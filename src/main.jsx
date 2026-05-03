@@ -14,12 +14,27 @@ function JDScienceWebsite() {
   const pages = ['home', 'about', 'subjects', 'booking', 'resources', 'videos', 'contact'];
 
   const subjects = [
-    ['Chemistry', 'GCSE and A-Level Chemistry support covering concepts, calculations, practical skills and exam technique.', 'From £35/hour', <FlaskConical />],
-    ['Physics', 'Support with forces, electricity, waves, energy, particles, equations, practicals and past-paper questions.', 'From £35/hour', <Atom />],
-    ['Biology', 'Clear help with cell biology, physiology, genetics, ecology, required practicals and exam-style answers.', 'From £35/hour', <Dna />],
-    ['Maths', 'Focused GCSE Maths support, numeracy for science, problem solving and confidence-building revision.', 'From £30/hour', <Calculator />],
-  ];
-
+  [
+    'Chemistry',
+    'GCSE, A-Level and BTEC Chemistry tutoring covering calculations, bonding, practical skills, exam preparation and revision support.',
+    <FlaskConical />
+  ],
+  [
+    'Physics',
+    'Physics tutoring covering electricity, forces, energy, waves, equations, required practicals and exam technique.',
+    <Atom />
+  ],
+  [
+    'Biology',
+    'Biology lessons covering cell biology, genetics, human physiology, ecology, required practicals and exam-style questions.',
+    <Dna />
+  ],
+  [
+    'Maths',
+    'GCSE Maths tutoring focused on problem solving, numeracy, confidence building and examination preparation.',
+    <Calculator />
+  ],
+];
   const navLabel = (p) => ({
     home: 'Home',
     about: 'About',
@@ -52,7 +67,7 @@ function JDScienceWebsite() {
           <div className="icon">{icon}</div>
           <h3>{title}</h3>
           <p>{text}</p>
-          <strong className="price">{price}</strong>
+      
           {showButtons && <button onClick={() => go('booking')} className="btn full">Book {title}</button>}
         </div>
       ))}
