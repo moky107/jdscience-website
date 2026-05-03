@@ -170,16 +170,78 @@ function JDScienceWebsite() {
     </>
   );
 
-  const Resources = () => (
-    <>
-      <Header title="Resources and Blog" text="Revision materials, study guidance, exam tips and downloadable science learning resources." />
-      <section className="container section grid three">
-        {['Revision Worksheets', 'Past-Paper Practice', 'Study Skills Blog', 'Practical Science Notes', 'Exam Technique Guides', 'Parent Support Advice'].map(title => (
-          <div className="card" key={title}><BookOpen /><h3>{title}</h3><p>Placeholder section for downloadable content, articles and guidance.</p></div>
-        ))}
-      </section>
-    </>
-  );
+   const Resources = () => (
+  <>
+    <Header
+      title="Resources"
+      text="Free and premium science and maths learning resources for GCSE, A-Level and vocational students."
+    />
+
+    <section className="container section grid three">
+
+      <div className="card">
+        <BookOpen />
+        <h3>GCSE Chemistry Revision Notes</h3>
+        <p>
+          Topic summaries, calculations, bonding,
+          atomic structure, required practicals and exam preparation.
+        </p>
+        <button className="btn full">View Resources</button>
+      </div>
+
+      <div className="card">
+        <BookOpen />
+        <h3>Physics Revision Resources</h3>
+        <p>
+          Electricity, forces, energy, waves,
+          practical skills and exam-style questions.
+        </p>
+        <button className="btn full">View Resources</button>
+      </div>
+
+      <div className="card">
+        <BookOpen />
+        <h3>Biology Learning Materials</h3>
+        <p>
+          Cell biology, genetics, ecology,
+          human physiology and revision support.
+        </p>
+        <button className="btn full">View Resources</button>
+      </div>
+
+      <div className="card">
+        <BookOpen />
+        <h3>GCSE Maths Support</h3>
+        <p>
+          Numeracy practice, algebra,
+          problem solving and exam preparation.
+        </p>
+        <button className="btn full">View Resources</button>
+      </div>
+
+      <div className="card">
+        <BookOpen />
+        <h3>Past Paper Questions</h3>
+        <p>
+          Practice questions and walkthrough solutions
+          for major UK exam boards.
+        </p>
+        <button className="btn full">Practice Questions</button>
+      </div>
+
+      <div className="card">
+        <BookOpen />
+        <h3>Study Skills and Exam Technique</h3>
+        <p>
+          Revision planning, memory techniques,
+          exam strategy and study guidance.
+        </p>
+        <button className="btn full">Read More</button>
+      </div>
+
+    </section>
+  </>
+);
 
   const Videos = () => (
     <>
