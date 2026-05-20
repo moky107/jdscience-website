@@ -245,11 +245,12 @@ function JDScienceWebsite() {
           <tbody>
             <tr>
               <td>Atomic Structure</td>
-              <td>
-                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Revision-Notes.pdf" target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </td>
+             <td>
+  <a href="/resources/gcse/chemistry/Topic%201%20-%20Key%20Concepts%20in%20Chemistry%20(1).pptx" target="_blank" rel="noreferrer">
+    Download
+  </a>
+</td>
+              
               <td>
                 <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Worksheet.pdf" target="_blank" rel="noreferrer">
                   Download
