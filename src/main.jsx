@@ -13,25 +13,25 @@ function JDScienceWebsite() {
 
   const pages = ['home', 'about', 'subjects', 'booking', 'resources', 'videos', 'contact'];
 
-  const subjects = [
+ const subjects = [
   [
     'Chemistry',
-    'GCSE, A-Level and BTEC Chemistry tutoring covering calculations, bonding, practical skills, exam preparation and revision support.',
+    'GCSE, IGCSE and A-Level Chemistry tutoring covering calculations, bonding, practical skills, exam preparation and revision support.',
     <FlaskConical />
   ],
   [
     'Physics',
-    'Physics tutoring covering electricity, forces, energy, waves, equations, required practicals and exam technique.',
+    'GCSE, IGCSE and A-Level Physics tutoring covering electricity, forces, energy, waves, equations, required practicals and exam technique.',
     <Atom />
   ],
   [
     'Biology',
-    'Biology lessons covering cell biology, genetics, human physiology, ecology, required practicals and exam-style questions.',
+    'GCSE, IGCSE and A-Level Biology tutoring covering cell biology, genetics, human physiology, ecology, required practicals and exam-style questions.',
     <Dna />
   ],
   [
     'Maths',
-    'GCSE Maths tutoring focused on problem solving, numeracy, confidence building and examination preparation.',
+    'GCSE, IGCSE and A-Level Maths tutoring focused on problem solving, numeracy, confidence building and examination preparation.',
     <Calculator />
   ],
 ];
@@ -170,75 +170,129 @@ function JDScienceWebsite() {
     </>
   );
 
-   const Resources = () => (
+  const Resources = () => (
   <>
     <Header
       title="Resources"
-      text="Free and premium science and maths learning resources for GCSE, A-Level and vocational students."
+      text="GCSE, IGCSE and A-Level resources for Biology, Chemistry, Physics and Maths, including revision notes, worksheets, past questions and mark schemes."
     />
 
-    <section className="container section grid three">
-
-      <div className="card">
-        <BookOpen />
-        <h3>GCSE Chemistry Revision Notes</h3>
+    <section className="container section">
+      <div className="resourceIntro">
+        <h2>JD Science Resource Library</h2>
         <p>
-          Topic summaries, calculations, bonding,
-          atomic structure, required practicals and exam preparation.
+          Access carefully prepared resources for GCSE, IGCSE and A-Level students in Biology,
+          Chemistry, Physics and Maths. These materials support revision, independent study,
+          exam preparation and deeper subject understanding.
         </p>
-        <button className="btn full">View Resources</button>
       </div>
 
-      <div className="card">
-        <BookOpen />
-        <h3>Physics Revision Resources</h3>
-        <p>
-          Electricity, forces, energy, waves,
-          practical skills and exam-style questions.
-        </p>
-        <button className="btn full">View Resources</button>
+      <div className="grid four">
+        <div className="card">
+          <BookOpen />
+          <h3>GCSE Resources</h3>
+          <p>Biology, Chemistry, Physics, Maths and Combined Science resources.</p>
+        </div>
+
+        <div className="card">
+          <BookOpen />
+          <h3>IGCSE Resources</h3>
+          <p>Exam-board focused IGCSE resources for science and maths learners.</p>
+        </div>
+
+        <div className="card">
+          <BookOpen />
+          <h3>A-Level Resources</h3>
+          <p>Advanced Biology, Chemistry, Physics and Maths resources.</p>
+        </div>
+
+        <div className="card">
+          <BookOpen />
+          <h3>Free Resources</h3>
+          <p>Free revision notes, worksheets, past questions and sample packs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section className="container section">
+      <h2>GCSE Chemistry Resources</h2>
+      <p>
+        Access GCSE Chemistry revision notes, worksheets, past questions and mark schemes
+        for AQA, Edexcel, OCR and Eduqas.
+      </p>
+
+      <div className="examBoardButtons">
+        <button>AQA Chemistry</button>
+        <button>Edexcel Chemistry</button>
+        <button>OCR Chemistry</button>
+        <button>Eduqas Chemistry</button>
       </div>
 
-      <div className="card">
-        <BookOpen />
-        <h3>Biology Learning Materials</h3>
-        <p>
-          Cell biology, genetics, ecology,
-          human physiology and revision support.
-        </p>
-        <button className="btn full">View Resources</button>
-      </div>
+      <h3>AQA Chemistry</h3>
 
-      <div className="card">
-        <BookOpen />
-        <h3>GCSE Maths Support</h3>
-        <p>
-          Numeracy practice, algebra,
-          problem solving and exam preparation.
-        </p>
-        <button className="btn full">View Resources</button>
-      </div>
+      <div className="tableWrapper">
+        <table className="resourceTable">
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Revision Notes</th>
+              <th>Worksheets</th>
+              <th>Past Questions</th>
+              <th>Mark Schemes</th>
+            </tr>
+          </thead>
 
-      <div className="card">
-        <BookOpen />
-        <h3>Past Paper Questions</h3>
-        <p>
-          Practice questions and walkthrough solutions
-          for major UK exam boards.
-        </p>
-        <button className="btn full">Practice Questions</button>
-      </div>
+          <tbody>
+            <tr>
+              <td>Atomic Structure</td>
+              <td>
+                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Revision-Notes.pdf" target="_blank" rel="noreferrer">
+                  Download
+                </a>
+              </td>
+              <td>
+                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Worksheet.pdf" target="_blank" rel="noreferrer">
+                  Download
+                </a>
+              </td>
+              <td>
+                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Past-Questions.pdf" target="_blank" rel="noreferrer">
+                  Download
+                </a>
+              </td>
+              <td>
+                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Mark-Scheme.pdf" target="_blank" rel="noreferrer">
+                  Download
+                </a>
+              </td>
+            </tr>
 
-      <div className="card">
-        <BookOpen />
-        <h3>Study Skills and Exam Technique</h3>
-        <p>
-          Revision planning, memory techniques,
-          exam strategy and study guidance.
-        </p>
-        <button className="btn full">Read More</button>
-      </div>
+            <tr>
+              <td>Periodic Table</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+            </tr>
 
+            <tr>
+              <td>Bonding</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+            </tr>
+
+            <tr>
+              <td>Quantitative Chemistry</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+              <td>Coming soon</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
   </>
 );
