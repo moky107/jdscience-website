@@ -221,7 +221,7 @@ function JDScienceWebsite() {
             </table>
           </div>
         </div>
-      
+      ))}
     </section>
   </>
 );
