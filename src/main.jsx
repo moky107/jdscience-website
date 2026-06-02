@@ -264,9 +264,51 @@ function JDScienceWebsite() {
 
         
           </tbody>
-        </table>
-      </div>
-    </section>
+</table>
+</div>
+
+<h3>Edexcel Chemistry</h3>
+
+<div className="tableWrapper">
+  <table className="resourceTable">
+    <thead>
+      <tr>
+        <th>Revision Notes</th>
+        <th>Worksheets</th>
+        <th>Past Questions</th>
+        <th>Mark Schemes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <a href="/resources/gcse/chemistry/Topic%201%20-%20Key%20Concepts%20in%20Chemistry%20(1).pptx" target="_blank" rel="noreferrer">
+            Download
+          </a>
+        </td>
+       <td>
+  <a href="#" target="_blank" rel="noreferrer">
+    Download
+  </a>
+</td>
+
+<td>
+  <a href="#" target="_blank" rel="noreferrer">
+    Download
+  </a>
+</td>
+
+<td>
+  <a href="#" target="_blank" rel="noreferrer">
+    Download
+  </a>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</section>
   </>
    );
    
