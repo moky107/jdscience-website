@@ -178,15 +178,7 @@ function JDScienceWebsite() {
     />
 
     <section className="container section">
-      <div className="resourceIntro">
-        <h2>JD Science Resource Library</h2>
-        <p>
-          Access carefully prepared resources for GCSE, IGCSE and A-Level students in Biology,
-          Chemistry, Physics and Maths. These materials support revision, independent study,
-          exam preparation and deeper subject understanding.
-        </p>
-      </div>
-
+      
       <div className="grid four">
         <div className="card">
           <BookOpen />
