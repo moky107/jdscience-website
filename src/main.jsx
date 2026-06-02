@@ -262,15 +262,7 @@ function JDScienceWebsite() {
 
             
 
-            <tr>
-              <td>Bonding</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-           
-              <td>Coming soon</td>
-            </tr>
+        
           </tbody>
         </table>
       </div>
