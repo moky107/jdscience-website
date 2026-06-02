@@ -170,7 +170,7 @@ function JDScienceWebsite() {
     </>
   );
 
-  const Resources = () => (
+ const Resources = () => (
   <>
     <Header
       title="Resources"
@@ -178,40 +178,17 @@ function JDScienceWebsite() {
     />
 
     <section className="container section">
-      
       <div className="grid four">
-        <div className="card">
-          <BookOpen />
-          <h3>GCSE Resources</h3>
-          <p>Biology, Chemistry, Physics, Maths and Combined Science resources.</p>
-        </div>
-
-        <div className="card">
-          <BookOpen />
-          <h3>IGCSE Resources</h3>
-          <p>Exam-board focused IGCSE resources for science and maths learners.</p>
-        </div>
-
-        <div className="card">
-          <BookOpen />
-          <h3>A-Level Resources</h3>
-          <p>Advanced Biology, Chemistry, Physics and Maths resources.</p>
-        </div>
-
-        <div className="card">
-          <BookOpen />
-          <h3>Free Resources</h3>
-          <p>Free revision notes, worksheets, past questions and sample packs.</p>
-        </div>
+        <div className="card"><BookOpen /><h3>GCSE Resources</h3><p>Biology, Chemistry, Physics, Maths and Combined Science resources.</p></div>
+        <div className="card"><BookOpen /><h3>IGCSE Resources</h3><p>Exam-board focused IGCSE resources for science and maths learners.</p></div>
+        <div className="card"><BookOpen /><h3>A-Level Resources</h3><p>Advanced Biology, Chemistry, Physics and Maths resources.</p></div>
+        <div className="card"><BookOpen /><h3>Free Resources</h3><p>Free revision notes, worksheets, past questions and sample packs.</p></div>
       </div>
     </section>
 
     <section className="container section">
       <h2>GCSE Chemistry Resources</h2>
-      <p>
-        Access GCSE Chemistry revision notes, worksheets, past questions and mark schemes
-        for AQA, Edexcel, OCR and Eduqas.
-      </p>
+      <p>Access GCSE Chemistry revision notes, worksheets, past questions and mark schemes for AQA, Edexcel, OCR and Eduqas.</p>
 
       <div className="examBoardButtons">
         <button>AQA Chemistry</button>
@@ -220,150 +197,34 @@ function JDScienceWebsite() {
         <button>Eduqas Chemistry</button>
       </div>
 
-      <h3>AQA Chemistry</h3>
-
-      <div className="tableWrapper">
-        <table className="resourceTable">
-          <thead>
-            <tr>
-             
-              <th>Revision Notes</th>
-              <th>Worksheets</th>
-              <th>Past Questions</th>
-              <th>Mark Schemes</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-           
-             <td>
-  <a href="/resources/gcse/chemistry/Topic%201%20-%20Key%20Concepts%20in%20Chemistry%20(1).pptx" target="_blank" rel="noreferrer">
-    Download
-  </a>
-</td>
-              
-              <td>
-                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Worksheet.pdf" target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </td>
-              <td>
-                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Past-Questions.pdf" target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </td>
-              <td>
-                <a href="/resources/JDScience_GCSE_AQA_Chemistry_Atomic-Structure_Mark-Scheme.pdf" target="_blank" rel="noreferrer">
-                  Download
-                </a>
-              </td>
-            </tr>
-
-            
-
-        
-          </tbody>
-</table>
-</div>
-
-<h3>Edexcel Chemistry</h3>
-
-<div className="tableWrapper">
-  <table className="resourceTable">
-    <thead>
-      <tr>
-        <th>Revision Notes</th>
-        <th>Worksheets</th>
-        <th>Past Questions</th>
-        <th>Mark Schemes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <a href="/resources/gcse/chemistry/Topic%201%20-%20Key%20Concepts%20in%20Chemistry%20(1).pptx" target="_blank" rel="noreferrer">
-            Download
-          </a>
-        </td>
-       <td>
-  <a href="#" target="_blank" rel="noreferrer">
-    Download
-  </a>
-</td>
-
-<td>
-  <a href="#" target="_blank" rel="noreferrer">
-    Download
-  </a>
-</td>
-
-<td>
-  <a href="#" target="_blank" rel="noreferrer">
-    Download
-  </a>
-</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-
-
-
-</table>
-</div>
-
-<h3>OCR Chemistry</h3>
-
-<div className="tableWrapper">
-  <table className="resourceTable">
-    <thead>
-      <tr>
-        <th>Revision Notes</th>
-        <th>Worksheets</th>
-        <th>Past Questions</th>
-        <th>Mark Schemes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<h3>Eduqas Chemistry</h3>
-
-<div className="tableWrapper">
-  <table className="resourceTable">
-    <thead>
-      <tr>
-        <th>Revision Notes</th>
-        <th>Worksheets</th>
-        <th>Past Questions</th>
-        <th>Mark Schemes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-</section>
-</>
+      {['AQA', 'Edexcel', 'OCR', 'Eduqas'].map((board) => (
+        <div key={board}>
+          <h3>{board} Chemistry</h3>
+          <div className="tableWrapper">
+            <table className="resourceTable">
+              <thead>
+                <tr>
+                  <th>Revision Notes</th>
+                  <th>Worksheets</th>
+                  <th>Past Questions</th>
+                  <th>Mark Schemes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+                  <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+                  <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+                  <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+    </section>
+  </>
 );
-
 
 
 
