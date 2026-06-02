@@ -308,9 +308,65 @@ function JDScienceWebsite() {
   </table>
 </div>
 
+
+
+
+</table>
+</div>
+
+<h3>OCR Chemistry</h3>
+
+<div className="tableWrapper">
+  <table className="resourceTable">
+    <thead>
+      <tr>
+        <th>Revision Notes</th>
+        <th>Worksheets</th>
+        <th>Past Questions</th>
+        <th>Mark Schemes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3>Eduqas Chemistry</h3>
+
+<div className="tableWrapper">
+  <table className="resourceTable">
+    <thead>
+      <tr>
+        <th>Revision Notes</th>
+        <th>Worksheets</th>
+        <th>Past Questions</th>
+        <th>Mark Schemes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+        <td><a href="#" target="_blank" rel="noreferrer">Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </section>
-  </>
-   );
+</>
+);
+
+
+
+
    
   const Contact = () => (
     <>
