@@ -268,7 +268,7 @@ function JDScienceWebsite() {
       </div>
     </section>
   </>
-
+   );
    
   const Contact = () => (
     <>
