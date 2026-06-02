@@ -269,10 +269,7 @@ function JDScienceWebsite() {
     </section>
   </>
 
-         
-    </>
-  );
-
+   
   const Contact = () => (
     <>
       <Header title="Contact JD Science" text="Get in touch to discuss tutoring, revision support, group lessons, resources or video learning." />
