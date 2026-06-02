@@ -11,7 +11,7 @@ function JDScienceWebsite() {
   const [page, setPage] = useState('home');
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const pages = ['home', 'about', 'subjects', 'booking', 'resources', 'videos', 'contact'];
+  const pages = ['home', 'about', 'subjects', 'booking', 'resources', 'contact'];
 
  const subjects = [
   [
@@ -41,7 +41,7 @@ function JDScienceWebsite() {
     subjects: 'Subjects & Pricing',
     booking: 'Book a Session',
     resources: 'Resources',
-    videos: 'Videos',
+   
     contact: 'Contact'
   }[p]);
 
@@ -293,7 +293,7 @@ function JDScienceWebsite() {
     </>
   );
 
-  const CurrentPage = { home: <Home />, about: <About />, subjects: <Subjects />, booking: <Booking />, resources: <Resources />, videos: <Videos />, contact: <Contact /> }[page];
+  const CurrentPage = { home: <Home />, about: <About />, subjects: <Subjects />, booking: <Booking />, resources: <Resources />,  contact: <Contact /> }[page];
 
   return (
     <div>
