@@ -260,13 +260,7 @@ function JDScienceWebsite() {
               </td>
             </tr>
 
-            <tr>
-              <td>Periodic Table</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-            </tr>
+            
 
             <tr>
               <td>Bonding</td>
@@ -274,13 +268,7 @@ function JDScienceWebsite() {
               <td>Coming soon</td>
               <td>Coming soon</td>
               <td>Coming soon</td>
-            </tr>
-
-            <tr>
-              <td>Quantitative Chemistry</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
-              <td>Coming soon</td>
+           
               <td>Coming soon</td>
             </tr>
           </tbody>
@@ -288,13 +276,7 @@ function JDScienceWebsite() {
       </div>
     </section>
   </>
-);
 
-  const Videos = () => (
-    <>
-      <Header title="Video Lessons" text="A dedicated section for science explanation videos, past-paper walkthroughs and revision clips." />
-      <section className="container section grid three">
-        {['Chemistry Videos', 'Physics Videos', 'Biology Videos', 'Maths Support', 'Required Practicals', 'Past-Paper Walkthroughs'].map(title => (
           <div className="card video" key={title}><div><PlayCircle /></div><h3>{title}</h3><p>Embed YouTube, Vimeo or self-hosted videos here.</p></div>
         ))}
       </section>
