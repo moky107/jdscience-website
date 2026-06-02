@@ -269,9 +269,7 @@ function JDScienceWebsite() {
     </section>
   </>
 
-          <div className="card video" key={title}><div><PlayCircle /></div><h3>{title}</h3><p>Embed YouTube, Vimeo or self-hosted videos here.</p></div>
-        ))}
-      </section>
+         
     </>
   );
 
