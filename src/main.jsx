@@ -226,7 +226,7 @@ function JDScienceWebsite() {
         <table className="resourceTable">
           <thead>
             <tr>
-              <th>Topic</th>
+             
               <th>Revision Notes</th>
               <th>Worksheets</th>
               <th>Past Questions</th>
@@ -236,7 +236,7 @@ function JDScienceWebsite() {
 
           <tbody>
             <tr>
-              <td>Atomic Structure</td>
+           
              <td>
   <a href="/resources/gcse/chemistry/Topic%201%20-%20Key%20Concepts%20in%20Chemistry%20(1).pptx" target="_blank" rel="noreferrer">
     Download
