@@ -131,7 +131,35 @@ function App() {
           ))}
         </div>
       </div>
-
+{/* ABOUT US */}
+<div id="about" style={{ background: 'white', padding: '50px 40px' }}>
+  <div style={{ maxWidth: 900, margin: '0 auto' }}>
+    <div style={{ fontSize: 24, fontWeight: 800, color: '#004d40', marginBottom: 8, textAlign: 'center' }}>Welcome to JD Science</div>
+    <div style={{ width: 50, height: 4, background: '#009688', borderRadius: 2, margin: '0 auto 26px' }}></div>
+    <p style={{ fontSize: 15, color: '#444', lineHeight: 1.8, marginBottom: 24, textAlign: 'center' }}>
+      JD Science is a specialist provider of GCSE, A-Level and T-Level tuition and revision support in Science and Maths.
+      We focus on what we do best — Physics, Chemistry, Biology and Maths — delivering high-quality teaching and exam-board
+      specific resources that help students achieve their target grades.
+    </p>
+    <div style={{ fontSize: 17, fontWeight: 800, color: '#00695c', marginBottom: 16 }}>What makes us different:</div>
+    <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+      {[
+        ['Subject specialists', 'Experienced teachers who know the Science and Maths specifications inside out, across AQA, Edexcel, OCR and Eduqas.'],
+        ['Tailored tuition', "Every session is built around your child's individual needs — current grade, target grade and the topics they find most challenging."],
+        ['One-to-one & small groups', 'Personalised attention with focused, distraction-free learning, online or in person.'],
+        ['Exam-board specific resources', 'Worksheets, revision notes, past questions and marking schemes, organised by level, subject and exam board.'],
+        ['Flexible learning', 'Online and in-person options to fit around school and family life.'],
+        ['A child-safe environment', 'Our tutors hold up-to-date DBS checks, meeting safeguarding requirements.'],
+        ['Proven approach', 'A clear focus on exam technique, practice and confidence-building to get results.'],
+      ].map(([title, desc]) => (
+        <li key={title} style={{ background: '#f9f9f9', borderRadius: 8, padding: '16px 18px', borderLeft: '4px solid #009688' }}>
+          <div style={{ fontSize: 14, fontWeight: 800, color: '#004d40', marginBottom: 5 }}>{title}</div>
+          <div style={{ fontSize: 13, color: '#666', lineHeight: 1.6 }}>{desc}</div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
       {/* STATS STRIP */}
       <div style={{ background: '#e0f2f1', padding: '30px 40px', display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', gap: 20 }}>
         {[['4','Core Subjects'],['3','Qualification Levels'],['4','Exam Boards Covered'],['1-to-1','Personalised Tuition'],['Online','& In-Person Available']].map(([num, label]) => (
