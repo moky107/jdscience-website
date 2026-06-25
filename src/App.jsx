@@ -1,12 +1,3 @@
-const styles = {
-  global: `
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; color: #111; background: #fff; }
-    a { text-decoration: none; }
-  `
-};
-
 const subjects = [
   {
     icon: "⚛️", name: "Physics",
@@ -58,7 +49,7 @@ function Navbar() {
       </div>
       <ul style={{display:'flex',gap:28,listStyle:'none'}}>
         {['Home','Subjects','About','Testimonials','Contact'].map(l => (
-          <li key={l}><a href="#" style={{color:'#444',fontWeight:500,fontSize:'.95rem'}}>{l}</a></li>
+          <li key={l}><a href="#" style={{color:'#444',fontWeight:500,fontSize:'.95rem',textDecoration:'none'}}>{l}</a></li>
         ))}
       </ul>
       <button style={{background:'#7c3aed',color:'#fff',border:'none',padding:'10px 22px',borderRadius:8,fontWeight:600,cursor:'pointer',fontSize:'.9rem'}}>
@@ -71,15 +62,10 @@ function Navbar() {
 function Hero() {
   return (
     <section style={{minHeight:'92vh',background:'linear-gradient(135deg,#1a0533 0%,#2d1060 50%,#0f2557 100%)',display:'flex',alignItems:'center',padding:'60px 40px',position:'relative',overflow:'hidden'}}>
-      {/* Background circles */}
-      {[
-        {w:300,h:300,bg:'radial-gradient(circle,#a855f7,transparent)',top:'-60px',right:'10%'},
-        {w:200,h:200,bg:'radial-gradient(circle,#06b6d4,transparent)',bottom:'10%',right:'25%'},
-        {w:160,h:160,bg:'radial-gradient(circle,#f59e0b,transparent)',bottom:'20%',right:'5%'},
-        {w:120,h:120,bg:'radial-gradient(circle,#ec4899,transparent)',top:'30%',right:'40%'},
-      ].map((c,i) => (
-        <div key={i} style={{position:'absolute',borderRadius:'50%',opacity:.35,width:c.w,height:c.h,background:c.bg,top:c.top,bottom:c.bottom,right:c.right}} />
-      ))}
+      <div style={{position:'absolute',borderRadius:'50%',opacity:.35,width:300,height:300,background:'radial-gradient(circle,#a855f7,transparent)',top:'-60px',right:'10%'}} />
+      <div style={{position:'absolute',borderRadius:'50%',opacity:.35,width:200,height:200,background:'radial-gradient(circle,#06b6d4,transparent)',bottom:'10%',right:'25%'}} />
+      <div style={{position:'absolute',borderRadius:'50%',opacity:.35,width:160,height:160,background:'radial-gradient(circle,#f59e0b,transparent)',bottom:'20%',right:'5%'}} />
+      <div style={{position:'absolute',borderRadius:'50%',opacity:.35,width:120,height:120,background:'radial-gradient(circle,#ec4899,transparent)',top:'30%',right:'40%'}} />
       <div style={{maxWidth:620,position:'relative',zIndex:2}}>
         <div style={{display:'inline-flex',alignItems:'center',gap:8,background:'rgba(255,255,255,.1)',color:'#fff',padding:'8px 16px',borderRadius:50,fontSize:'.85rem',marginBottom:28,border:'1px solid rgba(255,255,255,.15)'}}>
           🏆 Expert Science & Maths Tutoring
@@ -141,7 +127,7 @@ function Subjects() {
       </div>
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',gap:24,maxWidth:900,margin:'0 auto'}}>
         {subjects.map(s => (
-          <div key={s.name} style={{borderRadius:16,overflow:'hidden',border:'1px solid #e5e7eb',cursor:'pointer',transition:'transform .2s'}}>
+          <div key={s.name} style={{borderRadius:16,overflow:'hidden',border:'1px solid #e5e7eb',cursor:'pointer'}}>
             <div style={{height:200,background:s.bg,position:'relative',display:'flex',alignItems:'flex-end',padding:14}}>
               <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',fontSize:'4rem',opacity:.4}}>{s.icon}</div>
               <div style={{display:'flex',alignItems:'center',gap:8,color:'#fff',fontWeight:700,fontSize:'1.1rem',position:'relative',zIndex:1}}>
@@ -151,7 +137,7 @@ function Subjects() {
             </div>
             <div style={{padding:'18px 20px 22px'}}>
               <p style={{color:'#555',fontSize:'.93rem',lineHeight:1.6,marginBottom:14}}>{s.desc}</p>
-              <a href="#" style={{color:'#7c3aed',fontWeight:600,fontSize:'.9rem'}}>Learn more →</a>
+              <a href="#" style={{color:'#7c3aed',fontWeight:600,fontSize:'.9rem',textDecoration:'none'}}>Learn more →</a>
             </div>
           </div>
         ))}
@@ -204,8 +190,7 @@ function Footer() {
 
 function App() {
   return (
-    <>
-      <style>{styles.global}</style>
+    <div style={{fontFamily:"'Inter',sans-serif",color:'#111',background:'#fff'}}>
       <Navbar />
       <Hero />
       <Stats />
@@ -213,6 +198,6 @@ function App() {
       <WhyUs />
       <CTA />
       <Footer />
-    </>
+    </div>
   );
 }
