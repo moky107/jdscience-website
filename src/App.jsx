@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { supabase } from "./supabaseClient";
 
 const HERO_IMG = "https://cdn.abacus.ai/images/a3ac8de7-2ad2-4a64-bab2-8fbe6d17616e.png";
 const CONTACT = { email:"info@jdscience.co.uk", phone:"07466142805" };
@@ -81,10 +82,21 @@ function BookingModal({ onClose }) {
 }
 
 // ── Navbar ──────────────────────────────────────────────────
-function Navbar({ onSearch, onBook, onOpenResource }) {
+function Navbar({ onSearch, onBook, onOpenResource, isAdmin }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(null);
   const submit = (e) => { e.preventDefault(); onSearch(q); };
+
+  const handleAuth = async () => {
+    if (isAdmin) { await supabase.auth.signOut(); return; }
+    const email = window.prompt("Admin email:");
+    if (!email) return;
+    const password = window.prompt("Admin password:");
+    if (!password) return;
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) alert("Login failed: " + error.message);
+  };
+
   return (
     <nav style={{background:"#fff",position:"sticky",top:0,zIndex:100,boxShadow:"0 1px 6px rgba(0,0,0,.08)"}}>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 40px",flexWrap:"wrap",gap:12}}>
@@ -99,6 +111,7 @@ function Navbar({ onSearch, onBook, onOpenResource }) {
           </div>
           <button type="submit" style={{background:"#7c3aed",color:"#fff",border:"none",padding:"10px 16px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>Search</button>
           <button type="button" onClick={onBook} style={{background:"#06b6d4",color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>Book a Session</button>
+          <button type="button" onClick={handleAuth} title="Admin login" style={{background: isAdmin ? "#16a34a" : "#e5e7eb", color: isAdmin ? "#fff" : "#555", border:"none", padding:"10px 14px", borderRadius:8, fontWeight:600, cursor:"pointer", fontSize:".8rem"}}>{isAdmin ? "✓ Logout" : "Admin"}</button>
         </form>
       </div>
       <div style={{background:"#2dd4bf",display:"flex",justifyContent:"center",flexWrap:"wrap"}}>
@@ -129,8 +142,8 @@ function Navbar({ onSearch, onBook, onOpenResource }) {
 }
 
 // ── Resource Browser (Revision Notes / Past Questions) ──────
-// Navigation:  type → choose subject → choose exam board → (notes also: topic) → file list
-function ResourceBrowser({ type, files, setFiles, onClose }) {
+// Files now stored permanently in Supabase Storage ("resources" bucket)
+function ResourceBrowser({ type, onClose, isAdmin }) {
   const isNotes = type === "Revision Notes";
   const accent = isNotes ? "#0284c7" : "#7c3aed";
   const icon = isNotes ? "📚" : "📝";
@@ -138,18 +151,45 @@ function ResourceBrowser({ type, files, setFiles, onClose }) {
   const [subject, setSubject] = useState(null);
   const [board, setBoard] = useState(null);
   const [topic, setTopic] = useState(null);
+  const [files, setFiles] = useState([]);
+  const [loading, setLoading] = useState(false);
   const inputRef = useRef(null);
 
-  // storage key: notes use subject_board_topic; past questions use subject_board
-  const slot = isNotes ? `notes_${subject}_${board}_${topic}` : `past_${subject}_${board}`;
-  const current = files[slot] || [];
+  const folder = isNotes ? `notes/${subject}/${board}/${topic}` : `past/${subject}/${board}`;
+  const showFiles = isNotes ? (subject && board && topic) : (subject && board);
 
-  const upload = (e) => {
-    const added = Array.from(e.target.files).map(f => ({ name:f.name, size:(f.size/1024).toFixed(1)+" KB", url:URL.createObjectURL(f) }));
-    setFiles(prev => ({ ...prev, [slot]:[...(prev[slot]||[]), ...added] }));
-    e.target.value = "";
+  const loadFiles = async () => {
+    setLoading(true);
+    const { data, error } = await supabase.storage.from("resources").list(folder, { sortBy: { column: "name", order: "asc" } });
+    if (!error && data) {
+      const withUrls = data.filter(f => f.name !== ".emptyFolderPlaceholder").map(f => {
+        const { data: pub } = supabase.storage.from("resources").getPublicUrl(`${folder}/${f.name}`);
+        return { name: f.name, url: pub.publicUrl };
+      });
+      setFiles(withUrls);
+    } else {
+      setFiles([]);
+    }
+    setLoading(false);
   };
-  const remove = (i) => setFiles(prev => ({ ...prev, [slot]: prev[slot].filter((_,x)=>x!==i) }));
+
+  React.useEffect(() => { if (showFiles) loadFiles(); /* eslint-disable-next-line */ }, [folder, showFiles]);
+
+  const upload = async (e) => {
+    const list = Array.from(e.target.files);
+    setLoading(true);
+    for (const f of list) {
+      const { error } = await supabase.storage.from("resources").upload(`${folder}/${f.name}`, f, { upsert: true });
+      if (error) alert("Upload failed: " + error.message);
+    }
+    e.target.value = "";
+    await loadFiles();
+  };
+
+  const remove = async (name) => {
+    await supabase.storage.from("resources").remove([`${folder}/${name}`]);
+    await loadFiles();
+  };
 
   const Crumb = () => (
     <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap",fontSize:".9rem",marginBottom:24}}>
@@ -168,7 +208,6 @@ function ResourceBrowser({ type, files, setFiles, onClose }) {
   );
 
   const grid = { display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))", gap:16 };
-  const showFiles = isNotes ? (subject && board && topic) : (subject && board);
 
   return (
     <section style={{minHeight:"70vh",padding:"50px 40px",background:"#f9fafb"}}>
@@ -180,53 +219,55 @@ function ResourceBrowser({ type, files, setFiles, onClose }) {
         <p style={{color:"#666",marginBottom:24}}>{isNotes ? "Browse revision notes by subject, exam board and topic." : "Browse past questions by subject and exam board."}</p>
         <Crumb />
 
-        {/* Step 1: subject */}
         {!subject && (
           <div style={grid}>
             {RES_SUBJECTS.map(s => <Tile key={s} label={s} sub="Select subject" onClick={() => setSubject(s)} />)}
           </div>
         )}
 
-        {/* Step 2: exam board */}
         {subject && !board && (
           <div style={grid}>
             {EXAM_BOARDS.map(b => <Tile key={b} label={b} sub="Select exam board" onClick={() => setBoard(b)} />)}
           </div>
         )}
 
-        {/* Step 3 (notes only): topic */}
         {isNotes && subject && board && !topic && (
           <div style={grid}>
             {topicsFor(subject).map(t => <Tile key={t} label={t} sub="View notes" onClick={() => setTopic(t)} />)}
           </div>
         )}
 
-        {/* File list + upload */}
         {showFiles && (
           <div style={{background:"#fff",borderRadius:16,border:"1px solid #e5e7eb",padding:28}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:18,flexWrap:"wrap",gap:12}}>
               <h3 style={{fontSize:"1.1rem",fontWeight:800,color:accent}}>{icon} {subject} · {board}{topic?` · ${topic}`:""}</h3>
-              <button onClick={() => inputRef.current.click()} style={{background:accent,color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>＋ Upload</button>
-              <input ref={inputRef} type="file" multiple onChange={upload} style={{display:"none"}} />
+              {isAdmin && (
+                <>
+                  <button onClick={() => inputRef.current.click()} style={{background:accent,color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>＋ Upload</button>
+                  <input ref={inputRef} type="file" multiple onChange={upload} style={{display:"none"}} />
+                </>
+              )}
             </div>
-            {current.length===0 ? (
+            {loading ? (
+              <div style={{textAlign:"center",padding:"36px 0",color:"#999"}}>Loading…</div>
+            ) : files.length===0 ? (
               <div style={{textAlign:"center",padding:"36px 0",color:"#999",border:"2px dashed #e5e7eb",borderRadius:12}}>
                 <div style={{fontSize:"2.2rem",marginBottom:8}}>{icon}</div>
-                <p style={{fontWeight:600}}>Nothing uploaded here yet.</p>
-                <p style={{fontSize:".85rem",marginTop:4}}>Click "Upload" to add files (PDF, DOCX, images).</p>
+                <p style={{fontWeight:600}}>{isAdmin ? "Nothing uploaded here yet." : "No files available here yet."}</p>
+                <p style={{fontSize:".85rem",marginTop:4}}>{isAdmin ? 'Click "Upload" to add files (PDF, DOCX, images).' : "Please check back soon."}</p>
               </div>
             ) : (
               <div style={{display:"flex",flexDirection:"column",gap:10}}>
-                {current.map((f,i) => (
-                  <div key={i} style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:"#f9fafb",borderRadius:10,padding:"12px 16px",border:"1px solid #eee"}}>
+                {files.map((f) => (
+                  <div key={f.name} style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:"#f9fafb",borderRadius:10,padding:"12px 16px",border:"1px solid #eee"}}>
                     <div style={{display:"flex",alignItems:"center",gap:12}}>
                       <span style={{fontSize:"1.3rem"}}>📄</span>
-                      <div><p style={{fontWeight:600,fontSize:".92rem"}}>{f.name}</p><p style={{color:"#999",fontSize:".78rem"}}>{f.size}</p></div>
+                      <p style={{fontWeight:600,fontSize:".92rem"}}>{f.name}</p>
                     </div>
                     <div style={{display:"flex",gap:10,alignItems:"center"}}>
                       <a href={f.url} target="_blank" rel="noreferrer" style={{color:accent,fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>View</a>
-                      <a href={f.url} download={f.name} style={{color:"#06b6d4",fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>Download</a>
-                      <button onClick={() => remove(i)} style={{background:"none",border:"none",color:"#ef4444",cursor:"pointer",fontWeight:700}}>✕</button>
+                      <a href={f.url} download style={{color:"#06b6d4",fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>Download</a>
+                      {isAdmin && <button onClick={() => remove(f.name)} style={{background:"none",border:"none",color:"#ef4444",cursor:"pointer",fontWeight:700}}>✕</button>}
                     </div>
                   </div>
                 ))}
@@ -413,16 +454,24 @@ function Footer() {
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showBooking, setShowBooking] = useState(false);
-  const [resourceView, setResourceView] = useState(null); // "Revision Notes" | "Past Questions" | null
-  const [files, setFiles] = useState({});
+  const [resourceView, setResourceView] = useState(null);
+  const [session, setSession] = useState(null);
+
+  React.useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
+    return () => sub.subscription.unsubscribe();
+  }, []);
+
+  const isAdmin = !!session;
 
   const openResource = (type) => { setSearchQuery(""); setResourceView(type); window.scrollTo({top:0,behavior:"smooth"}); };
 
   return (
     <div style={{fontFamily:"'Inter',sans-serif",color:"#111",background:"#fff"}}>
-      <Navbar onSearch={(q)=>{setResourceView(null);setSearchQuery(q);}} onBook={() => setShowBooking(true)} onOpenResource={openResource} />
+      <Navbar onSearch={(q)=>{setResourceView(null);setSearchQuery(q);}} onBook={() => setShowBooking(true)} onOpenResource={openResource} isAdmin={isAdmin} />
       {resourceView ? (
-        <ResourceBrowser type={resourceView} files={files} setFiles={setFiles} onClose={() => setResourceView(null)} />
+        <ResourceBrowser type={resourceView} onClose={() => setResourceView(null)} isAdmin={isAdmin} />
       ) : searchQuery ? (
         <SearchResults query={searchQuery} onClose={() => setSearchQuery("")} />
       ) : (
