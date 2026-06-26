@@ -1,21 +1,14 @@
 import React, { useState, useRef } from "react";
 
-// ── Save the generated hero image into your project ──
-// Put the image in:  src/assets/students.png  (or public/students.png)
-// then update HERO_IMG below to match.
 const HERO_IMG = "https://cdn.abacus.ai/images/a3ac8de7-2ad2-4a64-bab2-8fbe6d17616e.png";
-
 const CONTACT = { email:"info@jdscience.co.uk", phone:"07466142805" };
-
 const inputStyle = { padding:"12px 14px", borderRadius:8, border:"1px solid #ddd", fontSize:".95rem", outline:"none", width:"100%", boxSizing:"border-box" };
 
 const subjects = [
   { icon:"⚛️", name:"Physics", bg:"linear-gradient(135deg,#1a0533,#4c1d95,#2d1060)", desc:"Master the fundamental laws of the universe. From mechanics to quantum physics, build a strong conceptual and exam-ready foundation.", topics:["Mechanics","Waves","Electricity","Magnetism","Quantum Physics","Nuclear Physics"] },
   { icon:"⚗️", name:"Chemistry", bg:"linear-gradient(135deg,#064e3b,#065f46,#047857)", desc:"Explore the science of matter and its transformations. From organic reactions to atomic structure, master every topic with confidence.", topics:["Organic Chemistry","Atomic Structure","Bonding","Energetics","Kinetics","Electrochemistry"] },
   { icon:"🧬", name:"Biology", bg:"linear-gradient(135deg,#0c4a6e,#0369a1,#0284c7)", desc:"Understand the science of life. From cells and genetics to ecology and evolution, develop a deep understanding of living systems.", topics:["Cell Biology","Genetics","Ecology","Evolution","Physiology","Microbiology"] },
-  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations. From algebra and geometry to calculus and statistics, develop fluency and exam technique.", topics:["Algebra","Calculus","Statistics","Geometry","Trigonometry","Mechanics"] },
-  { icon:"📖", name:"A-Level", bg:"linear-gradient(135deg,#312e81,#4338ca,#6366f1)", desc:"In-depth A-Level tutoring for top grades in Science and Maths. Expert support for AS and A2 content across all major exam boards.", topics:["AS Level","A2 Level","AQA","Edexcel","OCR","WJEC"] },
-  { icon:"🎓", name:"T-Levels", bg:"linear-gradient(135deg,#78350f,#92400e,#b45309)", desc:"Expert support for T-Level Science qualifications. Combining classroom theory with practical application for a complete learning experience.", topics:["Health Science","Engineering","Digital","Education","Construction","Science"] }
+  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations. From algebra and geometry to calculus and statistics, develop fluency and exam technique.", topics:["Algebra","Calculus","Statistics","Geometry","Trigonometry","Mechanics"] }
 ];
 
 const whyCards = [
@@ -23,11 +16,14 @@ const whyCards = [
   { icon:"🏆", title:"Experienced Tutor", desc:"Qualified science educator with 5000+ hours of tutoring experience across GCSE, A-Level, and T-Levels." },
   { icon:"📈", title:"Proven Results", desc:"98% student satisfaction rate with consistently improved grades and boosted confidence." },
   { icon:"💻", title:"Flexible Sessions", desc:"Online and in-person options available to suit your schedule and learning preferences." },
-  { icon:"📋", title:"All Exam Boards", desc:"Covering AQA, Edexcel, OCR, WJEC, and iGCSE — no matter your school's curriculum." },
+  { icon:"📋", title:"All Exam Boards", desc:"Covering AQA, Edexcel, OCR, Eduqas, and iGCSE — no matter your school's curriculum." },
   { icon:"🤝", title:"Free Consultation", desc:"Start with a free no-obligation consultation to discuss your goals and find the right plan." }
 ];
 
-// Top-level qualifications with hover dropdown options
+const EXAM_BOARDS = ["AQA","Edexcel","OCR","Eduqas"];
+const RES_SUBJECTS = ["Physics","Chemistry","Biology","Maths"];
+const topicsFor = (subj) => (subjects.find(s => s.name===subj) || {}).topics || [];
+
 const navMenu = [
   { label:"Home", id:"home" },
   { label:"11+", options:["English","Maths","Verbal Reasoning","Non-Verbal Reasoning"] },
@@ -35,15 +31,12 @@ const navMenu = [
   { label:"A-Level", options:["AQA","Edexcel","OCR","Eduqas"] },
   { label:"T-Levels", options:["Health & Science","Engineering","Digital","Education"] },
   { label:"BTEC", options:["Applied Science","Engineering","IT","Health & Social Care"] },
-  { label:"Resources", id:"resources" },
+  { label:"Resources", resource:true, options:["Revision Notes","Past Questions"] },
   { label:"Find a Tutor", id:"contact" },
   { label:"Contact", id:"contact" }
 ];
 
-const scrollTo = (id) => {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior:"smooth" });
-};
+const scrollTo = (id) => { const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:"smooth"}); };
 
 // ── Booking Modal ──────────────────────────────────────────
 function BookingModal({ onClose }) {
@@ -58,7 +51,7 @@ function BookingModal({ onClose }) {
   };
   return (
     <div onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,.6)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:1000,padding:20}}>
-      <div onClick={e => e.stopPropagation()} style={{background:"#fff",borderRadius:18,padding:36,maxWidth:480,width:"100%",position:"relative",boxShadow:"0 20px 60px rgba(0,0,0,.3)"}}>
+      <div onClick={e=>e.stopPropagation()} style={{background:"#fff",borderRadius:18,padding:36,maxWidth:480,width:"100%",position:"relative",boxShadow:"0 20px 60px rgba(0,0,0,.3)"}}>
         <button onClick={onClose} style={{position:"absolute",top:16,right:18,background:"none",border:"none",fontSize:"1.4rem",cursor:"pointer",color:"#888"}}>✕</button>
         {sent ? (
           <div style={{textAlign:"center",padding:"20px 0"}}>
@@ -87,44 +80,39 @@ function BookingModal({ onClose }) {
   );
 }
 
-// ── Navbar with hover dropdowns ─────────────────────────────
-function Navbar({ onSearch, onBook }) {
+// ── Navbar ──────────────────────────────────────────────────
+function Navbar({ onSearch, onBook, onOpenResource }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(null);
   const submit = (e) => { e.preventDefault(); onSearch(q); };
   return (
     <nav style={{background:"#fff",position:"sticky",top:0,zIndex:100,boxShadow:"0 1px 6px rgba(0,0,0,.08)"}}>
       <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"14px 40px",flexWrap:"wrap",gap:12}}>
-        <div onClick={() => scrollTo("home")} style={{display:"flex",alignItems:"center",gap:10,fontSize:"1.4rem",fontWeight:800,color:"#7c3aed",cursor:"pointer"}}>
+        <div onClick={() => { onOpenResource(null); scrollTo("home"); }} style={{display:"flex",alignItems:"center",gap:10,fontSize:"1.4rem",fontWeight:800,color:"#7c3aed",cursor:"pointer"}}>
           <div style={{width:38,height:38,background:"linear-gradient(135deg,#7c3aed,#06b6d4)",borderRadius:8,display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",fontWeight:900,fontSize:".9rem"}}>JD</div>
           JDScience
         </div>
         <form onSubmit={submit} style={{display:"flex",alignItems:"center",gap:8}}>
           <div style={{display:"flex",alignItems:"center",background:"#f3f4f6",borderRadius:8,padding:"8px 14px",gap:8,border:"1px solid #e5e7eb"}}>
             <span>🔍</span>
-            <input type="text" placeholder="Search subjects, topics..." value={q} onChange={e => setQ(e.target.value)}
-              style={{border:"none",background:"transparent",outline:"none",fontSize:".9rem",width:160,color:"#333"}} />
+            <input type="text" placeholder="Search subjects, topics..." value={q} onChange={e=>setQ(e.target.value)} style={{border:"none",background:"transparent",outline:"none",fontSize:".9rem",width:160,color:"#333"}} />
           </div>
           <button type="submit" style={{background:"#7c3aed",color:"#fff",border:"none",padding:"10px 16px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>Search</button>
           <button type="button" onClick={onBook} style={{background:"#06b6d4",color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>Book a Session</button>
         </form>
       </div>
-      {/* qualification bar */}
       <div style={{background:"#2dd4bf",display:"flex",justifyContent:"center",flexWrap:"wrap"}}>
         {navMenu.map((item,i) => (
-          <div key={item.label}
-            onMouseEnter={() => setOpen(item.options ? i : null)}
-            onMouseLeave={() => setOpen(null)}
-            style={{position:"relative"}}>
-            <button
-              onClick={() => item.id && scrollTo(item.id)}
-              style={{background: open===i ? "#1f2937" : "transparent",color:"#1f2937",border:"none",borderRight:"1px solid rgba(0,0,0,.1)",padding:"14px 22px",fontWeight:700,fontSize:".85rem",letterSpacing:".5px",cursor:"pointer",color: open===i ? "#fff":"#1f2937"}}>
+          <div key={item.label} onMouseEnter={() => setOpen(item.options?i:null)} onMouseLeave={() => setOpen(null)} style={{position:"relative"}}>
+            <button onClick={() => item.id && scrollTo(item.id)}
+              style={{background: open===i?"#1f2937":"transparent",border:"none",borderRight:"1px solid rgba(0,0,0,.1)",padding:"14px 22px",fontWeight:700,fontSize:".85rem",letterSpacing:".5px",cursor:"pointer",color: open===i?"#fff":"#1f2937"}}>
               {item.label.toUpperCase()}{item.options ? " ▾" : ""}
             </button>
             {item.options && open===i && (
               <div style={{position:"absolute",top:"100%",left:0,background:"#1f2937",minWidth:200,boxShadow:"0 10px 30px rgba(0,0,0,.25)",zIndex:200}}>
                 {item.options.map(opt => (
-                  <a key={opt} onClick={() => scrollTo("resources")}
+                  <a key={opt}
+                    onClick={() => item.resource ? onOpenResource(opt) : scrollTo("resources")}
                     style={{display:"block",padding:"12px 20px",color:"#e5e7eb",fontSize:".88rem",textDecoration:"none",cursor:"pointer",borderBottom:"1px solid rgba(255,255,255,.06)"}}
                     onMouseEnter={e => e.currentTarget.style.background="#374151"}
                     onMouseLeave={e => e.currentTarget.style.background="transparent"}>
@@ -140,45 +128,135 @@ function Navbar({ onSearch, onBook }) {
   );
 }
 
+// ── Resource Browser (Revision Notes / Past Questions) ──────
+// Navigation:  type → choose subject → choose exam board → (notes also: topic) → file list
+function ResourceBrowser({ type, files, setFiles, onClose }) {
+  const isNotes = type === "Revision Notes";
+  const accent = isNotes ? "#0284c7" : "#7c3aed";
+  const icon = isNotes ? "📚" : "📝";
+
+  const [subject, setSubject] = useState(null);
+  const [board, setBoard] = useState(null);
+  const [topic, setTopic] = useState(null);
+  const inputRef = useRef(null);
+
+  // storage key: notes use subject_board_topic; past questions use subject_board
+  const slot = isNotes ? `notes_${subject}_${board}_${topic}` : `past_${subject}_${board}`;
+  const current = files[slot] || [];
+
+  const upload = (e) => {
+    const added = Array.from(e.target.files).map(f => ({ name:f.name, size:(f.size/1024).toFixed(1)+" KB", url:URL.createObjectURL(f) }));
+    setFiles(prev => ({ ...prev, [slot]:[...(prev[slot]||[]), ...added] }));
+    e.target.value = "";
+  };
+  const remove = (i) => setFiles(prev => ({ ...prev, [slot]: prev[slot].filter((_,x)=>x!==i) }));
+
+  const Crumb = () => (
+    <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap",fontSize:".9rem",marginBottom:24}}>
+      <span onClick={() => { setSubject(null); setBoard(null); setTopic(null); }} style={{cursor:"pointer",color:accent,fontWeight:700}}>{icon} {type}</span>
+      {subject && <><span style={{color:"#bbb"}}>/</span><span onClick={() => { setBoard(null); setTopic(null); }} style={{cursor:"pointer",color:accent,fontWeight:600}}>{subject}</span></>}
+      {board && <><span style={{color:"#bbb"}}>/</span><span onClick={() => setTopic(null)} style={{cursor:"pointer",color:accent,fontWeight:600}}>{board}</span></>}
+      {topic && <><span style={{color:"#bbb"}}>/</span><span style={{color:"#555",fontWeight:600}}>{topic}</span></>}
+    </div>
+  );
+
+  const Tile = ({ label, sub, onClick }) => (
+    <button onClick={onClick} style={{textAlign:"left",background:"#fff",border:"1px solid #e5e7eb",borderRadius:14,padding:"22px 24px",cursor:"pointer",boxShadow:"0 2px 10px rgba(0,0,0,.04)"}}>
+      <div style={{fontSize:"1.1rem",fontWeight:800,color:accent}}>{label}</div>
+      {sub && <div style={{color:"#888",fontSize:".82rem",marginTop:4}}>{sub}</div>}
+    </button>
+  );
+
+  const grid = { display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))", gap:16 };
+  const showFiles = isNotes ? (subject && board && topic) : (subject && board);
+
+  return (
+    <section style={{minHeight:"70vh",padding:"50px 40px",background:"#f9fafb"}}>
+      <div style={{maxWidth:980,margin:"0 auto"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+          <h2 style={{fontSize:"2rem",fontWeight:800}}>{icon} {type}</h2>
+          <button onClick={onClose} style={{background:"#fff",border:"1px solid #e5e7eb",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontWeight:600}}>← Back to Home</button>
+        </div>
+        <p style={{color:"#666",marginBottom:24}}>{isNotes ? "Browse revision notes by subject, exam board and topic." : "Browse past questions by subject and exam board."}</p>
+        <Crumb />
+
+        {/* Step 1: subject */}
+        {!subject && (
+          <div style={grid}>
+            {RES_SUBJECTS.map(s => <Tile key={s} label={s} sub="Select subject" onClick={() => setSubject(s)} />)}
+          </div>
+        )}
+
+        {/* Step 2: exam board */}
+        {subject && !board && (
+          <div style={grid}>
+            {EXAM_BOARDS.map(b => <Tile key={b} label={b} sub="Select exam board" onClick={() => setBoard(b)} />)}
+          </div>
+        )}
+
+        {/* Step 3 (notes only): topic */}
+        {isNotes && subject && board && !topic && (
+          <div style={grid}>
+            {topicsFor(subject).map(t => <Tile key={t} label={t} sub="View notes" onClick={() => setTopic(t)} />)}
+          </div>
+        )}
+
+        {/* File list + upload */}
+        {showFiles && (
+          <div style={{background:"#fff",borderRadius:16,border:"1px solid #e5e7eb",padding:28}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:18,flexWrap:"wrap",gap:12}}>
+              <h3 style={{fontSize:"1.1rem",fontWeight:800,color:accent}}>{icon} {subject} · {board}{topic?` · ${topic}`:""}</h3>
+              <button onClick={() => inputRef.current.click()} style={{background:accent,color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>＋ Upload</button>
+              <input ref={inputRef} type="file" multiple onChange={upload} style={{display:"none"}} />
+            </div>
+            {current.length===0 ? (
+              <div style={{textAlign:"center",padding:"36px 0",color:"#999",border:"2px dashed #e5e7eb",borderRadius:12}}>
+                <div style={{fontSize:"2.2rem",marginBottom:8}}>{icon}</div>
+                <p style={{fontWeight:600}}>Nothing uploaded here yet.</p>
+                <p style={{fontSize:".85rem",marginTop:4}}>Click "Upload" to add files (PDF, DOCX, images).</p>
+              </div>
+            ) : (
+              <div style={{display:"flex",flexDirection:"column",gap:10}}>
+                {current.map((f,i) => (
+                  <div key={i} style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:"#f9fafb",borderRadius:10,padding:"12px 16px",border:"1px solid #eee"}}>
+                    <div style={{display:"flex",alignItems:"center",gap:12}}>
+                      <span style={{fontSize:"1.3rem"}}>📄</span>
+                      <div><p style={{fontWeight:600,fontSize:".92rem"}}>{f.name}</p><p style={{color:"#999",fontSize:".78rem"}}>{f.size}</p></div>
+                    </div>
+                    <div style={{display:"flex",gap:10,alignItems:"center"}}>
+                      <a href={f.url} target="_blank" rel="noreferrer" style={{color:accent,fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>View</a>
+                      <a href={f.url} download={f.name} style={{color:"#06b6d4",fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>Download</a>
+                      <button onClick={() => remove(i)} style={{background:"none",border:"none",color:"#ef4444",cursor:"pointer",fontWeight:700}}>✕</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 // ── Search Results ──────────────────────────────────────────
 function SearchResults({ query, onClose }) {
-  const results = subjects.filter(s =>
-    s.name.toLowerCase().includes(query.toLowerCase()) ||
-    s.desc.toLowerCase().includes(query.toLowerCase()) ||
-    s.topics.some(t => t.toLowerCase().includes(query.toLowerCase()))
-  );
+  const results = subjects.filter(s => s.name.toLowerCase().includes(query.toLowerCase()) || s.desc.toLowerCase().includes(query.toLowerCase()) || s.topics.some(t=>t.toLowerCase().includes(query.toLowerCase())));
   return (
     <div style={{background:"#f9fafb",padding:"40px",borderBottom:"1px solid #e5e7eb"}}>
       <div style={{maxWidth:900,margin:"0 auto"}}>
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:24}}>
-          <div>
-            <h2 style={{fontSize:"1.5rem",fontWeight:800}}>Results for "<span style={{color:"#7c3aed"}}>{query}</span>"</h2>
-            <p style={{color:"#666",fontSize:".9rem",marginTop:4}}>{results.length} result{results.length !== 1 ? "s" : ""} found</p>
-          </div>
+          <div><h2 style={{fontSize:"1.5rem",fontWeight:800}}>Results for "<span style={{color:"#7c3aed"}}>{query}</span>"</h2><p style={{color:"#666",fontSize:".9rem",marginTop:4}}>{results.length} result{results.length!==1?"s":""} found</p></div>
           <button onClick={onClose} style={{background:"#fff",border:"1px solid #e5e7eb",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontWeight:600}}>✕ Clear</button>
         </div>
-        {results.length === 0 ? (
-          <div style={{textAlign:"center",padding:40,color:"#888"}}>
-            <div style={{fontSize:"3rem",marginBottom:12}}>🔍</div>
-            <p style={{fontSize:"1.1rem",fontWeight:600}}>No results for "{query}"</p>
-            <p style={{fontSize:".9rem",marginTop:8}}>Try: Physics, Chemistry, Biology, Maths, A-Level, T-Levels</p>
-          </div>
+        {results.length===0 ? (
+          <div style={{textAlign:"center",padding:40,color:"#888"}}><div style={{fontSize:"3rem",marginBottom:12}}>🔍</div><p style={{fontSize:"1.1rem",fontWeight:600}}>No results for "{query}"</p></div>
         ) : (
           <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20}}>
             {results.map(s => (
               <div key={s.name} style={{background:"#fff",borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb"}}>
-                <div style={{height:80,background:s.bg,display:"flex",alignItems:"center",padding:"0 20px",gap:12}}>
-                  <span style={{fontSize:"1.8rem"}}>{s.icon}</span>
-                  <span style={{color:"#fff",fontWeight:700,fontSize:"1.1rem"}}>{s.name}</span>
-                </div>
-                <div style={{padding:"16px 20px"}}>
-                  <p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p>
-                  <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-                    {s.topics.map(t => (
-                      <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>
-                    ))}
-                  </div>
-                </div>
+                <div style={{height:80,background:s.bg,display:"flex",alignItems:"center",padding:"0 20px",gap:12}}><span style={{fontSize:"1.8rem"}}>{s.icon}</span><span style={{color:"#fff",fontWeight:700,fontSize:"1.1rem"}}>{s.name}</span></div>
+                <div style={{padding:"16px 20px"}}><p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p><div style={{display:"flex",flexWrap:"wrap",gap:6}}>{s.topics.map(t => <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>)}</div></div>
               </div>
             ))}
           </div>
@@ -188,77 +266,47 @@ function SearchResults({ query, onClose }) {
   );
 }
 
-// ── Hero with diverse students image ────────────────────────
+// ── Hero ────────────────────────────────────────────────────
 function Hero({ onBook }) {
   return (
     <section id="home" style={{background:"linear-gradient(135deg,#1a0533 0%,#2d1060 50%,#0f2557 100%)",padding:"60px 40px"}}>
       <div style={{maxWidth:1150,margin:"0 auto",display:"grid",gridTemplateColumns:"1.1fr 1fr",gap:50,alignItems:"center"}}>
         <div>
-          <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,255,255,.1)",color:"#fff",padding:"8px 16px",borderRadius:50,fontSize:".85rem",marginBottom:24,border:"1px solid rgba(255,255,255,.15)"}}>
-            🏆 Expert Science & Maths Tutoring
-          </div>
-          <h1 style={{fontSize:"3.2rem",fontWeight:900,color:"#fff",lineHeight:1.1,marginBottom:22}}>
-            Learn <span style={{color:"#a78bfa"}}>Smarter</span>.<br/>
-            Revise <span style={{color:"#2dd4bf"}}>Better</span>.<br/>
-            Achieve <span style={{color:"#fbbf24"}}>More</span>.
-          </h1>
-          <p style={{color:"rgba(255,255,255,.8)",fontSize:"1.05rem",lineHeight:1.7,marginBottom:30}}>
-            Personalised tutoring for 11+, GCSE, A-Level, T-Levels and BTEC. Supporting students of every background to reach their full potential.
-          </p>
+          <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,255,255,.1)",color:"#fff",padding:"8px 16px",borderRadius:50,fontSize:".85rem",marginBottom:24,border:"1px solid rgba(255,255,255,.15)"}}>🏆 Expert Science & Maths Tutoring</div>
+          <h1 style={{fontSize:"3.2rem",fontWeight:900,color:"#fff",lineHeight:1.1,marginBottom:22}}>Learn <span style={{color:"#a78bfa"}}>Smarter</span>.<br/>Revise <span style={{color:"#2dd4bf"}}>Better</span>.<br/>Achieve <span style={{color:"#fbbf24"}}>More</span>.</h1>
+          <p style={{color:"rgba(255,255,255,.8)",fontSize:"1.05rem",lineHeight:1.7,marginBottom:30}}>Personalised tutoring for 11+, GCSE, A-Level, T-Levels and BTEC. Supporting students of every background to reach their full potential.</p>
           <div style={{display:"flex",gap:14,flexWrap:"wrap",marginBottom:30}}>
             <button onClick={() => scrollTo("subjects")} style={{background:"rgba(255,255,255,.15)",color:"#fff",padding:"14px 26px",borderRadius:10,border:"1px solid rgba(255,255,255,.25)",fontWeight:600,fontSize:"1rem",cursor:"pointer"}}>Explore Subjects</button>
             <button onClick={onBook} style={{background:"#fff",color:"#7c3aed",padding:"14px 26px",borderRadius:10,border:"none",fontWeight:700,fontSize:"1rem",cursor:"pointer"}}>Book a Free Consultation</button>
           </div>
-          <div style={{display:"flex",alignItems:"center",gap:14,flexWrap:"wrap"}}>
-            <span style={{color:"rgba(255,255,255,.6)",fontSize:".85rem"}}>Exam Boards:</span>
-            {["AQA","Edexcel","OCR","Eduqas","iGCSE"].map(b => (
-              <span key={b} style={{color:"rgba(255,255,255,.85)",fontSize:".9rem",fontWeight:600}}>{b}</span>
-            ))}
-          </div>
+          <div style={{display:"flex",alignItems:"center",gap:14,flexWrap:"wrap"}}><span style={{color:"rgba(255,255,255,.6)",fontSize:".85rem"}}>Exam Boards:</span>{["AQA","Edexcel","OCR","Eduqas","iGCSE"].map(b => <span key={b} style={{color:"rgba(255,255,255,.85)",fontSize:".9rem",fontWeight:600}}>{b}</span>)}</div>
         </div>
-        <div style={{borderRadius:20,overflow:"hidden",boxShadow:"0 20px 60px rgba(0,0,0,.4)"}}>
-          <img src={HERO_IMG} alt="Diverse students learning together" style={{width:"100%",display:"block"}} />
-        </div>
+        <div style={{borderRadius:20,overflow:"hidden",boxShadow:"0 20px 60px rgba(0,0,0,.4)"}}><img src={HERO_IMG} alt="Diverse students learning together" style={{width:"100%",display:"block"}} /></div>
       </div>
     </section>
   );
 }
 
-// ── Compact Video Section (embed YouTube or upload own) ─────
+// ── Video ───────────────────────────────────────────────────
 function VideoSection() {
   const [embedUrl, setEmbedUrl] = useState("https://www.youtube.com/embed/dQw4w9WgXcQ");
   const [draft, setDraft] = useState("");
   const [ownVideo, setOwnVideo] = useState(null);
   const fileRef = useRef(null);
-
-  const toEmbed = (url) => {
-    const m = url.match(/(?:youtu\.be\/|v=)([\w-]{11})/);
-    return m ? `https://www.youtube.com/embed/${m[1]}` : url;
-  };
-  const applyUrl = () => { if (draft) { setOwnVideo(null); setEmbedUrl(toEmbed(draft)); } };
-  const uploadOwn = (e) => { const f = e.target.files[0]; if (f) setOwnVideo(URL.createObjectURL(f)); };
-
+  const toEmbed = (url) => { const m=url.match(/(?:youtu\.be\/|v=)([\w-]{11})/); return m?`https://www.youtube.com/embed/${m[1]}`:url; };
+  const applyUrl = () => { if(draft){ setOwnVideo(null); setEmbedUrl(toEmbed(draft)); } };
+  const uploadOwn = (e) => { const f=e.target.files[0]; if(f) setOwnVideo(URL.createObjectURL(f)); };
   return (
     <section id="video" style={{padding:"70px 40px",background:"#0f0820"}}>
-      <div style={{textAlign:"center",marginBottom:32}}>
-        <h2 style={{fontSize:"2rem",fontWeight:800,color:"#fff"}}>Watch Our <span style={{color:"#a78bfa"}}>Video</span></h2>
-        <p style={{color:"rgba(255,255,255,.7)",marginTop:8,fontSize:".95rem"}}>Embed a YouTube video or upload your own.</p>
-      </div>
+      <div style={{textAlign:"center",marginBottom:32}}><h2 style={{fontSize:"2rem",fontWeight:800,color:"#fff"}}>Watch Our <span style={{color:"#a78bfa"}}>Video</span></h2><p style={{color:"rgba(255,255,255,.7)",marginTop:8,fontSize:".95rem"}}>Embed a YouTube video or upload your own.</p></div>
       <div style={{maxWidth:560,margin:"0 auto"}}>
         <div style={{borderRadius:14,overflow:"hidden",boxShadow:"0 16px 40px rgba(0,0,0,.45)",background:"#000"}}>
           <div style={{position:"relative",paddingTop:"56.25%"}}>
-            {ownVideo ? (
-              <video src={ownVideo} controls style={{position:"absolute",inset:0,width:"100%",height:"100%"}} />
-            ) : (
-              <iframe src={embedUrl} title="JDScience Video" allowFullScreen
-                style={{position:"absolute",inset:0,width:"100%",height:"100%",border:"none"}}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />
-            )}
+            {ownVideo ? <video src={ownVideo} controls style={{position:"absolute",inset:0,width:"100%",height:"100%"}} /> : <iframe src={embedUrl} title="JDScience Video" allowFullScreen style={{position:"absolute",inset:0,width:"100%",height:"100%",border:"none"}} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" />}
           </div>
         </div>
         <div style={{display:"flex",gap:8,marginTop:16,flexWrap:"wrap"}}>
-          <input value={draft} onChange={e => setDraft(e.target.value)} placeholder="Paste a YouTube link..."
-            style={{...inputStyle,flex:1,minWidth:200}} />
+          <input value={draft} onChange={e=>setDraft(e.target.value)} placeholder="Paste a YouTube link..." style={{...inputStyle,flex:1,minWidth:200}} />
           <button onClick={applyUrl} style={{background:"#7c3aed",color:"#fff",border:"none",padding:"0 20px",borderRadius:8,fontWeight:600,cursor:"pointer"}}>Embed</button>
           <button onClick={() => fileRef.current.click()} style={{background:"#06b6d4",color:"#fff",border:"none",padding:"12px 18px",borderRadius:8,fontWeight:600,cursor:"pointer"}}>Upload</button>
           <input ref={fileRef} type="file" accept="video/*" onChange={uploadOwn} style={{display:"none"}} />
@@ -269,126 +317,20 @@ function VideoSection() {
 }
 
 // ── Subjects ────────────────────────────────────────────────
-function Subjects() {
+function Subjects({ onOpenResource }) {
   return (
     <section id="subjects" style={{padding:"80px 40px"}}>
-      <div style={{textAlign:"center",marginBottom:48}}>
-        <h2 style={{fontSize:"2.2rem",fontWeight:800}}>Subjects We <span style={{color:"#7c3aed"}}>Offer</span></h2>
-        <p style={{color:"#666",fontSize:"1rem",marginTop:10,maxWidth:520,margin:"10px auto 0"}}>Expert tutoring across core science and maths subjects, tailored to your curriculum and learning style.</p>
-      </div>
+      <div style={{textAlign:"center",marginBottom:48}}><h2 style={{fontSize:"2.2rem",fontWeight:800}}>Subjects We <span style={{color:"#7c3aed"}}>Offer</span></h2><p style={{color:"#666",fontSize:"1rem",marginTop:10,maxWidth:520,margin:"10px auto 0"}}>Expert tutoring across core science and maths subjects, tailored to your curriculum.</p></div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:24,maxWidth:900,margin:"0 auto"}}>
         {subjects.map(s => (
-          <div key={s.name} style={{borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb",cursor:"pointer"}}>
+          <div key={s.name} style={{borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb"}}>
             <div style={{height:200,background:s.bg,position:"relative",display:"flex",alignItems:"flex-end",padding:14}}>
               <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"4rem",opacity:.4}}>{s.icon}</div>
-              <div style={{display:"flex",alignItems:"center",gap:8,color:"#fff",fontWeight:700,fontSize:"1.1rem",position:"relative",zIndex:1}}>
-                <div style={{width:36,height:36,background:"rgba(255,255,255,.2)",borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1rem"}}>{s.icon}</div>
-                {s.name}
-              </div>
+              <div style={{display:"flex",alignItems:"center",gap:8,color:"#fff",fontWeight:700,fontSize:"1.1rem",position:"relative",zIndex:1}}><div style={{width:36,height:36,background:"rgba(255,255,255,.2)",borderRadius:"50%",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1rem"}}>{s.icon}</div>{s.name}</div>
             </div>
-            <div style={{padding:"18px 20px 22px"}}>
-              <p style={{color:"#555",fontSize:".93rem",lineHeight:1.6,marginBottom:14}}>{s.desc}</p>
-              <a onClick={() => scrollTo("resources")} style={{color:"#7c3aed",fontWeight:600,fontSize:".9rem",textDecoration:"none",cursor:"pointer"}}>View resources →</a>
-            </div>
+            <div style={{padding:"18px 20px 22px"}}><p style={{color:"#555",fontSize:".93rem",lineHeight:1.6,marginBottom:14}}>{s.desc}</p><a onClick={() => onOpenResource("Revision Notes")} style={{color:"#7c3aed",fontWeight:600,fontSize:".9rem",textDecoration:"none",cursor:"pointer"}}>View resources →</a></div>
           </div>
         ))}
-      </div>
-    </section>
-  );
-}
-
-// ── Professional Resources Hub ──────────────────────────────
-const RESOURCE_CATS = [
-  { key:"past",     label:"Past Questions",     icon:"📝", color:"#7c3aed" },
-  { key:"notes",    label:"Revision Notes",     icon:"📚", color:"#0284c7" },
-  { key:"schemes",  label:"Marking Schemes",    icon:"✅", color:"#059669" },
-  { key:"reports",  label:"Examiner's Reports", icon:"📊", color:"#d97706" }
-];
-const RES_SUBJECTS = ["Physics","Chemistry","Biology","Maths"];
-
-function Resources() {
-  const [cat, setCat] = useState("past");
-  const [subject, setSubject] = useState("Physics");
-  const [files, setFiles] = useState({});   // key: `${cat}_${subject}` -> [files]
-  const inputRef = useRef(null);
-
-  const slot = `${cat}_${subject}`;
-  const current = files[slot] || [];
-
-  const handleUpload = (e) => {
-    const added = Array.from(e.target.files).map(f => ({
-      name: f.name, size: (f.size/1024).toFixed(1)+" KB", url: URL.createObjectURL(f)
-    }));
-    setFiles(prev => ({ ...prev, [slot]: [...(prev[slot]||[]), ...added] }));
-    e.target.value = "";
-  };
-  const remove = (i) => setFiles(prev => ({ ...prev, [slot]: prev[slot].filter((_,x)=>x!==i) }));
-
-  const activeCat = RESOURCE_CATS.find(c => c.key===cat);
-
-  return (
-    <section id="resources" style={{padding:"80px 40px",background:"#f9fafb"}}>
-      <div style={{textAlign:"center",marginBottom:40}}>
-        <h2 style={{fontSize:"2.2rem",fontWeight:800}}>Learning <span style={{color:"#7c3aed"}}>Resources</span></h2>
-        <p style={{color:"#666",marginTop:10}}>Past questions, revision notes, marking schemes & examiner's reports — organised by subject.</p>
-      </div>
-
-      <div style={{maxWidth:920,margin:"0 auto"}}>
-        {/* category tabs */}
-        <div style={{display:"flex",gap:12,flexWrap:"wrap",justifyContent:"center",marginBottom:24}}>
-          {RESOURCE_CATS.map(c => (
-            <button key={c.key} onClick={() => setCat(c.key)}
-              style={{display:"flex",alignItems:"center",gap:8,padding:"12px 20px",borderRadius:12,border:cat===c.key?`2px solid ${c.color}`:"1px solid #e5e7eb",background:cat===c.key?"#fff":"#fff",color:cat===c.key?c.color:"#555",fontWeight:700,fontSize:".9rem",cursor:"pointer",boxShadow:cat===c.key?"0 4px 14px rgba(0,0,0,.08)":"none"}}>
-              <span style={{fontSize:"1.1rem"}}>{c.icon}</span>{c.label}
-            </button>
-          ))}
-        </div>
-
-        {/* subject filter */}
-        <div style={{display:"flex",gap:8,flexWrap:"wrap",justifyContent:"center",marginBottom:24}}>
-          {RES_SUBJECTS.map(s => (
-            <button key={s} onClick={() => setSubject(s)}
-              style={{padding:"8px 18px",borderRadius:20,border:"1px solid #e5e7eb",background:subject===s?activeCat.color:"#fff",color:subject===s?"#fff":"#555",fontWeight:600,fontSize:".85rem",cursor:"pointer"}}>
-              {s}
-            </button>
-          ))}
-        </div>
-
-        {/* panel */}
-        <div style={{background:"#fff",borderRadius:16,border:"1px solid #e5e7eb",padding:28}}>
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:18,flexWrap:"wrap",gap:12}}>
-            <h3 style={{fontSize:"1.15rem",fontWeight:800,color:activeCat.color}}>{activeCat.icon} {activeCat.label} — {subject}</h3>
-            <button onClick={() => inputRef.current.click()} style={{background:activeCat.color,color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>＋ Upload</button>
-            <input ref={inputRef} type="file" multiple onChange={handleUpload} style={{display:"none"}} />
-          </div>
-
-          {current.length === 0 ? (
-            <div style={{textAlign:"center",padding:"36px 0",color:"#999",border:"2px dashed #e5e7eb",borderRadius:12}}>
-              <div style={{fontSize:"2.2rem",marginBottom:8}}>{activeCat.icon}</div>
-              <p style={{fontWeight:600}}>No {activeCat.label.toLowerCase()} for {subject} yet.</p>
-              <p style={{fontSize:".85rem",marginTop:4}}>Click "Upload" to add files (PDF, DOCX, images).</p>
-            </div>
-          ) : (
-            <div style={{display:"flex",flexDirection:"column",gap:10}}>
-              {current.map((f,i) => (
-                <div key={i} style={{display:"flex",alignItems:"center",justifyContent:"space-between",background:"#f9fafb",borderRadius:10,padding:"12px 16px",border:"1px solid #eee"}}>
-                  <div style={{display:"flex",alignItems:"center",gap:12}}>
-                    <span style={{fontSize:"1.3rem"}}>📄</span>
-                    <div>
-                      <p style={{fontWeight:600,fontSize:".92rem"}}>{f.name}</p>
-                      <p style={{color:"#999",fontSize:".78rem"}}>{f.size}</p>
-                    </div>
-                  </div>
-                  <div style={{display:"flex",gap:10,alignItems:"center"}}>
-                    <a href={f.url} target="_blank" rel="noreferrer" style={{color:activeCat.color,fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>View</a>
-                    <a href={f.url} download={f.name} style={{color:"#06b6d4",fontWeight:600,fontSize:".82rem",textDecoration:"none"}}>Download</a>
-                    <button onClick={() => remove(i)} style={{background:"none",border:"none",color:"#ef4444",cursor:"pointer",fontWeight:700}}>✕</button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
     </section>
   );
@@ -398,17 +340,10 @@ function Resources() {
 function WhyUs() {
   return (
     <section id="why" style={{background:"#faf5ff",padding:"80px 40px"}}>
-      <div style={{textAlign:"center",marginBottom:48}}>
-        <h2 style={{fontSize:"2.2rem",fontWeight:800}}>Why Choose <span style={{color:"#7c3aed"}}>JDScience</span>?</h2>
-        <p style={{color:"#666",marginTop:10}}>We go beyond textbooks to deliver real understanding and lasting results.</p>
-      </div>
+      <div style={{textAlign:"center",marginBottom:48}}><h2 style={{fontSize:"2.2rem",fontWeight:800}}>Why Choose <span style={{color:"#7c3aed"}}>JDScience</span>?</h2><p style={{color:"#666",marginTop:10}}>We go beyond textbooks to deliver real understanding and lasting results.</p></div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:28,maxWidth:1000,margin:"0 auto"}}>
         {whyCards.map(c => (
-          <div key={c.title} style={{background:"#fff",borderRadius:16,padding:28,border:"1px solid #e5e7eb"}}>
-            <div style={{width:48,height:48,background:"#f3e8ff",borderRadius:12,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.4rem",marginBottom:16}}>{c.icon}</div>
-            <h3 style={{fontSize:"1.05rem",fontWeight:700,marginBottom:8}}>{c.title}</h3>
-            <p style={{color:"#666",fontSize:".9rem",lineHeight:1.6}}>{c.desc}</p>
-          </div>
+          <div key={c.title} style={{background:"#fff",borderRadius:16,padding:28,border:"1px solid #e5e7eb"}}><div style={{width:48,height:48,background:"#f3e8ff",borderRadius:12,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.4rem",marginBottom:16}}>{c.icon}</div><h3 style={{fontSize:"1.05rem",fontWeight:700,marginBottom:8}}>{c.title}</h3><p style={{color:"#666",fontSize:".9rem",lineHeight:1.6}}>{c.desc}</p></div>
         ))}
       </div>
     </section>
@@ -428,45 +363,22 @@ function Contact() {
   };
   return (
     <section id="contact" style={{padding:"80px 40px",background:"#fff"}}>
-      <div style={{textAlign:"center",marginBottom:48}}>
-        <h2 style={{fontSize:"2.2rem",fontWeight:800}}>Get In <span style={{color:"#7c3aed"}}>Touch</span></h2>
-        <p style={{color:"#666",marginTop:10}}>Send us your request and we'll respond as soon as possible.</p>
-      </div>
+      <div style={{textAlign:"center",marginBottom:48}}><h2 style={{fontSize:"2.2rem",fontWeight:800}}>Get In <span style={{color:"#7c3aed"}}>Touch</span></h2><p style={{color:"#666",marginTop:10}}>Send us your request and we'll respond as soon as possible.</p></div>
       <div style={{maxWidth:1000,margin:"0 auto",display:"grid",gridTemplateColumns:"1fr 1.3fr",gap:40,alignItems:"start"}}>
         <div style={{display:"flex",flexDirection:"column",gap:20}}>
-          <div style={{display:"flex",alignItems:"center",gap:14,background:"#faf5ff",padding:"18px 20px",borderRadius:12}}>
-            <div style={{width:44,height:44,background:"#7c3aed",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.2rem"}}>✉️</div>
-            <div>
-              <p style={{fontSize:".8rem",color:"#888",fontWeight:600}}>EMAIL</p>
-              <a href={`mailto:${CONTACT.email}`} style={{color:"#7c3aed",fontWeight:700,textDecoration:"none"}}>{CONTACT.email}</a>
-            </div>
-          </div>
-          <div style={{display:"flex",alignItems:"center",gap:14,background:"#faf5ff",padding:"18px 20px",borderRadius:12}}>
-            <div style={{width:44,height:44,background:"#06b6d4",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.2rem"}}>📞</div>
-            <div>
-              <p style={{fontSize:".8rem",color:"#888",fontWeight:600}}>PHONE</p>
-              <a href={`tel:${CONTACT.phone}`} style={{color:"#06b6d4",fontWeight:700,textDecoration:"none"}}>{CONTACT.phone}</a>
-            </div>
-          </div>
+          <div style={{display:"flex",alignItems:"center",gap:14,background:"#faf5ff",padding:"18px 20px",borderRadius:12}}><div style={{width:44,height:44,background:"#7c3aed",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.2rem"}}>✉️</div><div><p style={{fontSize:".8rem",color:"#888",fontWeight:600}}>EMAIL</p><a href={`mailto:${CONTACT.email}`} style={{color:"#7c3aed",fontWeight:700,textDecoration:"none"}}>{CONTACT.email}</a></div></div>
+          <div style={{display:"flex",alignItems:"center",gap:14,background:"#faf5ff",padding:"18px 20px",borderRadius:12}}><div style={{width:44,height:44,background:"#06b6d4",borderRadius:10,display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.2rem"}}>📞</div><div><p style={{fontSize:".8rem",color:"#888",fontWeight:600}}>PHONE</p><a href={`tel:${CONTACT.phone}`} style={{color:"#06b6d4",fontWeight:700,textDecoration:"none"}}>{CONTACT.phone}</a></div></div>
           <p style={{color:"#666",fontSize:".9rem",lineHeight:1.6}}>Prefer to talk? Call or email us directly, or fill in the form and we'll get back to you.</p>
         </div>
         <div style={{background:"#fff",borderRadius:16,padding:32,border:"1px solid #e5e7eb",boxShadow:"0 8px 30px rgba(0,0,0,.06)"}}>
           {sent ? (
-            <div style={{textAlign:"center",padding:"30px 0"}}>
-              <div style={{fontSize:"3rem",marginBottom:12}}>✅</div>
-              <h3 style={{fontSize:"1.3rem",fontWeight:800,marginBottom:8}}>Message Ready!</h3>
-              <p style={{color:"#666"}}>Your email client should have opened with your request. We'll reply soon.</p>
-              <button onClick={() => setSent(false)} style={{marginTop:20,background:"#7c3aed",color:"#fff",border:"none",padding:"12px 28px",borderRadius:8,fontWeight:600,cursor:"pointer"}}>Send Another</button>
-            </div>
+            <div style={{textAlign:"center",padding:"30px 0"}}><div style={{fontSize:"3rem",marginBottom:12}}>✅</div><h3 style={{fontSize:"1.3rem",fontWeight:800,marginBottom:8}}>Message Ready!</h3><p style={{color:"#666"}}>Your email client should have opened. We'll reply soon.</p><button onClick={() => setSent(false)} style={{marginTop:20,background:"#7c3aed",color:"#fff",border:"none",padding:"12px 28px",borderRadius:8,fontWeight:600,cursor:"pointer"}}>Send Another</button></div>
           ) : (
             <form onSubmit={submit} style={{display:"flex",flexDirection:"column",gap:14}}>
               <input required name="name" placeholder="Your name" value={form.name} onChange={change} style={inputStyle} />
               <input required type="email" name="email" placeholder="Your email" value={form.email} onChange={change} style={inputStyle} />
               <input name="phone" placeholder="Phone (optional)" value={form.phone} onChange={change} style={inputStyle} />
-              <select name="subject" value={form.subject} onChange={change} style={inputStyle}>
-                {subjects.map(s => <option key={s.name}>{s.name}</option>)}
-                <option>General Enquiry</option>
-              </select>
+              <select name="subject" value={form.subject} onChange={change} style={inputStyle}>{subjects.map(s => <option key={s.name}>{s.name}</option>)}<option>General Enquiry</option></select>
               <textarea required name="message" placeholder="Your request — tell us what you need help with..." value={form.message} onChange={change} rows={5} style={{...inputStyle,resize:"vertical"}} />
               <button type="submit" style={{background:"#7c3aed",color:"#fff",border:"none",padding:"14px",borderRadius:8,fontWeight:700,cursor:"pointer",fontSize:"1rem"}}>Send Request</button>
             </form>
@@ -477,26 +389,21 @@ function Contact() {
   );
 }
 
-// ── CTA ─────────────────────────────────────────────────────
+// ── CTA & Footer ────────────────────────────────────────────
 function CTA({ onBook }) {
   return (
     <section style={{background:"linear-gradient(135deg,#1a0533,#2d1060)",padding:"80px 40px",textAlign:"center"}}>
       <h2 style={{color:"#fff",fontSize:"2.2rem",fontWeight:800,marginBottom:16}}>Ready to Achieve More?</h2>
-      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",maxWidth:480,margin:"0 auto 28px"}}>Book your free consultation today and take the first step towards better grades and greater confidence.</p>
+      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",maxWidth:480,margin:"0 auto 28px"}}>Book your free consultation today and take the first step towards better grades.</p>
       <button onClick={onBook} style={{background:"#fff",color:"#7c3aed",border:"none",padding:"14px 32px",borderRadius:10,fontWeight:700,fontSize:"1rem",cursor:"pointer"}}>Book a Free Consultation</button>
     </section>
   );
 }
-
-// ── Footer ──────────────────────────────────────────────────
 function Footer() {
   return (
     <footer style={{padding:"32px 40px",display:"flex",justifyContent:"space-between",alignItems:"center",borderTop:"1px solid #e5e7eb",flexWrap:"wrap",gap:16}}>
       <div style={{fontWeight:800,color:"#7c3aed",fontSize:"1.1rem"}}>JDScience</div>
-      <div style={{display:"flex",gap:20,flexWrap:"wrap"}}>
-        <a href={`mailto:${CONTACT.email}`} style={{color:"#888",fontSize:".85rem",textDecoration:"none"}}>{CONTACT.email}</a>
-        <a href={`tel:${CONTACT.phone}`} style={{color:"#888",fontSize:".85rem",textDecoration:"none"}}>{CONTACT.phone}</a>
-      </div>
+      <div style={{display:"flex",gap:20,flexWrap:"wrap"}}><a href={`mailto:${CONTACT.email}`} style={{color:"#888",fontSize:".85rem",textDecoration:"none"}}>{CONTACT.email}</a><a href={`tel:${CONTACT.phone}`} style={{color:"#888",fontSize:".85rem",textDecoration:"none"}}>{CONTACT.phone}</a></div>
       <p style={{color:"#888",fontSize:".85rem"}}>© 2025 JDScience. All rights reserved.</p>
     </footer>
   );
@@ -506,16 +413,23 @@ function Footer() {
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showBooking, setShowBooking] = useState(false);
+  const [resourceView, setResourceView] = useState(null); // "Revision Notes" | "Past Questions" | null
+  const [files, setFiles] = useState({});
+
+  const openResource = (type) => { setSearchQuery(""); setResourceView(type); window.scrollTo({top:0,behavior:"smooth"}); };
+
   return (
     <div style={{fontFamily:"'Inter',sans-serif",color:"#111",background:"#fff"}}>
-      <Navbar onSearch={setSearchQuery} onBook={() => setShowBooking(true)} />
-      {searchQuery && <SearchResults query={searchQuery} onClose={() => setSearchQuery("")} />}
-      {!searchQuery && (
+      <Navbar onSearch={(q)=>{setResourceView(null);setSearchQuery(q);}} onBook={() => setShowBooking(true)} onOpenResource={openResource} />
+      {resourceView ? (
+        <ResourceBrowser type={resourceView} files={files} setFiles={setFiles} onClose={() => setResourceView(null)} />
+      ) : searchQuery ? (
+        <SearchResults query={searchQuery} onClose={() => setSearchQuery("")} />
+      ) : (
         <>
           <Hero onBook={() => setShowBooking(true)} />
           <VideoSection />
-          <Subjects />
-          <Resources />
+          <Subjects onOpenResource={openResource} />
           <WhyUs />
           <Contact />
           <CTA onBook={() => setShowBooking(true)} />
