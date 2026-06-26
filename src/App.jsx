@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const subjects = [
@@ -28,7 +29,7 @@ function Navbar({ onSearch }) {
         JDScience
       </div>
       <ul style={{display:"flex",gap:28,listStyle:"none",margin:0,padding:0}}>
-        {["Home","Subjects","About","Testimonials","Contact"].map(l => (
+        {["Home","Subjects","Resources","About","Testimonials","Contact"].map(l => (
           <li key={l}><a href="#" style={{color:"#444",fontWeight:500,fontSize:".95rem",textDecoration:"none"}}>{l}</a></li>
         ))}
       </ul>
@@ -113,7 +114,6 @@ function Hero() {
           Tailored sessions designed to boost confidence, understanding, and grades.
         </p>
         <div style={{display:"flex",gap:16,flexWrap:"wrap",marginBottom:40}}>
-          <button style={{background:"#7c3aed",color:"#fff",padding:"14px 28px",borderRadius:10,border:"none",fontWeight:700,fontSize:"1rem",cursor:"pointer"}}>Book a Free Consultation →</button>
           <button style={{background:"rgba(255,255,255,.15)",color:"#fff",padding:"14px 28px",borderRadius:10,border:"1px solid rgba(255,255,255,.25)",fontWeight:600,fontSize:"1rem",cursor:"pointer"}}>Explore Subjects</button>
         </div>
         <div style={{display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
@@ -127,25 +127,6 @@ function Hero() {
   );
 }
 
-function Stats() {
-  const items = [
-    {icon:"👥",num:"200+",label:"Students Tutored"},
-    {icon:"📚",num:"6",label:"Subjects Covered"},
-    {icon:"⭐",num:"98%",label:"Satisfaction Rate"},
-    {icon:"🕐",num:"5000+",label:"Hours of Tutoring"},
-  ];
-  return (
-    <section style={{padding:"48px 40px",display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20,borderBottom:"1px solid #f0f0f0"}}>
-      {items.map(s => (
-        <div key={s.label} style={{textAlign:"center"}}>
-          <div style={{fontSize:"1.6rem",marginBottom:8}}>{s.icon}</div>
-          <div style={{fontSize:"2.2rem",fontWeight:900}}>{s.num}</div>
-          <div style={{color:"#666",fontSize:".9rem",marginTop:4}}>{s.label}</div>
-        </div>
-      ))}
-    </section>
-  );
-}
 
 function Subjects() {
   return (
@@ -199,8 +180,7 @@ function CTA() {
   return (
     <section style={{background:"linear-gradient(135deg,#1a0533,#2d1060)",padding:"80px 40px",textAlign:"center"}}>
       <h2 style={{color:"#fff",fontSize:"2.2rem",fontWeight:800,marginBottom:16}}>Ready to Achieve More?</h2>
-      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",marginBottom:32,maxWidth:480,margin:"0 auto 32px"}}>Book your free consultation today and take the first step towards better grades and greater confidence.</p>
-      <button style={{background:"#7c3aed",color:"#fff",padding:"14px 28px",borderRadius:10,border:"none",fontWeight:700,fontSize:"1rem",cursor:"pointer"}}>Book a Free Consultation →</button>
+      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",maxWidth:480,margin:"0 auto 32px"}}>Book your free consultation today and take the first step towards better grades and greater confidence.</p>
     </section>
   );
 }
