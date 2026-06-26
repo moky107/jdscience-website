@@ -1,3 +1,5 @@
+import React from "react";
+
 const subjects = [
   {
     icon: "⚛️", name: "Physics",
@@ -201,3 +203,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
