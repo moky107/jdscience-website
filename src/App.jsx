@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 const subjects = [
@@ -127,7 +126,6 @@ function Hero() {
   );
 }
 
-
 function Subjects() {
   return (
     <section style={{padding:"80px 40px"}}>
@@ -180,7 +178,7 @@ function CTA() {
   return (
     <section style={{background:"linear-gradient(135deg,#1a0533,#2d1060)",padding:"80px 40px",textAlign:"center"}}>
       <h2 style={{color:"#fff",fontSize:"2.2rem",fontWeight:800,marginBottom:16}}>Ready to Achieve More?</h2>
-      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",maxWidth:480,margin:"0 auto 32px"}}>Book your free consultation today and take the first step towards better grades and greater confidence.</p>
+      <p style={{color:"rgba(255,255,255,.75)",fontSize:"1rem",maxWidth:480,margin:"0 auto"}}>Book your free consultation today and take the first step towards better grades and greater confidence.</p>
     </section>
   );
 }
@@ -204,7 +202,6 @@ function App() {
       {!searchQuery && (
         <>
           <Hero />
-          <Stats />
           <Subjects />
           <WhyUs />
           <CTA />
