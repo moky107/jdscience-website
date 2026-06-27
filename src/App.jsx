@@ -3,36 +3,61 @@ import { supabase } from "./supabaseClient";
 
 const HERO_IMG = "https://cdn.abacus.ai/images/a3ac8de7-2ad2-4a64-bab2-8fbe6d17616e.png";
 const CONTACT = { email:"info@jdscience.co.uk", phone:"07466142805" };
-// 🔑 Paste your Stripe Payment Link here (Stripe Dashboard → Payment Links). Used as fallback if a tutor has no own link.
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_xxxxxxxxxxxx";
 const inputStyle = { padding:"12px 14px", borderRadius:8, border:"1px solid #ddd", fontSize:".95rem", outline:"none", width:"100%", boxSizing:"border-box" };
 
-// Topics drawn from AQA GCSE specification, split by Paper 1 / Paper 2
+// ── Specifications: Subject → Exam Board → Paper → Topics ────
 const subjects = [
   { icon:"⚛️", name:"Physics", bg:"linear-gradient(135deg,#1a0533,#4c1d95,#2d1060)", desc:"Master the fundamental laws of the universe — from energy and electricity to forces, waves and magnetism.",
-    papers:{
-      "Paper 1":["Energy","Electricity","Particle Model of Matter","Atomic Structure"],
-      "Paper 2":["Forces","Waves","Magnetism & Electromagnetism"]
-    } },
+    boards:{
+      AQA:{ code:"8463", papers:{
+        "Paper 1":["Energy","Electricity","Particle Model of Matter","Atomic Structure"],
+        "Paper 2":["Forces","Waves","Magnetism and Electromagnetism","Space Physics (Separate Science only)"]
+      }},
+      Edexcel:{ code:"1PH0", papers:{
+        "Paper 1":["Key Concepts of Physics","Motion and Forces","Conservation of Energy","Waves","Light and the Electromagnetic Spectrum","Radioactivity","Energy Resources and Energy Transfers"],
+        "Paper 2":["Forces and their Effects","Electricity and Circuits","Magnetism and the Motor Effect","Electromagnetic Induction","Particle Model","Cosmology"]
+      }}
+    }},
   { icon:"⚗️", name:"Chemistry", bg:"linear-gradient(135deg,#064e3b,#065f46,#047857)", desc:"Explore matter and its transformations — atomic structure, bonding, energy changes and organic chemistry.",
-    papers:{
-      "Paper 1":["Atomic Structure & the Periodic Table","Bonding, Structure & the Properties of Matter","Quantitative Chemistry","Chemical Changes","Energy Changes"],
-      "Paper 2":["The Rate & Extent of Chemical Change","Organic Chemistry","Chemical Analysis","Chemistry of the Atmosphere","Using Resources"]
-    } },
+    boards:{
+      AQA:{ code:"8462", papers:{
+        "Paper 1":["Atomic Structure and the Periodic Table","Bonding, Structure and the Properties of Matter","Quantitative Chemistry","Chemical Changes","Energy Changes"],
+        "Paper 2":["The Rate and Extent of Chemical Change","Organic Chemistry","Chemical Analysis","Chemistry of the Atmosphere","Using Resources"]
+      }},
+      Edexcel:{ code:"1CH0", papers:{
+        "Paper 1":["Key Concepts in Chemistry","States of Matter and Mixtures","Chemical Changes","Extracting Metals and Equilibria","Separate Chemistry 1"],
+        "Paper 2":["Groups in the Periodic Table","Rates of Reaction and Energy Changes","Fuels and Earth Science","Separate Chemistry 2"]
+      }}
+    }},
   { icon:"🧬", name:"Biology", bg:"linear-gradient(135deg,#0c4a6e,#0369a1,#0284c7)", desc:"Understand the science of life — cells, organisation, infection, inheritance, evolution and ecology.",
-    papers:{
-      "Paper 1":["Cell Biology","Organisation","Infection & Response","Bioenergetics"],
-      "Paper 2":["Homeostasis & Response","Inheritance, Variation & Evolution","Ecology"]
-    } },
-  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations — algebra, geometry, statistics and more.",
-    papers:{
-      "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion & Rates of Change","Geometry & Measures","Probability","Statistics"],
-      "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion & Rates of Change","Geometry & Measures","Probability","Statistics"]
-    } }
+    boards:{
+      AQA:{ code:"8461", papers:{
+        "Paper 1":["Cell Biology","Organisation","Infection and Response","Bioenergetics"],
+        "Paper 2":["Homeostasis and Response","Inheritance, Variation and Evolution","Ecology"]
+      }},
+      Edexcel:{ code:"1BI0", papers:{
+        "Paper 1":["Key Concepts in Biology","Cells and Control","Genetics","Natural Selection and Genetic Modification","Health, Disease and the Development of Medicines"],
+        "Paper 2":["Plant Structures and their Functions","Animal Coordination, Control and Homeostasis","Exchange and Transport in Animals","Ecosystems and Material Cycles"]
+      }}
+    }},
+  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations — number, algebra, geometry, probability and statistics.",
+    boards:{
+      AQA:{ code:"8300", papers:{
+        "Paper 1 (Non-Calculator)":["Number: Integers","Number: Fractions","Number: Decimals","Number: Percentages","Number: Standard Form","Number: Surds","Number: Indices","Algebra: Simplifying Expressions","Algebra: Expanding and Factorising","Algebra: Equations","Algebra: Inequalities","Algebra: Simultaneous Equations","Algebra: Quadratics","Algebra: Functions","Algebra: Sequences","Ratio, Proportion and Rates of Change","Geometry: Angles","Geometry: Area","Geometry: Volume","Geometry: Surface Area","Geometry: Pythagoras","Geometry: Trigonometry","Geometry: Vectors","Geometry: Transformations","Geometry: Bearings","Geometry: Circle Theorems","Geometry: Constructions","Probability","Statistics: Averages","Statistics: Scatter Graphs","Statistics: Histograms","Statistics: Cumulative Frequency","Statistics: Box Plots","Statistics: Venn Diagrams"],
+        "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"]
+      }},
+      Edexcel:{ code:"1MA1", papers:{
+        "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"],
+        "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"]
+      }}
+    }}
 ];
 
-// flat topic list (used by search & resources)
-const allTopics = (s) => Object.values(s.papers || {}).flat();
+// helpers
+const subjectByName = (n) => subjects.find(s => s.name === n);
+const allTopics = (s) => Object.values(s.boards).flatMap(b => Object.values(b.papers).flat());
+const topicsFor = (subj, board) => { const s = subjectByName(subj); if (!s) return []; const b = s.boards[board] || Object.values(s.boards)[0]; return Object.values(b.papers).flat(); };
 
 const whyCards = [
   { icon:"🎯", title:"Personalised Learning", desc:"Every session is tailored to the individual student's pace, gaps, and exam board requirements." },
@@ -43,9 +68,8 @@ const whyCards = [
   { icon:"🤝", title:"Free Consultation", desc:"Start with a free no-obligation consultation to discuss your goals and find the right plan." }
 ];
 
-const EXAM_BOARDS = ["AQA","Edexcel","OCR","Eduqas"];
+const EXAM_BOARDS = ["AQA","Edexcel"];
 const RES_SUBJECTS = ["Physics","Chemistry","Biology","Maths"];
-const topicsFor = (subj) => allTopics(subjects.find(s => s.name===subj) || {});
 
 const navMenu = [
   { label:"Home", id:"home" },
@@ -144,9 +168,12 @@ function Navbar({ onSearch, onBook, onOpenResource, onOpenSubject, isAdmin }) {
   );
 }
 
-// ── Subject Page ────────────────────────────────────────────
+// ── Subject Page (board tabs → papers → topics) ─────────────
 function SubjectPage({ level, subject, onClose, onOpenResource, onBook }) {
-  const s = subjects.find(x => x.name === subject) || {};
+  const s = subjectByName(subject) || { boards:{} };
+  const boardKeys = Object.keys(s.boards);
+  const [board, setBoard] = useState(boardKeys[0]);
+  const b = s.boards[board] || { papers:{} };
   return (
     <section style={{minHeight:"70vh"}}>
       <div style={{background:s.bg||"#2d1060",padding:"60px 40px"}}>
@@ -159,14 +186,21 @@ function SubjectPage({ level, subject, onClose, onOpenResource, onBook }) {
         </div>
       </div>
       <div style={{maxWidth:980,margin:"0 auto",padding:"50px 40px"}}>
-        <h2 style={{fontSize:"1.6rem",fontWeight:800,marginBottom:8}}>{level} {subject} — Topics</h2>
-        <p style={{color:"#666",marginBottom:28}}>The full topic breakdown we cover for {level} {subject}, split by exam paper.</p>
-        {Object.entries(s.papers||{}).map(([paper, list]) => (
+        <div style={{display:"flex",gap:10,marginBottom:30,flexWrap:"wrap"}}>
+          {boardKeys.map(k => (
+            <button key={k} onClick={() => setBoard(k)} style={{padding:"10px 22px",borderRadius:30,border:"1px solid #e5e7eb",fontWeight:700,cursor:"pointer",fontSize:".9rem",background: board===k?s.bg:"#fff",color: board===k?"#fff":"#444"}}>
+              {k}{s.boards[k].code?` (${s.boards[k].code})`:""}
+            </button>
+          ))}
+        </div>
+        <h2 style={{fontSize:"1.6rem",fontWeight:800,marginBottom:8}}>{board} {subject} — Specification</h2>
+        <p style={{color:"#666",marginBottom:28}}>The full topic breakdown we cover for {board} {subject}, split by exam paper.</p>
+        {Object.entries(b.papers).map(([paper, list]) => (
           <div key={paper} style={{marginBottom:34}}>
             <div style={{display:"inline-block",background:s.bg,color:"#fff",padding:"6px 16px",borderRadius:20,fontWeight:700,fontSize:".9rem",marginBottom:16}}>{paper}</div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:14}}>
               {list.map(t => (
-                <div key={t} style={{background:"#fff",border:"1px solid #e5e7eb",borderRadius:12,padding:"18px 20px",fontWeight:600,color:"#333",boxShadow:"0 2px 8px rgba(0,0,0,.04)"}}>{t}</div>
+                <div key={t} style={{background:"#fff",border:"1px solid #e5e7eb",borderRadius:12,padding:"16px 18px",fontWeight:600,color:"#333",boxShadow:"0 2px 8px rgba(0,0,0,.04)",fontSize:".9rem"}}>{t}</div>
               ))}
             </div>
           </div>
@@ -182,7 +216,7 @@ function SubjectPage({ level, subject, onClose, onOpenResource, onBook }) {
   );
 }
 
-// ── Resource Browser: Revision Notes / Past Questions (files) ──
+// ── Resource Browser: Revision Notes / Past Questions ───────
 function ResourceBrowser({ type, onClose, isAdmin }) {
   const isNotes = type === "Revision Notes";
   const accent = isNotes ? "#0284c7" : "#7c3aed";
@@ -242,8 +276,8 @@ function ResourceBrowser({ type, onClose, isAdmin }) {
         <p style={{color:"#666",marginBottom:24}}>{isNotes ? "Browse revision notes by subject, exam board and topic." : "Browse past questions by subject and exam board."}</p>
         <Crumb />
         {!subject && <div style={grid}>{RES_SUBJECTS.map(s => <Tile key={s} label={s} sub="Select subject" onClick={() => setSubject(s)} />)}</div>}
-        {subject && !board && <div style={grid}>{EXAM_BOARDS.map(b => <Tile key={b} label={b} sub="Select exam board" onClick={() => setBoard(b)} />)}</div>}
-        {isNotes && subject && board && !topic && <div style={grid}>{topicsFor(subject).map(t => <Tile key={t} label={t} sub="View notes" onClick={() => setTopic(t)} />)}</div>}
+        {subject && !board && <div style={grid}>{EXAM_BOARDS.map(bd => <Tile key={bd} label={bd} sub="Select exam board" onClick={() => setBoard(bd)} />)}</div>}
+        {isNotes && subject && board && !topic && <div style={grid}>{topicsFor(subject, board).map(t => <Tile key={t} label={t} sub="View notes" onClick={() => setTopic(t)} />)}</div>}
         {showFiles && (
           <div style={{background:"#fff",borderRadius:16,border:"1px solid #e5e7eb",padding:28}}>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:18,flexWrap:"wrap",gap:12}}>
@@ -277,10 +311,11 @@ function ResourceBrowser({ type, onClose, isAdmin }) {
   );
 }
 
-// ── Video Resources: videos arranged by subject → topic ─────
+// ── Video Resources: Subject → Board → Topic ────────────────
 function VideoBrowser({ onClose, isAdmin }) {
   const accent = "#dc2626";
   const [subject, setSubject] = useState(null);
+  const [board, setBoard] = useState(null);
   const [topic, setTopic] = useState(null);
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -288,23 +323,24 @@ function VideoBrowser({ onClose, isAdmin }) {
 
   const loadVideos = async () => {
     setLoading(true);
-    const { data } = await supabase.from("videos").select("*").eq("subject",subject).eq("topic",topic).order("created_at",{ascending:false});
+    const { data } = await supabase.from("videos").select("*").eq("subject",subject).eq("board",board).eq("topic",topic).order("created_at",{ascending:false});
     setVideos(data || []); setLoading(false);
   };
-  React.useEffect(() => { if (subject && topic) loadVideos(); /* eslint-disable-next-line */ }, [subject, topic]);
+  React.useEffect(() => { if (subject && board && topic) loadVideos(); /* eslint-disable-next-line */ }, [subject, board, topic]);
 
   const addVideo = async () => {
     const title = window.prompt("Video title:"); if (!title) return;
     const url = window.prompt("YouTube link:"); if (!url) return;
-    const { error } = await supabase.from("videos").insert({ subject, topic, title, url: toEmbed(url) });
+    const { error } = await supabase.from("videos").insert({ subject, board, topic, title, url: toEmbed(url) });
     if (error) alert("Failed: " + error.message); else loadVideos();
   };
   const delVideo = async (id) => { await supabase.from("videos").delete().eq("id",id); loadVideos(); };
 
   const Crumb = () => (
     <div style={{display:"flex",alignItems:"center",gap:8,flexWrap:"wrap",fontSize:".9rem",marginBottom:24}}>
-      <span onClick={() => { setSubject(null); setTopic(null); }} style={{cursor:"pointer",color:accent,fontWeight:700}}>🎬 Videos</span>
-      {subject && <><span style={{color:"#bbb"}}>/</span><span onClick={() => setTopic(null)} style={{cursor:"pointer",color:accent,fontWeight:600}}>{subject}</span></>}
+      <span onClick={() => { setSubject(null); setBoard(null); setTopic(null); }} style={{cursor:"pointer",color:accent,fontWeight:700}}>🎬 Videos</span>
+      {subject && <><span style={{color:"#bbb"}}>/</span><span onClick={() => { setBoard(null); setTopic(null); }} style={{cursor:"pointer",color:accent,fontWeight:600}}>{subject}</span></>}
+      {board && <><span style={{color:"#bbb"}}>/</span><span onClick={() => setTopic(null)} style={{cursor:"pointer",color:accent,fontWeight:600}}>{board}</span></>}
       {topic && <><span style={{color:"#bbb"}}>/</span><span style={{color:"#555",fontWeight:600}}>{topic}</span></>}
     </div>
   );
@@ -323,14 +359,15 @@ function VideoBrowser({ onClose, isAdmin }) {
           <h2 style={{fontSize:"2rem",fontWeight:800}}>🎬 Video Lessons</h2>
           <button onClick={onClose} style={{background:"#fff",border:"1px solid #e5e7eb",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontWeight:600}}>← Back to Home</button>
         </div>
-        <p style={{color:"#666",marginBottom:24}}>Watch topic-by-topic video lessons, organised by subject.</p>
+        <p style={{color:"#666",marginBottom:24}}>Watch topic-by-topic video lessons, organised by subject and exam board.</p>
         <Crumb />
         {!subject && <div style={grid}>{RES_SUBJECTS.map(s => <Tile key={s} label={s} sub="Select subject" onClick={() => setSubject(s)} />)}</div>}
-        {subject && !topic && <div style={grid}>{topicsFor(subject).map(t => <Tile key={t} label={t} sub="Watch videos" onClick={() => setTopic(t)} />)}</div>}
-        {subject && topic && (
+        {subject && !board && <div style={grid}>{EXAM_BOARDS.map(bd => <Tile key={bd} label={bd} sub="Select exam board" onClick={() => setBoard(bd)} />)}</div>}
+        {subject && board && !topic && <div style={grid}>{topicsFor(subject, board).map(t => <Tile key={t} label={t} sub="Watch videos" onClick={() => setTopic(t)} />)}</div>}
+        {subject && board && topic && (
           <div>
             <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:18,flexWrap:"wrap",gap:12}}>
-              <h3 style={{fontSize:"1.1rem",fontWeight:800,color:accent}}>🎬 {subject} · {topic}</h3>
+              <h3 style={{fontSize:"1.1rem",fontWeight:800,color:accent}}>🎬 {subject} · {board} · {topic}</h3>
               {isAdmin && <button onClick={addVideo} style={{background:accent,color:"#fff",border:"none",padding:"10px 18px",borderRadius:8,fontWeight:600,cursor:"pointer",fontSize:".85rem"}}>＋ Add Video</button>}
             </div>
             {loading ? <div style={{textAlign:"center",padding:"36px 0",color:"#999"}}>Loading…</div>
@@ -426,7 +463,7 @@ function SearchResults({ query, onClose }) {
             {results.map(s => (
               <div key={s.name} style={{background:"#fff",borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb"}}>
                 <div style={{height:80,background:s.bg,display:"flex",alignItems:"center",padding:"0 20px",gap:12}}><span style={{fontSize:"1.8rem"}}>{s.icon}</span><span style={{color:"#fff",fontWeight:700,fontSize:"1.1rem"}}>{s.name}</span></div>
-                <div style={{padding:"16px 20px"}}><p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p><div style={{display:"flex",flexWrap:"wrap",gap:6}}>{allTopics(s).map(t => <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>)}</div></div>
+                <div style={{padding:"16px 20px"}}><p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p><div style={{display:"flex",flexWrap:"wrap",gap:6}}>{allTopics(s).slice(0,12).map(t => <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>)}</div></div>
               </div>
             ))}
           </div>
@@ -553,9 +590,9 @@ function Footer() {
 // ── App ─────────────────────────────────────────────────────
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [bookingTutor, setBookingTutor] = useState(undefined); // undefined = closed, null = generic, object = tutor
+  const [bookingTutor, setBookingTutor] = useState(undefined);
   const [resourceView, setResourceView] = useState(null);
-  const [subjectPage, setSubjectPage] = useState(null); // { level, subject }
+  const [subjectPage, setSubjectPage] = useState(null);
   const [session, setSession] = useState(null);
 
   React.useEffect(() => {
