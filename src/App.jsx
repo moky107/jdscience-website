@@ -7,13 +7,32 @@ const CONTACT = { email:"info@jdscience.co.uk", phone:"07466142805" };
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_xxxxxxxxxxxx";
 const inputStyle = { padding:"12px 14px", borderRadius:8, border:"1px solid #ddd", fontSize:".95rem", outline:"none", width:"100%", boxSizing:"border-box" };
 
-// Topics drawn from AQA GCSE Combined Science spec
+// Topics drawn from AQA GCSE specification, split by Paper 1 / Paper 2
 const subjects = [
-  { icon:"⚛️", name:"Physics", bg:"linear-gradient(135deg,#1a0533,#4c1d95,#2d1060)", desc:"Master the fundamental laws of the universe — from energy and electricity to forces, waves and magnetism.", topics:["Energy","Electricity","Particle Model of Matter","Atomic Structure","Forces","Waves","Magnetism & Electromagnetism"] },
-  { icon:"⚗️", name:"Chemistry", bg:"linear-gradient(135deg,#064e3b,#065f46,#047857)", desc:"Explore matter and its transformations — atomic structure, bonding, energy changes and organic chemistry.", topics:["Atomic Structure & Periodic Table","Bonding, Structure & Properties","Quantitative Chemistry","Chemical Changes","Energy Changes","Rate & Extent of Chemical Change","Organic Chemistry","Chemical Analysis","Chemistry of the Atmosphere","Using Resources"] },
-  { icon:"🧬", name:"Biology", bg:"linear-gradient(135deg,#0c4a6e,#0369a1,#0284c7)", desc:"Understand the science of life — cells, organisation, infection, inheritance, evolution and ecology.", topics:["Cell Biology","Organisation","Infection & Response","Bioenergetics","Homeostasis & Response","Inheritance, Variation & Evolution","Ecology"] },
-  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations — algebra, geometry, statistics and more.", topics:["Number","Algebra","Ratio & Proportion","Geometry & Measures","Probability","Statistics"] }
+  { icon:"⚛️", name:"Physics", bg:"linear-gradient(135deg,#1a0533,#4c1d95,#2d1060)", desc:"Master the fundamental laws of the universe — from energy and electricity to forces, waves and magnetism.",
+    papers:{
+      "Paper 1":["Energy","Electricity","Particle Model of Matter","Atomic Structure"],
+      "Paper 2":["Forces","Waves","Magnetism & Electromagnetism"]
+    } },
+  { icon:"⚗️", name:"Chemistry", bg:"linear-gradient(135deg,#064e3b,#065f46,#047857)", desc:"Explore matter and its transformations — atomic structure, bonding, energy changes and organic chemistry.",
+    papers:{
+      "Paper 1":["Atomic Structure & the Periodic Table","Bonding, Structure & the Properties of Matter","Quantitative Chemistry","Chemical Changes","Energy Changes"],
+      "Paper 2":["The Rate & Extent of Chemical Change","Organic Chemistry","Chemical Analysis","Chemistry of the Atmosphere","Using Resources"]
+    } },
+  { icon:"🧬", name:"Biology", bg:"linear-gradient(135deg,#0c4a6e,#0369a1,#0284c7)", desc:"Understand the science of life — cells, organisation, infection, inheritance, evolution and ecology.",
+    papers:{
+      "Paper 1":["Cell Biology","Organisation","Infection & Response","Bioenergetics"],
+      "Paper 2":["Homeostasis & Response","Inheritance, Variation & Evolution","Ecology"]
+    } },
+  { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations — algebra, geometry, statistics and more.",
+    papers:{
+      "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion & Rates of Change","Geometry & Measures","Probability","Statistics"],
+      "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion & Rates of Change","Geometry & Measures","Probability","Statistics"]
+    } }
 ];
+
+// flat topic list (used by search & resources)
+const allTopics = (s) => Object.values(s.papers || {}).flat();
 
 const whyCards = [
   { icon:"🎯", title:"Personalised Learning", desc:"Every session is tailored to the individual student's pace, gaps, and exam board requirements." },
@@ -26,7 +45,7 @@ const whyCards = [
 
 const EXAM_BOARDS = ["AQA","Edexcel","OCR","Eduqas"];
 const RES_SUBJECTS = ["Physics","Chemistry","Biology","Maths"];
-const topicsFor = (subj) => (subjects.find(s => s.name===subj) || {}).topics || [];
+const topicsFor = (subj) => allTopics(subjects.find(s => s.name===subj) || {});
 
 const navMenu = [
   { label:"Home", id:"home" },
@@ -141,13 +160,18 @@ function SubjectPage({ level, subject, onClose, onOpenResource, onBook }) {
       </div>
       <div style={{maxWidth:980,margin:"0 auto",padding:"50px 40px"}}>
         <h2 style={{fontSize:"1.6rem",fontWeight:800,marginBottom:8}}>{level} {subject} — Topics</h2>
-        <p style={{color:"#666",marginBottom:24}}>The full topic breakdown we cover for {level} {subject}.</p>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:14,marginBottom:40}}>
-          {(s.topics||[]).map(t => (
-            <div key={t} style={{background:"#fff",border:"1px solid #e5e7eb",borderRadius:12,padding:"18px 20px",fontWeight:600,color:"#333",boxShadow:"0 2px 8px rgba(0,0,0,.04)"}}>{t}</div>
-          ))}
-        </div>
-        <div style={{display:"flex",gap:14,flexWrap:"wrap"}}>
+        <p style={{color:"#666",marginBottom:28}}>The full topic breakdown we cover for {level} {subject}, split by exam paper.</p>
+        {Object.entries(s.papers||{}).map(([paper, list]) => (
+          <div key={paper} style={{marginBottom:34}}>
+            <div style={{display:"inline-block",background:s.bg,color:"#fff",padding:"6px 16px",borderRadius:20,fontWeight:700,fontSize:".9rem",marginBottom:16}}>{paper}</div>
+            <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:14}}>
+              {list.map(t => (
+                <div key={t} style={{background:"#fff",border:"1px solid #e5e7eb",borderRadius:12,padding:"18px 20px",fontWeight:600,color:"#333",boxShadow:"0 2px 8px rgba(0,0,0,.04)"}}>{t}</div>
+              ))}
+            </div>
+          </div>
+        ))}
+        <div style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:10}}>
           <button onClick={() => onOpenResource("Revision Notes")} style={{background:"#0284c7",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>📚 Revision Notes</button>
           <button onClick={() => onOpenResource("Past Questions")} style={{background:"#7c3aed",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>📝 Past Questions</button>
           <button onClick={() => onOpenResource("Videos")} style={{background:"#dc2626",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>🎬 Video Lessons</button>
@@ -387,7 +411,7 @@ function Tutors({ isAdmin, onBookTutor }) {
 
 // ── Search Results ──────────────────────────────────────────
 function SearchResults({ query, onClose }) {
-  const results = subjects.filter(s => s.name.toLowerCase().includes(query.toLowerCase()) || s.desc.toLowerCase().includes(query.toLowerCase()) || s.topics.some(t=>t.toLowerCase().includes(query.toLowerCase())));
+  const results = subjects.filter(s => s.name.toLowerCase().includes(query.toLowerCase()) || s.desc.toLowerCase().includes(query.toLowerCase()) || allTopics(s).some(t=>t.toLowerCase().includes(query.toLowerCase())));
   return (
     <div style={{background:"#f9fafb",padding:"40px",borderBottom:"1px solid #e5e7eb"}}>
       <div style={{maxWidth:900,margin:"0 auto"}}>
@@ -402,7 +426,7 @@ function SearchResults({ query, onClose }) {
             {results.map(s => (
               <div key={s.name} style={{background:"#fff",borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb"}}>
                 <div style={{height:80,background:s.bg,display:"flex",alignItems:"center",padding:"0 20px",gap:12}}><span style={{fontSize:"1.8rem"}}>{s.icon}</span><span style={{color:"#fff",fontWeight:700,fontSize:"1.1rem"}}>{s.name}</span></div>
-                <div style={{padding:"16px 20px"}}><p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p><div style={{display:"flex",flexWrap:"wrap",gap:6}}>{s.topics.map(t => <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>)}</div></div>
+                <div style={{padding:"16px 20px"}}><p style={{color:"#555",fontSize:".9rem",lineHeight:1.6,marginBottom:12}}>{s.desc}</p><div style={{display:"flex",flexWrap:"wrap",gap:6}}>{allTopics(s).map(t => <span key={t} style={{background:"#f3e8ff",color:"#7c3aed",fontSize:".78rem",padding:"3px 10px",borderRadius:20,fontWeight:500}}>{t}</span>)}</div></div>
               </div>
             ))}
           </div>
