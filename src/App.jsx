@@ -31,8 +31,8 @@ const topicsFor = (subj) => (subjects.find(s => s.name===subj) || {}).topics || 
 const navMenu = [
   { label:"Home", id:"home" },
   { label:"11+", options:["English","Maths","Verbal Reasoning","Non-Verbal Reasoning"] },
-  { label:"GCSE / IGCSE", options:["AQA","Edexcel","OCR","Eduqas"] },
-  { label:"A-Level", options:["AQA","Edexcel","OCR","Eduqas"] },
+  { label:"GCSE / IGCSE", level:"GCSE / IGCSE", options:["Physics","Chemistry","Biology","Maths"] },
+  { label:"A-Level", level:"A-Level", options:["Physics","Chemistry","Biology","Maths"] },
   { label:"T-Levels", options:["Health & Science","Engineering","Digital","Education"] },
   { label:"BTEC", options:["Applied Science","Engineering","IT","Health & Social Care"] },
   { label:"Resources", resource:true, options:["Revision Notes","Past Questions","Videos"] },
@@ -48,7 +48,6 @@ function BookingModal({ onClose, tutor }) {
   const proceedToPay = (e) => {
     e.preventDefault();
     const link = (tutor && tutor.payment_link) || STRIPE_PAYMENT_LINK;
-    // pass details to Stripe via prefilled email + client_reference_id
     const url = `${link}${link.includes("?")?"&":"?"}prefilled_email=${encodeURIComponent(form.email)}&client_reference_id=${encodeURIComponent(form.name + " | " + form.subject + (tutor?(" | Tutor: "+tutor.name):""))}`;
     window.open(url, "_blank");
   };
@@ -74,7 +73,7 @@ function BookingModal({ onClose, tutor }) {
 }
 
 // ── Navbar ──────────────────────────────────────────────────
-function Navbar({ onSearch, onBook, onOpenResource, isAdmin }) {
+function Navbar({ onSearch, onBook, onOpenResource, onOpenSubject, isAdmin }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(null);
   const submit = (e) => { e.preventDefault(); onSearch(q); };
@@ -112,7 +111,7 @@ function Navbar({ onSearch, onBook, onOpenResource, isAdmin }) {
             {item.options && open===i && (
               <div style={{position:"absolute",top:"100%",left:0,background:"#1f2937",minWidth:200,boxShadow:"0 10px 30px rgba(0,0,0,.25)",zIndex:200}}>
                 {item.options.map(opt => (
-                  <a key={opt} onClick={() => item.resource ? onOpenResource(opt) : scrollTo("resources")}
+                  <a key={opt} onClick={() => item.resource ? onOpenResource(opt) : item.level ? onOpenSubject(item.level, opt) : scrollTo("resources")}
                     style={{display:"block",padding:"12px 20px",color:"#e5e7eb",fontSize:".88rem",textDecoration:"none",cursor:"pointer",borderBottom:"1px solid rgba(255,255,255,.06)"}}
                     onMouseEnter={e => e.currentTarget.style.background="#374151"}
                     onMouseLeave={e => e.currentTarget.style.background="transparent"}>{opt}</a>
@@ -123,6 +122,39 @@ function Navbar({ onSearch, onBook, onOpenResource, isAdmin }) {
         ))}
       </div>
     </nav>
+  );
+}
+
+// ── Subject Page ────────────────────────────────────────────
+function SubjectPage({ level, subject, onClose, onOpenResource, onBook }) {
+  const s = subjects.find(x => x.name === subject) || {};
+  return (
+    <section style={{minHeight:"70vh"}}>
+      <div style={{background:s.bg||"#2d1060",padding:"60px 40px"}}>
+        <div style={{maxWidth:980,margin:"0 auto",color:"#fff"}}>
+          <button onClick={onClose} style={{background:"rgba(255,255,255,.15)",color:"#fff",border:"1px solid rgba(255,255,255,.3)",padding:"8px 16px",borderRadius:8,cursor:"pointer",fontWeight:600,marginBottom:20}}>← Back to Home</button>
+          <div style={{fontSize:"3rem",marginBottom:10}}>{s.icon}</div>
+          <p style={{opacity:.85,fontWeight:600,letterSpacing:".5px",marginBottom:6}}>{level}</p>
+          <h1 style={{fontSize:"2.6rem",fontWeight:900,marginBottom:14}}>{subject}</h1>
+          <p style={{fontSize:"1.05rem",lineHeight:1.7,maxWidth:640,opacity:.92}}>{s.desc}</p>
+        </div>
+      </div>
+      <div style={{maxWidth:980,margin:"0 auto",padding:"50px 40px"}}>
+        <h2 style={{fontSize:"1.6rem",fontWeight:800,marginBottom:8}}>{level} {subject} — Topics</h2>
+        <p style={{color:"#666",marginBottom:24}}>The full topic breakdown we cover for {level} {subject}.</p>
+        <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(220px,1fr))",gap:14,marginBottom:40}}>
+          {(s.topics||[]).map(t => (
+            <div key={t} style={{background:"#fff",border:"1px solid #e5e7eb",borderRadius:12,padding:"18px 20px",fontWeight:600,color:"#333",boxShadow:"0 2px 8px rgba(0,0,0,.04)"}}>{t}</div>
+          ))}
+        </div>
+        <div style={{display:"flex",gap:14,flexWrap:"wrap"}}>
+          <button onClick={() => onOpenResource("Revision Notes")} style={{background:"#0284c7",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>📚 Revision Notes</button>
+          <button onClick={() => onOpenResource("Past Questions")} style={{background:"#7c3aed",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>📝 Past Questions</button>
+          <button onClick={() => onOpenResource("Videos")} style={{background:"#dc2626",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>🎬 Video Lessons</button>
+          <button onClick={onBook} style={{background:"#635bff",color:"#fff",border:"none",padding:"14px 24px",borderRadius:10,fontWeight:700,cursor:"pointer"}}>💳 Book a Session</button>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -335,7 +367,7 @@ function Tutors({ isAdmin, onBookTutor }) {
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))",gap:24,maxWidth:1100,margin:"0 auto"}}>
           {tutors.map(t => (
             <div key={t.id} style={{background:"#fff",borderRadius:16,overflow:"hidden",border:"1px solid #e5e7eb",boxShadow:"0 4px 16px rgba(0,0,0,.05)"}}>
-              <div style={{height:160,background:t.photo?`url(${t.photo}) center/cover`:"linear-gradient(135deg,#7c3aed,#06b6d4)",display:"flex",alignItems:"center",justifyContent:"center"}}>{!t.photo && <span style={{fontSize:"3rem",color:"#fff"}}>�toContain</span>}</div>
+              <div style={{height:160,background:t.photo?`url(${t.photo}) center/cover`:"linear-gradient(135deg,#7c3aed,#06b6d4)",display:"flex",alignItems:"center",justifyContent:"center"}}>{!t.photo && <span style={{fontSize:"3rem",color:"#fff"}}>👤</span>}</div>
               <div style={{padding:"18px 20px"}}>
                 <h3 style={{fontSize:"1.15rem",fontWeight:800}}>{t.name}</h3>
                 <p style={{color:"#7c3aed",fontWeight:600,fontSize:".88rem",margin:"2px 0 10px"}}>{t.subject}{t.rate?` · ${t.rate}`:""}</p>
@@ -499,6 +531,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [bookingTutor, setBookingTutor] = useState(undefined); // undefined = closed, null = generic, object = tutor
   const [resourceView, setResourceView] = useState(null);
+  const [subjectPage, setSubjectPage] = useState(null); // { level, subject }
   const [session, setSession] = useState(null);
 
   React.useEffect(() => {
@@ -507,13 +540,16 @@ function App() {
     return () => sub.subscription.unsubscribe();
   }, []);
   const isAdmin = !!session;
-  const openResource = (type) => { setSearchQuery(""); setResourceView(type); window.scrollTo({top:0,behavior:"smooth"}); };
+  const openResource = (type) => { setSearchQuery(""); setSubjectPage(null); setResourceView(type); window.scrollTo({top:0,behavior:"smooth"}); };
+  const openSubject = (level, subject) => { setResourceView(null); setSearchQuery(""); setSubjectPage({ level, subject }); window.scrollTo({top:0,behavior:"smooth"}); };
   const openBooking = (tutor=null) => setBookingTutor(tutor);
 
   return (
     <div style={{fontFamily:"'Inter',sans-serif",color:"#111",background:"#fff"}}>
-      <Navbar onSearch={(q)=>{setResourceView(null);setSearchQuery(q);}} onBook={() => openBooking(null)} onOpenResource={openResource} isAdmin={isAdmin} />
-      {resourceView === "Videos" ? (
+      <Navbar onSearch={(q)=>{setResourceView(null);setSubjectPage(null);setSearchQuery(q);}} onBook={() => openBooking(null)} onOpenResource={openResource} onOpenSubject={openSubject} isAdmin={isAdmin} />
+      {subjectPage ? (
+        <SubjectPage level={subjectPage.level} subject={subjectPage.subject} onClose={() => setSubjectPage(null)} onOpenResource={openResource} onBook={() => openBooking(null)} />
+      ) : resourceView === "Videos" ? (
         <VideoBrowser onClose={() => setResourceView(null)} isAdmin={isAdmin} />
       ) : resourceView ? (
         <ResourceBrowser type={resourceView} onClose={() => setResourceView(null)} isAdmin={isAdmin} />
