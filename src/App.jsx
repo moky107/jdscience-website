@@ -4,6 +4,8 @@ import { supabase } from "./supabaseClient";
 const HERO_IMG = "https://cdn.abacus.ai/images/a3ac8de7-2ad2-4a64-bab2-8fbe6d17616e.png";
 const CONTACT = { email:"info@jdscience.co.uk", phone:"07466142805" };
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_xxxxxxxxxxxx";
+// ↓ Replace with your own intro/promo video (YouTube embed URL or direct .mp4 link)
+const FRONT_VIDEO = "https://www.youtube.com/embed/dQw4w9WgXcQ";
 const inputStyle = { padding:"12px 14px", borderRadius:8, border:"1px solid #ddd", fontSize:".95rem", outline:"none", width:"100%", boxSizing:"border-box" };
 
 // ── Specifications: Subject → Exam Board → Paper → Topics ────
@@ -17,6 +19,14 @@ const subjects = [
       Edexcel:{ code:"1PH0", papers:{
         "Paper 1":["Key Concepts of Physics","Motion and Forces","Conservation of Energy","Waves","Light and the Electromagnetic Spectrum","Radioactivity","Energy Resources and Energy Transfers"],
         "Paper 2":["Forces and their Effects","Electricity and Circuits","Magnetism and the Motor Effect","Electromagnetic Induction","Particle Model","Cosmology"]
+      }},
+      OCR:{ code:"J249 (Gateway A)", papers:{
+        "Paper 1":["P1 Matter","P2 Forces","P3 Electricity","P4 Magnetism and Magnetic Fields"],
+        "Paper 2":["P5 Waves in Matter","P6 Radioactivity","P7 Energy","P8 Global Challenges"]
+      }},
+      Eduqas:{ code:"C420P", papers:{
+        "Component 1":["Electric Circuits","Generating Electricity","Energy and Efficiency in the Home","Domestic Electricity","Features of Waves","Distribution and Use of Energy"],
+        "Component 2":["Describing Motion","Newton's Laws","Work and Energy","Further Motion Concepts","Stars and Planets","Types of Radiation","Nuclear Decay and Nuclear Energy","Kinetic Theory","Electromagnetism"]
       }}
     }},
   { icon:"⚗️", name:"Chemistry", bg:"linear-gradient(135deg,#064e3b,#065f46,#047857)", desc:"Explore matter and its transformations — atomic structure, bonding, energy changes and organic chemistry.",
@@ -28,6 +38,14 @@ const subjects = [
       Edexcel:{ code:"1CH0", papers:{
         "Paper 1":["Key Concepts in Chemistry","States of Matter and Mixtures","Chemical Changes","Extracting Metals and Equilibria","Separate Chemistry 1"],
         "Paper 2":["Groups in the Periodic Table","Rates of Reaction and Energy Changes","Fuels and Earth Science","Separate Chemistry 2"]
+      }},
+      OCR:{ code:"J248 (Gateway A)", papers:{
+        "Paper 1":["C1 Particles","C2 Elements, Compounds and Mixtures","C3 Chemical Reactions"],
+        "Paper 2":["C4 Predicting and Identifying Reactions and Products","C5 Monitoring and Controlling Chemical Reactions","C6 Global Challenges"]
+      }},
+      Eduqas:{ code:"C410P", papers:{
+        "Component 1":["The Nature of Substances and Chemical Reactions","Atomic Structure and the Periodic Table","Water","The Detection of Ions","Bonding, Structure and Properties"],
+        "Component 2":["Acids, Bases and Salts","Metals and their Extraction","Chemical Reactions and Energy Changes","Crude Oil and its Products","Rates of Reaction","Equilibria","Organic Chemistry"]
       }}
     }},
   { icon:"🧬", name:"Biology", bg:"linear-gradient(135deg,#0c4a6e,#0369a1,#0284c7)", desc:"Understand the science of life — cells, organisation, infection, inheritance, evolution and ecology.",
@@ -39,6 +57,14 @@ const subjects = [
       Edexcel:{ code:"1BI0", papers:{
         "Paper 1":["Key Concepts in Biology","Cells and Control","Genetics","Natural Selection and Genetic Modification","Health, Disease and the Development of Medicines"],
         "Paper 2":["Plant Structures and their Functions","Animal Coordination, Control and Homeostasis","Exchange and Transport in Animals","Ecosystems and Material Cycles"]
+      }},
+      OCR:{ code:"J247 (Gateway A)", papers:{
+        "Paper 1":["B1 Cell Level Systems","B2 Scaling Up","B3 Organism Level Systems"],
+        "Paper 2":["B4 Community Level Systems","B5 Genes, Inheritance and Selection","B6 Global Challenges"]
+      }},
+      Eduqas:{ code:"C400P", papers:{
+        "Component 1":["Cells and Movement Across Membranes","Respiration and the Cellular System","Digestion and the Circulatory System","Plants and Photosynthesis","Ecosystems and Food Production"],
+        "Component 2":["Homeostasis","Disease, Defence and Treatment","Genetics, Variation and Evolution","Response and Regulation","Hormones and Reproduction"]
       }}
     }},
   { icon:"🧮", name:"Maths", bg:"linear-gradient(135deg,#1c1917,#292524,#44403c)", desc:"Build strong mathematical foundations — number, algebra, geometry, probability and statistics.",
@@ -50,6 +76,14 @@ const subjects = [
       Edexcel:{ code:"1MA1", papers:{
         "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"],
         "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"]
+      }},
+      OCR:{ code:"J560", papers:{
+        "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"],
+        "Papers 2 & 3 (Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"]
+      }},
+      Eduqas:{ code:"C300", papers:{
+        "Paper 1 (Non-Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"],
+        "Paper 2 (Calculator)":["Number","Algebra","Ratio, Proportion and Rates of Change","Geometry and Measures","Probability","Statistics"]
       }}
     }}
 ];
@@ -64,11 +98,11 @@ const whyCards = [
   { icon:"🏆", title:"Experienced Tutors", desc:"Qualified science educators with thousands of hours of tutoring experience across all key stages." },
   { icon:"📈", title:"Proven Results", desc:"98% student satisfaction rate with consistently improved grades and boosted confidence." },
   { icon:"💻", title:"Flexible Sessions", desc:"Online and in-person options available to suit your schedule and learning preferences." },
-  { icon:"📋", title:"All Exam Boards", desc:"Covering AQA, Edexcel, OCR, Eduqas, and iGCSE — no matter your school's curriculum." },
+  { icon:"📋", title:"All Exam Boards", desc:"Covering AQA, Edexcel, OCR and Eduqas — no matter your school's curriculum." },
   { icon:"🤝", title:"Free Consultation", desc:"Start with a free no-obligation consultation to discuss your goals and find the right plan." }
 ];
 
-const EXAM_BOARDS = ["AQA","Edexcel"];
+const EXAM_BOARDS = ["AQA","Edexcel","OCR","Eduqas"];
 const RES_SUBJECTS = ["Physics","Chemistry","Biology","Maths"];
 
 const navMenu = [
@@ -486,9 +520,30 @@ function Hero({ onBook }) {
             <button onClick={() => scrollTo("subjects")} style={{background:"rgba(255,255,255,.15)",color:"#fff",padding:"14px 26px",borderRadius:10,border:"1px solid rgba(255,255,255,.25)",fontWeight:600,fontSize:"1rem",cursor:"pointer"}}>Explore Subjects</button>
             <button onClick={onBook} style={{background:"#fff",color:"#7c3aed",padding:"14px 26px",borderRadius:10,border:"none",fontWeight:700,fontSize:"1rem",cursor:"pointer"}}>Book a Session</button>
           </div>
-          <div style={{display:"flex",alignItems:"center",gap:14,flexWrap:"wrap"}}><span style={{color:"rgba(255,255,255,.6)",fontSize:".85rem"}}>Exam Boards:</span>{["AQA","Edexcel","OCR","Eduqas","iGCSE"].map(b => <span key={b} style={{color:"rgba(255,255,255,.85)",fontSize:".9rem",fontWeight:600}}>{b}</span>)}</div>
+          <div style={{display:"flex",alignItems:"center",gap:14,flexWrap:"wrap"}}><span style={{color:"rgba(255,255,255,.6)",fontSize:".85rem"}}>Exam Boards:</span>{["AQA","Edexcel","OCR","Eduqas"].map(b => <span key={b} style={{color:"rgba(255,255,255,.85)",fontSize:".9rem",fontWeight:600}}>{b}</span>)}</div>
         </div>
         <div style={{borderRadius:20,overflow:"hidden",boxShadow:"0 20px 60px rgba(0,0,0,.4)"}}><img src={HERO_IMG} alt="Diverse students learning together" style={{width:"100%",display:"block"}} /></div>
+      </div>
+    </section>
+  );
+}
+
+// ── Front Page Video ────────────────────────────────────────
+function FrontVideo() {
+  const isYouTube = /youtube\.com|youtu\.be/.test(FRONT_VIDEO);
+  return (
+    <section id="intro-video" style={{padding:"70px 40px",background:"#0b0420",textAlign:"center"}}>
+      <div style={{maxWidth:860,margin:"0 auto"}}>
+        <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(255,255,255,.1)",color:"#fff",padding:"6px 16px",borderRadius:50,fontSize:".8rem",marginBottom:18,border:"1px solid rgba(255,255,255,.15)"}}>🎬 Watch Our Intro</div>
+        <h2 style={{color:"#fff",fontSize:"2.2rem",fontWeight:800,marginBottom:12}}>See How <span style={{color:"#a78bfa"}}>JDScience</span> Works</h2>
+        <p style={{color:"rgba(255,255,255,.7)",fontSize:"1rem",marginBottom:32,maxWidth:560,margin:"0 auto 32px"}}>A quick look at our approach to tutoring and how we help students achieve more.</p>
+        <div style={{position:"relative",paddingTop:"56.25%",borderRadius:18,overflow:"hidden",boxShadow:"0 20px 60px rgba(0,0,0,.5)",border:"1px solid rgba(255,255,255,.1)"}}>
+          {isYouTube ? (
+            <iframe src={FRONT_VIDEO} title="JDScience intro video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{position:"absolute",inset:0,width:"100%",height:"100%",border:"none"}} />
+          ) : (
+            <video src={FRONT_VIDEO} controls style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover"}} />
+          )}
+        </div>
       </div>
     </section>
   );
@@ -619,6 +674,7 @@ function App() {
       ) : (
         <>
           <Hero onBook={() => openBooking(null)} />
+          <FrontVideo />
           <Subjects onOpenResource={openResource} />
           <Tutors isAdmin={isAdmin} onBookTutor={(t) => openBooking(t)} />
           <WhyUs />
