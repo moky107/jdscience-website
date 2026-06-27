@@ -15,7 +15,7 @@ const navMenu = [
   { label: "A-Level", options: ["Physics", "Chemistry", "Biology", "Maths"], subOptions: ["AQA", "Edexcel", "OCR", "Eduqas"] },
   { label: "T-Levels", options: ["Health & Science", "Engineering", "Digital", "Education"] },
   { label: "BTEC", options: ["Applied Science", "Engineering", "IT", "Health & Social Care"] },
-  { label: "Resources", resource: true, options: ["Revision Notes", "Past Questions"] },
+  { label: "Resources", resource: true, options: ["Revision Notes", "Past Questions", "Videos"] },
   { label: "Tutors", id: "tutors" },
   { label: "Contact", id: "contact" }
 ];
@@ -99,32 +99,50 @@ function ResourceHub({ type, onClose, isAdmin }) {
   const [files, setFiles] = useState([]);
 
   const loadFiles = async () => {
-    const path = `${type}/${subject}/${board}`;
-    const { data } = await supabase.storage.from("resources").list(path);
-    if (data) setFiles(data.map(f => ({ name: f.name, url: supabase.storage.from("resources").getPublicUrl(`${path}/${f.name}`).data.publicUrl })));
+    // For videos, we fetch from the database 'videos' table. For others, from storage.
+    if (type === "Videos") {
+        const { data } = await supabase.from("videos").select("*").eq("subject", subject);
+        if (data) setFiles(data.map(v => ({ name: v.title, url: v.url })));
+    } else {
+        const path = `${type}/${subject}/${board}`;
+        const { data } = await supabase.storage.from("resources").list(path);
+        if (data) setFiles(data.map(f => ({ name: f.name, url: supabase.storage.from("resources").getPublicUrl(`${path}/${f.name}`).data.publicUrl })));
+    }
   };
 
-  useEffect(() => { if (subject && board) loadFiles(); }, [subject, board]);
+  useEffect(() => { if (subject && (type === "Videos" || board)) loadFiles(); }, [subject, board, type]);
 
   return (
     <section style={{ padding: "60px 40px", background: "#f9fafb", minHeight: "80vh" }}>
-      <button onClick={onClose} style={{ marginBottom: 20, cursor: "pointer" }}>← Back to Home</button>
-      <h2>{type}</h2>
-      <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
-        {["Physics", "Chemistry", "Biology", "Maths"].map(s => <button key={s} onClick={() => setSubject(s)} style={{ padding: "10px 20px", background: subject === s ? "#7c3aed" : "#fff", color: subject === s ? "#fff" : "#333", border: "1px solid #ddd", borderRadius: 8 }}>{s}</button>)}
+      <button onClick={onClose} style={{ marginBottom: 20, cursor: "pointer", border: "none", background: "#eee", padding: "8px 15px", borderRadius: 5 }}>← Back to Home</button>
+      <h2 style={{ marginBottom: 25 }}>{type} Library</h2>
+      <div style={{ display: "flex", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
+        {["Physics", "Chemistry", "Biology", "Maths"].map(s => <button key={s} onClick={() => setSubject(s)} style={{ padding: "10px 20px", background: subject === s ? "#7c3aed" : "#fff", color: subject === s ? "#fff" : "#333", border: "1px solid #ddd", borderRadius: 8, cursor: "pointer" }}>{s}</button>)}
       </div>
-      {subject && (
-        <div style={{ display: "flex", gap: 10 }}>
-          {["AQA", "Edexcel", "OCR", "Eduqas"].map(b => <button key={b} onClick={() => setBoard(b)} style={{ padding: "10px 20px", background: board === b ? "#06b6d4" : "#fff", color: board === b ? "#fff" : "#333", border: "1px solid #ddd", borderRadius: 8 }}>{b}</button>)}
+      {subject && type !== "Videos" && (
+        <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
+          {["AQA", "Edexcel", "OCR", "Eduqas"].map(b => <button key={b} onClick={() => setBoard(b)} style={{ padding: "10px 20px", background: board === b ? "#06b6d4" : "#fff", color: board === b ? "#fff" : "#333", border: "1px solid #ddd", borderRadius: 8, cursor: "pointer" }}>{b}</button>)}
         </div>
       )}
-      <div style={{ marginTop: 30 }}>
+      
+      <div style={{ marginTop: 30, display: "grid", gridTemplateColumns: type === "Videos" ? "repeat(auto-fit, minmax(300px, 1fr))" : "1fr", gap: 20 }}>
         {files.length > 0 ? files.map((f, i) => (
-          <div key={i} style={{ padding: "15px", background: "#fff", border: "1px solid #eee", marginBottom: 10, borderRadius: 8, display: "flex", justifyContent: "space-between" }}>
-            <span>{f.name}</span>
-            <a href={f.url} target="_blank" style={{ color: "#7c3aed", fontWeight: 700 }}>Download</a>
+          <div key={i} style={{ padding: "15px", background: "#fff", border: "1px solid #eee", borderRadius: 12, boxShadow: "0 4px 6px rgba(0,0,0,0.05)" }}>
+            {type === "Videos" ? (
+                <div>
+                    <h4 style={{ marginBottom: 10 }}>{f.name}</h4>
+                    <div style={{ position: "relative", paddingTop: "56.25%", borderRadius: 8, overflow: "hidden" }}>
+                        <iframe src={f.url} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }} allowFullScreen />
+                    </div>
+                </div>
+            ) : (
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                    <span>{f.name}</span>
+                    <a href={f.url} target="_blank" rel="noreferrer" style={{ color: "#7c3aed", fontWeight: 700, textDecoration: "none" }}>Download</a>
+                </div>
+            )}
           </div>
-        )) : <p>Select subject and board to see files.</p>}
+        )) : <p style={{ color: "#666" }}>Please select a subject (and exam board for notes) to view content.</p>}
       </div>
     </section>
   );
@@ -163,6 +181,10 @@ export default function App() {
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => setIsAdmin(!!data.session));
+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
+      setIsAdmin(!!session);
+    });
+    return () => authListener.subscription.unsubscribe();
   }, []);
 
   return (
@@ -176,7 +198,9 @@ export default function App() {
           <section id="home" style={{ background: "linear-gradient(135deg,#1a0533,#2d1060)", padding: "100px 40px", color: "#fff", textAlign: "center" }}>
             <h1 style={{ fontSize: "3.5rem", fontWeight: 900, marginBottom: 20 }}>JD Education</h1>
             <p style={{ fontSize: "1.2rem", maxWidth: 700, margin: "0 auto 40px" }}>Expert tutoring for 11+, GCSE, A-Levels and more. We provide the tools you need to excel in science and maths.</p>
-            <img src={HERO_IMG} style={{ width: "100%", maxWidth: 900, borderRadius: 20, boxShadow: "0 20px 50px rgba(0,0,0,0.4)" }} alt="Diverse Students" />
+            <div style={{ maxWidth: 900, margin: "0 auto", borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 50px rgba(0,0,0,0.4)" }}>
+                <img src={HERO_IMG} style={{ width: "100%", display: "block" }} alt="Diverse Students" />
+            </div>
           </section>
 
           <FrontVideo isAdmin={isAdmin} />
