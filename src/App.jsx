@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from "react";
 /* ============================================================
    jdscience.co.uk — PMT-style site, Teal Classic theme
-   Vercel/Vite ready: has `App` (no ReactDOM.render).
+   Vercel/Vite ready: import React (top) + App (bottom).
    Paste this whole file into src/App.jsx.
-   🔌 SUPABASE markers show where to wire your storage calls
-   (paths unchanged → no data loss).
+   🔌 SUPABASE markers show where to wire your storage calls.
 ============================================================ */
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
-const ADMIN_PASSWORD = "jdscience2026"; // change to your real one
+const ADMIN_PASSWORD = "jdscience2026";
 
 const SUBJECTS = ["Physics", "Chemistry", "Biology", "Maths"];
-const LEVELS = ["GCSE", "A-Level", "T-Level"];
+const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
 const BOARDS = ["AQA", "Edexcel", "OCR", "Eduqas"];
 const RES_TYPES = ["Revision Notes", "Past Questions", "Mark Schemes", "Videos"];
 
@@ -32,7 +30,7 @@ function useIsMobile(bp = 768) {
 }
 
 /* ========================= NAVBAR ========================= */
-function Navbar({ onNav, onSearch, isAdmin, setIsAdmin }) {
+function Navbar({ onNav, onLevel, onResource, onSearch, isAdmin, setIsAdmin }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,9 +43,10 @@ function Navbar({ onNav, onSearch, isAdmin, setIsAdmin }) {
     else if (pw) alert("Wrong password");
   };
 
+  // Each level is its own top-level button; Resources is a dropdown
   const menu = [
     { label: "Home", action: () => onNav("home") },
-    { label: "Past Papers", action: () => onNav("papers") },
+    ...LEVELS.map(l => ({ label: l, action: () => onLevel(l) })),
     { label: "Resources", options: RES_TYPES },
     { label: "Find a Tutor", action: () => onNav("book") },
     { label: "Contact", action: () => onNav("contact") },
@@ -70,7 +69,7 @@ function Navbar({ onNav, onSearch, isAdmin, setIsAdmin }) {
         {!isMobile && (
           <form onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
-              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 220 }} />
+              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 200 }} />
             <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer" }}>Search</button>
             <button type="button" onClick={handleAdmin}
               style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: isAdmin ? "#10b981" : "#fff", color: isAdmin ? "#fff" : "#111", cursor: "pointer" }}>Admin</button>
@@ -85,19 +84,21 @@ function Navbar({ onNav, onSearch, isAdmin, setIsAdmin }) {
       </div>
 
       {!isMobile && (
-        <nav style={{ display: "flex", gap: 6, padding: "8px 18px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)" }}>
+        <nav style={{ display: "flex", gap: 4, padding: "8px 18px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", flexWrap: "wrap" }}>
           {menu.map((it, i) => (
             <div key={it.label} style={{ position: "relative" }}
               onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
-              <button onClick={() => it.action ? it.action() : onNav("papers")}
-                style={{ background: "transparent", border: "none", padding: "8px 12px", cursor: "pointer", fontWeight: 700, color: "#0f172a" }}>
+              <button onClick={() => it.action && it.action()}
+                style={{ background: "transparent", border: "none", padding: "8px 11px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14 }}>
                 {it.label}{it.options ? " ▾" : ""}
               </button>
               {it.options && openIdx === i && (
-                <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 190, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.12)", borderRadius: 8, overflow: "hidden" }}>
+                <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 190, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.12)", borderRadius: 8, overflow: "hidden", zIndex: 10 }}>
                   {it.options.map(opt => (
-                    <div key={opt} onClick={() => onNav("papers")}
-                      style={{ padding: "10px 14px", cursor: "pointer", borderBottom: "1px solid #f3f4f6" }}>{opt}</div>
+                    <div key={opt} onClick={() => onResource(opt)}
+                      style={{ padding: "10px 14px", cursor: "pointer", borderBottom: "1px solid #f3f4f6", fontSize: 14 }}
+                      onMouseEnter={e => e.currentTarget.style.background = "#ecfeff"}
+                      onMouseLeave={e => e.currentTarget.style.background = "#fff"}>{opt}</div>
                   ))}
                 </div>
               )}
@@ -110,12 +111,12 @@ function Navbar({ onNav, onSearch, isAdmin, setIsAdmin }) {
         <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0" }}>
           {menu.map(it => (
             <div key={it.label}>
-              <button onClick={() => { it.action ? it.action() : onNav("papers"); setMenuOpen(false); }}
+              <button onClick={() => { it.action && it.action(); if (it.action) setMenuOpen(false); }}
                 style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "12px 18px", cursor: "pointer", fontWeight: 700, fontSize: 16 }}>
                 {it.label}
               </button>
               {it.options && it.options.map(opt => (
-                <button key={opt} onClick={() => { onNav("papers"); setMenuOpen(false); }}
+                <button key={opt} onClick={() => { onResource(opt); setMenuOpen(false); }}
                   style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "8px 34px", cursor: "pointer", color: "#0e7490", fontSize: 14 }}>
                   • {opt}
                 </button>
@@ -151,7 +152,7 @@ function Hero({ onNav }) {
             Learn <span style={{ color: "#80cbc4" }}>Smarter</span>. Revise <span style={{ color: "#2dd4bf" }}>Better</span>. Achieve <span style={{ color: "#fbbf24" }}>More</span>.
           </h1>
           <p style={{ color: "rgba(255,255,255,.9)", maxWidth: 600 }}>
-            Free past papers, revision notes and mark schemes organised by subject, level and exam board — plus 1-to-1 tutoring.
+            Free past papers, revision notes and mark schemes for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC — plus 1-to-1 tutoring.
           </p>
           <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
             <button onClick={() => onNav("papers")} style={{ padding: "11px 18px", borderRadius: 8, border: "none", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 700 }}>Browse Past Papers</button>
@@ -187,7 +188,7 @@ function SubjectCards({ onPick }) {
     <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 28 }}>Choose Your Subject</h2>
-        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>GCSE · A-Level · T-Level resources for every exam board</p>
+        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>11+ · GCSE/IGCSE · A-Level · T-Level · BTEC — every exam board</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18, marginTop: 26 }}>
           {SUBJECTS.map(s => (
             <div key={s} onClick={() => onPick(s)}
@@ -206,27 +207,31 @@ function SubjectCards({ onPick }) {
   );
 }
 
-/* ========================= PMT-STYLE PAST PAPERS PAGE ========================= */
-function PastPapers({ subject, isAdmin }) {
+/* ========================= PAST PAPERS / RESOURCES PAGE ========================= */
+function PastPapers({ subject, level, resType, isAdmin }) {
   const isMobile = useIsMobile();
   const [activeSubject, setActiveSubject] = useState(subject || "Physics");
-  const [activeLevel, setActiveLevel] = useState("GCSE");
+  const [activeLevel, setActiveLevel] = useState(level || "GCSE/IGCSE");
+  const [activeRes, setActiveRes] = useState(resType || "Past Questions");
 
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
+  useEffect(() => { if (level) setActiveLevel(level); }, [level]);
+  useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
 
-  // 🔌 SUPABASE: replace DEMO_PAPERS with a listing of files from
-  // bucket `resources` at path `PastQuestions/${activeSubject}/${board}/${activeLevel}`
-  const getPapers = (board) => DEMO_PAPERS;
-  const openPaper = (board, paper) => {
+  // 🔌 SUPABASE: list files at bucket `resources` path:
+  // `${activeRes}/${activeSubject}/${board}/${activeLevel}`
+  const getItems = (board) => DEMO_PAPERS;
+  const openItem = (board, item) => {
     // 🔌 SUPABASE: getPublicUrl(...) then window.open(url)
-    alert(`Open: ${activeSubject} ${activeLevel} ${board} — ${paper}`);
+    alert(`Open: ${activeRes} — ${activeSubject} ${activeLevel} ${board} — ${item}`);
   };
 
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › Past Papers › {activeSubject}</div>
+        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › {activeRes} › {activeLevel} › {activeSubject}</div>
 
+        {/* Tutor banner */}
         <div style={{ display: "flex", alignItems: "center", gap: 16, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
           <img src="https://placehold.co/80x80/009688/ffffff?text=JD" alt="tutor" style={{ width: 70, height: 70, borderRadius: "50%" }} />
           <div style={{ flex: 1, minWidth: 200 }}>
@@ -236,36 +241,51 @@ function PastPapers({ subject, isAdmin }) {
           <button style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
         </div>
 
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
-          {SUBJECTS.map(s => (
-            <button key={s} onClick={() => setActiveSubject(s)}
-              style={{ padding: "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
+        {/* Resource type tabs */}
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Resource Type</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+          {RES_TYPES.map(r => (
+            <button key={r} onClick={() => setActiveRes(r)}
+              style={{ padding: "8px 14px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeRes === r ? TEAL_DARK : "#e2e8f0", color: activeRes === r ? "#fff" : "#334155" }}>{r}</button>
           ))}
         </div>
+
+        {/* Subject tabs */}
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Subject</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+          {SUBJECTS.map(s => (
+            <button key={s} onClick={() => setActiveSubject(s)}
+              style={{ padding: "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
+          ))}
+        </div>
+
+        {/* Level tabs */}
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Level</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
           {LEVELS.map(l => (
             <button key={l} onClick={() => setActiveLevel(l)}
-              style={{ padding: "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
+              style={{ padding: "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, fontSize: 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
           ))}
         </div>
 
-        <h2 style={{ color: "#0f172a", marginBottom: 16 }}>{activeLevel} {activeSubject} — Past Papers by Exam Board</h2>
+        <h2 style={{ color: "#0f172a", marginBottom: 16 }}>{activeLevel} {activeSubject} — {activeRes} by Exam Board</h2>
 
+        {/* Board columns */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
           {BOARDS.map(board => (
             <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
               <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>{board}</div>
               <div style={{ padding: 12, display: "flex", flexDirection: "column", gap: 8 }}>
-                {getPapers(board).map(p => (
-                  <button key={p} onClick={() => openPaper(board, p)}
+                {getItems(board).map(p => (
+                  <button key={p} onClick={() => openItem(board, p)}
                     style={{ textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a" }}
                     onMouseEnter={e => { e.currentTarget.style.background = "#ecfeff"; e.currentTarget.style.borderColor = TEAL; }}
                     onMouseLeave={e => { e.currentTarget.style.background = "#f8fafc"; e.currentTarget.style.borderColor = "#e2e8f0"; }}>
-                    📄 {p}
+                    {activeRes === "Videos" ? "▶️" : "📄"} {p}
                   </button>
                 ))}
                 {isAdmin && (
-                  <button onClick={() => alert(`Upload to ${activeSubject}/${board}/${activeLevel}`)}
+                  <button onClick={() => alert(`Upload to ${activeRes}/${activeSubject}/${board}/${activeLevel}`)}
                     style={{ padding: "9px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>
                     + Upload file
                   </button>
@@ -282,7 +302,7 @@ function PastPapers({ subject, isAdmin }) {
 /* ========================= BOOKING ========================= */
 function Booking() {
   const isMobile = useIsMobile();
-  const [form, setForm] = useState({ name: "", email: "", subject: "Physics", level: "GCSE", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "Physics", level: "GCSE/IGCSE", message: "" });
   const [sent, setSent] = useState(false);
   const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
   const submit = (e) => { e.preventDefault(); setSent(true); /* 🔌 wire email/Supabase here */ };
@@ -359,7 +379,7 @@ function Footer() {
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 24 }}>
         <div>
           <div style={{ fontWeight: 800, color: "#fff", fontSize: 18 }}>jdscience.co.uk</div>
-          <p style={{ fontSize: 14, marginTop: 8 }}>Free science & maths resources and expert tutoring for GCSE, A-Level and T-Level.</p>
+          <p style={{ fontSize: 14, marginTop: 8 }}>Free science & maths resources and expert tutoring for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC.</p>
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
@@ -380,28 +400,28 @@ function Footer() {
 function App() {
   const [page, setPage] = useState("home");
   const [pickedSubject, setPickedSubject] = useState(null);
+  const [pickedLevel, setPickedLevel] = useState(null);
+  const [pickedRes, setPickedRes] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  const goTo = (p) => {
-    setPage(p);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const goTo = (p) => { setPage(p); window.scrollTo({ top: 0, behavior: "smooth" }); };
 
   const handleNav = (target) => {
-    if (target === "contact") {
-      if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById("contact-anchor")?.scrollIntoView({ behavior: "smooth" }), 50); }
-      else document.getElementById("contact-anchor")?.scrollIntoView({ behavior: "smooth" });
-    } else if (target === "book") {
-      if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 50); }
-      else document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" });
+    if (target === "contact" || target === "book") {
+      const id = target === "contact" ? "contact-anchor" : "book-anchor";
+      if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 60); }
+      else document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     } else goTo(target);
   };
 
+  const handleLevel = (lvl) => { setPickedLevel(lvl); goTo("papers"); };
+  const handleResource = (res) => { setPickedRes(res); goTo("papers"); };
   const pickSubject = (s) => { setPickedSubject(s); goTo("papers"); };
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc" }}>
-      <Navbar onNav={handleNav} onSearch={(q) => q && goTo("papers")} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
+      <Navbar onNav={handleNav} onLevel={handleLevel} onResource={handleResource}
+        onSearch={(q) => q && goTo("papers")} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
 
       {page === "home" && (
         <main>
@@ -415,7 +435,7 @@ function App() {
 
       {page === "papers" && (
         <main>
-          <PastPapers subject={pickedSubject} isAdmin={isAdmin} />
+          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} isAdmin={isAdmin} />
         </main>
       )}
 
@@ -424,4 +444,4 @@ function App() {
   );
 }
 
-export default App;
+App;
