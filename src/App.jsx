@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-const { useState, useEffect } = React;
+import React, { useState, useEffect } from "react";
 /* ============================================================
-   jdscience.co.uk — PMT-style site, Teal Classic theme
-   Admin login enables ADDING resources (title + link) which
-   persist in the browser (localStorage) and open for real.
+   jdscience.co.uk — Teal Classic with banner hero image
+   Vercel-ready: single import at top, single export at bottom.
 ============================================================ */
 
 const TEAL = "#009688";
@@ -17,30 +15,28 @@ const RES_TYPES = ["Revision Notes", "Past Questions", "Mark Schemes", "Videos"]
 
 const BANNER_IMG = "https://placehold.co/1400x500/004d40/ffffff?text=jdscience.co.uk";
 
-/* ---------- localStorage-backed resource store ----------
-   key format: "ResType|Subject|Board|Level" -> [{name, url}] */
 const STORE_KEY = "jdscience_resources_v1";
 function loadStore() {
   try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
   catch { return {}; }
 }
 function saveStore(obj) {
-  try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch {}
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch (e) {}
 }
 
-/* ---------- Mobile detection hook ---------- */
-function useIsMobile(bp = 768) {
-  const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= bp : false);
+function useIsMobile(bp) {
+  const breakpoint = bp || 768;
+  const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= breakpoint : false);
   useEffect(() => {
-    const r = () => setM(window.innerWidth <= bp);
+    const r = () => setM(window.innerWidth <= breakpoint);
     window.addEventListener("resize", r);
     return () => window.removeEventListener("resize", r);
-  }, [bp]);
+  }, [breakpoint]);
   return m;
 }
 
-/* ========================= NAVBAR ========================= */
-function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIsAdmin }) {
+function Navbar(props) {
+  const { onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIsAdmin } = props;
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,11 +51,11 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
 
   const menu = [
     { label: "Home", type: "link", action: onHome },
-    ...LEVELS.map(lvl => ({
+    ...LEVELS.map((lvl) => ({
       label: lvl, type: "dropdown",
-      options: SUBJECTS.map(s => ({ text: s, action: () => onPick(lvl, s) })),
+      options: SUBJECTS.map((s) => ({ text: s, action: () => onPick(lvl, s) })),
     })),
-    { label: "Resources", type: "dropdown", options: RES_TYPES.map(r => ({ text: r, action: () => onResource(r) })) },
+    { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book") },
     { label: "Contact", type: "link", action: () => onScroll("contact") },
   ];
@@ -68,7 +64,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
 
   const logo = (
     <div onClick={onHome} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 0 }}>
-      <div style={{ width: 38, height: 38, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+      <div style={{ width: 38, height: 38, borderRadius: 8, background: "linear-gradient(135deg," + TEAL + "," + TEAL_DARK + ")", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
       <div style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
     </div>
   );
@@ -87,12 +83,11 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
           </form>
         )}
         {isMobile && (
-          <button onClick={() => setMenuOpen(o => !o)} aria-label="Menu"
+          <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu"
             style={{ fontSize: 26, background: "none", border: "none", cursor: "pointer", lineHeight: 1 }}>{menuOpen ? "✕" : "☰"}</button>
         )}
       </div>
 
-      {/* Desktop nav — single tidy row */}
       {!isMobile && (
         <nav style={{ display: "flex", gap: 2, padding: "0 14px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", justifyContent: "center" }}>
           {menu.map((it, i) => (
@@ -104,11 +99,11 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
               </button>
               {it.type === "dropdown" && openIdx === i && (
                 <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 180, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.14)", borderRadius: "0 0 8px 8px", overflow: "hidden", zIndex: 10 }}>
-                  {it.options.map(opt => (
+                  {it.options.map((opt) => (
                     <div key={opt.text} onClick={opt.action}
                       style={{ padding: "11px 16px", cursor: "pointer", borderBottom: "1px solid #f3f4f6", fontSize: 14, color: "#0f172a" }}
-                      onMouseEnter={e => e.currentTarget.style.background = "#ecfeff"}
-                      onMouseLeave={e => e.currentTarget.style.background = "#fff"}>{opt.text}</div>
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "#ecfeff")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "#fff")}>{opt.text}</div>
                   ))}
                 </div>
               )}
@@ -117,14 +112,13 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
         </nav>
       )}
 
-      {/* Mobile nav */}
       {isMobile && menuOpen && (
         <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0", maxHeight: "70vh", overflowY: "auto" }}>
-          {menu.map(it => (
+          {menu.map((it) => (
             <div key={it.label}>
               <button onClick={() => { if (it.type === "link") { it.action(); setMenuOpen(false); } }}
                 style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "12px 18px", cursor: "pointer", fontWeight: 700, fontSize: 16, color: "#0f172a" }}>{it.label}</button>
-              {it.type === "dropdown" && it.options.map(opt => (
+              {it.type === "dropdown" && it.options.map((opt) => (
                 <button key={opt.text} onClick={() => { opt.action(); setMenuOpen(false); }}
                   style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "8px 34px", cursor: "pointer", color: "#0e7490", fontSize: 14 }}>• {opt.text}</button>
               ))}
@@ -145,8 +139,8 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
   );
 }
 
-/* ========================= HERO ========================= */
-function Hero({ onScroll, onBrowse }) {
+function Hero(props) {
+  const { onScroll, onBrowse } = props;
   const isMobile = useIsMobile();
   return (
     <section style={{ position: "relative", minHeight: isMobile ? 360 : 460, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
@@ -174,13 +168,14 @@ function BoardStrip() {
     <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: "14px 18px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
         <span style={{ color: "#94a3b8" }}>Covering:</span>
-        {BOARDS.map(b => <span key={b}>{b}</span>)}
+        {BOARDS.map((b) => <span key={b}>{b}</span>)}
       </div>
     </div>
   );
 }
 
-function LevelGrid({ onLevel }) {
+function LevelGrid(props) {
+  const { onLevel } = props;
   const isMobile = useIsMobile();
   const blurb = { "11+": "Entrance exam prep & practice", "GCSE/IGCSE": "Years 10–11 · all boards", "A-Level": "Years 12–13 · exam-ready", "T-Level": "Technical qualifications", "BTEC": "Vocational courses" };
   return (
@@ -189,11 +184,11 @@ function LevelGrid({ onLevel }) {
         <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 28, margin: 0 }}>Choose Your Level</h2>
         <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Pick where you're studying — then choose your subject</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginTop: 26 }}>
-          {LEVELS.map(l => (
+          {LEVELS.map((l) => (
             <div key={l} onClick={() => onLevel(l)}
-              style={{ background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, color: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)" }}
-              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
-              onMouseLeave={e => e.currentTarget.style.transform = "none"}>
+              style={{ background: "linear-gradient(135deg," + TEAL + "," + TEAL_DARK + ")", color: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "none")}>
               <div style={{ fontSize: 22, fontWeight: 800 }}>{l}</div>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,.9)", margin: "8px 0 0" }}>{blurb[l]}</p>
               <div style={{ marginTop: 14, fontWeight: 700, fontSize: 14 }}>Explore →</div>
@@ -205,7 +200,8 @@ function LevelGrid({ onLevel }) {
   );
 }
 
-function SubjectCards({ onPick }) {
+function SubjectCards(props) {
+  const { onPick } = props;
   const isMobile = useIsMobile();
   const colors = { Physics: "#0ea5e9", Chemistry: "#f59e0b", Biology: "#22c55e", Maths: "#8b5cf6" };
   const icons = { Physics: "⚛️", Chemistry: "🧪", Biology: "🧬", Maths: "📐" };
@@ -215,11 +211,11 @@ function SubjectCards({ onPick }) {
         <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 28 }}>Browse by Subject</h2>
         <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Past papers, notes & mark schemes for every exam board</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18, marginTop: 26 }}>
-          {SUBJECTS.map(s => (
+          {SUBJECTS.map((s) => (
             <div key={s} onClick={() => onPick(s)}
-              style={{ background: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.06)", borderTop: `4px solid ${colors[s]}` }}
-              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
-              onMouseLeave={e => e.currentTarget.style.transform = "none"}>
+              style={{ background: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.06)", borderTop: "4px solid " + colors[s] }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "none")}>
               <div style={{ fontSize: 34 }}>{icons[s]}</div>
               <h3 style={{ margin: "10px 0 4px", color: "#0f172a" }}>{s}</h3>
               <p style={{ color: "#64748b", fontSize: 14, margin: 0 }}>All levels & exam boards</p>
@@ -232,8 +228,8 @@ function SubjectCards({ onPick }) {
   );
 }
 
-/* ========================= PAST PAPERS / RESOURCES PAGE ========================= */
-function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook }) {
+function PastPapers(props) {
+  const { subject, level, resType, isAdmin, store, setStore, onBook } = props;
   const isMobile = useIsMobile();
   const [activeSubject, setActiveSubject] = useState(subject || "Physics");
   const [activeLevel, setActiveLevel] = useState(level || "GCSE/IGCSE");
@@ -243,9 +239,8 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
 
-  const keyFor = (board) => `${activeRes}|${activeSubject}|${board}|${activeLevel}`;
+  const keyFor = (board) => activeRes + "|" + activeSubject + "|" + board + "|" + activeLevel;
   const getItems = (board) => store[keyFor(board)] || [];
-
   const openItem = (item) => { if (item.url) window.open(item.url, "_blank", "noopener"); };
 
   const addItem = (board) => {
@@ -254,14 +249,17 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
     const url = window.prompt("Paste the file link (Google Drive / YouTube / any public URL):");
     if (!url) return;
     const k = keyFor(board);
-    const next = { ...store, [k]: [...(store[k] || []), { name, url }] };
+    const next = Object.assign({}, store);
+    next[k] = (store[k] || []).concat([{ name: name, url: url }]);
     setStore(next); saveStore(next);
   };
 
   const removeItem = (board, idx) => {
     const k = keyFor(board);
-    const arr = [...(store[k] || [])]; arr.splice(idx, 1);
-    const next = { ...store, [k]: arr };
+    const arr = (store[k] || []).slice();
+    arr.splice(idx, 1);
+    const next = Object.assign({}, store);
+    next[k] = arr;
     setStore(next); saveStore(next);
   };
 
@@ -281,7 +279,7 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Resource Type</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
-          {RES_TYPES.map(r => (
+          {RES_TYPES.map((r) => (
             <button key={r} onClick={() => setActiveRes(r)}
               style={{ padding: "8px 14px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeRes === r ? TEAL_DARK : "#e2e8f0", color: activeRes === r ? "#fff" : "#334155" }}>{r}</button>
           ))}
@@ -289,7 +287,7 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Subject</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
-          {SUBJECTS.map(s => (
+          {SUBJECTS.map((s) => (
             <button key={s} onClick={() => setActiveSubject(s)}
               style={{ padding: "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
           ))}
@@ -297,16 +295,16 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Level</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
-          {LEVELS.map(l => (
+          {LEVELS.map((l) => (
             <button key={l} onClick={() => setActiveLevel(l)}
-              style={{ padding: "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, fontSize: 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
+              style={{ padding: "6px 12px", borderRadius: 8, border: "1px solid " + (activeLevel === l ? TEAL : "#cbd5e1"), cursor: "pointer", fontWeight: 600, fontSize: 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
           ))}
         </div>
 
         <h2 style={{ color: "#0f172a", marginBottom: 16 }}>{activeLevel} {activeSubject} — {activeRes} by Exam Board</h2>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
-          {BOARDS.map(board => {
+          {BOARDS.map((board) => {
             const items = getItems(board);
             return (
               <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
@@ -317,8 +315,8 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
                     <div key={idx} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
                       <button onClick={() => openItem(p)}
                         style={{ flex: 1, textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a" }}
-                        onMouseEnter={e => { e.currentTarget.style.background = "#ecfeff"; e.currentTarget.style.borderColor = TEAL; }}
-                        onMouseLeave={e => { e.currentTarget.style.background = "#f8fafc"; e.currentTarget.style.borderColor = "#e2e8f0"; }}>
+                        onMouseEnter={(e) => { e.currentTarget.style.background = "#ecfeff"; e.currentTarget.style.borderColor = TEAL; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.background = "#f8fafc"; e.currentTarget.style.borderColor = "#e2e8f0"; }}>
                         {activeRes === "Videos" ? "▶️" : "📄"} {p.name}
                       </button>
                       {isAdmin && (
@@ -329,7 +327,7 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
                   ))}
                   {isAdmin && (
                     <button onClick={() => addItem(board)}
-                      style={{ padding: "9px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>+ Add resource</button>
+                      style={{ padding: "9px 12px", borderRadius: 8, border: "1px dashed " + TEAL, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>+ Add resource</button>
                   )}
                 </div>
               </div>
@@ -341,18 +339,18 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
   );
 }
 
-/* ========================= BOOKING ========================= */
 const inp = { padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 14, width: "100%", boxSizing: "border-box" };
+
 function Booking() {
   const isMobile = useIsMobile();
   const [form, setForm] = useState({ name: "", email: "", subject: "Physics", level: "GCSE/IGCSE", message: "" });
   const [sent, setSent] = useState(false);
-  const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
+  const set = (k, v) => setForm((f) => Object.assign({}, f, { [k]: v }));
   const submit = (e) => { e.preventDefault(); setSent(true); };
   const price = form.level === "A-Level" ? "£40/hr" : "£35/hr";
 
   return (
-    <section style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
+    <section style={{ background: "linear-gradient(135deg," + TEAL_DARK + "," + TEAL + ")", padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
       <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
         <div>
           <h2 style={{ fontSize: 28, marginTop: 0 }}>Book a Tutoring Session</h2>
@@ -372,18 +370,18 @@ function Booking() {
             </div>
           ) : (
             <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <input required placeholder="Your name" value={form.name} onChange={e => set("name", e.target.value)} style={inp} />
-              <input required type="email" placeholder="Email" value={form.email} onChange={e => set("email", e.target.value)} style={inp} />
+              <input required placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} style={inp} />
+              <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                <select value={form.subject} onChange={e => set("subject", e.target.value)} style={inp}>
-                  {SUBJECTS.map(s => <option key={s}>{s}</option>)}
+                <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
+                  {SUBJECTS.map((s) => <option key={s}>{s}</option>)}
                 </select>
-                <select value={form.level} onChange={e => set("level", e.target.value)} style={inp}>
-                  {LEVELS.map(l => <option key={l}>{l}</option>)}
+                <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
+                  {LEVELS.map((l) => <option key={l}>{l}</option>)}
                 </select>
               </div>
               <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
-              <textarea placeholder="What would you like help with?" value={form.message} onChange={e => set("message", e.target.value)} rows={3} style={inp} />
+              <textarea placeholder="What would you like help with?" value={form.message} onChange={(e) => set("message", e.target.value)} rows={3} style={inp} />
               <button type="submit" style={{ padding: "12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>Request Session</button>
             </form>
           )}
@@ -426,7 +424,7 @@ function Footer() {
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
-          {RES_TYPES.map(r => <div key={r} style={{ fontSize: 14, marginTop: 6 }}>{r}</div>)}
+          {RES_TYPES.map((r) => <div key={r} style={{ fontSize: 14, marginTop: 6 }}>{r}</div>)}
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Contact</div>
@@ -439,7 +437,6 @@ function Footer() {
   );
 }
 
-/* ========================= ROOT APP ========================= */
 function App() {
   const [page, setPage] = useState("home");
   const [pickedSubject, setPickedSubject] = useState(null);
@@ -458,8 +455,13 @@ function App() {
 
   const handleScroll = (target) => {
     const id = target === "contact" ? "contact-anchor" : "book-anchor";
-    if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id) && document.getElementById(id).scrollIntoView({ behavior: "smooth" }), 120); }
-    else { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth" }); }
+    if (page !== "home") {
+      setPage("home");
+      setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth" }); }, 120);
+    } else {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -489,4 +491,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
