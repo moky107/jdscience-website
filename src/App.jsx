@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 /* ============================================================
    jdscience.co.uk — PMT-style site, Teal Classic theme
    Vercel/Vite ready: import React (top) + App (bottom).
@@ -444,4 +445,4 @@ function App() {
   );
 }
 
-App;
+export default App;
