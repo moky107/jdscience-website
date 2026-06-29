@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 // ====== CONFIG: replace these after creating free Formspree forms ======
 const FORMSPREE_BOOKING = "https://formspree.io/f/YOUR_FORM_ID";
 const FORMSPREE_TUTOR = "https://formspree.io/f/YOUR_FORM_ID";
@@ -223,3 +224,4 @@ const priceCard = { background: "#eef7f6", borderRadius: 12, padding: "18px 26px
 const select = { padding: "12px 14px", borderRadius: 8, border: "1px solid #cdd9d8", fontSize: 15, minWidth: 220, background: "#fff" };
 const formBox = { display: "grid", gap: 12, maxWidth: 520, marginTop: 20 };
 const input = { padding: "12px 14px", borderRadius: 8, border: "1px solid #cdd9d8", fontSize: 15, fontFamily: "inherit" };
+export default App;
