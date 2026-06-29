@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+ import React, { useState, useEffect } from "react";
 
 /*
   jdscience App Preview (mobile-friendly)
@@ -398,4 +398,4 @@ function App(){
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('artifact_react'));
+export default App;
