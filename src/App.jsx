@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState, useEffect } from "react";
 /* ============================================================
    jdscience.co.uk — Teal Classic, banner hero
    - Per-level subjects (11+, GCSE, A-Level, T-Level, BTEC)
