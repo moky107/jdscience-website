@@ -3,6 +3,8 @@ import { supabase } from "./supabaseClient";
 
 const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources";
+// Replace this with your real JD Science intro video embed URL when ready.
+const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/VIDEO_ID_HERE";
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK";
 
 const TEAL = "#009688";
@@ -249,16 +251,26 @@ function Home({ navigate }) {
     <main>
       <section style={styles.hero}>
         <div style={styles.heroInner}>
-          <p style={styles.badge}>Expert Science and Maths Tutoring</p>
-          <h1 style={styles.heroTitle}>Learn Smarter. Revise Better. Achieve More.</h1>
-          <p style={styles.heroText}>
-            Organised science and maths resources by level, subject, exam board and specification,
-            with tutoring support for learners.
-          </p>
+          <div style={styles.heroCopy}>
+            <p style={styles.badge}>Expert Science and Maths Tutoring</p>
+            <h1 style={styles.heroTitle}>Learn Smarter. Revise Better. Achieve More.</h1>
+            <p style={styles.heroText}>
+              Organised science and maths resources by level, subject, exam board and specification,
+              with tutoring support for learners.
+            </p>
 
-          <div style={styles.heroActions}>
-            <button onClick={() => navigate("resources")} style={styles.primary}>Browse Resources</button>
-            <button onClick={() => navigate("booking")} style={styles.secondary}>Book a Session</button>
+            <div style={styles.heroActions}>
+              <button onClick={() => navigate("resources")} style={styles.primary}>Browse Resources</button>
+              <button onClick={() => navigate("booking")} style={styles.secondary}>Book a Session</button>
+            </div>
+          </div>
+
+          <div style={styles.heroImageWrap}>
+            <img
+              src="/hero-students.png"
+              alt="A multinational group of learners studying together"
+              style={styles.heroImage}
+            />
           </div>
         </div>
       </section>
@@ -271,6 +283,23 @@ function Home({ navigate }) {
           <Card title="Tutoring" text="Book support for GCSE, IGCSE, A-Level, BTEC and T-Level." />
           <Card title="Tutor Profiles" text="Approved tutors appear live after admin approval." />
           <Card title="Admin Control" text="Admin can upload resources directly into Supabase for visitors to download." />
+        </div>
+      </section>
+
+      <section style={styles.videoSection}>
+        <div style={styles.videoInner}>
+          <h2 style={styles.videoTitle}>How JD Science Works</h2>
+          <p style={styles.videoSubtitle}>Watch this short introduction to see how learners can use resources, past papers and tutoring support.</p>
+          <div style={styles.videoFrame}>
+            <iframe
+              title="How JD Science Works"
+              src={INTRO_VIDEO_EMBED_URL}
+              style={styles.videoIframe}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <p style={styles.videoNote}>Replace <strong>VIDEO_ID_HERE</strong> in App.jsx with your YouTube video ID when your introduction video is ready.</p>
         </div>
       </section>
     </main>
@@ -711,8 +740,11 @@ const styles = {
   navLink: { background: "#f1f5f9", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 700, textAlign: "left" },
   activeNav: { background: TEAL_DARK, color: "#fff" },
   adminButton: { background: "#0f172a", color: "#fff", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 800 },
-  hero: { background: `linear-gradient(135deg, ${TEAL_DARK}, ${TEAL})`, color: "#fff", padding: "85px 20px" },
-  heroInner: { maxWidth: 1180, margin: "0 auto" },
+  hero: { background: `linear-gradient(135deg, ${TEAL_DARK}, ${TEAL})`, color: "#fff", padding: "70px 20px" },
+  heroInner: { maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(320px, .9fr)", gap: 36, alignItems: "center" },
+  heroCopy: { minWidth: 0 },
+  heroImageWrap: { background: "rgba(255,255,255,.12)", borderRadius: 24, padding: 10, boxShadow: "0 24px 60px rgba(0,0,0,.22)" },
+  heroImage: { width: "100%", height: "auto", minHeight: 280, objectFit: "cover", borderRadius: 18, display: "block" },
   badge: { display: "inline-block", background: "rgba(255,255,255,0.15)", padding: "8px 14px", borderRadius: 999, fontWeight: 700 },
   heroTitle: { fontSize: "clamp(36px, 7vw, 64px)", maxWidth: 820, lineHeight: 1.05, margin: "18px 0" },
   heroText: { maxWidth: 760, fontSize: 18, lineHeight: 1.7 },
@@ -739,6 +771,13 @@ const styles = {
   modalBack: { position: "fixed", inset: 0, background: "rgba(15,23,42,.55)", zIndex: 999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 },
   modal: { background: "#fff", borderRadius: 18, padding: 24, width: "min(430px, 100%)", boxShadow: "0 20px 50px rgba(15,23,42,.25)", display: "grid", gap: 14 },
   linkButton: { background: "transparent", border: "none", color: TEAL_DARK, cursor: "pointer", fontWeight: 800, textAlign: "left" },
+  videoSection: { background: "#071025", color: "#fff", padding: "56px 20px" },
+  videoInner: { maxWidth: 980, margin: "0 auto", textAlign: "center" },
+  videoTitle: { fontSize: "clamp(28px, 4vw, 42px)", margin: 0 },
+  videoSubtitle: { color: "#cbd5e1", fontSize: 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" },
+  videoFrame: { position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 60px rgba(0,0,0,.35)" },
+  videoIframe: { position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 },
+  videoNote: { color: "#94a3b8", fontSize: 14, marginTop: 14 },
   footer: { background: "#0f172a", color: "#fff", textAlign: "center", padding: "38px 20px" },
 };
 
