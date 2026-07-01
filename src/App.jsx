@@ -742,7 +742,7 @@ const styles = {
   adminButton: { background: "#0f172a", color: "#fff", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 800 },
   hero: {
   backgroundImage:
-    "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/hero-students.png')",
+  "linear-gradient(rgba(0,105,92,0.65), rgba(0,137,123,0.65)), url('/hero-students.png')",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
