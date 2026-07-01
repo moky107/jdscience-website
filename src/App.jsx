@@ -4,7 +4,7 @@ import { supabase } from "./supabaseClient";
 const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources";
 // Replace this with your real JD Science intro video embed URL when ready.
-const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/watch?v=TjPFZaMe2yw"; 
+const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
 const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK";
 
 const TEAL = "#009688";
