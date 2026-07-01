@@ -740,7 +740,15 @@ const styles = {
   navLink: { background: "#f1f5f9", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 700, textAlign: "left" },
   activeNav: { background: TEAL_DARK, color: "#fff" },
   adminButton: { background: "#0f172a", color: "#fff", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 800 },
-  hero: { background: `linear-gradient(135deg, ${TEAL_DARK}, ${TEAL})`, color: "#fff", padding: "70px 20px" },
+  hero: {
+  backgroundImage:
+    "linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('/hero-students.png')",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  color: "#fff",
+  padding: "90px 20px",
+},
   heroInner: { maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(320px, .9fr)", gap: 36, alignItems: "center" },
   heroCopy: { minWidth: 0 },
   heroImageWrap: { background: "rgba(255,255,255,.12)", borderRadius: 24, padding: 10, boxShadow: "0 24px 60px rgba(0,0,0,.22)" },
