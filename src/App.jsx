@@ -177,7 +177,7 @@ function Navbar({ page, navigate, menuOpen, setMenuOpen, isAdmin, adminLogin }) 
     ["resources", "Resources"],
     ["booking", "Book a Session"],
     ["tutors", "Tutors"],
-    ["becomeTutor", "Become a Tutor"],
+    ["becomeTutor", ],
     ["admin", "Admin"],
   ];
 
