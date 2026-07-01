@@ -267,7 +267,7 @@ function Home({ navigate }) {
 
           <div style={styles.heroImageWrap}>
             <img
-              src="/hero-students.png"
+              src="/hero-students..png"
               alt="A multinational group of learners studying together"
               style={styles.heroImage}
             />
