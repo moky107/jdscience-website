@@ -442,19 +442,33 @@ function BecomeTutor({ tutors, setTutors }) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subjects: "", levels: "", qualifications: "", bio: "" });
   const update = (key, value) => setForm({ ...form, [key]: value });
 
-  const submit = () => {
-    if (!form.name || !form.email || !form.subjects) {
-      alert("Please complete name, email and subjects.");
-      return;
-    }
+  const submit = async () => {
+  if (!form.name || !form.email || !form.subjects) {
+    alert("Please complete name, email and subjects.");
+    return;
+  }
 
-    const application = { ...form, id: Date.now(), status: "pending", date: new Date().toLocaleString() };
-    const updated = [...tutors, application];
-    setTutors(updated);
-    setSaved("jd_tutors", updated);
-    alert("Application submitted. Admin will review it before it goes live.");
-    setForm({ name: "", email: "", phone: "", subjects: "", levels: "", qualifications: "", bio: "" });
-  };
+  const { error } = await supabase
+    .from("tutor_applications")
+    .insert([form]);
+
+  if (error) {
+    alert(error.message);
+    return;
+  }
+
+  alert("Application submitted successfully.");
+
+  setForm({
+    name: "",
+    email: "",
+    phone: "",
+    subjects: "",
+    levels: "",
+    qualifications: "",
+    bio: "",
+  });
+};
 
   return (
     <main style={styles.page}>
