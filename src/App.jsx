@@ -10,7 +10,7 @@ import {
   Users,
   FileText,
 } from "lucide-react";
-import "./App.css";
+import "./styles.css";
 
 function App() {
   const [page, setPage] = useState("home");
