@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 /* ============================================================
    jdscience.co.uk — PMT-style site, Teal Classic theme
-   Admin login enables ADDING resources (title + link) which
-   persist in the browser (localStorage) and open for real.
 ============================================================ */
 
 const TEAL = "#009688";
@@ -16,8 +14,6 @@ const RES_TYPES = ["Revision Notes", "Past Questions", "Mark Schemes", "Videos"]
 
 const BANNER_IMG = "https://placehold.co/1400x500/004d40/ffffff?text=jdscience.co.uk";
 
-/* ---------- localStorage-backed resource store ----------
-   key format: "ResType|Subject|Board|Level" -> [{name, url}] */
 const STORE_KEY = "jdscience_resources_v1";
 function loadStore() {
   try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
@@ -27,7 +23,6 @@ function saveStore(obj) {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch {}
 }
 
-/* ---------- Mobile detection hook ---------- */
 function useIsMobile(bp = 768) {
   const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= bp : false);
   useEffect(() => {
@@ -38,7 +33,6 @@ function useIsMobile(bp = 768) {
   return m;
 }
 
-/* ========================= NAVBAR ========================= */
 function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIsAdmin }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
@@ -91,7 +85,6 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
         )}
       </div>
 
-      {/* Desktop nav — single tidy row */}
       {!isMobile && (
         <nav style={{ display: "flex", gap: 2, padding: "0 14px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", justifyContent: "center" }}>
           {menu.map((it, i) => (
@@ -116,7 +109,6 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
         </nav>
       )}
 
-      {/* Mobile nav */}
       {isMobile && menuOpen && (
         <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0", maxHeight: "70vh", overflowY: "auto" }}>
           {menu.map(it => (
@@ -144,7 +136,6 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIs
   );
 }
 
-/* ========================= HERO ========================= */
 function Hero({ onScroll, onBrowse }) {
   const isMobile = useIsMobile();
   return (
@@ -231,7 +222,6 @@ function SubjectCards({ onPick }) {
   );
 }
 
-/* ========================= PAST PAPERS / RESOURCES PAGE ========================= */
 function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook }) {
   const isMobile = useIsMobile();
   const [activeSubject, setActiveSubject] = useState(subject || "Physics");
@@ -340,7 +330,6 @@ function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook 
   );
 }
 
-/* ========================= BOOKING ========================= */
 const inp = { padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 14, width: "100%", boxSizing: "border-box" };
 function Booking() {
   const isMobile = useIsMobile();
@@ -438,7 +427,6 @@ function Footer() {
   );
 }
 
-/* ========================= WHAT JD SCIENCE OFFERS ========================= */
 function OffersSection() {
   const isMobile = useIsMobile();
   const offers = [
@@ -464,7 +452,6 @@ function OffersSection() {
   );
 }
 
-/* ========================= SUBJECTS WE OFFER ========================= */
 function SubjectsWeOffer({ onPick }) {
   const isMobile = useIsMobile();
   const items = [
@@ -511,7 +498,6 @@ function SubjectsWeOffer({ onPick }) {
   );
 }
 
-/* ========================= ROOT APP ========================= */
 function App() {
   const [page, setPage] = useState("home");
   const [pickedSubject, setPickedSubject] = useState(null);
@@ -563,3 +549,5 @@ function App() {
     </div>
   );
 }
+
+export default App;
