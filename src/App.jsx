@@ -16,11 +16,35 @@ const LEVEL_SUBJECTS = {
   "11+": ["Maths", "English", "Verbal Reasoning", "Non-Verbal Reasoning"],
   "GCSE/IGCSE": ["Physics", "Chemistry", "Biology", "Combined Science", "Maths"],
   "A-Level": ["Physics", "Chemistry", "Biology", "Maths"],
-  "T-Level": ["Core Science", "Laboratory Sciences", "The Science Sector"],
+  "T-Level": [
+    // Core (Science)
+    "Core: Biology",
+    "Core: Chemistry",
+    "Core: Physics",
+    "Core: The Science Sector (Synoptic)",
+    // Occupational Specialism – Laboratory Sciences
+    "Lab Sciences PO1: Design & Execute Scientific Tasks",
+    "Lab Sciences PO2: Scientific Techniques & Data Collection",
+    "Lab Sciences PO3: Review, Interpret & Present Data",
+    "Lab Sciences PO4: Review & Improve Scientific Tasks",
+    // Health & Social Care
+    "HSC Core: Health & Social Care Sector",
+    "HSC Core: Health, Safety & Regulation",
+    "HSC Core: Person-Centred Care",
+    "HSC Core: Safeguarding & Infection Prevention",
+    "HSC OS: Supporting Adult Care",
+    "HSC OS: Supporting Healthcare",
+  ],
   BTEC: [
-    "Unit 1: Principles & Applications of Science I",
-    "Unit 2: Practical Scientific Procedures",
+    // Mandatory units
+    "Unit 1: Principles and Applications of Science I",
+    "Unit 2: Practical Scientific Procedures and Techniques",
     "Unit 3: Science Investigation Skills",
+    "Unit 4: Laboratory Techniques and their Application",
+    "Unit 5: Principles and Applications of Science II",
+    "Unit 6: Investigative Project",
+    "Unit 7: Contemporary Issues in Science",
+    // Optional units
     "Unit 8: Physiology of Human Body Systems",
   ],
 };
@@ -29,7 +53,7 @@ const LEVEL_BOARDS = {
   "11+": ["GL Assessment", "CEM"],
   "GCSE/IGCSE": ["AQA", "Edexcel", "OCR", "Eduqas"],
   "A-Level": ["AQA", "Edexcel", "OCR"],
-  "T-Level": ["NCFE"],
+  "T-Level": ["Pearson", "NCFE"],
   BTEC: ["Pearson"],
 };
 
