@@ -9,7 +9,7 @@ const TEAL_DARK = "#004d40";
 const ADMIN_PASSWORD = "jdscience2026";
 
 /* Put hero-students.png in your /public folder (one dot, lowercase) */
-const BANNER_IMG = "/hero-students.png";
+const BANNER_IMG = "/hero-students.png.png";
 /* Swap in your real intro video ID — keep the /embed/ format */
 const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
 
