@@ -1,4 +1,4 @@
-const { useState, useEffect } = React;
+import React, { useState, useEffect } from "react";
 /* ============================================================
    jdscience.co.uk — PMT-style site, Teal Classic theme
    Admin login enables ADDING resources (title + link) which
