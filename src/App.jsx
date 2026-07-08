@@ -77,6 +77,7 @@ function useIsMobile() {
 
 export default function App() {
   const [page, setPage] = useState("home");
+  const [selectedLevel, setSelectedLevel] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [session, setSession] = useState(null);
   const [authOpen, setAuthOpen] = useState(false);
@@ -128,6 +129,11 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const goToLevel = (level) => {
+    setSelectedLevel(level);
+    navigate("resources");
+  };
+
   const openAuth = (mode = "login") => {
     setAuthMode(mode);
     setAuthOpen(true);
@@ -152,8 +158,14 @@ export default function App() {
         logout={logout}
       />
 
-      {page === "home" && <Home navigate={navigate} />}
-      {page === "resources" && <Resources resources={resources} loading={loadingResources} />}
+      {page === "home" && <Home navigate={navigate} goToLevel={goToLevel} />}
+      {page === "resources" && (
+        <Resources
+          resources={resources}
+          loading={loadingResources}
+          initialLevel={selectedLevel}
+        />
+      )}
       {page === "booking" && (
         <Booking bookings={bookings} setBookings={setBookings} tutors={tutors} />
       )}
@@ -246,7 +258,7 @@ function Navbar({ page, navigate, menuOpen, setMenuOpen, session, isAdmin, openA
   );
 }
 
-function Home({ navigate }) {
+function Home({ navigate, goToLevel }) {
   return (
     <main>
       <section style={styles.hero}>
@@ -258,6 +270,14 @@ function Home({ navigate }) {
               Organised science and maths resources by level, subject, exam board and specification,
               with tutoring support for learners.
             </p>
+
+            <div style={styles.levelRow}>
+              {LEVELS.map((lvl) => (
+                <button key={lvl} onClick={() => goToLevel(lvl)} style={styles.levelButton}>
+                  {lvl}
+                </button>
+              ))}
+            </div>
 
             <div style={styles.heroActions}>
               <button onClick={() => navigate("resources")} style={styles.primary}>Browse Resources</button>
@@ -306,12 +326,16 @@ function Home({ navigate }) {
   );
 }
 
-function Resources({ resources, loading }) {
-  const [level, setLevel] = useState("GCSE/IGCSE");
+function Resources({ resources, loading, initialLevel }) {
+  const [level, setLevel] = useState(initialLevel || "GCSE/IGCSE");
   const [subject, setSubject] = useState("Chemistry");
   const [board, setBoard] = useState("AQA");
   const [type, setType] = useState("Revision Notes");
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    if (initialLevel) setLevel(initialLevel);
+  }, [initialLevel]);
 
   useEffect(() => {
     const subjects = LEVEL_SUBJECTS[level] || [];
@@ -770,6 +794,8 @@ const styles = {
   badge: { display: "inline-block", background: "rgba(255,255,255,0.15)", padding: "8px 14px", borderRadius: 999, fontWeight: 700 },
   heroTitle: { fontSize: "clamp(36px, 7vw, 64px)", maxWidth: 820, lineHeight: 1.05, margin: "18px 0" },
   heroText: { maxWidth: 760, fontSize: 18, lineHeight: 1.7 },
+  levelRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 24 },
+  levelButton: { background: "rgba(255,255,255,0.15)", color: "#fff", border: "1px solid rgba(255,255,255,0.5)", padding: "10px 16px", borderRadius: 999, fontWeight: 800, cursor: "pointer", fontSize: 15 },
   heroActions: { display: "flex", gap: 12, flexWrap: "wrap", marginTop: 28 },
   primary: { background: TEAL_DARK, color: "#fff", border: "none", padding: "13px 18px", borderRadius: 12, fontWeight: 800, cursor: "pointer", textDecoration: "none" },
   secondary: { background: "#fff", color: TEAL_DARK, border: "none", padding: "13px 18px", borderRadius: 12, fontWeight: 800, cursor: "pointer" },
