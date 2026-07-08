@@ -146,7 +146,7 @@ function Hero({ onScroll, onBrowse }) {
     <section style={{ position: "relative", minHeight: isMobile ? 420 : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="A diverse group of students learning together"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,77,64,.82), rgba(0,150,136,.62))" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,77,64,.55), rgba(0,150,136,.35))" }} />
       <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: "40px 18px" }}>
         <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "6px 14px", borderRadius: 20, marginBottom: 14, fontSize: 13, fontWeight: 600 }}>🏆 Expert Science & Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 26 : 44, margin: "0 0 14px", lineHeight: 1.15, fontWeight: 800 }}>
