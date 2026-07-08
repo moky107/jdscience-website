@@ -1,854 +1,565 @@
-import React, { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
-
-const ADMIN_EMAILS = ["jd943791@gmail.com"];
-const BUCKET = "resources";
-// Replace this with your real JD Science intro video embed URL when ready.
-const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
-const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_YOUR_STRIPE_LINK";
+const { useState, useEffect } = React;
+/* ============================================================
+   jdscience.co.uk — PMT-style site, Teal Classic theme
+   Admin login enables ADDING resources (title + link) which
+   persist in the browser (localStorage) and open for real.
+============================================================ */
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
+const ADMIN_PASSWORD = "jdscience2026";
 
+const SUBJECTS = ["Physics", "Chemistry", "Biology", "Maths"];
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
+const BOARDS = ["AQA", "Edexcel", "OCR", "Eduqas"];
+const RES_TYPES = ["Revision Notes", "Past Questions", "Mark Schemes", "Videos"];
 
-const LEVEL_SUBJECTS = {
-  "11+": ["Maths", "English", "Verbal Reasoning", "Non-Verbal Reasoning"],
-  "GCSE/IGCSE": ["Physics", "Chemistry", "Biology", "Combined Science", "Maths"],
-  "A-Level": ["Physics", "Chemistry", "Biology", "Maths"],
-  "T-Level": [
-    // Core (Science)
-    "Core: Biology",
-    "Core: Chemistry",
-    "Core: Physics",
-    "Core: The Science Sector (Synoptic)",
-    // Occupational Specialism – Laboratory Sciences
-    "Lab Sciences PO1: Design & Execute Scientific Tasks",
-    "Lab Sciences PO2: Scientific Techniques & Data Collection",
-    "Lab Sciences PO3: Review, Interpret & Present Data",
-    "Lab Sciences PO4: Review & Improve Scientific Tasks",
-    // Health & Social Care
-    "HSC Core: Health & Social Care Sector",
-    "HSC Core: Health, Safety & Regulation",
-    "HSC Core: Person-Centred Care",
-    "HSC Core: Safeguarding & Infection Prevention",
-    "HSC OS: Supporting Adult Care",
-    "HSC OS: Supporting Healthcare",
-  ],
-  BTEC: [
-    // Mandatory units
-    "Unit 1: Principles and Applications of Science I",
-    "Unit 2: Practical Scientific Procedures and Techniques",
-    "Unit 3: Science Investigation Skills",
-    "Unit 4: Laboratory Techniques and their Application",
-    "Unit 5: Principles and Applications of Science II",
-    "Unit 6: Investigative Project",
-    "Unit 7: Contemporary Issues in Science",
-    // Optional units
-    "Unit 8: Physiology of Human Body Systems",
-  ],
-};
+const BANNER_IMG = "https://placehold.co/1400x500/004d40/ffffff?text=jdscience.co.uk";
 
-const LEVEL_BOARDS = {
-  "11+": ["GL Assessment", "CEM"],
-  "GCSE/IGCSE": ["AQA", "Edexcel", "OCR", "Eduqas"],
-  "A-Level": ["AQA", "Edexcel", "OCR"],
-  "T-Level": ["Pearson", "NCFE"],
-  BTEC: ["Pearson"],
-};
-
-const RESOURCE_TYPES = [
-  "Revision Notes",
-  "How Questions Are Framed",
-  "Past Questions",
-  "Mark Schemes",
-  "Examiner Reports",
-  "Videos",
-];
-
-function slugify(text) {
-  return String(text || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
+/* ---------- localStorage-backed resource store ----------
+   key format: "ResType|Subject|Board|Level" -> [{name, url}] */
+const STORE_KEY = "jdscience_resources_v1";
+function loadStore() {
+  try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; }
+  catch { return {}; }
+}
+function saveStore(obj) {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(obj)); } catch {}
 }
 
-function getSaved(key, fallback) {
-  try {
-    const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function setSaved(key, value) {
-  localStorage.setItem(key, JSON.stringify(value));
-}
-
-function useIsMobile() {
-  const [mobile, setMobile] = useState(false);
-
+/* ---------- Mobile detection hook ---------- */
+function useIsMobile(bp = 768) {
+  const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= bp : false);
   useEffect(() => {
-    const check = () => setMobile(window.innerWidth <= 760);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  return mobile;
+    const r = () => setM(window.innerWidth <= bp);
+    window.addEventListener("resize", r);
+    return () => window.removeEventListener("resize", r);
+  }, [bp]);
+  return m;
 }
 
-export default function App() {
-  const [page, setPage] = useState("home");
-  const [selectedLevel, setSelectedLevel] = useState(null);
+/* ========================= NAVBAR ========================= */
+function Navbar({ onHome, onPick, onResource, onScroll, onSearch, isAdmin, setIsAdmin }) {
+  const [q, setQ] = useState("");
+  const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [session, setSession] = useState(null);
-  const [authOpen, setAuthOpen] = useState(false);
-  const [authMode, setAuthMode] = useState("login");
-  const [resources, setResources] = useState([]);
-  const [tutors, setTutors] = useState([]);
-  const [bookings, setBookings] = useState([]);
-  const [loadingResources, setLoadingResources] = useState(false);
+  const isMobile = useIsMobile();
 
-  const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
-
-  useEffect(() => {
-    setTutors(getSaved("jd_tutors", []));
-    setBookings(getSaved("jd_bookings", []));
-    loadResources();
-
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session || null);
-    });
-
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, newSession) => {
-      setSession(newSession || null);
-    });
-
-    return () => listener.subscription.unsubscribe();
-  }, []);
-
-  async function loadResources() {
-    setLoadingResources(true);
-    const { data, error } = await supabase
-      .from("resources")
-      .select("*")
-      .eq("published", true)
-      .order("topic_order", { ascending: true, nullsFirst: false })
-      .order("title", { ascending: true });
-
-    if (error) {
-      console.error(error.message);
-      setResources([]);
-    } else {
-      setResources(data || []);
-    }
-    setLoadingResources(false);
-  }
-
-  const navigate = (target) => {
-    setPage(target);
-    setMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const handleAdmin = () => {
+    if (isAdmin) { setIsAdmin(false); return; }
+    const pw = window.prompt("Admin password:");
+    if (pw === ADMIN_PASSWORD) { setIsAdmin(true); alert("Admin enabled — you can now add resources."); }
+    else if (pw) alert("Wrong password");
   };
 
-  const goToLevel = (level) => {
-    setSelectedLevel(level);
-    navigate("resources");
+  const menu = [
+    { label: "Home", type: "link", action: onHome },
+    ...LEVELS.map(lvl => ({
+      label: lvl, type: "dropdown",
+      options: SUBJECTS.map(s => ({ text: s, action: () => onPick(lvl, s) })),
+    })),
+    { label: "Resources", type: "dropdown", options: RES_TYPES.map(r => ({ text: r, action: () => onResource(r) })) },
+    { label: "Find a Tutor", type: "link", action: () => onScroll("book") },
+    { label: "Contact", type: "link", action: () => onScroll("contact") },
+  ];
+
+  const submit = (e) => { e.preventDefault(); onSearch(q); setMenuOpen(false); };
+
+  const logo = (
+    <div onClick={onHome} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 0 }}>
+      <div style={{ width: 38, height: 38, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+      <div style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
+    </div>
+  );
+
+  return (
+    <header style={{ position: "sticky", top: 0, zIndex: 1000, background: "#fff", boxShadow: "0 1px 6px rgba(0,0,0,.06)" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 18px", gap: 12 }}>
+        {logo}
+        {!isMobile && (
+          <form onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
+              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 190 }} />
+            <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer" }}>Search</button>
+            <button type="button" onClick={handleAdmin}
+              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: isAdmin ? "#10b981" : "#fff", color: isAdmin ? "#fff" : "#111", cursor: "pointer" }}>{isAdmin ? "Admin ✓" : "Admin"}</button>
+          </form>
+        )}
+        {isMobile && (
+          <button onClick={() => setMenuOpen(o => !o)} aria-label="Menu"
+            style={{ fontSize: 26, background: "none", border: "none", cursor: "pointer", lineHeight: 1 }}>{menuOpen ? "✕" : "☰"}</button>
+        )}
+      </div>
+
+      {/* Desktop nav — single tidy row */}
+      {!isMobile && (
+        <nav style={{ display: "flex", gap: 2, padding: "0 14px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", justifyContent: "center" }}>
+          {menu.map((it, i) => (
+            <div key={it.label} style={{ position: "relative" }}
+              onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
+              <button onClick={() => it.type === "link" && it.action()}
+                style={{ background: openIdx === i && it.type === "dropdown" ? "#d9f6fa" : "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap" }}>
+                {it.label}{it.type === "dropdown" ? " ▾" : ""}
+              </button>
+              {it.type === "dropdown" && openIdx === i && (
+                <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 180, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.14)", borderRadius: "0 0 8px 8px", overflow: "hidden", zIndex: 10 }}>
+                  {it.options.map(opt => (
+                    <div key={opt.text} onClick={opt.action}
+                      style={{ padding: "11px 16px", cursor: "pointer", borderBottom: "1px solid #f3f4f6", fontSize: 14, color: "#0f172a" }}
+                      onMouseEnter={e => e.currentTarget.style.background = "#ecfeff"}
+                      onMouseLeave={e => e.currentTarget.style.background = "#fff"}>{opt.text}</div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+      )}
+
+      {/* Mobile nav */}
+      {isMobile && menuOpen && (
+        <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0", maxHeight: "70vh", overflowY: "auto" }}>
+          {menu.map(it => (
+            <div key={it.label}>
+              <button onClick={() => { if (it.type === "link") { it.action(); setMenuOpen(false); } }}
+                style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "12px 18px", cursor: "pointer", fontWeight: 700, fontSize: 16, color: "#0f172a" }}>{it.label}</button>
+              {it.type === "dropdown" && it.options.map(opt => (
+                <button key={opt.text} onClick={() => { opt.action(); setMenuOpen(false); }}
+                  style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "8px 34px", cursor: "pointer", color: "#0e7490", fontSize: 14 }}>• {opt.text}</button>
+              ))}
+            </div>
+          ))}
+          <form onSubmit={submit} style={{ display: "flex", gap: 8, padding: "10px 18px" }}>
+            <input placeholder="Search..." value={q} onChange={(e) => setQ(e.target.value)}
+              style={{ flex: 1, padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6" }} />
+            <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none" }}>Go</button>
+          </form>
+          <div style={{ padding: "0 18px 12px" }}>
+            <button type="button" onClick={() => { handleAdmin(); setMenuOpen(false); }}
+              style={{ width: "100%", padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: isAdmin ? "#10b981" : "#fff", color: isAdmin ? "#fff" : "#111" }}>{isAdmin ? "Admin: ON" : "Admin"}</button>
+          </div>
+        </nav>
+      )}
+    </header>
+  );
+}
+
+/* ========================= HERO ========================= */
+function Hero({ onScroll, onBrowse }) {
+  const isMobile = useIsMobile();
+  return (
+    <section style={{ position: "relative", minHeight: isMobile ? 360 : 460, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
+      <img src={BANNER_IMG} alt="Students learning" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,77,64,.82), rgba(0,150,136,.62))" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: "40px 20px" }}>
+        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "6px 14px", borderRadius: 20, marginBottom: 14, fontSize: 13, fontWeight: 600 }}>🏆 Expert Science & Maths Tutoring for Everyone</div>
+        <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.12, fontWeight: 800 }}>
+          Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
+        </h1>
+        <p style={{ fontSize: isMobile ? 15 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto" }}>
+          Free past papers, revision notes & mark schemes for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC — plus expert 1-to-1 tutoring.
+        </p>
+        <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+          <button onClick={onBrowse} style={{ padding: "13px 24px", borderRadius: 8, border: "none", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800, fontSize: 15 }}>Browse Resources</button>
+          <button onClick={() => onScroll("book")} style={{ padding: "13px 24px", borderRadius: 8, border: "2px solid rgba(255,255,255,.7)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 800, fontSize: 15 }}>Book a Tutor</button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BoardStrip() {
+  return (
+    <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: "14px 18px" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
+        <span style={{ color: "#94a3b8" }}>Covering:</span>
+        {BOARDS.map(b => <span key={b}>{b}</span>)}
+      </div>
+    </div>
+  );
+}
+
+function LevelGrid({ onLevel }) {
+  const isMobile = useIsMobile();
+  const blurb = { "11+": "Entrance exam prep & practice", "GCSE/IGCSE": "Years 10–11 · all boards", "A-Level": "Years 12–13 · exam-ready", "T-Level": "Technical qualifications", "BTEC": "Vocational courses" };
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 28, margin: 0 }}>Choose Your Level</h2>
+        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Pick where you're studying — then choose your subject</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16, marginTop: 26 }}>
+          {LEVELS.map(l => (
+            <div key={l} onClick={() => onLevel(l)}
+              style={{ background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, color: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)" }}
+              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
+              onMouseLeave={e => e.currentTarget.style.transform = "none"}>
+              <div style={{ fontSize: 22, fontWeight: 800 }}>{l}</div>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,.9)", margin: "8px 0 0" }}>{blurb[l]}</p>
+              <div style={{ marginTop: 14, fontWeight: 700, fontSize: 14 }}>Explore →</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SubjectCards({ onPick }) {
+  const isMobile = useIsMobile();
+  const colors = { Physics: "#0ea5e9", Chemistry: "#f59e0b", Biology: "#22c55e", Maths: "#8b5cf6" };
+  const icons = { Physics: "⚛️", Chemistry: "🧪", Biology: "🧬", Maths: "📐" };
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 28 }}>Browse by Subject</h2>
+        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Past papers, notes & mark schemes for every exam board</p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18, marginTop: 26 }}>
+          {SUBJECTS.map(s => (
+            <div key={s} onClick={() => onPick(s)}
+              style={{ background: "#fff", borderRadius: 14, padding: 22, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.06)", borderTop: `4px solid ${colors[s]}` }}
+              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
+              onMouseLeave={e => e.currentTarget.style.transform = "none"}>
+              <div style={{ fontSize: 34 }}>{icons[s]}</div>
+              <h3 style={{ margin: "10px 0 4px", color: "#0f172a" }}>{s}</h3>
+              <p style={{ color: "#64748b", fontSize: 14, margin: 0 }}>All levels & exam boards</p>
+              <div style={{ marginTop: 12, color: colors[s], fontWeight: 700, fontSize: 14 }}>View resources →</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================= PAST PAPERS / RESOURCES PAGE ========================= */
+function PastPapers({ subject, level, resType, isAdmin, store, setStore, onBook }) {
+  const isMobile = useIsMobile();
+  const [activeSubject, setActiveSubject] = useState(subject || "Physics");
+  const [activeLevel, setActiveLevel] = useState(level || "GCSE/IGCSE");
+  const [activeRes, setActiveRes] = useState(resType || "Past Questions");
+
+  useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
+  useEffect(() => { if (level) setActiveLevel(level); }, [level]);
+  useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
+
+  const keyFor = (board) => `${activeRes}|${activeSubject}|${board}|${activeLevel}`;
+  const getItems = (board) => store[keyFor(board)] || [];
+
+  const openItem = (item) => { if (item.url) window.open(item.url, "_blank", "noopener"); };
+
+  const addItem = (board) => {
+    const name = window.prompt("Resource title (e.g. Paper 1 — June 2023):");
+    if (!name) return;
+    const url = window.prompt("Paste the file link (Google Drive / YouTube / any public URL):");
+    if (!url) return;
+    const k = keyFor(board);
+    const next = { ...store, [k]: [...(store[k] || []), { name, url }] };
+    setStore(next); saveStore(next);
   };
 
-  const openAuth = (mode = "login") => {
-    setAuthMode(mode);
-    setAuthOpen(true);
-  };
-
-  const logout = async () => {
-    await supabase.auth.signOut();
-    setSession(null);
-    navigate("home");
+  const removeItem = (board, idx) => {
+    const k = keyFor(board);
+    const arr = [...(store[k] || [])]; arr.splice(idx, 1);
+    const next = { ...store, [k]: arr };
+    setStore(next); saveStore(next);
   };
 
   return (
-    <div style={styles.site}>
-      <Navbar
-        page={page}
-        navigate={navigate}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-        session={session}
-        isAdmin={isAdmin}
-        openAuth={openAuth}
-        logout={logout}
-      />
+    <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › {activeRes} › {activeLevel} › {activeSubject}</div>
 
-      {page === "home" && <Home navigate={navigate} goToLevel={goToLevel} />}
-      {page === "resources" && (
-        <Resources
-          resources={resources}
-          loading={loadingResources}
-          initialLevel={selectedLevel}
-        />
-      )}
-      {page === "booking" && (
-        <Booking bookings={bookings} setBookings={setBookings} tutors={tutors} />
-      )}
-      {page === "tutors" && <Tutors tutors={tutors} />}
-      {page === "becomeTutor" && <BecomeTutor tutors={tutors} setTutors={setTutors} />}
-      {page === "admin" && (
-        <Admin
-          session={session}
-          isAdmin={isAdmin}
-          openAuth={openAuth}
-          resources={resources}
-          reloadResources={loadResources}
-          tutors={tutors}
-          setTutors={setTutors}
-          bookings={bookings}
-        />
+        <div style={{ display: "flex", alignItems: "center", gap: 16, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
+          <img src="https://placehold.co/80x80/009688/ffffff?text=JD" alt="tutor" style={{ width: 70, height: 70, borderRadius: "50%" }} />
+          <div style={{ flex: 1, minWidth: 200 }}>
+            <div style={{ fontWeight: 800, color: "#0f172a" }}>Need help with {activeSubject}?</div>
+            <div style={{ color: "#64748b", fontSize: 14 }}>1-to-1 tutoring with an experienced specialist · ✓ Qualified Teacher · ⭐ 5.0</div>
+          </div>
+          <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
+        </div>
+
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Resource Type</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+          {RES_TYPES.map(r => (
+            <button key={r} onClick={() => setActiveRes(r)}
+              style={{ padding: "8px 14px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeRes === r ? TEAL_DARK : "#e2e8f0", color: activeRes === r ? "#fff" : "#334155" }}>{r}</button>
+          ))}
+        </div>
+
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Subject</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
+          {SUBJECTS.map(s => (
+            <button key={s} onClick={() => setActiveSubject(s)}
+              style={{ padding: "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
+          ))}
+        </div>
+
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Level</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
+          {LEVELS.map(l => (
+            <button key={l} onClick={() => setActiveLevel(l)}
+              style={{ padding: "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, fontSize: 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
+          ))}
+        </div>
+
+        <h2 style={{ color: "#0f172a", marginBottom: 16 }}>{activeLevel} {activeSubject} — {activeRes} by Exam Board</h2>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
+          {BOARDS.map(board => {
+            const items = getItems(board);
+            return (
+              <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+                <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>{board}</div>
+                <div style={{ padding: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+                  {items.length === 0 && <div style={{ color: "#94a3b8", fontSize: 13, padding: "4px 2px" }}>No files yet — coming soon</div>}
+                  {items.map((p, idx) => (
+                    <div key={idx} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
+                      <button onClick={() => openItem(p)}
+                        style={{ flex: 1, textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a" }}
+                        onMouseEnter={e => { e.currentTarget.style.background = "#ecfeff"; e.currentTarget.style.borderColor = TEAL; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = "#f8fafc"; e.currentTarget.style.borderColor = "#e2e8f0"; }}>
+                        {activeRes === "Videos" ? "▶️" : "📄"} {p.name}
+                      </button>
+                      {isAdmin && (
+                        <button onClick={() => removeItem(board, idx)} title="Delete"
+                          style={{ padding: "0 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
+                      )}
+                    </div>
+                  ))}
+                  {isAdmin && (
+                    <button onClick={() => addItem(board)}
+                      style={{ padding: "9px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>+ Add resource</button>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================= BOOKING ========================= */
+const inp = { padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 14, width: "100%", boxSizing: "border-box" };
+function Booking() {
+  const isMobile = useIsMobile();
+  const [form, setForm] = useState({ name: "", email: "", subject: "Physics", level: "GCSE/IGCSE", message: "" });
+  const [sent, setSent] = useState(false);
+  const set = (k, v) => setForm(f => ({ ...f, [k]: v }));
+  const submit = (e) => { e.preventDefault(); setSent(true); };
+  const price = form.level === "A-Level" ? "£40/hr" : "£35/hr";
+
+  return (
+    <section style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
+        <div>
+          <h2 style={{ fontSize: 28, marginTop: 0 }}>Book a Tutoring Session</h2>
+          <p style={{ color: "rgba(255,255,255,.9)" }}>Personalised 1-to-1 lessons in Physics, Chemistry, Biology and Maths.</p>
+          <ul style={{ lineHeight: 1.9, paddingLeft: 18 }}>
+            <li>✓ GCSE / 11+ / T-Level / BTEC — <b>£35/hr</b></li>
+            <li>✓ A-Level — <b>£40/hr</b></li>
+            <li>✓ All exam boards · flexible online sessions</li>
+          </ul>
+        </div>
+        <div style={{ background: "#fff", borderRadius: 14, padding: 22, color: "#0f172a" }}>
+          {sent ? (
+            <div style={{ textAlign: "center", padding: "20px 0" }}>
+              <div style={{ fontSize: 40 }}>✅</div>
+              <h3>Thanks, {form.name || "there"}!</h3>
+              <p style={{ color: "#64748b" }}>We'll be in touch at {form.email || "your email"} soon.</p>
+            </div>
+          ) : (
+            <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <input required placeholder="Your name" value={form.name} onChange={e => set("name", e.target.value)} style={inp} />
+              <input required type="email" placeholder="Email" value={form.email} onChange={e => set("email", e.target.value)} style={inp} />
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                <select value={form.subject} onChange={e => set("subject", e.target.value)} style={inp}>
+                  {SUBJECTS.map(s => <option key={s}>{s}</option>)}
+                </select>
+                <select value={form.level} onChange={e => set("level", e.target.value)} style={inp}>
+                  {LEVELS.map(l => <option key={l}>{l}</option>)}
+                </select>
+              </div>
+              <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
+              <textarea placeholder="What would you like help with?" value={form.message} onChange={e => set("message", e.target.value)} rows={3} style={inp} />
+              <button type="submit" style={{ padding: "12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>Request Session</button>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Contact() {
+  const isMobile = useIsMobile();
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
+        <h2 style={{ color: "#0f172a" }}>Get in Touch</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px,1fr))", gap: 16, marginTop: 20 }}>
+          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 20 }}>
+            <div style={{ fontSize: 28 }}>📧</div>
+            <div style={{ fontWeight: 700, marginTop: 6 }}>Email</div>
+            <a href="mailto:info@jdscience.co.uk" style={{ color: TEAL }}>info@jdscience.co.uk</a>
+          </div>
+          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 20 }}>
+            <div style={{ fontSize: 28 }}>📞</div>
+            <div style={{ fontWeight: 700, marginTop: 6 }}>Phone</div>
+            <a href="tel:07466142805" style={{ color: TEAL }}>07466 142805</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "32px 20px" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 24 }}>
+        <div>
+          <div style={{ fontWeight: 800, color: "#fff", fontSize: 18 }}>jdscience.co.uk</div>
+          <p style={{ fontSize: 14, marginTop: 8 }}>Free science & maths resources and expert tutoring for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC.</p>
+        </div>
+        <div>
+          <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
+          {RES_TYPES.map(r => <div key={r} style={{ fontSize: 14, marginTop: 6 }}>{r}</div>)}
+        </div>
+        <div>
+          <div style={{ fontWeight: 700, color: "#fff" }}>Contact</div>
+          <div style={{ fontSize: 14, marginTop: 6 }}>📧 info@jdscience.co.uk</div>
+          <div style={{ fontSize: 14, marginTop: 6 }}>📞 07466 142805</div>
+        </div>
+      </div>
+      <div style={{ textAlign: "center", color: "#64748b", marginTop: 24, fontSize: 13 }}>© {new Date().getFullYear()} jdscience.co.uk — All rights reserved.</div>
+    </footer>
+  );
+}
+
+/* ========================= WHAT JD SCIENCE OFFERS ========================= */
+function OffersSection() {
+  const isMobile = useIsMobile();
+  const offers = [
+    { title: "Resources", text: "Revision notes, how questions are framed, past questions, mark schemes and examiner reports." },
+    { title: "Tutoring", text: "Book support for GCSE, IGCSE, A-Level, BTEC and T-Level." },
+    { title: "Tutor Profiles", text: "Approved tutors appear live after admin approval." },
+    { title: "Admin Control", text: "Admin can upload resources directly into Supabase for visitors to download." },
+  ];
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <h2 style={{ color: "#0f172a", fontSize: 28, margin: "0 0 24px" }}>What JD Science Offers</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
+          {offers.map(o => (
+            <div key={o.title} style={{ background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+              <h3 style={{ margin: "0 0 8px", color: "#0f172a", fontSize: 18 }}>{o.title}</h3>
+              <p style={{ color: "#64748b", fontSize: 14, margin: 0, lineHeight: 1.6 }}>{o.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================= SUBJECTS WE OFFER ========================= */
+function SubjectsWeOffer({ onPick }) {
+  const isMobile = useIsMobile();
+  const items = [
+    { name: "Physics", icon: "⚛️", price: "£35/hr", bg: "linear-gradient(135deg,#4c1d95,#7c3aed)", desc: "Master the fundamental laws of the universe. From mechanics to…" },
+    { name: "Chemistry", icon: "🧪", price: "£35/hr", bg: "linear-gradient(135deg,#065f46,#f59e0b)", desc: "Explore the science of matter and its transformations. From organic…" },
+    { name: "Biology", icon: "🧬", price: "£35/hr", bg: "linear-gradient(135deg,#0e7490,#7c3aed)", desc: "Understand the science of life. From cells and genetics to ecology and…" },
+    { name: "Maths", icon: "📐", price: "£35/hr", bg: "linear-gradient(135deg,#111827,#334155)", desc: "Build strong mathematical foundations. From algebra and…" },
+    { name: "A-Level", icon: "📖", price: "£40/hr", bg: "linear-gradient(135deg,#1e3a8a,#6366f1)", desc: "In-depth A-Level tutoring for top grades in Science and Maths. Exper…" },
+    { name: "T-Levels", icon: "🎓", price: "£40/hr", bg: "linear-gradient(135deg,#374151,#0e7490)", desc: "Expert support for T-Level Science qualifications. Combining classroo…" },
+    { name: "11+", icon: "☑️", price: "£40/hr", bg: "linear-gradient(135deg,#92400e,#d97706)", desc: "Comprehensive 11+ entrance exam preparation. Build confidence in…" },
+  ];
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: 30, margin: 0 }}>
+          Subjects We <span style={{ color: "#7c3aed" }}>Offer</span>
+        </h2>
+        <p style={{ textAlign: "center", color: "#64748b", marginTop: 8, maxWidth: 560, marginLeft: "auto", marginRight: "auto" }}>
+          Expert tutoring across core science and maths subjects, tailored to your curriculum and learning style.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20, marginTop: 28 }}>
+          {items.map(s => (
+            <div key={s.name} onClick={() => onPick && onPick(s.name)}
+              style={{ background: "#fff", borderRadius: 14, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.08)", cursor: "pointer", border: "1px solid #eef2f7" }}
+              onMouseEnter={e => e.currentTarget.style.transform = "translateY(-4px)"}
+              onMouseLeave={e => e.currentTarget.style.transform = "none"}>
+              <div style={{ height: 130, background: s.bg, display: "flex", alignItems: "flex-end", padding: 14 }}>
+                <div style={{ color: "#fff", fontWeight: 800, fontSize: 18, display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 20 }}>{s.icon}</span>{s.name}
+                </div>
+              </div>
+              <div style={{ padding: 16 }}>
+                <p style={{ color: "#64748b", fontSize: 14, margin: "0 0 14px", lineHeight: 1.5 }}>{s.desc}</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ color: "#7c3aed", fontWeight: 800 }}>{s.price}</span>
+                  <span style={{ color: "#334155", fontWeight: 600, fontSize: 14 }}>Learn more →</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ========================= ROOT APP ========================= */
+function App() {
+  const [page, setPage] = useState("home");
+  const [pickedSubject, setPickedSubject] = useState(null);
+  const [pickedLevel, setPickedLevel] = useState(null);
+  const [pickedRes, setPickedRes] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [store, setStore] = useState(loadStore());
+
+  const goPapers = () => { setPage("papers"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goHome = () => { setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+
+  const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
+  const handleLevel = (lvl) => { setPickedLevel(lvl); goPapers(); };
+  const handleResource = (res) => { setPickedRes(res); goPapers(); };
+  const pickSubject = (s) => { setPickedSubject(s); goPapers(); };
+
+  const handleScroll = (target) => {
+    const id = target === "contact" ? "contact-anchor" : "book-anchor";
+    if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id) && document.getElementById(id).scrollIntoView({ behavior: "smooth" }), 120); }
+    else { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: "smooth" }); }
+  };
+
+  return (
+    <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc" }}>
+      <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll}
+        onSearch={(q) => q && goPapers()} isAdmin={isAdmin} setIsAdmin={setIsAdmin} />
+
+      {page === "home" && (
+        <main>
+          <Hero onScroll={handleScroll} onBrowse={goPapers} />
+          <BoardStrip />
+          <OffersSection />
+          <LevelGrid onLevel={handleLevel} />
+          <SubjectsWeOffer onPick={pickSubject} />
+          <SubjectCards onPick={pickSubject} />
+          <div id="book-anchor"><Booking /></div>
+          <div id="contact-anchor"><Contact /></div>
+        </main>
       )}
 
-      {authOpen && (
-        <AuthModal
-          mode={authMode}
-          setMode={setAuthMode}
-          close={() => setAuthOpen(false)}
-        />
+      {page === "papers" && (
+        <main>
+          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes}
+            isAdmin={isAdmin} store={store} setStore={setStore} onBook={() => handleScroll("book")} />
+        </main>
       )}
 
       <Footer />
     </div>
   );
 }
-
-function Navbar({ page, navigate, menuOpen, setMenuOpen, session, isAdmin, openAuth, logout }) {
-  const mobile = useIsMobile();
-
-  const links = [
-    ["home", "Home"],
-    ["resources", "Resources"],
-    ["booking", "Book a Session"],
-    ["tutors", "Tutors"],
-    ["becomeTutor", "Become a Tutor"],
-  ];
-
-  if (isAdmin) links.push(["admin", "Admin"]);
-
-  return (
-    <header style={styles.navbar}>
-      <div style={styles.navInner}>
-        <button onClick={() => navigate("home")} style={styles.brand}>
-          <span style={styles.logo}>JD</span>
-          <span>
-            <strong>JD Science</strong>
-            <small style={styles.small}>Science and Maths Tutoring</small>
-          </span>
-        </button>
-
-        {mobile && (
-          <button onClick={() => setMenuOpen(!menuOpen)} style={styles.menuButton}>
-            {menuOpen ? "✕" : "☰"}
-          </button>
-        )}
-
-        {(!mobile || menuOpen) && (
-          <nav style={mobile ? styles.mobileNav : styles.desktopNav}>
-            {links.map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => navigate(key)}
-                style={{
-                  ...styles.navLink,
-                  ...(page === key ? styles.activeNav : {}),
-                }}
-              >
-                {label}
-              </button>
-            ))}
-
-            {session ? (
-              <button onClick={logout} style={styles.adminButton}>
-                Logout
-              </button>
-            ) : (
-              <button onClick={() => openAuth("login")} style={styles.adminButton}>
-                Register / Login
-              </button>
-            )}
-          </nav>
-        )}
-      </div>
-    </header>
-  );
-}
-
-function Home({ navigate, goToLevel }) {
-  return (
-    <main>
-      <section style={styles.hero}>
-        <div style={styles.heroInner}>
-          <div style={styles.heroCopy}>
-            <p style={styles.badge}>Expert Science and Maths Tutoring</p>
-            <h1 style={styles.heroTitle}>Learn Smarter. Revise Better. Achieve More.</h1>
-            <p style={styles.heroText}>
-              Organised science and maths resources by level, subject, exam board and specification,
-              with tutoring support for learners.
-            </p>
-
-            <div style={styles.levelRow}>
-              {LEVELS.map((lvl) => (
-                <button key={lvl} onClick={() => goToLevel(lvl)} style={styles.levelButton}>
-                  {lvl}
-                </button>
-              ))}
-            </div>
-
-            <div style={styles.heroActions}>
-              <button onClick={() => navigate("resources")} style={styles.primary}>Browse Resources</button>
-              <button onClick={() => navigate("booking")} style={styles.secondary}>Book a Session</button>
-            </div>
-          </div>
-
-          <div style={styles.heroImageWrap}>
-            <img
-              src="/hero-students..png"
-              alt="A multinational group of learners studying together"
-              style={styles.heroImage}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section style={styles.page}>
-        <h2>What JD Science Offers</h2>
-
-        <div style={styles.cardGrid}>
-          <Card title="Resources" text="Revision notes, how questions are framed, past questions, mark schemes and examiner reports." />
-          <Card title="Tutoring" text="Book support for GCSE, IGCSE, A-Level, BTEC and T-Level." />
-          <Card title="Tutor Profiles" text="Approved tutors appear live after admin approval." />
-          <Card title="Admin Control" text="Admin can upload resources directly into Supabase for visitors to download." />
-        </div>
-      </section>
-
-      <section style={styles.videoSection}>
-        <div style={styles.videoInner}>
-          <h2 style={styles.videoTitle}>How JD Science Works</h2>
-          <p style={styles.videoSubtitle}>Watch this short introduction to see how learners can use resources, past papers and tutoring support.</p>
-          <div style={styles.videoFrame}>
-            <iframe
-              title="How JD Science Works"
-              src={INTRO_VIDEO_EMBED_URL}
-              style={styles.videoIframe}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-          <p style={styles.videoNote}>Replace <strong>VIDEO_ID_HERE</strong> in App.jsx with your YouTube video ID when your introduction video is ready.</p>
-        </div>
-      </section>
-    </main>
-  );
-}
-
-function Resources({ resources, loading, initialLevel }) {
-  const [level, setLevel] = useState(initialLevel || "GCSE/IGCSE");
-  const [subject, setSubject] = useState("Chemistry");
-  const [board, setBoard] = useState("AQA");
-  const [type, setType] = useState("Revision Notes");
-  const [query, setQuery] = useState("");
-
-  useEffect(() => {
-    if (initialLevel) setLevel(initialLevel);
-  }, [initialLevel]);
-
-  useEffect(() => {
-    const subjects = LEVEL_SUBJECTS[level] || [];
-    if (!subjects.includes(subject)) setSubject(subjects[0] || "");
-  }, [level, subject]);
-
-  useEffect(() => {
-    const boards = LEVEL_BOARDS[level] || [];
-    if (!boards.includes(board)) setBoard(boards[0] || "");
-  }, [level, board]);
-
-  const filtered = resources.filter((r) => {
-    return (
-      r.level === level &&
-      r.subject === subject &&
-      r.exam_board === board &&
-      r.resource_category === type &&
-      `${r.title} ${r.file_name}`.toLowerCase().includes(query.toLowerCase())
-    );
-  });
-
-  return (
-    <main style={styles.page}>
-      <h1>Resources</h1>
-      <p style={styles.muted}>Browse by level, subject, exam board, specification topic and resource type.</p>
-
-      <div style={styles.filterGrid}>
-        <Select label="Level" value={level} setValue={setLevel} options={LEVELS} />
-        <Select label="Subject" value={subject} setValue={setSubject} options={LEVEL_SUBJECTS[level] || []} />
-        <Select label="Exam Board" value={board} setValue={setBoard} options={LEVEL_BOARDS[level] || []} />
-        <Select label="Resource Type" value={type} setValue={setType} options={RESOURCE_TYPES} />
-
-        <div>
-          <label style={styles.label}>Search Topic</label>
-          <input style={styles.input} value={query} onChange={(e) => setQuery(e.target.value)} placeholder="e.g. Atomic Structure" />
-        </div>
-      </div>
-
-      <div style={styles.resourceList}>
-        {loading ? (
-          <p style={styles.empty}>Loading resources...</p>
-        ) : filtered.length === 0 ? (
-          <p style={styles.empty}>No resources uploaded yet for this selection.</p>
-        ) : (
-          filtered.map((r) => (
-            <div key={r.id} style={styles.resourceItem}>
-              <div>
-                <strong>{r.title}</strong>
-                <p style={styles.muted}>{r.level} | {r.subject} | {r.exam_board} | {r.resource_category}</p>
-              </div>
-              <a href={r.file_url} target="_blank" rel="noreferrer" style={styles.download}>Download</a>
-            </div>
-          ))
-        )}
-      </div>
-    </main>
-  );
-}
-
-function Booking({ bookings, setBookings, tutors }) {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    level: "GCSE/IGCSE",
-    subject: "Chemistry",
-    tutor: "",
-    message: "",
-  });
-
-  const approvedTutors = tutors.filter((t) => t.status === "approved");
-  const update = (key, value) => setForm({ ...form, [key]: value });
-
-  const submit = () => {
-    if (!form.name || !form.email) {
-      alert("Please enter your name and email.");
-      return;
-    }
-
-    const newBooking = { ...form, id: Date.now(), status: "pending payment", date: new Date().toLocaleString() };
-    const updated = [...bookings, newBooking];
-    setBookings(updated);
-    setSaved("jd_bookings", updated);
-    window.location.href = STRIPE_PAYMENT_LINK;
-  };
-
-  return (
-    <main style={styles.page}>
-      <h1>Book a Tutoring Session</h1>
-      <p style={styles.muted}>Complete the form and continue to payment. Replace the Stripe payment link in the code.</p>
-
-      <div style={styles.form}>
-        <input style={styles.input} placeholder="Learner name" value={form.name} onChange={(e) => update("name", e.target.value)} />
-        <input style={styles.input} placeholder="Email address" type="email" value={form.email} onChange={(e) => update("email", e.target.value)} />
-        <Select label="Level" value={form.level} setValue={(v) => update("level", v)} options={LEVELS} />
-        <Select label="Subject" value={form.subject} setValue={(v) => update("subject", v)} options={LEVEL_SUBJECTS[form.level] || []} />
-
-        <label style={styles.label}>Choose Tutor</label>
-        <select style={styles.input} value={form.tutor} onChange={(e) => update("tutor", e.target.value)}>
-          <option value="">Any available tutor</option>
-          {approvedTutors.map((t) => <option key={t.id} value={t.name}>{t.name}</option>)}
-        </select>
-
-        <textarea style={styles.textarea} placeholder="What support do you need?" value={form.message} onChange={(e) => update("message", e.target.value)} />
-        <button onClick={submit} style={styles.primary}>Continue to Payment</button>
-      </div>
-    </main>
-  );
-}
-
-function Tutors({ tutors }) {
-  const approvedTutors = tutors.filter((t) => t.status === "approved");
-
-  return (
-    <main style={styles.page}>
-      <h1>Our Tutors</h1>
-      {approvedTutors.length === 0 ? (
-        <p style={styles.empty}>No approved tutors are live yet.</p>
-      ) : (
-        <div style={styles.cardGrid}>
-          {approvedTutors.map((t) => <Card key={t.id} title={t.name} text={`${t.subjects}. Levels: ${t.levels}. ${t.bio}`} />)}
-        </div>
-      )}
-    </main>
-  );
-}
-
-function BecomeTutor({ tutors, setTutors }) {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", subjects: "", levels: "", qualifications: "", bio: "" });
-  const update = (key, value) => setForm({ ...form, [key]: value });
-
-  const submit = async () => {
-  if (!form.name || !form.email || !form.subjects) {
-    alert("Please complete name, email and subjects.");
-    return;
-  }
-
-  const { error } = await supabase
-    .from("tutor_applications")
-    .insert([form]);
-
-  if (error) {
-    alert(error.message);
-    return;
-  }
-
-  alert("Application submitted successfully.");
-
-  setForm({
-    name: "",
-    email: "",
-    phone: "",
-    subjects: "",
-    levels: "",
-    qualifications: "",
-    bio: "",
-  });
-};
-
-  return (
-    <main style={styles.page}>
-      <h1>Become a Tutor</h1>
-      <p style={styles.muted}>Fill in the form below. Your profile will only appear after admin approval.</p>
-      <div style={styles.form}>
-        <input style={styles.input} placeholder="Full name" value={form.name} onChange={(e) => update("name", e.target.value)} />
-        <input style={styles.input} placeholder="Email address" type="email" value={form.email} onChange={(e) => update("email", e.target.value)} />
-        <input style={styles.input} placeholder="Phone number" value={form.phone} onChange={(e) => update("phone", e.target.value)} />
-        <input style={styles.input} placeholder="Subjects you teach" value={form.subjects} onChange={(e) => update("subjects", e.target.value)} />
-        <input style={styles.input} placeholder="Levels you teach" value={form.levels} onChange={(e) => update("levels", e.target.value)} />
-        <input style={styles.input} placeholder="Qualifications" value={form.qualifications} onChange={(e) => update("qualifications", e.target.value)} />
-        <textarea style={styles.textarea} placeholder="Short biography and teaching experience" value={form.bio} onChange={(e) => update("bio", e.target.value)} />
-        <button onClick={submit} style={styles.primary}>Submit Application</button>
-      </div>
-    </main>
-  );
-}
-
-function Admin({ session, isAdmin, openAuth, resources, reloadResources, tutors, setTutors, bookings }) {
-  const [resourceForm, setResourceForm] = useState({
-    level: "GCSE/IGCSE",
-    subject: "Chemistry",
-    board: "AQA",
-    type: "Revision Notes",
-    topic: "",
-    topicOrder: "",
-  });
-  const [file, setFile] = useState(null);
-  const [busy, setBusy] = useState(false);
-
-  const updateResource = (key, value) => setResourceForm({ ...resourceForm, [key]: value });
-
-  useEffect(() => {
-    const subjects = LEVEL_SUBJECTS[resourceForm.level] || [];
-    if (!subjects.includes(resourceForm.subject)) updateResource("subject", subjects[0] || "");
-  }, [resourceForm.level]);
-
-  useEffect(() => {
-    const boards = LEVEL_BOARDS[resourceForm.level] || [];
-    if (!boards.includes(resourceForm.board)) updateResource("board", boards[0] || "");
-  }, [resourceForm.level]);
-
-  const uploadResource = async () => {
-    if (!session) {
-      openAuth("login");
-      return;
-    }
-    if (!resourceForm.topic || !file) {
-      alert("Add a topic/title and choose a file.");
-      return;
-    }
-
-    setBusy(true);
-    const cleanName = `${Date.now()}-${slugify(file.name)}`;
-    const storagePath = `${slugify(resourceForm.level)}/${slugify(resourceForm.subject)}/${slugify(resourceForm.board)}/${slugify(resourceForm.type)}/${cleanName}`;
-
-    const uploadResult = await supabase.storage.from(BUCKET).upload(storagePath, file, { upsert: true });
-    if (uploadResult.error) {
-      alert(uploadResult.error.message);
-      setBusy(false);
-      return;
-    }
-
-    const { data: publicData } = supabase.storage.from(BUCKET).getPublicUrl(storagePath);
-
-    const insertResult = await supabase.from("resources").insert({
-      level: resourceForm.level,
-      subject: resourceForm.subject,
-      exam_board: resourceForm.board,
-      resource_category: resourceForm.type,
-      topic_order: resourceForm.topicOrder ? Number(resourceForm.topicOrder) : null,
-      title: resourceForm.topic,
-      file_name: file.name,
-      file_url: publicData.publicUrl,
-      file_type: file.type || file.name.split(".").pop(),
-      storage_path: storagePath,
-      published: true,
-    });
-
-    if (insertResult.error) {
-      alert(insertResult.error.message);
-    } else {
-      alert("Resource uploaded successfully.");
-      setResourceForm({ ...resourceForm, topic: "", topicOrder: "" });
-      setFile(null);
-      await reloadResources();
-    }
-    setBusy(false);
-  };
-
-  const approveTutor = (id) => {
-    const updated = tutors.map((t) => (t.id === id ? { ...t, status: "approved" } : t));
-    setTutors(updated);
-    setSaved("jd_tutors", updated);
-  };
-
-  const deleteTutor = (id) => {
-    const updated = tutors.filter((t) => t.id !== id);
-    setTutors(updated);
-    setSaved("jd_tutors", updated);
-  };
-
-  if (!session) {
-    return (
-      <main style={styles.page}>
-        <h1>Admin Login</h1>
-        <p style={styles.muted}>Login to manage resources, tutors and bookings.</p>
-        <button onClick={() => openAuth("login")} style={styles.primary}>Login</button>
-      </main>
-    );
-  }
-
-  if (!isAdmin) {
-    return (
-      <main style={styles.page}>
-        <h1>Access Denied</h1>
-        <p style={styles.muted}>This account is not authorised as admin.</p>
-      </main>
-    );
-  }
-
-  return (
-    <main style={styles.page}>
-      <h1>Admin Dashboard</h1>
-
-      <section style={styles.panel}>
-        <h2>Upload Resource</h2>
-        <div style={styles.filterGrid}>
-          <Select label="Level" value={resourceForm.level} setValue={(v) => updateResource("level", v)} options={LEVELS} />
-          <Select label="Subject" value={resourceForm.subject} setValue={(v) => updateResource("subject", v)} options={LEVEL_SUBJECTS[resourceForm.level] || []} />
-          <Select label="Board" value={resourceForm.board} setValue={(v) => updateResource("board", v)} options={LEVEL_BOARDS[resourceForm.level] || []} />
-          <Select label="Type" value={resourceForm.type} setValue={(v) => updateResource("type", v)} options={RESOURCE_TYPES} />
-
-          <div>
-            <label style={styles.label}>Specification Topic / File Title</label>
-            <input style={styles.input} value={resourceForm.topic} onChange={(e) => updateResource("topic", e.target.value)} placeholder="e.g. Atomic Structure" />
-          </div>
-
-          <div>
-            <label style={styles.label}>Topic Order</label>
-            <input style={styles.input} value={resourceForm.topicOrder} onChange={(e) => updateResource("topicOrder", e.target.value)} placeholder="e.g. 1" />
-          </div>
-
-          <div>
-            <label style={styles.label}>Choose File</label>
-            <input style={styles.input} type="file" accept=".pdf,.doc,.docx,.ppt,.pptx" onChange={(e) => setFile(e.target.files?.[0] || null)} />
-          </div>
-        </div>
-
-        <button onClick={uploadResource} disabled={busy} style={styles.primary}>{busy ? "Uploading..." : "Upload Resource"}</button>
-      </section>
-
-      <section style={styles.panel}>
-        <h2>Uploaded Resources</h2>
-        {resources.length === 0 ? (
-          <p style={styles.empty}>No uploaded resources yet.</p>
-        ) : (
-          resources.map((r) => (
-            <div key={r.id} style={styles.resourceItem}>
-              <div>
-                <strong>{r.title}</strong>
-                <p style={styles.muted}>{r.level} | {r.subject} | {r.exam_board} | {r.resource_category}</p>
-              </div>
-              <a href={r.file_url} target="_blank" rel="noreferrer" style={styles.download}>Open</a>
-            </div>
-          ))
-        )}
-      </section>
-
-      <section style={styles.panel}>
-        <h2>Tutor Applications</h2>
-        {tutors.length === 0 ? (
-          <p style={styles.empty}>No tutor applications yet.</p>
-        ) : (
-          tutors.map((t) => (
-            <div key={t.id} style={styles.resourceItem}>
-              <div><strong>{t.name}</strong><p style={styles.muted}>{t.email} | {t.subjects} | {t.levels} | {t.status}</p></div>
-              <div>
-                {t.status !== "approved" && <button onClick={() => approveTutor(t.id)} style={styles.smallButton}>Approve</button>}
-                <button onClick={() => deleteTutor(t.id)} style={styles.deleteButton}>Delete</button>
-              </div>
-            </div>
-          ))
-        )}
-      </section>
-
-      <section style={styles.panel}>
-        <h2>Bookings</h2>
-        {bookings.length === 0 ? (
-          <p style={styles.empty}>No bookings yet.</p>
-        ) : (
-          bookings.map((b) => (
-            <div key={b.id} style={styles.resourceItem}>
-              <div><strong>{b.name}</strong><p style={styles.muted}>{b.email} | {b.level} | {b.subject} | {b.status}</p></div>
-            </div>
-          ))
-        )}
-      </section>
-    </main>
-  );
-}
-
-function AuthModal({ mode, setMode, close }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [busy, setBusy] = useState(false);
-
-  const submit = async () => {
-    if (!email || !password) {
-      alert("Please enter your email and password.");
-      return;
-    }
-    setBusy(true);
-    const result = mode === "login"
-      ? await supabase.auth.signInWithPassword({ email, password })
-      : await supabase.auth.signUp({ email, password });
-
-    if (result.error) alert(result.error.message);
-    else {
-      alert(mode === "login" ? "Logged in successfully." : "Registration successful. Please check your email if confirmation is required.");
-      close();
-    }
-    setBusy(false);
-  };
-
-  return (
-    <div style={styles.modalBack}>
-      <div style={styles.modal}>
-        <h2>{mode === "login" ? "Login" : "Register"}</h2>
-        <input style={styles.input} placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input style={styles.input} placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={submit} disabled={busy} style={styles.primary}>{busy ? "Please wait..." : mode === "login" ? "Login" : "Register"}</button>
-        <button onClick={() => setMode(mode === "login" ? "register" : "login")} style={styles.linkButton}>
-          {mode === "login" ? "Create a visitor account" : "Already have an account? Login"}
-        </button>
-        <button onClick={close} style={styles.linkButton}>Close</button>
-      </div>
-    </div>
-  );
-}
-
-function Select({ label, value, setValue, options }) {
-  return (
-    <div>
-      <label style={styles.label}>{label}</label>
-      <select style={styles.input} value={value} onChange={(e) => setValue(e.target.value)}>
-        {options.map((option) => <option key={option} value={option}>{option}</option>)}
-      </select>
-    </div>
-  );
-}
-
-function Card({ title, text }) {
-  return (
-    <div style={styles.card}>
-      <h3>{title}</h3>
-      <p style={styles.muted}>{text}</p>
-    </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer style={styles.footer}>
-      <h3>JD Science</h3>
-      <p>Science and Maths Tutoring</p>
-      <p>info@jdscience.co.uk</p>
-    </footer>
-  );
-}
-
-const styles = {
-  site: { minHeight: "100vh", background: "#f8fafc", color: "#0f172a", fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" },
-  navbar: { position: "sticky", top: 0, zIndex: 100, background: "#ffffff", borderBottom: "1px solid #e5e7eb" },
-  navInner: { maxWidth: 1180, margin: "0 auto", padding: "14px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 },
-  brand: { background: "none", border: "none", display: "flex", alignItems: "center", gap: 10, cursor: "pointer", textAlign: "left" },
-  logo: { width: 42, height: 42, borderRadius: "50%", background: TEAL, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900 },
-  small: { display: "block", fontSize: 12, color: "#64748b" },
-  desktopNav: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" },
-  mobileNav: { position: "absolute", top: 70, left: 0, right: 0, background: "#fff", padding: 16, display: "grid", gap: 8, borderBottom: "1px solid #e5e7eb" },
-  menuButton: { background: TEAL, color: "#fff", border: "none", borderRadius: 8, padding: "8px 12px", fontSize: 20, cursor: "pointer" },
-  navLink: { background: "#f1f5f9", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 700, textAlign: "left" },
-  activeNav: { background: TEAL_DARK, color: "#fff" },
-  adminButton: { background: "#0f172a", color: "#fff", border: "none", padding: "10px 13px", borderRadius: 10, cursor: "pointer", fontWeight: 800 },
-  hero: {
-  backgroundImage:
-  "linear-gradient(rgba(0,105,92,0.65), rgba(0,137,123,0.65)), url('/hero-students.png')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  color: "#fff",
-  padding: "90px 20px",
-},
-  heroInner: { maxWidth: 1180, margin: "0 auto", display: "grid", gridTemplateColumns: "minmax(0, 1.1fr) minmax(320px, .9fr)", gap: 36, alignItems: "center" },
-  heroCopy: { minWidth: 0 },
-  heroImageWrap: { background: "rgba(255,255,255,.12)", borderRadius: 24, padding: 10, boxShadow: "0 24px 60px rgba(0,0,0,.22)" },
-  heroImage: { width: "100%", height: "auto", minHeight: 280, objectFit: "cover", borderRadius: 18, display: "block" },
-  badge: { display: "inline-block", background: "rgba(255,255,255,0.15)", padding: "8px 14px", borderRadius: 999, fontWeight: 700 },
-  heroTitle: { fontSize: "clamp(36px, 7vw, 64px)", maxWidth: 820, lineHeight: 1.05, margin: "18px 0" },
-  heroText: { maxWidth: 760, fontSize: 18, lineHeight: 1.7 },
-  levelRow: { display: "flex", gap: 10, flexWrap: "wrap", marginTop: 24 },
-  levelButton: { background: "rgba(255,255,255,0.15)", color: "#fff", border: "1px solid rgba(255,255,255,0.5)", padding: "10px 16px", borderRadius: 999, fontWeight: 800, cursor: "pointer", fontSize: 15 },
-  heroActions: { display: "flex", gap: 12, flexWrap: "wrap", marginTop: 28 },
-  primary: { background: TEAL_DARK, color: "#fff", border: "none", padding: "13px 18px", borderRadius: 12, fontWeight: 800, cursor: "pointer", textDecoration: "none" },
-  secondary: { background: "#fff", color: TEAL_DARK, border: "none", padding: "13px 18px", borderRadius: 12, fontWeight: 800, cursor: "pointer" },
-  goldButton: { background: "#fbbf24", color: "#0f172a", border: "none", padding: "13px 18px", borderRadius: 12, fontWeight: 800, cursor: "pointer" },
-  page: { maxWidth: 1180, margin: "0 auto", padding: "55px 20px" },
-  muted: { color: "#64748b", lineHeight: 1.6 },
-  cardGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 18, marginTop: 22 },
-  card: { background: "#fff", padding: 24, borderRadius: 18, border: "1px solid #e5e7eb", boxShadow: "0 10px 25px rgba(15,23,42,0.08)" },
-  filterGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 14, margin: "25px 0" },
-  label: { display: "block", fontWeight: 800, marginBottom: 6 },
-  input: { width: "100%", padding: 13, borderRadius: 10, border: "1px solid #cbd5e1", font: "inherit", boxSizing: "border-box" },
-  textarea: { width: "100%", minHeight: 120, padding: 13, borderRadius: 10, border: "1px solid #cbd5e1", font: "inherit", boxSizing: "border-box" },
-  resourceList: { display: "grid", gap: 12, marginTop: 24 },
-  resourceItem: { background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 18, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, flexWrap: "wrap" },
-  download: { background: TEAL, color: "#fff", padding: "11px 16px", borderRadius: 10, textDecoration: "none", fontWeight: 800 },
-  empty: { background: "#fff", border: "1px dashed #cbd5e1", padding: 20, borderRadius: 16, color: "#64748b" },
-  form: { background: "#fff", border: "1px solid #e5e7eb", borderRadius: 18, padding: 24, maxWidth: 700, display: "grid", gap: 14, boxShadow: "0 10px 25px rgba(15,23,42,0.08)" },
-  panel: { background: "#fff", border: "1px solid #e5e7eb", borderRadius: 18, padding: 24, marginTop: 24, boxShadow: "0 10px 25px rgba(15,23,42,0.08)" },
-  smallButton: { background: "#16a34a", color: "#fff", border: "none", padding: "9px 12px", borderRadius: 10, fontWeight: 800, cursor: "pointer", marginRight: 8 },
-  deleteButton: { background: "#dc2626", color: "#fff", border: "none", padding: "9px 12px", borderRadius: 10, fontWeight: 800, cursor: "pointer" },
-  modalBack: { position: "fixed", inset: 0, background: "rgba(15,23,42,.55)", zIndex: 999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 },
-  modal: { background: "#fff", borderRadius: 18, padding: 24, width: "min(430px, 100%)", boxShadow: "0 20px 50px rgba(15,23,42,.25)", display: "grid", gap: 14 },
-  linkButton: { background: "transparent", border: "none", color: TEAL_DARK, cursor: "pointer", fontWeight: 800, textAlign: "left" },
-  videoSection: { background: "#071025", color: "#fff", padding: "56px 20px" },
-  videoInner: { maxWidth: 980, margin: "0 auto", textAlign: "center" },
-  videoTitle: { fontSize: "clamp(28px, 4vw, 42px)", margin: 0 },
-  videoSubtitle: { color: "#cbd5e1", fontSize: 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" },
-  videoFrame: { position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 60px rgba(0,0,0,.35)" },
-  videoIframe: { position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 },
-  videoNote: { color: "#94a3b8", fontSize: 14, marginTop: 14 },
-  footer: { background: "#0f172a", color: "#fff", textAlign: "center", padding: "38px 20px" },
-};
