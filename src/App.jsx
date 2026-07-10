@@ -7,6 +7,7 @@ import { supabase } from "./supabaseClient";
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 const ADMIN_EMAILS = ["jd943791@gmail.com"];
+const BUCKET = "resources"; // Supabase Storage bucket name
 
 const BANNER_IMG = "/hero-students.png.png";
 const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
@@ -254,12 +255,12 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
 
   const [activeSubject, setActiveSubject] = useState(subject || subjectsForLevel[0]);
   const [activeRes, setActiveRes] = useState(resType || "Past Questions");
+  const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
 
-  // when level changes, keep subject valid
   useEffect(() => {
     const list = SUBJECTS_BY_LEVEL[activeLevel] || [];
     if (!list.includes(activeSubject)) setActiveSubject(list[0]);
@@ -273,21 +274,10 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
       slugify(r.resource_category) === slugify(activeRes)
     );
 
-  async function addItem(board) {
-    const title = window.prompt("Resource title (e.g. Paper 1 — June 2023):");
-    if (!title) return;
-    const url = window.prompt("Paste the file link (Google Drive / YouTube / any public URL):");
-    if (!url) return;
-    const { error } = await supabase.from("resources").insert({
-      level: activeLevel, subject: activeSubject, exam_board: board,
-      resource_category: activeRes, title, file_name: title,
-      file_url: url, file_type: "link", published: true,
-    });
-    if (error) alert(error.message); else reload();
-  }
-  async function removeItem(id) {
+  async function removeItem(item) {
     if (!window.confirm("Delete this resource?")) return;
-    const { error } = await supabase.from("resources").delete().eq("id", id);
+    if (item.storage_path) await supabase.storage.from(BUCKET).remove([item.storage_path]);
+    const { error } = await supabase.from("resources").delete().eq("id", item.id);
     if (error) alert(error.message); else reload();
   }
 
@@ -333,7 +323,6 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
           {boardsForLevel.map((board) => {
             const items = itemsFor(board);
-            // Hide empty boards for visitors; admins still see them so they can upload.
             if (items.length === 0 && !isAdmin) return null;
             return (
               <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
@@ -346,13 +335,13 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
                         {activeRes === "Videos" ? "▶️" : "📄"} {p.title}
                       </a>
                       {isAdmin && (
-                        <button onClick={() => removeItem(p.id)} title="Delete"
+                        <button onClick={() => removeItem(p)} title="Delete"
                           style={{ padding: "0 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
                       )}
                     </div>
                   ))}
                   {isAdmin && (
-                    <button onClick={() => addItem(board)}
+                    <button onClick={() => setUploadBoard(board)}
                       style={{ padding: "9px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>+ Add resource</button>
                   )}
                 </div>
@@ -361,7 +350,124 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
           })}
         </div>
       </div>
+
+      {uploadBoard && (
+        <UploadModal
+          level={activeLevel} subject={activeSubject} board={uploadBoard} category={activeRes}
+          close={() => setUploadBoard(null)} reload={reload}
+        />
+      )}
     </section>
+  );
+}
+
+/* ------------------------------ UPLOAD MODAL ------------------------------ */
+function UploadModal({ level, subject, board, category, close, reload }) {
+  const [mode, setMode] = useState("file"); // "file" | "link"
+  const [title, setTitle] = useState("");
+  const [link, setLink] = useState("");
+  const [file, setFile] = useState(null);
+  const [drag, setDrag] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const inputRef = React.useRef(null);
+
+  const pickFile = (f) => {
+    if (!f) return;
+    setFile(f);
+    if (!title) setTitle(f.name.replace(/\.[^.]+$/, "")); // prefill title from filename
+  };
+
+  const onDrop = (e) => {
+    e.preventDefault(); setDrag(false);
+    pickFile(e.dataTransfer.files?.[0]);
+  };
+
+  async function save() {
+    if (!title.trim()) { alert("Please enter a title."); return; }
+    setBusy(true);
+    try {
+      let file_url = link.trim();
+      let storage_path = null;
+      let file_type = "link";
+      let file_name = title;
+
+      if (mode === "file") {
+        if (!file) { alert("Please choose or drop a file."); setBusy(false); return; }
+        const clean = `${Date.now()}-${slugify(file.name)}`;
+        storage_path = `${slugify(level)}/${slugify(subject)}/${slugify(board)}/${slugify(category)}/${clean}`;
+        const up = await supabase.storage.from(BUCKET).upload(storage_path, file, { cacheControl: "3600", upsert: true });
+        if (up.error) { alert(up.error.message); setBusy(false); return; }
+        file_url = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
+        file_type = file.type || file.name.split(".").pop();
+        file_name = file.name;
+      } else if (!file_url) {
+        alert("Please paste a link."); setBusy(false); return;
+      }
+
+      const { error } = await supabase.from("resources").insert({
+        level, subject, exam_board: board, resource_category: category,
+        title: title.trim(), file_name, file_url, file_type, storage_path, published: true,
+      });
+      if (error) { alert(error.message); setBusy(false); return; }
+      reload();
+      close();
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  const tab = (m, label) => (
+    <button onClick={() => setMode(m)}
+      style={{ flex: 1, padding: "10px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 800,
+        background: mode === m ? TEAL : "#e2e8f0", color: mode === m ? "#fff" : "#334155" }}>{label}</button>
+  );
+
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000, padding: 16 }}>
+      <div style={{ background: "#fff", padding: 24, borderRadius: 16, width: "min(480px,95vw)", display: "flex", flexDirection: "column", gap: 14 }}>
+        <div>
+          <h2 style={{ margin: 0 }}>Add Resource</h2>
+          <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 13 }}>{level} · {subject} · {board} · {category}</p>
+        </div>
+
+        <div style={{ display: "flex", gap: 8 }}>{tab("file", "⬆️ Upload File")}{tab("link", "🔗 Paste Link")}</div>
+
+        <input style={inp} placeholder="Title (e.g. Paper 1 — June 2023)" value={title} onChange={(e) => setTitle(e.target.value)} />
+
+        {mode === "file" ? (
+          <>
+            <div
+              onClick={() => inputRef.current?.click()}
+              onDragOver={(e) => { e.preventDefault(); setDrag(true); }}
+              onDragLeave={() => setDrag(false)}
+              onDrop={onDrop}
+              style={{ border: `2px dashed ${drag ? TEAL : "#cbd5e1"}`, background: drag ? "#ecfeff" : "#f8fafc",
+                borderRadius: 12, padding: "28px 16px", textAlign: "center", cursor: "pointer", color: "#475569" }}>
+              <div style={{ fontSize: 34 }}>📂</div>
+              {file ? (
+                <div style={{ fontWeight: 700, color: "#0f172a", marginTop: 6 }}>{file.name}</div>
+              ) : (
+                <>
+                  <div style={{ fontWeight: 700, marginTop: 6 }}>Drag &amp; drop a file here</div>
+                  <div style={{ fontSize: 13 }}>or click to browse your computer</div>
+                </>
+              )}
+            </div>
+            <input ref={inputRef} type="file" hidden
+              accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg"
+              onChange={(e) => pickFile(e.target.files?.[0])} />
+          </>
+        ) : (
+          <input style={inp} placeholder="Paste file / YouTube / Drive link" value={link} onChange={(e) => setLink(e.target.value)} />
+        )}
+
+        <button onClick={save} disabled={busy}
+          style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+          {busy ? "Saving…" : "Save Resource"}
+        </button>
+        <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>
+      </div>
+    </div>
   );
 }
 
