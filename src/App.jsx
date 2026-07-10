@@ -361,54 +361,121 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
   );
 }
 
-/* ------------------------------ UPLOAD MODAL ------------------------------ */
+/* ------------------------------ UPLOAD MODAL (multi-file) ------------------------------ */
 function UploadModal({ level, subject, board, category, close, reload }) {
   const [mode, setMode] = useState("file"); // "file" | "link"
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
-  const [file, setFile] = useState(null);
+  const [files, setFiles] = useState([]); // array of { file, name, progress, status, storage_path, url }
   const [drag, setDrag] = useState(false);
   const [busy, setBusy] = useState(false);
   const inputRef = React.useRef(null);
 
-  const pickFile = (f) => {
-    if (!f) return;
-    setFile(f);
-    if (!title) setTitle(f.name.replace(/\.[^.]+$/, "")); // prefill title from filename
+  const addFiles = (fileList) => {
+    if (!fileList || fileList.length === 0) return;
+    const arr = Array.from(fileList).map((f) => ({
+      file: f,
+      name: f.name,
+      title: f.name.replace(/\.[^.]+$/, ""),
+      progress: 0,
+      status: "ready", // ready|uploading|done|error
+      storage_path: null,
+      url: null,
+      error: null,
+    }));
+    setFiles((cur) => [...cur, ...arr]);
+    // prefill title if empty
+    if (!title && arr.length === 1) setTitle(arr[0].title);
   };
+
+  const pickFiles = (fList) => addFiles(fList);
 
   const onDrop = (e) => {
     e.preventDefault(); setDrag(false);
-    pickFile(e.dataTransfer.files?.[0]);
+    pickFiles(e.dataTransfer.files);
   };
 
-  async function save() {
-    if (!title.trim()) { alert("Please enter a title."); return; }
-    setBusy(true);
+  const removeLocalFile = (idx) => setFiles((f) => f.filter((_, i) => i !== idx));
+
+  async function uploadSingle(fileObj, idx) {
+    // upload via Supabase Storage with progress
+    const f = fileObj.file;
+    const clean = `${Date.now()}-${slugify(f.name)}`;
+    const storage_path = `${slugify(level)}/${slugify(subject)}/${slugify(board)}/${slugify(category)}/${clean}`;
+    // Use fetch to upload as blob via supabase.storage.from().upload which doesn't provide progress;
+    // emulate progress by splitting into single fetch with XMLHttpRequest is not supported here.
+    // We'll set progress to indeterminate while awaiting upload, then mark done.
     try {
-      let file_url = link.trim();
-      let storage_path = null;
-      let file_type = "link";
-      let file_name = title;
+      fileObj.status = "uploading";
+      setFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...fileObj };
+        return next;
+      });
 
-      if (mode === "file") {
-        if (!file) { alert("Please choose or drop a file."); setBusy(false); return; }
-        const clean = `${Date.now()}-${slugify(file.name)}`;
-        storage_path = `${slugify(level)}/${slugify(subject)}/${slugify(board)}/${slugify(category)}/${clean}`;
-        const up = await supabase.storage.from(BUCKET).upload(storage_path, file, { cacheControl: "3600", upsert: true });
-        if (up.error) { alert(up.error.message); setBusy(false); return; }
-        file_url = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
-        file_type = file.type || file.name.split(".").pop();
-        file_name = file.name;
-      } else if (!file_url) {
-        alert("Please paste a link."); setBusy(false); return;
-      }
+      const up = await supabase.storage.from(BUCKET).upload(storage_path, f, { cacheControl: "3600", upsert: true });
+      if (up.error) throw up.error;
+      const publicUrl = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
 
+      // insert row
       const { error } = await supabase.from("resources").insert({
         level, subject, exam_board: board, resource_category: category,
-        title: title.trim(), file_name, file_url, file_type, storage_path, published: true,
+        title: fileObj.title || fileObj.name, file_name: fileObj.name,
+        file_url: publicUrl, file_type: f.type || fileObj.name.split(".").pop(), storage_path, published: true,
       });
-      if (error) { alert(error.message); setBusy(false); return; }
+      if (error) throw error;
+
+      // success
+      fileObj.status = "done";
+      fileObj.progress = 100;
+      fileObj.storage_path = storage_path;
+      fileObj.url = publicUrl;
+      setFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...fileObj };
+        return next;
+      });
+      return { success: true };
+    } catch (err) {
+      fileObj.status = "error";
+      fileObj.error = err.message || String(err);
+      setFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...fileObj };
+        return next;
+      });
+      return { success: false, error: err };
+    }
+  }
+
+  async function save() {
+    if (mode === "link") {
+      if (!title.trim()) { alert("Please enter a title."); return; }
+      if (!link.trim()) { alert("Please paste a link."); return; }
+      setBusy(true);
+      try {
+        const { error } = await supabase.from("resources").insert({
+          level, subject, exam_board: board, resource_category: category,
+          title: title.trim(), file_name: title.trim(), file_url: link.trim(), file_type: "link", storage_path: null, published: true,
+        });
+        if (error) alert(error.message); else { reload(); close(); }
+      } finally { setBusy(false); }
+      return;
+    }
+
+    if (files.length === 0) { alert("Please choose or drop one or more files."); return; }
+    setBusy(true);
+    try {
+      // upload files sequentially to avoid concurrent rate issues; you can parallelise if desired.
+      for (let i = 0; i < files.length; i++) {
+        const fobj = files[i];
+        if (fobj.status === "done") continue;
+        // allow per-file title override (use common title input only if single file and title provided)
+        if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
+        // upload
+        await uploadSingle(fobj, i);
+      }
+      // after all, refresh list and close
       reload();
       close();
     } finally {
@@ -424,48 +491,87 @@ function UploadModal({ level, subject, board, category, close, reload }) {
 
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000, padding: 16 }}>
-      <div style={{ background: "#fff", padding: 24, borderRadius: 16, width: "min(480px,95vw)", display: "flex", flexDirection: "column", gap: 14 }}>
+      <div style={{ background: "#fff", padding: 24, borderRadius: 16, width: "min(640px,98vw)", maxHeight: "92vh", overflowY: "auto", display: "flex", flexDirection: "column", gap: 14 }}>
         <div>
           <h2 style={{ margin: 0 }}>Add Resource</h2>
           <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 13 }}>{level} · {subject} · {board} · {category}</p>
         </div>
 
-        <div style={{ display: "flex", gap: 8 }}>{tab("file", "⬆️ Upload File")}{tab("link", "🔗 Paste Link")}</div>
+        <div style={{ display: "flex", gap: 8 }}>{tab("file", "⬆️ Upload File(s)")} {tab("link", "🔗 Paste Link")}</div>
 
-        <input style={inp} placeholder="Title (e.g. Paper 1 — June 2023)" value={title} onChange={(e) => setTitle(e.target.value)} />
-
-        {mode === "file" ? (
+        {mode === "file" && (
           <>
+            <div style={{ display: "flex", gap: 8 }}>
+              <input style={{ ...inp, flex: 1 }} placeholder="Common title (optional - used for single file)" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <div style={{ display: "flex", gap: 8 }}>
+                <button onClick={() => inputRef.current?.click()} style={{ padding: "10px 12px", borderRadius: 8, border: `1px solid ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700 }}>Browse</button>
+                <button onClick={() => { setFiles([]); setTitle(""); }} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", cursor: "pointer" }}>Clear</button>
+              </div>
+            </div>
+
             <div
               onClick={() => inputRef.current?.click()}
               onDragOver={(e) => { e.preventDefault(); setDrag(true); }}
               onDragLeave={() => setDrag(false)}
               onDrop={onDrop}
               style={{ border: `2px dashed ${drag ? TEAL : "#cbd5e1"}`, background: drag ? "#ecfeff" : "#f8fafc",
-                borderRadius: 12, padding: "28px 16px", textAlign: "center", cursor: "pointer", color: "#475569" }}>
-              <div style={{ fontSize: 34 }}>📂</div>
-              {file ? (
-                <div style={{ fontWeight: 700, color: "#0f172a", marginTop: 6 }}>{file.name}</div>
-              ) : (
-                <>
-                  <div style={{ fontWeight: 700, marginTop: 6 }}>Drag &amp; drop a file here</div>
-                  <div style={{ fontSize: 13 }}>or click to browse your computer</div>
-                </>
-              )}
+                borderRadius: 12, padding: "20px", textAlign: "center", cursor: "pointer", color: "#475569" }}>
+              <div style={{ fontSize: 28 }}>📂</div>
+              <div style={{ fontWeight: 700, marginTop: 6 }}>{files.length === 0 ? "Drag & drop files here (or click to browse)" : `${files.length} file(s) selected`}</div>
+              <div style={{ fontSize: 13, marginTop: 6 }}>Supports multiple files — Word, PDF, images, PPT, etc.</div>
             </div>
-            <input ref={inputRef} type="file" hidden
-              accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg"
-              onChange={(e) => pickFile(e.target.files?.[0])} />
+
+            <input ref={inputRef} type="file" hidden multiple
+              accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.txt,.md,.odt" onChange={(e) => addFiles(e.target.files)} />
+
+            {files.length > 0 && (
+              <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 8 }}>
+                {files.map((f, i) => (
+                  <div key={`${f.name}-${i}`} style={{ display: "flex", gap: 8, alignItems: "center", padding: 8, borderRadius: 8, background: "#fff", border: "1px solid #eef2f7" }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 700 }}>{f.title}</div>
+                      <div style={{ fontSize: 13, color: "#64748b" }}>{f.name}</div>
+                    </div>
+                    <div style={{ minWidth: 120, textAlign: "right", fontWeight: 700 }}>
+                      {f.status === "ready" && <span style={{ color: "#0f172a" }}>Ready</span>}
+                      {f.status === "uploading" && <span style={{ color: TEAL }}>{f.progress || "…"}%</span>}
+                      {f.status === "done" && <span style={{ color: "green" }}>Uploaded</span>}
+                      {f.status === "error" && <span style={{ color: "#dc2626" }}>Error</span>}
+                    </div>
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <button onClick={() => {
+                        const newTitle = prompt("Edit title for this file:", f.title);
+                        if (newTitle !== null) {
+                          setFiles((cur) => {
+                            const next = [...cur];
+                            next[i] = { ...next[i], title: newTitle };
+                            return next;
+                          });
+                        }
+                      }} style={{ padding: "6px 8px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", cursor: "pointer" }}>Edit</button>
+                      <button onClick={() => removeLocalFile(i)} style={{ padding: "6px 8px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff", color: "#dc2626", cursor: "pointer" }}>Remove</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </>
-        ) : (
-          <input style={inp} placeholder="Paste file / YouTube / Drive link" value={link} onChange={(e) => setLink(e.target.value)} />
         )}
 
-        <button onClick={save} disabled={busy}
-          style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
-          {busy ? "Saving…" : "Save Resource"}
-        </button>
-        <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>
+        {mode === "link" && (
+          <>
+            <input style={inp} placeholder="Title (e.g. Paper 1 — June 2023)" value={title} onChange={(e) => setTitle(e.target.value)} />
+            <input style={inp} placeholder="Paste file / YouTube / Drive link" value={link} onChange={(e) => setLink(e.target.value)} />
+          </>
+        )}
+
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <button onClick={save} disabled={busy}
+            style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+            {busy ? "Uploading…" : "Save Resource(s)"}
+          </button>
+          <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>
+        </div>
       </div>
     </div>
   );
