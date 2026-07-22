@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
@@ -399,13 +398,9 @@ function UploadModal({ level, subject, board, category, close, reload }) {
   const removeLocalFile = (idx) => setFiles((f) => f.filter((_, i) => i !== idx));
 
   async function uploadSingle(fileObj, idx) {
-    // upload via Supabase Storage with progress
     const f = fileObj.file;
     const clean = `${Date.now()}-${slugify(f.name)}`;
     const storage_path = `${slugify(level)}/${slugify(subject)}/${slugify(board)}/${slugify(category)}/${clean}`;
-    // Use fetch to upload as blob via supabase.storage.from().upload which doesn't provide progress;
-    // emulate progress by splitting into single fetch with XMLHttpRequest is not supported here.
-    // We'll set progress to indeterminate while awaiting upload, then mark done.
     try {
       fileObj.status = "uploading";
       setFiles((cur) => {
@@ -418,7 +413,6 @@ function UploadModal({ level, subject, board, category, close, reload }) {
       if (up.error) throw up.error;
       const publicUrl = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
 
-      // insert row
       const { error } = await supabase.from("resources").insert({
         level, subject, exam_board: board, resource_category: category,
         title: fileObj.title || fileObj.name, file_name: fileObj.name,
@@ -426,7 +420,6 @@ function UploadModal({ level, subject, board, category, close, reload }) {
       });
       if (error) throw error;
 
-      // success
       fileObj.status = "done";
       fileObj.progress = 100;
       fileObj.storage_path = storage_path;
@@ -467,16 +460,12 @@ function UploadModal({ level, subject, board, category, close, reload }) {
     if (files.length === 0) { alert("Please choose or drop one or more files."); return; }
     setBusy(true);
     try {
-      // upload files sequentially to avoid concurrent rate issues; you can parallelise if desired.
       for (let i = 0; i < files.length; i++) {
         const fobj = files[i];
         if (fobj.status === "done") continue;
-        // allow per-file title override (use common title input only if single file and title provided)
         if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
-        // upload
         await uploadSingle(fobj, i);
       }
-      // after all, refresh list and close
       reload();
       close();
     } finally {
@@ -580,6 +569,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
 
 /* -------------------------------- BOOKING --------------------------------- */
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
+
 function Booking() {
   const isMobile = useIsMobile();
   const [form, setForm] = useState({
@@ -602,7 +592,6 @@ function Booking() {
   });
 
   useEffect(() => {
-    // Load active services from Supabase (anon client expected in your existing file)
     (async () => {
       try {
         const { data, error } = await supabase
@@ -640,8 +629,6 @@ function Booking() {
 
     try {
       if (form.sessionType === "trial") {
-        // If your RLS/policies allow client insert for trials this will work.
-        // Recommended: change to server-side insert later for stronger security.
         const { data, error } = await supabase.from("bookings").insert([{
           student_name: form.name,
           student_email: form.email,
@@ -659,7 +646,6 @@ function Booking() {
         return;
       }
 
-      // Paid booking -> create checkout session via server
       const payload = {
         name: form.name,
         email: form.email,
@@ -687,7 +673,7 @@ function Booking() {
       }
 
       if (body.url) {
-        window.location.href = body.url; // redirect to Stripe Checkout
+        window.location.href = body.url;
       } else {
         throw new Error("Missing Stripe redirect URL");
       }
@@ -730,7 +716,7 @@ function Booking() {
                     : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
                 </select>
                 <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
-                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s}>{s}</option>)}
+                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
 
@@ -757,8 +743,9 @@ function Booking() {
       </div>
     </section>
   );
-}}
+}
 
+/* --------------------------- VIDEO / CONTACT / FOOTER --------------------------- */
 function VideoSection() {
   const isMobile = useIsMobile();
   return (
