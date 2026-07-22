@@ -582,15 +582,123 @@ function UploadModal({ level, subject, board, category, close, reload }) {
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
 function Booking() {
   const isMobile = useIsMobile();
-  const [form, setForm] = useState({ name: "", email: "", level: "GCSE/IGCSE", subject: SUBJECTS_BY_LEVEL["GCSE/IGCSE"][0], message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    level: "GCSE/IGCSE",
+    subject: SUBJECTS_BY_LEVEL["GCSE/IGCSE"][0],
+    message: "",
+    sessionType: "single"
+  });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [services, setServices] = useState([]);
+
   const set = (k, v) => setForm((f) => {
     const next = { ...f, [k]: v };
-    if (k === "level") next.subject = SUBJECTS_BY_LEVEL[v][0];
+    if (k === "level") next.subject = (SUBJECTS_BY_LEVEL[v] || [])[0] || "";
     return next;
   });
-  const submit = (e) => { e.preventDefault(); setSent(true); };
-  const price = form.level === "A-Level" ? "£40/hr" : "£35/hr";
+
+  useEffect(() => {
+    // Load active services from Supabase (anon client expected in your existing file)
+    (async () => {
+      try {
+        const { data, error } = await supabase
+          .from("tutoring_services")
+          .select("*")
+          .eq("is_active", true)
+          .order("created_at", { ascending: true });
+
+        if (error) throw error;
+        if (data) setServices(data);
+      } catch (err) {
+        console.error("Could not load services:", err);
+      }
+    })();
+  }, []);
+
+  function priceLabel(level, type) {
+    const svc = services.find(s => s.level === level || s.slug === level);
+    if (!svc) {
+      if (level && level.toLowerCase().includes("a-level")) return type === "package" ? "£400" : "£45/hr";
+      return type === "package" ? "£300" : "£35/hr";
+    }
+    return type === "package" ? `£${svc.package_price_10}` : `£${svc.price_per_hour}/hr`;
+  }
+
+  async function submit(e) {
+    e.preventDefault();
+    setLoading(true);
+
+    if (!form.name || !form.email) {
+      alert("Please enter name and email");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      if (form.sessionType === "trial") {
+        // If your RLS/policies allow client insert for trials this will work.
+        // Recommended: change to server-side insert later for stronger security.
+        const { data, error } = await supabase.from("bookings").insert([{
+          student_name: form.name,
+          student_email: form.email,
+          phone: form.phone || null,
+          level: form.level,
+          subject: form.subject,
+          session_type: "trial",
+          status: "confirmed",
+          meta: { message: form.message }
+        }]).select().single();
+
+        if (error) throw error;
+        setSent(true);
+        setLoading(false);
+        return;
+      }
+
+      // Paid booking -> create checkout session via server
+      const payload = {
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        level: form.level,
+        subject: form.subject,
+        sessionType: form.sessionType === "package" ? "package" : "single",
+      };
+
+      const resp = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const body = await resp.json();
+      if (!resp.ok) {
+        throw new Error(body?.error || "Failed to create checkout session");
+      }
+
+      if (body.trial === true) {
+        setSent(true);
+        setLoading(false);
+        return;
+      }
+
+      if (body.url) {
+        window.location.href = body.url; // redirect to Stripe Checkout
+      } else {
+        throw new Error("Missing Stripe redirect URL");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error: " + (err.message || "unknown"));
+      setLoading(false);
+    }
+  }
+
+  const price = priceLabel(form.level, form.sessionType);
 
   return (
     <section style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
@@ -599,9 +707,9 @@ function Booking() {
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
           <p style={{ color: "rgba(255,255,255,.9)" }}>Personalised 1-to-1 lessons across science and maths.</p>
           <ul style={{ lineHeight: 1.9, paddingLeft: 18 }}>
-            <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35/hr</b></li>
-            <li>✓ A-Level — <b>£40/hr</b></li>
-            <li>✓ All exam boards · flexible online sessions</li>
+            <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
+            <li>✓ Free 30‑minute trial available for first-time students</li>
+            <li>✓ Packages available for discount pricing</li>
           </ul>
         </div>
         <div style={{ background: "#fff", borderRadius: 14, padding: 22, color: "#0f172a" }}>
@@ -615,24 +723,41 @@ function Booking() {
             <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               <input required placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} style={inp} />
               <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
+              <input placeholder="Phone (WhatsApp ok)" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inp} />
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
                 <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
-                  {LEVELS.map((l) => <option key={l}>{l}</option>)}
+                  {services.length > 0 ? services.map(s => <option key={s.id} value={s.level}>{s.level}</option>)
+                    : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
                 </select>
                 <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
-                  {SUBJECTS_BY_LEVEL[form.level].map((s) => <option key={s}>{s}</option>)}
+                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s}>{s}</option>)}
                 </select>
               </div>
+
+              <div style={{ display: "flex", gap: 8 }}>
+                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <input type="radio" name="sessionType" checked={form.sessionType === "single"} value="single" onChange={() => set("sessionType", "single")} /> Single
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <input type="radio" name="sessionType" checked={form.sessionType === "package"} value="package" onChange={() => set("sessionType", "package")} /> 10-session package
+                </label>
+                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <input type="radio" name="sessionType" checked={form.sessionType === "trial"} value="trial" onChange={() => set("sessionType", "trial")} /> Free 30-min trial
+                </label>
+              </div>
+
               <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
               <textarea placeholder="What would you like help with?" value={form.message} onChange={(e) => set("message", e.target.value)} rows={3} style={inp} />
-              <button type="submit" style={{ padding: "12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>Request Session</button>
+              <button type="submit" disabled={loading} style={{ padding: "12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>
+                {loading ? "Processing…" : "Request / Book"}
+              </button>
             </form>
           )}
         </div>
       </div>
     </section>
   );
-}
+}}
 
 function VideoSection() {
   const isMobile = useIsMobile();
