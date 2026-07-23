@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
+import { sendBookingNotification } from './_lib/notify.js';
 
 /**
  * Vercel serverless function: Stripe webhook handler.
@@ -100,8 +101,26 @@ export default async function handler(req, res) {
         };
 
         const { error } = await supabase.from('bookings').insert([insertRow]);
-        if (error) console.error('Supabase insert error (bookings):', error);
-        else console.log('Booking inserted for session:', session.id);
+        if (error) {
+          console.error('Supabase insert error (bookings):', error);
+        } else {
+          console.log('Booking inserted for session:', session.id);
+          // Best-effort owner notification — never let a mail failure break the webhook.
+          try {
+            await sendBookingNotification({
+              student_name: insertRow.student_name,
+              student_email: insertRow.student_email,
+              phone: insertRow.phone,
+              level: insertRow.level,
+              subject: insertRow.subject,
+              session_type: insertRow.session_type,
+              status: insertRow.status,
+              amount: insertRow.amount,
+            });
+          } catch (notifyErr) {
+            console.warn('Paid booking notification failed (ignored):', notifyErr?.message || notifyErr);
+          }
+        }
       }
     }
 
