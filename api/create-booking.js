@@ -50,6 +50,8 @@ export default async function handler(req, res) {
   try {
     const supabase = createClient(supabaseUrl, serviceRoleKey);
 
+    // Keep the row aligned with the existing bookings table schema.
+    // (Do not send columns that may not exist, e.g. amount_total.)
     const insertRow = {
       student_name: String(name).trim(),
       student_email: String(email).trim().toLowerCase(),
@@ -58,16 +60,24 @@ export default async function handler(req, res) {
       subject: String(subject).trim(),
       session_type: 'trial',
       status: 'confirmed',
-      amount_total: 0,
       meta: message ? { message: String(message).slice(0, 2000) } : null,
-      created_at: new Date().toISOString(),
     };
 
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from('bookings')
       .insert([insertRow])
       .select()
       .single();
+
+    // If `meta` column is missing, retry without it.
+    if (error && /meta/i.test(error.message || '')) {
+      const { meta, ...withoutMeta } = insertRow;
+      ({ data, error } = await supabase
+        .from('bookings')
+        .insert([withoutMeta])
+        .select()
+        .single());
+    }
 
     if (error) {
       console.error('Supabase insert error (trial booking):', error);

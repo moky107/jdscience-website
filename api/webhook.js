@@ -77,7 +77,9 @@ export default async function handler(req, res) {
       } else {
         const supabase = createClient(supabaseUrl, serviceRoleKey);
 
-        const insertRow = {
+        // Align with the existing bookings table. Prefer payment_id when present;
+        // fall back to a minimal row if optional columns are missing.
+        const baseRow = {
           student_name: meta.student_name || null,
           student_email: meta.student_email || session.customer_email || null,
           phone: meta.phone || null,
@@ -85,13 +87,28 @@ export default async function handler(req, res) {
           subject: meta.subject || null,
           session_type: meta.session_type || null,
           status: 'confirmed',
-          payment_id: session.id,
-          amount_total:
-            typeof session.amount_total === 'number' ? session.amount_total / 100 : null,
-          created_at: new Date().toISOString(),
         };
 
-        const { error } = await supabase.from('bookings').insert([insertRow]);
+        const withPayment = {
+          ...baseRow,
+          payment_id: session.id,
+          meta: {
+            stripe_session_id: session.id,
+            amount_total:
+              typeof session.amount_total === 'number' ? session.amount_total / 100 : null,
+            currency: session.currency || 'gbp',
+          },
+        };
+
+        let { error } = await supabase.from('bookings').insert([withPayment]);
+
+        if (error) {
+          // Retry without optional columns that may not exist in the schema.
+          console.warn('bookings insert with optional cols failed, retrying minimal:', error.message);
+          const minimal = { ...baseRow };
+          ({ error } = await supabase.from('bookings').insert([minimal]));
+        }
+
         if (error) console.error('Supabase insert error (bookings):', error);
         else console.log('Booking inserted for session:', session.id);
       }
