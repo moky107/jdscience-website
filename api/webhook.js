@@ -77,9 +77,10 @@ export default async function handler(req, res) {
       } else {
         const supabase = createClient(supabaseUrl, serviceRoleKey);
 
-        // Align with the existing bookings table. Prefer payment_id when present;
-        // fall back to a minimal row if optional columns are missing.
-        const baseRow = {
+        // bookings columns (confirmed live): student_name, student_email, phone,
+        // level, subject, session_type, status, stripe_session_id,
+        // stripe_payment_intent, amount, meta, created_at
+        const insertRow = {
           student_name: meta.student_name || null,
           student_email: meta.student_email || session.customer_email || null,
           phone: meta.phone || null,
@@ -87,28 +88,18 @@ export default async function handler(req, res) {
           subject: meta.subject || null,
           session_type: meta.session_type || null,
           status: 'confirmed',
-        };
-
-        const withPayment = {
-          ...baseRow,
-          payment_id: session.id,
+          stripe_session_id: session.id,
+          stripe_payment_intent:
+            typeof session.payment_intent === 'string' ? session.payment_intent : null,
+          amount:
+            typeof session.amount_total === 'number' ? session.amount_total / 100 : null,
           meta: {
-            stripe_session_id: session.id,
-            amount_total:
-              typeof session.amount_total === 'number' ? session.amount_total / 100 : null,
             currency: session.currency || 'gbp',
+            customer_email: session.customer_email || null,
           },
         };
 
-        let { error } = await supabase.from('bookings').insert([withPayment]);
-
-        if (error) {
-          // Retry without optional columns that may not exist in the schema.
-          console.warn('bookings insert with optional cols failed, retrying minimal:', error.message);
-          const minimal = { ...baseRow };
-          ({ error } = await supabase.from('bookings').insert([minimal]));
-        }
-
+        const { error } = await supabase.from('bookings').insert([insertRow]);
         if (error) console.error('Supabase insert error (bookings):', error);
         else console.log('Booking inserted for session:', session.id);
       }
