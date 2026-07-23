@@ -838,6 +838,155 @@ function AuthModal({ close }) {
   );
 }
 
+/* ------------------------------ ADMIN DASHBOARD --------------------------- */
+function AdminDashboard() {
+  const [password, setPassword] = useState(() => {
+    try { return sessionStorage.getItem("jd_admin_pw") || ""; } catch { return ""; }
+  });
+  const [authed, setAuthed] = useState(false);
+  const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function load(pw) {
+    setLoading(true);
+    setError("");
+    try {
+      const resp = await fetch("/api/admin-bookings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: pw }),
+      });
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(
+          data?.error || (resp.status === 401 ? "Incorrect password." : "Failed to load bookings.")
+        );
+      }
+      setBookings(data.bookings || []);
+      setAuthed(true);
+      try { sessionStorage.setItem("jd_admin_pw", pw); } catch { /* ignore */ }
+    } catch (err) {
+      setError(err.message || "Something went wrong.");
+      setAuthed(false);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // Auto-load if a password was remembered for this browser session.
+  useEffect(() => {
+    let saved = null;
+    try { saved = sessionStorage.getItem("jd_admin_pw"); } catch { /* ignore */ }
+    if (saved) load(saved);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  function submit(e) {
+    e.preventDefault();
+    if (!password) { setError("Please enter the admin password."); return; }
+    load(password);
+  }
+
+  function logout() {
+    try { sessionStorage.removeItem("jd_admin_pw"); } catch { /* ignore */ }
+    setAuthed(false);
+    setBookings([]);
+    setPassword("");
+  }
+
+  const total = bookings.length;
+  const trials = bookings.filter((b) => String(b.session_type || "").toLowerCase() === "trial").length;
+  const paid = total - trials;
+
+  const fmtDate = (d) => {
+    if (!d) return "—";
+    try { return new Date(d).toLocaleString("en-GB", { timeZone: "Europe/London" }); } catch { return d; }
+  };
+  const fmtAmount = (a) => (typeof a === "number" && a > 0 ? `£${a.toFixed(2)}` : "Free");
+
+  const th = { textAlign: "left", padding: "10px 12px", fontSize: 12, textTransform: "uppercase", letterSpacing: ".03em", color: "#64748b", borderBottom: "2px solid #e2e8f0", whiteSpace: "nowrap" };
+  const td = { padding: "10px 12px", fontSize: 14, color: "#0f172a", borderBottom: "1px solid #eef2f7", verticalAlign: "top" };
+
+  if (!authed) {
+    return (
+      <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: 16 }}>
+        <form onSubmit={submit} style={{ background: "#fff", borderRadius: 16, padding: 28, width: "min(400px,92vw)", display: "flex", flexDirection: "column", gap: 14, boxShadow: "0 20px 50px rgba(0,0,0,.25)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ width: 40, height: 40, borderRadius: 10, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+            <div>
+              <h2 style={{ margin: 0, fontSize: 18 }}>Admin — Bookings</h2>
+              <div style={{ color: "#64748b", fontSize: 13 }}>Enter your password to continue</div>
+            </div>
+          </div>
+          <input autoFocus type="password" placeholder="Admin password" value={password} onChange={(e) => setPassword(e.target.value)} style={inp} />
+          {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
+          <button type="submit" disabled={loading} style={{ padding: 12, borderRadius: 8, background: loading ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: loading ? "default" : "pointer", fontWeight: 800 }}>
+            {loading ? "Checking…" : "View bookings"}
+          </button>
+          <a href="/" style={{ textAlign: "center", color: TEAL, textDecoration: "none", fontSize: 14 }}>← Back to website</a>
+        </form>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif" }}>
+      <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 18px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ width: 36, height: 36, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+          <div style={{ fontWeight: 800 }}>Bookings Dashboard</div>
+        </div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
+          <a href="/" style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", textDecoration: "none", fontWeight: 700 }}>View site</a>
+          <button onClick={logout} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>Log out</button>
+        </div>
+      </header>
+
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 12, marginBottom: 20 }}>
+          {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials]].map(([label, value]) => (
+            <div key={label} style={{ background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
+              <div style={{ color: "#64748b", fontSize: 13 }}>{label}</div>
+              <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK }}>{value}</div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "auto" }}>
+          {bookings.length === 0 ? (
+            <div style={{ padding: 40, textAlign: "center", color: "#64748b" }}>No bookings yet.</div>
+          ) : (
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 820 }}>
+              <thead>
+                <tr>
+                  <th style={th}>Date</th><th style={th}>Name</th><th style={th}>Email</th><th style={th}>Phone</th>
+                  <th style={th}>Level</th><th style={th}>Subject</th><th style={th}>Type</th><th style={th}>Amount</th><th style={th}>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {bookings.map((b, i) => (
+                  <tr key={b.id || i}>
+                    <td style={td}>{fmtDate(b.created_at)}</td>
+                    <td style={{ ...td, fontWeight: 700 }}>{b.student_name || "—"}</td>
+                    <td style={td}>{b.student_email ? <a href={`mailto:${b.student_email}`} style={{ color: TEAL }}>{b.student_email}</a> : "—"}</td>
+                    <td style={td}>{b.phone || "—"}</td>
+                    <td style={td}>{b.level || "—"}</td>
+                    <td style={td}>{b.subject || "—"}</td>
+                    <td style={td}>{b.session_type || "—"}</td>
+                    <td style={td}>{fmtAmount(b.amount)}</td>
+                    <td style={td}><span style={{ padding: "3px 10px", borderRadius: 999, fontSize: 12, fontWeight: 700, background: b.status === "confirmed" ? "#dcfce7" : "#fef9c3", color: b.status === "confirmed" ? "#166534" : "#854d0e" }}>{b.status || "—"}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------------------------------- APP ----------------------------------- */
 function App() {
   const [page, setPage] = useState("home");
@@ -850,6 +999,16 @@ function App() {
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
+
+  // Detect the admin dashboard route (?admin=1 or #admin) so no router is needed.
+  const isAdminRoute = (() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("admin") === "1" || window.location.hash === "#admin";
+    } catch {
+      return false;
+    }
+  })();
 
   useEffect(() => {
     loadResources();
@@ -902,6 +1061,9 @@ function App() {
     else document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
   const logout = async () => { await supabase.auth.signOut(); setSession(null); };
+
+  // The admin dashboard is a standalone page (its own auth) — render it alone.
+  if (isAdminRoute) return <AdminDashboard />;
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>

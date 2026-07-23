@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { sendBookingNotification } from './_lib/notify.js';
 
 /**
  * Vercel serverless function: create a free-trial (or unpaid) booking.
@@ -82,6 +83,23 @@ export default async function handler(req, res) {
     if (error) {
       console.error('Supabase insert error (trial booking):', error);
       return res.status(500).json({ error: error.message || 'Failed to save booking' });
+    }
+
+    // Best-effort owner notification — must never block or fail the booking.
+    try {
+      await sendBookingNotification({
+        student_name: insertRow.student_name,
+        student_email: insertRow.student_email,
+        phone: insertRow.phone,
+        level: insertRow.level,
+        subject: insertRow.subject,
+        session_type: 'trial',
+        status: insertRow.status,
+        amount: 0,
+        message: message || '',
+      });
+    } catch (notifyErr) {
+      console.warn('Trial booking notification failed (ignored):', notifyErr?.message || notifyErr);
     }
 
     return res.status(200).json({ ok: true, booking: data });
