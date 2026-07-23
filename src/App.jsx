@@ -609,9 +609,11 @@ function Booking() {
   }, []);
 
   function priceLabel(level, type) {
+    if (type === "trial") return "Free";
     const svc = services.find(s => s.level === level || s.slug === level);
     if (!svc) {
-      if (level && level.toLowerCase().includes("a-level")) return type === "package" ? "£400" : "£45/hr";
+      const premium = level && (level.includes("A-Level") || level.includes("T-Level") || level.includes("BTEC"));
+      if (premium) return type === "package" ? "£400" : "£45/hr";
       return type === "package" ? "£300" : "£35/hr";
     }
     return type === "package" ? `£${svc.package_price_10}` : `£${svc.price_per_hour}/hr`;
@@ -628,19 +630,24 @@ function Booking() {
     }
 
     try {
+      // Free trials go through a server API that uses the service role key,
+      // so Supabase RLS does not block the insert.
       if (form.sessionType === "trial") {
-        const { data, error } = await supabase.from("bookings").insert([{
-          student_name: form.name,
-          student_email: form.email,
-          phone: form.phone || null,
-          level: form.level,
-          subject: form.subject,
-          session_type: "trial",
-          status: "confirmed",
-          meta: { message: form.message }
-        }]).select().single();
-
-        if (error) throw error;
+        const resp = await fetch("/api/create-booking", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            level: form.level,
+            subject: form.subject,
+            message: form.message,
+            sessionType: "trial",
+          }),
+        });
+        const body = await resp.json().catch(() => ({}));
+        if (!resp.ok) throw new Error(body?.error || "Failed to book free trial");
         setSent(true);
         setLoading(false);
         return;
@@ -661,15 +668,9 @@ function Booking() {
         body: JSON.stringify(payload),
       });
 
-      const body = await resp.json();
+      const body = await resp.json().catch(() => ({}));
       if (!resp.ok) {
         throw new Error(body?.error || "Failed to create checkout session");
-      }
-
-      if (body.trial === true) {
-        setSent(true);
-        setLoading(false);
-        return;
       }
 
       if (body.url) {
@@ -846,6 +847,7 @@ function App() {
   const [session, setSession] = useState(null);
   const [resources, setResources] = useState([]);
   const [authOpen, setAuthOpen] = useState(false);
+  const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
@@ -854,6 +856,32 @@ function App() {
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     return () => listener.subscription.unsubscribe();
+  }, []);
+
+  // Show a confirmation banner after Stripe Checkout redirects back.
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("success") === "true") {
+        setBanner({
+          type: "success",
+          text: "Payment successful — thank you! Your booking is confirmed. We'll email you shortly to arrange the session.",
+        });
+        setPage("home");
+        window.history.replaceState({}, "", window.location.pathname);
+        setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
+      } else if (params.get("canceled") === "true") {
+        setBanner({
+          type: "canceled",
+          text: "Payment was cancelled. No charge was made — you can try booking again whenever you're ready.",
+        });
+        setPage("home");
+        window.history.replaceState({}, "", window.location.pathname);
+        setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
+      }
+    } catch {
+      /* ignore */
+    }
   }, []);
 
   async function loadResources() {
@@ -880,6 +908,34 @@ function App() {
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
         onAuth={() => setAuthOpen(true)} onLogout={logout} />
+
+      {banner && (
+        <div
+          role="status"
+          style={{
+            background: banner.type === "success" ? "#ecfdf5" : "#fff7ed",
+            color: banner.type === "success" ? "#065f46" : "#9a3412",
+            borderBottom: `1px solid ${banner.type === "success" ? "#a7f3d0" : "#fed7aa"}`,
+            padding: "14px 18px",
+            display: "flex",
+            gap: 12,
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            fontWeight: 600,
+          }}
+        >
+          <span>{banner.type === "success" ? "✅" : "ℹ️"} {banner.text}</span>
+          <button
+            type="button"
+            onClick={() => setBanner(null)}
+            aria-label="Dismiss"
+            style={{ background: "transparent", border: 0, cursor: "pointer", fontWeight: 800, color: "inherit", fontSize: 16 }}
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
       {page === "home" && (
         <main>
