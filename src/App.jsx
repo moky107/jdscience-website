@@ -957,29 +957,128 @@ function AdminDashboard() {
           {bookings.length === 0 ? (
             <div style={{ padding: 40, textAlign: "center", color: "#64748b" }}>No bookings yet.</div>
           ) : (
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 820 }}>
-              <thead>
-                <tr>
-                  <th style={th}>Date</th><th style={th}>Name</th><th style={th}>Email</th><th style={th}>Phone</th>
-                  <th style={th}>Level</th><th style={th}>Subject</th><th style={th}>Type</th><th style={th}>Amount</th><th style={th}>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {bookings.map((b, i) => (
-                  <tr key={b.id || i}>
-                    <td style={td}>{fmtDate(b.created_at)}</td>
-                    <td style={{ ...td, fontWeight: 700 }}>{b.student_name || "—"}</td>
-                    <td style={td}>{b.student_email ? <a href={`mailto:${b.student_email}`} style={{ color: TEAL }}>{b.student_email}</a> : "—"}</td>
-                    <td style={td}>{b.phone || "—"}</td>
-                    <td style={td}>{b.level || "—"}</td>
-                    <td style={td}>{b.subject || "—"}</td>
-                    <td style={td}>{b.session_type || "—"}</td>
-                    <td style={td}>{fmtAmount(b.amount)}</td>
-                    <td style={td}><span style={{ padding: "3px 10px", borderRadius: 999, fontSize: 12, fontWeight: 700, background: b.status === "confirmed" ? "#dcfce7" : "#fef9c3", color: b.status === "confirmed" ? "#166534" : "#854d0e" }}>{b.status || "—"}</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1000 }}>
+  <thead>
+    <tr>
+      <th style={th}>Date</th>
+      <th style={th}>Name</th>
+      <th style={th}>Email</th>
+      <th style={th}>Phone</th>
+      <th style={th}>Level</th>
+      <th style={th}>Subject</th>
+      <th style={th}>Type</th>
+      <th style={th}>Amount</th>
+      <th style={th}>Status</th>
+      <th style={th}>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {bookings.map((b, i) => (
+      <tr key={b.id || i}>
+        <td style={td}>{fmtDate(b.created_at)}</td>
+
+        <td style={{ ...td, fontWeight: 700 }}>
+          {b.student_name || "-"}
+        </td>
+
+        <td style={td}>
+          {b.student_email ? (
+            <a href={`mailto:${b.student_email}`} style={{ color: TEAL }}>
+              {b.student_email}
+            </a>
+          ) : (
+            "-"
+          )}
+        </td>
+
+        <td style={td}>{b.phone || "-"}</td>
+        <td style={td}>{b.level || "-"}</td>
+        <td style={td}>{b.subject || "-"}</td>
+        <td style={td}>{b.session_type || "-"}</td>
+        <td style={td}>{fmtAmount(b.amount)}</td>
+
+        <td style={td}>
+          <span
+            style={{
+              padding: "3px 10px",
+              borderRadius: 999,
+              fontSize: 12,
+              fontWeight: 700,
+              background:
+                b.status === "confirmed"
+                  ? "#dcfce7"
+                  : b.status === "rejected"
+                  ? "#fee2e2"
+                  : b.status === "completed"
+                  ? "#e0f2fe"
+                  : "#fef3c7",
+              color:
+                b.status === "confirmed"
+                  ? "#166534"
+                  : b.status === "rejected"
+                  ? "#991b1b"
+                  : b.status === "completed"
+                  ? "#075985"
+                  : "#92400e",
+            }}
+          >
+            {b.status || "pending"}
+          </span>
+        </td>
+
+        <td style={td}>
+          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking Confirmed&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AI am pleased to confirm your ${b.subject || ""} session.%0D%0A%0D%0APlease let me know if there are any specific topics you would like covered.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{
+                padding: "5px 8px",
+                borderRadius: 6,
+                background: "#dcfce7",
+                color: "#166534",
+                textDecoration: "none",
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
+              Confirm
+            </a>
+
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking - Alternative Time&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AThe requested time is not currently available. I can offer an alternative time. Please let me know your availability.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{
+                padding: "5px 8px",
+                borderRadius: 6,
+                background: "#fef3c7",
+                color: "#92400e",
+                textDecoration: "none",
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
+              Change
+            </a>
+
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking Update&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AUnfortunately, I am unable to accept the requested booking at this time.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{
+                padding: "5px 8px",
+                borderRadius: 6,
+                background: "#fee2e2",
+                color: "#991b1b",
+                textDecoration: "none",
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
+              Reject
+            </a>
+          </div>
+        </td>
+      </tr>
+    ))}
+  </tbody>
+</table>
           )}
         </div>
       </div>
