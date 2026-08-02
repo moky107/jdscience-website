@@ -196,22 +196,66 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, session, isAdm
 /* ---------------------------------- HERO ---------------------------------- */
 function Hero({ onScroll, onBrowse }) {
   const isMobile = useIsMobile();
+  const isTablet = useIsMobile(1024);
+  const heroOffset = isMobile ? -4 : isTablet ? -18 : -36;
+  const ctaBaseStyle = {
+    padding: isMobile ? "14px 22px" : "15px 24px",
+    borderRadius: 12,
+    cursor: "pointer",
+    fontWeight: 800,
+    fontSize: isMobile ? 15 : 16,
+    boxShadow: "0 10px 24px rgba(15, 23, 42, .16)",
+    transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease",
+    outlineOffset: 3,
+  };
   return (
     <section style={{ position: "relative", minHeight: isMobile ? 420 : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(1.08) contrast(1.08) saturate(1.04)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.14) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,.28) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: "40px 18px", textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
-        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "6px 14px", borderRadius: 20, marginBottom: 14, fontSize: 13, fontWeight: 600 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 34%", filter: "brightness(1.12) contrast(1.06) saturate(1.05)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.17) 44%, rgba(0,0,0,.24) 100%)" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: isMobile ? "34px 18px 40px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
+        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 14 : 15, fontWeight: 700 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 26 : 44, margin: "0 0 14px", lineHeight: 1.15, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
         <p style={{ fontSize: isMobile ? 15 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
-          Free past papers, revision notes &amp; mark schemes for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC — plus expert 1-to-1 tutoring.
+          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
         </p>
         <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-          <button onClick={onBrowse} style={{ padding: "13px 22px", borderRadius: 8, border: "none", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800, fontSize: 15 }}>Browse Resources</button>
-          <button onClick={() => onScroll("book")} style={{ padding: "13px 22px", borderRadius: 8, border: "2px solid rgba(255,255,255,.7)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 800, fontSize: 15 }}>Book a Tutor</button>
+          <button
+            onClick={onBrowse}
+            style={{ ...ctaBaseStyle, border: "none", background: "#fff", color: TEAL_DARK }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-1px)";
+              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .2)";
+              e.currentTarget.style.background = "#f8fafc";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
+              e.currentTarget.style.background = "#fff";
+            }}
+          >
+            Browse Resources
+          </button>
+          <button
+            onClick={() => onScroll("book")}
+            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-1px)";
+              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .22)";
+              e.currentTarget.style.background = "rgba(255,255,255,.14)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,.92)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
+              e.currentTarget.style.background = "rgba(255,255,255,.08)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,.76)";
+            }}
+          >
+            Book a Tutor
+          </button>
         </div>
       </div>
     </section>
@@ -219,11 +263,31 @@ function Hero({ onScroll, onBrowse }) {
 }
 
 function BoardStrip() {
+  const isMobile = useIsMobile();
   return (
-    <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: "14px 16px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
-        <span style={{ color: "#94a3b8" }}>Covering:</span>
-        {["AQA", "Edexcel", "OCR", "Eduqas", "Cambridge International", "Pearson", "NCFE"].map((b) => <span key={b}>{b}</span>)}
+    <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: isMobile ? "14px 16px" : "16px 16px" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 10, justifyContent: "center", alignItems: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
+        <span style={{ color: "#94a3b8", fontSize: 13, letterSpacing: ".02em", textTransform: "uppercase" }}>Covering:</span>
+        {["AQA", "Edexcel", "OCR", "Eduqas", "Cambridge International", "Pearson", "NCFE"].map((b) => (
+          <span
+            key={b}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: isMobile ? "7px 11px" : "8px 13px",
+              borderRadius: 999,
+              border: "1px solid rgba(0, 150, 136, .18)",
+              background: "#ecfeff",
+              color: TEAL_DARK,
+              fontSize: 13,
+              lineHeight: 1.1,
+              whiteSpace: "nowrap",
+            }}
+          >
+            {b}
+          </span>
+        ))}
       </div>
     </div>
   );
