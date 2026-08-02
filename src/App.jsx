@@ -31,7 +31,29 @@ const BOARDS_BY_LEVEL = {
   "BTEC": ["Pearson"],
 };
 
-const RES_TYPES = ["Revision Notes", "Past Questions", "Mark Schemes", "Videos"];
+const RES_TYPES = [
+  "Specifications",
+  "Revision Notes",
+  "Past Questions",
+  "Mark Schemes",
+  "Examiner Reports",
+  "Worksheets",
+  "Videos",
+];
+
+const RESOURCE_BOARDS = ["Edexcel", "AQA", "OCR", "Eduqas", "WJEC"];
+const RESOURCE_LEVELS = ["GCSE", "IGCSE", "A-Level", "BTEC", "T-Level", "11+"];
+const RESOURCE_SUBJECTS = ["Chemistry", "Physics", "Biology", "Maths"];
+
+const PLACEHOLDER_RESOURCE_LINKS = {
+  Specifications: ["Specification (Current)", "Specification (Legacy)"],
+  "Revision Notes": ["Topic Summary Pack", "Quick Revision Guide", "Exam Technique Notes"],
+  "Past Questions": ["Mixed Practice Set", "Topic-by-Topic Questions", "Timed Mock Questions"],
+  "Mark Schemes": ["Official-Style Mark Scheme", "Model Answers", "Grade Boundary Hints"],
+  "Examiner Reports": ["Examiner Feedback", "Common Mistakes Review"],
+  Worksheets: ["Foundation Worksheet", "Higher Worksheet", "Challenge Problems"],
+  Videos: ["Core Concepts Video", "Worked Example Video", "Exam Tips Video"],
+};
 
 function slugify(t) {
   return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -55,6 +77,15 @@ function useIsMobile(bp = 768) {
     return () => window.removeEventListener("resize", r);
   }, [bp]);
   return m;
+}
+
+function buildPlaceholderResources({ board, level, subject, type }) {
+  const labels = PLACEHOLDER_RESOURCE_LINKS[type] || ["Resource Pack"];
+  return labels.map((label, idx) => ({
+    id: `${slugify(board)}-${slugify(level)}-${slugify(subject)}-${slugify(type)}-${idx}`,
+    title: `${board} ${level} ${subject} ${label}`,
+    href: "#",
+  }));
 }
 
 /* --------------------------------- NAVBAR --------------------------------- */
@@ -168,9 +199,9 @@ function Hero({ onScroll, onBrowse }) {
   return (
     <section style={{ position: "relative", minHeight: isMobile ? 420 : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(0,77,64,.55), rgba(0,150,136,.35))" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: "40px 18px" }}>
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(1.08) contrast(1.08) saturate(1.04)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.14) 0%, rgba(0,0,0,.2) 45%, rgba(0,0,0,.28) 100%)" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: "40px 18px", textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
         <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "6px 14px", borderRadius: 20, marginBottom: 14, fontSize: 13, fontWeight: 600 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 26 : 44, margin: "0 0 14px", lineHeight: 1.15, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
@@ -240,6 +271,82 @@ function LevelGrid({ onLevel }) {
               <div style={{ marginTop: 14, fontWeight: 700, fontSize: 14 }}>Explore →</div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ResourceBrowser({ initialType, onBook }) {
+  const isMobile = useIsMobile();
+  const [board, setBoard] = useState(RESOURCE_BOARDS[0]);
+  const [level, setLevel] = useState(RESOURCE_LEVELS[0]);
+  const [subject, setSubject] = useState(RESOURCE_SUBJECTS[0]);
+  const [type, setType] = useState(initialType || RES_TYPES[0]);
+
+  useEffect(() => {
+    if (initialType && RES_TYPES.includes(initialType)) setType(initialType);
+  }, [initialType]);
+
+  const resources = buildPlaceholderResources({ board, level, subject, type });
+
+  return (
+    <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › Resources › {board} › {level} › {subject} › {type}</div>
+
+        <div style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
+          <div style={{ flex: 1, minWidth: 180 }}>
+            <div style={{ fontWeight: 800, color: "#0f172a" }}>Resource Browser</div>
+            <div style={{ color: "#64748b", fontSize: 14 }}>
+              Browse by exam board, level, subject and resource type. Placeholder links are currently shown.
+            </div>
+          </div>
+          <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 16 }}>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
+            <select value={board} onChange={(e) => setBoard(e.target.value)} style={inp}>
+              {RESOURCE_BOARDS.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </div>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Level</div>
+            <select value={level} onChange={(e) => setLevel(e.target.value)} style={inp}>
+              {RESOURCE_LEVELS.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </div>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Subject</div>
+            <select value={subject} onChange={(e) => setSubject(e.target.value)} style={inp}>
+              {RESOURCE_SUBJECTS.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </div>
+          <div>
+            <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Resource Type</div>
+            <select value={type} onChange={(e) => setType(e.target.value)} style={inp}>
+              {RES_TYPES.map((item) => <option key={item} value={item}>{item}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.06)", overflow: "hidden" }}>
+          <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>
+            {board} · {level} · {subject} · {type}
+          </div>
+          <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
+            {resources.map((item) => (
+              <a key={item.id} href={item.href}
+                style={{ textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
+                📄 {item.title}
+              </a>
+            ))}
+          </div>
+          <div style={{ padding: "0 12px 12px", fontSize: 12, color: "#64748b" }}>
+            Links are placeholders and will be replaced with live resources.
+          </div>
         </div>
       </div>
     </section>
@@ -746,6 +853,179 @@ function Booking() {
   );
 }
 
+function TutorProfiles({ tutors, loading, error }) {
+  const isMobile = useIsMobile();
+
+  return (
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: 0 }}>Tutor Profiles</h2>
+        <p style={{ color: "#64748b", marginTop: 8 }}>
+          Browse approved tutors and send an enquiry for the tutor you want.
+        </p>
+
+        {loading && <div style={{ color: "#64748b", marginTop: 12 }}>Loading tutor profiles…</div>}
+        {error && <div style={{ color: "#b91c1c", marginTop: 12 }}>{error}</div>}
+
+        {!loading && !error && tutors.length === 0 && (
+          <div style={{ marginTop: 14, background: "#f8fafc", borderRadius: 12, padding: 16, color: "#64748b" }}>
+            No approved tutor profiles yet.
+          </div>
+        )}
+
+        <div style={{ marginTop: 16, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))", gap: 16 }}>
+          {tutors.map((tutor) => (
+            <article key={tutor.id} style={{ background: "#f8fafc", borderRadius: 14, padding: 18, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                <h3 style={{ margin: 0, color: "#0f172a" }}>{tutor.tutor_name}</h3>
+                <span style={{ fontSize: 12, fontWeight: 700, background: "#dcfce7", color: "#166534", borderRadius: 999, padding: "4px 8px" }}>approved</span>
+              </div>
+              <p style={{ margin: "8px 0", color: "#0f172a", fontWeight: 700 }}>{tutor.subject_specialism}</p>
+              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Level:</b> {tutor.level_taught}</p>
+              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Qualifications:</b> {tutor.qualifications}</p>
+              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Mode:</b> {tutor.teaching_mode}</p>
+              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Location:</b> {tutor.location}</p>
+              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}>
+                <b>Rate:</b> {tutor.contact_for_quote ? "Contact for quote" : (tutor.hourly_rate ? `£${Number(tutor.hourly_rate).toFixed(2)}/hr` : "Contact for quote")}
+              </p>
+              <p style={{ margin: "10px 0", color: "#64748b", fontSize: 14, lineHeight: 1.55 }}>{tutor.bio}</p>
+              <a
+                href={`mailto:info@jdscience.co.uk?subject=Tutor enquiry: ${encodeURIComponent(tutor.tutor_name)}&body=Hello JD Science,%0D%0A%0D%0AI would like to enquire about ${encodeURIComponent(tutor.tutor_name)} (${encodeURIComponent(tutor.subject_specialism)}).`}
+                style={{ display: "inline-block", marginTop: 6, padding: "9px 12px", borderRadius: 8, background: TEAL, color: "#fff", textDecoration: "none", fontWeight: 700 }}
+              >
+                Enquire About This Tutor
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TutorApplicationForm({ onSubmitted }) {
+  const isMobile = useIsMobile();
+  const [saving, setSaving] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+  const [form, setForm] = useState({
+    tutor_name: "",
+    subject_specialism: "Chemistry",
+    level_taught: "GCSE",
+    qualifications: "",
+    bio: "",
+    teaching_mode: "online",
+    location: "",
+    hourly_rate: "",
+    contact_for_quote: false,
+  });
+
+  const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
+
+  async function submit(e) {
+    e.preventDefault();
+    setSaving(true);
+    setSuccess("");
+    setError("");
+
+    try {
+      const payload = {
+        ...form,
+        hourly_rate: form.contact_for_quote || !form.hourly_rate ? null : Number(form.hourly_rate),
+      };
+
+      const resp = await fetch("/api/create-tutor-application", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const body = await resp.json().catch(() => ({}));
+      if (!resp.ok) throw new Error(body?.error || "Failed to submit tutor application.");
+
+      setSuccess("Application submitted. Your profile will stay pending until admin approval.");
+      setForm({
+        tutor_name: "",
+        subject_specialism: "Chemistry",
+        level_taught: "GCSE",
+        qualifications: "",
+        bio: "",
+        teaching_mode: "online",
+        location: "",
+        hourly_rate: "",
+        contact_for_quote: false,
+      });
+      if (onSubmitted) onSubmitted();
+    } catch (err) {
+      setError(err.message || "Failed to submit application.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <section style={{ background: "#f8fafc", padding: isMobile ? "32px 16px" : "48px 20px" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+        <h2 style={{ marginTop: 0, color: "#0f172a" }}>Tutor Application Form</h2>
+        <p style={{ color: "#64748b", marginTop: 8, marginBottom: 16 }}>
+          Submit your details to advertise on JD Science. Profiles remain pending until approved by admin.
+        </p>
+
+        <form onSubmit={submit} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
+          <input required placeholder="Tutor name" value={form.tutor_name} onChange={(e) => set("tutor_name", e.target.value)} style={inp} />
+          <select value={form.subject_specialism} onChange={(e) => set("subject_specialism", e.target.value)} style={inp}>
+            {RESOURCE_SUBJECTS.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+
+          <select value={form.level_taught} onChange={(e) => set("level_taught", e.target.value)} style={inp}>
+            {RESOURCE_LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
+          </select>
+          <select value={form.teaching_mode} onChange={(e) => set("teaching_mode", e.target.value)} style={inp}>
+            <option value="online">Online</option>
+            <option value="face-to-face">Face-to-face</option>
+            <option value="both">Both</option>
+          </select>
+
+          <input required placeholder="Qualifications" value={form.qualifications} onChange={(e) => set("qualifications", e.target.value)} style={inp} />
+          <input required placeholder="Location" value={form.location} onChange={(e) => set("location", e.target.value)} style={inp} />
+
+          <input
+            type="number"
+            min="0"
+            step="0.01"
+            disabled={form.contact_for_quote}
+            placeholder="Hourly rate (GBP)"
+            value={form.hourly_rate}
+            onChange={(e) => set("hourly_rate", e.target.value)}
+            style={inp}
+          />
+          <label style={{ display: "flex", alignItems: "center", gap: 8, color: "#334155", fontSize: 14 }}>
+            <input type="checkbox" checked={form.contact_for_quote} onChange={(e) => set("contact_for_quote", e.target.checked)} />
+            Contact for quote
+          </label>
+
+          <textarea
+            required
+            rows={4}
+            placeholder="Short bio"
+            value={form.bio}
+            onChange={(e) => set("bio", e.target.value)}
+            style={{ ...inp, gridColumn: isMobile ? "auto" : "1 / -1" }}
+          />
+
+          <div style={{ gridColumn: isMobile ? "auto" : "1 / -1", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+            <button type="submit" disabled={saving} style={{ padding: "12px 14px", borderRadius: 8, background: saving ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>
+              {saving ? "Submitting…" : "Submit Tutor Application"}
+            </button>
+            {success && <span style={{ color: "#166534", fontSize: 14 }}>{success}</span>}
+            {error && <span style={{ color: "#b91c1c", fontSize: 14 }}>{error}</span>}
+          </div>
+        </form>
+      </div>
+    </section>
+  );
+}
+
 /* --------------------------- VIDEO / CONTACT / FOOTER --------------------------- */
 function VideoSection() {
   const isMobile = useIsMobile();
@@ -768,11 +1048,70 @@ function VideoSection() {
 
 function Contact() {
   const isMobile = useIsMobile();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    company: "",
+  });
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("");
+
+  const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
+
+  async function submit(e) {
+    e.preventDefault();
+    if (sending) return;
+
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const subject = form.subject.trim();
+    const message = form.message.trim();
+
+    if (!name || !email || !subject || !message) {
+      setError("Please complete name, email, subject and message.");
+      setSuccess("");
+      return;
+    }
+
+    setSending(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      const resp = await fetch("/api/send-contact-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+          company: form.company,
+        }),
+      });
+
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(data?.error || "Failed to send message.");
+      }
+
+      setSuccess("Thanks. Your message has been sent and we will reply soon.");
+      setForm({ name: "", email: "", subject: "", message: "", company: "" });
+    } catch (err) {
+      setError(err.message || "Something went wrong while sending your message.");
+    } finally {
+      setSending(false);
+    }
+  }
+
   return (
     <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
       <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
         <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28 }}>Get in Touch</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 16, marginTop: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, minmax(0, 1fr))", gap: 16, marginTop: 20, alignItems: "start" }}>
           <div style={{ background: "#f8fafc", borderRadius: 12, padding: 20 }}>
             <div style={{ fontSize: 28 }}>📧</div>
             <div style={{ fontWeight: 700, marginTop: 6 }}>Email</div>
@@ -783,6 +1122,41 @@ function Contact() {
             <div style={{ fontWeight: 700, marginTop: 6 }}>Phone</div>
             <a href="tel:07466142805" style={{ color: TEAL }}>07466 142805</a>
           </div>
+          <form onSubmit={submit} style={{ position: "relative", gridColumn: isMobile ? "auto" : "1 / -1", background: "#f8fafc", borderRadius: 12, padding: 20, textAlign: "left", boxShadow: "0 4px 14px rgba(0,0,0,.04)" }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: 14, color: "#0f172a", marginBottom: 6 }}>Name</label>
+                <input required value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="Your name" style={inp} />
+              </div>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, fontSize: 14, color: "#0f172a", marginBottom: 6 }}>Email address</label>
+                <input required type="email" value={form.email} onChange={(e) => set("email", e.target.value)} placeholder="you@example.com" style={inp} />
+              </div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}>
+                <label style={{ display: "block", fontWeight: 700, fontSize: 14, color: "#0f172a", marginBottom: 6 }}>Subject</label>
+                <input required value={form.subject} onChange={(e) => set("subject", e.target.value)} placeholder="How can we help?" style={inp} />
+              </div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}>
+                <label style={{ display: "block", fontWeight: 700, fontSize: 14, color: "#0f172a", marginBottom: 6 }}>Message</label>
+                <textarea required rows={5} value={form.message} onChange={(e) => set("message", e.target.value)} placeholder="Write your message here..." style={inp} />
+              </div>
+            </div>
+
+            <div style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }} aria-hidden="true">
+              <label>
+                Company
+                <input tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => set("company", e.target.value)} />
+              </label>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginTop: 12 }}>
+              <button type="submit" disabled={sending} style={{ padding: "12px 18px", borderRadius: 8, background: sending ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: sending ? "default" : "pointer", fontWeight: 800 }}>
+                {sending ? "Sending…" : "Send Message"}
+              </button>
+              {success && <span style={{ color: "#166534", fontSize: 14 }}>{success}</span>}
+              {error && <span style={{ color: "#b91c1c", fontSize: 14 }}>{error}</span>}
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -846,7 +1220,10 @@ function AdminDashboard() {
   const [authed, setAuthed] = useState(false);
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [statusSavingId, setStatusSavingId] = useState(null);
   const [error, setError] = useState("");
+  const [tutorApplications, setTutorApplications] = useState([]);
+  const [tutorSavingId, setTutorSavingId] = useState(null);
 
   async function load(pw) {
     setLoading(true);
@@ -866,6 +1243,17 @@ function AdminDashboard() {
       setBookings(data.bookings || []);
       setAuthed(true);
       try { sessionStorage.setItem("jd_admin_pw", pw); } catch { /* ignore */ }
+
+      const tutorResp = await fetch("/api/admin-tutor-applications", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: pw }),
+      });
+      const tutorData = await tutorResp.json().catch(() => ({}));
+      if (!tutorResp.ok) {
+        throw new Error(tutorData?.error || "Failed to load tutor applications.");
+      }
+      setTutorApplications(tutorData.applications || []);
     } catch (err) {
       setError(err.message || "Something went wrong.");
       setAuthed(false);
@@ -891,12 +1279,109 @@ function AdminDashboard() {
     try { sessionStorage.removeItem("jd_admin_pw"); } catch { /* ignore */ }
     setAuthed(false);
     setBookings([]);
+    setTutorApplications([]);
     setPassword("");
+  }
+
+  async function updateTutorStatus(application, nextStatus) {
+    if (!application?.id) {
+      setError("This tutor application cannot be updated because it has no ID.");
+      return;
+    }
+
+    const applicationId = String(application.id);
+    const previousStatus = application.profile_status || "pending";
+    setError("");
+    setTutorSavingId(applicationId);
+
+    setTutorApplications((rows) => rows.map((row) => (
+      String(row.id) === applicationId ? { ...row, profile_status: nextStatus } : row
+    )));
+
+    try {
+      const resp = await fetch("/api/update-tutor-profile-status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          password,
+          id: application.id,
+          profile_status: nextStatus,
+        }),
+      });
+
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(data?.error || "Failed to update tutor profile status.");
+      }
+
+      if (data?.application) {
+        setTutorApplications((rows) => rows.map((row) => (
+          String(row.id) === applicationId ? { ...row, ...data.application } : row
+        )));
+      }
+    } catch (err) {
+      setTutorApplications((rows) => rows.map((row) => (
+        String(row.id) === applicationId ? { ...row, profile_status: previousStatus } : row
+      )));
+      setError(err.message || "Failed to update tutor profile status.");
+    } finally {
+      setTutorSavingId(null);
+    }
+  }
+
+  async function updateBookingStatus(booking, nextStatus) {
+    if (!booking?.id) {
+      setError("This booking cannot be updated because it has no ID.");
+      return;
+    }
+
+    const bookingId = String(booking.id);
+    const previousStatus = booking.status || "pending";
+    setError("");
+    setStatusSavingId(bookingId);
+
+    // Optimistic UI update so the badge changes immediately.
+    setBookings((rows) => rows.map((row) => (
+      String(row.id) === bookingId ? { ...row, status: nextStatus } : row
+    )));
+
+    try {
+      const resp = await fetch("/api/update-booking-status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          password,
+          id: booking.id,
+          status: nextStatus,
+        }),
+      });
+
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(data?.error || "Failed to update booking status.");
+      }
+
+      if (data?.booking) {
+        setBookings((rows) => rows.map((row) => (
+          String(row.id) === bookingId ? { ...row, ...data.booking } : row
+        )));
+      }
+    } catch (err) {
+      // Revert optimistic status on error.
+      setBookings((rows) => rows.map((row) => (
+        String(row.id) === bookingId ? { ...row, status: previousStatus } : row
+      )));
+      setError(err.message || "Failed to update booking status.");
+    } finally {
+      setStatusSavingId(null);
+    }
   }
 
   const total = bookings.length;
   const trials = bookings.filter((b) => String(b.session_type || "").toLowerCase() === "trial").length;
   const paid = total - trials;
+  const pendingTutors = tutorApplications.filter((t) => (t.profile_status || "pending") === "pending").length;
+  const approvedTutors = tutorApplications.filter((t) => (t.profile_status || "pending") === "approved").length;
 
   const fmtDate = (d) => {
     if (!d) return "—";
@@ -944,8 +1429,13 @@ function AdminDashboard() {
       </header>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px" }}>
+        {error && (
+          <div style={{ marginBottom: 12, padding: "10px 12px", borderRadius: 8, background: "#fef2f2", border: "1px solid #fecaca", color: "#991b1b", fontSize: 14 }}>
+            {error}
+          </div>
+        )}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 12, marginBottom: 20 }}>
-          {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials]].map(([label, value]) => (
+          {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials], ["Pending tutor apps", pendingTutors], ["Approved tutors", approvedTutors]].map(([label, value]) => (
             <div key={label} style={{ background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
               <div style={{ color: "#64748b", fontSize: 13 }}>{label}</div>
               <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK }}>{value}</div>
@@ -1008,6 +1498,8 @@ function AdminDashboard() {
               background:
                 b.status === "confirmed"
                   ? "#dcfce7"
+                  : b.status === "rescheduled"
+                  ? "#fff7ed"
                   : b.status === "rejected"
                   ? "#fee2e2"
                   : b.status === "completed"
@@ -1016,6 +1508,8 @@ function AdminDashboard() {
               color:
                 b.status === "confirmed"
                   ? "#166534"
+                  : b.status === "rescheduled"
+                  ? "#9a3412"
                   : b.status === "rejected"
                   ? "#991b1b"
                   : b.status === "completed"
@@ -1028,57 +1522,196 @@ function AdminDashboard() {
         </td>
 
         <td style={td}>
-          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-            <a
-              href={`mailto:${b.student_email}?subject=JD Science Booking Confirmed&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AI am pleased to confirm your ${b.subject || ""} session.%0D%0A%0D%0APlease let me know if there are any specific topics you would like covered.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+          <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
+            <button
+              type="button"
+              onClick={() => updateBookingStatus(b, "confirmed")}
+              disabled={loading || statusSavingId === String(b.id) || !b.id}
               style={{
                 padding: "5px 8px",
                 borderRadius: 6,
+                border: "1px solid #bbf7d0",
                 background: "#dcfce7",
                 color: "#166534",
-                textDecoration: "none",
+                cursor: "pointer",
                 fontSize: 12,
                 fontWeight: 700,
               }}
             >
               Confirm
+            </button>
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking Confirmed&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AI am pleased to confirm your ${b.subject || ""} session.%0D%0A%0D%0APlease let me know if there are any specific topics you would like covered.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{ color: TEAL, fontSize: 12, fontWeight: 700, textDecoration: "none" }}
+            >
+              Email
             </a>
 
-            <a
-              href={`mailto:${b.student_email}?subject=JD Science Booking - Alternative Time&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AThe requested time is not currently available. I can offer an alternative time. Please let me know your availability.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+            <button
+              type="button"
+              onClick={() => updateBookingStatus(b, "rescheduled")}
+              disabled={loading || statusSavingId === String(b.id) || !b.id}
               style={{
                 padding: "5px 8px",
                 borderRadius: 6,
+                border: "1px solid #fde68a",
                 background: "#fef3c7",
                 color: "#92400e",
-                textDecoration: "none",
+                cursor: "pointer",
                 fontSize: 12,
                 fontWeight: 700,
               }}
             >
               Change
+            </button>
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking - Alternative Time&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AThe requested time is not currently available. I can offer an alternative time. Please let me know your availability.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{ color: TEAL, fontSize: 12, fontWeight: 700, textDecoration: "none" }}
+            >
+              Email
             </a>
 
-            <a
-              href={`mailto:${b.student_email}?subject=JD Science Booking Update&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AUnfortunately, I am unable to accept the requested booking at this time.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+            <button
+              type="button"
+              onClick={() => updateBookingStatus(b, "rejected")}
+              disabled={loading || statusSavingId === String(b.id) || !b.id}
               style={{
                 padding: "5px 8px",
                 borderRadius: 6,
+                border: "1px solid #fecaca",
                 background: "#fee2e2",
                 color: "#991b1b",
-                textDecoration: "none",
+                cursor: "pointer",
                 fontSize: 12,
                 fontWeight: 700,
               }}
             >
               Reject
+            </button>
+            <a
+              href={`mailto:${b.student_email}?subject=JD Science Booking Update&body=Dear ${b.student_name || "Student"},%0D%0A%0D%0AThank you for your booking enquiry.%0D%0A%0D%0AUnfortunately, I am unable to accept the requested booking at this time.%0D%0A%0D%0AKind regards,%0D%0AJoseph%0D%0AJD Science`}
+              style={{ color: TEAL, fontSize: 12, fontWeight: 700, textDecoration: "none" }}
+            >
+              Email
             </a>
+
+            <button
+              type="button"
+              onClick={() => updateBookingStatus(b, "completed")}
+              disabled={loading || statusSavingId === String(b.id) || !b.id}
+              style={{
+                padding: "5px 8px",
+                borderRadius: 6,
+                border: "1px solid #bae6fd",
+                background: "#e0f2fe",
+                color: "#075985",
+                cursor: "pointer",
+                fontSize: 12,
+                fontWeight: 700,
+              }}
+            >
+              Completed
+            </button>
           </div>
         </td>
       </tr>
     ))}
   </tbody>
 </table>
+          )}
+        </div>
+
+        <div style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "auto" }}>
+          <div style={{ padding: "12px 14px", borderBottom: "1px solid #e2e8f0", fontWeight: 800, color: "#0f172a" }}>Tutor Applications Review</div>
+          {tutorApplications.length === 0 ? (
+            <div style={{ padding: 24, textAlign: "center", color: "#64748b" }}>No tutor applications yet.</div>
+          ) : (
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1100 }}>
+              <thead>
+                <tr>
+                  <th style={th}>Date</th>
+                  <th style={th}>Tutor</th>
+                  <th style={th}>Subject</th>
+                  <th style={th}>Level</th>
+                  <th style={th}>Mode</th>
+                  <th style={th}>Location</th>
+                  <th style={th}>Rate</th>
+                  <th style={th}>Qualifications</th>
+                  <th style={th}>Bio</th>
+                  <th style={th}>Status</th>
+                  <th style={th}>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tutorApplications.map((t, i) => (
+                  <tr key={t.id || i}>
+                    <td style={td}>{fmtDate(t.created_at)}</td>
+                    <td style={{ ...td, fontWeight: 700 }}>{t.tutor_name || "-"}</td>
+                    <td style={td}>{t.subject_specialism || "-"}</td>
+                    <td style={td}>{t.level_taught || "-"}</td>
+                    <td style={td}>{t.teaching_mode || "-"}</td>
+                    <td style={td}>{t.location || "-"}</td>
+                    <td style={td}>
+                      {t.contact_for_quote ? "Contact for quote" : (t.hourly_rate ? `£${Number(t.hourly_rate).toFixed(2)}/hr` : "-")}
+                    </td>
+                    <td style={td}>{t.qualifications || "-"}</td>
+                    <td style={{ ...td, maxWidth: 280 }}>{t.bio || "-"}</td>
+                    <td style={td}>
+                      <span
+                        style={{
+                          padding: "3px 10px",
+                          borderRadius: 999,
+                          fontSize: 12,
+                          fontWeight: 700,
+                          background:
+                            t.profile_status === "approved"
+                              ? "#dcfce7"
+                              : t.profile_status === "rejected"
+                              ? "#fee2e2"
+                              : "#fef3c7",
+                          color:
+                            t.profile_status === "approved"
+                              ? "#166534"
+                              : t.profile_status === "rejected"
+                              ? "#991b1b"
+                              : "#92400e",
+                        }}
+                      >
+                        {t.profile_status || "pending"}
+                      </span>
+                    </td>
+                    <td style={td}>
+                      <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                        <button
+                          type="button"
+                          onClick={() => updateTutorStatus(t, "pending")}
+                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
+                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #fde68a", background: "#fef3c7", color: "#92400e", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
+                        >
+                          Pending
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => updateTutorStatus(t, "approved")}
+                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
+                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #bbf7d0", background: "#dcfce7", color: "#166534", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
+                        >
+                          Approve
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => updateTutorStatus(t, "rejected")}
+                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
+                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #fecaca", background: "#fee2e2", color: "#991b1b", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
+                        >
+                          Reject
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           )}
         </div>
       </div>
@@ -1096,6 +1729,9 @@ function App() {
   const [resources, setResources] = useState([]);
   const [authOpen, setAuthOpen] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
+  const [approvedTutors, setApprovedTutors] = useState([]);
+  const [tutorsLoading, setTutorsLoading] = useState(false);
+  const [tutorsError, setTutorsError] = useState("");
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
@@ -1111,6 +1747,7 @@ function App() {
 
   useEffect(() => {
     loadResources();
+    loadApprovedTutors();
     supabase.auth.getSession().then(({ data }) => setSession(data.session));
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     return () => listener.subscription.unsubscribe();
@@ -1149,11 +1786,28 @@ function App() {
     if (!error) setResources(data || []);
   }
 
+  async function loadApprovedTutors() {
+    setTutorsLoading(true);
+    setTutorsError("");
+    try {
+      const resp = await fetch("/api/tutor-profiles");
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) throw new Error(data?.error || "Failed to load tutor profiles.");
+      setApprovedTutors(data.tutors || []);
+    } catch (err) {
+      setTutorsError(err.message || "Failed to load tutor profiles.");
+      setApprovedTutors([]);
+    } finally {
+      setTutorsLoading(false);
+    }
+  }
+
   const goPapers = () => { setPage("papers"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goResources = () => { setPage("resources"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goHome = () => { setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
-  const handleResource = (res) => { setPickedRes(res); goPapers(); };
+  const handleResource = (res) => { setPickedRes(res); goResources(); };
   const handleScroll = (target) => {
     const id = target === "contact" ? "contact-anchor" : "book-anchor";
     if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
@@ -1204,6 +1858,8 @@ function App() {
           <BoardStrip />
           <OffersSection />
           <LevelGrid onLevel={handleLevel} />
+          <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} />
+          <TutorApplicationForm onSubmitted={loadApprovedTutors} />
           <div id="book-anchor"><Booking /></div>
           <div id="contact-anchor"><Contact /></div>
           <VideoSection />
@@ -1214,6 +1870,12 @@ function App() {
         <main>
           <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes}
             isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
+        </main>
+      )}
+
+      {page === "resources" && (
+        <main>
+          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
         </main>
       )}
 
