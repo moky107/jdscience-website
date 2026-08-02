@@ -120,6 +120,14 @@ function avatarInitials(name) {
   return parts.slice(0, 2).map((part) => part[0]?.toUpperCase() || "").join("");
 }
 
+function formatTutorStorageError(error) {
+  const message = String(error?.message || error || "");
+  if (/bucket not found/i.test(message)) {
+    return 'Tutor uploads are not configured yet. Create the private Supabase Storage bucket "tutor-applications" or run the SQL in supabase/tutor_workflow.sql.';
+  }
+  return message || "Failed to upload file.";
+}
+
 function usePrefersReducedMotion() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
@@ -1397,7 +1405,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
       upsert: false,
       contentType: file.type || undefined,
     });
-    if (error) throw new Error(error.message || "Failed to upload file.");
+    if (error) throw new Error(formatTutorStorageError(error));
     return path;
   }
 
