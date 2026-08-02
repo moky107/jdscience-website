@@ -278,7 +278,7 @@ function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidt
 }
 
 /* --------------------------------- NAVBAR --------------------------------- */
-function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutorButtonRef, session, isAdmin, onAuth, onLogout }) {
+function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutorButtonRef, session, isAdmin, onAuth, onLogout, onAdminDashboard }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -305,10 +305,23 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
   );
 
   const adminBtn = session ? (
-    <button type="button" onClick={onLogout}
-      style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: isAdmin ? "#10b981" : "#fff", color: isAdmin ? "#fff" : "#111", cursor: "pointer" }}>
-      {isAdmin ? "Admin ✓" : "Logout"}
-    </button>
+    isAdmin ? (
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <button type="button" onClick={onAdminDashboard}
+          style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #10b981", background: "#10b981", color: "#fff", cursor: "pointer", fontWeight: 700 }}>
+          Admin ✓
+        </button>
+        <button type="button" onClick={onLogout}
+          style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
+          Logout
+        </button>
+      </div>
+    ) : (
+      <button type="button" onClick={onLogout}
+        style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
+        Logout
+      </button>
+    )
   ) : (
     <button type="button" onClick={onAuth}
       style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
@@ -1779,7 +1792,7 @@ function AuthModal({ close }) {
 }
 
 /* ------------------------------ ADMIN DASHBOARD --------------------------- */
-function AdminDashboard() {
+function AdminDashboard({ onClose, onSiteLogout }) {
   const [password, setPassword] = useState(() => {
     try { return sessionStorage.getItem("jd_admin_pw") || ""; } catch { return ""; }
   });
@@ -1876,6 +1889,7 @@ function AdminDashboard() {
           password,
           id: application.id,
           profile_status: nextStatus,
+          is_published: nextStatus === "approved",
           admin_note: noteForApplication,
         }),
       });
@@ -1954,6 +1968,7 @@ function AdminDashboard() {
   const paid = total - trials;
   const pendingTutors = tutorApplications.filter((t) => (t.profile_status || "pending") === "pending").length;
   const approvedTutors = tutorApplications.filter((t) => (t.profile_status || "pending") === "approved").length;
+  const publishedTutors = tutorApplications.filter((t) => Boolean(t.is_published) && (t.profile_status || "pending") === "approved").length;
 
   const fmtDate = (d) => {
     if (!d) return "—";
@@ -1980,7 +1995,13 @@ function AdminDashboard() {
           <button type="submit" disabled={loading} style={{ padding: 12, borderRadius: 8, background: loading ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: loading ? "default" : "pointer", fontWeight: 800 }}>
             {loading ? "Checking…" : "View bookings"}
           </button>
-          <a href="/" style={{ textAlign: "center", color: TEAL, textDecoration: "none", fontSize: 14 }}>← Back to website</a>
+          {onClose ? (
+            <button type="button" onClick={onClose} style={{ textAlign: "center", color: TEAL, background: "none", border: 0, cursor: "pointer", fontSize: 14 }}>
+              ← Return to website
+            </button>
+          ) : (
+            <a href="/" style={{ textAlign: "center", color: TEAL, textDecoration: "none", fontSize: 14 }}>← Back to website</a>
+          )}
         </form>
       </div>
     );
@@ -1995,7 +2016,18 @@ function AdminDashboard() {
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
-          <a href="/" style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", textDecoration: "none", fontWeight: 700 }}>View site</a>
+          {onClose ? (
+            <button onClick={onClose} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
+              Close Admin Dashboard
+            </button>
+          ) : (
+            <a href="/" style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", textDecoration: "none", fontWeight: 700 }}>View site</a>
+          )}
+          {onSiteLogout && (
+            <button onClick={onSiteLogout} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #dbeafe", background: "#eff6ff", color: "#1d4ed8", cursor: "pointer", fontWeight: 700 }}>
+              Logout Website Session
+            </button>
+          )}
           <button onClick={logout} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>Log out</button>
         </div>
       </header>
@@ -2007,7 +2039,7 @@ function AdminDashboard() {
           </div>
         )}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 12, marginBottom: 20 }}>
-          {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials], ["Pending tutor apps", pendingTutors], ["Approved tutors", approvedTutors]].map(([label, value]) => (
+          {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials], ["Pending tutor apps", pendingTutors], ["Approved tutors", approvedTutors], ["Published tutors", publishedTutors]].map(([label, value]) => (
             <div key={label} style={{ background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
               <div style={{ color: "#64748b", fontSize: 13 }}>{label}</div>
               <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK }}>{value}</div>
@@ -2029,6 +2061,7 @@ function AdminDashboard() {
       <th style={th}>Level</th>
       <th style={th}>Subject</th>
       <th style={th}>Type</th>
+      <th style={th}>Payment</th>
       <th style={th}>Amount</th>
       <th style={th}>Status</th>
       <th style={th}>Actions</th>
@@ -2058,6 +2091,7 @@ function AdminDashboard() {
         <td style={td}>{b.level || "-"}</td>
         <td style={td}>{b.subject || "-"}</td>
         <td style={td}>{b.session_type || "-"}</td>
+        <td style={td}>{b.payment_status || b.stripe_payment_status || (typeof b.amount === "number" && b.amount > 0 ? "paid" : "free")}</td>
         <td style={td}>{fmtAmount(b.amount)}</td>
 
         <td style={td}>
@@ -2223,6 +2257,8 @@ function AdminDashboard() {
                       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                         <button type="button" onClick={() => setExpandedTutorId(expanded ? null : applicationId)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{expanded ? "Hide details" : "Inspect"}</button>
                         <button type="button" onClick={() => updateTutorStatus(t, "approved")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bbf7d0", background: "#dcfce7", color: "#166534", cursor: "pointer", fontWeight: 700 }}>Approve</button>
+                        <button type="button" onClick={() => updateTutorStatus({ ...t, is_published: true }, "approved")} disabled={loading || tutorSavingId === applicationId || !t.id || (t.profile_status === "approved" && t.is_published)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #86efac", background: "#f0fdf4", color: "#166534", cursor: "pointer", fontWeight: 700 }}>Publish</button>
+                        <button type="button" onClick={() => updateTutorStatus(t, "suspended")} disabled={loading || tutorSavingId === applicationId || !t.id || !t.is_published} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bfdbfe", background: "#eff6ff", color: "#1d4ed8", cursor: "pointer", fontWeight: 700 }}>Unpublish</button>
                         <button type="button" onClick={() => updateTutorStatus(t, "rejected")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #fecaca", background: "#fee2e2", color: "#991b1b", cursor: "pointer", fontWeight: 700 }}>Reject</button>
                         <button type="button" onClick={() => updateTutorStatus(t, "suspended")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bae6fd", background: "#e0f2fe", color: "#075985", cursor: "pointer", fontWeight: 700 }}>Suspend</button>
                       </div>
@@ -2288,6 +2324,7 @@ function App() {
   const [tutorsError, setTutorsError] = useState("");
   const [tutorApplicationOpen, setTutorApplicationOpen] = useState(false);
   const [selectedTutorSlug, setSelectedTutorSlug] = useState(null);
+  const [adminDashboardOpen, setAdminDashboardOpen] = useState(false);
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
@@ -2370,6 +2407,12 @@ function App() {
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
   const closeTutorProfile = () => setSelectedTutorSlug(null);
+  const openAdminDashboard = () => {
+    if (!session || !isAdmin) return;
+    setAdminDashboardOpen(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const closeAdminDashboard = () => setAdminDashboardOpen(false);
   const handleBookTutor = () => {
     if (page !== "home") {
       setPage("home");
@@ -2383,16 +2426,39 @@ function App() {
     if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
     else document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
-  const logout = async () => { await supabase.auth.signOut(); setSession(null); };
+  const logout = async () => {
+    await supabase.auth.signOut();
+    setSession(null);
+    setAdminDashboardOpen(false);
+  };
 
-  // The admin dashboard is a standalone page (its own auth) — render it alone.
-  if (isAdminRoute) return <AdminDashboard />;
+  // If the route is forced to admin, still require an authenticated admin user.
+  if (isAdminRoute) {
+    if (session && isAdmin) {
+      return <AdminDashboard onClose={goHome} onSiteLogout={logout} />;
+    }
+    return (
+      <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 20, background: "#f8fafc" }}>
+        <div style={{ background: "#fff", borderRadius: 14, border: "1px solid #e2e8f0", padding: 24, width: "min(560px, 96vw)", textAlign: "center" }}>
+          <h2 style={{ marginTop: 0, color: "#0f172a" }}>Admin Access Required</h2>
+          <p style={{ color: "#64748b", lineHeight: 1.65 }}>You must be signed in with an authorised admin account to view this dashboard.</p>
+          <button type="button" onClick={goHome} style={{ marginTop: 6, padding: "10px 14px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
+            Return to Website
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (adminDashboardOpen && session && isAdmin) {
+    return <AdminDashboard onClose={closeAdminDashboard} onSiteLogout={logout} />;
+  }
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
-        onAuth={() => setAuthOpen(true)} onLogout={logout} />
+        onAuth={() => setAuthOpen(true)} onLogout={logout} onAdminDashboard={openAdminDashboard} />
 
       {banner && (
         <div
