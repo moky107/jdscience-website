@@ -44,6 +44,13 @@ const RES_TYPES = [
 const RESOURCE_BOARDS = ["Edexcel", "AQA", "OCR", "Eduqas", "WJEC"];
 const RESOURCE_LEVELS = ["GCSE", "IGCSE", "A-Level", "BTEC", "T-Level", "11+"];
 const RESOURCE_SUBJECTS = ["Chemistry", "Physics", "Biology", "Maths"];
+const TUTOR_STORAGE_BUCKET = "tutor-applications";
+const TUTOR_SUBJECT_OPTIONS = ["Chemistry", "Physics", "Biology", "Mathematics", "Applied Science", "Other"];
+const TUTOR_LEVEL_OPTIONS = ["11+", "GCSE", "IGCSE", "A Level", "BTEC", "T Level", "Other"];
+const PROFILE_PHOTO_ACCEPT = ".jpg,.jpeg,.png,.webp";
+const DOCUMENT_ACCEPT = ".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp";
+const PROFILE_PHOTO_MAX_BYTES = 5 * 1024 * 1024;
+const DOCUMENT_MAX_BYTES = 8 * 1024 * 1024;
 
 const PLACEHOLDER_RESOURCE_LINKS = {
   Specifications: ["Specification (Current)", "Specification (Legacy)"],
@@ -88,8 +95,182 @@ function buildPlaceholderResources({ board, level, subject, type }) {
   }));
 }
 
+function isValidEmailAddress(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value || "").trim());
+}
+
+function isValidTelephone(value) {
+  const raw = String(value || "").trim();
+  const digits = raw.replace(/\D/g, "");
+  return /^[+()\d\s-]{7,24}$/.test(raw) && digits.length >= 7 && digits.length <= 15;
+}
+
+function buildTutorStoragePath(folder, tutorName, fileName) {
+  const extension = fileName.includes(".") ? fileName.split(".").pop() : "dat";
+  return `applications/${folder}/${Date.now()}-${slugify(tutorName || "tutor")}-${Math.random().toString(36).slice(2, 8)}.${String(extension || "dat").toLowerCase()}`;
+}
+
+function formatList(items, fallback = "Not provided") {
+  return Array.isArray(items) && items.length > 0 ? items.join(", ") : fallback;
+}
+
+function avatarInitials(name) {
+  const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return "JD";
+  return parts.slice(0, 2).map((part) => part[0]?.toUpperCase() || "").join("");
+}
+
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return undefined;
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setPrefersReducedMotion(media.matches);
+    update();
+    if (media.addEventListener) media.addEventListener("change", update);
+    else media.addListener(update);
+    return () => {
+      if (media.removeEventListener) media.removeEventListener("change", update);
+      else media.removeListener(update);
+    };
+  }, []);
+
+  return prefersReducedMotion;
+}
+
+function useInView(options = {}) {
+  const ref = React.useRef(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      setInView(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          if (options.once !== false) observer.disconnect();
+        } else if (options.once === false) {
+          setInView(false);
+        }
+      },
+      { threshold: options.threshold ?? 0.15 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [options.once, options.threshold]);
+
+  return [ref, inView];
+}
+
+function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidth = 920, children }) {
+  const panelRef = React.useRef(null);
+  const previousFocusRef = React.useRef(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const [entered, setEntered] = useState(false);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    setEntered(false);
+    previousFocusRef.current = document.activeElement;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const frame = window.requestAnimationFrame(() => setEntered(true));
+
+    if (panelRef.current) {
+      const focusable = panelRef.current.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length > 0) focusable[0].focus();
+      else panelRef.current.focus();
+    }
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab" || !panelRef.current) return;
+      const focusable = Array.from(panelRef.current.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(
+        (element) => !element.hasAttribute("disabled") && element.getAttribute("aria-hidden") !== "true"
+      );
+      if (focusable.length === 0) {
+        event.preventDefault();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      document.body.style.overflow = originalOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+      const focusTarget = triggerRef?.current || previousFocusRef.current;
+      if (focusTarget && typeof focusTarget.focus === "function") focusTarget.focus();
+    };
+  }, [open, onClose, triggerRef]);
+
+  if (!open) return null;
+
+  return (
+    <div
+      role="presentation"
+      onMouseDown={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+      style={{
+        position: "fixed",
+        inset: 0,
+        zIndex: 3000,
+        display: "grid",
+        placeItems: "center",
+        padding: 16,
+        background: entered ? "rgba(2, 6, 23, .56)" : "rgba(2, 6, 23, 0)",
+        backdropFilter: prefersReducedMotion ? "none" : "blur(4px)",
+        transition: prefersReducedMotion ? "none" : "background .22s ease",
+      }}
+    >
+      <div
+        ref={panelRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={descriptionId}
+        tabIndex={-1}
+        style={{
+          width: `min(${maxWidth}px, 100%)`,
+          maxHeight: "min(90vh, 980px)",
+          overflowY: "auto",
+          borderRadius: 24,
+          background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)",
+          border: "1px solid rgba(148, 163, 184, .22)",
+          boxShadow: "0 32px 90px rgba(15, 23, 42, .28)",
+          transform: entered ? "translateY(0) scale(1)" : "translateY(16px) scale(.97)",
+          opacity: entered ? 1 : 0,
+          transition: prefersReducedMotion ? "none" : "transform .24s ease, opacity .24s ease",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 /* --------------------------------- NAVBAR --------------------------------- */
-function Navbar({ onHome, onPick, onResource, onScroll, onSearch, session, isAdmin, onAuth, onLogout }) {
+function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutorButtonRef, session, isAdmin, onAuth, onLogout }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -103,7 +284,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, session, isAdm
     })),
     { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book") },
-    { label: "Contact", type: "link", action: () => onScroll("contact") },
+    { label: "Become a Tutor", type: "link", action: onTutor, ref: tutorButtonRef },
   ];
 
   const submit = (e) => { e.preventDefault(); onSearch(q); setMenuOpen(false); };
@@ -150,7 +331,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, session, isAdm
           {menu.map((it, i) => (
             <div key={it.label} style={{ position: "relative" }}
               onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
-              <button onClick={() => it.type === "link" && it.action()}
+              <button ref={it.ref} onClick={() => it.type === "link" && it.action()}
                 style={{ background: openIdx === i && it.type === "dropdown" ? "#d9f6fa" : "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap" }}>
                 {it.label}{it.type === "dropdown" ? " ▾" : ""}
               </button>
@@ -173,7 +354,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, session, isAdm
         <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0", maxHeight: "72vh", overflowY: "auto" }}>
           {menu.map((it) => (
             <div key={it.label}>
-              <button onClick={() => { if (it.type === "link") { it.action(); setMenuOpen(false); } }}
+              <button ref={it.ref} onClick={() => { if (it.type === "link") { it.action(); setMenuOpen(false); } }}
                 style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "13px 18px", cursor: "pointer", fontWeight: 700, fontSize: 16, color: "#0f172a" }}>{it.label}</button>
               {it.type === "dropdown" && it.options.map((opt) => (
                 <button key={opt.text} onClick={() => { opt.action(); setMenuOpen(false); }}
@@ -917,48 +1098,101 @@ function Booking() {
   );
 }
 
-function TutorProfiles({ tutors, loading, error }) {
+function TutorAvatar({ tutor, size = 72 }) {
+  if (tutor.profile_photo_url) {
+    return <img src={tutor.profile_photo_url} alt={`${tutor.tutor_name} profile`} style={{ width: size, height: size, borderRadius: 20, objectFit: "cover", background: "#e2e8f0", boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }} />;
+  }
+  return <div aria-hidden="true" style={{ width: size, height: size, borderRadius: 20, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }}>{avatarInitials(tutor.tutor_name)}</div>;
+}
+
+function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBook }) {
   const isMobile = useIsMobile();
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const [sectionRef, inView] = useInView({ threshold: 0.15 });
+  const featuredTutors = tutors.slice(0, 3);
+  const showViewAll = tutors.length > featuredTutors.length;
 
   return (
-    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+    <section ref={sectionRef} style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: 0 }}>Tutor Profiles</h2>
-        <p style={{ color: "#64748b", marginTop: 8 }}>
-          Browse approved tutors and send an enquiry for the tutor you want.
-        </p>
+        <div style={{ display: "flex", alignItems: "end", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+          <div>
+            <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Approved Tutors</div>
+            <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0" }}>Meet Our Approved Tutors</h2>
+            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680 }}>
+              Carefully reviewed tutors across science and maths, ready for 1-to-1 support online or face to face.
+            </p>
+          </div>
+          {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
+        </div>
 
-        {loading && <div style={{ color: "#64748b", marginTop: 12 }}>Loading tutor profiles…</div>}
-        {error && <div style={{ color: "#b91c1c", marginTop: 12 }}>{error}</div>}
+        {loading && <div style={{ color: "#64748b", marginTop: 18 }}>Loading approved tutors…</div>}
+        {error && <div style={{ color: "#b91c1c", marginTop: 18 }}>{error}</div>}
 
-        {!loading && !error && tutors.length === 0 && (
-          <div style={{ marginTop: 14, background: "#f8fafc", borderRadius: 12, padding: 16, color: "#64748b" }}>
-            No approved tutor profiles yet.
+        {!loading && !error && featuredTutors.length === 0 && (
+          <div style={{ marginTop: 18, borderRadius: 24, padding: isMobile ? 22 : 30, background: "linear-gradient(135deg, #ecfeff, #f8fafc)", border: "1px solid rgba(0, 150, 136, .12)", color: "#475569" }}>
+            <div style={{ fontSize: 18, fontWeight: 800, color: "#0f172a" }}>Approved tutor profiles are coming soon.</div>
+            <p style={{ margin: "8px 0 0", lineHeight: 1.6 }}>
+              New applications are reviewed before going live. Use the Become a Tutor button above if you would like to apply.
+            </p>
           </div>
         )}
 
-        <div style={{ marginTop: 16, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px,1fr))", gap: 16 }}>
-          {tutors.map((tutor) => (
-            <article key={tutor.id} style={{ background: "#f8fafc", borderRadius: 14, padding: 18, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                <h3 style={{ margin: 0, color: "#0f172a" }}>{tutor.tutor_name}</h3>
-                <span style={{ fontSize: 12, fontWeight: 700, background: "#dcfce7", color: "#166534", borderRadius: 999, padding: "4px 8px" }}>approved</span>
+        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+          {featuredTutors.map((tutor, index) => (
+            <article
+              key={tutor.id || tutor.public_slug}
+              style={{
+                background: "#fff",
+                borderRadius: 24,
+                padding: 20,
+                border: "1px solid rgba(148, 163, 184, .16)",
+                boxShadow: "0 16px 40px rgba(15, 23, 42, .08)",
+                opacity: inView ? 1 : 0,
+                transform: inView ? "translateY(0)" : "translateY(18px)",
+                transition: prefersReducedMotion ? "none" : `opacity .45s ease ${index * 90}ms, transform .45s ease ${index * 90}ms`,
+              }}
+              onMouseEnter={(event) => {
+                event.currentTarget.style.transform = "translateY(-4px)";
+                event.currentTarget.style.boxShadow = "0 20px 46px rgba(15, 23, 42, .12)";
+              }}
+              onMouseLeave={(event) => {
+                event.currentTarget.style.transform = "translateY(0)";
+                event.currentTarget.style.boxShadow = "0 16px 40px rgba(15, 23, 42, .08)";
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "start", gap: 14 }}>
+                <TutorAvatar tutor={tutor} size={76} />
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>
+                    <span aria-hidden="true">✓</span>
+                    <span>JDScience Approved</span>
+                  </div>
+                  <h3 style={{ margin: "10px 0 4px", color: "#0f172a", fontSize: 22 }}>{tutor.tutor_name}</h3>
+                  <div style={{ color: TEAL_DARK, fontWeight: 700 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
+                </div>
               </div>
-              <p style={{ margin: "8px 0", color: "#0f172a", fontWeight: 700 }}>{tutor.subject_specialism}</p>
-              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Level:</b> {tutor.level_taught}</p>
-              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Qualifications:</b> {tutor.qualifications}</p>
-              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Mode:</b> {tutor.teaching_mode}</p>
-              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}><b>Location:</b> {tutor.location}</p>
-              <p style={{ margin: "4px 0", color: "#475569", fontSize: 14 }}>
-                <b>Rate:</b> {tutor.contact_for_quote ? "Contact for quote" : (tutor.hourly_rate ? `£${Number(tutor.hourly_rate).toFixed(2)}/hr` : "Contact for quote")}
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 16 }}>
+                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 12 }}>
+                  <div style={{ fontSize: 12, color: "#94a3b8", textTransform: "uppercase", fontWeight: 800 }}>Levels</div>
+                  <div style={{ marginTop: 6, color: "#334155", fontWeight: 700 }}>{formatList(tutor.levels_taught, tutor.level_taught)}</div>
+                </div>
+                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 12 }}>
+                  <div style={{ fontSize: 12, color: "#94a3b8", textTransform: "uppercase", fontWeight: 800 }}>Experience</div>
+                  <div style={{ marginTop: 6, color: "#334155", fontWeight: 700 }}>{tutor.years_experience || "Experienced"}</div>
+                </div>
+              </div>
+
+              <p style={{ margin: "16px 0 0", color: "#64748b", lineHeight: 1.65 }}>
+                {String(tutor.short_professional_biography || tutor.bio || "").slice(0, 150)}{String(tutor.short_professional_biography || tutor.bio || "").length > 150 ? "…" : ""}
               </p>
-              <p style={{ margin: "10px 0", color: "#64748b", fontSize: 14, lineHeight: 1.55 }}>{tutor.bio}</p>
-              <a
-                href={`mailto:info@jdscience.co.uk?subject=Tutor enquiry: ${encodeURIComponent(tutor.tutor_name)}&body=Hello JD Science,%0D%0A%0D%0AI would like to enquire about ${encodeURIComponent(tutor.tutor_name)} (${encodeURIComponent(tutor.subject_specialism)}).`}
-                style={{ display: "inline-block", marginTop: 6, padding: "9px 12px", borderRadius: 8, background: TEAL, color: "#fff", textDecoration: "none", fontWeight: 700 }}
-              >
-                Enquire About This Tutor
-              </a>
+              <div style={{ marginTop: 12, color: "#475569", fontSize: 14 }}><b>Mode:</b> {tutor.teaching_mode || "Not specified"}</div>
+
+              <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "11px 14px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View Profile</button>
+                <button type="button" onClick={() => onBook(tutor)} style={{ padding: "11px 14px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
+              </div>
             </article>
           ))}
         </div>
@@ -967,126 +1201,382 @@ function TutorProfiles({ tutors, loading, error }) {
   );
 }
 
-function TutorApplicationForm({ onSubmitted }) {
+function TutorDirectory({ tutors, loading, error, onBack, onViewProfile, onBook }) {
+  const isMobile = useIsMobile();
+  return (
+    <section style={{ padding: isMobile ? "24px 16px" : "36px 20px", minHeight: "65vh", background: "#f8fafc" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+          <div>
+            <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Tutor Directory</div>
+            <h2 style={{ margin: "8px 0 0", color: "#0f172a", fontSize: isMobile ? 28 : 36 }}>All Approved Tutors</h2>
+          </div>
+          <button type="button" onClick={onBack} style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>← Back Home</button>
+        </div>
+
+        {loading && <div style={{ color: "#64748b", marginTop: 20 }}>Loading tutors…</div>}
+        {error && <div style={{ color: "#b91c1c", marginTop: 20 }}>{error}</div>}
+
+        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18 }}>
+          {(tutors || []).map((tutor) => (
+            <article key={tutor.id || tutor.public_slug} style={{ background: "#fff", borderRadius: 22, padding: 20, boxShadow: "0 12px 36px rgba(15, 23, 42, .08)", border: "1px solid rgba(148, 163, 184, .16)" }}>
+              <div style={{ display: "flex", alignItems: "start", gap: 14 }}>
+                <TutorAvatar tutor={tutor} size={72} />
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: "inline-flex", padding: "5px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>JDScience Approved</div>
+                  <h3 style={{ margin: "10px 0 4px", color: "#0f172a" }}>{tutor.tutor_name}</h3>
+                  <div style={{ color: TEAL_DARK, fontWeight: 700 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
+                </div>
+              </div>
+              <div style={{ marginTop: 12, color: "#475569", fontSize: 14 }}><b>Levels:</b> {formatList(tutor.levels_taught, tutor.level_taught)}</div>
+              <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}><b>Experience:</b> {tutor.years_experience || "Not stated"}</div>
+              <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}><b>Rate:</b> {tutor.rate_display || (tutor.contact_for_quote ? "Contact for quote" : "Not stated")}</div>
+              <p style={{ margin: "12px 0 0", color: "#64748b", lineHeight: 1.65 }}>{String(tutor.short_professional_biography || tutor.bio || "").slice(0, 170)}{String(tutor.short_professional_biography || tutor.bio || "").length > 170 ? "…" : ""}</p>
+              <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "11px 14px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View Profile</button>
+                <button type="button" onClick={() => onBook(tutor)} style={{ padding: "11px 14px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
+  const [loading, setLoading] = useState(false);
+  const [tutor, setTutor] = useState(null);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!slug) return;
+    let cancelled = false;
+    setLoading(true);
+    setError("");
+    setTutor(null);
+
+    (async () => {
+      try {
+        const resp = await fetch(`/api/tutor-profiles?slug=${encodeURIComponent(slug)}`);
+        const data = await resp.json().catch(() => ({}));
+        if (!resp.ok) throw new Error(data?.error || "Tutor profile not found.");
+        if (!cancelled) setTutor(data.tutor || null);
+      } catch (err) {
+        if (!cancelled) setError(err.message || "Tutor profile not found.");
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  return (
+    <ModalShell open={Boolean(slug)} onClose={onClose} titleId="tutor-profile-title" descriptionId="tutor-profile-description" triggerRef={triggerRef} maxWidth={860}>
+      <div style={{ padding: 24 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start" }}>
+          <div>
+            <div id="tutor-profile-description" style={{ color: "#64748b", fontSize: 14 }}>Approved tutor profile</div>
+            <h2 id="tutor-profile-title" style={{ margin: "6px 0 0", color: "#0f172a" }}>Tutor Profile</h2>
+          </div>
+          <button type="button" onClick={onClose} aria-label="Close tutor profile" style={{ width: 42, height: 42, borderRadius: 999, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontSize: 22, lineHeight: 1 }}>×</button>
+        </div>
+
+        {loading && <div style={{ marginTop: 20, color: "#64748b" }}>Loading profile…</div>}
+        {error && <div style={{ marginTop: 20, color: "#b91c1c" }}>{error}</div>}
+
+        {tutor && (
+          <div style={{ marginTop: 20 }}>
+            <div style={{ display: "flex", gap: 18, alignItems: "start", flexWrap: "wrap" }}>
+              <TutorAvatar tutor={tutor} size={108} />
+              <div style={{ flex: 1, minWidth: 220 }}>
+                <div style={{ display: "inline-flex", padding: "6px 12px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>JDScience Approved</div>
+                <h3 style={{ margin: "12px 0 6px", fontSize: 30, color: "#0f172a" }}>{tutor.tutor_name}</h3>
+                <div style={{ color: TEAL_DARK, fontWeight: 700, fontSize: 16 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
+                <div style={{ marginTop: 8, color: "#475569" }}>{formatList(tutor.levels_taught, tutor.level_taught)} · {tutor.teaching_mode || "Mode not specified"}</div>
+                <div style={{ marginTop: 8, color: "#475569" }}>{tutor.rate_display || (tutor.contact_for_quote ? "Contact for quote" : "Rate available on request")}</div>
+              </div>
+            </div>
+
+            <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Exam boards:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.exam_boards_taught || "Not specified"}</div></div>
+              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Experience:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.years_experience || "Not specified"}</div></div>
+              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Location:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.location || "Not specified"}</div></div>
+              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Availability:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.availability_summary || "Not specified"}</div></div>
+            </div>
+
+            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Qualifications</div>
+            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}>{tutor.highest_relevant_qualification || tutor.qualifications || "Not specified"}</p>
+            {tutor.teaching_qualifications && <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}><b>Teaching qualifications:</b> {tutor.teaching_qualifications}</p>}
+            {tutor.professional_memberships && <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}><b>Professional memberships:</b> {tutor.professional_memberships}</p>}
+
+            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Professional biography</div>
+            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.short_professional_biography || tutor.bio || "Not provided."}</p>
+
+            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Tutoring approach</div>
+            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.tutoring_approach || "Not provided."}</p>
+
+            <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <button type="button" onClick={() => onBook(tutor)} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
+              <button type="button" onClick={onClose} style={{ padding: "12px 18px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
+            </div>
+          </div>
+        )}
+      </div>
+    </ModalShell>
+  );
+}
+
+function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   const isMobile = useIsMobile();
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState("");
-  const [error, setError] = useState("");
-  const [form, setForm] = useState({
-    tutor_name: "",
-    subject_specialism: "Chemistry",
-    level_taught: "GCSE",
-    qualifications: "",
-    bio: "",
-    teaching_mode: "online",
-    location: "",
-    hourly_rate: "",
-    contact_for_quote: false,
-  });
+  const [submitError, setSubmitError] = useState("");
+  const [privacyExpanded, setPrivacyExpanded] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [form, setForm] = useState({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false });
+  const [files, setFiles] = useState({ profile_photo: null, cv: null, qualification_evidence: null });
 
   const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
+  const toggleChoice = (key, choice) => setForm((current) => {
+    const values = Array.isArray(current[key]) ? current[key] : [];
+    return { ...current, [key]: values.includes(choice) ? values.filter((item) => item !== choice) : [...values, choice] };
+  });
+  const setFile = (key, file) => setFiles((current) => ({ ...current, [key]: file || null }));
+  const fieldError = (name) => errors[name] ? <div style={{ color: "#b91c1c", fontSize: 13, marginTop: 6 }}>{errors[name]}</div> : null;
+
+  function validateFile(file, kind) {
+    if (!file) return null;
+    const extension = `.${String(file.name || "").split(".").pop()?.toLowerCase() || ""}`;
+    const allowed = kind === "profile_photo" ? PROFILE_PHOTO_ACCEPT.split(",") : DOCUMENT_ACCEPT.split(",");
+    const maxBytes = kind === "profile_photo" ? PROFILE_PHOTO_MAX_BYTES : DOCUMENT_MAX_BYTES;
+    if (!allowed.includes(extension)) return "This file type is not allowed.";
+    if (file.size > maxBytes) return `File is too large. Maximum ${kind === "profile_photo" ? "5MB" : "8MB"}.`;
+    return null;
+  }
+
+  function validateForm() {
+    const nextErrors = {};
+    if (!form.tutor_name.trim()) nextErrors.tutor_name = "Full name is required.";
+    if (!form.email_address.trim() || !isValidEmailAddress(form.email_address)) nextErrors.email_address = "Enter a valid email address.";
+    if (!form.telephone_number.trim() || !isValidTelephone(form.telephone_number)) nextErrors.telephone_number = "Enter a valid telephone number.";
+    if (!form.location.trim()) nextErrors.location = "Location is required.";
+    if (form.subjects_taught.length === 0) nextErrors.subjects_taught = "Choose at least one subject.";
+    if (form.subjects_taught.includes("Other") && !form.subjects_other.trim()) nextErrors.subjects_other = "Please specify the other subject.";
+    if (form.levels_taught.length === 0) nextErrors.levels_taught = "Choose at least one level.";
+    if (form.levels_taught.includes("Other") && !form.levels_other.trim()) nextErrors.levels_other = "Please specify the other level.";
+    if (!form.exam_boards_taught.trim()) nextErrors.exam_boards_taught = "Exam boards taught is required.";
+    if (!form.highest_relevant_qualification.trim()) nextErrors.highest_relevant_qualification = "Highest relevant qualification is required.";
+    if (!form.years_experience.trim()) nextErrors.years_experience = "Years of experience is required.";
+    if (!form.current_professional_role.trim()) nextErrors.current_professional_role = "Current professional role is required.";
+    if (!form.short_professional_biography.trim()) nextErrors.short_professional_biography = "A short professional biography is required.";
+    if (!form.tutoring_approach.trim()) nextErrors.tutoring_approach = "Please describe your tutoring approach.";
+    if (!form.availability_summary.trim()) nextErrors.availability_summary = "Availability is required.";
+    if (!form.rate_display.trim()) nextErrors.rate_display = "Please provide an hourly rate or rate range.";
+    if (!files.profile_photo) nextErrors.profile_photo = "A profile photograph is required.";
+    const profilePhotoError = validateFile(files.profile_photo, "profile_photo");
+    if (profilePhotoError) nextErrors.profile_photo = profilePhotoError;
+    const cvError = validateFile(files.cv, "cv");
+    if (cvError) nextErrors.cv = cvError;
+    const evidenceError = validateFile(files.qualification_evidence, "qualification_evidence");
+    if (evidenceError) nextErrors.qualification_evidence = evidenceError;
+    if (!form.confirm_accurate) nextErrors.confirm_accurate = "You must confirm the information supplied is accurate.";
+    if (!form.consent_review_store) nextErrors.consent_review_store = "You must consent to JDScience reviewing and storing the application.";
+    if (!form.consent_public_profile) nextErrors.consent_public_profile = "You must agree that an approved profile may be displayed publicly.";
+    return nextErrors;
+  }
+
+  async function uploadFile(file, folder) {
+    if (!file) return null;
+    const path = buildTutorStoragePath(folder, form.tutor_name, file.name);
+    const { error } = await supabase.storage.from(TUTOR_STORAGE_BUCKET).upload(path, file, {
+      cacheControl: "3600",
+      upsert: false,
+      contentType: file.type || undefined,
+    });
+    if (error) throw new Error(error.message || "Failed to upload file.");
+    return path;
+  }
+
+  function resetForm() {
+    setForm({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false });
+    setFiles({ profile_photo: null, cv: null, qualification_evidence: null });
+    setErrors({});
+    setSubmitError("");
+  }
 
   async function submit(e) {
     e.preventDefault();
-    setSaving(true);
+    if (saving) return;
+    const validation = validateForm();
+    setErrors(validation);
+    setSubmitError("");
     setSuccess("");
-    setError("");
+    if (Object.keys(validation).length > 0) return;
 
+    setSaving(true);
     try {
-      const payload = {
-        ...form,
-        hourly_rate: form.contact_for_quote || !form.hourly_rate ? null : Number(form.hourly_rate),
-      };
+      const [profilePhotoPath, cvPath, evidencePath] = await Promise.all([
+        uploadFile(files.profile_photo, "profile-photo"),
+        uploadFile(files.cv, "cv"),
+        uploadFile(files.qualification_evidence, "qualification-evidence"),
+      ]);
 
       const resp = await fetch("/api/create-tutor-application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...form, profile_photo_path: profilePhotoPath, cv_path: cvPath, qualification_evidence_path: evidencePath }),
       });
 
       const body = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(body?.error || "Failed to submit tutor application.");
 
-      setSuccess("Application submitted. Your profile will stay pending until admin approval.");
-      setForm({
-        tutor_name: "",
-        subject_specialism: "Chemistry",
-        level_taught: "GCSE",
-        qualifications: "",
-        bio: "",
-        teaching_mode: "online",
-        location: "",
-        hourly_rate: "",
-        contact_for_quote: false,
-      });
+      setSuccess("Application submitted successfully. JDScience will review your application before any profile is published.");
       if (onSubmitted) onSubmitted();
+      resetForm();
     } catch (err) {
-      setError(err.message || "Failed to submit application.");
+      setSubmitError(err.message || "Failed to submit tutor application.");
     } finally {
       setSaving(false);
     }
   }
 
   return (
-    <section style={{ background: "#f8fafc", padding: isMobile ? "32px 16px" : "48px 20px" }}>
-      <div style={{ maxWidth: 900, margin: "0 auto", background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
-        <h2 style={{ marginTop: 0, color: "#0f172a" }}>Tutor Application Form</h2>
-        <p style={{ color: "#64748b", marginTop: 8, marginBottom: 16 }}>
-          Submit your details to advertise on JD Science. Profiles remain pending until approved by admin.
-        </p>
+    <ModalShell open={open} onClose={onClose} titleId="become-tutor-title" descriptionId="become-tutor-description" triggerRef={triggerRef} maxWidth={980}>
+      <div style={{ padding: isMobile ? 18 : 26 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start" }}>
+          <div>
+            <div id="become-tutor-description" style={{ color: TEAL_DARK, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: ".08em" }}>JDScience Tutor Applications</div>
+            <h2 id="become-tutor-title" style={{ margin: "8px 0 0", color: "#0f172a", fontSize: isMobile ? 28 : 36 }}>Become a Tutor</h2>
+            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 720, lineHeight: 1.7 }}>
+              Submit your application below. Every application is reviewed by JDScience before a public tutor profile can be approved and published.
+            </p>
+          </div>
+          <button type="button" onClick={onClose} aria-label="Close tutor application form" style={{ width: 44, height: 44, borderRadius: 999, border: "1px solid #dbe3ef", background: "#fff", color: "#0f172a", cursor: "pointer", fontSize: 24, lineHeight: 1 }}>×</button>
+        </div>
 
-        <form onSubmit={submit} style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
-          <input required placeholder="Tutor name" value={form.tutor_name} onChange={(e) => set("tutor_name", e.target.value)} style={inp} />
-          <select value={form.subject_specialism} onChange={(e) => set("subject_specialism", e.target.value)} style={inp}>
-            {RESOURCE_SUBJECTS.map((s) => <option key={s} value={s}>{s}</option>)}
-          </select>
+        <form onSubmit={submit} style={{ marginTop: 20, display: "grid", gap: 20 }}>
+          <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
+            <h3 style={{ margin: 0, color: "#0f172a" }}>Personal details</h3>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
+              <div><input required placeholder="Full name" value={form.tutor_name} onChange={(e) => set("tutor_name", e.target.value)} style={inp} />{fieldError("tutor_name")}</div>
+              <div><input required type="email" placeholder="Email address" value={form.email_address} onChange={(e) => set("email_address", e.target.value)} style={inp} />{fieldError("email_address")}</div>
+              <div><input required placeholder="Telephone number" value={form.telephone_number} onChange={(e) => set("telephone_number", e.target.value)} style={inp} />{fieldError("telephone_number")}</div>
+              <div><input required placeholder="Town or city" value={form.location} onChange={(e) => set("location", e.target.value)} style={inp} />{fieldError("location")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}>
+                <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Profile photograph</label>
+                <input type="file" accept={PROFILE_PHOTO_ACCEPT} onChange={(e) => setFile("profile_photo", e.target.files?.[0] || null)} style={inp} />
+                <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.profile_photo ? files.profile_photo.name : "JPG, PNG or WebP up to 5MB."}</div>
+                {fieldError("profile_photo")}
+              </div>
+            </div>
+          </div>
 
-          <select value={form.level_taught} onChange={(e) => set("level_taught", e.target.value)} style={inp}>
-            {RESOURCE_LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
-          </select>
-          <select value={form.teaching_mode} onChange={(e) => set("teaching_mode", e.target.value)} style={inp}>
-            <option value="online">Online</option>
-            <option value="face-to-face">Face-to-face</option>
-            <option value="both">Both</option>
-          </select>
+          <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
+            <h3 style={{ margin: 0, color: "#0f172a" }}>Teaching information</h3>
+            <div style={{ marginTop: 16 }}>
+              <div style={{ fontWeight: 700, color: "#334155", marginBottom: 8 }}>Subjects taught</div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {TUTOR_SUBJECT_OPTIONS.map((item) => (
+                  <label key={item} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "9px 12px", borderRadius: 999, border: "1px solid #dbe3ef", background: form.subjects_taught.includes(item) ? "#ecfeff" : "#fff", color: form.subjects_taught.includes(item) ? TEAL_DARK : "#334155", cursor: "pointer", fontWeight: 700, fontSize: 14 }}>
+                    <input type="checkbox" checked={form.subjects_taught.includes(item)} onChange={() => toggleChoice("subjects_taught", item)} />
+                    {item}
+                  </label>
+                ))}
+              </div>
+              {fieldError("subjects_taught")}
+              {form.subjects_taught.includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other subject" value={form.subjects_other} onChange={(e) => set("subjects_other", e.target.value)} style={inp} />{fieldError("subjects_other")}</div>}
+            </div>
 
-          <input required placeholder="Qualifications" value={form.qualifications} onChange={(e) => set("qualifications", e.target.value)} style={inp} />
-          <input required placeholder="Location" value={form.location} onChange={(e) => set("location", e.target.value)} style={inp} />
+            <div style={{ marginTop: 16 }}>
+              <div style={{ fontWeight: 700, color: "#334155", marginBottom: 8 }}>Levels taught</div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {TUTOR_LEVEL_OPTIONS.map((item) => (
+                  <label key={item} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "9px 12px", borderRadius: 999, border: "1px solid #dbe3ef", background: form.levels_taught.includes(item) ? "#ecfeff" : "#fff", color: form.levels_taught.includes(item) ? TEAL_DARK : "#334155", cursor: "pointer", fontWeight: 700, fontSize: 14 }}>
+                    <input type="checkbox" checked={form.levels_taught.includes(item)} onChange={() => toggleChoice("levels_taught", item)} />
+                    {item}
+                  </label>
+                ))}
+              </div>
+              {fieldError("levels_taught")}
+              {form.levels_taught.includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other level" value={form.levels_other} onChange={(e) => set("levels_other", e.target.value)} style={inp} />{fieldError("levels_other")}</div>}
+            </div>
 
-          <input
-            type="number"
-            min="0"
-            step="0.01"
-            disabled={form.contact_for_quote}
-            placeholder="Hourly rate (GBP)"
-            value={form.hourly_rate}
-            onChange={(e) => set("hourly_rate", e.target.value)}
-            style={inp}
-          />
-          <label style={{ display: "flex", alignItems: "center", gap: 8, color: "#334155", fontSize: 14 }}>
-            <input type="checkbox" checked={form.contact_for_quote} onChange={(e) => set("contact_for_quote", e.target.checked)} />
-            Contact for quote
-          </label>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
+              <div><input placeholder="Exam boards taught" value={form.exam_boards_taught} onChange={(e) => set("exam_boards_taught", e.target.value)} style={inp} />{fieldError("exam_boards_taught")}</div>
+              <div><input placeholder="Highest relevant qualification" value={form.highest_relevant_qualification} onChange={(e) => set("highest_relevant_qualification", e.target.value)} style={inp} />{fieldError("highest_relevant_qualification")}</div>
+              <div><input placeholder="Teaching qualifications" value={form.teaching_qualifications} onChange={(e) => set("teaching_qualifications", e.target.value)} style={inp} /></div>
+              <div><input placeholder="Professional memberships" value={form.professional_memberships} onChange={(e) => set("professional_memberships", e.target.value)} style={inp} /></div>
+              <div><input placeholder="Years of teaching or tutoring experience" value={form.years_experience} onChange={(e) => set("years_experience", e.target.value)} style={inp} />{fieldError("years_experience")}</div>
+              <div><input placeholder="Current professional role" value={form.current_professional_role} onChange={(e) => set("current_professional_role", e.target.value)} style={inp} />{fieldError("current_professional_role")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea rows={4} placeholder="Short professional biography" value={form.short_professional_biography} onChange={(e) => set("short_professional_biography", e.target.value)} style={inp} />{fieldError("short_professional_biography")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea rows={4} placeholder="Tutoring approach" value={form.tutoring_approach} onChange={(e) => set("tutoring_approach", e.target.value)} style={inp} />{fieldError("tutoring_approach")}</div>
+              <div>
+                <select value={form.teaching_mode} onChange={(e) => set("teaching_mode", e.target.value)} style={inp}>
+                  <option value="online">Online</option>
+                  <option value="face-to-face">Face-to-face</option>
+                  <option value="both">Both</option>
+                </select>
+              </div>
+              <div><input placeholder="Availability" value={form.availability_summary} onChange={(e) => set("availability_summary", e.target.value)} style={inp} />{fieldError("availability_summary")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><input placeholder="Hourly rate or rate range" value={form.rate_display} onChange={(e) => set("rate_display", e.target.value)} style={inp} />{fieldError("rate_display")}</div>
+            </div>
+          </div>
 
-          <textarea
-            required
-            rows={4}
-            placeholder="Short bio"
-            value={form.bio}
-            onChange={(e) => set("bio", e.target.value)}
-            style={{ ...inp, gridColumn: isMobile ? "auto" : "1 / -1" }}
-          />
+          <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
+            <h3 style={{ margin: 0, color: "#0f172a" }}>Evidence and consent</h3>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Optional CV upload</label>
+                <input type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("cv", e.target.files?.[0] || null)} style={inp} />
+                <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.cv ? files.cv.name : "PDF, DOC, DOCX or image up to 8MB."}</div>
+                {fieldError("cv")}
+              </div>
+              <div>
+                <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Optional qualification evidence upload</label>
+                <input type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("qualification_evidence", e.target.files?.[0] || null)} style={inp} />
+                <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.qualification_evidence ? files.qualification_evidence.name : "Certificates or evidence up to 8MB."}</div>
+                {fieldError("qualification_evidence")}
+              </div>
+            </div>
 
-          <div style={{ gridColumn: isMobile ? "auto" : "1 / -1", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-            <button type="submit" disabled={saving} style={{ padding: "12px 14px", borderRadius: 8, background: saving ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>
-              {saving ? "Submitting…" : "Submit Tutor Application"}
-            </button>
-            {success && <span style={{ color: "#166534", fontSize: 14 }}>{success}</span>}
-            {error && <span style={{ color: "#b91c1c", fontSize: 14 }}>{error}</span>}
+            <div style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }} aria-hidden="true">
+              <label>
+                Company
+                <input tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => set("company", e.target.value)} />
+              </label>
+            </div>
+
+            <div style={{ marginTop: 16, display: "grid", gap: 10 }}>
+              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.confirm_accurate} onChange={(e) => set("confirm_accurate", e.target.checked)} /><span>I confirm that the information supplied is accurate.</span></label>
+              {fieldError("confirm_accurate")}
+              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_review_store} onChange={(e) => set("consent_review_store", e.target.checked)} /><span>I consent to JDScience reviewing and storing this application.</span></label>
+              {fieldError("consent_review_store")}
+              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_public_profile} onChange={(e) => set("consent_public_profile", e.target.checked)} /><span>I agree that an approved profile may be displayed publicly.</span></label>
+              {fieldError("consent_public_profile")}
+              <div style={{ color: "#64748b", fontSize: 14 }}>
+                Read our <a href="#tutor-privacy-policy" onClick={(e) => { e.preventDefault(); setPrivacyExpanded((current) => !current); }} style={{ color: TEAL, fontWeight: 700 }}>privacy policy</a> before submitting.
+              </div>
+              {privacyExpanded && <div id="tutor-privacy-policy" style={{ borderRadius: 14, background: "#f8fafc", padding: 14, color: "#475569", lineHeight: 1.65, fontSize: 14 }}>JDScience stores tutor application information so applications can be reviewed, approved, rejected or suspended by administrators. Private information such as your email address, phone number, CV, uploaded evidence and internal admin notes is kept out of the public tutor directory.</div>}
+            </div>
+          </div>
+
+          {submitError && <div style={{ color: "#b91c1c", fontWeight: 700 }}>{submitError}</div>}
+          {success && <div style={{ color: "#166534", fontWeight: 700 }}>{success}</div>}
+
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+            <div style={{ color: "#64748b", fontSize: 13 }}>Applications are saved as pending until approved by JDScience.</div>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <button type="button" onClick={onClose} style={{ padding: "12px 16px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
+              <button type="submit" disabled={saving} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
+            </div>
           </div>
         </form>
       </div>
-    </section>
+    </ModalShell>
   );
 }
 
@@ -1227,7 +1717,7 @@ function Contact() {
   );
 }
 
-function Footer() {
+function Footer({ onContact, onTutor }) {
   return (
     <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "32px 20px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 24 }}>
@@ -1243,6 +1733,10 @@ function Footer() {
           <div style={{ fontWeight: 700, color: "#fff" }}>Contact</div>
           <div style={{ fontSize: 14, marginTop: 6 }}>📧 info@jdscience.co.uk</div>
           <div style={{ fontSize: 14, marginTop: 6 }}>📞 07466 142805</div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
+            <button type="button" onClick={onContact} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Contact Form</button>
+            <button type="button" onClick={onTutor} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Become a Tutor</button>
+          </div>
         </div>
       </div>
       <div style={{ textAlign: "center", color: "#64748b", marginTop: 24, fontSize: 13 }}>© {new Date().getFullYear()} jdscience.co.uk — All rights reserved.</div>
@@ -1288,6 +1782,8 @@ function AdminDashboard() {
   const [error, setError] = useState("");
   const [tutorApplications, setTutorApplications] = useState([]);
   const [tutorSavingId, setTutorSavingId] = useState(null);
+  const [tutorNotes, setTutorNotes] = useState({});
+  const [expandedTutorId, setExpandedTutorId] = useState(null);
 
   async function load(pw) {
     setLoading(true);
@@ -1318,6 +1814,7 @@ function AdminDashboard() {
         throw new Error(tutorData?.error || "Failed to load tutor applications.");
       }
       setTutorApplications(tutorData.applications || []);
+      setTutorNotes(Object.fromEntries((tutorData.applications || []).map((item) => [String(item.id), item.admin_note || ""])));
     } catch (err) {
       setError(err.message || "Something went wrong.");
       setAuthed(false);
@@ -1355,6 +1852,7 @@ function AdminDashboard() {
 
     const applicationId = String(application.id);
     const previousStatus = application.profile_status || "pending";
+    const noteForApplication = tutorNotes[applicationId] || "";
     setError("");
     setTutorSavingId(applicationId);
 
@@ -1370,6 +1868,7 @@ function AdminDashboard() {
           password,
           id: application.id,
           profile_status: nextStatus,
+          admin_note: noteForApplication,
         }),
       });
 
@@ -1382,6 +1881,7 @@ function AdminDashboard() {
         setTutorApplications((rows) => rows.map((row) => (
           String(row.id) === applicationId ? { ...row, ...data.application } : row
         )));
+        setTutorNotes((current) => ({ ...current, [applicationId]: data.application.admin_note || noteForApplication }));
       }
     } catch (err) {
       setTutorApplications((rows) => rows.map((row) => (
@@ -1685,97 +2185,79 @@ function AdminDashboard() {
           )}
         </div>
 
-        <div style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "auto" }}>
+        <div style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
           <div style={{ padding: "12px 14px", borderBottom: "1px solid #e2e8f0", fontWeight: 800, color: "#0f172a" }}>Tutor Applications Review</div>
           {tutorApplications.length === 0 ? (
             <div style={{ padding: 24, textAlign: "center", color: "#64748b" }}>No tutor applications yet.</div>
           ) : (
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1100 }}>
-              <thead>
-                <tr>
-                  <th style={th}>Date</th>
-                  <th style={th}>Tutor</th>
-                  <th style={th}>Subject</th>
-                  <th style={th}>Level</th>
-                  <th style={th}>Mode</th>
-                  <th style={th}>Location</th>
-                  <th style={th}>Rate</th>
-                  <th style={th}>Qualifications</th>
-                  <th style={th}>Bio</th>
-                  <th style={th}>Status</th>
-                  <th style={th}>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {tutorApplications.map((t, i) => (
-                  <tr key={t.id || i}>
-                    <td style={td}>{fmtDate(t.created_at)}</td>
-                    <td style={{ ...td, fontWeight: 700 }}>{t.tutor_name || "-"}</td>
-                    <td style={td}>{t.subject_specialism || "-"}</td>
-                    <td style={td}>{t.level_taught || "-"}</td>
-                    <td style={td}>{t.teaching_mode || "-"}</td>
-                    <td style={td}>{t.location || "-"}</td>
-                    <td style={td}>
-                      {t.contact_for_quote ? "Contact for quote" : (t.hourly_rate ? `£${Number(t.hourly_rate).toFixed(2)}/hr` : "-")}
-                    </td>
-                    <td style={td}>{t.qualifications || "-"}</td>
-                    <td style={{ ...td, maxWidth: 280 }}>{t.bio || "-"}</td>
-                    <td style={td}>
-                      <span
-                        style={{
-                          padding: "3px 10px",
-                          borderRadius: 999,
-                          fontSize: 12,
-                          fontWeight: 700,
-                          background:
-                            t.profile_status === "approved"
-                              ? "#dcfce7"
-                              : t.profile_status === "rejected"
-                              ? "#fee2e2"
-                              : "#fef3c7",
-                          color:
-                            t.profile_status === "approved"
-                              ? "#166534"
-                              : t.profile_status === "rejected"
-                              ? "#991b1b"
-                              : "#92400e",
-                        }}
-                      >
-                        {t.profile_status || "pending"}
-                      </span>
-                    </td>
-                    <td style={td}>
-                      <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                        <button
-                          type="button"
-                          onClick={() => updateTutorStatus(t, "pending")}
-                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
-                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #fde68a", background: "#fef3c7", color: "#92400e", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
-                        >
-                          Pending
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => updateTutorStatus(t, "approved")}
-                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
-                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #bbf7d0", background: "#dcfce7", color: "#166534", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
-                        >
-                          Approve
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => updateTutorStatus(t, "rejected")}
-                          disabled={loading || tutorSavingId === String(t.id) || !t.id}
-                          style={{ padding: "5px 8px", borderRadius: 6, border: "1px solid #fecaca", background: "#fee2e2", color: "#991b1b", cursor: "pointer", fontSize: 12, fontWeight: 700 }}
-                        >
-                          Reject
-                        </button>
+            <div style={{ padding: 16, display: "grid", gap: 14 }}>
+              {tutorApplications.map((t, i) => {
+                const applicationId = String(t.id || i);
+                const expanded = expandedTutorId === applicationId;
+                const statusColor = t.profile_status === "approved" ? ["#dcfce7", "#166534"] : t.profile_status === "rejected" ? ["#fee2e2", "#991b1b"] : t.profile_status === "suspended" ? ["#e0f2fe", "#075985"] : ["#fef3c7", "#92400e"];
+                return (
+                  <article key={applicationId} style={{ borderRadius: 16, border: "1px solid #e2e8f0", background: "#fff", padding: 16 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 14, alignItems: "start", flexWrap: "wrap" }}>
+                      <div style={{ display: "flex", gap: 14, alignItems: "start", flex: 1, minWidth: 240 }}>
+                        {t.profile_photo_url ? <img src={t.profile_photo_url} alt={`${t.tutor_name || "Tutor"} application`} style={{ width: 74, height: 74, borderRadius: 18, objectFit: "cover", background: "#e2e8f0" }} /> : <div style={{ width: 74, height: 74, borderRadius: 18, background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", display: "grid", placeItems: "center", fontWeight: 800 }}>{avatarInitials(t.tutor_name)}</div>}
+                        <div>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                            <h3 style={{ margin: 0, color: "#0f172a" }}>{t.tutor_name || "Unnamed tutor"}</h3>
+                            <span style={{ padding: "4px 10px", borderRadius: 999, fontSize: 12, fontWeight: 800, background: statusColor[0], color: statusColor[1] }}>{t.profile_status || "pending"}</span>
+                            {t.is_published && <span style={{ padding: "4px 10px", borderRadius: 999, fontSize: 12, fontWeight: 800, background: "#dcfce7", color: "#166534" }}>published</span>}
+                          </div>
+                          <div style={{ marginTop: 6, color: TEAL_DARK, fontWeight: 700 }}>{formatList(t.subjects_taught || [], t.subject_specialism || "-")}</div>
+                          <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}>{formatList(t.levels_taught || [], t.level_taught || "-")} · {t.teaching_mode || "-"} · {t.location || "-"}</div>
+                          <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}>{t.rate_display || (t.contact_for_quote ? "Contact for quote" : "Rate not supplied")}</div>
+                          <div style={{ marginTop: 6, color: "#64748b", fontSize: 13 }}>Submitted {fmtDate(t.created_at)}</div>
+                        </div>
                       </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                        <button type="button" onClick={() => setExpandedTutorId(expanded ? null : applicationId)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{expanded ? "Hide details" : "Inspect"}</button>
+                        <button type="button" onClick={() => updateTutorStatus(t, "approved")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bbf7d0", background: "#dcfce7", color: "#166534", cursor: "pointer", fontWeight: 700 }}>Approve</button>
+                        <button type="button" onClick={() => updateTutorStatus(t, "rejected")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #fecaca", background: "#fee2e2", color: "#991b1b", cursor: "pointer", fontWeight: 700 }}>Reject</button>
+                        <button type="button" onClick={() => updateTutorStatus(t, "suspended")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bae6fd", background: "#e0f2fe", color: "#075985", cursor: "pointer", fontWeight: 700 }}>Suspend</button>
+                      </div>
+                    </div>
+
+                    {expanded && (
+                      <div style={{ marginTop: 16, borderTop: "1px solid #eef2f7", paddingTop: 16, display: "grid", gap: 14 }}>
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Email:</b><div style={{ marginTop: 8 }}><a href={`mailto:${t.email_address || ""}`} style={{ color: TEAL }}>{t.email_address || "Not supplied"}</a></div></div>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Phone:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.telephone_number || "Not supplied"}</div></div>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Exam boards:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.exam_boards_taught || "Not supplied"}</div></div>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Experience:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.years_experience || "Not supplied"}</div></div>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Current role:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.current_professional_role || "Not supplied"}</div></div>
+                          <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Availability:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.availability_summary || "Not supplied"}</div></div>
+                        </div>
+
+                        <div style={{ display: "grid", gap: 12 }}>
+                          <div><b>Highest qualification:</b><div style={{ marginTop: 6, color: "#475569", lineHeight: 1.65 }}>{t.highest_relevant_qualification || t.qualifications || "Not supplied"}</div></div>
+                          <div><b>Teaching qualifications:</b><div style={{ marginTop: 6, color: "#475569", lineHeight: 1.65 }}>{t.teaching_qualifications || "Not supplied"}</div></div>
+                          <div><b>Professional memberships:</b><div style={{ marginTop: 6, color: "#475569", lineHeight: 1.65 }}>{t.professional_memberships || "Not supplied"}</div></div>
+                          <div><b>Biography:</b><div style={{ marginTop: 6, color: "#475569", lineHeight: 1.7 }}>{t.short_professional_biography || t.bio || "Not supplied"}</div></div>
+                          <div><b>Tutoring approach:</b><div style={{ marginTop: 6, color: "#475569", lineHeight: 1.7 }}>{t.tutoring_approach || "Not supplied"}</div></div>
+                        </div>
+
+                        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                          {t.cv_url && <a href={t.cv_url} target="_blank" rel="noreferrer" style={{ padding: "9px 12px", borderRadius: 10, background: "#ecfeff", color: TEAL_DARK, textDecoration: "none", fontWeight: 700 }}>View CV</a>}
+                          {t.qualification_evidence_url && <a href={t.qualification_evidence_url} target="_blank" rel="noreferrer" style={{ padding: "9px 12px", borderRadius: 10, background: "#ecfeff", color: TEAL_DARK, textDecoration: "none", fontWeight: 700 }}>View Qualification Evidence</a>}
+                        </div>
+
+                        <div>
+                          <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Internal administrative note</label>
+                          <textarea rows={3} value={tutorNotes[applicationId] || ""} onChange={(e) => setTutorNotes((current) => ({ ...current, [applicationId]: e.target.value }))} style={inp} />
+                          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+                            <button type="button" onClick={() => updateTutorStatus(t, t.profile_status || "pending")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "9px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>Save Note</button>
+                            <button type="button" onClick={() => updateTutorStatus(t, "pending")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "9px 12px", borderRadius: 8, border: "1px solid #fde68a", background: "#fef3c7", color: "#92400e", cursor: "pointer", fontWeight: 700 }}>Mark Pending</button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
           )}
         </div>
       </div>
@@ -1796,6 +2278,9 @@ function App() {
   const [approvedTutors, setApprovedTutors] = useState([]);
   const [tutorsLoading, setTutorsLoading] = useState(false);
   const [tutorsError, setTutorsError] = useState("");
+  const [tutorApplicationOpen, setTutorApplicationOpen] = useState(false);
+  const [selectedTutorSlug, setSelectedTutorSlug] = useState(null);
+  const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
@@ -1868,10 +2353,23 @@ function App() {
 
   const goPapers = () => { setPage("papers"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goResources = () => { setPage("resources"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goTutors = () => { setPage("tutors"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goHome = () => { setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goResources(); };
+  const openTutorApplication = () => setTutorApplicationOpen(true);
+  const closeTutorApplication = () => setTutorApplicationOpen(false);
+  const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
+  const closeTutorProfile = () => setSelectedTutorSlug(null);
+  const handleBookTutor = () => {
+    if (page !== "home") {
+      setPage("home");
+      setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 120);
+      return;
+    }
+    document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" });
+  };
   const handleScroll = (target) => {
     const id = target === "contact" ? "contact-anchor" : "book-anchor";
     if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
@@ -1884,7 +2382,7 @@ function App() {
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>
-      <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll}
+      <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
         onAuth={() => setAuthOpen(true)} onLogout={logout} />
 
@@ -1922,8 +2420,7 @@ function App() {
           <BoardStrip />
           <OffersSection />
           <LevelGrid onLevel={handleLevel} />
-          <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} />
-          <TutorApplicationForm onSubmitted={loadApprovedTutors} />
+          <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
           <div id="book-anchor"><Booking /></div>
           <div id="contact-anchor"><Contact /></div>
           <VideoSection />
@@ -1943,8 +2440,16 @@ function App() {
         </main>
       )}
 
+      {page === "tutors" && (
+        <main>
+          <TutorDirectory tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onBack={goHome} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
+        </main>
+      )}
+
       {authOpen && <AuthModal close={() => setAuthOpen(false)} />}
-      <Footer />
+      <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
+      <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
+      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} />
     </div>
   );
 }
