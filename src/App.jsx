@@ -1126,12 +1126,144 @@ function TutorAvatar({ tutor, size = 72 }) {
   return <div aria-hidden="true" style={{ width: size, height: size, borderRadius: 20, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }}>{avatarInitials(tutor.tutor_name)}</div>;
 }
 
+function hasText(value) {
+  return typeof value === "string" ? value.trim().length > 0 : Boolean(value);
+}
+
+function listFromTutorField(arrayValue, fallbackText) {
+  if (Array.isArray(arrayValue) && arrayValue.length > 0) {
+    return arrayValue.map((item) => String(item || "").trim()).filter(Boolean);
+  }
+  if (!hasText(fallbackText)) return [];
+  return String(fallbackText).split(",").map((item) => item.trim()).filter(Boolean);
+}
+
+function tutorModeLabel(mode) {
+  const raw = String(mode || "").trim().toLowerCase();
+  if (!raw) return "Not specified";
+  if (raw === "online") return "Online";
+  if (raw === "face-to-face" || raw === "face to face") return "Face-to-face";
+  if (raw === "both") return "Both";
+  return mode;
+}
+
+function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReducedMotion = false, delayMs = 0 }) {
+  const subjects = listFromTutorField(tutor.subjects_taught, tutor.subject_specialism);
+  const levels = listFromTutorField(tutor.levels_taught, tutor.level_taught);
+  const profileText = String(tutor.short_professional_biography || tutor.bio || "").trim();
+  const experience = hasText(tutor.years_experience) ? tutor.years_experience : "Experience not provided";
+  const mode = tutorModeLabel(tutor.teaching_mode);
+  const rate = hasText(tutor.rate_display) ? tutor.rate_display : (tutor.contact_for_quote ? "Contact for quote" : "");
+  const qualifications = hasText(tutor.highest_relevant_qualification)
+    ? tutor.highest_relevant_qualification
+    : (hasText(tutor.qualifications) ? tutor.qualifications : "");
+  const memberships = hasText(tutor.professional_memberships) ? tutor.professional_memberships : "";
+
+  return (
+    <article
+      key={tutor.id || tutor.public_slug}
+      tabIndex={0}
+      aria-label={`Tutor profile for ${tutor.tutor_name || "approved tutor"}`}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" && tutor.public_slug) {
+          event.preventDefault();
+          onViewProfile(tutor.public_slug);
+        }
+      }}
+      style={{
+        background: "#fff",
+        borderRadius: 20,
+        padding: 16,
+        border: "1px solid rgba(148, 163, 184, .16)",
+        boxShadow: "0 12px 34px rgba(15, 23, 42, .08)",
+        opacity: inView ? 1 : 0,
+        transform: inView ? "translateY(0)" : "translateY(14px)",
+        transition: prefersReducedMotion ? "none" : `opacity .38s ease ${delayMs}ms, transform .38s ease ${delayMs}ms, box-shadow .2s ease`,
+        display: "flex",
+        flexDirection: "column",
+        gap: 12,
+        minHeight: 396,
+      }}
+      onMouseEnter={(event) => {
+        event.currentTarget.style.transform = "translateY(-3px)";
+        event.currentTarget.style.boxShadow = "0 18px 42px rgba(15, 23, 42, .12)";
+      }}
+      onMouseLeave={(event) => {
+        event.currentTarget.style.transform = "translateY(0)";
+        event.currentTarget.style.boxShadow = "0 12px 34px rgba(15, 23, 42, .08)";
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "start", gap: 12 }}>
+        <TutorAvatar tutor={tutor} size={92} />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 11, fontWeight: 800 }}>
+            <span aria-hidden="true">✓</span>
+            <span>JDScience Approved</span>
+          </div>
+          <h3 style={{ margin: "8px 0 6px", color: "#0f172a", fontSize: 22, lineHeight: 1.2 }}>{tutor.tutor_name || "Approved Tutor"}</h3>
+          {subjects.length > 0 && (
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              {subjects.slice(0, 3).map((subject) => (
+                <span key={subject} style={{ padding: "4px 8px", borderRadius: 999, border: "1px solid rgba(0, 150, 136, .2)", background: "#ecfeff", color: TEAL_DARK, fontSize: 12, fontWeight: 700 }}>
+                  {subject}
+                </span>
+              ))}
+              {subjects.length > 3 && (
+                <span style={{ padding: "4px 8px", borderRadius: 999, border: "1px solid #cbd5e1", background: "#f8fafc", color: "#475569", fontSize: 12, fontWeight: 700 }}>
+                  +{subjects.length - 3}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div style={{ display: "grid", gap: 8, fontSize: 14, color: "#334155" }}>
+        {levels.length > 0 && <div><b>Levels:</b> {levels.join(", ")}</div>}
+        <div><b>Experience:</b> {experience}</div>
+        <div><b>Mode:</b> {mode}</div>
+        {rate && <div><b>Rate:</b> {rate}</div>}
+        {qualifications && <div><b>Qualification:</b> {qualifications}</div>}
+        {memberships && <div><b>Memberships:</b> {memberships}</div>}
+      </div>
+
+      {profileText && (
+        <p
+          style={{
+            margin: 0,
+            color: "#64748b",
+            lineHeight: 1.6,
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            minHeight: 66,
+          }}
+        >
+          {profileText}
+        </p>
+      )}
+
+      <div style={{ marginTop: "auto", display: "flex", gap: 10, flexWrap: "wrap" }}>
+        <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "10px 13px", borderRadius: 10, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>
+          View Profile
+        </button>
+        <button type="button" onClick={() => onBook(tutor)} style={{ padding: "10px 13px", borderRadius: 10, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>
+          Book This Tutor
+        </button>
+      </div>
+    </article>
+  );
+}
+
 function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBook }) {
   const isMobile = useIsMobile();
+  const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
   const featuredTutors = tutors.slice(0, 3);
   const showViewAll = tutors.length > featuredTutors.length;
+  const gridColumns = isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))");
 
   return (
     <section ref={sectionRef} style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
@@ -1159,62 +1291,17 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
           </div>
         )}
 
-        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 18 }}>
+        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}>
           {featuredTutors.map((tutor, index) => (
-            <article
+            <TutorCard
               key={tutor.id || tutor.public_slug}
-              style={{
-                background: "#fff",
-                borderRadius: 24,
-                padding: 20,
-                border: "1px solid rgba(148, 163, 184, .16)",
-                boxShadow: "0 16px 40px rgba(15, 23, 42, .08)",
-                opacity: inView ? 1 : 0,
-                transform: inView ? "translateY(0)" : "translateY(18px)",
-                transition: prefersReducedMotion ? "none" : `opacity .45s ease ${index * 90}ms, transform .45s ease ${index * 90}ms`,
-              }}
-              onMouseEnter={(event) => {
-                event.currentTarget.style.transform = "translateY(-4px)";
-                event.currentTarget.style.boxShadow = "0 20px 46px rgba(15, 23, 42, .12)";
-              }}
-              onMouseLeave={(event) => {
-                event.currentTarget.style.transform = "translateY(0)";
-                event.currentTarget.style.boxShadow = "0 16px 40px rgba(15, 23, 42, .08)";
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "start", gap: 14 }}>
-                <TutorAvatar tutor={tutor} size={76} />
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>
-                    <span aria-hidden="true">✓</span>
-                    <span>JDScience Approved</span>
-                  </div>
-                  <h3 style={{ margin: "10px 0 4px", color: "#0f172a", fontSize: 22 }}>{tutor.tutor_name}</h3>
-                  <div style={{ color: TEAL_DARK, fontWeight: 700 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 16 }}>
-                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 12 }}>
-                  <div style={{ fontSize: 12, color: "#94a3b8", textTransform: "uppercase", fontWeight: 800 }}>Levels</div>
-                  <div style={{ marginTop: 6, color: "#334155", fontWeight: 700 }}>{formatList(tutor.levels_taught, tutor.level_taught)}</div>
-                </div>
-                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 12 }}>
-                  <div style={{ fontSize: 12, color: "#94a3b8", textTransform: "uppercase", fontWeight: 800 }}>Experience</div>
-                  <div style={{ marginTop: 6, color: "#334155", fontWeight: 700 }}>{tutor.years_experience || "Experienced"}</div>
-                </div>
-              </div>
-
-              <p style={{ margin: "16px 0 0", color: "#64748b", lineHeight: 1.65 }}>
-                {String(tutor.short_professional_biography || tutor.bio || "").slice(0, 150)}{String(tutor.short_professional_biography || tutor.bio || "").length > 150 ? "…" : ""}
-              </p>
-              <div style={{ marginTop: 12, color: "#475569", fontSize: 14 }}><b>Mode:</b> {tutor.teaching_mode || "Not specified"}</div>
-
-              <div style={{ marginTop: 18, display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "11px 14px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View Profile</button>
-                <button type="button" onClick={() => onBook(tutor)} style={{ padding: "11px 14px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
-              </div>
-            </article>
+              tutor={tutor}
+              onViewProfile={onViewProfile}
+              onBook={onBook}
+              inView={inView}
+              prefersReducedMotion={prefersReducedMotion}
+              delayMs={index * 90}
+            />
           ))}
         </div>
       </div>
@@ -1224,6 +1311,8 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
 
 function TutorDirectory({ tutors, loading, error, onBack, onViewProfile, onBook }) {
   const isMobile = useIsMobile();
+  const isTablet = useIsMobile(1024);
+  const gridColumns = isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))");
   return (
     <section style={{ padding: isMobile ? "24px 16px" : "36px 20px", minHeight: "65vh", background: "#f8fafc" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -1238,26 +1327,15 @@ function TutorDirectory({ tutors, loading, error, onBack, onViewProfile, onBook 
         {loading && <div style={{ color: "#64748b", marginTop: 20 }}>Loading tutors…</div>}
         {error && <div style={{ color: "#b91c1c", marginTop: 20 }}>{error}</div>}
 
-        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 18 }}>
-          {(tutors || []).map((tutor) => (
-            <article key={tutor.id || tutor.public_slug} style={{ background: "#fff", borderRadius: 22, padding: 20, boxShadow: "0 12px 36px rgba(15, 23, 42, .08)", border: "1px solid rgba(148, 163, 184, .16)" }}>
-              <div style={{ display: "flex", alignItems: "start", gap: 14 }}>
-                <TutorAvatar tutor={tutor} size={72} />
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: "inline-flex", padding: "5px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>JDScience Approved</div>
-                  <h3 style={{ margin: "10px 0 4px", color: "#0f172a" }}>{tutor.tutor_name}</h3>
-                  <div style={{ color: TEAL_DARK, fontWeight: 700 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
-                </div>
-              </div>
-              <div style={{ marginTop: 12, color: "#475569", fontSize: 14 }}><b>Levels:</b> {formatList(tutor.levels_taught, tutor.level_taught)}</div>
-              <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}><b>Experience:</b> {tutor.years_experience || "Not stated"}</div>
-              <div style={{ marginTop: 6, color: "#475569", fontSize: 14 }}><b>Rate:</b> {tutor.rate_display || (tutor.contact_for_quote ? "Contact for quote" : "Not stated")}</div>
-              <p style={{ margin: "12px 0 0", color: "#64748b", lineHeight: 1.65 }}>{String(tutor.short_professional_biography || tutor.bio || "").slice(0, 170)}{String(tutor.short_professional_biography || tutor.bio || "").length > 170 ? "…" : ""}</p>
-              <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "11px 14px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View Profile</button>
-                <button type="button" onClick={() => onBook(tutor)} style={{ padding: "11px 14px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
-              </div>
-            </article>
+        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}>
+          {(tutors || []).map((tutor, index) => (
+            <TutorCard
+              key={tutor.id || tutor.public_slug}
+              tutor={tutor}
+              onViewProfile={onViewProfile}
+              onBook={onBook}
+              delayMs={index * 50}
+            />
           ))}
         </div>
       </div>
@@ -1312,33 +1390,59 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
         {tutor && (
           <div style={{ marginTop: 20 }}>
             <div style={{ display: "flex", gap: 18, alignItems: "start", flexWrap: "wrap" }}>
-              <TutorAvatar tutor={tutor} size={108} />
+              <TutorAvatar tutor={tutor} size={112} />
               <div style={{ flex: 1, minWidth: 220 }}>
                 <div style={{ display: "inline-flex", padding: "6px 12px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>JDScience Approved</div>
-                <h3 style={{ margin: "12px 0 6px", fontSize: 30, color: "#0f172a" }}>{tutor.tutor_name}</h3>
-                <div style={{ color: TEAL_DARK, fontWeight: 700, fontSize: 16 }}>{formatList(tutor.subjects_taught, tutor.subject_specialism)}</div>
-                <div style={{ marginTop: 8, color: "#475569" }}>{formatList(tutor.levels_taught, tutor.level_taught)} · {tutor.teaching_mode || "Mode not specified"}</div>
-                <div style={{ marginTop: 8, color: "#475569" }}>{tutor.rate_display || (tutor.contact_for_quote ? "Contact for quote" : "Rate available on request")}</div>
+                {hasText(tutor.tutor_name) && <h3 style={{ margin: "12px 0 6px", fontSize: 30, color: "#0f172a" }}>{tutor.tutor_name}</h3>}
+                {listFromTutorField(tutor.subjects_taught, tutor.subject_specialism).length > 0 && (
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 4 }}>
+                    {listFromTutorField(tutor.subjects_taught, tutor.subject_specialism).map((subject) => (
+                      <span key={subject} style={{ padding: "4px 9px", borderRadius: 999, border: "1px solid rgba(0, 150, 136, .2)", background: "#ecfeff", color: TEAL_DARK, fontSize: 12, fontWeight: 700 }}>{subject}</span>
+                    ))}
+                  </div>
+                )}
+                <div style={{ marginTop: 10, color: "#475569", display: "grid", gap: 6 }}>
+                  {listFromTutorField(tutor.levels_taught, tutor.level_taught).length > 0 && <div><b>Levels:</b> {listFromTutorField(tutor.levels_taught, tutor.level_taught).join(", ")}</div>}
+                  {hasText(tutor.exam_boards_taught) && <div><b>Exam boards:</b> {tutor.exam_boards_taught}</div>}
+                  {hasText(tutor.years_experience) && <div><b>Experience:</b> {tutor.years_experience}</div>}
+                  {hasText(tutor.current_professional_role) && <div><b>Current role:</b> {tutor.current_professional_role}</div>}
+                  <div><b>Teaching mode:</b> {tutorModeLabel(tutor.teaching_mode)}</div>
+                  {hasText(tutor.availability_summary) && <div><b>Availability:</b> {tutor.availability_summary}</div>}
+                  {(hasText(tutor.rate_display) || tutor.contact_for_quote) && <div><b>Rate:</b> {hasText(tutor.rate_display) ? tutor.rate_display : "Contact for quote"}</div>}
+                </div>
               </div>
             </div>
 
-            <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
-              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Exam boards:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.exam_boards_taught || "Not specified"}</div></div>
-              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Experience:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.years_experience || "Not specified"}</div></div>
-              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Location:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.location || "Not specified"}</div></div>
-              <div style={{ background: "#f8fafc", borderRadius: 16, padding: 16 }}><b>Availability:</b><div style={{ marginTop: 8, color: "#475569" }}>{tutor.availability_summary || "Not specified"}</div></div>
+            <div style={{ marginTop: 22, display: "grid", gap: 12 }}>
+              {(hasText(tutor.highest_relevant_qualification) || hasText(tutor.qualifications) || hasText(tutor.teaching_qualifications)) && (
+                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 14 }}>
+                  <div style={{ color: "#0f172a", fontWeight: 800 }}>Qualifications</div>
+                  {hasText(tutor.highest_relevant_qualification || tutor.qualifications) && <div style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}>{tutor.highest_relevant_qualification || tutor.qualifications}</div>}
+                  {hasText(tutor.teaching_qualifications) && <div style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}><b>Teaching qualifications:</b> {tutor.teaching_qualifications}</div>}
+                </div>
+              )}
+
+              {hasText(tutor.professional_memberships) && (
+                <div style={{ background: "#f8fafc", borderRadius: 14, padding: 14 }}>
+                  <div style={{ color: "#0f172a", fontWeight: 800 }}>Professional memberships</div>
+                  <div style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}>{tutor.professional_memberships}</div>
+                </div>
+              )}
+
+              {hasText(tutor.short_professional_biography || tutor.bio) && (
+                <div>
+                  <div style={{ marginTop: 4, color: "#0f172a", fontWeight: 800 }}>Professional biography</div>
+                  <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.short_professional_biography || tutor.bio}</p>
+                </div>
+              )}
+
+              {hasText(tutor.tutoring_approach) && (
+                <div>
+                  <div style={{ color: "#0f172a", fontWeight: 800 }}>Tutoring approach</div>
+                  <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.tutoring_approach}</p>
+                </div>
+              )}
             </div>
-
-            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Qualifications</div>
-            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}>{tutor.highest_relevant_qualification || tutor.qualifications || "Not specified"}</p>
-            {tutor.teaching_qualifications && <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}><b>Teaching qualifications:</b> {tutor.teaching_qualifications}</p>}
-            {tutor.professional_memberships && <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.7 }}><b>Professional memberships:</b> {tutor.professional_memberships}</p>}
-
-            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Professional biography</div>
-            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.short_professional_biography || tutor.bio || "Not provided."}</p>
-
-            <div style={{ marginTop: 18, color: "#0f172a", fontWeight: 800 }}>Tutoring approach</div>
-            <p style={{ marginTop: 8, color: "#475569", lineHeight: 1.75 }}>{tutor.tutoring_approach || "Not provided."}</p>
 
             <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap" }}>
               <button type="button" onClick={() => onBook(tutor)} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
