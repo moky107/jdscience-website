@@ -10,7 +10,6 @@ const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources"; // Supabase Storage bucket name
 
 const BANNER_IMG = "/hero-students.png.png";
-const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
 
 /* -------- Qualification-specific data (single source of truth) -------- */
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
@@ -1716,9 +1715,13 @@ function VideoSection() {
           Watch this short introduction to see how learners use resources, past papers and tutoring support.
         </p>
         <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 60px rgba(0,0,0,.35)" }}>
-          <iframe title="How JD Science Works" src={INTRO_VIDEO_EMBED_URL}
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+          <video
+            src="/homepage-promo.mp4"
+            controls
+            muted
+            playsInline
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </div>
       </div>
     </section>
