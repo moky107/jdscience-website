@@ -1913,6 +1913,19 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   const [tutorNotes, setTutorNotes] = useState({});
   const [expandedTutorId, setExpandedTutorId] = useState(null);
 
+  // Tab navigation: "bookings" | "tutors" | "upload"
+  const [activeTab, setActiveTab] = useState("bookings");
+
+  // Upload Resources tab state
+  const [upBoard, setUpBoard] = useState("AQA");
+  const [upLevel, setUpLevel] = useState("GCSE");
+  const [upSubject, setUpSubject] = useState("Chemistry");
+  const [upCategory, setUpCategory] = useState("Revision Notes");
+  const [upFiles, setUpFiles] = useState([]); // { file, name, title, status, error }
+  const [upDrag, setUpDrag] = useState(false);
+  const [upBusy, setUpBusy] = useState(false);
+  const upInputRef = React.useRef(null);
+
   async function load(pw) {
     setLoading(true);
     setError("");
@@ -2070,6 +2083,95 @@ function AdminDashboard({ onClose, onSiteLogout }) {
     }
   }
 
+  // ----- Upload Resources tab logic (mirrors UploadModal.uploadSingle) -----
+  const addUpFiles = (fileList) => {
+    if (!fileList || fileList.length === 0) return;
+    const arr = Array.from(fileList).map((f) => ({
+      file: f,
+      name: f.name,
+      title: f.name.replace(/\.[^.]+$/, ""),
+      status: "ready", // ready|uploading|done|error
+      error: null,
+    }));
+    setUpFiles((cur) => [...cur, ...arr]);
+  };
+
+  const onUpDrop = (e) => {
+    e.preventDefault();
+    setUpDrag(false);
+    addUpFiles(e.dataTransfer.files);
+  };
+
+  const removeUpFile = (idx) => setUpFiles((f) => f.filter((_, i) => i !== idx));
+  const clearUpFiles = () => setUpFiles([]);
+
+  const setUpFileTitle = (idx, value) =>
+    setUpFiles((cur) => {
+      const next = [...cur];
+      next[idx] = { ...next[idx], title: value };
+      return next;
+    });
+
+  async function uploadSingleResource(fileObj, idx) {
+    const f = fileObj.file;
+    const clean = `${Date.now()}-${slugify(f.name)}`;
+    const storage_path = `${slugify(upLevel)}/${slugify(upSubject)}/${slugify(upBoard)}/${slugify(upCategory)}/${clean}`;
+    try {
+      setUpFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...next[idx], status: "uploading", error: null };
+        return next;
+      });
+
+      const up = await supabase.storage.from(BUCKET).upload(storage_path, f, { cacheControl: "3600", upsert: true });
+      if (up.error) throw up.error;
+      const publicUrl = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
+
+      const { error: insErr } = await supabase.from("resources").insert({
+        level: upLevel,
+        subject: upSubject,
+        exam_board: upBoard,
+        resource_category: upCategory,
+        title: fileObj.title || fileObj.name,
+        file_name: fileObj.name,
+        file_url: publicUrl,
+        file_type: f.type || fileObj.name.split(".").pop(),
+        storage_path,
+        published: true,
+      });
+      if (insErr) throw insErr;
+
+      setUpFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...next[idx], status: "done" };
+        return next;
+      });
+      return { success: true };
+    } catch (err) {
+      setUpFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...next[idx], status: "error", error: err.message || String(err) };
+        return next;
+      });
+      return { success: false, error: err };
+    }
+  }
+
+  async function uploadAllResources() {
+    if (upFiles.length === 0) { alert("Please choose or drop one or more files."); return; }
+    setUpBusy(true);
+    try {
+      for (let i = 0; i < upFiles.length; i++) {
+        if (upFiles[i].status === "done") continue;
+        const fobj = { ...upFiles[i] };
+        if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
+        await uploadSingleResource(fobj, i);
+      }
+    } finally {
+      setUpBusy(false);
+    }
+  }
+
   const total = bookings.length;
   const trials = bookings.filter((b) => String(b.session_type || "").toLowerCase() === "trial").length;
   const paid = total - trials;
@@ -2119,7 +2221,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
       <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 18px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div style={{ width: 36, height: 36, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
-          <div style={{ fontWeight: 800 }}>Bookings Dashboard</div>
+          <div style={{ fontWeight: 800 }}>Admin Dashboard</div>
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
@@ -2145,6 +2247,29 @@ function AdminDashboard({ onClose, onSiteLogout }) {
             {error}
           </div>
         )}
+        {/* Tab bar */}
+        <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
+          {[["bookings", "📋 Bookings"], ["tutors", "👤 Tutor Applications"], ["upload", "📤 Upload Resources"]].map(([key, label]) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setActiveTab(key)}
+              style={{
+                padding: "10px 18px",
+                borderRadius: 10,
+                border: activeTab === key ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
+                background: activeTab === key ? TEAL : "#fff",
+                color: activeTab === key ? "#fff" : "#334155",
+                cursor: "pointer",
+                fontWeight: 800,
+                fontSize: 14,
+              }}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 12, marginBottom: 20 }}>
           {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials], ["Pending tutor apps", pendingTutors], ["Approved tutors", approvedTutors], ["Published tutors", publishedTutors]].map(([label, value]) => (
             <div key={label} style={{ background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
@@ -2154,6 +2279,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           ))}
         </div>
 
+        {activeTab === "bookings" && (
         <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "auto" }}>
           {bookings.length === 0 ? (
             <div style={{ padding: 40, textAlign: "center", color: "#64748b" }}>No bookings yet.</div>
@@ -2333,8 +2459,10 @@ function AdminDashboard({ onClose, onSiteLogout }) {
 </table>
           )}
         </div>
+        )}
 
-        <div style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
+        {activeTab === "tutors" && (
+        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
           <div style={{ padding: "12px 14px", borderBottom: "1px solid #e2e8f0", fontWeight: 800, color: "#0f172a" }}>Tutor Applications Review</div>
           {tutorApplications.length === 0 ? (
             <div style={{ padding: 24, textAlign: "center", color: "#64748b" }}>No tutor applications yet.</div>
@@ -2411,6 +2539,130 @@ function AdminDashboard({ onClose, onSiteLogout }) {
             </div>
           )}
         </div>
+        )}
+
+        {activeTab === "upload" && (
+        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
+          <div>
+            <h2 style={{ margin: 0, fontSize: 20, color: "#0f172a" }}>Upload Resources</h2>
+            <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 14 }}>
+              Choose the category, then drag &amp; drop your files (PPT, PDF, Word, etc.). Each file is published to the resources library.
+            </p>
+          </div>
+
+          {/* Category selectors */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 12 }}>
+            <div>
+              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Board</label>
+              <select value={upBoard} onChange={(e) => setUpBoard(e.target.value)} style={inp}>
+                {RESOURCE_BOARDS.map((b) => <option key={b} value={b}>{b}</option>)}
+              </select>
+            </div>
+            <div>
+              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Level</label>
+              <select value={upLevel} onChange={(e) => setUpLevel(e.target.value)} style={inp}>
+                {RESOURCE_LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
+              </select>
+            </div>
+            <div>
+              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Subject</label>
+              <select value={upSubject} onChange={(e) => setUpSubject(e.target.value)} style={inp}>
+                {RESOURCE_SUBJECTS.map((s) => <option key={s} value={s}>{s}</option>)}
+              </select>
+            </div>
+            <div>
+              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Resource Type</label>
+              <select value={upCategory} onChange={(e) => setUpCategory(e.target.value)} style={inp}>
+                {RES_TYPES.map((r) => <option key={r} value={r}>{r}</option>)}
+              </select>
+            </div>
+          </div>
+
+          {/* Drag & drop zone */}
+          <div
+            onClick={() => upInputRef.current?.click()}
+            onDragOver={(e) => { e.preventDefault(); setUpDrag(true); }}
+            onDragLeave={() => setUpDrag(false)}
+            onDrop={onUpDrop}
+            style={{
+              border: `2px dashed ${upDrag ? TEAL : "#cbd5e1"}`,
+              background: upDrag ? "#ecfeff" : "#f8fafc",
+              borderRadius: 12,
+              padding: "28px 20px",
+              textAlign: "center",
+              cursor: "pointer",
+              color: "#475569",
+            }}
+          >
+            <div style={{ fontSize: 32 }}>📂</div>
+            <div style={{ fontWeight: 700, marginTop: 6 }}>
+              {upFiles.length === 0 ? "Drag & drop files here (or click to browse)" : `${upFiles.length} file(s) selected`}
+            </div>
+            <div style={{ fontSize: 13, marginTop: 6 }}>Supports multiple files — PPT, PDF, Word, images, etc.</div>
+          </div>
+          <input
+            ref={upInputRef}
+            type="file"
+            hidden
+            multiple
+            accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.txt,.md,.odt"
+            onChange={(e) => addUpFiles(e.target.files)}
+          />
+
+          {/* File list */}
+          {upFiles.length > 0 && (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {upFiles.map((f, i) => (
+                <div key={`${f.name}-${i}`} style={{ display: "flex", gap: 10, alignItems: "center", padding: 10, borderRadius: 8, background: "#fff", border: "1px solid #eef2f7", flexWrap: "wrap" }}>
+                  <div style={{ flex: 1, minWidth: 220 }}>
+                    <input
+                      value={f.title}
+                      onChange={(e) => setUpFileTitle(i, e.target.value)}
+                      placeholder="Resource title"
+                      style={{ ...inp, fontSize: 14, padding: "8px 10px" }}
+                    />
+                    <div style={{ fontSize: 12, color: "#64748b", marginTop: 4 }}>{f.name}</div>
+                  </div>
+                  <div style={{ minWidth: 90, textAlign: "right", fontWeight: 700, fontSize: 13 }}>
+                    {f.status === "ready" && <span style={{ color: "#0f172a" }}>Ready</span>}
+                    {f.status === "uploading" && <span style={{ color: TEAL }}>Uploading…</span>}
+                    {f.status === "done" && <span style={{ color: "green" }}>✓ Done</span>}
+                    {f.status === "error" && <span style={{ color: "#dc2626" }} title={f.error || ""}>✗ Error</span>}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => removeUpFile(i)}
+                    disabled={upBusy}
+                    style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff", color: "#dc2626", cursor: upBusy ? "default" : "pointer" }}
+                  >
+                    Remove
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Action buttons */}
+          <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+            <button
+              type="button"
+              onClick={uploadAllResources}
+              disabled={upBusy || upFiles.length === 0}
+              style={{ padding: "12px 20px", borderRadius: 8, background: (upBusy || upFiles.length === 0) ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: (upBusy || upFiles.length === 0) ? "default" : "pointer", fontWeight: 800 }}
+            >
+              {upBusy ? "Uploading…" : "Upload All"}
+            </button>
+            <button
+              type="button"
+              onClick={clearUpFiles}
+              disabled={upBusy || upFiles.length === 0}
+              style={{ padding: "12px 18px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#334155", cursor: (upBusy || upFiles.length === 0) ? "default" : "pointer", fontWeight: 700 }}
+            >
+              Clear
+            </button>
+          </div>
+        </div>
+        )}
       </div>
     </div>
   );
