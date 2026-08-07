@@ -2138,6 +2138,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
         file_type: f.type || fileObj.name.split(".").pop(),
         storage_path,
         published: true,
+        topic_order: null,
       });
       if (insErr) throw insErr;
 
@@ -2167,6 +2168,8 @@ function AdminDashboard({ onClose, onSiteLogout }) {
         if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
         await uploadSingleResource(fobj, i);
       }
+      // Reload resources so they appear immediately
+      await loadResources();
     } finally {
       setUpBusy(false);
     }
@@ -2735,7 +2738,8 @@ function App() {
   async function loadResources() {
     const { data, error } = await supabase
       .from("resources").select("*").eq("published", true)
-      .order("topic_order", { ascending: true }).order("title", { ascending: true });
+      .order("topic_order", { ascending: true, nullsFirst: false })
+      .order("title", { ascending: true });
     if (!error) setResources(data || []);
   }
 
