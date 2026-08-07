@@ -542,7 +542,7 @@ function LevelGrid({ onLevel }) {
   );
 }
 
-function ResourceBrowser({ initialType, onBook }) {
+function ResourceBrowser({ initialType, onBook, resources = [], isAdmin, reload }) {
   const isMobile = useIsMobile();
   const [board, setBoard] = useState(RESOURCE_BOARDS[0]);
   const [level, setLevel] = useState(RESOURCE_LEVELS[0]);
@@ -553,7 +553,21 @@ function ResourceBrowser({ initialType, onBook }) {
     if (initialType && RES_TYPES.includes(initialType)) setType(initialType);
   }, [initialType]);
 
-  const resources = buildPlaceholderResources({ board, level, subject, type });
+  // Filter the real, uploaded resources by the selected dropdowns.
+  // levelKey() is used so GCSE, IGCSE and older "GCSE/IGCSE" rows all match together.
+  const matched = (resources || []).filter((r) =>
+    slugify(r.exam_board) === slugify(board) &&
+    levelKey(r.level) === levelKey(level) &&
+    slugify(r.subject) === slugify(subject) &&
+    slugify(r.resource_category) === slugify(type)
+  );
+
+  async function removeResource(item) {
+    if (!window.confirm("Delete this resource?")) return;
+    if (item.storage_path) await supabase.storage.from(BUCKET).remove([item.storage_path]);
+    const { error } = await supabase.from("resources").delete().eq("id", item.id);
+    if (error) alert(error.message); else if (reload) reload();
+  }
 
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
@@ -564,7 +578,7 @@ function ResourceBrowser({ initialType, onBook }) {
           <div style={{ flex: 1, minWidth: 180 }}>
             <div style={{ fontWeight: 800, color: "#0f172a" }}>Resource Browser</div>
             <div style={{ color: "#64748b", fontSize: 14 }}>
-              Browse by exam board, level, subject and resource type. Placeholder links are currently shown.
+              Browse by exam board, level, subject and resource type. Click a resource to open or download it.
             </div>
           </div>
           <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
@@ -601,17 +615,27 @@ function ResourceBrowser({ initialType, onBook }) {
           <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>
             {board} · {level} · {subject} · {type}
           </div>
-          <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
-            {resources.map((item) => (
-              <a key={item.id} href={item.href}
-                style={{ textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
-                📄 {item.title}
-              </a>
-            ))}
-          </div>
-          <div style={{ padding: "0 12px 12px", fontSize: 12, color: "#64748b" }}>
-            Links are placeholders and will be replaced with live resources.
-          </div>
+          {matched.length > 0 ? (
+            <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
+              {matched.map((item) => (
+                <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
+                  <a href={item.file_url} target="_blank" rel="noreferrer"
+                    style={{ flex: 1, textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
+                    {type === "Videos" ? "▶️" : "📄"} {item.title}
+                  </a>
+                  {isAdmin && (
+                    <button onClick={() => removeResource(item)} title="Delete"
+                      style={{ padding: "0 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff5f5", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div style={{ padding: 24, textAlign: "center", color: "#64748b", fontSize: 14 }}>
+              No resources here yet for <b>{board} · {level} · {subject} · {type}</b>.
+              <div style={{ fontSize: 13, marginTop: 6 }}>Try a different combination, or check back soon.</div>
+            </div>
+          )}
         </div>
       </div>
     </section>
@@ -2873,7 +2897,8 @@ function App() {
 
       {page === "resources" && (
         <main>
-          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
+          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")}
+            resources={resources} isAdmin={isAdmin} reload={loadResources} />
         </main>
       )}
 
