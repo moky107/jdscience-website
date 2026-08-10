@@ -10,13 +10,14 @@ const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources"; // Supabase Storage bucket name
 
 const BANNER_IMG = "/hero-students.png.png";
+const INTRO_VIDEO_EMBED_URL = "https://www.youtube.com/embed/TjPFZaMe2yw";
 
 /* -------- Qualification-specific data (single source of truth) -------- */
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
 
 const SUBJECTS_BY_LEVEL = {
   "11+": ["English", "Maths", "Verbal Reasoning", "Non-Verbal Reasoning"],
-  "GCSE/IGCSE": ["Biology", "Chemistry", "Physics", "Combined Science", "Maths"],
+  "GCSE/IGCSE": ["Biology", "Chemistry", "Physics", "Maths"],
   "A-Level": ["Biology", "Chemistry", "Physics", "Maths"],
   "T-Level": ["Science", "Health", "Laboratory Sciences", "Healthcare Science"],
   "BTEC": ["Applied Science", "Health and Social Care", "Engineering", "Business", "Computing"],
@@ -24,8 +25,8 @@ const SUBJECTS_BY_LEVEL = {
 
 const BOARDS_BY_LEVEL = {
   "11+": ["Independent Schools", "Grammar Schools"],
-  "GCSE/IGCSE": ["AQA", "Edexcel", "OCR", "Eduqas", "Cambridge International"],
-  "A-Level": ["AQA", "Edexcel", "OCR", "Eduqas", "Cambridge International"],
+  "GCSE/IGCSE": ["AQA", "Edexcel", "OCR", "Eduqas", "WJEC"],
+  "A-Level": ["AQA", "Edexcel", "OCR", "Eduqas", "WJEC"],
   "T-Level": ["NCFE", "Pearson", "City & Guilds"],
   "BTEC": ["Pearson"],
 };
@@ -61,6 +62,26 @@ const PLACEHOLDER_RESOURCE_LINKS = {
   Videos: ["Core Concepts Video", "Worked Example Video", "Exam Tips Video"],
 };
 
+const STATIC_RESOURCE_ITEMS = [
+  // Edexcel GCSE Biology — Revision Notes (served from /public)
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 1 - Cell Biology", file_name: "Biology 1 - Cell Biology.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 2 - Organisation", file_name: "Biology 2 - Organisation.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 3 - Infection and Response", file_name: "Biology 3 - Infection and Response.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 4 - Bioenergetics", file_name: "Biology 4 - Bioenergetics (1).pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 5 - Homeostasis and Response", file_name: "Biology 5 - Homeostasis and Response (1).pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 6 - Inheritance Variation and Evolution", file_name: "Biology 6 - Inheritance Variation and Evolution.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 7 - Ecology", file_name: "Biology 7 - Ecology.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Unit 1 Biology Revision Booklet", file_name: "Unit-1-Biology-Revision-Booklet.pdf" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B1 Cell Biology", file_name: "JDScience_B1_Cell_Biology.pptx" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B4 Bioenergetics", file_name: "JDScience_B4_Bioenergetics.pptx" },
+  // GCSE Biology — Specifications (official board URLs)
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Specifications", title: "Edexcel GCSE Biology Specification (9-1, Issue 4)", file_url_override: "https://qualifications.pearson.com/content/dam/pdf/GCSE/Biology/2016/specification-and-sample-assessments/Pearson-Edexcel-Level-1-Level-2-GCSE-9-1-in-Biology-Specification-Issue-4.pdf" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "AQA", resource_category: "Specifications", title: "AQA GCSE Biology Specification (8461)", file_url_override: "https://filestore.aqa.org.uk/resources/biology/specifications/AQA-8461-SP-2016.PDF" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "OCR", resource_category: "Specifications", title: "OCR GCSE Biology A Specification (J247)", file_url_override: "https://www.ocr.org.uk/Images/234596-specification-accredited-gcse-gateway-science-suite-biology-a-j247.pdf" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Eduqas", resource_category: "Specifications", title: "Eduqas GCSE Biology Specification", file_url_override: "https://www.eduqas.co.uk/media/by0bk3na/eduqas-gcse-biology-spec-from-2016.pdf" },
+  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "WJEC", resource_category: "Specifications", title: "WJEC GCSE Biology Specification", file_url_override: "https://www.wjec.co.uk/media/o1hbpvqf/wjec-gcse-biology-spec-from-2016.pdf" },
+];
+
 function slugify(t) {
   return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -91,6 +112,23 @@ function buildPlaceholderResources({ board, level, subject, type }) {
     id: `${slugify(board)}-${slugify(level)}-${slugify(subject)}-${slugify(type)}-${idx}`,
     title: `${board} ${level} ${subject} ${label}`,
     href: "#",
+  }));
+}
+
+function buildStaticResourceItems() {
+  return STATIC_RESOURCE_ITEMS.map((resource, index) => ({
+    id: `static-${index}`,
+    level: resource.level,
+    subject: resource.subject,
+    exam_board: resource.exam_board,
+    resource_category: resource.resource_category,
+    title: resource.title,
+    file_name: resource.file_name || resource.title,
+    // file_url_override used for external spec URLs; otherwise serve from public folder
+    file_url: resource.file_url_override || `/resources/edexcel/gcse/biology/revision-notes/${encodeURIComponent(resource.file_name)}`,
+    file_type: resource.file_url_override ? "application/pdf" : "application/octet-stream",
+    storage_path: null,
+    published: true,
   }));
 }
 
@@ -469,7 +507,7 @@ function BoardStrip() {
     <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: isMobile ? "14px 16px" : "16px 16px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 10, justifyContent: "center", alignItems: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
         <span style={{ color: "#94a3b8", fontSize: 13, letterSpacing: ".02em", textTransform: "uppercase" }}>Covering:</span>
-        {["AQA", "Edexcel", "OCR", "Eduqas", "Cambridge International", "Pearson", "NCFE"].map((b) => (
+        {["AQA", "Edexcel", "OCR", "Eduqas", "WJEC", "Pearson", "NCFE"].map((b) => (
           <span
             key={b}
             style={{
@@ -542,7 +580,7 @@ function LevelGrid({ onLevel }) {
   );
 }
 
-function ResourceBrowser({ initialType, onBook, resources = [], isAdmin, reload }) {
+function ResourceBrowser({ initialType, onBook }) {
   const isMobile = useIsMobile();
   const [board, setBoard] = useState(RESOURCE_BOARDS[0]);
   const [level, setLevel] = useState(RESOURCE_LEVELS[0]);
@@ -553,21 +591,7 @@ function ResourceBrowser({ initialType, onBook, resources = [], isAdmin, reload 
     if (initialType && RES_TYPES.includes(initialType)) setType(initialType);
   }, [initialType]);
 
-  // Filter the real, uploaded resources by the selected dropdowns.
-  // levelKey() is used so GCSE, IGCSE and older "GCSE/IGCSE" rows all match together.
-  const matched = (resources || []).filter((r) =>
-    slugify(r.exam_board) === slugify(board) &&
-    levelKey(r.level) === levelKey(level) &&
-    slugify(r.subject) === slugify(subject) &&
-    slugify(r.resource_category) === slugify(type)
-  );
-
-  async function removeResource(item) {
-    if (!window.confirm("Delete this resource?")) return;
-    if (item.storage_path) await supabase.storage.from(BUCKET).remove([item.storage_path]);
-    const { error } = await supabase.from("resources").delete().eq("id", item.id);
-    if (error) alert(error.message); else if (reload) reload();
-  }
+  const resources = buildPlaceholderResources({ board, level, subject, type });
 
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
@@ -578,7 +602,7 @@ function ResourceBrowser({ initialType, onBook, resources = [], isAdmin, reload 
           <div style={{ flex: 1, minWidth: 180 }}>
             <div style={{ fontWeight: 800, color: "#0f172a" }}>Resource Browser</div>
             <div style={{ color: "#64748b", fontSize: 14 }}>
-              Browse by exam board, level, subject and resource type. Click a resource to open or download it.
+              Select your exam board, level, subject and resource type to view available resources.
             </div>
           </div>
           <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
@@ -615,27 +639,15 @@ function ResourceBrowser({ initialType, onBook, resources = [], isAdmin, reload 
           <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>
             {board} · {level} · {subject} · {type}
           </div>
-          {matched.length > 0 ? (
-            <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
-              {matched.map((item) => (
-                <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
-                  <a href={item.file_url} target="_blank" rel="noreferrer"
-                    style={{ flex: 1, textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
-                    {type === "Videos" ? "▶️" : "📄"} {item.title}
-                  </a>
-                  {isAdmin && (
-                    <button onClick={() => removeResource(item)} title="Delete"
-                      style={{ padding: "0 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff5f5", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
-                  )}
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div style={{ padding: 24, textAlign: "center", color: "#64748b", fontSize: 14 }}>
-              No resources here yet for <b>{board} · {level} · {subject} · {type}</b>.
-              <div style={{ fontSize: 13, marginTop: 6 }}>Try a different combination, or check back soon.</div>
-            </div>
-          )}
+          <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
+            {resources.map((item) => (
+              <a key={item.id} href={item.href}
+                style={{ textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
+                📄 {item.title}
+              </a>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
@@ -651,11 +663,13 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
 
   const [activeSubject, setActiveSubject] = useState(subject || subjectsForLevel[0]);
   const [activeRes, setActiveRes] = useState(resType || "Past Questions");
+  const [activeBoard, setActiveBoard] = useState(null);
   const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
+  useEffect(() => { setActiveBoard(null); }, [activeRes, activeLevel, activeSubject]);
 
   useEffect(() => {
     const list = SUBJECTS_BY_LEVEL[activeLevel] || [];
@@ -716,8 +730,18 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
 
         <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 19 : 24 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
 
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
+          <button onClick={() => setActiveBoard(null)}
+            style={{ padding: "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: !activeBoard ? TEAL_DARK : "#e2e8f0", color: !activeBoard ? "#fff" : "#334155" }}>All Boards</button>
+          {boardsForLevel.map((b) => (
+            <button key={b} onClick={() => setActiveBoard(b)}
+              style={{ padding: "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeBoard === b ? TEAL : "#e2e8f0", color: activeBoard === b ? "#fff" : "#334155" }}>{b}</button>
+          ))}
+        </div>
+
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
-          {boardsForLevel.map((board) => {
+          {boardsForLevel.filter((b) => !activeBoard || b === activeBoard).map((board) => {
             const items = itemsFor(board);
             if (items.length === 0 && !isAdmin) return null;
             return (
@@ -1739,13 +1763,9 @@ function VideoSection() {
           Watch this short introduction to see how learners use resources, past papers and tutoring support.
         </p>
         <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 60px rgba(0,0,0,.35)" }}>
-          <video
-            src="/homepage-promo.mp4"
-            controls
-            muted
-            playsInline
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
-          />
+          <iframe title="How JD Science Works" src={INTRO_VIDEO_EMBED_URL}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
         </div>
       </div>
     </section>
@@ -1937,19 +1957,6 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   const [tutorNotes, setTutorNotes] = useState({});
   const [expandedTutorId, setExpandedTutorId] = useState(null);
 
-  // Tab navigation: "bookings" | "tutors" | "upload"
-  const [activeTab, setActiveTab] = useState("bookings");
-
-  // Upload Resources tab state
-  const [upBoard, setUpBoard] = useState("AQA");
-  const [upLevel, setUpLevel] = useState("GCSE");
-  const [upSubject, setUpSubject] = useState("Chemistry");
-  const [upCategory, setUpCategory] = useState("Revision Notes");
-  const [upFiles, setUpFiles] = useState([]); // { file, name, title, status, error }
-  const [upDrag, setUpDrag] = useState(false);
-  const [upBusy, setUpBusy] = useState(false);
-  const upInputRef = React.useRef(null);
-
   async function load(pw) {
     setLoading(true);
     setError("");
@@ -2107,98 +2114,6 @@ function AdminDashboard({ onClose, onSiteLogout }) {
     }
   }
 
-  // ----- Upload Resources tab logic (mirrors UploadModal.uploadSingle) -----
-  const addUpFiles = (fileList) => {
-    if (!fileList || fileList.length === 0) return;
-    const arr = Array.from(fileList).map((f) => ({
-      file: f,
-      name: f.name,
-      title: f.name.replace(/\.[^.]+$/, ""),
-      status: "ready", // ready|uploading|done|error
-      error: null,
-    }));
-    setUpFiles((cur) => [...cur, ...arr]);
-  };
-
-  const onUpDrop = (e) => {
-    e.preventDefault();
-    setUpDrag(false);
-    addUpFiles(e.dataTransfer.files);
-  };
-
-  const removeUpFile = (idx) => setUpFiles((f) => f.filter((_, i) => i !== idx));
-  const clearUpFiles = () => setUpFiles([]);
-
-  const setUpFileTitle = (idx, value) =>
-    setUpFiles((cur) => {
-      const next = [...cur];
-      next[idx] = { ...next[idx], title: value };
-      return next;
-    });
-
-  async function uploadSingleResource(fileObj, idx) {
-    const f = fileObj.file;
-    const clean = `${Date.now()}-${slugify(f.name)}`;
-    const storage_path = `${slugify(upLevel)}/${slugify(upSubject)}/${slugify(upBoard)}/${slugify(upCategory)}/${clean}`;
-    try {
-      setUpFiles((cur) => {
-        const next = [...cur];
-        next[idx] = { ...next[idx], status: "uploading", error: null };
-        return next;
-      });
-
-      const up = await supabase.storage.from(BUCKET).upload(storage_path, f, { cacheControl: "3600", upsert: true });
-      if (up.error) throw up.error;
-      const publicUrl = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
-
-      const { error: insErr } = await supabase.from("resources").insert({
-        level: upLevel,
-        subject: upSubject,
-        exam_board: upBoard,
-        resource_category: upCategory,
-        title: fileObj.title || fileObj.name,
-        file_name: fileObj.name,
-        file_url: publicUrl,
-        file_type: f.type || fileObj.name.split(".").pop(),
-        storage_path,
-        published: true,
-        topic_order: null,
-      });
-      if (insErr) throw insErr;
-
-      setUpFiles((cur) => {
-        const next = [...cur];
-        next[idx] = { ...next[idx], status: "done" };
-        return next;
-      });
-      return { success: true };
-    } catch (err) {
-      setUpFiles((cur) => {
-        const next = [...cur];
-        next[idx] = { ...next[idx], status: "error", error: err.message || String(err) };
-        return next;
-      });
-      return { success: false, error: err };
-    }
-  }
-
-  async function uploadAllResources() {
-    if (upFiles.length === 0) { alert("Please choose or drop one or more files."); return; }
-    setUpBusy(true);
-    try {
-      for (let i = 0; i < upFiles.length; i++) {
-        if (upFiles[i].status === "done") continue;
-        const fobj = { ...upFiles[i] };
-        if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
-        await uploadSingleResource(fobj, i);
-      }
-      // Reload resources so they appear immediately
-      await loadResources();
-    } finally {
-      setUpBusy(false);
-    }
-  }
-
   const total = bookings.length;
   const trials = bookings.filter((b) => String(b.session_type || "").toLowerCase() === "trial").length;
   const paid = total - trials;
@@ -2248,7 +2163,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
       <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 18px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div style={{ width: 36, height: 36, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
-          <div style={{ fontWeight: 800 }}>Admin Dashboard</div>
+          <div style={{ fontWeight: 800 }}>Bookings Dashboard</div>
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
@@ -2274,29 +2189,6 @@ function AdminDashboard({ onClose, onSiteLogout }) {
             {error}
           </div>
         )}
-        {/* Tab bar */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 20, flexWrap: "wrap" }}>
-          {[["bookings", "📋 Bookings"], ["tutors", "👤 Tutor Applications"], ["upload", "📤 Upload Resources"]].map(([key, label]) => (
-            <button
-              key={key}
-              type="button"
-              onClick={() => setActiveTab(key)}
-              style={{
-                padding: "10px 18px",
-                borderRadius: 10,
-                border: activeTab === key ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
-                background: activeTab === key ? TEAL : "#fff",
-                color: activeTab === key ? "#fff" : "#334155",
-                cursor: "pointer",
-                fontWeight: 800,
-                fontSize: 14,
-              }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(160px,1fr))", gap: 12, marginBottom: 20 }}>
           {[["Total bookings", total], ["Paid bookings", paid], ["Free trials", trials], ["Pending tutor apps", pendingTutors], ["Approved tutors", approvedTutors], ["Published tutors", publishedTutors]].map(([label, value]) => (
             <div key={label} style={{ background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
@@ -2306,7 +2198,6 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           ))}
         </div>
 
-        {activeTab === "bookings" && (
         <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "auto" }}>
           {bookings.length === 0 ? (
             <div style={{ padding: 40, textAlign: "center", color: "#64748b" }}>No bookings yet.</div>
@@ -2486,10 +2377,8 @@ function AdminDashboard({ onClose, onSiteLogout }) {
 </table>
           )}
         </div>
-        )}
 
-        {activeTab === "tutors" && (
-        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
+        <div style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
           <div style={{ padding: "12px 14px", borderBottom: "1px solid #e2e8f0", fontWeight: 800, color: "#0f172a" }}>Tutor Applications Review</div>
           {tutorApplications.length === 0 ? (
             <div style={{ padding: 24, textAlign: "center", color: "#64748b" }}>No tutor applications yet.</div>
@@ -2566,130 +2455,6 @@ function AdminDashboard({ onClose, onSiteLogout }) {
             </div>
           )}
         </div>
-        )}
-
-        {activeTab === "upload" && (
-        <div style={{ background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
-          <div>
-            <h2 style={{ margin: 0, fontSize: 20, color: "#0f172a" }}>Upload Resources</h2>
-            <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 14 }}>
-              Choose the category, then drag &amp; drop your files (PPT, PDF, Word, etc.). Each file is published to the resources library.
-            </p>
-          </div>
-
-          {/* Category selectors */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(180px,1fr))", gap: 12 }}>
-            <div>
-              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Board</label>
-              <select value={upBoard} onChange={(e) => setUpBoard(e.target.value)} style={inp}>
-                {RESOURCE_BOARDS.map((b) => <option key={b} value={b}>{b}</option>)}
-              </select>
-            </div>
-            <div>
-              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Level</label>
-              <select value={upLevel} onChange={(e) => setUpLevel(e.target.value)} style={inp}>
-                {RESOURCE_LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
-              </select>
-            </div>
-            <div>
-              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Subject</label>
-              <select value={upSubject} onChange={(e) => setUpSubject(e.target.value)} style={inp}>
-                {RESOURCE_SUBJECTS.map((s) => <option key={s} value={s}>{s}</option>)}
-              </select>
-            </div>
-            <div>
-              <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 6, fontSize: 13 }}>Resource Type</label>
-              <select value={upCategory} onChange={(e) => setUpCategory(e.target.value)} style={inp}>
-                {RES_TYPES.map((r) => <option key={r} value={r}>{r}</option>)}
-              </select>
-            </div>
-          </div>
-
-          {/* Drag & drop zone */}
-          <div
-            onClick={() => upInputRef.current?.click()}
-            onDragOver={(e) => { e.preventDefault(); setUpDrag(true); }}
-            onDragLeave={() => setUpDrag(false)}
-            onDrop={onUpDrop}
-            style={{
-              border: `2px dashed ${upDrag ? TEAL : "#cbd5e1"}`,
-              background: upDrag ? "#ecfeff" : "#f8fafc",
-              borderRadius: 12,
-              padding: "28px 20px",
-              textAlign: "center",
-              cursor: "pointer",
-              color: "#475569",
-            }}
-          >
-            <div style={{ fontSize: 32 }}>📂</div>
-            <div style={{ fontWeight: 700, marginTop: 6 }}>
-              {upFiles.length === 0 ? "Drag & drop files here (or click to browse)" : `${upFiles.length} file(s) selected`}
-            </div>
-            <div style={{ fontSize: 13, marginTop: 6 }}>Supports multiple files — PPT, PDF, Word, images, etc.</div>
-          </div>
-          <input
-            ref={upInputRef}
-            type="file"
-            hidden
-            multiple
-            accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.txt,.md,.odt"
-            onChange={(e) => addUpFiles(e.target.files)}
-          />
-
-          {/* File list */}
-          {upFiles.length > 0 && (
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {upFiles.map((f, i) => (
-                <div key={`${f.name}-${i}`} style={{ display: "flex", gap: 10, alignItems: "center", padding: 10, borderRadius: 8, background: "#fff", border: "1px solid #eef2f7", flexWrap: "wrap" }}>
-                  <div style={{ flex: 1, minWidth: 220 }}>
-                    <input
-                      value={f.title}
-                      onChange={(e) => setUpFileTitle(i, e.target.value)}
-                      placeholder="Resource title"
-                      style={{ ...inp, fontSize: 14, padding: "8px 10px" }}
-                    />
-                    <div style={{ fontSize: 12, color: "#64748b", marginTop: 4 }}>{f.name}</div>
-                  </div>
-                  <div style={{ minWidth: 90, textAlign: "right", fontWeight: 700, fontSize: 13 }}>
-                    {f.status === "ready" && <span style={{ color: "#0f172a" }}>Ready</span>}
-                    {f.status === "uploading" && <span style={{ color: TEAL }}>Uploading…</span>}
-                    {f.status === "done" && <span style={{ color: "green" }}>✓ Done</span>}
-                    {f.status === "error" && <span style={{ color: "#dc2626" }} title={f.error || ""}>✗ Error</span>}
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => removeUpFile(i)}
-                    disabled={upBusy}
-                    style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff", color: "#dc2626", cursor: upBusy ? "default" : "pointer" }}
-                  >
-                    Remove
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {/* Action buttons */}
-          <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-            <button
-              type="button"
-              onClick={uploadAllResources}
-              disabled={upBusy || upFiles.length === 0}
-              style={{ padding: "12px 20px", borderRadius: 8, background: (upBusy || upFiles.length === 0) ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: (upBusy || upFiles.length === 0) ? "default" : "pointer", fontWeight: 800 }}
-            >
-              {upBusy ? "Uploading…" : "Upload All"}
-            </button>
-            <button
-              type="button"
-              onClick={clearUpFiles}
-              disabled={upBusy || upFiles.length === 0}
-              style={{ padding: "12px 18px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#334155", cursor: (upBusy || upFiles.length === 0) ? "default" : "pointer", fontWeight: 700 }}
-            >
-              Clear
-            </button>
-          </div>
-        </div>
-        )}
       </div>
     </div>
   );
@@ -2762,9 +2527,11 @@ function App() {
   async function loadResources() {
     const { data, error } = await supabase
       .from("resources").select("*").eq("published", true)
-      .order("topic_order", { ascending: true, nullsFirst: false })
-      .order("title", { ascending: true });
-    if (!error) setResources(data || []);
+      .order("topic_order", { ascending: true }).order("title", { ascending: true });
+    if (!error) {
+      const merged = [...(data || []), ...buildStaticResourceItems()];
+      setResources(merged);
+    }
   }
 
   async function loadApprovedTutors() {
@@ -2897,8 +2664,7 @@ function App() {
 
       {page === "resources" && (
         <main>
-          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")}
-            resources={resources} isAdmin={isAdmin} reload={loadResources} />
+          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
         </main>
       )}
 
