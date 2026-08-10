@@ -2556,7 +2556,7 @@ function App() {
   const goHome = () => { setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
-  const handleResource = (res) => { setPickedRes(res); goResources(); };
+  const handleResource = (res) => { setPickedRes(res); goPapers(); };
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
