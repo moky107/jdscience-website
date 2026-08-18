@@ -22,6 +22,20 @@ npm run dev
 npm run build
 ```
 
+## Visitor accounts
+In the Supabase dashboard:
+
+1. Authentication → Providers → Email: enable email sign-up.
+2. Turn **Confirm email** on so new visitors must verify their inbox before logging in.
+3. Authentication → URL Configuration: add these Redirect URLs:
+   - `https://www.jdscience.co.uk/?verified=1`
+   - `https://jdscience.co.uk/?verified=1`
+   - `https://jdscience-website.vercel.app/?verified=1`
+   - `http://localhost:5173/?verified=1`
+
+## Advice, exam tips and education news
+Run `supabase/migrations/20260818_education_posts.sql` once in the Supabase SQL editor. After that, publish posts from the admin dashboard. They appear in the homepage **Advice** section.
+
 ## Deploy on Vercel
 1. Upload this folder to GitHub.
 2. Import the GitHub repository into Vercel.

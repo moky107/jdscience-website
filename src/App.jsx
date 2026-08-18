@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
+import AuthModal from "./AuthModal";
+import AdviceNewsSection from "./AdviceNewsSection";
+import AdminAdviceEditor from "./AdminAdviceEditor";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -328,6 +331,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       options: SUBJECTS_BY_LEVEL[lvl].map((s) => ({ text: s, action: () => onPick(lvl, s) })),
     })),
     { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
+    { label: "Advice", type: "link", action: () => onScroll("advice") },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book") },
     { label: "Become a Tutor", type: "link", action: onTutor, ref: tutorButtonRef },
   ];
@@ -354,16 +358,25 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
         </button>
       </div>
     ) : (
-      <button type="button" onClick={onLogout}
-        style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
-        Logout
-      </button>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={{ fontSize: 13, color: "#64748b", maxWidth: 140, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</span>
+        <button type="button" onClick={onLogout}
+          style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
+          Logout
+        </button>
+      </div>
     )
   ) : (
-    <button type="button" onClick={onAuth}
-      style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
-      Login
-    </button>
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <button type="button" onClick={() => onAuth("login")}
+        style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
+        Login
+      </button>
+      <button type="button" onClick={() => onAuth("register")}
+        style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 700 }}>
+        Register
+      </button>
+    </div>
   );
 
   return (
@@ -1897,7 +1910,7 @@ function Contact() {
   );
 }
 
-function Footer({ onContact, onTutor }) {
+function Footer({ onContact, onTutor, onAdvice }) {
   return (
     <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "32px 20px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 24 }}>
@@ -1915,6 +1928,7 @@ function Footer({ onContact, onTutor }) {
           <div style={{ fontSize: 14, marginTop: 6 }}>📞 07466 142805</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
             <button type="button" onClick={onContact} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Contact Form</button>
+            {onAdvice && <button type="button" onClick={onAdvice} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Advice &amp; News</button>}
             <button type="button" onClick={onTutor} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Become a Tutor</button>
           </div>
         </div>
@@ -2698,6 +2712,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
             </div>
           )}
         </div>
+        <AdminAdviceEditor password={password} />
       </div>
     </div>
   );
@@ -2712,6 +2727,8 @@ function App() {
   const [session, setSession] = useState(null);
   const [authReady, setAuthReady] = useState(false);
   const [resources, setResources] = useState([]);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authMode, setAuthMode] = useState("login");
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
   const [tutorsLoading, setTutorsLoading] = useState(false);
@@ -2732,6 +2749,11 @@ function App() {
   const leaveAdmin = () => {
     writeAdminRoute(false);
     setAdminRoute(false);
+  };
+
+  const openAuth = (mode = "login") => {
+    setAuthMode(mode === "register" ? "register" : "login");
+    setAuthOpen(true);
   };
 
   useEffect(() => {
@@ -2770,6 +2792,16 @@ function App() {
         setPage("home");
         window.history.replaceState({}, "", window.location.pathname);
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
+      } else if (params.get("verified") === "1") {
+        setBanner({
+          type: "success",
+          text: "Your email is verified. You can now log in.",
+        });
+        params.delete("verified");
+        const query = params.toString();
+        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
+        setAuthMode("login");
+        setAuthOpen(true);
       }
     } catch {
       /* ignore */
@@ -2822,7 +2854,7 @@ function App() {
     document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" });
   };
   const handleScroll = (target) => {
-    const id = target === "contact" ? "contact-anchor" : "book-anchor";
+    const id = target === "contact" ? "contact-anchor" : target === "advice" ? "advice-anchor" : "book-anchor";
     if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
     else document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -2868,7 +2900,7 @@ function App() {
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
-        onAuth={goAdmin} onLogout={logout} onAdminDashboard={goAdmin} />
+        onAuth={openAuth} onLogout={logout} onAdminDashboard={goAdmin} />
 
       {banner && (
         <div
@@ -2903,6 +2935,7 @@ function App() {
           <Hero onScroll={handleScroll} onBrowse={goPapers} />
           <BoardStrip />
           <OffersSection />
+          <AdviceNewsSection />
           <LevelGrid onLevel={handleLevel} />
           <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
           <div id="book-anchor"><Booking /></div>
@@ -2930,9 +2963,10 @@ function App() {
         </main>
       )}
 
+      {authOpen && <AuthModal initialMode={authMode} close={() => setAuthOpen(false)} />}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
-      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} />
+      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} />
     </div>
   );
 }
