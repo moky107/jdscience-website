@@ -13,8 +13,18 @@ function formatPostDate(value) {
   }
 }
 
+function useIsMobile(bp = 768) {
+  const [m, setM] = useState(typeof window !== "undefined" ? window.innerWidth <= bp : false);
+  useEffect(() => {
+    const r = () => setM(window.innerWidth <= bp);
+    window.addEventListener("resize", r);
+    return () => window.removeEventListener("resize", r);
+  }, [bp]);
+  return m;
+}
+
 export default function AdviceNewsSection() {
-  const isMobile = typeof window !== "undefined" ? window.innerWidth <= 768 : false;
+  const isMobile = useIsMobile();
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("all");
@@ -44,7 +54,7 @@ export default function AdviceNewsSection() {
         <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "end", flexWrap: "wrap" }}>
           <div>
             <div style={{ color: TEAL_DARK, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: ".08em" }}>Student support</div>
-            <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 32, margin: "6px 0 8px" }}>Revision advice, exam tips &amp; education news</h2>
+            <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 32, margin: "6px 0 8px", lineHeight: 1.25 }}>Revision advice, exam tips &amp; education news</h2>
             <p style={{ color: "#475569", margin: 0, maxWidth: 640, lineHeight: 1.6 }}>
               Practical guidance for 11+, GCSE, IGCSE, A Level, BTEC and T Level — plus updates worth knowing before exam season.
             </p>
@@ -52,13 +62,13 @@ export default function AdviceNewsSection() {
         </div>
 
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 22 }}>
-          <button type="button" onClick={() => setFilter("all")}
-            style={{ padding: "8px 14px", borderRadius: 999, border: "none", cursor: "pointer", fontWeight: 800, fontSize: 13, background: filter === "all" ? TEAL_DARK : "#fff", color: filter === "all" ? "#fff" : "#334155" }}>
+          <button type="button" className="filter-chip" onClick={() => setFilter("all")}
+            style={{ padding: isMobile ? "12px 16px" : "8px 14px", borderRadius: 999, border: "none", cursor: "pointer", fontWeight: 800, fontSize: isMobile ? 15 : 13, background: filter === "all" ? TEAL_DARK : "#fff", color: filter === "all" ? "#fff" : "#334155" }}>
             All
           </button>
           {ADVICE_CATEGORIES.map((item) => (
-            <button key={item.id} type="button" onClick={() => setFilter(item.id)}
-              style={{ padding: "8px 14px", borderRadius: 999, border: "none", cursor: "pointer", fontWeight: 800, fontSize: 13, background: filter === item.id ? TEAL : "#fff", color: filter === item.id ? "#fff" : "#334155" }}>
+            <button key={item.id} type="button" className="filter-chip" onClick={() => setFilter(item.id)}
+              style={{ padding: isMobile ? "12px 16px" : "8px 14px", borderRadius: 999, border: "none", cursor: "pointer", fontWeight: 800, fontSize: isMobile ? 15 : 13, background: filter === item.id ? TEAL : "#fff", color: filter === item.id ? "#fff" : "#334155" }}>
               {item.label}
             </button>
           ))}
@@ -75,20 +85,20 @@ export default function AdviceNewsSection() {
           </div>
         )}
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 22 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 22 }}>
           {visible.map((post) => {
             const open = openId === post.id;
             return (
-              <article key={post.id} style={{ background: "#fff", borderRadius: 16, padding: 20, boxShadow: "0 8px 24px rgba(15,23,42,.06)", display: "flex", flexDirection: "column", gap: 10 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "start" }}>
+              <article key={post.id} style={{ background: "#fff", borderRadius: 16, padding: isMobile ? 18 : 20, boxShadow: "0 8px 24px rgba(15,23,42,.06)", display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8, alignItems: "start", flexWrap: "wrap" }}>
                   <span style={{ padding: "4px 10px", borderRadius: 999, background: "#ccfbf1", color: TEAL_DARK, fontSize: 12, fontWeight: 800 }}>{adviceCategoryLabel(post.category)}</span>
                   <span style={{ color: "#94a3b8", fontSize: 12, fontWeight: 700 }}>{formatPostDate(post.published_at)}</span>
                 </div>
-                <h3 style={{ margin: 0, color: "#0f172a", fontSize: 18, lineHeight: 1.35 }}>{post.title}</h3>
-                <p style={{ margin: 0, color: "#475569", fontSize: 14, lineHeight: 1.65 }}>{post.summary}</p>
-                {open && <div style={{ color: "#334155", fontSize: 14, lineHeight: 1.75, whiteSpace: "pre-wrap" }}>{post.body}</div>}
+                <h3 style={{ margin: 0, color: "#0f172a", fontSize: isMobile ? 18 : 18, lineHeight: 1.35 }}>{post.title}</h3>
+                <p style={{ margin: 0, color: "#475569", fontSize: 15, lineHeight: 1.65 }}>{post.summary}</p>
+                {open && <div style={{ color: "#334155", fontSize: 15, lineHeight: 1.75, whiteSpace: "pre-wrap" }}>{post.body}</div>}
                 <button type="button" onClick={() => setOpenId(open ? null : post.id)}
-                  style={{ marginTop: "auto", alignSelf: "start", padding: "8px 0", background: "none", border: 0, color: TEAL, cursor: "pointer", fontWeight: 800 }}>
+                  style={{ marginTop: "auto", alignSelf: "start", padding: "10px 0", minHeight: 44, background: "none", border: 0, color: TEAL, cursor: "pointer", fontWeight: 800 }}>
                   {open ? "Show less" : "Read more"}
                 </button>
               </article>

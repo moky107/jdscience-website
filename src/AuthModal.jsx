@@ -102,8 +102,8 @@ export default function AuthModal({ close, initialMode = "login" }) {
   }
 
   return (
-    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000, padding: 16 }}>
-      <form onSubmit={submit} style={{ background: "#fff", padding: 26, borderRadius: 16, width: "min(420px,92vw)", display: "flex", flexDirection: "column", gap: 12, boxShadow: "0 20px 50px rgba(0,0,0,.25)" }}>
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000, padding: 12 }}>
+      <form onSubmit={submit} style={{ background: "#fff", padding: 22, borderRadius: 16, width: "min(420px,100%)", maxHeight: "min(92dvh, 920px)", overflowY: "auto", display: "flex", flexDirection: "column", gap: 12, boxShadow: "0 20px 50px rgba(0,0,0,.25)" }}>
         <div>
           <h2 style={{ margin: 0 }}>{mode === "login" ? "Login" : "Create an account"}</h2>
           <p style={{ margin: "8px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.55 }}>
@@ -119,18 +119,18 @@ export default function AuthModal({ close, initialMode = "login" }) {
         )}
         {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
         {info && <div style={{ color: "#166534", fontSize: 14 }}>{info}</div>}
-        <button type="submit" disabled={busy} style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+        <button type="submit" disabled={busy} style={{ padding: 14, minHeight: 48, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
           {busy ? "Please wait…" : (mode === "login" ? "Login" : "Register")}
         </button>
         {(mode === "register" || /verify your email/i.test(error)) && (
-          <button type="button" onClick={resendVerification} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: "pointer", fontWeight: 700 }}>
+          <button type="button" onClick={resendVerification} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: "pointer", fontWeight: 700, minHeight: 44 }}>
             Resend verification email
           </button>
         )}
-        <button type="button" onClick={() => { setMode(mode === "login" ? "register" : "login"); setError(""); setInfo(""); }} style={{ background: "none", border: 0, color: TEAL, cursor: "pointer", fontWeight: 700 }}>
+        <button type="button" onClick={() => { setMode(mode === "login" ? "register" : "login"); setError(""); setInfo(""); }} style={{ background: "none", border: 0, color: TEAL, cursor: "pointer", fontWeight: 700, minHeight: 44 }}>
           {mode === "login" ? "Create an account" : "Already have an account?"}
         </button>
-        <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Close</button>
+        <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer", minHeight: 44 }}>Close</button>
       </form>
     </div>
   );

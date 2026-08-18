@@ -285,7 +285,7 @@ function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidt
         zIndex: 3000,
         display: "grid",
         placeItems: "center",
-        padding: 16,
+        padding: "max(8px, env(safe-area-inset-top)) 12px max(8px, env(safe-area-inset-bottom))",
         background: entered ? "rgba(2, 6, 23, .56)" : "rgba(2, 6, 23, 0)",
         backdropFilter: prefersReducedMotion ? "none" : "blur(4px)",
         transition: prefersReducedMotion ? "none" : "background .22s ease",
@@ -298,6 +298,7 @@ function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidt
         aria-labelledby={titleId}
         aria-describedby={descriptionId}
         tabIndex={-1}
+        className="modal-panel"
         style={{
           width: `min(${maxWidth}px, 100%)`,
           maxHeight: "min(90vh, 980px)",
@@ -324,6 +325,17 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
   const [menuOpen, setMenuOpen] = useState(false);
   const isMobile = useIsMobile();
 
+  useEffect(() => {
+    if (!isMobile) setMenuOpen(false);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (!isMobile || !menuOpen) return undefined;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = originalOverflow; };
+  }, [isMobile, menuOpen]);
+
   const menu = [
     { label: "Home", type: "link", action: onHome },
     ...LEVELS.map((lvl) => ({
@@ -339,40 +351,40 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
   const submit = (e) => { e.preventDefault(); onSearch(q); setMenuOpen(false); };
 
   const logo = (
-    <div onClick={onHome} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 0 }}>
+    <div onClick={() => { onHome(); setMenuOpen(false); }} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 1, minWidth: 0 }}>
       <div style={{ width: 38, height: 38, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
-      <div style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
+      <div className="site-logo-text" style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
     </div>
   );
 
   const adminBtn = session ? (
     isAdmin ? (
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <button type="button" onClick={onAdminDashboard}
+      <div className="nav-auth" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <button type="button" onClick={() => { onAdminDashboard(); setMenuOpen(false); }}
           style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #10b981", background: "#10b981", color: "#fff", cursor: "pointer", fontWeight: 700 }}>
           Admin ✓
         </button>
-        <button type="button" onClick={onLogout}
+        <button type="button" onClick={() => { onLogout(); setMenuOpen(false); }}
           style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
           Logout
         </button>
       </div>
     ) : (
-      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: 13, color: "#64748b", maxWidth: 140, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</span>
-        <button type="button" onClick={onLogout}
+      <div className="nav-auth" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <span style={{ fontSize: 13, color: "#64748b", maxWidth: isMobile ? "100%" : 140, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{session.user?.email}</span>
+        <button type="button" onClick={() => { onLogout(); setMenuOpen(false); }}
           style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
           Logout
         </button>
       </div>
     )
   ) : (
-    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-      <button type="button" onClick={() => onAuth("login")}
+    <div className="nav-auth" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <button type="button" onClick={() => { onAuth("login"); setMenuOpen(false); }}
         style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", color: "#111", cursor: "pointer" }}>
         Login
       </button>
-      <button type="button" onClick={() => onAuth("register")}
+      <button type="button" onClick={() => { onAuth("register"); setMenuOpen(false); }}
         style={{ padding: "8px 12px", borderRadius: 8, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 700 }}>
         Register
       </button>
@@ -380,8 +392,8 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
   );
 
   return (
-    <header style={{ position: "sticky", top: 0, zIndex: 1000, background: "#fff", boxShadow: "0 1px 6px rgba(0,0,0,.06)" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 16px", gap: 12 }}>
+    <header className="site-header" style={{ position: "sticky", top: 0, zIndex: 1000, background: "#fff", boxShadow: "0 1px 6px rgba(0,0,0,.06)" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "10px 14px" : "10px 16px", gap: 12 }}>
         {logo}
         {!isMobile && (
           <form onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
@@ -392,8 +404,8 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
           </form>
         )}
         {isMobile && (
-          <button onClick={() => setMenuOpen((o) => !o)} aria-label="Menu"
-            style={{ fontSize: 28, background: "none", border: "none", cursor: "pointer", lineHeight: 1, padding: 4 }}>{menuOpen ? "✕" : "☰"}</button>
+          <button type="button" onClick={() => setMenuOpen((o) => !o)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen}
+            style={{ width: 44, height: 44, flexShrink: 0, fontSize: 26, background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: 10, cursor: "pointer", lineHeight: 1 }}>{menuOpen ? "✕" : "☰"}</button>
         )}
       </div>
 
@@ -422,23 +434,29 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       )}
 
       {isMobile && menuOpen && (
-        <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "8px 0", maxHeight: "72vh", overflowY: "auto" }}>
-          {menu.map((it) => (
-            <div key={it.label}>
-              <button ref={it.ref} onClick={() => { if (it.type === "link") { it.action(); setMenuOpen(false); } }}
-                style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "13px 18px", cursor: "pointer", fontWeight: 700, fontSize: 16, color: "#0f172a" }}>{it.label}</button>
-              {it.type === "dropdown" && it.options.map((opt) => (
-                <button key={opt.text} onClick={() => { opt.action(); setMenuOpen(false); }}
-                  style={{ display: "block", width: "100%", textAlign: "left", background: "transparent", border: "none", padding: "9px 34px", cursor: "pointer", color: "#0e7490", fontSize: 14 }}>• {opt.text}</button>
+        <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "4px 0 16px", maxHeight: "min(78vh, calc(100dvh - 68px))", overflowY: "auto" }}>
+          {menu.map((it, i) => (
+            <div key={it.label} style={{ borderBottom: "1px solid rgba(0,150,136,.08)" }}>
+              <button type="button" ref={it.ref} onClick={() => {
+                if (it.type === "link") { it.action(); setMenuOpen(false); }
+                else setOpenIdx(openIdx === i ? null : i);
+              }}
+                style={{ display: "flex", width: "100%", textAlign: "left", alignItems: "center", justifyContent: "space-between", background: openIdx === i && it.type === "dropdown" ? "#d9f6fa" : "transparent", border: "none", padding: "14px 18px", minHeight: 48, cursor: "pointer", fontWeight: 700, fontSize: 16, color: "#0f172a" }}>
+                <span>{it.label}</span>
+                {it.type === "dropdown" && <span aria-hidden="true" style={{ color: TEAL_DARK }}>{openIdx === i ? "▴" : "▾"}</span>}
+              </button>
+              {it.type === "dropdown" && openIdx === i && it.options.map((opt) => (
+                <button type="button" key={opt.text} onClick={() => { opt.action(); setMenuOpen(false); setOpenIdx(null); }}
+                  style={{ display: "block", width: "100%", textAlign: "left", background: "#fff", border: "none", padding: "12px 18px 12px 28px", minHeight: 44, cursor: "pointer", color: "#0e7490", fontSize: 15 }}>{opt.text}</button>
               ))}
             </div>
           ))}
-          <form onSubmit={submit} style={{ display: "flex", gap: 8, padding: "10px 18px" }}>
-            <input placeholder="Search..." value={q} onChange={(e) => setQ(e.target.value)}
-              style={{ flex: 1, minWidth: 0, padding: "10px 12px", borderRadius: 8, border: "1px solid #e6e6e6" }} />
-            <button type="submit" style={{ padding: "10px 14px", borderRadius: 8, background: TEAL, color: "#fff", border: "none" }}>Go</button>
+          <form onSubmit={submit} style={{ display: "flex", gap: 8, padding: "14px 18px 8px" }}>
+            <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
+              style={{ flex: 1, minWidth: 0, padding: "12px 12px", borderRadius: 8, border: "1px solid #e6e6e6", fontSize: 16 }} />
+            <button type="submit" style={{ padding: "12px 16px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", fontWeight: 700 }}>Go</button>
           </form>
-          <div style={{ padding: "0 18px 12px" }}>{adminBtn}</div>
+          <div style={{ padding: "8px 18px 4px" }}>{adminBtn}</div>
         </nav>
       )}
     </header>
@@ -449,31 +467,31 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
 function Hero({ onScroll, onBrowse }) {
   const isMobile = useIsMobile();
   const isTablet = useIsMobile(1024);
-  const heroOffset = isMobile ? -4 : isTablet ? -18 : -36;
+  const heroOffset = isMobile ? 0 : isTablet ? -18 : -36;
   const ctaBaseStyle = {
-    padding: isMobile ? "14px 22px" : "15px 24px",
+    padding: isMobile ? "14px 18px" : "15px 24px",
     borderRadius: 12,
     cursor: "pointer",
     fontWeight: 800,
-    fontSize: isMobile ? 15 : 16,
+    fontSize: isMobile ? 16 : 16,
     boxShadow: "0 10px 24px rgba(15, 23, 42, .16)",
     transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease",
     outlineOffset: 3,
   };
   return (
-    <section style={{ position: "relative", minHeight: isMobile ? 420 : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
+    <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 34%", filter: "brightness(1.12) contrast(1.06) saturate(1.05)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.17) 44%, rgba(0,0,0,.24) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, padding: isMobile ? "34px 18px 40px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
-        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 14 : 15, fontWeight: 700 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
-        <h1 style={{ fontSize: isMobile ? 26 : 44, margin: "0 0 14px", lineHeight: 1.15, fontWeight: 800 }}>
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.12) contrast(1.06) saturate(1.05)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.22) 44%, rgba(0,0,0,.38) 100%)" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
+        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
+        <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
-        <p style={{ fontSize: isMobile ? 15 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
+        <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
           Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
         </p>
-        <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+        <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <button
             onClick={onBrowse}
             style={{ ...ctaBaseStyle, border: "none", background: "#fff", color: TEAL_DARK }}
@@ -527,12 +545,12 @@ function BoardStrip() {
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: isMobile ? "7px 11px" : "8px 13px",
+              padding: isMobile ? "10px 14px" : "8px 13px",
               borderRadius: 999,
               border: "1px solid rgba(0, 150, 136, .18)",
               background: "#ecfeff",
               color: TEAL_DARK,
-              fontSize: 13,
+              fontSize: isMobile ? 14 : 13,
               lineHeight: 1.1,
               whiteSpace: "nowrap",
             }}
@@ -557,7 +575,7 @@ function OffersSection() {
     <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: "0 0 22px" }}>What JD Science Offers</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
           {offers.map((o) => (
             <div key={o.title} style={{ background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
               <h3 style={{ margin: "0 0 8px", color: "#0f172a", fontSize: 18 }}>{o.title}</h3>
@@ -578,10 +596,10 @@ function LevelGrid({ onLevel }) {
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: 0 }}>Choose Your Level</h2>
         <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Pick where you're studying — then choose your subject</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginTop: 26 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginTop: 26 }}>
           {LEVELS.map((l) => (
             <div key={l} onClick={() => onLevel(l)}
-              style={{ background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, color: "#fff", borderRadius: 14, padding: 20, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)" }}>
+              style={{ background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, color: "#fff", borderRadius: 14, padding: isMobile ? 22 : 20, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)", minHeight: isMobile ? 112 : undefined }}>
               <div style={{ fontSize: 20, fontWeight: 800 }}>{l}</div>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,.9)", margin: "8px 0 0" }}>{blurb[l]}</p>
               <div style={{ marginTop: 14, fontWeight: 700, fontSize: 14 }}>Explore →</div>
@@ -609,19 +627,19 @@ function ResourceBrowser({ initialType, onBook }) {
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › Resources › {board} › {level} › {subject} › {type}</div>
+        <div style={{ color: "#64748b", fontSize: isMobile ? 12 : 13, marginBottom: 10, lineHeight: 1.5, overflowWrap: "anywhere" }}>Home › Resources › {board} › {level} › {subject} › {type}</div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
-          <div style={{ flex: 1, minWidth: 180 }}>
+          <div style={{ flex: 1, minWidth: isMobile ? "100%" : 180 }}>
             <div style={{ fontWeight: 800, color: "#0f172a" }}>Resource Browser</div>
             <div style={{ color: "#64748b", fontSize: 14 }}>
               Select your exam board, level, subject and resource type to view available resources.
             </div>
           </div>
-          <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
+          <button onClick={onBook} style={{ padding: "12px 18px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700, width: isMobile ? "100%" : "auto" }}>Book Tutor</button>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 16 }}>
           <div>
             <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
             <select value={board} onChange={(e) => setBoard(e.target.value)} style={inp}>
@@ -652,10 +670,10 @@ function ResourceBrowser({ initialType, onBook }) {
           <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>
             {board} · {level} · {subject} · {type}
           </div>
-          <div style={{ padding: 12, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
+          <div style={{ padding: 12, display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(240px, 1fr))", gap: 10 }}>
             {resources.map((item) => (
-              <a key={item.id} href={item.href}
-                style={{ textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
+              <a key={item.id} href={item.href} className="folder-file"
+                style={{ textAlign: "left", padding: isMobile ? "14px 16px" : "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none" }}>
                 📄 {item.title}
               </a>
             ))}
@@ -707,75 +725,75 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ color: "#64748b", fontSize: 13, marginBottom: 10 }}>Home › {activeRes} › {activeLevel} › {activeSubject}</div>
+        <div style={{ color: "#64748b", fontSize: isMobile ? 12 : 13, marginBottom: 10, lineHeight: 1.5, overflowWrap: "anywhere" }}>Home › {activeRes} › {activeLevel} › {activeSubject}</div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
-          <div style={{ flex: 1, minWidth: 180 }}>
-            <div style={{ fontWeight: 800, color: "#0f172a" }}>Need help with {activeSubject}?</div>
-            <div style={{ color: "#64748b", fontSize: 14 }}>1-to-1 tutoring with an experienced specialist · ✓ Qualified · ⭐ 5.0</div>
+          <div style={{ flex: 1, minWidth: isMobile ? "100%" : 180 }}>
+            <div style={{ fontWeight: 800, color: "#0f172a", fontSize: isMobile ? 17 : 16 }}>Need help with {activeSubject}?</div>
+            <div style={{ color: "#64748b", fontSize: 14, lineHeight: 1.5 }}>1-to-1 tutoring with an experienced specialist · ✓ Qualified · ⭐ 5.0</div>
           </div>
-          <button onClick={onBook} style={{ padding: "10px 18px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700 }}>Book Tutor</button>
+          <button onClick={onBook} style={{ padding: "12px 18px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 700, width: isMobile ? "100%" : "auto" }}>Book Tutor</button>
         </div>
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Level</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
           {LEVELS.map((l) => (
-            <button key={l} onClick={() => setActiveLevel(l)}
-              style={{ padding: "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, fontSize: 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
+            <button key={l} className="filter-chip" onClick={() => setActiveLevel(l)}
+              style={{ padding: isMobile ? "12px 16px" : "6px 12px", borderRadius: 8, border: `1px solid ${activeLevel === l ? TEAL : "#cbd5e1"}`, cursor: "pointer", fontWeight: 600, fontSize: isMobile ? 15 : 13, background: activeLevel === l ? "#ecfeff" : "#fff", color: activeLevel === l ? TEAL_DARK : "#475569" }}>{l}</button>
           ))}
         </div>
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Subject</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
           {subjectsForLevel.map((s) => (
-            <button key={s} onClick={() => setActiveSubject(s)}
-              style={{ padding: "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
+            <button key={s} className="filter-chip" onClick={() => setActiveSubject(s)}
+              style={{ padding: isMobile ? "12px 16px" : "8px 14px", borderRadius: 20, border: "none", cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13, background: activeSubject === s ? TEAL : "#e2e8f0", color: activeSubject === s ? "#fff" : "#334155" }}>{s}</button>
           ))}
         </div>
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Resource Type</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
           {RES_TYPES.map((r) => (
-            <button key={r} onClick={() => setActiveRes(r)}
-              style={{ padding: "8px 14px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeRes === r ? TEAL_DARK : "#e2e8f0", color: activeRes === r ? "#fff" : "#334155" }}>{r}</button>
+            <button key={r} className="filter-chip" onClick={() => setActiveRes(r)}
+              style={{ padding: isMobile ? "12px 16px" : "8px 14px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13, background: activeRes === r ? TEAL_DARK : "#e2e8f0", color: activeRes === r ? "#fff" : "#334155" }}>{r}</button>
           ))}
         </div>
 
-        <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 19 : 24 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
+        <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 20 : 24, lineHeight: 1.3 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
-          <button onClick={() => setActiveBoard(null)}
-            style={{ padding: "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: !activeBoard ? TEAL_DARK : "#e2e8f0", color: !activeBoard ? "#fff" : "#334155" }}>All Boards</button>
+          <button className="filter-chip" onClick={() => setActiveBoard(null)}
+            style={{ padding: isMobile ? "12px 16px" : "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13, background: !activeBoard ? TEAL_DARK : "#e2e8f0", color: !activeBoard ? "#fff" : "#334155" }}>All Boards</button>
           {boardsForLevel.map((b) => (
-            <button key={b} onClick={() => setActiveBoard(b)}
-              style={{ padding: "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: 13, background: activeBoard === b ? TEAL : "#e2e8f0", color: activeBoard === b ? "#fff" : "#334155" }}>{b}</button>
+            <button key={b} className="filter-chip" onClick={() => setActiveBoard(b)}
+              style={{ padding: isMobile ? "12px 16px" : "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13, background: activeBoard === b ? TEAL : "#e2e8f0", color: activeBoard === b ? "#fff" : "#334155" }}>{b}</button>
           ))}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
+        <div className="folder-grid" style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))", gap: isMobile ? 16 : 18 }}>
           {boardsForLevel.filter((b) => !activeBoard || b === activeBoard).map((board) => {
             const items = itemsFor(board);
             if (items.length === 0 && !isAdmin) return null;
             return (
               <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
-                <div style={{ background: TEAL_DARK, color: "#fff", padding: "12px 14px", fontWeight: 800 }}>{board}</div>
-                <div style={{ padding: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ background: TEAL_DARK, color: "#fff", padding: isMobile ? "16px 18px" : "12px 14px", fontWeight: 800, fontSize: isMobile ? 18 : 16 }}>{board}</div>
+                <div style={{ padding: isMobile ? 14 : 12, display: "flex", flexDirection: "column", gap: 8 }}>
                   {items.map((p) => (
                     <div key={p.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
-                      <a href={p.file_url} target="_blank" rel="noreferrer"
-                        style={{ flex: 1, textAlign: "left", padding: "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: 14, color: "#0f172a", textDecoration: "none" }}>
+                      <a href={p.file_url} target="_blank" rel="noreferrer" className="folder-file"
+                        style={{ flex: 1, textAlign: "left", padding: isMobile ? "14px 16px" : "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none" }}>
                         {activeRes === "Videos" ? "▶️" : "📄"} {p.title}
                       </a>
                       {isAdmin && (
                         <button onClick={() => removeItem(p)} title="Delete"
-                          style={{ padding: "0 10px", borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
+                          style={{ padding: "0 12px", minWidth: 44, borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
                       )}
                     </div>
                   ))}
                   {isAdmin && (
                     <button onClick={() => setUploadBoard(board)}
-                      style={{ padding: "9px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 13 }}>+ Add resource</button>
+                      style={{ padding: "12px 12px", minHeight: 44, borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 14 }}>+ Add resource</button>
                   )}
                 </div>
               </div>
@@ -924,9 +942,9 @@ function UploadModal({ level, subject, board, category, close, reload }) {
 
         {mode === "file" && (
           <>
-            <div style={{ display: "flex", gap: 8 }}>
-              <input style={{ ...inp, flex: 1 }} placeholder="Common title (optional - used for single file)" value={title} onChange={(e) => setTitle(e.target.value)} />
-              <div style={{ display: "flex", gap: 8 }}>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <input style={{ ...inp, flex: 1, minWidth: 0 }} placeholder="Common title (optional - used for single file)" value={title} onChange={(e) => setTitle(e.target.value)} />
+              <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flex: 1 }}>
                 <button onClick={() => inputRef.current?.click()} style={{ padding: "10px 12px", borderRadius: 8, border: `1px solid ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700 }}>Browse</button>
                 <button onClick={() => { setFiles([]); setTitle(""); }} style={{ padding: "10px 12px", borderRadius: 8, border: "1px solid #e6e6e6", background: "#fff", cursor: "pointer" }}>Clear</button>
               </div>
@@ -950,7 +968,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
             {files.length > 0 && (
               <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 8 }}>
                 {files.map((f, i) => (
-                  <div key={`${f.name}-${i}`} style={{ display: "flex", gap: 8, alignItems: "center", padding: 8, borderRadius: 8, background: "#fff", border: "1px solid #eef2f7" }}>
+                  <div key={`${f.name}-${i}`} className="stack-on-mobile" style={{ display: "flex", gap: 8, alignItems: "center", padding: 8, borderRadius: 8, background: "#fff", border: "1px solid #eef2f7" }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 700 }}>{f.title}</div>
                       <div style={{ fontSize: 13, color: "#64748b" }}>{f.name}</div>
@@ -1126,14 +1144,14 @@ function Booking() {
       <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
         <div>
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
-          <p style={{ color: "rgba(255,255,255,.9)" }}>Personalised 1-to-1 lessons across science and maths.</p>
-          <ul style={{ lineHeight: 1.9, paddingLeft: 18 }}>
+          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths.</p>
+          <ul style={{ lineHeight: 1.7, paddingLeft: 18, fontSize: isMobile ? 15 : 16 }}>
             <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
             <li>✓ Free 30‑minute trial available for first-time students</li>
             <li>✓ Packages available for discount pricing</li>
           </ul>
         </div>
-        <div style={{ background: "#fff", borderRadius: 14, padding: 22, color: "#0f172a" }}>
+        <div style={{ background: "#fff", borderRadius: 14, padding: isMobile ? 16 : 22, color: "#0f172a" }}>
           {sent ? (
             <div style={{ textAlign: "center", padding: "20px 0" }}>
               <div style={{ fontSize: 40 }}>✅</div>
@@ -1145,7 +1163,7 @@ function Booking() {
               <input required placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} style={inp} />
               <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
               <input placeholder="Phone (WhatsApp ok)" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inp} />
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
                 <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
                   {services.length > 0 ? services.map(s => <option key={s.id} value={s.level}>{s.level}</option>)
                     : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
@@ -1155,21 +1173,39 @@ function Booking() {
                 </select>
               </div>
 
-              <div style={{ display: "flex", gap: 8 }}>
-                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <input type="radio" name="sessionType" checked={form.sessionType === "single"} value="single" onChange={() => set("sessionType", "single")} /> Single
-                </label>
-                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <input type="radio" name="sessionType" checked={form.sessionType === "package"} value="package" onChange={() => set("sessionType", "package")} /> 10-session package
-                </label>
-                <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <input type="radio" name="sessionType" checked={form.sessionType === "trial"} value="trial" onChange={() => set("sessionType", "trial")} /> Free 30-min trial
-                </label>
+              <div className="session-options" style={{ display: "flex", gap: 8 }}>
+                {[
+                  { id: "single", label: "Single session", hint: priceLabel(form.level, "single") },
+                  { id: "package", label: "10-session package", hint: priceLabel(form.level, "package") },
+                  { id: "trial", label: "Free 30-min trial", hint: "Free" },
+                ].map((opt) => {
+                  const active = form.sessionType === opt.id;
+                  return (
+                    <label key={opt.id} style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      flex: 1,
+                      padding: "12px 14px",
+                      borderRadius: 10,
+                      border: `2px solid ${active ? TEAL : "#e2e8f0"}`,
+                      background: active ? "#ecfeff" : "#fff",
+                      cursor: "pointer",
+                      minHeight: 48,
+                    }}>
+                      <input type="radio" name="sessionType" checked={active} value={opt.id} onChange={() => set("sessionType", opt.id)} />
+                      <span>
+                        <span style={{ fontWeight: 800, display: "block", color: "#0f172a" }}>{opt.label}</span>
+                        <span style={{ fontSize: 13, color: "#64748b" }}>{opt.hint}</span>
+                      </span>
+                    </label>
+                  );
+                })}
               </div>
 
               <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
               <textarea placeholder="What would you like help with?" value={form.message} onChange={(e) => set("message", e.target.value)} rows={3} style={inp} />
-              <button type="submit" disabled={loading} style={{ padding: "12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>
+              <button type="submit" disabled={loading} style={{ padding: "14px 12px", minHeight: 48, borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>
                 {loading ? "Processing…" : "Request / Book"}
               </button>
             </form>
@@ -1209,6 +1245,7 @@ function tutorModeLabel(mode) {
 }
 
 function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReducedMotion = false, delayMs = 0 }) {
+  const isMobile = useIsMobile();
   const subjects = listFromTutorField(tutor.subjects_taught, tutor.subject_specialism);
   const levels = listFromTutorField(tutor.levels_taught, tutor.level_taught);
   const profileText = String(tutor.short_professional_biography || tutor.bio || "").trim();
@@ -1223,6 +1260,7 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
   return (
     <article
       key={tutor.id || tutor.public_slug}
+      className="tutor-card"
       tabIndex={0}
       aria-label={`Tutor profile for ${tutor.tutor_name || "approved tutor"}`}
       onKeyDown={(event) => {
@@ -1243,7 +1281,7 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
         display: "flex",
         flexDirection: "column",
         gap: 12,
-        minHeight: 396,
+        minHeight: isMobile ? 0 : 396,
       }}
       onMouseEnter={(event) => {
         event.currentTarget.style.transform = "translateY(-3px)";
@@ -1255,7 +1293,7 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
       }}
     >
       <div style={{ display: "flex", alignItems: "start", gap: 12 }}>
-        <TutorAvatar tutor={tutor} size={92} />
+        <TutorAvatar tutor={tutor} size={isMobile ? 72 : 92} />
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "4px 10px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 11, fontWeight: 800 }}>
             <span aria-hidden="true">✓</span>
@@ -1305,11 +1343,11 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
         </p>
       )}
 
-      <div style={{ marginTop: "auto", display: "flex", gap: 10, flexWrap: "wrap" }}>
-        <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "10px 13px", borderRadius: 10, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>
+      <div className="stack-on-mobile" style={{ marginTop: "auto", display: "flex", gap: 10, flexWrap: "wrap" }}>
+        <button type="button" onClick={() => onViewProfile(tutor.public_slug)} style={{ padding: "12px 13px", borderRadius: 10, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>
           View Profile
         </button>
-        <button type="button" onClick={() => onBook(tutor)} style={{ padding: "10px 13px", borderRadius: 10, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>
+        <button type="button" onClick={() => onBook(tutor)} style={{ padding: "12px 13px", borderRadius: 10, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>
           Book This Tutor
         </button>
       </div>
@@ -1436,7 +1474,7 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
 
   return (
     <ModalShell open={Boolean(slug)} onClose={onClose} titleId="tutor-profile-title" descriptionId="tutor-profile-description" triggerRef={triggerRef} maxWidth={860}>
-      <div style={{ padding: 24 }}>
+      <div style={{ padding: 16 }}>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start" }}>
           <div>
             <div id="tutor-profile-description" style={{ color: "#64748b", fontSize: 14 }}>Approved tutor profile</div>
@@ -1452,9 +1490,9 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
           <div style={{ marginTop: 20 }}>
             <div style={{ display: "flex", gap: 18, alignItems: "start", flexWrap: "wrap" }}>
               <TutorAvatar tutor={tutor} size={112} />
-              <div style={{ flex: 1, minWidth: 220 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: "inline-flex", padding: "6px 12px", borderRadius: 999, background: "#dcfce7", color: "#166534", fontSize: 12, fontWeight: 800 }}>JDScience Approved</div>
-                {hasText(tutor.tutor_name) && <h3 style={{ margin: "12px 0 6px", fontSize: 30, color: "#0f172a" }}>{tutor.tutor_name}</h3>}
+                {hasText(tutor.tutor_name) && <h3 style={{ margin: "12px 0 6px", fontSize: 26, color: "#0f172a", lineHeight: 1.2 }}>{tutor.tutor_name}</h3>}
                 {listFromTutorField(tutor.subjects_taught, tutor.subject_specialism).length > 0 && (
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 4 }}>
                     {listFromTutorField(tutor.subjects_taught, tutor.subject_specialism).map((subject) => (
@@ -1505,7 +1543,7 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
               )}
             </div>
 
-            <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <div style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap" }} className="stack-on-mobile">
               <button type="button" onClick={() => onBook(tutor)} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>Book This Tutor</button>
               <button type="button" onClick={onClose} style={{ padding: "12px 18px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
             </div>
@@ -1870,7 +1908,7 @@ function Contact() {
             <div style={{ fontWeight: 700, marginTop: 6 }}>Phone</div>
             <a href="tel:07466142805" style={{ color: TEAL }}>07466 142805</a>
           </div>
-          <form onSubmit={submit} style={{ position: "relative", gridColumn: isMobile ? "auto" : "1 / -1", background: "#f8fafc", borderRadius: 12, padding: 20, textAlign: "left", boxShadow: "0 4px 14px rgba(0,0,0,.04)" }}>
+          <form onSubmit={submit} style={{ position: "relative", gridColumn: isMobile ? "auto" : "1 / -1", background: "#f8fafc", borderRadius: 12, padding: isMobile ? 16 : 20, textAlign: "left", boxShadow: "0 4px 14px rgba(0,0,0,.04)" }}>
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
               <div>
                 <label style={{ display: "block", fontWeight: 700, fontSize: 14, color: "#0f172a", marginBottom: 6 }}>Name</label>
@@ -1898,7 +1936,7 @@ function Contact() {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginTop: 12 }}>
-              <button type="submit" disabled={sending} style={{ padding: "12px 18px", borderRadius: 8, background: sending ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: sending ? "default" : "pointer", fontWeight: 800 }}>
+              <button type="submit" disabled={sending} style={{ padding: "12px 18px", minHeight: 48, borderRadius: 8, background: sending ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: sending ? "default" : "pointer", fontWeight: 800, width: isMobile ? "100%" : "auto" }}>
                 {sending ? "Sending…" : "Send Message"}
               </button>
               {success && <span style={{ color: "#166534", fontSize: 14 }}>{success}</span>}
@@ -1912,25 +1950,26 @@ function Contact() {
 }
 
 function Footer({ onContact, onTutor, onAdvice }) {
+  const isMobile = useIsMobile();
   return (
-    <footer style={{ background: "#0f172a", color: "#cbd5e1", padding: "32px 20px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px,1fr))", gap: 24 }}>
+    <footer className="site-footer" style={{ background: "#0f172a", color: "#cbd5e1", padding: isMobile ? "28px 16px 32px" : "32px 20px" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(200px,1fr))", gap: isMobile ? 28 : 24 }}>
         <div>
           <div style={{ fontWeight: 800, color: "#fff", fontSize: 18 }}>jdscience.co.uk</div>
-          <p style={{ fontSize: 14, marginTop: 8 }}>Free science &amp; maths resources and expert tutoring for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC.</p>
+          <p style={{ fontSize: 14, marginTop: 8, lineHeight: 1.6 }}>Free science &amp; maths resources and expert tutoring for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC.</p>
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
-          {RES_TYPES.map((r) => <div key={r} style={{ fontSize: 14, marginTop: 6 }}>{r}</div>)}
+          {RES_TYPES.map((r) => <div key={r} style={{ fontSize: 14, marginTop: 8 }}>{r}</div>)}
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Contact</div>
-          <div style={{ fontSize: 14, marginTop: 6 }}>📧 info@jdscience.co.uk</div>
-          <div style={{ fontSize: 14, marginTop: 6 }}>📞 07466 142805</div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
-            <button type="button" onClick={onContact} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Contact Form</button>
-            {onAdvice && <button type="button" onClick={onAdvice} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Advice &amp; News</button>}
-            <button type="button" onClick={onTutor} style={{ padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Become a Tutor</button>
+          <div style={{ fontSize: 14, marginTop: 8 }}><a href="mailto:info@jdscience.co.uk" style={{ color: "#cbd5e1", textDecoration: "none" }}>📧 info@jdscience.co.uk</a></div>
+          <div style={{ fontSize: 14, marginTop: 8 }}><a href="tel:07466142805" style={{ color: "#cbd5e1", textDecoration: "none" }}>📞 07466 142805</a></div>
+          <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
+            <button type="button" onClick={onContact} style={{ padding: "12px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "transparent", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Contact Form</button>
+            {onAdvice && <button type="button" onClick={onAdvice} style={{ padding: "12px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Advice &amp; News</button>}
+            <button type="button" onClick={onTutor} style={{ padding: "12px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.18)", background: "rgba(255,255,255,.06)", color: "#fff", cursor: "pointer", fontWeight: 700 }}>Become a Tutor</button>
           </div>
         </div>
       </div>
@@ -2352,7 +2391,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           <div style={{ width: 36, height: 36, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
           <div style={{ fontWeight: 800 }}>Bookings Dashboard</div>
         </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
           {onClose ? (
             <button onClick={onClose} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
@@ -2389,7 +2428,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           {bookings.length === 0 ? (
             <div style={{ padding: 40, textAlign: "center", color: "#64748b" }}>No bookings yet.</div>
           ) : (
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 1000 }}>
+            <table className="admin-bookings-table" style={{ width: "100%", borderCollapse: "collapse", minWidth: 1000 }}>
   <thead>
     <tr>
       <th style={th}>Date</th>
@@ -2409,13 +2448,13 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   <tbody>
     {bookings.map((b, i) => (
       <tr key={b.id || i}>
-        <td style={td}>{fmtDate(b.created_at)}</td>
+        <td data-label="Date" style={td}>{fmtDate(b.created_at)}</td>
 
-        <td style={{ ...td, fontWeight: 700 }}>
+        <td data-label="Name" style={{ ...td, fontWeight: 700 }}>
           {b.student_name || "-"}
         </td>
 
-        <td style={td}>
+        <td data-label="Email" style={td}>
           {b.student_email ? (
             <a href={`mailto:${b.student_email}`} style={{ color: TEAL }}>
               {b.student_email}
@@ -2425,14 +2464,14 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           )}
         </td>
 
-        <td style={td}>{b.phone || "-"}</td>
-        <td style={td}>{b.level || "-"}</td>
-        <td style={td}>{b.subject || "-"}</td>
-        <td style={td}>{b.session_type || "-"}</td>
-        <td style={td}>{b.payment_status || b.stripe_payment_status || (typeof b.amount === "number" && b.amount > 0 ? "paid" : "free")}</td>
-        <td style={td}>{fmtAmount(b.amount)}</td>
+        <td data-label="Phone" style={td}>{b.phone || "-"}</td>
+        <td data-label="Level" style={td}>{b.level || "-"}</td>
+        <td data-label="Subject" style={td}>{b.subject || "-"}</td>
+        <td data-label="Type" style={td}>{b.session_type || "-"}</td>
+        <td data-label="Payment" style={td}>{b.payment_status || b.stripe_payment_status || (typeof b.amount === "number" && b.amount > 0 ? "paid" : "free")}</td>
+        <td data-label="Amount" style={td}>{fmtAmount(b.amount)}</td>
 
-        <td style={td}>
+        <td data-label="Status" style={td}>
           <span
             style={{
               padding: "3px 10px",
@@ -2465,7 +2504,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           </span>
         </td>
 
-        <td style={td}>
+        <td data-label="Actions" style={td}>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
             <button
               type="button"
@@ -2578,7 +2617,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
                 return (
                   <article key={applicationId} style={{ borderRadius: 16, border: "1px solid #e2e8f0", background: "#fff", padding: 16 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", gap: 14, alignItems: "start", flexWrap: "wrap" }}>
-                      <div style={{ display: "flex", gap: 14, alignItems: "start", flex: 1, minWidth: 240 }}>
+                      <div style={{ display: "flex", gap: 14, alignItems: "start", flex: 1, minWidth: 0 }}>
                         {t.profile_photo_url ? <img src={t.profile_photo_url} alt={`${t.tutor_name || "Tutor"} application`} style={{ width: 74, height: 74, borderRadius: 18, objectFit: "cover", background: "#e2e8f0" }} /> : <div style={{ width: 74, height: 74, borderRadius: 18, background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", display: "grid", placeItems: "center", fontWeight: 800 }}>{avatarInitials(t.tutor_name)}</div>}
                         <div>
                           <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
@@ -2592,7 +2631,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
                           <div style={{ marginTop: 6, color: "#64748b", fontSize: 13 }}>Submitted {fmtDate(t.created_at)}</div>
                         </div>
                       </div>
-                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                      <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                         <button type="button" onClick={() => {
                           if (expanded) {
                             setExpandedTutorId(null);
@@ -2898,7 +2937,7 @@ function App() {
   }
 
   return (
-    <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>
+    <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden", maxWidth: "100%" }}>
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
         onAuth={openAuth} onLogout={logout} onAdminDashboard={goAdmin} />
@@ -2910,13 +2949,14 @@ function App() {
             background: banner.type === "success" ? "#ecfdf5" : "#fff7ed",
             color: banner.type === "success" ? "#065f46" : "#9a3412",
             borderBottom: `1px solid ${banner.type === "success" ? "#a7f3d0" : "#fed7aa"}`,
-            padding: "14px 18px",
+            padding: "14px 16px",
             display: "flex",
             gap: 12,
             alignItems: "center",
             justifyContent: "center",
             textAlign: "center",
             fontWeight: 600,
+            flexWrap: "wrap",
           }}
         >
           <span>{banner.type === "success" ? "✅" : "ℹ️"} {banner.text}</span>
