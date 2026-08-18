@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ADVICE_CATEGORIES, adviceCategoryLabel } from "./adviceConstants";
+import { STATIC_ADVICE_POSTS } from "./staticAdvicePosts";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -23,6 +24,13 @@ function useIsMobile(bp = 768) {
   return m;
 }
 
+function mergeAdvicePosts(apiPosts) {
+  const fromApi = Array.isArray(apiPosts) ? apiPosts : [];
+  const seen = new Set(fromApi.map((post) => String(post.title || "").trim().toLowerCase()));
+  const extras = STATIC_ADVICE_POSTS.filter((post) => !seen.has(String(post.title || "").trim().toLowerCase()));
+  return [...fromApi, ...extras].sort((a, b) => new Date(b.published_at || 0) - new Date(a.published_at || 0));
+}
+
 export default function AdviceNewsSection() {
   const isMobile = useIsMobile();
   const [posts, setPosts] = useState([]);
@@ -36,9 +44,9 @@ export default function AdviceNewsSection() {
       try {
         const resp = await fetch("/api/education-posts");
         const data = await resp.json().catch(() => ({}));
-        if (!cancelled) setPosts(Array.isArray(data.posts) ? data.posts : []);
+        if (!cancelled) setPosts(mergeAdvicePosts(Array.isArray(data.posts) ? data.posts : []));
       } catch {
-        if (!cancelled) setPosts([]);
+        if (!cancelled) setPosts(mergeAdvicePosts([]));
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -56,7 +64,7 @@ export default function AdviceNewsSection() {
             <div style={{ color: TEAL_DARK, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: ".08em" }}>Student support</div>
             <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 32, margin: "6px 0 8px", lineHeight: 1.25 }}>Revision advice, exam tips &amp; education news</h2>
             <p style={{ color: "#475569", margin: 0, maxWidth: 640, lineHeight: 1.6 }}>
-              Practical guidance for 11+, GCSE, IGCSE, A Level, BTEC and T Level — plus updates worth knowing before exam season.
+              Practical guidance for 11+, GCSE, IGCSE, A Level, BTEC and T Level — including what to do after results day.
             </p>
           </div>
         </div>
