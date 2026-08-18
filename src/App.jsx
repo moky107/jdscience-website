@@ -1925,29 +1925,81 @@ function Footer({ onContact, onTutor }) {
 }
 
 /* ------------------------------ AUTH MODAL -------------------------------- */
-function AuthModal({ close }) {
-  const [mode, setMode] = useState("login");
+function AdminLoginForm({ onCancel }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
   async function submit(e) {
     e.preventDefault();
-    const res = mode === "login"
-      ? await supabase.auth.signInWithPassword({ email, password })
-      : await supabase.auth.signUp({ email, password });
-    if (res.error) alert(res.error.message); else close();
+    if (busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      const res = await supabase.auth.signInWithPassword({ email: email.trim(), password });
+      if (res.error) {
+        setError(res.error.message);
+        return;
+      }
+      const signedInEmail = res.data?.session?.user?.email;
+      if (!ADMIN_EMAILS.includes(signedInEmail)) {
+        await supabase.auth.signOut();
+        setError("This account is not authorised for the admin dashboard.");
+      }
+    } catch (err) {
+      setError(err.message || "Login failed.");
+    } finally {
+      setBusy(false);
+    }
   }
+
   return (
-    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000 }}>
-      <form onSubmit={submit} style={{ background: "#fff", padding: 26, borderRadius: 16, width: "min(400px,90vw)", display: "flex", flexDirection: "column", gap: 12 }}>
-        <h2 style={{ margin: 0 }}>{mode === "login" ? "Login" : "Register"}</h2>
-        <input style={inp} placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: 16 }}>
+      <form onSubmit={submit} style={{ background: "#fff", borderRadius: 16, padding: 28, width: "min(400px,92vw)", display: "flex", flexDirection: "column", gap: 14, boxShadow: "0 20px 50px rgba(0,0,0,.25)" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ width: 40, height: 40, borderRadius: 10, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+          <div>
+            <h2 style={{ margin: 0, fontSize: 18 }}>Admin login</h2>
+            <div style={{ color: "#64748b", fontSize: 13 }}>Sign in to open the bookings dashboard</div>
+          </div>
+        </div>
+        <input autoFocus style={inp} type="email" placeholder="Admin email" value={email} onChange={(e) => setEmail(e.target.value)} />
         <input style={inp} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit" style={{ padding: 12, borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>{mode === "login" ? "Login" : "Register"}</button>
-        <button type="button" onClick={() => setMode(mode === "login" ? "register" : "login")} style={{ background: "none", border: 0, color: TEAL, cursor: "pointer", fontWeight: 700 }}>{mode === "login" ? "Create an account" : "Already have an account?"}</button>
-        <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Close</button>
+        {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
+        <button type="submit" disabled={busy} style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+          {busy ? "Signing in…" : "Open dashboard"}
+        </button>
+        {onCancel && (
+          <button type="button" onClick={onCancel} style={{ textAlign: "center", color: TEAL, background: "none", border: 0, cursor: "pointer", fontSize: 14 }}>
+            ← Return to website
+          </button>
+        )}
       </form>
     </div>
   );
+}
+
+function readAdminRoute() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("admin") === "1" || window.location.hash === "#admin";
+  } catch {
+    return false;
+  }
+}
+
+function writeAdminRoute(enabled) {
+  try {
+    const url = new URL(window.location.href);
+    if (enabled) url.searchParams.set("admin", "1");
+    else url.searchParams.delete("admin");
+    if (url.hash === "#admin") url.hash = "";
+    const next = `${url.pathname}${url.search}${url.hash}` || "/";
+    window.history.pushState({}, "", next);
+  } catch {
+    /* ignore */
+  }
 }
 
 /* ------------------------------ ADMIN DASHBOARD --------------------------- */
@@ -2658,35 +2710,44 @@ function App() {
   const [pickedLevel, setPickedLevel] = useState(null);
   const [pickedRes, setPickedRes] = useState(null);
   const [session, setSession] = useState(null);
+  const [authReady, setAuthReady] = useState(false);
   const [resources, setResources] = useState([]);
-  const [authOpen, setAuthOpen] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
   const [tutorsLoading, setTutorsLoading] = useState(false);
   const [tutorsError, setTutorsError] = useState("");
   const [tutorApplicationOpen, setTutorApplicationOpen] = useState(false);
   const [selectedTutorSlug, setSelectedTutorSlug] = useState(null);
-  const [adminDashboardOpen, setAdminDashboardOpen] = useState(false);
+  const [adminRoute, setAdminRoute] = useState(readAdminRoute);
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
-  // Detect the admin dashboard route (?admin=1 or #admin) so no router is needed.
-  const isAdminRoute = (() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      return params.get("admin") === "1" || window.location.hash === "#admin";
-    } catch {
-      return false;
-    }
-  })();
+  const goAdmin = () => {
+    writeAdminRoute(true);
+    setAdminRoute(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const leaveAdmin = () => {
+    writeAdminRoute(false);
+    setAdminRoute(false);
+  };
 
   useEffect(() => {
     loadResources();
     loadApprovedTutors();
-    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    supabase.auth.getSession().then(({ data }) => {
+      setSession(data.session);
+      setAuthReady(true);
+    });
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
-    return () => listener.subscription.unsubscribe();
+    const onPopState = () => setAdminRoute(readAdminRoute());
+    window.addEventListener("popstate", onPopState);
+    return () => {
+      listener.subscription.unsubscribe();
+      window.removeEventListener("popstate", onPopState);
+    };
   }, []);
 
   // Show a confirmation banner after Stripe Checkout redirects back.
@@ -2744,7 +2805,7 @@ function App() {
   const goPapers = () => { setPage("papers"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goResources = () => { setPage("resources"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const goTutors = () => { setPage("tutors"); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const goHome = () => { setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goHome = () => { leaveAdmin(); setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
@@ -2752,12 +2813,6 @@ function App() {
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
   const closeTutorProfile = () => setSelectedTutorSlug(null);
-  const openAdminDashboard = () => {
-    if (!session || !isAdmin) return;
-    setAdminDashboardOpen(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  const closeAdminDashboard = () => setAdminDashboardOpen(false);
   const handleBookTutor = () => {
     if (page !== "home") {
       setPage("home");
@@ -2774,36 +2829,46 @@ function App() {
   const logout = async () => {
     await supabase.auth.signOut();
     setSession(null);
-    setAdminDashboardOpen(false);
+    leaveAdmin();
   };
 
-  // If the route is forced to admin, still require an authenticated admin user.
-  if (isAdminRoute) {
+  if (adminRoute) {
+    if (!authReady) {
+      return (
+        <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#f8fafc", color: "#64748b", fontWeight: 700 }}>
+          Opening admin dashboard…
+        </div>
+      );
+    }
     if (session && isAdmin) {
       return <AdminDashboard onClose={goHome} onSiteLogout={logout} />;
     }
-    return (
-      <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 20, background: "#f8fafc" }}>
-        <div style={{ background: "#fff", borderRadius: 14, border: "1px solid #e2e8f0", padding: 24, width: "min(560px, 96vw)", textAlign: "center" }}>
-          <h2 style={{ marginTop: 0, color: "#0f172a" }}>Admin Access Required</h2>
-          <p style={{ color: "#64748b", lineHeight: 1.65 }}>You must be signed in with an authorised admin account to view this dashboard.</p>
-          <button type="button" onClick={goHome} style={{ marginTop: 6, padding: "10px 14px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
-            Return to Website
-          </button>
+    if (session && !isAdmin) {
+      return (
+        <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", padding: 20, background: "#f8fafc" }}>
+          <div style={{ background: "#fff", borderRadius: 14, border: "1px solid #e2e8f0", padding: 24, width: "min(560px, 96vw)", textAlign: "center" }}>
+            <h2 style={{ marginTop: 0, color: "#0f172a" }}>Admin Access Required</h2>
+            <p style={{ color: "#64748b", lineHeight: 1.65 }}>This account is signed in, but it is not authorised to open the admin dashboard.</p>
+            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap", marginTop: 8 }}>
+              <button type="button" onClick={async () => { await supabase.auth.signOut(); setSession(null); }} style={{ padding: "10px 14px", borderRadius: 10, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>
+                Sign in with admin account
+              </button>
+              <button type="button" onClick={goHome} style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
+                Return to Website
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    );
-  }
-
-  if (adminDashboardOpen && session && isAdmin) {
-    return <AdminDashboard onClose={closeAdminDashboard} onSiteLogout={logout} />;
+      );
+    }
+    return <AdminLoginForm onCancel={goHome} />;
   }
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden" }}>
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
-        onAuth={() => setAuthOpen(true)} onLogout={logout} onAdminDashboard={openAdminDashboard} />
+        onAuth={goAdmin} onLogout={logout} onAdminDashboard={goAdmin} />
 
       {banner && (
         <div
@@ -2865,7 +2930,6 @@ function App() {
         </main>
       )}
 
-      {authOpen && <AuthModal close={() => setAuthOpen(false)} />}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
       <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} />
