@@ -148,7 +148,7 @@ function buildStaticResourceItems() {
     title: resource.title,
     file_name: resource.file_name || resource.title,
     file_url: staticResourceFileUrl(resource),
-    file_type: resource.file_url_override ? "application/pdf" : "application/octet-stream",
+    file_type: (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
     storage_path: null,
     published: true,
     series_label: resource.series_label || null,
