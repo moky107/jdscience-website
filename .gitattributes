@@ -1,6 +1,3 @@
-# Keep promo and other media files as binary so GitHub web edits cannot
-# replace them with a 2-byte text placeholder the way homepage-promo.mp4
-# was corrupted during the rename in 31475c0.
 *.mp4 binary
 *.png binary
 *.jpg binary
