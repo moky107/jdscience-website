@@ -40,7 +40,7 @@ export default async function handler(req, res) {
   }
   body = body || {};
 
-  const { name, email, phone, level, subject, sessionType } = body;
+  const { name, email, phone, level, subject, sessionType, message } = body;
 
   // Basic validation so a malformed request returns a clear 400 instead of a
   // 500 (e.g. calling `.includes` on an undefined level).
@@ -93,6 +93,7 @@ export default async function handler(req, res) {
         level,
         subject,
         session_type: isPackage ? 'package' : 'single',
+        message: String(message || '').slice(0, 450),
       },
     });
 

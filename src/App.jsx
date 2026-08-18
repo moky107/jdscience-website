@@ -1093,6 +1093,7 @@ function Booking() {
         level: form.level,
         subject: form.subject,
         sessionType: form.sessionType === "package" ? "package" : "single",
+        message: form.message,
       };
 
       const resp = await fetch("/api/create-checkout-session", {

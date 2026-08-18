@@ -97,6 +97,7 @@ export default async function handler(req, res) {
           meta: {
             currency: session.currency || 'gbp',
             customer_email: session.customer_email || null,
+            message: meta.message || '',
           },
         };
 
@@ -116,6 +117,7 @@ export default async function handler(req, res) {
               session_type: insertRow.session_type,
               status: insertRow.status,
               amount: insertRow.amount,
+              message: meta.message || '',
             });
           } catch (notifyErr) {
             console.warn('Paid booking notification failed (ignored):', notifyErr?.message || notifyErr);
