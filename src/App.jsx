@@ -3,6 +3,7 @@ import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
+import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -83,6 +84,7 @@ const STATIC_RESOURCE_ITEMS = [
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "OCR", resource_category: "Specifications", title: "OCR GCSE Biology A Specification (J247)", file_url_override: "https://www.ocr.org.uk/Images/234596-specification-accredited-gcse-gateway-science-suite-biology-a-j247.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Eduqas", resource_category: "Specifications", title: "Eduqas GCSE Biology Specification", file_url_override: "https://www.eduqas.co.uk/media/by0bk3na/eduqas-gcse-biology-spec-from-2016.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "WJEC", resource_category: "Specifications", title: "WJEC GCSE Biology Specification", file_url_override: "https://www.wjec.co.uk/media/o1hbpvqf/wjec-gcse-biology-spec-from-2016.pdf" },
+  ...AQA_GCSE_MATHS_RESOURCES,
 ];
 
 function slugify(t) {
@@ -118,6 +120,24 @@ function buildPlaceholderResources({ board, level, subject, type }) {
   }));
 }
 
+function resourceFolderLevel(level) {
+  const key = levelKey(level);
+  if (key === "GCSE/IGCSE") return "gcse";
+  if (key === "A-Level") return "alevel";
+  if (key === "T-Level") return "tlevel";
+  if (key === "11+") return "11plus";
+  return slugify(key);
+}
+
+function staticResourceFileUrl(resource) {
+  if (resource.file_url_override) return resource.file_url_override;
+  const board = slugify(resource.exam_board);
+  const level = resourceFolderLevel(resource.level);
+  const subject = slugify(resource.subject);
+  const category = slugify(resource.resource_category);
+  return `/resources/${board}/${level}/${subject}/${category}/${encodeURIComponent(resource.file_name)}`;
+}
+
 function buildStaticResourceItems() {
   return STATIC_RESOURCE_ITEMS.map((resource, index) => ({
     id: `static-${index}`,
@@ -127,11 +147,11 @@ function buildStaticResourceItems() {
     resource_category: resource.resource_category,
     title: resource.title,
     file_name: resource.file_name || resource.title,
-    // file_url_override used for external spec URLs; otherwise serve from public folder
-    file_url: resource.file_url_override || `/resources/edexcel/gcse/biology/revision-notes/${encodeURIComponent(resource.file_name)}`,
+    file_url: staticResourceFileUrl(resource),
     file_type: resource.file_url_override ? "application/pdf" : "application/octet-stream",
     storage_path: null,
     published: true,
+    series_label: resource.series_label || null,
   }));
 }
 
@@ -775,11 +795,25 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
           {boardsForLevel.filter((b) => !activeBoard || b === activeBoard).map((board) => {
             const items = itemsFor(board);
             if (items.length === 0 && !isAdmin) return null;
+            const grouped = [];
+            const groupMap = new Map();
+            items.forEach((p) => {
+              const key = p.series_label || "";
+              if (!groupMap.has(key)) {
+                const group = { key, items: [] };
+                groupMap.set(key, group);
+                grouped.push(group);
+              }
+              groupMap.get(key).items.push(p);
+            });
             return (
               <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
                 <div style={{ background: TEAL_DARK, color: "#fff", padding: isMobile ? "16px 18px" : "12px 14px", fontWeight: 800, fontSize: isMobile ? 18 : 16 }}>{board}</div>
-                <div style={{ padding: isMobile ? 14 : 12, display: "flex", flexDirection: "column", gap: 8 }}>
-                  {items.map((p) => (
+                <div style={{ padding: isMobile ? 14 : 12, display: "flex", flexDirection: "column", gap: 8, maxHeight: isMobile ? undefined : 640, overflowY: items.length > 12 ? "auto" : undefined }}>
+                  {grouped.map((group) => (
+                    <div key={group.key || "ungrouped"} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      {group.key ? <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, marginTop: 4 }}>{group.key}</div> : null}
+                      {group.items.map((p) => (
                     <div key={p.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
                       <a href={p.file_url} target="_blank" rel="noreferrer" className="folder-file"
                         style={{ flex: 1, textAlign: "left", padding: isMobile ? "14px 16px" : "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none" }}>
@@ -789,6 +823,8 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
                         <button onClick={() => removeItem(p)} title="Delete"
                           style={{ padding: "0 12px", minWidth: 44, borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
                       )}
+                    </div>
+                      ))}
                     </div>
                   ))}
                   {isAdmin && (
