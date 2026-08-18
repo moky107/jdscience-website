@@ -1951,6 +1951,37 @@ function AuthModal({ close }) {
 }
 
 /* ------------------------------ ADMIN DASHBOARD --------------------------- */
+function applicationToEditForm(t) {
+  const subjects = Array.isArray(t.subjects_taught) && t.subjects_taught.length
+    ? t.subjects_taught.map((item) => String(item || "").trim()).filter(Boolean)
+    : (t.subject_specialism ? [t.subject_specialism] : []);
+  const levels = Array.isArray(t.levels_taught) && t.levels_taught.length
+    ? t.levels_taught.map((item) => String(item || "").trim()).filter(Boolean)
+    : String(t.level_taught || "").split(/,|\n/).map((item) => item.trim()).filter(Boolean);
+  const mode = String(t.teaching_mode || "").toLowerCase();
+  return {
+    tutor_name: t.tutor_name || "",
+    email_address: t.email_address || "",
+    telephone_number: t.telephone_number || "",
+    location: t.location || "",
+    subjects_taught: subjects,
+    subjects_other: t.subjects_other || "",
+    levels_taught: levels,
+    levels_other: t.levels_other || "",
+    exam_boards_taught: t.exam_boards_taught || "",
+    highest_relevant_qualification: t.highest_relevant_qualification || t.qualifications || "",
+    teaching_qualifications: t.teaching_qualifications || "",
+    professional_memberships: t.professional_memberships || "",
+    years_experience: t.years_experience || "",
+    current_professional_role: t.current_professional_role || "",
+    short_professional_biography: t.short_professional_biography || t.bio || "",
+    tutoring_approach: t.tutoring_approach || "",
+    teaching_mode: ["online", "face-to-face", "both"].includes(mode) ? mode : "online",
+    availability_summary: t.availability_summary || "",
+    rate_display: t.rate_display || (t.hourly_rate != null ? String(t.hourly_rate) : ""),
+  };
+}
+
 function AdminDashboard({ onClose, onSiteLogout }) {
   const [password, setPassword] = useState(() => {
     try { return sessionStorage.getItem("jd_admin_pw") || ""; } catch { return ""; }
@@ -1964,6 +1995,9 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   const [tutorSavingId, setTutorSavingId] = useState(null);
   const [tutorNotes, setTutorNotes] = useState({});
   const [expandedTutorId, setExpandedTutorId] = useState(null);
+  const [editingTutorId, setEditingTutorId] = useState(null);
+  const [tutorEdits, setTutorEdits] = useState(null);
+  const [tutorSaveMessage, setTutorSaveMessage] = useState("");
 
   async function load(pw) {
     setLoading(true);
@@ -2022,6 +2056,9 @@ function AdminDashboard({ onClose, onSiteLogout }) {
     setBookings([]);
     setTutorApplications([]);
     setPassword("");
+    setEditingTutorId(null);
+    setTutorEdits(null);
+    setTutorSaveMessage("");
   }
 
   async function updateTutorStatus(application, nextStatus) {
@@ -2069,6 +2106,81 @@ function AdminDashboard({ onClose, onSiteLogout }) {
         String(row.id) === applicationId ? { ...row, profile_status: previousStatus } : row
       )));
       setError(err.message || "Failed to update tutor profile status.");
+    } finally {
+      setTutorSavingId(null);
+    }
+  }
+
+  function startEditTutor(application) {
+    if (!application?.id) return;
+    const applicationId = String(application.id);
+    setExpandedTutorId(applicationId);
+    setEditingTutorId(applicationId);
+    setTutorEdits(applicationToEditForm(application));
+    setTutorSaveMessage("");
+    setError("");
+  }
+
+  function cancelEditTutor() {
+    setEditingTutorId(null);
+    setTutorEdits(null);
+    setTutorSaveMessage("");
+  }
+
+  function setTutorEdit(key, value) {
+    setTutorEdits((current) => ({ ...(current || {}), [key]: value }));
+  }
+
+  function toggleTutorEditChoice(key, item) {
+    setTutorEdits((current) => {
+      const list = Array.isArray(current?.[key]) ? current[key] : [];
+      return {
+        ...(current || {}),
+        [key]: list.includes(item) ? list.filter((value) => value !== item) : [...list, item],
+      };
+    });
+  }
+
+  async function saveTutorProfile(application, { publish = false } = {}) {
+    if (!application?.id || !tutorEdits) {
+      setError("Open Edit on this tutor profile before saving.");
+      return;
+    }
+
+    const applicationId = String(application.id);
+    setError("");
+    setTutorSaveMessage("");
+    setTutorSavingId(applicationId);
+
+    try {
+      const resp = await fetch("/api/update-tutor-profile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          password,
+          id: application.id,
+          publish,
+          admin_note: tutorNotes[applicationId] || "",
+          ...tutorEdits,
+        }),
+      });
+      const data = await resp.json().catch(() => ({}));
+      if (!resp.ok) {
+        throw new Error(data?.error || "Failed to update tutor profile.");
+      }
+
+      if (data?.application) {
+        setTutorApplications((rows) => rows.map((row) => (
+          String(row.id) === applicationId ? { ...row, ...data.application } : row
+        )));
+        setTutorNotes((current) => ({ ...current, [applicationId]: data.application.admin_note || tutorNotes[applicationId] || "" }));
+        setTutorEdits(applicationToEditForm(data.application));
+      }
+
+      setTutorSaveMessage(publish ? "Profile saved and published." : "Profile saved.");
+      if (publish) setEditingTutorId(null);
+    } catch (err) {
+      setError(err.message || "Failed to update tutor profile.");
     } finally {
       setTutorSavingId(null);
     }
@@ -2414,7 +2526,15 @@ function AdminDashboard({ onClose, onSiteLogout }) {
                         </div>
                       </div>
                       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                        <button type="button" onClick={() => setExpandedTutorId(expanded ? null : applicationId)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{expanded ? "Hide details" : "Inspect"}</button>
+                        <button type="button" onClick={() => {
+                          if (expanded) {
+                            setExpandedTutorId(null);
+                            if (editingTutorId === applicationId) cancelEditTutor();
+                          } else {
+                            setExpandedTutorId(applicationId);
+                          }
+                        }} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{expanded ? "Hide details" : "Inspect"}</button>
+                        <button type="button" onClick={() => (editingTutorId === applicationId ? cancelEditTutor() : startEditTutor(t))} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #99f6e4", background: editingTutorId === applicationId ? "#ccfbf1" : "#f0fdfa", color: TEAL_DARK, cursor: "pointer", fontWeight: 700 }}>{editingTutorId === applicationId ? "Cancel edit" : "Edit"}</button>
                         <button type="button" onClick={() => updateTutorStatus(t, "approved")} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bbf7d0", background: "#dcfce7", color: "#166534", cursor: "pointer", fontWeight: 700 }}>Approve</button>
                         <button type="button" onClick={() => updateTutorStatus({ ...t, is_published: true }, "approved")} disabled={loading || tutorSavingId === applicationId || !t.id || (t.profile_status === "approved" && t.is_published)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #86efac", background: "#f0fdf4", color: "#166534", cursor: "pointer", fontWeight: 700 }}>Publish</button>
                         <button type="button" onClick={() => updateTutorStatus(t, "suspended")} disabled={loading || tutorSavingId === applicationId || !t.id || !t.is_published} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #bfdbfe", background: "#eff6ff", color: "#1d4ed8", cursor: "pointer", fontWeight: 700 }}>Unpublish</button>
@@ -2425,6 +2545,67 @@ function AdminDashboard({ onClose, onSiteLogout }) {
 
                     {expanded && (
                       <div style={{ marginTop: 16, borderTop: "1px solid #eef2f7", paddingTop: 16, display: "grid", gap: 14 }}>
+                        {editingTutorId === applicationId && tutorEdits ? (
+                          <form onSubmit={(e) => { e.preventDefault(); saveTutorProfile(t, { publish: false }); }} style={{ display: "grid", gap: 14 }}>
+                            <div style={{ fontWeight: 800, color: "#0f172a" }}>Edit public profile</div>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Name</span><input value={tutorEdits.tutor_name} onChange={(e) => setTutorEdit("tutor_name", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Email</span><input type="email" value={tutorEdits.email_address} onChange={(e) => setTutorEdit("email_address", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Phone</span><input value={tutorEdits.telephone_number} onChange={(e) => setTutorEdit("telephone_number", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Location</span><input value={tutorEdits.location} onChange={(e) => setTutorEdit("location", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Hourly rate</span><input value={tutorEdits.rate_display} onChange={(e) => setTutorEdit("rate_display", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Teaching mode</span>
+                                <select value={tutorEdits.teaching_mode} onChange={(e) => setTutorEdit("teaching_mode", e.target.value)} style={inp}>
+                                  <option value="online">Online</option>
+                                  <option value="face-to-face">Face-to-face</option>
+                                  <option value="both">Both</option>
+                                </select>
+                              </label>
+                            </div>
+                            <div>
+                              <div style={{ fontWeight: 700, color: "#334155", marginBottom: 8 }}>Subjects taught</div>
+                              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                {[...new Set([...TUTOR_SUBJECT_OPTIONS, ...(tutorEdits.subjects_taught || [])])].map((item) => (
+                                  <label key={item} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 12px", borderRadius: 999, border: "1px solid #dbe3ef", background: (tutorEdits.subjects_taught || []).includes(item) ? "#ecfeff" : "#fff", cursor: "pointer", fontWeight: 700, fontSize: 14 }}>
+                                    <input type="checkbox" checked={(tutorEdits.subjects_taught || []).includes(item)} onChange={() => toggleTutorEditChoice("subjects_taught", item)} />
+                                    {item}
+                                  </label>
+                                ))}
+                              </div>
+                              {(tutorEdits.subjects_taught || []).includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other subject" value={tutorEdits.subjects_other} onChange={(e) => setTutorEdit("subjects_other", e.target.value)} style={inp} /></div>}
+                            </div>
+                            <div>
+                              <div style={{ fontWeight: 700, color: "#334155", marginBottom: 8 }}>Levels taught</div>
+                              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                                {[...new Set([...TUTOR_LEVEL_OPTIONS, ...(tutorEdits.levels_taught || [])])].map((item) => (
+                                  <label key={item} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 12px", borderRadius: 999, border: "1px solid #dbe3ef", background: (tutorEdits.levels_taught || []).includes(item) ? "#ecfeff" : "#fff", cursor: "pointer", fontWeight: 700, fontSize: 14 }}>
+                                    <input type="checkbox" checked={(tutorEdits.levels_taught || []).includes(item)} onChange={() => toggleTutorEditChoice("levels_taught", item)} />
+                                    {item}
+                                  </label>
+                                ))}
+                              </div>
+                              {(tutorEdits.levels_taught || []).includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other level" value={tutorEdits.levels_other} onChange={(e) => setTutorEdit("levels_other", e.target.value)} style={inp} /></div>}
+                            </div>
+                            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Exam boards</span><input value={tutorEdits.exam_boards_taught} onChange={(e) => setTutorEdit("exam_boards_taught", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Years of experience</span><input value={tutorEdits.years_experience} onChange={(e) => setTutorEdit("years_experience", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Current role</span><input value={tutorEdits.current_professional_role} onChange={(e) => setTutorEdit("current_professional_role", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Availability</span><input value={tutorEdits.availability_summary} onChange={(e) => setTutorEdit("availability_summary", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Highest qualification</span><input value={tutorEdits.highest_relevant_qualification} onChange={(e) => setTutorEdit("highest_relevant_qualification", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6 }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Teaching qualifications</span><input value={tutorEdits.teaching_qualifications} onChange={(e) => setTutorEdit("teaching_qualifications", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6, gridColumn: "1 / -1" }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Professional memberships</span><input value={tutorEdits.professional_memberships} onChange={(e) => setTutorEdit("professional_memberships", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6, gridColumn: "1 / -1" }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Biography</span><textarea rows={4} value={tutorEdits.short_professional_biography} onChange={(e) => setTutorEdit("short_professional_biography", e.target.value)} style={inp} /></label>
+                              <label style={{ display: "grid", gap: 6, gridColumn: "1 / -1" }}><span style={{ fontWeight: 700, color: "#334155", fontSize: 13 }}>Tutoring approach</span><textarea rows={4} value={tutorEdits.tutoring_approach} onChange={(e) => setTutorEdit("tutoring_approach", e.target.value)} style={inp} /></label>
+                            </div>
+                            {tutorSaveMessage && <div style={{ color: "#166534", fontWeight: 700 }}>{tutorSaveMessage}</div>}
+                            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                              <button type="submit" disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "10px 14px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 800 }}>{tutorSavingId === applicationId ? "Saving…" : "Save changes"}</button>
+                              <button type="button" onClick={() => saveTutorProfile(t, { publish: true })} disabled={loading || tutorSavingId === applicationId || !t.id} style={{ padding: "10px 14px", borderRadius: 8, border: "none", background: TEAL, color: "#fff", cursor: "pointer", fontWeight: 800 }}>{tutorSavingId === applicationId ? "Publishing…" : "Save & publish"}</button>
+                              <button type="button" onClick={cancelEditTutor} style={{ padding: "10px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>Cancel</button>
+                            </div>
+                          </form>
+                        ) : (
+                          <>
                         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
                           <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Email:</b><div style={{ marginTop: 8 }}><a href={`mailto:${t.email_address || ""}`} style={{ color: TEAL }}>{t.email_address || "Not supplied"}</a></div></div>
                           <div style={{ background: "#f8fafc", borderRadius: 12, padding: 14 }}><b>Phone:</b><div style={{ marginTop: 8, color: "#475569" }}>{t.telephone_number || "Not supplied"}</div></div>
@@ -2446,6 +2627,8 @@ function AdminDashboard({ onClose, onSiteLogout }) {
                           {t.cv_url && <a href={t.cv_url} target="_blank" rel="noreferrer" style={{ padding: "9px 12px", borderRadius: 10, background: "#ecfeff", color: TEAL_DARK, textDecoration: "none", fontWeight: 700 }}>View CV</a>}
                           {t.qualification_evidence_url && <a href={t.qualification_evidence_url} target="_blank" rel="noreferrer" style={{ padding: "9px 12px", borderRadius: 10, background: "#ecfeff", color: TEAL_DARK, textDecoration: "none", fontWeight: 700 }}>View Qualification Evidence</a>}
                         </div>
+                          </>
+                        )}
 
                         <div>
                           <label style={{ display: "block", fontWeight: 700, color: "#0f172a", marginBottom: 8 }}>Internal administrative note</label>

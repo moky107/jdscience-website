@@ -112,6 +112,104 @@ export function toRateFields(rateDisplay) {
   };
 }
 
+export function normalizeTutorProfileFields(body) {
+  const tutor_name = safeTrim(body.tutor_name, 120);
+  const email_address = safeTrim(body.email_address, 160).toLowerCase();
+  const telephone_number = safeTrim(body.telephone_number, 40);
+  const location = safeTrim(body.location, 120);
+  const subjects_taught = normalizeList(body.subjects_taught);
+  const subjects_other = safeTrim(body.subjects_other, 120);
+  const levels_taught = normalizeList(body.levels_taught);
+  const levels_other = safeTrim(body.levels_other, 120);
+  const exam_boards_taught = safeTrim(body.exam_boards_taught, 240);
+  const highest_relevant_qualification = safeTrim(body.highest_relevant_qualification, 240);
+  const teaching_qualifications = safeTrim(body.teaching_qualifications, 240);
+  const professional_memberships = safeTrim(body.professional_memberships, 240);
+  const years_experience = safeTrim(body.years_experience, 80);
+  const current_professional_role = safeTrim(body.current_professional_role, 240);
+  const short_professional_biography = safeTrim(body.short_professional_biography, 2500);
+  const tutoring_approach = safeTrim(body.tutoring_approach, 2500);
+  const teaching_mode = safeTrim(body.teaching_mode, 40).toLowerCase();
+  const availability_summary = safeTrim(body.availability_summary, 240);
+  const rate_display = safeTrim(body.rate_display, 120);
+  const admin_note = body.admin_note === undefined ? undefined : (safeTrim(body.admin_note, 2000) || null);
+
+  if (
+    !tutor_name ||
+    !email_address ||
+    !telephone_number ||
+    !location ||
+    subjects_taught.length === 0 ||
+    levels_taught.length === 0 ||
+    !exam_boards_taught ||
+    !highest_relevant_qualification ||
+    !years_experience ||
+    !current_professional_role ||
+    !short_professional_biography ||
+    !tutoring_approach ||
+    !teaching_mode ||
+    !availability_summary ||
+    !rate_display
+  ) {
+    return { ok: false, error: 'Missing required tutor profile fields.' };
+  }
+
+  if (subjects_taught.includes('Other') && !subjects_other) {
+    return { ok: false, error: 'Please specify the other subject taught.' };
+  }
+
+  if (levels_taught.includes('Other') && !levels_other) {
+    return { ok: false, error: 'Please specify the other level taught.' };
+  }
+
+  if (!isValidEmail(email_address)) {
+    return { ok: false, error: 'Please provide a valid email address.' };
+  }
+
+  if (!isValidPhone(telephone_number)) {
+    return { ok: false, error: 'Please provide a valid telephone number.' };
+  }
+
+  if (!TUTOR_ALLOWED_MODES.has(teaching_mode)) {
+    return { ok: false, error: 'Invalid teaching mode. Allowed: online, face-to-face, both.' };
+  }
+
+  const rateInfo = toRateFields(rate_display);
+  const fields = {
+    tutor_name,
+    email_address,
+    telephone_number,
+    location,
+    subjects_taught,
+    subjects_other,
+    levels_taught,
+    levels_other,
+    exam_boards_taught,
+    highest_relevant_qualification,
+    teaching_qualifications,
+    professional_memberships,
+    years_experience,
+    current_professional_role,
+    short_professional_biography,
+    tutoring_approach,
+    teaching_mode,
+    availability_summary,
+    rate_display: rateInfo.rateDisplay,
+    hourly_rate: rateInfo.contactForQuote ? null : rateInfo.hourlyRate,
+    contact_for_quote: rateInfo.contactForQuote,
+    subject_specialism: pickPrimaryLabel(subjects_taught),
+    level_taught: pickPrimaryLabel(levels_taught, ''),
+    qualifications: highest_relevant_qualification,
+    bio: short_professional_biography,
+  };
+
+  if (admin_note !== undefined) {
+    fields.admin_note = admin_note;
+  }
+
+  return { ok: true, fields };
+}
+
 function getFileExtension(path) {
   const parts = String(path || '').toLowerCase().split('.');
   return parts.length > 1 ? parts.pop() : '';
