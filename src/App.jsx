@@ -84,11 +84,65 @@ const STATIC_RESOURCE_ITEMS = [
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "OCR", resource_category: "Specifications", title: "OCR GCSE Biology A Specification (J247)", file_url_override: "https://www.ocr.org.uk/Images/234596-specification-accredited-gcse-gateway-science-suite-biology-a-j247.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Eduqas", resource_category: "Specifications", title: "Eduqas GCSE Biology Specification", file_url_override: "https://www.eduqas.co.uk/media/by0bk3na/eduqas-gcse-biology-spec-from-2016.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "WJEC", resource_category: "Specifications", title: "WJEC GCSE Biology Specification", file_url_override: "https://www.wjec.co.uk/media/o1hbpvqf/wjec-gcse-biology-spec-from-2016.pdf" },
+  // GCSE Chemistry — Videos
+  {
+    level: "GCSE/IGCSE",
+    subject: "Chemistry",
+    exam_board: "Edexcel",
+    resource_category: "Videos",
+    title: "Topic 1 Key Concepts In Chemistry",
+    embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e",
+    all_boards: true,
+  },
   ...AQA_GCSE_MATHS_RESOURCES,
 ];
 
 function slugify(t) {
   return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function videoEmbedSrc(url) {
+  const raw = String(url || "").trim();
+  if (!raw) return null;
+  try {
+    const parsed = new URL(raw);
+    const host = parsed.hostname.replace(/^www\./, "");
+    if (host === "share.synthesia.io") {
+      const match = parsed.pathname.match(/\/(?:embeds\/)?videos\/([0-9a-f-]+)/i);
+      if (match) return `https://share.synthesia.io/embeds/videos/${match[1]}`;
+    }
+    if (host === "youtube.com" || host === "youtube-nocookie.com") {
+      const id = parsed.searchParams.get("v");
+      if (id) return `https://www.youtube-nocookie.com/embed/${id}`;
+      const embed = parsed.pathname.match(/\/embed\/([^/?]+)/);
+      if (embed) return `https://www.youtube-nocookie.com/embed/${embed[1]}`;
+    }
+    if (host === "youtu.be") {
+      const id = parsed.pathname.split("/").filter(Boolean)[0];
+      if (id) return `https://www.youtube-nocookie.com/embed/${id}`;
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function ResourceVideoPlayer({ title, src }) {
+  return (
+    <div style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)", padding: 16 }}>
+      <h3 style={{ margin: "0 0 12px", fontSize: 18, color: "#0f172a", lineHeight: 1.35 }}>{title}</h3>
+      <div className="resource-video-embed" style={{ position: "relative", overflow: "hidden", aspectRatio: "1920 / 1080", borderRadius: 10, background: "#000" }}>
+        <iframe
+          src={src}
+          loading="lazy"
+          title={title}
+          allowFullScreen
+          allow="encrypted-media; fullscreen; microphone; screen-wake-lock"
+          style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none", padding: 0, margin: 0, overflow: "hidden", maxWidth: "none" }}
+        />
+      </div>
+    </div>
+  );
 }
 /* tolerant level matcher for older stored rows */
 function levelKey(l) {
@@ -147,11 +201,14 @@ function buildStaticResourceItems() {
     resource_category: resource.resource_category,
     title: resource.title,
     file_name: resource.file_name || resource.title,
-    file_url: staticResourceFileUrl(resource),
-    file_type: (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
+    file_url: resource.embed_url || staticResourceFileUrl(resource),
+    file_type: resource.embed_url
+      ? "video-embed"
+      : (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
     storage_path: null,
     published: true,
     series_label: resource.series_label || null,
+    all_boards: Boolean(resource.all_boards),
   }));
 }
 
@@ -727,12 +784,30 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
     if (!list.includes(activeSubject)) setActiveSubject(list[0]);
   }, [activeLevel]); // eslint-disable-line
 
+  const isVideos = slugify(activeRes) === "videos";
+  const videoItems = [];
+  if (isVideos) {
+    const seen = new Set();
+    resources.forEach((r) => {
+      if (levelKey(r.level) !== activeLevel) return;
+      if (slugify(r.subject) !== slugify(activeSubject)) return;
+      if (slugify(r.resource_category) !== "videos") return;
+      if (activeBoard && !r.all_boards && slugify(r.exam_board) !== slugify(activeBoard)) return;
+      const key = r.file_url || r.id;
+      if (seen.has(key)) return;
+      seen.add(key);
+      videoItems.push(r);
+    });
+  }
+  const shownVideoIds = new Set(videoItems.map((r) => r.id));
+
   const itemsFor = (board) =>
     resources.filter((r) =>
       levelKey(r.level) === activeLevel &&
       slugify(r.subject) === slugify(activeSubject) &&
       slugify(r.exam_board) === slugify(board) &&
-      slugify(r.resource_category) === slugify(activeRes)
+      slugify(r.resource_category) === slugify(activeRes) &&
+      !shownVideoIds.has(r.id)
     );
 
   async function removeItem(item) {
@@ -791,6 +866,24 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
           ))}
         </div>
 
+        {isVideos && videoItems.length > 0 && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 18, marginBottom: 22 }}>
+            {videoItems.map((video) => {
+              const embedSrc = videoEmbedSrc(video.file_url);
+              if (embedSrc) {
+                return <ResourceVideoPlayer key={video.id} title={video.title} src={embedSrc} />;
+              }
+              return (
+                <a key={video.id} href={video.file_url} target="_blank" rel="noreferrer" className="folder-file"
+                  style={{ display: "block", textAlign: "left", padding: isMobile ? "14px 16px" : "12px 14px", borderRadius: 12, border: "1px solid #e2e8f0", background: "#fff", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+                  ▶️ {video.title}
+                </a>
+              );
+            })}
+          </div>
+        )}
+
+        {(isAdmin || boardsForLevel.some((board) => (!activeBoard || board === activeBoard) && itemsFor(board).length > 0)) && (
         <div className="folder-grid" style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(280px, 1fr))", gap: isMobile ? 16 : 18 }}>
           {boardsForLevel.filter((b) => !activeBoard || b === activeBoard).map((board) => {
             const items = itemsFor(board);
@@ -836,6 +929,7 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
             );
           })}
         </div>
+        )}
       </div>
 
       {uploadBoard && (
@@ -2885,13 +2979,15 @@ function App() {
   }, []);
 
   async function loadResources() {
+    const staticItems = buildStaticResourceItems();
     const { data, error } = await supabase
       .from("resources").select("*").eq("published", true)
       .order("topic_order", { ascending: true }).order("title", { ascending: true });
-    if (!error) {
-      const merged = [...(data || []), ...buildStaticResourceItems()];
-      setResources(merged);
+    if (error) {
+      setResources(staticItems);
+      return;
     }
+    setResources([...(data || []), ...staticItems]);
   }
 
   async function loadApprovedTutors() {

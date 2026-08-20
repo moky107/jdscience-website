@@ -30,6 +30,10 @@ img, video, iframe, canvas, svg {
   max-width: 100%;
 }
 
+.resource-video-embed iframe {
+  max-width: none;
+}
+
 button, a, input, select, textarea {
   -webkit-tap-highlight-color: rgba(0, 150, 136, 0.18);
 }
