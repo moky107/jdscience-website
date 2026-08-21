@@ -5,6 +5,7 @@ import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
+import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -98,6 +99,7 @@ const STATIC_RESOURCE_ITEMS = [
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...AQA_GCSE_MATHS_RESOURCES,
   ...NCFE_TLEVEL_RESOURCES,
+  ...PEARSON_BTEC_RESOURCES,
 ];
 
 function slugify(t) {
