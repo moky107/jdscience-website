@@ -4,6 +4,19 @@ import AuthModal from "./AuthModal";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
+import {
+  slugify,
+  levelKey,
+  FOLDER_FILE_TYPE,
+  TLEVEL_FOLDER_SUGGESTIONS,
+  isFolderResource,
+  folderMembershipId,
+  encodeFolderLabel,
+  listFolders,
+  countFolderContents,
+  folderBreadcrumb,
+  seriesGroupKey,
+} from "./resourceFolders";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -97,10 +110,6 @@ const STATIC_RESOURCE_ITEMS = [
   ...AQA_GCSE_MATHS_RESOURCES,
 ];
 
-function slugify(t) {
-  return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
 function videoEmbedSrc(url) {
   const raw = String(url || "").trim();
   if (!raw) return null;
@@ -143,16 +152,6 @@ function ResourceVideoPlayer({ title, src }) {
       </div>
     </div>
   );
-}
-/* tolerant level matcher for older stored rows */
-function levelKey(l) {
-  const s = slugify(l);
-  if (s.includes("11")) return "11+";
-  if (s.includes("gcse") || s.includes("igcse")) return "GCSE/IGCSE";
-  if (s.includes("a-level") || s === "alevel") return "A-Level";
-  if (s.includes("t-level") || s === "tlevel") return "T-Level";
-  if (s.includes("btec")) return "BTEC";
-  return l;
 }
 
 function useIsMobile(bp = 768) {
@@ -773,22 +772,46 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
   const [activeRes, setActiveRes] = useState(resType || "Past Questions");
   const [activeBoard, setActiveBoard] = useState(null);
   const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
+  const [activeFolderId, setActiveFolderId] = useState(null);
+  const [folderModalOpen, setFolderModalOpen] = useState(false);
+  const [newFolderName, setNewFolderName] = useState("");
+  const [folderBusy, setFolderBusy] = useState(false);
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
   useEffect(() => { setActiveBoard(null); }, [activeRes, activeLevel, activeSubject]);
+  useEffect(() => { setActiveFolderId(null); }, [activeLevel, activeSubject]);
 
   useEffect(() => {
     const list = SUBJECTS_BY_LEVEL[activeLevel] || [];
     if (!list.includes(activeSubject)) setActiveSubject(list[0]);
   }, [activeLevel]); // eslint-disable-line
 
+  const pageFolders = listFolders({
+    resources,
+    level: activeLevel,
+    subject: activeSubject,
+    parentId: activeFolderId,
+  });
+  const folderTrail = folderBreadcrumb(resources, activeFolderId);
+  const activeFolder = folderTrail[folderTrail.length - 1] || null;
+  const suggestionNames = levelKey(activeLevel) === "T-Level" && slugify(activeSubject) === "science" && !activeFolderId
+    ? TLEVEL_FOLDER_SUGGESTIONS
+    : [];
+  const unusedSuggestions = suggestionNames.filter((name) =>
+    !pageFolders.some((folder) => slugify(folder.title) === slugify(name))
+  );
+
+  const inCurrentFolder = (r) => String(folderMembershipId(r) || "") === String(activeFolderId || "");
+
   const isVideos = slugify(activeRes) === "videos";
   const videoItems = [];
   if (isVideos) {
     const seen = new Set();
     resources.forEach((r) => {
+      if (isFolderResource(r)) return;
+      if (!inCurrentFolder(r)) return;
       if (levelKey(r.level) !== activeLevel) return;
       if (slugify(r.subject) !== slugify(activeSubject)) return;
       if (slugify(r.resource_category) !== "videos") return;
@@ -803,6 +826,8 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
 
   const itemsFor = (board) =>
     resources.filter((r) =>
+      !isFolderResource(r) &&
+      inCurrentFolder(r) &&
       levelKey(r.level) === activeLevel &&
       slugify(r.subject) === slugify(activeSubject) &&
       slugify(r.exam_board) === slugify(board) &&
@@ -817,10 +842,89 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
     if (error) alert(error.message); else reload();
   }
 
+  async function saveFolder(name) {
+    const trimmed = String(name || "").trim();
+    if (!trimmed) { alert("Please enter a folder name."); return false; }
+    if (pageFolders.some((folder) => slugify(folder.title) === slugify(trimmed))) {
+      alert(`A folder named "${trimmed}" already exists here.`);
+      return false;
+    }
+    setFolderBusy(true);
+    const payload = {
+      level: activeLevel,
+      subject: activeSubject,
+      exam_board: "All",
+      resource_category: "*",
+      title: trimmed,
+      file_name: slugify(trimmed) || "folder",
+      file_url: "#folder",
+      file_type: FOLDER_FILE_TYPE,
+      storage_path: null,
+      published: true,
+      series_label: encodeFolderLabel(activeFolderId),
+    };
+    const attempts = [
+      payload,
+      { ...payload, exam_board: boardsForLevel[0] || "All", resource_category: activeRes },
+      { ...payload, exam_board: boardsForLevel[0] || "All", resource_category: activeRes, file_type: "application/x-folder" },
+    ];
+    try {
+      let error = null;
+      for (const attempt of attempts) {
+        const result = await supabase.from("resources").insert(attempt);
+        error = result.error;
+        if (!error) break;
+      }
+      if (error) {
+        alert(error.message);
+        return false;
+      }
+      setNewFolderName("");
+      setFolderModalOpen(false);
+      reload();
+      return true;
+    } finally {
+      setFolderBusy(false);
+    }
+  }
+
+  async function renameFolder(folder) {
+    const next = window.prompt("Rename folder", folder.title || "");
+    if (next == null) return;
+    const trimmed = next.trim();
+    if (!trimmed || slugify(trimmed) === slugify(folder.title)) return;
+    const { error } = await supabase.from("resources").update({
+      title: trimmed,
+      file_name: slugify(trimmed) || folder.file_name,
+    }).eq("id", folder.id);
+    if (error) alert(error.message); else reload();
+  }
+
+  async function removeFolder(folder) {
+    const count = countFolderContents(resources, folder.id);
+    const extra = count > 0 ? ` ${count} item(s) inside will move up one level.` : "";
+    if (!window.confirm(`Delete folder “${folder.title}”?${extra}`)) return;
+    const parentLabel = encodeFolderLabel(folderMembershipId(folder));
+    const children = resources.filter((resource) => String(folderMembershipId(resource) || "") === String(folder.id));
+    for (const child of children) {
+      const { error } = await supabase.from("resources").update({ series_label: parentLabel }).eq("id", child.id);
+      if (error) { alert(error.message); return; }
+    }
+    const { error } = await supabase.from("resources").delete().eq("id", folder.id);
+    if (error) { alert(error.message); return; }
+    if (String(activeFolderId) === String(folder.id)) setActiveFolderId(folderMembershipId(folder));
+    reload();
+  }
+
   return (
     <section style={{ padding: isMobile ? "20px 14px" : "28px 20px", background: "#f8fafc", minHeight: "60vh" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ color: "#64748b", fontSize: isMobile ? 12 : 13, marginBottom: 10, lineHeight: 1.5, overflowWrap: "anywhere" }}>Home › {activeRes} › {activeLevel} › {activeSubject}</div>
+        <div style={{ color: "#64748b", fontSize: isMobile ? 12 : 13, marginBottom: 10, lineHeight: 1.5, overflowWrap: "anywhere" }}>
+          Home › {activeRes} › {activeLevel} › {activeSubject}
+          {folderTrail.map((folder) => (
+            <span key={folder.id}> › {folder.title}</span>
+          ))}
+        </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", borderRadius: 12, padding: 16, boxShadow: "0 4px 14px rgba(0,0,0,.06)", marginBottom: 22, flexWrap: "wrap" }}>
           <div style={{ flex: 1, minWidth: isMobile ? "100%" : 180 }}>
@@ -854,7 +958,70 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
           ))}
         </div>
 
-        <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 20 : 24, lineHeight: 1.3 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
+        <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 20 : 24, lineHeight: 1.3 }}>
+          {activeFolder ? `${activeFolder.title} — ${activeLevel} ${activeSubject}` : `${activeLevel} ${activeSubject} — ${activeRes} by ${activeLevel === "11+" ? "School Type" : "Exam Board"}`}
+        </h2>
+
+        {activeFolder && (
+          <button type="button" onClick={() => setActiveFolderId(folderMembershipId(activeFolder))}
+            style={{ marginBottom: 16, padding: isMobile ? "12px 16px" : "8px 14px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13 }}>
+            ← Back{folderTrail.length > 1 ? ` to ${folderTrail[folderTrail.length - 2].title}` : ""}
+          </button>
+        )}
+
+        {(isAdmin || pageFolders.length > 0) && (
+          <div style={{ marginBottom: 22 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", marginBottom: 8 }}>
+              <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase" }}>Folders</div>
+              {isAdmin && (
+                <button type="button" onClick={() => { setNewFolderName(""); setFolderModalOpen(true); }}
+                  style={{ padding: isMobile ? "10px 14px" : "6px 12px", borderRadius: 8, border: `1px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 14 : 13 }}>
+                  + New folder
+                </button>
+              )}
+            </div>
+            {isAdmin && unusedSuggestions.length > 0 && (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+                {unusedSuggestions.map((name) => (
+                  <button key={name} type="button" disabled={folderBusy} onClick={() => saveFolder(name)}
+                    className="filter-chip"
+                    style={{ padding: isMobile ? "10px 14px" : "6px 12px", borderRadius: 999, border: "1px solid #cbd5e1", background: "#fff", color: "#334155", cursor: folderBusy ? "default" : "pointer", fontWeight: 700, fontSize: isMobile ? 14 : 12 }}>
+                    + {name}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="resource-folder-grid" style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr 1fr" : "repeat(auto-fill, minmax(160px, 1fr))", gap: 12 }}>
+              {pageFolders.map((folder) => {
+                const count = countFolderContents(resources, folder.id);
+                return (
+                  <div key={folder.id} className="resource-folder-card" style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)", display: "flex", flexDirection: "column" }}>
+                    <button type="button" onClick={() => setActiveFolderId(folder.id)}
+                      style={{ flex: 1, textAlign: "left", padding: isMobile ? 16 : 14, border: 0, background: "transparent", cursor: "pointer", minHeight: isMobile ? 88 : 84 }}>
+                      <div style={{ fontSize: 28, lineHeight: 1 }}>📁</div>
+                      <div style={{ marginTop: 8, fontWeight: 800, color: "#0f172a", fontSize: isMobile ? 15 : 14 }}>{folder.title}</div>
+                      <div style={{ marginTop: 4, color: "#64748b", fontSize: 12 }}>{count === 0 ? "Empty" : `${count} item${count === 1 ? "" : "s"}`}</div>
+                    </button>
+                    {isAdmin && (
+                      <div style={{ display: "flex", borderTop: "1px solid #e2e8f0" }}>
+                        <button type="button" onClick={() => renameFolder(folder)}
+                          style={{ flex: 1, padding: "8px 10px", border: 0, background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 700, fontSize: 12 }}>Rename</button>
+                        <button type="button" onClick={() => removeFolder(folder)}
+                          style={{ flex: 1, padding: "8px 10px", border: 0, borderLeft: "1px solid #e2e8f0", background: "#fff", color: "#dc2626", cursor: "pointer", fontWeight: 700, fontSize: 12 }}>Delete</button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+              {isAdmin && pageFolders.length === 0 && unusedSuggestions.length === 0 && (
+                <button type="button" onClick={() => { setNewFolderName(""); setFolderModalOpen(true); }}
+                  style={{ minHeight: 84, borderRadius: 12, border: `2px dashed ${TEAL}`, background: "#fff", color: TEAL, cursor: "pointer", fontWeight: 700, fontSize: 14 }}>
+                  + Create a folder
+                </button>
+              )}
+            </div>
+          </div>
+        )}
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
@@ -891,7 +1058,7 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
             const grouped = [];
             const groupMap = new Map();
             items.forEach((p) => {
-              const key = p.series_label || "";
+              const key = seriesGroupKey(p);
               if (!groupMap.has(key)) {
                 const group = { key, items: [] };
                 groupMap.set(key, group);
@@ -930,20 +1097,67 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
           })}
         </div>
         )}
+
+        {!isAdmin && pageFolders.length === 0 && videoItems.length === 0 && !boardsForLevel.some((board) => (!activeBoard || board === activeBoard) && itemsFor(board).length > 0) && (
+          <p style={{ color: "#64748b", margin: 0, fontSize: 14 }}>
+            {activeFolder ? "This folder is empty." : "No resources have been added here yet."}
+          </p>
+        )}
       </div>
 
       {uploadBoard && (
         <UploadModal
           level={activeLevel} subject={activeSubject} board={uploadBoard} category={activeRes}
+          folderId={activeFolderId} folderName={activeFolder?.title}
           close={() => setUploadBoard(null)} reload={reload}
         />
+      )}
+      {folderModalOpen && (
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.55)", display: "grid", placeItems: "center", zIndex: 2000, padding: 16 }}>
+          <form
+            onSubmit={(e) => { e.preventDefault(); saveFolder(newFolderName); }}
+            className="modal-panel"
+            style={{ background: "#fff", padding: 24, borderRadius: 16, width: "min(440px,98vw)", display: "flex", flexDirection: "column", gap: 14 }}
+          >
+            <div>
+              <h2 style={{ margin: 0 }}>New folder</h2>
+              <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 13 }}>
+                {activeLevel} · {activeSubject}{activeFolder ? ` · ${activeFolder.title}` : ""}
+              </p>
+            </div>
+            <input
+              autoFocus
+              style={inp}
+              placeholder={levelKey(activeLevel) === "T-Level" && slugify(activeSubject) === "science" ? "e.g. Core units, Physics, ESP" : "Folder name"}
+              value={newFolderName}
+              onChange={(e) => setNewFolderName(e.target.value)}
+            />
+            {unusedSuggestions.length > 0 && (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {unusedSuggestions.map((name) => (
+                  <button key={name} type="button" onClick={() => setNewFolderName(name)}
+                    style={{ padding: "6px 10px", borderRadius: 999, border: "1px solid #cbd5e1", background: slugify(newFolderName) === slugify(name) ? "#ecfeff" : "#fff", color: "#334155", cursor: "pointer", fontWeight: 700, fontSize: 12 }}>
+                    {name}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <button type="submit" disabled={folderBusy}
+                style={{ padding: 12, borderRadius: 8, background: folderBusy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: folderBusy ? "default" : "pointer", fontWeight: 800 }}>
+                {folderBusy ? "Creating…" : "Create folder"}
+              </button>
+              <button type="button" onClick={() => setFolderModalOpen(false)} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>
+            </div>
+          </form>
+        </div>
       )}
     </section>
   );
 }
 
 /* ------------------------------ UPLOAD MODAL (multi-file) ------------------------------ */
-function UploadModal({ level, subject, board, category, close, reload }) {
+function UploadModal({ level, subject, board, category, folderId, folderName, close, reload }) {
   const [mode, setMode] = useState("file"); // "file" | "link"
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
@@ -998,6 +1212,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
         level, subject, exam_board: board, resource_category: category,
         title: fileObj.title || fileObj.name, file_name: fileObj.name,
         file_url: publicUrl, file_type: f.type || fileObj.name.split(".").pop(), storage_path, published: true,
+        ...(folderId ? { series_label: encodeFolderLabel(folderId) } : {}),
       });
       if (error) throw error;
 
@@ -1032,6 +1247,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
         const { error } = await supabase.from("resources").insert({
           level, subject, exam_board: board, resource_category: category,
           title: title.trim(), file_name: title.trim(), file_url: link.trim(), file_type: "link", storage_path: null, published: true,
+          ...(folderId ? { series_label: encodeFolderLabel(folderId) } : {}),
         });
         if (error) alert(error.message); else { reload(); close(); }
       } finally { setBusy(false); }
@@ -1065,7 +1281,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
       <div style={{ background: "#fff", padding: 24, borderRadius: 16, width: "min(640px,98vw)", maxHeight: "92vh", overflowY: "auto", display: "flex", flexDirection: "column", gap: 14 }}>
         <div>
           <h2 style={{ margin: 0 }}>Add Resource</h2>
-          <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 13 }}>{level} · {subject} · {board} · {category}</p>
+          <p style={{ margin: "4px 0 0", color: "#64748b", fontSize: 13 }}>{level} · {subject} · {board} · {category}{folderName ? ` · 📁 ${folderName}` : ""}</p>
         </div>
 
         <div style={{ display: "flex", gap: 8 }}>{tab("file", "⬆️ Upload File(s)")} {tab("link", "🔗 Paste Link")}</div>

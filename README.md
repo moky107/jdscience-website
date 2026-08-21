@@ -36,6 +36,9 @@ In the Supabase dashboard:
 ## Advice, exam tips and education news
 Run `supabase/migrations/20260818_education_posts.sql` once in the Supabase SQL editor. After that, publish posts from the admin dashboard. They appear in the homepage **Advice** section.
 
+## Resource folders
+On any resources page (for example T-Level → Science), a signed-in admin can create folders such as Core units, Physics, Chemistry, Biology or ESP. Open a folder to add nested folders and resources. Visitors see the same folders and can browse into them.
+
 ## Deploy on Vercel
 1. Upload this folder to GitHub.
 2. Import the GitHub repository into Vercel.
