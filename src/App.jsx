@@ -4,6 +4,7 @@ import AuthModal from "./AuthModal";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
+import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -23,7 +24,7 @@ const SUBJECTS_BY_LEVEL = {
   "11+": ["English", "Maths", "Verbal Reasoning", "Non-Verbal Reasoning"],
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics", "Maths"],
   "A-Level": ["Biology", "Chemistry", "Physics", "Maths"],
-  "T-Level": ["Science", "Health", "Laboratory Sciences", "Healthcare Science"],
+  "T-Level": ["Science", "Laboratory Sciences", "Food Sciences", "Health", "Healthcare Science"],
   "BTEC": ["Applied Science", "Health and Social Care", "Engineering", "Business", "Computing"],
 };
 
@@ -94,7 +95,9 @@ const STATIC_RESOURCE_ITEMS = [
     embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e",
     all_boards: true,
   },
+  { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...AQA_GCSE_MATHS_RESOURCES,
+  ...NCFE_TLEVEL_RESOURCES,
 ];
 
 function slugify(t) {
