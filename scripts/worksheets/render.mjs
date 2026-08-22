@@ -48,20 +48,55 @@ function renderAnswer(question, index) {
   </article>`;
 }
 
-function pageShell({ title, offering, topicTitle, kind, questions, extraNote }) {
+function pageShell({ title, offering, topicTitle, kind, questions, extraNote, canonicalPath }) {
   const marks = totalMarks(questions);
   const isAnswers = kind === "answers";
   const watermark = isAnswers ? "JD SCIENCE  ·  ANSWERS" : "JD SCIENCE";
   const banner = isAnswers
     ? "Separate mark scheme — do not issue with the student worksheet"
     : "Original exam-style worksheet — not an official exam paper";
+  const description = isAnswers
+    ? `Indicative answers and marking points for the JD Science ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicTitle}. Original UK practice material, not an official exam paper.`
+    : `Free original ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicTitle} from JD Science. ${questions.length} exam-style questions for GCSE, A-Level, T-Level and BTEC students in the UK.`;
+  const canonical = canonicalPath ? `https://www.jdscience.co.uk${canonicalPath}` : "https://www.jdscience.co.uk/worksheets/";
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: title,
+    description,
+    url: canonical,
+    learningResourceType: isAnswers ? "Answer key" : "Worksheet",
+    educationalLevel: offering.level,
+    about: `${offering.subject} — ${topicTitle}`,
+    inLanguage: "en-GB",
+    isAccessibleForFree: true,
+    provider: {
+      "@type": "EducationalOrganization",
+      name: "JD Science",
+      url: "https://www.jdscience.co.uk",
+    },
+  };
 
   return `<!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${escapeHtml(title)}</title>
+  <meta name="description" content="${escapeHtml(description)}" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="${escapeHtml(canonical)}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="JD Science" />
+  <meta property="og:title" content="${escapeHtml(title)}" />
+  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:url" content="${escapeHtml(canonical)}" />
+  <meta property="og:image" content="https://www.jdscience.co.uk/og-image.png" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${escapeHtml(title)}" />
+  <meta name="twitter:description" content="${escapeHtml(description)}" />
+  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   <style>
     :root { --teal: #009688; --teal-dark: #004d40; }
     @page { size: A4; margin: 12mm; }
@@ -113,6 +148,7 @@ function pageShell({ title, offering, topicTitle, kind, questions, extraNote }) 
     }
     .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
     .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    .web a { color: inherit; text-decoration: none; }
     h1 { font-size: 20px; margin: 8px 0 4px; }
     .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
     .meta { color: #334155; font-size: 13px; line-height: 1.45; }
@@ -165,7 +201,7 @@ function pageShell({ title, offering, topicTitle, kind, questions, extraNote }) 
         <div class="brand">
           <div>
             <div class="logo">JD SCIENCE</div>
-            <div class="web">www.jdscience.co.uk</div>
+            <div class="web"><a href="https://www.jdscience.co.uk">www.jdscience.co.uk</a> · <a href="https://www.jdscience.co.uk/worksheets/">Worksheets</a></div>
           </div>
           <div class="meta" style="text-align:right">
             ${escapeHtml(offering.specName)} (${escapeHtml(offering.spec)})<br />
@@ -195,24 +231,26 @@ function pageShell({ title, offering, topicTitle, kind, questions, extraNote }) 
 </html>`;
 }
 
-export function renderWorksheet({ offering, topicTitle, questions }) {
+export function renderWorksheet({ offering, topicTitle, questions, canonicalPath }) {
   return pageShell({
     title: `JD Science | ${offering.board} ${offering.subject} | ${topicTitle}`,
     offering,
     topicTitle,
     kind: "questions",
     questions,
+    canonicalPath,
     extraNote: "Answer all questions. Show working. Answers are in a separate file on the Worksheets page — do not look at them until you have finished.",
   });
 }
 
-export function renderAnswers({ offering, topicTitle, questions }) {
+export function renderAnswers({ offering, topicTitle, questions, canonicalPath }) {
   return pageShell({
     title: `JD Science answers | ${offering.board} ${offering.subject} | ${topicTitle}`,
     offering,
     topicTitle,
     kind: "answers",
     questions,
+    canonicalPath,
     extraNote: "Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.",
   });
 }

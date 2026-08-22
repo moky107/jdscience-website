@@ -1,0 +1,17 @@
+# JD Science
+
+> UK science and maths tutoring, official past-paper links, and original JD Science topic worksheets.
+
+JD Science helps GCSE, IGCSE, A-Level, T-Level and BTEC students with Biology, Chemistry, Physics and Maths. The site publishes free original worksheets and links to official exam-board papers. Tutoring can be booked online.
+
+## Site
+- Home: https://www.jdscience.co.uk/
+- Past papers and resources: https://www.jdscience.co.uk/papers
+- Free worksheets: https://www.jdscience.co.uk/worksheets/
+- Find a tutor: https://www.jdscience.co.uk/tutors
+- Contact: info@jdscience.co.uk
+- Phone: 07466 142805
+
+## Notes
+- Worksheets are original JD Science practice, not official exam papers.
+- Official papers are linked from exam-board public libraries.

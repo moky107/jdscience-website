@@ -1,2 +1,22 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*?admin=1
+Disallow: /*&admin=1
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://www.jdscience.co.uk/sitemap.xml

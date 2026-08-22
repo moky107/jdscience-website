@@ -38,8 +38,8 @@ for (const offering of OFFERINGS) {
       const fileBase = slugify(topicId);
       const qRel = `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}.html`;
       const aRel = `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}-answers.html`;
-      fs.writeFileSync(path.join(root, "public", qRel.replace(/^\//, "")), renderWorksheet({ offering, topicTitle, questions }));
-      fs.writeFileSync(path.join(root, "public", aRel.replace(/^\//, "")), renderAnswers({ offering, topicTitle, questions }));
+      fs.writeFileSync(path.join(root, "public", qRel.replace(/^\//, "")), renderWorksheet({ offering, topicTitle, questions, canonicalPath: qRel }));
+      fs.writeFileSync(path.join(root, "public", aRel.replace(/^\//, "")), renderAnswers({ offering, topicTitle, questions, canonicalPath: aRel }));
       catalog.push({
         level: offering.level,
         subject: offering.subject,

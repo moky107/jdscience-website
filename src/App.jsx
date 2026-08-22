@@ -12,6 +12,7 @@ import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsRes
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
+import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -427,24 +428,24 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
   }, [isMobile, menuOpen]);
 
   const menu = [
-    { label: "Home", type: "link", action: onHome },
+    { label: "Home", type: "link", action: onHome, href: "/" },
     ...LEVELS.map((lvl) => ({
       label: lvl, type: "dropdown",
       options: SUBJECTS_BY_LEVEL[lvl].map((s) => ({ text: s, action: () => onPick(lvl, s) })),
     })),
     { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
-    { label: "Advice", type: "link", action: () => onScroll("advice") },
-    { label: "Find a Tutor", type: "link", action: () => onScroll("book") },
+    { label: "Advice", type: "link", action: () => onScroll("advice"), href: "/#advice-anchor" },
+    { label: "Find a Tutor", type: "link", action: () => onScroll("book"), href: "/#book-anchor" },
     { label: "Become a Tutor", type: "link", action: onTutor, ref: tutorButtonRef },
   ];
 
   const submit = (e) => { e.preventDefault(); onSearch(q); setMenuOpen(false); };
 
   const logo = (
-    <div onClick={() => { onHome(); setMenuOpen(false); }} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 1, minWidth: 0 }}>
+    <a href="/" onClick={(e) => { e.preventDefault(); onHome(); setMenuOpen(false); }} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 1, minWidth: 0, textDecoration: "none" }}>
       <div style={{ width: 38, height: 38, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
       <div className="site-logo-text" style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
-    </div>
+    </a>
   );
 
   const adminBtn = session ? (
@@ -486,8 +487,8 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "10px 14px" : "10px 16px", gap: 12 }}>
         {logo}
         {!isMobile && (
-          <form onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
+          <form role="search" onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <input name="q" aria-label="Search subjects or topics" placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
               style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 190 }} />
             <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer" }}>Search</button>
             {adminBtn}
@@ -504,10 +505,17 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
           {menu.map((it, i) => (
             <div key={it.label} style={{ position: "relative" }}
               onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
-              <button ref={it.ref} onClick={() => it.type === "link" && it.action()}
-                style={{ background: openIdx === i && it.type === "dropdown" ? "#d9f6fa" : "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap" }}>
-                {it.label}{it.type === "dropdown" ? " ▾" : ""}
-              </button>
+              {it.href ? (
+                <a ref={it.ref} href={it.href} onClick={(e) => { e.preventDefault(); it.action(); }}
+                  style={{ background: "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap", textDecoration: "none", display: "inline-block" }}>
+                  {it.label}
+                </a>
+              ) : (
+                <button ref={it.ref} onClick={() => it.type === "link" && it.action()}
+                  style={{ background: openIdx === i && it.type === "dropdown" ? "#d9f6fa" : "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap" }}>
+                  {it.label}{it.type === "dropdown" ? " ▾" : ""}
+                </button>
+              )}
               {it.type === "dropdown" && openIdx === i && (
                 <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 200, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.14)", borderRadius: "0 0 8px 8px", overflow: "hidden", zIndex: 10 }}>
                   {it.options.map((opt) => (
@@ -582,9 +590,10 @@ function Hero({ onScroll, onBrowse }) {
           Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
         </p>
         <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-          <button
-            onClick={onBrowse}
-            style={{ ...ctaBaseStyle, border: "none", background: "#fff", color: TEAL_DARK }}
+          <a
+            href="/papers"
+            onClick={(e) => { e.preventDefault(); onBrowse(); }}
+            style={{ ...ctaBaseStyle, border: "none", background: "#fff", color: TEAL_DARK, textDecoration: "none" }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-1px)";
               e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .2)";
@@ -597,10 +606,11 @@ function Hero({ onScroll, onBrowse }) {
             }}
           >
             Browse Resources
-          </button>
-          <button
-            onClick={() => onScroll("book")}
-            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff" }}
+          </a>
+          <a
+            href="/#book-anchor"
+            onClick={(e) => { e.preventDefault(); onScroll("book"); }}
+            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff", textDecoration: "none" }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-1px)";
               e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .22)";
@@ -615,7 +625,7 @@ function Hero({ onScroll, onBrowse }) {
             }}
           >
             Book a Tutor
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -2092,18 +2102,24 @@ function Contact() {
   );
 }
 
-function Footer({ onContact, onTutor, onAdvice }) {
+function Footer({ onContact, onTutor, onAdvice, onPapers, onTutors, onHome }) {
   const isMobile = useIsMobile();
+  const footerLink = { fontSize: 14, marginTop: 8, color: "#cbd5e1", textDecoration: "none", display: "block" };
   return (
     <footer className="site-footer" style={{ background: "#0f172a", color: "#cbd5e1", padding: isMobile ? "28px 16px 32px" : "32px 20px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(200px,1fr))", gap: isMobile ? 28 : 24 }}>
         <div>
-          <div style={{ fontWeight: 800, color: "#fff", fontSize: 18 }}>jdscience.co.uk</div>
+          <a href="/" onClick={(e) => { e.preventDefault(); onHome?.(); }} style={{ fontWeight: 800, color: "#fff", fontSize: 18, textDecoration: "none" }}>jdscience.co.uk</a>
           <p style={{ fontSize: 14, marginTop: 8, lineHeight: 1.6 }}>Free science &amp; maths resources and expert tutoring for 11+, GCSE/IGCSE, A-Level, T-Level and BTEC.</p>
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
-          {RES_TYPES.map((r) => <div key={r} style={{ fontSize: 14, marginTop: 8 }}>{r}</div>)}
+          <a href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>Past papers</a>
+          <a href="/worksheets/" style={footerLink}>Topic worksheets</a>
+          <a href="/tutors" onClick={(e) => { e.preventDefault(); onTutors?.(); }} style={footerLink}>Find a tutor</a>
+          {RES_TYPES.map((r) => (
+            <a key={r} href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>{r}</a>
+          ))}
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Contact</div>
@@ -2903,7 +2919,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
 
 /* ---------------------------------- APP ----------------------------------- */
 function App() {
-  const [page, setPage] = useState("home");
+  const [page, setPage] = useState(() => (typeof window === "undefined" ? "home" : pageFromPathname(window.location.pathname)));
   const [pickedSubject, setPickedSubject] = useState(null);
   const [pickedLevel, setPickedLevel] = useState(null);
   const [pickedRes, setPickedRes] = useState(null);
@@ -2922,6 +2938,10 @@ function App() {
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
+
+  useEffect(() => {
+    applyDocumentMeta(page, { noIndex: adminRoute });
+  }, [page, adminRoute]);
 
   const goAdmin = () => {
     writeAdminRoute(true);
@@ -2947,7 +2967,10 @@ function App() {
       setAuthReady(true);
     });
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
-    const onPopState = () => setAdminRoute(readAdminRoute());
+    const onPopState = () => {
+      setAdminRoute(readAdminRoute());
+      setPage(pageFromPathname(window.location.pathname));
+    };
     window.addEventListener("popstate", onPopState);
     return () => {
       listener.subscription.unsubscribe();
@@ -2965,7 +2988,7 @@ function App() {
           text: "Payment successful — thank you! Your booking is confirmed. We'll email you shortly to arrange the session.",
         });
         setPage("home");
-        window.history.replaceState({}, "", window.location.pathname);
+        window.history.replaceState({}, "", "/");
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
       } else if (params.get("canceled") === "true") {
         setBanner({
@@ -2973,7 +2996,7 @@ function App() {
           text: "Payment was cancelled. No charge was made — you can try booking again whenever you're ready.",
         });
         setPage("home");
-        window.history.replaceState({}, "", window.location.pathname);
+        window.history.replaceState({}, "", "/");
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
       } else if (params.get("verified") === "1") {
         setBanner({
@@ -3019,10 +3042,20 @@ function App() {
     }
   }
 
-  const goPapers = () => { setPage("papers"); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const goResources = () => { setPage("resources"); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const goTutors = () => { setPage("tutors"); window.scrollTo({ top: 0, behavior: "smooth" }); };
-  const goHome = () => { leaveAdmin(); setPage("home"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const navigate = (nextPage, { replace = false } = {}) => {
+    setPage(nextPage);
+    const nextPath = pathForPage(nextPage);
+    if (typeof window !== "undefined" && window.location.pathname !== nextPath) {
+      const nextUrl = `${nextPath}${window.location.search}${window.location.hash}`;
+      if (replace) window.history.replaceState({ page: nextPage }, "", nextUrl);
+      else window.history.pushState({ page: nextPage }, "", nextUrl);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const goPapers = () => navigate("papers");
+  const goResources = () => navigate("resources");
+  const goTutors = () => navigate("tutors");
+  const goHome = () => { leaveAdmin(); navigate("home"); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
@@ -3032,7 +3065,7 @@ function App() {
   const closeTutorProfile = () => setSelectedTutorSlug(null);
   const handleBookTutor = () => {
     if (page !== "home") {
-      setPage("home");
+      navigate("home");
       setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 120);
       return;
     }
@@ -3040,7 +3073,7 @@ function App() {
   };
   const handleScroll = (target) => {
     const id = target === "contact" ? "contact-anchor" : target === "advice" ? "advice-anchor" : "book-anchor";
-    if (page !== "home") { setPage("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
+    if (page !== "home") { navigate("home"); setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }), 120); }
     else document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
   const logout = async () => {
@@ -3152,7 +3185,7 @@ function App() {
       {authOpen && <AuthModal initialMode={authMode} close={() => setAuthOpen(false)} />}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
-      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} />
+      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onTutors={goTutors} onHome={goHome} />
     </div>
   );
 }
