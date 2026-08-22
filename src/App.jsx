@@ -571,9 +571,9 @@ function Hero({ onScroll, onBrowse }) {
   return (
     <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.12) contrast(1.06) saturate(1.05)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.16) 0%, rgba(0,0,0,.22) 44%, rgba(0,0,0,.38) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.28) contrast(1.02) saturate(1.08)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(0,0,0,.06) 52%, rgba(15,23,42,.18) 100%)" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 12px rgba(15,23,42,.42)" }}>
         <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
@@ -1361,7 +1361,7 @@ function Booking() {
 
 function TutorAvatar({ tutor, size = 72 }) {
   if (tutor.profile_photo_url) {
-    return <img src={tutor.profile_photo_url} alt={`${tutor.tutor_name} profile`} style={{ width: size, height: size, borderRadius: 20, objectFit: "cover", background: "#e2e8f0", boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }} />;
+    return <img src={tutor.profile_photo_url} alt={`${tutor.tutor_name} profile`} style={{ width: size, height: size, borderRadius: 20, objectFit: "cover", background: "#e2e8f0", boxShadow: "0 12px 30px rgba(15, 23, 42, .16)", filter: "brightness(1.12) contrast(1.04) saturate(1.05)" }} />;
   }
   return <div aria-hidden="true" style={{ width: size, height: size, borderRadius: 20, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }}>{avatarInitials(tutor.tutor_name)}</div>;
 }
@@ -1965,7 +1965,7 @@ function VideoSection() {
             muted
             playsInline
             preload="metadata"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", background: "#000" }}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", background: "#111827", filter: "brightness(1.22) contrast(1.04) saturate(1.06)" }}
           >
             Your browser does not support the video tag.
           </video>
