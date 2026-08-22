@@ -9,6 +9,7 @@ import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
 import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources";
 import { OCR_SCIENCE_MATHS_RESOURCES } from "./ocrScienceMathsResources";
 import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsResources";
+import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 /* ============================================================
@@ -102,6 +103,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...EDEXCEL_SCIENCE_MATHS_RESOURCES,
   ...OCR_SCIENCE_MATHS_RESOURCES,
   ...EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES,
+  ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
 ];
@@ -213,7 +215,9 @@ function buildStaticResourceItems() {
     file_url: resource.embed_url || staticResourceFileUrl(resource),
     file_type: resource.embed_url
       ? "video-embed"
-      : (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
+      : /\.html$/i.test(resource.file_name || resource.file_url_override || "")
+        ? "text/html"
+        : (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
     storage_path: null,
     published: true,
     series_label: resource.series_label || null,

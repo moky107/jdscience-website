@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science | OCR Maths | Statistics</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #ecfeff;
+      border: 1px solid var(--teal);
+      color: var(--teal-dark);
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk<br>JD SCIENCE · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            OCR GCSE Mathematics (J560)<br />
+            GCSE Maths<br />
+            Topic worksheet
+          </div>
+        </div>
+        <h1>Statistics</h1>
+        <div class="banner">Original exam-style worksheet — not an official exam paper</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: 50–60 minutes · Questions: 32 · Total marks: 76<br />
+          Written in OCR Higher-style. Show working. Give answers in their simplest form.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Answer all questions. Show working. Answers are in a separate file on the Worksheets page — do not look at them until you have finished.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">For the data 2, 5, 7, 7, 11, 11, 15, find the median. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Find the mode of that data set. <span class="marks">[1]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">Find the range of that data set. <span class="marks">[1]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">Find the mean of that data set. Give your answer to 1 d.p. if needed. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">The mean of four numbers is 10. Three of the numbers are 7, 9 and 12. Find the fourth number. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Which average is most affected by an outlier: mean, median or mode? Explain. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">A frequency table: 1,2,3,4,5 scored by 4, 6, 7, 3, 0 students.</div></div>
+    <div class="part">
+        <div class="part-head"><span class="part-label">(a)</span> How many students were surveyed? <span class="marks">[2]</span></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div><div class="part">
+        <div class="part-head"><span class="part-label">(b)</span> Estimate the mean score. <span class="marks">[3]</span></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">From the same table, find the modal score and the median score. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">Explain the difference between a bar chart and a histogram. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">A histogram has a class 10 ≤ t &lt; 20 of width 10 and frequency 16. Find the frequency density. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">A scatter graph shows a strong negative correlation. Describe what this means in context if the variables are age of a car and value. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Why does correlation not imply causation? Give an exam-style example. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Stem-and-leaf: 1 | 2 5 ; 2 | 0 3 7 8 ; 3 | 1 4. Find the median and the range. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Quartiles for 11 ordered values: find the positions of Q1, Q2 and Q3. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">A data set has Q1 = 4, Q3 = 12. Find the interquartile range and explain what it measures. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">An outlier is often defined as a value more than 1.5 × IQR above Q3 or below Q1. If Q1 = 10, Q3 = 22, which of 42 and 40 would be outliers? <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">Two groups: A has mean 20 from 10 people, B has mean 30 from 20 people. Find the combined mean. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Describe how to draw a box plot from a five-number summary. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Compare two box plots: team A has a higher median but a larger IQR than team B. Write a comparison in context of test scores. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Grouped data: 0–10 fd=2, 10–20 fd=5, 20–40 fd=3. The second class is 10 wide. Find its frequency. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">What is frequency density and why is it used in a histogram with unequal class widths? <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">A pie chart represents 180 students. The 'walk' sector is 80°. How many students walk? <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">In a sample of 40, 7 people own a cat. Estimate how many own a cat in a town of 12 000, assuming the sample is representative. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Give one reason a sample might not be representative, and one way to improve it. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Explain the difference between discrete and continuous data. Give an example of each. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Moving average: sales 4, 8, 6, 10. Calculate the 3-point moving averages. <span class="marks">[3]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">What is the purpose of a moving average on a time series? <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Grace records 5, 7, a, 9. The mean is 8. Find a. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">A cumulative frequency graph is drawn for 80 times.</div></div>
+    <div class="part">
+        <div class="part-head"><span class="part-label">(a)</span> How do you read the median from the graph? <span class="marks">[1]</span></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div><div class="part">
+        <div class="part-head"><span class="part-label">(b)</span> How do you estimate the IQR? <span class="marks">[2]</span></div>
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">A student says the mean of 1, 2, 3, 100 is a good typical value. Critique this. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">On OCR statistics questions, you are often asked to compare distributions. Write the two things you must compare. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Index numbers: price in year 0 is £2.50 (index 100). Year 1 price is £3.00. Find the index number for year 1. <span class="marks">[2]</span></div></div>
+    
+    <div class="line"></div><div class="line"></div><div class="line"></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow OCR style but this is not an official OCR paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

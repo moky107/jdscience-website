@@ -1,0 +1,357 @@
+/** Board/level/subject offerings and official topic titles used on each specification. */
+
+export const TEAL = "#009688";
+export const TEAL_DARK = "#004d40";
+
+export const OFFERINGS = [
+  // GCSE Biology
+  { board: "AQA", level: "GCSE/IGCSE", subject: "Biology", spec: "8461", specName: "AQA GCSE Biology", paperNote: "Written in AQA style. Use AQA command words. Quality of written communication is assessed on the 6-mark question." },
+  { board: "Edexcel", level: "GCSE/IGCSE", subject: "Biology", spec: "1BI0", specName: "Pearson Edexcel GCSE Biology", paperNote: "Written in Pearson Edexcel style. Show working. Core practical methods may be examined." },
+  { board: "OCR", level: "GCSE/IGCSE", subject: "Biology", spec: "J247", specName: "OCR Gateway Science Biology A", paperNote: "Written in OCR Gateway A style. Use the data sheet where a calculation needs a formula." },
+  { board: "WJEC", level: "GCSE/IGCSE", subject: "Biology", spec: "3400", specName: "WJEC GCSE Biology", paperNote: "Written in WJEC style. Answer in full sentences unless a calculation is required." },
+
+  // GCSE Chemistry
+  { board: "AQA", level: "GCSE/IGCSE", subject: "Chemistry", spec: "8462", specName: "AQA GCSE Chemistry", paperNote: "Written in AQA style. Include units and give answers to an appropriate number of significant figures." },
+  { board: "Edexcel", level: "GCSE/IGCSE", subject: "Chemistry", spec: "1CH0", specName: "Pearson Edexcel GCSE Chemistry", paperNote: "Written in Pearson Edexcel style. Show working for every calculation." },
+  { board: "OCR", level: "GCSE/IGCSE", subject: "Chemistry", spec: "J248", specName: "OCR Gateway Science Chemistry A", paperNote: "Written in OCR Gateway A style. Use the data sheet for relative atomic masses if needed." },
+  { board: "WJEC", level: "GCSE/IGCSE", subject: "Chemistry", spec: "3410", specName: "WJEC GCSE Chemistry", paperNote: "Written in WJEC style. Show working and give units." },
+
+  // GCSE Physics
+  { board: "AQA", level: "GCSE/IGCSE", subject: "Physics", spec: "8463", specName: "AQA GCSE Physics", paperNote: "Written in AQA style. Use the Physics Equation Sheet. Show substitution and rearrangement." },
+  { board: "Edexcel", level: "GCSE/IGCSE", subject: "Physics", spec: "1PH0", specName: "Pearson Edexcel GCSE Physics", paperNote: "Written in Pearson Edexcel style. Show working and include units in the final answer." },
+  { board: "OCR", level: "GCSE/IGCSE", subject: "Physics", spec: "J249", specName: "OCR Gateway Science Physics A", paperNote: "Written in OCR Gateway A style. Use the equation sheet. Give answers to 2 or 3 significant figures where appropriate." },
+  { board: "WJEC", level: "GCSE/IGCSE", subject: "Physics", spec: "3420", specName: "WJEC GCSE Physics", paperNote: "Written in WJEC style. Show working. Include units." },
+
+  // GCSE Maths
+  { board: "AQA", level: "GCSE/IGCSE", subject: "Maths", spec: "8300", specName: "AQA GCSE Mathematics", paperNote: "Written in AQA Higher-style. Show clear working. A calculator may be used unless a question says otherwise." },
+  { board: "Edexcel", level: "GCSE/IGCSE", subject: "Maths", spec: "1MA1", specName: "Pearson Edexcel GCSE Mathematics", paperNote: "Written in Pearson Edexcel Higher-style. Show working. Marks are available for method." },
+  { board: "OCR", level: "GCSE/IGCSE", subject: "Maths", spec: "J560", specName: "OCR GCSE Mathematics", paperNote: "Written in OCR Higher-style. Show working. Give answers in their simplest form." },
+  { board: "Eduqas", level: "GCSE/IGCSE", subject: "Maths", spec: "C300", specName: "Eduqas GCSE Mathematics", paperNote: "Written in Eduqas Higher-style. There are two exam papers. Show working throughout." },
+  { board: "WJEC", level: "GCSE/IGCSE", subject: "Maths", spec: "3300", specName: "WJEC GCSE Mathematics", paperNote: "Written in WJEC Higher-style. Show working. Give units where needed." },
+
+  // A-Level Biology
+  { board: "AQA", level: "A-Level", subject: "Biology", spec: "7402", specName: "AQA A-Level Biology", paperNote: "Written in AQA A-Level style. Use precise biological terminology. The 6-mark question assesses extended response." },
+  { board: "Edexcel", level: "A-Level", subject: "Biology", spec: "9BI0", specName: "Pearson Edexcel A-Level Biology B", paperNote: "Written in Pearson Edexcel Biology B style. Show working in calculations. Use scientific language." },
+  { board: "OCR", level: "A-Level", subject: "Biology", spec: "H420", specName: "OCR A-Level Biology A", paperNote: "Written in OCR Biology A style. Use the data booklet ideas where relevant. Show statistical working." },
+  { board: "Eduqas", level: "A-Level", subject: "Biology", spec: "A400", specName: "Eduqas A-Level Biology", paperNote: "Written in Eduqas A-Level style. Answer in continuous prose where the marks require explanation." },
+
+  // A-Level Chemistry
+  { board: "AQA", level: "A-Level", subject: "Chemistry", spec: "7405", specName: "AQA A-Level Chemistry", paperNote: "Written in AQA A-Level style. Include units and significant figures. Mechanisms need curly arrows." },
+  { board: "Edexcel", level: "A-Level", subject: "Chemistry", spec: "9CH0", specName: "Pearson Edexcel A-Level Chemistry", paperNote: "Written in Pearson Edexcel style. Show working. Give mechanisms with curly arrows." },
+  { board: "OCR", level: "A-Level", subject: "Chemistry", spec: "H432", specName: "OCR A-Level Chemistry A", paperNote: "Written in OCR Chemistry A style. Use the data sheet. Show working for every calculation." },
+  { board: "Eduqas", level: "A-Level", subject: "Chemistry", spec: "A410", specName: "Eduqas A-Level Chemistry", paperNote: "Written in Eduqas A-Level style. Show working and include units." },
+
+  // A-Level Physics
+  { board: "AQA", level: "A-Level", subject: "Physics", spec: "7408", specName: "AQA A-Level Physics", paperNote: "Written in AQA A-Level style. Use the data and formulae booklet. Show substitution." },
+  { board: "Edexcel", level: "A-Level", subject: "Physics", spec: "9PH0", specName: "Pearson Edexcel A-Level Physics", paperNote: "Written in Pearson Edexcel style. Show working. Give answers to an appropriate number of significant figures." },
+  { board: "OCR", level: "A-Level", subject: "Physics", spec: "H556", specName: "OCR A-Level Physics A", paperNote: "Written in OCR Physics A style. Use the data, formulae and relationships booklet." },
+  { board: "Eduqas", level: "A-Level", subject: "Physics", spec: "A420", specName: "Eduqas A-Level Physics", paperNote: "Written in Eduqas A-Level style. Show working and include units." },
+
+  // A-Level Maths
+  { board: "AQA", level: "A-Level", subject: "Maths", spec: "7357", specName: "AQA A-Level Mathematics", paperNote: "Written in AQA A-Level style. Show full working. A calculator may be used." },
+  { board: "Edexcel", level: "A-Level", subject: "Maths", spec: "9MA0", specName: "Pearson Edexcel A-Level Mathematics", paperNote: "Written in Pearson Edexcel style. Show working. Give exact answers unless a decimal is asked for." },
+  { board: "OCR", level: "A-Level", subject: "Maths", spec: "H240", specName: "OCR A-Level Mathematics A", paperNote: "Written in OCR Mathematics A style. Show working. Give answers in exact form where possible." },
+];
+
+export const TOPICS = {
+  "GCSE/IGCSE": {
+    Biology: {
+      AQA: [
+        ["cell-biology", "Cell biology"],
+        ["organisation", "Organisation"],
+        ["infection-and-response", "Infection and response"],
+        ["bioenergetics", "Bioenergetics"],
+        ["homeostasis-and-response", "Homeostasis and response"],
+        ["inheritance-variation-evolution", "Inheritance, variation and evolution"],
+        ["ecology", "Ecology"],
+      ],
+      Edexcel: [
+        ["key-concepts", "Key concepts in biology"],
+        ["cells-and-control", "Cells and control"],
+        ["genetics", "Genetics"],
+        ["natural-selection-gm", "Natural selection and genetic modification"],
+        ["health-and-disease", "Health, disease and the development of medicines"],
+        ["plant-structures", "Plant structures and their functions"],
+        ["animal-coordination", "Animal coordination, control and homeostasis"],
+        ["exchange-and-transport", "Exchange and transport in animals"],
+        ["ecosystems", "Ecosystems and material cycles"],
+      ],
+      OCR: [
+        ["b1-cell-level-systems", "B1 Cell-level systems"],
+        ["b2-scaling-up", "B2 Scaling up"],
+        ["b3-organism-level-systems", "B3 Organism-level systems"],
+        ["b4-community-level-systems", "B4 Community-level systems"],
+        ["b5-genes-inheritance", "B5 Genes, inheritance and selection"],
+        ["b6-global-challenges", "B6 Global challenges"],
+      ],
+      WJEC: [
+        ["cells-tissues-organs", "Cells, tissues and organs"],
+        ["respiration-photosynthesis", "Respiration and photosynthesis"],
+        ["digestion-circulation", "Digestion and circulation"],
+        ["nervous-hormonal-control", "Nervous and hormonal control"],
+        ["disease-and-immunity", "Disease, defence and treatment"],
+        ["inheritance-and-variation", "Inheritance, variation and evolution"],
+        ["ecology-and-environment", "Ecology and human impact"],
+      ],
+    },
+    Chemistry: {
+      AQA: [
+        ["atomic-structure-periodic-table", "Atomic structure and the periodic table"],
+        ["bonding-structure-properties", "Bonding, structure and the properties of matter"],
+        ["quantitative-chemistry", "Quantitative chemistry"],
+        ["chemical-changes", "Chemical changes"],
+        ["energy-changes", "Energy changes"],
+        ["rate-and-extent", "The rate and extent of chemical change"],
+        ["organic-chemistry", "Organic chemistry"],
+        ["chemical-analysis", "Chemical analysis"],
+        ["chemistry-of-atmosphere", "Chemistry of the atmosphere"],
+        ["using-resources", "Using resources"],
+      ],
+      Edexcel: [
+        ["key-concepts", "Key concepts in chemistry"],
+        ["states-and-mixtures", "States of matter and mixtures"],
+        ["chemical-changes", "Chemical changes"],
+        ["extracting-metals-equilibria", "Extracting metals and equilibria"],
+        ["separate-chemistry-1", "Separate chemistry 1"],
+        ["separate-chemistry-2", "Separate chemistry 2"],
+      ],
+      OCR: [
+        ["c1-particles", "C1 Particles"],
+        ["c2-elements-compounds-mixtures", "C2 Elements, compounds and mixtures"],
+        ["c3-chemical-reactions", "C3 Chemical reactions"],
+        ["c4-predicting-reactions", "C4 Predicting and identifying reactions and products"],
+        ["c5-monitoring-reactions", "C5 Monitoring and controlling chemical reactions"],
+        ["c6-global-challenges", "C6 Global challenges"],
+      ],
+      WJEC: [
+        ["nature-of-substances", "The nature of substances and chemical reactions"],
+        ["atomic-structure-periodic-table", "Atomic structure and the periodic table"],
+        ["water-and-solutions", "Water and solutions"],
+        ["earth-and-atmosphere", "The ever-changing Earth"],
+        ["rates-of-reaction", "Rate of chemical change"],
+        ["organic-chemistry-fuels", "Organic chemistry and fuels"],
+        ["chemical-analysis", "Chemical analysis"],
+      ],
+    },
+    Physics: {
+      AQA: [
+        ["energy", "Energy"],
+        ["electricity", "Electricity"],
+        ["particle-model", "Particle model of matter"],
+        ["atomic-structure", "Atomic structure"],
+        ["forces", "Forces"],
+        ["waves", "Waves"],
+        ["magnetism-electromagnetism", "Magnetism and electromagnetism"],
+        ["space-physics", "Space physics"],
+      ],
+      Edexcel: [
+        ["key-concepts", "Key concepts of physics"],
+        ["motion-and-forces", "Motion and forces"],
+        ["conservation-of-energy", "Conservation of energy"],
+        ["waves", "Waves"],
+        ["light-and-em-spectrum", "Light and the electromagnetic spectrum"],
+        ["radioactivity", "Radioactivity"],
+        ["astronomy", "Astronomy"],
+        ["energy-forces-work", "Energy — forces doing work"],
+        ["electricity-and-circuits", "Electricity and circuits"],
+        ["magnetism-induction", "Magnetism and electromagnetic induction"],
+        ["particle-model", "Particle model"],
+      ],
+      OCR: [
+        ["p1-matter", "P1 Matter"],
+        ["p2-forces", "P2 Forces"],
+        ["p3-electricity-and-magnetism", "P3 Electricity and magnetism"],
+        ["p4-waves-and-radioactivity", "P4 Waves and radioactivity"],
+        ["p5-energy", "P5 Energy"],
+        ["p6-global-challenges", "P6 Global challenges"],
+      ],
+      WJEC: [
+        ["electricity-energy-waves", "Electricity, energy and waves"],
+        ["forces-and-motion", "Forces and motion"],
+        ["particles-and-kinetic-theory", "Particles and kinetic theory"],
+        ["radioactivity-and-half-life", "Radioactivity"],
+        ["magnetism-and-electromagnetism", "Magnetism and electromagnetism"],
+        ["space-and-the-universe", "Space"],
+      ],
+    },
+    Maths: {
+      AQA: [
+        ["number", "Number"],
+        ["algebra", "Algebra"],
+        ["ratio-proportion", "Ratio, proportion and rates of change"],
+        ["geometry-measures", "Geometry and measures"],
+        ["probability", "Probability"],
+        ["statistics", "Statistics"],
+      ],
+      Edexcel: [
+        ["number", "Number"],
+        ["algebra", "Algebra"],
+        ["ratio-proportion", "Ratio, proportion and rates of change"],
+        ["geometry-measures", "Geometry and measures"],
+        ["probability", "Probability"],
+        ["statistics", "Statistics"],
+      ],
+      OCR: [
+        ["number", "Number"],
+        ["algebra", "Algebra"],
+        ["ratio-proportion", "Ratio, proportion and rates of change"],
+        ["geometry-measures", "Geometry and measures"],
+        ["probability", "Probability"],
+        ["statistics", "Statistics"],
+      ],
+      Eduqas: [
+        ["number", "Number"],
+        ["algebra", "Algebra"],
+        ["ratio-proportion", "Ratio, proportion and rates of change"],
+        ["geometry-measures", "Geometry and measures"],
+        ["probability", "Probability"],
+        ["statistics", "Statistics"],
+      ],
+      WJEC: [
+        ["number", "Number"],
+        ["algebra", "Algebra"],
+        ["ratio-proportion", "Ratio, proportion and rates of change"],
+        ["geometry-measures", "Geometry and measures"],
+        ["probability", "Probability"],
+        ["statistics", "Statistics"],
+      ],
+    },
+  },
+  "A-Level": {
+    Biology: {
+      AQA: [
+        ["biological-molecules", "Biological molecules"],
+        ["cells", "Cells"],
+        ["exchange", "Organisms exchange substances with their environment"],
+        ["genetic-information", "Genetic information, variation and relationships between organisms"],
+        ["energy-transfers", "Energy transfers in and between organisms"],
+        ["organisms-respond", "Organisms respond to changes in their internal and external environments"],
+        ["genetics-populations", "Genetics, populations, evolution and ecosystems"],
+        ["control-of-gene-expression", "The control of gene expression"],
+      ],
+      Edexcel: [
+        ["biological-molecules", "Biological molecules and cells"],
+        ["exchange-and-transport", "Exchange, transport and classification"],
+        ["health-and-disease", "Health, infection and immunology"],
+        ["genetics-and-variation", "Genetics, variation and gene technology"],
+        ["energy-and-ecosystems", "Energy flow and ecosystems"],
+        ["control-and-coordination", "Control, coordination and homeostasis"],
+        ["respiration-and-photosynthesis", "Respiration and photosynthesis"],
+        ["evolution-and-speciation", "Evolution, speciation and biodiversity"],
+      ],
+      OCR: [
+        ["module-2-foundations", "Module 2 Foundations in biology"],
+        ["module-3-exchange-transport", "Module 3 Exchange and transport"],
+        ["module-4-biodiversity", "Module 4 Biodiversity, evolution and disease"],
+        ["module-5-communication", "Module 5 Communication, homeostasis and energy"],
+        ["module-6-genetics", "Module 6 Genetics, evolution and ecosystems"],
+      ],
+      Eduqas: [
+        ["basic-biochemistry-cells", "Basic biochemistry and cell organisation"],
+        ["biodiversity-physiology", "Biodiversity and physiology of body systems"],
+        ["requirements-for-life", "Requirements for life"],
+        ["energy-for-life", "Energy for life"],
+        ["continuity-of-life", "Continuity of life"],
+      ],
+    },
+    Chemistry: {
+      AQA: [
+        ["physical-chemistry-1", "Physical chemistry 1 — atomic structure, amount and bonding"],
+        ["physical-chemistry-2", "Physical chemistry 2 — energetics, kinetics and equilibria"],
+        ["physical-chemistry-3", "Physical chemistry 3 — thermodynamics, rates and electrochemistry"],
+        ["inorganic-chemistry", "Inorganic chemistry"],
+        ["organic-chemistry-1", "Organic chemistry 1 — hydrocarbons to carbonyls"],
+        ["organic-chemistry-2", "Organic chemistry 2 — aromatics, polymers and analysis"],
+      ],
+      Edexcel: [
+        ["topic-1-4-physical", "Atomic structure, bonding and energetics"],
+        ["topic-5-8-physical", "Kinetics, equilibria and redox"],
+        ["inorganic-chemistry", "Inorganic chemistry"],
+        ["organic-core", "Organic chemistry core"],
+        ["organic-modern", "Modern analytical and organic techniques"],
+      ],
+      OCR: [
+        ["module-2-foundations", "Module 2 Foundations in chemistry"],
+        ["module-3-periodic-table", "Module 3 Periodic table and energy"],
+        ["module-4-core-organic", "Module 4 Core organic chemistry"],
+        ["module-5-physical-chemistry", "Module 5 Physical chemistry and transition elements"],
+        ["module-6-organic-analysis", "Module 6 Organic chemistry and analysis"],
+      ],
+      Eduqas: [
+        ["physical-chemistry", "Physical chemistry"],
+        ["inorganic-chemistry", "Inorganic chemistry"],
+        ["organic-chemistry", "Organic chemistry"],
+        ["analytical-chemistry", "Analytical chemistry"],
+      ],
+    },
+    Physics: {
+      AQA: [
+        ["particles-and-radiation", "Particles and radiation"],
+        ["waves", "Waves"],
+        ["mechanics-and-materials", "Mechanics and materials"],
+        ["electricity", "Electricity"],
+        ["further-mechanics-thermal", "Further mechanics and thermal physics"],
+        ["fields", "Fields and their consequences"],
+        ["nuclear-physics", "Nuclear physics"],
+        ["astrophysics", "Astrophysics (option)"],
+      ],
+      Edexcel: [
+        ["mechanics", "Working as a physicist and mechanics"],
+        ["electric-circuits", "Electric circuits"],
+        ["materials-and-waves", "Materials and waves"],
+        ["further-mechanics", "Further mechanics"],
+        ["fields", "Electric and magnetic fields"],
+        ["nuclear-and-particle", "Nuclear and particle physics"],
+        ["thermodynamics", "Thermodynamics"],
+        ["space", "Space"],
+      ],
+      OCR: [
+        ["module-2-foundations", "Module 2 Foundations of physics"],
+        ["module-3-forces", "Module 3 Forces and motion"],
+        ["module-4-electrons-waves-photons", "Module 4 Electrons, waves and photons"],
+        ["module-5-newtonian-world", "Module 5 Newtonian world and astrophysics"],
+        ["module-6-particles-and-fields", "Module 6 Particles and medical physics"],
+      ],
+      Eduqas: [
+        ["mechanics", "Mechanics"],
+        ["electricity-and-waves", "Electricity and waves"],
+        ["fields-and-particles", "Fields and particles"],
+        ["thermal-and-nuclear", "Thermal and nuclear physics"],
+      ],
+    },
+    Maths: {
+      AQA: [
+        ["pure-algebra-functions", "Pure — algebra and functions"],
+        ["pure-coordinate-trigonometry", "Pure — coordinate geometry and trigonometry"],
+        ["pure-calculus", "Pure — differentiation and integration"],
+        ["pure-sequences-exponentials", "Pure — sequences, exponentials and logarithms"],
+        ["statistics", "Statistics"],
+        ["mechanics", "Mechanics"],
+      ],
+      Edexcel: [
+        ["pure-algebra-functions", "Pure — algebra and functions"],
+        ["pure-coordinate-trigonometry", "Pure — coordinate geometry and trigonometry"],
+        ["pure-calculus", "Pure — differentiation and integration"],
+        ["pure-sequences-exponentials", "Pure — sequences, exponentials and logarithms"],
+        ["statistics", "Statistics"],
+        ["mechanics", "Mechanics"],
+      ],
+      OCR: [
+        ["pure-algebra-functions", "Pure — algebra and functions"],
+        ["pure-coordinate-trigonometry", "Pure — coordinate geometry and trigonometry"],
+        ["pure-calculus", "Pure — differentiation and integration"],
+        ["pure-sequences-exponentials", "Pure — sequences, exponentials and logarithms"],
+        ["statistics", "Statistics"],
+        ["mechanics", "Mechanics"],
+      ],
+    },
+  },
+};
+
+export function offeringKey(offering) {
+  return `${offering.board}|${offering.level}|${offering.subject}`;
+}
+
+export function topicsFor(offering) {
+  return TOPICS[offering.level]?.[offering.subject]?.[offering.board] || [];
+}

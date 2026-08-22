@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | OCR Maths | Pure — sequences, exponentials and logarithms</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            OCR A-Level Mathematics A (H240)<br />
+            A-Level Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Pure — sequences, exponentials and logarithms</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 90<br />
+          Written in OCR Mathematics A style. Show working. Give answers in exact form where possible.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">An AP has first term 5 and common difference 6. Find the 10th term.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>a + (n−1)d</li><li>Final answer: 59</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Find the sum of the first 20 terms of that AP.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Sₙ = n/2 (2a + (n−1)d)</li><li>Final answer: 1240</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">How many terms of 5, 9, 13, … are needed to exceed 500?</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Quadratic inequality</li><li>Final answer: Solve n/2 (10 + (n−1)4) &gt; 500</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">A GP has first term 2 and common ratio 0.5. Find the 6th term.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>ar^{n−1}</li><li>Final answer: 0.0625</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">Find the sum of the first 8 terms of that GP.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: S = 2(1 − 0.5⁸)/(1 − 0.5)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Find the sum to infinity of 1 + 1/3 + 1/9 + …</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>a/(1−r), |r|&lt;1</li><li>Final answer: 3/2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State the condition for a GP to have a sum to infinity.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>|r| &lt; 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">The 3rd term of an AP is 11 and the 7th term is 23. Find a and d.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>a+2d=11, a+6d=23</li><li>Final answer: d = 3, a = 5</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">The first term of a GP is 5 and the 4th term is 40. Find r and the 6th term.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>5r³ = 40</li><li>Final answer: r = 2, 6th = 160</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">Solve 3^{x} = 12. Give your answer as a logarithm.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: x = log₃ 12 or ln12/ln3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Simplify log₂ 8 + log₂ 4 − log₂ 2.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Laws of logs</li><li>Final answer: 3+2−1 = 4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Write 2 log x + 3 log y − log z as a single logarithm.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: log (x² y³ / z)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Solve 2^{2x} − 5 × 2^x + 4 = 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Quadratic in 2^x</li><li>Final answer: 2^x = 1 or 4 so x = 0 or 2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">The nth term of a sequence is 3n − 1. Prove that the sum of the first n terms is n(3n + 1)/2.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Algebraic proof</li><li>Final answer: AP with a=2, d=3; S=n/2 (4 + (n−1)3)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Find ∑_{r=1}^{n} (2r + 1).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>2∑r + ∑1</li><li>Final answer: n(n+2) or n² + 2n</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">A recurrence is u_{n+1} = 0.6 u_n + 4, u₁ = 10. Find u₂ and u₃.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Fixed point</li><li>Final answer: u₂ = 10, u₃ = 10</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">Find the limit L of u_{n+1} = 0.6 u_n + 4 as n → ∞, assuming it converges.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>L = 0.6L + 4</li><li>Final answer: L = 10</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Explain the difference between an arithmetic series and a geometric series.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Constant difference vs constant ratio</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">£2000 is invested at 3% compound interest. Find the value after 8 years and the year it first exceeds £2500.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Logs for the year</li><li>Final answer: 2000×1.03⁸; solve 2000×1.03ⁿ &gt; 2500</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">A ball is dropped from 10 m and bounces to 0.6 of its previous height. Find the total distance travelled before it stops.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Infinite GP after the first drop</li><li>Final answer: 10 + 2×10×0.6/(1−0.6) = 40 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">Solve ln(x + 1) = 2.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: x = e² − 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Differentiate y = 3^x. Use y = e^{x ln 3}.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: 3^x ln 3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">The sum of an AP is 156, n = 12, a = 3. Find d.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>12/2 (6 + 11d) = 156</li><li>Final answer: d = 2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Show that 4, 10, 16, … and 3, 6, 12, … are AP and GP respectively, and find the 8th term of each.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: AP 8th = 46; GP 8th = 384</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Write the formulae for the nth term of an AP and a GP.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>a+(n−1)d</li><li>ar^{n−1}</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Solve log₃ (x − 1) + log₃ (x + 1) = 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>(x²−1)=3</li><li>Final answer: x = 2 (check domain x&gt;1)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">A geometric series has S∞ = 20 and a = 8. Find r.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>8/(1−r)=20</li><li>Final answer: r = 0.6</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Find the smallest n such that 1.04^n &gt; 2.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: n = 18 because n &gt; ln2/ln1.04 ≈ 17.67</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">A OCR logs question often loses a mark for missing the domain. What must you check after solving a log equation?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Arguments positive</li><li>Reject roots that make a log undefined</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Expand e^{2x} as a Maclaurin series up to x³ if on your spec; otherwise write the first four terms of the binomial expansion of (1 + 2x)^{1/2}.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Standard expansion</li><li>Final answer: 1 + x − (1/2)x² + (1/2)x³ + … for the binomial with |2x|&lt;1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">An AP and a GP both have first term 4. The AP has d = 3. The GP has r = 2. Find the first term that appears in both sequences after 4.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Final answer: Terms AP: 4,7,10,13,16,19,22,25,28,31,34… GP: 4,8,16,32… common 16</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Explain why |r| &lt; 1 is needed for S∞, using a numerical counter-example if |r| ≥ 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Terms do not tend to 0</li><li>e.g. 2+4+8+… diverges</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow OCR style but this is not an official OCR paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

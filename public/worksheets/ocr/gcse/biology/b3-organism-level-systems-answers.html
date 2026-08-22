@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | OCR Biology | B3 Organism-level systems</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            OCR Gateway Science Biology A (J247)<br />
+            GCSE Biology<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>B3 Organism-level systems</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 104<br />
+          Written in OCR Gateway A style. Use the data sheet where a calculation needs a formula.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">State what is meant by homeostasis.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>maintaining a constant internal environment</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">State what is meant by a receptor.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>a cell that detects a stimulus</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">State what is meant by a reflex arc.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>a rapid automatic response that does not involve conscious thought</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">State what is meant by a synapse.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>a gap between two neurones</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State what is meant by the eye.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>sense organ that detects light</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">State what is meant by accommodation.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>changing the lens shape to focus near or distant objects</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State what is meant by insulin.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>hormone from the pancreas that lowers blood glucose</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">State what is meant by glucagon.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>hormone that raises blood glucose</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State what is meant by Type 2 diabetes.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>the body cells no longer respond properly to insulin</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">State what is meant by auxin.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>plant hormone that controls phototropism</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Grace is asked about homeostasis in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>includes temperature, blood glucose, water</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why homeostasis is needed</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Grace is asked about a receptor in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>part of a reflex arc</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why receptors are specific</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Grace is asked about a reflex arc in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>receptor → sensory neurone → synapse in CNS → motor neurone → effector</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why reflexes are fast</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Grace is asked about a synapse in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>neurotransmitter diffuses across</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why synapses only transmit in one direction</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Grace is asked about the eye in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>retina contains receptors</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why the pupil changes size</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Grace is asked about accommodation in a OCR Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>ciliary muscles and suspensory ligaments</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>why a convex lens is needed for long sight</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">A reflex takes 0.018 s to travel 1.8 m. Calculate the speed of the impulse.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>1.8/0.018</li><li>Final answer: 100 m/s</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Blood glucose rises from 4.0 to 6.6000000000000005 mmol/dm³. Calculate the percentage increase.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 65%</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">A person produces 1.5 dm³ of urine a day. How much in a week?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 10.5 dm³</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Reaction time is 0.28 s. How far does a car travelling at 15 m/s travel in that time?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>s=vt</li><li>Final answer: 4.2 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">A plant shoot bends 12° in 40 minutes. Calculate the mean rate.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 0.3 °/min</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Body temperature falls from 37.0°C to 35.5°C. Calculate the drop as a percentage of 37.0°C.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>1.5/37 × 100</li><li>Final answer: 4.05%</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Grace carries out the reaction-time practical (ruler drop). This is a typical OCR required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: practice / caffeine / distraction</li><li>Dependent: catch distance / calculated time</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same ruler, same hand</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>anticipating the drop</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Grace carries out investigating phototropism with seedlings. This is a typical OCR required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: direction of light</li><li>Dependent: direction of growth</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same species and age</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>pots not rotated equally in the control</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Grace carries out testing urine or a model for glucose. This is a typical OCR required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: sample</li><li>Dependent: Benedict's colour</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same heating time</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>not using a water bath safely</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Grace carries out the human nervous system observation of pupil reflex (light). This is a typical OCR required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: light intensity</li><li>Dependent: pupil diameter</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same eye, same starting light</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>measuring a moving pupil</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Compare the nervous system with the endocrine system.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>nervous: fast, electrical, short-lived</li><li>endocrine: slower, chemical hormones, longer lasting</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Compare Type 1 diabetes with Type 2 diabetes.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Type 1: no insulin produced, insulin injections</li><li>Type 2: cells do not respond, diet/exercise/drugs</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Compare rods with cones.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>rods: low light, black and white</li><li>cones: colour, bright light</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Compare phototropism with gravitropism.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>phototropism is a response to light</li><li>gravitropism is a response to gravity</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Apply your knowledge of insulin to this situation: the pancreas does not produce enough insulin</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>the pancreas does not produce enough insulin</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Apply your knowledge of glucagon to this situation: they have opposite effects</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>they have opposite effects</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow OCR style but this is not an official OCR paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

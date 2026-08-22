@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | OCR Maths | Pure — differentiation and integration</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            OCR A-Level Mathematics A (H240)<br />
+            A-Level Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Pure — differentiation and integration</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 97<br />
+          Written in OCR Mathematics A style. Show working. Give answers in exact form where possible.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">Differentiate y = 5x⁴ − 3x² + 7.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: 20x³ − 6x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Differentiate y = (2x + 1)³.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Chain rule</li><li>Final answer: 6(2x+1)²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">Differentiate y = x² sin x.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Product rule</li><li>Final answer: 2x sin x + x² cos x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">Differentiate y = (x² + 1)/(x − 1).</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Final answer: Quotient rule: [(2x)(x−1) − (x²+1)]/(x−1)²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">Find dy/dx if x = 2t + 1, y = t².</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>(dy/dt)/(dx/dt) = 2t / 2</li><li>Final answer: dy/dx = t</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Find the gradient of y = x³ − 3x at x = 2.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>3x² − 3</li><li>Final answer: 9</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">Find the equation of the tangent to y = x² at (3, 9).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Gradient 6</li><li>Final answer: y − 9 = 6(x − 3)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">Find the equation of the normal to y = x² at (3, 9).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: y − 9 = −(1/6)(x − 3)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">Find the stationary points of y = x³ − 12x + 1 and determine their nature.</div></div>
+    <div class="ms-block"><div class="ms-label">[5 marks]</div><ul><li>d²y/dx² = 6x</li><li>Final answer: (2, −15) min, (−2, 17) max</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">A rectangle has perimeter 20 cm. Show that the area A = 10x − x² and find the maximum area.</div></div>
+    <div class="ms-block"><div class="ms-label">[5 marks]</div><ul><li>dA/dx = 10 − 2x = 0</li><li>Final answer: Maximum 25 cm² when x = 5</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Integrate 6x² − 4x + 3.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: 2x³ − 2x² + 3x + c</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Find ∫ (2x + 1)⁴ dx.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Reverse chain rule</li><li>Final answer: (1/10)(2x+1)⁵ + c</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Evaluate ∫₀² (3x² + 1) dx.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>[x³ + x] from 0 to 2</li><li>Final answer: 10</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Find the area between y = x², the x-axis, x = 1 and x = 3.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>∫ x² dx</li><li>Final answer: 26/3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Find the area between y = x and y = x² from 0 to 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>∫(x−x²)dx</li><li>Final answer: 1/6</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Use the trapezium rule with 4 strips to estimate ∫₀⁴ (x²) dx. Comment on whether this is an over- or underestimate.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>(h/2)(y0+2y1+2y2+2y3+y4)</li><li>Final answer: h=1; estimate 22; overestimate because the curve is convex</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">If dy/dx = 6x² and y = 5 when x = 1, find y.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Integrate + constant</li><li>Final answer: y = 2x³ + 3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Differentiate y = e^{3x} and y = ln(5x).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>ln(5x)=ln5+ln x</li><li>Final answer: 3e^{3x} ; 1/x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Differentiate y = e^{x²}.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Chain rule</li><li>Final answer: 2x e^{x²}</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Find ∫ 1/(2x) dx, x &gt; 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: (1/2) ln|x| + c or (1/2) ln|2x| + c</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">Implicit differentiation: x² + y² = 25. Find dy/dx at (3, 4).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>2x + 2y y' = 0</li><li>Final answer: −3/4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Related rates: a sphere has V = (4/3)πr³. If dr/dt = 2, find dV/dt when r = 3.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>dV/dt = 4πr² dr/dt</li><li>Final answer: dV/dt = 72π</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Find the second derivative of y = sin 2x.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: −4 sin 2x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Explain how to decide whether a stationary point is a max, min or point of inflection using the second derivative.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>f'' &gt; 0 min</li><li>f'' &lt; 0 max</li><li>f'' = 0 inconclusive</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Integration by substitution: ∫ 2x(x² + 1)³ dx.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>u = x²+1</li><li>Final answer: (1/4)(x²+1)⁴ + c</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Find the average value of y = 3x² on [0, 2].</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>(1/2)∫ 3x² dx = 4</li><li>Final answer: 4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">A curve is y = 1/x. Find the volume generated when the region from x = 1 to x = 2 is rotated about the x-axis. Leave π in the answer if this is on the spec; otherwise find the area under the curve.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: Area = ln 2; volume π∫ x⁻² dx = π(1 − 1/2) = π/2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">State the chain, product and quotient rules in Leibniz or function notation.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>dy/dx = dy/du × du/dx</li><li>uv' + vu'</li><li>(vu' − uv')/v²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">A OCR question gives displacement s = t³ − 6t². Find the velocity and acceleration at t = 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>v=3t²−12t, a=6t−12</li><li>Final answer: v = −9, a = −6</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Solve dy/dx = 2y, y(0) = 3, by separating variables.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>∫ dy/y = ∫ 2 dx</li><li>Final answer: y = 3e^{2x}</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Why do you add + c for an indefinite integral but not for a definite integral?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Family of antiderivatives</li><li>Constants cancel in the evaluation</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Find the x-coordinate of the point on y = x² + 1 where the tangent is parallel to y = 4x.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>2x = 4</li><li>Final answer: x = 2</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow OCR style but this is not an official OCR paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

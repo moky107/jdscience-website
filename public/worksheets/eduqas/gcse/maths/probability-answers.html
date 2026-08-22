@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | Eduqas Maths | Probability</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            Eduqas GCSE Mathematics (C300)<br />
+            GCSE Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Probability</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 82<br />
+          Written in Eduqas Higher-style. There are two exam papers. Show working throughout.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">A fair six-sided dice is rolled. Find P(even number).</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>2, 4, 6</li><li>Final answer: 1/2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Two fair coins are flipped. Find P(two heads).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>HH, HT, TH, TT</li><li>Final answer: 1/4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">A bag contains 7 red and 9 blue counters. One counter is taken at random. Find P(red).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: 7/16</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">A spinner has sections A, A, B, C. It is fair.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [1 mark]</div><ul><li>1/2</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>(1/2)×(1/4) = 1/8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">P(rain) = 0.3. Find P(not rain).</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>1 − 0.3</li><li>Final answer: 0.7</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Events A and B are mutually exclusive. P(A) = 0.2, P(B) = 0.5. Find P(A or B).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>0.7</li><li>Add because they cannot both happen</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">Events C and D are independent. P(C) = 0.4, P(D) = 0.5. Find P(C and D).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>0.2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">A bag has 3 red and 5 green sweets. Two sweets are taken without replacement. Find P(both red).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Tree diagram</li><li>Final answer: 3/8 × 2/7 = 6/56 = 3/28</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">Using the same bag, find P(one of each colour) when two sweets are taken without replacement.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Two orders</li><li>Final answer: 3/8×5/7 + 5/8×3/7 = 30/56 = 15/28</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">Draw a complete tree diagram for two flips of a biased coin with P(H) = 0.6. Label all eight probabilities on the branches and ends.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Branches 0.6 and 0.4 twice</li><li>HH 0.36, HT 0.24, TH 0.24, TT 0.16</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">A two-way table: 20 students, 12 study French, 9 study German, 5 study both. How many study neither?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Inclusion-exclusion: 12+9−5 = 16, 20−16 = 4</li><li>Final answer: 4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">From that table, a student is chosen at random. Find P(studies French | studies German).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Conditional: both / German</li><li>Final answer: 5/9</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Write the formula for P(A|B) and explain it in words.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>P(A and B) / P(B)</li><li>Restrict the sample space to B</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">The probability of winning a game is 0.15. The game is played 200 times. Estimate the number of wins.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Expected frequency np</li><li>Final answer: 30</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Relative frequency of a 6 after 50 rolls is 0.1. After 500 rolls it is 0.16. Which is the better estimate of P(6) on a fair dice, and why?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>500 rolls</li><li>More trials, relative frequency closer to the true probability</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">A letter is chosen from MISSISSIPPI. Find P(S).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>4 S letters, 11 total</li><li>Final answer: 4/11</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">Two events: P(A) = 0.3, P(B) = 0.4, P(A and B) = 0.12. Are A and B independent? Show working.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: Yes, because 0.3×0.4 = 0.12</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">P(A) = 0.6, P(B) = 0.5, P(A and B) = 0.2. Find P(A or B).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>0.6+0.5−0.2</li><li>Final answer: 0.9</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">What is a sample space? List the sample space when a coin is flipped and a dice is rolled.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>All possible outcomes</li><li>H1–H6 and T1–T6, 12 outcomes</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">A fair spinner 1–5 is spun twice. Find P(sum is 10).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Only 5 then 5</li><li>Final answer: 1/25</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">Find P(sum is 6) for two fair dice.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>(1,5)(2,4)(3,3)(4,2)(5,1)</li><li>Final answer: 5/36</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Explain the difference between independent events and mutually exclusive events. Give an example of each.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Independent: one does not affect the other, e.g. two coin flips</li><li>Mutually exclusive: cannot happen together, e.g. rolling a 2 and a 5 on one roll</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Jac picks a number from 1 to 20. Find P(prime).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>2,3,5,7,11,13,17,19</li><li>Final answer: 8/20 = 2/5</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">A Venn diagram has P(A) = 0.5, P(B) = 0.4 and P(A and B) = 0.15.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>0.35</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>0.25</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Without replacement: 10 tickets numbered 1–10. Two tickets are drawn. Find P(both even).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 5/10 × 4/9 = 2/9</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Why must probabilities on a set of mutually exclusive exhaustive outcomes add up to 1?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>One of them must happen</li><li>The sample space is complete</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">A biased dice has P(6) = 0.3. It is rolled twice. Find P(at least one 6).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Complement</li><li>Final answer: 1 − 0.7² = 0.51</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Expected winnings: a game costs £2. P(win £10) = 0.1, otherwise win nothing. Is the game fair? Show working.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: Expected gain = 0.1×10 − 2 = −1, not fair</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Describe how to use a set of random numbers from 00 to 99 to simulate P(success) = 0.27.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Assign 00–26 as success</li><li>27–99 as failure</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">A Eduqas tree-diagram question is often 4 marks. State what must be labelled on the branches and on the ends.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Branch probabilities</li><li>Outcome probabilities multiplied along the path</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Three fair coins. Find P(exactly two heads).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>HHT, HTH, THH</li><li>Final answer: 3/8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">The probability of an event is 0. Explain what this means. The probability is 1. Explain what this means.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Impossible</li><li>Certain</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow Eduqas style but this is not an official Eduqas paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

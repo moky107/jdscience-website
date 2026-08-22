@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | AQA Physics | Mechanics and materials</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            AQA A-Level Physics (7408)<br />
+            A-Level Physics<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Mechanics and materials</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 104<br />
+          Written in AQA A-Level style. Use the data and formulae booklet. Show substitution.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">State what is meant by suvat.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>constant acceleration equations</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">State what is meant by projectile motion.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>horizontal u constant, vertical acceleration g</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">State what is meant by moments.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>force × perpendicular distance</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">State what is meant by density and pressure.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>ρ=m/V, P=F/A, P=ρgh</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State what is meant by Young modulus.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>stress/strain in the linear region</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">State what is meant by stress and strain.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>F/A and ΔL/L</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State what is meant by energy stored in a spring.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>½Fe or ½ke²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">State what is meant by terminal velocity.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>drag = weight (and upthrust)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State what is meant by resolving vectors.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>components Fx = F cosθ</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">State what is meant by centre of mass.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>point where the weight acts</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Amira is asked about suvat in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>vectors along a line</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>take a direction as positive</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Amira is asked about projectile motion in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>time from vertical motion</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>range = uₓ t</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Amira is asked about moments in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>equilibrium: net force and net moment zero</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>couples</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Amira is asked about density and pressure in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>fluids</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>upthrust</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Amira is asked about Young modulus in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>E = (F/A)/(ΔL/L)</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>property of the material</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Amira is asked about stress and strain in a AQA Physics paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>elastic if returns to original</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>plastic beyond yield</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">s = ut + ½at². u=0, a=10, t=3</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 45 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Range: ux=12, t=2.0 s</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 24 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Stress if F=80 N, A=0.50×10⁻⁶ m²</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 1.6 × 10⁸ Pa</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Strain if ΔL=0.40 mm, L=2.0 m</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 2.0 × 10⁻⁴</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">E = stress/strain from those values</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 8.0 × 10¹¹ Pa</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">½ke². k=200, e=0.050</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 0.25 J</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Amira carries out a AQA-style required practical linked to mechanics and materials. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: the independent variable for this topic</li><li>Dependent: the measured outcome</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>keep all other variables constant</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>repeat and calculate a mean / use a tighter method</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Amira carries out collecting valid data for mechanics and materials. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: a chosen factor</li><li>Dependent: a quantitative measurement</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>calibrated instrument</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>systematic error from zero error</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Amira carries out drawing a graph for mechanics and materials. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: x-variable</li><li>Dependent: y-variable</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same scale / same apparatus</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>not drawing a line of best fit through the trend</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Amira carries out evaluating a method about mechanics and materials. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: method change</li><li>Dependent: precision / accuracy</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same sample size</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>too few repeats</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Compare suvat with projectile motion.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>constant acceleration equations</li><li>horizontal u constant, vertical acceleration g</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Compare projectile motion with moments.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>horizontal u constant, vertical acceleration g</li><li>force × perpendicular distance</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Compare moments with density and pressure.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>force × perpendicular distance</li><li>ρ=m/V, P=F/A, P=ρgh</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Compare density and pressure with Young modulus.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>ρ=m/V, P=F/A, P=ρgh</li><li>stress/strain in the linear region</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Apply your knowledge of energy stored in a spring to this situation: area under F–x</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>area under F–x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Apply your knowledge of terminal velocity to this situation: resultant zero</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>resultant zero</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow AQA style but this is not an official AQA paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

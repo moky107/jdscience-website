@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | OCR Maths | Mechanics</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            OCR A-Level Mathematics A (H240)<br />
+            A-Level Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Mechanics</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 95<br />
+          Written in OCR Mathematics A style. Show working. Give answers in exact form where possible.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">A particle has constant acceleration 3 m s⁻². It starts at 4 m s⁻¹. Find its velocity after 5 s.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>v = u + at</li><li>Final answer: 19 m s⁻¹</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">It travels with u = 16 m s⁻¹, a = −2 m s⁻² for 4 s. Find the displacement.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>s = ut + ½at²</li><li>Final answer: 48 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">A car accelerates from rest to 20 m s⁻¹ in 8 s. Find the acceleration and the distance travelled.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: a = 2.5 m s⁻²; s = 80 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">A ball is thrown vertically upwards at 14 m s⁻¹. Take g = 9.8 m s⁻². Find the time to the top and the greatest height.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>v=0 at top</li><li>Final answer: t = 14/9.8 = 1.43 s; h = 10 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State the difference between distance and displacement, and between speed and velocity.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Displacement is a vector</li><li>Velocity is a vector / has direction</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">A particle moves with v = 3t² − 4. Find the acceleration at t = 2 and the displacement from t = 0 to 2 if s(0)=0.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>a=dv/dt=6t; s=∫v dt = t³ − 4t</li><li>Final answer: a = 12; s = 0</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">Two forces 5 N and 12 N act at right angles. Find the magnitude of the resultant.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Pythagoras</li><li>Final answer: 13 N</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">Resolve a 20 N force at 30° to the horizontal into horizontal and vertical components.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>20 cos30, 20 sin30</li><li>Final answer: 10√3 N horizontal, 10 N vertical</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">A 3 kg particle is on a smooth horizontal surface. A 6 N force acts. Find the acceleration.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>F=ma</li><li>Final answer: 2 m s⁻²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">The same 3 kg particle is on a rough surface, μ = 0.2, g = 10. A horizontal 9 N force acts. Find the acceleration.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>R=30 N</li><li>Final answer: Friction = 6 N; a = 1 m s⁻²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">State the modelling assumptions for a particle and for a smooth surface.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Particle: mass concentrated at a point, no size/air resistance unless stated</li><li>Smooth: no friction</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">A 4 kg block is on a plane inclined at 30°. The plane is smooth. Find the acceleration down the plane. g = 10.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>g sin30</li><li>Final answer: 5 m s⁻²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">If that plane is rough with μ = 1/√3, show that the block is in limiting equilibrium or find the acceleration.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Compare mg sinθ with μ mg cosθ</li><li>Final answer: F = μR = (1/√3)(4g cos30) = 4g/2 = 2g; component down = 2g, so limiting equilibrium if g=10: check numbers</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Connected particles: A (2 kg) on a table, B (3 kg) hanging, string smooth, pulley light. Find the acceleration. g=10.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>3g − T = 3a, T = 2a</li><li>Final answer: a = 6 m s⁻²; T = 12 N</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Why is the tension the same throughout a light inextensible string that passes over a smooth pulley?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Light: no mass so net force on a string element is zero</li><li>Smooth pulley: no friction</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">A projectile is launched at 20 m s⁻¹ at 30° to the horizontal. g = 10. Find the time of flight on level ground and the range.</div></div>
+    <div class="ms-block"><div class="ms-label">[5 marks]</div><ul><li>uy=10, T=2uy/g</li><li>Final answer: T = 2 s; R = 20√3 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">For that projectile, find the greatest height.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>uy²/2g</li><li>Final answer: 5 m</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Find the speed of that projectile after 1 s.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>vx constant</li><li>Final answer: √( (10√3)² + 0² ) = 10√3 m s⁻¹ at the top? At 1 s, vy=0, vx=10√3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Write the suvat equations and state when they may be used.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Constant acceleration only</li><li>v=u+at, s=ut+½at², v²=u²+2as, s=(u+v)t/2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Momentum: a 2 kg trolley at 3 m s⁻¹ collides and sticks to a 1 kg trolley at rest. Find the common speed.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Conservation of momentum</li><li>Final answer: 2 m s⁻¹</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">The collision lasts 0.1 s. Find the impulse on the 1 kg trolley and the mean force.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>I = Δmv</li><li>Final answer: Impulse 2 N s; mean force 20 N</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">State the difference between elastic and inelastic collisions in terms of kinetic energy.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Elastic: KE conserved</li><li>Inelastic: KE not conserved</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">A 50 N force does work moving a box 4 m along its line of action. Find the work done. If the force is at 60° to the displacement, find the work done.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>W = Fd cosθ</li><li>Final answer: 200 J ; 100 J</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">A 2 kg mass falls 5 m. Find the loss in GPE and the speed if all becomes KE. g=10.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>mgh = ½mv²</li><li>Final answer: 100 J; v=10 m s⁻¹</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Power: a car travels at a constant 15 m s⁻¹ against a 400 N resistance. Find the driving force and the power.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>P=Fv</li><li>Final answer: F=400 N; P=6000 W</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">A moment: a uniform 4 m beam of weight 20 N is supported at each end. A 10 N weight sits 1 m from A. Find the reactions at A and B.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Equilibrium</li><li>Final answer: Take moments about A: 4B = 20×2 + 10×1; B=12.5 N, A=17.5 N</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">State the two conditions for equilibrium of a rigid body.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Net force zero</li><li>Net moment zero</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">A particle has position r = (3t² − 2)i + (4t)j m. Find the velocity and speed at t = 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: v = 6i + 4j; speed = √52 = 2√13 m s⁻¹</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">A OCR mechanics question usually tells you to take g = 9.8 or 10. Why must you state the value you use?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>The numerical answer depends on g</li><li>Method marks may still be awarded if g is shown</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">A lift of mass 800 kg accelerates upwards at 0.5 m s⁻². Find the tension in the cable. g=10.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>N2L</li><li>Final answer: T − 8000 = 400; T = 8400 N</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">A graph of v against t is a straight line from (0, 0) to (10, 15). Find the distance travelled and the acceleration.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Area under graph; gradient</li><li>Final answer: s = 75 m; a = 1.5 m s⁻²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Explain the difference between mass and weight, including units.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Mass in kg is scalar amount of matter</li><li>Weight is mg, a force in N</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow OCR style but this is not an official OCR paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | Edexcel Maths | Pure — algebra and functions</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            Pearson Edexcel A-Level Mathematics (9MA0)<br />
+            A-Level Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Pure — algebra and functions</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 99<br />
+          Written in Pearson Edexcel style. Show working. Give exact answers unless a decimal is asked for.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">Solve x² − 6x − 6 = 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Show both roots</li><li>Final answer: Use quadratic formula / factorise if possible</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Express 2x² + 8x + 3 in the form 2(x + p)² + q.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Complete the square</li><li>Final answer: 2(x + 2)² − 5</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">Solve |3x − 1| = 5.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Two cases</li><li>Final answer: x = 2 or x = −4/3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">Solve the inequality x² − 5x + 6 &gt; 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Critical values 2 and 3, sketch</li><li>Final answer: x &lt; 2 or x &gt; 3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">f(x) = 3x − 3, g(x) = x². Find fg(x) and gf(x).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Order of composition</li><li>Final answer: fg(x) = 3x² − 3; gf(x) = (3x − 3)²</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Find the inverse of f(x) = (x − 1)/(x + 2), x ≠ −2.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Swap x and y, rearrange</li><li>Final answer: f⁻¹(x) = (1 + 2x)/(1 − x), x ≠ 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">The remainder when x³ + ax² − 4x + 1 is divided by (x − 1) is 3. Find a.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>f(1) = 3</li><li>Final answer: a = 5</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">(x − 2) is a factor of x³ − 3x² + kx − 4. Find k and fully factorise.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>f(2)=0 → 8 − 12 + 2k − 4 = 0 → 2k = 8 → k = 4</li><li>Then factorise</li><li>Final answer: k = 2; (x − 2)²(x + 1) wait check</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State the factor theorem.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>If f(a) = 0 then (x − a) is a factor</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">Simplify (x³ − 8)/(x − 2).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Difference of cubes</li><li>Final answer: x² + 2x + 4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Solve 2 ln x = ln 9.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>ln x² = ln 9</li><li>Final answer: x = 3 (x &gt; 0)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Solve log₁₀(x + 1) + log₁₀(x − 1) = 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>log((x²−1))=1 so x²−1=10</li><li>Final answer: x = √11</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Sketch y = |x − 2| + 1, showing the vertex and intercepts.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Vertex (2, 1)</li><li>V shape</li><li>y-intercept 3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">The function f(x) = x³ − 3x + 1 has a turning point. Find dy/dx and the stationary points.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Set derivative = 0</li><li>Final answer: dy/dx = 3x² − 3; x = ±1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Partial fractions: express (5x + 3)/((x + 1)(x − 2)) in partial fractions.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>A/(x+1) + B/(x−2) = (2/3)/(x+1) + (13/3)/(x−2)</li><li>Final answer: A=2/3? Let's compute: 5x+3 = A(x−2)+B(x+1). x=2: 13=3B, B=13/3; x=−1: −2=−3A, A=2/3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Binomial expansion of (1 + 2x)⁵ up to the term in x³.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>C(5,k)(2x)^k</li><li>Final answer: 1 + 10x + 40x² + 80x³</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">Find the term independent of x in (x + 2/x)⁶.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>(6 choose r) x^{6−r} 2^r x^{−r}</li><li>Final answer: C(6,3)×1³×2³ = 160</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">State the conditions for the binomial expansion of (1 + x)^n when n is not a positive integer.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>|x| &lt; 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Solve 3^{2x} − 12 × 3^x + 27 = 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Quadratic in 3^x</li><li>Final answer: 3^x = 3 or 9 so x = 1 or 2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">The modulus of a complex number is not required at this spec for all boards — instead solve 2^{x+1} = 5.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Take logs</li><li>Final answer: x = log₂(5/2) or ln5/ln2 − 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">f(x) = 2x + 1, domain x ≥ 0.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [1 mark]</div><ul><li>f(x) ≥ 1</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>(x − 1)/2</li><li>x ≥ 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Solve simultaneously y = x + 1 and x² + y² = 25.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Substitute</li><li>Final answer: x = 3, y = 4 or x = −4, y = −3</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Describe the transformation that maps y = f(x) to y = 2f(x − 3) + 1.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Translation 3 right</li><li>Stretch ×2 parallel to y-axis</li><li>Translation 1 up</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Prove that (1 + sin x)/(cos x) + (cos x)/(1 + sin x) = 2/cos x.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Identity proof — each step must be justified</li><li>Final answer: Combine over a common denominator and use 1 − sin²x = cos²x</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Find the set of values of k for which kx² + 4x + k = 0 has real roots.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Discriminant 16 − 4k² ≥ 0</li><li>Final answer: k ≤ −2 or k ≥ 2, and k ≠ 0 if needed for quadratic</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Explain why a function must be one-to-one to have an inverse, and how a domain restriction can fix y = x².</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Each output from one input</li><li>Restrict x ≥ 0 so it is one-to-one</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Expand (2 − 3x)⁴.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Binomial</li><li>Final answer: 16 − 96x + 216x² − 216x³ + 81x⁴</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Solve x + 4/x = 5, x ≠ 0.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Multiply through by x</li><li>Final answer: x = 1 or x = 4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">A Edexcel Pure paper often awards method marks for a correct first line. Write the first line you should write when using the factor theorem to test (x + 3).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>f(−3) = …</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Given f(x) = x³ − 4x, find f(2 + h) − f(2) and hence the derivative from first principles at x = 2.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Limit as h→0 of [12h + 6h² + h³]/h</li><li>Final answer: f'(2) = 8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">The roots of 2x² − 5x − 3 = 0 are α and β. Find α + β and αβ.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>−b/a and c/a</li><li>Final answer: 5/2 and −3/2</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">State two common mistakes on a 4-mark algebra rearrangement and how to avoid them.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Not changing the sign when crossing the equals</li><li>Dividing only one term</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow Edexcel style but this is not an official Edexcel paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | AQA Biology | The control of gene expression</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            AQA A-Level Biology (7402)<br />
+            A-Level Biology<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>The control of gene expression</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 104<br />
+          Written in AQA A-Level style. Use precise biological terminology. The 6-mark question assesses extended response.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">State what is meant by totipotent cells.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>can become any body cell including placenta</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">State what is meant by pluripotent cells.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>can become any body cell except placenta</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">State what is meant by transcription factors.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>proteins that bind DNA and switch genes on or off</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">State what is meant by epigenetics.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>heritable changes in gene function without changing the base sequence</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State what is meant by RNA interference.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>siRNA / miRNA can stop mRNA being translated</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">State what is meant by a tumour suppressor gene.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>slows the cell cycle / promotes apoptosis</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State what is meant by a proto-oncogene.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>stimulates the cell cycle</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">State what is meant by recombinant DNA.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>DNA from more than one source</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State what is meant by PCR.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>amplifies DNA</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">State what is meant by gel electrophoresis.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>separates DNA fragments by size</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Amira is asked about totipotent cells in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>zygote</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>genes not yet permanently switched off</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Amira is asked about pluripotent cells in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>embryonic stem cells</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>used in research</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Amira is asked about transcription factors in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>oestrogen can be a stimulus</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>needed for cell specialisation</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Amira is asked about epigenetics in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>methylation, acetylation</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>environment can affect this</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Amira is asked about RNA interference in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>breaks down mRNA</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>gene silencing</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Amira is asked about a tumour suppressor gene in a AQA Biology paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>if mutated, cell cycle runs on</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>both copies often need to fail</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">PCR: starting with 1 molecule, copies after 5 cycles</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 32</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">A fragment is 600 bp. After a 6-cutter idea, number of fragments depends on sites — if 2 cut sites on a linear DNA</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 3 fragments</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Stem cell therapy risk: name one</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: tumour formation / rejection</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">Methylation of a promoter typically</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: reduces transcription</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">A gene is 900 bases coding. Amino acids (no stop)</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 300</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Dilution 1 in 10 four times. Final dilution</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 1 in 10 000</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Amira carries out a AQA-style required practical linked to control of gene expression. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: the independent variable for this topic</li><li>Dependent: the measured outcome</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>keep all other variables constant</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>repeat and calculate a mean / use a tighter method</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Amira carries out collecting valid data for control of gene expression. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: a chosen factor</li><li>Dependent: a quantitative measurement</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>calibrated instrument</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>systematic error from zero error</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Amira carries out drawing a graph for control of gene expression. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: x-variable</li><li>Dependent: y-variable</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same scale / same apparatus</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>not drawing a line of best fit through the trend</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Amira carries out evaluating a method about control of gene expression. This is a typical AQA required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: method change</li><li>Dependent: precision / accuracy</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same sample size</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>too few repeats</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Compare totipotent cells with pluripotent cells.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>can become any body cell including placenta</li><li>can become any body cell except placenta</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Compare pluripotent cells with transcription factors.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>can become any body cell except placenta</li><li>proteins that bind DNA and switch genes on or off</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Compare transcription factors with epigenetics.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>proteins that bind DNA and switch genes on or off</li><li>heritable changes in gene function without changing the base sequence</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Compare epigenetics with RNA interference.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>heritable changes in gene function without changing the base sequence</li><li>siRNA / miRNA can stop mRNA being translated</li><li>give one linked difference</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Apply your knowledge of a proto-oncogene to this situation: becomes an oncogene if mutated</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>becomes an oncogene if mutated</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Apply your knowledge of recombinant DNA to this situation: restriction enzymes, ligase, vectors</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>restriction enzymes, ligase, vectors</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow AQA style but this is not an official AQA paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

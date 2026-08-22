@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | AQA Maths | Statistics</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            AQA A-Level Mathematics (7357)<br />
+            A-Level Maths<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Statistics</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 86<br />
+          Written in AQA A-Level style. Show full working. A calculator may be used.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">Explain the difference between a population and a sample, and between a parameter and a statistic.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Population: whole group</li><li>Sample: subset</li><li>Parameter from population, statistic from sample</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">Describe simple random sampling and one advantage and one disadvantage.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Every sample of size n equally likely</li><li>Unbiased</li><li>Needs a sampling frame / can be impractical</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">Describe stratified sampling and when it is better than simple random sampling.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Sample in proportion to strata</li><li>More representative when groups differ</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">Describe opportunity/convenience sampling and why it can be biased.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Use who is available</li><li>Not every person has an equal chance</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">A data set has values 2, 5, 7, 10, 16. Find the mean and the standard deviation (divisor n or n−1 as used on your board).</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Show the sum of squared deviations</li><li>Final answer: Mean 8; variance = 22.4 (n) or 28 (n−1)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">Coded data: y = (x − 20)/2. The mean of y is 3 and the sd of y is 1.4. Find the mean and sd of x.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Reverse the coding</li><li>Final answer: Mean x = 26; sd x = 2.8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">Interpret a positive skew and a negative skew. Which average is pulled the most?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Positive: tail to the right, mean &gt; median</li><li>Mean is pulled toward the tail</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">Two events A and B: P(A)=0.4, P(B)=0.5, P(A∩B)=0.2. Find P(A∪B) and P(A|B).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Addition rule; conditional</li><li>Final answer: 0.7 ; 0.4</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State the conditions for a binomial distribution B(n, p).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Fixed n</li><li>Two outcomes</li><li>Independent trials</li><li>Constant p</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">X ~ B(10, 0.3). Find P(X = 2). Leave your answer in a calculable form and evaluate to 3 s.f.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: C(10,2)(0.3)²(0.7)⁸ ≈ 0.233</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">X ~ B(10, 0.3). Find E(X) and Var(X).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>np, np(1−p)</li><li>Final answer: 3 and 2.1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">X ~ B(20, 0.4). Use your calculator to find P(X ≤ 5).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Binomial cdf</li><li>Final answer: 0.1256 (3 s.f., calculator)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">When can a normal distribution be used as a model? Mention symmetry and the mean/median.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Data roughly symmetric / bell-shaped</li><li>Mean ≈ median</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">X ~ N(50, 16). Find P(X &lt; 46). Standardise and use Φ.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: z = (46−50)/4 = −1; Φ(−1) = 1 − 0.8413 = 0.1587</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">X ~ N(100, 25). Find the value a such that P(X &lt; a) = 0.975.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Inverse normal</li><li>Final answer: a = 100 + 1.96×5 = 109.8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">State the mean and variance of the standard normal Z.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>0 and 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">A hypothesis test: H₀: p = 0.5, H₁: p &gt; 0.5, n = 20, observed 14 successes, 5% level. Carry out the test using a binomial model.</div></div>
+    <div class="ms-block"><div class="ms-label">[5 marks]</div><ul><li>State conclusion in context</li><li>Final answer: P(X≥14 | B(20,0.5)) = 0.0577 &gt; 0.05, not significant, do not reject H₀</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Explain what a Type I error and a Type II error are.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Type I: reject H₀ when true</li><li>Type II: fail to reject H₀ when false</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Why do we use a continuity correction when approximating a discrete distribution by a normal?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Discrete values occupy a unit width</li><li>P(X ≤ 10) ≈ P(Y &lt; 10.5)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">PMCC: a scatter graph of revision hours and mark has r = 0.82. Interpret r.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: Strong positive linear correlation</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">The least-squares regression line is y = 12 + 4.5x. Interpret the gradient and the intercept in context if x is hours and y is mark.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Gradient: extra 4.5 marks per hour</li><li>Intercept: predicted mark with 0 hours — may not be meaningful</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">Why should you not use a regression line to predict far outside the data range?</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Extrapolation</li><li>The linear model may not hold</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">A discrete random variable X has P(X=1)=0.2, P(X=2)=0.5, P(X=3)=0.3. Find E(X) and Var(X).</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>Final answer: E(X)=2.1; E(X²)=4.9; Var=0.49</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">For that X, find P(X ≥ 2).</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>Final answer: 0.8</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Describe a histogram versus a box plot: what can you see on each?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Histogram: shape, modality, skew</li><li>Box plot: median, IQR, outliers, easy comparison</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Large data set style: a sample of 40 daily maxima has mean 18.2°C. Explain why this mean might not estimate the yearly mean temperature well.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: Only maxima not typical days,Seasonal bias if the 40 days are not spread through the year</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Write H₀ and H₁ for a two-tailed test that a coin is fair, and state the meaning of the significance level.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>H₀: p=0.5, H₁: p≠0.5</li><li>Significance level is P(Type I error)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Y ~ N(0, 1). Find P(−1.96 &lt; Y &lt; 1.96).</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Standard result</li><li>Final answer: 0.95</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">On AQA Statistics, you must conclude in context. Write a model concluding sentence for a non-significant result about a plant fertiliser.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>There is insufficient evidence at the 5% level that the fertiliser increases mean growth</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">The IQR is 12 and the range is 40. Comment on the presence of possible outliers compared with a data set with IQR 12 and range 16.</div></div>
+    <div class="ms-block"><div class="ms-label">[2 marks]</div><ul><li>Final answer: Much larger range suggests outliers or long tails</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Explain mutually exclusive vs independent, with a probability condition for each.</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>ME: P(A∩B)=0</li><li>Independent: P(A∩B)=P(A)P(B)</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">A Venn diagram: 50 students, 30 do maths, 22 do physics, 12 do both. A student is chosen at random. Find P(physics | maths).</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 12/30 = 0.4</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow AQA style but this is not an official AQA paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
