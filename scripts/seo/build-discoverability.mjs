@@ -110,7 +110,33 @@ function writeSitemap() {
     { loc: `${SITE}/papers`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/tutors`, lastmod: today, changefreq: "weekly", priority: "0.8" },
     { loc: `${SITE}/worksheets/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/about/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
+    { loc: `${SITE}/tutors/joseph-danso/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
+    { loc: `${SITE}/resources/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
   ];
+
+  function walkIndexPages(dir, baseUrl) {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walkIndexPages(full, `${baseUrl}${entry.name}/`);
+      else if (entry.name === "index.html") {
+        const loc = baseUrl.endsWith("/") ? `${SITE}${baseUrl}` : `${SITE}${baseUrl}/`;
+        if (!urls.some((url) => url.loc === loc)) {
+          const depth = baseUrl.split("/").filter(Boolean).length;
+          urls.push({
+            loc,
+            lastmod: isoDate(full),
+            changefreq: "monthly",
+            priority: depth <= 3 ? "0.8" : "0.6",
+          });
+        }
+      }
+    }
+  }
+  walkIndexPages(path.join(root, "public", "about"), "/about/");
+  walkIndexPages(path.join(root, "public", "tutors"), "/tutors/");
+  walkIndexPages(path.join(root, "public", "resources"), "/resources/");
 
   for (const item of JD_SCIENCE_WORKSHEETS) {
     const loc = `${SITE}${item.file_url_override}`;
@@ -222,7 +248,7 @@ function writeWorksheetHub() {
 </head>
 <body>
   <header>
-    <nav><a href="/">JD Science home</a> · <a href="/papers">Past papers</a> · <a href="/tutors">Find a tutor</a></nav>
+      <nav><a href="/">JD Science home</a> · <a href="/about/">About</a> · <a href="/tutors/joseph-danso/">Joseph Danso</a> · <a href="/resources/">Resources</a> · <a href="/papers">Past papers</a> · <a href="/tutors">Find a tutor</a></nav>
     <h1>Free science and maths worksheets</h1>
     <p style="color:#ccfbf1;max-width:720px">Original JD Science topic worksheets for GCSE, IGCSE, A-Level, T-Level and BTEC. Every question is newly written for tutoring and revision — not copied from official exam papers.</p>
   </header>

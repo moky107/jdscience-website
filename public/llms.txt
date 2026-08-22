@@ -6,7 +6,11 @@ JD Science helps GCSE, IGCSE, A-Level, T-Level and BTEC students with Biology, C
 
 ## Site
 - Home: https://www.jdscience.co.uk/
-- Past papers and resources: https://www.jdscience.co.uk/papers
+- About: https://www.jdscience.co.uk/about/
+- Joseph Danso: https://www.jdscience.co.uk/tutors/joseph-danso/
+- Resources: https://www.jdscience.co.uk/resources/
+- GCSE Chemistry: https://www.jdscience.co.uk/resources/gcse/chemistry/
+- Past papers: https://www.jdscience.co.uk/papers
 - Free worksheets: https://www.jdscience.co.uk/worksheets/
 - Find a tutor: https://www.jdscience.co.uk/tutors
 - Contact: info@jdscience.co.uk

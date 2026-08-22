@@ -434,6 +434,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       options: SUBJECTS_BY_LEVEL[lvl].map((s) => ({ text: s, action: () => onPick(lvl, s) })),
     })),
     { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
+    { label: "About", type: "link", action: () => { window.location.href = "/about/"; }, href: "/about/" },
     { label: "Advice", type: "link", action: () => onScroll("advice"), href: "/#advice-anchor" },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book"), href: "/#book-anchor" },
     { label: "Become a Tutor", type: "link", action: onTutor, ref: tutorButtonRef },
@@ -506,7 +507,11 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
             <div key={it.label} style={{ position: "relative" }}
               onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
               {it.href ? (
-                <a ref={it.ref} href={it.href} onClick={(e) => { e.preventDefault(); it.action(); }}
+                <a ref={it.ref} href={it.href} onClick={(e) => {
+                  if (it.href.startsWith("/about") || it.href.startsWith("/resources/") || it.href.startsWith("/tutors/joseph")) return;
+                  e.preventDefault();
+                  it.action();
+                }}
                   style={{ background: "transparent", border: "none", padding: "12px 14px", cursor: "pointer", fontWeight: 700, color: "#0f172a", fontSize: 14, whiteSpace: "nowrap", textDecoration: "none", display: "inline-block" }}>
                   {it.label}
                 </a>
@@ -1544,6 +1549,12 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
         )}
 
         <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}>
+          <article style={{ background: "#fff", borderRadius: 22, padding: isMobile ? 18 : 22, boxShadow: "0 10px 30px rgba(15,23,42,.08)", border: "1px solid rgba(0,150,136,.16)" }}>
+            <div style={{ color: TEAL_DARK, fontWeight: 800, fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}>Founder</div>
+            <h3 style={{ margin: "8px 0 6px", color: "#0f172a" }}>Joseph Danso</h3>
+            <p style={{ color: "#64748b", margin: 0, lineHeight: 1.55 }}>Science Lecturer, FRSC, QTLS, EdD candidate, examiner and WorldSkills educator. Online Chemistry tutor in London and across the UK.</p>
+            <a href="/tutors/joseph-danso/" style={{ display: "inline-block", marginTop: 14, fontWeight: 800, color: TEAL }}>View Joseph&apos;s profile →</a>
+          </article>
           {featuredTutors.map((tutor, index) => (
             <TutorCard
               key={tutor.id || tutor.public_slug}
@@ -2114,6 +2125,10 @@ function Footer({ onContact, onTutor, onAdvice, onPapers, onTutors, onHome }) {
         </div>
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
+          <a href="/about/" style={footerLink}>About JD Science</a>
+          <a href="/tutors/joseph-danso/" style={footerLink}>Joseph Danso</a>
+          <a href="/resources/" style={footerLink}>Resource pages</a>
+          <a href="/resources/gcse/chemistry/" style={footerLink}>GCSE Chemistry</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>Past papers</a>
           <a href="/worksheets/" style={footerLink}>Topic worksheets</a>
           <a href="/tutors" onClick={(e) => { e.preventDefault(); onTutors?.(); }} style={footerLink}>Find a tutor</a>

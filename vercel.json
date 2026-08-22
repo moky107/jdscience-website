@@ -33,6 +33,6 @@
     { "source": "/papers/", "destination": "/" },
     { "source": "/tutors", "destination": "/" },
     { "source": "/tutors/", "destination": "/" },
-    { "source": "/((?!api/|resources/|worksheets/|sitemap\\.xml|robots\\.txt|llms\\.txt|site\\.webmanifest|og-image\\.png|favicon\\.svg).*)", "destination": "/" }
+    { "source": "/((?!api/|resources/|worksheets/|about/|tutors/joseph-danso|sitemap\\.xml|robots\\.txt|llms\\.txt|site\\.webmanifest|og-image\\.png|favicon\\.svg).*)", "destination": "/" }
   ]
 }
