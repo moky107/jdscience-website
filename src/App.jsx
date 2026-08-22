@@ -6,8 +6,10 @@ import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
-import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources";
+import { OCR_SCIENCE_MATHS_RESOURCES } from "./ocrScienceMathsResources";
+import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsResources";
+import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
@@ -83,10 +85,6 @@ const STATIC_RESOURCE_ITEMS = [
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Unit 1 Biology Revision Booklet", file_name: "Unit-1-Biology-Revision-Booklet.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B1 Cell Biology", file_name: "JDScience_B1_Cell_Biology.pptx" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B4 Bioenergetics", file_name: "JDScience_B4_Bioenergetics.pptx" },
-  // GCSE Biology — Specifications (official board URLs)
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "OCR", resource_category: "Specifications", title: "OCR GCSE Biology A Specification (J247)", file_url_override: "https://www.ocr.org.uk/Images/234596-specification-accredited-gcse-gateway-science-suite-biology-a-j247.pdf" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Eduqas", resource_category: "Specifications", title: "Eduqas GCSE Biology Specification", file_url_override: "https://www.eduqas.co.uk/media/by0bk3na/eduqas-gcse-biology-spec-from-2016.pdf" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "WJEC", resource_category: "Specifications", title: "WJEC GCSE Biology Specification", file_url_override: "https://www.wjec.co.uk/media/o1hbpvqf/wjec-gcse-biology-spec-from-2016.pdf" },
   // GCSE Chemistry — Videos
   {
     level: "GCSE/IGCSE",
@@ -102,6 +100,8 @@ const STATIC_RESOURCE_ITEMS = [
   ...AQA_ALEVEL_CHEMISTRY_RESOURCES,
   ...AQA_SCIENCE_RESOURCES,
   ...EDEXCEL_SCIENCE_MATHS_RESOURCES,
+  ...OCR_SCIENCE_MATHS_RESOURCES,
+  ...EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
 ];
