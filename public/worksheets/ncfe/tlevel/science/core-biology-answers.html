@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | NCFE Science | Core biology</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            NCFE T Level Technical Qualification in Science (603/6989/9)<br />
+            T-Level Science<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Core biology</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 104<br />
+          Written in T-Level core exam style (Papers A and B). Use the command verbs: state, describe, explain, calculate, evaluate. Show working and refer to workplace practice.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">State what is meant by a eukaryotic cell.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>cell with a nucleus and organelles</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">State what is meant by a prokaryotic cell.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>no nucleus, DNA in the cytoplasm</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">State what is meant by biological molecules.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>carbohydrates, lipids, proteins, nucleic acids</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">State what is meant by an enzyme.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>biological catalyst with an active site</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State what is meant by DNA.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>double helix of nucleotides</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">State what is meant by the cell cycle.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>interphase, mitosis, cytokinesis</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State what is meant by a pathogen.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>organism or agent that causes disease</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">State what is meant by the immune response.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>non-specific then specific</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State what is meant by transport in organisms.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>diffusion, osmosis, active transport</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">State what is meant by microbiology.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>study of microorganisms</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Noah is asked about a eukaryotic cell in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>animal, plant, fungal</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>different from prokaryotes</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Noah is asked about a prokaryotic cell in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>bacteria</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>70S ribosomes, cell wall</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Noah is asked about biological molecules in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>built by condensation</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>hydrolysed in digestion</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Noah is asked about an enzyme in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>affected by T, pH, inhibitors</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>used in food and diagnostics</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Noah is asked about DNA in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>A-T and G-C</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>codes for proteins</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Noah is asked about the cell cycle in a NCFE Science paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>growth and repair</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>errors can cause tumours</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">Magnification = 12 mm / 8 µm. Magnification?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: ×1500</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">A culture doubles every 30 min. Cells from 1 after 3 h?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 64</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Enzyme rate 18 cm³ in 3 min. Mean rate?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 6 cm³/min</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">A DNA sample is 20% adenine. Percentage thymine?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 20%</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">Cfu: 45 colonies from 0.1 cm³ of a 10⁻⁴ dilution. cfu/cm³?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 4.5 × 10⁵</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">SA:V of a 2 cm cube</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 3 : 1</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Noah carries out a T-Level occupational task on T-Level core biology. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: the factor being investigated</li><li>Dependent: the measured result or quality check</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>follow the SOP and keep other variables constant</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>not recording the batch/lot number or operator ID</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Noah carries out writing or following an SOP for T-Level core biology. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: a step in the method</li><li>Dependent: whether the acceptance criteria are met</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same calibrated instrument</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>skipping a verification check</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Noah carries out a COSHH / risk-assessment review for T-Level core biology. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: hazard</li><li>Dependent: control measure effectiveness</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same PPE and waste route</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>using expired reagents or the wrong waste stream</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Noah carries out data review in a LIMS or quality log for T-Level core biology. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: sample ID</li><li>Dependent: result vs specification</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same calculation method</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>transcription error between the instrument and the LIMS</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Compare a eukaryotic cell with an enzyme.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>cell with a nucleus and organelles</li><li>biological catalyst with an active site</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Compare a prokaryotic cell with DNA.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>no nucleus, DNA in the cytoplasm</li><li>double helix of nucleotides</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Compare biological molecules with the cell cycle.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>carbohydrates, lipids, proteins, nucleic acids</li><li>interphase, mitosis, cytokinesis</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Compare an enzyme with a pathogen.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>biological catalyst with an active site</li><li>organism or agent that causes disease</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Apply your knowledge of a pathogen to this situation: bacteria, viruses, fungi, protozoa</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>bacteria, viruses, fungi, protozoa</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Apply your knowledge of the immune response to this situation: phagocytes, antibodies, memory cells</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>phagocytes, antibodies, memory cells</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow NCFE style but this is not an official NCFE paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

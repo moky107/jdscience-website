@@ -4160,5 +4160,1485 @@ export const JD_SCIENCE_WORKSHEETS = [
     "file_name": "mechanics-answers.html",
     "series_label": "JD Science answer sheets",
     "file_url_override": "/worksheets/ocr/alevel/maths/mechanics-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in the health and science sector — JD Science worksheet (32 questions)",
+    "file_name": "working-in-the-sector.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/working-in-the-sector.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in the health and science sector — JD Science answers",
+    "file_name": "working-in-the-sector-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/working-in-the-sector-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health, safety and environmental regulations — JD Science worksheet (32 questions)",
+    "file_name": "health-safety-environment.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/health-safety-environment.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health, safety and environmental regulations — JD Science answers",
+    "file_name": "health-safety-environment-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/health-safety-environment-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Managing information and data — JD Science worksheet (32 questions)",
+    "file_name": "managing-information-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/managing-information-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Managing information and data — JD Science answers",
+    "file_name": "managing-information-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/managing-information-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Good scientific and clinical practice — JD Science worksheet (32 questions)",
+    "file_name": "good-scientific-practice.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/good-scientific-practice.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Good scientific and clinical practice — JD Science answers",
+    "file_name": "good-scientific-practice-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/good-scientific-practice-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core biology — JD Science worksheet (32 questions)",
+    "file_name": "core-biology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-biology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core biology — JD Science answers",
+    "file_name": "core-biology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-biology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core chemistry — JD Science worksheet (32 questions)",
+    "file_name": "core-chemistry.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-chemistry.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core chemistry — JD Science answers",
+    "file_name": "core-chemistry-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-chemistry-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core physics — JD Science worksheet (32 questions)",
+    "file_name": "core-physics.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-physics.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Core physics — JD Science answers",
+    "file_name": "core-physics-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/core-physics-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Ethics, research and the Employer Set Project — JD Science worksheet (32 questions)",
+    "file_name": "ethics-and-research.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/ethics-and-research.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Ethics, research and the Employer Set Project — JD Science answers",
+    "file_name": "ethics-and-research-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/science/ethics-and-research-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in the science sector — JD Science worksheet (32 questions)",
+    "file_name": "working-in-the-sector.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/working-in-the-sector.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in the science sector — JD Science answers",
+    "file_name": "working-in-the-sector-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/working-in-the-sector-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Health and safety in a laboratory environment — JD Science worksheet (32 questions)",
+    "file_name": "health-safety-environment.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/health-safety-environment.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Health and safety in a laboratory environment — JD Science answers",
+    "file_name": "health-safety-environment-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/health-safety-environment-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Managing information and data — JD Science worksheet (32 questions)",
+    "file_name": "managing-information-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/managing-information-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Managing information and data — JD Science answers",
+    "file_name": "managing-information-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/managing-information-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Good scientific practice — JD Science worksheet (32 questions)",
+    "file_name": "good-scientific-practice.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/good-scientific-practice.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Good scientific practice — JD Science answers",
+    "file_name": "good-scientific-practice-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/good-scientific-practice-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core biology — cells, molecules, microbiology and immunology — JD Science worksheet (32 questions)",
+    "file_name": "core-biology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-biology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core biology — cells, molecules, microbiology and immunology — JD Science answers",
+    "file_name": "core-biology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-biology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core chemistry — reactions, rates and calculations — JD Science worksheet (32 questions)",
+    "file_name": "core-chemistry.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-chemistry.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core chemistry — reactions, rates and calculations — JD Science answers",
+    "file_name": "core-chemistry-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-chemistry-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core physics — particles, electricity, waves and gas laws — JD Science worksheet (32 questions)",
+    "file_name": "core-physics.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-physics.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Core physics — particles, electricity, waves and gas laws — JD Science answers",
+    "file_name": "core-physics-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/core-physics-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Ethical considerations in scientific research — JD Science worksheet (32 questions)",
+    "file_name": "ethics-and-research.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/ethics-and-research.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Ethical considerations in scientific research — JD Science answers",
+    "file_name": "ethics-and-research-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/science/ethics-and-research-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Scientific techniques and SOPs (PO1) — JD Science worksheet (32 questions)",
+    "file_name": "lab-techniques-sops.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-techniques-sops.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Scientific techniques and SOPs (PO1) — JD Science answers",
+    "file_name": "lab-techniques-sops-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-techniques-sops-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health, safety, GLP and quality — JD Science worksheet (32 questions)",
+    "file_name": "lab-quality-glp-gmp.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-quality-glp-gmp.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health, safety, GLP and quality — JD Science answers",
+    "file_name": "lab-quality-glp-gmp-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-quality-glp-gmp-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Laboratory chemical calculations — JD Science worksheet (32 questions)",
+    "file_name": "lab-chemical-calculations.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-chemical-calculations.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Laboratory chemical calculations — JD Science answers",
+    "file_name": "lab-chemical-calculations-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-chemical-calculations-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Planning and reviewing investigations (PO2) — JD Science worksheet (32 questions)",
+    "file_name": "lab-planning-investigations.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-planning-investigations.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Planning and reviewing investigations (PO2) — JD Science answers",
+    "file_name": "lab-planning-investigations-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-planning-investigations-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Data, LIMS and resolving errors (PO3) — JD Science worksheet (32 questions)",
+    "file_name": "lab-data-lims-errors.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-data-lims-errors.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Data, LIMS and resolving errors (PO3) — JD Science answers",
+    "file_name": "lab-data-lims-errors-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/laboratory-sciences/lab-data-lims-errors-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Scientific laboratory techniques and SOPs — JD Science worksheet (32 questions)",
+    "file_name": "lab-techniques-sops.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-techniques-sops.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Scientific laboratory techniques and SOPs — JD Science answers",
+    "file_name": "lab-techniques-sops-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-techniques-sops-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "GLP, GMP and laboratory quality — JD Science worksheet (32 questions)",
+    "file_name": "lab-quality-glp-gmp.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-quality-glp-gmp.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "GLP, GMP and laboratory quality — JD Science answers",
+    "file_name": "lab-quality-glp-gmp-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-quality-glp-gmp-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Chemical calculations — JD Science worksheet (32 questions)",
+    "file_name": "lab-chemical-calculations.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-chemical-calculations.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Chemical calculations — JD Science answers",
+    "file_name": "lab-chemical-calculations-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-chemical-calculations-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Designing and executing scientific tasks — JD Science worksheet (32 questions)",
+    "file_name": "lab-planning-investigations.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-planning-investigations.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Designing and executing scientific tasks — JD Science answers",
+    "file_name": "lab-planning-investigations-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-planning-investigations-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Data collection, analysis and errors — JD Science worksheet (32 questions)",
+    "file_name": "lab-data-lims-errors.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-data-lims-errors.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Laboratory Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Data collection, analysis and errors — JD Science answers",
+    "file_name": "lab-data-lims-errors-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/laboratory-sciences/lab-data-lims-errors-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food safety, quality and legislation (PO1) — JD Science worksheet (32 questions)",
+    "file_name": "food-safety-legislation.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-safety-legislation.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food safety, quality and legislation (PO1) — JD Science answers",
+    "file_name": "food-safety-legislation-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-safety-legislation-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "HACCP — JD Science worksheet (32 questions)",
+    "file_name": "food-haccp.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-haccp.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "HACCP — JD Science answers",
+    "file_name": "food-haccp-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-haccp-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food microbiology — JD Science worksheet (32 questions)",
+    "file_name": "food-microbiology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-microbiology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food microbiology — JD Science answers",
+    "file_name": "food-microbiology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-microbiology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Raw materials, technology and new products (PO2) — JD Science worksheet (32 questions)",
+    "file_name": "food-materials-technology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-materials-technology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Raw materials, technology and new products (PO2) — JD Science answers",
+    "file_name": "food-materials-technology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-materials-technology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Packaging, processing and issues in the supply chain (PO3) — JD Science worksheet (32 questions)",
+    "file_name": "food-packaging-processing.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-packaging-processing.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Packaging, processing and issues in the supply chain (PO3) — JD Science answers",
+    "file_name": "food-packaging-processing-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-packaging-processing-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food production data (PO4) — JD Science worksheet (32 questions)",
+    "file_name": "food-production-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-production-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Food production data (PO4) — JD Science answers",
+    "file_name": "food-production-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/food-sciences/food-production-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Safety, quality and legislation in food and drink — JD Science worksheet (32 questions)",
+    "file_name": "food-safety-legislation.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-safety-legislation.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Safety, quality and legislation in food and drink — JD Science answers",
+    "file_name": "food-safety-legislation-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-safety-legislation-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "HACCP in the food and drink industry — JD Science worksheet (32 questions)",
+    "file_name": "food-haccp.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-haccp.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "HACCP in the food and drink industry — JD Science answers",
+    "file_name": "food-haccp-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-haccp-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Microbiology in the food and drink industry — JD Science worksheet (32 questions)",
+    "file_name": "food-microbiology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-microbiology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Microbiology in the food and drink industry — JD Science answers",
+    "file_name": "food-microbiology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-microbiology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Raw materials and food technology — JD Science worksheet (32 questions)",
+    "file_name": "food-materials-technology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-materials-technology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Raw materials and food technology — JD Science answers",
+    "file_name": "food-materials-technology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-materials-technology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Packaging and processing — JD Science worksheet (32 questions)",
+    "file_name": "food-packaging-processing.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-packaging-processing.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Packaging and processing — JD Science answers",
+    "file_name": "food-packaging-processing-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-packaging-processing-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Collecting and interpreting food production data — JD Science worksheet (32 questions)",
+    "file_name": "food-production-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-production-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Food Sciences",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Collecting and interpreting food production data — JD Science answers",
+    "file_name": "food-production-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/food-sciences/food-production-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science worksheet (32 questions)",
+    "file_name": "health-working-in-health.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-working-in-health.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science answers",
+    "file_name": "health-working-in-health-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-working-in-health-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science worksheet (32 questions)",
+    "file_name": "health-person-centred-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-person-centred-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science answers",
+    "file_name": "health-person-centred-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-person-centred-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science worksheet (32 questions)",
+    "file_name": "health-infection-control.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-infection-control.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science answers",
+    "file_name": "health-infection-control-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-infection-control-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science worksheet (32 questions)",
+    "file_name": "health-safeguarding.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-safeguarding.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science answers",
+    "file_name": "health-safeguarding-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-safeguarding-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science worksheet (32 questions)",
+    "file_name": "health-physiology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-physiology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science answers",
+    "file_name": "health-physiology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-physiology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science worksheet (32 questions)",
+    "file_name": "health-wellbeing.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-wellbeing.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science answers",
+    "file_name": "health-wellbeing-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/health/health-wellbeing-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science worksheet (32 questions)",
+    "file_name": "health-working-in-health.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-working-in-health.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science answers",
+    "file_name": "health-working-in-health-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-working-in-health-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science worksheet (32 questions)",
+    "file_name": "health-person-centred-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-person-centred-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science answers",
+    "file_name": "health-person-centred-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-person-centred-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science worksheet (32 questions)",
+    "file_name": "health-infection-control.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-infection-control.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science answers",
+    "file_name": "health-infection-control-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-infection-control-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science worksheet (32 questions)",
+    "file_name": "health-safeguarding.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-safeguarding.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science answers",
+    "file_name": "health-safeguarding-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-safeguarding-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science worksheet (32 questions)",
+    "file_name": "health-physiology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-physiology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science answers",
+    "file_name": "health-physiology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-physiology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science worksheet (32 questions)",
+    "file_name": "health-wellbeing.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-wellbeing.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science answers",
+    "file_name": "health-wellbeing-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/health/health-wellbeing-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science worksheet (32 questions)",
+    "file_name": "health-working-in-health.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-working-in-health.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Working in health — JD Science answers",
+    "file_name": "health-working-in-health-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-working-in-health-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science worksheet (32 questions)",
+    "file_name": "health-person-centred-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-person-centred-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Person-centred care — JD Science answers",
+    "file_name": "health-person-centred-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-person-centred-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science worksheet (32 questions)",
+    "file_name": "health-infection-control.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-infection-control.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and control — JD Science answers",
+    "file_name": "health-infection-control-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-infection-control-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science worksheet (32 questions)",
+    "file_name": "health-safeguarding.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-safeguarding.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Safeguarding — JD Science answers",
+    "file_name": "health-safeguarding-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-safeguarding-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science worksheet (32 questions)",
+    "file_name": "health-physiology.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-physiology.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Human physiology and observations — JD Science answers",
+    "file_name": "health-physiology-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-physiology-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science worksheet (32 questions)",
+    "file_name": "health-wellbeing.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-wellbeing.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Health",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Health and wellbeing — JD Science answers",
+    "file_name": "health-wellbeing-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/health/health-wellbeing-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science worksheet (32 questions)",
+    "file_name": "hcs-working-in-healthcare-science.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-working-in-healthcare-science.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science answers",
+    "file_name": "hcs-working-in-healthcare-science-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-working-in-healthcare-science-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science worksheet (32 questions)",
+    "file_name": "hcs-physiological-measurement.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-physiological-measurement.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science answers",
+    "file_name": "hcs-physiological-measurement-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-physiological-measurement-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science worksheet (32 questions)",
+    "file_name": "hcs-point-of-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-point-of-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science answers",
+    "file_name": "hcs-point-of-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-point-of-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science worksheet (32 questions)",
+    "file_name": "hcs-quality-governance.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-quality-governance.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science answers",
+    "file_name": "hcs-quality-governance-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-quality-governance-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science worksheet (32 questions)",
+    "file_name": "hcs-infection-and-safety.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-infection-and-safety.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science answers",
+    "file_name": "hcs-infection-and-safety-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-infection-and-safety-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science worksheet (32 questions)",
+    "file_name": "hcs-records-and-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-records-and-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "NCFE",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science answers",
+    "file_name": "hcs-records-and-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/ncfe/tlevel/healthcare-science/hcs-records-and-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science worksheet (32 questions)",
+    "file_name": "hcs-working-in-healthcare-science.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-working-in-healthcare-science.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science answers",
+    "file_name": "hcs-working-in-healthcare-science-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-working-in-healthcare-science-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science worksheet (32 questions)",
+    "file_name": "hcs-physiological-measurement.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-physiological-measurement.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science answers",
+    "file_name": "hcs-physiological-measurement-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-physiological-measurement-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science worksheet (32 questions)",
+    "file_name": "hcs-point-of-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-point-of-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science answers",
+    "file_name": "hcs-point-of-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-point-of-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science worksheet (32 questions)",
+    "file_name": "hcs-quality-governance.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-quality-governance.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science answers",
+    "file_name": "hcs-quality-governance-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-quality-governance-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science worksheet (32 questions)",
+    "file_name": "hcs-infection-and-safety.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-infection-and-safety.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science answers",
+    "file_name": "hcs-infection-and-safety-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-infection-and-safety-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science worksheet (32 questions)",
+    "file_name": "hcs-records-and-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-records-and-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "Pearson",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science answers",
+    "file_name": "hcs-records-and-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/pearson/tlevel/healthcare-science/hcs-records-and-data-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science worksheet (32 questions)",
+    "file_name": "hcs-working-in-healthcare-science.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-working-in-healthcare-science.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Working in healthcare science — JD Science answers",
+    "file_name": "hcs-working-in-healthcare-science-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-working-in-healthcare-science-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science worksheet (32 questions)",
+    "file_name": "hcs-physiological-measurement.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-physiological-measurement.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Physiological measurement — JD Science answers",
+    "file_name": "hcs-physiological-measurement-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-physiological-measurement-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science worksheet (32 questions)",
+    "file_name": "hcs-point-of-care.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-point-of-care.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Point-of-care testing — JD Science answers",
+    "file_name": "hcs-point-of-care-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-point-of-care-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science worksheet (32 questions)",
+    "file_name": "hcs-quality-governance.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-quality-governance.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Quality, IQC/EQA and governance — JD Science answers",
+    "file_name": "hcs-quality-governance-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-quality-governance-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science worksheet (32 questions)",
+    "file_name": "hcs-infection-and-safety.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-infection-and-safety.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Infection prevention and safety — JD Science answers",
+    "file_name": "hcs-infection-and-safety-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-infection-and-safety-answers.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science worksheet (32 questions)",
+    "file_name": "hcs-records-and-data.html",
+    "series_label": "JD Science topic worksheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-records-and-data.html"
+  },
+  {
+    "level": "T-Level",
+    "subject": "Healthcare Science",
+    "exam_board": "City & Guilds",
+    "resource_category": "Worksheets",
+    "title": "Records, data and confidentiality — JD Science answers",
+    "file_name": "hcs-records-and-data-answers.html",
+    "series_label": "JD Science answer sheets",
+    "file_url_override": "/worksheets/city-guilds/tlevel/healthcare-science/hcs-records-and-data-answers.html"
   }
 ];

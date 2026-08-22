@@ -13,6 +13,9 @@ const STUDENTS = {
   OCR: ["Grace", "Hari", "Isla"],
   Eduqas: ["Jac", "Kira", "Llio"],
   WJEC: ["Owain", "Nia", "Rhys"],
+  NCFE: ["Noah", "Priya", "Sam"],
+  Pearson: ["Pat", "Quinn", "Rae"],
+  "City & Guilds": ["Chris", "Gita", "Lee"],
 };
 
 const TOWNS = {
@@ -21,11 +24,14 @@ const TOWNS = {
   OCR: "Worcester",
   Eduqas: "Cardiff",
   WJEC: "Swansea",
+  NCFE: "Leeds",
+  Pearson: "Manchester",
+  "City & Guilds": "Birmingham",
 };
 
 export function contextFor(offering) {
   const names = STUDENTS[offering.board] || STUDENTS.AQA;
-  const offset = { AQA: 0, Edexcel: 1, OCR: 2, Eduqas: 3, WJEC: 4 }[offering.board] || 0;
+  const offset = { AQA: 0, Edexcel: 1, OCR: 2, Eduqas: 3, WJEC: 4, NCFE: 5, Pearson: 6, "City & Guilds": 7 }[offering.board] || 0;
   return {
     ...offering,
     student: names[0],

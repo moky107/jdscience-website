@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Science answers | NCFE Laboratory Sciences | Scientific techniques and SOPs (PO1)</title>
+  <style>
+    :root { --teal: #009688; --teal-dark: #004d40; }
+    @page { size: A4; margin: 12mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Times New Roman", Times, Georgia, serif;
+      color: #111;
+      background: #f3f4f6;
+    }
+    .sheet {
+      position: relative;
+      max-width: 210mm;
+      margin: 16px auto;
+      background: #fff;
+      padding: 16px 18px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .watermark {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .watermark span {
+      position: absolute;
+      left: -20%;
+      top: 8%;
+      width: 160%;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: #004d40;
+      opacity: 0.055;
+      transform: rotate(-28deg);
+      text-align: center;
+      line-height: 3.2;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .content { position: relative; z-index: 1; }
+    header { border-bottom: 3px solid var(--teal); padding-bottom: 10px; margin-bottom: 14px; }
+    .brand {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+    .logo { font-weight: 800; color: var(--teal-dark); font-size: 22px; letter-spacing: 0.04em; }
+    .web { color: var(--teal); font-size: 13px; font-weight: 700; }
+    h1 { font-size: 20px; margin: 8px 0 4px; }
+    .meta, .banner, .note, .toolbar, footer { font-family: "Segoe UI", Arial, sans-serif; }
+    .meta { color: #334155; font-size: 13px; line-height: 1.45; }
+    .banner {
+      margin-top: 8px;
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      color: #92400e;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toolbar { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+    .toolbar button {
+      background: var(--teal);
+      color: #fff;
+      border: 0;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .note { font-size: 13px; color: #334155; margin: 8px 0 14px; }
+    .question { margin: 0 0 16px; break-inside: avoid; }
+    .q-head { display: flex; gap: 8px; align-items: flex-start; }
+    .q-num { font-weight: 700; min-width: 1.6em; }
+    .q-stem { flex: 1; }
+    .marks { float: right; font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 12px; color: #0f172a; }
+    .part { margin: 8px 0 8px 22px; }
+    .part-head { margin-bottom: 4px; }
+    .part-label { font-weight: 700; }
+    .line { border-bottom: 1px dotted #94a3b8; height: 18px; }
+    .ms-block { margin: 6px 0 6px 22px; }
+    .ms-label { font-weight: 700; font-family: "Segoe UI", Arial, sans-serif; font-size: 13px; color: var(--teal-dark); }
+    ul { margin: 4px 0 0 18px; }
+    li { margin: 2px 0; }
+    footer { margin-top: 22px; border-top: 2px solid var(--teal); padding-top: 8px; font-size: 11px; color: #475569; }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; box-shadow: none; max-width: none; padding: 0; }
+      .toolbar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="watermark"><span>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk<br>JD SCIENCE  ·  ANSWERS · www.jdscience.co.uk</span></div>
+  <div class="sheet">
+    <div class="content">
+      <header>
+        <div class="brand">
+          <div>
+            <div class="logo">JD SCIENCE</div>
+            <div class="web">www.jdscience.co.uk</div>
+          </div>
+          <div class="meta" style="text-align:right">
+            NCFE T Level Science — Laboratory Sciences (Lab OSA)<br />
+            T-Level Laboratory Sciences<br />
+            Answer sheet
+          </div>
+        </div>
+        <h1>Scientific techniques and SOPs (PO1)</h1>
+        <div class="banner">Separate mark scheme — do not issue with the student worksheet</div>
+        <div class="meta" style="margin-top:8px">
+          Time guide: — · Questions: 32 · Total marks: 104<br />
+          Written in occupational specialism style (PO1–PO3 / Assignments 1–3). Refer to SOPs, COSHH, GLP and LIMS.
+        </div>
+      </header>
+      <div class="toolbar">
+        <button onclick="window.print()">Print / Save as PDF</button>
+      </div>
+      <p class="note">Indicative marking points. Award marks for equivalent scientific or mathematical wording. Do not issue this sheet with the student worksheet.</p>
+      <article class="question">
+    <div class="q-head"><span class="q-num">1.</span> <div class="q-stem">State what is meant by a volumetric flask.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>makes a solution of known volume and concentration</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">2.</span> <div class="q-stem">State what is meant by a burette.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>delivers a variable volume to 0.05 cm³</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">3.</span> <div class="q-stem">State what is meant by a balance.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>measures mass</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">4.</span> <div class="q-stem">State what is meant by pH measurement.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>glass electrode, calibrated buffers</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">5.</span> <div class="q-stem">State what is meant by chromatography.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>separates mixtures</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">6.</span> <div class="q-stem">State what is meant by spectroscopy.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>interaction of light with matter</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">7.</span> <div class="q-stem">State what is meant by microscopy.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>magnifies a specimen</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">8.</span> <div class="q-stem">State what is meant by centrifugation.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>separates by density</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">9.</span> <div class="q-stem">State what is meant by an SOP.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>controlled method everyone must follow</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">10.</span> <div class="q-stem">State what is meant by sample integrity.</div></div>
+    <div class="ms-block"><div class="ms-label">[1 mark]</div><ul><li>correct ID, storage, chain of custody</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">11.</span> <div class="q-stem">Noah is asked about a volumetric flask in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>make up to the mark at eye level</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>used for standards</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">12.</span> <div class="q-stem">Noah is asked about a burette in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>titration</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>read the bottom of the meniscus</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">13.</span> <div class="q-stem">Noah is asked about a balance in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>analytical balances to 0.0001 g</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>draft shield and tare</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">14.</span> <div class="q-stem">Noah is asked about pH measurement in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>rinse between samples</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>store in KCl</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">15.</span> <div class="q-stem">Noah is asked about chromatography in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>TLC, HPLC, GC</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>Rf or retention time</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">16.</span> <div class="q-stem">Noah is asked about spectroscopy in a NCFE Laboratory Sciences paper.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>colorimetry, UV-Vis, IR, AA</li></ul></div><div class="ms-block"><div class="ms-label">(b) [3 marks]</div><ul><li>Beer–Lambert</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">17.</span> <div class="q-stem">A 250 cm³ flask is used for 0.100 mol dm⁻³ NaOH. Mass of NaOH (M=40)?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 1.00 g</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">18.</span> <div class="q-stem">Beer–Lambert: A = εcl. A=0.60, ε=2000, l=1.0 cm. c?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 3.0 × 10⁻⁴ mol dm⁻³</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">19.</span> <div class="q-stem">Rf = 3.6 / 9.0</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 0.40</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">20.</span> <div class="q-stem">A centrifuge runs at 3000 rpm for 10 min. Total revolutions?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 30000</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">21.</span> <div class="q-stem">Titres 24.10, 24.20, 24.15. Mean?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 24.15 cm³</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">22.</span> <div class="q-stem">A 10 cm³ pipette delivers 9.96 cm³. Percentage error?</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>Final answer: 0.40%</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">23.</span> <div class="q-stem">Noah carries out a T-Level occupational task on laboratory techniques and SOPs. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: the factor being investigated</li><li>Dependent: the measured result or quality check</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>follow the SOP and keep other variables constant</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>not recording the batch/lot number or operator ID</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">24.</span> <div class="q-stem">Noah carries out writing or following an SOP for laboratory techniques and SOPs. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: a step in the method</li><li>Dependent: whether the acceptance criteria are met</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same calibrated instrument</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>skipping a verification check</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">25.</span> <div class="q-stem">Noah carries out a COSHH / risk-assessment review for laboratory techniques and SOPs. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: hazard</li><li>Dependent: control measure effectiveness</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same PPE and waste route</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>using expired reagents or the wrong waste stream</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">26.</span> <div class="q-stem">Noah carries out data review in a LIMS or quality log for laboratory techniques and SOPs. This is a typical NCFE required-practical style question.</div></div>
+    <div class="ms-block"><div class="ms-label">(a) [2 marks]</div><ul><li>Independent: sample ID</li><li>Dependent: result vs specification</li></ul></div><div class="ms-block"><div class="ms-label">(b) [2 marks]</div><ul><li>same calculation method</li><li>so the test is fair / only one variable is changed</li></ul></div><div class="ms-block"><div class="ms-label">(c) [2 marks]</div><ul><li>transcription error between the instrument and the LIMS</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">27.</span> <div class="q-stem">Compare a volumetric flask with pH measurement.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>makes a solution of known volume and concentration</li><li>glass electrode, calibrated buffers</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">28.</span> <div class="q-stem">Compare a burette with chromatography.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>delivers a variable volume to 0.05 cm³</li><li>separates mixtures</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">29.</span> <div class="q-stem">Compare a balance with spectroscopy.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>measures mass</li><li>interaction of light with matter</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">30.</span> <div class="q-stem">Compare pH measurement with microscopy.</div></div>
+    <div class="ms-block"><div class="ms-label">[4 marks]</div><ul><li>glass electrode, calibrated buffers</li><li>magnifies a specimen</li><li>state one workplace implication</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">31.</span> <div class="q-stem">Apply your knowledge of microscopy to this situation: light or electron</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>light or electron</li></ul></div>
+  </article>
+<article class="question">
+    <div class="q-head"><span class="q-num">32.</span> <div class="q-stem">Apply your knowledge of centrifugation to this situation: balance the tubes</div></div>
+    <div class="ms-block"><div class="ms-label">[3 marks]</div><ul><li>balance the tubes</li></ul></div>
+  </article>
+      <footer>
+        © JD Science. Original practice material for personal study and tutoring. Command words, mark allocations and paper layout follow NCFE style but this is not an official NCFE paper.
+        Reproduction of official exam questions is not permitted — every item here is newly written.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -11,7 +11,9 @@ const publicDir = path.join(root, "public", "worksheets");
 const catalogPath = path.join(root, "src", "jdScienceWorksheets.js");
 
 function levelFolder(level) {
-  return level === "A-Level" ? "alevel" : "gcse";
+  if (level === "A-Level") return "alevel";
+  if (level === "T-Level") return "tlevel";
+  return "gcse";
 }
 
 const catalog = [];
