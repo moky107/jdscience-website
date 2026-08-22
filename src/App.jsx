@@ -571,9 +571,9 @@ function Hero({ onScroll, onBrowse }) {
   return (
     <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.28) contrast(1.02) saturate(1.08)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(0,0,0,.06) 52%, rgba(15,23,42,.18) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 12px rgba(15,23,42,.42)" }}>
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.10) contrast(1.04) saturate(1.04)" }} />
+      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.16) 48%, rgba(0,0,0,.28) 100%)" }} />
+      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
         <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
