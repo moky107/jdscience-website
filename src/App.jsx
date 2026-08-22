@@ -7,6 +7,7 @@ import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
+import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
@@ -83,7 +84,6 @@ const STATIC_RESOURCE_ITEMS = [
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B1 Cell Biology", file_name: "JDScience_B1_Cell_Biology.pptx" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B4 Bioenergetics", file_name: "JDScience_B4_Bioenergetics.pptx" },
   // GCSE Biology — Specifications (official board URLs)
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Specifications", title: "Edexcel GCSE Biology Specification (9-1, Issue 4)", file_url_override: "https://qualifications.pearson.com/content/dam/pdf/GCSE/Biology/2016/specification-and-sample-assessments/Pearson-Edexcel-Level-1-Level-2-GCSE-9-1-in-Biology-Specification-Issue-4.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "OCR", resource_category: "Specifications", title: "OCR GCSE Biology A Specification (J247)", file_url_override: "https://www.ocr.org.uk/Images/234596-specification-accredited-gcse-gateway-science-suite-biology-a-j247.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Eduqas", resource_category: "Specifications", title: "Eduqas GCSE Biology Specification", file_url_override: "https://www.eduqas.co.uk/media/by0bk3na/eduqas-gcse-biology-spec-from-2016.pdf" },
   { level: "GCSE/IGCSE", subject: "Biology", exam_board: "WJEC", resource_category: "Specifications", title: "WJEC GCSE Biology Specification", file_url_override: "https://www.wjec.co.uk/media/o1hbpvqf/wjec-gcse-biology-spec-from-2016.pdf" },
@@ -101,6 +101,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...AQA_GCSE_MATHS_RESOURCES,
   ...AQA_ALEVEL_CHEMISTRY_RESOURCES,
   ...AQA_SCIENCE_RESOURCES,
+  ...EDEXCEL_SCIENCE_MATHS_RESOURCES,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
 ];
