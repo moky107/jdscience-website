@@ -3,6 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
+import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
+import { papersHref } from "../../src/papersQuery.js";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -72,17 +74,17 @@ function card(href, title, text) {
 
 function writeAboutPage() {
   const bodyHtml = `
-    <p>JD Science is a UK education platform founded by <a href="${JOSEPH_DANSO.profilePath}">${escapeHtml(JOSEPH_DANSO.name)}</a>. Students and parents use it for GCSE, IGCSE, A-Level, T-Level and BTEC science and maths tutoring, official past-paper links, and original JD Science topic worksheets.</p>
+    <p>JD Science is a UK education platform founded by <a href="${JOSEPH_DANSO.profilePath}">${escapeHtml(JOSEPH_DANSO.name)}</a>. Students and parents use it for Chemistry, Physics, Biology and Applied Science tutoring, official past-paper links, original science worksheets, and the wider JD Science maths resources already published on the site.</p>
     <h2>What JD Science publishes</h2>
     <p>Search engines index public pages, not files sitting only in an admin dashboard. JD Science therefore publishes crawlable pages for the organisation, the educator, and individual subjects and topics.</p>
     <div class="cards">
       ${card("/resources/", "Educational resources", "Subject and topic pages for Chemistry, Physics, Biology and Maths.")}
       ${card(JOSEPH_DANSO.profilePath, "Joseph Danso", "Science Lecturer, FRSC, QTLS, EdD candidate, examiner and WorldSkills educator.")}
       ${card("/worksheets/", "Original worksheets", "Exam-style practice written by JD Science, with separate answer sheets.")}
-      ${card("/#book-anchor", "Book a tutor", "1-to-1 online science and maths tutoring, including Chemistry tuition in London.")}
+      ${card("/#book-anchor", "Book a tutor", "1-to-1 online science tutoring, including Chemistry tuition in London.")}
     </div>
     <h2>Who we help</h2>
-    <p>JD Science supports school, college and adult learners who need clear explanations, structured revision and exam technique. Resources cover Biology, Chemistry, Physics, Maths and selected vocational science courses.</p>
+    <p>JD Science supports school, college and adult learners who need clear explanations, structured revision and exam technique. The platform publishes Biology, Chemistry, Physics, Maths and selected vocational science resources. Joseph Danso’s own teaching profile is Chemistry, Physics, Biology and Applied Science.</p>
     <h2>Contact</h2>
     <p>Email <a href="mailto:${JOSEPH_DANSO.email}">${escapeHtml(JOSEPH_DANSO.email)}</a> or call <a href="tel:${JOSEPH_DANSO.telephone}">${escapeHtml(JOSEPH_DANSO.telephoneDisplay)}</a>.</p>
   `;
@@ -111,7 +113,7 @@ function writeJosephPage() {
     <h2>JD Science</h2>
     <p>Joseph founded <a href="/about/">JD Science</a> so learners can find both tutoring and public revision pages. The platform publishes indexable subject and topic pages, including GCSE Chemistry resources and original worksheets, rather than keeping teaching files only inside an admin area.</p>
     <h2>Teaching and examining</h2>
-    <p>As a Science Lecturer and examiner, Joseph focuses on how questions are asked, how marks are awarded and how students can show working clearly. His tutoring covers Chemistry, Physics, Biology and Maths from GCSE through to A-Level, T-Level and BTEC.</p>
+    <p>As a Science Lecturer and examiner, Joseph focuses on how questions are asked, how marks are awarded and how students can show working clearly. His tutoring covers Chemistry, Physics, Biology and Applied Science from GCSE through to A-Level, T-Level and BTEC.</p>
     <h2>WorldSkills and authorship</h2>
     <p>Joseph is a WorldSkills educator and a published science education author. That work informs the way JD Science writes original practice questions and revision notes for classroom and online learning.</p>
     <h2>Book an online Chemistry tutor in London</h2>
@@ -123,7 +125,7 @@ function writeJosephPage() {
     description: "Joseph Danso is a Science Lecturer, FRSC, QTLS, EdD candidate, examiner, WorldSkills educator and founder of JD Science. Book an online Chemistry tutor in London or across the UK.",
     canonicalPath: JOSEPH_DANSO.profilePath,
     heading: "Joseph Danso",
-    lede: `${JOSEPH_DANSO.role}. ${JOSEPH_DANSO.honorifics}. EdD candidate, examiner and WorldSkills educator.`,
+    lede: JOSEPH_DANSO.lede,
     breadcrumbs: [
       { name: "Tutors", path: "/tutors" },
       { name: "Joseph Danso", path: JOSEPH_DANSO.profilePath },
@@ -140,7 +142,7 @@ function writeJosephPage() {
       telephone: JOSEPH_DANSO.telephone,
       address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
       worksFor: { "@id": `${SITE_ORIGIN}/#organisation` },
-      knowsAbout: ["Chemistry", "Physics", "Biology", "Mathematics", "GCSE", "A-Level", "Science education"],
+      knowsAbout: ["Chemistry", "Physics", "Biology", "Applied Science", "GCSE", "A-Level", "Science education"],
     },
     bodyHtml,
   }));
@@ -210,6 +212,18 @@ function writeResourcePages(subjects) {
     levels.get(subject.level).push(subject);
   }
 
+  for (const page of FEATURED_RESOURCE_LANDINGS) {
+    if (!levels.has(page.level)) levels.set(page.level, []);
+    if (!levels.get(page.level).some((item) => item.subjectSlug === page.subjectSlug || item.subject === page.subject)) {
+      levels.get(page.level).push({
+        level: page.level,
+        subject: page.subject,
+        levelSlug: page.levelSlug,
+        subjectSlug: page.subjectSlug,
+      });
+    }
+  }
+
   writePage("resources", renderPublicPage({
     title: "JD Science Resources | GCSE, A-Level, T-Level and BTEC",
     description: "Browse indexable JD Science resource pages by level and subject, including GCSE Chemistry, Biology, Physics and Maths worksheets and revision notes.",
@@ -268,7 +282,9 @@ function writeResourcePages(subjects) {
       },
       bodyHtml: `
         <p>These pages exist so searches such as “JD Science ${levelLabel(subject.level)} ${subject.subject} resources” can land on a real public URL, not an admin upload list.</p>
-        <p>Need a tutor? <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a> teaches ${subject.subject} online, including to students in London.</p>
+        ${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
+          ? `<p>Need a tutor? <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a> teaches ${escapeHtml(subject.subject)} online, including to students in London.</p>`
+          : `<p>Need a tutor? See the <a href="/tutors">JD Science tutor directory</a> or <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso’s science profile</a>.</p>`}
         <div class="cards">${categories.map(([category, topics]) => card(`${subjectPath}${categorySlug(category)}/`, category, `${topics.size} topic page${topics.size === 1 ? "" : "s"}`)).join("")}</div>
         <p class="meta">Also browse the interactive <a href="/papers">past papers and mark schemes</a> for official exam-board files.</p>
       `,
@@ -330,7 +346,9 @@ function writeResourcePages(subjects) {
             <ul>
               ${topic.items.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}
             </ul>
-            <p>Taught by <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a>, Science Lecturer and online Chemistry tutor in London. <a href="/#book-anchor">Book a session</a>.</p>
+            <p>${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
+              ? `Taught with support from <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a>, Science Lecturer in London.`
+              : `Browse more <a href="/resources/">JD Science resource pages</a> or <a href="/tutors">find a tutor</a>.`} <a href="/#book-anchor">Book a session</a>.</p>
           `,
         }));
         topicCount += 1;
@@ -340,8 +358,93 @@ function writeResourcePages(subjects) {
   return topicCount;
 }
 
+function writeFeaturedLandingPages() {
+  for (const page of FEATURED_RESOURCE_LANDINGS) {
+    const categoryCards = RESOURCE_TYPES.map((type) => card(
+      papersHref({ level: page.level, subject: page.subject, res: type }),
+      type,
+      `Open the existing JD Science library for ${page.levelLabel} ${page.subject} ${type.toLowerCase()}.`,
+    )).join("");
+    const boardCards = page.boards.map((board) => card(
+      papersHref({ level: page.level, subject: page.subject, board }),
+      board,
+      `${page.levelLabel} ${page.subject} resources filtered to ${board}.`,
+    )).join("");
+    const related = page.related.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.text)}</a></li>`).join("");
+    writePage(`resources/${page.levelSlug}/${page.subjectSlug}`, renderPublicPage({
+      title: page.title,
+      description: page.description,
+      canonicalPath: page.path,
+      heading: page.heading,
+      lede: `${page.levelLabel} ${page.subject} revision notes, worksheets, past papers and exam practice from the existing JD Science resource library.`,
+      breadcrumbs: [
+        { name: "Resources", path: "/resources/" },
+        { name: page.levelLabel, path: `/resources/${page.levelSlug}/` },
+        { name: page.subject, path: page.path },
+      ],
+      jsonLd: [
+        {
+          "@type": ["CollectionPage", "WebPage"],
+          name: page.heading,
+          url: `${SITE_ORIGIN}${page.path}`,
+          description: page.description,
+          inLanguage: "en-GB",
+          isPartOf: { "@id": `${SITE_ORIGIN}/#website` },
+          publisher: { "@id": `${SITE_ORIGIN}/#organisation` },
+          about: page.subject,
+          educationalLevel: page.level,
+        },
+      ],
+      bodyHtml: `
+        <p>${escapeHtml(page.intro)}</p>
+        <h2>Resource categories</h2>
+        <p>These links open the current <a href="${escapeHtml(papersHref({ level: page.level, subject: page.subject }))}">${escapeHtml(page.levelLabel)} ${escapeHtml(page.subject)} past papers</a> browser. Uploads, Supabase records and static files stay in that system.</p>
+        <div class="cards">${categoryCards}</div>
+        <h2>Exam boards</h2>
+        <div class="cards">${boardCards}</div>
+        <h2>Related JD Science pages</h2>
+        <ul>${related}</ul>
+      `,
+    }));
+  }
+}
+
+function writeMissingFeaturedHubs(subjects) {
+  const missing = FEATURED_RESOURCE_LANDINGS.filter((page) => (
+    !subjects.some((item) => item.levelSlug === page.levelSlug && item.subjectSlug === page.subjectSlug)
+  ));
+  const byLevel = new Map();
+  for (const page of missing) {
+    if (!byLevel.has(page.level)) byLevel.set(page.level, []);
+    byLevel.get(page.level).push(page);
+  }
+  for (const [level, pages] of byLevel) {
+    const levelSlug = pages[0].levelSlug;
+    const existing = subjects.filter((item) => item.levelSlug === levelSlug);
+    const cards = [
+      ...existing.map((item) => card(`/resources/${item.levelSlug}/${item.subjectSlug}/`, item.subject, `${levelLabel(item.level)} ${item.subject} topic pages.`)),
+      ...pages.map((page) => card(page.path, page.subject, `${page.levelLabel} ${page.subject} SEO landing page.`)),
+    ].join("");
+    writePage(`resources/${levelSlug}`, renderPublicPage({
+      title: `${pages[0].levelLabel} Science Resources | JD Science`,
+      description: `Public ${pages[0].levelLabel} science resource pages from JD Science, including ${pages.map((page) => page.subject).join(", ")}.`,
+      canonicalPath: `/resources/${levelSlug}/`,
+      heading: `${pages[0].levelLabel} resources`,
+      lede: `Indexable ${pages[0].levelLabel} pages that open the existing JD Science resource library.`,
+      breadcrumbs: [
+        { name: "Resources", path: "/resources/" },
+        { name: pages[0].levelLabel, path: `/resources/${levelSlug}/` },
+      ],
+      jsonLd: { "@type": "CollectionPage", name: `${pages[0].levelLabel} resources`, url: `${SITE_ORIGIN}/resources/${levelSlug}/` },
+      bodyHtml: `<div class="cards">${cards}</div>`,
+    }));
+  }
+}
+
 writeAboutPage();
 writeJosephPage();
 const subjects = collectTopics();
 const topicCount = writeResourcePages(subjects);
-console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs and ${topicCount} topic pages.`);
+writeFeaturedLandingPages();
+writeMissingFeaturedHubs(subjects);
+console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages and ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings.`);

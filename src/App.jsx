@@ -13,6 +13,7 @@ import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
+import { parsePapersQuery } from "./papersQuery";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -791,7 +792,7 @@ function ResourceBrowser({ initialType, onBook }) {
 }
 
 /* ------------------------- PAST PAPERS (Supabase) ------------------------- */
-function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBook }) {
+function PastPapers({ subject, level, resType, board, isAdmin, resources, reload, onBook }) {
   const isMobile = useIsMobile();
   const [activeLevel, setActiveLevel] = useState(level || "GCSE/IGCSE");
   const subjectsForLevel = SUBJECTS_BY_LEVEL[activeLevel] || [];
@@ -799,13 +800,14 @@ function PastPapers({ subject, level, resType, isAdmin, resources, reload, onBoo
 
   const [activeSubject, setActiveSubject] = useState(subject || subjectsForLevel[0]);
   const [activeRes, setActiveRes] = useState(resType || "Past Questions");
-  const [activeBoard, setActiveBoard] = useState(null);
+  const [activeBoard, setActiveBoard] = useState(board || null);
   const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
-  useEffect(() => { setActiveBoard(null); }, [activeRes, activeLevel, activeSubject]);
+  useEffect(() => { setActiveBoard(board || null); }, [board]);
+  useEffect(() => { if (!board) setActiveBoard(null); }, [activeRes, activeLevel, activeSubject]); // eslint-disable-line
 
   useEffect(() => {
     const list = SUBJECTS_BY_LEVEL[activeLevel] || [];
@@ -2933,11 +2935,26 @@ function AdminDashboard({ onClose, onSiteLogout }) {
 }
 
 /* ---------------------------------- APP ----------------------------------- */
+function resolvePapersFilters(query) {
+  const level = query.level || null;
+  const subjectOptions = level ? (SUBJECTS_BY_LEVEL[level] || []) : Object.values(SUBJECTS_BY_LEVEL).flat();
+  const boardOptions = level ? (BOARDS_BY_LEVEL[level] || []) : Object.values(BOARDS_BY_LEVEL).flat();
+  const subject = query.subject
+    ? (subjectOptions.find((item) => item.toLowerCase() === query.subject.toLowerCase()) || query.subject)
+    : null;
+  const board = query.board
+    ? (boardOptions.find((item) => item.toLowerCase() === query.board.toLowerCase()) || query.board)
+    : null;
+  return { level, subject, res: query.res || null, board };
+}
+
 function App() {
+  const initialPapers = typeof window === "undefined" ? {} : resolvePapersFilters(parsePapersQuery(window.location.search));
   const [page, setPage] = useState(() => (typeof window === "undefined" ? "home" : pageFromPathname(window.location.pathname)));
-  const [pickedSubject, setPickedSubject] = useState(null);
-  const [pickedLevel, setPickedLevel] = useState(null);
-  const [pickedRes, setPickedRes] = useState(null);
+  const [pickedSubject, setPickedSubject] = useState(initialPapers.subject || null);
+  const [pickedLevel, setPickedLevel] = useState(initialPapers.level || null);
+  const [pickedRes, setPickedRes] = useState(initialPapers.res || null);
+  const [pickedBoard, setPickedBoard] = useState(initialPapers.board || null);
   const [session, setSession] = useState(null);
   const [authReady, setAuthReady] = useState(false);
   const [resources, setResources] = useState([]);
@@ -3071,8 +3088,8 @@ function App() {
   const goResources = () => navigate("resources");
   const goTutors = () => navigate("tutors");
   const goHome = () => { leaveAdmin(); navigate("home"); };
-  const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); goPapers(); };
-  const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); goPapers(); };
+  const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
+  const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
@@ -3180,7 +3197,7 @@ function App() {
 
       {page === "papers" && (
         <main>
-          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes}
+          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
             isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
         </main>
       )}

@@ -113,6 +113,14 @@ function writeSitemap() {
     { loc: `${SITE}/about/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
     { loc: `${SITE}/tutors/joseph-danso/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
     { loc: `${SITE}/resources/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/gcse/chemistry/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/gcse/physics/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/gcse/biology/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/a-level/chemistry/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/a-level/physics/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/a-level/biology/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/btec/applied-science/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/t-level/science/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
   ];
 
   function walkIndexPages(dir, baseUrl) {
