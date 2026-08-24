@@ -2970,16 +2970,6 @@ function App() {
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
-  const catalogRepairRef = React.useRef(false);
-
-  useEffect(() => {
-    if (!isAdmin || catalogRepairRef.current) return;
-    catalogRepairRef.current = true;
-    fetch("/api/repair-resource-catalog", { method: "POST" })
-      .then((resp) => (resp.ok ? resp.json() : null))
-      .then((data) => { if (data?.updated) loadResources(); })
-      .catch(() => {});
-  }, [isAdmin]);
 
   useEffect(() => {
     applyDocumentMeta(page, { noIndex: adminRoute });

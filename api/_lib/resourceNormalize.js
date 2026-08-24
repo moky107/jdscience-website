@@ -102,7 +102,7 @@ export function resourceOpenHref(resource) {
   if (!resource) return "#";
   if (resource.file_type === "video-embed") return resource.file_url;
   if (resource.storage_path && resource.id != null && !String(resource.id).startsWith("static-")) {
-    return `/api/resource-file?id=${encodeURIComponent(resource.id)}`;
+    return `/api/education-posts?kind=file&id=${encodeURIComponent(resource.id)}`;
   }
   return resource.file_url;
 }

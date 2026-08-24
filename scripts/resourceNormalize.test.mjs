@@ -5,6 +5,7 @@ import {
   inferResourceSubject,
   isDeadResource,
   mergeResourceCatalog,
+  resourceOpenHref,
   tidyDownloadFilename,
   tidyResourceTitle,
 } from "../src/resourceNormalize.js";
@@ -38,6 +39,7 @@ assert.equal(isDeadResource(workingPhysics), false);
 assert.equal(canonicalizeResource(workingPhysics).subject, "Physics");
 assert.equal(tidyResourceTitle(workingPhysics), "JDScience Physics topic 1: Energy");
 assert.equal(tidyDownloadFilename(workingPhysics), "jdscience-physics-energy.pptx");
+assert.equal(resourceOpenHref(workingPhysics), "/api/education-posts?kind=file&id=70");
 
 const chemistryAsPhysics = {
   id: 151,

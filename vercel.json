@@ -29,6 +29,7 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },
     { "source": "/papers", "destination": "/" },
     { "source": "/papers/", "destination": "/" },
     { "source": "/tutors", "destination": "/" },
