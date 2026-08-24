@@ -36,8 +36,8 @@ const workingPhysics = {
 };
 assert.equal(isDeadResource(workingPhysics), false);
 assert.equal(canonicalizeResource(workingPhysics).subject, "Physics");
-assert.equal(tidyResourceTitle(workingPhysics), "Physics topic 1: Energy");
-assert.equal(tidyDownloadFilename(workingPhysics), "physics-topic-1-energy.pptx");
+assert.equal(tidyResourceTitle(workingPhysics), "JDScience Physics topic 1: Energy");
+assert.equal(tidyDownloadFilename(workingPhysics), "jdscience-physics-energy.pptx");
 
 const chemistryAsPhysics = {
   id: 151,
@@ -74,7 +74,7 @@ const encoded = canonicalizeResource({
   file_url: "https://example.supabase.co/storage/v1/object/public/resources/gcse-igcse/physics/edexcel/revision-notes/x",
   published: true,
 });
-assert.equal(encoded.title, "Physics topic 2: Electricity");
+assert.equal(encoded.title, "JDScience Physics topic 2: Electricity");
 
 const timestamped = {
   title: "1786377538003-jdscience-aqa-physics-1-energy-1-ppt",
@@ -82,8 +82,8 @@ const timestamped = {
   subject: "Physics",
   resource_category: "Revision Notes",
 };
-assert.equal(tidyResourceTitle(timestamped), "Physics topic 1: Energy");
-assert.equal(tidyDownloadFilename(timestamped), "physics-topic-1-energy.pptx");
+assert.equal(tidyResourceTitle(timestamped), "JDScience Physics topic 1: Energy");
+assert.equal(tidyDownloadFilename(timestamped), "jdscience-physics-energy.pptx");
 
 const quantitative = {
   title: "JDScience_C3_Quantitative_Chemistry",
@@ -92,7 +92,13 @@ const quantitative = {
   file_name: "JDScience_C3_Quantitative_Chemistry.pptx",
 };
 assert.equal(inferResourceCategory(quantitative), "Revision Notes");
-assert.match(tidyResourceTitle(quantitative), /Quantitative Chemistry/i);
+assert.match(tidyResourceTitle(quantitative), /Quantitative chemistry/i);
+assert.equal(tidyDownloadFilename({
+  title: "AQA-84621H-QP-JUN23",
+  file_name: "AQA-84621H-QP-JUN23.PDF",
+  subject: "Chemistry",
+  resource_category: "Past Questions",
+}), "AQA-84621H-QP-JUN23.PDF");
 
 const edexcelBiologyPptx = {
   id: "static-old",
@@ -121,7 +127,7 @@ const workingBioTopic1 = {
   published: true,
 };
 assert.equal(isDeadResource(workingBioTopic1), false);
-assert.equal(canonicalizeResource(workingBioTopic1).title, "Biology topic 1: Cell biology");
+assert.equal(canonicalizeResource(workingBioTopic1).title, "JDScience Biology topic 1: Cell biology");
 
 const catalogNotes = hostedRevisionNotesForCatalog();
 assert.ok(catalogNotes.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.title === "Cell Biology"));

@@ -108,35 +108,71 @@ export function resourceOpenHref(resource) {
 }
 
 const PHYSICS_TOPICS = [
-  { re: /\benergy\b/i, n: 1, label: "Energy" },
-  { re: /\belectricity\b/i, n: 2, label: "Electricity" },
-  { re: /\bparticle/i, n: 3, label: "Particle model" },
-  { re: /\batomic|\bradioactiv/i, n: 4, label: "Atomic structure" },
-  { re: /\bforces?\b/i, n: 5, label: "Forces" },
-  { re: /\bwaves?\b/i, n: 6, label: "Waves" },
+  { re: /\benergy\b/i, n: 1, label: "Energy", slug: "energy" },
+  { re: /\belectricity\b/i, n: 2, label: "Electricity", slug: "electricity" },
+  { re: /\bparticle/i, n: 3, label: "Particle model", slug: "particle-model" },
+  { re: /\batomic|\bradioactiv/i, n: 4, label: "Atomic structure", slug: "atomic-structure" },
+  { re: /\bforces?\b/i, n: 5, label: "Forces", slug: "forces" },
+  { re: /\bwaves?\b/i, n: 6, label: "Waves", slug: "waves" },
+  { re: /\bmagnetism|\belectromagnetism/i, n: 7, label: "Magnetism", slug: "magnetism" },
+  { re: /\bspace\b|\bastronomy\b/i, n: 8, label: "Space physics", slug: "space-physics" },
 ];
 
 const BIOLOGY_TOPICS = [
-  { re: /\bcell\b|\btopic\s*1\b|\btopic1\b|\bb1\b/i, n: 1, label: "Cell biology" },
-  { re: /\borganisation|\borganization|\btopic\s*2\b|\bb2\b/i, n: 2, label: "Organisation" },
-  { re: /\binfection|\btopic\s*3\b|\bb3\b/i, n: 3, label: "Infection and response" },
-  { re: /\bbioenergetic|\btopic\s*4\b|\bb4\b/i, n: 4, label: "Bioenergetics" },
-  { re: /\bhomeostasis|\btopic\s*5\b|\bb5\b/i, n: 5, label: "Homeostasis and response" },
-  { re: /\binheritance|\bevolution|\btopic\s*6\b|\bb6\b/i, n: 6, label: "Inheritance, variation and evolution" },
-  { re: /\becology|\btopic\s*7\b|\bb7\b/i, n: 7, label: "Ecology" },
+  { re: /\bcell\b|\btopic\s*1\b|\btopic1\b|\bb1\b/i, n: 1, label: "Cell biology", slug: "cell-biology" },
+  { re: /\borganisation|\borganization|\btopic\s*2\b|\bb2\b/i, n: 2, label: "Organisation", slug: "organisation" },
+  { re: /\binfection|\btopic\s*3\b|\bb3\b/i, n: 3, label: "Infection and response", slug: "infection-and-response" },
+  { re: /\bbioenergetic|\btopic\s*4\b|\bb4\b/i, n: 4, label: "Bioenergetics", slug: "bioenergetics" },
+  { re: /\bhomeostasis|\btopic\s*5\b|\bb5\b/i, n: 5, label: "Homeostasis and response", slug: "homeostasis" },
+  { re: /\binheritance|\bevolution|\btopic\s*6\b|\bb6\b/i, n: 6, label: "Inheritance and evolution", slug: "inheritance" },
+  { re: /\becology|\btopic\s*7\b|\bb7\b/i, n: 7, label: "Ecology", slug: "ecology" },
 ];
 
+const CHEMISTRY_TOPICS = [
+  { re: /\bc3\b|quantitative/i, n: 3, label: "Quantitative chemistry", slug: "quantitative-chemistry" },
+  { re: /\bc2\b|bonding/i, n: 2, label: "Bonding and structure", slug: "bonding" },
+  { re: /\bc5\b|energy changes/i, n: 5, label: "Energy changes", slug: "energy-changes" },
+  { re: /\bc6\b|rate and extent/i, n: 6, label: "Rate and extent", slug: "rate-and-extent" },
+  { re: /\bc7\b|organic chemistry/i, n: 7, label: "Organic chemistry", slug: "organic-chemistry" },
+  { re: /\bc8\b|chemical analysis/i, n: 8, label: "Chemical analysis", slug: "chemical-analysis" },
+  { re: /\bc9\b|atmosphere/i, n: 9, label: "Atmosphere", slug: "atmosphere" },
+  { re: /\bc10\b|using resources/i, n: 10, label: "Using resources", slug: "using-resources" },
+  { re: /\bc1\b|key concepts|\btopic\s*1\b/i, n: 1, label: "Key concepts", slug: "key-concepts" },
+  { re: /\btopic\s*2\b|states of matter/i, n: 2, label: "States of matter", slug: "states-of-matter" },
+  { re: /\bc4\b/i, n: 4, label: "Chemical changes", slug: "chemical-changes" },
+  { re: /\btopic\s*3\b|chemical changes/i, n: 3, label: "Chemical changes", slug: "chemical-changes" },
+  { re: /\btopic\s*4\b|extracting metals/i, n: 4, label: "Extracting metals", slug: "extracting-metals" },
+  { re: /\btopic\s*5\b|separate chemistry 1/i, n: 5, label: "Separate chemistry 1", slug: "separate-chemistry-1" },
+  { re: /\btopic\s*6\b|groups in the periodic/i, n: 6, label: "Periodic table groups", slug: "periodic-table-groups" },
+  { re: /\btopic\s*8\b|fuels and earth/i, n: 8, label: "Fuels and earth science", slug: "fuels-and-earth-science" },
+  { re: /\btopic\s*9\b|separate chemistry 2/i, n: 9, label: "Separate chemistry 2", slug: "separate-chemistry-2" },
+];
+
+function pathBasename(resource) {
+  return String(resource.storage_path || resource.file_url || "").split("/").pop() || "";
+}
+
+function looksLikeOfficialPaper(resource) {
+  const file = decodeResourceLabel(resource.file_name || resource.title || "");
+  return /^(AQA-|OCR-|WJEC-|EDUQAS-|1[A-Z]{2}\d|846[123])/i.test(file)
+    || /_QP-|_MS-|_QU(?:_|\s|\.|\(|$)|_PEF|-que-|-rms-|-msc-|-ins-/i.test(file);
+}
+
 function looksLikeUploadedDeck(resource) {
+  if (looksLikeOfficialPaper(resource)) return false;
   const title = String(resource.title || "");
   const file = String(resource.file_name || "");
   const decoded = `${decodeResourceLabel(title)} ${decodeResourceLabel(file)} ${resource.storage_path || ""}`;
+  const base = pathBasename(resource);
   return (
-    /^\d{10,}/.test(title) ||
-    /^\d{10,}/.test(file) ||
-    /^\d{10,}/.test(decodeResourceLabel(file)) ||
+    /^\d{10,}-/.test(title) ||
+    /^\d{10,}-/.test(file) ||
+    /^\d{10,}-/.test(decodeResourceLabel(file)) ||
+    /^\d{10,}-/.test(base) ||
     /%20/i.test(title) ||
     /%20/i.test(file) ||
     /jdscience/i.test(decoded) ||
+    (/_[0-9a-f]{6,}\b/i.test(decoded) && /\.pptx?/i.test(file)) ||
     (/\.pptx?$/i.test(file) && /revision notes/i.test(String(resource.resource_category || "")))
   );
 }
@@ -149,58 +185,98 @@ function stripTitleBoilerplate(value) {
     .replace(/\b20\b/g, " ")
     .replace(/\bjdscience\b/ig, "")
     .replace(/\b(aqa|edexcel|ocr|eduqas|wjec|gcse|igcse)\b/ig, "")
+    .replace(/\bworksheet\b/ig, "")
+    .replace(/\bmodules?\b/ig, "modules")
+    .replace(/[_\s-][0-9a-f]{6,}\b/ig, "")
     .replace(/\(\s*\d+\s*\)/g, "")
     .replace(/\bfinal\b/ig, "")
+    .replace(/\bv\d+\b/ig, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
 function titleCasePhrase(value) {
-  const small = new Set(["and", "of", "the", "a"]);
+  const small = new Set(["and", "of", "the", "a", "in"]);
   return String(value || "")
     .split(" ")
     .filter(Boolean)
     .map((word, index) => {
       const lower = word.toLowerCase();
+      if (/^\d/.test(word)) return word;
       if (index > 0 && small.has(lower)) return lower;
       return lower.charAt(0).toUpperCase() + lower.slice(1);
     })
     .join(" ");
 }
 
+function matchTopic(list, haystack) {
+  return list.find((topic) => topic.re.test(haystack)) || null;
+}
+
+function jdTitle(subject, topic) {
+  if (topic?.n) return `JDScience ${subject} topic ${topic.n}: ${topic.label}`;
+  if (topic?.label) return `JDScience ${subject}: ${topic.label}`;
+  return `JDScience ${subject}`;
+}
+
 export function tidyResourceTitle(resource) {
   const decodedTitle = decodeResourceLabel(resource.title || "");
   if (!looksLikeUploadedDeck(resource)) return decodedTitle || decodeResourceLabel(resource.file_name || "");
   const haystack = blob(resource).replace(/[_-]+/g, " ");
-  const subject = inferResourceSubject(resource);
-  if (subject === "Physics" || /physics/.test(haystack)) {
-    for (const topic of PHYSICS_TOPICS) {
-      if (topic.re.test(haystack)) return `Physics topic ${topic.n}: ${topic.label}`;
+  const subject = inferResourceSubject(resource) || "Resource";
+  const category = String(resource.resource_category || "").toLowerCase();
+  const isNotes = category.includes("revision");
+
+  if (isNotes) {
+    if (subject === "Physics" || /\bphysics\b/.test(haystack)) {
+      const topic = matchTopic(PHYSICS_TOPICS, haystack);
+      if (topic) return jdTitle("Physics", topic);
+    }
+    if (subject === "Biology" || /\bbiolog/.test(haystack)) {
+      const topic = matchTopic(BIOLOGY_TOPICS, haystack);
+      if (topic) return jdTitle("Biology", topic);
+    }
+    if (subject === "Chemistry" || /\bchemistr/.test(haystack)) {
+      const topic = matchTopic(CHEMISTRY_TOPICS, haystack);
+      if (topic) return jdTitle("Chemistry", topic);
     }
   }
-  if (subject === "Biology" || /biology/.test(haystack)) {
-    for (const topic of BIOLOGY_TOPICS) {
-      if (topic.re.test(haystack)) return `Biology topic ${topic.n}: ${topic.label}`;
-    }
-  }
-  const cleaned = stripTitleBoilerplate(decodedTitle || resource.file_name || "")
+
+  let cleaned = stripTitleBoilerplate(decodedTitle || resource.file_name || pathBasename(resource))
     .replace(new RegExp(`^${subject}\\s+`, "i"), "")
-    .replace(/\btopic\s*\d+\b/ig, "")
+    .replace(/\btopic(\d+)\b/ig, "topic $1")
     .replace(/\s+/g, " ")
     .trim();
+  cleaned = cleaned.replace(/\bmodules\s+(\d+)\s+(\d+)\b/ig, "modules $1-$2");
   if (cleaned && subject && !new RegExp(`^${subject}$`, "i").test(cleaned)) {
-    return `${subject}: ${titleCasePhrase(cleaned)}`;
+    return `JDScience ${subject}: ${titleCasePhrase(cleaned)}`;
   }
-  return titleCasePhrase(cleaned) || decodedTitle;
+  return cleaned ? `JDScience ${titleCasePhrase(cleaned)}` : decodedTitle;
 }
 
 export function tidyDownloadFilename(resource) {
-  const title = tidyResourceTitle(resource);
-  const slug = slugify(title) || "resource";
-  const original = decodeResourceLabel(resource.file_name || resource.title || "");
+  const original = decodeResourceLabel(resource.file_name || resource.title || pathBasename(resource));
+  if (!looksLikeUploadedDeck(resource)) return original || "resource";
   const extMatch = original.match(/\.(pptx?|pdf|html)$/i);
   const ext = extMatch ? extMatch[0].toLowerCase() : "";
-  return ext ? `${slug}${ext}` : slug;
+  const haystack = blob(resource).replace(/[_-]+/g, " ");
+  const subject = slugify(inferResourceSubject(resource) || "resource");
+  const category = String(resource.resource_category || "").toLowerCase();
+  const isNotes = category.includes("revision");
+  let topicSlug = "";
+  if (isNotes) {
+    const list = subject === "physics" ? PHYSICS_TOPICS : subject === "biology" ? BIOLOGY_TOPICS : subject === "chemistry" ? CHEMISTRY_TOPICS : [];
+    const topic = matchTopic(list, haystack);
+    if (topic) topicSlug = topic.slug;
+  }
+  if (!topicSlug) {
+    topicSlug = slugify(
+      stripTitleBoilerplate(original)
+        .replace(new RegExp(`^${inferResourceSubject(resource) || ""}\\s+`, "i"), ""),
+    );
+  }
+  const base = ["jdscience", subject, topicSlug].filter(Boolean).join("-").replace(/-+/g, "-");
+  return ext ? `${base}${ext}` : base;
 }
 
 function resourceDedupeKey(resource) {
