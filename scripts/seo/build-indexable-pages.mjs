@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
+import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
@@ -11,16 +12,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
 const publicDir = path.join(root, "public");
 
 const EXTRA_HOSTED_RESOURCES = [
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 1 - Cell Biology", file_name: "Biology 1 - Cell Biology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 2 - Organisation", file_name: "Biology 2 - Organisation.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 3 - Infection and Response", file_name: "Biology 3 - Infection and Response.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 4 - Bioenergetics", file_name: "Biology 4 - Bioenergetics (1).pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 5 - Homeostasis and Response", file_name: "Biology 5 - Homeostasis and Response (1).pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 6 - Inheritance Variation and Evolution", file_name: "Biology 6 - Inheritance Variation and Evolution.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 7 - Ecology", file_name: "Biology 7 - Ecology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Unit 1 Biology Revision Booklet", file_name: "Unit-1-Biology-Revision-Booklet.pdf" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B1 Cell Biology", file_name: "JDScience_B1_Cell_Biology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B4 Bioenergetics", file_name: "JDScience_B4_Bioenergetics.pptx" },
+  ...HOSTED_REVISION_NOTES,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Videos", title: "Topic 1 Key Concepts In Chemistry", embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e" },
 ];
@@ -59,7 +51,7 @@ function topicFromHosted(item) {
     .replace(/^Topic\s+\d+\s+/i, "")
     .replace(/\s+notes$/i, "")
     .trim();
-  return { slug: slugify(title), title };
+  return { slug: item.topicSlug || slugify(title), title };
 }
 
 function writePage(relPath, html) {
@@ -194,12 +186,17 @@ function collectTopics() {
     const { slug, title } = topicFromHosted(item);
     const topics = subject.categories.get(category);
     if (!topics.has(slug)) topics.set(slug, { slug, title, items: [] });
-    const href = item.embed_url || `/resources/${slugify(item.exam_board)}/${item.level === "A-Level" ? "alevel" : "gcse"}/${slugify(item.subject)}/${slugify(item.resource_category)}/${encodeURIComponent(item.file_name)}`;
+    const href = item.embed_url || item.file_url_override || `/resources/${slugify(item.exam_board)}/${item.level === "A-Level" ? "alevel" : "gcse"}/${slugify(item.subject)}/${slugify(item.resource_category)}/${encodeURIComponent(item.file_name)}`;
     topics.get(slug).items.push({
       board: item.exam_board,
       href,
       label: item.title,
     });
+    if (item.notesHtml && !topics.get(slug).notesHtml) topics.get(slug).notesHtml = item.notesHtml;
+    if (item.downloadHref && !topics.get(slug).downloadHref) {
+      topics.get(slug).downloadHref = item.downloadHref;
+      topics.get(slug).downloadLabel = item.downloadLabel;
+    }
   }
 
   return [...subjects.values()].sort((a, b) => `${a.level} ${a.subject}`.localeCompare(`${b.level} ${b.subject}`));
@@ -316,6 +313,10 @@ function writeResourcePages(subjects) {
       for (const topic of topicList) {
         const topicPath = `${categoryPath}${topic.slug}/`;
         const title = `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category} | JD Science`;
+        const noteLinks = topic.items.filter((item) => item.href && item.href !== topicPath);
+        const downloadLink = topic.downloadHref
+          ? `<p><a class="download" href="${escapeHtml(topic.downloadHref)}">${escapeHtml(topic.downloadLabel || "Download slides")}</a></p>`
+          : "";
         writePage(`resources/${subject.levelSlug}/${subject.subjectSlug}/${categorySlug(category)}/${topic.slug}`, renderPublicPage({
           title,
           description: `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category.toLowerCase()} from JD Science. Original practice and revision for UK students, with tutoring from Joseph Danso.`,
@@ -342,10 +343,9 @@ function writeResourcePages(subjects) {
             author: { "@id": `${SITE_ORIGIN}/tutors/joseph-danso/#person` },
           },
           bodyHtml: `
-            <p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}. Use the links below to open the worksheet, notes or video. Files uploaded only to the admin dashboard are not used as the indexable page.</p>
-            <ul>
-              ${topic.items.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}
-            </ul>
+            ${topic.notesHtml || `<p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}.</p>`}
+            ${downloadLink}
+            ${noteLinks.length ? `<h2>Open these resources</h2><ul>${noteLinks.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}</ul>` : ""}
             <p>${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
               ? `Taught with support from <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a>, Science Lecturer in London.`
               : `Browse more <a href="/resources/">JD Science resource pages</a> or <a href="/tutors">find a tutor</a>.`} <a href="/#book-anchor">Book a session</a>.</p>

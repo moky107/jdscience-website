@@ -14,6 +14,8 @@ import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
+import { HOSTED_REVISION_NOTES } from "./hostedRevisionNotes";
+import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -77,17 +79,7 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 };
 
 const STATIC_RESOURCE_ITEMS = [
-  // Edexcel GCSE Biology — Revision Notes (served from /public)
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 1 - Cell Biology", file_name: "Biology 1 - Cell Biology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 2 - Organisation", file_name: "Biology 2 - Organisation.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 3 - Infection and Response", file_name: "Biology 3 - Infection and Response.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 4 - Bioenergetics", file_name: "Biology 4 - Bioenergetics (1).pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 5 - Homeostasis and Response", file_name: "Biology 5 - Homeostasis and Response (1).pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 6 - Inheritance Variation and Evolution", file_name: "Biology 6 - Inheritance Variation and Evolution.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Biology 7 - Ecology", file_name: "Biology 7 - Ecology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Unit 1 Biology Revision Booklet", file_name: "Unit-1-Biology-Revision-Booklet.pdf" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B1 Cell Biology", file_name: "JDScience_B1_Cell_Biology.pptx" },
-  { level: "GCSE/IGCSE", subject: "Biology", exam_board: "Edexcel", resource_category: "Revision Notes", title: "JDScience B4 Bioenergetics", file_name: "JDScience_B4_Bioenergetics.pptx" },
+  ...HOSTED_REVISION_NOTES,
   // GCSE Chemistry — Videos
   {
     level: "GCSE/IGCSE",
@@ -835,8 +827,10 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     resources.filter((r) =>
       levelKey(r.level) === activeLevel &&
       slugify(r.subject) === slugify(activeSubject) &&
-      slugify(r.exam_board) === slugify(board) &&
       slugify(r.resource_category) === slugify(activeRes) &&
+      (r.all_boards
+        ? (!activeBoard ? slugify(r.exam_board) === slugify(board) : true)
+        : slugify(r.exam_board) === slugify(board)) &&
       !shownVideoIds.has(r.id)
     );
 
@@ -938,7 +932,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
                       {group.key ? <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, marginTop: 4 }}>{group.key}</div> : null}
                       {group.items.map((p) => (
                     <div key={p.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
-                      <a href={p.file_url} target="_blank" rel="noreferrer" className="folder-file"
+                      <a href={resourceOpenHref(p)} target="_blank" rel="noreferrer" className="folder-file"
                         style={{ flex: 1, textAlign: "left", padding: isMobile ? "14px 16px" : "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none" }}>
                         {activeRes === "Videos" ? "▶️" : "📄"} {p.title}
                       </a>
@@ -2970,6 +2964,16 @@ function App() {
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
+  const catalogRepairRef = React.useRef(false);
+
+  useEffect(() => {
+    if (!isAdmin || catalogRepairRef.current) return;
+    catalogRepairRef.current = true;
+    fetch("/api/repair-resource-catalog", { method: "POST" })
+      .then((resp) => (resp.ok ? resp.json() : null))
+      .then((data) => { if (data?.updated) loadResources(); })
+      .catch(() => {});
+  }, [isAdmin]);
 
   useEffect(() => {
     applyDocumentMeta(page, { noIndex: adminRoute });
@@ -3052,10 +3056,10 @@ function App() {
       .from("resources").select("*").eq("published", true)
       .order("topic_order", { ascending: true }).order("title", { ascending: true });
     if (error) {
-      setResources(staticItems);
+      setResources(mergeResourceCatalog([], staticItems));
       return;
     }
-    setResources([...(data || []), ...staticItems]);
+    setResources(mergeResourceCatalog(data || [], staticItems));
   }
 
   async function loadApprovedTutors() {
