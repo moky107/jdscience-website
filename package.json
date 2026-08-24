@@ -6,7 +6,7 @@
     "preview": "vite preview --host 0.0.0.0",
     "generate:worksheets": "node scripts/worksheets/generate.mjs",
     "seo:build": "node scripts/seo/build-indexable-pages.mjs && node scripts/seo/build-discoverability.mjs",
-    "test:catalog": "node scripts/resourceNormalize.test.mjs && node scripts/worksheets/chemistry-units.test.mjs"
+    "test:catalog": "node scripts/resourceNormalize.test.mjs && node scripts/worksheets/chemistry-units.test.mjs && node scripts/edexcel-biology-paper1.test.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",
