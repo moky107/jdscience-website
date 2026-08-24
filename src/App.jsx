@@ -106,6 +106,15 @@ function slugify(t) {
   return String(t || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+function isUnitFolderLabel(label) {
+  return /^Unit\s+\d+$/i.test(String(label || ""));
+}
+
+function unitFolderNumber(label) {
+  const match = String(label || "").match(/^Unit\s+(\d+)$/i);
+  return match ? Number(match[1]) : 0;
+}
+
 function videoEmbedSrc(url) {
   const raw = String(url || "").trim();
   if (!raw) return null;
@@ -794,12 +803,14 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   const [activeRes, setActiveRes] = useState(resType || "Past Questions");
   const [activeBoard, setActiveBoard] = useState(board || null);
   const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
+  const [openUnitByBoard, setOpenUnitByBoard] = useState({});
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
   useEffect(() => { if (resType) setActiveRes(resType); }, [resType]);
   useEffect(() => { setActiveBoard(board || null); }, [board]);
   useEffect(() => { if (!board) setActiveBoard(null); }, [activeRes, activeLevel, activeSubject]); // eslint-disable-line
+  useEffect(() => { setOpenUnitByBoard({}); }, [activeRes, activeLevel, activeSubject, activeBoard]);
 
   useEffect(() => {
     const list = SUBJECTS_BY_LEVEL[activeLevel] || [];
@@ -845,6 +856,33 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     if (item.storage_path) await supabase.storage.from(BUCKET).remove([item.storage_path]);
     const { error } = await supabase.from("resources").delete().eq("id", item.id);
     if (error) alert(error.message); else reload();
+  }
+
+  const fileLinkStyle = {
+    flex: 1,
+    textAlign: "left",
+    padding: isMobile ? "14px 16px" : "10px 12px",
+    borderRadius: 8,
+    border: "1px solid #e2e8f0",
+    background: "#f8fafc",
+    cursor: "pointer",
+    fontSize: isMobile ? 16 : 14,
+    color: "#0f172a",
+    textDecoration: "none",
+  };
+
+  function renderResourceRow(item) {
+    return (
+      <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
+        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle}>
+          {activeRes === "Videos" ? "▶️" : "📄"} {item.title}
+        </a>
+        {isAdmin && (
+          <button onClick={() => removeItem(item)} title="Delete"
+            style={{ padding: "0 12px", minWidth: 44, borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
+        )}
+      </div>
+    );
   }
 
   return (
@@ -929,25 +967,44 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
               }
               groupMap.get(key).items.push(p);
             });
+            const unitGroups = grouped
+              .filter((group) => isUnitFolderLabel(group.key))
+              .sort((a, b) => unitFolderNumber(a.key) - unitFolderNumber(b.key));
+            const otherGroups = grouped.filter((group) => !isUnitFolderLabel(group.key));
+            const openUnit = openUnitByBoard[board] || null;
+            const openUnitGroup = unitGroups.find((group) => group.key === openUnit) || null;
             return (
               <div key={board} style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
                 <div style={{ background: TEAL_DARK, color: "#fff", padding: isMobile ? "16px 18px" : "12px 14px", fontWeight: 800, fontSize: isMobile ? 18 : 16 }}>{board}</div>
                 <div style={{ padding: isMobile ? 14 : 12, display: "flex", flexDirection: "column", gap: 8, maxHeight: isMobile ? undefined : 640, overflowY: items.length > 12 ? "auto" : undefined }}>
-                  {grouped.map((group) => (
+                  {unitGroups.length > 0 && !openUnitGroup && unitGroups.map((group) => (
+                    <button
+                      key={group.key}
+                      type="button"
+                      className="folder-file"
+                      onClick={() => setOpenUnitByBoard((prev) => ({ ...prev, [board]: group.key }))}
+                      style={{ ...fileLinkStyle, width: "100%", fontWeight: 700, background: "#ecfeff", border: `1px solid ${TEAL}` }}
+                    >
+                      📁 {group.key}
+                    </button>
+                  ))}
+                  {openUnitGroup && (
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      <button
+                        type="button"
+                        onClick={() => setOpenUnitByBoard((prev) => ({ ...prev, [board]: null }))}
+                        style={{ ...fileLinkStyle, fontWeight: 700, color: TEAL_DARK }}
+                      >
+                        ← Unit folders
+                      </button>
+                      <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK }}>📁 {openUnitGroup.key}</div>
+                      {openUnitGroup.items.map(renderResourceRow)}
+                    </div>
+                  )}
+                  {otherGroups.map((group) => (
                     <div key={group.key || "ungrouped"} style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                       {group.key ? <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, marginTop: 4 }}>{group.key}</div> : null}
-                      {group.items.map((p) => (
-                    <div key={p.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
-                      <a href={resourceOpenHref(p)} target="_blank" rel="noreferrer" className="folder-file"
-                        style={{ flex: 1, textAlign: "left", padding: isMobile ? "14px 16px" : "10px 12px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#f8fafc", cursor: "pointer", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none" }}>
-                        {activeRes === "Videos" ? "▶️" : "📄"} {p.title}
-                      </a>
-                      {isAdmin && (
-                        <button onClick={() => removeItem(p)} title="Delete"
-                          style={{ padding: "0 12px", minWidth: 44, borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
-                      )}
-                    </div>
-                      ))}
+                      {group.items.map(renderResourceRow)}
                     </div>
                   ))}
                   {isAdmin && (

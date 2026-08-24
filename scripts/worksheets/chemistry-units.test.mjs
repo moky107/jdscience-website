@@ -65,7 +65,16 @@ for (const board of Object.keys(chemistry)) {
     assert.match(worksheetHtml, new RegExp(`Unit ${unit} worksheet`, "i"));
     assert.match(answersHtml, new RegExp(`Unit ${unit} answers`, "i"));
     assert.match(answersHtml, /Separate mark scheme/);
+
+    const unitIndex = path.join(root, "public", `worksheets/${board.toLowerCase()}/gcse/chemistry/unit-${unit}/index.html`);
+    const unitIndexHtml = fs.readFileSync(unitIndex, "utf8");
+    assert.match(unitIndexHtml, /worksheet\.html/);
+    assert.match(unitIndexHtml, /answers\.html/);
   }
+  const chemIndex = path.join(root, "public", `worksheets/${board.toLowerCase()}/gcse/chemistry/index.html`);
+  const chemIndexHtml = fs.readFileSync(chemIndex, "utf8");
+  assert.match(chemIndexHtml, /unit-1\//);
+  assert.match(chemIndexHtml, /Unit folders/i);
 }
 
 console.log("GCSE Chemistry unit folders each have a worksheet and a separate matching answers file.");

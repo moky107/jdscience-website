@@ -146,6 +146,7 @@ function writeSitemap() {
   walkIndexPages(path.join(root, "public", "about"), "/about/");
   walkIndexPages(path.join(root, "public", "tutors"), "/tutors/");
   walkIndexPages(path.join(root, "public", "resources"), "/resources/");
+  walkIndexPages(path.join(root, "public", "worksheets"), "/worksheets/");
 
   for (const item of JD_SCIENCE_WORKSHEETS) {
     const loc = `${SITE}${item.file_url_override}`;

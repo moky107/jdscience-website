@@ -6,6 +6,7 @@ import { slugify } from "./exam.mjs";
 import { buildQuestions } from "./bank.mjs";
 import { renderWorksheet, renderAnswers } from "./render.mjs";
 import { isAnswerSheet, unitDisplayTitles, unitNumberFromId } from "./catalog.mjs";
+import { writeChemistryFolderIndexes } from "./chemistry-folders.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const publicDir = path.join(root, "public", "worksheets");
@@ -83,6 +84,7 @@ export const JD_SCIENCE_WORKSHEETS = ${JSON.stringify(catalog, null, 2)};
 fs.writeFileSync(catalogPath, js);
 
 const worksheetCount = catalog.filter((item) => !isAnswerSheet(item)).length;
+writeChemistryFolderIndexes(root, catalog);
 console.log(`Wrote ${worksheetCount} worksheets and ${worksheetCount} answer sheets.`);
 if (errors.length) {
   console.error("Errors:");
