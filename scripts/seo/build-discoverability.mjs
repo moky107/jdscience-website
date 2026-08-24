@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
+import { isAnswerSheet, answersUrlFor } from "../worksheets/catalog.mjs";
 
 const SITE = "https://www.jdscience.co.uk";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -149,7 +150,7 @@ function writeSitemap() {
   for (const item of JD_SCIENCE_WORKSHEETS) {
     const loc = `${SITE}${item.file_url_override}`;
     const filePath = path.join(root, "public", item.file_url_override.replace(/^\//, ""));
-    const isAnswers = item.series_label === "JD Science answer sheets";
+    const isAnswers = isAnswerSheet(item);
     urls.push({
       loc,
       lastmod: isoDate(filePath),
@@ -177,7 +178,7 @@ ${body}
 function writeWorksheetHub() {
   const groups = new Map();
   for (const item of JD_SCIENCE_WORKSHEETS) {
-    if (item.series_label !== "JD Science topic worksheets") continue;
+    if (isAnswerSheet(item)) continue;
     const key = `${item.level}||${item.exam_board}||${item.subject}`;
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(item);
@@ -205,15 +206,15 @@ function writeWorksheetHub() {
     sections.push(`<h3>${escapeHtml(board)} ${escapeHtml(subject)}</h3><ul>`);
     for (const item of items) {
       const answers = JD_SCIENCE_WORKSHEETS.find((other) => (
-        other.series_label === "JD Science answer sheets"
+        isAnswerSheet(other)
         && other.exam_board === item.exam_board
         && other.level === item.level
         && other.subject === item.subject
-        && other.file_name === item.file_name.replace(/\.html$/, "-answers.html")
+        && other.file_url_override === answersUrlFor(item)
       ));
       const topic = item.title.replace(/\s*[—-]\s*JD Science.*$/i, "").trim();
       const answerLink = answers
-        ? ` <a class="answers" href="${escapeHtml(answers.file_url_override)}">Answers</a>`
+        ? ` <a class="answers" href="${escapeHtml(answers.file_url_override)}">${escapeHtml(answers.title.startsWith("Unit ") ? answers.title.split(" — ")[0] : "Answers")}</a>`
         : "";
       sections.push(`<li><a href="${escapeHtml(item.file_url_override)}">${escapeHtml(topic)}</a>${answerLink}</li>`);
     }

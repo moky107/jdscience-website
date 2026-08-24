@@ -51,13 +51,16 @@ function renderAnswer(question, index) {
 function pageShell({ title, offering, topicTitle, kind, questions, extraNote, canonicalPath }) {
   const marks = totalMarks(questions);
   const isAnswers = kind === "answers";
+  const topicForCopy = String(topicTitle || "")
+    .replace(/^Unit\s+(\d+)\s+worksheet\s*[—–-]\s*/i, "Unit $1 — ")
+    .replace(/^Unit\s+(\d+)\s+answers\s*[—–-]\s*/i, "Unit $1 — ");
   const watermark = isAnswers ? "JD SCIENCE  ·  ANSWERS" : "JD SCIENCE";
   const banner = isAnswers
     ? "Separate mark scheme — do not issue with the student worksheet"
     : "Original exam-style worksheet — not an official exam paper";
   const description = isAnswers
-    ? `Indicative answers and marking points for the JD Science ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicTitle}. Original UK practice material, not an official exam paper.`
-    : `Free original ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicTitle} from JD Science. ${questions.length} exam-style questions for GCSE, A-Level, T-Level and BTEC students in the UK.`;
+    ? `Indicative answers and marking points for the JD Science ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicForCopy}. Original UK practice material, not an official exam paper.`
+    : `Free original ${offering.board} ${offering.level} ${offering.subject} worksheet on ${topicForCopy} from JD Science. ${questions.length} exam-style questions for GCSE, A-Level, T-Level and BTEC students in the UK.`;
   const canonical = canonicalPath ? `https://www.jdscience.co.uk${canonicalPath}` : "https://www.jdscience.co.uk/worksheets/";
   const jsonLd = {
     "@context": "https://schema.org",
@@ -67,7 +70,7 @@ function pageShell({ title, offering, topicTitle, kind, questions, extraNote, ca
     url: canonical,
     learningResourceType: isAnswers ? "Answer key" : "Worksheet",
     educationalLevel: offering.level,
-    about: `${offering.subject} — ${topicTitle}`,
+    about: `${offering.subject} — ${topicForCopy}`,
     inLanguage: "en-GB",
     isAccessibleForFree: true,
     provider: {
@@ -206,7 +209,7 @@ function pageShell({ title, offering, topicTitle, kind, questions, extraNote, ca
           <div class="meta" style="text-align:right">
             ${escapeHtml(offering.specName)} (${escapeHtml(offering.spec)})<br />
             ${escapeHtml(offering.level.replace("/IGCSE", ""))} ${escapeHtml(offering.subject)}<br />
-            ${isAnswers ? "Answer sheet" : "Topic worksheet"}
+            ${isAnswers ? (/^Unit\s+\d+/i.test(topicTitle) ? "Unit answers" : "Answer sheet") : (/^Unit\s+\d+/i.test(topicTitle) ? "Unit worksheet" : "Topic worksheet")}
           </div>
         </div>
         <h1>${escapeHtml(topicTitle)}</h1>

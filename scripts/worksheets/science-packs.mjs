@@ -7,7 +7,55 @@ function pack(ctx, data) {
   return composeScience(ctx, data);
 }
 
+function chemistryUnitFn(topicId, board) {
+  const units = {
+    AQA: {
+      "unit-1": atomic,
+      "unit-2": bonding,
+      "unit-3": quantitative,
+      "unit-4": chemicalChanges,
+      "unit-5": energyChem,
+      "unit-6": rates,
+      "unit-7": organicGcse,
+      "unit-8": analysis,
+      "unit-9": atmosphere,
+      "unit-10": resources,
+    },
+    Edexcel: {
+      "unit-1": quantitative,
+      "unit-2": bonding,
+      "unit-3": chemicalChanges,
+      "unit-4": chemicalChanges,
+      "unit-5": organicGcse,
+      "unit-6": analysis,
+    },
+    OCR: {
+      "unit-1": atomic,
+      "unit-2": bonding,
+      "unit-3": chemicalChanges,
+      "unit-4": analysis,
+      "unit-5": rates,
+      "unit-6": resources,
+    },
+    WJEC: {
+      "unit-1": atomic,
+      "unit-2": atomic,
+      "unit-3": resources,
+      "unit-4": atmosphere,
+      "unit-5": rates,
+      "unit-6": organicGcse,
+      "unit-7": analysis,
+    },
+  };
+  return units[board]?.[topicId] || null;
+}
+
 export function buildScience(topicId, ctx) {
+  if (ctx.level === "GCSE/IGCSE" && ctx.subject === "Chemistry") {
+    const unitFn = chemistryUnitFn(topicId, ctx.board);
+    if (unitFn) return unitFn(ctx);
+  }
+
   const table = {
     // GCSE Biology
     "cell-biology": () => cells(ctx, "animal and plant cells, microscopy and transport"),

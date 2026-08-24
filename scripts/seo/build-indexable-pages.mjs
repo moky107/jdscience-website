@@ -7,6 +7,7 @@ import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
+import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const publicDir = path.join(root, "public");
@@ -39,6 +40,12 @@ function categorySlug(category) {
 }
 
 function topicFromWorksheet(item) {
+  const url = item.file_url_override || "";
+  const unitFolder = url.match(/\/(unit-\d+)\//i);
+  if (unitFolder) {
+    const n = unitFolder[1].replace(/^unit-/i, "");
+    return { slug: unitFolder[1].toLowerCase(), title: `Unit ${n}` };
+  }
   const fileBase = (item.file_name || "").replace(/-answers\.html$/i, "").replace(/\.html$/i, "");
   const title = item.title.replace(/\s*[—-]\s*JD Science.*$/i, "").trim();
   return { slug: fileBase || slugify(title), title };
@@ -157,7 +164,7 @@ function collectTopics() {
   };
 
   for (const item of JD_SCIENCE_WORKSHEETS) {
-    if (item.series_label !== "JD Science topic worksheets") continue;
+    if (isAnswerSheet(item)) continue;
     const subject = ensure(item.level, item.subject);
     const category = "Worksheets";
     if (!subject.categories.has(category)) subject.categories.set(category, new Map());
@@ -165,11 +172,11 @@ function collectTopics() {
     const topics = subject.categories.get(category);
     if (!topics.has(slug)) topics.set(slug, { slug, title, items: [] });
     const answers = JD_SCIENCE_WORKSHEETS.find((other) => (
-      other.series_label === "JD Science answer sheets"
+      isAnswerSheet(other)
       && other.exam_board === item.exam_board
       && other.level === item.level
       && other.subject === item.subject
-      && other.file_name === item.file_name.replace(/\.html$/, "-answers.html")
+      && other.file_url_override === answersUrlFor(item)
     ));
     topics.get(slug).items.push({
       board: item.exam_board,
@@ -289,7 +296,7 @@ function writeResourcePages(subjects) {
 
     for (const [category, topics] of categories) {
       const categoryPath = `${subjectPath}${categorySlug(category)}/`;
-      const topicList = [...topics.values()].sort((a, b) => a.title.localeCompare(b.title));
+      const topicList = [...topics.values()].sort((a, b) => compareTopicTitles(a.title, b.title));
       writePage(`resources/${subject.levelSlug}/${subject.subjectSlug}/${categorySlug(category)}`, renderPublicPage({
         title: `${levelLabel(subject.level)} ${subject.subject} ${category} | JD Science`,
         description: `${category} for ${levelLabel(subject.level)} ${subject.subject} from JD Science, organised by topic so students can find the exact page they need.`,

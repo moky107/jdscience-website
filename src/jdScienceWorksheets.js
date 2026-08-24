@@ -586,580 +586,580 @@ export const JD_SCIENCE_WORKSHEETS = [
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Atomic structure and the periodic table — JD Science worksheet (32 questions)",
-    "file_name": "atomic-structure-periodic-table.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/atomic-structure-periodic-table.html"
+    "title": "Unit 1 worksheet — Atomic structure and the periodic table",
+    "file_name": "unit-1-worksheet.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-1/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Atomic structure and the periodic table — JD Science answers",
-    "file_name": "atomic-structure-periodic-table-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/atomic-structure-periodic-table-answers.html"
+    "title": "Unit 1 answers — Atomic structure and the periodic table",
+    "file_name": "unit-1-answers.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-1/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Bonding, structure and the properties of matter — JD Science worksheet (32 questions)",
-    "file_name": "bonding-structure-properties.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/bonding-structure-properties.html"
+    "title": "Unit 2 worksheet — Bonding, structure and the properties of matter",
+    "file_name": "unit-2-worksheet.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-2/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Bonding, structure and the properties of matter — JD Science answers",
-    "file_name": "bonding-structure-properties-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/bonding-structure-properties-answers.html"
+    "title": "Unit 2 answers — Bonding, structure and the properties of matter",
+    "file_name": "unit-2-answers.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-2/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Quantitative chemistry — JD Science worksheet (32 questions)",
-    "file_name": "quantitative-chemistry.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/quantitative-chemistry.html"
+    "title": "Unit 3 worksheet — Quantitative chemistry",
+    "file_name": "unit-3-worksheet.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-3/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Quantitative chemistry — JD Science answers",
-    "file_name": "quantitative-chemistry-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/quantitative-chemistry-answers.html"
+    "title": "Unit 3 answers — Quantitative chemistry",
+    "file_name": "unit-3-answers.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-3/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemical changes — JD Science worksheet (32 questions)",
-    "file_name": "chemical-changes.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemical-changes.html"
+    "title": "Unit 4 worksheet — Chemical changes",
+    "file_name": "unit-4-worksheet.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-4/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemical changes — JD Science answers",
-    "file_name": "chemical-changes-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemical-changes-answers.html"
+    "title": "Unit 4 answers — Chemical changes",
+    "file_name": "unit-4-answers.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-4/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Energy changes — JD Science worksheet (32 questions)",
-    "file_name": "energy-changes.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/energy-changes.html"
+    "title": "Unit 5 worksheet — Energy changes",
+    "file_name": "unit-5-worksheet.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-5/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Energy changes — JD Science answers",
-    "file_name": "energy-changes-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/energy-changes-answers.html"
+    "title": "Unit 5 answers — Energy changes",
+    "file_name": "unit-5-answers.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-5/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "The rate and extent of chemical change — JD Science worksheet (32 questions)",
-    "file_name": "rate-and-extent.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/rate-and-extent.html"
+    "title": "Unit 6 worksheet — The rate and extent of chemical change",
+    "file_name": "unit-6-worksheet.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-6/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "The rate and extent of chemical change — JD Science answers",
-    "file_name": "rate-and-extent-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/rate-and-extent-answers.html"
+    "title": "Unit 6 answers — The rate and extent of chemical change",
+    "file_name": "unit-6-answers.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-6/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Organic chemistry — JD Science worksheet (32 questions)",
-    "file_name": "organic-chemistry.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/organic-chemistry.html"
+    "title": "Unit 7 worksheet — Organic chemistry",
+    "file_name": "unit-7-worksheet.html",
+    "series_label": "Unit 7",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-7/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Organic chemistry — JD Science answers",
-    "file_name": "organic-chemistry-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/organic-chemistry-answers.html"
+    "title": "Unit 7 answers — Organic chemistry",
+    "file_name": "unit-7-answers.html",
+    "series_label": "Unit 7",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-7/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemical analysis — JD Science worksheet (32 questions)",
-    "file_name": "chemical-analysis.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemical-analysis.html"
+    "title": "Unit 8 worksheet — Chemical analysis",
+    "file_name": "unit-8-worksheet.html",
+    "series_label": "Unit 8",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-8/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemical analysis — JD Science answers",
-    "file_name": "chemical-analysis-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemical-analysis-answers.html"
+    "title": "Unit 8 answers — Chemical analysis",
+    "file_name": "unit-8-answers.html",
+    "series_label": "Unit 8",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-8/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemistry of the atmosphere — JD Science worksheet (32 questions)",
-    "file_name": "chemistry-of-atmosphere.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemistry-of-atmosphere.html"
+    "title": "Unit 9 worksheet — Chemistry of the atmosphere",
+    "file_name": "unit-9-worksheet.html",
+    "series_label": "Unit 9",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-9/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Chemistry of the atmosphere — JD Science answers",
-    "file_name": "chemistry-of-atmosphere-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/chemistry-of-atmosphere-answers.html"
+    "title": "Unit 9 answers — Chemistry of the atmosphere",
+    "file_name": "unit-9-answers.html",
+    "series_label": "Unit 9",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-9/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Using resources — JD Science worksheet (32 questions)",
-    "file_name": "using-resources.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/using-resources.html"
+    "title": "Unit 10 worksheet — Using resources",
+    "file_name": "unit-10-worksheet.html",
+    "series_label": "Unit 10",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-10/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "AQA",
     "resource_category": "Worksheets",
-    "title": "Using resources — JD Science answers",
-    "file_name": "using-resources-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/aqa/gcse/chemistry/using-resources-answers.html"
+    "title": "Unit 10 answers — Using resources",
+    "file_name": "unit-10-answers.html",
+    "series_label": "Unit 10",
+    "file_url_override": "/worksheets/aqa/gcse/chemistry/unit-10/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Key concepts in chemistry — JD Science worksheet (32 questions)",
-    "file_name": "key-concepts.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/key-concepts.html"
+    "title": "Unit 1 worksheet — Key concepts in chemistry",
+    "file_name": "unit-1-worksheet.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-1/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Key concepts in chemistry — JD Science answers",
-    "file_name": "key-concepts-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/key-concepts-answers.html"
+    "title": "Unit 1 answers — Key concepts in chemistry",
+    "file_name": "unit-1-answers.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-1/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "States of matter and mixtures — JD Science worksheet (32 questions)",
-    "file_name": "states-and-mixtures.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/states-and-mixtures.html"
+    "title": "Unit 2 worksheet — States of matter and mixtures",
+    "file_name": "unit-2-worksheet.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-2/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "States of matter and mixtures — JD Science answers",
-    "file_name": "states-and-mixtures-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/states-and-mixtures-answers.html"
+    "title": "Unit 2 answers — States of matter and mixtures",
+    "file_name": "unit-2-answers.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-2/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Chemical changes — JD Science worksheet (32 questions)",
-    "file_name": "chemical-changes.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/chemical-changes.html"
+    "title": "Unit 3 worksheet — Chemical changes",
+    "file_name": "unit-3-worksheet.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-3/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Chemical changes — JD Science answers",
-    "file_name": "chemical-changes-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/chemical-changes-answers.html"
+    "title": "Unit 3 answers — Chemical changes",
+    "file_name": "unit-3-answers.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-3/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Extracting metals and equilibria — JD Science worksheet (32 questions)",
-    "file_name": "extracting-metals-equilibria.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/extracting-metals-equilibria.html"
+    "title": "Unit 4 worksheet — Extracting metals and equilibria",
+    "file_name": "unit-4-worksheet.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-4/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Extracting metals and equilibria — JD Science answers",
-    "file_name": "extracting-metals-equilibria-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/extracting-metals-equilibria-answers.html"
+    "title": "Unit 4 answers — Extracting metals and equilibria",
+    "file_name": "unit-4-answers.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-4/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Separate chemistry 1 — JD Science worksheet (32 questions)",
-    "file_name": "separate-chemistry-1.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/separate-chemistry-1.html"
+    "title": "Unit 5 worksheet — Separate chemistry 1",
+    "file_name": "unit-5-worksheet.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-5/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Separate chemistry 1 — JD Science answers",
-    "file_name": "separate-chemistry-1-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/separate-chemistry-1-answers.html"
+    "title": "Unit 5 answers — Separate chemistry 1",
+    "file_name": "unit-5-answers.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-5/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Separate chemistry 2 — JD Science worksheet (32 questions)",
-    "file_name": "separate-chemistry-2.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/separate-chemistry-2.html"
+    "title": "Unit 6 worksheet — Separate chemistry 2",
+    "file_name": "unit-6-worksheet.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-6/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "Edexcel",
     "resource_category": "Worksheets",
-    "title": "Separate chemistry 2 — JD Science answers",
-    "file_name": "separate-chemistry-2-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/edexcel/gcse/chemistry/separate-chemistry-2-answers.html"
+    "title": "Unit 6 answers — Separate chemistry 2",
+    "file_name": "unit-6-answers.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/edexcel/gcse/chemistry/unit-6/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C1 Particles — JD Science worksheet (32 questions)",
-    "file_name": "c1-particles.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c1-particles.html"
+    "title": "Unit 1 worksheet — C1 Particles",
+    "file_name": "unit-1-worksheet.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-1/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C1 Particles — JD Science answers",
-    "file_name": "c1-particles-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c1-particles-answers.html"
+    "title": "Unit 1 answers — C1 Particles",
+    "file_name": "unit-1-answers.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-1/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C2 Elements, compounds and mixtures — JD Science worksheet (32 questions)",
-    "file_name": "c2-elements-compounds-mixtures.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c2-elements-compounds-mixtures.html"
+    "title": "Unit 2 worksheet — C2 Elements, compounds and mixtures",
+    "file_name": "unit-2-worksheet.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-2/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C2 Elements, compounds and mixtures — JD Science answers",
-    "file_name": "c2-elements-compounds-mixtures-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c2-elements-compounds-mixtures-answers.html"
+    "title": "Unit 2 answers — C2 Elements, compounds and mixtures",
+    "file_name": "unit-2-answers.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-2/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C3 Chemical reactions — JD Science worksheet (32 questions)",
-    "file_name": "c3-chemical-reactions.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c3-chemical-reactions.html"
+    "title": "Unit 3 worksheet — C3 Chemical reactions",
+    "file_name": "unit-3-worksheet.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-3/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C3 Chemical reactions — JD Science answers",
-    "file_name": "c3-chemical-reactions-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c3-chemical-reactions-answers.html"
+    "title": "Unit 3 answers — C3 Chemical reactions",
+    "file_name": "unit-3-answers.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-3/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C4 Predicting and identifying reactions and products — JD Science worksheet (32 questions)",
-    "file_name": "c4-predicting-reactions.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c4-predicting-reactions.html"
+    "title": "Unit 4 worksheet — C4 Predicting and identifying reactions and products",
+    "file_name": "unit-4-worksheet.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-4/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C4 Predicting and identifying reactions and products — JD Science answers",
-    "file_name": "c4-predicting-reactions-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c4-predicting-reactions-answers.html"
+    "title": "Unit 4 answers — C4 Predicting and identifying reactions and products",
+    "file_name": "unit-4-answers.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-4/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C5 Monitoring and controlling chemical reactions — JD Science worksheet (32 questions)",
-    "file_name": "c5-monitoring-reactions.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c5-monitoring-reactions.html"
+    "title": "Unit 5 worksheet — C5 Monitoring and controlling chemical reactions",
+    "file_name": "unit-5-worksheet.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-5/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C5 Monitoring and controlling chemical reactions — JD Science answers",
-    "file_name": "c5-monitoring-reactions-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c5-monitoring-reactions-answers.html"
+    "title": "Unit 5 answers — C5 Monitoring and controlling chemical reactions",
+    "file_name": "unit-5-answers.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-5/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C6 Global challenges — JD Science worksheet (32 questions)",
-    "file_name": "c6-global-challenges.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c6-global-challenges.html"
+    "title": "Unit 6 worksheet — C6 Global challenges",
+    "file_name": "unit-6-worksheet.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-6/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "OCR",
     "resource_category": "Worksheets",
-    "title": "C6 Global challenges — JD Science answers",
-    "file_name": "c6-global-challenges-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/ocr/gcse/chemistry/c6-global-challenges-answers.html"
+    "title": "Unit 6 answers — C6 Global challenges",
+    "file_name": "unit-6-answers.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/ocr/gcse/chemistry/unit-6/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "The nature of substances and chemical reactions — JD Science worksheet (32 questions)",
-    "file_name": "nature-of-substances.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/nature-of-substances.html"
+    "title": "Unit 1 worksheet — The nature of substances and chemical reactions",
+    "file_name": "unit-1-worksheet.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-1/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "The nature of substances and chemical reactions — JD Science answers",
-    "file_name": "nature-of-substances-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/nature-of-substances-answers.html"
+    "title": "Unit 1 answers — The nature of substances and chemical reactions",
+    "file_name": "unit-1-answers.html",
+    "series_label": "Unit 1",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-1/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Atomic structure and the periodic table — JD Science worksheet (32 questions)",
-    "file_name": "atomic-structure-periodic-table.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/atomic-structure-periodic-table.html"
+    "title": "Unit 2 worksheet — Atomic structure and the periodic table",
+    "file_name": "unit-2-worksheet.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-2/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Atomic structure and the periodic table — JD Science answers",
-    "file_name": "atomic-structure-periodic-table-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/atomic-structure-periodic-table-answers.html"
+    "title": "Unit 2 answers — Atomic structure and the periodic table",
+    "file_name": "unit-2-answers.html",
+    "series_label": "Unit 2",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-2/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Water and solutions — JD Science worksheet (32 questions)",
-    "file_name": "water-and-solutions.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/water-and-solutions.html"
+    "title": "Unit 3 worksheet — Water and solutions",
+    "file_name": "unit-3-worksheet.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-3/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Water and solutions — JD Science answers",
-    "file_name": "water-and-solutions-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/water-and-solutions-answers.html"
+    "title": "Unit 3 answers — Water and solutions",
+    "file_name": "unit-3-answers.html",
+    "series_label": "Unit 3",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-3/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "The ever-changing Earth — JD Science worksheet (32 questions)",
-    "file_name": "earth-and-atmosphere.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/earth-and-atmosphere.html"
+    "title": "Unit 4 worksheet — The ever-changing Earth",
+    "file_name": "unit-4-worksheet.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-4/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "The ever-changing Earth — JD Science answers",
-    "file_name": "earth-and-atmosphere-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/earth-and-atmosphere-answers.html"
+    "title": "Unit 4 answers — The ever-changing Earth",
+    "file_name": "unit-4-answers.html",
+    "series_label": "Unit 4",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-4/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Rate of chemical change — JD Science worksheet (32 questions)",
-    "file_name": "rates-of-reaction.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/rates-of-reaction.html"
+    "title": "Unit 5 worksheet — Rate of chemical change",
+    "file_name": "unit-5-worksheet.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-5/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Rate of chemical change — JD Science answers",
-    "file_name": "rates-of-reaction-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/rates-of-reaction-answers.html"
+    "title": "Unit 5 answers — Rate of chemical change",
+    "file_name": "unit-5-answers.html",
+    "series_label": "Unit 5",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-5/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Organic chemistry and fuels — JD Science worksheet (32 questions)",
-    "file_name": "organic-chemistry-fuels.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/organic-chemistry-fuels.html"
+    "title": "Unit 6 worksheet — Organic chemistry and fuels",
+    "file_name": "unit-6-worksheet.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-6/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Organic chemistry and fuels — JD Science answers",
-    "file_name": "organic-chemistry-fuels-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/organic-chemistry-fuels-answers.html"
+    "title": "Unit 6 answers — Organic chemistry and fuels",
+    "file_name": "unit-6-answers.html",
+    "series_label": "Unit 6",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-6/answers.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Chemical analysis — JD Science worksheet (32 questions)",
-    "file_name": "chemical-analysis.html",
-    "series_label": "JD Science topic worksheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/chemical-analysis.html"
+    "title": "Unit 7 worksheet — Chemical analysis",
+    "file_name": "unit-7-worksheet.html",
+    "series_label": "Unit 7",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-7/worksheet.html"
   },
   {
     "level": "GCSE/IGCSE",
     "subject": "Chemistry",
     "exam_board": "WJEC",
     "resource_category": "Worksheets",
-    "title": "Chemical analysis — JD Science answers",
-    "file_name": "chemical-analysis-answers.html",
-    "series_label": "JD Science answer sheets",
-    "file_url_override": "/worksheets/wjec/gcse/chemistry/chemical-analysis-answers.html"
+    "title": "Unit 7 answers — Chemical analysis",
+    "file_name": "unit-7-answers.html",
+    "series_label": "Unit 7",
+    "file_url_override": "/worksheets/wjec/gcse/chemistry/unit-7/answers.html"
   },
   {
     "level": "GCSE/IGCSE",

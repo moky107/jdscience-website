@@ -5,6 +5,7 @@ import { OFFERINGS, topicsFor } from "./specs.mjs";
 import { slugify } from "./exam.mjs";
 import { buildQuestions } from "./bank.mjs";
 import { renderWorksheet, renderAnswers } from "./render.mjs";
+import { isAnswerSheet, unitDisplayTitles, unitNumberFromId } from "./catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const publicDir = path.join(root, "public", "worksheets");
@@ -36,18 +37,27 @@ for (const offering of OFFERINGS) {
       );
       fs.mkdirSync(folder, { recursive: true });
       const fileBase = slugify(topicId);
-      const qRel = `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}.html`;
-      const aRel = `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}-answers.html`;
-      fs.writeFileSync(path.join(root, "public", qRel.replace(/^\//, "")), renderWorksheet({ offering, topicTitle, questions, canonicalPath: qRel }));
-      fs.writeFileSync(path.join(root, "public", aRel.replace(/^\//, "")), renderAnswers({ offering, topicTitle, questions, canonicalPath: aRel }));
+      const labels = unitDisplayTitles(topicId, topicTitle, questions.length);
+      const unitN = offering.level === "GCSE/IGCSE" && offering.subject === "Chemistry"
+        ? unitNumberFromId(topicId)
+        : null;
+      const qRel = unitN
+        ? `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/unit-${unitN}/worksheet.html`
+        : `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}.html`;
+      const aRel = unitN
+        ? `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/unit-${unitN}/answers.html`
+        : `/worksheets/${slugify(offering.board)}/${levelFolder(offering.level)}/${slugify(offering.subject)}/${fileBase}-answers.html`;
+      fs.mkdirSync(path.dirname(path.join(root, "public", qRel.replace(/^\//, ""))), { recursive: true });
+      fs.writeFileSync(path.join(root, "public", qRel.replace(/^\//, "")), renderWorksheet({ offering, topicTitle: labels.worksheetHeading, questions, canonicalPath: qRel }));
+      fs.writeFileSync(path.join(root, "public", aRel.replace(/^\//, "")), renderAnswers({ offering, topicTitle: labels.answersHeading, questions, canonicalPath: aRel }));
       catalog.push({
         level: offering.level,
         subject: offering.subject,
         exam_board: offering.board,
         resource_category: "Worksheets",
-        title: `${topicTitle} — JD Science worksheet (${questions.length} questions)`,
-        file_name: `${fileBase}.html`,
-        series_label: "JD Science topic worksheets",
+        title: labels.worksheetTitle,
+        file_name: unitN ? `unit-${unitN}-worksheet.html` : `${fileBase}.html`,
+        series_label: labels.worksheetSeries,
         file_url_override: qRel,
       });
       catalog.push({
@@ -55,9 +65,9 @@ for (const offering of OFFERINGS) {
         subject: offering.subject,
         exam_board: offering.board,
         resource_category: "Worksheets",
-        title: `${topicTitle} — JD Science answers`,
-        file_name: `${fileBase}-answers.html`,
-        series_label: "JD Science answer sheets",
+        title: labels.answersTitle,
+        file_name: unitN ? `unit-${unitN}-answers.html` : `${fileBase}-answers.html`,
+        series_label: labels.answersSeries,
         file_url_override: aRel,
       });
     } catch (error) {
@@ -72,7 +82,7 @@ export const JD_SCIENCE_WORKSHEETS = ${JSON.stringify(catalog, null, 2)};
 `;
 fs.writeFileSync(catalogPath, js);
 
-const worksheetCount = catalog.filter((item) => item.series_label === "JD Science topic worksheets").length;
+const worksheetCount = catalog.filter((item) => !isAnswerSheet(item)).length;
 console.log(`Wrote ${worksheetCount} worksheets and ${worksheetCount} answer sheets.`);
 if (errors.length) {
   console.error("Errors:");
