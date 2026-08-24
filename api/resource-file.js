@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { tidyDownloadFilename } from './_lib/resourceNormalize.js';
 
 function supabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -51,7 +52,7 @@ export default async function handler(req, res) {
     }
 
     const buf = Buffer.from(await upstream.arrayBuffer());
-    const filename = safeFilename(data.file_name || data.title);
+    const filename = safeFilename(tidyDownloadFilename(data) || data.file_name || data.title);
     const type = upstream.headers.get('content-type') || data.file_type || 'application/octet-stream';
     res.setHeader('Content-Type', type);
     res.setHeader('Content-Length', String(buf.length));

@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { isDeadResource, repairPatchForResource } from '../src/resourceNormalize.js';
+import { isDeadResource, repairPatchForResource } from './_lib/resourceNormalize.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {

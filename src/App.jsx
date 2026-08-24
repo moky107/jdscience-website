@@ -14,7 +14,7 @@ import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
-import { HOSTED_REVISION_NOTES } from "./hostedRevisionNotes";
+import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
@@ -79,7 +79,7 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 };
 
 const STATIC_RESOURCE_ITEMS = [
-  ...HOSTED_REVISION_NOTES,
+  ...hostedRevisionNotesForCatalog(),
   // GCSE Chemistry — Videos
   {
     level: "GCSE/IGCSE",
@@ -824,15 +824,21 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   const shownVideoIds = new Set(videoItems.map((r) => r.id));
 
   const itemsFor = (board) =>
-    resources.filter((r) =>
-      levelKey(r.level) === activeLevel &&
-      slugify(r.subject) === slugify(activeSubject) &&
-      slugify(r.resource_category) === slugify(activeRes) &&
-      (r.all_boards
-        ? (!activeBoard ? slugify(r.exam_board) === slugify(board) : true)
-        : slugify(r.exam_board) === slugify(board)) &&
-      !shownVideoIds.has(r.id)
-    );
+    resources.filter((r) => {
+      const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
+      if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
+        return false;
+      }
+      return (
+        levelKey(r.level) === activeLevel &&
+        slugify(r.subject) === slugify(activeSubject) &&
+        slugify(r.resource_category) === slugify(activeRes) &&
+        (r.all_boards
+          ? (!activeBoard ? slugify(r.exam_board) === slugify(board) : true)
+          : slugify(r.exam_board) === slugify(board)) &&
+        !shownVideoIds.has(r.id)
+      );
+    });
 
   async function removeItem(item) {
     if (!window.confirm("Delete this resource?")) return;

@@ -5,7 +5,10 @@ import {
   inferResourceSubject,
   isDeadResource,
   mergeResourceCatalog,
+  tidyDownloadFilename,
+  tidyResourceTitle,
 } from "../src/resourceNormalize.js";
+import { hostedRevisionNotesForCatalog } from "../src/hostedRevisionNotes.js";
 
 const physicsInBiology = {
   id: 65,
@@ -33,6 +36,8 @@ const workingPhysics = {
 };
 assert.equal(isDeadResource(workingPhysics), false);
 assert.equal(canonicalizeResource(workingPhysics).subject, "Physics");
+assert.equal(tidyResourceTitle(workingPhysics), "Physics topic 1: Energy");
+assert.equal(tidyDownloadFilename(workingPhysics), "physics-topic-1-energy.pptx");
 
 const chemistryAsPhysics = {
   id: 151,
@@ -69,7 +74,16 @@ const encoded = canonicalizeResource({
   file_url: "https://example.supabase.co/storage/v1/object/public/resources/gcse-igcse/physics/edexcel/revision-notes/x",
   published: true,
 });
-assert.equal(encoded.title, "JDScience GCSE Physics - Electricity(2)");
+assert.equal(encoded.title, "Physics topic 2: Electricity");
+
+const timestamped = {
+  title: "1786377538003-jdscience-aqa-physics-1-energy-1-ppt",
+  file_name: "1786377538003-jdscience-aqa-physics-1-energy-1-ppt.pptx",
+  subject: "Physics",
+  resource_category: "Revision Notes",
+};
+assert.equal(tidyResourceTitle(timestamped), "Physics topic 1: Energy");
+assert.equal(tidyDownloadFilename(timestamped), "physics-topic-1-energy.pptx");
 
 const quantitative = {
   title: "JDScience_C3_Quantitative_Chemistry",
@@ -78,22 +92,59 @@ const quantitative = {
   file_name: "JDScience_C3_Quantitative_Chemistry.pptx",
 };
 assert.equal(inferResourceCategory(quantitative), "Revision Notes");
+assert.match(tidyResourceTitle(quantitative), /Quantitative Chemistry/i);
 
-const merged = mergeResourceCatalog([physicsInBiology, workingPhysics, chemistryAsPhysics], [{
-  id: "static-1",
-  title: "Cell Biology",
+const edexcelBiologyPptx = {
+  id: "static-old",
+  title: "Biology 1 - Cell Biology",
   subject: "Biology",
   level: "GCSE/IGCSE",
-  exam_board: "AQA",
+  exam_board: "Edexcel",
   resource_category: "Revision Notes",
-  file_name: "cell-biology.html",
-  file_url: "/resources/gcse/biology/revision-notes/cell-biology/",
-  all_boards: true,
+  file_name: "Biology 1 - Cell Biology.pptx",
+  file_url: "/resources/edexcel/gcse/biology/revision-notes/Biology%201%20-%20Cell%20Biology.pptx",
   published: true,
-}]);
+};
+assert.equal(isDeadResource(edexcelBiologyPptx), true);
+assert.equal(canonicalizeResource(edexcelBiologyPptx), null);
+
+const workingBioTopic1 = {
+  id: 56,
+  title: "JDScience_GCSE_Biology_Topic1_FINAL",
+  subject: "Biology",
+  level: "GCSE/IGCSE",
+  exam_board: "Edexcel",
+  resource_category: "Revision Notes",
+  file_name: "JDScience_GCSE_Biology_Topic1_FINAL.pptx",
+  storage_path: "gcse-igcse/biology/edexcel/revision-notes/1785700782822-jdscience-gcse-biology-topic1-final-pptx",
+  file_url: "https://example.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/edexcel/revision-notes/1785700782822-jdscience-gcse-biology-topic1-final-pptx",
+  published: true,
+};
+assert.equal(isDeadResource(workingBioTopic1), false);
+assert.equal(canonicalizeResource(workingBioTopic1).title, "Biology topic 1: Cell biology");
+
+const catalogNotes = hostedRevisionNotesForCatalog();
+assert.ok(catalogNotes.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.title === "Cell Biology"));
+assert.ok(catalogNotes.every((item) => item.file_url_override && item.file_url_override.endsWith("/")));
+assert.ok(catalogNotes.every((item) => !item.notesHtml));
+
+const merged = mergeResourceCatalog([
+  physicsInBiology,
+  workingPhysics,
+  chemistryAsPhysics,
+  workingBioTopic1,
+  edexcelBiologyPptx,
+], catalogNotes);
+
 assert.equal(merged.some((item) => item.id === 65), false);
 assert.equal(merged.some((item) => item.id === 70), true);
 assert.equal(merged.find((item) => item.id === 151).subject, "Chemistry");
-assert.equal(merged.some((item) => item.title === "Cell Biology"), true);
+assert.equal(merged.some((item) => item.title === "Biology 1 - Cell Biology"), false);
+assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.title === "Cell Biology"));
+assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.id === 56));
+assert.equal(
+  merged.filter((item) => item.subject === "Biology" && /physics/i.test(`${item.title} ${item.file_name}`)).length,
+  0,
+);
 
 console.log("resourceNormalize tests passed");

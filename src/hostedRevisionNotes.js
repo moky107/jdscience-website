@@ -9,6 +9,8 @@ const PHYSICS_PPTX = {
   atomic: "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/physics/edexcel/revision-notes/1786378722441-jdscience-20gcse-20physics-20-20atomic-20structure-pptx",
 };
 
+export const GCSE_NOTE_BOARDS = ["AQA", "Edexcel", "OCR", "Eduqas", "WJEC"];
+
 function note(partial) {
   const slug = partial.topicSlug;
   const subjectSlug = String(partial.subject || "").toLowerCase();
@@ -16,11 +18,22 @@ function note(partial) {
     level: "GCSE/IGCSE",
     exam_board: partial.exam_board || "AQA",
     resource_category: "Revision Notes",
-    all_boards: true,
+    all_boards: false,
     file_name: `${slug}.html`,
     file_url_override: `/resources/gcse/${subjectSlug}/revision-notes/${slug}/`,
     ...partial,
   };
+}
+
+export function hostedRevisionNotesForCatalog() {
+  return HOSTED_REVISION_NOTES.flatMap((item) => {
+    const { notesHtml: _notesHtml, downloadHref: _downloadHref, downloadLabel: _downloadLabel, ...rest } = item;
+    return GCSE_NOTE_BOARDS.map((exam_board) => ({
+      ...rest,
+      exam_board,
+      all_boards: false,
+    }));
+  });
 }
 
 export const HOSTED_REVISION_NOTES = [
