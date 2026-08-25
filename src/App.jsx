@@ -5,7 +5,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { FEATURED_ROTATION_MS, FEATURED_TUTOR_SLOTS, featuredTutorWindow, tutorsForHomepage } from "./tutorRotation";
-import { isResourceLibraryPage, preferredVisitorAuthMode } from "./visitorAuth";
+import { isResourceLibraryPage, preferredVisitorAuthMode, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
@@ -3156,6 +3156,10 @@ function App() {
 
   useEffect(() => {
     if (session) setAuthOpen(false);
+  }, [session]);
+
+  useEffect(() => {
+    syncSignedInCookie(Boolean(session));
   }, [session]);
 
   useEffect(() => {

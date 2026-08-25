@@ -77,6 +77,10 @@ assert.match(app, /variant="tutor"/);
 assert.match(app, /variant="booking"/);
 assert.match(app, /href="\/terms\/"/);
 
+assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /jd_signed_in=1/);
+assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /Googlebot/);
+assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /\/papers/);
+
 const apiFiles = fs.readdirSync(path.join(root, "api")).filter((name) => name.endsWith(".js"));
 assert.equal(apiFiles.length, 12, "Vercel Hobby must keep exactly 12 top-level API functions");
 

@@ -91,6 +91,10 @@ function patchWorksheetHtml(filePath) {
     );
   }
 
+  if (!html.includes("resource-gate.js")) {
+    html = html.replace(/<\/body>/i, '  <script src="/resource-gate.js" defer></script>\n</body>');
+  }
+
   fs.writeFileSync(filePath, html);
 }
 

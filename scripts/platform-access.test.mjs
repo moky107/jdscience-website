@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { featuredTutorWindow, shouldRotateTutorProfiles, tutorsForHomepage } from "../src/tutorRotation.js";
 import { HAS_ACCOUNT_KEY, isResourceLibraryPage, markHasAccount, preferredVisitorAuthMode } from "../src/visitorAuth.js";
+import { withResourceGate } from "./seo/inject-resource-gate.mjs";
 
 assert.equal(isResourceLibraryPage("papers"), true);
 assert.equal(isResourceLibraryPage("resources"), true);
@@ -32,5 +33,9 @@ assert.deepEqual(featuredTutorWindow(homepage, 3, 0).map((item) => item.public_s
 assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["sam-reed", "lee-okonkwo", "priya-shah"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 3).map((item) => item.public_slug), ["priya-shah", "amina-khan", "sam-reed"]);
 assert.deepEqual(featuredTutorWindow(homepage.slice(0, 2), 3, 9).map((item) => item.public_slug), ["amina-khan", "sam-reed"]);
+
+const gated = withResourceGate("<html><body><p>worksheet</p></body></html>");
+assert.match(gated, /resource-gate\.js/);
+assert.equal(withResourceGate(gated), gated);
 
 console.log("platform-access.test.mjs: ok");
