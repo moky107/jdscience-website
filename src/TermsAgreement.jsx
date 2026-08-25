@@ -3,11 +3,11 @@ import { TERMS_PATH } from "./termsAndConditions";
 
 const COPY = {
   register:
-    "I have read and agree to the Terms and Conditions. I understand that JD Science provides a platform for independent tutors to advertise their services and, to the fullest extent permitted by law, is not liable for tutoring arrangements, teaching quality or academic outcomes.",
+    "I have read and agree to the Terms and Conditions. I understand that JD Science provides a platform for discovering tutors and resources, and that listed tutors may operate independently.",
   tutor:
-    "I have read and agree to the Terms and Conditions. I confirm I am an independent tutor advertising my own services, I am not employed by JD Science, and JD Science is not responsible for my conduct, qualifications, safeguarding checks, fees, or any contract I enter into with students.",
+    "I have read and agree to the Terms and Conditions. I confirm I am an independent tutor listing my own services, I am not employed by JD Science unless it has expressly agreed otherwise, and I am responsible for the accuracy of the information I supply, including qualifications.",
   booking:
-    "I have read and agree to the Terms and Conditions. I understand JD Science only provides the opportunity for private tutors to advertise, is not a party to arrangements with independent listed tutors, and to the fullest extent permitted by law bears no liability for their services, cancellations, safeguarding or exam results.",
+    "I have read and agree to the Terms and Conditions. I understand that listed tutors may operate independently and that I should carry out my own checks before engaging a tutor. JD Science provides a platform for discovery and connection.",
 };
 
 export default function TermsAgreement({

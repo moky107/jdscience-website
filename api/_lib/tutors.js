@@ -320,6 +320,6 @@ export function toPublicTutor(row) {
     bio: row.bio || row.short_professional_biography || '',
     contact_for_quote: Boolean(row.contact_for_quote),
     hourly_rate: row.hourly_rate ?? null,
-    approved_badge_label: 'JDScience Approved',
+    approved_badge_label: 'Listed tutor',
   };
 }

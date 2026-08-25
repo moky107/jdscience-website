@@ -1,4 +1,4 @@
-export const TERMS_VERSION = "1.0";
+export const TERMS_VERSION = "1.1";
 export const TERMS_UPDATED = "25 August 2026";
 export const TERMS_PATH = "/terms/";
 export const TERMS_ACCEPTANCE_ERROR =
@@ -6,7 +6,11 @@ export const TERMS_ACCEPTANCE_ERROR =
 
 export const TERMS_PAGE_TITLE = "Terms and Conditions | JD Science";
 export const TERMS_PAGE_DESCRIPTION =
-  "JD Science terms for students, parents and independent tutors. The platform is an advertising and introduction service and, to the fullest extent permitted by law, is not liable for private tutoring arrangements.";
+  "JD Science terms for students, parents and independent tutors. JD Science provides a platform to discover and connect with tutors. Listed tutors usually operate independently. Please read these terms before you register, apply or book.";
+
+export const TUTOR_CHOOSING_NOTICE_TITLE = "Choosing a tutor";
+export const TUTOR_CHOOSING_NOTICE =
+  "Tutors listed on JD Science may operate as independent tutors. Students and parents should carry out their own checks and satisfy themselves that a tutor is suitably qualified, experienced and appropriate for their needs before engaging them. Where the learner is under 18, parents or guardians should also consider appropriate safeguarding and DBS checks.";
 
 export const TERMS_SECTIONS = [
   {
@@ -22,44 +26,50 @@ export const TERMS_SECTIONS = [
     id: "platform",
     title: "2. What JD Science provides",
     paragraphs: [
-      "JD Science publishes educational resources and provides a website where independent private tutors may advertise their services and where students and parents may browse those listings. Except where we expressly provide our own tutoring (see section 4), we are an advertising and introduction platform only.",
-      "We are not a tutoring agency in respect of independent listed tutors. We do not employ those tutors, we do not supervise their lessons, and we are not a party to any contract between a student (or parent) and an independent tutor.",
-      "To the fullest extent permitted by law, JD Science bears no responsibility for independent tutors' advertising, conduct, qualifications, availability, fees, cancellations, safeguarding arrangements, or the quality or outcome of any tuition they provide.",
+      "JD Science provides a platform through which students and parents can discover and connect with tutors, and through which tutors may list their services. We also publish educational resources. Where we expressly identify a session as provided by JD Science itself, we supply that tutoring directly (see section 4).",
+      "Unless we expressly state otherwise, tutors listed on the Platform operate independently and are not employees, workers or agents of JD Science.",
+      "Accepting a tutor application for publication means the listing may appear on the Platform. It does not mean we have verified the tutor's identity, qualifications, professional credentials, teaching experience, references, DBS status or other background checks, or that we endorse the tutor.",
     ],
   },
   {
     id: "independent-tutors",
-    title: "3. Independent tutors and student bookings",
+    title: "3. Independent tutors and your checks",
     paragraphs: [
-      "Profiles in the tutor directory (other than JD Science's own educator profile where clearly identified) are submitted by independent private tutors. Listing a tutor does not mean we have verified every claim, employed the tutor, or accepted liability for their services.",
-      "If you book, pay, or otherwise arrange tuition with an independent tutor — whether after finding them on this Platform or by contacting them directly — that arrangement is solely between you and the tutor. JD Science is absolved of all liabilities arising from that arrangement to the fullest extent permitted by law.",
-      "In particular, we are not responsible for:",
+      "JD Science's role in respect of listed tutors is to provide the Platform so that students and parents can discover and connect with them. We are not a party to any contract between a student (or parent or guardian) and an independent tutor, and we do not supervise that tutor's lessons.",
+      "Students and, where applicable, parents or guardians are responsible for carrying out their own reasonable due diligence before engaging a tutor. You should consider checking matters such as:",
     ],
     bullets: [
-      "the accuracy of a tutor's profile, qualifications, experience, DBS or safeguarding statements, rates or availability;",
-      "the content, quality, safety or legality of any lesson delivered by an independent tutor;",
-      "cancellations, no-shows, refunds, disputes, injury, loss, or academic disappointment arising from independent tuition;",
-      "payments you make to a tutor off-platform, including cash, bank transfer or third-party apps;",
-      "exam grades, predicted grades, university admission, or any other educational outcome.",
+      "the tutor's identity;",
+      "qualifications and professional credentials;",
+      "relevant teaching or tutoring experience;",
+      "suitability for the student's subject, level and examination board;",
+      "references or reviews where available;",
+      "safeguarding arrangements where the learner is under 18;",
+      "DBS status where relevant;",
+      "lesson arrangements and expectations; and",
+      "fees, cancellation arrangements and any other terms applying to the tutoring relationship.",
+    ],
+    afterParagraphs: [
+      "Where JD Science displays qualifications or other information supplied by tutors, that information is provided by the tutor. You should independently satisfy yourself that it is appropriate and sufficient for your needs. We do not state or imply that a tutor has been DBS checked, background checked, professionally verified or endorsed by JD Science unless we have actually completed and documented that specific verification.",
+      "If you book, pay or otherwise arrange tuition with an independent tutor — whether after finding them on this Platform or by contacting them directly — that arrangement is between you and the tutor. We do not hold client money for independent tutors.",
     ],
   },
   {
     id: "jd-science-sessions",
     title: "4. JD Science's own tutoring sessions",
     paragraphs: [
-      "The \"Book a Tutoring Session\" form on this website is for sessions provided by JD Science (including trial and paid sessions processed through our payment provider). Those sessions are supplied by JD Science and are separate from any contract you may later make with an independent listed tutor.",
+      "The \"Book a Tutoring Session\" form on this website is for sessions provided by JD Science (including trial and paid sessions processed through our payment provider), unless we clearly tell you that a particular booking is with a named independent tutor. JD Science sessions are separate from any contract you may later make with an independent listed tutor.",
       "Even for JD Science's own sessions, we do not guarantee any particular grade, mark, predicted grade or admission outcome. Teaching support is one factor among many, including the learner's effort, attendance, school teaching and exam performance on the day.",
-      "Nothing in these Terms excludes or limits liability for death or personal injury caused by our negligence, fraud or fraudulent misrepresentation, or any other liability that cannot be excluded under English law.",
     ],
   },
   {
     id: "tutor-obligations",
     title: "5. Terms for independent tutors",
     paragraphs: [
-      "If you apply to be listed, you confirm that you are self-employed (or otherwise lawfully able to provide private tuition) and that JD Science is not your employer, agent or payroll provider. You are solely responsible for tax, National Insurance, VAT where applicable, insurance, and any professional or regulatory requirements.",
-      "You must supply accurate information. You must not misrepresent qualifications, experience, DBS checks, safeguarding training, rates or availability. We may refuse, suspend or remove an application or listing at our discretion, including where we consider a listing misleading, incomplete or unsuitable.",
-      "You remain solely responsible for your own safeguarding, including any DBS or equivalent checks required for the ages you teach, parental consent, lesson location, online-safety arrangements, and compliance with the law. JD Science does not undertake DBS checks on your behalf by listing you.",
-      "Any contract for tuition, including fees, cancellations and refunds, is between you and the student or parent. JD Science is not responsible for unpaid fees, complaints, or claims arising from your services. You agree to indemnify JD Science against claims brought by students, parents or third parties in connection with your listing or tuition, except to the extent caused by our own negligence or as the law does not allow.",
+      "If you apply to be listed, you confirm that you are self-employed (or otherwise lawfully able to provide private tuition) unless we have expressly agreed a different arrangement in writing. JD Science is not your employer, agent or payroll provider by listing you. You are responsible for tax, National Insurance, VAT where applicable, insurance, and any professional or regulatory requirements.",
+      "You must supply accurate information. You must not misrepresent qualifications, experience, DBS checks, safeguarding training, rates or availability. We may refuse, suspend or remove an application or listing where we consider it misleading, incomplete or unsuitable.",
+      "You remain responsible for your own safeguarding arrangements, including any DBS or equivalent checks required for the ages you teach, parental consent, lesson location, online-safety arrangements, and compliance with the law. Listing you on the Platform does not mean JD Science has carried out a DBS or background check on you.",
+      "Any contract for tuition with a student or parent, including fees, cancellations and refunds, is between you and that student or parent. You agree to indemnify JD Science against claims brought by students, parents or third parties in connection with your listing or tuition, except to the extent caused by our negligence or as the law does not allow.",
     ],
   },
   {
@@ -83,9 +93,9 @@ export const TERMS_SECTIONS = [
     id: "under-18",
     title: "8. Under-18s, parents and safeguarding",
     paragraphs: [
-      "If the learner is under 18, a parent or legal guardian must agree to these Terms and supervise the learner's use of the Platform and any tuition, including online sessions.",
-      "JD Science is not a child-care, school or regulated activity provider in respect of independent tutors. Parents remain responsible for deciding whether a tutor, venue or online arrangement is suitable, and for remaining present or contactable as they consider appropriate.",
-      "Anyone with safeguarding concerns about a JD Science session should contact us at info@jdscience.co.uk. Concerns about an independent tutor should also be raised with the tutor, the learner's school where appropriate, and the relevant authorities.",
+      "If the learner is under 18, a parent or legal guardian must agree to these Terms and should supervise the learner's use of the Platform and any tuition, including online sessions.",
+      "In respect of independent tutors, JD Science is a listing and introduction platform rather than a school, college or childcare provider. Parents and guardians should decide whether a particular tutor, venue or online arrangement is suitable, remain present or contactable as they consider appropriate, and consider safeguarding and DBS checks before arranging tuition.",
+      "Anyone with safeguarding concerns about a session provided by JD Science itself should contact us at info@jdscience.co.uk. Concerns about an independent tutor should also be raised with the tutor, the learner's school where appropriate, and the relevant authorities.",
     ],
   },
   {
@@ -103,17 +113,18 @@ export const TERMS_SECTIONS = [
     paragraphs: [
       "Paid JD Science sessions booked through this website are charged via our payment provider. Prices are shown on the booking form. Free trials, where offered, are subject to availability and may be refused or withdrawn.",
       "Unless a consumer cancellation right applies by law, fees for JD Science sessions are non-refundable once a session has been delivered. If you need to rearrange a JD Science session, contact us as soon as possible. We will try to help but cannot promise an alternative slot.",
-      "Payments arranged directly with independent tutors are outside JD Science's control. We do not hold client money for those tutors and cannot recover fees on your behalf.",
+      "Payments arranged directly with independent tutors are between you and that tutor. We do not hold client money for those tutors.",
     ],
   },
   {
     id: "liability",
     title: "11. Limitation of liability",
     paragraphs: [
-      "To the fullest extent permitted by law, JD Science excludes all implied warranties and is not liable for any indirect, incidental, special or consequential loss, or for loss of profit, data, goodwill, opportunity or anticipated savings, arising from use of the Platform or from any tutoring arrangement.",
-      "To the fullest extent permitted by law, our total liability to you for JD Science's own services in any 12-month period is limited to the amount you paid to JD Science for those services in that period (or £50 if you paid nothing).",
+      "Nothing in these Terms excludes or limits any liability that cannot lawfully be excluded or limited under applicable UK law. This includes liability for death or personal injury caused by our negligence, and liability for fraud or fraudulent misrepresentation.",
+      "Subject to that, and to the fullest extent permitted by law, JD Science is not liable for any indirect, incidental, special or consequential loss, or for loss of profit, data, goodwill, opportunity or anticipated savings, arising from use of the Platform or from an arrangement with an independent tutor.",
+      "Subject to that, and to the fullest extent permitted by law, our total liability to you for JD Science's own services in any 12-month period is limited to the amount you paid to JD Science for those services in that period (or £50 if you paid nothing).",
       "We are not liable for events outside our reasonable control, including school closures, exam-board changes, internet failure, illness, or a tutor's or student's unavailability.",
-      "If you are a consumer, these Terms do not affect your statutory rights. We do not exclude liability where the law does not allow it.",
+      "If you are a consumer, these Terms do not affect your statutory rights.",
     ],
   },
   {

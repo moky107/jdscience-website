@@ -18,7 +18,8 @@ export function buildTermsHtml() {
     const bullets = section.bullets?.length
       ? `<ul>${section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`
       : "";
-    return `<h2 id="${escapeHtml(section.id)}">${escapeHtml(section.title)}</h2>\n${paragraphs}\n${bullets}`;
+    const afterParagraphs = (section.afterParagraphs || []).map((item) => `<p>${escapeHtml(item)}</p>`).join("\n");
+    return `<h2 id="${escapeHtml(section.id)}">${escapeHtml(section.title)}</h2>\n${paragraphs}\n${bullets}\n${afterParagraphs}`;
   }).join("\n");
 
   const bodyHtml = `
