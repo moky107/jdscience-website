@@ -112,6 +112,7 @@ function writeSitemap() {
     { loc: `${SITE}/tutors`, lastmod: today, changefreq: "weekly", priority: "0.8" },
     { loc: `${SITE}/worksheets/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/about/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
+    { loc: `${SITE}/terms/`, lastmod: today, changefreq: "monthly", priority: "0.7" },
     { loc: `${SITE}/tutors/joseph-danso/`, lastmod: today, changefreq: "monthly", priority: "0.8" },
     { loc: `${SITE}/resources/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/resources/gcse/chemistry/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
@@ -144,6 +145,7 @@ function writeSitemap() {
     }
   }
   walkIndexPages(path.join(root, "public", "about"), "/about/");
+  walkIndexPages(path.join(root, "public", "terms"), "/terms/");
   walkIndexPages(path.join(root, "public", "tutors"), "/tutors/");
   walkIndexPages(path.join(root, "public", "resources"), "/resources/");
   walkIndexPages(path.join(root, "public", "worksheets"), "/worksheets/");
@@ -258,7 +260,7 @@ function writeWorksheetHub() {
 </head>
 <body>
   <header>
-      <nav><a href="/">JD Science home</a> · <a href="/about/">About</a> · <a href="/tutors/joseph-danso/">Joseph Danso</a> · <a href="/resources/">Resources</a> · <a href="/papers">Past papers</a> · <a href="/tutors">Find a tutor</a></nav>
+      <nav><a href="/">JD Science home</a> · <a href="/about/">About</a> · <a href="/terms/">Terms</a> · <a href="/tutors/joseph-danso/">Joseph Danso</a> · <a href="/resources/">Resources</a> · <a href="/papers">Past papers</a> · <a href="/tutors">Find a tutor</a></nav>
     <h1>Free science and maths worksheets</h1>
     <p style="color:#ccfbf1;max-width:720px">Original JD Science topic worksheets for GCSE, IGCSE, A-Level, T-Level and BTEC. Every question is newly written for tutoring and revision — not copied from official exam papers.</p>
   </header>

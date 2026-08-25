@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { sendBookingNotification } from './_lib/notify.js';
+import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, termsAcceptancePayload } from './_lib/requireTerms.js';
 
 /**
  * Vercel serverless function: create a free-trial (or unpaid) booking.
@@ -41,6 +42,10 @@ export default async function handler(req, res) {
       .json({ error: 'Missing required fields (name, email, level, subject).' });
   }
 
+  if (!hasAcceptedTerms(body)) {
+    return res.status(400).json({ error: TERMS_ACCEPTANCE_ERROR });
+  }
+
   // This endpoint is only for free trials. Paid bookings go through Stripe.
   if (sessionType && sessionType !== 'trial') {
     return res.status(400).json({
@@ -61,7 +66,10 @@ export default async function handler(req, res) {
       subject: String(subject).trim(),
       session_type: 'trial',
       status: 'confirmed',
-      meta: message ? { message: String(message).slice(0, 2000) } : null,
+      meta: {
+        ...(message ? { message: String(message).slice(0, 2000) } : {}),
+        ...termsAcceptancePayload(body),
+      },
     };
 
     let { data, error } = await supabase

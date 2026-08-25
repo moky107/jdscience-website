@@ -83,7 +83,7 @@ export function renderPublicPage({
 <body>
   <header class="top">
     <div class="wrap">
-      <nav class="crumbs"><a href="/">JD Science</a> · <a href="/about/">About</a> · <a href="/resources/">Resources</a> · <a href="/tutors/joseph-danso/">Joseph Danso</a> · <a href="/papers">Past papers</a></nav>
+      <nav class="crumbs"><a href="/">JD Science</a> · <a href="/about/">About</a> · <a href="/terms/">Terms</a> · <a href="/resources/">Resources</a> · <a href="/tutors/joseph-danso/">Joseph Danso</a> · <a href="/papers">Past papers</a></nav>
       ${breadcrumbs.length ? `<nav class="crumbs">${[{ name: "Home", path: "/" }, ...breadcrumbs].map((crumb, index, list) => `${index ? " → " : ""}<a href="${escapeHtml(crumb.path)}">${escapeHtml(crumb.name)}</a>`).join("")}</nav>` : ""}
       <h1>${escapeHtml(heading)}</h1>
       <p class="lede">${escapeHtml(lede)}</p>
@@ -96,6 +96,7 @@ export function renderPublicPage({
     <div class="wrap">
       <a href="/">JD Science</a> ·
       <a href="/about/">About</a> ·
+      <a href="/terms/">Terms</a> ·
       <a href="/tutors/joseph-danso/">Joseph Danso</a> ·
       <a href="/resources/">Resources</a> ·
       <a href="mailto:info@jdscience.co.uk">info@jdscience.co.uk</a>

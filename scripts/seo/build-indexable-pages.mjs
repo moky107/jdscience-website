@@ -6,7 +6,7 @@ import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
-import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
+import { writeTermsPage } from "./write-terms-page.mjs";
 import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -450,6 +450,7 @@ function writeMissingFeaturedHubs(subjects) {
 
 writeAboutPage();
 writeJosephPage();
+writeTermsPage(publicDir);
 const subjects = collectTopics();
 const topicCount = writeResourcePages(subjects);
 writeFeaturedLandingPages();

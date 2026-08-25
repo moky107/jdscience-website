@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { sendTutorApplicationNotification } from './_lib/notify.js';
+import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR } from './_lib/requireTerms.js';
 import {
   DOCUMENT_EXTENSIONS,
   DOCUMENT_MAX_BYTES,
@@ -62,6 +63,7 @@ export default async function handler(req, res) {
   const confirm_accurate = parseBoolean(body.confirm_accurate);
   const consent_review_store = parseBoolean(body.consent_review_store);
   const consent_public_profile = parseBoolean(body.consent_public_profile);
+  const accept_terms = hasAcceptedTerms(body);
 
   if (company) {
     return res.status(200).json({ ok: true });
@@ -107,8 +109,8 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Invalid teaching mode. Allowed: online, face-to-face, both.' });
   }
 
-  if (!confirm_accurate || !consent_review_store || !consent_public_profile) {
-    return res.status(400).json({ error: 'You must complete the required consent checkboxes.' });
+  if (!confirm_accurate || !consent_review_store || !consent_public_profile || !accept_terms) {
+    return res.status(400).json({ error: accept_terms ? 'You must complete the required consent checkboxes.' : TERMS_ACCEPTANCE_ERROR });
   }
 
   const rateInfo = toRateFields(rate_display);

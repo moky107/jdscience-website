@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { supabase } from "./supabaseClient";
+import TermsAgreement from "./TermsAgreement";
+import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
+import { markHasAccount } from "./visitorAuth";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -10,7 +13,7 @@ function authRedirectUrl() {
   return `${window.location.origin}/?verified=1`;
 }
 
-export default function AuthModal({ close, initialMode = "login" }) {
+export default function AuthModal({ close, initialMode = "login", reason = "" }) {
   const [mode, setMode] = useState(initialMode === "register" ? "register" : "login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +21,7 @@ export default function AuthModal({ close, initialMode = "login" }) {
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
   const [busy, setBusy] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   async function resendVerification() {
     const trimmed = email.trim();
@@ -62,21 +66,34 @@ export default function AuthModal({ close, initialMode = "login" }) {
           setError("The passwords do not match.");
           return;
         }
+        if (!termsAccepted) {
+          setError(TERMS_ACCEPTANCE_ERROR);
+          return;
+        }
         const { data, error: signUpError } = await supabase.auth.signUp({
           email: trimmedEmail,
           password,
-          options: { emailRedirectTo: authRedirectUrl() },
+          options: {
+            emailRedirectTo: authRedirectUrl(),
+            data: {
+              terms_accepted: true,
+              terms_version: TERMS_VERSION,
+              terms_accepted_at: new Date().toISOString(),
+            },
+          },
         });
         if (signUpError) {
           setError(signUpError.message);
           return;
         }
         if (data.session) {
+          markHasAccount();
           setInfo("Your account is ready. You are now signed in.");
           setTimeout(() => close(), 800);
           return;
         }
-        setInfo("Account created. Check your email and click the verification link before you log in.");
+        markHasAccount();
+        setInfo("Account created. Check your email and click the verification link, then log in to open resources.");
         return;
       }
 
@@ -93,6 +110,7 @@ export default function AuthModal({ close, initialMode = "login" }) {
         }
         return;
       }
+      markHasAccount();
       close();
     } catch (err) {
       setError(err.message || "Something went wrong.");
@@ -107,9 +125,13 @@ export default function AuthModal({ close, initialMode = "login" }) {
         <div>
           <h2 style={{ margin: 0 }}>{mode === "login" ? "Login" : "Create an account"}</h2>
           <p style={{ margin: "8px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.55 }}>
-            {mode === "login"
-              ? "Sign in to your JD Science account."
-              : "Register with your email. We will send a verification link before you can log in."}
+            {reason === "resources"
+              ? (mode === "login"
+                ? "Log in to open past papers, worksheets and revision resources."
+                : "First-time visitors need a free account before opening resources. Agree to the Terms, then log in whenever you visit.")
+              : (mode === "login"
+                ? "Sign in to your JD Science account."
+                : "Register with your email. We will send a verification link before you can log in.")}
           </p>
         </div>
         <input style={inp} type="email" autoComplete="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -117,9 +139,12 @@ export default function AuthModal({ close, initialMode = "login" }) {
         {mode === "register" && (
           <input style={inp} type="password" autoComplete="new-password" placeholder="Confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
         )}
+        {mode === "register" && (
+          <TermsAgreement id="register-accept-terms" variant="register" checked={termsAccepted} onChange={setTermsAccepted} disabled={busy} />
+        )}
         {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
         {info && <div style={{ color: "#166534", fontSize: 14 }}>{info}</div>}
-        <button type="submit" disabled={busy} style={{ padding: 14, minHeight: 48, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+        <button type="submit" disabled={busy || (mode === "register" && !termsAccepted)} style={{ padding: 14, minHeight: 48, borderRadius: 8, background: busy || (mode === "register" && !termsAccepted) ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy || (mode === "register" && !termsAccepted) ? "default" : "pointer", fontWeight: 800 }}>
           {busy ? "Please wait…" : (mode === "login" ? "Login" : "Register")}
         </button>
         {(mode === "register" || /verify your email/i.test(error)) && (

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
+import ResourceAccessGate from "./ResourceAccessGate";
+import TermsAgreement from "./TermsAgreement";
+import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
+import { FEATURED_ROTATION_MS, FEATURED_TUTOR_SLOTS, featuredTutorWindow, tutorsForHomepage } from "./tutorRotation";
+import { isResourceLibraryPage, preferredVisitorAuthMode } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
@@ -594,7 +599,7 @@ function Hero({ onScroll, onBrowse }) {
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
         <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
-          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
+          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC. Create a free account to open resources, then log in whenever you visit.
         </p>
         <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <a
@@ -1251,6 +1256,7 @@ function Booking() {
   });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const [services, setServices] = useState([]);
 
   const set = (k, v) => setForm((f) => {
@@ -1297,6 +1303,12 @@ function Booking() {
       return;
     }
 
+    if (!acceptTerms) {
+      alert(TERMS_ACCEPTANCE_ERROR);
+      setLoading(false);
+      return;
+    }
+
     try {
       // Free trials go through a server API that uses the service role key,
       // so Supabase RLS does not block the insert.
@@ -1312,6 +1324,8 @@ function Booking() {
             subject: form.subject,
             message: form.message,
             sessionType: "trial",
+            accept_terms: true,
+            terms_version: TERMS_VERSION,
           }),
         });
         const body = await resp.json().catch(() => ({}));
@@ -1329,6 +1343,8 @@ function Booking() {
         subject: form.subject,
         sessionType: form.sessionType === "package" ? "package" : "single",
         message: form.message,
+        accept_terms: true,
+        terms_version: TERMS_VERSION,
       };
 
       const resp = await fetch("/api/create-checkout-session", {
@@ -1361,7 +1377,7 @@ function Booking() {
       <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
         <div>
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
-          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths.</p>
+          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths. Independent tutor listings are advertising only — JD Science is not a party to those arrangements.</p>
           <ul style={{ lineHeight: 1.7, paddingLeft: 18, fontSize: isMobile ? 15 : 16 }}>
             <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
             <li>✓ Free 30‑minute trial available for first-time students</li>
@@ -1422,7 +1438,8 @@ function Booking() {
 
               <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
               <textarea placeholder="What would you like help with?" value={form.message} onChange={(e) => set("message", e.target.value)} rows={3} style={inp} />
-              <button type="submit" disabled={loading} style={{ padding: "14px 12px", minHeight: 48, borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", fontWeight: 800 }}>
+              <TermsAgreement id="booking-accept-terms" variant="booking" checked={acceptTerms} onChange={setAcceptTerms} disabled={loading} />
+              <button type="submit" disabled={loading || !acceptTerms} style={{ padding: "14px 12px", minHeight: 48, borderRadius: 8, background: loading || !acceptTerms ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: loading || !acceptTerms ? "default" : "pointer", fontWeight: 800 }}>
                 {loading ? "Processing…" : "Request / Book"}
               </button>
             </form>
@@ -1577,9 +1594,21 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
-  const featuredTutors = tutors.slice(0, 3);
-  const showViewAll = tutors.length > featuredTutors.length;
+  const rotatableTutors = tutorsForHomepage(tutors);
+  const canRotate = rotatableTutors.length > FEATURED_TUTOR_SLOTS;
+  const [offset, setOffset] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const featuredTutors = featuredTutorWindow(rotatableTutors, FEATURED_TUTOR_SLOTS, offset);
+  const showViewAll = rotatableTutors.length > featuredTutors.length;
   const gridColumns = isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))");
+
+  useEffect(() => {
+    if (prefersReducedMotion || !canRotate || paused) return undefined;
+    const timer = window.setInterval(() => {
+      setOffset((current) => current + 1);
+    }, FEATURED_ROTATION_MS);
+    return () => window.clearInterval(timer);
+  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
 
   return (
     <section ref={sectionRef} style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
@@ -1590,9 +1619,18 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
             <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0" }}>Meet Our Approved Tutors</h2>
             <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680 }}>
               Carefully reviewed tutors across science and maths, ready for 1-to-1 support online or face to face.
+              {canRotate ? " Featured profiles rotate so every approved tutor is shown." : ""}
             </p>
           </div>
-          {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+            {canRotate && (
+              <>
+                <button type="button" aria-label="Show previous approved tutors" onClick={() => { setPaused(true); setOffset((current) => current - 1); }} style={{ width: 44, height: 44, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
+                <button type="button" aria-label="Show next approved tutors" onClick={() => { setPaused(true); setOffset((current) => current + 1); }} style={{ width: 44, height: 44, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
+              </>
+            )}
+            {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
+          </div>
         </div>
 
         {loading && <div style={{ color: "#64748b", marginTop: 18 }}>Loading approved tutors…</div>}
@@ -1607,7 +1645,12 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
           </div>
         )}
 
-        <div style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}>
+        <div
+          aria-live="polite"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}
+        >
           <article style={{ background: "#fff", borderRadius: 22, padding: isMobile ? 18 : 22, boxShadow: "0 10px 30px rgba(15,23,42,.08)", border: "1px solid rgba(0,150,136,.16)" }}>
             <div style={{ color: TEAL_DARK, fontWeight: 800, fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}>Founder</div>
             <h3 style={{ margin: "8px 0 6px", color: "#0f172a" }}>Joseph Danso</h3>
@@ -1784,7 +1827,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   const [submitError, setSubmitError] = useState("");
   const [privacyExpanded, setPrivacyExpanded] = useState(false);
   const [errors, setErrors] = useState({});
-  const [form, setForm] = useState({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false });
+  const [form, setForm] = useState({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false, accept_terms: false });
   const [files, setFiles] = useState({ profile_photo: null, cv: null, qualification_evidence: null });
 
   const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
@@ -1833,6 +1876,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
     if (!form.confirm_accurate) nextErrors.confirm_accurate = "You must confirm the information supplied is accurate.";
     if (!form.consent_review_store) nextErrors.consent_review_store = "You must consent to JDScience reviewing and storing the application.";
     if (!form.consent_public_profile) nextErrors.consent_public_profile = "You must agree that an approved profile may be displayed publicly.";
+    if (!form.accept_terms) nextErrors.accept_terms = TERMS_ACCEPTANCE_ERROR;
     return nextErrors;
   }
 
@@ -1849,7 +1893,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   }
 
   function resetForm() {
-    setForm({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false });
+    setForm({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false, accept_terms: false });
     setFiles({ profile_photo: null, cv: null, qualification_evidence: null });
     setErrors({});
     setSubmitError("");
@@ -1875,7 +1919,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
       const resp = await fetch("/api/create-tutor-application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, profile_photo_path: profilePhotoPath, cv_path: cvPath, qualification_evidence_path: evidencePath }),
+        body: JSON.stringify({ ...form, profile_photo_path: profilePhotoPath, cv_path: cvPath, qualification_evidence_path: evidencePath, terms_version: TERMS_VERSION }),
       });
 
       const body = await resp.json().catch(() => ({}));
@@ -2004,6 +2048,8 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
               {fieldError("consent_review_store")}
               <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_public_profile} onChange={(e) => set("consent_public_profile", e.target.checked)} /><span>I agree that an approved profile may be displayed publicly.</span></label>
               {fieldError("consent_public_profile")}
+              <TermsAgreement id="tutor-accept-terms" variant="tutor" checked={form.accept_terms} onChange={(value) => set("accept_terms", value)} disabled={saving} />
+              {fieldError("accept_terms")}
               <div style={{ color: "#64748b", fontSize: 14 }}>
                 Read our <a href="#tutor-privacy-policy" onClick={(e) => { e.preventDefault(); setPrivacyExpanded((current) => !current); }} style={{ color: TEAL, fontWeight: 700 }}>privacy policy</a> before submitting.
               </div>
@@ -2018,7 +2064,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
             <div style={{ color: "#64748b", fontSize: 13 }}>Applications are saved as pending until approved by JDScience.</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <button type="button" onClick={onClose} style={{ padding: "12px 16px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
-              <button type="submit" disabled={saving} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
+              <button type="submit" disabled={saving || !form.accept_terms} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving || !form.accept_terms ? "#94a3b8" : TEAL, color: "#fff", cursor: saving || !form.accept_terms ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
             </div>
           </div>
         </form>
@@ -2172,7 +2218,7 @@ function Contact() {
   );
 }
 
-function Footer({ onContact, onTutor, onAdvice, onPapers, onTutors, onHome }) {
+function Footer({ onContact, onTutor, onAdvice, onPapers, onWorksheets, onTutors, onHome }) {
   const isMobile = useIsMobile();
   const footerLink = { fontSize: 14, marginTop: 8, color: "#cbd5e1", textDecoration: "none", display: "block" };
   return (
@@ -2185,11 +2231,12 @@ function Footer({ onContact, onTutor, onAdvice, onPapers, onTutors, onHome }) {
         <div>
           <div style={{ fontWeight: 700, color: "#fff" }}>Resources</div>
           <a href="/about/" style={footerLink}>About JD Science</a>
+          <a href="/terms/" style={footerLink}>Terms and Conditions</a>
           <a href="/tutors/joseph-danso/" style={footerLink}>Joseph Danso</a>
           <a href="/resources/" style={footerLink}>Resource pages</a>
           <a href="/resources/gcse/chemistry/" style={footerLink}>GCSE Chemistry</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>Past papers</a>
-          <a href="/worksheets/" style={footerLink}>Topic worksheets</a>
+          <a href="/papers" onClick={(e) => { e.preventDefault(); onWorksheets ? onWorksheets() : onPapers?.(); }} style={footerLink}>Topic worksheets</a>
           <a href="/tutors" onClick={(e) => { e.preventDefault(); onTutors?.(); }} style={footerLink}>Find a tutor</a>
           {RES_TYPES.map((r) => (
             <a key={r} href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>{r}</a>
@@ -2206,7 +2253,7 @@ function Footer({ onContact, onTutor, onAdvice, onPapers, onTutors, onHome }) {
           </div>
         </div>
       </div>
-      <div style={{ textAlign: "center", color: "#64748b", marginTop: 24, fontSize: 13 }}>© {new Date().getFullYear()} jdscience.co.uk — All rights reserved.</div>
+      <div style={{ textAlign: "center", color: "#64748b", marginTop: 24, fontSize: 13 }}>© {new Date().getFullYear()} jdscience.co.uk — All rights reserved. <a href="/terms/" style={{ color: "#94a3b8" }}>Terms and Conditions</a></div>
     </footer>
   );
 }
@@ -3017,6 +3064,8 @@ function App() {
   const [resources, setResources] = useState([]);
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState("login");
+  const [authReason, setAuthReason] = useState("");
+  const [resourceAuthPrompted, setResourceAuthPrompted] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
   const [tutorsLoading, setTutorsLoading] = useState(false);
@@ -3043,8 +3092,9 @@ function App() {
     setAdminRoute(false);
   };
 
-  const openAuth = (mode = "login") => {
+  const openAuth = (mode = "login", reason = "") => {
     setAuthMode(mode === "register" ? "register" : "login");
+    setAuthReason(reason || "");
     setAuthOpen(true);
   };
 
@@ -3096,12 +3146,27 @@ function App() {
         const query = params.toString();
         window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
         setAuthMode("login");
+        setAuthReason("");
         setAuthOpen(true);
       }
     } catch {
       /* ignore */
     }
   }, []);
+
+  useEffect(() => {
+    if (session) setAuthOpen(false);
+  }, [session]);
+
+  useEffect(() => {
+    if (!isResourceLibraryPage(page)) {
+      setResourceAuthPrompted(false);
+      return;
+    }
+    if (!authReady || session || authOpen || resourceAuthPrompted) return;
+    setResourceAuthPrompted(true);
+    openAuth(preferredVisitorAuthMode(), "resources");
+  }, [authReady, session, page, authOpen, resourceAuthPrompted]);
 
   async function loadResources() {
     const staticItems = buildStaticResourceItems();
@@ -3148,6 +3213,8 @@ function App() {
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
+  const awaitingVisitorAuth = isResourceLibraryPage(page) && !authReady;
+  const resourceLibraryLocked = isResourceLibraryPage(page) && authReady && !session;
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
@@ -3254,14 +3321,36 @@ function App() {
 
       {page === "papers" && (
         <main>
-          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
-            isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
+          {awaitingVisitorAuth ? (
+            <section style={{ padding: "64px 16px", textAlign: "center", color: "#64748b", fontWeight: 700 }}>Checking your account…</section>
+          ) : resourceLibraryLocked ? (
+            <ResourceAccessGate
+              returningVisitor={preferredVisitorAuthMode() === "login"}
+              onRegister={() => openAuth("register", "resources")}
+              onLogin={() => openAuth("login", "resources")}
+              onHome={goHome}
+            />
+          ) : (
+            <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
+              isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
+          )}
         </main>
       )}
 
       {page === "resources" && (
         <main>
-          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
+          {awaitingVisitorAuth ? (
+            <section style={{ padding: "64px 16px", textAlign: "center", color: "#64748b", fontWeight: 700 }}>Checking your account…</section>
+          ) : resourceLibraryLocked ? (
+            <ResourceAccessGate
+              returningVisitor={preferredVisitorAuthMode() === "login"}
+              onRegister={() => openAuth("register", "resources")}
+              onLogin={() => openAuth("login", "resources")}
+              onHome={goHome}
+            />
+          ) : (
+            <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
+          )}
         </main>
       )}
 
@@ -3271,10 +3360,10 @@ function App() {
         </main>
       )}
 
-      {authOpen && <AuthModal initialMode={authMode} close={() => setAuthOpen(false)} />}
+      {authOpen && <AuthModal key={`${authMode}-${authReason}`} initialMode={authMode} reason={authReason} close={() => setAuthOpen(false)} />}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
-      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onTutors={goTutors} onHome={goHome} />
+      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} />
     </div>
   );
 }

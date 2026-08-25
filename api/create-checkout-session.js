@@ -1,4 +1,5 @@
 import Stripe from 'stripe';
+import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './_lib/requireTerms.js';
 
 /**
  * Vercel serverless function: create a Stripe Checkout session.
@@ -50,6 +51,10 @@ export default async function handler(req, res) {
       .json({ error: 'Missing required fields (name, email, level, subject).' });
   }
 
+  if (!hasAcceptedTerms(body)) {
+    return res.status(400).json({ error: TERMS_ACCEPTANCE_ERROR });
+  }
+
   try {
     const isPremium =
       level.includes('A-Level') || level.includes('T-Level') || level.includes('BTEC');
@@ -94,6 +99,8 @@ export default async function handler(req, res) {
         subject,
         session_type: isPackage ? 'package' : 'single',
         message: String(message || '').slice(0, 450),
+        terms_accepted: 'true',
+        terms_version: String(body.terms_version || TERMS_VERSION).slice(0, 20),
       },
     });
 
