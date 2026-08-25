@@ -293,7 +293,7 @@ function resourceDedupeKey(resource) {
 function resourceScore(resource) {
   const url = resource.file_url || "";
   let score = 0;
-  if (/filestore\.aqa\.org\.uk|qualifications\.pearson\.com|ocr\.org\.uk|eduqas\.co\.uk|wjec\.co\.uk/.test(url)) score += 6;
+  if (/filestore\.aqa\.org\.uk|qualifications\.pearson\.com|ocr\.org\.uk|eduqas\.co\.uk|wjec\.co\.uk|ncfe\.org\.uk/.test(url)) score += 6;
   if (url.startsWith("/worksheets/")) score += 5;
   if (url.startsWith("/resources/") && /revision-notes/.test(url) && url.endsWith("/")) score += 4;
   if (url.startsWith("/resources/") && !resource.storage_path) score += 3;

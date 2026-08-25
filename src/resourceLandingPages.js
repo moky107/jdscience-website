@@ -171,10 +171,10 @@ export const FEATURED_RESOURCE_LANDINGS = [
     description: "Browse JDScience T-Level Science worksheets, core-science revision and exam practice for NCFE, Pearson and City & Guilds course routes here.",
     intro: "T-Level Science combines core scientific knowledge with occupational practice. This page is the public doorway into JD Science materials for that course, including original topic worksheets and any specifications, notes or videos already stored in the shared library. It does not create a second set of files. Choose Worksheets or Past Questions to open the live browser on T-Level Science, then pick NCFE, Pearson or City & Guilds. Related pages for BTEC Applied Science and GCSE Chemistry help if you are bridging from a previous course. Examiner reports and mark schemes appear in the usual categories when those items exist. For tutoring on core biology, chemistry or physics within the T-Level, use Find a Tutor or Joseph Danso’s profile.",
     related: [
+      { href: "/papers?level=T-Level&subject=Laboratory%20Sciences", text: "T-Level Laboratory Sciences papers" },
+      { href: "/papers?level=T-Level&subject=Healthcare%20Science", text: "T-Level Healthcare Science papers" },
+      { href: "/papers?level=T-Level&subject=Food%20Sciences", text: "T-Level Food Sciences papers" },
       { href: "/resources/btec/applied-science/", text: "BTEC Applied Science resources" },
-      { href: "/resources/gcse/chemistry/", text: "GCSE Chemistry resources" },
-      { href: "/resources/gcse/physics/", text: "GCSE Physics resources" },
-      { href: "/resources/gcse/biology/", text: "GCSE Biology resources" },
       { href: "/papers?level=T-Level&subject=Science", text: "T-Level Science past papers" },
       { href: "/tutors", text: "Find a science tutor" },
       { href: "/tutors/joseph-danso/", text: "Joseph Danso science lecturer profile" },
