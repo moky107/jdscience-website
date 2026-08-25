@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { sendTutorApplicationNotification } from './_lib/notify.js';
 import {
   DOCUMENT_EXTENSIONS,
   DOCUMENT_MAX_BYTES,
@@ -191,6 +192,28 @@ export default async function handler(req, res) {
 
     if (error) {
       return res.status(500).json({ error: error.message || `Failed to create tutor application in ${TUTOR_STORAGE_BUCKET}` });
+    }
+
+    try {
+      await sendTutorApplicationNotification({
+        tutor_name,
+        email_address,
+        telephone_number,
+        location,
+        subjects_taught,
+        subjects_other,
+        levels_taught,
+        exam_boards_taught,
+        highest_relevant_qualification,
+        years_experience,
+        current_professional_role,
+        teaching_mode,
+        availability_summary,
+        rate_display: rateInfo.rateDisplay,
+        profile_status: data?.profile_status || "pending",
+      });
+    } catch (notifyErr) {
+      console.warn("Tutor application notification failed (ignored):", notifyErr?.message || notifyErr);
     }
 
     return res.status(200).json({ ok: true, application: data });
