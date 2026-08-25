@@ -18,7 +18,7 @@ for (const item of NCFE_TLEVEL_RESOURCES) {
   assert.ok(item.series_label, `missing series folder for ${item.title}`);
   assert.match(
     item.file_url_override,
-    /^(https:\/\/www\.ncfe\.org\.uk\/media\/|https:\/\/qualifications\.pearson\.com\/content\/dam\/pdf\/)/,
+    /^(https:\/\/www\.ncfe\.org\.uk\/media\/|https:\/\/qualifications\.pearson\.com\/content\/dam\/pdf\/|\/resources\/pearson\/tlevel\/)/,
     item.title,
   );
 }
@@ -49,6 +49,10 @@ assert.equal(
   find("Science", "Specifications", "Specification", "T Level Science specification (first teaching September 2026)").exam_board,
   "Pearson",
 );
+assert.ok(find("Science", "Specifications", "Teaching plans 2026–2027", "Biology teaching plan 2026–2027"));
+assert.ok(find("Science", "Specifications", "Teaching plans 2026–2027", "Chemistry teaching plan 2026–2027"));
+assert.ok(find("Science", "Specifications", "Teaching plans 2026–2027", "Physics teaching plan 2026–2027"));
+assert.ok(find("Laboratory Sciences", "Specifications", "Teaching plans 2026–2027", "Laboratory Sciences teaching plan 2026–2027"));
 assert.ok(find("Science", "Examiner Reports", "Summer 2025", "Chief examiner report — Core Paper A and B"));
 assert.ok(find("Science", "Past Questions", "Summer 2023", "Core Paper A"));
 assert.ok(find("Science", "Mark Schemes", "Summer 2023", "Core Paper A mark scheme"));

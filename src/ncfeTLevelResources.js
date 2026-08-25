@@ -89,6 +89,42 @@ export const NCFE_TLEVEL_RESOURCES = [
     series: "Specification",
     url: `${PEARSON}/TLevels/science/2026/administration/qualification-description-t-level-technical-qualification-in-science.pdf`,
   }),
+  row({
+    subject: "Science",
+    board: "Pearson",
+    category: "Specifications",
+    title: "Biology teaching plan 2026–2027",
+    file: "biology-teaching-plan-2026-2027.docx",
+    series: "Teaching plans 2026–2027",
+    url: "/resources/pearson/tlevel/science/specifications/biology-teaching-plan-2026-2027.docx",
+  }),
+  row({
+    subject: "Science",
+    board: "Pearson",
+    category: "Specifications",
+    title: "Chemistry teaching plan 2026–2027",
+    file: "chemistry-teaching-plan-2026-2027.docx",
+    series: "Teaching plans 2026–2027",
+    url: "/resources/pearson/tlevel/science/specifications/chemistry-teaching-plan-2026-2027.docx",
+  }),
+  row({
+    subject: "Science",
+    board: "Pearson",
+    category: "Specifications",
+    title: "Physics teaching plan 2026–2027",
+    file: "physics-teaching-plan-2026-2027.docx",
+    series: "Teaching plans 2026–2027",
+    url: "/resources/pearson/tlevel/science/specifications/physics-teaching-plan-2026-2027.docx",
+  }),
+  row({
+    subject: "Laboratory Sciences",
+    board: "Pearson",
+    category: "Specifications",
+    title: "Laboratory Sciences teaching plan 2026–2027",
+    file: "laboratory-sciences-teaching-plan-2026-2027.docx",
+    series: "Teaching plans 2026–2027",
+    url: "/resources/pearson/tlevel/laboratory-sciences/specifications/laboratory-sciences-teaching-plan-2026-2027.docx",
+  }),
 
   // --- T-Level Science / NCFE (core papers, support, withdrawn spec) ---
   row({
