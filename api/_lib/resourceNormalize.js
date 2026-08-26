@@ -90,17 +90,60 @@ function isMissingLocalRevisionBinary(resource) {
   return false;
 }
 
+const AWARDING_BODY_URL = /filestore\.aqa\.org\.uk|qualifications\.pearson\.com|ocr\.org\.uk|eduqas\.co\.uk|wjec\.co\.uk|ncfe\.org\.uk/i;
+const EXAM_MATERIAL_CATEGORIES = /^(Past Questions|Mark Schemes|Examiner Reports)$/i;
+
+export function hasAwardingBodyUrl(resource) {
+  const url = `${resource?.file_url_override || ""} ${resource?.file_url || ""}`;
+  return AWARDING_BODY_URL.test(url);
+}
+
+export function looksLikeOfficialPaper(resource) {
+  const file = decodeResourceLabel(resource.file_name || resource.title || "");
+  return /^(AQA-|OCR-|WJEC-|EDUQAS-|1[A-Z]{2}\d|846[123])/i.test(file)
+    || /_QP-|_MS-|_QU(?:_|\s|\.|\(|$)|_PEF|-que-|-rms-|-msc-|-ins-/i.test(file)
+    || /\b31617h\b/i.test(file)
+    || /question-paper-btec|mark-scheme-btec|examiner-report-btec/i.test(file)
+    || /unit\d-.*-(question-paper|mark-scheme|examiner-report)/i.test(file);
+}
+
+function isExamMaterialCategory(resource) {
+  return EXAM_MATERIAL_CATEGORIES.test(String(resource?.resource_category || ""));
+}
+
+function isOriginalJdScienceFile(resource) {
+  const file = `${decodeResourceLabel(resource.file_name || "")} ${decodeResourceLabel(resource.title || "")} ${resource.file_url || ""}`;
+  return /jdscience/i.test(file) || String(resource.file_url || "").startsWith("/worksheets/");
+}
+
+export function isHostedOfficialExamCopy(resource) {
+  if (!resource || hasAwardingBodyUrl(resource) || isOriginalJdScienceFile(resource)) return false;
+  if (looksLikeOfficialPaper(resource)) return true;
+  if (!isExamMaterialCategory(resource)) return false;
+  const file = decodeResourceLabel(resource.file_name || resource.title || "");
+  const url = resource.file_url || "";
+  if (resource.storage_path) return true;
+  if (url.startsWith("/resources/") && /\.pdf$/i.test(file || url)) return true;
+  if (!url && !resource.file_url_override && /\.pdf$/i.test(file)) return true;
+  return false;
+}
+
 export function isDeadResource(resource) {
   if (!resource) return true;
   if (DEAD_PHYSICS_UNDER_BIOLOGY_IDS.has(Number(resource.id))) return true;
   if (isBiologyLocation(resource) && isPhysicsNamed(resource)) return true;
   if (isMissingLocalRevisionBinary(resource)) return true;
+  if (isHostedOfficialExamCopy(resource)) return true;
   return false;
 }
 
 export function resourceOpenHref(resource) {
   if (!resource) return "#";
   if (resource.file_type === "video-embed") return resource.file_url;
+  if (isHostedOfficialExamCopy(resource)) return "#";
+  if (hasAwardingBodyUrl(resource) && (looksLikeOfficialPaper(resource) || isExamMaterialCategory(resource))) {
+    return resource.file_url_override || resource.file_url;
+  }
   if (resource.storage_path && resource.id != null && !String(resource.id).startsWith("static-")) {
     return `/api/education-posts?kind=file&id=${encodeURIComponent(resource.id)}`;
   }
@@ -150,12 +193,6 @@ const CHEMISTRY_TOPICS = [
 
 function pathBasename(resource) {
   return String(resource.storage_path || resource.file_url || "").split("/").pop() || "";
-}
-
-function looksLikeOfficialPaper(resource) {
-  const file = decodeResourceLabel(resource.file_name || resource.title || "");
-  return /^(AQA-|OCR-|WJEC-|EDUQAS-|1[A-Z]{2}\d|846[123])/i.test(file)
-    || /_QP-|_MS-|_QU(?:_|\s|\.|\(|$)|_PEF|-que-|-rms-|-msc-|-ins-/i.test(file);
 }
 
 function looksLikeUploadedDeck(resource) {

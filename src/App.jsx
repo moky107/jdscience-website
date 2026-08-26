@@ -205,11 +205,14 @@ function resourceFolderLevel(level) {
 
 function staticResourceFileUrl(resource) {
   if (resource.file_url_override) return resource.file_url_override;
+  const category = String(resource.resource_category || "");
+  if (/^(Past Questions|Mark Schemes|Examiner Reports)$/i.test(category)) {
+    return "";
+  }
   const board = slugify(resource.exam_board);
   const level = resourceFolderLevel(resource.level);
   const subject = slugify(resource.subject);
-  const category = slugify(resource.resource_category);
-  return `/resources/${board}/${level}/${subject}/${category}/${encodeURIComponent(resource.file_name)}`;
+  return `/resources/${board}/${level}/${subject}/${slugify(category)}/${encodeURIComponent(resource.file_name)}`;
 }
 
 function buildStaticResourceItems() {

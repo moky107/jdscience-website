@@ -1,9 +1,12 @@
 import assert from "node:assert/strict";
 import {
   canonicalizeResource,
+  hasAwardingBodyUrl,
   inferResourceCategory,
   inferResourceSubject,
   isDeadResource,
+  isHostedOfficialExamCopy,
+  looksLikeOfficialPaper,
   mergeResourceCatalog,
   resourceOpenHref,
   tidyDownloadFilename,
@@ -54,6 +57,9 @@ const chemistryAsPhysics = {
   published: true,
 };
 assert.equal(inferResourceSubject(chemistryAsPhysics), "Chemistry");
+assert.equal(isDeadResource(chemistryAsPhysics), true);
+assert.equal(canonicalizeResource(chemistryAsPhysics), null);
+assert.equal(resourceOpenHref(chemistryAsPhysics), "#");
 
 const mathsPaperInNotes = {
   id: 438,
@@ -101,6 +107,46 @@ assert.equal(tidyDownloadFilename({
   subject: "Chemistry",
   resource_category: "Past Questions",
 }), "AQA-84621H-QP-JUN23.PDF");
+assert.equal(
+  tidyResourceTitle({
+    title: "AQA-84621H-QP-JUN23",
+    file_name: "AQA-84621H-QP-JUN23.PDF",
+    subject: "Chemistry",
+    resource_category: "Past Questions",
+  }),
+  "AQA-84621H-QP-JUN23",
+);
+
+const officialLinkedPaper = {
+  id: "static-aqa-maths",
+  title: "Paper 1 Non-Calculator (Foundation)",
+  file_name: "AQA-83001F-QP-JUN22.PDF",
+  file_url: "https://filestore.aqa.org.uk/sample-papers-and-mark-schemes/2022/june/AQA-83001F-QP-JUN22.PDF",
+  resource_category: "Past Questions",
+  subject: "Maths",
+  exam_board: "AQA",
+  published: true,
+};
+assert.equal(looksLikeOfficialPaper(officialLinkedPaper), true);
+assert.equal(hasAwardingBodyUrl(officialLinkedPaper), true);
+assert.equal(isHostedOfficialExamCopy(officialLinkedPaper), false);
+assert.equal(isDeadResource(officialLinkedPaper), false);
+assert.equal(resourceOpenHref(officialLinkedPaper), officialLinkedPaper.file_url);
+
+const hostedBtecCopy = {
+  id: 900,
+  title: "Unit 1 Biology — January 2019 question paper",
+  file_name: "unit1-biology-january-2019-question-paper.pdf",
+  file_url: "/resources/pearson/btec/applied-science/past-questions/unit1-biology-january-2019-question-paper.pdf",
+  resource_category: "Past Questions",
+  subject: "Applied Science",
+  exam_board: "Pearson",
+  published: true,
+};
+assert.equal(looksLikeOfficialPaper(hostedBtecCopy), true);
+assert.equal(isHostedOfficialExamCopy(hostedBtecCopy), true);
+assert.equal(isDeadResource(hostedBtecCopy), true);
+assert.equal(resourceOpenHref(hostedBtecCopy), "#");
 
 const edexcelBiologyPptx = {
   id: "static-old",
@@ -146,7 +192,7 @@ const merged = mergeResourceCatalog([
 
 assert.equal(merged.some((item) => item.id === 65), false);
 assert.equal(merged.some((item) => item.id === 70), true);
-assert.equal(merged.find((item) => item.id === 151).subject, "Chemistry");
+assert.equal(merged.some((item) => item.id === 151), false);
 assert.equal(merged.some((item) => item.title === "Biology 1 - Cell Biology"), false);
 assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.title === "Cell Biology"));
 assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.id === 56));

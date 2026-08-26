@@ -1,4 +1,6 @@
-/* AQA Maths resources: hosted PDFs in /public plus official filestore links. */
+/* Official AQA Maths papers, mark schemes and related PDFs.
+   Links use AQA's public filestore so copyrighted exam material is not copied into the repo.
+   Series without a public filestore URL are omitted. */
 
 const LEVEL = "GCSE/IGCSE";
 const ALEVEL = "A-Level";
@@ -16,8 +18,6 @@ const COMPONENTS = [
   { id: "3H", paper: "3", tier: "Higher", calc: "Calculator" },
 ];
 
-const COMPONENT_BY_ID = Object.fromEntries(COMPONENTS.map((item) => [item.id, item]));
-
 // msPrefix is the AQA filename token: older series use W-MS, 2021+ use MS.
 const SERIES = [
   { year: 2023, season: "June", folder: "2023/june", code: "JUN23", msPrefix: "MS" },
@@ -33,26 +33,12 @@ const SERIES = [
   { year: 2017, season: "June", folder: "2017/june", code: "JUN17", msPrefix: "W-MS" },
 ];
 
-// Local PDFs copied into public/resources/aqa/... — use these instead of filestore when present.
-const HOSTED_GCSE_FILES = new Set([
-  "AQA-83001F-QP-JUN22.PDF",
-  "AQA-83001F-QP-JUN25.PDF",
-  "AQA-83001F-SQP.PDF",
-  "AQA-83001F-MS-JUN23.PDF",
-  "AQA-83001F-MS-JUN25.PDF",
-  "AQA-83001H-MS-JUN22.PDF",
-  "AQA-83001H-MS-JUN23.PDF",
-  "AQA-83001H-MS-NOV24.PDF",
-  "AQA-83002F-MS-JUN23.PDF",
-  "AQA-83002H-MS-JUN23.PDF",
-]);
-
 function paperLabel(component) {
   return `Paper ${component.paper} ${component.calc} (${component.tier})`;
 }
 
 function item({ level = LEVEL, subject = SUBJECT, category, title, url, seriesLabel, fileName }) {
-  const resource = {
+  return {
     level,
     subject,
     exam_board: BOARD,
@@ -60,18 +46,8 @@ function item({ level = LEVEL, subject = SUBJECT, category, title, url, seriesLa
     title,
     file_name: fileName,
     series_label: seriesLabel,
+    file_url_override: url,
   };
-  if (url) resource.file_url_override = url;
-  return resource;
-}
-
-function hostedGcse({ category, componentId, seriesLabel, fileName }) {
-  return item({
-    category,
-    title: paperLabel(COMPONENT_BY_ID[componentId]),
-    seriesLabel,
-    fileName,
-  });
 }
 
 function buildAqaGcseMathsResources() {
@@ -83,9 +59,6 @@ function buildAqaGcseMathsResources() {
       seriesLabel: "Specification",
       fileName: "AQA-8300-SP-2015.PDF",
     }),
-    hostedGcse({ category: "Past Questions", componentId: "1F", seriesLabel: "June 2025", fileName: "AQA-83001F-QP-JUN25.PDF" }),
-    hostedGcse({ category: "Mark Schemes", componentId: "1F", seriesLabel: "June 2025", fileName: "AQA-83001F-MS-JUN25.PDF" }),
-    hostedGcse({ category: "Mark Schemes", componentId: "1H", seriesLabel: "November 2024", fileName: "AQA-83001H-MS-NOV24.PDF" }),
   ];
 
   for (const series of SERIES) {
@@ -98,14 +71,14 @@ function buildAqaGcseMathsResources() {
         item({
           category: "Past Questions",
           title: label,
-          url: HOSTED_GCSE_FILES.has(qpName) ? null : `${BASE}/${series.folder}/${qpName}`,
+          url: `${BASE}/${series.folder}/${qpName}`,
           seriesLabel,
           fileName: qpName,
         }),
         item({
           category: "Mark Schemes",
           title: label,
-          url: HOSTED_GCSE_FILES.has(msName) ? null : `${BASE}/${series.folder}/${msName}`,
+          url: `${BASE}/${series.folder}/${msName}`,
           seriesLabel,
           fileName: msName,
         }),
@@ -121,14 +94,14 @@ function buildAqaGcseMathsResources() {
       item({
         category: "Past Questions",
         title: `Sample ${label}`,
-        url: HOSTED_GCSE_FILES.has(qpName) ? null : `${SAMPLE_BASE}/${qpName}`,
+        url: `${SAMPLE_BASE}/${qpName}`,
         seriesLabel: "Sample assessment",
         fileName: qpName,
       }),
       item({
         category: "Mark Schemes",
         title: `Sample ${label}`,
-        url: HOSTED_GCSE_FILES.has(msName) ? null : `${SAMPLE_BASE}/${msName}`,
+        url: `${SAMPLE_BASE}/${msName}`,
         seriesLabel: "Sample assessment",
         fileName: msName,
       }),
@@ -136,14 +109,25 @@ function buildAqaGcseMathsResources() {
   }
 
   resources.push(
-    item({ category: "Mark Schemes", title: "Paper 1 (Foundation)", seriesLabel: "Statistics · June 2025", fileName: "AQA-83821F-MS-JUN25.PDF" }),
-    item({ category: "Mark Schemes", title: "Paper 2 (Foundation)", seriesLabel: "Statistics · June 2025", fileName: "AQA-83822F-MS-JUN25.PDF" }),
-    item({ category: "Mark Schemes", title: "Paper 1 (Foundation)", seriesLabel: "Statistics · June 2024", fileName: "AQA-83821F-MS-JUN24.PDF" }),
-    item({ category: "Mark Schemes", title: "Paper 2 (Foundation)", seriesLabel: "Statistics · June 2024", fileName: "AQA-83822F-MS-JUN24.PDF" }),
+    item({
+      category: "Mark Schemes",
+      title: "Paper 1 (Foundation)",
+      url: `${BASE}/2023/june/AQA-83821F-MS-JUN23.PDF`,
+      seriesLabel: "Statistics · June 2023",
+      fileName: "AQA-83821F-MS-JUN23.PDF",
+    }),
+    item({
+      category: "Mark Schemes",
+      title: "Paper 2 (Foundation)",
+      url: `${BASE}/2023/june/AQA-83822F-MS-JUN23.PDF`,
+      seriesLabel: "Statistics · June 2023",
+      fileName: "AQA-83822F-MS-JUN23.PDF",
+    }),
     item({
       level: ALEVEL,
       category: "Past Questions",
       title: "Paper 1",
+      url: `${BASE}/2023/june/AQA-13501-QP-JUN23.PDF`,
       seriesLabel: "Core Maths (1350) · June 2023",
       fileName: "AQA-13501-QP-JUN23.PDF",
     }),
@@ -151,22 +135,25 @@ function buildAqaGcseMathsResources() {
       level: ALEVEL,
       category: "Mark Schemes",
       title: "Paper 1",
-      seriesLabel: "Core Maths (1350) · June 2025",
-      fileName: "AQA-13501-MS-JUN25.PDF",
+      url: `${BASE}/2023/june/AQA-13501-MS-JUN23.PDF`,
+      seriesLabel: "Core Maths (1350) · June 2023",
+      fileName: "AQA-13501-MS-JUN23.PDF",
     }),
     item({
       level: ALEVEL,
       category: "Mark Schemes",
       title: "Paper 2A Statistical techniques",
-      seriesLabel: "Core Maths (1350) · June 2025",
-      fileName: "AQA-13502A-MS-JUN25.PDF",
+      url: `${BASE}/2023/june/AQA-13502A-MS-JUN23.PDF`,
+      seriesLabel: "Core Maths (1350) · June 2023",
+      fileName: "AQA-13502A-MS-JUN23.PDF",
     }),
     item({
       level: ALEVEL,
       category: "Mark Schemes",
       title: "Paper 2C Graphical techniques",
-      seriesLabel: "Core Maths (1350) · June 2025",
-      fileName: "AQA-13502C-MS-JUN25.PDF",
+      url: `${BASE}/2023/june/AQA-13502C-MS-JUN23.PDF`,
+      seriesLabel: "Core Maths (1350) · June 2023",
+      fileName: "AQA-13502C-MS-JUN23.PDF",
     }),
   );
 

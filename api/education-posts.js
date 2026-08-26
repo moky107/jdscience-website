@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { tidyDownloadFilename } from './_lib/resourceNormalize.js';
+import { hasAwardingBodyUrl, looksLikeOfficialPaper, tidyDownloadFilename } from './_lib/resourceNormalize.js';
 
 function resourceSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -45,6 +45,14 @@ async function sendResourceFile(req, res) {
     if (error) return res.status(500).json({ error: error.message });
     if (!data || data.published === false || !data.file_url) {
       return res.status(404).json({ error: 'Resource not found' });
+    }
+
+    if (looksLikeOfficialPaper(data)) {
+      if (hasAwardingBodyUrl(data)) {
+        res.setHeader('Location', data.file_url_override || data.file_url);
+        return res.status(302).end();
+      }
+      return res.status(404).json({ error: 'Official exam materials are not hosted on JD Science' });
     }
 
     const upstream = await fetch(data.file_url);
