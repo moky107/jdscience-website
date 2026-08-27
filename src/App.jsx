@@ -820,7 +820,6 @@ function ElevenPlusCard({ item, isMobile }) {
       <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>{item.subject}</div>
       <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{item.title}</h3>
       {item.skill_area ? <div style={{ fontSize: 13, fontWeight: 700, color: TEAL }}>Skill area: {item.skill_area}</div> : null}
-      {item.description ? <p style={{ margin: 0, color: "#64748b", fontSize: 14, lineHeight: 1.55, flex: 1 }}>{item.description}</p> : null}
       <a
         href={href}
         target="_blank"
