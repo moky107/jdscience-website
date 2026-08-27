@@ -6,7 +6,9 @@ import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
+import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "../../src/elevenPlusResources.js";
 import { writeTermsPage } from "./write-terms-page.mjs";
+import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
 import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -14,6 +16,7 @@ const publicDir = path.join(root, "public");
 
 const EXTRA_HOSTED_RESOURCES = [
   ...HOSTED_REVISION_NOTES,
+  ...ELEVEN_PLUS_RESOURCES,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Videos", title: "Topic 1 Key Concepts In Chemistry", embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e" },
 ];
@@ -448,6 +451,89 @@ function writeMissingFeaturedHubs(subjects) {
   }
 }
 
+function pdfCard(item) {
+  return `<article class="resource-card">
+    <div class="subject">${escapeHtml(item.subject)}</div>
+    <h3>${escapeHtml(item.title)}</h3>
+    <div class="skill">Skill area: ${escapeHtml(item.skill_area)}</div>
+    <p>${escapeHtml(item.description)}</p>
+    <a class="btn" href="${escapeHtml(item.file_url_override)}" target="_blank" rel="noreferrer">Open PDF</a>
+  </article>`;
+}
+
+function writeElevenPlusPages() {
+  const grouped = new Map();
+  for (const section of ELEVEN_PLUS_SECTIONS) {
+    grouped.set(section.title, ELEVEN_PLUS_RESOURCES.filter((item) => item.subject === section.title));
+  }
+
+  writePage("resources/11-plus", renderPublicPage({
+    title: "Free 11+ Practice Papers | JD Science",
+    description: "Download original JDScience 11+ Maths, English, Verbal Reasoning, Non-Verbal Reasoning and mixed practice PDFs. Free, no login required.",
+    canonicalPath: "/resources/11-plus/",
+    heading: "11+ resources",
+    lede: "Original JDScience 11+ practice papers with answers. Free to open — no account needed.",
+    breadcrumbs: [
+      { name: "Resources", path: "/resources/" },
+      { name: "11+", path: "/resources/11-plus/" },
+    ],
+    jsonLd: { "@type": "CollectionPage", name: "JD Science 11+ resources", url: `${SITE_ORIGIN}/resources/11-plus/` },
+    bodyHtml: `
+      <p class="callout">These PDFs are original JDScience material. They are not official GL, CEM, CSSE or independent-school papers and do not rehost third-party downloads.</p>
+      <p>Also browse them in the live library: <a href="${escapeHtml(papersHref({ level: "11+" }))}">11+ on the resources page</a>.</p>
+      <h2>11+ subjects</h2>
+      <div class="cards">${ELEVEN_PLUS_SECTIONS.map((section) => card(section.path, section.title, `JDScience 11+ ${section.title} practice papers.`)).join("")}</div>
+      ${ELEVEN_PLUS_SECTIONS.map((section) => `
+        <h2>11+ → ${escapeHtml(section.title)}</h2>
+        <div class="cards">${grouped.get(section.title).map(pdfCard).join("")}</div>
+      `).join("")}
+    `,
+  }));
+
+  for (const section of ELEVEN_PLUS_SECTIONS) {
+    if (section.id === "parent-guide") continue;
+    const items = section.id === "mixed-practice"
+      ? [...(grouped.get("Mixed Practice") || []), ...(grouped.get("Parent Guide") || [])]
+      : (grouped.get(section.title) || []);
+    writePage(`resources/11-plus/${section.id}`, renderPublicPage({
+      title: `11+ ${section.title} Practice Papers | JD Science`,
+      description: `Free original JDScience 11+ ${section.title} PDFs with questions, answers and short explanations. No login required.`,
+      canonicalPath: `/resources/11-plus/${section.id}/`,
+      heading: `11+ ${section.title}`,
+      lede: `Original JDScience 11+ ${section.title} resources. Open a PDF in a new tab — no account needed.`,
+      breadcrumbs: [
+        { name: "Resources", path: "/resources/" },
+        { name: "11+", path: "/resources/11-plus/" },
+        { name: section.title, path: `/resources/11-plus/${section.id}/` },
+      ],
+      jsonLd: { "@type": "CollectionPage", name: `11+ ${section.title} resources`, url: `${SITE_ORIGIN}/resources/11-plus/${section.id}/` },
+      bodyHtml: `
+        <p class="callout">Public downloads. Each file includes student instructions, original questions, answers and short explanations.</p>
+        <div class="cards">${items.map(pdfCard).join("")}</div>
+        <p class="meta"><a href="/resources/11-plus/">All 11+ resources</a> · <a href="${escapeHtml(papersHref({ level: "11+", subject: section.title }))}">Open in the resources library</a></p>
+      `,
+    }));
+  }
+
+  writePage("resources/11-plus/parent-guide", renderPublicPage({
+    title: "11+ Parent Guide | JD Science",
+    description: "A short original JDScience guide for families on using the free 11+ practice papers, timing, marking and wellbeing.",
+    canonicalPath: "/resources/11-plus/parent-guide/",
+    heading: "11+ Parent Guide",
+    lede: "How to use the JDScience 11+ papers at home. Free to download.",
+    breadcrumbs: [
+      { name: "Resources", path: "/resources/" },
+      { name: "11+", path: "/resources/11-plus/" },
+      { name: "Parent Guide", path: "/resources/11-plus/parent-guide/" },
+    ],
+    jsonLd: { "@type": "LearningResource", name: "11+ Parent Guide", url: `${SITE_ORIGIN}/resources/11-plus/parent-guide/` },
+    bodyHtml: `
+      <div class="cards">${ELEVEN_PLUS_RESOURCES.filter((item) => item.subject === "Parent Guide").map(pdfCard).join("")}</div>
+      <p class="meta"><a href="/resources/11-plus/mixed-practice/">Mixed practice papers</a> · <a href="/resources/11-plus/">All 11+ resources</a></p>
+    `,
+  }));
+}
+
 writeAboutPage();
 writeJosephPage();
 writeTermsPage(publicDir);
@@ -455,4 +541,5 @@ const subjects = collectTopics();
 const topicCount = writeResourcePages(subjects);
 writeFeaturedLandingPages();
 writeMissingFeaturedHubs(subjects);
-console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages and ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings.`);
+writeElevenPlusPages();
+console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages, ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings and 11+ PDF library pages.`);

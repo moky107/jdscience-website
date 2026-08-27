@@ -5,6 +5,9 @@ node_modules/
 dist/
 .vercel/
 
+# Generated PDF working files
+scripts/eleven-plus/.tmp-html/
+
 # Environment variables (never commit real secrets)
 .env
 .env.local

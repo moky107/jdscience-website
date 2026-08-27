@@ -18,6 +18,7 @@ import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsRes
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
+import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
@@ -38,7 +39,7 @@ const INTRO_VIDEO_SRC = "/homepage-promo.mp4";
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
 
 const SUBJECTS_BY_LEVEL = {
-  "11+": ["English", "Maths", "Verbal Reasoning", "Non-Verbal Reasoning"],
+  "11+": ["English", "Maths", "Verbal Reasoning", "Non-Verbal Reasoning", "Mixed Practice", "Parent Guide"],
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics", "Maths"],
   "A-Level": ["Biology", "Chemistry", "Physics", "Maths"],
   "T-Level": ["Science", "Laboratory Sciences", "Food Sciences", "Health", "Healthcare Science"],
@@ -106,6 +107,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
+  ...ELEVEN_PLUS_RESOURCES,
 ];
 
 function slugify(t) {
@@ -234,6 +236,9 @@ function buildStaticResourceItems() {
     published: true,
     series_label: resource.series_label || null,
     all_boards: Boolean(resource.all_boards),
+    skill_area: resource.skill_area || null,
+    description: resource.description || null,
+    section: resource.section || null,
   }));
 }
 
@@ -444,7 +449,10 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       label: lvl, type: "dropdown",
       options: SUBJECTS_BY_LEVEL[lvl].map((s) => ({ text: s, action: () => onPick(lvl, s) })),
     })),
-    { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
+    { label: "Resources", type: "dropdown", options: [
+      { text: "11+ Practice", action: () => onPick("11+", "Maths") },
+      ...RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })),
+    ] },
     { label: "About", type: "link", action: () => { window.location.href = "/about/"; }, href: "/about/" },
     { label: "Advice", type: "link", action: () => onScroll("advice"), href: "/#advice-anchor" },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book"), href: "/#book-anchor" },
@@ -801,6 +809,56 @@ function ResourceBrowser({ initialType, onBook }) {
   );
 }
 
+function isElevenPlusOriginal(item) {
+  return String(item?.file_url || "").includes("/resources/11-plus/");
+}
+
+function ElevenPlusCard({ item, isMobile }) {
+  const href = resourceOpenHref(item);
+  return (
+    <article style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: isMobile ? 16 : 18, boxShadow: "0 4px 14px rgba(15,23,42,.06)", display: "flex", flexDirection: "column", gap: 8, minHeight: isMobile ? undefined : 220 }}>
+      <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>{item.subject}</div>
+      <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{item.title}</h3>
+      {item.skill_area ? <div style={{ fontSize: 13, fontWeight: 700, color: TEAL }}>Skill area: {item.skill_area}</div> : null}
+      {item.description ? <p style={{ margin: 0, color: "#64748b", fontSize: 14, lineHeight: 1.55, flex: 1 }}>{item.description}</p> : null}
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        style={{ marginTop: "auto", display: "inline-block", textAlign: "center", padding: "12px 16px", minHeight: 44, borderRadius: 10, background: TEAL, color: "#fff", fontWeight: 800, textDecoration: "none" }}
+      >
+        Open PDF
+      </a>
+    </article>
+  );
+}
+
+function ElevenPlusLibrary({ resources, activeSubject, isMobile }) {
+  const items = resources.filter((item) => (
+    isElevenPlusOriginal(item)
+    && slugify(item.subject) === slugify(activeSubject)
+  ));
+  const section = ELEVEN_PLUS_SECTIONS.find((entry) => slugify(entry.title) === slugify(activeSubject));
+  return (
+    <div style={{ marginBottom: 28 }}>
+      <div style={{ background: "#ecfeff", border: `1px solid ${TEAL}`, borderRadius: 12, padding: "14px 16px", marginBottom: 16, color: TEAL_DARK }}>
+        <div style={{ fontWeight: 800 }}>Free original JDScience 11+ papers</div>
+        <div style={{ fontSize: 14, lineHeight: 1.55, marginTop: 4 }}>
+          Download without an account. Each PDF opens in a new tab and includes questions, answers and short explanations.
+          Public copies also live at <a href={section?.path || "/resources/11-plus/"} style={{ color: TEAL_DARK, fontWeight: 800 }}>{section?.path || "/resources/11-plus/"}</a>.
+        </div>
+      </div>
+      {items.length === 0 ? (
+        <p style={{ color: "#64748b" }}>No 11+ PDFs in this subject yet. Try Maths, English, Verbal Reasoning, Non-Verbal Reasoning, Mixed Practice or Parent Guide.</p>
+      ) : (
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
+          {items.map((item) => <ElevenPlusCard key={item.id || item.file_name} item={item} isMobile={isMobile} />)}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ------------------------- PAST PAPERS (Supabase) ------------------------- */
 function PastPapers({ subject, level, resType, board, isAdmin, resources, reload, onBook }) {
   const isMobile = useIsMobile();
@@ -845,6 +903,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
 
   const itemsFor = (board) =>
     resources.filter((r) => {
+      if (isElevenPlusOriginal(r)) return false;
       const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
       if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
         return false;
@@ -933,7 +992,11 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
 
         <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 20 : 24, lineHeight: 1.3 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
 
-        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>Exam Board</div>
+        {activeLevel === "11+" && (
+          <ElevenPlusLibrary resources={resources} activeSubject={activeSubject} isMobile={isMobile} />
+        )}
+
+        <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>{activeLevel === "11+" ? "School Type" : "Exam Board"}</div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 22 }}>
           <button className="filter-chip" onClick={() => setActiveBoard(null)}
             style={{ padding: isMobile ? "12px 16px" : "8px 16px", borderRadius: 8, border: "none", cursor: "pointer", fontWeight: 700, fontSize: isMobile ? 15 : 13, background: !activeBoard ? TEAL_DARK : "#e2e8f0", color: !activeBoard ? "#fff" : "#334155" }}>All Boards</button>
@@ -2243,6 +2306,7 @@ function Footer({ onContact, onTutor, onAdvice, onPapers, onWorksheets, onTutors
           <a href="/terms/" style={footerLink}>Terms and Conditions</a>
           <a href="/tutors/joseph-danso/" style={footerLink}>Joseph Danso</a>
           <a href="/resources/" style={footerLink}>Resource pages</a>
+          <a href="/resources/11-plus/" style={footerLink}>11+ papers</a>
           <a href="/resources/gcse/chemistry/" style={footerLink}>GCSE Chemistry</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>Past papers</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onWorksheets ? onWorksheets() : onPapers?.(); }} style={footerLink}>Topic worksheets</a>
