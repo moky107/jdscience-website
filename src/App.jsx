@@ -22,6 +22,7 @@ import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
+import { ELEVEN_PLUS_PRACTICE_PAPERS } from "./elevenPlusPracticePapers";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -65,7 +66,7 @@ const RES_TYPES = [
 
 const RESOURCE_BOARDS = ["Edexcel", "AQA", "OCR", "Eduqas", "WJEC"];
 const RESOURCE_LEVELS = ["GCSE", "IGCSE", "A-Level", "BTEC", "T-Level", "11+"];
-const RESOURCE_SUBJECTS = ["Chemistry", "Physics", "Biology", "Maths"];
+const RESOURCE_SUBJECTS = ["Chemistry", "Physics", "Biology", "Maths", "English", "Verbal Reasoning", "Non-Verbal Reasoning"];
 const TUTOR_STORAGE_BUCKET = "tutor-applications";
 const TUTOR_SUBJECT_OPTIONS = ["Chemistry", "Physics", "Biology", "Mathematics", "Applied Science", "Other"];
 const TUTOR_LEVEL_OPTIONS = ["11+", "GCSE", "IGCSE", "A Level", "BTEC", "T Level", "Other"];
@@ -86,6 +87,7 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 
 const STATIC_RESOURCE_ITEMS = [
   ...hostedRevisionNotesForCatalog(),
+  ...ELEVEN_PLUS_PRACTICE_PAPERS,
   // GCSE Chemistry — Videos
   {
     level: "GCSE/IGCSE",

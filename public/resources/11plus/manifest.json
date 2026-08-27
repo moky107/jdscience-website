@@ -1,0 +1,74 @@
+[
+  {
+    "subject": "Maths",
+    "title": "JDScience 11+ Mathematics Practice Paper 1",
+    "kind": "paper",
+    "localPath": "/workspace/public/resources/11plus/maths/practice-papers/jdscience-11plus-mathematics-practice-paper-1.pdf",
+    "publicPath": "/resources/11plus/maths/practice-papers/jdscience-11plus-mathematics-practice-paper-1.pdf",
+    "pages": 11,
+    "category": "Past Questions"
+  },
+  {
+    "subject": "Maths",
+    "title": "JDScience 11+ Mathematics Practice Paper 1 — Answers and Explanations",
+    "kind": "answers",
+    "localPath": "/workspace/public/resources/11plus/maths/answers/jdscience-11plus-mathematics-practice-paper-1-answers.pdf",
+    "publicPath": "/resources/11plus/maths/answers/jdscience-11plus-mathematics-practice-paper-1-answers.pdf",
+    "pages": 5,
+    "category": "Mark Schemes"
+  },
+  {
+    "subject": "English",
+    "title": "JDScience 11+ English Practice Paper 1",
+    "kind": "paper",
+    "localPath": "/workspace/public/resources/11plus/english/practice-papers/jdscience-11plus-english-practice-paper-1.pdf",
+    "publicPath": "/resources/11plus/english/practice-papers/jdscience-11plus-english-practice-paper-1.pdf",
+    "pages": 14,
+    "category": "Past Questions"
+  },
+  {
+    "subject": "English",
+    "title": "JDScience 11+ English Practice Paper 1 — Answers and Explanations",
+    "kind": "answers",
+    "localPath": "/workspace/public/resources/11plus/english/answers/jdscience-11plus-english-practice-paper-1-answers.pdf",
+    "publicPath": "/resources/11plus/english/answers/jdscience-11plus-english-practice-paper-1-answers.pdf",
+    "pages": 6,
+    "category": "Mark Schemes"
+  },
+  {
+    "subject": "Verbal Reasoning",
+    "title": "JDScience 11+ Verbal Reasoning Practice Paper 1",
+    "kind": "paper",
+    "localPath": "/workspace/public/resources/11plus/verbal-reasoning/practice-papers/jdscience-11plus-verbal-reasoning-practice-paper-1.pdf",
+    "publicPath": "/resources/11plus/verbal-reasoning/practice-papers/jdscience-11plus-verbal-reasoning-practice-paper-1.pdf",
+    "pages": 11,
+    "category": "Past Questions"
+  },
+  {
+    "subject": "Verbal Reasoning",
+    "title": "JDScience 11+ Verbal Reasoning Practice Paper 1 — Answers and Explanations",
+    "kind": "answers",
+    "localPath": "/workspace/public/resources/11plus/verbal-reasoning/answers/jdscience-11plus-verbal-reasoning-practice-paper-1-answers.pdf",
+    "publicPath": "/resources/11plus/verbal-reasoning/answers/jdscience-11plus-verbal-reasoning-practice-paper-1-answers.pdf",
+    "pages": 5,
+    "category": "Mark Schemes"
+  },
+  {
+    "subject": "Non-Verbal Reasoning",
+    "title": "JDScience 11+ Non-Verbal Reasoning Practice Paper 1",
+    "kind": "paper",
+    "localPath": "/workspace/public/resources/11plus/non-verbal-reasoning/practice-papers/jdscience-11plus-non-verbal-reasoning-practice-paper-1.pdf",
+    "publicPath": "/resources/11plus/non-verbal-reasoning/practice-papers/jdscience-11plus-non-verbal-reasoning-practice-paper-1.pdf",
+    "pages": 17,
+    "category": "Past Questions"
+  },
+  {
+    "subject": "Non-Verbal Reasoning",
+    "title": "JDScience 11+ Non-Verbal Reasoning Practice Paper 1 — Answers and Explanations",
+    "kind": "answers",
+    "localPath": "/workspace/public/resources/11plus/non-verbal-reasoning/answers/jdscience-11plus-non-verbal-reasoning-practice-paper-1-answers.pdf",
+    "publicPath": "/resources/11plus/non-verbal-reasoning/answers/jdscience-11plus-non-verbal-reasoning-practice-paper-1-answers.pdf",
+    "pages": 5,
+    "category": "Mark Schemes"
+  }
+]
