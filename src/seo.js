@@ -7,11 +7,11 @@ export const PAGE_META = {
   },
   papers: {
     title: "Past Papers and Worksheets | JD Science",
-    description: "Find official past papers, mark schemes, specifications and original JD Science worksheets for GCSE, A-Level, T-Level and BTEC science and maths.",
+    description: "Find official past papers, mark schemes, specifications and original JD Science worksheets for 11+, GCSE, A-Level, T-Level and BTEC science and maths.",
   },
   resources: {
     title: "Revision Resources | JD Science",
-    description: "Browse JD Science revision notes, past questions, mark schemes, examiner reports, worksheets and videos by exam board and subject.",
+    description: "Browse JD Science 11+ practice papers, revision notes, past questions, mark schemes, examiner reports, worksheets and videos by exam board and subject.",
   },
   tutors: {
     title: "Find a Science or Maths Tutor | JD Science",
