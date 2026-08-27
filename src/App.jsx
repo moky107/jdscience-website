@@ -6,7 +6,7 @@ import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { FEATURED_ROTATION_MS, FEATURED_TUTOR_SLOTS, featuredTutorWindow, tutorsForHomepage } from "./tutorRotation";
-import { isResourceLibraryPage, preferredVisitorAuthMode, syncSignedInCookie } from "./visitorAuth";
+import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
@@ -603,7 +603,7 @@ function Hero({ onScroll, onBrowse }) {
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
         <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
-          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC. Create a free account to open resources, then log in whenever you visit.
+          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
         </p>
         <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <a
@@ -3172,6 +3172,10 @@ function App() {
   }, [session]);
 
   useEffect(() => {
+    if (!RESOURCE_LOGIN_REQUIRED) {
+      setResourceAuthPrompted(false);
+      return;
+    }
     if (!isResourceLibraryPage(page)) {
       setResourceAuthPrompted(false);
       return;
@@ -3226,8 +3230,8 @@ function App() {
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
-  const awaitingVisitorAuth = isResourceLibraryPage(page) && !authReady;
-  const resourceLibraryLocked = isResourceLibraryPage(page) && authReady && !session;
+  const awaitingVisitorAuth = RESOURCE_LOGIN_REQUIRED && isResourceLibraryPage(page) && !authReady;
+  const resourceLibraryLocked = RESOURCE_LOGIN_REQUIRED && isResourceLibraryPage(page) && authReady && !session;
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);

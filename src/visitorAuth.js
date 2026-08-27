@@ -2,6 +2,9 @@ export const HAS_ACCOUNT_KEY = "jd_has_account";
 export const SIGNED_IN_COOKIE = "jd_signed_in";
 export const RESOURCE_LIBRARY_PAGES = ["papers", "resources"];
 
+/** Temporarily false so visitors can open resources without signing in. Set true to restore the gate. */
+export const RESOURCE_LOGIN_REQUIRED = false;
+
 export function isResourceLibraryPage(page) {
   return RESOURCE_LIBRARY_PAGES.includes(page);
 }

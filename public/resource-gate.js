@@ -1,5 +1,9 @@
 (function () {
   try {
+    // Keep in sync with RESOURCE_LOGIN_REQUIRED in src/visitorAuth.js
+    var REQUIRE_LOGIN = false;
+    if (!REQUIRE_LOGIN) return;
+
     var ua = navigator.userAgent || "";
     if (/Googlebot|bingbot|DuckDuckBot|Yandex|Baiduspider|facebookexternalhit|Twitterbot|Slackbot|LinkedInBot/i.test(ua)) {
       return;

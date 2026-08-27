@@ -1,8 +1,9 @@
 import assert from "node:assert/strict";
 import { featuredTutorWindow, shouldRotateTutorProfiles, tutorsForHomepage } from "../src/tutorRotation.js";
-import { HAS_ACCOUNT_KEY, isResourceLibraryPage, markHasAccount, preferredVisitorAuthMode } from "../src/visitorAuth.js";
+import { HAS_ACCOUNT_KEY, isResourceLibraryPage, markHasAccount, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED } from "../src/visitorAuth.js";
 import { withResourceGate } from "./seo/inject-resource-gate.mjs";
 
+assert.equal(RESOURCE_LOGIN_REQUIRED, false);
 assert.equal(isResourceLibraryPage("papers"), true);
 assert.equal(isResourceLibraryPage("resources"), true);
 assert.equal(isResourceLibraryPage("home"), false);
