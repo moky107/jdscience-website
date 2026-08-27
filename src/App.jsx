@@ -18,7 +18,7 @@ import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsRes
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
-import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "./elevenPlusResources";
+import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
@@ -838,16 +838,8 @@ function ElevenPlusLibrary({ resources, activeSubject, isMobile }) {
     isElevenPlusOriginal(item)
     && slugify(item.subject) === slugify(activeSubject)
   ));
-  const section = ELEVEN_PLUS_SECTIONS.find((entry) => slugify(entry.title) === slugify(activeSubject));
   return (
     <div style={{ marginBottom: 28 }}>
-      <div style={{ background: "#ecfeff", border: `1px solid ${TEAL}`, borderRadius: 12, padding: "14px 16px", marginBottom: 16, color: TEAL_DARK }}>
-        <div style={{ fontWeight: 800 }}>Free original JDScience 11+ papers</div>
-        <div style={{ fontSize: 14, lineHeight: 1.55, marginTop: 4 }}>
-          Download without an account. Each PDF opens in a new tab. Practice papers and matching answer booklets are listed here.
-          Public copies also live at <a href={section?.path || "/resources/11-plus/"} style={{ color: TEAL_DARK, fontWeight: 800 }}>{section?.path || "/resources/11-plus/"}</a>.
-        </div>
-      </div>
       {items.length === 0 ? (
         <p style={{ color: "#64748b" }}>No 11+ PDFs in this subject yet. Try Maths, English, Verbal Reasoning, Non-Verbal Reasoning, Mixed Practice or Parent Guide.</p>
       ) : (
