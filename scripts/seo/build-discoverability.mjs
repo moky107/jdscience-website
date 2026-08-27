@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
+import { ELEVEN_PLUS_RESOURCES } from "../../src/elevenPlusResources.js";
 import { isAnswerSheet, answersUrlFor } from "../worksheets/catalog.mjs";
 
 const SITE = "https://www.jdscience.co.uk";
@@ -158,6 +159,18 @@ function writeSitemap() {
     const loc = `${SITE}${item.file_url_override}`;
     const filePath = path.join(root, "public", item.file_url_override.replace(/^\//, ""));
     const isAnswers = isAnswerSheet(item);
+    urls.push({
+      loc,
+      lastmod: isoDate(filePath),
+      changefreq: "monthly",
+      priority: isAnswers ? "0.5" : "0.7",
+    });
+  }
+
+  for (const item of ELEVEN_PLUS_RESOURCES) {
+    const loc = `${SITE}${item.file_url_override}`;
+    const filePath = path.join(root, "public", item.file_url_override.replace(/^\//, ""));
+    const isAnswers = /answers/i.test(item.file_name || "") || /mark schemes/i.test(item.resource_category || "");
     urls.push({
       loc,
       lastmod: isoDate(filePath),

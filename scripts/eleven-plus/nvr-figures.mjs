@@ -92,6 +92,33 @@ export function ringDot({ rot = 0 } = {}) {
   </g>`;
 }
 
+export function chevron({ dir = "right", fill = "solid" } = {}) {
+  const rot = { right: 0, down: 90, left: 180, up: 270 }[dir] || 0;
+  return `<g transform="rotate(${rot} 50 50)">
+    <polygon points="18,22 82,50 18,78 34,50" fill="${shapeFill(fill)}" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>
+  </g>`;
+}
+
+export function hexagon({ fill = "none" } = {}) {
+  return `<polygon points="50,12 82,31 82,69 50,88 18,69 18,31" fill="${shapeFill(fill)}" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`;
+}
+
+export function lShape({ fill = "solid", rot = 0 } = {}) {
+  return `<path d="M22 18 H58 V42 H42 V82 H22 Z" fill="${shapeFill(fill)}" stroke="${INK}" stroke-width="3" stroke-linejoin="round" transform="rotate(${rot} 50 50)"/>`;
+}
+
+export function cubeNet({ variant = "cross" } = {}) {
+  const sq = (x, y) => `<rect x="${x}" y="${y}" width="20" height="20" fill="${WHITE}" stroke="${INK}" stroke-width="2.4"/>`;
+  const layouts = {
+    cross: [[40, 8], [20, 28], [40, 28], [60, 28], [40, 48], [40, 68]],
+    tee: [[40, 10], [20, 30], [40, 30], [60, 30], [40, 50], [40, 70]],
+    block: [[20, 20], [40, 20], [60, 20], [20, 40], [40, 40], [60, 40]],
+    zigzag: [[18, 18], [38, 18], [38, 38], [58, 38], [58, 58], [78, 58]],
+    corner: [[20, 20], [40, 20], [60, 20], [20, 40], [40, 40], [20, 60]],
+  };
+  return (layouts[variant] || layouts.cross).map(([x, y]) => sq(x, y)).join("");
+}
+
 export function combo(parts) {
   return parts.join("");
 }
