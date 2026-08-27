@@ -93,7 +93,7 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
           return;
         }
         markHasAccount();
-        setInfo("Account created. Check your email and click the verification link, then log in to open resources.");
+        setInfo("Account created. Check your email and click the verification link, then log in.");
         return;
       }
 
@@ -125,13 +125,9 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
         <div>
           <h2 style={{ margin: 0 }}>{mode === "login" ? "Login" : "Create an account"}</h2>
           <p style={{ margin: "8px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.55 }}>
-            {reason === "resources"
-              ? (mode === "login"
-                ? "Log in to open past papers, worksheets and revision resources."
-                : "First-time visitors need a free account before opening resources. Agree to the Terms, then log in whenever you visit.")
-              : (mode === "login"
-                ? "Sign in to your JD Science account."
-                : "Register with your email. We will send a verification link before you can log in.")}
+            {mode === "login"
+              ? "Sign in to your JD Science account."
+              : "Register with your email. We will send a verification link before you can log in."}
           </p>
         </div>
         <input style={inp} type="email" autoComplete="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
