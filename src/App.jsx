@@ -682,9 +682,7 @@ function BoardStrip() {
 function OffersSection() {
   const isMobile = useIsMobile();
   const offers = [
-    { title: "Resources", text: "Revision notes, how questions are framed, past questions, mark schemes and examiner reports." },
     { title: "Tutoring", text: "Book support for 11+, GCSE, IGCSE, A-Level, BTEC and T-Level." },
-    { title: "Tutor Profiles", text: "Tutor listings appear after a listing review." },
     { title: "Admin Control", text: "Admin can upload resources directly for visitors to download." },
   ];
   return (
