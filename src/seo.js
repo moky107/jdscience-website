@@ -13,6 +13,10 @@ export const PAGE_META = {
     title: "Revision Resources | JD Science",
     description: "Browse JD Science revision notes, past questions, mark schemes, examiner reports, worksheets and videos by exam board and subject.",
   },
+  "eleven-plus": {
+    title: "11+ Resources | Free Practice Papers | JD Science",
+    description: "Free 11+ English, Maths, Verbal Reasoning and Non-Verbal Reasoning practice papers from GL Assessment, CGP, Collins, Examberry, The Exam Coach and original JDScience materials.",
+  },
   tutors: {
     title: "Find a Science or Maths Tutor | JD Science",
     description: "Book an approved JD Science tutor for GCSE, A-Level, T-Level or BTEC Biology, Chemistry, Physics and Maths. Online and face-to-face support.",
@@ -21,12 +25,14 @@ export const PAGE_META = {
 
 export function pageFromPathname(pathname) {
   if (pathname === "/papers" || pathname === "/papers/") return "papers";
+  if (pathname === "/11-plus" || pathname === "/11-plus/" || pathname === "/11-plus-resources" || pathname === "/11-plus-resources/") return "eleven-plus";
   if (pathname === "/tutors" || pathname === "/tutors/") return "tutors";
   return "home";
 }
 
 export function pathForPage(page) {
   if (page === "papers" || page === "resources") return "/papers";
+  if (page === "eleven-plus") return "/11-plus";
   if (page === "tutors") return "/tutors";
   return "/";
 }
