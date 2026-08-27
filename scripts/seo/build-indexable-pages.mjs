@@ -456,7 +456,6 @@ function pdfCard(item) {
     <div class="subject">${escapeHtml(item.subject)}</div>
     <h3>${escapeHtml(item.title)}</h3>
     <div class="skill">Skill area: ${escapeHtml(item.skill_area)}</div>
-    <p>${escapeHtml(item.description)}</p>
     <a class="btn" href="${escapeHtml(item.file_url_override)}" target="_blank" rel="noreferrer">Open PDF</a>
   </article>`;
 }
