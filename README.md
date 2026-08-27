@@ -27,11 +27,13 @@ In the Supabase dashboard:
 
 1. Authentication → Providers → Email: enable email sign-up.
 2. Turn **Confirm email** on so new visitors must verify their inbox before logging in.
-3. Authentication → URL Configuration: add these Redirect URLs:
-   - `https://www.jdscience.co.uk/?verified=1`
-   - `https://jdscience.co.uk/?verified=1`
-   - `https://jdscience-website.vercel.app/?verified=1`
-   - `http://localhost:5173/?verified=1`
+3. Authentication → URL Configuration:
+   - **Site URL:** `https://www.jdscience.co.uk`
+   - **Redirect URLs:**
+     - `https://www.jdscience.co.uk/auth/callback`
+     - `https://jdscience.co.uk/auth/callback`
+     - `http://localhost:5173/auth/callback` (local development only)
+4. Authentication → Email Templates → Confirm signup: keep `{{ .ConfirmationURL }}` as the button link. Do not hard-code localhost or an obsolete domain.
 
 ## Advice, exam tips and education news
 Run `supabase/migrations/20260818_education_posts.sql` once in the Supabase SQL editor. After that, publish posts from the admin dashboard. They appear in the homepage **Advice** section.

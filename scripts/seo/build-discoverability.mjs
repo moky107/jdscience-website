@@ -91,9 +91,8 @@ function patchWorksheetHtml(filePath) {
     );
   }
 
-  if (!html.includes("resource-gate.js")) {
-    html = html.replace(/<\/body>/i, '  <script src="/resource-gate.js" defer></script>\n</body>');
-  }
+  // Resource pages are public — do not inject a login gate script.
+  html = html.replace(/\s*<script[^>]*src=["']\/resource-gate\.js["'][^>]*>\s*<\/script>\s*/gi, "\n");
 
   fs.writeFileSync(filePath, html);
 }

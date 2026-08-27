@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
-import ResourceAccessGate from "./ResourceAccessGate";
+import AuthCallbackPage from "./AuthCallbackPage";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { FEATURED_ROTATION_MS, FEATURED_TUTOR_SLOTS, featuredTutorWindow, tutorsForHomepage } from "./tutorRotation";
-import { isResourceLibraryPage, preferredVisitorAuthMode, syncSignedInCookie } from "./visitorAuth";
+import { syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
@@ -603,7 +603,7 @@ function Hero({ onScroll, onBrowse }) {
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
         <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
-          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC. Create a free account to open resources, then log in whenever you visit.
+          Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC. Browse and download resources freely — no account required.
         </p>
         <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
           <a
@@ -3074,7 +3074,6 @@ function App() {
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [authReason, setAuthReason] = useState("");
-  const [resourceAuthPrompted, setResourceAuthPrompted] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
   const [tutorsLoading, setTutorsLoading] = useState(false);
@@ -3087,7 +3086,7 @@ function App() {
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
   useEffect(() => {
-    applyDocumentMeta(page, { noIndex: adminRoute });
+    applyDocumentMeta(page, { noIndex: adminRoute || page === "auth-callback" });
   }, [page, adminRoute]);
 
   const goAdmin = () => {
@@ -3147,11 +3146,19 @@ function App() {
         window.history.replaceState({}, "", "/");
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
       } else if (params.get("verified") === "1") {
+        // Legacy confirmation links that landed on /?verified=1.
         setBanner({
           type: "success",
-          text: "Your email is verified. You can now log in.",
+          text: "Your email address has been verified. You can now log in.",
         });
         params.delete("verified");
+        const query = params.toString();
+        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
+        setAuthMode("login");
+        setAuthReason("");
+        setAuthOpen(true);
+      } else if (params.get("login") === "1") {
+        params.delete("login");
         const query = params.toString();
         window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
         setAuthMode("login");
@@ -3170,16 +3177,6 @@ function App() {
   useEffect(() => {
     syncSignedInCookie(Boolean(session));
   }, [session]);
-
-  useEffect(() => {
-    if (!isResourceLibraryPage(page)) {
-      setResourceAuthPrompted(false);
-      return;
-    }
-    if (!authReady || session || authOpen || resourceAuthPrompted) return;
-    setResourceAuthPrompted(true);
-    openAuth(preferredVisitorAuthMode(), "resources");
-  }, [authReady, session, page, authOpen, resourceAuthPrompted]);
 
   async function loadResources() {
     const staticItems = buildStaticResourceItems();
@@ -3226,8 +3223,6 @@ function App() {
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
-  const awaitingVisitorAuth = isResourceLibraryPage(page) && !authReady;
-  const resourceLibraryLocked = isResourceLibraryPage(page) && authReady && !session;
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
@@ -3334,42 +3329,34 @@ function App() {
 
       {page === "papers" && (
         <main>
-          {awaitingVisitorAuth ? (
-            <section style={{ padding: "64px 16px", textAlign: "center", color: "#64748b", fontWeight: 700 }}>Checking your account…</section>
-          ) : resourceLibraryLocked ? (
-            <ResourceAccessGate
-              returningVisitor={preferredVisitorAuthMode() === "login"}
-              onRegister={() => openAuth("register", "resources")}
-              onLogin={() => openAuth("login", "resources")}
-              onHome={goHome}
-            />
-          ) : (
-            <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
-              isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
-          )}
+          <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
+            isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
         </main>
       )}
 
       {page === "resources" && (
         <main>
-          {awaitingVisitorAuth ? (
-            <section style={{ padding: "64px 16px", textAlign: "center", color: "#64748b", fontWeight: 700 }}>Checking your account…</section>
-          ) : resourceLibraryLocked ? (
-            <ResourceAccessGate
-              returningVisitor={preferredVisitorAuthMode() === "login"}
-              onRegister={() => openAuth("register", "resources")}
-              onLogin={() => openAuth("login", "resources")}
-              onHome={goHome}
-            />
-          ) : (
-            <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
-          )}
+          <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
         </main>
       )}
 
       {page === "tutors" && (
         <main>
           <TutorDirectory tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onBack={goHome} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
+        </main>
+      )}
+
+      {page === "auth-callback" && (
+        <main>
+          <AuthCallbackPage
+            onGoHome={goHome}
+            onOpenLogin={() => {
+              goHome();
+              setAuthMode("login");
+              setAuthReason("");
+              setAuthOpen(true);
+            }}
+          />
         </main>
       )}
 

@@ -17,17 +17,23 @@ export const PAGE_META = {
     title: "Find a Science or Maths Tutor | JD Science",
     description: "Book an approved JD Science tutor for GCSE, A-Level, T-Level or BTEC Biology, Chemistry, Physics and Maths. Online and face-to-face support.",
   },
+  "auth-callback": {
+    title: "Email verification | JD Science",
+    description: "Confirm your JD Science account email address, then log in.",
+  },
 };
 
 export function pageFromPathname(pathname) {
   if (pathname === "/papers" || pathname === "/papers/") return "papers";
   if (pathname === "/tutors" || pathname === "/tutors/") return "tutors";
+  if (pathname === "/auth/callback" || pathname === "/auth/callback/") return "auth-callback";
   return "home";
 }
 
 export function pathForPage(page) {
   if (page === "papers" || page === "resources") return "/papers";
   if (page === "tutors") return "/tutors";
+  if (page === "auth-callback") return "/auth/callback";
   return "/";
 }
 

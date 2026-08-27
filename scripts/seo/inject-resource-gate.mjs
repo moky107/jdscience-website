@@ -3,14 +3,11 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const SCRIPT_TAG = '<script src="/resource-gate.js" defer></script>';
+const GATE_SCRIPT_RE = /\s*<script[^>]*src=["']\/resource-gate\.js["'][^>]*>\s*<\/script>\s*/gi;
 
+/** Resources are public — strip any legacy gate script instead of injecting one. */
 export function withResourceGate(html) {
-  if (html.includes("resource-gate.js")) return html;
-  if (/<\/body>/i.test(html)) {
-    return html.replace(/<\/body>/i, `  ${SCRIPT_TAG}\n</body>`);
-  }
-  return `${html.trimEnd()}\n${SCRIPT_TAG}\n`;
+  return String(html || "").replace(GATE_SCRIPT_RE, "\n");
 }
 
 function walkHtml(dir) {
@@ -39,5 +36,5 @@ export function injectResourceGate(worksheetsDir = path.join(root, "public", "wo
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
   const changed = injectResourceGate();
-  console.log(`Injected resource gate into ${changed} worksheet pages.`);
+  console.log(`Removed resource gate from ${changed} worksheet pages.`);
 }

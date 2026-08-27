@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /auth/
 Disallow: /*?admin=1
 Disallow: /*&admin=1
 
