@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { supabase } from "./supabaseClient";
 import TermsAgreement from "./TermsAgreement";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
+import { authEmailRedirectTo } from "./authRedirect";
 import { markHasAccount } from "./visitorAuth";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
-
-function authRedirectUrl() {
-  if (typeof window === "undefined") return undefined;
-  return `${window.location.origin}/?verified=1`;
-}
+const RESEND_COOLDOWN_MS = 30000;
 
 export default function AuthModal({ close, initialMode = "login", reason = "" }) {
   const [mode, setMode] = useState(initialMode === "register" ? "register" : "login");
@@ -22,6 +19,7 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
   const [info, setInfo] = useState("");
   const [busy, setBusy] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [lastResendAt, setLastResendAt] = useState(0);
 
   async function resendVerification() {
     const trimmed = email.trim();
@@ -29,17 +27,33 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
       setError("Enter the email address you registered with first.");
       return;
     }
+    const now = Date.now();
+    if (now - lastResendAt < RESEND_COOLDOWN_MS) {
+      const wait = Math.ceil((RESEND_COOLDOWN_MS - (now - lastResendAt)) / 1000);
+      setError(`Please wait ${wait}s before requesting another email.`);
+      return;
+    }
+    if (busy) return;
     setBusy(true);
     setError("");
     setInfo("");
-    const { error: resendError } = await supabase.auth.resend({
-      type: "signup",
-      email: trimmed,
-      options: { emailRedirectTo: authRedirectUrl() },
-    });
-    setBusy(false);
-    if (resendError) setError(resendError.message);
-    else setInfo("A new verification email has been sent. Check your inbox and spam folder.");
+    try {
+      const { error: resendError } = await supabase.auth.resend({
+        type: "signup",
+        email: trimmed,
+        options: {
+          emailRedirectTo: authEmailRedirectTo(),
+        },
+      });
+      if (resendError) {
+        setError(resendError.message);
+        return;
+      }
+      setLastResendAt(Date.now());
+      setInfo("A new verification email has been sent. Check your inbox and spam folder.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function submit(e) {
@@ -74,7 +88,7 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
           email: trimmedEmail,
           password,
           options: {
-            emailRedirectTo: authRedirectUrl(),
+            emailRedirectTo: authEmailRedirectTo(),
             data: {
               terms_accepted: true,
               terms_version: TERMS_VERSION,
@@ -144,7 +158,7 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
           {busy ? "Please wait…" : (mode === "login" ? "Login" : "Register")}
         </button>
         {(mode === "register" || /verify your email/i.test(error)) && (
-          <button type="button" onClick={resendVerification} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: "pointer", fontWeight: 700, minHeight: 44 }}>
+          <button type="button" onClick={resendVerification} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: busy ? "default" : "pointer", fontWeight: 700, minHeight: 44 }}>
             Resend verification email
           </button>
         )}

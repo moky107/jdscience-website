@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
+import AuthCallbackPage from "./AuthCallbackPage";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
@@ -3085,7 +3086,7 @@ function App() {
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
   useEffect(() => {
-    applyDocumentMeta(page, { noIndex: adminRoute });
+    applyDocumentMeta(page, { noIndex: adminRoute || page === "auth-callback" });
   }, [page, adminRoute]);
 
   const goAdmin = () => {
@@ -3145,11 +3146,19 @@ function App() {
         window.history.replaceState({}, "", "/");
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
       } else if (params.get("verified") === "1") {
+        // Legacy confirmation links that landed on /?verified=1.
         setBanner({
           type: "success",
-          text: "Your email is verified. You can now log in.",
+          text: "Your email address has been verified. You can now log in.",
         });
         params.delete("verified");
+        const query = params.toString();
+        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
+        setAuthMode("login");
+        setAuthReason("");
+        setAuthOpen(true);
+      } else if (params.get("login") === "1") {
+        params.delete("login");
         const query = params.toString();
         window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
         setAuthMode("login");
@@ -3334,6 +3343,20 @@ function App() {
       {page === "tutors" && (
         <main>
           <TutorDirectory tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onBack={goHome} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
+        </main>
+      )}
+
+      {page === "auth-callback" && (
+        <main>
+          <AuthCallbackPage
+            onGoHome={goHome}
+            onOpenLogin={() => {
+              goHome();
+              setAuthMode("login");
+              setAuthReason("");
+              setAuthOpen(true);
+            }}
+          />
         </main>
       )}
 
