@@ -1,0 +1,23 @@
+-- Optional note for operators (no schema change required for the 11+ Resources hub).
+--
+-- The curated 11+ Resources page stores external publisher links in
+-- src/elevenPlusResourcesCatalog.js and opens them with target="_blank"
+-- rel="noopener noreferrer". It does NOT insert third-party PDFs into
+-- Supabase Storage.
+--
+-- Existing resources table fields already support external links when
+-- admins add them via the Upload modal:
+--   file_url   text   -- absolute https URL
+--   file_type  text   -- use 'link' for external resources
+--   storage_path null -- leave empty for external links
+--
+-- Do NOT add a separate external_url column unless product requirements
+-- later need both a hosted file and an external attribution URL on the
+-- same row. Prefer reusing file_url + file_type = 'link'.
+--
+-- Public read access for published JDScience resources (already shipped
+-- separately) remains:
+--   see 20260827_public_published_resources.sql
+--
+-- No ALTER TABLE is required for this feature.
+SELECT 1;

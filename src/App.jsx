@@ -22,6 +22,8 @@ import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
 import { ELEVEN_PLUS_PRACTICE_PAPERS } from "./elevenPlusPracticePapers";
+import ElevenPlusResourcesPage from "./ElevenPlusResourcesPage";
+import { sectionSlug } from "./elevenPlusResourcesCatalog";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -422,7 +424,7 @@ function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidt
 }
 
 /* --------------------------------- NAVBAR --------------------------------- */
-function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutorButtonRef, session, isAdmin, onAuth, onLogout, onAdminDashboard }) {
+function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, onElevenPlus, tutorButtonRef, session, isAdmin, onAuth, onLogout, onAdminDashboard }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -441,9 +443,18 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
 
   const menu = [
     { label: "Home", type: "link", action: onHome, href: "/" },
+    { label: "11+ Resources", type: "link", action: onElevenPlus, href: "/11-plus" },
     ...LEVELS.map((lvl) => ({
       label: lvl, type: "dropdown",
-      options: SUBJECTS_BY_LEVEL[lvl].map((s) => ({ text: s, action: () => onPick(lvl, s) })),
+      options: [
+        ...(lvl === "11+"
+          ? [{ text: "All 11+ Resources", action: () => onElevenPlus() }]
+          : []),
+        ...SUBJECTS_BY_LEVEL[lvl].map((s) => ({
+          text: s,
+          action: () => (lvl === "11+" ? onElevenPlus(s) : onPick(lvl, s)),
+        })),
+      ],
     })),
     { label: "Resources", type: "dropdown", options: RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })) },
     { label: "About", type: "link", action: () => { window.location.href = "/about/"; }, href: "/about/" },
@@ -2228,7 +2239,7 @@ function Contact() {
   );
 }
 
-function Footer({ onContact, onTutor, onAdvice, onPapers, onWorksheets, onTutors, onHome }) {
+function Footer({ onContact, onTutor, onAdvice, onPapers, onWorksheets, onTutors, onHome, onElevenPlus }) {
   const isMobile = useIsMobile();
   const footerLink = { fontSize: 14, marginTop: 8, color: "#cbd5e1", textDecoration: "none", display: "block" };
   return (
@@ -2245,6 +2256,7 @@ function Footer({ onContact, onTutor, onAdvice, onPapers, onWorksheets, onTutors
           <a href="/tutors/joseph-danso/" style={footerLink}>Joseph Danso</a>
           <a href="/resources/" style={footerLink}>Resource pages</a>
           <a href="/resources/gcse/chemistry/" style={footerLink}>GCSE Chemistry</a>
+          <a href="/11-plus" onClick={(e) => { e.preventDefault(); onElevenPlus?.(); }} style={footerLink}>11+ Resources</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onPapers?.(); }} style={footerLink}>Past papers</a>
           <a href="/papers" onClick={(e) => { e.preventDefault(); onWorksheets ? onWorksheets() : onPapers?.(); }} style={footerLink}>Topic worksheets</a>
           <a href="/tutors" onClick={(e) => { e.preventDefault(); onTutors?.(); }} style={footerLink}>Find a tutor</a>
@@ -3213,8 +3225,45 @@ function App() {
   const goResources = () => navigate("resources");
   const goTutors = () => navigate("tutors");
   const goHome = () => { leaveAdmin(); navigate("home"); };
-  const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
-  const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
+  const goElevenPlus = (subjectOrSection) => {
+    navigate("eleven-plus");
+    const map = {
+      English: "English",
+      Maths: "Mathematics",
+      Mathematics: "Mathematics",
+      "Verbal Reasoning": "Verbal Reasoning",
+      "Non-Verbal Reasoning": "Non-Verbal and Spatial Reasoning",
+      "Non-Verbal and Spatial Reasoning": "Non-Verbal and Spatial Reasoning",
+    };
+    const section = map[subjectOrSection] || null;
+    if (section && typeof window !== "undefined") {
+      const slug = sectionSlug(section);
+      window.setTimeout(() => {
+        window.history.replaceState(null, "", `/11-plus#${slug}`);
+        document.getElementById(`eleven-plus-${slug}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    }
+  };
+  const handlePick = (lvl, subj) => {
+    if (lvl === "11+") {
+      goElevenPlus(subj);
+      return;
+    }
+    if (lvl) setPickedLevel(lvl);
+    if (subj) setPickedSubject(subj);
+    setPickedBoard(null);
+    goPapers();
+  };
+  const handleLevel = (lvl) => {
+    if (lvl === "11+") {
+      goElevenPlus();
+      return;
+    }
+    setPickedLevel(lvl);
+    setPickedSubject(null);
+    setPickedBoard(null);
+    goPapers();
+  };
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
   const openTutorApplication = () => setTutorApplicationOpen(true);
   const closeTutorApplication = () => setTutorApplicationOpen(false);
@@ -3274,6 +3323,7 @@ function App() {
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden", maxWidth: "100%" }}>
       <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
+        onElevenPlus={goElevenPlus}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
         onAuth={openAuth} onLogout={logout} onAdminDashboard={goAdmin} />
 
@@ -3327,6 +3377,12 @@ function App() {
         </main>
       )}
 
+      {page === "eleven-plus" && (
+        <main>
+          <ElevenPlusResourcesPage onBook={() => handleScroll("book")} onHome={goHome} />
+        </main>
+      )}
+
       {page === "resources" && (
         <main>
           <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
@@ -3342,7 +3398,7 @@ function App() {
       {authOpen && <AuthModal key={`${authMode}-${authReason}`} initialMode={authMode} reason={authReason} close={() => setAuthOpen(false)} />}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
-      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} />
+      <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} onElevenPlus={goElevenPlus} />
     </div>
   );
 }
