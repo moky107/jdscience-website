@@ -844,7 +844,7 @@ function ElevenPlusLibrary({ resources, activeSubject, isMobile }) {
       <div style={{ background: "#ecfeff", border: `1px solid ${TEAL}`, borderRadius: 12, padding: "14px 16px", marginBottom: 16, color: TEAL_DARK }}>
         <div style={{ fontWeight: 800 }}>Free original JDScience 11+ papers</div>
         <div style={{ fontSize: 14, lineHeight: 1.55, marginTop: 4 }}>
-          Download without an account. Each PDF opens in a new tab and includes questions, answers and short explanations.
+          Download without an account. Each PDF opens in a new tab. Practice papers and matching answer booklets are listed here.
           Public copies also live at <a href={section?.path || "/resources/11-plus/"} style={{ color: TEAL_DARK, fontWeight: 800 }}>{section?.path || "/resources/11-plus/"}</a>.
         </div>
       </div>

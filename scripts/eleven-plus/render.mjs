@@ -39,14 +39,24 @@ function renderQuestion(question, index) {
   </article>`;
 }
 
-function renderAnswer(question, index) {
+function recapText(question) {
+  const raw = String(question.stem || "").replace(/\s+/g, " ").trim();
+  if (!raw) return "";
+  return raw.length > 160 ? `${raw.slice(0, 157)}…` : raw;
+}
+
+function renderAnswer(question, index, { includeRecap = false } = {}) {
   if (question.kind === "passage") return "";
   const number = question.number || index + 1;
   const answer = question.answerHtml || escapeHtml(question.answer || "");
   const explanation = question.explanationHtml || escapeHtml(question.explanation || "");
+  const recap = includeRecap && recapText(question)
+    ? `<div class="q-recap">${escapeHtml(recapText(question))}</div>`
+    : "";
   return `<article class="answer">
     <div class="q-head"><span class="q-num">${number}.</span>
       <div class="q-main">
+        ${recap}
         <div class="ans-line"><strong>Answer:</strong> ${answer}</div>
         ${explanation ? `<div class="why"><strong>Why:</strong> ${explanation}</div>` : ""}
       </div>
@@ -88,6 +98,7 @@ function paperCss() {
     .meta { text-align: right; font-size: 11.5px; color: #334155; line-height: 1.4; }
     h1 { font-size: 20px; margin: 8px 0 6px; color: var(--teal-dark); }
     h2 { font-size: 16px; color: var(--teal-dark); border-top: 2px solid var(--teal); padding-top: 10px; margin: 18px 0 10px; page-break-before: always; }
+    h2.first { page-break-before: auto; border-top: none; padding-top: 0; }
     h3.section { font-size: 13px; color: var(--teal-dark); margin: 14px 0 8px; letter-spacing: 0.03em; text-transform: uppercase; }
     .banner {
       background: #ecfeff; border: 1px solid var(--teal); color: var(--teal-dark);
@@ -113,6 +124,7 @@ function paperCss() {
     .nvr-row, .option-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 6px 0; }
     .nvr-label { font-weight: 800; color: var(--teal-dark); margin-right: 4px; }
     .ans-line { margin-bottom: 3px; }
+    .q-recap { color: #64748b; font-size: 11.5px; margin-bottom: 4px; }
     .why { color: #334155; font-size: 12px; }
     .guide h3 { color: var(--teal-dark); margin: 14px 0 6px; font-size: 14px; }
     .guide p, .guide li { font-size: 12.5px; line-height: 1.55; color: #1e293b; }
@@ -129,6 +141,8 @@ function paperCss() {
 
 export function renderPaperHtml(paper) {
   const isGuide = paper.kind === "guide";
+  const isAnswers = paper.kind === "answers";
+  const isQuestionsOnly = paper.kind === "questions";
   const questions = paper.questions || [];
   let displayNumber = 0;
   const numbered = questions.map((question) => {
@@ -136,12 +150,35 @@ export function renderPaperHtml(paper) {
     displayNumber += 1;
     return { ...question, number: question.number || displayNumber };
   });
+  const scoredCount = numbered.filter((question) => question.kind !== "passage").length;
   const questionHtml = numbered.map((question, index) => renderQuestion(question, index)).join("\n");
-  const answerHtml = numbered.map((question, index) => renderAnswer(question, index)).join("\n");
+  const answerHtml = numbered.map((question, index) => renderAnswer(question, index, { includeRecap: isAnswers })).join("\n");
   const guideHtml = (paper.sections || []).map((section) => `
     <h3>${escapeHtml(section.heading)}</h3>
     ${section.html || `<p>${escapeHtml(section.body || "")}</p>`}
   `).join("\n");
+
+  const banner = isAnswers
+    ? "Answer booklet for an original JDScience paper. Independent of, and not affiliated with, GL Assessment, CEM, CSSE, Bond, CGP or any other publisher or test provider."
+    : "Original JDScience material. Independent of, and not affiliated with, GL Assessment, CEM, CSSE, Bond, CGP or any other publisher or test provider. Do not copy third-party exam questions.";
+
+  let main = "";
+  if (isGuide) {
+    main = `<div class="guide">${guideHtml}</div>`;
+  } else if (isAnswers) {
+    main = `<h2 class="first">Answers and short explanations</h2>
+    <p class="note">Use this booklet only after finishing the matching practice paper. Equivalent wording is accepted where the meaning is the same.</p>
+    ${answerHtml}`;
+  } else {
+    main = questionHtml;
+    if (!isQuestionsOnly) {
+      main += `<h2>Answers and short explanations</h2>
+    <p class="note">Check your work only after you have finished. Equivalent wording is accepted where the meaning is the same.</p>
+    ${answerHtml}`;
+    }
+  }
+
+  const countLabel = isGuide ? "Guide" : isAnswers ? `${scoredCount} answers` : `${scoredCount} questions`;
 
   return `<!DOCTYPE html>
 <html lang="en-GB">
@@ -167,15 +204,12 @@ export function renderPaperHtml(paper) {
       </div>
     </header>
     <h1>${escapeHtml(paper.title)}</h1>
-    <div class="banner">Original JDScience material. Not an official GL, CEM, CSSE or independent-school paper. Do not copy third-party exam questions.</div>
+    <div class="banner">${banner}</div>
     <p class="note">${escapeHtml(paper.instructions)}</p>
-    ${paper.time ? `<p class="note"><strong>Suggested time:</strong> ${escapeHtml(paper.time)} · <strong>Questions:</strong> ${isGuide ? "Guide" : questions.length}</p>` : ""}
-    ${isGuide ? `<div class="guide">${guideHtml}</div>` : questionHtml}
-    ${isGuide ? "" : `<h2>Answers and short explanations</h2>
-    <p class="note">Check your work only after you have finished. Equivalent wording is accepted where the meaning is the same.</p>
-    ${answerHtml}`}
+    ${paper.time ? `<p class="note"><strong>Suggested time:</strong> ${escapeHtml(paper.time)} · <strong>${isAnswers ? "Answers:" : "Questions:"}</strong> ${countLabel}</p>` : `<p class="note"><strong>${isAnswers ? "Answers:" : "Items:"}</strong> ${countLabel}</p>`}
+    ${main}
     <footer class="doc">
-      © JD Science. Original 11+ practice for personal study and tutoring. Style and topic coverage follow common UK 11+ papers, but every question, passage and figure is newly written by JDScience. Redistribution of official or third-party PDFs is not permitted — this file may be shared from jdscience.co.uk.
+      © JD Science. Original 11+ practice for personal study and tutoring. Style and topic coverage follow common UK 11+ papers, but every question, passage and figure is newly written by JDScience. This resource is not affiliated with GL Assessment or any other exam board or publisher. Redistribution of official or third-party PDFs is not permitted — this file may be shared from jdscience.co.uk.
     </footer>
   </div>
 </body>

@@ -7,7 +7,7 @@ import { ELEVEN_PLUS_RESOURCES } from "../src/elevenPlusResources.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-assert.equal(ELEVEN_PLUS_RESOURCES.length, 16);
+assert.equal(ELEVEN_PLUS_RESOURCES.length, 26);
 
 for (const item of ELEVEN_PLUS_RESOURCES) {
   assert.equal(item.level, "11+");
@@ -47,7 +47,17 @@ const expected = [
   "public/resources/11-plus/mixed-practice/JDScience_11Plus_Mixed_Practice_Paper_1.pdf",
   "public/resources/11-plus/mixed-practice/JDScience_11Plus_Mixed_Practice_Paper_2.pdf",
   "public/resources/11-plus/mixed-practice/JDScience_11Plus_Parent_Guide.pdf",
+  "public/resources/11-plus/maths/JDScience_11Plus_GL_Style_Maths_Practice_Paper_1.pdf",
+  "public/resources/11-plus/maths/JDScience_11Plus_GL_Style_Maths_Answers_1.pdf",
+  "public/resources/11-plus/english/JDScience_11Plus_GL_Style_English_Practice_Paper_1.pdf",
+  "public/resources/11-plus/english/JDScience_11Plus_GL_Style_English_Answers_1.pdf",
+  "public/resources/11-plus/verbal-reasoning/JDScience_11Plus_Verbal_Reasoning_Practice_Paper_3.pdf",
+  "public/resources/11-plus/verbal-reasoning/JDScience_11Plus_Verbal_Reasoning_Answers_3.pdf",
+  "public/resources/11-plus/non-verbal-reasoning/JDScience_11Plus_Non_Verbal_Reasoning_Practice_Paper_3.pdf",
+  "public/resources/11-plus/non-verbal-reasoning/JDScience_11Plus_Non_Verbal_Reasoning_Answers_3.pdf",
+  "public/resources/11-plus/mixed-practice/JDScience_11Plus_Mixed_Practice_Paper_3.pdf",
+  "public/resources/11-plus/mixed-practice/JDScience_11Plus_Mixed_Practice_Answers_3.pdf",
 ];
 assert.deepEqual(ELEVEN_PLUS_RESOURCES.map((item) => item.file_url_override.replace(/^\//, "")), expected.map((item) => item.replace(/^public\//, "")));
 
-console.log("eleven-plus tests passed (16 original PDFs)");
+console.log("eleven-plus tests passed (26 original PDFs)");

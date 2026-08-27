@@ -201,4 +201,18 @@ assert.equal(
   0,
 );
 
+const elevenPlusPaper = {
+  level: "11+",
+  subject: "Maths",
+  exam_board: "Grammar Schools",
+  resource_category: "Worksheets",
+  title: "11+ GL-Style Maths Practice Paper 1",
+  file_name: "JDScience_11Plus_GL_Style_Maths_Practice_Paper_1.pdf",
+  file_url: "/resources/11-plus/maths/JDScience_11Plus_GL_Style_Maths_Practice_Paper_1.pdf",
+  file_url_override: "/resources/11-plus/maths/JDScience_11Plus_GL_Style_Maths_Practice_Paper_1.pdf",
+  published: true,
+};
+assert.equal(tidyResourceTitle(elevenPlusPaper), "11+ GL-Style Maths Practice Paper 1");
+assert.equal(canonicalizeResource(elevenPlusPaper).title, "11+ GL-Style Maths Practice Paper 1");
+
 console.log("resourceNormalize tests passed");

@@ -479,7 +479,7 @@ function writeElevenPlusPages() {
     ],
     jsonLd: { "@type": "CollectionPage", name: "JD Science 11+ resources", url: `${SITE_ORIGIN}/resources/11-plus/` },
     bodyHtml: `
-      <p class="callout">These PDFs are original JDScience material. They are not official GL, CEM, CSSE or independent-school papers and do not rehost third-party downloads.</p>
+      <p class="callout">These PDFs are original JDScience material. They are independent of, and not affiliated with, GL Assessment, CEM, CSSE, Bond, CGP or any other publisher. They do not rehost third-party downloads. Newer papers have a separate answer booklet.</p>
       <p>Also browse them in the live library: <a href="${escapeHtml(papersHref({ level: "11+" }))}">11+ on the resources page</a>.</p>
       <h2>11+ subjects</h2>
       <div class="cards">${ELEVEN_PLUS_SECTIONS.map((section) => card(section.path, section.title, `JDScience 11+ ${section.title} practice papers.`)).join("")}</div>
@@ -508,7 +508,7 @@ function writeElevenPlusPages() {
       ],
       jsonLd: { "@type": "CollectionPage", name: `11+ ${section.title} resources`, url: `${SITE_ORIGIN}/resources/11-plus/${section.id}/` },
       bodyHtml: `
-        <p class="callout">Public downloads. Each file includes student instructions, original questions, answers and short explanations.</p>
+        <p class="callout">Public downloads. Practice papers include student instructions and timed guidance. Matching answer booklets give short explanations. No account needed.</p>
         <div class="cards">${items.map(pdfCard).join("")}</div>
         <p class="meta"><a href="/resources/11-plus/">All 11+ resources</a> · <a href="${escapeHtml(papersHref({ level: "11+", subject: section.title }))}">Open in the resources library</a></p>
       `,

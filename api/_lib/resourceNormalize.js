@@ -12,7 +12,9 @@ export function decodeResourceLabel(value) {
   const raw = String(value || "").trim();
   if (!raw) return "";
   try {
-    return decodeURIComponent(raw.replace(/\+/g, " "));
+    const looksEncoded = /%[0-9A-Fa-f]{2}/.test(raw);
+    const prepared = looksEncoded ? raw.replace(/\+/g, " ") : raw;
+    return decodeURIComponent(prepared);
   } catch {
     return raw;
   }
@@ -196,6 +198,8 @@ function pathBasename(resource) {
 }
 
 function looksLikeUploadedDeck(resource) {
+  const hostedUrl = `${resource.file_url_override || ""} ${resource.file_url || ""}`;
+  if (hostedUrl.includes("/resources/11-plus/")) return false;
   if (looksLikeOfficialPaper(resource)) return false;
   const title = String(resource.title || "");
   const file = String(resource.file_name || "");

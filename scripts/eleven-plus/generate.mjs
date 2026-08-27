@@ -7,6 +7,7 @@ import { ENGLISH_PAPERS } from "./english.mjs";
 import { VERBAL_PAPERS } from "./verbal.mjs";
 import { NVR_PAPERS } from "./nvr.mjs";
 import { MIXED_PAPERS, PARENT_GUIDE } from "./mixed.mjs";
+import { SERIES2_PAPERS } from "./series2.mjs";
 import { renderPaperHtml } from "./render.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -20,6 +21,7 @@ export const ALL_11PLUS_PAPERS = [
   ...NVR_PAPERS,
   ...MIXED_PAPERS,
   PARENT_GUIDE,
+  ...SERIES2_PAPERS,
 ];
 
 function chromeBin() {
@@ -42,8 +44,8 @@ function chromeBin() {
   throw new Error("Chrome/Chromium not found for PDF generation");
 }
 
-function htmlToPdf(chrome, htmlPath, pdfPath) {
-  const profile = path.join(tmpRoot, "chrome-profile");
+function htmlToPdf(chrome, htmlPath, pdfPath, profileName) {
+  const profile = path.join(tmpRoot, profileName || "chrome-profile");
   fs.mkdirSync(profile, { recursive: true });
   const result = spawnSync(chrome, [
     "--headless=new",
@@ -56,7 +58,7 @@ function htmlToPdf(chrome, htmlPath, pdfPath) {
     "--no-pdf-header-footer",
     `--print-to-pdf=${pdfPath}`,
     `file://${htmlPath}`,
-  ], { encoding: "utf8", timeout: 60000 });
+  ], { encoding: "utf8", timeout: 90000 });
   if (result.error) throw result.error;
   if (!fs.existsSync(pdfPath) || fs.statSync(pdfPath).size < 2000) {
     throw new Error(`PDF failed for ${pdfPath}: ${result.stderr || result.stdout || result.status}`);
@@ -68,15 +70,17 @@ export function main() {
   fs.mkdirSync(tmpRoot, { recursive: true });
   const chrome = chromeBin();
   const written = [];
+  const onlySeries2 = process.argv.includes("--series2");
+  const papers = onlySeries2 ? SERIES2_PAPERS : ALL_11PLUS_PAPERS;
 
-  for (const paper of ALL_11PLUS_PAPERS) {
+  for (const paper of papers) {
     const folder = path.join(publicRoot, paper.folder);
     fs.mkdirSync(folder, { recursive: true });
     const html = renderPaperHtml(paper);
     const htmlPath = path.join(tmpRoot, `${paper.id}.html`);
     const pdfPath = path.join(folder, paper.file);
     fs.writeFileSync(htmlPath, html);
-    htmlToPdf(chrome, htmlPath, pdfPath);
+    htmlToPdf(chrome, htmlPath, pdfPath, `chrome-${paper.id}`);
     const stat = fs.statSync(pdfPath);
     if (stat.size < 2000) throw new Error(`${paper.file} looks too small (${stat.size} bytes)`);
     written.push({ file: paper.file, bytes: stat.size, path: `/resources/11-plus/${paper.folder}/${paper.file}` });
