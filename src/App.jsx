@@ -1710,12 +1710,6 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
           onMouseLeave={() => setPaused(false)}
           style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}
         >
-          <article style={{ background: "#fff", borderRadius: 22, padding: isMobile ? 18 : 22, boxShadow: "0 10px 30px rgba(15,23,42,.08)", border: "1px solid rgba(0,150,136,.16)" }}>
-            <div style={{ color: TEAL_DARK, fontWeight: 800, fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase" }}>Founder</div>
-            <h3 style={{ margin: "8px 0 6px", color: "#0f172a" }}>Joseph Danso</h3>
-            <p style={{ color: "#64748b", margin: 0, lineHeight: 1.55 }}>Science Lecturer, FRSC, QTLS, EdD candidate, examiner and WorldSkills educator. Online Chemistry tutor in London and across the UK.</p>
-            <a href="/tutors/joseph-danso/" style={{ display: "inline-block", marginTop: 14, fontWeight: 800, color: TEAL }}>View Joseph&apos;s profile →</a>
-          </article>
           {featuredTutors.map((tutor, index) => (
             <TutorCard
               key={tutor.id || tutor.public_slug}
