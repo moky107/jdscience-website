@@ -76,7 +76,7 @@ function card(href, title, text) {
 
 function writeAboutPage() {
   const bodyHtml = `
-    <p>JD Science is a UK education platform founded by <a href="${JOSEPH_DANSO.profilePath}">${escapeHtml(JOSEPH_DANSO.name)}</a>. Students and parents use it for Chemistry, Physics, Biology and Applied Science tutoring, official past-paper links, original science worksheets, and the wider JD Science maths resources already published on the site.</p>
+    <p>JD Science is a UK education platform. Students and parents use it for Chemistry, Physics, Biology and Applied Science tutoring, official past-paper links, original science worksheets, and the wider JD Science maths resources already published on the site.</p>
     <h2>What JD Science publishes</h2>
     <div class="cards">
       ${card("/resources/", "Educational resources", "Subject and topic pages for Chemistry, Physics, Biology and Maths.")}
@@ -91,7 +91,7 @@ function writeAboutPage() {
   `;
   writePage("about", renderPublicPage({
     title: "About JD Science | Science and Maths Tutoring UK",
-    description: "JD Science is a UK education platform founded by Joseph Danso, offering GCSE and A-Level science tutoring, original worksheets and official past-paper links.",
+    description: "JD Science is a UK education platform offering GCSE and A-Level science tutoring, original worksheets and official past-paper links.",
     canonicalPath: "/about/",
     heading: "About JD Science",
     lede: "An education platform for science and maths tutoring, original worksheets and exam-board past papers.",
