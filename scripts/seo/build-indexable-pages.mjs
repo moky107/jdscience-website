@@ -78,7 +78,6 @@ function writeAboutPage() {
   const bodyHtml = `
     <p>JD Science is a UK education platform founded by <a href="${JOSEPH_DANSO.profilePath}">${escapeHtml(JOSEPH_DANSO.name)}</a>. Students and parents use it for Chemistry, Physics, Biology and Applied Science tutoring, official past-paper links, original science worksheets, and the wider JD Science maths resources already published on the site.</p>
     <h2>What JD Science publishes</h2>
-    <p>Search engines index public pages, not files sitting only in an admin dashboard. JD Science therefore publishes crawlable pages for the organisation, the educator, and individual subjects and topics.</p>
     <div class="cards">
       ${card("/resources/", "Educational resources", "Subject and topic pages for Chemistry, Physics, Biology and Maths.")}
       ${card(JOSEPH_DANSO.profilePath, "Joseph Danso", "Science Lecturer, FRSC, QTLS, EdD candidate, examiner and WorldSkills educator.")}
