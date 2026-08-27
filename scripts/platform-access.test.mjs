@@ -34,8 +34,9 @@ assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_s
 assert.deepEqual(featuredTutorWindow(homepage, 3, 3).map((item) => item.public_slug), ["priya-shah", "amina-khan", "sam-reed"]);
 assert.deepEqual(featuredTutorWindow(homepage.slice(0, 2), 3, 9).map((item) => item.public_slug), ["amina-khan", "sam-reed"]);
 
-const gated = withResourceGate("<html><body><p>worksheet</p></body></html>");
-assert.match(gated, /resource-gate\.js/);
+const gated = withResourceGate('<html><body><p>worksheet</p><script src="/resource-gate.js" defer></script></body></html>');
+assert.doesNotMatch(gated, /resource-gate\.js/);
+assert.match(gated, /worksheet/);
 assert.equal(withResourceGate(gated), gated);
 
 console.log("platform-access.test.mjs: ok");

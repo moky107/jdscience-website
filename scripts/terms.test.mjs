@@ -47,8 +47,10 @@ assert.match(joined, /exam success/);
 assert.match(joined, /under 18/);
 assert.match(joined, /england and wales/);
 assert.match(joined, /not your employer/);
-assert.match(joined, /registered users only/);
-assert.match(joined, /log in to access the library/);
+assert.match(joined, /available to all visitors/);
+assert.match(joined, /without creating an account/);
+assert.doesNotMatch(joined, /registered users only/);
+assert.doesNotMatch(joined, /log in to access the library/);
 
 assert.equal(hasAcceptedTerms({}), false);
 assert.equal(hasAcceptedTerms({ accept_terms: false }), false);
@@ -94,9 +96,15 @@ assert.match(app, /href="\/terms\/"/);
 assert.match(app, /TutorChoosingNotice/);
 assert.match(fs.readFileSync(path.join(root, "src", "TutorChoosingNotice.jsx"), "utf8"), /TUTOR_CHOOSING_NOTICE/);
 
-assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /jd_signed_in=1/);
-assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /Googlebot/);
-assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /\/papers/);
+const resourceGate = fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8");
+assert.match(resourceGate, /Resource pages are public/);
+assert.doesNotMatch(resourceGate, /jd_signed_in=1/);
+assert.doesNotMatch(resourceGate, /location\.replace/);
+
+const appSource = fs.readFileSync(path.join(root, "src", "App.jsx"), "utf8");
+assert.doesNotMatch(appSource, /ResourceAccessGate/);
+assert.doesNotMatch(appSource, /resourceLibraryLocked/);
+assert.match(appSource, /\.eq\("published", true\)/);
 
 const apiFiles = fs.readdirSync(path.join(root, "api")).filter((name) => name.endsWith(".js"));
 assert.equal(apiFiles.length, 12, "Vercel Hobby must keep exactly 12 top-level API functions");
