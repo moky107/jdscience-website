@@ -57,7 +57,7 @@ export default function AdviceNewsSection() {
   const visible = posts.filter((post) => filter === "all" || post.category === filter);
 
   return (
-    <section id="advice-anchor" style={{ padding: isMobile ? "36px 16px" : "52px 20px", background: "#ecfeff" }}>
+    <section id="advice-anchor" className="homepage-section" style={{ paddingTop: isMobile ? 36 : 52, paddingBottom: isMobile ? 36 : 52, background: "#ecfeff" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 16, alignItems: "end", flexWrap: "wrap" }}>
           <div>

@@ -504,13 +504,13 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
 
   return (
     <header className="site-header" style={{ position: "sticky", top: 0, zIndex: 1000, background: "#fff", boxShadow: "0 1px 6px rgba(0,0,0,.06)" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: isMobile ? "10px 14px" : "10px 16px", gap: 12 }}>
+      <div className="site-header-bar">
         {logo}
         {!isMobile && (
-          <form role="search" onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <form role="search" className="desktop-nav-search" onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center", flex: "1 1 auto", justifyContent: "flex-end", maxWidth: 520 }}>
             <input name="q" aria-label="Search subjects or topics" placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
-              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 190 }} />
-            <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer" }}>Search</button>
+              style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: "min(190px, 100%)", flex: "1 1 140px", minWidth: 0 }} />
+            <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer", flexShrink: 0 }}>Search</button>
             {adminBtn}
           </form>
         )}
@@ -521,9 +521,9 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       </div>
 
       {!isMobile && (
-        <nav style={{ display: "flex", gap: 2, padding: "0 14px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", justifyContent: "center", flexWrap: "wrap" }}>
+        <nav className="desktop-nav" style={{ display: "flex", gap: 2, padding: "0 14px", background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", justifyContent: "center", flexWrap: "wrap" }}>
           {menu.map((it, i) => (
-            <div key={it.label} style={{ position: "relative" }}
+            <div key={it.label} className={`nav-item-dropdown${i >= menu.length - 3 ? " nav-align-right" : ""}`} style={{ position: "relative" }}
               onMouseEnter={() => setOpenIdx(i)} onMouseLeave={() => setOpenIdx(null)}>
               {it.href ? (
                 <a ref={it.ref} href={it.href} onClick={(e) => {
@@ -541,7 +541,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
                 </button>
               )}
               {it.type === "dropdown" && openIdx === i && (
-                <div style={{ position: "absolute", top: "100%", left: 0, minWidth: 200, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.14)", borderRadius: "0 0 8px 8px", overflow: "hidden", zIndex: 10 }}>
+                <div className="nav-dropdown-menu" style={{ position: "absolute", top: "100%", left: 0, minWidth: 200, background: "#fff", boxShadow: "0 8px 24px rgba(0,0,0,0.14)", borderRadius: "0 0 8px 8px", overflow: "hidden", zIndex: 10 }}>
                   {it.options.map((opt) => (
                     <div key={opt.text} onClick={opt.action}
                       style={{ padding: "11px 16px", cursor: "pointer", borderBottom: "1px solid #f3f4f6", fontSize: 14, color: "#0f172a" }}
@@ -556,7 +556,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       )}
 
       {isMobile && menuOpen && (
-        <nav style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "4px 0 16px", maxHeight: "min(78vh, calc(100dvh - 68px))", overflowY: "auto" }}>
+        <nav className="mobile-nav-panel" style={{ background: "#ecfeff", borderTop: "1px solid rgba(0,0,0,0.04)", padding: "4px 0 16px" }}>
           {menu.map((it, i) => (
             <div key={it.label} style={{ borderBottom: "1px solid rgba(0,150,136,.08)" }}>
               <button type="button" ref={it.ref} onClick={() => {
@@ -573,12 +573,12 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
               ))}
             </div>
           ))}
-          <form onSubmit={submit} style={{ display: "flex", gap: 8, padding: "14px 18px 8px" }}>
+          <form onSubmit={submit} className="mobile-nav-search">
             <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
               style={{ flex: 1, minWidth: 0, padding: "12px 12px", borderRadius: 8, border: "1px solid #e6e6e6", fontSize: 16 }} />
-            <button type="submit" style={{ padding: "12px 16px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", fontWeight: 700 }}>Go</button>
+            <button type="submit" style={{ padding: "12px 16px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", fontWeight: 700, flexShrink: 0 }}>Go</button>
           </form>
-          <div style={{ padding: "8px 18px 4px" }}>{adminBtn}</div>
+          <div className="mobile-nav-auth" style={{ padding: "8px 18px 4px" }}>{adminBtn}</div>
         </nav>
       )}
     </header>
@@ -601,13 +601,13 @@ function Hero({ onScroll, onBrowse }) {
     outlineOffset: 3,
   };
   return (
-    <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
+    <section className="hero-section" style={{ position: "relative", minHeight: isMobile ? undefined : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
       <img src={BANNER_IMG} alt="Students learning together"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.10) contrast(1.04) saturate(1.04)" }} />
       <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.16) 48%, rgba(0,0,0,.28) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
-        <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
-        <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
+      <div className="hero-content" style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: isMobile ? undefined : `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
+        <div className="hero-badge" style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
+        <h1 style={{ fontSize: isMobile ? "clamp(1.55rem, 7vw, 1.85rem)" : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
         <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
@@ -659,10 +659,11 @@ function Hero({ onScroll, onBrowse }) {
 function BoardStrip() {
   const isMobile = useIsMobile();
   return (
-    <div style={{ background: "#fff", borderBottom: "1px solid #eee", padding: isMobile ? "14px 16px" : "16px 16px" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 10, justifyContent: "center", alignItems: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
-        <span style={{ color: "#94a3b8", fontSize: 13, letterSpacing: ".02em", textTransform: "uppercase" }}>Covering:</span>
-        {["AQA", "Edexcel", "OCR", "Eduqas", "WJEC", "Pearson", "NCFE"].map((b) => (
+    <div className="board-strip" style={{ background: "#fff", borderBottom: "1px solid #eee", paddingTop: isMobile ? 14 : 16, paddingBottom: isMobile ? 14 : 16 }}>
+      <div className="homepage-section board-strip-inner" style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: 10, justifyContent: "center", alignItems: "center", flexWrap: "wrap", color: "#475569", fontWeight: 700 }}>
+        <span style={{ color: "#94a3b8", fontSize: 13, letterSpacing: ".02em", textTransform: "uppercase", width: isMobile ? "100%" : "auto", textAlign: "center" }}>Covering:</span>
+        <div className="board-strip-chips" style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", width: isMobile ? "100%" : "auto" }}>
+          {["AQA", "Edexcel", "OCR", "Eduqas", "WJEC", "Pearson", "NCFE"].map((b) => (
           <span
             key={b}
             style={{
@@ -682,6 +683,7 @@ function BoardStrip() {
             {b}
           </span>
         ))}
+        </div>
       </div>
     </div>
   );
@@ -692,16 +694,14 @@ function OffersSection() {
   const offers = [
     { title: "Resources", text: "Revision notes, how questions are framed, past questions, mark schemes and examiner reports." },
     { title: "Tutoring", text: "Book support for 11+, GCSE, IGCSE, A-Level, BTEC and T-Level." },
-    { title: "Tutor Profiles", text: "Tutor listings appear after a listing review." },
-    { title: "Admin Control", text: "Admin can upload resources directly for visitors to download." },
   ];
   return (
-    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
+    <section className="homepage-section" style={{ paddingTop: isMobile ? 32 : 48, paddingBottom: isMobile ? 32 : 48, background: "#f8fafc" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: "0 0 22px" }}>What JD Science Offers</h2>
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
+        <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: "0 0 22px", textAlign: isMobile ? "left" : "left" }}>What JD Science Offers</h2>
+        <div className="offers-grid">
           {offers.map((o) => (
-            <div key={o.title} style={{ background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+            <div key={o.title} className="offer-card" style={{ background: "#fff", borderRadius: 14, padding: 22, boxShadow: "0 4px 14px rgba(0,0,0,.06)", height: "100%" }}>
               <h3 style={{ margin: "0 0 8px", color: "#0f172a", fontSize: 18 }}>{o.title}</h3>
               <p style={{ color: "#64748b", fontSize: 14, margin: 0, lineHeight: 1.6 }}>{o.text}</p>
             </div>
@@ -716,13 +716,13 @@ function LevelGrid({ onLevel }) {
   const isMobile = useIsMobile();
   const blurb = { "11+": "Entrance exam prep & practice", "GCSE/IGCSE": "Years 10–11 · all boards", "A-Level": "Years 12–13 · exam-ready", "T-Level": "Technical qualifications", "BTEC": "Vocational courses" };
   return (
-    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+    <section className="homepage-section" style={{ paddingTop: isMobile ? 32 : 48, paddingBottom: isMobile ? 32 : 48, background: "#fff" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <h2 style={{ textAlign: "center", color: "#0f172a", fontSize: isMobile ? 24 : 28, margin: 0 }}>Choose Your Level</h2>
-        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4 }}>Pick where you're studying — then choose your subject</p>
-        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(160px, 1fr))", gap: 14, marginTop: 26 }}>
+        <p style={{ textAlign: "center", color: "#64748b", marginTop: 4, padding: "0 4px" }}>Pick where you're studying — then choose your subject</p>
+        <div className="level-grid" style={{ marginTop: 26 }}>
           {LEVELS.map((l) => (
-            <div key={l} onClick={() => onLevel(l)}
+            <div key={l} onClick={() => onLevel(l)} className="level-card"
               style={{ background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, color: "#fff", borderRadius: 14, padding: isMobile ? 22 : 20, cursor: "pointer", boxShadow: "0 4px 14px rgba(0,0,0,.1)", minHeight: isMobile ? 112 : undefined }}>
               <div style={{ fontSize: 20, fontWeight: 800 }}>{l}</div>
               <p style={{ fontSize: 13, color: "rgba(255,255,255,.9)", margin: "8px 0 0" }}>{blurb[l]}</p>
@@ -1431,7 +1431,7 @@ function Booking() {
   const price = priceLabel(form.level, form.sessionType);
 
   return (
-    <section style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
+    <section className="homepage-section" style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, paddingTop: isMobile ? 32 : 48, paddingBottom: isMobile ? 32 : 48, color: "#fff" }}>
       <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
         <div>
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
@@ -1592,7 +1592,7 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
             <span aria-hidden="true">✓</span>
             <span>Listed tutor</span>
           </div>
-            <h3 style={{ margin: "8px 0 6px", color: "#0f172a", fontSize: 22, lineHeight: 1.2 }}>{tutor.tutor_name || "Listed Tutor"}</h3>
+            <h3 style={{ margin: "8px 0 6px", color: "#0f172a", fontSize: isMobile ? 20 : 22, lineHeight: 1.2, overflowWrap: "anywhere" }}>{tutor.tutor_name || "Listed Tutor"}</h3>
           {subjects.length > 0 && (
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
               {subjects.slice(0, 3).map((subject) => (
@@ -1670,18 +1670,18 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
 
   return (
-    <section ref={sectionRef} style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
+    <section ref={sectionRef} className="homepage-section" style={{ paddingTop: isMobile ? 40 : 56, paddingBottom: isMobile ? 40 : 56, background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <div style={{ display: "flex", alignItems: "end", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-          <div>
+        <div className="tutor-section-header">
+          <div style={{ flex: "1 1 240px", minWidth: 0 }}>
             <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Tutors</div>
-            <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0" }}>Meet Our Tutors</h2>
-            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680 }}>
+            <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0", lineHeight: 1.2 }}>Meet Our Tutors</h2>
+            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680, lineHeight: 1.6 }}>
               Carefully reviewed tutors across science and maths, ready for 1-to-1 support online or face to face.
               {canRotate ? " Featured profiles rotate so every listed tutor is shown." : ""}
             </p>
           </div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+          <div className="tutor-section-actions stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
             {canRotate && (
               <>
                 <button type="button" aria-label="Show previous listed tutors" onClick={() => { setPaused(true); setOffset((current) => current - 1); }} style={{ width: 44, height: 44, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
@@ -2134,7 +2134,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 function VideoSection() {
   const isMobile = useIsMobile();
   return (
-    <section style={{ background: "#071025", color: "#fff", padding: isMobile ? "40px 16px" : "56px 20px" }}>
+    <section className="homepage-section" style={{ background: "#071025", color: "#fff", paddingTop: isMobile ? 40 : 56, paddingBottom: isMobile ? 40 : 56 }}>
       <div style={{ maxWidth: 980, margin: "0 auto", textAlign: "center" }}>
         <h2 style={{ fontSize: isMobile ? 24 : 38, margin: 0 }}>How JD Science Works</h2>
         <p style={{ color: "#cbd5e1", fontSize: isMobile ? 15 : 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" }}>
@@ -2220,7 +2220,7 @@ function Contact() {
   }
 
   return (
-    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#fff" }}>
+    <section className="homepage-section" style={{ paddingTop: isMobile ? 32 : 48, paddingBottom: isMobile ? 32 : 48, background: "#fff" }}>
       <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
         <h2 style={{ color: "#0f172a", fontSize: isMobile ? 24 : 28 }}>Get in Touch</h2>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(2, minmax(0, 1fr))", gap: 16, marginTop: 20, alignItems: "start" }}>
