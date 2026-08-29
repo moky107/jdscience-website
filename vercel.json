@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/education-posts.js": {
+      "includeFiles": "content/shop/**"
+    }
+  },
   "redirects": [
     {
       "source": "/:path*",
