@@ -252,7 +252,7 @@ export default function AdminShopEditor({ password }) {
       {error && <div style={{ marginTop: 12, color: "#b91c1c" }}>{error}</div>}
       {message && <div style={{ marginTop: 12, color: "#047857" }}>{message}</div>}
 
-      <form onSubmit={save} style={{ display: "grid", gap: 12, marginTop: 18 }}>
+      <form id="shop-product-form" onSubmit={save} style={{ display: "grid", gap: 12, marginTop: 18 }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
           <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
             Product sale type
@@ -301,53 +301,6 @@ export default function AdminShopEditor({ password }) {
             <input placeholder="Keywords (optional)" value={form.keywords} onChange={(e) => setField("keywords", e.target.value)} style={inp} />
           )}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-          <ShopFileUploadBox
-            boxKey={`image-${form.id || "new"}-${form.image_path || "empty"}`}
-            label="Product image"
-            dragHint="Click to upload or drag and drop product image"
-            chooseButtonLabel="Choose image file"
-            helperText="PNG, JPG or WebP recommended"
-            accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
-            path={form.image_path}
-            previewUrl={form.image_url}
-            showImagePreview
-            uploading={uploadingField === "image_path"}
-            disabled={saving}
-            validate={isValidProductImageFile}
-            onSelectFile={(file) => uploadFile(file, "images", "image_path")}
-          />
-          <ShopFileUploadBox
-            boxKey={`preview-${form.id || "new"}-${form.preview_path || "empty"}`}
-            label="Preview file"
-            dragHint="Click to upload or drag and drop preview file"
-            chooseButtonLabel="Choose preview file"
-            helperText="Optional image or PDF preview for the product page."
-            accept=".jpg,.jpeg,.png,.webp,.pdf,image/*,application/pdf"
-            path={form.preview_path}
-            previewUrl={form.preview_url}
-            showImagePreview={Boolean(form.preview_url && !String(form.preview_path || "").endsWith(".pdf"))}
-            uploading={uploadingField === "preview_path"}
-            disabled={saving}
-            validate={validatePreviewFile}
-            onSelectFile={(file) => uploadFile(file, "previews", "preview_path")}
-          />
-          {form.sale_type !== "external" && form.product_kind === "digital" && (
-            <ShopFileUploadBox
-              boxKey={`download-${form.id || "new"}-${form.download_path || "empty"}`}
-              label="Download file"
-              dragHint="Click to upload or drag and drop download file"
-              chooseButtonLabel="Choose download file"
-              helperText="Digital product file customers receive after purchase."
-              accept="*/*"
-              path={form.download_path}
-              uploading={uploadingField === "download_path"}
-              disabled={saving}
-              validate={validateDownloadFile}
-              onSelectFile={(file) => uploadFile(file, "downloads", "download_path")}
-            />
-          )}
-        </div>
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
           <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
             <input type="checkbox" checked={form.is_featured} onChange={(e) => setField("is_featured", e.target.checked)} />
@@ -359,17 +312,68 @@ export default function AdminShopEditor({ password }) {
           </label>
           <input type="number" placeholder="Sort order" value={form.sort_order} onChange={(e) => setField("sort_order", e.target.value)} style={{ ...inp, width: 140 }} />
         </div>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <button type="submit" disabled={saving || Boolean(uploadingField)} style={{ padding: "12px 16px", borderRadius: 8, border: "none", background: saving || uploadingField ? "#94a3b8" : TEAL, color: "#fff", fontWeight: 800, cursor: saving || uploadingField ? "default" : "pointer" }}>
-            {saving ? "Saving…" : form.id ? "Update product" : "Add product"}
-          </button>
-          {form.id && (
-            <button type="button" onClick={() => setForm(EMPTY_FORM)} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>
-              Clear form
-            </button>
-          )}
-        </div>
       </form>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16, marginTop: 16 }}>
+        <ShopFileUploadBox
+          boxKey={`image-${form.id || "new"}-${form.image_path || "empty"}`}
+          label="Product image"
+          dragHint="Click to upload or drag and drop product image"
+          chooseButtonLabel="Choose image file"
+          helperText="PNG, JPG or WebP recommended"
+          accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
+          path={form.image_path}
+          previewUrl={form.image_url}
+          showImagePreview
+          showNativeInput
+          showDebug
+          uploading={uploadingField === "image_path"}
+          disabled={uploadingField === "image_path"}
+          validate={isValidProductImageFile}
+          onSelectFile={(file) => uploadFile(file, "images", "image_path")}
+        />
+        <ShopFileUploadBox
+          boxKey={`preview-${form.id || "new"}-${form.preview_path || "empty"}`}
+          label="Preview file"
+          dragHint="Click to upload or drag and drop preview file"
+          chooseButtonLabel="Choose preview file"
+          helperText="Optional image or PDF preview for the product page."
+          accept=".jpg,.jpeg,.png,.webp,.pdf,image/*,application/pdf"
+          path={form.preview_path}
+          previewUrl={form.preview_url}
+          showImagePreview={Boolean(form.preview_url && !String(form.preview_path || "").endsWith(".pdf"))}
+          uploading={uploadingField === "preview_path"}
+          disabled={uploadingField === "preview_path"}
+          validate={validatePreviewFile}
+          onSelectFile={(file) => uploadFile(file, "previews", "preview_path")}
+        />
+        {form.sale_type !== "external" && form.product_kind === "digital" && (
+          <ShopFileUploadBox
+            boxKey={`download-${form.id || "new"}-${form.download_path || "empty"}`}
+            label="Download file"
+            dragHint="Click to upload or drag and drop download file"
+            chooseButtonLabel="Choose download file"
+            helperText="Digital product file customers receive after purchase."
+            accept="*/*"
+            path={form.download_path}
+            uploading={uploadingField === "download_path"}
+            disabled={uploadingField === "download_path"}
+            validate={validateDownloadFile}
+            onSelectFile={(file) => uploadFile(file, "downloads", "download_path")}
+          />
+        )}
+      </div>
+
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 12 }}>
+        <button form="shop-product-form" type="submit" disabled={saving || Boolean(uploadingField)} style={{ padding: "12px 16px", borderRadius: 8, border: "none", background: saving || uploadingField ? "#94a3b8" : TEAL, color: "#fff", fontWeight: 800, cursor: saving || uploadingField ? "default" : "pointer" }}>
+          {saving ? "Saving…" : form.id ? "Update product" : "Add product"}
+        </button>
+        {form.id && (
+          <button type="button" onClick={() => setForm(EMPTY_FORM)} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>
+            Clear form
+          </button>
+        )}
+      </div>
 
       <div style={{ marginTop: 24 }}>
         <h3 style={{ margin: "0 0 12px", color: "#0f172a" }}>Products ({products.length})</h3>

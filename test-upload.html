@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ShopFileUploadBox Test</title>
+  <script type="module">
+    import React from 'http://esm.sh/react@18.3.1';
+    import ReactDOM from 'http://esm.sh/react-dom@18.3.1/client';
+    import { ShopFileUploadBox } from '/src/AdminShopFileUpload.jsx';
+    
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+      React.createElement(ShopFileUploadBox, {
+        label: 'Test Product Image',
+        helperText: 'PNG or JPG format, max 500 KB',
+        dragHint: 'Click to upload or drag and drop file',
+        chooseButtonLabel: 'Choose image file',
+        accept: 'image/png,image/jpeg',
+        showImagePreview: true,
+        onSelectFile: async (file) => {
+          console.log('File selected:', file.name, file.size, file.type);
+        }
+      })
+    );
+  </script>
+</head>
+<body style="padding: 40px; font-family: system-ui, sans-serif;">
+  <h1>ShopFileUploadBox Test</h1>
+  <div id="root"></div>
+  <div style="margin-top: 30px; padding: 20px; background: #f0f0f0; border-radius: 8px;">
+    <h3>Test Instructions:</h3>
+    <ol>
+      <li>Click the "Choose image file" button - file picker should open</li>
+      <li>Click the drop zone (gray area with arrow) - file picker should open</li>
+      <li>Drag and drop an image - should show preview</li>
+    </ol>
+    <p><strong>Expected behavior:</strong> Both methods should open the native file picker.</p>
+  </div>
+</body>
+</html>
