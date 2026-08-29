@@ -3,10 +3,24 @@ import React, { useEffect, useId, useRef, useState } from "react";
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 
+const hiddenInputStyle = {
+  position: "absolute",
+  width: 1,
+  height: 1,
+  padding: 0,
+  margin: -1,
+  overflow: "hidden",
+  clip: "rect(0, 0, 0, 0)",
+  whiteSpace: "nowrap",
+  border: 0,
+  opacity: 0,
+};
+
 export function ShopFileUploadBox({
   label,
   helperText,
   dragHint = "Click to upload or drag and drop file",
+  chooseButtonLabel = "Choose image file",
   accept,
   path = "",
   previewUrl = "",
@@ -22,6 +36,7 @@ export function ShopFileUploadBox({
   const [dragOver, setDragOver] = useState(false);
   const [localPreview, setLocalPreview] = useState("");
   const [localError, setLocalError] = useState("");
+  const inactive = disabled || uploading;
 
   useEffect(() => {
     setLocalPreview("");
@@ -35,8 +50,11 @@ export function ShopFileUploadBox({
   const displayPreview = showImagePreview && (localPreview || previewUrl);
 
   function openPicker() {
-    if (disabled || uploading) return;
-    inputRef.current?.click();
+    if (inactive) return;
+    const input = inputRef.current;
+    if (!input) return;
+    input.value = "";
+    input.click();
   }
 
   async function handleFile(file) {
@@ -76,13 +94,13 @@ export function ShopFileUploadBox({
   function onDragEnter(event) {
     event.preventDefault();
     event.stopPropagation();
-    if (!disabled && !uploading) setDragOver(true);
+    if (!inactive) setDragOver(true);
   }
 
   function onDragOver(event) {
     event.preventDefault();
     event.stopPropagation();
-    if (!disabled && !uploading) setDragOver(true);
+    if (!inactive) setDragOver(true);
   }
 
   function onDragLeave(event) {
@@ -95,29 +113,33 @@ export function ShopFileUploadBox({
     event.preventDefault();
     event.stopPropagation();
     setDragOver(false);
-    if (disabled || uploading) return;
+    if (inactive) return;
     void handleFile(event.dataTransfer.files?.[0]);
   }
 
   return (
-    <div style={{ display: "grid", gap: 8 }}>
+    <div style={{ display: "grid", gap: 10, position: "relative" }}>
       <span style={{ fontSize: 14, fontWeight: 700, color: "#0f172a" }}>{label}</span>
-      <div
-        role="button"
-        tabIndex={disabled || uploading ? -1 : 0}
-        aria-disabled={disabled || uploading}
-        onClick={openPicker}
-        onKeyDown={(event) => {
-          if (disabled || uploading) return;
-          if (event.key === "Enter" || event.key === " ") {
-            event.preventDefault();
-            openPicker();
-          }
-        }}
+
+      <input
+        id={inputId}
+        ref={inputRef}
+        type="file"
+        accept={accept}
+        onChange={onInputChange}
+        disabled={inactive}
+        style={hiddenInputStyle}
+        tabIndex={-1}
+        aria-hidden="true"
+      />
+
+      <label
+        htmlFor={inactive ? undefined : inputId}
         onDragEnter={onDragEnter}
         onDragOver={onDragOver}
         onDragLeave={onDragLeave}
         onDrop={onDrop}
+        aria-disabled={inactive}
         style={{
           border: `2px dashed ${dragOver ? TEAL : "#cbd5e1"}`,
           background: dragOver ? "#ecfeff" : "#f8fafc",
@@ -129,40 +151,61 @@ export function ShopFileUploadBox({
           alignContent: "center",
           justifyItems: "center",
           textAlign: "center",
-          cursor: disabled || uploading ? "default" : "pointer",
-          opacity: disabled || uploading ? 0.75 : 1,
+          cursor: inactive ? "default" : "pointer",
+          opacity: inactive ? 0.75 : 1,
           transition: "border-color .15s ease, background .15s ease",
+          position: "relative",
+          zIndex: 1,
+          userSelect: "none",
         }}
       >
-        <input
-          id={inputId}
-          ref={inputRef}
-          type="file"
-          accept={accept}
-          onChange={onInputChange}
-          disabled={disabled || uploading}
-          style={{ display: "none" }}
-        />
         {displayPreview ? (
           <img
             src={displayPreview}
             alt=""
-            style={{ maxHeight: 120, maxWidth: "100%", borderRadius: 8, objectFit: "cover", display: "block", boxShadow: "0 4px 14px rgba(15,23,42,.08)" }}
+            draggable={false}
+            style={{ maxHeight: 120, maxWidth: "100%", borderRadius: 8, objectFit: "cover", display: "block", boxShadow: "0 4px 14px rgba(15,23,42,.08)", pointerEvents: "none" }}
           />
         ) : (
-          <div style={{ width: 52, height: 52, borderRadius: 12, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, fontSize: 22 }}>
+          <div style={{ width: 52, height: 52, borderRadius: 12, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, fontSize: 22, pointerEvents: "none" }}>
             ↑
           </div>
         )}
-        <div style={{ color: TEAL_DARK, fontWeight: 700, fontSize: 14, lineHeight: 1.45 }}>
+        <div style={{ color: TEAL_DARK, fontWeight: 700, fontSize: 14, lineHeight: 1.45, pointerEvents: "none" }}>
           {uploading ? "Uploading…" : dragHint}
         </div>
         {helperText && (
-          <div style={{ color: "#64748b", fontSize: 12, lineHeight: 1.5, maxWidth: 280 }}>
+          <div style={{ color: "#64748b", fontSize: 12, lineHeight: 1.5, maxWidth: 280, pointerEvents: "none" }}>
             {helperText}
           </div>
         )}
-      </div>
+      </label>
+
+      <button
+        type="button"
+        disabled={inactive}
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          openPicker();
+        }}
+        style={{
+          padding: "10px 14px",
+          borderRadius: 8,
+          border: "1px solid #cbd5e1",
+          background: inactive ? "#f1f5f9" : "#fff",
+          color: inactive ? "#94a3b8" : TEAL_DARK,
+          fontWeight: 700,
+          fontSize: 14,
+          cursor: inactive ? "default" : "pointer",
+          justifySelf: "start",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
+        {uploading ? "Uploading…" : chooseButtonLabel}
+      </button>
+
       {path && (
         <div style={{ fontSize: 12, color: "#64748b", wordBreak: "break-all" }}>
           Saved path: {path}
