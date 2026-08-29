@@ -137,6 +137,12 @@ assert.equal(productIsPublished({ published: true }), true);
 assert.equal(productIsPublished({ is_published: false, published: true }), true);
 assert.equal(productIsPublished({ is_published: false, published: false }), false);
 assert.equal(productIsPublished({ is_featured: true, is_published: false, published: false }), true);
+
+const publishedCatalog = [{ title: "GCSE Notes", slug: "gcse-notes", featured: true, published: true, product_kind: "digital", product_type: "revision_notes", price_pence: 299 }]
+  .map(normalizeShopProductRow)
+  .filter(productIsPublished);
+assert.equal(publishedCatalog.length, 1);
+assert.equal(publishedCatalog[0].slug, "gcse-notes");
 assert.equal(productIsFeatured({ featured: true }), true);
 assert.equal(productIsFeatured({ is_featured: true }), true);
 

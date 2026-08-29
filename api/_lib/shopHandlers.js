@@ -97,9 +97,23 @@ async function runShopProductsDiagnostics(supabase, config) {
     isFeaturedTrueCount: rows.filter((row) => row.is_featured === true).length,
     featuredTrueCount: rows.filter((row) => row.featured === true).length,
     externalProductCount: rows.filter((row) => row.opens_external && row.external_url).length,
+    publishedProductTitles: publishedRows.map((row) => row.title).filter(Boolean).slice(0, 10),
     storageBucket: SHOP_STORAGE_BUCKET,
     storageBucketExists: storage.exists,
     storageError: storage.error,
+  };
+}
+
+async function buildPublicShopProductsResponse(supabase, filters = {}) {
+  const result = await loadPublishedShopProducts(supabase, filters);
+  if (!result.ok) {
+    return { ok: false, products: [], error: result.error };
+  }
+  const withAssets = await attachProductAssetUrlsToMany(supabase, result.data || []);
+  return {
+    ok: true,
+    products: withAssets.map(toPublicProduct),
+    error: null,
   };
 }
 
@@ -242,11 +256,16 @@ export async function handleShopPublicRequest(req, res) {
 
     if (check) {
       const diagnostics = await runShopProductsDiagnostics(supabase, config);
+      const listed = await buildPublicShopProductsResponse(supabase);
       logShopProductsError('diagnostics', diagnostics.error ? { message: diagnostics.error, code: diagnostics.errorCode } : null, diagnostics);
       return shopProductsResponse(res, {
-        products: [],
+        products: listed.products,
         setupRequired: diagnostics.setupRequired,
-        diagnostics,
+        diagnostics: {
+          ...diagnostics,
+          productsReturned: listed.products.length,
+          listError: listed.ok ? null : safeShopErrorMessage(listed.error),
+        },
       }, { check: true });
     }
 
