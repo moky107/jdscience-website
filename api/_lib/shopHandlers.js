@@ -168,8 +168,9 @@ export async function handleShopPublicRequest(req, res) {
     return res.status(500).json({ error: 'Server not configured for shop.' });
   }
   const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
+  let unit1Seed = null;
   if (kind === 'shop-products') {
-    await ensureUnit1SpecialiseCellsProduct(supabase);
+    unit1Seed = await ensureUnit1SpecialiseCellsProduct(supabase);
   }
 
   if (kind === 'shop-order') {
@@ -269,6 +270,18 @@ export async function handleShopPublicRequest(req, res) {
           ...diagnostics,
           productsReturned: listed.products.length,
           listError: listed.ok ? null : safeShopErrorMessage(listed.error),
+          unit1Seed: unit1Seed
+            ? {
+                ok: Boolean(unit1Seed.ok),
+                skipped: Boolean(unit1Seed.skipped),
+                existed: Boolean(unit1Seed.existed),
+                created: Boolean(unit1Seed.created),
+                reason: unit1Seed.reason || null,
+                title: unit1Seed.product?.title || null,
+                slug: unit1Seed.product?.slug || null,
+                price_pence: unit1Seed.product?.price_pence ?? null,
+              }
+            : null,
         },
       }, { check: true });
     }

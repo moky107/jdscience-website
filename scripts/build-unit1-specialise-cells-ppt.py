@@ -14,7 +14,7 @@ from pptx.util import Emu, Inches, Pt
 
 ROOT = Path(__file__).resolve().parents[1]
 MEDIA = ROOT / "content/shop/unit-1-specialise-cells/media"
-OUT_PPT = ROOT / "content/shop/Unit 1 specialise cells.pptx"
+OUT_PPT = ROOT / "content/shop/unit-1-specialise-cells/unit-1-specialise-cells.pptx"
 OUT_COVER = ROOT / "content/shop/unit-1-specialise-cells/cover.png"
 
 W, H = Inches(13.333), Inches(7.5)

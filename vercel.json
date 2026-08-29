@@ -1,7 +1,12 @@
 {
   "functions": {
     "api/education-posts.js": {
-      "includeFiles": "content/shop/**"
+      "includeFiles": "content/shop/unit-1-specialise-cells/**",
+      "maxDuration": 60
+    },
+    "api/admin-education-posts.js": {
+      "includeFiles": "content/shop/unit-1-specialise-cells/**",
+      "maxDuration": 60
     }
   },
   "redirects": [

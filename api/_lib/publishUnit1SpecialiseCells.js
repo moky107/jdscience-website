@@ -8,6 +8,13 @@ export const UNIT1_SLUG = "unit-1-specialise-cells";
 export const UNIT1_PRICE_PENCE = 500;
 const BUCKET = "shop-products";
 
+const ASSET_DIR = "content/shop/unit-1-specialise-cells";
+const PPT_NAMES = [
+  "unit-1-specialise-cells.pptx",
+  "Unit 1 specialise cells.pptx",
+];
+const COVER_NAMES = ["cover.png"];
+
 function shopConfig() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || "";
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
@@ -32,13 +39,27 @@ function roots() {
     process.cwd(),
     path.resolve(here, "../.."),
     path.resolve(here, "../../.."),
+    path.resolve(here, ".."),
     "/var/task",
+    path.join("/var/task", ".next"),
   ])];
 }
 
+function candidateAssetPaths(names) {
+  const fromRoots = roots().flatMap((root) => [
+    ...names.map((name) => path.join(root, ASSET_DIR, name)),
+    ...names.map((name) => path.join(root, "content/shop", name)),
+  ]);
+  const fromModule = names.flatMap((name) => [
+    fileURLToPath(new URL(`../../${ASSET_DIR}/${name}`, import.meta.url)),
+    fileURLToPath(new URL(`../${ASSET_DIR}/${name}`, import.meta.url)),
+  ]);
+  return [...new Set([...fromRoots, ...fromModule])];
+}
+
 export async function unit1AssetPaths() {
-  const ppt = await firstExisting(roots().map((root) => path.join(root, "content/shop/Unit 1 specialise cells.pptx")));
-  const cover = await firstExisting(roots().map((root) => path.join(root, "content/shop/unit-1-specialise-cells/cover.png")));
+  const ppt = await firstExisting(candidateAssetPaths(PPT_NAMES));
+  const cover = await firstExisting(candidateAssetPaths(COVER_NAMES));
   return { ppt, cover };
 }
 
@@ -92,6 +113,11 @@ export async function publishUnit1SpecialiseCells({ supabase } = {}) {
 
   const { ppt, cover } = await unit1AssetPaths();
   if (!ppt || !cover) {
+    console.warn("[shop] Unit 1 specialise cells publish skipped: missing_local_assets", {
+      cwd: process.cwd(),
+      pptFound: Boolean(ppt),
+      coverFound: Boolean(cover),
+    });
     return { ok: false, skipped: true, reason: "missing_local_assets" };
   }
 
