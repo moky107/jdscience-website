@@ -59,7 +59,7 @@ function ProductImagePlaceholder() {
   );
 }
 
-export function ProductCard({ product, onView, onAdd, onBuyNow, compact = false }) {
+export function ProductCard({ product, onView, onAdd, compact = false }) {
   const viewportWidth = useViewportWidth();
   const imageHeight = productCardImageHeight(compact, viewportWidth);
   const external = isExternalProduct(product);
@@ -131,11 +131,6 @@ export function ProductCard({ product, onView, onAdd, onBuyNow, compact = false 
             </button>
           )}
         </div>
-        {!external && onBuyNow && (
-          <button type="button" onClick={() => onBuyNow(product)} style={{ width: "100%", minHeight: 48, borderRadius: 10, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
-            Buy Now
-          </button>
-        )}
       </div>
     </article>
   );
