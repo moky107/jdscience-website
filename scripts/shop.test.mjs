@@ -15,6 +15,9 @@ import {
   isShopSchemaCacheStale,
   isValidExternalUrl,
   missingShopColumnName,
+  normalizeShopProductRow,
+  productIsFeatured,
+  productIsPublished,
 } from "../api/_lib/shop.js";
 import {
   effectivePricePence,
@@ -38,6 +41,8 @@ import {
 } from "../src/shopProductHelpers.js";
 import {
   featuredTutorWindow,
+  homepageTutorFallback,
+  isFounderTutor,
   shouldRotateTutorProfiles,
   tutorCarouselPageCount,
   tutorCarouselPageIndex,
@@ -127,22 +132,37 @@ const checkoutReady = buildOrderLineItems([digitalProduct], [
 assert.equal(checkoutReady.ok, true);
 assert.equal(checkoutReady.lines.length, 1);
 
-const legacyProduct = normalizeShopProduct({ title: "Legacy product" });
-assert.equal(legacyProduct.external_url, "");
-assert.equal(legacyProduct.external_button_label, "Buy now");
-assert.equal(legacyProduct.opens_external, false);
-assert.equal(isExternalProduct({ opens_external: true }), false);
-assert.equal(externalButtonLabel({}), "Buy now");
+assert.equal(productIsPublished({ is_published: true }), true);
+assert.equal(productIsPublished({ published: true }), true);
+assert.equal(productIsPublished({ is_published: false, published: true }), true);
+assert.equal(productIsPublished({ is_published: false, published: false }), false);
+assert.equal(productIsFeatured({ featured: true }), true);
+assert.equal(productIsFeatured({ is_featured: true }), true);
+
+const legacyPublished = normalizeShopProductRow({ title: "Legacy book", published: true, featured: true });
+assert.equal(legacyPublished.is_published, true);
+assert.equal(legacyPublished.published, true);
+assert.equal(legacyPublished.is_featured, true);
+assert.equal(legacyPublished.featured, true);
+assert.equal(legacyPublished.external_url, "");
+assert.equal(legacyPublished.external_button_label, "Buy now");
+assert.equal(legacyPublished.opens_external, false);
+assert.equal(legacyPublished.product_kind, "digital");
 
 const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
   { public_slug: "joseph-danso", tutor_name: "Joseph Danso" },
+  { public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" },
   { public_slug: "amina-khan", tutor_name: "Amina Khan" },
   { public_slug: "sam-reed", tutor_name: "Sam Reed" },
   { public_slug: "lee-okonkwo", tutor_name: "Lee Okonkwo" },
 ];
+assert.equal(isFounderTutor({ public_slug: "joseph-danso-4qy75y" }), true);
+assert.equal(tutorsForHomepage(tutors).map((item) => item.public_slug).join(","), "amina-khan,sam-reed,lee-okonkwo");
+assert.deepEqual(homepageTutorFallback(tutors).map((item) => item.public_slug), ["amina-khan", "sam-reed", "lee-okonkwo"]);
+assert.deepEqual(homepageTutorFallback([{ public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" }]).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 const homepage = tutorsForHomepage(tutors);
 assert.equal(tutorSlotCount({ isMobile: true }), 1);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: true }), 2);

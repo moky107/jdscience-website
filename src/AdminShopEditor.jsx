@@ -118,6 +118,8 @@ export default function AdminShopEditor({ password }) {
       sale_price_pence: normalized.sale_price_pence ?? "",
       stock_quantity: normalized.stock_quantity ?? "",
       sale_type: normalized.opens_external ? "external" : "checkout",
+      is_published: Boolean(normalized.is_published || normalized.published),
+      is_featured: Boolean(normalized.is_featured || normalized.featured),
     });
     setMessage("");
     setError("");
@@ -205,7 +207,7 @@ export default function AdminShopEditor({ password }) {
 
       {setupRequired && (
         <div style={{ marginTop: 12, padding: 12, borderRadius: 8, background: "#fff7ed", color: "#9a3412" }}>
-          Run <code>supabase/migrations/20260829_shop.sql</code>, <code>supabase/migrations/20260829_shop_external_links.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
+          Run <code>supabase/migrations/20260829_shop.sql</code>, <code>supabase/migrations/20260829_shop_external_links.sql</code>, <code>supabase/migrations/20260829_shop_publish_sync.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
         </div>
       )}
       {error && <div style={{ marginTop: 12, color: "#b91c1c" }}>{error}</div>}
@@ -311,8 +313,8 @@ export default function AdminShopEditor({ password }) {
                 <div style={{ fontWeight: 800, color: "#0f172a" }}>{product.title}</div>
                 <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>
                   {formatPricePence(product.effective_price_pence ?? product.price_pence)} · {shopProductTypeLabel(product.product_type)} · {isExternalProduct(product) ? "External link" : shopProductKindLabel(product.product_kind)}
-                  {product.is_published ? " · Published" : " · Draft"}
-                  {product.is_featured ? " · Featured" : ""}
+                  {(product.is_published || product.published) ? " · Published" : " · Draft"}
+                  {(product.is_featured || product.featured) ? " · Featured" : ""}
                 </div>
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>

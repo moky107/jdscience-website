@@ -14,6 +14,9 @@ import {
   missingShopColumnName,
   normalizeProductInput,
   parseBasketItems,
+  productIsFeatured,
+  productIsPublished,
+  normalizeShopProductRow,
   safeShopErrorMessage,
   shopSetupReason,
   shopSupabaseConfig,
@@ -63,13 +66,14 @@ async function probeShopStorageBucket(supabase) {
 }
 
 async function runShopProductsDiagnostics(supabase, config) {
-  const { data, error } = await supabase
+  const { data: allRows, error } = await supabase
     .from('shop_products')
-    .select(PUBLIC_PRODUCT_SELECT)
-    .eq('is_published', true)
-    .limit(1);
+    .select('*');
 
   const storage = await probeShopStorageBucket(supabase);
+  const rows = (allRows || []).map(normalizeShopProductRow);
+  const publishedRows = rows.filter(productIsPublished);
+  const featuredRows = rows.filter(productIsFeatured);
 
   return {
     projectRef: config.projectRef,
@@ -85,7 +89,14 @@ async function runShopProductsDiagnostics(supabase, config) {
     error: error ? safeShopErrorMessage(error) : null,
     errorCode: error?.code || null,
     querySucceeded: !error,
-    publishedProductCount: Array.isArray(data) ? data.length : 0,
+    totalProductCount: rows.length,
+    publishedProductCount: publishedRows.length,
+    featuredProductCount: featuredRows.length,
+    isPublishedTrueCount: rows.filter((row) => row.is_published === true).length,
+    publishedTrueCount: rows.filter((row) => row.published === true).length,
+    isFeaturedTrueCount: rows.filter((row) => row.is_featured === true).length,
+    featuredTrueCount: rows.filter((row) => row.featured === true).length,
+    externalProductCount: rows.filter((row) => row.opens_external && row.external_url).length,
     storageBucket: SHOP_STORAGE_BUCKET,
     storageBucketExists: storage.exists,
     storageError: storage.error,
@@ -98,40 +109,40 @@ function logShopProductsError(context, error, diagnostics = null) {
 }
 
 async function loadPublishedShopProducts(supabase, filters = {}) {
-  let query = supabase
+  const { data, error } = await supabase
     .from('shop_products')
-    .select(PUBLIC_PRODUCT_SELECT)
-    .eq('is_published', true)
+    .select('*')
     .order('sort_order', { ascending: true })
     .order('created_at', { ascending: false });
 
-  if (filters.featured) query = query.eq('is_featured', true);
-  if (filters.level) query = query.eq('level', filters.level);
-  if (filters.subject) query = query.eq('subject', filters.subject);
-  if (filters.examBoard) query = query.eq('exam_board', filters.examBoard);
-  if (filters.productType) query = query.eq('product_type', filters.productType);
-  if (filters.productKind) query = query.eq('product_kind', filters.productKind);
-
-  const { data, error } = await query;
-  if (!error) {
-    return { ok: true, data: data || [], error: null };
-  }
-
-  if (isShopColumnMismatch(error)) {
-    const fallbacks = [
-      () => supabase.from('shop_products').select('*').eq('is_published', true),
-      () => supabase.from('shop_products').select('*'),
-    ];
-    for (const run of fallbacks) {
-      const { data: fallbackData, error: fallbackError } = await run();
+  if (error) {
+    if (isShopColumnMismatch(error)) {
+      const { data: fallbackData, error: fallbackError } = await supabase.from('shop_products').select('*');
       if (!fallbackError) {
-        const rows = (fallbackData || []).filter((row) => row?.is_published !== false);
-        return { ok: true, data: rows, error: null, usedFallbackSelect: true };
+        return { ok: true, data: filterPublishedShopProducts(fallbackData || [], filters), error: null, usedFallbackSelect: true };
       }
     }
+    return { ok: false, data: [], error };
   }
 
-  return { ok: false, data: [], error };
+  return {
+    ok: true,
+    data: filterPublishedShopProducts(data || [], filters),
+    error: null,
+  };
+}
+
+function filterPublishedShopProducts(rows, filters = {}) {
+  let products = (rows || []).map(normalizeShopProductRow).filter(productIsPublished);
+
+  if (filters.featured) products = products.filter(productIsFeatured);
+  if (filters.level) products = products.filter((product) => product.level === filters.level);
+  if (filters.subject) products = products.filter((product) => product.subject === filters.subject);
+  if (filters.examBoard) products = products.filter((product) => product.exam_board === filters.examBoard);
+  if (filters.productType) products = products.filter((product) => product.product_type === filters.productType);
+  if (filters.productKind) products = products.filter((product) => product.product_kind === filters.productKind);
+
+  return products;
 }
 
 export async function handleShopPublicRequest(req, res) {
@@ -240,7 +251,7 @@ export async function handleShopPublicRequest(req, res) {
     }
 
     if (slug) {
-      const { data, error } = await supabase.from('shop_products').select(PUBLIC_PRODUCT_SELECT).eq('is_published', true).eq('slug', slug).maybeSingle();
+      const { data, error } = await supabase.from('shop_products').select('*').eq('slug', slug).maybeSingle();
       if (error) {
         logShopProductsError('single-product', error);
         if (isMissingShopTable(error)) {
@@ -256,8 +267,9 @@ export async function handleShopPublicRequest(req, res) {
         }
         return res.status(500).json({ error: safeShopErrorMessage(error) });
       }
-      if (!data) return res.status(404).json({ error: 'Product not found.' });
-      const withAssets = await attachProductAssetUrls(supabase, data);
+      const product = normalizeShopProductRow(data);
+      if (!product || !productIsPublished(product)) return res.status(404).json({ error: 'Product not found.' });
+      const withAssets = await attachProductAssetUrls(supabase, product);
       return res.status(200).json({ ok: true, product: toPublicProduct(withAssets) });
     }
 
@@ -358,7 +370,10 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       throw error;
     }
     const withAssets = await attachProductAssetUrlsToMany(supabase, data || [], { includeDownload: true });
-    return res.status(200).json({ ok: true, products: withAssets });
+    return res.status(200).json({
+      ok: true,
+      products: withAssets.map((product) => toPublicProduct(normalizeShopProductRow(product))),
+    });
   }
 
   if (action === 'shop-create' || action === 'create') {
@@ -368,7 +383,9 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       ...normalized.fields,
       slug: normalized.fields.slug || slugifyProductTitle(normalized.fields.title),
       is_featured: normalized.fields.is_featured ?? false,
+      featured: normalized.fields.featured ?? normalized.fields.is_featured ?? false,
       is_published: normalized.fields.is_published ?? false,
+      published: normalized.fields.published ?? normalized.fields.is_published ?? false,
       sort_order: normalized.fields.sort_order ?? 0,
       created_at: new Date().toISOString(),
     };

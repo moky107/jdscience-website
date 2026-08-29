@@ -5,7 +5,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
-import { FEATURED_ROTATION_MS, featuredTutorWindow, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorSlotCount, tutorsForHomepage } from "./tutorRotation";
+import { FEATURED_ROTATION_MS, featuredTutorWindow, homepageTutorFallback, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorSlotCount } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
@@ -1682,7 +1682,7 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
-  const rotatableTutors = tutorsForHomepage(tutors);
+  const rotatableTutors = homepageTutorFallback(tutors);
   const slotCount = tutorSlotCount({ isMobile, isTablet });
   const canRotate = shouldRotateTutorProfiles(tutors, slotCount);
   const pageCount = tutorCarouselPageCount(tutors, slotCount);
@@ -1702,7 +1702,25 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length, slotCount]);
 
   if (!loading && !error && rotatableTutors.length === 0) {
-    return null;
+    return (
+      <section aria-label="Meet our tutors" style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Tutors</div>
+          <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0" }}>Meet Our Tutors</h2>
+          <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680, lineHeight: 1.6 }}>
+            Book 1-to-1 science and maths tutoring with Joseph Danso, FRSC, QTLS — or browse the full tutor directory as more approved profiles are published.
+          </p>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
+            <button type="button" onClick={onBook} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+              Book Joseph Danso
+            </button>
+            <button type="button" onClick={onViewAll} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
+              View All Tutors
+            </button>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   const goPrev = () => {
@@ -3246,7 +3264,7 @@ function App() {
   const [resourceAuthPrompted, setResourceAuthPrompted] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
-  const [tutorsLoading, setTutorsLoading] = useState(false);
+  const [tutorsLoading, setTutorsLoading] = useState(true);
   const [tutorsError, setTutorsError] = useState("");
   const [tutorApplicationOpen, setTutorApplicationOpen] = useState(false);
   const [selectedTutorSlug, setSelectedTutorSlug] = useState(null);

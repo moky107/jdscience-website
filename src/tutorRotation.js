@@ -7,11 +7,26 @@ export function tutorSlotCount({ isMobile = false, isTablet = false } = {}) {
   return 3;
 }
 
+export function isFounderTutor(tutor) {
+  const slug = String(tutor?.public_slug || "").trim().toLowerCase();
+  if (!slug) return false;
+  return slug === FOUNDER_SLUG || slug.startsWith(`${FOUNDER_SLUG}-`);
+}
+
 export function tutorsForHomepage(tutors) {
   return (Array.isArray(tutors) ? tutors : []).filter((tutor) => {
     const slug = String(tutor?.public_slug || "").trim().toLowerCase();
-    return slug && slug !== FOUNDER_SLUG;
+    return slug && !isFounderTutor(tutor);
   });
+}
+
+export function homepageTutorFallback(tutors) {
+  const list = Array.isArray(tutors) ? tutors.filter(Boolean) : [];
+  const nonFounders = tutorsForHomepage(list);
+  if (nonFounders.length) return nonFounders;
+  const founder = list.find(isFounderTutor);
+  if (founder) return [founder];
+  return [];
 }
 
 export function featuredTutorWindow(tutors, slotCount = 3, offset = 0) {
@@ -24,11 +39,11 @@ export function featuredTutorWindow(tutors, slotCount = 3, offset = 0) {
 }
 
 export function shouldRotateTutorProfiles(tutors, slotCount = 3) {
-  return tutorsForHomepage(tutors).length > slotCount;
+  return homepageTutorFallback(tutors).length > slotCount;
 }
 
 export function tutorCarouselPageCount(tutors, slotCount = 3) {
-  const list = tutorsForHomepage(tutors);
+  const list = homepageTutorFallback(tutors);
   if (!list.length || list.length <= slotCount) return 1;
   return list.length;
 }

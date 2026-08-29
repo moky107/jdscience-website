@@ -99,6 +99,37 @@ export function externalButtonLabel(product) {
   return label || 'Buy now';
 }
 
+export function productIsPublished(product) {
+  if (!product) return false;
+  if (product.is_published === true || product.published === true) return true;
+  if (product.is_published === false && product.published === false) return false;
+  if (product.is_published === false || product.published === false) return false;
+  return false;
+}
+
+export function productIsFeatured(product) {
+  if (!product) return false;
+  return product.is_featured === true || product.featured === true;
+}
+
+export function normalizeShopProductRow(product) {
+  if (!product) return null;
+  const published = productIsPublished(product);
+  const featured = productIsFeatured(product);
+  return {
+    ...product,
+    published,
+    is_published: published,
+    featured,
+    is_featured: featured,
+    opens_external: Boolean(product.opens_external),
+    external_url: product.external_url || '',
+    external_button_label: product.external_button_label || 'Buy now',
+    product_kind: product.product_kind || 'digital',
+    product_type: product.product_type || '',
+  };
+}
+
 export function slugifyProductTitle(value) {
   return baseSlugify(value) || 'product';
 }
@@ -151,14 +182,15 @@ export async function attachProductAssetUrlsToMany(supabase, products, options =
 
 export function toPublicProduct(product) {
   if (!product) return null;
+  const normalized = normalizeShopProductRow(product);
   const {
     download_path,
     ...rest
-  } = product;
+  } = normalized;
   return {
     ...rest,
-    effective_price_pence: effectivePricePence(product),
-    on_sale: productOnSale(product),
+    effective_price_pence: effectivePricePence(normalized),
+    on_sale: productOnSale(normalized),
   };
 }
 
@@ -198,8 +230,12 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   const stockRaw = body.stock_quantity ?? body.stockQuantity;
   const stock_quantity = stockRaw == null || stockRaw === '' ? null : Math.max(0, Math.round(Number(stockRaw)));
 
-  const is_featured = body.is_featured != null ? Boolean(body.is_featured) : undefined;
-  const is_published = body.is_published != null ? Boolean(body.is_published) : undefined;
+  const is_featured = body.is_featured != null
+    ? Boolean(body.is_featured)
+    : (body.featured != null ? Boolean(body.featured) : undefined);
+  const is_published = body.is_published != null
+    ? Boolean(body.is_published)
+    : (body.published != null ? Boolean(body.published) : undefined);
   const sort_order = body.sort_order != null ? Math.round(Number(body.sort_order) || 0) : undefined;
 
   if (!partial) {
@@ -270,8 +306,14 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
     fields.external_button_label = external_button_label;
   }
 
-  if (is_featured !== undefined) fields.is_featured = is_featured;
-  if (is_published !== undefined) fields.is_published = is_published;
+  if (is_featured !== undefined) {
+    fields.is_featured = is_featured;
+    fields.featured = is_featured;
+  }
+  if (is_published !== undefined) {
+    fields.is_published = is_published;
+    fields.published = is_published;
+  }
   if (sort_order !== undefined) fields.sort_order = sort_order;
 
   return { ok: true, fields };
@@ -294,10 +336,11 @@ export async function loadPublishedProductsByIds(supabase, ids) {
   const { data, error } = await supabase
     .from('shop_products')
     .select('*')
-    .in('id', uniqueIds)
-    .eq('is_published', true);
+    .in('id', uniqueIds);
   if (error) throw error;
-  return data || [];
+  return (data || [])
+    .map(normalizeShopProductRow)
+    .filter(productIsPublished);
 }
 
 export function buildOrderLineItems(products, basketItems) {
