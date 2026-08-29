@@ -8,6 +8,12 @@ globalThis.localStorage = {
 };
 
 import {
+  isMissingShopTable,
+  isShopColumnMismatch,
+  isShopSchemaCacheStale,
+  missingShopColumnName,
+} from "../api/_lib/shop.js";
+import {
   effectivePricePence,
   formatPricePence,
   productOnSale,
@@ -41,6 +47,13 @@ assert.equal(pathForPage("shop-product", { shopSlug: "sample-pack" }), "/shop/sa
 assert.equal(formatPricePence(499), "£4.99");
 assert.equal(effectivePricePence({ price_pence: 1000, sale_price_pence: 750 }), 750);
 assert.equal(productOnSale({ price_pence: 1000, sale_price_pence: 750 }), true);
+
+assert.equal(isMissingShopTable({ message: 'relation "public.shop_products" does not exist' }), true);
+assert.equal(isMissingShopTable({ message: "Could not find the table 'public.shop_products' in the schema cache" }), true);
+assert.equal(isMissingShopTable({ message: 'column shop_products.preview_path does not exist' }), false);
+assert.equal(isShopColumnMismatch({ message: 'column shop_products.preview_path does not exist' }), true);
+assert.equal(missingShopColumnName({ message: 'column shop_products.preview_path does not exist' }), 'preview_path');
+assert.equal(isShopSchemaCacheStale({ message: "Could not find the table 'public.shop_products' in the schema cache" }), true);
 
 const sampleProduct = {
   id: "prod-1",

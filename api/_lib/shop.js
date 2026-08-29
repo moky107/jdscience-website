@@ -39,8 +39,48 @@ export const PUBLIC_PRODUCT_SELECT = [
   'created_at',
 ].join(', ');
 
+export const EXPECTED_SHOP_PRODUCT_COLUMNS = PUBLIC_PRODUCT_SELECT.split(',').map((c) => c.trim());
+
+export function shopSupabaseConfig() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || '';
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+  const projectRef = supabaseUrl.match(/https:\/\/([^.]+)\.supabase\.co/i)?.[1] || null;
+  return { supabaseUrl, serviceRoleKey, projectRef };
+}
+
+export function safeShopErrorMessage(error) {
+  return String(error?.message || error || 'Unknown shop database error').slice(0, 240);
+}
+
 export function isMissingShopTable(error) {
-  return /shop_products|shop_orders|schema cache|does not exist/i.test(error?.message || '');
+  const msg = safeShopErrorMessage(error).toLowerCase();
+  return (
+    /relation ["']?public\.shop_(products|orders)["']? does not exist/.test(msg)
+    || /could not find the table ['"]public\.shop_(products|orders)['"] in the schema cache/.test(msg)
+  );
+}
+
+export function isShopSchemaCacheStale(error) {
+  const msg = safeShopErrorMessage(error).toLowerCase();
+  return /schema cache/.test(msg) && /shop_(products|orders)/.test(msg);
+}
+
+export function isShopColumnMismatch(error) {
+  const msg = safeShopErrorMessage(error).toLowerCase();
+  return /column shop_(products|orders)\.[a-z0-9_]+ does not exist/.test(msg);
+}
+
+export function missingShopColumnName(error) {
+  const match = safeShopErrorMessage(error).match(/column shop_(?:products|orders)\.([a-z0-9_]+) does not exist/i);
+  return match?.[1] || null;
+}
+
+export function shopSetupReason(error) {
+  if (!error) return null;
+  if (isMissingShopTable(error)) return 'missing_table';
+  if (isShopSchemaCacheStale(error)) return 'schema_cache_stale';
+  if (isShopColumnMismatch(error)) return 'column_mismatch';
+  return 'query_error';
 }
 
 export function slugifyProductTitle(value) {

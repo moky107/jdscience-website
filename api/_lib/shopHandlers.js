@@ -7,10 +7,16 @@ import {
   attachProductAssetUrlsToMany,
   buildOrderLineItems,
   isMissingShopTable,
+  isShopColumnMismatch,
+  isShopSchemaCacheStale,
   loadPublishedProductsByIds,
   matchesShopSearch,
+  missingShopColumnName,
   normalizeProductInput,
   parseBasketItems,
+  safeShopErrorMessage,
+  shopSetupReason,
+  shopSupabaseConfig,
   signedShopAssetUrl,
   slugifyProductTitle,
   toPublicProduct,
@@ -31,14 +37,109 @@ export function wantsShopPublicRequest(req) {
   return Boolean(shopKind(req));
 }
 
+function shopProductsResponse(res, payload, { check = false } = {}) {
+  const body = { ok: true, ...payload };
+  if (check) {
+    body.setupRequired = Boolean(payload.setupRequired);
+  } else if ('setupRequired' in payload && payload.setupRequired === false) {
+    delete body.setupRequired;
+  } else if (payload.setupRequired) {
+    body.setupRequired = true;
+  }
+  return res.status(200).json(body);
+}
+
+async function probeShopStorageBucket(supabase) {
+  try {
+    const { data, error } = await supabase.storage.listBuckets();
+    if (error) {
+      return { exists: false, error: safeShopErrorMessage(error) };
+    }
+    const exists = (data || []).some((bucket) => bucket.name === SHOP_STORAGE_BUCKET);
+    return { exists, error: null };
+  } catch (err) {
+    return { exists: false, error: safeShopErrorMessage(err) };
+  }
+}
+
+async function runShopProductsDiagnostics(supabase, config) {
+  const { data, error } = await supabase
+    .from('shop_products')
+    .select(PUBLIC_PRODUCT_SELECT)
+    .eq('is_published', true)
+    .limit(1);
+
+  const storage = await probeShopStorageBucket(supabase);
+
+  return {
+    projectRef: config.projectRef,
+    expectedProjectRef: 'xugsznxfvpbifpzpuoek',
+    projectRefMatchesExpected: config.projectRef === 'xugsznxfvpbifpzpuoek',
+    supabaseUrlConfigured: Boolean(config.supabaseUrl),
+    serviceRoleConfigured: Boolean(config.serviceRoleKey),
+    setupReason: shopSetupReason(error),
+    setupRequired: isMissingShopTable(error),
+    schemaCacheStale: isShopSchemaCacheStale(error),
+    columnMismatch: isShopColumnMismatch(error),
+    missingColumn: missingShopColumnName(error),
+    error: error ? safeShopErrorMessage(error) : null,
+    errorCode: error?.code || null,
+    querySucceeded: !error,
+    publishedProductCount: Array.isArray(data) ? data.length : 0,
+    storageBucket: SHOP_STORAGE_BUCKET,
+    storageBucketExists: storage.exists,
+    storageError: storage.error,
+  };
+}
+
+function logShopProductsError(context, error, diagnostics = null) {
+  const message = safeShopErrorMessage(error);
+  console.warn(`[shop-products] ${context}: ${message}`, diagnostics ? JSON.stringify(diagnostics) : '');
+}
+
+async function loadPublishedShopProducts(supabase, filters = {}) {
+  let query = supabase
+    .from('shop_products')
+    .select(PUBLIC_PRODUCT_SELECT)
+    .eq('is_published', true)
+    .order('sort_order', { ascending: true })
+    .order('created_at', { ascending: false });
+
+  if (filters.featured) query = query.eq('is_featured', true);
+  if (filters.level) query = query.eq('level', filters.level);
+  if (filters.subject) query = query.eq('subject', filters.subject);
+  if (filters.examBoard) query = query.eq('exam_board', filters.examBoard);
+  if (filters.productType) query = query.eq('product_type', filters.productType);
+  if (filters.productKind) query = query.eq('product_kind', filters.productKind);
+
+  const { data, error } = await query;
+  if (!error) {
+    return { ok: true, data: data || [], error: null };
+  }
+
+  if (isShopColumnMismatch(error)) {
+    const { data: fallbackData, error: fallbackError } = await supabase
+      .from('shop_products')
+      .select('*')
+      .eq('is_published', true)
+      .order('sort_order', { ascending: true })
+      .order('created_at', { ascending: false });
+    if (!fallbackError) {
+      return { ok: true, data: fallbackData || [], error: null, usedFallbackSelect: true };
+    }
+  }
+
+  return { ok: false, data: [], error };
+}
+
 export async function handleShopPublicRequest(req, res) {
   const kind = shopKind(req);
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!supabaseUrl || !serviceRoleKey) {
+  const config = shopSupabaseConfig();
+  const check = req.query?.check === '1' || req.query?.check === 'true';
+  if (!config.supabaseUrl || !config.serviceRoleKey) {
     return res.status(500).json({ error: 'Server not configured for shop.' });
   }
-  const supabase = createClient(supabaseUrl, serviceRoleKey);
+  const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
 
   if (kind === 'shop-order') {
     if (req.method !== 'GET') {
@@ -126,34 +227,77 @@ export async function handleShopPublicRequest(req, res) {
     const productType = safeTrim(req.query?.product_type || req.query?.productType, 40);
     const productKind = safeTrim(req.query?.product_kind || req.query?.productKind, 20);
 
+    if (check) {
+      const diagnostics = await runShopProductsDiagnostics(supabase, config);
+      logShopProductsError('diagnostics', diagnostics.error ? { message: diagnostics.error, code: diagnostics.errorCode } : null, diagnostics);
+      return shopProductsResponse(res, {
+        products: [],
+        setupRequired: diagnostics.setupRequired,
+        diagnostics,
+      }, { check: true });
+    }
+
     if (slug) {
       const { data, error } = await supabase.from('shop_products').select(PUBLIC_PRODUCT_SELECT).eq('is_published', true).eq('slug', slug).maybeSingle();
       if (error) {
-        if (isMissingShopTable(error)) return res.status(200).json({ ok: true, product: null, setupRequired: true });
-        return res.status(500).json({ error: error.message || 'Failed to load product.' });
+        logShopProductsError('single-product', error);
+        if (isMissingShopTable(error)) {
+          return shopProductsResponse(res, { product: null, setupRequired: true });
+        }
+        if (isShopSchemaCacheStale(error)) {
+          return shopProductsResponse(res, {
+            product: null,
+            setupRequired: false,
+            schemaCacheStale: true,
+            error: safeShopErrorMessage(error),
+          });
+        }
+        return res.status(500).json({ error: safeShopErrorMessage(error) });
       }
       if (!data) return res.status(404).json({ error: 'Product not found.' });
       const withAssets = await attachProductAssetUrls(supabase, data);
       return res.status(200).json({ ok: true, product: toPublicProduct(withAssets) });
     }
 
-    let query = supabase.from('shop_products').select(PUBLIC_PRODUCT_SELECT).eq('is_published', true).order('sort_order', { ascending: true }).order('created_at', { ascending: false });
-    if (featured) query = query.eq('is_featured', true);
-    if (level) query = query.eq('level', level);
-    if (subject) query = query.eq('subject', subject);
-    if (examBoard) query = query.eq('exam_board', examBoard);
-    if (productType) query = query.eq('product_type', productType);
-    if (productKind) query = query.eq('product_kind', productKind);
-    const { data, error } = await query;
-    if (error) {
-      if (isMissingShopTable(error)) return res.status(200).json({ ok: true, products: [], setupRequired: true });
-      return res.status(500).json({ error: error.message || 'Failed to load products.' });
+    const result = await loadPublishedShopProducts(supabase, {
+      featured,
+      level,
+      subject,
+      examBoard,
+      productType,
+      productKind,
+    });
+
+    if (!result.ok) {
+      const { error } = result;
+      logShopProductsError('list-products', error);
+      if (isMissingShopTable(error)) {
+        return shopProductsResponse(res, { products: [], setupRequired: true });
+      }
+      if (isShopSchemaCacheStale(error)) {
+        return shopProductsResponse(res, {
+          products: [],
+          setupRequired: false,
+          schemaCacheStale: true,
+          error: safeShopErrorMessage(error),
+        });
+      }
+      return res.status(500).json({
+        error: safeShopErrorMessage(error),
+        setupReason: shopSetupReason(error),
+        missingColumn: missingShopColumnName(error),
+      });
     }
-    const filtered = (data || []).filter((product) => matchesShopSearch(product, search));
+
+    const filtered = (result.data || []).filter((product) => matchesShopSearch(product, search));
     const withAssets = await attachProductAssetUrlsToMany(supabase, filtered);
-    return res.status(200).json({ ok: true, products: withAssets.map(toPublicProduct) });
+    return shopProductsResponse(res, {
+      products: withAssets.map(toPublicProduct),
+      setupRequired: false,
+    });
   } catch (err) {
-    return res.status(500).json({ error: err?.message || 'Failed to load shop products.' });
+    logShopProductsError('unexpected', err);
+    return res.status(500).json({ error: safeShopErrorMessage(err) });
   }
 }
 
