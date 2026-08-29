@@ -20,7 +20,7 @@ import {
   updateBasketQuantity,
 } from "./shopBasket";
 import { formatPricePence, productOnSale } from "./shopFormat";
-import { ProductCard } from "./ShopFeaturedSection";
+import { ProductCard, productCardImageHeight } from "./ShopFeaturedSection";
 import { externalButtonLabel, isExternalProduct, productShowsPrice } from "./shopProductHelpers";
 
 const TEAL = "#009688";
@@ -38,6 +38,8 @@ function useShopWidth() {
 }
 
 function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
+  const width = useShopWidth();
+  const imageHeight = Math.min(productCardImageHeight(false, width) + 40, 280);
   const external = isExternalProduct(product);
   const price = product.effective_price_pence ?? product.price_pence;
   const showPrice = productShowsPrice(product);
@@ -57,11 +59,11 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
         ← Back to shop
       </button>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24, alignItems: "start" }}>
-        <div style={{ borderRadius: 18, overflow: "hidden", background: "#f1f5f9", aspectRatio: "4 / 3" }}>
+        <div style={{ borderRadius: 18, overflow: "hidden", background: "#f1f5f9", height: imageHeight, maxHeight: imageHeight }}>
           {(product.preview_url || product.image_url) ? (
-            <img src={product.preview_url || product.image_url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={product.preview_url || product.image_url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           ) : (
-            <div style={{ width: "100%", height: "100%", display: "grid", placeItems: "center", color: "#94a3b8", fontWeight: 700 }}>Preview unavailable</div>
+            <div style={{ width: "100%", height: "100%", display: "grid", placeItems: "center", color: "#94a3b8", fontWeight: 700, background: "linear-gradient(135deg, #ecfeff 0%, #f1f5f9 100%)" }}>Preview unavailable</div>
           )}
         </div>
         <div>
@@ -455,7 +457,7 @@ export default function ShopPage({
                 No products match your filters yet. Check back soon or contact info@jdscience.co.uk.
               </div>
             )}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
+            <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
               {products.map((product) => (
                 <ProductCard
                   key={product.id}

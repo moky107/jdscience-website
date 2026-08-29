@@ -7,6 +7,12 @@ export function normalizeShopProduct(product = {}) {
   };
 }
 
+export function productCardImageHeight(compact = false, viewportWidth = 1200) {
+  const mobile = viewportWidth < 768;
+  if (mobile) return compact ? 160 : 180;
+  return compact ? 180 : 200;
+}
+
 export function isValidExternalUrl(url) {
   return /^https:\/\/.+/i.test(String(url || "").trim());
 }

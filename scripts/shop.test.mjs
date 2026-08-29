@@ -50,6 +50,7 @@ import {
   tutorsForHomepage,
 } from "../src/tutorRotation.js";
 import { pageFromPathname, pathForPage, shopSlugFromPathname } from "../src/seo.js";
+import { productCardImageHeight } from "../src/shopProductHelpers.js";
 
 assert.equal(pageFromPathname("/shop"), "shop");
 assert.equal(pageFromPathname("/shop/"), "shop");
@@ -155,6 +156,11 @@ assert.equal(legacyPublished.external_url, "");
 assert.equal(legacyPublished.external_button_label, "Buy now");
 assert.equal(legacyPublished.opens_external, false);
 assert.equal(legacyPublished.product_kind, "digital");
+
+assert.equal(productCardImageHeight(true, 1200), 180);
+assert.equal(productCardImageHeight(true, 500), 160);
+assert.equal(productCardImageHeight(false, 1200), 200);
+assert.equal(productCardImageHeight(false, 500), 180);
 
 const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
