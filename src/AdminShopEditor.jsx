@@ -63,6 +63,7 @@ export default function AdminShopEditor({ password }) {
   const [message, setMessage] = useState("");
   const [setupRequired, setSetupRequired] = useState(false);
   const [uploadingField, setUploadingField] = useState("");
+  const [uploadStatus, setUploadStatus] = useState("");
 
   async function request(endpoint, payload) {
     const resp = await fetch(endpoint, {
@@ -138,6 +139,7 @@ export default function AdminShopEditor({ password }) {
     if (!file) return null;
     const productId = form.id;
     setUploadingField(field);
+    setUploadStatus(`uploading ${file.name}…`);
     setError("");
     try {
       const data = await request("/api/admin-shop-products", {
@@ -154,12 +156,14 @@ export default function AdminShopEditor({ password }) {
       setForm((current) => ({
         ...current,
         [field]: data.path,
-        ...(field === "image_path" ? { image_url: updated?.image_url || "" } : {}),
+        ...(field === "image_path" ? { image_url: updated?.image_url || data.path || "" } : {}),
         ...(field === "preview_path" ? { preview_url: updated?.preview_url || "" } : {}),
       }));
+      setUploadStatus(`ok → ${data.path}`);
       setMessage(`${field.replace(/_/g, " ")} uploaded.`);
       return data;
     } catch (err) {
+      setUploadStatus(`error: ${err.message || "Upload failed."}`);
       setError(err.message || "Upload failed.");
       throw err;
     } finally {
@@ -318,15 +322,15 @@ export default function AdminShopEditor({ password }) {
         <ShopFileUploadBox
           boxKey={`image-${form.id || "new"}-${form.image_path || "empty"}`}
           label="Product image"
-          dragHint="Click to upload or drag and drop product image"
+          dragHint="Drag and drop a product image here"
           chooseButtonLabel="Choose image file"
           helperText="PNG, JPG or WebP recommended"
-          accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
+          accept="image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp"
           path={form.image_path}
           previewUrl={form.image_url}
           showImagePreview
-          showNativeInput
           showDebug
+          uploadStatus={uploadingField === "image_path" || form.image_path ? uploadStatus : ""}
           uploading={uploadingField === "image_path"}
           disabled={uploadingField === "image_path"}
           validate={isValidProductImageFile}
@@ -335,7 +339,7 @@ export default function AdminShopEditor({ password }) {
         <ShopFileUploadBox
           boxKey={`preview-${form.id || "new"}-${form.preview_path || "empty"}`}
           label="Preview file"
-          dragHint="Click to upload or drag and drop preview file"
+          dragHint="Drag and drop a preview file here"
           chooseButtonLabel="Choose preview file"
           helperText="Optional image or PDF preview for the product page."
           accept=".jpg,.jpeg,.png,.webp,.pdf,image/*,application/pdf"
@@ -351,7 +355,7 @@ export default function AdminShopEditor({ password }) {
           <ShopFileUploadBox
             boxKey={`download-${form.id || "new"}-${form.download_path || "empty"}`}
             label="Download file"
-            dragHint="Click to upload or drag and drop download file"
+            dragHint="Drag and drop a download file here"
             chooseButtonLabel="Choose download file"
             helperText="Digital product file customers receive after purchase."
             accept="*/*"

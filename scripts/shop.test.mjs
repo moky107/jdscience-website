@@ -170,16 +170,17 @@ assert.match(isValidProductImageFile({ type: "application/pdf", name: "cover.pdf
 
 const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
 assert.match(adminSource, /ShopFileUploadBox/, "AdminShopEditor must use ShopFileUploadBox");
-assert.match(adminSource, /Click to upload or drag and drop product image/);
+assert.match(adminSource, /Drag and drop a product image here/);
 assert.match(adminSource, /Choose image file/);
 
 const uploadSource = fs.readFileSync(new URL("../src/AdminShopFileUpload.jsx", import.meta.url), "utf8");
-assert.match(uploadSource, /htmlFor/, "ShopFileUploadBox must use label htmlFor for native file picker");
-assert.match(uploadSource, /showNativeInput/, "ShopFileUploadBox must support visible native file input");
-assert.match(uploadSource, /stableInputId/, "ShopFileUploadBox must use stable ids without React useId colons");
+assert.match(uploadSource, /type="file"/, "ShopFileUploadBox must render a native file input");
+assert.match(uploadSource, /native file picker/, "ShopFileUploadBox must expose a visible native file picker");
 assert.match(uploadSource, /onDragOver/, "ShopFileUploadBox must wire drag-and-drop handlers");
-assert.match(adminSource, /showNativeInput/, "AdminShopEditor must enable visible native product image input");
+assert.doesNotMatch(uploadSource, /inputRef\.current\?\.click|input\.click\(\)/, "Must not rely on programmatic input.click()");
+assert.doesNotMatch(uploadSource, /display:\s*[\"']none[\"']/, "Must not hide file input with display:none");
 assert.match(adminSource, /shop-product-form/, "Shop uploads must sit outside the product form");
+assert.match(adminSource, /showDebug/, "Product image upload must keep temporary debug panel");
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
