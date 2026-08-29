@@ -2472,11 +2472,28 @@ function readAdminRoute() {
   }
 }
 
+function normalizeAdminUrl() {
+  try {
+    if (!readAdminRoute()) return false;
+    if (window.location.pathname === "/" || window.location.pathname === "") return false;
+    const url = new URL(window.location.href);
+    url.pathname = "/";
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function writeAdminRoute(enabled) {
   try {
     const url = new URL(window.location.href);
-    if (enabled) url.searchParams.set("admin", "1");
-    else url.searchParams.delete("admin");
+    if (enabled) {
+      url.pathname = "/";
+      url.searchParams.set("admin", "1");
+    } else {
+      url.searchParams.delete("admin");
+    }
     if (url.hash === "#admin") url.hash = "";
     const next = `${url.pathname}${url.search}${url.hash}` || "/";
     window.history.pushState({}, "", next);
@@ -3204,8 +3221,16 @@ function resolvePapersFilters(query) {
 
 function App() {
   const initialPapers = typeof window === "undefined" ? {} : resolvePapersFilters(parsePapersQuery(window.location.search));
-  const [page, setPage] = useState(() => (typeof window === "undefined" ? "home" : pageFromPathname(window.location.pathname)));
-  const [shopProductSlug, setShopProductSlug] = useState(() => (typeof window === "undefined" ? null : shopSlugFromPathname(window.location.pathname)));
+  const [page, setPage] = useState(() => {
+    if (typeof window === "undefined") return "home";
+    if (normalizeAdminUrl()) return "home";
+    return pageFromPathname(window.location.pathname);
+  });
+  const [shopProductSlug, setShopProductSlug] = useState(() => {
+    if (typeof window === "undefined") return null;
+    if (readAdminRoute()) return null;
+    return shopSlugFromPathname(window.location.pathname);
+  });
   const [shopBasketCount, setShopBasketCount] = useState(() => (typeof window === "undefined" ? 0 : countBasketItems(readBasket())));
   const [shopSuccessSessionId, setShopSuccessSessionId] = useState(null);
   const [pickedSubject, setPickedSubject] = useState(initialPapers.subject || null);
@@ -3237,6 +3262,8 @@ function App() {
   const goAdmin = () => {
     writeAdminRoute(true);
     setAdminRoute(true);
+    setPage("home");
+    setShopProductSlug(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -3260,10 +3287,14 @@ function App() {
     });
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     const onPopState = () => {
+      if (normalizeAdminUrl()) {
+        setShopProductSlug(null);
+        setPage("home");
+      }
       setAdminRoute(readAdminRoute());
       const nextPath = window.location.pathname;
-      setShopProductSlug(shopSlugFromPathname(nextPath));
-      setPage(pageFromPathname(nextPath));
+      setShopProductSlug(readAdminRoute() ? null : shopSlugFromPathname(nextPath));
+      setPage(readAdminRoute() ? "home" : pageFromPathname(nextPath));
     };
     window.addEventListener("popstate", onPopState);
     return () => {

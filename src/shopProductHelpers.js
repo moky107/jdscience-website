@@ -1,13 +1,24 @@
+export function normalizeShopProduct(product = {}) {
+  return {
+    ...product,
+    external_url: product?.external_url || "",
+    external_button_label: product?.external_button_label || "Buy now",
+    opens_external: Boolean(product?.opens_external),
+  };
+}
+
 export function isValidExternalUrl(url) {
   return /^https:\/\/.+/i.test(String(url || "").trim());
 }
 
 export function isExternalProduct(product) {
-  return Boolean(product?.opens_external) && isValidExternalUrl(product?.external_url);
+  const normalized = normalizeShopProduct(product);
+  return normalized.opens_external && isValidExternalUrl(normalized.external_url);
 }
 
 export function externalButtonLabel(product) {
-  const label = String(product?.external_button_label || "").trim();
+  const normalized = normalizeShopProduct(product);
+  const label = String(normalized.external_button_label || "").trim();
   return label || "Buy now";
 }
 

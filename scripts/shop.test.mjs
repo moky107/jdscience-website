@@ -1,3 +1,4 @@
+import fs from "node:fs";
 import assert from "node:assert/strict";
 
 const memory = new Map();
@@ -33,6 +34,7 @@ import {
   externalButtonLabel,
   isExternalProduct,
   isValidExternalUrl as isValidExternalUrlClient,
+  normalizeShopProduct,
 } from "../src/shopProductHelpers.js";
 import {
   featuredTutorWindow,
@@ -124,6 +126,16 @@ const checkoutReady = buildOrderLineItems([digitalProduct], [
 ]);
 assert.equal(checkoutReady.ok, true);
 assert.equal(checkoutReady.lines.length, 1);
+
+const legacyProduct = normalizeShopProduct({ title: "Legacy product" });
+assert.equal(legacyProduct.external_url, "");
+assert.equal(legacyProduct.external_button_label, "Buy now");
+assert.equal(legacyProduct.opens_external, false);
+assert.equal(isExternalProduct({ opens_external: true }), false);
+assert.equal(externalButtonLabel({}), "Buy now");
+
+const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
+assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
   { public_slug: "joseph-danso", tutor_name: "Joseph Danso" },

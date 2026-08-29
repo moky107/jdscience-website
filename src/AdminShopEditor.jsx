@@ -4,11 +4,12 @@ import {
   SHOP_LEVELS,
   SHOP_PRODUCT_KINDS,
   SHOP_PRODUCT_TYPES,
+  SHOP_SUBJECTS,
   shopProductKindLabel,
   shopProductTypeLabel,
 } from "./shopConstants";
 import { formatPricePence } from "./shopFormat";
-import { isExternalProduct } from "./shopProductHelpers";
+import { isExternalProduct, normalizeShopProduct } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -109,16 +110,14 @@ export default function AdminShopEditor({ password }) {
   }
 
   function editProduct(product) {
+    const normalized = normalizeShopProduct(product);
     setForm({
       ...EMPTY_FORM,
-      ...product,
-      price_pence: product.price_pence ?? "",
-      sale_price_pence: product.sale_price_pence ?? "",
-      stock_quantity: product.stock_quantity ?? "",
-      sale_type: product.opens_external ? "external" : "checkout",
-      external_url: product.external_url || "",
-      external_button_label: product.external_button_label || "Buy now",
-      opens_external: Boolean(product.opens_external),
+      ...normalized,
+      price_pence: normalized.price_pence ?? "",
+      sale_price_pence: normalized.sale_price_pence ?? "",
+      stock_quantity: normalized.stock_quantity ?? "",
+      sale_type: normalized.opens_external ? "external" : "checkout",
     });
     setMessage("");
     setError("");
@@ -216,7 +215,7 @@ export default function AdminShopEditor({ password }) {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
           <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
             Product sale type
-            <select value={form.sale_type} onChange={(e) => setField("sale_type", e.target.value)} style={inp}>
+            <select value={form.sale_type || "checkout"} onChange={(e) => setField("sale_type", e.target.value)} style={inp}>
               <option value="checkout">JDScience checkout</option>
               <option value="external">External link</option>
             </select>
