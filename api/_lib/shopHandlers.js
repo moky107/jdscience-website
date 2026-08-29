@@ -121,9 +121,7 @@ async function loadPublishedShopProducts(supabase, filters = {}) {
     const { data: fallbackData, error: fallbackError } = await supabase
       .from('shop_products')
       .select('*')
-      .eq('is_published', true)
-      .order('sort_order', { ascending: true })
-      .order('created_at', { ascending: false });
+      .eq('is_published', true);
     if (!fallbackError) {
       return { ok: true, data: fallbackData || [], error: null, usedFallbackSelect: true };
     }
