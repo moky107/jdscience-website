@@ -1,0 +1,283 @@
+import { parseRequestBody, safeTrim, slugify as baseSlugify } from './tutors.js';
+
+export const SHOP_STORAGE_BUCKET = 'shop-products';
+
+export const SHOP_PRODUCT_TYPES = new Set([
+  'powerpoint',
+  'worksheet',
+  'revision_notes',
+  'practice_questions',
+  'study_pack',
+  'book',
+  'stationery',
+  'clothing',
+  'merchandise',
+]);
+
+export const SHOP_PRODUCT_KINDS = new Set(['digital', 'physical']);
+
+export const PUBLIC_PRODUCT_SELECT = [
+  'id',
+  'slug',
+  'title',
+  'short_description',
+  'description',
+  'price_pence',
+  'sale_price_pence',
+  'product_type',
+  'level',
+  'subject',
+  'exam_board',
+  'product_kind',
+  'stock_quantity',
+  'is_featured',
+  'is_published',
+  'image_path',
+  'preview_path',
+  'keywords',
+  'sort_order',
+  'created_at',
+].join(', ');
+
+export function isMissingShopTable(error) {
+  return /shop_products|shop_orders|schema cache|does not exist/i.test(error?.message || '');
+}
+
+export function slugifyProductTitle(value) {
+  return baseSlugify(value) || 'product';
+}
+
+export function effectivePricePence(product) {
+  const base = Number(product?.price_pence);
+  const sale = product?.sale_price_pence;
+  if (sale != null && sale !== '' && Number(sale) >= 0 && Number(sale) < base) {
+    return Number(sale);
+  }
+  return Number.isFinite(base) ? base : 0;
+}
+
+export function productOnSale(product) {
+  const base = Number(product?.price_pence);
+  const sale = product?.sale_price_pence;
+  return sale != null && sale !== '' && Number(sale) >= 0 && Number(sale) < base;
+}
+
+export async function signedShopAssetUrl(supabase, path, expiresIn = 3600) {
+  const normalized = safeTrim(path, 400);
+  if (!normalized) return null;
+  const { data, error } = await supabase.storage
+    .from(SHOP_STORAGE_BUCKET)
+    .createSignedUrl(normalized, expiresIn);
+  if (error) return null;
+  return data?.signedUrl || null;
+}
+
+export async function attachProductAssetUrls(supabase, product, { includeDownload = false } = {}) {
+  if (!product) return product;
+  const image_url = await signedShopAssetUrl(supabase, product.image_path, 3600);
+  const preview_url = await signedShopAssetUrl(supabase, product.preview_path, 3600);
+  const download_url = includeDownload
+    ? await signedShopAssetUrl(supabase, product.download_path, 3600)
+    : null;
+  return {
+    ...product,
+    effective_price_pence: effectivePricePence(product),
+    on_sale: productOnSale(product),
+    image_url,
+    preview_url,
+    download_url: includeDownload ? download_url : undefined,
+  };
+}
+
+export async function attachProductAssetUrlsToMany(supabase, products, options = {}) {
+  return Promise.all((products || []).map((product) => attachProductAssetUrls(supabase, product, options)));
+}
+
+export function toPublicProduct(product) {
+  if (!product) return null;
+  const {
+    download_path,
+    ...rest
+  } = product;
+  return {
+    ...rest,
+    effective_price_pence: effectivePricePence(product),
+    on_sale: productOnSale(product),
+  };
+}
+
+export function normalizeProductInput(body = {}, { partial = false } = {}) {
+  const title = safeTrim(body.title, 180);
+  const short_description = safeTrim(body.short_description, 400);
+  const description = safeTrim(body.description, 12000);
+  const product_type = safeTrim(body.product_type, 40);
+  const product_kind = safeTrim(body.product_kind, 20) || 'digital';
+  const level = safeTrim(body.level, 40) || null;
+  const subject = safeTrim(body.subject, 80) || null;
+  const exam_board = safeTrim(body.exam_board, 40) || null;
+  const keywords = safeTrim(body.keywords, 400) || null;
+  const image_path = safeTrim(body.image_path, 400) || null;
+  const preview_path = safeTrim(body.preview_path, 400) || null;
+  const download_path = safeTrim(body.download_path, 400) || null;
+  const slug = safeTrim(body.slug, 80) || slugifyProductTitle(title);
+
+  const priceRaw = body.price_pence ?? body.pricePence;
+  const saleRaw = body.sale_price_pence ?? body.salePricePence;
+  const price_pence = priceRaw == null || priceRaw === '' ? null : Math.round(Number(priceRaw));
+  const sale_price_pence = saleRaw == null || saleRaw === '' ? null : Math.round(Number(saleRaw));
+
+  const stockRaw = body.stock_quantity ?? body.stockQuantity;
+  const stock_quantity = stockRaw == null || stockRaw === '' ? null : Math.max(0, Math.round(Number(stockRaw)));
+
+  const is_featured = body.is_featured != null ? Boolean(body.is_featured) : undefined;
+  const is_published = body.is_published != null ? Boolean(body.is_published) : undefined;
+  const sort_order = body.sort_order != null ? Math.round(Number(body.sort_order) || 0) : undefined;
+
+  if (!partial) {
+    if (!title) return { ok: false, error: 'Product title is required.' };
+    if (!Number.isFinite(price_pence) || price_pence < 0) {
+      return { ok: false, error: 'Enter a valid price in pence.' };
+    }
+    if (!SHOP_PRODUCT_TYPES.has(product_type)) {
+      return { ok: false, error: 'Choose a valid product type.' };
+    }
+    if (!SHOP_PRODUCT_KINDS.has(product_kind)) {
+      return { ok: false, error: 'Choose digital or physical.' };
+    }
+    if (product_kind === 'digital' && !download_path) {
+      return { ok: false, error: 'Digital products need a downloadable file path.' };
+    }
+    if (product_kind === 'physical' && stock_quantity == null) {
+      return { ok: false, error: 'Physical products need a stock quantity.' };
+    }
+  }
+
+  const fields = {
+    slug,
+    title,
+    short_description,
+    description,
+    price_pence,
+    sale_price_pence,
+    product_type,
+    product_kind,
+    level,
+    subject,
+    exam_board,
+    keywords,
+    image_path,
+    preview_path,
+    download_path: product_kind === 'physical' ? null : download_path,
+    stock_quantity: product_kind === 'digital' ? null : stock_quantity,
+    updated_at: new Date().toISOString(),
+  };
+
+  if (is_featured !== undefined) fields.is_featured = is_featured;
+  if (is_published !== undefined) fields.is_published = is_published;
+  if (sort_order !== undefined) fields.sort_order = sort_order;
+
+  return { ok: true, fields };
+}
+
+export function parseBasketItems(body) {
+  const parsed = parseRequestBody(body);
+  const items = Array.isArray(parsed?.items) ? parsed.items : [];
+  return items
+    .map((item) => ({
+      product_id: safeTrim(item.product_id || item.productId, 80),
+      quantity: Math.max(1, Math.min(99, Math.round(Number(item.quantity) || 1))),
+    }))
+    .filter((item) => item.product_id);
+}
+
+export async function loadPublishedProductsByIds(supabase, ids) {
+  const uniqueIds = [...new Set(ids.filter(Boolean))];
+  if (!uniqueIds.length) return [];
+  const { data, error } = await supabase
+    .from('shop_products')
+    .select('*')
+    .in('id', uniqueIds)
+    .eq('is_published', true);
+  if (error) throw error;
+  return data || [];
+}
+
+export function buildOrderLineItems(products, basketItems) {
+  const byId = new Map(products.map((product) => [String(product.id), product]));
+  const lines = [];
+  let subtotal = 0;
+  let hasPhysical = false;
+  let hasDigital = false;
+
+  for (const item of basketItems) {
+    const product = byId.get(String(item.product_id));
+    if (!product) {
+      return { ok: false, error: 'One or more products are no longer available.' };
+    }
+    if (product.product_kind === 'physical') {
+      hasPhysical = true;
+      const stock = Number(product.stock_quantity);
+      if (!Number.isFinite(stock) || stock < item.quantity) {
+        return { ok: false, error: `${product.title} is out of stock.` };
+      }
+    } else {
+      hasDigital = true;
+      if (!product.download_path) {
+        return { ok: false, error: `${product.title} is missing its download file.` };
+      }
+    }
+    const unitPrice = effectivePricePence(product);
+    subtotal += unitPrice * item.quantity;
+    lines.push({
+      product_id: product.id,
+      slug: product.slug,
+      title: product.title,
+      quantity: item.quantity,
+      unit_price_pence: unitPrice,
+      line_total_pence: unitPrice * item.quantity,
+      product_kind: product.product_kind,
+      product_type: product.product_type,
+      is_digital: product.product_kind === 'digital',
+    });
+  }
+
+  if (!lines.length) {
+    return { ok: false, error: 'Your basket is empty.' };
+  }
+
+  return {
+    ok: true,
+    lines,
+    subtotal_pence: subtotal,
+    total_pence: subtotal,
+    has_physical: hasPhysical,
+    has_digital: hasDigital,
+  };
+}
+
+export function safeEqual(a, b) {
+  const sa = String(a || '');
+  const sb = String(b || '');
+  if (sa.length !== sb.length) return false;
+  let diff = 0;
+  for (let i = 0; i < sa.length; i += 1) diff |= sa.charCodeAt(i) ^ sb.charCodeAt(i);
+  return diff === 0;
+}
+
+export function matchesShopSearch(product, query) {
+  const q = safeTrim(query, 120).toLowerCase();
+  if (!q) return true;
+  const haystack = [
+    product.title,
+    product.short_description,
+    product.subject,
+    product.level,
+    product.exam_board,
+    product.keywords,
+    product.product_type,
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+  return haystack.includes(q);
+}

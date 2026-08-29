@@ -186,3 +186,108 @@ export async function sendBookingNotification(booking = {}) {
 export async function sendTutorApplicationNotification(application = {}) {
   return sendOwnerEmail(tutorApplicationNotificationContent(application));
 }
+
+export function shopOrderNotificationContent(order = {}) {
+  const when = new Date().toLocaleString("en-GB", { timeZone: "Europe/London" });
+  const items = Array.isArray(order.items) ? order.items : [];
+  const itemLines = items
+    .map((item) => `${item.quantity} × ${item.title} (${item.is_digital ? "Digital" : "Physical"}) — £${((item.line_total_pence || 0) / 100).toFixed(2)}`)
+    .join("<br>");
+
+  const subjectLine = `New shop order: ${order.customer_name || order.customer_email || "Customer"} — £${Number(order.amount || 0).toFixed(2)}`;
+
+  const html = `
+  <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto;">
+    <div style="background:linear-gradient(135deg,#004d40,#009688);color:#fff;padding:18px 20px;border-radius:12px 12px 0 0;">
+      <h2 style="margin:0;font-size:18px;">New JD Science shop order</h2>
+      <p style="margin:4px 0 0;opacity:.9;font-size:13px;">Payment received via Stripe Checkout</p>
+    </div>
+    <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #eef2f7;border-top:none;border-radius:0 0 12px 12px;overflow:hidden;font-size:14px;">
+      ${ownerNotificationRows([
+        ["Customer", order.customer_name],
+        ["Email", order.customer_email],
+        ["Items", itemLines || "—"],
+        ["Subtotal", `£${((order.subtotal_pence || 0) / 100).toFixed(2)}`],
+        ["Total paid", `£${Number(order.amount || 0).toFixed(2)}`],
+        ["Includes digital", order.has_digital ? "Yes" : "No"],
+        ["Includes physical", order.has_physical ? "Yes" : "No"],
+        ["Delivery name", order.shipping_name],
+        ["Address", [order.shipping_line1, order.shipping_line2, order.shipping_city, order.shipping_postcode, order.shipping_country].filter(Boolean).join(", ") || "—"],
+        ["Phone", order.shipping_phone],
+        ["Received", when],
+      ])}
+    </table>
+    <p style="color:#94a3b8;font-size:12px;margin-top:12px;text-align:center;">Sent automatically from jdscience.co.uk</p>
+  </div>`;
+
+  return {
+    subject: subjectLine,
+    html,
+    replyTo: order.customer_email || undefined,
+  };
+}
+
+export function shopCustomerReceiptContent(order = {}) {
+  const items = Array.isArray(order.items) ? order.items : [];
+  const itemLines = items
+    .map((item) => `<li style="margin-bottom:6px;">${item.quantity} × ${escapeHtml(item.title)} — £${((item.line_total_pence || 0) / 100).toFixed(2)} <span style="color:#64748b;">(${item.is_digital ? "Digital download" : "Physical delivery"})</span></li>`)
+    .join("");
+
+  const html = `
+  <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto;">
+    <div style="background:linear-gradient(135deg,#004d40,#009688);color:#fff;padding:18px 20px;border-radius:12px 12px 0 0;">
+      <h2 style="margin:0;font-size:18px;">Thank you for your order</h2>
+      <p style="margin:4px 0 0;opacity:.9;font-size:13px;">JD Science order confirmation</p>
+    </div>
+    <div style="background:#fff;border:1px solid #eef2f7;border-top:none;border-radius:0 0 12px 12px;padding:18px 20px;color:#334155;font-size:14px;line-height:1.6;">
+      <p style="margin-top:0;">Hi ${escapeHtml(order.customer_name || "there")},</p>
+      <p>We have received your payment of <strong>£${Number(order.amount || 0).toFixed(2)}</strong>.</p>
+      <ul style="padding-left:18px;">${itemLines}</ul>
+      ${order.has_digital ? "<p>Return to <a href=\"https://www.jdscience.co.uk/shop\">jdscience.co.uk/shop</a> and use your email address to download your digital products securely.</p>" : ""}
+      ${order.has_physical ? "<p>We will dispatch your physical items to the delivery address provided at checkout.</p>" : ""}
+      <p style="margin-bottom:0;">Questions? Reply to this email or contact <a href=\"mailto:info@jdscience.co.uk\">info@jdscience.co.uk</a>.</p>
+    </div>
+  </div>`;
+
+  return {
+    subject: `Your JD Science order confirmation — £${Number(order.amount || 0).toFixed(2)}`,
+    html,
+  };
+}
+
+export async function sendShopOrderNotifications(order = {}) {
+  await sendOwnerEmail(shopOrderNotificationContent(order));
+  if (!order.customer_email) return { sent: false, reason: "no_customer_email" };
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.NOTIFY_FROM || "JD Science <onboarding@resend.dev>";
+  const receipt = shopCustomerReceiptContent(order);
+  if (!apiKey) {
+    console.warn("RESEND_API_KEY not set — skipping customer receipt email.");
+    return { sent: false, reason: "no_api_key" };
+  }
+
+  try {
+    const resp = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from,
+        to: order.customer_email,
+        subject: receipt.subject,
+        html: receipt.html,
+      }),
+    });
+    if (!resp.ok) {
+      const detail = await resp.text().catch(() => "");
+      console.warn("Customer receipt email failed:", resp.status, detail);
+    }
+  } catch (err) {
+    console.warn("Customer receipt email error:", err?.message || err);
+  }
+
+  return { sent: true };
+}
