@@ -602,15 +602,34 @@ function Hero({ onScroll, onBrowse, onShop }) {
   const isMobile = useIsMobile();
   const isTablet = useIsMobile(1024);
   const heroOffset = isMobile ? 0 : isTablet ? -18 : -36;
+  const heroGreen = "#0f766e";
+  const heroGreenHover = "#0d9488";
   const ctaBaseStyle = {
     padding: isMobile ? "14px 18px" : "15px 24px",
     borderRadius: 12,
     cursor: "pointer",
     fontWeight: 800,
-    fontSize: isMobile ? 16 : 16,
-    boxShadow: "0 10px 24px rgba(15, 23, 42, .16)",
+    fontSize: 16,
+    border: `1px solid ${heroGreen}`,
+    background: heroGreen,
+    color: "#ffffff",
+    textDecoration: "none",
+    textShadow: "none",
+    boxShadow: "0 10px 24px rgba(15, 23, 42, .22)",
     transition: "transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease",
     outlineOffset: 3,
+  };
+  const applyCtaHover = (el) => {
+    el.style.transform = "translateY(-1px)";
+    el.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .28)";
+    el.style.background = heroGreenHover;
+    el.style.borderColor = heroGreenHover;
+  };
+  const resetCtaHover = (el) => {
+    el.style.transform = "translateY(0)";
+    el.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .22)";
+    el.style.background = heroGreen;
+    el.style.borderColor = heroGreen;
   };
   return (
     <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
@@ -629,55 +648,27 @@ function Hero({ onScroll, onBrowse, onShop }) {
           <a
             href="/papers"
             onClick={(e) => { e.preventDefault(); onBrowse(); }}
-            style={{ ...ctaBaseStyle, border: "none", background: "#fff", color: TEAL_DARK, textDecoration: "none" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-1px)";
-              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .2)";
-              e.currentTarget.style.background = "#f8fafc";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
-              e.currentTarget.style.background = "#fff";
-            }}
+            style={ctaBaseStyle}
+            onMouseEnter={(e) => applyCtaHover(e.currentTarget)}
+            onMouseLeave={(e) => resetCtaHover(e.currentTarget)}
           >
             Browse Resources
           </a>
           <a
             href="/shop"
             onClick={(e) => { e.preventDefault(); onShop(); }}
-            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff", textDecoration: "none" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-1px)";
-              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .22)";
-              e.currentTarget.style.background = "rgba(255,255,255,.14)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,.92)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
-              e.currentTarget.style.background = "rgba(255,255,255,.08)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,.76)";
-            }}
+            style={ctaBaseStyle}
+            onMouseEnter={(e) => applyCtaHover(e.currentTarget)}
+            onMouseLeave={(e) => resetCtaHover(e.currentTarget)}
           >
             Visit the Shop
           </a>
           <a
             href="/#book-anchor"
             onClick={(e) => { e.preventDefault(); onScroll("book"); }}
-            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff", textDecoration: "none" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-1px)";
-              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .22)";
-              e.currentTarget.style.background = "rgba(255,255,255,.14)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,.92)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
-              e.currentTarget.style.background = "rgba(255,255,255,.08)";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,.76)";
-            }}
+            style={ctaBaseStyle}
+            onMouseEnter={(e) => applyCtaHover(e.currentTarget)}
+            onMouseLeave={(e) => resetCtaHover(e.currentTarget)}
           >
             Book a Tutor
           </a>

@@ -464,7 +464,6 @@ export default function ShopPage({
                   product={product}
                   onView={() => onOpenProduct(product.slug)}
                   onAdd={(item) => handleAdd(item, false)}
-                  onBuyNow={(item) => handleAdd(item, true)}
                 />
               ))}
             </div>
