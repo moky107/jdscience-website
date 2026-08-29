@@ -306,8 +306,9 @@ export default function AdminShopEditor({ password }) {
             boxKey={`image-${form.id || "new"}-${form.image_path || "empty"}`}
             label="Product image"
             dragHint="Click to upload or drag and drop product image"
-            helperText="PNG, JPG or WebP recommended. This image appears on the shop and homepage."
-            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+            chooseButtonLabel="Choose image file"
+            helperText="PNG, JPG or WebP recommended"
+            accept="image/png,image/jpeg,image/jpg,image/webp,.png,.jpg,.jpeg,.webp"
             path={form.image_path}
             previewUrl={form.image_url}
             showImagePreview
@@ -320,6 +321,7 @@ export default function AdminShopEditor({ password }) {
             boxKey={`preview-${form.id || "new"}-${form.preview_path || "empty"}`}
             label="Preview file"
             dragHint="Click to upload or drag and drop preview file"
+            chooseButtonLabel="Choose preview file"
             helperText="Optional image or PDF preview for the product page."
             accept=".jpg,.jpeg,.png,.webp,.pdf,image/*,application/pdf"
             path={form.preview_path}
@@ -335,6 +337,7 @@ export default function AdminShopEditor({ password }) {
               boxKey={`download-${form.id || "new"}-${form.download_path || "empty"}`}
               label="Download file"
               dragHint="Click to upload or drag and drop download file"
+              chooseButtonLabel="Choose download file"
               helperText="Digital product file customers receive after purchase."
               accept="*/*"
               path={form.download_path}

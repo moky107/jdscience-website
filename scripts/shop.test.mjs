@@ -171,6 +171,12 @@ assert.match(isValidProductImageFile({ type: "application/pdf", name: "cover.pdf
 const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
 assert.match(adminSource, /ShopFileUploadBox/, "AdminShopEditor must use ShopFileUploadBox");
 assert.match(adminSource, /Click to upload or drag and drop product image/);
+assert.match(adminSource, /Choose image file/);
+
+const uploadSource = fs.readFileSync(new URL("../src/AdminShopFileUpload.jsx", import.meta.url), "utf8");
+assert.match(uploadSource, /htmlFor/, "ShopFileUploadBox must use label htmlFor for native file picker");
+assert.match(uploadSource, /type="button"/, "ShopFileUploadBox must include explicit choose button");
+assert.match(uploadSource, /onDragOver/, "ShopFileUploadBox must wire drag-and-drop handlers");
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
