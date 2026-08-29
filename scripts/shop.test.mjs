@@ -175,8 +175,11 @@ assert.match(adminSource, /Choose image file/);
 
 const uploadSource = fs.readFileSync(new URL("../src/AdminShopFileUpload.jsx", import.meta.url), "utf8");
 assert.match(uploadSource, /htmlFor/, "ShopFileUploadBox must use label htmlFor for native file picker");
-assert.match(uploadSource, /type="button"/, "ShopFileUploadBox must include explicit choose button");
+assert.match(uploadSource, /showNativeInput/, "ShopFileUploadBox must support visible native file input");
+assert.match(uploadSource, /stableInputId/, "ShopFileUploadBox must use stable ids without React useId colons");
 assert.match(uploadSource, /onDragOver/, "ShopFileUploadBox must wire drag-and-drop handlers");
+assert.match(adminSource, /showNativeInput/, "AdminShopEditor must enable visible native product image input");
+assert.match(adminSource, /shop-product-form/, "Shop uploads must sit outside the product form");
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
