@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 import { productFields, unit1AssetPaths } from "../api/_lib/publishUnit1SpecialiseCells.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ppt = path.join(root, "content/shop/Unit 1 specialise cells.pptx");
+const ppt = path.join(root, "content/shop/unit-1-specialise-cells/unit-1-specialise-cells.pptx");
 const cover = path.join(root, "content/shop/unit-1-specialise-cells/cover.png");
 
 await access(ppt);
@@ -25,6 +25,6 @@ assert.equal(fields.product_type, "powerpoint");
 assert.equal(fields.product_kind, "digital");
 assert.equal(fields.is_published, true);
 assert.equal(fields.slug, "unit-1-specialise-cells");
-assert.match(path.basename(ppt), /^Unit 1 specialise cells\.pptx$/);
+assert.match(path.basename(assets.ppt), /unit-1-specialise-cells\.pptx$/i);
 
 console.log("unit 1 specialise cells shop payload ok");
