@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { hasAwardingBodyUrl, looksLikeOfficialPaper, tidyDownloadFilename } from './_lib/resourceNormalize.js';
+import { handleShopPublicRequest, wantsShopPublicRequest } from './_lib/shopHandlers.js';
 
 function resourceSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -80,6 +81,7 @@ async function sendResourceFile(req, res) {
 }
 
 export default async function handler(req, res) {
+  if (wantsShopPublicRequest(req)) return handleShopPublicRequest(req, res);
   if (wantsResourceFile(req)) return sendResourceFile(req, res);
 
   if (req.method !== 'GET') {

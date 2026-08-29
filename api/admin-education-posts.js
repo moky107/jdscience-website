@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { handleShopAdminRequest, wantsShopAdminRequest } from './_lib/shopHandlers.js';
 import { parseRequestBody, safeTrim } from './_lib/tutors.js';
 
 const CATEGORIES = new Set(['revision-advice', 'exam-tips', 'education-news']);
@@ -71,6 +72,10 @@ export default async function handler(req, res) {
   const supabase = createClient(supabaseUrl, serviceRoleKey);
 
   try {
+    if (wantsShopAdminRequest(req, body)) {
+      return handleShopAdminRequest(req, res, body, supabase);
+    }
+
     if (action === 'list') {
       const { data, error } = await supabase
         .from('education_posts')

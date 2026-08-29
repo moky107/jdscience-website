@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { featuredTutorWindow, shouldRotateTutorProfiles, tutorsForHomepage } from "../src/tutorRotation.js";
+import { featuredTutorWindow, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "../src/tutorRotation.js";
 import { HAS_ACCOUNT_KEY, isResourceLibraryPage, markHasAccount, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED } from "../src/visitorAuth.js";
 import { withResourceGate } from "./seo/inject-resource-gate.mjs";
 
@@ -30,6 +30,8 @@ const homepage = tutorsForHomepage(tutors);
 assert.deepEqual(homepage.map((item) => item.public_slug), ["amina-khan", "sam-reed", "lee-okonkwo", "priya-shah"]);
 assert.equal(shouldRotateTutorProfiles(tutors, 3), true);
 assert.equal(shouldRotateTutorProfiles(homepage.slice(0, 3), 3), false);
+assert.equal(tutorCarouselPageCount(homepage, 3), homepage.length);
+assert.equal(tutorCarouselPageIndex(1, homepage.length), 1);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 0).map((item) => item.public_slug), ["amina-khan", "sam-reed", "lee-okonkwo"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["sam-reed", "lee-okonkwo", "priya-shah"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 3).map((item) => item.public_slug), ["priya-shah", "amina-khan", "sam-reed"]);

@@ -1,0 +1,136 @@
+import React, { useEffect, useState } from "react";
+import { formatPricePence, productOnSale } from "./shopFormat";
+import { shopProductKindLabel, shopProductTypeLabel } from "./shopConstants";
+
+const TEAL = "#009688";
+const TEAL_DARK = "#004d40";
+
+function ProductMeta({ product }) {
+  const chips = [
+    product.level,
+    product.subject,
+    product.exam_board,
+    shopProductTypeLabel(product.product_type),
+    shopProductKindLabel(product.product_kind),
+  ].filter(Boolean);
+  if (!chips.length) return null;
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+      {chips.map((chip) => (
+        <span key={chip} style={{ padding: "4px 8px", borderRadius: 999, background: "#ecfeff", color: TEAL_DARK, fontSize: 12, fontWeight: 700 }}>
+          {chip}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export function ProductCard({ product, onView, onAdd, onBuyNow, compact = false }) {
+  const price = product.effective_price_pence ?? product.price_pence;
+  return (
+    <article style={{ background: "#fff", borderRadius: 16, overflow: "hidden", boxShadow: "0 8px 24px rgba(15,23,42,.08)", display: "flex", flexDirection: "column", height: "100%" }}>
+      <div style={{ aspectRatio: "4 / 3", background: "#f1f5f9", position: "relative" }}>
+        {product.image_url ? (
+          <img src={product.image_url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        ) : (
+          <div style={{ width: "100%", height: "100%", display: "grid", placeItems: "center", color: "#94a3b8", fontWeight: 700 }}>JD Science</div>
+        )}
+        {product.is_featured && (
+          <span style={{ position: "absolute", top: 10, left: 10, background: "#fbbf24", color: "#78350f", fontSize: 11, fontWeight: 800, padding: "4px 8px", borderRadius: 999 }}>Featured</span>
+        )}
+      </div>
+      <div style={{ padding: compact ? 16 : 18, display: "flex", flexDirection: "column", gap: 10, flex: 1 }}>
+        <h3 style={{ margin: 0, color: "#0f172a", fontSize: compact ? 17 : 18, lineHeight: 1.3 }}>{product.title}</h3>
+        {product.short_description && (
+          <p style={{ margin: 0, color: "#64748b", fontSize: 14, lineHeight: 1.55, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+            {product.short_description}
+          </p>
+        )}
+        <ProductMeta product={product} />
+        <div style={{ marginTop: "auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>
+            {formatPricePence(price)}
+            {productOnSale(product) && product.price_pence != null && (
+              <span style={{ marginLeft: 8, color: "#94a3b8", textDecoration: "line-through", fontSize: 14, fontWeight: 600 }}>
+                {formatPricePence(product.price_pence)}
+              </span>
+            )}
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <button type="button" onClick={() => onView(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: `1px solid rgba(0,150,136,.22)`, background: "#fff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
+            View Product
+          </button>
+          <button type="button" onClick={() => onAdd(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+            Add to Basket
+          </button>
+        </div>
+        {onBuyNow && (
+          <button type="button" onClick={() => onBuyNow(product)} style={{ width: "100%", minHeight: 48, borderRadius: 10, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
+            Buy Now
+          </button>
+        )}
+      </div>
+    </article>
+  );
+}
+
+export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddToBasket }) {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      setLoading(true);
+      try {
+        const resp = await fetch("/api/shop-products?featured=1");
+        const data = await resp.json().catch(() => ({}));
+        if (!cancelled) setProducts((data.products || []).slice(0, 3));
+      } catch {
+        if (!cancelled) setProducts([]);
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
+  return (
+    <section style={{ padding: "48px 20px", background: "#fff" }}>
+      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "end", marginBottom: 22 }}>
+          <div>
+            <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Shop</div>
+            <h2 style={{ color: "#0f172a", fontSize: 28, margin: "8px 0 0" }}>Shop Educational Resources</h2>
+            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680, lineHeight: 1.6 }}>
+              Explore high-quality revision materials, teaching resources and JDScience products.
+            </p>
+          </div>
+          <button type="button" onClick={onVisitShop} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+            Visit the Shop
+          </button>
+        </div>
+        {loading ? (
+          <div style={{ color: "#64748b" }}>Loading featured products…</div>
+        ) : products.length === 0 ? (
+          <div style={{ borderRadius: 16, padding: 24, background: "#f8fafc", color: "#64748b" }}>
+            Featured shop products will appear here once published by the administrator.
+          </div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                compact
+                onView={onViewProduct}
+                onAdd={onAddToBasket}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}

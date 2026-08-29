@@ -1,0 +1,318 @@
+import React, { useEffect, useState } from "react";
+import {
+  SHOP_EXAM_BOARDS,
+  SHOP_LEVELS,
+  SHOP_PRODUCT_KINDS,
+  SHOP_PRODUCT_TYPES,
+  shopProductKindLabel,
+  shopProductTypeLabel,
+} from "./shopConstants";
+import { formatPricePence } from "./shopFormat";
+
+const TEAL = "#009688";
+const TEAL_DARK = "#004d40";
+const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
+
+const EMPTY_FORM = {
+  id: null,
+  title: "",
+  slug: "",
+  short_description: "",
+  description: "",
+  price_pence: "",
+  sale_price_pence: "",
+  product_type: "revision_notes",
+  product_kind: "digital",
+  level: "",
+  subject: "",
+  exam_board: "",
+  keywords: "",
+  stock_quantity: "",
+  is_featured: false,
+  is_published: false,
+  sort_order: 0,
+  image_path: "",
+  preview_path: "",
+  download_path: "",
+};
+
+async function fileToBase64(file) {
+  const buffer = await file.arrayBuffer();
+  let binary = "";
+  const bytes = new Uint8Array(buffer);
+  bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+  return btoa(binary);
+}
+
+export default function AdminShopEditor({ password }) {
+  const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([]);
+  const [form, setForm] = useState(EMPTY_FORM);
+  const [loading, setLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [setupRequired, setSetupRequired] = useState(false);
+
+  async function request(endpoint, payload) {
+    const resp = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password, ...payload }),
+    });
+    const data = await resp.json().catch(() => ({}));
+    if (!resp.ok) {
+      const err = new Error(data?.error || "Request failed");
+      err.setupRequired = Boolean(data?.setupRequired);
+      throw err;
+    }
+    return data;
+  }
+
+  async function load() {
+    setLoading(true);
+    setError("");
+    try {
+      const [productData, orderData] = await Promise.all([
+        request("/api/admin-shop-products", { action: "shop-list" }),
+        request("/api/admin-shop-orders", { action: "shop-orders" }),
+      ]);
+      setProducts(productData.products || []);
+      setOrders(orderData.orders || []);
+      setSetupRequired(Boolean(productData.setupRequired || orderData.setupRequired));
+    } catch (err) {
+      setError(err.message || "Failed to load shop data.");
+      setSetupRequired(Boolean(err.setupRequired));
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    if (password) load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [password]);
+
+  function setField(key, value) {
+    setForm((current) => ({ ...current, [key]: value }));
+  }
+
+  function editProduct(product) {
+    setForm({
+      ...EMPTY_FORM,
+      ...product,
+      price_pence: product.price_pence ?? "",
+      sale_price_pence: product.sale_price_pence ?? "",
+      stock_quantity: product.stock_quantity ?? "",
+    });
+    setMessage("");
+    setError("");
+  }
+
+  async function uploadFile(file, folder, field) {
+    if (!file) return;
+    setSaving(true);
+    setError("");
+    try {
+      const data = await request("/api/admin-shop-products", {
+        action: "shop-upload",
+        folder,
+        filename: file.name,
+        contentType: file.type,
+        base64: await fileToBase64(file),
+      });
+      setField(field, data.path);
+      setMessage(`${field.replace("_", " ")} uploaded.`);
+    } catch (err) {
+      setError(err.message || "Upload failed.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function save(e) {
+    e.preventDefault();
+    setSaving(true);
+    setError("");
+    setMessage("");
+    try {
+      const action = form.id ? "shop-update" : "shop-create";
+      await request("/api/admin-shop-products", {
+        action,
+        id: form.id,
+        product: form,
+      });
+      setForm(EMPTY_FORM);
+      setMessage(form.id ? "Product updated." : "Product created.");
+      await load();
+    } catch (err) {
+      setError(err.message || "Failed to save product.");
+      setSetupRequired(Boolean(err.setupRequired));
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function removeProduct(id) {
+    if (!window.confirm("Delete this product permanently?")) return;
+    setSaving(true);
+    setError("");
+    try {
+      await request("/api/admin-shop-products", { action: "shop-delete", id });
+      if (form.id === id) setForm(EMPTY_FORM);
+      setMessage("Product deleted.");
+      await load();
+    } catch (err) {
+      setError(err.message || "Failed to delete product.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div style={{ marginTop: 28, background: "#fff", borderRadius: 12, padding: 18, boxShadow: "0 4px 14px rgba(0,0,0,.05)" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+        <div>
+          <h2 style={{ margin: 0, color: "#0f172a" }}>Shop management</h2>
+          <p style={{ margin: "6px 0 0", color: "#64748b" }}>Add products, upload files, manage stock and review orders.</p>
+        </div>
+        <button type="button" onClick={load} disabled={loading} style={{ padding: "10px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>
+          {loading ? "Refreshing…" : "Refresh shop"}
+        </button>
+      </div>
+
+      {setupRequired && (
+        <div style={{ marginTop: 12, padding: 12, borderRadius: 8, background: "#fff7ed", color: "#9a3412" }}>
+          Run <code>supabase/migrations/20260829_shop.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
+        </div>
+      )}
+      {error && <div style={{ marginTop: 12, color: "#b91c1c" }}>{error}</div>}
+      {message && <div style={{ marginTop: 12, color: "#047857" }}>{message}</div>}
+
+      <form onSubmit={save} style={{ display: "grid", gap: 12, marginTop: 18 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+          <input required placeholder="Product title" value={form.title} onChange={(e) => setField("title", e.target.value)} style={inp} />
+          <input placeholder="Slug (optional)" value={form.slug} onChange={(e) => setField("slug", e.target.value)} style={inp} />
+          <input required type="number" min="0" placeholder="Price (pence)" value={form.price_pence} onChange={(e) => setField("price_pence", e.target.value)} style={inp} />
+          <input type="number" min="0" placeholder="Sale price (pence, optional)" value={form.sale_price_pence} onChange={(e) => setField("sale_price_pence", e.target.value)} style={inp} />
+        </div>
+        <textarea required rows={2} placeholder="Short description" value={form.short_description} onChange={(e) => setField("short_description", e.target.value)} style={inp} />
+        <textarea rows={5} placeholder="Full description" value={form.description} onChange={(e) => setField("description", e.target.value)} style={inp} />
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
+          <select value={form.product_type} onChange={(e) => setField("product_type", e.target.value)} style={inp}>
+            {SHOP_PRODUCT_TYPES.map((type) => <option key={type.value} value={type.value}>{type.label}</option>)}
+          </select>
+          <select value={form.product_kind} onChange={(e) => setField("product_kind", e.target.value)} style={inp}>
+            {SHOP_PRODUCT_KINDS.map((kind) => <option key={kind.value} value={kind.value}>{kind.label}</option>)}
+          </select>
+          <select value={form.level} onChange={(e) => setField("level", e.target.value)} style={inp}>
+            <option value="">Level (optional)</option>
+            {SHOP_LEVELS.map((level) => <option key={level} value={level}>{level}</option>)}
+          </select>
+          <select value={form.subject} onChange={(e) => setField("subject", e.target.value)} style={inp}>
+            <option value="">Subject (optional)</option>
+            {SHOP_SUBJECTS.map((subject) => <option key={subject} value={subject}>{subject}</option>)}
+          </select>
+          <select value={form.exam_board} onChange={(e) => setField("exam_board", e.target.value)} style={inp}>
+            <option value="">Exam board (optional)</option>
+            {SHOP_EXAM_BOARDS.map((board) => <option key={board} value={board}>{board}</option>)}
+          </select>
+          {form.product_kind === "physical" ? (
+            <input required type="number" min="0" placeholder="Stock quantity" value={form.stock_quantity} onChange={(e) => setField("stock_quantity", e.target.value)} style={inp} />
+          ) : (
+            <input placeholder="Keywords (optional)" value={form.keywords} onChange={(e) => setField("keywords", e.target.value)} style={inp} />
+          )}
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+          <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
+            Product image
+            <input type="file" accept="image/*" onChange={(e) => uploadFile(e.target.files?.[0], "images", "image_path")} />
+            {form.image_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.image_path}</span>}
+          </label>
+          <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
+            Preview file
+            <input type="file" accept="image/*,.pdf" onChange={(e) => uploadFile(e.target.files?.[0], "previews", "preview_path")} />
+            {form.preview_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.preview_path}</span>}
+          </label>
+          {form.product_kind === "digital" && (
+            <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
+              Download file
+              <input type="file" onChange={(e) => uploadFile(e.target.files?.[0], "downloads", "download_path")} />
+              {form.download_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.download_path}</span>}
+            </label>
+          )}
+        </div>
+        <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <input type="checkbox" checked={form.is_featured} onChange={(e) => setField("is_featured", e.target.checked)} />
+            Featured
+          </label>
+          <label style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <input type="checkbox" checked={form.is_published} onChange={(e) => setField("is_published", e.target.checked)} />
+            Published
+          </label>
+          <input type="number" placeholder="Sort order" value={form.sort_order} onChange={(e) => setField("sort_order", e.target.value)} style={{ ...inp, width: 140 }} />
+        </div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          <button type="submit" disabled={saving} style={{ padding: "12px 16px", borderRadius: 8, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", fontWeight: 800, cursor: saving ? "default" : "pointer" }}>
+            {saving ? "Saving…" : form.id ? "Update product" : "Add product"}
+          </button>
+          {form.id && (
+            <button type="button" onClick={() => setForm(EMPTY_FORM)} style={{ padding: "12px 16px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>
+              Clear form
+            </button>
+          )}
+        </div>
+      </form>
+
+      <div style={{ marginTop: 24 }}>
+        <h3 style={{ margin: "0 0 12px", color: "#0f172a" }}>Products ({products.length})</h3>
+        <div style={{ display: "grid", gap: 10 }}>
+          {products.map((product) => (
+            <div key={product.id} style={{ border: "1px solid #e2e8f0", borderRadius: 10, padding: 12, display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+              <div>
+                <div style={{ fontWeight: 800, color: "#0f172a" }}>{product.title}</div>
+                <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>
+                  {formatPricePence(product.effective_price_pence ?? product.price_pence)} · {shopProductTypeLabel(product.product_type)} · {shopProductKindLabel(product.product_kind)}
+                  {product.is_published ? " · Published" : " · Draft"}
+                  {product.is_featured ? " · Featured" : ""}
+                </div>
+              </div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button type="button" onClick={() => editProduct(product)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #cbd5e1", background: "#fff", cursor: "pointer", fontWeight: 700 }}>Edit</button>
+                <button type="button" onClick={() => removeProduct(product.id)} style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #fecaca", background: "#fff", color: "#b91c1c", cursor: "pointer", fontWeight: 700 }}>Delete</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{ marginTop: 24 }}>
+        <h3 style={{ margin: "0 0 12px", color: "#0f172a" }}>Recent orders ({orders.length})</h3>
+        <div style={{ overflow: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 720 }}>
+            <thead>
+              <tr>
+                {["Date", "Customer", "Email", "Total", "Payment", "Items"].map((label) => (
+                  <th key={label} style={{ textAlign: "left", padding: "8px 10px", fontSize: 12, color: "#64748b", borderBottom: "2px solid #e2e8f0" }}>{label}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {orders.map((order) => (
+                <tr key={order.id}>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{new Date(order.created_at).toLocaleString("en-GB")}</td>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{order.customer_name || "—"}</td>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{order.customer_email}</td>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{formatPricePence(order.total_pence)}</td>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{order.payment_status}</td>
+                  <td style={{ padding: "10px", borderBottom: "1px solid #eef2f7", fontSize: 13 }}>{Array.isArray(order.items) ? order.items.map((item) => item.title).join(", ") : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}

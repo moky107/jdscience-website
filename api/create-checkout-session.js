@@ -1,5 +1,7 @@
 import Stripe from 'stripe';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './_lib/requireTerms.js';
+import { handleShopCheckoutRequest, isShopCheckoutRequest } from './_lib/shopHandlers.js';
+import { parseRequestBody } from './_lib/tutors.js';
 
 /**
  * Vercel serverless function: create a Stripe Checkout session.
@@ -40,6 +42,15 @@ export default async function handler(req, res) {
     }
   }
   body = body || {};
+
+  if (isShopCheckoutRequest(req, body)) {
+    try {
+      return await handleShopCheckoutRequest(req, res, body);
+    } catch (err) {
+      console.error('Shop checkout session creation failed:', err?.message || err);
+      return res.status(500).json({ error: err?.message || 'Failed to create checkout session' });
+    }
+  }
 
   const { name, email, phone, level, subject, sessionType, message } = body;
 

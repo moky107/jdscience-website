@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
-import { sendBookingNotification } from './_lib/notify.js';
+import { sendBookingNotification, sendShopOrderNotifications } from './_lib/notify.js';
+import { isMissingShopTable } from './_lib/shop.js';
 
 /**
  * Vercel serverless function: Stripe webhook handler.
@@ -75,6 +76,67 @@ export default async function handler(req, res) {
         console.error(
           'Cannot record booking — missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY.'
         );
+      } else if (meta.order_type === 'shop') {
+        const supabase = createClient(supabaseUrl, serviceRoleKey);
+        let items = [];
+        try {
+          items = JSON.parse(meta.items_json || '[]');
+        } catch {
+          items = [];
+        }
+
+        const shipping = session.shipping_details || session.customer_details || {};
+        const shippingAddress = shipping.address || {};
+
+        const orderRow = {
+          stripe_session_id: session.id,
+          customer_email: meta.customer_email || session.customer_email || null,
+          customer_name: meta.customer_name || shipping.name || null,
+          shipping_name: shipping.name || meta.shipping_name || null,
+          shipping_line1: shippingAddress.line1 || meta.shipping_line1 || null,
+          shipping_line2: shippingAddress.line2 || meta.shipping_line2 || null,
+          shipping_city: shippingAddress.city || meta.shipping_city || null,
+          shipping_postcode: shippingAddress.postal_code || meta.shipping_postcode || null,
+          shipping_country: shippingAddress.country || meta.shipping_country || 'GB',
+          shipping_phone: meta.shipping_phone || null,
+          items,
+          subtotal_pence: Number(meta.subtotal_pence) || session.amount_subtotal || session.amount_total || 0,
+          total_pence: Number(meta.total_pence) || session.amount_total || 0,
+          payment_status: 'paid',
+          has_physical: meta.has_physical === 'true',
+          has_digital: meta.has_digital === 'true',
+          updated_at: new Date().toISOString(),
+        };
+
+        const { error: orderError } = await supabase
+          .from('shop_orders')
+          .upsert([orderRow], { onConflict: 'stripe_session_id' });
+
+        if (orderError && !isMissingShopTable(orderError)) {
+          console.error('Supabase upsert error (shop_orders):', orderError);
+        } else {
+          for (const line of items) {
+            if (line.product_kind !== 'physical') continue;
+            const { data: product } = await supabase
+              .from('shop_products')
+              .select('stock_quantity')
+              .eq('id', line.product_id)
+              .maybeSingle();
+            if (product && Number.isFinite(Number(product.stock_quantity))) {
+              const nextStock = Math.max(0, Number(product.stock_quantity) - Number(line.quantity || 1));
+              await supabase.from('shop_products').update({ stock_quantity: nextStock }).eq('id', line.product_id);
+            }
+          }
+
+          try {
+            await sendShopOrderNotifications({
+              ...orderRow,
+              amount: (orderRow.total_pence || 0) / 100,
+            });
+          } catch (notifyErr) {
+            console.warn('Shop order notification failed (ignored):', notifyErr?.message || notifyErr);
+          }
+        }
       } else {
         const supabase = createClient(supabaseUrl, serviceRoleKey);
 

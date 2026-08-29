@@ -5,10 +5,14 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
-import { FEATURED_ROTATION_MS, FEATURED_TUTOR_SLOTS, featuredTutorWindow, tutorsForHomepage } from "./tutorRotation";
+import { FEATURED_ROTATION_MS, featuredTutorWindow, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorSlotCount, tutorsForHomepage } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
+import AdminShopEditor from "./AdminShopEditor";
+import ShopPage from "./ShopPage";
+import ShopFeaturedSection from "./ShopFeaturedSection";
+import { addToBasket, basketCount as countBasketItems, readBasket } from "./shopBasket";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
@@ -19,7 +23,7 @@ import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
-import { applyDocumentMeta, pageFromPathname, pathForPage } from "./seo";
+import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
@@ -426,7 +430,7 @@ function ModalShell({ open, onClose, titleId, descriptionId, triggerRef, maxWidt
 }
 
 /* --------------------------------- NAVBAR --------------------------------- */
-function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutorButtonRef, session, isAdmin, onAuth, onLogout, onAdminDashboard }) {
+function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, onShop, basketCount = 0, tutorButtonRef, session, isAdmin, onAuth, onLogout, onAdminDashboard }) {
   const [q, setQ] = useState("");
   const [openIdx, setOpenIdx] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -453,6 +457,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
       { text: "11+ Practice", action: () => onPick("11+", "Maths") },
       ...RES_TYPES.map((r) => ({ text: r, action: () => onResource(r) })),
     ] },
+    { label: "Shop", type: "link", action: onShop, href: "/shop" },
     { label: "About", type: "link", action: () => { window.location.href = "/about/"; }, href: "/about/" },
     { label: "Advice", type: "link", action: () => onScroll("advice"), href: "/#advice-anchor" },
     { label: "Find a Tutor", type: "link", action: () => onScroll("book"), href: "/#book-anchor" },
@@ -508,6 +513,9 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
         {logo}
         {!isMobile && (
           <form role="search" onSubmit={submit} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            <button type="button" onClick={() => { onShop(); setMenuOpen(false); }} style={{ padding: "8px 12px", minHeight: 44, borderRadius: 8, border: `1px solid rgba(0,150,136,.22)`, background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>
+              Shop{basketCount > 0 ? ` (${basketCount})` : ""}
+            </button>
             <input name="q" aria-label="Search subjects or topics" placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
               style={{ padding: "8px 12px", borderRadius: 8, border: "1px solid #e6e6e6", width: 190 }} />
             <button type="submit" style={{ padding: "8px 12px", borderRadius: 8, background: TEAL, color: "#fff", border: "none", cursor: "pointer" }}>Search</button>
@@ -574,6 +582,9 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
             </div>
           ))}
           <form onSubmit={submit} style={{ display: "flex", gap: 8, padding: "14px 18px 8px" }}>
+            <button type="button" onClick={() => { onShop(); setMenuOpen(false); }} style={{ width: "100%", minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+              Shop{basketCount > 0 ? ` (${basketCount})` : ""}
+            </button>
             <input placeholder="Search subjects or topics..." value={q} onChange={(e) => setQ(e.target.value)}
               style={{ flex: 1, minWidth: 0, padding: "12px 12px", borderRadius: 8, border: "1px solid #e6e6e6", fontSize: 16 }} />
             <button type="submit" style={{ padding: "12px 16px", minHeight: 44, borderRadius: 8, background: TEAL, color: "#fff", border: "none", fontWeight: 700 }}>Go</button>
@@ -586,7 +597,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, tutor
 }
 
 /* ---------------------------------- HERO ---------------------------------- */
-function Hero({ onScroll, onBrowse }) {
+function Hero({ onScroll, onBrowse, onShop }) {
   const isMobile = useIsMobile();
   const isTablet = useIsMobile(1024);
   const heroOffset = isMobile ? 0 : isTablet ? -18 : -36;
@@ -630,6 +641,25 @@ function Hero({ onScroll, onBrowse }) {
             }}
           >
             Browse Resources
+          </a>
+          <a
+            href="/shop"
+            onClick={(e) => { e.preventDefault(); onShop(); }}
+            style={{ ...ctaBaseStyle, border: "2px solid rgba(255,255,255,.76)", background: "rgba(255,255,255,.08)", color: "#fff", textDecoration: "none" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-1px)";
+              e.currentTarget.style.boxShadow = "0 14px 28px rgba(15, 23, 42, .22)";
+              e.currentTarget.style.background = "rgba(255,255,255,.14)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,.92)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(15, 23, 42, .16)";
+              e.currentTarget.style.background = "rgba(255,255,255,.08)";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,.76)";
+            }}
+          >
+            Visit the Shop
           </a>
           <a
             href="/#book-anchor"
@@ -1652,12 +1682,15 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
   const rotatableTutors = tutorsForHomepage(tutors);
-  const canRotate = rotatableTutors.length > FEATURED_TUTOR_SLOTS;
+  const slotCount = tutorSlotCount({ isMobile, isTablet });
+  const canRotate = shouldRotateTutorProfiles(tutors, slotCount);
+  const pageCount = tutorCarouselPageCount(tutors, slotCount);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
-  const featuredTutors = featuredTutorWindow(rotatableTutors, FEATURED_TUTOR_SLOTS, offset);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const featuredTutors = featuredTutorWindow(rotatableTutors, slotCount, offset);
+  const activePage = tutorCarouselPageIndex(offset, pageCount);
   const showViewAll = rotatableTutors.length > featuredTutors.length;
-  const gridColumns = isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))");
 
   useEffect(() => {
     if (prefersReducedMotion || !canRotate || paused) return undefined;
@@ -1665,61 +1698,120 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
       setOffset((current) => current + 1);
     }, FEATURED_ROTATION_MS);
     return () => window.clearInterval(timer);
-  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
+  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length, slotCount]);
+
+  if (!loading && !error && rotatableTutors.length === 0) {
+    return null;
+  }
+
+  const goPrev = () => {
+    setPaused(true);
+    setOffset((current) => current - 1);
+  };
+  const goNext = () => {
+    setPaused(true);
+    setOffset((current) => current + 1);
+  };
+
+  const onTouchStart = (event) => {
+    setTouchStartX(event.changedTouches?.[0]?.clientX ?? null);
+    setPaused(true);
+  };
+  const onTouchEnd = (event) => {
+    const startX = touchStartX;
+    const endX = event.changedTouches?.[0]?.clientX;
+    setTouchStartX(null);
+    if (startX == null || endX == null) return;
+    const delta = endX - startX;
+    if (Math.abs(delta) < 40) return;
+    if (delta > 0) goPrev();
+    else goNext();
+  };
 
   return (
-    <section ref={sectionRef} style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
+    <section ref={sectionRef} aria-label="Meet our tutors carousel" style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "end", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
           <div>
             <div style={{ color: TEAL_DARK, fontWeight: 800, letterSpacing: ".08em", textTransform: "uppercase", fontSize: 12 }}>Tutors</div>
             <h2 style={{ color: "#0f172a", fontSize: isMobile ? 26 : 34, margin: "8px 0 0" }}>Meet Our Tutors</h2>
             <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680 }}>
-              Carefully reviewed tutors across science and maths, ready for 1-to-1 support online or face to face.
-              {canRotate ? " Featured profiles rotate so every listed tutor is shown." : ""}
+              Approved, published tutor profiles from the JD Science directory — ready for 1-to-1 support online or face to face.
             </p>
           </div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
             {canRotate && (
               <>
-                <button type="button" aria-label="Show previous listed tutors" onClick={() => { setPaused(true); setOffset((current) => current - 1); }} style={{ width: 44, height: 44, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
-                <button type="button" aria-label="Show next listed tutors" onClick={() => { setPaused(true); setOffset((current) => current + 1); }} style={{ width: 44, height: 44, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
+                <button type="button" aria-label="Show previous tutors" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
+                <button type="button" aria-label="Show next tutors" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
               </>
             )}
-            {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
+            {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", minHeight: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
           </div>
         </div>
 
         {loading && <div style={{ color: "#64748b", marginTop: 18 }}>Loading tutors…</div>}
         {error && <div style={{ color: "#b91c1c", marginTop: 18 }}>{error}</div>}
 
-        {!loading && !error && featuredTutors.length === 0 && (
-          <div style={{ marginTop: 18, borderRadius: 24, padding: isMobile ? 22 : 30, background: "linear-gradient(135deg, #ecfeff, #f8fafc)", border: "1px solid rgba(0, 150, 136, .12)", color: "#475569" }}>
-            <div style={{ fontSize: 18, fontWeight: 800, color: "#0f172a" }}>Tutor profiles are coming soon.</div>
-            <p style={{ margin: "8px 0 0", lineHeight: 1.6 }}>
-              New applications are reviewed before going live. Use the Become a Tutor button above if you would like to apply.
-            </p>
-          </div>
-        )}
-
         <div
+          role="region"
+          aria-roledescription="carousel"
           aria-live="polite"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
-          style={{ marginTop: 22, display: "grid", gridTemplateColumns: gridColumns, gap: 16 }}
+          onFocus={() => setPaused(true)}
+          onBlur={() => setPaused(false)}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+          style={{ marginTop: 22, overflow: "hidden" }}
         >
-          {featuredTutors.map((tutor, index) => (
-            <TutorCard
-              key={tutor.id || tutor.public_slug}
-              tutor={tutor}
-              onViewProfile={onViewProfile}
-              onBook={onBook}
-              inView={inView}
-              prefersReducedMotion={prefersReducedMotion}
-              delayMs={index * 90}
-            />
-          ))}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))"),
+              gap: 16,
+              transition: prefersReducedMotion ? "none" : "opacity .45s ease, transform .45s ease",
+              opacity: inView ? 1 : 0.92,
+              transform: inView ? "translateX(0)" : "translateX(8px)",
+            }}
+          >
+            {featuredTutors.map((tutor, index) => (
+              <TutorCard
+                key={`${tutor.id || tutor.public_slug}-${offset}-${index}`}
+                tutor={tutor}
+                onViewProfile={onViewProfile}
+                onBook={onBook}
+                inView={inView}
+                prefersReducedMotion={prefersReducedMotion}
+                delayMs={index * 90}
+              />
+            ))}
+          </div>
         </div>
+
+        {canRotate && pageCount > 1 && (
+          <div role="tablist" aria-label="Tutor carousel pages" style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
+            {Array.from({ length: pageCount }, (_, index) => (
+              <button
+                key={index}
+                type="button"
+                role="tab"
+                aria-label={`Show tutor set ${index + 1} of ${pageCount}`}
+                aria-selected={activePage === index}
+                onClick={() => { setPaused(true); setOffset(index); }}
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 999,
+                  border: "none",
+                  background: activePage === index ? TEAL : "#cbd5e1",
+                  cursor: "pointer",
+                  padding: 0,
+                }}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -3089,6 +3181,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
           )}
         </div>
         <AdminAdviceEditor password={password} />
+        <AdminShopEditor password={password} />
       </div>
     </div>
   );
@@ -3111,6 +3204,9 @@ function resolvePapersFilters(query) {
 function App() {
   const initialPapers = typeof window === "undefined" ? {} : resolvePapersFilters(parsePapersQuery(window.location.search));
   const [page, setPage] = useState(() => (typeof window === "undefined" ? "home" : pageFromPathname(window.location.pathname)));
+  const [shopProductSlug, setShopProductSlug] = useState(() => (typeof window === "undefined" ? null : shopSlugFromPathname(window.location.pathname)));
+  const [shopBasketCount, setShopBasketCount] = useState(() => (typeof window === "undefined" ? 0 : countBasketItems(readBasket())));
+  const [shopSuccessSessionId, setShopSuccessSessionId] = useState(null);
   const [pickedSubject, setPickedSubject] = useState(initialPapers.subject || null);
   const [pickedLevel, setPickedLevel] = useState(initialPapers.level || null);
   const [pickedRes, setPickedRes] = useState(initialPapers.res || null);
@@ -3135,7 +3231,7 @@ function App() {
 
   useEffect(() => {
     applyDocumentMeta(page, { noIndex: adminRoute });
-  }, [page, adminRoute]);
+  }, [page, adminRoute, shopProductSlug]);
 
   const goAdmin = () => {
     writeAdminRoute(true);
@@ -3164,7 +3260,9 @@ function App() {
     const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
     const onPopState = () => {
       setAdminRoute(readAdminRoute());
-      setPage(pageFromPathname(window.location.pathname));
+      const nextPath = window.location.pathname;
+      setShopProductSlug(shopSlugFromPathname(nextPath));
+      setPage(pageFromPathname(nextPath));
     };
     window.addEventListener("popstate", onPopState);
     return () => {
@@ -3185,6 +3283,25 @@ function App() {
         setPage("home");
         window.history.replaceState({}, "", "/");
         setTimeout(() => document.getElementById("book-anchor")?.scrollIntoView({ behavior: "smooth" }), 200);
+      } else if (params.get("shop_success") === "true") {
+        const sessionId = params.get("session_id");
+        setShopSuccessSessionId(sessionId || null);
+        setShopBasketCount(0);
+        setBanner({
+          type: "success",
+          text: "Shop payment successful — thank you! Your receipt and download instructions are below on the shop page.",
+        });
+        setShopProductSlug(null);
+        setPage("shop");
+        window.history.replaceState({}, "", "/shop");
+      } else if (params.get("shop_canceled") === "true") {
+        setBanner({
+          type: "canceled",
+          text: "Shop checkout was cancelled. No charge was made.",
+        });
+        setShopProductSlug(null);
+        setPage("shop");
+        window.history.replaceState({}, "", "/shop");
       } else if (params.get("canceled") === "true") {
         setBanner({
           type: "canceled",
@@ -3260,9 +3377,12 @@ function App() {
     }
   }
 
-  const navigate = (nextPage, { replace = false } = {}) => {
+  const navigate = (nextPage, { replace = false, shopSlug = null } = {}) => {
     setPage(nextPage);
-    const nextPath = pathForPage(nextPage);
+    const slug = shopSlug ?? (nextPage === "shop-product" ? shopProductSlug : null);
+    if (nextPage === "shop-product") setShopProductSlug(slug);
+    if (nextPage === "shop") setShopProductSlug(null);
+    const nextPath = pathForPage(nextPage, { shopSlug: slug });
     if (typeof window !== "undefined" && window.location.pathname !== nextPath) {
       const nextUrl = `${nextPath}${window.location.search}${window.location.hash}`;
       if (replace) window.history.replaceState({ page: nextPage }, "", nextUrl);
@@ -3273,6 +3393,16 @@ function App() {
   const goPapers = () => navigate("papers");
   const goResources = () => navigate("resources");
   const goTutors = () => navigate("tutors");
+  const goShop = () => navigate("shop");
+  const openShopProduct = (slug) => {
+    if (slug) navigate("shop-product", { shopSlug: slug });
+    else navigate("shop");
+  };
+  const handleShopBasketChange = (count) => setShopBasketCount(count);
+  const handleShopFeaturedAdd = (product) => {
+    addToBasket(product, 1);
+    setShopBasketCount(countBasketItems(readBasket()));
+  };
   const goHome = () => { leaveAdmin(); navigate("home"); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
   const handleLevel = (lvl) => { setPickedLevel(lvl); setPickedSubject(null); setPickedBoard(null); goPapers(); };
@@ -3336,7 +3466,7 @@ function App() {
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif", color: "#0f172a", background: "#f8fafc", overflowX: "hidden", maxWidth: "100%" }}>
-      <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} tutorButtonRef={tutorTriggerRef}
+      <Navbar onHome={goHome} onPick={handlePick} onResource={handleResource} onScroll={handleScroll} onTutor={openTutorApplication} onShop={goShop} basketCount={shopBasketCount} tutorButtonRef={tutorTriggerRef}
         onSearch={(q) => q && goPapers()} session={session} isAdmin={isAdmin}
         onAuth={openAuth} onLogout={logout} onAdminDashboard={goAdmin} />
 
@@ -3371,9 +3501,10 @@ function App() {
 
       {page === "home" && (
         <main>
-          <Hero onScroll={handleScroll} onBrowse={goPapers} />
+          <Hero onScroll={handleScroll} onBrowse={goPapers} onShop={goShop} />
           <BoardStrip />
           <OffersSection />
+          <ShopFeaturedSection onVisitShop={goShop} onViewProduct={openShopProduct} onAddToBasket={handleShopFeaturedAdd} />
           <AdviceNewsSection />
           <LevelGrid onLevel={handleLevel} />
           <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
@@ -3415,6 +3546,18 @@ function App() {
           ) : (
             <ResourceBrowser initialType={pickedRes} onBook={() => handleScroll("book")} />
           )}
+        </main>
+      )}
+
+      {(page === "shop" || page === "shop-product") && (
+        <main>
+          <ShopPage
+            productSlug={page === "shop-product" ? shopProductSlug : null}
+            onHome={goHome}
+            onOpenProduct={openShopProduct}
+            onBasketChange={handleShopBasketChange}
+            initialSuccessSessionId={shopSuccessSessionId}
+          />
         </main>
       )}
 
