@@ -136,6 +136,7 @@ assert.equal(productIsPublished({ is_published: true }), true);
 assert.equal(productIsPublished({ published: true }), true);
 assert.equal(productIsPublished({ is_published: false, published: true }), true);
 assert.equal(productIsPublished({ is_published: false, published: false }), false);
+assert.equal(productIsPublished({ is_featured: true, is_published: false, published: false }), true);
 assert.equal(productIsFeatured({ featured: true }), true);
 assert.equal(productIsFeatured({ is_featured: true }), true);
 

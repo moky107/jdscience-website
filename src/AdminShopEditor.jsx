@@ -105,6 +105,9 @@ export default function AdminShopEditor({ password }) {
       if (key === "sale_type") {
         next.opens_external = value === "external";
       }
+      if (key === "is_featured" && value) {
+        next.is_published = true;
+      }
       return next;
     });
   }

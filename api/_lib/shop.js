@@ -102,6 +102,7 @@ export function externalButtonLabel(product) {
 export function productIsPublished(product) {
   if (!product) return false;
   if (product.is_published === true || product.published === true) return true;
+  if (productIsFeatured(product)) return true;
   if (product.is_published === false && product.published === false) return false;
   if (product.is_published === false || product.published === false) return false;
   return false;
@@ -309,6 +310,10 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   if (is_featured !== undefined) {
     fields.is_featured = is_featured;
     fields.featured = is_featured;
+    if (is_featured && is_published === undefined) {
+      fields.is_published = true;
+      fields.published = true;
+    }
   }
   if (is_published !== undefined) {
     fields.is_published = is_published;

@@ -24,5 +24,12 @@ set featured = true
 where is_featured = true
   and coalesce(featured, false) = false;
 
+update public.shop_products
+set is_published = true,
+    published = true
+where (featured = true or is_featured = true)
+  and coalesce(is_published, false) = false
+  and coalesce(published, false) = false;
+
 create index if not exists shop_products_legacy_published_featured_idx
   on public.shop_products (published, featured, sort_order, created_at desc);
