@@ -77,7 +77,7 @@ export function productFields({ download_path, image_path }) {
     level: "T Level",
     subject: "Biology",
     exam_board: "N/A",
-    keywords: "specialised cells, specialise cells, unit 1, biology, T Level, powerpoint",
+    keywords: ["specialised cells", "specialise cells", "unit 1", "biology", "T Level", "powerpoint"],
     image_path,
     preview_path: image_path,
     download_path,
@@ -146,11 +146,20 @@ export async function publishUnit1SpecialiseCells({ supabase } = {}) {
   );
 
   const fields = productFields({ download_path, image_path });
-  const { data, error } = await client
+  const row = { ...fields, created_at: new Date().toISOString() };
+  let { data, error } = await client
     .from("shop_products")
-    .insert([{ ...fields, created_at: new Date().toISOString() }])
+    .insert([row])
     .select("id, title, price_pence, slug")
     .single();
+  if (error && /keywords|array literal/i.test(error.message || "")) {
+    const { keywords, ...withoutKeywords } = row;
+    ({ data, error } = await client
+      .from("shop_products")
+      .insert([withoutKeywords])
+      .select("id, title, price_pence, slug")
+      .single());
+  }
   if (error) throw new Error(error.message);
   return { ok: true, created: true, product: data };
 }

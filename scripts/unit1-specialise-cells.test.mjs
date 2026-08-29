@@ -25,6 +25,7 @@ assert.equal(fields.product_type, "powerpoint");
 assert.equal(fields.product_kind, "digital");
 assert.equal(fields.is_published, true);
 assert.equal(fields.slug, "unit-1-specialise-cells");
+assert.ok(Array.isArray(fields.keywords), "live shop_products.keywords is text[]");
 assert.match(path.basename(assets.ppt), /unit-1-specialise-cells\.pptx$/i);
 
 console.log("unit 1 specialise cells shop payload ok");
