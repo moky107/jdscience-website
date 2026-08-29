@@ -26,6 +26,7 @@ import {
 } from './shop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
+import { ensureUnit1SpecialiseCellsProduct } from './publishUnit1SpecialiseCells.js';
 
 function shopKind(req) {
   const kind = safeTrim(req.query?.kind, 40);
@@ -167,6 +168,9 @@ export async function handleShopPublicRequest(req, res) {
     return res.status(500).json({ error: 'Server not configured for shop.' });
   }
   const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
+  if (kind === 'shop-products') {
+    await ensureUnit1SpecialiseCellsProduct(supabase);
+  }
 
   if (kind === 'shop-order') {
     if (req.method !== 'GET') {
@@ -383,6 +387,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
   }
 
   if (action === 'shop-list' || action === 'list') {
+    await ensureUnit1SpecialiseCellsProduct(supabase);
     const { data, error } = await supabase.from('shop_products').select('*').order('sort_order', { ascending: true }).order('created_at', { ascending: false });
     if (error) {
       if (isMissingShopTable(error)) return res.status(200).json({ ok: true, products: [], setupRequired: true });
