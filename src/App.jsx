@@ -711,30 +711,29 @@ function BoardStrip() {
 
 function OffersSection() {
   const isMobile = useIsMobile();
-  const sectionGreen = "#0f766e";
+  const headingGreen = "#0f766e";
   const offers = [
     { title: "Resources", text: "Revision notes, how questions are framed, past questions, mark schemes and examiner reports." },
     { title: "Tutoring", text: "Book support for 11+, GCSE, IGCSE, A-Level, BTEC and T-Level." },
   ];
   return (
-    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: `linear-gradient(135deg, ${sectionGreen} 0%, ${TEAL_DARK} 100%)` }}>
+    <section style={{ padding: isMobile ? "32px 16px" : "48px 20px", background: "#f8fafc" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <h2 style={{ color: "#ffffff", fontSize: isMobile ? 24 : 28, margin: "0 0 22px" }}>What JD Science Offers</h2>
+        <h2 style={{ color: headingGreen, fontSize: isMobile ? 24 : 28, margin: "0 0 22px" }}>What JD Science Offers</h2>
         <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
           {offers.map((o) => (
             <div
               key={o.title}
               style={{
-                background: "linear-gradient(160deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,.08) 100%)",
-                border: "1px solid rgba(255,255,255,.22)",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
                 borderRadius: 14,
                 padding: 22,
-                boxShadow: "0 8px 24px rgba(15,23,42,.18)",
-                backdropFilter: "blur(2px)",
+                boxShadow: "0 4px 14px rgba(15,23,42,.06)",
               }}
             >
-              <h3 style={{ margin: "0 0 8px", color: "#ffffff", fontSize: 18 }}>{o.title}</h3>
-              <p style={{ color: "rgba(255,255,255,.92)", fontSize: 14, margin: 0, lineHeight: 1.6 }}>{o.text}</p>
+              <h3 style={{ margin: "0 0 8px", color: headingGreen, fontSize: 18 }}>{o.title}</h3>
+              <p style={{ color: "#475569", fontSize: 14, margin: 0, lineHeight: 1.6 }}>{o.text}</p>
             </div>
           ))}
         </div>
