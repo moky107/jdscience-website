@@ -160,23 +160,23 @@ export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddT
   }, []);
 
   return (
-    <section style={{ padding: isMobile ? "40px 16px" : "48px 20px", background: `linear-gradient(135deg, #0f766e 0%, ${TEAL_DARK} 100%)` }}>
+    <section style={{ padding: isMobile ? "40px 16px" : "48px 20px", background: "#ffffff" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 16, flexWrap: "wrap", alignItems: "end", marginBottom: 22 }}>
           <div>
-            <h2 style={{ color: "#ffffff", fontSize: isMobile ? 24 : 28, margin: 0 }}>Visit Our Shop</h2>
-            <p style={{ color: "rgba(255,255,255,.92)", marginTop: 10, maxWidth: 680, lineHeight: 1.6 }}>
+            <h2 style={{ color: "#0f766e", fontSize: isMobile ? 24 : 28, margin: 0 }}>Visit Our Shop</h2>
+            <p style={{ color: "#64748b", marginTop: 10, maxWidth: 680, lineHeight: 1.6 }}>
               Explore high-quality revision materials, teaching resources and JDScience products.
             </p>
           </div>
-          <button type="button" onClick={onVisitShop} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "1px solid rgba(255,255,255,.35)", background: "#ffffff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer", boxShadow: "0 8px 20px rgba(15,23,42,.16)" }}>
+          <button type="button" onClick={onVisitShop} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
             Visit the Shop
           </button>
         </div>
         {loading ? (
-          <div style={{ color: "rgba(255,255,255,.9)" }}>Loading featured products…</div>
+          <div style={{ color: "#64748b" }}>Loading featured products…</div>
         ) : products.length === 0 ? (
-          <div style={{ borderRadius: 16, padding: 24, background: "rgba(255,255,255,.12)", border: "1px solid rgba(255,255,255,.2)", color: "rgba(255,255,255,.92)" }}>
+          <div style={{ borderRadius: 16, padding: 24, background: "#f8fafc", color: "#64748b" }}>
             Featured shop products will appear here once published by the administrator.
           </div>
         ) : (
