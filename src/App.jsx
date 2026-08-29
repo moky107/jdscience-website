@@ -5,7 +5,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
-import { FEATURED_ROTATION_MS, featuredTutorWindow, homepageTutorFallback, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorSlotCount } from "./tutorRotation";
+import { FEATURED_ROTATION_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
@@ -1680,27 +1680,34 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
 
 function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBook }) {
   const isMobile = useIsMobile();
-  const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
-  const rotatableTutors = homepageTutorFallback(tutors);
-  const slotCount = tutorSlotCount({ isMobile, isTablet });
-  const canRotate = shouldRotateTutorProfiles(tutors, slotCount);
-  const pageCount = tutorCarouselPageCount(tutors, slotCount);
+  const rotatableTutors = tutorsForHomepage(tutors);
+  const canRotate = shouldRotateTutorProfiles(tutors);
+  const pageCount = tutorCarouselPageCount(tutors);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
+  const [slideDir, setSlideDir] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
-  const featuredTutors = featuredTutorWindow(rotatableTutors, slotCount, offset);
   const activePage = tutorCarouselPageIndex(offset, pageCount);
-  const showViewAll = rotatableTutors.length > featuredTutors.length;
+  const currentTutor = rotatableTutors[activePage] || null;
+
+  useEffect(() => {
+    setOffset(0);
+    setAnimKey((value) => value + 1);
+    setSlideDir(0);
+  }, [rotatableTutors.length]);
 
   useEffect(() => {
     if (prefersReducedMotion || !canRotate || paused) return undefined;
     const timer = window.setInterval(() => {
+      setSlideDir(1);
       setOffset((current) => current + 1);
+      setAnimKey((value) => value + 1);
     }, FEATURED_ROTATION_MS);
     return () => window.clearInterval(timer);
-  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length, slotCount]);
+  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
 
   if (!loading && !error && rotatableTutors.length === 0) {
     return (
@@ -1726,11 +1733,21 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
 
   const goPrev = () => {
     setPaused(true);
+    setSlideDir(-1);
     setOffset((current) => current - 1);
+    setAnimKey((value) => value + 1);
   };
   const goNext = () => {
     setPaused(true);
+    setSlideDir(1);
     setOffset((current) => current + 1);
+    setAnimKey((value) => value + 1);
+  };
+  const goTo = (index) => {
+    setPaused(true);
+    setSlideDir(index > activePage ? 1 : -1);
+    setOffset(index);
+    setAnimKey((value) => value + 1);
   };
 
   const onTouchStart = (event) => {
@@ -1748,6 +1765,8 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
     else goNext();
   };
 
+  const slideFrom = prefersReducedMotion ? "translateX(0)" : (slideDir < 0 ? "translateX(-18px)" : "translateX(18px)");
+
   return (
     <section ref={sectionRef} aria-label="Meet our tutors carousel" style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -1762,71 +1781,73 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
             {canRotate && (
               <>
-                <button type="button" aria-label="Show previous tutors" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
-                <button type="button" aria-label="Show next tutors" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
+                <button type="button" aria-label="Show previous tutor" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
+                <button type="button" aria-label="Show next tutor" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
               </>
             )}
-            {showViewAll && <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", minHeight: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>}
+            <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", minHeight: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>
           </div>
         </div>
 
         {loading && <div style={{ color: "#64748b", marginTop: 18 }}>Loading tutors…</div>}
         {error && <div style={{ color: "#b91c1c", marginTop: 18 }}>{error}</div>}
 
-        <div
-          role="region"
-          aria-roledescription="carousel"
-          aria-live="polite"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-          onFocus={() => setPaused(true)}
-          onBlur={() => setPaused(false)}
-          onTouchStart={onTouchStart}
-          onTouchEnd={onTouchEnd}
-          style={{ marginTop: 22, overflow: "hidden" }}
-        >
+        {currentTutor && (
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))"),
-              gap: 16,
-              transition: prefersReducedMotion ? "none" : "opacity .45s ease, transform .45s ease",
-              opacity: inView ? 1 : 0.92,
-              transform: inView ? "translateX(0)" : "translateX(8px)",
+            role="region"
+            aria-roledescription="carousel"
+            aria-live="polite"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocusCapture={() => setPaused(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
             }}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+            style={{ marginTop: 22, maxWidth: isMobile ? "100%" : 420, marginLeft: "auto", marginRight: "auto" }}
           >
-            {featuredTutors.map((tutor, index) => (
+            <div
+              key={`${currentTutor.id || currentTutor.public_slug}-${animKey}`}
+              style={{
+                transition: prefersReducedMotion ? "none" : "opacity .45s ease, transform .45s ease",
+                opacity: inView ? 1 : 0.92,
+                transform: inView ? "translateX(0)" : slideFrom,
+                animation: prefersReducedMotion || !inView ? "none" : "tutorCarouselIn .45s ease",
+              }}
+            >
               <TutorCard
-                key={`${tutor.id || tutor.public_slug}-${offset}-${index}`}
-                tutor={tutor}
+                tutor={currentTutor}
                 onViewProfile={onViewProfile}
                 onBook={onBook}
                 inView={inView}
                 prefersReducedMotion={prefersReducedMotion}
-                delayMs={index * 90}
+                delayMs={0}
               />
-            ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {canRotate && pageCount > 1 && (
           <div role="tablist" aria-label="Tutor carousel pages" style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
-            {Array.from({ length: pageCount }, (_, index) => (
+            {rotatableTutors.map((tutor, index) => (
               <button
-                key={index}
+                key={tutor.id || tutor.public_slug || index}
                 type="button"
                 role="tab"
-                aria-label={`Show tutor set ${index + 1} of ${pageCount}`}
+                aria-label={`Show tutor ${tutor.tutor_name || index + 1} (${index + 1} of ${pageCount})`}
                 aria-selected={activePage === index}
-                onClick={() => { setPaused(true); setOffset(index); }}
+                onClick={() => goTo(index)}
+                onFocus={() => setPaused(true)}
                 style={{
-                  width: 12,
+                  width: activePage === index ? 22 : 12,
                   height: 12,
                   borderRadius: 999,
                   border: "none",
                   background: activePage === index ? TEAL : "#cbd5e1",
                   cursor: "pointer",
                   padding: 0,
+                  transition: prefersReducedMotion ? "none" : "width .2s ease, background-color .2s ease",
                 }}
               />
             ))}

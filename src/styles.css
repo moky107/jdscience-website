@@ -223,6 +223,30 @@ input, select, textarea {
   }
 }
 
+@keyframes tutorCarouselIn {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes tutorCarouselIn {
+    from {
+      opacity: 1;
+      transform: none;
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
 @media (max-width: 420px) {
   .admin-bookings-table td[data-label="Actions"] > div {
     grid-template-columns: 1fr;
