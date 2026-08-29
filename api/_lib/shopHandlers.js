@@ -118,12 +118,16 @@ async function loadPublishedShopProducts(supabase, filters = {}) {
   }
 
   if (isShopColumnMismatch(error)) {
-    const { data: fallbackData, error: fallbackError } = await supabase
-      .from('shop_products')
-      .select('*')
-      .eq('is_published', true);
-    if (!fallbackError) {
-      return { ok: true, data: fallbackData || [], error: null, usedFallbackSelect: true };
+    const fallbacks = [
+      () => supabase.from('shop_products').select('*').eq('is_published', true),
+      () => supabase.from('shop_products').select('*'),
+    ];
+    for (const run of fallbacks) {
+      const { data: fallbackData, error: fallbackError } = await run();
+      if (!fallbackError) {
+        const rows = (fallbackData || []).filter((row) => row?.is_published !== false);
+        return { ok: true, data: rows, error: null, usedFallbackSelect: true };
+      }
     }
   }
 
