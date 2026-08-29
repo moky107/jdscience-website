@@ -50,7 +50,7 @@ import {
   tutorsForHomepage,
 } from "../src/tutorRotation.js";
 import { pageFromPathname, pathForPage, shopSlugFromPathname } from "../src/seo.js";
-import { productCardImageHeight } from "../src/shopProductHelpers.js";
+import { productCardImageHeight, isValidProductImageFile } from "../src/shopProductHelpers.js";
 
 assert.equal(pageFromPathname("/shop"), "shop");
 assert.equal(pageFromPathname("/shop/"), "shop");
@@ -162,7 +162,15 @@ assert.equal(productCardImageHeight(true, 500), 160);
 assert.equal(productCardImageHeight(false, 1200), 200);
 assert.equal(productCardImageHeight(false, 500), 180);
 
+assert.equal(isValidProductImageFile({ type: "image/png", name: "cover.png" }).ok, true);
+assert.equal(isValidProductImageFile({ type: "image/jpeg", name: "cover.jpg" }).ok, true);
+assert.equal(isValidProductImageFile({ type: "image/webp", name: "cover.webp" }).ok, true);
+assert.equal(isValidProductImageFile({ type: "application/pdf", name: "cover.pdf" }).ok, false);
+assert.match(isValidProductImageFile({ type: "application/pdf", name: "cover.pdf" }).error, /JPG, PNG or WebP/i);
+
 const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
+assert.match(adminSource, /ShopFileUploadBox/, "AdminShopEditor must use ShopFileUploadBox");
+assert.match(adminSource, /Click to upload or drag and drop product image/);
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [

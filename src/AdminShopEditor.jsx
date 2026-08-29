@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ShopFileUploadBox from "./AdminShopFileUpload";
 import {
   SHOP_EXAM_BOARDS,
   SHOP_LEVELS,
@@ -9,7 +10,7 @@ import {
   shopProductTypeLabel,
 } from "./shopConstants";
 import { formatPricePence } from "./shopFormat";
-import { isExternalProduct, normalizeShopProduct } from "./shopProductHelpers";
+import { isExternalProduct, isValidProductImageFile, normalizeShopProduct } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -36,6 +37,8 @@ const EMPTY_FORM = {
   image_path: "",
   preview_path: "",
   download_path: "",
+  image_url: "",
+  preview_url: "",
   sale_type: "checkout",
   external_url: "",
   external_button_label: "Buy now",
@@ -59,6 +62,7 @@ export default function AdminShopEditor({ password }) {
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
   const [setupRequired, setSetupRequired] = useState(false);
+  const [uploadingField, setUploadingField] = useState("");
 
   async function request(endpoint, payload) {
     const resp = await fetch(endpoint, {
@@ -123,34 +127,66 @@ export default function AdminShopEditor({ password }) {
       sale_type: normalized.opens_external ? "external" : "checkout",
       is_published: Boolean(normalized.is_published || normalized.published),
       is_featured: Boolean(normalized.is_featured || normalized.featured),
+      image_url: product.image_url || "",
+      preview_url: product.preview_url || "",
     });
     setMessage("");
     setError("");
   }
 
   async function uploadFile(file, folder, field) {
-    if (!file) return;
-    setSaving(true);
+    if (!file) return null;
+    const productId = form.id;
+    setUploadingField(field);
     setError("");
     try {
       const data = await request("/api/admin-shop-products", {
         action: "shop-upload",
         folder,
         filename: file.name,
-        contentType: file.type,
+        contentType: file.type || "application/octet-stream",
         base64: await fileToBase64(file),
       });
-      setField(field, data.path);
-      setMessage(`${field.replace("_", " ")} uploaded.`);
+      const productData = await request("/api/admin-shop-products", { action: "shop-list" });
+      const refreshedProducts = productData.products || [];
+      setProducts(refreshedProducts);
+      const updated = productId ? refreshedProducts.find((item) => item.id === productId) : null;
+      setForm((current) => ({
+        ...current,
+        [field]: data.path,
+        ...(field === "image_path" ? { image_url: updated?.image_url || "" } : {}),
+        ...(field === "preview_path" ? { preview_url: updated?.preview_url || "" } : {}),
+      }));
+      setMessage(`${field.replace(/_/g, " ")} uploaded.`);
+      return data;
     } catch (err) {
       setError(err.message || "Upload failed.");
+      throw err;
     } finally {
-      setSaving(false);
+      setUploadingField("");
     }
+  }
+
+  function validatePreviewFile(file) {
+    if (!file) return { ok: false, error: "Choose a preview file." };
+    const type = String(file.type || "").toLowerCase();
+    const name = String(file.name || "").toLowerCase();
+    if (type.startsWith("image/") || type === "application/pdf") return { ok: true };
+    if (/\.(jpe?g|png|webp|gif|pdf)$/.test(name)) return { ok: true };
+    return { ok: false, error: "Preview must be an image or PDF." };
+  }
+
+  function validateDownloadFile(file) {
+    if (!file) return { ok: false, error: "Choose a download file." };
+    return { ok: true };
   }
 
   async function save(e) {
     e.preventDefault();
+    if (uploadingField) {
+      setError("Wait for the file upload to finish before saving.");
+      return;
+    }
     setSaving(true);
     setError("");
     setMessage("");
@@ -265,23 +301,48 @@ export default function AdminShopEditor({ password }) {
             <input placeholder="Keywords (optional)" value={form.keywords} onChange={(e) => setField("keywords", e.target.value)} style={inp} />
           )}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
-          <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
-            Product image
-            <input type="file" accept="image/*" onChange={(e) => uploadFile(e.target.files?.[0], "images", "image_path")} />
-            {form.image_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.image_path}</span>}
-          </label>
-          <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
-            Preview file
-            <input type="file" accept="image/*,.pdf" onChange={(e) => uploadFile(e.target.files?.[0], "previews", "preview_path")} />
-            {form.preview_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.preview_path}</span>}
-          </label>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
+          <ShopFileUploadBox
+            boxKey={`image-${form.id || "new"}-${form.image_path || "empty"}`}
+            label="Product image"
+            dragHint="Click to upload or drag and drop product image"
+            helperText="PNG, JPG or WebP recommended. This image appears on the shop and homepage."
+            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+            path={form.image_path}
+            previewUrl={form.image_url}
+            showImagePreview
+            uploading={uploadingField === "image_path"}
+            disabled={saving}
+            validate={isValidProductImageFile}
+            onSelectFile={(file) => uploadFile(file, "images", "image_path")}
+          />
+          <ShopFileUploadBox
+            boxKey={`preview-${form.id || "new"}-${form.preview_path || "empty"}`}
+            label="Preview file"
+            dragHint="Click to upload or drag and drop preview file"
+            helperText="Optional image or PDF preview for the product page."
+            accept=".jpg,.jpeg,.png,.webp,.pdf,image/*,application/pdf"
+            path={form.preview_path}
+            previewUrl={form.preview_url}
+            showImagePreview={Boolean(form.preview_url && !String(form.preview_path || "").endsWith(".pdf"))}
+            uploading={uploadingField === "preview_path"}
+            disabled={saving}
+            validate={validatePreviewFile}
+            onSelectFile={(file) => uploadFile(file, "previews", "preview_path")}
+          />
           {form.sale_type !== "external" && form.product_kind === "digital" && (
-            <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
-              Download file
-              <input type="file" onChange={(e) => uploadFile(e.target.files?.[0], "downloads", "download_path")} />
-              {form.download_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.download_path}</span>}
-            </label>
+            <ShopFileUploadBox
+              boxKey={`download-${form.id || "new"}-${form.download_path || "empty"}`}
+              label="Download file"
+              dragHint="Click to upload or drag and drop download file"
+              helperText="Digital product file customers receive after purchase."
+              accept="*/*"
+              path={form.download_path}
+              uploading={uploadingField === "download_path"}
+              disabled={saving}
+              validate={validateDownloadFile}
+              onSelectFile={(file) => uploadFile(file, "downloads", "download_path")}
+            />
           )}
         </div>
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -296,7 +357,7 @@ export default function AdminShopEditor({ password }) {
           <input type="number" placeholder="Sort order" value={form.sort_order} onChange={(e) => setField("sort_order", e.target.value)} style={{ ...inp, width: 140 }} />
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <button type="submit" disabled={saving} style={{ padding: "12px 16px", borderRadius: 8, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", fontWeight: 800, cursor: saving ? "default" : "pointer" }}>
+          <button type="submit" disabled={saving || Boolean(uploadingField)} style={{ padding: "12px 16px", borderRadius: 8, border: "none", background: saving || uploadingField ? "#94a3b8" : TEAL, color: "#fff", fontWeight: 800, cursor: saving || uploadingField ? "default" : "pointer" }}>
             {saving ? "Saving…" : form.id ? "Update product" : "Add product"}
           </button>
           {form.id && (
