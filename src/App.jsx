@@ -13,6 +13,7 @@ import AdminShopEditor from "./AdminShopEditor";
 import ShopPage from "./ShopPage";
 import ShopFeaturedSection from "./ShopFeaturedSection";
 import { addToBasket, basketCount as countBasketItems, readBasket } from "./shopBasket";
+import { isExternalProduct } from "./shopProductHelpers";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
@@ -3400,6 +3401,7 @@ function App() {
   };
   const handleShopBasketChange = (count) => setShopBasketCount(count);
   const handleShopFeaturedAdd = (product) => {
+    if (isExternalProduct(product)) return;
     addToBasket(product, 1);
     setShopBasketCount(countBasketItems(readBasket()));
   };

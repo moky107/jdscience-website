@@ -8,6 +8,7 @@ import {
   shopProductTypeLabel,
 } from "./shopConstants";
 import { formatPricePence } from "./shopFormat";
+import { isExternalProduct } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -34,6 +35,10 @@ const EMPTY_FORM = {
   image_path: "",
   preview_path: "",
   download_path: "",
+  sale_type: "checkout",
+  external_url: "",
+  external_button_label: "Buy now",
+  opens_external: false,
 };
 
 async function fileToBase64(file) {
@@ -94,7 +99,13 @@ export default function AdminShopEditor({ password }) {
   }, [password]);
 
   function setField(key, value) {
-    setForm((current) => ({ ...current, [key]: value }));
+    setForm((current) => {
+      const next = { ...current, [key]: value };
+      if (key === "sale_type") {
+        next.opens_external = value === "external";
+      }
+      return next;
+    });
   }
 
   function editProduct(product) {
@@ -104,6 +115,10 @@ export default function AdminShopEditor({ password }) {
       price_pence: product.price_pence ?? "",
       sale_price_pence: product.sale_price_pence ?? "",
       stock_quantity: product.stock_quantity ?? "",
+      sale_type: product.opens_external ? "external" : "checkout",
+      external_url: product.external_url || "",
+      external_button_label: product.external_button_label || "Buy now",
+      opens_external: Boolean(product.opens_external),
     });
     setMessage("");
     setError("");
@@ -137,10 +152,18 @@ export default function AdminShopEditor({ password }) {
     setMessage("");
     try {
       const action = form.id ? "shop-update" : "shop-create";
+      const payload = {
+        ...form,
+        opens_external: form.sale_type === "external",
+        sale_type: form.sale_type,
+      };
+      if (form.sale_type === "external" && !/^https:\/\/.+/i.test(String(form.external_url || "").trim())) {
+        throw new Error("External link products need a valid https:// URL.");
+      }
       await request("/api/admin-shop-products", {
         action,
         id: form.id,
-        product: form,
+        product: payload,
       });
       setForm(EMPTY_FORM);
       setMessage(form.id ? "Product updated." : "Product created.");
@@ -183,7 +206,7 @@ export default function AdminShopEditor({ password }) {
 
       {setupRequired && (
         <div style={{ marginTop: 12, padding: 12, borderRadius: 8, background: "#fff7ed", color: "#9a3412" }}>
-          Run <code>supabase/migrations/20260829_shop.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
+          Run <code>supabase/migrations/20260829_shop.sql</code>, <code>supabase/migrations/20260829_shop_external_links.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
         </div>
       )}
       {error && <div style={{ marginTop: 12, color: "#b91c1c" }}>{error}</div>}
@@ -191,18 +214,31 @@ export default function AdminShopEditor({ password }) {
 
       <form onSubmit={save} style={{ display: "grid", gap: 12, marginTop: 18 }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+          <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
+            Product sale type
+            <select value={form.sale_type} onChange={(e) => setField("sale_type", e.target.value)} style={inp}>
+              <option value="checkout">JDScience checkout</option>
+              <option value="external">External link</option>
+            </select>
+          </label>
           <input required placeholder="Product title" value={form.title} onChange={(e) => setField("title", e.target.value)} style={inp} />
           <input placeholder="Slug (optional)" value={form.slug} onChange={(e) => setField("slug", e.target.value)} style={inp} />
-          <input required type="number" min="0" placeholder="Price (pence)" value={form.price_pence} onChange={(e) => setField("price_pence", e.target.value)} style={inp} />
+          <input type="number" min="0" required={form.sale_type === "checkout"} placeholder={form.sale_type === "external" ? "Price (pence, optional)" : "Price (pence)"} value={form.price_pence} onChange={(e) => setField("price_pence", e.target.value)} style={inp} />
           <input type="number" min="0" placeholder="Sale price (pence, optional)" value={form.sale_price_pence} onChange={(e) => setField("sale_price_pence", e.target.value)} style={inp} />
         </div>
+        {form.sale_type === "external" && (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+            <input required type="url" placeholder="External URL (https://…)" value={form.external_url} onChange={(e) => setField("external_url", e.target.value)} style={inp} />
+            <input required placeholder="Button label, e.g. Buy on Amazon" value={form.external_button_label} onChange={(e) => setField("external_button_label", e.target.value)} style={inp} />
+          </div>
+        )}
         <textarea required rows={2} placeholder="Short description" value={form.short_description} onChange={(e) => setField("short_description", e.target.value)} style={inp} />
         <textarea rows={5} placeholder="Full description" value={form.description} onChange={(e) => setField("description", e.target.value)} style={inp} />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
           <select value={form.product_type} onChange={(e) => setField("product_type", e.target.value)} style={inp}>
             {SHOP_PRODUCT_TYPES.map((type) => <option key={type.value} value={type.value}>{type.label}</option>)}
           </select>
-          <select value={form.product_kind} onChange={(e) => setField("product_kind", e.target.value)} style={inp}>
+          <select value={form.product_kind} onChange={(e) => setField("product_kind", e.target.value)} style={inp} disabled={form.sale_type === "external"}>
             {SHOP_PRODUCT_KINDS.map((kind) => <option key={kind.value} value={kind.value}>{kind.label}</option>)}
           </select>
           <select value={form.level} onChange={(e) => setField("level", e.target.value)} style={inp}>
@@ -217,8 +253,10 @@ export default function AdminShopEditor({ password }) {
             <option value="">Exam board (optional)</option>
             {SHOP_EXAM_BOARDS.map((board) => <option key={board} value={board}>{board}</option>)}
           </select>
-          {form.product_kind === "physical" ? (
+          {form.sale_type !== "external" && form.product_kind === "physical" ? (
             <input required type="number" min="0" placeholder="Stock quantity" value={form.stock_quantity} onChange={(e) => setField("stock_quantity", e.target.value)} style={inp} />
+          ) : form.sale_type !== "external" ? (
+            <input placeholder="Keywords (optional)" value={form.keywords} onChange={(e) => setField("keywords", e.target.value)} style={inp} />
           ) : (
             <input placeholder="Keywords (optional)" value={form.keywords} onChange={(e) => setField("keywords", e.target.value)} style={inp} />
           )}
@@ -234,7 +272,7 @@ export default function AdminShopEditor({ password }) {
             <input type="file" accept="image/*,.pdf" onChange={(e) => uploadFile(e.target.files?.[0], "previews", "preview_path")} />
             {form.preview_path && <span style={{ fontWeight: 500, color: "#64748b" }}>{form.preview_path}</span>}
           </label>
-          {form.product_kind === "digital" && (
+          {form.sale_type !== "external" && form.product_kind === "digital" && (
             <label style={{ display: "grid", gap: 6, fontSize: 14, fontWeight: 700 }}>
               Download file
               <input type="file" onChange={(e) => uploadFile(e.target.files?.[0], "downloads", "download_path")} />
@@ -273,7 +311,7 @@ export default function AdminShopEditor({ password }) {
               <div>
                 <div style={{ fontWeight: 800, color: "#0f172a" }}>{product.title}</div>
                 <div style={{ color: "#64748b", fontSize: 13, marginTop: 4 }}>
-                  {formatPricePence(product.effective_price_pence ?? product.price_pence)} · {shopProductTypeLabel(product.product_type)} · {shopProductKindLabel(product.product_kind)}
+                  {formatPricePence(product.effective_price_pence ?? product.price_pence)} · {shopProductTypeLabel(product.product_type)} · {isExternalProduct(product) ? "External link" : shopProductKindLabel(product.product_kind)}
                   {product.is_published ? " · Published" : " · Draft"}
                   {product.is_featured ? " · Featured" : ""}
                 </div>

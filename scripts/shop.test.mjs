@@ -8,9 +8,11 @@ globalThis.localStorage = {
 };
 
 import {
+  buildOrderLineItems,
   isMissingShopTable,
   isShopColumnMismatch,
   isShopSchemaCacheStale,
+  isValidExternalUrl,
   missingShopColumnName,
 } from "../api/_lib/shop.js";
 import {
@@ -27,6 +29,11 @@ import {
   removeFromBasket,
   updateBasketQuantity,
 } from "../src/shopBasket.js";
+import {
+  externalButtonLabel,
+  isExternalProduct,
+  isValidExternalUrl as isValidExternalUrlClient,
+} from "../src/shopProductHelpers.js";
 import {
   featuredTutorWindow,
   shouldRotateTutorProfiles,
@@ -72,6 +79,51 @@ updateBasketQuantity("prod-1", 2);
 assert.equal(basketCount(readBasket()), 2);
 removeFromBasket("prod-1");
 assert.equal(basketCount(readBasket()), 0);
+
+const externalProduct = {
+  id: "prod-ext",
+  slug: "chemistry-companion",
+  title: "My Chemistry Companion",
+  price_pence: 1299,
+  effective_price_pence: 1299,
+  product_kind: "digital",
+  opens_external: true,
+  external_url: "https://www.amazon.co.uk/dp/example",
+  external_button_label: "Buy on Amazon",
+};
+
+assert.equal(isValidExternalUrl("https://www.amazon.co.uk/dp/example"), true);
+assert.equal(isValidExternalUrl("http://example.com"), false);
+assert.equal(isValidExternalUrlClient("https://www.amazon.co.uk/dp/example"), true);
+assert.equal(isExternalProduct(externalProduct), true);
+assert.equal(externalButtonLabel(externalProduct), "Buy on Amazon");
+assert.equal(externalButtonLabel({ opens_external: true, external_url: "https://example.com" }), "Buy now");
+
+clearBasket();
+addToBasket(externalProduct, 1);
+assert.equal(basketCount(readBasket()), 0);
+
+const checkoutOrder = buildOrderLineItems([externalProduct, sampleProduct], [
+  { product_id: "prod-ext", quantity: 1 },
+]);
+assert.equal(checkoutOrder.ok, false);
+assert.match(checkoutOrder.error, /external website/i);
+
+const normalOrder = buildOrderLineItems([sampleProduct], [
+  { product_id: "prod-1", quantity: 1 },
+]);
+assert.equal(normalOrder.ok, false);
+assert.match(normalOrder.error, /download file/i);
+
+const digitalProduct = {
+  ...sampleProduct,
+  download_path: "downloads/sample.pdf",
+};
+const checkoutReady = buildOrderLineItems([digitalProduct], [
+  { product_id: "prod-1", quantity: 1 },
+]);
+assert.equal(checkoutReady.ok, true);
+assert.equal(checkoutReady.lines.length, 1);
 
 const tutors = [
   { public_slug: "joseph-danso", tutor_name: "Joseph Danso" },

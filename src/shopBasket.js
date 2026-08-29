@@ -1,3 +1,5 @@
+import { isExternalProduct } from "./shopProductHelpers.js";
+
 const BASKET_KEY = "jd_shop_basket";
 
 export function readBasket() {
@@ -27,6 +29,7 @@ export function basketSubtotalPence(items = readBasket()) {
 }
 
 export function addToBasket(product, quantity = 1) {
+  if (isExternalProduct(product)) return readBasket();
   const items = readBasket();
   const productId = String(product.id);
   const existing = items.find((item) => item.productId === productId);

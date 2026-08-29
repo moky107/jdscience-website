@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { shopProductKindLabel, shopProductTypeLabel } from "./shopConstants";
+import { externalButtonLabel, isExternalProduct, productShowsPrice } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -26,7 +27,11 @@ function ProductMeta({ product }) {
 }
 
 export function ProductCard({ product, onView, onAdd, onBuyNow, compact = false }) {
+  const external = isExternalProduct(product);
   const price = product.effective_price_pence ?? product.price_pence;
+  const showPrice = productShowsPrice(product);
+  const externalLabel = externalButtonLabel(product);
+
   return (
     <article style={{ background: "#fff", borderRadius: 16, overflow: "hidden", boxShadow: "0 8px 24px rgba(15,23,42,.08)", display: "flex", flexDirection: "column", height: "100%" }}>
       <div style={{ aspectRatio: "4 / 3", background: "#f1f5f9", position: "relative" }}>
@@ -47,25 +52,38 @@ export function ProductCard({ product, onView, onAdd, onBuyNow, compact = false 
           </p>
         )}
         <ProductMeta product={product} />
-        <div style={{ marginTop: "auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>
-            {formatPricePence(price)}
-            {productOnSale(product) && product.price_pence != null && (
-              <span style={{ marginLeft: 8, color: "#94a3b8", textDecoration: "line-through", fontSize: 14, fontWeight: 600 }}>
-                {formatPricePence(product.price_pence)}
-              </span>
-            )}
+        {showPrice && (
+          <div style={{ marginTop: "auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>
+              {formatPricePence(price)}
+              {productOnSale(product) && product.price_pence != null && (
+                <span style={{ marginLeft: 8, color: "#94a3b8", textDecoration: "line-through", fontSize: 14, fontWeight: 600 }}>
+                  {formatPricePence(product.price_pence)}
+                </span>
+              )}
+            </div>
           </div>
-        </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        )}
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: showPrice ? 0 : "auto" }}>
           <button type="button" onClick={() => onView(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: `1px solid rgba(0,150,136,.22)`, background: "#fff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
             View Product
           </button>
-          <button type="button" onClick={() => onAdd(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
-            Add to Basket
-          </button>
+          {external ? (
+            <a
+              href={product.external_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ flex: 1, minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer", display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}
+            >
+              {externalLabel}
+            </a>
+          ) : (
+            <button type="button" onClick={() => onAdd(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+              Add to Basket
+            </button>
+          )}
         </div>
-        {onBuyNow && (
+        {!external && onBuyNow && (
           <button type="button" onClick={() => onBuyNow(product)} style={{ width: "100%", minHeight: 48, borderRadius: 10, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
             Buy Now
           </button>

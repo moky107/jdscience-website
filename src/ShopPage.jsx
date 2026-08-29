@@ -21,6 +21,7 @@ import {
 } from "./shopBasket";
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { ProductCard } from "./ShopFeaturedSection";
+import { externalButtonLabel, isExternalProduct, productShowsPrice } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -37,7 +38,10 @@ function useShopWidth() {
 }
 
 function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
+  const external = isExternalProduct(product);
   const price = product.effective_price_pence ?? product.price_pence;
+  const showPrice = productShowsPrice(product);
+  const externalLabel = externalButtonLabel(product);
   const meta = [
     product.level && ["Level", product.level],
     product.subject && ["Subject", product.subject],
@@ -62,14 +66,16 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
         </div>
         <div>
           <h1 style={{ margin: "0 0 12px", color: "#0f172a", fontSize: 32, lineHeight: 1.2 }}>{product.title}</h1>
-          <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK, marginBottom: 16 }}>
-            {formatPricePence(price)}
-            {productOnSale(product) && product.price_pence != null && (
-              <span style={{ marginLeft: 10, color: "#94a3b8", textDecoration: "line-through", fontSize: 18, fontWeight: 600 }}>
-                {formatPricePence(product.price_pence)}
-              </span>
-            )}
-          </div>
+          {showPrice && (
+            <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK, marginBottom: 16 }}>
+              {formatPricePence(price)}
+              {productOnSale(product) && product.price_pence != null && (
+                <span style={{ marginLeft: 10, color: "#94a3b8", textDecoration: "line-through", fontSize: 18, fontWeight: 600 }}>
+                  {formatPricePence(product.price_pence)}
+                </span>
+              )}
+            </div>
+          )}
           {product.short_description && <p style={{ color: "#475569", lineHeight: 1.65, fontSize: 16 }}>{product.short_description}</p>}
           {meta.length > 0 && (
             <dl style={{ display: "grid", gap: 8, margin: "18px 0", fontSize: 14 }}>
@@ -85,12 +91,25 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
             <div style={{ color: "#334155", lineHeight: 1.7, whiteSpace: "pre-wrap", marginBottom: 18 }}>{product.description}</div>
           )}
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-            <button type="button" onClick={() => onAdd(product)} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
-              Add to Basket
-            </button>
-            <button type="button" onClick={() => onBuyNow(product)} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
-              Buy Now
-            </button>
+            {external ? (
+              <a
+                href={product.external_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer", display: "inline-flex", alignItems: "center", textDecoration: "none" }}
+              >
+                {externalLabel}
+              </a>
+            ) : (
+              <>
+                <button type="button" onClick={() => onAdd(product)} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+                  Add to Basket
+                </button>
+                <button type="button" onClick={() => onBuyNow(product)} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: `1px solid ${TEAL_DARK}`, background: "#ecfeff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
+                  Buy Now
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -311,6 +330,7 @@ export default function ShopPage({
   }
 
   function handleAdd(product, buyNow = false) {
+    if (isExternalProduct(product)) return;
     const next = addToBasket(product, 1);
     refreshBasket(next);
     if (buyNow) setCheckoutOpen(true);

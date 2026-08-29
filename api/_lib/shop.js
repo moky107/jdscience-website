@@ -37,6 +37,9 @@ export const PUBLIC_PRODUCT_SELECT = [
   'keywords',
   'sort_order',
   'created_at',
+  'external_url',
+  'external_button_label',
+  'opens_external',
 ].join(', ');
 
 export const EXPECTED_SHOP_PRODUCT_COLUMNS = PUBLIC_PRODUCT_SELECT.split(',').map((c) => c.trim());
@@ -81,6 +84,19 @@ export function shopSetupReason(error) {
   if (isShopSchemaCacheStale(error)) return 'schema_cache_stale';
   if (isShopColumnMismatch(error)) return 'column_mismatch';
   return 'query_error';
+}
+
+export function isValidExternalUrl(url) {
+  return /^https:\/\/.+/i.test(safeTrim(url, 2000));
+}
+
+export function isExternalProduct(product) {
+  return Boolean(product?.opens_external) && isValidExternalUrl(product?.external_url);
+}
+
+export function externalButtonLabel(product) {
+  const label = safeTrim(product?.external_button_label, 80);
+  return label || 'Buy now';
 }
 
 export function slugifyProductTitle(value) {
@@ -160,6 +176,19 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   const preview_path = safeTrim(body.preview_path, 400) || null;
   const download_path = safeTrim(body.download_path, 400) || null;
   const slug = safeTrim(body.slug, 80) || slugifyProductTitle(title);
+  const saleTypeProvided = body.sale_type != null || body.saleType != null;
+  const opensExternalProvided = body.opens_external != null || saleTypeProvided;
+  const opens_external = opensExternalProvided
+    ? (body.opens_external != null
+      ? Boolean(body.opens_external)
+      : (body.sale_type === 'external' || body.saleType === 'external'))
+    : (partial ? undefined : false);
+  const external_url = opens_external === true
+    ? safeTrim(body.external_url, 2000)
+    : (opens_external === false ? null : safeTrim(body.external_url, 2000) || undefined);
+  const external_button_label = body.external_button_label != null
+    ? (safeTrim(body.external_button_label, 80) || 'Buy now')
+    : undefined;
 
   const priceRaw = body.price_pence ?? body.pricePence;
   const saleRaw = body.sale_price_pence ?? body.salePricePence;
@@ -175,21 +204,36 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
 
   if (!partial) {
     if (!title) return { ok: false, error: 'Product title is required.' };
-    if (!Number.isFinite(price_pence) || price_pence < 0) {
-      return { ok: false, error: 'Enter a valid price in pence.' };
-    }
     if (!SHOP_PRODUCT_TYPES.has(product_type)) {
       return { ok: false, error: 'Choose a valid product type.' };
     }
-    if (!SHOP_PRODUCT_KINDS.has(product_kind)) {
-      return { ok: false, error: 'Choose digital or physical.' };
+    if (opens_external) {
+      if (!external_url || !isValidExternalUrl(external_url)) {
+        return { ok: false, error: 'External link products need a valid https:// URL.' };
+      }
+      if (price_pence != null && price_pence !== '' && (!Number.isFinite(price_pence) || price_pence < 0)) {
+        return { ok: false, error: 'Enter a valid price in pence, or leave blank for external products.' };
+      }
+    } else {
+      if (!Number.isFinite(price_pence) || price_pence < 0) {
+        return { ok: false, error: 'Enter a valid price in pence.' };
+      }
+      if (!SHOP_PRODUCT_KINDS.has(product_kind)) {
+        return { ok: false, error: 'Choose digital or physical.' };
+      }
+      if (product_kind === 'digital' && !download_path) {
+        return { ok: false, error: 'Digital products need a downloadable file path.' };
+      }
+      if (product_kind === 'physical' && stock_quantity == null) {
+        return { ok: false, error: 'Physical products need a stock quantity.' };
+      }
     }
-    if (product_kind === 'digital' && !download_path) {
-      return { ok: false, error: 'Digital products need a downloadable file path.' };
+  } else if (opens_external === true) {
+    if (!external_url || !isValidExternalUrl(external_url)) {
+      return { ok: false, error: 'External link products need a valid https:// URL.' };
     }
-    if (product_kind === 'physical' && stock_quantity == null) {
-      return { ok: false, error: 'Physical products need a stock quantity.' };
-    }
+  } else if (external_url && !isValidExternalUrl(external_url)) {
+    return { ok: false, error: 'External link products need a valid https:// URL.' };
   }
 
   const fields = {
@@ -197,20 +241,34 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
     title,
     short_description,
     description,
-    price_pence,
+    price_pence: price_pence == null || price_pence === '' ? 0 : price_pence,
     sale_price_pence,
     product_type,
-    product_kind,
+    product_kind: opens_external === true ? (product_kind || 'digital') : product_kind,
     level,
     subject,
     exam_board,
     keywords,
     image_path,
     preview_path,
-    download_path: product_kind === 'physical' ? null : download_path,
-    stock_quantity: product_kind === 'digital' ? null : stock_quantity,
+    download_path: opens_external === true || product_kind === 'physical' ? null : download_path,
+    stock_quantity: opens_external === true || product_kind === 'digital' ? null : stock_quantity,
     updated_at: new Date().toISOString(),
   };
+
+  if (opens_external !== undefined) fields.opens_external = opens_external;
+  if (opens_external === true) {
+    fields.external_url = external_url;
+    fields.external_button_label = external_button_label || 'Buy now';
+  } else if (opens_external === false) {
+    fields.external_url = null;
+    fields.external_button_label = 'Buy now';
+  } else if (external_url !== undefined) {
+    fields.external_url = external_url || null;
+  }
+  if (external_button_label !== undefined && opens_external !== false) {
+    fields.external_button_label = external_button_label;
+  }
 
   if (is_featured !== undefined) fields.is_featured = is_featured;
   if (is_published !== undefined) fields.is_published = is_published;
@@ -253,6 +311,12 @@ export function buildOrderLineItems(products, basketItems) {
     const product = byId.get(String(item.product_id));
     if (!product) {
       return { ok: false, error: 'One or more products are no longer available.' };
+    }
+    if (isExternalProduct(product)) {
+      return {
+        ok: false,
+        error: `${product.title} is sold on an external website and cannot be checked out through JD Science.`,
+      };
     }
     if (product.product_kind === 'physical') {
       hasPhysical = true;
