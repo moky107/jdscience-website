@@ -184,29 +184,30 @@ assert.match(adminSource, /showDebug/, "Product image upload must keep temporary
 assert.match(adminSource, /SHOP_SUBJECTS/, "AdminShopEditor must import SHOP_SUBJECTS");
 
 const tutors = [
-  { public_slug: "joseph-danso", tutor_name: "Joseph Danso" },
-  { public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" },
-  { public_slug: "amina-khan", tutor_name: "Amina Khan" },
-  { public_slug: "sam-reed", tutor_name: "Sam Reed" },
-  { public_slug: "lee-okonkwo", tutor_name: "Lee Okonkwo" },
+  { public_slug: "joseph-danso", tutor_name: "Joseph Danso", is_published: true, profile_status: "approved" },
+  { public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso", is_published: true, profile_status: "approved" },
+  { public_slug: "amina-khan", tutor_name: "Amina Khan", is_published: true, profile_status: "approved" },
+  { public_slug: "sam-reed", tutor_name: "Sam Reed", is_published: true, profile_status: "approved" },
+  { public_slug: "lee-okonkwo", tutor_name: "Lee Okonkwo", is_published: true, profile_status: "approved" },
+  { public_slug: "pending-tutor", tutor_name: "Pending Tutor", is_published: false, profile_status: "pending" },
 ];
 assert.equal(isFounderTutor({ public_slug: "joseph-danso-4qy75y" }), true);
-assert.equal(tutorsForHomepage(tutors).map((item) => item.public_slug).join(","), "amina-khan,sam-reed,lee-okonkwo");
-assert.deepEqual(homepageTutorFallback(tutors).map((item) => item.public_slug), ["amina-khan", "sam-reed", "lee-okonkwo"]);
+assert.equal(
+  tutorsForHomepage(tutors).map((item) => item.public_slug).join(","),
+  "joseph-danso,joseph-danso-4qy75y,amina-khan,sam-reed,lee-okonkwo",
+  "Homepage carousel must include published founder profiles",
+);
+assert.deepEqual(homepageTutorFallback(tutors).map((item) => item.public_slug), ["joseph-danso", "joseph-danso-4qy75y", "amina-khan", "sam-reed", "lee-okonkwo"]);
 assert.deepEqual(homepageTutorFallback([{ public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" }]).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 const homepage = tutorsForHomepage(tutors);
 assert.equal(tutorSlotCount({ isMobile: true }), 1);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: true }), 2);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: false }), 3);
-assert.equal(shouldRotateTutorProfiles(tutors, 3), false);
-assert.equal(shouldRotateTutorProfiles(homepage, 3), homepage.length > 3);
-assert.equal(tutorCarouselPageCount(homepage, 3), homepage.length > 3 ? homepage.length : 1);
-assert.equal(tutorCarouselPageIndex(4, homepage.length), 1);
-const extendedHomepage = [
-  ...homepage,
-  { public_slug: "priya-shah", tutor_name: "Priya Shah" },
-];
-assert.equal(shouldRotateTutorProfiles(extendedHomepage, 3), true);
-assert.deepEqual(featuredTutorWindow(extendedHomepage, 3, 1).map((item) => item.public_slug), ["sam-reed", "lee-okonkwo", "priya-shah"]);
+assert.equal(shouldRotateTutorProfiles(tutors), true);
+assert.equal(shouldRotateTutorProfiles([{ public_slug: "amina-khan", is_published: true }]), false);
+assert.equal(tutorCarouselPageCount(homepage), homepage.length);
+assert.equal(tutorCarouselPageIndex(4, homepage.length), 4 % homepage.length);
+assert.deepEqual(featuredTutorWindow(homepage, 1, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
+assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y", "amina-khan", "sam-reed"]);
 
 console.log("shop.test.mjs: ok");

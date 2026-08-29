@@ -1,5 +1,7 @@
-export const FEATURED_ROTATION_MS = 5000;
+export const FEATURED_ROTATION_MS = 6000;
 export const FOUNDER_SLUG = "joseph-danso";
+
+const HIDDEN_STATUSES = new Set(["pending", "rejected", "draft", "suspended"]);
 
 export function tutorSlotCount({ isMobile = false, isTablet = false } = {}) {
   if (isMobile) return 1;
@@ -13,23 +15,26 @@ export function isFounderTutor(tutor) {
   return slug === FOUNDER_SLUG || slug.startsWith(`${FOUNDER_SLUG}-`);
 }
 
+/** Published / listed tutors for the homepage carousel (includes founder). */
+export function isPublishedHomepageTutor(tutor) {
+  if (!tutor || !String(tutor.public_slug || "").trim()) return false;
+  const status = String(tutor.profile_status || "").trim().toLowerCase();
+  if (status && HIDDEN_STATUSES.has(status)) return false;
+  if (tutor.is_published === false) return false;
+  if (tutor.published === false) return false;
+  return true;
+}
+
 export function tutorsForHomepage(tutors) {
-  return (Array.isArray(tutors) ? tutors : []).filter((tutor) => {
-    const slug = String(tutor?.public_slug || "").trim().toLowerCase();
-    return slug && !isFounderTutor(tutor);
-  });
+  return (Array.isArray(tutors) ? tutors : []).filter(isPublishedHomepageTutor);
 }
 
+/** Alias kept for existing imports — includes all published tutors. */
 export function homepageTutorFallback(tutors) {
-  const list = Array.isArray(tutors) ? tutors.filter(Boolean) : [];
-  const nonFounders = tutorsForHomepage(list);
-  if (nonFounders.length) return nonFounders;
-  const founder = list.find(isFounderTutor);
-  if (founder) return [founder];
-  return [];
+  return tutorsForHomepage(tutors);
 }
 
-export function featuredTutorWindow(tutors, slotCount = 3, offset = 0) {
+export function featuredTutorWindow(tutors, slotCount = 1, offset = 0) {
   const list = Array.isArray(tutors) ? tutors.filter(Boolean) : [];
   const slots = Math.max(0, Number(slotCount) || 0);
   if (!list.length || slots === 0) return [];
@@ -38,14 +43,14 @@ export function featuredTutorWindow(tutors, slotCount = 3, offset = 0) {
   return Array.from({ length: slots }, (_, index) => list[(start + index) % list.length]);
 }
 
-export function shouldRotateTutorProfiles(tutors, slotCount = 3) {
-  return homepageTutorFallback(tutors).length > slotCount;
+/** Rotate whenever there is more than one published tutor. */
+export function shouldRotateTutorProfiles(tutors) {
+  return tutorsForHomepage(tutors).length > 1;
 }
 
-export function tutorCarouselPageCount(tutors, slotCount = 3) {
-  const list = homepageTutorFallback(tutors);
-  if (!list.length || list.length <= slotCount) return 1;
-  return list.length;
+export function tutorCarouselPageCount(tutors) {
+  const list = tutorsForHomepage(tutors);
+  return Math.max(1, list.length);
 }
 
 export function tutorCarouselPageIndex(offset, pageCount) {
