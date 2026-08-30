@@ -1,0 +1,33 @@
+{
+  "level": "BTEC Level 3 National Applied Science",
+  "unit": "Unit 1 Principles and Applications of Science I",
+  "batch1": [
+    {"title": "BTEC Unit 1 Chemistry: Atomic Structure", "subject": "Chemistry", "topic": "Atomic structure"},
+    {"title": "BTEC Unit 1 Chemistry: Electron Configuration", "subject": "Chemistry", "topic": "Electron configuration"},
+    {"title": "BTEC Unit 1 Chemistry: Ionic Bonding", "subject": "Chemistry", "topic": "Ionic bonding"},
+    {"title": "BTEC Unit 1 Chemistry: Covalent Bonding", "subject": "Chemistry", "topic": "Covalent bonding"},
+    {"title": "BTEC Unit 1 Chemistry: Metallic Bonding", "subject": "Chemistry", "topic": "Metallic bonding"},
+    {"title": "BTEC Unit 1 Biology: Cell Structure", "subject": "Biology", "topic": "Cell structure"},
+    {"title": "BTEC Unit 1 Biology: Prokaryotic and Eukaryotic Cells", "subject": "Biology", "topic": "Prokaryotes and eukaryotes"},
+    {"title": "BTEC Unit 1 Biology: Microscopy", "subject": "Biology", "topic": "Microscopy"},
+    {"title": "BTEC Unit 1 Physics: Progressive Waves", "subject": "Physics", "topic": "Progressive waves"},
+    {"title": "BTEC Unit 1 Physics: Wave Properties", "subject": "Physics", "topic": "Wave properties"}
+  ],
+  "laterCandidates": [
+    "Intermolecular forces",
+    "The mole and reacting masses",
+    "Percentage yield",
+    "Ionisation energy",
+    "Group 2 and the halogens",
+    "Specialised cells (already a live shop product — do not duplicate)",
+    "Epithelial tissue",
+    "Muscle tissue",
+    "Neurones and synapses",
+    "Refraction and Snell's law",
+    "Total internal reflection",
+    "Diffraction and interference",
+    "Stationary waves",
+    "Young's double-slit experiment",
+    "Diffraction gratings"
+  ]
+}
