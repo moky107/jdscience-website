@@ -31,7 +31,7 @@ import {
   deleteObsoleteSeededUnit1Products,
   correctSpecialisedCellsClassification,
 } from './shop.js';
-import { ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
+import { countMissingUnit1Products, ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
 import { copyResourceToShop, copyResourcesToShopBulk } from './copyResourceToShop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
@@ -182,7 +182,13 @@ export async function handleShopPublicRequest(req, res) {
   if (kind === 'shop-products') {
     obsoleteSeedCleanup = await deleteObsoleteSeededUnit1Products(supabase);
     specialisedCellsFix = await correctSpecialisedCellsClassification(supabase);
-    const wantsEnsure = req.query?.ensure_unit1 === '1' || req.query?.ensure_unit1 === 'true';
+    let missingUnit1 = 0;
+    try {
+      missingUnit1 = await countMissingUnit1Products(supabase);
+    } catch {
+      missingUnit1 = 20;
+    }
+    const wantsEnsure = req.query?.ensure_unit1 === '1' || req.query?.ensure_unit1 === 'true' || missingUnit1 > 0;
     if (wantsEnsure) {
       try {
         unit1Ensure = await ensureMissingUnit1ShopProducts(supabase, { maxCreate: 10 });

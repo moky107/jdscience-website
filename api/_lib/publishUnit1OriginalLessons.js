@@ -399,6 +399,15 @@ export async function publishUnit1OriginalLessons({
   };
 }
 
+export async function countMissingUnit1Products(supabase) {
+  const slugs = unit1ProductSpecs().map((spec) => spec.slug);
+  if (!supabase || !slugs.length) return slugs.length;
+  const { data, error } = await supabase.from("shop_products").select("slug").in("slug", slugs);
+  if (error) return slugs.length;
+  const present = new Set((data || []).map((row) => row.slug));
+  return slugs.filter((slug) => !present.has(slug)).length;
+}
+
 export async function ensureMissingUnit1ShopProducts(supabase, { maxCreate = 8 } = {}) {
   return publishUnit1OriginalLessons({
     supabase,
