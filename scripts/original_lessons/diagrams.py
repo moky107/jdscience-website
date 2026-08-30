@@ -47,6 +47,31 @@ def _leader(d, x1, y1, x2, y2, text, fill=INK, font=None):
     d.text((x2 + 6, y2 - 12), text, fill=fill, font=font)
 
 
+def _callout(d, sx, sy, lx, ly, title, sub="", col=INK, w=340, h=72):
+    mid_x = lx - 16
+    d.line((sx, sy, mid_x, ly + h // 2), fill=col, width=2)
+    d.line((mid_x, ly + h // 2, lx, ly + h // 2), fill=col, width=2)
+    d.ellipse((sx - 5, sy - 5, sx + 5, sy + 5), fill=col)
+    d.rounded_rectangle((lx, ly, lx + w, ly + h), 10, fill=WHITE, outline=col, width=2)
+    d.rectangle((lx, ly, lx + 8, ly + h), fill=col)
+    d.text((lx + 18, ly + 8), title, fill=col, font=_font(18, True))
+    if sub:
+        d.text((lx + 18, ly + 36), sub, fill=INK, font=_font(16))
+
+
+def _double_arrow(d, x1, y1, x2, y2, fill=INK, width=3):
+    d.line((x1, y1, x2, y2), fill=fill, width=width)
+    ang = math.atan2(y2 - y1, x2 - x1)
+    for end, sign in (( (x1, y1), 1), ((x2, y2), -1)):
+        a = ang + sign * math.pi
+        px, py = end
+        d.polygon([
+            (px, py),
+            (px + 12 * math.cos(a + 0.4), py + 12 * math.sin(a + 0.4)),
+            (px + 12 * math.cos(a - 0.4), py + 12 * math.sin(a - 0.4)),
+        ], fill=fill)
+
+
 def save(img: Image.Image, name: str) -> Path:
     path = MEDIA / name
     img.save(path, optimize=True)
@@ -143,16 +168,19 @@ def particle_compare() -> Path:
 
 
 def sodium_nuclide() -> Path:
-    img, d = _new(1200, 900, WHITE)
-    d.rounded_rectangle((80, 80, 1120, 820), 28, fill=CREAM, outline=TEAL, width=3)
-    d.text((160, 120), "Nuclide notation", fill=TEAL_DARK, font=_font(32, True))
-    d.text((280, 250), "23", fill=TEAL_DARK, font=_font(72, True))
-    d.text((280, 340), "11", fill=NAVY, font=_font(64, True))
-    d.text((430, 270), "Na", fill=INK, font=_font(110, True))
-    d.text((200, 500), "Mass number A  =  protons + neutrons  =  23", fill=INK, font=_font(26))
-    d.text((200, 560), "Atomic number Z  =  protons  =  11", fill=INK, font=_font(26))
-    d.text((200, 620), "Neutrons  =  23 − 11  =  12", fill=TEAL_DARK, font=_font(28, True))
-    d.text((200, 700), "Neutral atom: electrons = Z = 11", fill=NAVY, font=_font(24))
+    img, d = _new(1400, 920, WHITE)
+    d.text((60, 30), "Nuclide notation  ·  sodium-23", fill=TEAL_DARK, font=_font(30, True))
+    d.rounded_rectangle((70, 110, 620, 620), 24, fill=CREAM, outline=TEAL, width=3)
+    d.text((150, 180), "23", fill=TEAL_DARK, font=_font(72, True))
+    d.text((150, 280), "11", fill=NAVY, font=_font(64, True))
+    d.text((310, 210), "Na", fill=INK, font=_font(110, True))
+    _callout(d, 220, 210, 680, 140, "Mass number A = 23", "protons + neutrons", TEAL_DARK, 620, 70)
+    _callout(d, 220, 320, 680, 240, "Atomic number Z = 11", "protons — identifies the element", NAVY, 620, 70)
+    _callout(d, 430, 300, 680, 340, "Chemical symbol", "Na is still sodium if the charge changes", INK, 620, 70)
+    d.rounded_rectangle((70, 660, 1330, 880), 18, fill=SKY, outline=NAVY, width=2)
+    d.text((100, 690), "Neutrons  =  A − Z  =  23 − 11  =  12", fill=TEAL_DARK, font=_font(26, True))
+    d.text((100, 750), "Neutral atom: electrons = Z = 11", fill=NAVY, font=_font(24, True))
+    d.text((100, 810), "Na⁺ ion: still 11 protons; electrons = 10. The nucleus does not change.", fill=INK, font=_font(22))
     return save(img, "sodium-nuclide.png")
 
 
@@ -199,27 +227,28 @@ def shells_diagram() -> Path:
 
 
 def orbital_boxes() -> Path:
-    img, d = _new(1400, 920, WHITE)
-    d.text((70, 36), "Orbital box diagrams", fill=TEAL_DARK, font=_font(32, True))
-    d.text((70, 90), "Each box is one orbital. Arrows are electrons of opposite spin.", fill=MUTED, font=_font(20))
+    img, d = _new(1400, 960, WHITE)
+    d.text((70, 28), "Orbital box diagrams — boxes and spin arrows drawn", fill=TEAL_DARK, font=_font(30, True))
+    d.text((70, 78), "Each box is one orbital. An up arrow and a down arrow are electrons of opposite spin.", fill=MUTED, font=_font(20))
 
-    def boxes(x, y, n, arrows, title, note):
-        d.text((x, y - 46), title, fill=INK, font=_font(24, True))
-        for i in range(n):
-            bx = x + i * 90
-            d.rectangle((bx, y, bx + 76, y + 90), outline=TEAL_DARK, width=3, fill=WHITE)
+    def boxes(x, y, labels, arrows, title, note):
+        d.text((x, y - 44), title, fill=INK, font=_font(24, True))
+        for i, lab in enumerate(labels):
+            bx = x + i * 96
+            d.rectangle((bx, y, bx + 82, y + 96), outline=TEAL_DARK, width=3, fill=WHITE)
+            d.text((bx + 22, y + 102), lab, fill=TEAL_DARK, font=_font(16, True))
             arts = arrows[i] if i < len(arrows) else ""
             if "u" in arts:
-                d.line((bx + 28, y + 70, bx + 28, y + 22), fill=ROSE, width=4)
-                d.polygon([(bx + 28, y + 18), (bx + 18, y + 32), (bx + 38, y + 32)], fill=ROSE)
+                d.line((bx + 30, y + 74, bx + 30, y + 22), fill=ROSE, width=4)
+                d.polygon([(bx + 30, y + 16), (bx + 20, y + 32), (bx + 40, y + 32)], fill=ROSE)
             if "d" in arts:
-                d.line((bx + 50, y + 22, bx + 50, y + 70), fill=NAVY, width=4)
-                d.polygon([(bx + 50, y + 74), (bx + 40, y + 60), (bx + 60, y + 60)], fill=NAVY)
-        d.text((x, y + 110), note, fill=MUTED, font=_font(18))
+                d.line((bx + 54, y + 22, bx + 54, y + 74), fill=NAVY, width=4)
+                d.polygon([(bx + 54, y + 80), (bx + 44, y + 64), (bx + 64, y + 64)], fill=NAVY)
+        d.text((x, y + 132), note, fill=MUTED, font=_font(17))
 
-    boxes(80, 220, 1, ["ud"], "Helium  1s²", "Pauli: two electrons in one orbital must have opposite spin.")
-    boxes(80, 460, 3, ["u", "u", "u"], "Nitrogen  2p³", "Hund: one electron in each equal-energy orbital before pairing.")
-    boxes(80, 700, 3, ["ud", "u", "u"], "Oxygen  2p⁴", "The fourth 2p electron pairs in one box.")
+    boxes(80, 180, ["1s"], ["ud"], "Helium  1s²", "Pauli: two electrons in one orbital must have opposite spin.")
+    boxes(80, 430, ["2px", "2py", "2pz"], ["u", "u", "u"], "Nitrogen  2p³", "Hund: one electron in each equal-energy orbital before pairing.")
+    boxes(80, 690, ["2px", "2py", "2pz"], ["ud", "u", "u"], "Oxygen  2p⁴", "The fourth 2p electron pairs in one box. The other two stay unpaired.")
     return save(img, "orbital-boxes.png")
 
 
@@ -389,54 +418,75 @@ def metallic_lattice() -> Path:
 
 
 def animal_cell() -> Path:
-    img, d = _new(1500, 1050, WHITE)
-    d.text((40, 24), "Animal cell — labelled schematic", fill=TEAL_DARK, font=_font(30, True))
-    d.ellipse((80, 90, 900, 960), fill=MINT, outline=TEAL, width=7)
-    d.ellipse((300, 280, 620, 600), fill=PINK, outline=ROSE, width=5)
-    d.ellipse((390, 360, 530, 500), fill=ROSE)
-    d.ellipse((160, 200, 280, 300), outline=PURPLE, width=4)
-    d.ellipse((160, 210, 270, 290), outline=PURPLE, width=2)
-    d.ellipse((650, 180, 820, 280), outline=AMBER, width=3)
-    for i in range(5):
-        d.ellipse((640 + i * 18, 200, 652 + i * 18, 212), fill=NAVY)
-    d.ellipse((200, 680, 360, 800), outline=PURPLE, width=4)
-    d.ellipse((700, 700, 780, 760), fill=(254, 215, 170), outline=AMBER, width=2)
-    labels = [
-        (900, 120, 1180, 140, "Cell-surface membrane\nphospholipid bilayer", TEAL_DARK, 890, 200),
-        (900, 280, 1180, 300, "Nucleus + nucleolus\nDNA / rRNA", ROSE, 620, 430),
-        (900, 430, 1180, 450, "Mitochondrion\ncristae, ATP", PURPLE, 280, 250),
-        (900, 560, 1180, 580, "RER + ribosomes\nprotein synthesis", NAVY, 740, 230),
-        (900, 700, 1180, 720, "Cytoplasm\naqueous site of reactions", TEAL, 500, 800),
-        (900, 830, 1180, 850, "Lysosome / vesicle\ndigestive enzymes", AMBER, 740, 730),
-    ]
-    for lx, ly, _a, _b, text, col, sx, sy in labels:
-        d.line((sx, sy, lx, ly + 10), fill=col, width=2)
-        d.text((lx + 10, ly), text, fill=col, font=_font(20, True))
-    d.text((40, 990), "Original schematic — organelles are not to scale. Leader lines touch the structures.", fill=MUTED, font=_font(18))
+    img, d = _new(1600, 1080, WHITE)
+    d.text((40, 20), "Animal cell — labelled schematic", fill=TEAL_DARK, font=_font(30, True))
+    d.ellipse((70, 90, 880, 980), fill=(226, 250, 241), outline=TEAL, width=8)
+    # cytoplasm texture
+    for x in range(140, 820, 46):
+        for y in range(160, 920, 52):
+            if (x - 475) ** 2 / 380 ** 2 + (y - 535) ** 2 / 410 ** 2 < 0.82:
+                d.ellipse((x, y, x + 3, y + 3), fill=(167, 243, 208))
+    # nucleus
+    d.ellipse((310, 300, 620, 610), fill=(254, 226, 226), outline=ROSE, width=6)
+    d.ellipse((328, 318, 602, 592), outline=(244, 63, 94), width=3)
+    d.ellipse((400, 390, 530, 520), fill=ROSE)
+    for ang in (30, 110, 200, 280):
+        px = 465 + int(148 * math.cos(math.radians(ang)))
+        py = 455 + int(148 * math.sin(math.radians(ang)))
+        d.ellipse((px - 8, py - 8, px + 8, py + 8), fill=WHITE, outline=NAVY, width=2)
+    # mitochondria with inner folds
+    for mx, my in ((150, 220), (200, 700)):
+        d.ellipse((mx, my, mx + 150, my + 90), fill=(237, 233, 254), outline=PURPLE, width=4)
+        d.ellipse((mx + 12, my + 12, mx + 138, my + 78), outline=PURPLE, width=2)
+        for i in range(4):
+            fx = mx + 28 + i * 26
+            d.line([(fx, my + 20), (fx + 10, my + 45), (fx, my + 70)], fill=PURPLE, width=2)
+    # RER
+    for i, y in enumerate((170, 198, 226)):
+        d.arc((620, y, 820, y + 70), 200, 340, fill=AMBER, width=3)
+        for j in range(5):
+            d.ellipse((650 + j * 28, y + 8, 660 + j * 28, y + 18), fill=NAVY)
+    # Golgi
+    for i, y in enumerate((640, 662, 684, 706)):
+        d.arc((640, y, 800, y + 46), 200, 340, fill=PURPLE, width=4)
+    # lysosome
+    d.ellipse((700, 780, 780, 860), fill=(254, 215, 170), outline=AMBER, width=3)
+    _callout(d, 870, 200, 980, 90, "Cell-surface membrane", "phospholipid bilayer; selective", TEAL_DARK, 560, 68)
+    _callout(d, 620, 450, 980, 190, "Nucleus + nucleolus", "DNA as chromatin; rRNA made here", ROSE, 560, 68)
+    _callout(d, 300, 250, 980, 290, "Mitochondrion", "cristae increase area for ATP transfer", PURPLE, 560, 68)
+    _callout(d, 780, 200, 980, 390, "Rough ER + ribosomes", "protein synthesis and processing", NAVY, 560, 68)
+    _callout(d, 720, 680, 980, 490, "Golgi body", "modifies and packages proteins", PURPLE, 560, 68)
+    _callout(d, 500, 880, 980, 590, "Cytoplasm", "aqueous site of many reactions", TEAL, 560, 68)
+    _callout(d, 740, 820, 980, 690, "Lysosome / vesicle", "hydrolytic enzymes isolated", AMBER, 560, 68)
+    d.text((40, 1020), "Original schematic — organelles are not to scale. Leader lines touch the structures.", fill=MUTED, font=_font(18))
     return save(img, "animal-cell.png")
 
 
 def plant_cell() -> Path:
-    img, d = _new(1500, 1050, WHITE)
-    d.text((40, 24), "Plant cell — labelled schematic", fill=TEAL_DARK, font=_font(30, True))
-    d.rounded_rectangle((70, 90, 900, 960), 8, outline=TEAL_DARK, width=10)
-    d.ellipse((110, 140, 860, 910), outline=TEAL, width=5)
-    d.rounded_rectangle((260, 240, 680, 520), 24, fill=SKY, outline=BLUE, width=3)
-    d.ellipse((160, 600, 340, 780), fill=(187, 247, 208), outline=(22, 163, 74), width=3)
-    for gy in (640, 680, 720):
-        d.line((190, gy, 310, gy), fill=(22, 163, 74), width=2)
-    d.ellipse((520, 620, 720, 820), fill=PINK, outline=ROSE, width=3)
-    d.ellipse((580, 680, 660, 760), fill=ROSE)
-    labels = [
-        (960, 120, "Cellulose cell wall\nsupport; freely permeable", TEAL_DARK, 900, 160),
-        (960, 280, "Cell-surface membrane\nselectively permeable", TEAL, 860, 300),
-        (960, 430, "Permanent vacuole\ncell sap; turgidity", BLUE, 680, 360),
-        (960, 580, "Chloroplast\ngrana / thylakoids", (22, 163, 74), 340, 690),
-        (960, 740, "Nucleus", ROSE, 720, 720),
-    ]
-    for lx, ly, text, col, sx, sy in labels:
-        d.line((sx, sy, lx, ly + 10), fill=col, width=2)
-        d.text((lx + 12, ly), text, fill=col, font=_font(20, True))
+    img, d = _new(1600, 1080, WHITE)
+    d.text((40, 20), "Plant cell — labelled schematic", fill=TEAL_DARK, font=_font(30, True))
+    d.rounded_rectangle((60, 90, 900, 980), 10, outline=TEAL_DARK, width=14)
+    d.rounded_rectangle((88, 118, 872, 952), 8, fill=(236, 253, 245), outline=TEAL, width=5)
+    # vacuole
+    d.rounded_rectangle((240, 220, 720, 560), 28, fill=(219, 234, 254), outline=BLUE, width=4)
+    d.text((360, 360), "cell sap", fill=NAVY, font=_font(20, True))
+    # chloroplast with grana stacks
+    d.ellipse((140, 620, 360, 820), fill=(187, 247, 208), outline=(21, 128, 61), width=4)
+    for gx, gy in ((175, 670), (230, 690), (185, 740)):
+        for i in range(4):
+            d.ellipse((gx, gy + i * 10, gx + 48, gy + 8 + i * 10), fill=(22, 163, 74), outline=(21, 128, 61), width=1)
+    # nucleus pushed aside
+    d.ellipse((540, 640, 760, 860), fill=PINK, outline=ROSE, width=4)
+    d.ellipse((600, 700, 700, 800), fill=ROSE)
+    # mitochondrion
+    d.ellipse((150, 200, 280, 280), fill=(237, 233, 254), outline=PURPLE, width=3)
+    _callout(d, 900, 160, 980, 90, "Cellulose cell wall", "support; freely permeable", TEAL_DARK, 560, 68)
+    _callout(d, 870, 300, 980, 190, "Cell-surface membrane", "selectively permeable bilayer", TEAL, 560, 68)
+    _callout(d, 720, 360, 980, 290, "Permanent vacuole", "cell sap; keeps the cell turgid", BLUE, 560, 68)
+    _callout(d, 360, 720, 980, 390, "Chloroplast", "grana / thylakoids hold chlorophyll", (21, 128, 61), 560, 68)
+    _callout(d, 760, 750, 980, 490, "Nucleus", "DNA; controls protein synthesis", ROSE, 560, 68)
+    _callout(d, 280, 240, 980, 590, "Mitochondrion", "also present — aerobic respiration", PURPLE, 560, 68)
+    d.text((40, 1020), "The wall is freely permeable. Exchange is controlled by the membrane inside it.", fill=MUTED, font=_font(18))
     return save(img, "plant-cell.png")
 
 
@@ -458,16 +508,20 @@ def nucleus_detail() -> Path:
 
 
 def mitochondrion() -> Path:
-    img, d = _new(1400, 820, WHITE)
-    d.text((60, 30), "Mitochondrion — structure linked to ATP transfer", fill=TEAL_DARK, font=_font(28, True))
-    d.ellipse((80, 180, 860, 700), outline=NAVY, width=6)
-    d.ellipse((120, 220, 820, 660), outline=PURPLE, width=5)
-    for x in range(180, 760, 90):
-        d.line([(x, 250), (x + 24, 400), (x, 550), (x + 24, 630)], fill=PURPLE, width=4)
-    d.text((920, 220), "Outer membrane", fill=NAVY, font=_font(22, True))
-    d.text((920, 320), "Inner membrane folded\ninto cristae", fill=PURPLE, font=_font(22, True))
-    d.text((920, 460), "Matrix: enzymes,\ncircular DNA, 70S ribosomes", fill=TEAL_DARK, font=_font(22, True))
-    d.text((80, 740), "Cristae increase surface area for respiratory proteins. Do not say mitochondria 'make energy'.", fill=MUTED, font=_font(18))
+    img, d = _new(1500, 880, WHITE)
+    d.text((50, 24), "Mitochondrion — structure linked to ATP transfer", fill=TEAL_DARK, font=_font(28, True))
+    d.ellipse((60, 160, 880, 760), fill=(226, 232, 240), outline=NAVY, width=10)
+    d.ellipse((105, 205, 835, 715), fill=(245, 243, 255), outline=PURPLE, width=5)
+    for cx in (210, 330, 450, 570, 690):
+        depth = 430 if cx in (330, 570) else 480
+        d.line([(cx - 26, 230), (cx - 30, depth), (cx, depth + 40), (cx + 30, depth), (cx + 26, 230)], fill=PURPLE, width=4)
+        d.line([(cx - 12, 245), (cx - 14, depth - 20), (cx, depth), (cx + 14, depth - 20), (cx + 12, 245)], fill=(167, 139, 250), width=2)
+    d.ellipse((400, 560, 510, 640), outline=TEAL, width=2)
+    d.text((418, 584), "DNA", fill=TEAL_DARK, font=_font(16, True))
+    _callout(d, 880, 230, 960, 140, "Outer membrane", "smooth boundary", NAVY, 480, 68)
+    _callout(d, 690, 360, 960, 240, "Inner membrane / cristae", "folded inwards; more area for proteins", PURPLE, 480, 68)
+    _callout(d, 460, 600, 960, 360, "Matrix", "enzymes, circular DNA, 70S ribosomes", TEAL_DARK, 480, 68)
+    d.text((50, 800), "Cristae increase surface area for respiratory proteins. Do not write that mitochondria ‘make energy’.", fill=MUTED, font=_font(18))
     return save(img, "mitochondrion.png")
 
 
@@ -596,41 +650,67 @@ def mag_triangle() -> Path:
 
 
 def wave_snapshot() -> Path:
-    img, d = _new(1400, 860, WHITE)
-    d.line((80, 420, 1320, 420), fill=GREY, width=2)
+    img, d = _new(1500, 920, WHITE)
+    d.text((60, 24), "Transverse wave snapshot  ·  displacement against distance", fill=TEAL_DARK, font=_font(26, True))
+    d.line((90, 80, 90, 700), fill=INK, width=3)
+    d.line((90, 420, 1420, 420), fill=GREY, width=2)
+    d.text((20, 70), "displacement", fill=MUTED, font=_font(16))
+    d.text((1280, 700), "distance", fill=MUTED, font=_font(16))
     pts = []
-    for x in range(80, 1320):
-        y = 420 - int(160 * math.sin((x - 80) / 80))
+    for x in range(90, 1410):
+        y = 420 - int(170 * math.sin((x - 90) / 80))
         pts.append((x, y))
-    d.line(pts, fill=TEAL, width=5)
-    d.line((260, 420, 260, 260), fill=ROSE, width=4)
-    d.text((275, 300), "Amplitude A", fill=ROSE, font=_font(22, True))
-    start = 80 + int(80 * math.pi)
-    end = 80 + int(80 * 3 * math.pi)
-    d.line((start, 640, end, 640), fill=NAVY, width=4)
-    d.text((start + 40, 660), "Wavelength λ  (crest to next crest)", fill=NAVY, font=_font(22, True))
-    d.text((80, 40), "Transverse wave snapshot  ·  displacement against distance", fill=TEAL_DARK, font=_font(26, True))
-    d.text((80, 780), "Equilibrium is the centre line — not a trough. Crest-to-trough height is 2A.", fill=MUTED, font=_font(20))
+    d.line(pts, fill=TEAL, width=6)
+    crest1 = 90 + int(80 * math.pi / 2)
+    crest2 = 90 + int(80 * 5 * math.pi / 2)
+    trough = 90 + int(80 * 3 * math.pi / 2)
+    d.ellipse((crest1 - 8, 250 - 8, crest1 + 8, 250 + 8), fill=ROSE)
+    d.ellipse((crest2 - 8, 250 - 8, crest2 + 8, 250 + 8), fill=ROSE)
+    d.ellipse((trough - 8, 590 - 8, trough + 8, 590 + 8), fill=NAVY)
+    _double_arrow(d, crest1, 420, crest1, 250, ROSE, 4)
+    d.text((crest1 + 16, 310), "A", fill=ROSE, font=_font(28, True))
+    _double_arrow(d, crest1, 720, crest2, 720, NAVY, 4)
+    d.text((crest1 + 80, 740), "wavelength  λ", fill=NAVY, font=_font(22, True))
+    d.text((crest1 - 20, 200), "crest", fill=ROSE, font=_font(18, True))
+    d.text((trough - 30, 610), "trough", fill=NAVY, font=_font(18, True))
+    d.text((100, 400), "equilibrium", fill=MUTED, font=_font(16))
+    d.rounded_rectangle((90, 800, 1410, 890), 12, fill=GOLD)
+    d.text((110, 828), "A is measured from equilibrium to a crest — not crest to trough (that is 2A).", fill=INK, font=_font(22, True))
     return save(img, "wave-snapshot.png")
 
 
 def long_vs_trans() -> Path:
-    img, d = _new(1400, 920, WHITE)
-    d.text((70, 30), "Transverse", fill=TEAL_DARK, font=_font(28, True))
+    img, d = _new(1500, 980, WHITE)
+    d.text((60, 24), "Transverse wave", fill=TEAL_DARK, font=_font(28, True))
+    d.line((80, 200, 1420, 200), fill=GREY, width=2)
     pts = []
-    for x in range(80, 1320):
-        y = 200 - int(80 * math.sin((x - 80) / 60))
+    for x in range(80, 1420):
+        y = 200 - int(90 * math.sin((x - 80) / 60))
         pts.append((x, y))
     d.line(pts, fill=TEAL, width=5)
-    d.text((70, 300), "Oscillation is perpendicular to energy transfer.", fill=MUTED, font=_font(20))
-    d.text((70, 400), "Longitudinal", fill=NAVY, font=_font(28, True))
+    c1 = 80 + int(60 * math.pi / 2)
+    c2 = 80 + int(60 * 5 * math.pi / 2)
+    _double_arrow(d, c1, 200, c1, 110, ROSE, 3)
+    d.text((c1 + 10, 140), "A", fill=ROSE, font=_font(20, True))
+    _double_arrow(d, c1, 320, c2, 320, NAVY, 3)
+    d.text((c1 + 40, 336), "λ", fill=NAVY, font=_font(22, True))
+    d.text((60, 360), "Oscillation is perpendicular to the direction of energy transfer.", fill=INK, font=_font(20))
+    d.text((60, 430), "Longitudinal wave", fill=NAVY, font=_font(28, True))
     x = 80
-    for i in range(36):
-        gap = 12 if (i % 8) < 4 else 34
-        d.rectangle((x, 500, x + 12, 700), fill=NAVY)
+    labels_at = []
+    for i in range(40):
+        compressed = (i % 10) < 4
+        gap = 10 if compressed else 36
+        d.rectangle((x, 520, x + 14, 740), fill=NAVY if compressed else TEAL)
+        if i % 10 == 1:
+            labels_at.append((x, "compression"))
+        if i % 10 == 7:
+            labels_at.append((x, "rarefaction"))
         x += gap
-    d.text((70, 740), "Oscillation is parallel to energy transfer.", fill=MUTED, font=_font(20))
-    d.text((70, 790), "Compressions (particles closer) and rarefactions (particles further apart).", fill=MUTED, font=_font(20))
+    for lx, lab in labels_at[:4]:
+        d.text((lx - 10, 760), lab, fill=NAVY if lab[0] == "c" else TEAL, font=_font(16, True))
+    d.text((60, 820), "Oscillation is parallel to energy transfer. Particles bunch (compression) then spread (rarefaction).", fill=INK, font=_font(20))
+    d.text((60, 870), "Sound in air is longitudinal. Light is transverse. A sine-graph of sound is a graph, not a picture of the particles.", fill=MUTED, font=_font(18))
     return save(img, "long-vs-trans.png")
 
 

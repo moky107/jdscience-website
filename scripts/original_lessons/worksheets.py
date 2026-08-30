@@ -267,6 +267,7 @@ def bonding_student(styles, topic):
         s.append(fig("covalent-pair.png", 140 * mm, 48 * mm))
         s.append(question_block(styles, 4, "Explain how a chlorine molecule is held together, referring to both nuclei.", n=5))
         s.append(PageBreak())
+        s.append(Paragraph("B  Knowledge", styles["h"]))
         s.append(fig("diamond-graphite.png", 160 * mm, 52 * mm))
         s.append(question_block(styles, 5, "Describe the bonding and structure of diamond.", n=5))
         s.append(question_block(styles, 6, "Why does graphite conduct electricity when diamond does not?", n=5))
@@ -318,11 +319,19 @@ def cell_student(styles):
     s.append(question_block(styles, 2, "Name three structures found in plant cells but not in typical animal cells.", n=3))
     s.append(question_block(styles, 3, "What is meant by a selectively permeable membrane?", n=3))
     s.append(Paragraph("B  Labelling", styles["h"]))
-    s.append(fig("animal-cell.png", 160 * mm, 62 * mm))
-    s.append(question_block(styles, 4, "On the animal-cell schematic, name the structures indicated by the leader lines (or list six organelles and their functions).", n=7))
+    s.append(question_block(
+        styles, 4,
+        "On the animal-cell schematic, name the structures indicated by the leader lines (or list six organelles and their functions).",
+        n=6,
+        image=fig("animal-cell.png", 155 * mm, 70 * mm),
+    ))
     s.append(PageBreak())
-    s.append(fig("plant-cell.png", 160 * mm, 60 * mm))
-    s.append(question_block(styles, 5, "Label the plant-cell extras: wall, membrane, vacuole, chloroplast and nucleus. State which layer is freely permeable.", n=6))
+    s.append(question_block(
+        styles, 5,
+        "Label the plant-cell extras: wall, membrane, vacuole, chloroplast and nucleus. State which layer is freely permeable.",
+        n=5,
+        image=fig("plant-cell.png", 155 * mm, 68 * mm),
+    ))
     s.append(fig("bilayer.png", 150 * mm, 48 * mm))
     s.append(question_block(styles, 6, "Describe the structure of the cell-surface membrane. Use the words phospholipid, hydrophobic, protein and fluid mosaic.", n=6))
     s.append(PageBreak())
@@ -403,8 +412,11 @@ def waves_student(styles, progressive=True):
         s.append(question_block(styles, 4, "On the snapshot, mark A and λ. How is amplitude read from a displacement–distance graph?", n=4))
         s.append(PageBreak())
         s.append(Paragraph("C  Calculations", styles["h"]))
+        s.append(Paragraph("Use the same method every time: write the equation, convert to SI units, substitute, then give the unit.", styles["note"]))
+        s.append(blank_table(["Quantity", "As written", "SI value", "SI unit"], 3, [40 * mm, 45 * mm, 45 * mm, 40 * mm]))
+        s.append(Paragraph("Use the blank rows to convert 200 MHz, 48 m / 0.16 s, and any other value before you substitute.", styles["note"]))
         s.append(question_block(styles, 5, "f = 4.0 Hz, λ = 0.80 m. Calculate v.", "calc"))
-        s.append(question_block(styles, 6, "A radio wave has f = 200 MHz. Take c = 3.00 × 10<sup>8</sup> m s<sup>−1</sup>. Calculate λ.", "calc"))
+        s.append(question_block(styles, 6, "A radio wave has f = 200 MHz. Take c = 3.00 × 10<sup>8</sup> m s<sup>−1</sup>. Calculate λ. Show the MHz → Hz conversion.", "calc"))
         s.append(question_block(styles, 7, "A wave travels 48 m in 0.16 s. If λ = 2.0 m, calculate f.", "calc"))
         s.append(PageBreak())
         s.append(Paragraph("D  Exam-style practice", styles["h"]))
@@ -535,7 +547,8 @@ ANSWERS = {
             "1. Nucleus: DNA / control of protein synthesis. Mitochondrion: aerobic respiration / ATP. Ribosome: protein synthesis.",
             "2. Cell wall, chloroplasts, permanent vacuole.",
             "3. Allows some substances to cross and restricts others.",
-            "4–5. Accept correct labels from the schematics: membrane, cytoplasm, nucleus, nucleolus, mitochondrion, RER/ribosomes, wall, vacuole, chloroplast. Wall freely permeable.",
+            "4. Animal-cell labels: cell-surface membrane, cytoplasm, nucleus / nucleolus, mitochondrion, RER + ribosomes, lysosome / vesicle. Award 1 mark per correct structure–function pair, up to 6.",
+            "5. Plant extras: cellulose wall (freely permeable), membrane (selectively permeable), permanent vacuole, chloroplast (grana), nucleus.",
             "6. Phospholipid bilayer with proteins (and cholesterol / glycoproteins in animal cells); fluid mosaic.",
             "7. Folds increase surface area for respiratory enzymes / electron-transport proteins.",
             "8. High ATP demand for contraction.",
@@ -581,8 +594,8 @@ ANSWERS = {
             "2. v = fλ; m s<sup>−1</sup>, Hz, m.",
             "3. T = 1/f.",
             "4. Vertical distance from the equilibrium line to a crest (not crest-to-trough).",
-            "5. 3.2 m s<sup>−1</sup>.",
-            "6. f = 2.00 × 10<sup>8</sup> Hz; λ = 1.50 m.",
+            "5. 3.2 m s<sup>−1</sup>. Full working in the table.",
+            "6. Convert 200 MHz to 2.00 × 10<sup>8</sup> Hz first. λ = 1.50 m.",
             "7. v = 300 m s<sup>−1</sup>; f = 150 Hz.",
             "8. See retrieval definitions. [2]",
             "9. λ = 340/510 = 0.667 m (3 s.f.). [2]",
@@ -623,12 +636,162 @@ STUDENT_BUILDERS = {
 }
 
 
+CALC_ANSWERS = {
+    ("atomic-structure", "7"): (
+        "A<sub>r</sub> = (Σ percent × mass number) / 100",
+        "A<sub>r</sub> = (60.0 × 69 + 40.0 × 71) / 100",
+        "(4140 + 2840) / 100 = 6980 / 100",
+        "69.8   (no unit)",
+        "1 mark substitution with both isotopes; 1 mark 69.8.",
+    ),
+    ("atomic-structure", "10"): (
+        "A<sub>r</sub> = (Σ percent × mass number) / 100",
+        "A<sub>r</sub> = (75 × 63 + 25 × 65) / 100",
+        "(4725 + 1625) / 100 = 6350 / 100",
+        "63.5   (no unit)",
+        "1 mark substitution; 1 mark 63.5.",
+    ),
+    ("atomic-structure", "12"): (
+        "A<sub>r</sub> = (Σ abundance × mass number) / 100",
+        "A<sub>r</sub> = (90.5 × 20 + 0.27 × 21 + 9.25 × 22) / 100",
+        "(1810 + 5.67 + 203.5) / 100 = 2019.17 / 100",
+        "20.2 (3 s.f.)",
+        "1 mark full substitution; 1 mark 20.2; comment that ignoring <super>21</super>Ne barely changes 3 s.f.",
+    ),
+    ("microscopy", "2"): (
+        "1 mm = 1000 µm = 1 000 000 nm",
+        "2.5 mm × 1000",
+        "2500 µm;  2.5 × 10<sup>6</sup> nm",
+        "2500 µm   and   2.5 × 10<sup>6</sup> nm",
+        "1 mark each conversion.",
+    ),
+    ("microscopy", "4"): (
+        "A = I / M",
+        "I = 18 mm = 18 000 µm;  M = 600",
+        "A = 18 000 / 600",
+        "30 µm",
+        "1 mark conversion; 1 mark 30 µm.",
+    ),
+    ("microscopy", "5"): (
+        "M = I / A",
+        "I = 3.0 cm = 30 000 µm;  A = 7.5 µm",
+        "M = 30 000 / 7.5",
+        "×4000",
+        "1 mark conversion; 1 mark ×4000.",
+    ),
+    ("microscopy", "6"): (
+        "M = I / A",
+        "I = 40 mm = 40 000 µm;  A = 10 µm",
+        "M = 40 000 / 10",
+        "×4000",
+        "1 mark conversion; 1 mark ×4000.",
+    ),
+    ("microscopy", "7"): (
+        "A = I / M",
+        "I = 35 mm = 35 000 µm;  M = 500",
+        "A = 35 000 / 500",
+        "70 µm",
+        "1 mark conversion; 1 mark 70 µm.",
+    ),
+    ("progressive-waves", "5"): (
+        "v = fλ",
+        "v = 4.0 Hz × 0.80 m",
+        "v = 3.2",
+        "3.2 m s<sup>−1</sup>",
+        "1 mark substitution; 1 mark answer + unit.",
+    ),
+    ("progressive-waves", "6"): (
+        "λ = v / f",
+        "f = 200 MHz = 2.00 × 10<sup>8</sup> Hz;  v = 3.00 × 10<sup>8</sup> m s<sup>−1</sup>",
+        "λ = (3.00 × 10<sup>8</sup>) / (2.00 × 10<sup>8</sup>)",
+        "1.50 m",
+        "1 mark MHz → Hz; 1 mark 1.50 m.",
+    ),
+    ("progressive-waves", "7"): (
+        "v = s / t    then    f = v / λ",
+        "v = 48 / 0.16 = 300 m s<sup>−1</sup>;  λ = 2.0 m",
+        "f = 300 / 2.0",
+        "150 Hz",
+        "1 mark speed; 1 mark 150 Hz.",
+    ),
+    ("progressive-waves", "9"): (
+        "λ = v / f",
+        "λ = 340 / 510",
+        "λ = 0.666…",
+        "0.667 m (3 s.f.)",
+        "1 mark substitution; 1 mark 0.667 m.",
+    ),
+    ("progressive-waves", "11"): (
+        "T = total time / cycles;   f = 1/T;   v = fλ",
+        "T = 20 ms / 5 = 4.0 ms = 4.0 × 10<sup>−3</sup> s;  λ = 4.0 cm = 0.040 m",
+        "f = 1 / 0.0040 = 250 Hz;  v = 250 × 0.040",
+        "f = 250 Hz;  T = 4.0 × 10<sup>−3</sup> s;  λ = 0.040 m;  v = 10 m s<sup>−1</sup>",
+        "1 mark each correctly converted quantity, up to 4.",
+    ),
+}
+
+
+def calc_answer_table(eq, sub, work, ans):
+    data = [
+        ["Equation", eq],
+        ["Substitution", sub],
+        ["Working", work],
+        ["Answer + unit", ans],
+    ]
+    t = Table(data, colWidths=[38 * mm, 132 * mm], rowHeights=[8 * mm] * 4)
+    t.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (0, -1), CREAM),
+        ("BACKGROUND", (0, 3), (-1, 3), HexColor("#ECFDF5")),
+        ("TEXTCOLOR", (0, 0), (0, -1), TEAL_DARK),
+        ("FONTNAME", (0, 0), (0, -1), "Times-Bold"),
+        ("FONTNAME", (1, 0), (1, -1), "Times-Roman"),
+        ("FONTSIZE", (0, 0), (-1, -1), 10),
+        ("GRID", (0, 0), (-1, -1), 0.5, TEAL),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("LEFTPADDING", (0, 0), (-1, -1), 5),
+    ]))
+    return t
+
+
+ANSWER_FIGURES = {
+    "atomic-structure": [("13", "sodium-nuclide.png", 110 * mm, 42 * mm)],
+    "electron-configuration": [("6", "orbital-boxes.png", 140 * mm, 42 * mm)],
+    "cell-structure": [("4", "animal-cell.png", 145 * mm, 58 * mm), ("5", "plant-cell.png", 145 * mm, 56 * mm)],
+    "prokaryotic-and-eukaryotic-cells": [("4", "prokaryote-cell.png", 140 * mm, 42 * mm)],
+    "progressive-waves": [("4", "wave-snapshot.png", 145 * mm, 42 * mm)],
+    "wave-properties": [("4", "long-vs-trans.png", 145 * mm, 46 * mm)],
+}
+
+
 def answers_flow(styles, slug):
     s = [_disclaimer(styles, answers=True)]
+    s.append(Paragraph("Numbering matches the student worksheet exactly. Award equivalent scientifically correct wording. Show units on every calculated quantity.", styles["note"]))
+    count = 0
     for heading, items in ANSWERS[slug]:
         s.append(Paragraph(heading, styles["h"]))
         for item in items:
-            s.append(Paragraph(item, styles["ans"]))
+            num = item.split(".", 1)[0].split("–")[0].strip()
+            bits = [Paragraph(item, styles["ans"])]
+            calc = CALC_ANSWERS.get((slug, num))
+            if calc:
+                eq, sub, work, ans, guide = calc
+                bits.append(Spacer(1, 1 * mm))
+                bits.append(calc_answer_table(eq, sub, work, ans))
+                bits.append(Paragraph(f"<i>Marking guidance: {guide}</i>", styles["note"]))
+            for fig_num, name, w, h in ANSWER_FIGURES.get(slug, []):
+                if fig_num == num or (num.startswith(fig_num)):
+                    bits.append(Spacer(1, 2 * mm))
+                    bits.append(fig(name, w, h))
+            bits.append(Spacer(1, 3 * mm))
+            s.append(KeepTogether(bits))
+            count += 1
+            if count in {6, 10} and slug in {
+                "atomic-structure", "electron-configuration", "ionic-bonding",
+                "covalent-bonding", "metallic-bonding", "cell-structure",
+                "prokaryotic-and-eukaryotic-cells", "microscopy",
+                "progressive-waves", "wave-properties",
+            }:
+                s.append(PageBreak())
     return s
 
 

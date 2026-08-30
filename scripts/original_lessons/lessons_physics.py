@@ -63,7 +63,11 @@ def build_progressive_waves(out):
         "f = 20 / 5.0 = 4.0 Hz.",
         "Frequency: hertz (Hz). Wavelength: metre (m).",
     ])
-    section_slide(prs, "What a progressive wave is", "Energy on the move")
+    section_slide(prs, "What a progressive wave is", "Energy on the move", [
+        ("Look for", "A snapshot with A and λ labelled from the equilibrium line."),
+        ("Say in full", "A progressive wave transfers energy; particles oscillate about equilibrium."),
+        ("Level 3 move", "Crest-to-trough is 2A. Frequency is set by the source, not the medium."),
+    ])
     fact_cards(prs, "A working definition", [
         ("Transfer", "A progressive wave transfers energy from a source through oscillations of particles or fields."),
         ("Particles", "Oscillations are about an equilibrium position — no net transfer of matter."),
@@ -97,7 +101,11 @@ def build_progressive_waves(out):
         "You cannot read λ from a time graph or T from a distance graph.",
         "Both graphs can look like sine waves — label the axis first.",
     ])
-    section_slide(prs, "The wave equation", "v = fλ")
+    section_slide(prs, "The wave equation", "v = fλ", [
+        ("Look for", "v = fλ and T = 1/f, with units m s^{−1}, Hz and m."),
+        ("Say in full", "In one second the source makes f oscillations, each of length λ, so v = fλ."),
+        ("Level 3 move", "Convert MHz, nm and standard form before substituting."),
+    ])
     process_steps(prs, "Why the equation works", [
         ("In 1 s", "The source produces f oscillations."),
         ("Each one", "Occupies a length λ."),
@@ -228,7 +236,11 @@ def build_wave_properties(out):
         "Energy.",
         "Interference / diffraction / polarisation of light.",
     ])
-    section_slide(prs, "Two families of wave", "Direction of oscillation")
+    section_slide(prs, "Two families of wave", "Direction of oscillation", [
+        ("Look for", "A transverse snapshot and a compression–rarefaction sketch."),
+        ("Say in full", "Transverse: oscillation is perpendicular. Longitudinal: it is parallel."),
+        ("Level 3 move", "Sound in air cannot be polarised because it is longitudinal."),
+    ])
     diagram_explain(prs, "Transverse and longitudinal", d["long_vs_trans"], [
         "Transverse: oscillation perpendicular to energy transfer.",
         "Examples: water surface waves, waves on a string, all electromagnetic waves.",
@@ -252,7 +264,11 @@ def build_wave_properties(out):
         ("Spectrum", "From radio waves to gamma rays."),
         ("Evidence", "Polarising filters work because the oscillations have a direction. Sound cannot be polarised."),
     ])
-    section_slide(prs, "Phase and superposition", "How waves combine")
+    section_slide(prs, "Phase and superposition", "How waves combine", [
+        ("Look for", "Points separated by nλ (in phase) or 0.5 λ (antiphase)."),
+        ("Say in full", "The resultant displacement is the sum of the individual displacements."),
+        ("Level 3 move", "You cannot read λ from a time graph. Label the axis first."),
+    ])
     diagram_explain(prs, "Phase", d["phase_points"], [
         "Two points are in phase if they reach maxima and minima together.",
         "Points separated by a whole number of wavelengths are in phase.",

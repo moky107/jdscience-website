@@ -185,12 +185,33 @@ def objectives_slide(prs, items):
     return s
 
 
-def section_slide(prs, title, subtitle=""):
+def section_slide(prs, title, subtitle="", points=None):
     s = blank(prs, TEAL_DARK)
-    add_rect(s, 0, Inches(3.15), W, Inches(0.08), TEAL)
-    add_text(s, Inches(0.7), Inches(2.15), Inches(11.9), Inches(1.0), title, 34, True, WHITE)
-    if subtitle:
-        add_text(s, Inches(0.7), Inches(3.45), Inches(11.9), Inches(0.9), subtitle, 18, False, LINE)
+    add_rect(s, 0, 0, Inches(0.16), H, TEAL)
+    add_text(s, Inches(0.7), Inches(0.42), Inches(12.0), Inches(0.95), title, 30, True, WHITE)
+    add_text(
+        s,
+        Inches(0.7),
+        Inches(1.38),
+        Inches(12.0),
+        Inches(0.55),
+        subtitle or "Move from a GCSE label to a Level 3 explanation.",
+        17,
+        False,
+        LINE,
+    )
+    cards = points or [
+        ("Look for", "The labelled diagram, symbol or equation that carries this idea."),
+        ("Say in full", "A sentence that names the particles, structure or quantity — not ‘it’."),
+        ("Level 3 move", subtitle or "Explain using attraction, structure or a calculation, not a one-word label."),
+    ]
+    accents = [TEAL, RGBColor(0x99, 0xF6, 0xE4), RGBColor(0x5E, 0xEA, 0xD4)]
+    for i, (head, body) in enumerate(cards[:3]):
+        x = Inches(0.7) + Inches(4.05) * i
+        add_round(s, x, Inches(2.15), Inches(3.85), Inches(4.35), RGBColor(0x00, 0x3D, 0x33))
+        add_rect(s, x, Inches(2.15), Inches(3.85), Inches(0.12), accents[i])
+        add_text(s, x + Inches(0.22), Inches(2.42), Inches(3.4), Inches(0.5), f"{i+1}   {head}", 16, True, LINE)
+        add_text(s, x + Inches(0.22), Inches(3.05), Inches(3.4), Inches(3.15), body, 16, False, WHITE)
     return s
 
 
@@ -259,13 +280,31 @@ def diagram_explain(prs, title, image_path, points, caption=""):
         s.shapes.add_picture(str(image_path), Inches(0.4), Inches(1.05), Inches(6.7), Inches(5.15))
     colours = [TEAL, NAVY, PURPLE, AMBER, ROSE]
     n = max(len(points), 1)
-    ch = min(Inches(1.15), Inches(5.15) / n - Inches(0.08))
+    gap = Inches(0.1)
+    usable = Inches(5.15)
+    ch = (usable - gap * (n - 1)) / n
+    if ch > Inches(1.22):
+        ch = Inches(1.18)
     for i, point in enumerate(points):
-        y = Inches(1.05) + (ch + Inches(0.1)) * i
+        y = Inches(1.05) + (ch + gap) * i
         add_round(s, Inches(7.3), y, Inches(5.5), ch, CREAM)
         add_rect(s, Inches(7.3), y, Inches(0.1), ch, colours[i % len(colours)])
-        add_text(s, Inches(7.58), y + Inches(0.12), Inches(5.05), ch - Inches(0.2), point, 14, False, INK)
-    if caption:
+        add_text(s, Inches(7.58), y + Inches(0.1), Inches(5.05), ch - Inches(0.16), point, 14, False, INK)
+    leftover_top = Inches(1.05) + (ch + gap) * n
+    if leftover_top < Inches(6.05):
+        add_round(s, Inches(7.3), leftover_top, Inches(5.5), Inches(6.35) - leftover_top, NAVY_BG)
+        add_text(
+            s,
+            Inches(7.5),
+            leftover_top + Inches(0.1),
+            Inches(5.15),
+            Inches(6.25) - leftover_top,
+            caption or "Say the labelled feature and its function in one sentence.",
+            13,
+            False,
+            NAVY,
+        )
+    elif caption:
         add_text(s, Inches(0.4), Inches(6.28), Inches(6.7), Inches(0.32), caption, 12, False, MUTED)
     return s
 
@@ -312,7 +351,10 @@ def question_cards(prs, title, items, kind="Check your understanding"):
             add_text(s, x + Inches(0.2), Inches(1.56), Inches(0.5), Inches(0.4), str(i + 1), 16, True, WHITE, PP_ALIGN.CENTER)
             if marks:
                 add_text(s, x + Inches(0.8), Inches(1.56), width - Inches(1.1), Inches(0.4), f"{marks} marks", 13, True, ROSE)
-            add_text(s, x + Inches(0.22), Inches(2.2), width - Inches(0.44), height - Inches(1.15), text, 16, False, INK)
+            add_text(s, x + Inches(0.22), Inches(2.2), width - Inches(0.44), Inches(1.55), text, 16, False, INK)
+            add_text(s, x + Inches(0.22), Inches(3.85), width - Inches(0.44), Inches(0.28), "Write a full-sentence answer", 11, True, MUTED)
+            for k in range(4):
+                add_rect(s, x + Inches(0.22), Inches(4.22) + Inches(0.32) * k, width - Inches(0.44), Pt(1.25), RGBColor(0xE2, 0xE8, 0xF0))
     else:
         rows = 2
         cols = (n + 1) // 2

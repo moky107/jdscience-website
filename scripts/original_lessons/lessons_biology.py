@@ -63,7 +63,11 @@ def build_cell_structure(out):
         "Cell wall, chloroplasts and a permanent vacuole.",
         "To separate the contents from the surroundings and control what enters and leaves.",
     ])
-    section_slide(prs, "The eukaryotic animal cell", "Compartments with jobs")
+    section_slide(prs, "The eukaryotic animal cell", "Compartments with jobs", [
+        ("Look for", "Leader lines to the nucleus, mitochondrion, RER, membrane and cytoplasm."),
+        ("Say in full", "Each organelle has a structure that matches its function."),
+        ("Level 3 move", "Name ultrastructure: envelope, cristae, ribosomes — not just ‘it makes energy’."),
+    ])
     diagram_explain(prs, "Animal cell — labelled schematic", d["animal_cell"], [
         "The nucleus stores DNA as chromatin and controls protein synthesis.",
         "Mitochondria transfer energy to ATP by aerobic respiration.",
@@ -99,7 +103,11 @@ def build_cell_structure(out):
         "Cholesterol (animal cells) regulates fluidity.",
         "Glycoproteins and glycolipids are used in cell recognition — the fluid mosaic.",
     ])
-    section_slide(prs, "Plant cell extras", "Wall, vacuole, chloroplast")
+    section_slide(prs, "Plant cell extras", "Wall, vacuole, chloroplast", [
+        ("Look for", "A cellulose wall, a large permanent vacuole and chloroplasts with grana."),
+        ("Say in full", "The wall is freely permeable; the membrane controls exchange."),
+        ("Level 3 move", "Link each extra structure to support, turgidity or photosynthesis."),
+    ])
     diagram_explain(prs, "Plant cell — labelled schematic", d["plant_cell"], [
         "The cellulose cell wall provides support and prevents osmotic bursting.",
         "The wall is freely permeable to water and most solutes.",
@@ -211,7 +219,11 @@ def build_prokaryotes(out):
         "Useful: yoghurt / insulin / decomposition. Harmful: infection / food spoilage.",
         "An animal cell is typically larger (about 10–30 µm versus about 1–5 µm).",
     ])
-    section_slide(prs, "Two fundamental cell types", "The nucleus is the key divide")
+    section_slide(prs, "Two fundamental cell types", "The nucleus is the key divide", [
+        ("Look for", "A nucleus with an envelope versus a DNA loop in the cytoplasm."),
+        ("Say in full", "Eukaryotes have a nucleus and membrane-bound organelles; prokaryotes do not."),
+        ("Level 3 move", "Pair every difference: 70S versus 80S, peptidoglycan versus cellulose, size."),
+    ])
     fact_cards(prs, "Definitions that earn marks", [
         ("Eukaryotic", "Nucleus bounded by a nuclear envelope and membrane-bound organelles."),
         ("Prokaryotic", "No nucleus and no membrane-bound organelles."),
@@ -343,7 +355,11 @@ def build_microscopy(out):
         "25 mm = 25 000 µm. M = 25 000 / 25 = ×1000.",
         "An electron microscope — viruses are usually below the resolution of a light microscope.",
     ])
-    section_slide(prs, "The light microscope", "Rays, lenses and contrast")
+    section_slide(prs, "The light microscope", "Rays, lenses and contrast", [
+        ("Look for", "Lamp, stage, objective, eyepiece — total magnification = eyepiece × objective."),
+        ("Say in full", "Magnification enlarges; resolution is the smallest separable distance."),
+        ("Level 3 move", "Convert units first. Empty magnification does not add new detail."),
+    ])
     diagram_explain(prs, "Light microscope schematic", d["light_microscope"], [
         "The lamp provides light that passes through the specimen.",
         "The objective produces a magnified real image.",
@@ -404,7 +420,11 @@ def build_microscopy(out):
         "4.0 cm = 40 000 µm. M = 40 000 / 8 = ×5000.",
         "25 mm = 25 000 µm. M = 25 000 / 5 = ×5000.",
     ])
-    section_slide(prs, "Electron microscopy", "Shorter wavelength, higher resolution")
+    section_slide(prs, "Electron microscopy", "Shorter wavelength, higher resolution", [
+        ("Look for", "TEM for internal detail; SEM for surface; both need a vacuum."),
+        ("Say in full", "Electrons have a shorter wavelength than light, so resolution is higher."),
+        ("Level 3 move", "Living specimens cannot be viewed. Colour on EM images is usually added later."),
+    ])
     two_col(prs, "TEM and SEM", "TEM", [
         "Electrons pass through a thin specimen",
         "High internal detail (cristae, thylakoids)",

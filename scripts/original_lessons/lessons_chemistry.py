@@ -63,7 +63,11 @@ def build_atomic_structure(out):
         "An atom is a single particle of an element. A molecule contains two or more atoms chemically bonded.",
         "Positive — the nucleus contains protons (and uncharged neutrons).",
     ])
-    section_slide(prs, "The nuclear model", "A tiny dense nucleus; electrons in shells")
+    section_slide(prs, "The nuclear model", "A tiny dense nucleus; electrons in shells", [
+        ("Look for", "A labelled atom with a nucleus, shells, protons, neutrons and electrons."),
+        ("Say in full", "Almost all the mass is in a tiny nucleus. Electrons occupy shells around it."),
+        ("Level 3 move", "Chemical behaviour depends on the outer electrons, not on the neutrons."),
+    ])
     diagram_explain(prs, "A labelled lithium-7 atom", d["atom_labelled"], [
         "Almost all of the mass is in the nucleus.",
         "The nucleus occupies a tiny fraction of the volume.",
@@ -82,7 +86,11 @@ def build_atomic_structure(out):
         ["Neutron", "0", "1", "Nucleus"],
         ["Electron", "−1", "≈ 1/1836", "Shells"],
     ], "Learn this table exactly. Examiners expect charge and mass, not just names.")
-    section_slide(prs, "Reading a nuclide symbol", "Mass number top left, atomic number bottom left")
+    section_slide(prs, "Reading a nuclide symbol", "Mass number top left, atomic number bottom left", [
+        ("Look for", "A as a superscript, Z as a subscript — written ^{23}_{11}Na, never 23Na."),
+        ("Say in full", "Neutrons = A − Z. In a neutral atom, electrons = Z."),
+        ("Level 3 move", "For an ion, change electrons only. The nucleus — and the element — stay the same."),
+    ])
     diagram_explain(prs, "^{23}_{11}Na", d["sodium_nuclide"], [
         "A = protons + neutrons.",
         "Z = protons.",
@@ -112,7 +120,11 @@ def build_atomic_structure(out):
         "^{27}Al^{3+}: 13 p, 14 n, 10 e  (13 − 3).",
         "^{16}O^{2−}: 8 p, 8 n, 10 e  (8 + 2).",
     ])
-    section_slide(prs, "Isotopes", "Same Z, different neutron number")
+    section_slide(prs, "Isotopes", "Same Z, different neutron number", [
+        ("Look for", "Two nuclei with the same proton number and different neutron numbers."),
+        ("Say in full", "Isotopes are atoms of the same element with different mass numbers."),
+        ("Level 3 move", "Chemical properties match because the electron arrangement is the same."),
+    ])
     fact_cards(prs, "Defining isotopes", [
         ("Same element", "Isotopes have the same proton number, so they are the same element."),
         ("Different mass", "They have different numbers of neutrons and therefore different mass numbers."),
@@ -126,7 +138,11 @@ def build_atomic_structure(out):
         "They react with sodium in the same way.",
         "Do not say isotopes have different proton numbers.",
     ])
-    section_slide(prs, "Relative atomic mass", "A weighted mean, not a mass number")
+    section_slide(prs, "Relative atomic mass", "A weighted mean, not a mass number", [
+        ("Look for", "A_{r} = (Σ percent × mass number) / 100   — no unit."),
+        ("Say in full", "Most elements are mixtures of isotopes, so A_{r} is rarely a whole number."),
+        ("Level 3 move", "Use the abundances in the question. Compare the result with 1/12 of a ^{12}C atom."),
+    ])
     diagram_explain(prs, "Why A_{r} is not a whole number", d["ar_weighted"], [
         "Most elements are mixtures of isotopes.",
         "A_{r} is the weighted mean mass compared with 1/12 of the mass of a ^{12}C atom.",
@@ -165,7 +181,11 @@ def build_atomic_structure(out):
         "A_{r}(Cu) = (69×63 + 31×65)/100 = 63.6",
         "Chlorine is a mixture of ^{35}Cl and ^{37}Cl, so the weighted mean is not an integer.",
     ])
-    section_slide(prs, "Ions from atoms", "Electrons move; protons do not")
+    section_slide(prs, "Ions from atoms", "Electrons move; protons do not", [
+        ("Look for", "Charge = protons − electrons. Na^{+} has 11 p and 10 e."),
+        ("Say in full", "A cation has lost electrons. An anion has gained electrons."),
+        ("Level 3 move", "Z is unchanged, so it is still the same element. Link this to later bonding."),
+    ])
     diagram_explain(prs, "How a sodium ion forms", d["ion_formation"], [
         "A cation forms when an atom loses electrons.",
         "An anion forms when an atom gains electrons.",
@@ -276,7 +296,11 @@ def build_electron_configuration(out):
         "Sodium is in Group 1, so it has one outer-shell electron.",
         "Electrons.",
     ])
-    section_slide(prs, "Shells first", "A useful model for the first 20 elements")
+    section_slide(prs, "Shells first", "A useful model for the first 20 elements", [
+        ("Look for", "Maximum 2, then 8, then 8, then 2 — calcium is 2,8,8,2."),
+        ("Say in full", "Electrons occupy the lowest available shell first."),
+        ("Level 3 move", "This is the GCSE starting point. Subshells come next."),
+    ])
     diagram_explain(prs, "Electron shells", d["shells_diagram"], [
         "Electrons occupy the lowest available shell first.",
         "For the first 20 elements this course uses 2, 8, 8, then 2.",
@@ -309,7 +333,11 @@ def build_electron_configuration(out):
         "P: 2,8,5",
         "K: 2,8,8,1     S^{2−}: 2,8,8  (atom is 2,8,6)",
     ])
-    section_slide(prs, "Subshells and orbitals", "Why 2,8,8 is not the whole story")
+    section_slide(prs, "Subshells and orbitals", "Why 2,8,8 is not the whole story", [
+        ("Look for", "s, p and d capacities: 2, 6 and 10. Boxes with spin arrows."),
+        ("Say in full", "Oxygen is 1s^{2} 2s^{2} 2p^{4} — four electrons in 2p, not four p subshells."),
+        ("Level 3 move", "Apply Aufbau, Pauli and Hund, then rewrite the ion configuration."),
+    ])
     fact_cards(prs, "Subshell capacities", [
         ("s", "1 orbital. Maximum 2 electrons. Example: 1s^{2}, 2s^{2}, 3s^{2}."),
         ("p", "3 orbitals. Maximum 6 electrons. Example: 2p^{6}, 3p^{5}."),
@@ -423,7 +451,11 @@ def build_ionic_bonding(out):
         "They have one outer electron which is lost to leave a full outer shell.",
         "Examples include sodium chloride, copper sulfate or calcium carbonate.",
     ])
-    section_slide(prs, "What ionic bonding is", "Transfer, then attraction")
+    section_slide(prs, "What ionic bonding is", "Transfer, then attraction", [
+        ("Look for", "A metal losing electrons and a non-metal gaining them."),
+        ("Say in full", "Ionic bonding is electrostatic attraction between oppositely charged ions."),
+        ("Level 3 move", "Name the ions, the transfer and the giant lattice — not just ‘they share’."),
+    ])
     fact_cards(prs, "A precise definition", [
         ("The bond", "Strong electrostatic attraction between oppositely charged ions."),
         ("Who bonds", "Typically a metal and a non-metal."),
@@ -472,7 +504,11 @@ def build_ionic_bonding(out):
         "Mg_{3}N_{2} — magnesium nitride",
         "K_{2}SO_{4} — potassium sulfate",
     ])
-    section_slide(prs, "The giant ionic lattice", "Structure explains properties")
+    section_slide(prs, "The giant ionic lattice", "Structure explains properties", [
+        ("Look for", "Alternating cations and anions in every direction."),
+        ("Say in full", "Strong attraction throughout the crystal needs a lot of energy to overcome."),
+        ("Level 3 move", "Solid: ions fixed, no conduction. Molten/aqueous: mobile ions carry charge."),
+    ])
     diagram_explain(prs, "Giant ionic lattice", d["ionic_lattice"], [
         "Every cation is surrounded by anions, and vice versa.",
         "Attraction is strong and acts throughout the crystal.",
@@ -557,7 +593,11 @@ def build_covalent_bonding(out):
         "Hydrogen, nitrogen, oxygen, fluorine, chlorine, bromine or iodine.",
         "Eight electrons (helium is the exception with two).",
     ])
-    section_slide(prs, "The covalent bond", "A shared pair")
+    section_slide(prs, "The covalent bond", "A shared pair", [
+        ("Look for", "A pair of electrons sitting between two nuclei."),
+        ("Say in full", "The shared pair is attracted to both nuclei — that attraction is the bond."),
+        ("Level 3 move", "Do not say atoms ‘want’ electrons. Name the nuclei and the full outer shells."),
+    ])
     diagram_explain(prs, "A shared pair of electrons", d["covalent_pair"], [
         "Each atom contributes one electron to the shared pair (unless the bond is dative).",
         "The pair is attracted to both nuclei.",
@@ -587,7 +627,11 @@ def build_covalent_bonding(out):
         "State the full outer shell after sharing",
         "Do not mention ions in a covalent answer",
     ])
-    section_slide(prs, "Two covalent structure types", "The structure word wins the mark")
+    section_slide(prs, "Two covalent structure types", "The structure word wins the mark", [
+        ("Look for", "Simple molecular versus giant covalent — two different structures."),
+        ("Say in full", "Melting iodine overcomes weak forces between I_{2} molecules, not I–I bonds."),
+        ("Level 3 move", "Graphite conducts because electrons are delocalised between layers."),
+    ])
     two_col(prs, "Structure types", "Simple molecular", [
         "Strong covalent bonds within molecules",
         "Weak forces between molecules",
@@ -688,7 +732,11 @@ def build_metallic_bonding(out):
         "Shiny, conduct heat and electricity, malleable, ductile, high melting points (most).",
         "Not fixed to one atom; free to move through the structure.",
     ])
-    section_slide(prs, "The metallic lattice", "Ions plus a sea of electrons")
+    section_slide(prs, "The metallic lattice", "Ions plus a sea of electrons", [
+        ("Look for", "Positive metal ions packed closely, with delocalised electrons between them."),
+        ("Say in full", "Metallic bonding is attraction between cations and the electron sea."),
+        ("Level 3 move", "Layers slide but electrons still bind the ions — that is why metals are malleable."),
+    ])
     diagram_explain(prs, "Metallic structure", d["metallic_lattice"], [
         "Metal atoms lose outer electrons into a shared cloud.",
         "The remaining particles are positive ions packed closely.",
