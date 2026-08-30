@@ -20,7 +20,7 @@ import {
   updateBasketQuantity,
 } from "./shopBasket";
 import { formatPricePence, productOnSale } from "./shopFormat";
-import { ProductCard, productCardImageHeight } from "./ShopFeaturedSection";
+import { ProductCard, productCardImageHeight, ProductImagePlaceholder } from "./ShopFeaturedSection";
 import { externalButtonLabel, externalLegalNote, externalSaleNotice, isExternalProduct, productShowsPrice, retailerName, retailerPriceHint } from "./shopProductHelpers";
 
 const TEAL = "#009688";
@@ -64,7 +64,7 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
           {(product.preview_url || product.image_url) ? (
             <img src={product.preview_url || product.image_url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           ) : (
-            <div style={{ width: "100%", height: "100%", display: "grid", placeItems: "center", color: "#94a3b8", fontWeight: 700, background: "linear-gradient(135deg, #ecfeff 0%, #f1f5f9 100%)" }}>Preview unavailable</div>
+            <ProductImagePlaceholder product={product} />
           )}
         </div>
         <div>

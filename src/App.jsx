@@ -10,6 +10,8 @@ import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRE
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import AdminShopEditor from "./AdminShopEditor";
+import CopyResourceToShopModal from "./CopyResourceToShopModal";
+import { isCopyableTeachingResource } from "./resourceShopClassify";
 import ShopPage from "./ShopPage";
 import ShopFeaturedSection from "./ShopFeaturedSection";
 import { addToBasket, basketCount as countBasketItems, readBasket } from "./shopBasket";
@@ -892,6 +894,8 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   const [activeBoard, setActiveBoard] = useState(board || null);
   const [uploadBoard, setUploadBoard] = useState(null); // board name -> opens modal
   const [openUnitByBoard, setOpenUnitByBoard] = useState({});
+  const [selectedResourceIds, setSelectedResourceIds] = useState(() => new Set());
+  const [copyTargets, setCopyTargets] = useState(null);
 
   useEffect(() => { if (level) setActiveLevel(level); }, [level]);
   useEffect(() => { if (subject) setActiveSubject(subject); }, [subject]);
@@ -947,6 +951,26 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     if (error) alert(error.message); else reload();
   }
 
+  function toggleResourceSelected(item) {
+    if (!isCopyableTeachingResource(item)) return;
+    setSelectedResourceIds((current) => {
+      const next = new Set(current);
+      const key = String(item.id);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }
+
+  function openCopyForResources(list) {
+    const targets = (list || []).filter(isCopyableTeachingResource);
+    if (!targets.length) {
+      alert("Select at least one PowerPoint, worksheet, revision notes or answer sheet file.");
+      return;
+    }
+    setCopyTargets(targets);
+  }
+
   const fileLinkStyle = {
     flex: 1,
     textAlign: "left",
@@ -961,11 +985,33 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   };
 
   function renderResourceRow(item) {
+    const copyable = isAdmin && isCopyableTeachingResource(item);
+    const selected = selectedResourceIds.has(String(item.id));
     return (
-      <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
+      <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch", flexWrap: isMobile ? "wrap" : "nowrap" }}>
+        {copyable && (
+          <label style={{ display: "grid", placeItems: "center", padding: "0 6px", borderRadius: 8, border: "1px solid #e2e8f0", background: selected ? "#ecfeff" : "#fff", cursor: "pointer" }} title="Select for Shop">
+            <input
+              type="checkbox"
+              checked={selected}
+              onChange={() => toggleResourceSelected(item)}
+              aria-label={`Select ${item.title} for Shop`}
+            />
+          </label>
+        )}
         <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle}>
           {activeRes === "Videos" ? "▶️" : "📄"} {item.title}
         </a>
+        {copyable && (
+          <button
+            type="button"
+            onClick={() => openCopyForResources([item])}
+            title="Copy to Shop"
+            style={{ padding: "0 10px", minWidth: isMobile ? "100%" : 118, minHeight: 44, borderRadius: 8, border: `1px solid ${TEAL}`, background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800, fontSize: 13 }}
+          >
+            Copy to Shop
+          </button>
+        )}
         {isAdmin && (
           <button onClick={() => removeItem(item)} title="Delete"
             style={{ padding: "0 12px", minWidth: 44, borderRadius: 8, border: "1px solid #fecaca", background: "#fef2f2", color: "#dc2626", cursor: "pointer", fontWeight: 700 }}>✕</button>
@@ -1012,6 +1058,43 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
         </div>
 
         <h2 style={{ color: "#0f172a", marginBottom: 16, fontSize: isMobile ? 20 : 24, lineHeight: 1.3 }}>{activeLevel} {activeSubject} — {activeRes} by {activeLevel === "11+" ? "School Type" : "Exam Board"}</h2>
+
+        {isAdmin && (
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", marginBottom: 16, background: "#fff", borderRadius: 12, padding: 12, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+            <div style={{ flex: 1, color: "#475569", fontSize: 14 }}>
+              Shop tools: select teaching files, enter a price, then publish. Free resources stay available.
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                const selected = resources.filter((item) => selectedResourceIds.has(String(item.id)));
+                openCopyForResources(selected);
+              }}
+              disabled={selectedResourceIds.size === 0}
+              style={{
+                padding: "12px 14px",
+                minHeight: 44,
+                borderRadius: 8,
+                border: "none",
+                background: selectedResourceIds.size ? TEAL : "#94a3b8",
+                color: "#fff",
+                cursor: selectedResourceIds.size ? "pointer" : "default",
+                fontWeight: 800,
+              }}
+            >
+              Add selected resources to Shop ({selectedResourceIds.size})
+            </button>
+            {selectedResourceIds.size > 0 && (
+              <button
+                type="button"
+                onClick={() => setSelectedResourceIds(new Set())}
+                style={{ padding: "12px 14px", minHeight: 44, borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}
+              >
+                Clear selection
+              </button>
+            )}
+          </div>
+        )}
 
         {activeLevel === "11+" && (
           <ElevenPlusLibrary resources={resources} activeSubject={activeSubject} isMobile={isMobile} />
@@ -1116,6 +1199,15 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
         <UploadModal
           level={activeLevel} subject={activeSubject} board={uploadBoard} category={activeRes}
           close={() => setUploadBoard(null)} reload={reload}
+        />
+      )}
+      {copyTargets && (
+        <CopyResourceToShopModal
+          resources={copyTargets}
+          onClose={() => setCopyTargets(null)}
+          onDone={() => {
+            setSelectedResourceIds(new Set());
+          }}
         />
       )}
     </section>

@@ -30,6 +30,7 @@ import {
   EXTERNAL_CHECKOUT_ERROR,
   deleteObsoleteSeededUnit1Products,
 } from './shop.js';
+import { copyResourceToShop, copyResourcesToShopBulk } from './copyResourceToShop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
 
@@ -369,7 +370,16 @@ export function wantsShopAdminRequest(req, body) {
   const url = String(req.url || '');
   const action = safeTrim(body?.action, 30);
   return scope === 'shop' || scope === 'shop-orders' || url.includes('/api/admin-shop')
-    || ['shop-list', 'shop-create', 'shop-update', 'shop-delete', 'shop-upload', 'shop-orders'].includes(action);
+    || [
+      'shop-list',
+      'shop-create',
+      'shop-update',
+      'shop-delete',
+      'shop-upload',
+      'shop-orders',
+      'shop-copy-from-resource',
+      'shop-copy-from-resources',
+    ].includes(action);
 }
 
 export async function handleShopAdminRequest(req, res, body, supabase) {
@@ -478,6 +488,37 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
     if (confirmError) throw confirmError;
     if (stillThere?.id) return res.status(500).json({ error: 'Product row was not deleted.' });
     return res.status(200).json({ ok: true, deletedId: id });
+  }
+
+  if (action === 'shop-copy-from-resource') {
+    const result = await copyResourceToShop(supabase, {
+      resourceId: body.resource_id ?? body.resourceId ?? body.id,
+      price_pence: body.price_pence ?? body.pricePence,
+      product_type: body.product_type,
+      publish: body.publish !== false && body.is_published !== false,
+    });
+    if (!result.ok && !result.skipped) {
+      return res.status(result.status || 400).json({ error: result.error || 'Copy to Shop failed.' });
+    }
+    return res.status(200).json(result);
+  }
+
+  if (action === 'shop-copy-from-resources') {
+    const items = Array.isArray(body.items)
+      ? body.items
+      : (Array.isArray(body.resource_ids) ? body.resource_ids.map((resourceId) => ({
+        resource_id: resourceId,
+        price_pence: body.price_pence ?? body.pricePence,
+        product_type: body.product_type,
+      })) : []);
+    const result = await copyResourcesToShopBulk(supabase, items);
+    if (!result.ok && result.failed === items.length) {
+      return res.status(400).json({
+        error: result.error || result.results?.[0]?.error || 'Copy to Shop failed for all selected resources.',
+        ...result,
+      });
+    }
+    return res.status(200).json(result);
   }
 
   return res.status(400).json({ error: 'Unknown shop admin action.' });

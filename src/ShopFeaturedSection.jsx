@@ -6,6 +6,31 @@ import { externalButtonLabel, isExternalProduct, productCardImageHeight, product
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 
+const SUBJECT_PLACEHOLDER = {
+  Biology: { from: "#059669", to: "#065f46", soft: "#ecfdf5" },
+  Chemistry: { from: "#7c3aed", to: "#4c1d95", soft: "#f5f3ff" },
+  Physics: { from: "#ea580c", to: "#9a3412", soft: "#fff7ed" },
+  Maths: { from: "#2563eb", to: "#1e3a8a", soft: "#eff6ff" },
+  English: { from: "#db2777", to: "#9d174d", soft: "#fdf2f8" },
+  "Applied Science": { from: "#0d9488", to: "#115e59", soft: "#f0fdfa" },
+  Mixed: { from: "#64748b", to: "#334155", soft: "#f8fafc" },
+  General: { from: "#009688", to: "#004d40", soft: "#ecfeff" },
+};
+
+function placeholderPalette(subject) {
+  const key = Object.keys(SUBJECT_PLACEHOLDER).find((name) => name.toLowerCase() === String(subject || "").toLowerCase());
+  return SUBJECT_PLACEHOLDER[key] || SUBJECT_PLACEHOLDER.General;
+}
+
+function placeholderTypeLabel(product) {
+  const type = String(product?.product_type || "").toLowerCase();
+  if (type === "powerpoint") return "PowerPoint";
+  if (type === "worksheet") return "Worksheet";
+  if (type === "answer_sheet") return "Answer Sheet";
+  if (type === "revision_notes") return "Revision Notes";
+  return shopProductTypeLabel(product?.product_type) || "JD Science";
+}
+
 function useViewportWidth() {
   const [width, setWidth] = useState(typeof window === "undefined" ? 1200 : window.innerWidth);
   useEffect(() => {
@@ -41,9 +66,13 @@ function ProductMeta({ product }) {
   );
 }
 
-function ProductImagePlaceholder() {
+export function ProductImagePlaceholder({ product }) {
+  const palette = placeholderPalette(product?.subject);
+  const label = placeholderTypeLabel(product);
   return (
     <div
+      role="img"
+      aria-label={`${label} placeholder`}
       style={{
         width: "100%",
         height: "100%",
@@ -51,13 +80,37 @@ function ProductImagePlaceholder() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        gap: 4,
-        background: "linear-gradient(135deg, #ecfeff 0%, #f1f5f9 100%)",
-        color: TEAL_DARK,
+        gap: 8,
+        background: `linear-gradient(145deg, ${palette.soft} 0%, #ffffff 55%, ${palette.soft} 100%)`,
+        color: palette.to,
+        padding: 16,
+        boxSizing: "border-box",
+        textAlign: "center",
       }}
     >
-      <span style={{ width: 44, height: 44, borderRadius: 12, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, fontSize: 16 }}>JD</span>
-      <span style={{ fontSize: 12, color: "#64748b", fontWeight: 700 }}>JD Science</span>
+      <span
+        style={{
+          minWidth: 64,
+          padding: "10px 14px",
+          borderRadius: 14,
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: `linear-gradient(135deg, ${palette.from}, ${palette.to})`,
+          color: "#fff",
+          fontWeight: 800,
+          fontSize: 14,
+          letterSpacing: 0.2,
+          boxShadow: "0 10px 24px rgba(15,23,42,.18)",
+        }}
+      >
+        {label}
+      </span>
+      {product?.subject ? (
+        <span style={{ fontSize: 12, fontWeight: 700, color: "#475569" }}>{product.subject}</span>
+      ) : (
+        <span style={{ fontSize: 12, color: "#64748b", fontWeight: 700 }}>JD Science</span>
+      )}
     </div>
   );
 }
@@ -89,7 +142,7 @@ export function ProductCard({ product, onView, onAdd, compact = false }) {
         {product.image_url ? (
           <img src={product.image_url} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
         ) : (
-          <ProductImagePlaceholder />
+          <ProductImagePlaceholder product={product} />
         )}
         {isFeatured && (
           <span style={{ position: "absolute", top: 10, left: 10, background: "#fbbf24", color: "#78350f", fontSize: 11, fontWeight: 800, padding: "4px 8px", borderRadius: 999 }}>Featured</span>
