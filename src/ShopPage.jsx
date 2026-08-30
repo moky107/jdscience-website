@@ -247,7 +247,20 @@ export default function ShopPage({
   const [productDetail, setProductDetail] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [filters, setFilters] = useState({ q: "", level: "", subject: "", exam_board: "", product_type: "", product_kind: "" });
+  const [filters, setFilters] = useState(() => {
+    const initial = { q: "", level: "", subject: "", exam_board: "", product_type: "", product_kind: "" };
+    if (typeof window === "undefined") return initial;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      for (const key of Object.keys(initial)) {
+        const value = params.get(key);
+        if (value) initial[key] = value;
+      }
+    } catch {
+      /* ignore */
+    }
+    return initial;
+  });
   const [basketItems, setBasketItems] = useState(() => readBasket());
   const [checkoutOpen, setCheckoutOpen] = useState(false);
   const [checkoutLoading, setCheckoutLoading] = useState(false);
