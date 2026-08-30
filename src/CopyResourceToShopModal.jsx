@@ -1,11 +1,12 @@
 import React, { useMemo, useState } from "react";
 import { SHOP_PRODUCT_TYPES } from "./shopConstants";
-import { poundsInputToPence } from "./shopFormat";
+import { penceToPoundsInput, poundsInputToPence } from "./shopFormat";
 import {
   classifyResourceProductType,
   cleanShopTitle,
   productTypeLabelForCopy,
 } from "./resourceShopClassify";
+import { APPROVED_SHOP_PRICE_LABELS, approvedPricePenceForType } from "./shopStandardPrices";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -41,12 +42,15 @@ function rememberAdminPassword(password) {
  */
 export default function CopyResourceToShopModal({ resources, onClose, onDone }) {
   const items = useMemo(
-    () => (Array.isArray(resources) ? resources.filter(Boolean) : []).map((resource) => ({
-      resource,
-      title: cleanShopTitle(resource),
-      product_type: classifyResourceProductType(resource),
-      price_pounds: "",
-    })),
+    () => (Array.isArray(resources) ? resources.filter(Boolean) : []).map((resource) => {
+      const product_type = classifyResourceProductType(resource);
+      return {
+        resource,
+        title: cleanShopTitle(resource),
+        product_type,
+        price_pounds: penceToPoundsInput(approvedPricePenceForType(product_type)),
+      };
+    }),
     [resources],
   );
 
@@ -186,8 +190,9 @@ export default function CopyResourceToShopModal({ resources, onClose, onDone }) 
               {rows.length === 1 ? "Copy to Shop" : "Add selected resources to Shop"}
             </h2>
             <p style={{ margin: "8px 0 0", color: "#64748b", lineHeight: 1.5, fontSize: 14 }}>
-              Creates a published shop product from each free resource without changing the original file.
-              You must enter the price — no default price is applied.
+              Creates a published shop product from each original JDScience file without changing the free resource.
+              Approved prices are pre-filled: PowerPoints £5.00, worksheet packs £2.00, revision notes £3.00.
+              Past papers and other third-party copyrighted files are blocked. Duplicates are skipped.
             </p>
           </div>
           <button type="button" onClick={onClose} disabled={busy} style={{ border: "none", background: "transparent", fontSize: 22, cursor: "pointer", color: "#64748b" }}>×</button>
@@ -210,7 +215,10 @@ export default function CopyResourceToShopModal({ resources, onClose, onDone }) 
             <div key={row.resource.id} style={{ border: "1px solid #e2e8f0", borderRadius: 12, padding: 12, display: "grid", gap: 10 }}>
               <div style={{ fontWeight: 800, color: "#0f172a" }}>{row.title}</div>
               <div style={{ color: "#64748b", fontSize: 13 }}>
-                {row.resource.level} · {row.resource.subject} · {row.resource.exam_board} · suggested {productTypeLabelForCopy(row.product_type)}
+                {row.resource.level} · {row.resource.subject} · {row.resource.exam_board} · {productTypeLabelForCopy(row.product_type)}
+                {approvedPricePenceForType(row.product_type) != null && (
+                  <> · {APPROVED_SHOP_PRICE_LABELS[row.product_type]}</>
+                )}
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 10 }}>
                 <label style={{ display: "grid", gap: 6 }}>
@@ -219,7 +227,7 @@ export default function CopyResourceToShopModal({ resources, onClose, onDone }) 
                     required
                     value={row.price_pounds}
                     onChange={(e) => setRows((current) => current.map((item, i) => (i === index ? { ...item, price_pounds: e.target.value } : item)))}
-                    placeholder="Required"
+                    placeholder={penceToPoundsInput(approvedPricePenceForType(row.product_type)) || "Required"}
                     inputMode="decimal"
                     style={inp}
                   />
@@ -228,7 +236,16 @@ export default function CopyResourceToShopModal({ resources, onClose, onDone }) 
                   <span style={{ fontWeight: 700, fontSize: 13 }}>Product type</span>
                   <select
                     value={row.product_type}
-                    onChange={(e) => setRows((current) => current.map((item, i) => (i === index ? { ...item, product_type: e.target.value } : item)))}
+                    onChange={(e) => setRows((current) => current.map((item, i) => {
+                      if (i !== index) return item;
+                      const product_type = e.target.value;
+                      const previousApproved = penceToPoundsInput(approvedPricePenceForType(item.product_type));
+                      const nextApproved = penceToPoundsInput(approvedPricePenceForType(product_type));
+                      const price_pounds = !item.price_pounds || item.price_pounds === previousApproved
+                        ? (nextApproved || "")
+                        : item.price_pounds;
+                      return { ...item, product_type, price_pounds };
+                    }))}
                     style={inp}
                   >
                     {typeOptions.map((opt) => (

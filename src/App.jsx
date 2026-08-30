@@ -1062,7 +1062,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
         {isAdmin && (
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", marginBottom: 16, background: "#fff", borderRadius: 12, padding: 12, boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
             <div style={{ flex: 1, color: "#475569", fontSize: 14 }}>
-              Shop tools: select teaching files, enter a price, then publish. Free resources stay available.
+              Shop tools: original JDScience PowerPoints (£5), worksheet packs (£2) and revision notes (£3) can be copied to Shop. Duplicates and third-party exam files are blocked.
             </div>
             <button
               type="button"
