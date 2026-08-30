@@ -167,6 +167,20 @@ def particle_compare() -> Path:
     return save(img, "particle-compare.png")
 
 
+def sodium_nuclide_blank() -> Path:
+    img, d = _new(1400, 720, WHITE)
+    d.text((60, 30), "Nuclide notation  ·  complete the labels", fill=TEAL_DARK, font=_font(28, True))
+    d.rounded_rectangle((80, 120, 620, 560), 24, fill=CREAM, outline=TEAL, width=3)
+    d.text((160, 200), "?", fill=TEAL_DARK, font=_font(64, True))
+    d.text((160, 300), "?", fill=NAVY, font=_font(56, True))
+    d.text((320, 230), "Na", fill=INK, font=_font(100, True))
+    for i, lab in enumerate(("Mass number A", "Atomic number Z", "Protons", "Neutrons", "Electrons in Na⁺")):
+        y = 140 + i * 80
+        d.rounded_rectangle((700, y, 1320, y + 64), 10, fill=WHITE, outline=TEAL, width=2)
+        d.text((720, y + 18), lab + "  =", fill=MUTED, font=_font(20, True))
+    return save(img, "sodium-nuclide-blank.png")
+
+
 def sodium_nuclide() -> Path:
     img, d = _new(1400, 920, WHITE)
     d.text((60, 30), "Nuclide notation  ·  sodium-23", fill=TEAL_DARK, font=_font(30, True))
@@ -295,8 +309,8 @@ def ion_configs() -> Path:
     d.text((70, 36), "From atom configuration to ion configuration", fill=TEAL_DARK, font=_font(28, True))
     rows = [
         ("Na  2,8,1", "lose 1 e⁻", "Na⁺  2,8", TEAL),
-        ("O  2,6", "gain 2 e⁻", "O²⁻  2,8", ROSE),
-        ("Mg  2,8,2", "lose 2 e⁻", "Mg²⁺  2,8", NAVY),
+        ("O  2,6", "gain 2 e⁻", "O²⁻  2,8  ·  1s² 2s² 2p⁶", ROSE),
+        ("Mg  2,8,2", "lose 2 e⁻", "Mg²⁺  2,8  ·  1s² 2s² 2p⁶", NAVY),
         ("Cl  2,8,7", "gain 1 e⁻", "Cl⁻  2,8,8", PURPLE),
     ]
     for i, (atom, arrow, ion, col) in enumerate(rows):
@@ -362,20 +376,62 @@ def covalent_pair() -> Path:
 
 
 def covalent_molecules() -> Path:
-    img, d = _new(1400, 860, WHITE)
-    d.text((70, 30), "Displayed formulae to count shared pairs", fill=TEAL_DARK, font=_font(28, True))
+    img, d = _new(1400, 900, WHITE)
+    d.text((70, 24), "Displayed formulae — count the shared pairs", fill=TEAL_DARK, font=_font(28, True))
 
-    def mol(x, y, title, lines):
-        d.rounded_rectangle((x, y, x + 420, y + 340), 16, fill=CREAM, outline=TEAL, width=2)
-        d.text((x + 24, y + 20), title, fill=TEAL_DARK, font=_font(22, True))
-        d.text((x + 24, y + 90), lines, fill=INK, font=_font(22))
+    def card(x, y, title, note):
+        d.rounded_rectangle((x, y, x + 420, y + 400), 16, fill=CREAM, outline=TEAL, width=2)
+        d.text((x + 20, y + 16), title, fill=TEAL_DARK, font=_font(22, True))
+        d.text((x + 20, y + 330), note, fill=INK, font=_font(18))
 
-    mol(70, 120, "H₂O", "Two O–H single bonds\nTwo lone pairs on oxygen\nBent molecule")
-    mol(520, 120, "CO₂", "O=C=O\nTwo double bonds\nLinear molecule")
-    mol(970, 120, "N₂", "N≡N\nTriple bond (3 pairs)\nVery strong bond")
-    mol(70, 490, "CH₄", "Four C–H bonds\nTetrahedral\nNo lone pair on C")
-    mol(520, 490, "NH₃", "Three N–H bonds\nOne lone pair on N\nCan form NH₄⁺")
-    mol(970, 490, "O₂", "O=O\nTwo shared pairs\nSimple molecule")
+    card(70, 80, "H₂O", "2 shared pairs  ·  bent  ·  2 lone pairs on O")
+    d.text((240, 180), "H", fill=NAVY, font=_font(28, True))
+    d.line((275, 230, 310, 280), fill=TEAL_DARK, width=5)
+    d.text((300, 280), "O", fill=ROSE, font=_font(32, True))
+    d.line((345, 280, 380, 230), fill=TEAL_DARK, width=5)
+    d.text((380, 180), "H", fill=NAVY, font=_font(28, True))
+
+    card(520, 80, "CO₂", "2 double bonds  ·  linear")
+    d.text((560, 230), "O", fill=ROSE, font=_font(32, True))
+    d.line((610, 250, 690, 250), fill=TEAL_DARK, width=4)
+    d.line((610, 262, 690, 262), fill=TEAL_DARK, width=4)
+    d.text((700, 220), "C", fill=NAVY, font=_font(32, True))
+    d.line((750, 250, 830, 250), fill=TEAL_DARK, width=4)
+    d.line((750, 262, 830, 262), fill=TEAL_DARK, width=4)
+    d.text((840, 220), "O", fill=ROSE, font=_font(32, True))
+
+    card(970, 80, "N₂", "triple bond  ·  3 shared pairs")
+    d.text((1060, 220), "N", fill=NAVY, font=_font(36, True))
+    for dy in (-10, 2, 14):
+        d.line((1115, 250 + dy, 1210, 250 + dy), fill=TEAL_DARK, width=4)
+    d.text((1220, 220), "N", fill=NAVY, font=_font(36, True))
+
+    card(70, 500, "CH₄", "4 shared pairs  ·  tetrahedral")
+    d.text((240, 620), "H", fill=NAVY, font=_font(22, True))
+    d.text((150, 700), "H", fill=NAVY, font=_font(22, True))
+    d.text((250, 700), "C", fill=TEAL_DARK, font=_font(28, True))
+    d.text((350, 700), "H", fill=NAVY, font=_font(22, True))
+    d.text((240, 780), "H", fill=NAVY, font=_font(22, True))
+    d.line((255, 655, 270, 700), fill=TEAL_DARK, width=3)
+    d.line((185, 720, 245, 720), fill=TEAL_DARK, width=3)
+    d.line((295, 720, 350, 720), fill=TEAL_DARK, width=3)
+    d.line((270, 745, 255, 780), fill=TEAL_DARK, width=3)
+
+    card(520, 500, "NH₃", "3 shared pairs  ·  1 lone pair on N")
+    d.text((690, 620), "H", fill=NAVY, font=_font(22, True))
+    d.text((600, 720), "H", fill=NAVY, font=_font(22, True))
+    d.text((700, 700), "N", fill=TEAL_DARK, font=_font(28, True))
+    d.text((800, 720), "H", fill=NAVY, font=_font(22, True))
+    d.line((710, 655, 720, 700), fill=TEAL_DARK, width=3)
+    d.line((640, 735, 695, 725), fill=TEAL_DARK, width=3)
+    d.line((750, 725, 800, 735), fill=TEAL_DARK, width=3)
+    d.text((730, 665), "lone pair", fill=MUTED, font=_font(16))
+
+    card(970, 500, "O₂", "2 shared pairs  ·  double bond")
+    d.text((1060, 660), "O", fill=ROSE, font=_font(36, True))
+    d.line((1115, 685, 1210, 685), fill=TEAL_DARK, width=4)
+    d.line((1115, 697, 1210, 697), fill=TEAL_DARK, width=4)
+    d.text((1220, 660), "O", fill=ROSE, font=_font(36, True))
     return save(img, "covalent-molecules.png")
 
 
@@ -462,6 +518,33 @@ def animal_cell() -> Path:
     return save(img, "animal-cell.png")
 
 
+def animal_cell_blank() -> Path:
+    img, d = _new(1600, 1080, WHITE)
+    d.text((40, 20), "Animal cell — label the structures", fill=TEAL_DARK, font=_font(30, True))
+    d.ellipse((70, 90, 880, 980), fill=(226, 250, 241), outline=TEAL, width=8)
+    d.ellipse((310, 300, 620, 610), fill=(254, 226, 226), outline=ROSE, width=6)
+    d.ellipse((328, 318, 602, 592), outline=(244, 63, 94), width=3)
+    d.ellipse((400, 390, 530, 520), fill=ROSE)
+    for mx, my in ((150, 220), (200, 700)):
+        d.ellipse((mx, my, mx + 150, my + 90), fill=(237, 233, 254), outline=PURPLE, width=4)
+    for i, y in enumerate((170, 198, 226)):
+        d.arc((620, y, 820, y + 70), 200, 340, fill=AMBER, width=3)
+        for j in range(5):
+            d.ellipse((650 + j * 28, y + 8, 660 + j * 28, y + 18), fill=NAVY)
+    for y in (640, 662, 684, 706):
+        d.arc((640, y, 800, y + 46), 200, 340, fill=PURPLE, width=4)
+    d.ellipse((700, 780, 780, 860), fill=(254, 215, 170), outline=AMBER, width=3)
+    points = [(870, 200), (620, 450), (300, 250), (780, 200), (720, 680), (500, 880), (740, 820)]
+    for i, (sx, sy) in enumerate(points):
+        ly = 90 + i * 120
+        d.line((sx, sy, 980, ly + 34), fill=MUTED, width=2)
+        d.ellipse((sx - 5, sy - 5, sx + 5, sy + 5), fill=MUTED)
+        d.rounded_rectangle((980, ly, 1540, ly + 70), 10, fill=WHITE, outline=GREY, width=2)
+        d.text((1000, ly + 22), f"{i+1}.", fill=MUTED, font=_font(20, True))
+    d.text((40, 1020), "Write the name (and a function) in each box. Organelles are not to scale.", fill=MUTED, font=_font(18))
+    return save(img, "animal-cell-blank.png")
+
+
 def plant_cell() -> Path:
     img, d = _new(1600, 1080, WHITE)
     d.text((40, 20), "Plant cell — labelled schematic", fill=TEAL_DARK, font=_font(30, True))
@@ -488,6 +571,27 @@ def plant_cell() -> Path:
     _callout(d, 280, 240, 980, 590, "Mitochondrion", "also present — aerobic respiration", PURPLE, 560, 68)
     d.text((40, 1020), "The wall is freely permeable. Exchange is controlled by the membrane inside it.", fill=MUTED, font=_font(18))
     return save(img, "plant-cell.png")
+
+
+def plant_cell_blank() -> Path:
+    img, d = _new(1600, 1080, WHITE)
+    d.text((40, 20), "Plant cell — label the extra structures", fill=TEAL_DARK, font=_font(30, True))
+    d.rounded_rectangle((60, 90, 900, 980), 10, outline=TEAL_DARK, width=14)
+    d.rounded_rectangle((88, 118, 872, 952), 8, fill=(236, 253, 245), outline=TEAL, width=5)
+    d.rounded_rectangle((240, 220, 720, 560), 28, fill=(219, 234, 254), outline=BLUE, width=4)
+    d.ellipse((140, 620, 360, 820), fill=(187, 247, 208), outline=(21, 128, 61), width=4)
+    d.ellipse((540, 640, 760, 860), fill=PINK, outline=ROSE, width=4)
+    d.ellipse((600, 700, 700, 800), fill=ROSE)
+    d.ellipse((150, 200, 280, 280), fill=(237, 233, 254), outline=PURPLE, width=3)
+    points = [(900, 160), (870, 300), (720, 360), (360, 720), (760, 750)]
+    names = ["1. wall", "2. membrane", "3. vacuole", "4. chloroplast", "5. nucleus"]
+    for i, ((sx, sy), hint) in enumerate(zip(points, names)):
+        ly = 120 + i * 140
+        d.line((sx, sy, 980, ly + 34), fill=MUTED, width=2)
+        d.ellipse((sx - 5, sy - 5, sx + 5, sy + 5), fill=MUTED)
+        d.rounded_rectangle((980, ly, 1540, ly + 90), 10, fill=WHITE, outline=GREY, width=2)
+        d.text((1000, ly + 30), hint + "  —", fill=MUTED, font=_font(20, True))
+    return save(img, "plant-cell-blank.png")
 
 
 def nucleus_detail() -> Path:
@@ -598,8 +702,31 @@ def prokaryote_cell() -> Path:
     _leader(d, 560, 360, 1000, 380, "Loop of DNA (nucleoid)", ROSE)
     _leader(d, 760, 380, 1000, 500, "Plasmid", PURPLE)
     _leader(d, 400, 605, 1000, 620, "70S ribosomes", BLUE)
-    _leader(d, 1180, 300, 1220, 280, "Flagellum", AMBER)
+    d.line((920, 430, 1280, 280), fill=AMBER, width=6)
+    d.line((1180, 300, 1240, 220), fill=AMBER, width=4)
+    d.line((1180, 300, 1260, 360), fill=AMBER, width=4)
+    _leader(d, 1240, 250, 1280, 160, "Flagellum", AMBER)
     return save(img, "prokaryote-cell.png")
+
+
+def prokaryote_cell_blank() -> Path:
+    img, d = _new(1400, 860, WHITE)
+    d.text((60, 24), "Bacterial cell — label the structures", fill=TEAL_DARK, font=_font(28, True))
+    d.ellipse((70, 160, 920, 720), outline=NAVY, width=8)
+    d.ellipse((100, 190, 890, 690), fill=CREAM, outline=TEAL, width=5)
+    d.arc((220, 280, 560, 560), 200, 500, fill=ROSE, width=10)
+    d.ellipse((640, 320, 760, 440), outline=PURPLE, width=4)
+    for x in range(180, 820, 36):
+        d.ellipse((x, 600, x + 10, 610), fill=BLUE)
+    d.line((920, 430, 1180, 300), fill=AMBER, width=6)
+    d.line((1120, 320, 1180, 240), fill=AMBER, width=4)
+    for i, (sx, sy) in enumerate(((920, 200), (890, 260), (560, 360), (760, 380), (400, 605), (1180, 300))):
+        ly = 80 + i * 110
+        d.line((sx, sy, 1000, ly + 30), fill=MUTED, width=2)
+        d.ellipse((sx - 4, sy - 4, sx + 4, sy + 4), fill=MUTED)
+        d.rounded_rectangle((1000, ly, 1360, ly + 70), 10, fill=WHITE, outline=GREY, width=2)
+        d.text((1018, ly + 22), f"{i+1}.", fill=MUTED, font=_font(20, True))
+    return save(img, "prokaryote-cell-blank.png")
 
 
 def size_scale() -> Path:
@@ -677,6 +804,24 @@ def wave_snapshot() -> Path:
     d.rounded_rectangle((90, 800, 1410, 890), 12, fill=GOLD)
     d.text((110, 828), "A is measured from equilibrium to a crest — not crest to trough (that is 2A).", fill=INK, font=_font(22, True))
     return save(img, "wave-snapshot.png")
+
+
+def wave_snapshot_blank() -> Path:
+    img, d = _new(1500, 820, WHITE)
+    d.text((60, 24), "Mark amplitude A and wavelength λ on this snapshot", fill=TEAL_DARK, font=_font(26, True))
+    d.line((90, 80, 90, 620), fill=INK, width=3)
+    d.line((90, 360, 1420, 360), fill=GREY, width=2)
+    pts = []
+    for x in range(90, 1410):
+        y = 360 - int(150 * math.sin((x - 90) / 80))
+        pts.append((x, y))
+    d.line(pts, fill=TEAL, width=6)
+    d.text((100, 340), "equilibrium", fill=MUTED, font=_font(16))
+    d.rounded_rectangle((90, 680, 700, 780), 10, fill=WHITE, outline=GREY, width=2)
+    d.text((110, 712), "A  =", fill=MUTED, font=_font(22, True))
+    d.rounded_rectangle((740, 680, 1410, 780), 10, fill=WHITE, outline=GREY, width=2)
+    d.text((760, 712), "λ  =", fill=MUTED, font=_font(22, True))
+    return save(img, "wave-snapshot-blank.png")
 
 
 def long_vs_trans() -> Path:
@@ -833,6 +978,7 @@ def all_diagrams() -> dict[str, Path]:
         mitochondrion, protein_pathway, bilayer, specialised_cells, prokaryote_cell,
         size_scale, light_microscope, mag_triangle, wave_snapshot, long_vs_trans,
         wavefront_medium, phase_points, period_frequency, standard_form_visual,
-        superposition, refraction_rays, em_scale,
+        superposition, refraction_rays, em_scale, sodium_nuclide_blank,
+        animal_cell_blank, plant_cell_blank, prokaryote_cell_blank, wave_snapshot_blank,
     ]
     return {fn.__name__: fn() for fn in fns}

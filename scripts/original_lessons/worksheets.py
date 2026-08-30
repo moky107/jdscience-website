@@ -94,8 +94,20 @@ def calc_box(label="Working"):
     return t
 
 
+def _cell_style(color, bold=False, size=9):
+    return ParagraphStyle(
+        f"cell-{color}-{bold}-{size}",
+        textColor=color,
+        fontName="Times-Bold" if bold else "Times-Roman",
+        fontSize=size,
+        leading=size + 2,
+        alignment=1,
+    )
+
+
 def blank_table(headers, rows=4, col_w=None):
-    data = [headers] + [[""] * len(headers) for _ in range(rows)]
+    head_style = _cell_style(white, True, 9)
+    data = [[Paragraph(h, head_style) for h in headers]] + [[""] * len(headers) for _ in range(rows)]
     widths = col_w or [170 * mm / len(headers)] * len(headers)
     t = Table(data, colWidths=widths, rowHeights=[8 * mm] + [10 * mm] * rows)
     t.setStyle(TableStyle([
@@ -194,11 +206,11 @@ def atomic_student(styles):
     s.append(question_block(styles, 9, "A student claims that <super>14</super>C and <super>14</super>N are isotopes of each other. Explain why this is incorrect. [2]", n=5))
     s.append(question_block(styles, 10, "Calculate A<sub>r</sub> for an element that is 75% isotope-63 and 25% isotope-65. [2]", "calc"))
     s.append(PageBreak())
-    s.append(question_block(styles, 11, "Explain how a 2− ion forms from a neutral atom, referring to protons and electrons. [3]", n=6))
+    s.append(question_block(styles, 11, "Explain how a 2<sup>−</sup> ion forms from a neutral atom, referring to protons and electrons. [3]", n=6))
     s.append(Paragraph("E  Challenge", styles["h"]))
     s.append(fig("mass-spectrum.png", 160 * mm, 52 * mm))
-    s.append(question_block(styles, 12, "Neon has peaks at mass numbers 20, 21 and 22 with relative abundances 90.5, 0.27 and 9.25. Calculate A<sub>r</sub> to 3 s.f. and comment on the effect of ignoring the middle isotope.", "calc"))
-    s.append(question_block(styles, 13, "On the nuclide diagram below, label A, Z, protons and neutrons for <super>23</super><sub>11</sub>Na. Then state the electron number of Na<super>+</super>.", n=5, image=fig("sodium-nuclide.png", 120 * mm, 48 * mm)))
+    s.append(question_block(styles, 12, "The sketch shows a chlorine-style abundance plot. A sample is 75.0% <super>35</super>Cl and 25.0% <super>37</super>Cl. Calculate A<sub>r</sub> to 3 s.f. and explain why the value is not a whole number.", "calc"))
+    s.append(question_block(styles, 13, "On the blank nuclide card, complete A, Z, protons, neutrons and the electron number of Na<super>+</super> for sodium-23.", n=5, image=fig("sodium-nuclide-blank.png", 140 * mm, 52 * mm)))
     return s
 
 
@@ -318,19 +330,20 @@ def cell_student(styles):
     s.append(question_block(styles, 1, "State the function of the nucleus, a mitochondrion and a ribosome.", n=4))
     s.append(question_block(styles, 2, "Name three structures found in plant cells but not in typical animal cells.", n=3))
     s.append(question_block(styles, 3, "What is meant by a selectively permeable membrane?", n=3))
+    s.append(PageBreak())
     s.append(Paragraph("B  Labelling", styles["h"]))
     s.append(question_block(
         styles, 4,
-        "On the animal-cell schematic, name the structures indicated by the leader lines (or list six organelles and their functions).",
+        "On the animal-cell schematic, name the structures indicated by the numbered leader lines and state a function for each.",
         n=6,
-        image=fig("animal-cell.png", 155 * mm, 70 * mm),
+        image=fig("animal-cell-blank.png", 155 * mm, 72 * mm),
     ))
     s.append(PageBreak())
     s.append(question_block(
         styles, 5,
-        "Label the plant-cell extras: wall, membrane, vacuole, chloroplast and nucleus. State which layer is freely permeable.",
+        "Label the plant-cell extras indicated by the numbered lines: wall, membrane, vacuole, chloroplast and nucleus. State which layer is freely permeable.",
         n=5,
-        image=fig("plant-cell.png", 155 * mm, 68 * mm),
+        image=fig("plant-cell-blank.png", 155 * mm, 70 * mm),
     ))
     s.append(fig("bilayer.png", 150 * mm, 48 * mm))
     s.append(question_block(styles, 6, "Describe the structure of the cell-surface membrane. Use the words phospholipid, hydrophobic, protein and fluid mosaic.", n=6))
@@ -355,8 +368,12 @@ def prokaryote_student(styles):
     s.append(question_block(styles, 1, "What is the defining difference between prokaryotic and eukaryotic cells?", n=3))
     s.append(question_block(styles, 2, "Name four structures of a typical bacterial cell.", n=3))
     s.append(question_block(styles, 3, "Are viruses prokaryotic, eukaryotic, or neither? Justify.", n=3))
-    s.append(fig("prokaryote-cell.png", 155 * mm, 52 * mm))
-    s.append(question_block(styles, 4, "Label the bacterial cell: wall, membrane, DNA loop, plasmid, ribosomes and flagellum.", n=6))
+    s.append(question_block(
+        styles, 4,
+        "Label the bacterial cell at the numbered leader lines: wall, membrane, DNA loop, plasmid, ribosomes and flagellum.",
+        n=6,
+        image=fig("prokaryote-cell-blank.png", 155 * mm, 58 * mm),
+    ))
     s.append(PageBreak())
     s.append(Paragraph("B  Comparison table", styles["h"]))
     s.append(question_block(
@@ -408,8 +425,12 @@ def waves_student(styles, progressive=True):
         s.append(question_block(styles, 1, "Define amplitude, wavelength and frequency.", n=4))
         s.append(question_block(styles, 2, "Write the wave equation and give SI units for each quantity, including m s<sup>−1</sup>.", n=3))
         s.append(question_block(styles, 3, "How are period and frequency related?", n=2))
-        s.append(fig("wave-snapshot.png", 160 * mm, 50 * mm))
-        s.append(question_block(styles, 4, "On the snapshot, mark A and λ. How is amplitude read from a displacement–distance graph?", n=4))
+        s.append(question_block(
+            styles, 4,
+            "On the snapshot, mark A and λ. How is amplitude read from a displacement–distance graph?",
+            n=4,
+            image=fig("wave-snapshot-blank.png", 160 * mm, 52 * mm),
+        ))
         s.append(PageBreak())
         s.append(Paragraph("C  Calculations", styles["h"]))
         s.append(Paragraph("Use the same method every time: write the equation, convert to SI units, substitute, then give the unit.", styles["note"]))
@@ -470,7 +491,7 @@ ANSWERS = {
             "9. Isotopes must have the same proton number. C has 6 protons; N has 7.",
             "10. (75×63 + 25×65)/100 = 63.5",
             "11. The atom gains two electrons. Proton number unchanged. Electrons exceed protons by 2, so charge is 2−. [3]",
-            "12. A<sub>r</sub> = (90.5×20 + 0.27×21 + 9.25×22)/100 = 20.2 (3 s.f.). Ignoring <super>21</super>Ne changes only the third significant figure.",
+            "12. A<sub>r</sub> = (75.0×35 + 25.0×37)/100 = 35.5. Not whole because chlorine is a mixture of isotopes.",
             "13. A = 23 top left, Z = 11 bottom left, 11 p, 12 n. Na<sup>+</sup> has 10 electrons.",
         ]),
     ],
@@ -652,11 +673,11 @@ CALC_ANSWERS = {
         "1 mark substitution; 1 mark 63.5.",
     ),
     ("atomic-structure", "12"): (
-        "A<sub>r</sub> = (Σ abundance × mass number) / 100",
-        "A<sub>r</sub> = (90.5 × 20 + 0.27 × 21 + 9.25 × 22) / 100",
-        "(1810 + 5.67 + 203.5) / 100 = 2019.17 / 100",
-        "20.2 (3 s.f.)",
-        "1 mark full substitution; 1 mark 20.2; comment that ignoring <super>21</super>Ne barely changes 3 s.f.",
+        "A<sub>r</sub> = (Σ percent × mass number) / 100",
+        "A<sub>r</sub> = (75.0 × 35 + 25.0 × 37) / 100",
+        "(2625 + 925) / 100 = 3550 / 100",
+        "35.5 (3 s.f., no unit)",
+        "1 mark substitution; 1 mark 35.5; 1 mark mixture of isotopes so A<sub>r</sub> is not an integer.",
     ),
     ("microscopy", "2"): (
         "1 mm = 1000 µm = 1 000 000 nm",
@@ -732,23 +753,25 @@ CALC_ANSWERS = {
 
 
 def calc_answer_table(eq, sub, work, ans):
+    lab = _cell_style(TEAL_DARK, True, 10)
+    lab.alignment = 0
+    body = _cell_style(INK, False, 10)
+    body.alignment = 0
     data = [
-        ["Equation", eq],
-        ["Substitution", sub],
-        ["Working", work],
-        ["Answer + unit", ans],
+        [Paragraph("Equation", lab), Paragraph(eq, body)],
+        [Paragraph("Substitution", lab), Paragraph(sub, body)],
+        [Paragraph("Working", lab), Paragraph(work, body)],
+        [Paragraph("Answer + unit", lab), Paragraph(ans, body)],
     ]
-    t = Table(data, colWidths=[38 * mm, 132 * mm], rowHeights=[8 * mm] * 4)
+    t = Table(data, colWidths=[38 * mm, 132 * mm])
     t.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (0, -1), CREAM),
         ("BACKGROUND", (0, 3), (-1, 3), HexColor("#ECFDF5")),
-        ("TEXTCOLOR", (0, 0), (0, -1), TEAL_DARK),
-        ("FONTNAME", (0, 0), (0, -1), "Times-Bold"),
-        ("FONTNAME", (1, 0), (1, -1), "Times-Roman"),
-        ("FONTSIZE", (0, 0), (-1, -1), 10),
         ("GRID", (0, 0), (-1, -1), 0.5, TEAL),
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
         ("LEFTPADDING", (0, 0), (-1, -1), 5),
+        ("TOPPADDING", (0, 0), (-1, -1), 4),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
     ]))
     return t
 
@@ -766,7 +789,6 @@ ANSWER_FIGURES = {
 def answers_flow(styles, slug):
     s = [_disclaimer(styles, answers=True)]
     s.append(Paragraph("Numbering matches the student worksheet exactly. Award equivalent scientifically correct wording. Show units on every calculated quantity.", styles["note"]))
-    count = 0
     for heading, items in ANSWERS[slug]:
         s.append(Paragraph(heading, styles["h"]))
         for item in items:
@@ -784,14 +806,6 @@ def answers_flow(styles, slug):
                     bits.append(fig(name, w, h))
             bits.append(Spacer(1, 3 * mm))
             s.append(KeepTogether(bits))
-            count += 1
-            if count in {6, 10} and slug in {
-                "atomic-structure", "electron-configuration", "ionic-bonding",
-                "covalent-bonding", "metallic-bonding", "cell-structure",
-                "prokaryotic-and-eukaryotic-cells", "microscopy",
-                "progressive-waves", "wave-properties",
-            }:
-                s.append(PageBreak())
     return s
 
 
