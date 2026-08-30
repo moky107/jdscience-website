@@ -10,7 +10,7 @@ import {
   shopProductTypeLabel,
 } from "./shopConstants";
 import { formatPricePence, penceToPoundsInput, poundsInputToPence } from "./shopFormat";
-import { isExternalProduct, isValidProductImageFile, normalizeShopProduct } from "./shopProductHelpers";
+import { externalButtonLabel, isExternalProduct, isValidProductImageFile, normalizeShopProduct, retailerName } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -42,9 +42,12 @@ const EMPTY_FORM = {
   image_url: "",
   preview_url: "",
   download_url: "",
+  purchase_method: "jdscience",
   sale_type: "checkout",
+  retailer_name: "",
+  show_price: true,
   external_url: "",
-  external_button_label: "Buy now",
+  external_button_label: "",
   opens_external: false,
   clear_image: false,
   clear_preview: false,
@@ -128,8 +131,11 @@ export default function AdminShopEditor({ password }) {
   function setField(key, value) {
     setForm((current) => {
       const next = { ...current, [key]: value };
-      if (key === "sale_type") {
-        next.opens_external = value === "external";
+      if (key === "purchase_method" || key === "sale_type") {
+        const method = key === "purchase_method" ? value : (value === "external" ? "external" : "jdscience");
+        next.purchase_method = method;
+        next.sale_type = method === "external" ? "external" : "checkout";
+        next.opens_external = method === "external";
       }
       return next;
     });
@@ -150,7 +156,10 @@ export default function AdminShopEditor({ password }) {
       sale_price_pounds: penceToPoundsInput(normalized.sale_price_pence),
       stock_quantity: normalized.stock_quantity ?? "",
       keywords: keywordsToInput(normalized.keywords),
-      sale_type: normalized.opens_external ? "external" : "checkout",
+      purchase_method: normalized.purchase_method || (normalized.opens_external ? "external" : "jdscience"),
+      sale_type: (normalized.purchase_method || (normalized.opens_external ? "external" : "jdscience")) === "external" ? "external" : "checkout",
+      retailer_name: normalized.retailer_name || retailerName(normalized) || "",
+      show_price: normalized.show_price !== false,
       is_published: Boolean(normalized.is_published || normalized.published),
       is_featured: Boolean(normalized.is_featured || normalized.featured),
       image_path: normalized.image_path || "",
@@ -219,7 +228,7 @@ export default function AdminShopEditor({ password }) {
   }
 
   function removeAsset(field) {
-    const publishedDigital = form.is_published && form.product_kind === "digital" && form.sale_type !== "external";
+    const publishedDigital = form.is_published && form.product_kind === "digital" && (form.purchase_method || form.sale_type) !== "external";
     if (field === "download_path" && publishedDigital) {
       const confirmed = window.confirm("This is a published digital product. Removing the download file will stop customers receiving the file after purchase. Continue?");
       if (!confirmed) return;
@@ -262,7 +271,8 @@ export default function AdminShopEditor({ password }) {
     }
     const price_pence = poundsInputToPence(form.price_pounds);
     const sale_price_pence = poundsInputToPence(form.sale_price_pounds);
-    if (form.sale_type === "checkout" && (price_pence == null || !Number.isFinite(price_pence) || price_pence < 0)) {
+    const isExternal = (form.purchase_method || form.sale_type) === "external";
+    if (!isExternal && (price_pence == null || !Number.isFinite(price_pence) || price_pence < 0)) {
       setError("Enter a valid price in pounds, for example 5.00.");
       return;
     }
@@ -270,11 +280,15 @@ export default function AdminShopEditor({ password }) {
       setError("Enter a valid sale price in pounds, or leave it blank.");
       return;
     }
-    if (form.sale_type === "external" && !/^https:\/\/.+/i.test(String(form.external_url || "").trim())) {
-      setError("External link products need a valid https:// URL.");
+    if (isExternal && !String(form.retailer_name || "").trim()) {
+      setError("Enter the retailer name, for example Amazon.");
       return;
     }
-    if (form.sale_type !== "external" && form.product_kind === "digital" && form.is_published && !form.download_path) {
+    if (isExternal && !/^https:\/\//i.test(String(form.external_url || "").trim())) {
+      setError("External retailer products need a valid https:// URL.");
+      return;
+    }
+    if (!isExternal && form.product_kind === "digital" && form.is_published && !form.download_path) {
       setError("Add a customer download file before publishing a digital product.");
       return;
     }
@@ -305,10 +319,13 @@ export default function AdminShopEditor({ password }) {
         is_featured: form.is_featured,
         is_published: form.is_published,
         sort_order: form.sort_order,
-        sale_type: form.sale_type,
-        opens_external: form.sale_type === "external",
+        purchase_method: isExternal ? "external" : "jdscience",
+        sale_type: isExternal ? "external" : "checkout",
+        opens_external: isExternal,
+        retailer_name: form.retailer_name,
+        show_price: isExternal ? Boolean(form.show_price) : true,
         external_url: form.external_url,
-        external_button_label: form.external_button_label,
+        external_button_label: isExternal ? externalButtonLabel({ retailer_name: form.retailer_name }) : form.external_button_label,
         image_path: form.image_path || undefined,
         preview_path: form.preview_path || undefined,
         download_path: form.download_path || undefined,
@@ -370,7 +387,7 @@ export default function AdminShopEditor({ password }) {
 
       {setupRequired && (
         <div style={{ marginTop: 12, padding: 12, borderRadius: 8, background: "#fff7ed", color: "#9a3412" }}>
-          Run <code>supabase/migrations/20260829_shop.sql</code>, <code>supabase/migrations/20260829_shop_external_links.sql</code>, <code>supabase/migrations/20260829_shop_publish_sync.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
+          Run <code>supabase/migrations/20260829_shop.sql</code>, <code>supabase/migrations/20260829_shop_external_links.sql</code>, <code>supabase/migrations/20260829_shop_publish_sync.sql</code>, <code>supabase/migrations/20260830_shop_purchase_method.sql</code> and create the private Storage bucket <code>shop-products</code> before using the shop.
         </div>
       )}
       {form.id && (
@@ -383,10 +400,10 @@ export default function AdminShopEditor({ password }) {
 
       <form id="shop-product-form" onSubmit={save} style={{ display: "grid", gap: 12, marginTop: 18 }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))", gap: 12 }}>
-          <Field label="Product sale type">
-            <select value={form.sale_type || "checkout"} onChange={(e) => setField("sale_type", e.target.value)} style={inp}>
-              <option value="checkout">JDScience checkout</option>
-              <option value="external">External link</option>
+          <Field label="Purchase method">
+            <select value={form.purchase_method || "jdscience"} onChange={(e) => setField("purchase_method", e.target.value)} style={inp}>
+              <option value="jdscience">Sell directly on JDScience</option>
+              <option value="external">External retailer</option>
             </select>
           </Field>
           <Field label="Product title">
@@ -400,8 +417,8 @@ export default function AdminShopEditor({ password }) {
             <input
               type="text"
               inputMode="decimal"
-              required={form.sale_type === "checkout"}
-              placeholder={form.sale_type === "external" ? "Optional, e.g. 12.99" : "e.g. 5.00"}
+              required={(form.purchase_method || form.sale_type) !== "external"}
+              placeholder={(form.purchase_method || form.sale_type) === "external" ? "Optional, e.g. 12.99" : "e.g. 5.00"}
               value={form.price_pounds}
               onChange={(e) => setField("price_pounds", e.target.value)}
               style={inp}
@@ -411,14 +428,21 @@ export default function AdminShopEditor({ password }) {
             <input type="text" inputMode="decimal" placeholder="Optional" value={form.sale_price_pounds} onChange={(e) => setField("sale_price_pounds", e.target.value)} style={inp} />
           </Field>
         </div>
-        {form.sale_type === "external" && (
+        {(form.purchase_method || form.sale_type) === "external" && (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))", gap: 12 }}>
-            <Field label="External URL">
-              <input required type="url" placeholder="https://…" value={form.external_url} onChange={(e) => setField("external_url", e.target.value)} style={inp} />
+            <Field label="Retailer name">
+              <input required list="shop-retailer-names" placeholder="Amazon, Waterstones, Pearson…" value={form.retailer_name} onChange={(e) => setField("retailer_name", e.target.value)} style={inp} />
+              <datalist id="shop-retailer-names">
+                {["Amazon", "Waterstones", "WHSmith", "Etsy", "eBay", "Pearson"].map((name) => <option key={name} value={name} />)}
+              </datalist>
             </Field>
-            <Field label="Button label">
-              <input required placeholder="Buy on Amazon" value={form.external_button_label} onChange={(e) => setField("external_button_label", e.target.value)} style={inp} />
+            <Field label="External purchase URL">
+              <input required type="url" placeholder="https://www.amazon.co.uk/…" value={form.external_url} onChange={(e) => setField("external_url", e.target.value)} style={inp} />
             </Field>
+            <label style={{ display: "flex", alignItems: "center", gap: 8, minHeight: 48, fontWeight: 700 }}>
+              <input type="checkbox" checked={form.show_price !== false} onChange={(e) => setField("show_price", e.target.checked)} />
+              Show price on JDScience
+            </label>
           </div>
         )}
         <Field label="Short description">
@@ -433,11 +457,13 @@ export default function AdminShopEditor({ password }) {
               {typeOptions.map((type) => <option key={type.value} value={type.value}>{type.label}</option>)}
             </select>
           </Field>
+          {(form.purchase_method || form.sale_type) !== "external" && (
           <Field label="Digital or physical">
-            <select value={form.product_kind} onChange={(e) => setField("product_kind", e.target.value)} style={inp} disabled={form.sale_type === "external"}>
+            <select value={form.product_kind} onChange={(e) => setField("product_kind", e.target.value)} style={inp}>
               {SHOP_PRODUCT_KINDS.map((kind) => <option key={kind.value} value={kind.value}>{kind.label}</option>)}
             </select>
           </Field>
+          )}
           <Field label="Level">
             <select value={form.level} onChange={(e) => setField("level", e.target.value)} style={inp}>
               <option value="">Optional</option>
@@ -456,7 +482,7 @@ export default function AdminShopEditor({ password }) {
               {SHOP_EXAM_BOARDS.map((board) => <option key={board} value={board}>{board}</option>)}
             </select>
           </Field>
-          {form.sale_type !== "external" && form.product_kind === "physical" ? (
+          {(form.purchase_method || form.sale_type) !== "external" && form.product_kind === "physical" ? (
             <Field label="Stock">
               <input required type="number" min="0" value={form.stock_quantity} onChange={(e) => setField("stock_quantity", e.target.value)} style={inp} />
             </Field>
@@ -522,7 +548,7 @@ export default function AdminShopEditor({ password }) {
           onSelectFile={(file) => uploadFile(file, "previews", "preview_path")}
           onRemove={() => removeAsset("preview_path")}
         />
-        {form.sale_type !== "external" && form.product_kind === "digital" && (
+        {(form.purchase_method || form.sale_type) !== "external" && form.product_kind === "digital" && (
           <ShopFileUploadBox
             boxKey={`download-${form.id || "new"}`}
             label="Customer download"
@@ -562,7 +588,9 @@ export default function AdminShopEditor({ password }) {
               <div style={{ minWidth: 0 }}>
                 <div style={{ fontWeight: 800, color: "#0f172a" }}>{product.title}</div>
                 <div style={{ color: "#64748b", fontSize: 13, marginTop: 4, wordBreak: "break-word" }}>
-                  {formatPricePence(product.effective_price_pence ?? product.price_pence)} · {shopProductTypeLabel(product.product_type)} · {isExternalProduct(product) ? "External link" : shopProductKindLabel(product.product_kind)}
+                  {isExternalProduct(product)
+                    ? `${shopProductTypeLabel(product.product_type) || "Product"} · ${retailerName(product) || "Retailer"} · External purchase`
+                    : `${formatPricePence(product.effective_price_pence ?? product.price_pence)} · ${shopProductTypeLabel(product.product_type)} · JDScience checkout`}
                   {(product.is_published || product.published) ? " · Published" : " · Draft"}
                   {(product.is_featured || product.featured) ? " · Featured" : ""}
                 </div>

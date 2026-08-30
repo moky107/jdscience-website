@@ -25,6 +25,9 @@ import {
   toPublicProduct,
   toAdminProduct,
   applyShopProductUpdate,
+  persistShopProductRow,
+  checkoutRejectionForProduct,
+  EXTERNAL_CHECKOUT_ERROR,
 } from './shop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
@@ -429,10 +432,10 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       sort_order: normalized.fields.sort_order ?? 0,
       created_at: new Date().toISOString(),
     };
-    const { data, error } = await supabase.from('shop_products').insert([fields]).select('*').single();
+    const { data, error } = await persistShopProductRow(supabase, { mode: 'insert', fields });
     if (error) throw error;
     const withAssets = await attachProductAssetUrls(supabase, data, { includeDownload: true });
-    return res.status(200).json({ ok: true, product: withAssets });
+    return res.status(200).json({ ok: true, product: toAdminProduct(withAssets) });
   }
 
   if (action === 'shop-update' || action === 'update') {
@@ -458,11 +461,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       if (clashError) throw clashError;
       if (clash?.id) return res.status(400).json({ error: 'That slug is already used by another product.' });
     }
-    let { data, error } = await supabase.from('shop_products').update(merged.fields).eq('id', id).select('*').single();
-    if (error && /keywords|array literal/i.test(error.message || '')) {
-      const { keywords, ...withoutKeywords } = merged.fields;
-      ({ data, error } = await supabase.from('shop_products').update(withoutKeywords).eq('id', id).select('*').single());
-    }
+    const { data, error } = await persistShopProductRow(supabase, { mode: 'update', id, fields: merged.fields });
     if (error) {
       if (/duplicate key|unique/i.test(error.message || '')) {
         return res.status(400).json({ error: 'That slug is already used by another product.' });
@@ -506,6 +505,10 @@ export async function handleShopCheckoutRequest(req, res, body) {
 
   const supabase = createClient(supabaseUrl, serviceRoleKey);
   const products = await loadPublishedProductsByIds(supabase, basketItems.map((item) => item.product_id));
+  const externalItem = products.find((product) => checkoutRejectionForProduct(product));
+  if (externalItem) {
+    return res.status(400).json({ error: EXTERNAL_CHECKOUT_ERROR });
+  }
   const order = buildOrderLineItems(products, basketItems);
   if (!order.ok) return res.status(400).json({ error: order.error });
 
