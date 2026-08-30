@@ -1,4 +1,22 @@
 import { parseRequestBody, safeTrim, slugify as baseSlugify } from './tutors.js';
+import {
+  EXTERNAL_CHECKOUT_ERROR,
+  checkoutRejectionForProduct,
+  externalButtonLabel as purchaseExternalButtonLabel,
+  isExternalProduct as purchaseIsExternalProduct,
+  isExternalPurchase,
+  isValidExternalUrl as purchaseIsValidExternalUrl,
+  purchaseMethod,
+  retailerName,
+} from '../../src/shopPurchase.js';
+
+export {
+  EXTERNAL_CHECKOUT_ERROR,
+  checkoutRejectionForProduct,
+  isExternalPurchase,
+  purchaseMethod,
+  retailerName,
+} from '../../src/shopPurchase.js';
 
 export const SHOP_STORAGE_BUCKET = 'shop-products';
 
@@ -93,16 +111,15 @@ export function shopSetupReason(error) {
 }
 
 export function isValidExternalUrl(url) {
-  return /^https:\/\/.+/i.test(safeTrim(url, 2000));
+  return purchaseIsValidExternalUrl(url);
 }
 
 export function isExternalProduct(product) {
-  return Boolean(product?.opens_external) && isValidExternalUrl(product?.external_url);
+  return purchaseIsExternalProduct(product);
 }
 
 export function externalButtonLabel(product) {
-  const label = safeTrim(product?.external_button_label, 80);
-  return label || 'Buy now';
+  return purchaseExternalButtonLabel(product);
 }
 
 export function productIsPublished(product) {
@@ -129,9 +146,14 @@ export function normalizeShopProductRow(product) {
     is_published: published,
     featured,
     is_featured: featured,
-    opens_external: Boolean(product.opens_external),
+    opens_external: isExternalPurchase(product),
+    purchase_method: purchaseMethod(product),
+    retailer_name: retailerName(product),
+    show_price: product.show_price !== false,
     external_url: product.external_url || '',
-    external_button_label: product.external_button_label || 'Buy now',
+    external_button_label: isExternalPurchase(product)
+      ? purchaseExternalButtonLabel(product)
+      : (product.external_button_label || 'Buy now'),
     product_kind: product.product_kind || 'digital',
     product_type: product.product_type || '',
   };
@@ -262,12 +284,11 @@ export function applyShopProductUpdate(existing, body = {}, options = {}) {
     return { ok: false, error: 'Choose digital or physical.' };
   }
 
-  const saleTypeProvided = body.sale_type != null || body.saleType != null || body.opens_external != null;
-  const opens_external = saleTypeProvided
-    ? (body.opens_external != null
-      ? Boolean(body.opens_external)
-      : (body.sale_type === 'external' || body.saleType === 'external'))
-    : Boolean(existing.opens_external);
+  const purchaseProvided = body.purchase_method != null || body.sale_type != null || body.saleType != null || body.opens_external != null;
+  const nextPurchase = purchaseProvided
+    ? purchaseMethod(body)
+    : purchaseMethod(existing);
+  const opens_external = nextPurchase === 'external';
 
   const priceRaw = body.price_pence ?? body.pricePence;
   const saleRaw = body.sale_price_pence ?? body.salePricePence;
@@ -277,8 +298,11 @@ export function applyShopProductUpdate(existing, body = {}, options = {}) {
   const sale_price_pence = saleRaw === undefined
     ? (existing.sale_price_pence ?? null)
     : (saleRaw == null || saleRaw === '' ? null : Math.round(Number(saleRaw)));
-  if (!Number.isFinite(price_pence) || price_pence < 0) {
+  if (!opens_external && (!Number.isFinite(price_pence) || price_pence < 0)) {
     return { ok: false, error: 'Enter a valid price.' };
+  }
+  if (opens_external && priceRaw != null && priceRaw !== '' && (!Number.isFinite(price_pence) || price_pence < 0)) {
+    return { ok: false, error: 'Enter a valid price, or leave it blank.' };
   }
   if (sale_price_pence != null && (!Number.isFinite(sale_price_pence) || sale_price_pence < 0)) {
     return { ok: false, error: 'Enter a valid sale price, or leave it blank.' };
@@ -300,10 +324,17 @@ export function applyShopProductUpdate(existing, body = {}, options = {}) {
     ? Boolean(body.is_published)
     : (body.published != null ? Boolean(body.published) : Boolean(existing.is_published || existing.published));
 
+  const retailer_name = opens_external
+    ? (body.retailer_name != null ? safeTrim(body.retailer_name, 80) : retailerName(existing))
+    : null;
+  const show_price = body.show_price != null ? Boolean(body.show_price) : (existing.show_price !== false);
   if (opens_external) {
     const external_url = body.external_url != null ? safeTrim(body.external_url, 2000) : (existing.external_url || '');
+    if (!retailer_name) {
+      return { ok: false, error: 'Enter the retailer name, for example Amazon.' };
+    }
     if (!isValidExternalUrl(external_url)) {
-      return { ok: false, error: 'External link products need a valid https:// URL.' };
+      return { ok: false, error: 'External retailer products need a valid https:// URL.' };
     }
   } else if (product_kind === 'digital' && is_published && !download_path) {
     return { ok: false, error: 'Add a customer download file before publishing a digital product.' };
@@ -338,11 +369,14 @@ export function applyShopProductUpdate(existing, body = {}, options = {}) {
     published: is_published,
     sort_order,
     opens_external,
+    purchase_method: nextPurchase,
+    retailer_name: retailer_name || null,
+    show_price,
     external_url: opens_external
       ? (body.external_url != null ? safeTrim(body.external_url, 2000) : (existing.external_url || null))
       : (existing.external_url || null),
-    external_button_label: body.external_button_label != null
-      ? (safeTrim(body.external_button_label, 80) || 'Buy now')
+    external_button_label: opens_external
+      ? purchaseExternalButtonLabel({ retailer_name, external_button_label: body.external_button_label })
       : (existing.external_button_label || 'Buy now'),
     updated_at: new Date().toISOString(),
   };
@@ -369,19 +403,17 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   const preview_path = safeTrim(body.preview_path, 400) || null;
   const download_path = safeTrim(body.download_path, 400) || null;
   const slug = safeTrim(body.slug, 80) || slugifyProductTitle(title);
-  const saleTypeProvided = body.sale_type != null || body.saleType != null;
-  const opensExternalProvided = body.opens_external != null || saleTypeProvided;
-  const opens_external = opensExternalProvided
-    ? (body.opens_external != null
-      ? Boolean(body.opens_external)
-      : (body.sale_type === 'external' || body.saleType === 'external'))
-    : (partial ? undefined : false);
+  const purchaseProvided = body.purchase_method != null || body.sale_type != null || body.saleType != null || body.opens_external != null;
+  const nextPurchase = purchaseProvided ? purchaseMethod(body) : (partial ? undefined : 'jdscience');
+  const opens_external = nextPurchase == null ? undefined : nextPurchase === 'external';
+  const retailer_name = body.retailer_name != null ? safeTrim(body.retailer_name, 80) : undefined;
+  const show_price = body.show_price != null ? Boolean(body.show_price) : undefined;
   const external_url = opens_external === true
     ? safeTrim(body.external_url, 2000)
     : (opens_external === false ? null : safeTrim(body.external_url, 2000) || undefined);
-  const external_button_label = body.external_button_label != null
-    ? (safeTrim(body.external_button_label, 80) || 'Buy now')
-    : undefined;
+  const external_button_label = opens_external === true
+    ? purchaseExternalButtonLabel({ retailer_name, external_button_label: body.external_button_label })
+    : (body.external_button_label != null ? (safeTrim(body.external_button_label, 80) || 'Buy now') : undefined);
 
   const priceRaw = body.price_pence ?? body.pricePence;
   const saleRaw = body.sale_price_pence ?? body.salePricePence;
@@ -405,11 +437,14 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
       return { ok: false, error: 'Choose a valid product type.' };
     }
     if (opens_external) {
+      if (!retailer_name) {
+        return { ok: false, error: 'Enter the retailer name, for example Amazon.' };
+      }
       if (!external_url || !isValidExternalUrl(external_url)) {
-        return { ok: false, error: 'External link products need a valid https:// URL.' };
+        return { ok: false, error: 'External retailer products need a valid https:// URL.' };
       }
       if (price_pence != null && price_pence !== '' && (!Number.isFinite(price_pence) || price_pence < 0)) {
-        return { ok: false, error: 'Enter a valid price in pence, or leave blank for external products.' };
+        return { ok: false, error: 'Enter a valid price, or leave it blank.' };
       }
     } else {
       if (!Number.isFinite(price_pence) || price_pence < 0) {
@@ -453,6 +488,9 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
     updated_at: new Date().toISOString(),
   };
 
+  if (nextPurchase) fields.purchase_method = nextPurchase;
+  if (retailer_name !== undefined) fields.retailer_name = retailer_name || null;
+  if (show_price !== undefined) fields.show_price = show_price;
   if (opens_external !== undefined) fields.opens_external = opens_external;
   if (opens_external === true) {
     fields.external_url = external_url;
@@ -482,6 +520,32 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   if (sort_order !== undefined) fields.sort_order = sort_order;
 
   return { ok: true, fields };
+}
+
+export async function persistShopProductRow(supabase, { mode, id, fields }) {
+  let payload = { ...fields };
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    const query = mode === 'insert'
+      ? supabase.from('shop_products').insert([payload]).select('*').single()
+      : supabase.from('shop_products').update(payload).eq('id', id).select('*').single();
+    const { data, error } = await query;
+    if (!error) return { data, error: null };
+    if (/keywords|array literal/i.test(error.message || '') && 'keywords' in payload) {
+      const { keywords, ...rest } = payload;
+      payload = rest;
+      continue;
+    }
+    if (isShopColumnMismatch(error)) {
+      const missing = missingShopColumnName(error);
+      if (missing && missing in payload) {
+        const { [missing]: _dropped, ...rest } = payload;
+        payload = rest;
+        continue;
+      }
+    }
+    return { data: null, error };
+  }
+  return { data: null, error: new Error('Could not save shop product.') };
 }
 
 export function parseBasketItems(body) {
@@ -520,11 +584,9 @@ export function buildOrderLineItems(products, basketItems) {
     if (!product) {
       return { ok: false, error: 'One or more products are no longer available.' };
     }
-    if (isExternalProduct(product)) {
-      return {
-        ok: false,
-        error: `${product.title} is sold on an external website and cannot be checked out through JD Science.`,
-      };
+    const blocked = checkoutRejectionForProduct(product);
+    if (blocked) {
+      return { ok: false, error: blocked };
     }
     if (product.product_kind === 'physical') {
       hasPhysical = true;

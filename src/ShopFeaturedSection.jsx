@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { shopProductKindLabel, shopProductTypeLabel } from "./shopConstants";
-import { externalButtonLabel, isExternalProduct, productCardImageHeight, productShowsPrice } from "./shopProductHelpers";
+import { externalButtonLabel, isExternalProduct, productCardImageHeight, productShowsPrice, retailerName, retailerPriceHint } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -19,12 +19,15 @@ function useViewportWidth() {
 export { productCardImageHeight } from "./shopProductHelpers";
 
 function ProductMeta({ product }) {
+  const external = isExternalProduct(product);
+  const soldLabel = external && retailerName(product) ? `Sold on ${retailerName(product)}` : (external ? "External retailer" : "");
   const chips = [
     product.level,
     product.subject,
     product.exam_board,
     shopProductTypeLabel(product.product_type),
-    shopProductKindLabel(product.product_kind),
+    external ? null : shopProductKindLabel(product.product_kind),
+    soldLabel,
   ].filter(Boolean);
   if (!chips.length) return null;
   return (
@@ -100,8 +103,8 @@ export function ProductCard({ product, onView, onAdd, compact = false }) {
           </p>
         )}
         <ProductMeta product={product} />
-        {showPrice && (
-          <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+        {showPrice ? (
+          <div style={{ display: "grid", gap: 4 }}>
             <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>
               {formatPricePence(price)}
               {productOnSale(product) && product.price_pence != null && (
@@ -110,8 +113,11 @@ export function ProductCard({ product, onView, onAdd, compact = false }) {
                 </span>
               )}
             </div>
+            {external && <div style={{ color: "#64748b", fontSize: 12 }}>{retailerPriceHint(product)}</div>}
           </div>
-        )}
+        ) : external ? (
+          <div style={{ fontWeight: 700, color: TEAL_DARK, fontSize: 15 }}>{retailerPriceHint(product)}</div>
+        ) : null}
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: "auto", paddingTop: 4 }}>
           <button type="button" onClick={() => onView(product)} style={{ flex: 1, minHeight: 48, borderRadius: 10, border: `1px solid rgba(0,150,136,.22)`, background: "#fff", color: TEAL_DARK, fontWeight: 800, cursor: "pointer" }}>
             {viewLabel}

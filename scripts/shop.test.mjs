@@ -11,17 +11,26 @@ globalThis.localStorage = {
 import {
   applyShopProductUpdate,
   buildOrderLineItems,
+  checkoutRejectionForProduct,
+  EXTERNAL_CHECKOUT_ERROR,
   isMissingShopTable,
   isShopColumnMismatch,
   isShopSchemaCacheStale,
   isValidExternalUrl,
   missingShopColumnName,
+  normalizeProductInput,
   normalizeShopProductRow,
   productIsFeatured,
   productIsPublished,
+  purchaseMethod,
   toAdminProduct,
   toPublicProduct,
 } from "../api/_lib/shop.js";
+import {
+  externalButtonLabel as purchaseCta,
+  isValidExternalUrl as purchaseUrlOk,
+  retailerPriceHint,
+} from "../src/shopPurchase.js";
 import {
   effectivePricePence,
   formatPricePence,
@@ -107,10 +116,21 @@ const externalProduct = {
 
 assert.equal(isValidExternalUrl("https://www.amazon.co.uk/dp/example"), true);
 assert.equal(isValidExternalUrl("http://example.com"), false);
+assert.equal(isValidExternalUrl("javascript:alert(1)"), false);
+assert.equal(isValidExternalUrl("data:text/html,hi"), false);
 assert.equal(isValidExternalUrlClient("https://www.amazon.co.uk/dp/example"), true);
 assert.equal(isExternalProduct(externalProduct), true);
 assert.equal(externalButtonLabel(externalProduct), "Buy on Amazon");
-assert.equal(externalButtonLabel({ opens_external: true, external_url: "https://example.com" }), "Buy now");
+assert.equal(externalButtonLabel({ opens_external: true, retailer_name: "Amazon", external_url: "https://www.amazon.co.uk/dp/example" }), "Buy on Amazon");
+assert.equal(externalButtonLabel({ purchase_method: "external", retailer_name: "Waterstones" }), "Buy at Waterstones");
+assert.equal(externalButtonLabel({ purchase_method: "external", retailer_name: "Pearson" }), "Buy from Pearson");
+assert.equal(externalButtonLabel({ opens_external: true, external_url: "https://example.com" }), "Visit retailer");
+assert.equal(purchaseMethod({ opens_external: false }), "jdscience");
+assert.equal(purchaseMethod({ purchase_method: "external" }), "external");
+assert.equal(checkoutRejectionForProduct(externalProduct), EXTERNAL_CHECKOUT_ERROR);
+assert.equal(checkoutRejectionForProduct({ purchase_method: "jdscience" }), null);
+assert.equal(purchaseUrlOk("https://www.waterstones.com/book/x"), true);
+assert.match(retailerPriceHint({ purchase_method: "external", retailer_name: "Amazon", show_price: false }), /Check price at Amazon/);
 
 clearBasket();
 addToBasket(externalProduct, 1);
@@ -120,7 +140,7 @@ const checkoutOrder = buildOrderLineItems([externalProduct, sampleProduct], [
   { product_id: "prod-ext", quantity: 1 },
 ]);
 assert.equal(checkoutOrder.ok, false);
-assert.match(checkoutOrder.error, /external website/i);
+assert.equal(checkoutOrder.error, EXTERNAL_CHECKOUT_ERROR);
 
 const normalOrder = buildOrderLineItems([sampleProduct], [
   { product_id: "prod-1", quantity: 1 },
@@ -242,6 +262,52 @@ assert.equal(clearedPreview.fields.download_path, "downloads/unit1.pptx");
 const publishNeedsDownload = applyShopProductUpdate({ ...existingProduct, download_path: null }, { is_published: true }, { clear_download: true });
 assert.equal(publishNeedsDownload.ok, false);
 
+assert.equal(titleOnly.fields.purchase_method, "jdscience");
+assert.equal(titleOnly.fields.opens_external, false);
+
+const externalised = applyShopProductUpdate(existingProduct, {
+  purchase_method: "external",
+  retailer_name: "Amazon",
+  external_url: "https://www.amazon.co.uk/dp/example",
+  show_price: false,
+});
+assert.equal(externalised.ok, true);
+assert.equal(externalised.fields.purchase_method, "external");
+assert.equal(externalised.fields.opens_external, true);
+assert.equal(externalised.fields.retailer_name, "Amazon");
+assert.equal(externalised.fields.download_path, "downloads/unit1.pptx");
+assert.equal(externalised.fields.image_path, "images/unit1.png");
+assert.equal(externalised.fields.external_button_label, "Buy on Amazon");
+
+const missingRetailer = applyShopProductUpdate(existingProduct, {
+  purchase_method: "external",
+  retailer_name: "",
+  external_url: "https://www.amazon.co.uk/dp/example",
+});
+assert.equal(missingRetailer.ok, false);
+
+const badScheme = applyShopProductUpdate(existingProduct, {
+  purchase_method: "external",
+  retailer_name: "Amazon",
+  external_url: "javascript:alert(1)",
+});
+assert.equal(badScheme.ok, false);
+
+const createdExternal = normalizeProductInput({
+  title: "My Chemistry Companion: Your Ultimate GCSE Chemistry Revision Book",
+  short_description: "GCSE Chemistry revision book",
+  description: "Sold on Amazon",
+  product_type: "book",
+  purchase_method: "external",
+  retailer_name: "Amazon",
+  external_url: "https://www.amazon.co.uk/dp/example",
+  show_price: false,
+  price_pence: "",
+});
+assert.equal(createdExternal.ok, true);
+assert.equal(createdExternal.fields.purchase_method, "external");
+assert.equal(createdExternal.fields.download_path, null);
+
 const publicView = toPublicProduct({ ...existingProduct, download_url: "https://example.test/secret" });
 assert.equal("download_path" in publicView, false);
 const adminView = toAdminProduct(existingProduct);
@@ -252,6 +318,10 @@ assert.match(adminSource, /ShopFileUploadBox/, "AdminShopEditor must use ShopFil
 assert.match(adminSource, /Drag and drop a cover image here/);
 assert.match(adminSource, /Choose image file/);
 assert.match(adminSource, /Product title/);
+assert.match(adminSource, /Purchase method/);
+assert.match(adminSource, /Sell directly on JDScience/);
+assert.match(adminSource, /External retailer/);
+assert.match(adminSource, /Retailer name/);
 assert.match(adminSource, /Price \(£\)/);
 assert.match(adminSource, /Cover image/);
 assert.match(adminSource, /Customer download/);

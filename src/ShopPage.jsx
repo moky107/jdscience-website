@@ -21,7 +21,7 @@ import {
 } from "./shopBasket";
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { ProductCard, productCardImageHeight } from "./ShopFeaturedSection";
-import { externalButtonLabel, isExternalProduct, productShowsPrice } from "./shopProductHelpers";
+import { externalButtonLabel, externalLegalNote, externalSaleNotice, isExternalProduct, productShowsPrice, retailerName, retailerPriceHint } from "./shopProductHelpers";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -49,8 +49,9 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
     product.subject && ["Subject", product.subject],
     product.exam_board && ["Exam board", product.exam_board],
     product.product_type && ["Type", shopProductTypeLabel(product.product_type)],
-    product.product_kind && ["Format", shopProductKindLabel(product.product_kind)],
-    product.product_kind === "physical" && product.stock_quantity != null && ["Stock", String(product.stock_quantity)],
+    !external && product.product_kind && ["Format", shopProductKindLabel(product.product_kind)],
+    external && retailerName(product) && ["Retailer", retailerName(product)],
+    !external && product.product_kind === "physical" && product.stock_quantity != null && ["Stock", String(product.stock_quantity)],
   ].filter(Boolean);
 
   return (
@@ -68,16 +69,21 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
         </div>
         <div>
           <h1 style={{ margin: "0 0 12px", color: "#0f172a", fontSize: 32, lineHeight: 1.2 }}>{product.title}</h1>
-          {showPrice && (
-            <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK, marginBottom: 16 }}>
-              {formatPricePence(price)}
-              {productOnSale(product) && product.price_pence != null && (
-                <span style={{ marginLeft: 10, color: "#94a3b8", textDecoration: "line-through", fontSize: 18, fontWeight: 600 }}>
-                  {formatPricePence(product.price_pence)}
-                </span>
-              )}
+          {showPrice ? (
+            <div style={{ marginBottom: 16 }}>
+              <div style={{ fontSize: 28, fontWeight: 800, color: TEAL_DARK }}>
+                {formatPricePence(price)}
+                {productOnSale(product) && product.price_pence != null && (
+                  <span style={{ marginLeft: 10, color: "#94a3b8", textDecoration: "line-through", fontSize: 18, fontWeight: 600 }}>
+                    {formatPricePence(product.price_pence)}
+                  </span>
+                )}
+              </div>
+              {external && <div style={{ marginTop: 6, color: "#64748b", fontSize: 13 }}>{retailerPriceHint(product)}</div>}
             </div>
-          )}
+          ) : external ? (
+            <div style={{ fontSize: 20, fontWeight: 800, color: TEAL_DARK, marginBottom: 16 }}>{retailerPriceHint(product)}</div>
+          ) : null}
           {product.short_description && <p style={{ color: "#475569", lineHeight: 1.65, fontSize: 16 }}>{product.short_description}</p>}
           {meta.length > 0 && (
             <dl style={{ display: "grid", gap: 8, margin: "18px 0", fontSize: 14 }}>
@@ -91,6 +97,12 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
           )}
           {product.description && (
             <div style={{ color: "#334155", lineHeight: 1.7, whiteSpace: "pre-wrap", marginBottom: 18 }}>{product.description}</div>
+          )}
+          {external && (
+            <div style={{ background: "#f0fdfa", border: "1px solid #ccfbf1", color: TEAL_DARK, borderRadius: 12, padding: "12px 14px", marginBottom: 16, fontSize: 14, lineHeight: 1.55 }}>
+              <div>{externalSaleNotice(product)}</div>
+              <div style={{ marginTop: 6, color: "#475569" }}>{externalLegalNote(product)}</div>
+            </div>
           )}
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             {external ? (
