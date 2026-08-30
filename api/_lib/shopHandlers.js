@@ -23,6 +23,8 @@ import {
   signedShopAssetUrl,
   slugifyProductTitle,
   toPublicProduct,
+  toAdminProduct,
+  applyShopProductUpdate,
 } from './shop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
@@ -396,7 +398,8 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       base64: body.base64,
     });
     if (!upload.ok) return res.status(400).json({ error: upload.error });
-    return res.status(200).json({ ok: true, path: upload.path });
+    const url = await signedShopAssetUrl(supabase, upload.path, 3600);
+    return res.status(200).json({ ok: true, path: upload.path, url });
   }
 
   if (action === 'shop-list' || action === 'list') {
@@ -409,7 +412,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
     const withAssets = await attachProductAssetUrlsToMany(supabase, data || [], { includeDownload: true });
     return res.status(200).json({
       ok: true,
-      products: withAssets.map((product) => toPublicProduct(normalizeShopProductRow(product))),
+      products: withAssets.map((product) => toAdminProduct(product)),
     });
   }
 
@@ -433,14 +436,41 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
   }
 
   if (action === 'shop-update' || action === 'update') {
-    const normalized = normalizeProductInput(body.product || body, { partial: true });
-    if (!normalized.ok) return res.status(400).json({ error: normalized.error });
     const id = safeTrim(body.id || body.product?.id, 80);
     if (!id) return res.status(400).json({ error: 'Product ID is required.' });
-    const { data, error } = await supabase.from('shop_products').update(normalized.fields).eq('id', id).select('*').single();
-    if (error) throw error;
+    const { data: existing, error: loadError } = await supabase.from('shop_products').select('*').eq('id', id).maybeSingle();
+    if (loadError) throw loadError;
+    if (!existing) return res.status(404).json({ error: 'Product not found.' });
+    const incoming = body.product || body;
+    const merged = applyShopProductUpdate(existing, incoming, {
+      clear_image: Boolean(incoming.clear_image || body.clear_image),
+      clear_preview: Boolean(incoming.clear_preview || body.clear_preview),
+      clear_download: Boolean(incoming.clear_download || body.clear_download),
+    });
+    if (!merged.ok) return res.status(400).json({ error: merged.error });
+    if (merged.slugChanged) {
+      const { data: clash, error: clashError } = await supabase
+        .from('shop_products')
+        .select('id')
+        .eq('slug', merged.fields.slug)
+        .neq('id', id)
+        .maybeSingle();
+      if (clashError) throw clashError;
+      if (clash?.id) return res.status(400).json({ error: 'That slug is already used by another product.' });
+    }
+    let { data, error } = await supabase.from('shop_products').update(merged.fields).eq('id', id).select('*').single();
+    if (error && /keywords|array literal/i.test(error.message || '')) {
+      const { keywords, ...withoutKeywords } = merged.fields;
+      ({ data, error } = await supabase.from('shop_products').update(withoutKeywords).eq('id', id).select('*').single());
+    }
+    if (error) {
+      if (/duplicate key|unique/i.test(error.message || '')) {
+        return res.status(400).json({ error: 'That slug is already used by another product.' });
+      }
+      throw error;
+    }
     const withAssets = await attachProductAssetUrls(supabase, data, { includeDownload: true });
-    return res.status(200).json({ ok: true, product: withAssets });
+    return res.status(200).json({ ok: true, product: toAdminProduct(withAssets) });
   }
 
   if (action === 'shop-delete' || action === 'delete') {
