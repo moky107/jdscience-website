@@ -1,7 +1,7 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { sendBookingNotification, sendShopOrderNotifications } from './_lib/notify.js';
-import { isMissingShopTable } from './_lib/shop.js';
+import { isMissingShopTable, parseShopItemsMetadata } from './_lib/shop.js';
 
 /**
  * Vercel serverless function: Stripe webhook handler.
@@ -78,11 +78,14 @@ export default async function handler(req, res) {
         );
       } else if (meta.order_type === 'shop') {
         const supabase = createClient(supabaseUrl, serviceRoleKey);
-        let items = [];
-        try {
-          items = JSON.parse(meta.items_json || '[]');
-        } catch {
-          items = [];
+        let items = parseShopItemsMetadata(meta);
+        const { data: existingOrder } = await supabase
+          .from('shop_orders')
+          .select('items')
+          .eq('stripe_session_id', session.id)
+          .maybeSingle();
+        if (Array.isArray(existingOrder?.items) && existingOrder.items.length) {
+          items = existingOrder.items;
         }
 
         const shipping = session.shipping_details || session.customer_details || {};

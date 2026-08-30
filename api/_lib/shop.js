@@ -630,6 +630,68 @@ export function buildOrderLineItems(products, basketItems) {
   };
 }
 
+export const STRIPE_METADATA_VALUE_LIMIT = 500;
+
+export function compactShopOrderLines(lines) {
+  return (Array.isArray(lines) ? lines : []).map((line) => ({
+    product_id: line.product_id,
+    quantity: Number(line.quantity) || 1,
+    product_kind: line.product_kind || (line.is_digital === false ? 'physical' : 'digital'),
+    is_digital: line.is_digital !== false && line.product_kind !== 'physical',
+  }));
+}
+
+export function stripeMetadataItemFields(lines) {
+  const compact = compactShopOrderLines(lines);
+  const fields = {};
+  const chunks = [];
+  let current = [];
+  for (const item of compact) {
+    const candidate = [...current, item];
+    if (JSON.stringify(candidate).length > STRIPE_METADATA_VALUE_LIMIT && current.length) {
+      chunks.push(current);
+      current = [item];
+    } else {
+      current = candidate;
+    }
+  }
+  if (current.length) chunks.push(current);
+  if (!chunks.length) {
+    fields.items_json = '[]';
+    return fields;
+  }
+  chunks.forEach((chunk, index) => {
+    const key = index === 0 ? 'items_json' : `items_json_${index + 1}`;
+    fields[key] = JSON.stringify(chunk);
+  });
+  return fields;
+}
+
+export function parseShopItemsMetadata(meta) {
+  const src = meta || {};
+  const parts = [];
+  for (let i = 0; i < 20; i += 1) {
+    const key = i === 0 ? 'items_json' : `items_json_${i + 1}`;
+    const raw = src[key];
+    if (!raw) continue;
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) parts.push(...parsed);
+    } catch {
+      /* ignore truncated or invalid chunks */
+    }
+  }
+  return parts;
+}
+
+export function clipStripeMetadata(values) {
+  const out = {};
+  for (const [key, value] of Object.entries(values || {})) {
+    out[key] = String(value ?? '').slice(0, STRIPE_METADATA_VALUE_LIMIT);
+  }
+  return out;
+}
+
 export function safeEqual(a, b) {
   const sa = String(a || '');
   const sb = String(b || '');

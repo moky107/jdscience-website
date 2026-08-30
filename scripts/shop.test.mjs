@@ -12,12 +12,17 @@ import {
   applyShopProductUpdate,
   buildOrderLineItems,
   checkoutRejectionForProduct,
+  clipStripeMetadata,
+  compactShopOrderLines,
   EXTERNAL_CHECKOUT_ERROR,
   isMissingShopTable,
   isShopColumnMismatch,
   isShopSchemaCacheStale,
   isValidExternalUrl,
   missingShopColumnName,
+  parseShopItemsMetadata,
+  STRIPE_METADATA_VALUE_LIMIT,
+  stripeMetadataItemFields,
   normalizeProductInput,
   normalizeShopProductRow,
   productIsFeatured,
@@ -161,6 +166,49 @@ const checkoutReady = buildOrderLineItems([digitalProduct], [
 ]);
 assert.equal(checkoutReady.ok, true);
 assert.equal(checkoutReady.lines.length, 1);
+
+const twoDigital = buildOrderLineItems([
+  {
+    ...digitalProduct,
+    title: "BTEC Unit 1 Biology: Cell Structure",
+    slug: "btec-unit-1-biology-cell-structure",
+    product_type: "powerpoint",
+  },
+  {
+    ...digitalProduct,
+    id: "prod-2",
+    title: "BTEC Unit 1 Biology: Specialised Cells",
+    slug: "specialise-cells",
+    product_type: "powerpoint",
+  },
+], [
+  { product_id: "prod-1", quantity: 1 },
+  { product_id: "prod-2", quantity: 1 },
+]);
+assert.equal(twoDigital.ok, true);
+const stripeFields = stripeMetadataItemFields(twoDigital.lines);
+assert.ok(Object.values(stripeFields).every((value) => String(value).length <= STRIPE_METADATA_VALUE_LIMIT));
+assert.equal(parseShopItemsMetadata(stripeFields).length, 2);
+assert.equal(parseShopItemsMetadata(stripeFields)[1].product_id, "prod-2");
+
+const crowdedLines = Array.from({ length: 12 }, (_, index) => ({
+  product_id: `00000000-0000-4000-8000-0000000000${String(index).padStart(2, "0")}`,
+  slug: `btec-unit-1-biology-prokaryotic-and-eukaryotic-cells-${index}`,
+  title: `BTEC Unit 1 Biology: Prokaryotic and Eukaryotic Cells Worksheet ${index}`,
+  quantity: 1,
+  unit_price_pence: 200,
+  line_total_pence: 200,
+  product_kind: "digital",
+  product_type: "worksheet",
+  is_digital: true,
+}));
+assert.ok(JSON.stringify(crowdedLines).length > STRIPE_METADATA_VALUE_LIMIT);
+const crowdedFields = stripeMetadataItemFields(crowdedLines);
+assert.ok(Object.values(crowdedFields).every((value) => String(value).length <= STRIPE_METADATA_VALUE_LIMIT));
+assert.equal(parseShopItemsMetadata(crowdedFields).length, 12);
+const clipped = clipStripeMetadata({ items_json: "x".repeat(600), customer_name: "Test" });
+assert.equal(clipped.items_json.length, STRIPE_METADATA_VALUE_LIMIT);
+assert.equal(compactShopOrderLines(twoDigital.lines)[0].product_id, "prod-1");
 
 assert.equal(productIsPublished({ is_published: true }), true);
 assert.equal(productIsPublished({ published: true }), true);
