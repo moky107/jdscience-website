@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import zipfile
 from pathlib import Path
 
 from reportlab.lib.colors import HexColor, white, Color
@@ -819,4 +820,21 @@ def build_all(out_root: Path):
         build_doc(qpath, title, kicker, "Worksheet", builder(styles))
         build_doc(apath, f"{title} — Answers", kicker.replace("Worksheet", "Answer sheet"), "Answer sheet", answers_flow(styles, slug))
         written.append((title, qpath, apath))
+    return written
+
+
+def build_shop_packs(out_root: Path):
+    """Zip each student worksheet with its answer sheet for the paid shop download."""
+    written = []
+    for slug in STUDENT_BUILDERS:
+        folder = out_root / slug
+        qpath = folder / f"btec-unit-1-{slug}-worksheet.pdf"
+        apath = folder / f"btec-unit-1-{slug}-answers.pdf"
+        zpath = folder / f"btec-unit-1-{slug}-worksheet-pack.zip"
+        if not qpath.exists() or not apath.exists():
+            raise FileNotFoundError(f"Missing worksheet files for {slug}")
+        with zipfile.ZipFile(zpath, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+            archive.write(qpath, qpath.name)
+            archive.write(apath, apath.name)
+        written.append(zpath)
     return written

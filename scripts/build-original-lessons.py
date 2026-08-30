@@ -21,6 +21,7 @@ from original_lessons.lessons_chemistry import (
 from original_lessons.lessons_physics import build_progressive_waves, build_wave_properties
 from original_lessons.covers import build_covers
 from original_lessons.worksheets import build_all as build_worksheets
+from original_lessons.worksheets import build_shop_packs
 
 ROOT = HERE.parent
 OUT = ROOT / "content/lessons"
@@ -51,6 +52,8 @@ def main():
         print(f"WS   {title}  -> {q.name} / {a.name}")
     for path in build_covers():
         print(f"COVER {path}")
+    for path in build_shop_packs(OUT):
+        print(f"PACK  {path}")
     print(f"\nBuilt {len(results)} presentations.")
     return results
 

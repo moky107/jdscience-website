@@ -23,14 +23,19 @@ for (const [slug, ppt, title] of lessons) {
   const worksheet = path.join(folder, `btec-unit-1-${slug}-worksheet.pdf`);
   const answers = path.join(folder, `btec-unit-1-${slug}-answers.pdf`);
   const cover = path.join(folder, "cover.png");
+  const worksheetCover = path.join(folder, "cover-worksheet.png");
+  const pack = path.join(folder, `btec-unit-1-${slug}-worksheet-pack.zip`);
   assert.ok(existsSync(pptx), `missing ${pptx}`);
   assert.ok(existsSync(worksheet), `missing ${worksheet}`);
   assert.ok(existsSync(answers), `missing ${answers}`);
   assert.ok(existsSync(cover), `missing ${cover}`);
+  assert.ok(existsSync(worksheetCover), `missing ${worksheetCover}`);
+  assert.ok(existsSync(pack), `missing ${pack}`);
   assert.doesNotMatch(title, /JDScience/i);
   assert.ok(readFileSync(pptx).subarray(0, 2).toString() === "PK", `${ppt} is not a zip pptx`);
   assert.ok(readFileSync(worksheet).subarray(0, 4).toString() === "%PDF");
   assert.ok(readFileSync(answers).subarray(0, 4).toString() === "%PDF");
+  assert.ok(readFileSync(pack).subarray(0, 2).toString() === "PK", `${pack} is not a zip`);
 }
 
 const shopHandlers = readFileSync(path.join(root, "api/_lib/shopHandlers.js"), "utf8");

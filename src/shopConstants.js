@@ -1,4 +1,4 @@
-export const SHOP_LEVELS = ["11+", "GCSE/IGCSE", "A Level", "BTEC", "T Level"];
+export const SHOP_LEVELS = ["11+", "GCSE/IGCSE", "A Level", "BTEC", "BTEC Level 3", "T Level"];
 
 export const SHOP_SUBJECTS = [
   "Biology",

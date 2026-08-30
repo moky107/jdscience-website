@@ -23,7 +23,11 @@ assert.match(adminSource, /action: "shop-delete", id/);
 assert.match(adminSource, /removeProduct\(product\.id\)/);
 
 assert.doesNotMatch(pkg.scripts.build, /publish-unit1-specialise-cells/);
+assert.doesNotMatch(pkg.scripts.build, /publish-unit1-original-lessons/);
 assert.doesNotMatch(pkg.scripts["seo:build"] || "", /publish-unit1-specialise-cells/);
+assert.doesNotMatch(pkg.scripts["seo:build"] || "", /publish-unit1-original-lessons/);
+assert.doesNotMatch(shopHandlers, /publishUnit1OriginalLessons/);
+assert.doesNotMatch(shopHandlers, /unit1OriginalLessonCatalog/);
 
 assert.equal(isObsoleteSeededUnit1Product({
   id: "dfd172d3-c8c9-4209-bed7-1e0b2ec85079",
