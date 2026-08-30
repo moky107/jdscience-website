@@ -21,3 +21,4 @@ yarn-error.log*
 # OS files
 .DS_Store
 package-lock.json
+__pycache__/
