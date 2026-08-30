@@ -33,7 +33,7 @@ insert into public.shop_products (
     true,
     true,
     'downloads/btec-level-3-cell-ultrastructure-powerpoint.pptx',
-    'BTEC Level 3 Applied Science Unit 1 cell ultrastructure PowerPoint Pearson',
+    ARRAY['BTEC', 'Level 3', 'Applied Science', 'Unit 1', 'Cell Ultrastructure', 'PowerPoint', 'Pearson']::text[],
     110
   ),
   (
@@ -50,7 +50,7 @@ insert into public.shop_products (
     true,
     true,
     'downloads/btec-level-3-chemical-calculations-powerpoint.pptx',
-    'BTEC Level 3 Applied Science Unit 1 chemical calculations PowerPoint Pearson',
+    ARRAY['BTEC', 'Level 3', 'Applied Science', 'Unit 1', 'Chemical Calculations', 'PowerPoint', 'Pearson']::text[],
     111
   ),
   (
@@ -67,7 +67,7 @@ insert into public.shop_products (
     true,
     true,
     'downloads/btec-level-3-structure-and-bonding-powerpoint.pptx',
-    'BTEC Level 3 Applied Science Unit 1 structure bonding PowerPoint Pearson',
+    ARRAY['BTEC', 'Level 3', 'Applied Science', 'Unit 1', 'Structure and Bonding', 'PowerPoint', 'Pearson']::text[],
     112
   ),
   (
@@ -84,7 +84,7 @@ insert into public.shop_products (
     true,
     true,
     'downloads/btec-level-3-waves-in-communication-powerpoint.pptx',
-    'BTEC Level 3 Applied Science Unit 1 waves communication PowerPoint Pearson',
+    ARRAY['BTEC', 'Level 3', 'Applied Science', 'Unit 1', 'Waves in Communication', 'PowerPoint', 'Pearson']::text[],
     113
   )
 on conflict (slug) do update set
