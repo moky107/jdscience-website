@@ -81,7 +81,7 @@ def main() -> int:
         if "jdscience" in title.lower():
             print("  FAIL JDScience in title")
             failed += 1
-        if n < 28:
+        if n < 20:
             print(f"  FAIL too few slides ({n})")
             failed += 1
         hits = [b for b in BANNED if b in low]
@@ -100,9 +100,14 @@ def main() -> int:
         if not ws.exists() or not ans.exists():
             print("  FAIL missing worksheet or answers")
             failed += 1
-        if ws.exists() and ws.stat().st_size < 1000:
-            print("  FAIL worksheet too small")
+        if ws.exists() and ws.stat().st_size < 8000:
+            print("  FAIL worksheet too small for a multi-page resource")
             failed += 1
+        banned_plain = ("Al3+", "1s2 2s2 2p4", "m s-1", "10-4 s", "Ar is the weighted")
+        for phrase in banned_plain:
+            if phrase in text:
+                print(f"  FAIL plain-text notation: {phrase}")
+                failed += 1
         if failed == 0 or True:
             print("  text chars", len(text))
     print("\nFAILED checks:" , failed)

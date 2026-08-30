@@ -1,16 +1,19 @@
-"""Original companion worksheets and answer sheets (PDF)."""
+"""Multi-page original worksheets and separate answer sheets."""
 
 from __future__ import annotations
 
 from pathlib import Path
 
-from reportlab.lib.colors import Color, HexColor, white
+from reportlab.lib.colors import HexColor, white, Color
+from reportlab.lib.enums import TA_LEFT
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.units import mm
 from reportlab.platypus import (
-    ListFlowable,
-    ListItem,
+    HRFlowable,
+    Image,
+    KeepTogether,
+    PageBreak,
     Paragraph,
     SimpleDocTemplate,
     Spacer,
@@ -18,24 +21,29 @@ from reportlab.platypus import (
     TableStyle,
 )
 
+from .theme import MEDIA
+
 TEAL = HexColor("#009688")
 TEAL_DARK = HexColor("#004D40")
 INK = HexColor("#0F172A")
 MUTED = HexColor("#475569")
-RULE = HexColor("#CCFBF1")
+RULE = HexColor("#99F6E4")
+LINE = HexColor("#CBD5E1")
+CREAM = HexColor("#F0FDFA")
 
 
 def _styles():
     base = getSampleStyleSheet()
-    styles = {
+    return {
         "kicker": ParagraphStyle("kicker", parent=base["Normal"], textColor=TEAL, fontName="Times-Bold", fontSize=10, spaceAfter=2),
-        "title": ParagraphStyle("title", parent=base["Title"], textColor=TEAL_DARK, fontName="Times-Bold", fontSize=18, leading=22, spaceAfter=6, alignment=0),
-        "h": ParagraphStyle("h", parent=base["Heading2"], textColor=TEAL_DARK, fontName="Times-Bold", fontSize=13, spaceBefore=10, spaceAfter=4),
-        "body": ParagraphStyle("body", parent=base["Normal"], textColor=INK, fontName="Times-Roman", fontSize=11, leading=15, spaceAfter=4),
-        "q": ParagraphStyle("q", parent=base["Normal"], textColor=INK, fontName="Times-Roman", fontSize=11, leading=15, leftIndent=12, spaceAfter=8),
-        "foot": ParagraphStyle("foot", parent=base["Normal"], textColor=MUTED, fontName="Times-Italic", fontSize=8),
+        "title": ParagraphStyle("title", parent=base["Title"], textColor=TEAL_DARK, fontName="Times-Bold", fontSize=18, leading=22, spaceAfter=4, alignment=0),
+        "obj": ParagraphStyle("obj", parent=base["Normal"], textColor=MUTED, fontName="Times-Italic", fontSize=10, leading=13, spaceAfter=8),
+        "h": ParagraphStyle("h", parent=base["Heading2"], textColor=TEAL_DARK, fontName="Times-Bold", fontSize=13, spaceBefore=8, spaceAfter=4),
+        "body": ParagraphStyle("body", parent=base["Normal"], textColor=INK, fontName="Times-Roman", fontSize=11, leading=14, spaceAfter=4),
+        "q": ParagraphStyle("q", parent=base["Normal"], textColor=INK, fontName="Times-Roman", fontSize=11, leading=14, leftIndent=0, spaceAfter=3),
+        "note": ParagraphStyle("note", parent=base["Normal"], textColor=MUTED, fontName="Times-Italic", fontSize=9, leading=12, spaceAfter=4),
+        "ans": ParagraphStyle("ans", parent=base["Normal"], textColor=INK, fontName="Times-Roman", fontSize=10.5, leading=14, leftIndent=8, spaceAfter=6),
     }
-    return styles
 
 
 def _header_footer(title, kind):
@@ -58,7 +66,82 @@ def _header_footer(title, kind):
     return draw
 
 
-def write_pdf(path: Path, title: str, kicker: str, kind: str, sections: list[tuple[str, list[str]]]):
+def lines(n=4, width=170 * mm):
+    data = [[""] for _ in range(n)]
+    t = Table(data, colWidths=[width], rowHeights=[7 * mm] * n)
+    t.setStyle(TableStyle([
+        ("LINEBELOW", (0, 0), (-1, -2), 0.4, LINE),
+        ("LINEBELOW", (0, -1), (-1, -1), 0.4, LINE),
+        ("LEFTPADDING", (0, 0), (-1, -1), 0),
+        ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+    ]))
+    return t
+
+
+def calc_box(label="Working"):
+    data = [[label], [""], [""], [""], [""]]
+    t = Table(data, colWidths=[170 * mm], rowHeights=[6 * mm, 8 * mm, 8 * mm, 8 * mm, 8 * mm])
+    t.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), CREAM),
+        ("TEXTCOLOR", (0, 0), (-1, 0), TEAL_DARK),
+        ("FONTNAME", (0, 0), (-1, 0), "Times-Bold"),
+        ("FONTSIZE", (0, 0), (-1, 0), 9),
+        ("BOX", (0, 0), (-1, -1), 0.8, TEAL),
+        ("LINEBELOW", (0, 1), (-1, -2), 0.3, LINE),
+        ("LEFTPADDING", (0, 0), (-1, -1), 6),
+        ("TOPPADDING", (0, 0), (-1, 0), 3),
+    ]))
+    return t
+
+
+def blank_table(headers, rows=4, col_w=None):
+    data = [headers] + [[""] * len(headers) for _ in range(rows)]
+    widths = col_w or [170 * mm / len(headers)] * len(headers)
+    t = Table(data, colWidths=widths, rowHeights=[8 * mm] + [10 * mm] * rows)
+    t.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), TEAL_DARK),
+        ("TEXTCOLOR", (0, 0), (-1, 0), white),
+        ("FONTNAME", (0, 0), (-1, 0), "Times-Bold"),
+        ("FONTSIZE", (0, 0), (-1, -1), 9),
+        ("GRID", (0, 0), (-1, -1), 0.5, TEAL),
+        ("ALIGN", (0, 0), (-1, 0), "CENTER"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("BACKGROUND", (0, 1), (-1, -1), white),
+    ]))
+    return t
+
+
+def fig(name, w=150 * mm, h=55 * mm):
+    path = MEDIA / name
+    if path.exists():
+        return Image(str(path), width=w, height=h)
+    return Spacer(1, h)
+
+
+def question_block(styles, number, text, space="lines", n=4, table=None, image=None, extra=None):
+    bits = [Paragraph(f"<b>{number}.</b>  {text}", styles["q"])]
+    if extra:
+        bits.append(Paragraph(extra, styles["note"]))
+    if image:
+        bits.append(Spacer(1, 2 * mm))
+        bits.append(image)
+        bits.append(Spacer(1, 2 * mm))
+    if table is not None:
+        bits.append(Spacer(1, 2 * mm))
+        bits.append(table)
+        bits.append(Spacer(1, 2 * mm))
+    if space == "lines":
+        bits.append(lines(n))
+    elif space == "calc":
+        bits.append(Spacer(1, 1 * mm))
+        bits.append(calc_box())
+    elif space == "table_only":
+        pass
+    bits.append(Spacer(1, 3 * mm))
+    return KeepTogether(bits)
+
+
+def build_doc(path, title, kicker, kind, flowables):
     path.parent.mkdir(parents=True, exist_ok=True)
     styles = _styles()
     doc = SimpleDocTemplate(
@@ -74,411 +157,489 @@ def write_pdf(path: Path, title: str, kicker: str, kind: str, sections: list[tup
     story = [
         Paragraph(kicker, styles["kicker"]),
         Paragraph(title, styles["title"]),
-        Paragraph(
-            "Original JDScience practice. These questions were written for this resource and are not official exam-board items."
-            if "Answer" not in kind
-            else "Mark scheme for the companion worksheet. Accept equivalent correct wording.",
-            styles["body"],
-        ),
-        Spacer(1, 4),
     ]
-    for heading, items in sections:
-        story.append(Paragraph(heading, styles["h"]))
-        for item in items:
-            story.append(Paragraph(item, styles["q"]))
+    story.extend(flowables)
     doc.build(story, onFirstPage=_header_footer(title, kind), onLaterPages=_header_footer(title, kind))
     return path
 
 
-WORKSHEETS = {
-    "atomic-structure": {
-        "title": "Atomic Structure",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  State the relative charge and relative mass of a proton, a neutron and an electron.",
-                "2.  Define atomic number and mass number.",
-                "3.  What is the same, and what is different, in a pair of isotopes?",
-            ]),
-            ("B  Knowledge", [
-                "4.  A neutral atom of <sup>39</sup>K has atomic number 19. Calculate the numbers of protons, neutrons and electrons.",
-                "5.  Explain why atoms are electrically neutral.",
-                "6.  Describe where almost all of the mass of an atom is found, and why the atom is mostly empty space.",
-            ]),
-            ("C  Application and calculation", [
-                "7.  Complete a table for <sup>24</sup>Mg, <sup>24</sup>Mg<sup>2+</sup>, <sup>19</sup>F and <sup>19</sup>F<sup>−</sup> showing protons, neutrons and electrons.",
-                "8.  Gallium occurs as 60.0% <sup>69</sup>Ga and 40.0% <sup>71</sup>Ga. Calculate A<sub>r</sub>.",
-                "9.  Explain why the A<sub>r</sub> of chlorine on the periodic table is not a whole number.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  A student claims that <sup>14</sup>C and <sup>14</sup>N are isotopes of each other. Explain why this is incorrect. [2]",
-                "11.  Calculate A<sub>r</sub> for an element that is 75% isotope-63 and 25% isotope-65. [2]",
-                "12.  Explain how a 2− ion forms from a neutral atom, referring to protons and electrons. [3]",
-            ]),
-            ("E  Challenge", [
-                "13.  Neon has peaks at mass numbers 20, 21 and 22 with relative abundances 90.5, 0.27 and 9.25. Calculate A<sub>r</sub> to 3 s.f. and comment on the effect of ignoring the middle isotope.",
-            ]),
-        ],
-        "answers": [
-            ("A", [
-                "1.  Proton +1, mass 1. Neutron 0, mass 1. Electron −1, mass ≈ 1/1836 (very small).",
-                "2.  Atomic number = number of protons. Mass number = protons + neutrons.",
-                "3.  Same proton number / element; different neutron number / mass number.",
-            ]),
-            ("B", [
-                "4.  19 p, 20 n, 19 e.",
-                "5.  Number of protons equals number of electrons, so charges cancel.",
-                "6.  Mass is in the nucleus (protons and neutrons). Electrons occupy a much larger volume of mostly empty space.",
-            ]),
-            ("C", [
-                "7.  Mg: 12p 12n 12e. Mg2+: 12p 12n 10e. F: 9p 10n 9e. F−: 9p 10n 10e.",
-                "8.  A<sub>r</sub> = (60×69 + 40×71)/100 = 69.8",
-                "9.  Chlorine is a mixture of <sup>35</sup>Cl and <sup>37</sup>Cl; A<sub>r</sub> is a weighted mean.",
-            ]),
-            ("D", [
-                "10.  Isotopes must have the same proton number. C has 6 protons; N has 7, so they are different elements.",
-                "11.  (75×63 + 25×65)/100 = 63.5",
-                "12.  The atom gains two electrons. Proton number is unchanged. Electrons now exceed protons by 2, so charge is 2−.",
-            ]),
-            ("E", [
-                "13.  A<sub>r</sub> = (90.5×20 + 0.27×21 + 9.25×22)/100 = 20.2 (3 s.f.). Ignoring 21Ne changes the value only at the third significant figure / has a very small effect.",
-            ]),
-        ],
-    },
-    "electron-configuration": {
-        "title": "Electron Configuration",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  State the maximum number of electrons in the first, second and third shells for the first 20 elements as used in this course.",
-                "2.  How many electrons can an s subshell and a p subshell hold?",
-                "3.  What does the group number tell you about a Group 1 or Group 7 atom?",
-            ]),
-            ("B  Knowledge", [
-                "4.  Write shell configurations for N, Mg, Cl and K.",
-                "5.  Write full subshell configurations for O, Al and Ca.",
-                "6.  Explain why noble gases are chemically unreactive in terms of electron arrangement.",
-            ]),
-            ("C  Application", [
-                "7.  Write the configuration of O<sup>2−</sup>, Al<sup>3+</sup> and Cl<sup>−</sup>.",
-                "8.  A student writes calcium as 2,8,10. Correct the configuration and explain the error.",
-                "9.  Explain, using electrons, why magnesium forms a 2+ ion.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Write the electron configuration of Mg<sup>2+</sup> and explain why the ion is stable. [3]",
-                "11.  Explain why oxygen typically forms a 2− ion. [3]",
-                "12.  Identify the block (s, p or d) for sodium, fluorine and iron, and justify one of them. [3]",
-            ]),
-            ("E  Challenge", [
-                "13.  Write [Ne] shorthand configurations for phosphorus and for P<sup>3−</sup>. Explain the relationship between them.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  2, 8 and 8.", "2.  s: 2. p: 6.", "3.  Group 1: one outer electron. Group 7: seven outer electrons."]),
-            ("B", ["4.  N 2,5; Mg 2,8,2; Cl 2,8,7; K 2,8,8,1.", "5.  O 1s2 2s2 2p4; Al 1s2 2s2 2p6 3s2 3p1; Ca 1s2 2s2 2p6 3s2 3p6 4s2.", "6.  They already have a full outer shell, so they do not easily lose, gain or share electrons."]),
-            ("C", ["7.  O2− 2,8 / 1s2 2s2 2p6; Al3+ 2,8 / 1s2 2s2 2p6; Cl− 2,8,8 / 1s2 2s2 2p6 3s2 3p6.", "8.  Calcium is 2,8,8,2. After 2,8,8 the next two electrons occupy the fourth shell, not a 10-electron third shell in this course.", "9.  Mg is 2,8,2. Losing two electrons leaves 2,8, a full outer shell."]),
-            ("D", ["10.  Mg2+ is 2,8 or 1s2 2s2 2p6. This matches a noble-gas / full outer-shell arrangement, which is stable.", "11.  Oxygen is 2,6. Gaining two electrons gives 2,8, a full outer shell.", "12.  Na s-block; F p-block; Fe d-block. Sodium’s outer electron is in an s subshell / fluorine is filling 2p / iron is filling 3d."]),
-            ("E", ["13.  P is [Ne] 3s2 3p3. P3− is [Ne] 3s2 3p6. The ion has gained three electrons to fill 3p."]),
-        ],
-    },
-    "ionic-bonding": {
-        "title": "Ionic Bonding",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Define ionic bonding.",
-                "2.  Between which types of element does ionic bonding usually form?",
-                "3.  Why does solid sodium chloride not conduct electricity?",
-            ]),
-            ("B  Knowledge", [
-                "4.  Describe, in terms of electrons, how NaCl forms.",
-                "5.  Explain why ionic compounds have high melting points.",
-                "6.  Why can molten or aqueous ionic compounds conduct electricity?",
-            ]),
-            ("C  Application", [
-                "7.  Deduce formulae for the compounds of Na and O; Mg and Cl; Al and O.",
-                "8.  Explain why an ionic crystal is brittle.",
-                "9.  Compare the particles that carry charge in molten NaCl and in a copper wire.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Describe how ionic bonding arises in magnesium oxide. [4]",
-                "11.  Explain why sodium chloride has a high melting point but does not conduct as a solid. [4]",
-                "12.  Deduce the formula of the compound formed between Al<sup>3+</sup> and SO<sub>4</sub><sup>2−</sup>. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  Suggest why magnesium oxide has a higher melting point than sodium chloride, referring to charge and attraction.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  Electrostatic attraction between oppositely charged ions.", "2.  A metal and a non-metal.", "3.  Ions are not free to move."]),
-            ("B", ["4.  Na loses 1 electron to form Na+. Cl gains that electron to form Cl−. Oppositely charged ions attract.", "5.  Strong attractions throughout a giant lattice need a lot of energy to overcome.", "6.  Ions become free to move and carry charge."]),
-            ("C", ["7.  Na2O; MgCl2; Al2O3.", "8.  A shift lines up like charges, which repel, so the crystal splits.", "9.  Molten NaCl: mobile ions. Copper: delocalised electrons."]),
-            ("D", ["10.  Mg loses 2e− → Mg2+. O gains 2e− → O2−. Electrostatic attraction. Giant lattice of Mg2+ and O2−.", "11.  Strong ionic attractions throughout the lattice → high m.p. Solid ions fixed → no conduction.", "12.  Al2(SO4)3 so +6 balances −6."]),
-            ("E", ["13.  Mg2+ and O2− have higher charges than Na+ and Cl−, so the electrostatic attraction is stronger and more energy is needed to melt the lattice."]),
-        ],
-    },
-    "covalent-bonding": {
-        "title": "Covalent Bonding",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Define a covalent bond.",
-                "2.  What is a lone pair?",
-                "3.  Give one simple-molecular and one giant-covalent example.",
-            ]),
-            ("B  Knowledge", [
-                "4.  Explain how a chlorine molecule is held together.",
-                "5.  Describe the bonding and structure of diamond.",
-                "6.  Why does graphite conduct electricity when diamond does not?",
-            ]),
-            ("C  Application", [
-                "7.  State the number of shared pairs in F2, O2, N2 and CH4.",
-                "8.  Explain why water has a much lower boiling point than silicon dioxide.",
-                "9.  Why does boiling water not break O–H covalent bonds?",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Describe how a covalent bond forms in a hydrogen molecule. [3]",
-                "11.  Explain why iodine melts far below diamond. [4]",
-                "12.  Explain why carbon dioxide does not conduct electricity. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  Ammonia can accept a proton to form NH4+. Explain this using the idea of a lone pair and a dative covalent bond.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  A shared pair of electrons.", "2.  An outer-shell pair not used in bonding.", "3.  e.g. H2O or CO2; diamond, graphite or SiO2."]),
-            ("B", ["4.  Each Cl shares one electron; the shared pair is attracted to both nuclei.", "5.  Each C bonded to four others in a tetrahedral giant covalent network.", "6.  Graphite has delocalised electrons between layers; diamond’s electrons are all in C–C bonds."]),
-            ("C", ["7.  1, 2, 3 and 4.", "8.  Water is simple molecular (weak intermolecular forces). SiO2 is giant covalent (many strong bonds must break).", "9.  Boiling overcomes intermolecular forces; covalent bonds inside molecules remain."]),
-            ("D", ["10.  Each H has 1 electron. They share a pair. Both then have a full first shell. The pair is attracted to both nuclei.", "11.  Iodine is simple molecular — weak forces between I2 molecules. Diamond is giant covalent — many strong C–C bonds must break.", "12.  No mobile ions or delocalised electrons."]),
-            ("E", ["13.  Nitrogen has a lone pair. The pair is donated into a vacant orbital on H+ to form a dative bond. All four N–H bonds in NH4+ are equivalent once formed."]),
-        ],
-    },
-    "metallic-bonding": {
-        "title": "Metallic Bonding",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Define metallic bonding.",
-                "2.  Which particles move when a metal conducts electricity?",
-                "3.  What is meant by malleable?",
-            ]),
-            ("B  Knowledge", [
-                "4.  Describe the structure of a solid metal.",
-                "5.  Explain why metals conduct heat well.",
-                "6.  Explain why metals can be drawn into wires.",
-            ]),
-            ("C  Application", [
-                "7.  Why does solid magnesium conduct but solid magnesium oxide does not?",
-                "8.  Suggest why steel is harder than pure iron.",
-                "9.  Why are Group 1 metals softer than many transition metals?",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Describe the bonding in solid magnesium. [3]",
-                "11.  Explain why metals are malleable but ionic crystals are brittle. [4]",
-                "12.  Explain why copper is used for electrical wiring. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  Use ideas about charge and delocalised electrons to suggest why aluminium has a higher melting point than sodium.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  Attraction between positive metal ions and delocalised electrons.", "2.  Delocalised electrons.", "3.  Can be hammered into sheets without breaking."]),
-            ("B", ["4.  Lattice of positive ions surrounded by a sea of delocalised electrons.", "5.  Electrons transfer kinetic energy rapidly through the lattice.", "6.  Layers of ions slide; electrons still hold the structure together."]),
-            ("C", ["7.  Mg has mobile electrons; MgO ions are fixed in the solid lattice.", "8.  Different-sized atoms in the alloy hinder layers sliding.", "9.  Only one delocalised electron per atom / 1+ ions → weaker metallic bonding."]),
-            ("D", ["10.  Mg2+ lattice; delocalised electrons; electrostatic attraction is metallic bonding.", "11.  Metal layers slide and electrons still attract ions. Ionic lattice: sliding lines up like charges, so it shatters.", "12.  Delocalised electrons make it a good conductor; it is also ductile."]),
-            ("E", ["13.  Al forms 3+ ions and contributes more delocalised electrons than Na (1+), so the metallic attraction is stronger and the melting point is higher."]),
-        ],
-    },
-    "cell-structure": {
-        "title": "Cell Structure",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  State the function of the nucleus, a mitochondrion and a ribosome.",
-                "2.  Name three structures found in plant cells but not in typical animal cells.",
-                "3.  What is meant by a selectively permeable membrane?",
-            ]),
-            ("B  Knowledge", [
-                "4.  Describe the structure of the cell-surface membrane.",
-                "5.  Explain how cristae help mitochondria to transfer energy.",
-                "6.  Describe the role of the cellulose cell wall.",
-            ]),
-            ("C  Application", [
-                "7.  Why do muscle cells contain many mitochondria?",
-                "8.  Root cells usually lack chloroplasts. Explain why this is not a problem for the plant.",
-                "9.  Explain why mature mammalian red blood cells cannot produce new proteins.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Describe the functions of the nucleus and mitochondria in an animal cell. [4]",
-                "11.  Explain two ways a palisade cell is adapted for photosynthesis. [4]",
-                "12.  Distinguish between the cell wall and the cell membrane. [3]",
-            ]),
-            ("E  Challenge", [
-                "13.  Secretory cells have extensive RER and Golgi bodies. Explain this combination in terms of protein trafficking.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  Nucleus: DNA / control of protein synthesis. Mitochondrion: aerobic respiration / ATP. Ribosome: protein synthesis.", "2.  Cell wall, chloroplasts, permanent vacuole.", "3.  Allows some substances to cross and restricts others."]),
-            ("B", ["4.  Phospholipid bilayer with proteins (and cholesterol / glycoproteins in animal cells).", "5.  Folds increase surface area for respiratory enzymes / electron-transport proteins.", "6.  Support, shape, and prevention of osmotic bursting; freely permeable."]),
-            ("C", ["7.  High ATP demand for contraction.", "8.  Photosynthesis occurs in green shoots and leaves; roots absorb water and minerals instead.", "9.  They have no nucleus, so no DNA for transcription."]),
-            ("D", ["10.  Nucleus contains DNA and controls protein synthesis. Mitochondria carry out aerobic respiration / produce ATP.", "11.  Many chloroplasts; position near the upper leaf; vacuole maintains turgidity; elongated shape. Any two explained.", "12.  Wall: cellulose, freely permeable, support. Membrane: bilayer, selectively permeable, controls exchange."]),
-            ("E", ["13.  RER synthesises and processes proteins. Golgi modifies and packages them into vesicles for secretion."]),
-        ],
-    },
-    "prokaryotic-and-eukaryotic-cells": {
-        "title": "Prokaryotic and Eukaryotic Cells",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  What is the defining difference between prokaryotic and eukaryotic cells?",
-                "2.  Name four structures of a typical bacterial cell.",
-                "3.  Are viruses prokaryotic, eukaryotic, or neither? Justify.",
-            ]),
-            ("B  Knowledge", [
-                "4.  Compare DNA organisation in a bacterium and in an animal cell.",
-                "5.  What is a plasmid, and why can it be medically important?",
-                "6.  State typical size ranges for bacterial and animal cells.",
-            ]),
-            ("C  Application", [
-                "7.  Explain why some antibiotics can kill bacteria without killing human cells.",
-                "8.  Why can bacterial populations become resistant to an antibiotic so quickly?",
-                "9.  A student finds mitochondria in a cell. Which cell type is it? Explain.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Give three differences between a bacterial cell and an animal cell. [3]",
-                "11.  Explain how plasmids can be medically important. [3]",
-                "12.  Explain why bacteria are described as prokaryotic. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  Mitochondria and chloroplasts contain circular DNA and 70S ribosomes. Suggest how this observation is used in the endosymbiotic theory.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  Eukaryotes have a nucleus / membrane-bound organelles; prokaryotes do not.", "2.  Cell wall, membrane, loop of DNA, ribosomes; also plasmid / flagellum / capsule.", "3.  Neither — they are acellular / not cells."]),
-            ("B", ["4.  Bacterium: circular loop in cytoplasm, plasmids possible. Animal: linear chromosomes in a nucleus, with histones.", "5.  Small extra DNA circle; may carry resistance genes or be used as a vector.", "6.  Bacteria about 1–5 µm; animal cells about 10–30 µm (accept 10–100 µm)."]),
-            ("C", ["7.  Antibiotics can target peptidoglycan walls or 70S ribosomes, which human cells lack or have in a different form.", "8.  Rapid binary fission plus mutation and selection; plasmids can transfer resistance.", "9.  Eukaryotic — mitochondria are membrane-bound organelles."]),
-            ("D", ["10.  Nucleus / mitochondria / DNA form / ribosome type / wall / size — any three paired differences.", "11.  Carry resistance genes; transferable; used as vectors / make infections harder to treat.", "12.  No nucleus / DNA not enclosed by a nuclear envelope / no membrane-bound organelles."]),
-            ("E", ["13.  These features resemble free-living bacteria, supporting the idea that the organelles originated from engulfed prokaryotes."]),
-        ],
-    },
-    "microscopy": {
-        "title": "Microscopy",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Write the magnification formula.",
-                "2.  Define resolution.",
-                "3.  Convert 2.5 mm to µm and to nm.",
-            ]),
-            ("B  Knowledge", [
-                "4.  How do you calculate total magnification of a light microscope?",
-                "5.  Give two differences between a TEM and an SEM.",
-                "6.  Why can a living amoeba be viewed with a light microscope but not with an electron microscope?",
-            ]),
-            ("C  Calculations", [
-                "7.  An image is 18 mm wide and magnification is ×600. Calculate actual size in µm.",
-                "8.  A 7.5 µm cell is drawn 3.0 cm wide. Calculate magnification.",
-                "9.  A 10 µm scale bar measures 40 mm on a photograph. Calculate magnification.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Calculate the actual width of a cell if the image is 35 mm wide at ×500. Give the answer in µm. [2]",
-                "11.  Compare the resolution of a light microscope and a TEM. [4]",
-                "12.  Give two reasons for choosing a light microscope rather than an electron microscope. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  A student increases magnification from ×100 to ×1000 but cannot separate two close granules. Explain, using resolution.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  M = image size / actual size.", "2.  Smallest distance at which two points can still be seen as separate.", "3.  2500 µm; 2.5 × 10<sup>6</sup> nm."]),
-            ("B", ["4.  Eyepiece magnification × objective magnification.", "5.  TEM: electrons through a thin specimen, internal detail. SEM: surface scan, 3D appearance.", "6.  Electron microscopes require a vacuum; living specimens cannot be used."]),
-            ("C", ["7.  18 mm = 18 000 µm; actual = 18 000/600 = 30 µm.", "8.  3.0 cm = 30 000 µm; M = 30 000/7.5 = ×4000.", "9.  40 mm = 40 000 µm; M = 40 000/10 = ×4000."]),
-            ("D", ["10.  35 mm = 35 000 µm; actual = 70 µm.", "11.  Light about 0.2 µm; TEM much smaller (about 0.1 nm) because electrons have a shorter wavelength.", "12.  Living specimens / colour / cheaper / easier preparation."]),
-            ("E", ["13.  The granules are closer together than the resolution. Extra magnification enlarges the blur but cannot separate them (empty magnification)."]),
-        ],
-    },
-    "progressive-waves": {
-        "title": "Progressive Waves",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Physics  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Define amplitude, wavelength and frequency.",
-                "2.  Write the wave equation and give SI units for each quantity.",
-                "3.  How are period and frequency related?",
-            ]),
-            ("B  Knowledge", [
-                "4.  What does a progressive wave transfer, and what does it not transfer?",
-                "5.  Which quantity stays the same when a wave enters a new medium?",
-                "6.  How is amplitude read from a displacement–distance graph?",
-            ]),
-            ("C  Calculations", [
-                "7.  f = 4.0 Hz, λ = 0.80 m. Calculate v.",
-                "8.  A radio wave has f = 200 MHz. Take c = 3.00 × 10<sup>8</sup> m s<sup>−1</sup>. Calculate λ.",
-                "9.  A wave travels 48 m in 0.16 s. If λ = 2.0 m, calculate f.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Define amplitude and wavelength. [2]",
-                "11.  A note of 510 Hz travels at 340 m s<sup>−1</sup>. Calculate λ. [2]",
-                "12.  Explain why air particles do not travel from a loudspeaker to a listener. [3]",
-            ]),
-            ("E  Challenge", [
-                "13.  A displacement–time trace has 5 complete cycles in 20 ms. The matching snapshot shows 4.0 cm between adjacent crests. Calculate f, T, λ and v. Show unit conversions.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  A: max displacement from equilibrium. λ: shortest distance between points in phase. f: oscillations per second.", "2.  v = fλ; m s−1, Hz, m.", "3.  T = 1/f."]),
-            ("B", ["4.  Transfers energy (and information), not a net transfer of matter.", "5.  Frequency.", "6.  Vertical distance from the equilibrium line to a crest (not crest-to-trough)."]),
-            ("C", ["7.  3.2 m s−1.", "8.  f = 2.00 × 10<sup>8</sup> Hz; λ = 1.50 m.", "9.  v = 300 m s−1; f = 150 Hz."]),
-            ("D", ["10.  See retrieval definitions.", "11.  λ = 340/510 = 0.667 m (3 s.f.).", "12.  Particles oscillate about equilibrium; energy is passed along; no net movement of air."]),
-            ("E", ["13.  T = 20 ms / 5 = 4.0 ms; f = 250 Hz; λ = 0.040 m; v = 10 m s−1."]),
-        ],
-    },
-    "wave-properties": {
-        "title": "Wave Properties",
-        "kicker": "BTEC Level 3 Applied Science  ·  Unit 1 Physics  ·  Worksheet",
-        "questions": [
-            ("A  Retrieval", [
-                "1.  Define a transverse wave and a longitudinal wave.",
-                "2.  Give one example of each.",
-                "3.  State the principle of superposition.",
-            ]),
-            ("B  Knowledge", [
-                "4.  What is a compression and what is a rarefaction?",
-                "5.  When are two points on a wave in phase?",
-                "6.  Why can light be polarised but sound in air cannot?",
-            ]),
-            ("C  Application", [
-                "7.  Classify ultrasound, microwaves and stadium sound as transverse or longitudinal.",
-                "8.  Two crests are 6.0 cm apart and λ = 2.0 cm. Are they in phase? Explain.",
-                "9.  Describe what happens when a crest meets a trough of equal amplitude.",
-            ]),
-            ("D  Exam-style practice", [
-                "10.  Describe the difference between transverse and longitudinal waves, with an example of each. [4]",
-                "11.  State the principle of superposition. [2]",
-                "12.  Explain why sound from a loudspeaker cannot be polarised. [2]",
-            ]),
-            ("E  Challenge", [
-                "13.  A student says a sine-wave drawing of sound proves sound is transverse. Write a correction a teacher could use.",
-            ]),
-        ],
-        "answers": [
-            ("A", ["1.  Transverse: oscillation perpendicular to energy transfer. Longitudinal: parallel.", "2.  Light / water / string; sound / P-waves / slinky compressions.", "3.  Resultant displacement is the sum of individual displacements."]),
-            ("B", ["4.  Compression: particles closer / higher pressure. Rarefaction: more spaced / lower pressure.", "5.  They reach maxima and minima together / separated by nλ.", "6.  Light is transverse so oscillations have a direction that can be filtered; sound is longitudinal."]),
-            ("C", ["7.  Ultrasound longitudinal; microwaves transverse; stadium sound longitudinal.", "8.  Yes — separation is 3λ, a whole number of wavelengths.", "9.  Destructive superposition / cancellation (resultant zero if amplitudes are equal)."]),
-            ("D", ["10.  See definitions plus one valid example of each.", "11.  Resultant displacement = sum of individual displacements.", "12.  Polarisation needs a transverse direction; sound is longitudinal."]),
-            ("E", ["13.  The sine curve is a graph of pressure or displacement against distance or time. The air particles still oscillate parallel to the direction of travel."]),
-        ],
-    },
+def _disclaimer(styles, answers=False):
+    if answers:
+        return Paragraph("Mark scheme for the companion worksheet. Accept equivalent correct wording. These are original JDScience items, not official Pearson questions.", styles["body"])
+    return Paragraph("Original JDScience practice. These questions were written for this resource and are not official exam-board items.", styles["obj"])
+
+
+def atomic_student(styles):
+    s = []
+    s.append(_disclaimer(styles))
+    s.append(Paragraph("Learning focus: particles, nuclide notation, isotopes, A<sub>r</sub> and ions.", styles["obj"]))
+    s.append(Paragraph("A  Retrieval", styles["h"]))
+    s.append(question_block(styles, 1, "State the relative charge and relative mass of a proton, a neutron and an electron.", n=3))
+    s.append(question_block(styles, 2, "Define atomic number (<i>Z</i>) and mass number (<i>A</i>).", n=3))
+    s.append(question_block(styles, 3, "What is the same, and what is different, in a pair of isotopes?", n=3))
+    s.append(Paragraph("B  Knowledge", styles["h"]))
+    s.append(question_block(styles, 4, "A neutral atom of <super>39</super>K has atomic number 19. Calculate the numbers of protons, neutrons and electrons.", "calc"))
+    s.append(question_block(styles, 5, "Explain why atoms are electrically neutral even though they contain charged particles.", n=4))
+    s.append(PageBreak())
+    s.append(Paragraph("C  Application and calculation", styles["h"]))
+    s.append(question_block(
+        styles, 6,
+        "Complete the table for <super>24</super>Mg, <super>24</super>Mg<super>2+</super>, <super>19</super>F and <super>19</super>F<super>−</super>.",
+        "table_only",
+        table=blank_table(["Species", "Protons", "Neutrons", "Electrons"], 4, [50 * mm, 40 * mm, 40 * mm, 40 * mm]),
+    ))
+    s.append(question_block(styles, 7, "Gallium occurs as 60.0% <super>69</super>Ga and 40.0% <super>71</super>Ga. Calculate A<sub>r</sub>. Show substitution.", "calc"))
+    s.append(question_block(styles, 8, "Explain why the A<sub>r</sub> of chlorine on the periodic table is not a whole number.", n=4))
+    s.append(Paragraph("D  Exam-style practice", styles["h"]))
+    s.append(question_block(styles, 9, "A student claims that <super>14</super>C and <super>14</super>N are isotopes of each other. Explain why this is incorrect. [2]", n=5))
+    s.append(question_block(styles, 10, "Calculate A<sub>r</sub> for an element that is 75% isotope-63 and 25% isotope-65. [2]", "calc"))
+    s.append(PageBreak())
+    s.append(question_block(styles, 11, "Explain how a 2− ion forms from a neutral atom, referring to protons and electrons. [3]", n=6))
+    s.append(Paragraph("E  Challenge", styles["h"]))
+    s.append(fig("mass-spectrum.png", 160 * mm, 52 * mm))
+    s.append(question_block(styles, 12, "Neon has peaks at mass numbers 20, 21 and 22 with relative abundances 90.5, 0.27 and 9.25. Calculate A<sub>r</sub> to 3 s.f. and comment on the effect of ignoring the middle isotope.", "calc"))
+    s.append(question_block(styles, 13, "On the nuclide diagram below, label A, Z, protons and neutrons for <super>23</super><sub>11</sub>Na. Then state the electron number of Na<super>+</super>.", n=5, image=fig("sodium-nuclide.png", 120 * mm, 48 * mm)))
+    return s
+
+
+def electron_student(styles):
+    s = [_disclaimer(styles), Paragraph("Learning focus: shells, subshells, Aufbau, orbital boxes and ion configurations.", styles["obj"])]
+    s.append(Paragraph("A  Retrieval", styles["h"]))
+    s.append(question_block(styles, 1, "State the maximum number of electrons in the first, second and third shells for the first 20 elements as used in this course.", n=3))
+    s.append(question_block(styles, 2, "How many electrons can an s subshell and a p subshell hold?", n=2))
+    s.append(question_block(styles, 3, "What does the group number tell you about a Group 1 or Group 7 atom?", n=3))
+    s.append(Paragraph("B  Knowledge", styles["h"]))
+    s.append(question_block(styles, 4, "Write shell configurations for N, Mg, Cl and K.", n=5))
+    s.append(question_block(styles, 5, "Write full subshell configurations for O, Al and Ca. Use superscripts, e.g. 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>.", n=5))
+    s.append(PageBreak())
+    s.append(fig("orbital-boxes.png", 160 * mm, 55 * mm))
+    s.append(question_block(styles, 6, "On the orbital-box idea above, draw boxes and arrows for nitrogen 2p<sup>3</sup> and oxygen 2p<sup>4</sup>. State Hund’s rule in one sentence.", n=6))
+    s.append(Paragraph("C  Application", styles["h"]))
+    s.append(question_block(styles, 7, "Write the configuration of O<sup>2−</sup>, Al<sup>3+</sup> and Cl<sup>−</sup> in both shell and subshell form.", n=5))
+    s.append(question_block(styles, 8, "A student writes calcium as 2,8,10. Correct the configuration and explain the error.", n=5))
+    s.append(question_block(styles, 9, "Explain, using electrons, why magnesium forms a 2+ ion.", n=5))
+    s.append(PageBreak())
+    s.append(Paragraph("D  Exam-style practice", styles["h"]))
+    s.append(question_block(styles, 10, "Write the electron configuration of Mg<sup>2+</sup> and explain why the ion is stable. [3]", n=6))
+    s.append(question_block(styles, 11, "Explain why oxygen typically forms a 2− ion. [3]", n=5))
+    s.append(question_block(styles, 12, "Identify the block (s, p or d) for sodium, fluorine and iron, and justify one of them. [3]", n=5))
+    s.append(Paragraph("E  Challenge", styles["h"]))
+    s.append(question_block(styles, 13, "Write [Ne] shorthand configurations for phosphorus and for P<sup>3−</sup>. Explain the relationship between them.", n=6))
+    return s
+
+
+def bonding_student(styles, topic):
+    s = [_disclaimer(styles)]
+    if topic == "ionic":
+        s.append(Paragraph("Learning focus: electron transfer, formulae, lattice and properties.", styles["obj"]))
+        s.append(Paragraph("A  Retrieval", styles["h"]))
+        s.append(question_block(styles, 1, "Define ionic bonding.", n=3))
+        s.append(question_block(styles, 2, "Between which types of element does ionic bonding usually form?", n=2))
+        s.append(question_block(styles, 3, "Why does solid sodium chloride not conduct electricity?", n=3))
+        s.append(Paragraph("B  Knowledge", styles["h"]))
+        s.append(fig("ion-transfer.png", 150 * mm, 50 * mm))
+        s.append(question_block(styles, 4, "Using the diagram, describe in terms of electrons how NaCl forms.", n=5))
+        s.append(question_block(styles, 5, "Explain why ionic compounds have high melting points.", n=4))
+        s.append(PageBreak())
+        s.append(question_block(styles, 6, "Why can molten or aqueous ionic compounds conduct electricity?", n=4))
+        s.append(Paragraph("C  Application", styles["h"]))
+        s.append(question_block(
+            styles, 7,
+            "Deduce formulae for the compounds of Na and O; Mg and Cl; Al and O. Show charge balance in the table.",
+            "table_only",
+            table=blank_table(["Ions", "Charge balance", "Formula", "Name"], 3, [40 * mm, 50 * mm, 40 * mm, 40 * mm]),
+        ))
+        s.append(question_block(styles, 8, "Explain why an ionic crystal is brittle.", n=4))
+        s.append(question_block(styles, 9, "Compare the particles that carry charge in molten NaCl and in a copper wire.", n=4))
+        s.append(PageBreak())
+        s.append(Paragraph("D  Exam-style practice", styles["h"]))
+        s.append(question_block(styles, 10, "Describe how ionic bonding arises in magnesium oxide. [4]", n=7))
+        s.append(question_block(styles, 11, "Explain why sodium chloride has a high melting point but does not conduct as a solid. [4]", n=6))
+        s.append(question_block(styles, 12, "Deduce the formula of the compound formed between Al<sup>3+</sup> and SO<sub>4</sub><sup>2−</sup>. [2]", "calc"))
+        s.append(Paragraph("E  Challenge", styles["h"]))
+        s.append(question_block(styles, 13, "Suggest why magnesium oxide has a higher melting point than sodium chloride, referring to charge and attraction.", n=6))
+    elif topic == "covalent":
+        s.append(Paragraph("Learning focus: shared pairs, simple molecular versus giant covalent structures.", styles["obj"]))
+        s.append(Paragraph("A  Retrieval", styles["h"]))
+        s.append(question_block(styles, 1, "Define a covalent bond.", n=3))
+        s.append(question_block(styles, 2, "What is a lone pair?", n=2))
+        s.append(question_block(styles, 3, "Give one simple-molecular and one giant-covalent example.", n=3))
+        s.append(fig("covalent-pair.png", 140 * mm, 48 * mm))
+        s.append(question_block(styles, 4, "Explain how a chlorine molecule is held together, referring to both nuclei.", n=5))
+        s.append(PageBreak())
+        s.append(fig("diamond-graphite.png", 160 * mm, 52 * mm))
+        s.append(question_block(styles, 5, "Describe the bonding and structure of diamond.", n=5))
+        s.append(question_block(styles, 6, "Why does graphite conduct electricity when diamond does not?", n=5))
+        s.append(Paragraph("C  Application", styles["h"]))
+        s.append(question_block(
+            styles, 7,
+            "Complete the table for the number of shared pairs.",
+            "table_only",
+            table=blank_table(["Molecule", "F<sub>2</sub>", "O<sub>2</sub>", "N<sub>2</sub>", "CH<sub>4</sub>"], 1, [34 * mm] * 5),
+        ))
+        s.append(question_block(styles, 8, "Explain why water has a much lower boiling point than silicon dioxide.", n=5))
+        s.append(PageBreak())
+        s.append(question_block(styles, 9, "Why does boiling water not break O–H covalent bonds?", n=4))
+        s.append(Paragraph("D  Exam-style practice", styles["h"]))
+        s.append(question_block(styles, 10, "Describe how a covalent bond forms in a hydrogen molecule. [3]", n=5))
+        s.append(question_block(styles, 11, "Explain why iodine melts far below diamond. [4]", n=6))
+        s.append(question_block(styles, 12, "Explain why carbon dioxide does not conduct electricity. [2]", n=4))
+        s.append(Paragraph("E  Challenge", styles["h"]))
+        s.append(question_block(styles, 13, "Ammonia can accept a proton to form NH<sub>4</sub><sup>+</sup>. Explain this using a lone pair and a dative covalent bond.", n=6))
+    else:
+        s.append(Paragraph("Learning focus: delocalised electrons, properties and comparison with ionic solids.", styles["obj"]))
+        s.append(Paragraph("A  Retrieval", styles["h"]))
+        s.append(question_block(styles, 1, "Define metallic bonding.", n=3))
+        s.append(question_block(styles, 2, "Which particles move when a metal conducts electricity?", n=2))
+        s.append(question_block(styles, 3, "What is meant by malleable?", n=2))
+        s.append(fig("metallic-lattice.png", 150 * mm, 50 * mm))
+        s.append(question_block(styles, 4, "Describe the structure of a solid metal using the diagram.", n=5))
+        s.append(PageBreak())
+        s.append(question_block(styles, 5, "Explain why metals conduct heat well.", n=4))
+        s.append(question_block(styles, 6, "Explain why metals can be drawn into wires.", n=5))
+        s.append(Paragraph("C  Application", styles["h"]))
+        s.append(question_block(styles, 7, "Why does solid magnesium conduct but solid magnesium oxide does not?", n=5))
+        s.append(question_block(styles, 8, "Suggest why steel is harder than pure iron.", n=4))
+        s.append(question_block(styles, 9, "Why are Group 1 metals softer than many transition metals?", n=4))
+        s.append(PageBreak())
+        s.append(Paragraph("D  Exam-style practice", styles["h"]))
+        s.append(question_block(styles, 10, "Describe the bonding in solid magnesium. [3]", n=5))
+        s.append(question_block(styles, 11, "Explain why metals are malleable but ionic crystals are brittle. [4]", n=6))
+        s.append(question_block(styles, 12, "Explain why copper is used for electrical wiring. [2]", n=4))
+        s.append(Paragraph("E  Challenge", styles["h"]))
+        s.append(question_block(styles, 13, "Use ideas about charge and delocalised electrons to suggest why aluminium has a higher melting point than sodium.", n=6))
+    return s
+
+
+def cell_student(styles):
+    s = [_disclaimer(styles), Paragraph("Learning focus: ultrastructure, membranes and structure–function relationships.", styles["obj"])]
+    s.append(Paragraph("A  Retrieval", styles["h"]))
+    s.append(question_block(styles, 1, "State the function of the nucleus, a mitochondrion and a ribosome.", n=4))
+    s.append(question_block(styles, 2, "Name three structures found in plant cells but not in typical animal cells.", n=3))
+    s.append(question_block(styles, 3, "What is meant by a selectively permeable membrane?", n=3))
+    s.append(Paragraph("B  Labelling", styles["h"]))
+    s.append(fig("animal-cell.png", 160 * mm, 62 * mm))
+    s.append(question_block(styles, 4, "On the animal-cell schematic, name the structures indicated by the leader lines (or list six organelles and their functions).", n=7))
+    s.append(PageBreak())
+    s.append(fig("plant-cell.png", 160 * mm, 60 * mm))
+    s.append(question_block(styles, 5, "Label the plant-cell extras: wall, membrane, vacuole, chloroplast and nucleus. State which layer is freely permeable.", n=6))
+    s.append(fig("bilayer.png", 150 * mm, 48 * mm))
+    s.append(question_block(styles, 6, "Describe the structure of the cell-surface membrane. Use the words phospholipid, hydrophobic, protein and fluid mosaic.", n=6))
+    s.append(PageBreak())
+    s.append(question_block(styles, 7, "Explain how cristae help mitochondria to transfer energy to ATP.", n=5))
+    s.append(question_block(styles, 8, "Why do muscle cells contain many mitochondria?", n=3))
+    s.append(question_block(styles, 9, "Root cells usually lack chloroplasts. Explain why this is not a problem for the plant.", n=4))
+    s.append(Paragraph("D  Exam-style practice", styles["h"]))
+    s.append(question_block(styles, 10, "Describe the functions of the nucleus and mitochondria in an animal cell. [4]", n=6))
+    s.append(question_block(styles, 11, "Explain two ways a palisade cell is adapted for photosynthesis. [4]", n=6))
+    s.append(PageBreak())
+    s.append(question_block(styles, 12, "Distinguish between the cell wall and the cell membrane. [3]", n=5))
+    s.append(Paragraph("E  Challenge", styles["h"]))
+    s.append(fig("protein-pathway.png", 160 * mm, 42 * mm))
+    s.append(question_block(styles, 13, "Secretory cells have extensive RER and Golgi bodies. Explain this combination in terms of protein trafficking.", n=7))
+    return s
+
+
+def prokaryote_student(styles):
+    s = [_disclaimer(styles), Paragraph("Learning focus: comparison tables, plasmids and medical applications.", styles["obj"])]
+    s.append(Paragraph("A  Retrieval", styles["h"]))
+    s.append(question_block(styles, 1, "What is the defining difference between prokaryotic and eukaryotic cells?", n=3))
+    s.append(question_block(styles, 2, "Name four structures of a typical bacterial cell.", n=3))
+    s.append(question_block(styles, 3, "Are viruses prokaryotic, eukaryotic, or neither? Justify.", n=3))
+    s.append(fig("prokaryote-cell.png", 155 * mm, 52 * mm))
+    s.append(question_block(styles, 4, "Label the bacterial cell: wall, membrane, DNA loop, plasmid, ribosomes and flagellum.", n=6))
+    s.append(PageBreak())
+    s.append(Paragraph("B  Comparison table", styles["h"]))
+    s.append(question_block(
+        styles, 5,
+        "Complete the comparison table.",
+        "table_only",
+        table=blank_table(["Feature", "Prokaryote", "Eukaryote"], 6, [50 * mm, 60 * mm, 60 * mm]),
+        extra="Include nucleus, DNA form, organelles, ribosome type, typical size and wall chemistry.",
+    ))
+    s.append(question_block(styles, 6, "What is a plasmid, and why can it be medically important?", n=5))
+    s.append(question_block(styles, 7, "Explain why some antibiotics can kill bacteria without killing human cells.", n=5))
+    s.append(PageBreak())
+    s.append(Paragraph("D  Exam-style practice", styles["h"]))
+    s.append(question_block(styles, 8, "Give three differences between a bacterial cell and an animal cell. [3]", n=5))
+    s.append(question_block(styles, 9, "Explain how plasmids can be medically important. [3]", n=5))
+    s.append(question_block(styles, 10, "Explain why bacteria are described as prokaryotic. [2]", n=4))
+    s.append(Paragraph("E  Challenge", styles["h"]))
+    s.append(question_block(styles, 11, "Mitochondria and chloroplasts contain circular DNA and 70S ribosomes. Suggest how this observation is used in the endosymbiotic theory.", n=6))
+    return s
+
+
+def microscopy_student(styles):
+    s = [_disclaimer(styles), Paragraph("Learning focus: magnification, resolution, conversions and instrument choice.", styles["obj"])]
+    s.append(Paragraph("A  Retrieval", styles["h"]))
+    s.append(question_block(styles, 1, "Write the magnification formula and define resolution.", n=4))
+    s.append(question_block(styles, 2, "Convert 2.5 mm to µm and to nm.", "calc"))
+    s.append(fig("mag-triangle.png", 130 * mm, 48 * mm))
+    s.append(question_block(styles, 3, "How do you calculate total magnification of a light microscope?", n=3))
+    s.append(PageBreak())
+    s.append(Paragraph("C  Calculations — show every conversion", styles["h"]))
+    s.append(question_block(styles, 4, "An image is 18 mm wide and magnification is ×600. Calculate actual size in µm.", "calc"))
+    s.append(question_block(styles, 5, "A 7.5 µm cell is drawn 3.0 cm wide. Calculate magnification.", "calc"))
+    s.append(question_block(styles, 6, "A 10 µm scale bar measures 40 mm on a photograph. Calculate magnification.", "calc"))
+    s.append(PageBreak())
+    s.append(Paragraph("D  Exam-style practice", styles["h"]))
+    s.append(question_block(styles, 7, "Calculate the actual width of a cell if the image is 35 mm wide at ×500. Give the answer in µm. [2]", "calc"))
+    s.append(question_block(styles, 8, "Compare the resolution of a light microscope and a TEM. [4]", n=6))
+    s.append(question_block(styles, 9, "Give two reasons for choosing a light microscope rather than an electron microscope. [2]", n=4))
+    s.append(Paragraph("E  Challenge", styles["h"]))
+    s.append(question_block(styles, 10, "A student increases magnification from ×100 to ×1000 but cannot separate two close granules. Explain, using resolution.", n=6))
+    return s
+
+
+def waves_student(styles, progressive=True):
+    s = [_disclaimer(styles)]
+    if progressive:
+        s.append(Paragraph("Learning focus: definitions, v = fλ, standard form and medium change.", styles["obj"]))
+        s.append(Paragraph("A  Retrieval", styles["h"]))
+        s.append(question_block(styles, 1, "Define amplitude, wavelength and frequency.", n=4))
+        s.append(question_block(styles, 2, "Write the wave equation and give SI units for each quantity, including m s<sup>−1</sup>.", n=3))
+        s.append(question_block(styles, 3, "How are period and frequency related?", n=2))
+        s.append(fig("wave-snapshot.png", 160 * mm, 50 * mm))
+        s.append(question_block(styles, 4, "On the snapshot, mark A and λ. How is amplitude read from a displacement–distance graph?", n=4))
+        s.append(PageBreak())
+        s.append(Paragraph("C  Calculations", styles["h"]))
+        s.append(question_block(styles, 5, "f = 4.0 Hz, λ = 0.80 m. Calculate v.", "calc"))
+        s.append(question_block(styles, 6, "A radio wave has f = 200 MHz. Take c = 3.00 × 10<sup>8</sup> m s<sup>−1</sup>. Calculate λ.", "calc"))
+        s.append(question_block(styles, 7, "A wave travels 48 m in 0.16 s. If λ = 2.0 m, calculate f.", "calc"))
+        s.append(PageBreak())
+        s.append(Paragraph("D  Exam-style practice", styles["h"]))
+        s.append(question_block(styles, 8, "Define amplitude and wavelength. [2]", n=4))
+        s.append(question_block(styles, 9, "A note of 510 Hz travels at 340 m s<sup>−1</sup>. Calculate λ. [2]", "calc"))
+        s.append(question_block(styles, 10, "Explain why air particles do not travel from a loudspeaker to a listener. [3]", n=5))
+        s.append(Paragraph("E  Challenge", styles["h"]))
+        s.append(question_block(styles, 11, "A displacement–time trace has 5 complete cycles in 20 ms. The matching snapshot shows 4.0 cm between adjacent crests. Calculate f, T, λ and v. Show unit conversions.", "calc"))
+        s.append(question_block(styles, 12, "Which quantity stays the same when a wave enters a new medium? Explain what happens to v and λ.", n=5))
+    else:
+        s.append(Paragraph("Learning focus: wave type, phase, superposition and polarisation.", styles["obj"]))
+        s.append(Paragraph("A  Retrieval", styles["h"]))
+        s.append(question_block(styles, 1, "Define a transverse wave and a longitudinal wave.", n=4))
+        s.append(question_block(styles, 2, "Give one example of each.", n=2))
+        s.append(question_block(styles, 3, "State the principle of superposition.", n=3))
+        s.append(fig("long-vs-trans.png", 160 * mm, 55 * mm))
+        s.append(question_block(styles, 4, "What is a compression and what is a rarefaction?", n=4))
+        s.append(PageBreak())
+        s.append(fig("phase-points.png", 155 * mm, 45 * mm))
+        s.append(question_block(styles, 5, "When are two points on a wave in phase?", n=3))
+        s.append(question_block(styles, 6, "Why can light be polarised but sound in air cannot?", n=5))
+        s.append(question_block(styles, 7, "Classify ultrasound, microwaves and stadium sound as transverse or longitudinal.", n=3))
+        s.append(question_block(styles, 8, "Two crests are 6.0 cm apart and λ = 2.0 cm. Are they in phase? Explain.", "calc"))
+        s.append(PageBreak())
+        s.append(Paragraph("D  Exam-style practice", styles["h"]))
+        s.append(question_block(styles, 9, "Describe the difference between transverse and longitudinal waves, with an example of each. [4]", n=6))
+        s.append(question_block(styles, 10, "State the principle of superposition. [2]", n=3))
+        s.append(question_block(styles, 11, "Explain why sound from a loudspeaker cannot be polarised. [2]", n=4))
+        s.append(Paragraph("E  Challenge", styles["h"]))
+        s.append(question_block(styles, 12, "A student says a sine-wave drawing of sound proves sound is transverse. Write a correction a teacher could use.", n=6))
+    return s
+
+
+ANSWERS = {
+    "atomic-structure": [
+        ("A", [
+            "1. Proton +1, mass 1. Neutron 0, mass 1. Electron −1, mass ≈ 1/1836.",
+            "2. Z = number of protons. A = protons + neutrons.",
+            "3. Same proton number / element; different neutron number / mass number.",
+        ]),
+        ("B", [
+            "4. 19 p, 20 n, 19 e.",
+            "5. Number of protons equals number of electrons, so charges cancel.",
+        ]),
+        ("C", [
+            "6. Mg: 12p 12n 12e. Mg<sup>2+</sup>: 12p 12n 10e. F: 9p 10n 9e. F<sup>−</sup>: 9p 10n 10e.",
+            "7. A<sub>r</sub> = (60×69 + 40×71)/100 = 69.8",
+            "8. Chlorine is a mixture of <super>35</super>Cl and <super>37</super>Cl; A<sub>r</sub> is a weighted mean.",
+        ]),
+        ("D / E", [
+            "9. Isotopes must have the same proton number. C has 6 protons; N has 7.",
+            "10. (75×63 + 25×65)/100 = 63.5",
+            "11. The atom gains two electrons. Proton number unchanged. Electrons exceed protons by 2, so charge is 2−. [3]",
+            "12. A<sub>r</sub> = (90.5×20 + 0.27×21 + 9.25×22)/100 = 20.2 (3 s.f.). Ignoring <super>21</super>Ne changes only the third significant figure.",
+            "13. A = 23 top left, Z = 11 bottom left, 11 p, 12 n. Na<sup>+</sup> has 10 electrons.",
+        ]),
+    ],
+    "electron-configuration": [
+        ("A–E", [
+            "1. 2, 8 and 8.",
+            "2. s: 2. p: 6.",
+            "3. Group 1: one outer electron. Group 7: seven outer electrons.",
+            "4. N 2,5; Mg 2,8,2; Cl 2,8,7; K 2,8,8,1.",
+            "5. O 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>4</sup>; Al 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>1</sup>; Ca 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup> 4s<sup>2</sup>.",
+            "6. Hund: one electron in each equal-energy orbital before pairing. N 2p<sup>3</sup> three single arrows; O 2p<sup>4</sup> one pair plus two singles.",
+            "7. O<sup>2−</sup> 2,8 / 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>; Al<sup>3+</sup> 2,8 / 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>; Cl<sup>−</sup> 2,8,8 / 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup>.",
+            "8. Calcium is 2,8,8,2. After 2,8,8 the next two electrons occupy the fourth shell / 4s, not a 10-electron third shell.",
+            "9. Mg is 2,8,2. Losing two electrons leaves 2,8, a full outer shell.",
+            "10. Mg<sup>2+</sup> is 2,8 or 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup>. Full outer-shell / noble-gas arrangement is stable. [3]",
+            "11. Oxygen is 2,6. Gaining two electrons gives 2,8. [3]",
+            "12. Na s-block; F p-block; Fe d-block, with one justification. [3]",
+            "13. P is [Ne] 3s<sup>2</sup> 3p<sup>3</sup>. P<sup>3−</sup> is [Ne] 3s<sup>2</sup> 3p<sup>6</sup>. The ion has gained three electrons to fill 3p.",
+        ]),
+    ],
+    "ionic-bonding": [
+        ("A–E", [
+            "1. Electrostatic attraction between oppositely charged ions.",
+            "2. A metal and a non-metal.",
+            "3. Ions are not free to move.",
+            "4. Na loses 1 e<sup>−</sup> → Na<sup>+</sup>. Cl gains that electron → Cl<sup>−</sup>. Oppositely charged ions attract.",
+            "5. Strong attractions throughout a giant lattice need a lot of energy to overcome.",
+            "6. Ions become free to move and carry charge.",
+            "7. Na<sub>2</sub>O; MgCl<sub>2</sub>; Al<sub>2</sub>O<sub>3</sub>.",
+            "8. A shift lines up like charges, which repel, so the crystal splits.",
+            "9. Molten NaCl: mobile ions. Copper: delocalised electrons.",
+            "10. Mg loses 2e<sup>−</sup> → Mg<sup>2+</sup>. O gains 2e<sup>−</sup> → O<sup>2−</sup>. Electrostatic attraction. Giant lattice. [4]",
+            "11. Strong ionic attractions → high m.p. Solid ions fixed → no conduction. [4]",
+            "12. Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub> so +6 balances −6. [2]",
+            "13. Mg<sup>2+</sup> and O<sup>2−</sup> have higher charges than Na<sup>+</sup> and Cl<sup>−</sup>, so attraction is stronger.",
+        ]),
+    ],
+    "covalent-bonding": [
+        ("A–E", [
+            "1. A shared pair of electrons attracted to both nuclei.",
+            "2. An outer-shell pair not used in bonding.",
+            "3. e.g. H<sub>2</sub>O or CO<sub>2</sub>; diamond, graphite or SiO<sub>2</sub>.",
+            "4. Each Cl shares one electron; the shared pair is attracted to both nuclei.",
+            "5. Each C bonded to four others in a tetrahedral giant covalent network.",
+            "6. Graphite has delocalised electrons between layers; diamond’s electrons are all in C–C bonds.",
+            "7. 1, 2, 3 and 4 shared pairs.",
+            "8. Water is simple molecular (weak intermolecular forces). SiO<sub>2</sub> is giant covalent.",
+            "9. Boiling overcomes intermolecular forces; covalent bonds inside molecules remain.",
+            "10. Each H has 1 electron. They share a pair. Both then have a full first shell. [3]",
+            "11. Iodine is simple molecular — weak forces between I<sub>2</sub>. Diamond is giant covalent. [4]",
+            "12. No mobile ions or delocalised electrons. [2]",
+            "13. Nitrogen donates its lone pair to H<sup>+</sup> (dative bond). All four N–H bonds in NH<sub>4</sub><sup>+</sup> are then equivalent.",
+        ]),
+    ],
+    "metallic-bonding": [
+        ("A–E", [
+            "1. Attraction between positive metal ions and delocalised electrons.",
+            "2. Delocalised electrons.",
+            "3. Can be hammered into sheets without breaking.",
+            "4. Lattice of positive ions surrounded by a sea of delocalised electrons.",
+            "5. Electrons transfer kinetic energy rapidly through the lattice.",
+            "6. Layers of ions slide; electrons still hold the structure together.",
+            "7. Mg has mobile electrons; MgO ions are fixed in the solid lattice.",
+            "8. Different-sized atoms in the alloy hinder layers sliding.",
+            "9. Only one delocalised electron per atom / 1+ ions → weaker metallic bonding.",
+            "10. Mg<sup>2+</sup> lattice; delocalised electrons; electrostatic attraction is metallic bonding. [3]",
+            "11. Metal layers slide and electrons still attract ions. Ionic lattice: sliding lines up like charges. [4]",
+            "12. Delocalised electrons make it a good conductor; it is also ductile. [2]",
+            "13. Al forms 3+ ions and contributes more delocalised electrons than Na (1+), so metallic attraction is stronger.",
+        ]),
+    ],
+    "cell-structure": [
+        ("A–E", [
+            "1. Nucleus: DNA / control of protein synthesis. Mitochondrion: aerobic respiration / ATP. Ribosome: protein synthesis.",
+            "2. Cell wall, chloroplasts, permanent vacuole.",
+            "3. Allows some substances to cross and restricts others.",
+            "4–5. Accept correct labels from the schematics: membrane, cytoplasm, nucleus, nucleolus, mitochondrion, RER/ribosomes, wall, vacuole, chloroplast. Wall freely permeable.",
+            "6. Phospholipid bilayer with proteins (and cholesterol / glycoproteins in animal cells); fluid mosaic.",
+            "7. Folds increase surface area for respiratory enzymes / electron-transport proteins.",
+            "8. High ATP demand for contraction.",
+            "9. Photosynthesis occurs in green shoots and leaves; roots absorb water and minerals.",
+            "10. Nucleus contains DNA and controls protein synthesis. Mitochondria carry out aerobic respiration / produce ATP. [4]",
+            "11. Many chloroplasts; position near the upper leaf; vacuole maintains turgidity; elongated shape. Any two explained. [4]",
+            "12. Wall: cellulose, freely permeable, support. Membrane: bilayer, selectively permeable. [3]",
+            "13. RER synthesises and processes proteins. Golgi modifies and packages them into vesicles for secretion.",
+        ]),
+    ],
+    "prokaryotic-and-eukaryotic-cells": [
+        ("A–E", [
+            "1. Eukaryotes have a nucleus / membrane-bound organelles; prokaryotes do not.",
+            "2. Cell wall, membrane, loop of DNA, ribosomes; also plasmid / flagellum / capsule.",
+            "3. Neither — they are acellular / not cells.",
+            "4. Accept correct labels from the schematic.",
+            "5. Nucleus absent/present; circular vs linear DNA; no/yes membrane-bound organelles; 70S vs 80S; 1–5 µm vs 10–100 µm; peptidoglycan vs cellulose/chitin/none.",
+            "6. Small extra DNA circle; may carry resistance genes or be used as a vector.",
+            "7. Antibiotics can target peptidoglycan walls or 70S ribosomes, which human cells lack or have in a different form.",
+            "8. Three paired differences. [3]",
+            "9. Carry resistance genes; transferable; used as vectors. [3]",
+            "10. No nucleus / DNA not enclosed by a nuclear envelope / no membrane-bound organelles. [2]",
+            "11. These features resemble free-living bacteria, supporting an engulfed-prokaryote origin.",
+        ]),
+    ],
+    "microscopy": [
+        ("A–E", [
+            "1. M = image size / actual size. Resolution: smallest distance at which two points can still be seen as separate.",
+            "2. 2500 µm; 2.5 × 10<sup>6</sup> nm.",
+            "3. Eyepiece magnification × objective magnification.",
+            "4. 18 mm = 18 000 µm; actual = 18 000/600 = 30 µm.",
+            "5. 3.0 cm = 30 000 µm; M = 30 000/7.5 = ×4000.",
+            "6. 40 mm = 40 000 µm; M = 40 000/10 = ×4000.",
+            "7. 35 mm = 35 000 µm; actual = 70 µm. [2]",
+            "8. Light about 0.2 µm; TEM much smaller (about 0.1 nm) because electrons have a shorter wavelength. [4]",
+            "9. Living specimens / colour / cheaper / easier preparation. [2]",
+            "10. The granules are closer together than the resolution. Extra magnification enlarges the blur (empty magnification).",
+        ]),
+    ],
+    "progressive-waves": [
+        ("A–E", [
+            "1. A: max displacement from equilibrium. λ: shortest distance between points in phase. f: oscillations per second.",
+            "2. v = fλ; m s<sup>−1</sup>, Hz, m.",
+            "3. T = 1/f.",
+            "4. Vertical distance from the equilibrium line to a crest (not crest-to-trough).",
+            "5. 3.2 m s<sup>−1</sup>.",
+            "6. f = 2.00 × 10<sup>8</sup> Hz; λ = 1.50 m.",
+            "7. v = 300 m s<sup>−1</sup>; f = 150 Hz.",
+            "8. See retrieval definitions. [2]",
+            "9. λ = 340/510 = 0.667 m (3 s.f.). [2]",
+            "10. Particles oscillate about equilibrium; energy is passed along; no net movement of air. [3]",
+            "11. T = 20 ms / 5 = 4.0 ms; f = 250 Hz; λ = 0.040 m; v = 10 m s<sup>−1</sup>.",
+            "12. Frequency stays the same. Speed and wavelength change (both increase or both decrease together).",
+        ]),
+    ],
+    "wave-properties": [
+        ("A–E", [
+            "1. Transverse: oscillation perpendicular to energy transfer. Longitudinal: parallel.",
+            "2. Light / water / string; sound / P-waves / slinky compressions.",
+            "3. Resultant displacement is the sum of individual displacements.",
+            "4. Compression: particles closer / higher pressure. Rarefaction: more spaced / lower pressure.",
+            "5. They reach maxima and minima together / separated by nλ.",
+            "6. Light is transverse so oscillations have a direction that can be filtered; sound is longitudinal.",
+            "7. Ultrasound longitudinal; microwaves transverse; stadium sound longitudinal.",
+            "8. Yes — separation is 3λ, a whole number of wavelengths.",
+            "9. See definitions plus one valid example of each. [4]",
+            "10. Resultant displacement = sum of individual displacements. [2]",
+            "11. Polarisation needs a transverse direction; sound is longitudinal. [2]",
+            "12. The sine curve is a graph of pressure or displacement. The air particles still oscillate parallel to the direction of travel.",
+        ]),
+    ],
+}
+
+STUDENT_BUILDERS = {
+    "atomic-structure": ("Atomic Structure", "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet", atomic_student),
+    "electron-configuration": ("Electron Configuration", "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet", electron_student),
+    "ionic-bonding": ("Ionic Bonding", "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet", lambda st: bonding_student(st, "ionic")),
+    "covalent-bonding": ("Covalent Bonding", "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet", lambda st: bonding_student(st, "covalent")),
+    "metallic-bonding": ("Metallic Bonding", "BTEC Level 3 Applied Science  ·  Unit 1 Chemistry  ·  Worksheet", lambda st: bonding_student(st, "metallic")),
+    "cell-structure": ("Cell Structure", "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet", cell_student),
+    "prokaryotic-and-eukaryotic-cells": ("Prokaryotic and Eukaryotic Cells", "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet", prokaryote_student),
+    "microscopy": ("Microscopy", "BTEC Level 3 Applied Science  ·  Unit 1 Biology  ·  Worksheet", microscopy_student),
+    "progressive-waves": ("Progressive Waves", "BTEC Level 3 Applied Science  ·  Unit 1 Physics  ·  Worksheet", lambda st: waves_student(st, True)),
+    "wave-properties": ("Wave Properties", "BTEC Level 3 Applied Science  ·  Unit 1 Physics  ·  Worksheet", lambda st: waves_student(st, False)),
 }
 
 
+def answers_flow(styles, slug):
+    s = [_disclaimer(styles, answers=True)]
+    for heading, items in ANSWERS[slug]:
+        s.append(Paragraph(heading, styles["h"]))
+        for item in items:
+            s.append(Paragraph(item, styles["ans"]))
+    return s
+
+
 def build_all(out_root: Path):
+    styles = _styles()
     written = []
-    for slug, spec in WORKSHEETS.items():
+    for slug, (title, kicker, builder) in STUDENT_BUILDERS.items():
         folder = out_root / slug
         qpath = folder / f"btec-unit-1-{slug}-worksheet.pdf"
         apath = folder / f"btec-unit-1-{slug}-answers.pdf"
-        write_pdf(qpath, spec["title"], spec["kicker"], "Worksheet", spec["questions"])
-        write_pdf(apath, f"{spec['title']} — Answers", spec["kicker"].replace("Worksheet", "Answer sheet"), "Answer sheet", spec["answers"])
-        written.append((spec["title"], qpath, apath))
+        build_doc(qpath, title, kicker, "Worksheet", builder(styles))
+        build_doc(apath, f"{title} — Answers", kicker.replace("Worksheet", "Answer sheet"), "Answer sheet", answers_flow(styles, slug))
+        written.append((title, qpath, apath))
     return written
