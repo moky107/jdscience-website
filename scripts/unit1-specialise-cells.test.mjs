@@ -1,31 +1,86 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { productFields, unit1AssetPaths } from "../api/_lib/publishUnit1SpecialiseCells.js";
+import fs from "node:fs";
+import { createRequire } from "node:module";
+import {
+  deleteObsoleteSeededUnit1Products,
+  isObsoleteSeededUnit1Product,
+  OBSOLETE_SEEDED_UNIT1_SLUG,
+  OBSOLETE_SEEDED_UNIT1_TITLE,
+  PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  PROTECTED_CHEMISTRY_COMPANION_ID,
+} from "../api/_lib/shop.js";
 
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ppt = path.join(root, "content/shop/unit-1-specialise-cells/unit-1-specialise-cells.pptx");
-const cover = path.join(root, "content/shop/unit-1-specialise-cells/cover.png");
+const require = createRequire(import.meta.url);
+const pkg = require("../package.json");
+const shopHandlers = fs.readFileSync(new URL("../api/_lib/shopHandlers.js", import.meta.url), "utf8");
+const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import.meta.url), "utf8");
 
-await access(ppt);
-await access(cover);
-const assets = await unit1AssetPaths();
-assert.ok(assets.ppt, "PowerPoint file must be resolvable");
-assert.ok(assets.cover, "Cover image must be resolvable");
+assert.doesNotMatch(shopHandlers, /ensureUnit1SpecialiseCellsProduct/);
+assert.doesNotMatch(shopHandlers, /publishUnit1SpecialiseCells/);
+assert.match(shopHandlers, /deleteObsoleteSeededUnit1Products/);
+assert.match(shopHandlers, /delete\(\)\.eq\('id', id\)/);
+assert.match(adminSource, /action: "shop-delete", id/);
+assert.match(adminSource, /removeProduct\(product\.id\)/);
 
-const fields = productFields({
-  download_path: "downloads/demo.pptx",
-  image_path: "images/demo.png",
-});
+assert.doesNotMatch(pkg.scripts.build, /publish-unit1-specialise-cells/);
+assert.doesNotMatch(pkg.scripts["seo:build"] || "", /publish-unit1-specialise-cells/);
 
-assert.equal(fields.title, "Unit 1 specialise cells");
-assert.equal(fields.price_pence, 500);
-assert.equal(fields.product_type, "powerpoint");
-assert.equal(fields.product_kind, "digital");
-assert.equal(fields.is_published, true);
-assert.equal(fields.slug, "unit-1-specialise-cells");
-assert.ok(Array.isArray(fields.keywords), "live shop_products.keywords is text[]");
-assert.match(path.basename(assets.ppt), /unit-1-specialise-cells\.pptx$/i);
+assert.equal(isObsoleteSeededUnit1Product({
+  id: "dfd172d3-c8c9-4209-bed7-1e0b2ec85079",
+  title: OBSOLETE_SEEDED_UNIT1_TITLE,
+  slug: OBSOLETE_SEEDED_UNIT1_SLUG,
+}), true);
+assert.equal(isObsoleteSeededUnit1Product({
+  id: PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  title: OBSOLETE_SEEDED_UNIT1_TITLE,
+  slug: OBSOLETE_SEEDED_UNIT1_SLUG,
+}), false);
+assert.equal(isObsoleteSeededUnit1Product({
+  id: PROTECTED_CHEMISTRY_COMPANION_ID,
+  title: "My Chemistry Companion: Your Ultimate GCSE Chemistry Revision Book",
+  slug: "my-chemistry-companion",
+}), false);
+assert.equal(isObsoleteSeededUnit1Product({
+  id: PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  title: "BTEC Unit 1 Biology: Specialised Cells",
+  slug: "specialise-cells",
+}), false);
 
-console.log("unit 1 specialise cells shop payload ok");
+const deleted = [];
+const fake = {
+  from() {
+    return {
+      select() {
+        return {
+          eq() {
+            return {
+              eq: async () => ({
+                data: [
+                  { id: "dfd172d3-c8c9-4209-bed7-1e0b2ec85079", title: OBSOLETE_SEEDED_UNIT1_TITLE, slug: OBSOLETE_SEEDED_UNIT1_SLUG },
+                  { id: PROTECTED_BTEC_SPECIALISED_CELLS_ID, title: OBSOLETE_SEEDED_UNIT1_TITLE, slug: OBSOLETE_SEEDED_UNIT1_SLUG },
+                ],
+                error: null,
+              }),
+              maybeSingle: async () => ({ data: null, error: null }),
+            };
+          },
+        };
+      },
+      delete() {
+        return {
+          eq: async (_col, id) => {
+            deleted.push(id);
+            return { error: null };
+          },
+        };
+      },
+    };
+  },
+};
+
+const result = await deleteObsoleteSeededUnit1Products(fake);
+assert.deepEqual(result.deletedIds, ["dfd172d3-c8c9-4209-bed7-1e0b2ec85079"]);
+assert.equal(deleted.includes(PROTECTED_BTEC_SPECIALISED_CELLS_ID), false);
+assert.equal(deleted.includes(PROTECTED_CHEMISTRY_COMPANION_ID), false);
+
+console.log("unit 1 specialise cells obsolete-seed cleanup ok");

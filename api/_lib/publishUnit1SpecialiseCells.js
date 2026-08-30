@@ -1,3 +1,7 @@
+/* Manual one-off helper only. Do not call this from /api/shop-products,
+   Shop Admin list, npm run build, or Vercel deploy. Deleted catalogue
+   rows must stay deleted. */
+
 import { createClient } from "@supabase/supabase-js";
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";

@@ -655,3 +655,35 @@ export function matchesShopSearch(product, query) {
     .toLowerCase();
   return haystack.includes(q);
 }
+
+/** Live replacement product. Never delete or rewrite this row from seed/cleanup. */
+export const PROTECTED_BTEC_SPECIALISED_CELLS_ID = '53fa4258-a265-44f9-b605-a6bf512a2f03';
+/** Live Amazon book. Never delete or rewrite this row from seed/cleanup. */
+export const PROTECTED_CHEMISTRY_COMPANION_ID = '503d4625-94df-4d80-b6d0-7c06cebdf693';
+
+export const OBSOLETE_SEEDED_UNIT1_TITLE = 'Unit 1 specialise cells';
+export const OBSOLETE_SEEDED_UNIT1_SLUG = 'unit-1-specialise-cells';
+
+export function isObsoleteSeededUnit1Product(row) {
+  if (!row) return false;
+  if (row.id === PROTECTED_BTEC_SPECIALISED_CELLS_ID || row.id === PROTECTED_CHEMISTRY_COMPANION_ID) return false;
+  return row.title === OBSOLETE_SEEDED_UNIT1_TITLE && row.slug === OBSOLETE_SEEDED_UNIT1_SLUG;
+}
+
+export async function deleteObsoleteSeededUnit1Products(supabase) {
+  if (!supabase) return { deletedIds: [], error: null };
+  const { data, error } = await supabase
+    .from('shop_products')
+    .select('id, title, slug')
+    .eq('title', OBSOLETE_SEEDED_UNIT1_TITLE)
+    .eq('slug', OBSOLETE_SEEDED_UNIT1_SLUG);
+  if (error) return { deletedIds: [], error };
+  const deletedIds = [];
+  for (const row of data || []) {
+    if (!isObsoleteSeededUnit1Product(row)) continue;
+    const { error: deleteError } = await supabase.from('shop_products').delete().eq('id', row.id);
+    if (deleteError) return { deletedIds, error: deleteError };
+    deletedIds.push(row.id);
+  }
+  return { deletedIds, error: null };
+}

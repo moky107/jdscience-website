@@ -28,10 +28,10 @@ import {
   persistShopProductRow,
   checkoutRejectionForProduct,
   EXTERNAL_CHECKOUT_ERROR,
+  deleteObsoleteSeededUnit1Products,
 } from './shop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
-import { ensureUnit1SpecialiseCellsProduct } from './publishUnit1SpecialiseCells.js';
 
 function shopKind(req) {
   const kind = safeTrim(req.query?.kind, 40);
@@ -173,9 +173,9 @@ export async function handleShopPublicRequest(req, res) {
     return res.status(500).json({ error: 'Server not configured for shop.' });
   }
   const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
-  let unit1Seed = null;
+  let obsoleteSeedCleanup = null;
   if (kind === 'shop-products') {
-    unit1Seed = await ensureUnit1SpecialiseCellsProduct(supabase);
+    obsoleteSeedCleanup = await deleteObsoleteSeededUnit1Products(supabase);
   }
 
   if (kind === 'shop-order') {
@@ -275,16 +275,10 @@ export async function handleShopPublicRequest(req, res) {
           ...diagnostics,
           productsReturned: listed.products.length,
           listError: listed.ok ? null : safeShopErrorMessage(listed.error),
-          unit1Seed: unit1Seed
+          obsoleteSeedCleanup: obsoleteSeedCleanup
             ? {
-                ok: Boolean(unit1Seed.ok),
-                skipped: Boolean(unit1Seed.skipped),
-                existed: Boolean(unit1Seed.existed),
-                created: Boolean(unit1Seed.created),
-                reason: unit1Seed.reason || null,
-                title: unit1Seed.product?.title || null,
-                slug: unit1Seed.product?.slug || null,
-                price_pence: unit1Seed.product?.price_pence ?? null,
+                deletedIds: obsoleteSeedCleanup.deletedIds || [],
+                error: obsoleteSeedCleanup.error ? safeShopErrorMessage(obsoleteSeedCleanup.error) : null,
               }
             : null,
         },
@@ -406,7 +400,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
   }
 
   if (action === 'shop-list' || action === 'list') {
-    await ensureUnit1SpecialiseCellsProduct(supabase);
+    await deleteObsoleteSeededUnit1Products(supabase);
     const { data, error } = await supabase.from('shop_products').select('*').order('sort_order', { ascending: true }).order('created_at', { ascending: false });
     if (error) {
       if (isMissingShopTable(error)) return res.status(200).json({ ok: true, products: [], setupRequired: true });
@@ -475,9 +469,15 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
   if (action === 'shop-delete' || action === 'delete') {
     const id = safeTrim(body.id, 80);
     if (!id) return res.status(400).json({ error: 'Product ID is required.' });
+    const { data: existing, error: loadError } = await supabase.from('shop_products').select('id, title').eq('id', id).maybeSingle();
+    if (loadError) throw loadError;
+    if (!existing) return res.status(404).json({ error: 'Product not found.' });
     const { error } = await supabase.from('shop_products').delete().eq('id', id);
     if (error) throw error;
-    return res.status(200).json({ ok: true });
+    const { data: stillThere, error: confirmError } = await supabase.from('shop_products').select('id').eq('id', id).maybeSingle();
+    if (confirmError) throw confirmError;
+    if (stillThere?.id) return res.status(500).json({ error: 'Product row was not deleted.' });
+    return res.status(200).json({ ok: true, deletedId: id });
   }
 
   return res.status(400).json({ error: 'Unknown shop admin action.' });
