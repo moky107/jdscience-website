@@ -25,6 +25,10 @@ import {
   purchaseMethod,
   toAdminProduct,
   toPublicProduct,
+  specialisedCellsNeedsClassificationFix,
+  SPECIALISED_CELLS_LEVEL,
+  SPECIALISED_CELLS_EXAM_BOARD,
+  PROTECTED_BTEC_SPECIALISED_CELLS_ID,
 } from "../api/_lib/shop.js";
 import {
   externalButtonLabel as purchaseCta,
@@ -367,5 +371,18 @@ assert.equal(tutorCarouselPageCount(homepage), homepage.length);
 assert.equal(tutorCarouselPageIndex(4, homepage.length), 4 % homepage.length);
 assert.deepEqual(featuredTutorWindow(homepage, 1, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y", "amina-khan", "sam-reed"]);
+
+assert.equal(SPECIALISED_CELLS_LEVEL, "BTEC Level 3");
+assert.equal(SPECIALISED_CELLS_EXAM_BOARD, "Pearson");
+assert.equal(specialisedCellsNeedsClassificationFix({
+  id: PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  level: "T Level",
+  exam_board: "N/A",
+}), true);
+assert.equal(specialisedCellsNeedsClassificationFix({
+  id: PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  level: "BTEC Level 3",
+  exam_board: "Pearson",
+}), false);
 
 console.log("shop.test.mjs: ok");

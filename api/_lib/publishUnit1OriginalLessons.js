@@ -231,7 +231,10 @@ async function persistProduct(client, { existing, fields }) {
   return { product: saved.product, created: true, updated: false };
 }
 
-function resolveClient() {
+function resolveClient(supabase) {
+  if (supabase) {
+    return { kind: "supabase", config: shopConfig(), supabase };
+  }
   const config = shopConfig();
   if (config.supabaseUrl && config.serviceRoleKey) {
     return {
@@ -246,10 +249,36 @@ function resolveClient() {
   return null;
 }
 
-export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
-  const root = repoRoot();
+function candidateLessonRoots() {
+  const here = path.dirname(fileURLToPath(import.meta.url));
+  return [...new Set([
+    repoRoot(),
+    process.cwd(),
+    path.resolve(here, "../.."),
+    "/var/task",
+  ])];
+}
+
+async function resolveLessonRoot(spec) {
+  for (const root of candidateLessonRoots()) {
+    const download = path.join(root, LESSON_DIR, spec.folder, spec.localDownloadName);
+    if (await fileExists(download)) return root;
+  }
+  return repoRoot();
+}
+
+export async function publishUnit1OriginalLessons({
+  dryRun = false,
+  supabase = null,
+  skipPackBuild = false,
+  maxCreate = Number.POSITIVE_INFINITY,
+  updateExisting = true,
+} = {}) {
+  const root = await resolveLessonRoot(unit1ProductSpecs()[0] || { folder: "atomic-structure", localDownloadName: "btec-unit-1-chemistry-atomic-structure.pptx" });
   await mkdir(path.join(root, LESSON_DIR), { recursive: true });
-  await ensureWorksheetPacks(root);
+  if (!skipPackBuild) {
+    await ensureWorksheetPacks(root);
+  }
 
   const specs = unit1ProductSpecs();
   const verified = [];
@@ -259,12 +288,12 @@ export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
     }
     const check = await verifyLocalProductAssets(spec, root);
     if (!check.ok) {
-      return { ok: false, skipped: true, reason: "missing_local_assets", error: check.error };
+      return { ok: false, skipped: true, reason: "missing_local_assets", error: check.error, root };
     }
     verified.push({ spec, paths: check.paths });
   }
 
-  const client = resolveClient();
+  const client = resolveClient(supabase);
   if (!client) {
     return { ok: false, skipped: true, reason: "missing_shop_credentials", verified: verified.length };
   }
@@ -275,6 +304,7 @@ export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
   const existingRows = await listExisting(client);
   const results = [];
   const stamp = Date.now();
+  let createdCount = 0;
 
   for (const { spec, paths } of verified) {
     const existing = findExistingUnit1Product(existingRows, spec);
@@ -284,6 +314,25 @@ export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
         title: spec.title,
         skipped: true,
         reason: "protected_existing_row",
+      });
+      continue;
+    }
+    if (existing && !updateExisting) {
+      results.push({
+        slug: spec.slug,
+        title: spec.title,
+        skipped: true,
+        reason: "already_present",
+        id: existing.id,
+      });
+      continue;
+    }
+    if (!existing && createdCount >= maxCreate) {
+      results.push({
+        slug: spec.slug,
+        title: spec.title,
+        skipped: true,
+        reason: "max_create_reached",
       });
       continue;
     }
@@ -323,6 +372,8 @@ export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
       preview_path: image_path,
     });
     const saved = await persistProduct(client, { existing, fields });
+    if (saved.created) createdCount += 1;
+    if (saved.created && saved.product) existingRows.push(saved.product);
     results.push({
       slug: spec.slug,
       title: spec.title,
@@ -340,9 +391,19 @@ export async function publishUnit1OriginalLessons({ dryRun = false } = {}) {
   return {
     ok: true,
     mode: client.kind,
+    root,
     results,
     created: results.filter((row) => row.created).length,
     updated: results.filter((row) => row.updated).length,
     skipped: results.filter((row) => row.skipped).length,
   };
+}
+
+export async function ensureMissingUnit1ShopProducts(supabase, { maxCreate = 8 } = {}) {
+  return publishUnit1OriginalLessons({
+    supabase,
+    skipPackBuild: true,
+    maxCreate,
+    updateExisting: false,
+  });
 }

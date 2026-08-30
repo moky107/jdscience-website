@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/education-posts.js": {
-      "maxDuration": 60
+      "maxDuration": 60,
+      "includeFiles": "content/lessons/**"
     },
     "api/admin-education-posts.js": {
       "maxDuration": 60

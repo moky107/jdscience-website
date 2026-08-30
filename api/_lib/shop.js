@@ -662,6 +662,35 @@ export const PROTECTED_BTEC_SPECIALISED_CELLS_ID = '53fa4258-a265-44f9-b605-a6bf
 /** Live Amazon book. Never delete or rewrite this row from seed/cleanup. */
 export const PROTECTED_CHEMISTRY_COMPANION_ID = '503d4625-94df-4d80-b6d0-7c06cebdf693';
 
+export const SPECIALISED_CELLS_LEVEL = 'BTEC Level 3';
+export const SPECIALISED_CELLS_EXAM_BOARD = 'Pearson';
+
+export function specialisedCellsNeedsClassificationFix(row) {
+  if (!row || row.id !== PROTECTED_BTEC_SPECIALISED_CELLS_ID) return false;
+  return row.level !== SPECIALISED_CELLS_LEVEL || row.exam_board !== SPECIALISED_CELLS_EXAM_BOARD;
+}
+
+export async function correctSpecialisedCellsClassification(supabase) {
+  if (!supabase) return { updated: false, error: null };
+  const { data, error } = await supabase
+    .from('shop_products')
+    .select('id, level, exam_board, keywords, title')
+    .eq('id', PROTECTED_BTEC_SPECIALISED_CELLS_ID)
+    .maybeSingle();
+  if (error) return { updated: false, error };
+  if (!data || !specialisedCellsNeedsClassificationFix(data)) return { updated: false, error: null };
+  const { error: updateError } = await supabase
+    .from('shop_products')
+    .update({
+      level: SPECIALISED_CELLS_LEVEL,
+      exam_board: SPECIALISED_CELLS_EXAM_BOARD,
+      updated_at: new Date().toISOString(),
+    })
+    .eq('id', PROTECTED_BTEC_SPECIALISED_CELLS_ID);
+  if (updateError) return { updated: false, error: updateError };
+  return { updated: true, error: null };
+}
+
 export const OBSOLETE_SEEDED_UNIT1_TITLE = 'Unit 1 specialise cells';
 export const OBSOLETE_SEEDED_UNIT1_SLUG = 'unit-1-specialise-cells';
 

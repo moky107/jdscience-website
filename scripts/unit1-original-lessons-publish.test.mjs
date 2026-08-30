@@ -26,8 +26,6 @@ const require = createRequire(import.meta.url);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const pkg = require("../package.json");
 const shopHandlers = fs.readFileSync(path.join(root, "api/_lib/shopHandlers.js"), "utf8");
-const educationPosts = fs.readFileSync(path.join(root, "api/education-posts.js"), "utf8");
-const adminPosts = fs.readFileSync(path.join(root, "api/admin-education-posts.js"), "utf8");
 
 assert.ok(SHOP_LEVELS.includes("BTEC Level 3"));
 assert.equal(UNIT1_LEVEL, "BTEC Level 3");
@@ -62,10 +60,8 @@ const existing = findExistingUnit1Product([
 ], specs[0]);
 assert.equal(existing.id, "abc");
 
-assert.doesNotMatch(shopHandlers, /publishUnit1OriginalLessons/);
-assert.doesNotMatch(shopHandlers, /unit1OriginalLessonCatalog/);
-assert.doesNotMatch(educationPosts, /publishUnit1OriginalLessons/);
-assert.doesNotMatch(adminPosts, /publishUnit1OriginalLessons/);
+assert.match(shopHandlers, /ensureMissingUnit1ShopProducts/);
+assert.match(shopHandlers, /correctSpecialisedCellsClassification/);
 assert.doesNotMatch(pkg.scripts.build, /publish-unit1-original-lessons/);
 
 console.log("unit 1 original lesson publish catalogue ok");

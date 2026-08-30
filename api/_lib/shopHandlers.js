@@ -29,7 +29,9 @@ import {
   checkoutRejectionForProduct,
   EXTERNAL_CHECKOUT_ERROR,
   deleteObsoleteSeededUnit1Products,
+  correctSpecialisedCellsClassification,
 } from './shop.js';
+import { ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
 import { copyResourceToShop, copyResourcesToShopBulk } from './copyResourceToShop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
@@ -175,8 +177,19 @@ export async function handleShopPublicRequest(req, res) {
   }
   const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
   let obsoleteSeedCleanup = null;
+  let specialisedCellsFix = null;
+  let unit1Ensure = null;
   if (kind === 'shop-products') {
     obsoleteSeedCleanup = await deleteObsoleteSeededUnit1Products(supabase);
+    specialisedCellsFix = await correctSpecialisedCellsClassification(supabase);
+    const wantsEnsure = req.query?.ensure_unit1 === '1' || req.query?.ensure_unit1 === 'true';
+    if (wantsEnsure) {
+      try {
+        unit1Ensure = await ensureMissingUnit1ShopProducts(supabase, { maxCreate: 10 });
+      } catch (err) {
+        unit1Ensure = { ok: false, error: safeShopErrorMessage(err) };
+      }
+    }
   }
 
   if (kind === 'shop-order') {
@@ -341,9 +354,22 @@ export async function handleShopPublicRequest(req, res) {
 
     const filtered = (result.data || []).filter((product) => matchesShopSearch(product, search));
     const withAssets = await attachProductAssetUrlsToMany(supabase, filtered);
+    const extra = {};
+    if (unit1Ensure) {
+      extra.unit1Ensure = {
+        ok: unit1Ensure.ok !== false,
+        created: unit1Ensure.created || 0,
+        updated: unit1Ensure.updated || 0,
+        skipped: unit1Ensure.skipped || 0,
+        reason: unit1Ensure.reason || null,
+        error: unit1Ensure.error || null,
+      };
+    }
+    if (specialisedCellsFix?.updated) extra.specialisedCellsFixed = true;
     return shopProductsResponse(res, {
       products: withAssets.map(toPublicProduct),
       setupRequired: false,
+      ...extra,
     });
   } catch (err) {
     logShopProductsError('unexpected', err);
@@ -411,6 +437,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
 
   if (action === 'shop-list' || action === 'list') {
     await deleteObsoleteSeededUnit1Products(supabase);
+    await correctSpecialisedCellsClassification(supabase);
     const { data, error } = await supabase.from('shop_products').select('*').order('sort_order', { ascending: true }).order('created_at', { ascending: false });
     if (error) {
       if (isMissingShopTable(error)) return res.status(200).json({ ok: true, products: [], setupRequired: true });
