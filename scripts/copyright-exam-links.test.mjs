@@ -5,6 +5,7 @@ import { AQA_GCSE_MATHS_RESOURCES } from "../src/aqaGcseMathsResources.js";
 import { AQA_SCIENCE_RESOURCES } from "../src/aqaScienceResources.js";
 import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "../src/edexcelScienceMathsResources.js";
 import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "../src/eduqasWjecScienceMathsResources.js";
+import { EDUQAS_GCSE_MATHEMATICS_RESOURCES } from "../src/eduqasGcseMathematicsResources.js";
 import { NCFE_TLEVEL_RESOURCES } from "../src/ncfeTLevelResources.js";
 import { OCR_SCIENCE_MATHS_RESOURCES } from "../src/ocrScienceMathsResources.js";
 import { PEARSON_BTEC_RESOURCES } from "../src/pearsonBtecResources.js";
@@ -18,6 +19,7 @@ const catalogues = [
   ["Edexcel science/maths", EDEXCEL_SCIENCE_MATHS_RESOURCES],
   ["OCR science/maths", OCR_SCIENCE_MATHS_RESOURCES],
   ["Eduqas/WJEC science/maths", EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES],
+  ["Eduqas GCSE Mathematics", EDUQAS_GCSE_MATHEMATICS_RESOURCES],
   ["NCFE T-Level", NCFE_TLEVEL_RESOURCES],
   ["Pearson BTEC", PEARSON_BTEC_RESOURCES],
 ];

@@ -7,7 +7,7 @@
     "generate:worksheets": "node scripts/worksheets/generate.mjs",
     "generate:11plus": "node scripts/eleven-plus/generate.mjs",
     "seo:build": "node scripts/seo/build-indexable-pages.mjs && node scripts/seo/build-discoverability.mjs",
-    "test:catalog": "node scripts/resourceNormalize.test.mjs && node scripts/worksheets/chemistry-units.test.mjs && node scripts/edexcel-biology-paper1.test.mjs && node scripts/notify.test.mjs && node scripts/tlevel-resources.test.mjs && node scripts/btec-resources.test.mjs && node scripts/terms.test.mjs && node scripts/platform-access.test.mjs && node scripts/copyright-exam-links.test.mjs && node scripts/eleven-plus.test.mjs && node scripts/shop.test.mjs"
+    "test:catalog": "node scripts/resourceNormalize.test.mjs && node scripts/worksheets/chemistry-units.test.mjs && node scripts/edexcel-biology-paper1.test.mjs && node scripts/notify.test.mjs && node scripts/tlevel-resources.test.mjs && node scripts/btec-resources.test.mjs && node scripts/eduqas-gcse-maths.test.mjs && node scripts/terms.test.mjs && node scripts/platform-access.test.mjs && node scripts/copyright-exam-links.test.mjs && node scripts/eleven-plus.test.mjs && node scripts/shop.test.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",

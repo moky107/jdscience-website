@@ -20,6 +20,7 @@ import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
 import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources";
 import { OCR_SCIENCE_MATHS_RESOURCES } from "./ocrScienceMathsResources";
 import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsResources";
+import { EDUQAS_GCSE_MATHEMATICS_RESOURCES } from "./eduqasGcseMathematicsResources";
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
@@ -113,6 +114,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...EDEXCEL_SCIENCE_MATHS_RESOURCES,
   ...OCR_SCIENCE_MATHS_RESOURCES,
   ...EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES,
+  ...EDUQAS_GCSE_MATHEMATICS_RESOURCES,
   ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
@@ -250,6 +252,7 @@ function buildStaticResourceItems() {
     description: resource.description || null,
     section: resource.section || null,
     topic_slug: resource.topic_slug || null,
+    source_attribution: resource.source_attribution || null,
   }));
 }
 
@@ -1039,10 +1042,14 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   };
 
   function renderResourceRow(item) {
+    const externalLabel = item.source_attribution || (
+      /^https?:\/\//i.test(String(item.file_url || "")) ? "External link" : null
+    );
     return (
       <div key={item.id} style={{ display: "flex", gap: 6, alignItems: "stretch" }}>
-        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle}>
+        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle} title={item.description || externalLabel || item.title}>
           {activeRes === "Videos" ? "▶️" : "📄"} {item.title}
+          {externalLabel ? <span style={{ display: "block", fontSize: 12, color: "#64748b", fontWeight: 600, marginTop: 4 }}>↗ {externalLabel}</span> : null}
         </a>
         {isAdmin && (
           <button onClick={() => removeItem(item)} title="Delete"
