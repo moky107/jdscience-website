@@ -1,9 +1,32 @@
+import {
+  externalButtonLabel as purchaseButtonLabel,
+  isExternalProduct as purchaseIsExternal,
+  isValidExternalUrl as purchaseIsValidUrl,
+  productShowsPrice as purchaseShowsPrice,
+  purchaseMethod,
+} from "./shopPurchase.js";
+
+export {
+  EXTERNAL_CHECKOUT_ERROR,
+  checkoutRejectionForProduct,
+  externalLegalNote,
+  externalSaleNotice,
+  isExternalPurchase,
+  purchaseMethod,
+  retailerName,
+  retailerPriceHint,
+} from "./shopPurchase.js";
+
 export function normalizeShopProduct(product = {}) {
+  const method = purchaseMethod(product);
   return {
     ...product,
+    purchase_method: method,
+    opens_external: method === "external",
+    retailer_name: product?.retailer_name || "",
+    show_price: product?.show_price !== false,
     external_url: product?.external_url || "",
-    external_button_label: product?.external_button_label || "Buy now",
-    opens_external: Boolean(product?.opens_external),
+    external_button_label: purchaseButtonLabel(product),
   };
 }
 
@@ -24,21 +47,17 @@ export function isValidProductImageFile(file) {
 }
 
 export function isValidExternalUrl(url) {
-  return /^https:\/\/.+/i.test(String(url || "").trim());
+  return purchaseIsValidUrl(url);
 }
 
 export function isExternalProduct(product) {
-  const normalized = normalizeShopProduct(product);
-  return normalized.opens_external && isValidExternalUrl(normalized.external_url);
+  return purchaseIsExternal(product);
 }
 
 export function externalButtonLabel(product) {
-  const normalized = normalizeShopProduct(product);
-  const label = String(normalized.external_button_label || "").trim();
-  return label || "Buy now";
+  return purchaseButtonLabel(product);
 }
 
 export function productShowsPrice(product) {
-  const price = product?.effective_price_pence ?? product?.price_pence;
-  return Number.isFinite(Number(price)) && Number(price) > 0;
+  return purchaseShowsPrice(product);
 }

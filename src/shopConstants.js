@@ -1,4 +1,4 @@
-export const SHOP_LEVELS = ["11+", "GCSE/IGCSE", "A Level", "BTEC", "T Level"];
+export const SHOP_LEVELS = ["11+", "GCSE/IGCSE", "A Level", "BTEC", "BTEC Level 3", "T Level"];
 
 export const SHOP_SUBJECTS = [
   "Biology",
@@ -14,12 +14,19 @@ export const SHOP_SUBJECTS = [
 export const SHOP_EXAM_BOARDS = ["AQA", "Edexcel", "OCR", "Eduqas", "WJEC", "Pearson", "NCFE", "City & Guilds", "N/A"];
 
 export const SHOP_PRODUCT_TYPES = [
-  { value: "powerpoint", label: "PowerPoint Presentation" },
+  { value: "powerpoint", label: "PowerPoint" },
+  { value: "pdf", label: "PDF" },
   { value: "worksheet", label: "Worksheet" },
   { value: "revision_notes", label: "Revision Notes" },
+  { value: "answer_sheet", label: "Answer Sheet" },
   { value: "practice_questions", label: "Practice Questions & Mark Schemes" },
   { value: "study_pack", label: "Study Pack" },
   { value: "book", label: "Book" },
+  { value: "physical_book", label: "Physical Book" },
+  { value: "digital", label: "Digital Download" },
+  { value: "digital_download", label: "Digital Download" },
+  { value: "bundle", label: "Bundle" },
+  { value: "other", label: "Other" },
   { value: "stationery", label: "JDScience Stationery" },
   { value: "clothing", label: "JDScience Clothing" },
   { value: "merchandise", label: "Branded Merchandise" },

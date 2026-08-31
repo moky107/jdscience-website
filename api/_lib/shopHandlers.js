@@ -23,7 +23,16 @@ import {
   signedShopAssetUrl,
   slugifyProductTitle,
   toPublicProduct,
+  toAdminProduct,
+  applyShopProductUpdate,
+  persistShopProductRow,
+  checkoutRejectionForProduct,
+  EXTERNAL_CHECKOUT_ERROR,
+  deleteObsoleteSeededUnit1Products,
+  correctSpecialisedCellsClassification,
 } from './shop.js';
+import { countMissingUnit1Products, ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
+import { copyResourceToShop, copyResourcesToShopBulk } from './copyResourceToShop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
 
@@ -167,6 +176,27 @@ export async function handleShopPublicRequest(req, res) {
     return res.status(500).json({ error: 'Server not configured for shop.' });
   }
   const supabase = createClient(config.supabaseUrl, config.serviceRoleKey);
+  let obsoleteSeedCleanup = null;
+  let specialisedCellsFix = null;
+  let unit1Ensure = null;
+  if (kind === 'shop-products') {
+    obsoleteSeedCleanup = await deleteObsoleteSeededUnit1Products(supabase);
+    specialisedCellsFix = await correctSpecialisedCellsClassification(supabase);
+    let missingUnit1 = 0;
+    try {
+      missingUnit1 = await countMissingUnit1Products(supabase);
+    } catch {
+      missingUnit1 = 20;
+    }
+    const wantsEnsure = req.query?.ensure_unit1 === '1' || req.query?.ensure_unit1 === 'true' || missingUnit1 > 0;
+    if (wantsEnsure) {
+      try {
+        unit1Ensure = await ensureMissingUnit1ShopProducts(supabase, { maxCreate: 10 });
+      } catch (err) {
+        unit1Ensure = { ok: false, error: safeShopErrorMessage(err) };
+      }
+    }
+  }
 
   if (kind === 'shop-order') {
     if (req.method !== 'GET') {
@@ -265,6 +295,12 @@ export async function handleShopPublicRequest(req, res) {
           ...diagnostics,
           productsReturned: listed.products.length,
           listError: listed.ok ? null : safeShopErrorMessage(listed.error),
+          obsoleteSeedCleanup: obsoleteSeedCleanup
+            ? {
+                deletedIds: obsoleteSeedCleanup.deletedIds || [],
+                error: obsoleteSeedCleanup.error ? safeShopErrorMessage(obsoleteSeedCleanup.error) : null,
+              }
+            : null,
         },
       }, { check: true });
     }
@@ -324,9 +360,22 @@ export async function handleShopPublicRequest(req, res) {
 
     const filtered = (result.data || []).filter((product) => matchesShopSearch(product, search));
     const withAssets = await attachProductAssetUrlsToMany(supabase, filtered);
+    const extra = {};
+    if (unit1Ensure) {
+      extra.unit1Ensure = {
+        ok: unit1Ensure.ok !== false,
+        created: unit1Ensure.created || 0,
+        updated: unit1Ensure.updated || 0,
+        skipped: unit1Ensure.skipped || 0,
+        reason: unit1Ensure.reason || null,
+        error: unit1Ensure.error || null,
+      };
+    }
+    if (specialisedCellsFix?.updated) extra.specialisedCellsFixed = true;
     return shopProductsResponse(res, {
       products: withAssets.map(toPublicProduct),
       setupRequired: false,
+      ...extra,
     });
   } catch (err) {
     logShopProductsError('unexpected', err);
@@ -353,7 +402,16 @@ export function wantsShopAdminRequest(req, body) {
   const url = String(req.url || '');
   const action = safeTrim(body?.action, 30);
   return scope === 'shop' || scope === 'shop-orders' || url.includes('/api/admin-shop')
-    || ['shop-list', 'shop-create', 'shop-update', 'shop-delete', 'shop-upload', 'shop-orders'].includes(action);
+    || [
+      'shop-list',
+      'shop-create',
+      'shop-update',
+      'shop-delete',
+      'shop-upload',
+      'shop-orders',
+      'shop-copy-from-resource',
+      'shop-copy-from-resources',
+    ].includes(action);
 }
 
 export async function handleShopAdminRequest(req, res, body, supabase) {
@@ -379,10 +437,13 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       base64: body.base64,
     });
     if (!upload.ok) return res.status(400).json({ error: upload.error });
-    return res.status(200).json({ ok: true, path: upload.path });
+    const url = await signedShopAssetUrl(supabase, upload.path, 3600);
+    return res.status(200).json({ ok: true, path: upload.path, url });
   }
 
   if (action === 'shop-list' || action === 'list') {
+    await deleteObsoleteSeededUnit1Products(supabase);
+    await correctSpecialisedCellsClassification(supabase);
     const { data, error } = await supabase.from('shop_products').select('*').order('sort_order', { ascending: true }).order('created_at', { ascending: false });
     if (error) {
       if (isMissingShopTable(error)) return res.status(200).json({ ok: true, products: [], setupRequired: true });
@@ -391,7 +452,7 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
     const withAssets = await attachProductAssetUrlsToMany(supabase, data || [], { includeDownload: true });
     return res.status(200).json({
       ok: true,
-      products: withAssets.map((product) => toPublicProduct(normalizeShopProductRow(product))),
+      products: withAssets.map((product) => toAdminProduct(product)),
     });
   }
 
@@ -408,29 +469,89 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
       sort_order: normalized.fields.sort_order ?? 0,
       created_at: new Date().toISOString(),
     };
-    const { data, error } = await supabase.from('shop_products').insert([fields]).select('*').single();
+    const { data, error } = await persistShopProductRow(supabase, { mode: 'insert', fields });
     if (error) throw error;
     const withAssets = await attachProductAssetUrls(supabase, data, { includeDownload: true });
-    return res.status(200).json({ ok: true, product: withAssets });
+    return res.status(200).json({ ok: true, product: toAdminProduct(withAssets) });
   }
 
   if (action === 'shop-update' || action === 'update') {
-    const normalized = normalizeProductInput(body.product || body, { partial: true });
-    if (!normalized.ok) return res.status(400).json({ error: normalized.error });
     const id = safeTrim(body.id || body.product?.id, 80);
     if (!id) return res.status(400).json({ error: 'Product ID is required.' });
-    const { data, error } = await supabase.from('shop_products').update(normalized.fields).eq('id', id).select('*').single();
-    if (error) throw error;
+    const { data: existing, error: loadError } = await supabase.from('shop_products').select('*').eq('id', id).maybeSingle();
+    if (loadError) throw loadError;
+    if (!existing) return res.status(404).json({ error: 'Product not found.' });
+    const incoming = body.product || body;
+    const merged = applyShopProductUpdate(existing, incoming, {
+      clear_image: Boolean(incoming.clear_image || body.clear_image),
+      clear_preview: Boolean(incoming.clear_preview || body.clear_preview),
+      clear_download: Boolean(incoming.clear_download || body.clear_download),
+    });
+    if (!merged.ok) return res.status(400).json({ error: merged.error });
+    if (merged.slugChanged) {
+      const { data: clash, error: clashError } = await supabase
+        .from('shop_products')
+        .select('id')
+        .eq('slug', merged.fields.slug)
+        .neq('id', id)
+        .maybeSingle();
+      if (clashError) throw clashError;
+      if (clash?.id) return res.status(400).json({ error: 'That slug is already used by another product.' });
+    }
+    const { data, error } = await persistShopProductRow(supabase, { mode: 'update', id, fields: merged.fields });
+    if (error) {
+      if (/duplicate key|unique/i.test(error.message || '')) {
+        return res.status(400).json({ error: 'That slug is already used by another product.' });
+      }
+      throw error;
+    }
     const withAssets = await attachProductAssetUrls(supabase, data, { includeDownload: true });
-    return res.status(200).json({ ok: true, product: withAssets });
+    return res.status(200).json({ ok: true, product: toAdminProduct(withAssets) });
   }
 
   if (action === 'shop-delete' || action === 'delete') {
     const id = safeTrim(body.id, 80);
     if (!id) return res.status(400).json({ error: 'Product ID is required.' });
+    const { data: existing, error: loadError } = await supabase.from('shop_products').select('id, title').eq('id', id).maybeSingle();
+    if (loadError) throw loadError;
+    if (!existing) return res.status(404).json({ error: 'Product not found.' });
     const { error } = await supabase.from('shop_products').delete().eq('id', id);
     if (error) throw error;
-    return res.status(200).json({ ok: true });
+    const { data: stillThere, error: confirmError } = await supabase.from('shop_products').select('id').eq('id', id).maybeSingle();
+    if (confirmError) throw confirmError;
+    if (stillThere?.id) return res.status(500).json({ error: 'Product row was not deleted.' });
+    return res.status(200).json({ ok: true, deletedId: id });
+  }
+
+  if (action === 'shop-copy-from-resource') {
+    const result = await copyResourceToShop(supabase, {
+      resourceId: body.resource_id ?? body.resourceId ?? body.id,
+      price_pence: body.price_pence ?? body.pricePence,
+      product_type: body.product_type,
+      publish: body.publish !== false && body.is_published !== false,
+    });
+    if (!result.ok && !result.skipped) {
+      return res.status(result.status || 400).json({ error: result.error || 'Copy to Shop failed.' });
+    }
+    return res.status(200).json(result);
+  }
+
+  if (action === 'shop-copy-from-resources') {
+    const items = Array.isArray(body.items)
+      ? body.items
+      : (Array.isArray(body.resource_ids) ? body.resource_ids.map((resourceId) => ({
+        resource_id: resourceId,
+        price_pence: body.price_pence ?? body.pricePence,
+        product_type: body.product_type,
+      })) : []);
+    const result = await copyResourcesToShopBulk(supabase, items);
+    if (!result.ok && result.failed === items.length) {
+      return res.status(400).json({
+        error: result.error || result.results?.[0]?.error || 'Copy to Shop failed for all selected resources.',
+        ...result,
+      });
+    }
+    return res.status(200).json(result);
   }
 
   return res.status(400).json({ error: 'Unknown shop admin action.' });
@@ -458,6 +579,10 @@ export async function handleShopCheckoutRequest(req, res, body) {
 
   const supabase = createClient(supabaseUrl, serviceRoleKey);
   const products = await loadPublishedProductsByIds(supabase, basketItems.map((item) => item.product_id));
+  const externalItem = products.find((product) => checkoutRejectionForProduct(product));
+  if (externalItem) {
+    return res.status(400).json({ error: EXTERNAL_CHECKOUT_ERROR });
+  }
   const order = buildOrderLineItems(products, basketItems);
   if (!order.ok) return res.status(400).json({ error: order.error });
 
