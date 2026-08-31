@@ -22,9 +22,14 @@ import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
 import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources";
 import { OCR_SCIENCE_MATHS_RESOURCES } from "./ocrScienceMathsResources";
 import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsResources";
+import { EDUQAS_GCSE_MATHEMATICS_RESOURCES } from "./eduqasGcseMathematicsResources";
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
+import {
+  BTEC_APPLIED_SCIENCE_RESOURCES,
+  BTEC_APPLIED_SCIENCE_TOPICS,
+} from "./btecAppliedScienceResources";
 import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
@@ -111,9 +116,11 @@ const STATIC_RESOURCE_ITEMS = [
   ...EDEXCEL_SCIENCE_MATHS_RESOURCES,
   ...OCR_SCIENCE_MATHS_RESOURCES,
   ...EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES,
+  ...EDUQAS_GCSE_MATHEMATICS_RESOURCES,
   ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
+  ...BTEC_APPLIED_SCIENCE_RESOURCES,
   ...ELEVEN_PLUS_RESOURCES,
 ];
 
@@ -246,6 +253,8 @@ function buildStaticResourceItems() {
     skill_area: resource.skill_area || null,
     description: resource.description || null,
     section: resource.section || null,
+    topic_slug: resource.topic_slug || null,
+    source_attribution: resource.source_attribution || null,
   }));
 }
 
@@ -845,6 +854,77 @@ function isElevenPlusOriginal(item) {
   return String(item?.file_url || "").includes("/resources/11-plus/");
 }
 
+function isBtecAppliedScienceOriginal(item) {
+  return String(item?.file_url || "").includes("/resources/btec-level-3/");
+}
+
+function BtecAppliedScienceTopicCard({ topic, resources, isMobile }) {
+  const worksheet = resources.find(
+    (item) => item.topic_slug === topic.slug && slugify(item.resource_category) === "worksheets",
+  );
+  const answerSheet = resources.find(
+    (item) => item.topic_slug === topic.slug && slugify(item.resource_category) === "mark-schemes",
+  );
+  const shopHref = pathForPage("shop-product", { shopSlug: topic.shopSlug });
+  const btnStyle = {
+    display: "inline-block",
+    textAlign: "center",
+    padding: "12px 16px",
+    minHeight: 44,
+    borderRadius: 10,
+    fontWeight: 800,
+    textDecoration: "none",
+    fontSize: 14,
+  };
+
+  return (
+    <article style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: isMobile ? 16 : 18, boxShadow: "0 4px 14px rgba(15,23,42,.06)", display: "flex", flexDirection: "column", gap: 10 }}>
+      <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>Unit 1 · Applied Science</div>
+      <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{topic.title}</h3>
+      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: "auto" }}>
+        {worksheet ? (
+          <a href={resourceOpenHref(worksheet)} target="_blank" rel="noreferrer" style={{ ...btnStyle, background: TEAL, color: "#fff" }}>
+            Worksheet PDF
+          </a>
+        ) : (
+          <span style={{ ...btnStyle, background: "#f1f5f9", color: "#94a3b8", cursor: "default" }}>Worksheet PDF — coming soon</span>
+        )}
+        {answerSheet ? (
+          <a href={resourceOpenHref(answerSheet)} target="_blank" rel="noreferrer" style={{ ...btnStyle, background: "#ecfeff", color: TEAL_DARK, border: `1px solid ${TEAL}` }}>
+            Answer Sheet PDF
+          </a>
+        ) : (
+          <span style={{ ...btnStyle, background: "#f1f5f9", color: "#94a3b8", cursor: "default" }}>Answer Sheet PDF — coming soon</span>
+        )}
+        <a href={shopHref} style={{ ...btnStyle, background: TEAL_DARK, color: "#fff" }}>
+          Buy PowerPoint · £5
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function BtecAppliedScienceLibrary({ resources, isMobile }) {
+  const items = resources.filter(isBtecAppliedScienceOriginal);
+  if (items.length === 0 && BTEC_APPLIED_SCIENCE_TOPICS.length === 0) return null;
+
+  return (
+    <div style={{ marginBottom: 28 }}>
+      <div style={{ marginBottom: 14 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>JDScience originals</div>
+        <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.5 }}>
+          Free worksheets and answer sheets for BTEC Level 3 Applied Science Unit 1. Teaching PowerPoints are available as paid digital downloads in the shop.
+        </p>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
+        {BTEC_APPLIED_SCIENCE_TOPICS.map((topic) => (
+          <BtecAppliedScienceTopicCard key={topic.slug} topic={topic} resources={items} isMobile={isMobile} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function ElevenPlusCard({ item, isMobile }) {
   const href = resourceOpenHref(item);
   return (
@@ -929,6 +1009,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   const itemsFor = (board) =>
     resources.filter((r) => {
       if (isElevenPlusOriginal(r)) return false;
+      if (isBtecAppliedScienceOriginal(r)) return false;
       const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
       if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
         return false;
@@ -985,6 +1066,9 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
   };
 
   function renderResourceRow(item) {
+    const externalLabel = item.source_attribution || (
+      /^https?:\/\//i.test(String(item.file_url || "")) ? "External link" : null
+    );
     const copyable = isAdmin && isCopyableTeachingResource(item);
     const selected = selectedResourceIds.has(String(item.id));
     return (
@@ -999,8 +1083,9 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
             />
           </label>
         )}
-        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle}>
+        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle} title={item.description || externalLabel || item.title}>
           {activeRes === "Videos" ? "▶️" : "📄"} {item.title}
+          {externalLabel ? <span style={{ display: "block", fontSize: 12, color: "#64748b", fontWeight: 600, marginTop: 4 }}>↗ {externalLabel}</span> : null}
         </a>
         {copyable && (
           <button
@@ -1098,6 +1183,10 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
 
         {activeLevel === "11+" && (
           <ElevenPlusLibrary resources={resources} activeSubject={activeSubject} isMobile={isMobile} />
+        )}
+
+        {activeLevel === "BTEC" && slugify(activeSubject) === slugify("Applied Science") && (
+          <BtecAppliedScienceLibrary resources={resources} isMobile={isMobile} />
         )}
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>{activeLevel === "11+" ? "School Type" : "Exam Board"}</div>
