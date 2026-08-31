@@ -5,7 +5,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
-import { FEATURED_ROTATION_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
+import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
@@ -1885,12 +1885,13 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
   }, [rotatableTutors.length]);
 
   useEffect(() => {
+    // 5 minutes between automatic tutor slides
     if (prefersReducedMotion || !canRotate || paused) return undefined;
     const timer = window.setInterval(() => {
       setSlideDir(1);
       setOffset((current) => current + 1);
       setAnimKey((value) => value + 1);
-    }, FEATURED_ROTATION_MS);
+    }, ROTATION_INTERVAL_MS);
     return () => window.clearInterval(timer);
   }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
 

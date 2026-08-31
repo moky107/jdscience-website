@@ -1,4 +1,7 @@
-export const FEATURED_ROTATION_MS = 6000;
+// 5 minutes
+export const ROTATION_INTERVAL_MS = 300000;
+/** Alias used by the homepage tutor carousel. */
+export const FEATURED_ROTATION_MS = ROTATION_INTERVAL_MS;
 export const FOUNDER_SLUG = "joseph-danso";
 
 const HIDDEN_STATUSES = new Set(["pending", "rejected", "draft", "suspended"]);

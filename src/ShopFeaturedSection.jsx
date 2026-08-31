@@ -1,7 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { shopProductKindLabel, shopProductTypeLabel } from "./shopConstants";
-import { externalButtonLabel, isExternalProduct, productCardImageHeight, productShowsPrice, retailerName, retailerPriceHint } from "./shopProductHelpers";
+import {
+  externalButtonLabel,
+  isExternalProduct,
+  productCardImageHeight,
+  productShowsPrice,
+  retailerName,
+  retailerPriceHint,
+} from "./shopProductHelpers";
+import {
+  ROTATION_INTERVAL_MS,
+  shopCarouselPageCount,
+  shopCarouselPageIndex,
+  shopProductsForPage,
+  shopSlotCount,
+  shouldRotateShopProducts,
+  sortShopProductsForHomepage,
+} from "./shopCarousel";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -39,6 +55,23 @@ function useViewportWidth() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
   return width;
+}
+
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined" || !window.matchMedia) return undefined;
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const update = () => setPrefersReducedMotion(media.matches);
+    update();
+    if (media.addEventListener) media.addEventListener("change", update);
+    else media.addListener(update);
+    return () => {
+      if (media.removeEventListener) media.removeEventListener("change", update);
+      else media.removeListener(update);
+    };
+  }, []);
+  return prefersReducedMotion;
 }
 
 export { productCardImageHeight } from "./shopProductHelpers";
@@ -198,17 +231,39 @@ export function ProductCard({ product, onView, onAdd, compact = false }) {
 export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddToBasket }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
   const viewportWidth = useViewportWidth();
+  const prefersReducedMotion = usePrefersReducedMotion();
   const isMobile = viewportWidth < 768;
+  const isTablet = viewportWidth >= 768 && viewportWidth < 1024;
+  const slots = shopSlotCount({ isMobile, isTablet });
+  const pageCount = shopCarouselPageCount(products.length, slots);
+  const canRotate = shouldRotateShopProducts(products, slots);
+  const activePage = shopCarouselPageIndex(page, pageCount || 1);
+  const visible = shopProductsForPage(products, slots, activePage);
+  const gridColumns = isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(4, minmax(0, 1fr))");
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       setLoading(true);
       try {
-        const resp = await fetch("/api/shop-products?featured=1");
-        const data = await resp.json().catch(() => ({}));
-        if (!cancelled) setProducts((data.products || []).slice(0, 3));
+        // Prefer featured first; if fewer than a full desktop row, fill with other published products.
+        const [featuredResp, allResp] = await Promise.all([
+          fetch("/api/shop-products?featured=1"),
+          fetch("/api/shop-products"),
+        ]);
+        const featuredData = await featuredResp.json().catch(() => ({}));
+        const allData = await allResp.json().catch(() => ({}));
+        const featured = Array.isArray(featuredData.products) ? featuredData.products : [];
+        const published = Array.isArray(allData.products) ? allData.products : [];
+        const merged = sortShopProductsForHomepage([...featured, ...published]);
+        if (!cancelled) {
+          setProducts(merged);
+          setPage(0);
+        }
       } catch {
         if (!cancelled) setProducts([]);
       } finally {
@@ -218,6 +273,36 @@ export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddT
     return () => { cancelled = true; };
   }, []);
 
+  useEffect(() => {
+    setPage(0);
+    setAnimKey((value) => value + 1);
+  }, [slots, products.length]);
+
+  useEffect(() => {
+    // 5 minutes between automatic page advances
+    if (prefersReducedMotion || !canRotate || paused) return undefined;
+    const timer = window.setInterval(() => {
+      setPage((current) => current + 1);
+      setAnimKey((value) => value + 1);
+    }, ROTATION_INTERVAL_MS);
+    return () => window.clearInterval(timer);
+  }, [prefersReducedMotion, canRotate, paused, pageCount]);
+
+  const goPrev = () => {
+    setPaused(true);
+    setPage((current) => current - 1);
+    setAnimKey((value) => value + 1);
+  };
+  const goNext = () => {
+    setPaused(true);
+    setPage((current) => current + 1);
+    setAnimKey((value) => value + 1);
+  };
+  const goTo = (index) => {
+    setPaused(true);
+    setPage(index);
+    setAnimKey((value) => value + 1);
+  };
   return (
     <section style={{ padding: isMobile ? "40px 16px" : "48px 20px", background: "#ffffff" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -228,9 +313,17 @@ export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddT
               Explore high-quality revision materials, teaching resources and JDScience products.
             </p>
           </div>
-          <button type="button" onClick={onVisitShop} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
-            Visit the Shop
-          </button>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+            {canRotate && (
+              <>
+                <button type="button" aria-label="Show previous shop products" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
+                <button type="button" aria-label="Show next shop products" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
+              </>
+            )}
+            <button type="button" onClick={onVisitShop} style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+              Visit the Shop
+            </button>
+          </div>
         </div>
         {loading ? (
           <div style={{ color: "#64748b" }}>Loading featured products…</div>
@@ -239,16 +332,67 @@ export default function ShopFeaturedSection({ onVisitShop, onViewProduct, onAddT
             Featured shop products will appear here once published by the administrator.
           </div>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fill, minmax(260px, 320px))", gap: 16, justifyContent: "start" }}>
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                compact
-                onView={onViewProduct}
-                onAdd={onAddToBasket}
-              />
-            ))}
+          <div
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Featured shop products"
+            aria-live="polite"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+            onFocusCapture={() => setPaused(true)}
+            onBlurCapture={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false);
+            }}
+          >
+            <div
+              key={`shop-page-${activePage}-${animKey}`}
+              style={{
+                display: "grid",
+                gridTemplateColumns: gridColumns,
+                gap: 16,
+                alignContent: "start",
+                minHeight: isMobile ? 360 : 420,
+                transition: prefersReducedMotion ? "none" : "opacity .45s ease, transform .45s ease",
+                opacity: 1,
+                transform: "translateX(0)",
+                animation: prefersReducedMotion ? "none" : "shopCarouselIn .45s ease",
+              }}
+            >
+              {visible.map((product) => (
+                <ProductCard
+                  key={product.id || product.slug}
+                  product={product}
+                  compact
+                  onView={onViewProduct}
+                  onAdd={onAddToBasket}
+                />
+              ))}
+            </div>
+            {canRotate && pageCount > 1 && (
+              <div role="tablist" aria-label="Shop product carousel pages" style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
+                {Array.from({ length: pageCount }, (_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    role="tab"
+                    aria-label={`Show shop products page ${index + 1} of ${pageCount}`}
+                    aria-selected={activePage === index}
+                    onClick={() => goTo(index)}
+                    onFocus={() => setPaused(true)}
+                    style={{
+                      width: activePage === index ? 22 : 12,
+                      height: 12,
+                      borderRadius: 999,
+                      border: "none",
+                      background: activePage === index ? TEAL : "#cbd5e1",
+                      cursor: "pointer",
+                      padding: 0,
+                      transition: prefersReducedMotion ? "none" : "width .2s ease, background-color .2s ease",
+                    }}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

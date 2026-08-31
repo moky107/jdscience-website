@@ -59,16 +59,48 @@ import {
 } from "../src/shopProductHelpers.js";
 import {
   featuredTutorWindow,
+  FEATURED_ROTATION_MS,
   homepageTutorFallback,
   isFounderTutor,
+  ROTATION_INTERVAL_MS,
   shouldRotateTutorProfiles,
   tutorCarouselPageCount,
   tutorCarouselPageIndex,
   tutorSlotCount,
   tutorsForHomepage,
 } from "../src/tutorRotation.js";
+import {
+  ROTATION_INTERVAL_MS as SHOP_ROTATION_INTERVAL_MS,
+  shopCarouselPageCount,
+  shopCarouselPageIndex,
+  shopProductsForPage,
+  shopSlotCount,
+  shouldRotateShopProducts,
+  sortShopProductsForHomepage,
+} from "../src/shopCarousel.js";
 import { pageFromPathname, pathForPage, shopSlugFromPathname } from "../src/seo.js";
 import { productCardImageHeight, isValidProductImageFile } from "../src/shopProductHelpers.js";
+
+assert.equal(SHOP_ROTATION_INTERVAL_MS, 300000);
+assert.equal(shopSlotCount({ isMobile: true }), 1);
+assert.equal(shopSlotCount({ isMobile: false, isTablet: true }), 2);
+assert.equal(shopSlotCount({ isMobile: false, isTablet: false }), 4);
+const shopSample = [
+  { id: "1", title: "B", featured: false, sort_order: 2 },
+  { id: "2", title: "A", is_featured: true, sort_order: 1 },
+  { id: "3", title: "C", featured: true, sort_order: 3 },
+  { id: "4", title: "D", sort_order: 4 },
+  { id: "5", title: "E", sort_order: 5 },
+];
+assert.deepEqual(sortShopProductsForHomepage(shopSample).map((p) => p.id), ["2", "3", "1", "4", "5"]);
+assert.equal(shopCarouselPageCount(5, 4), 2);
+assert.equal(shopCarouselPageCount(4, 4), 1);
+assert.equal(shopCarouselPageCount(1, 4), 1);
+assert.equal(shopCarouselPageIndex(2, 2), 0);
+assert.deepEqual(shopProductsForPage(sortShopProductsForHomepage(shopSample), 4, 0).map((p) => p.id), ["2", "3", "1", "4"]);
+assert.deepEqual(shopProductsForPage(sortShopProductsForHomepage(shopSample), 4, 1).map((p) => p.id), ["5"]);
+assert.equal(shouldRotateShopProducts(shopSample, 4), true);
+assert.equal(shouldRotateShopProducts(shopSample.slice(0, 3), 4), false);
 
 assert.equal(pageFromPathname("/shop"), "shop");
 assert.equal(pageFromPathname("/shop/"), "shop");
@@ -362,6 +394,9 @@ assert.equal(
 assert.deepEqual(homepageTutorFallback(tutors).map((item) => item.public_slug), ["joseph-danso", "joseph-danso-4qy75y", "amina-khan", "sam-reed", "lee-okonkwo"]);
 assert.deepEqual(homepageTutorFallback([{ public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" }]).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 const homepage = tutorsForHomepage(tutors);
+assert.equal(FEATURED_ROTATION_MS, 300000);
+assert.equal(ROTATION_INTERVAL_MS, 300000);
+assert.equal(FEATURED_ROTATION_MS, ROTATION_INTERVAL_MS);
 assert.equal(tutorSlotCount({ isMobile: true }), 1);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: true }), 2);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: false }), 3);
