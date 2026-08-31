@@ -54,7 +54,8 @@ const migration = fs.readFileSync(
   path.join(root, "supabase/migrations/20260831_gcse_exam_walkthrough_shop.sql"),
   "utf8",
 );
-assert.match(migration, /gcse-chemistry-exam-walkthrough-pack/);
+assert.match(migration, /gcse-chemistry-exam-walkthrough-cover\.png/);
+assert.match(migration, /previews\/gcse-chemistry-exam-walkthrough-preview\.pdf/);
 assert.match(migration, /exam_walkthrough/);
 assert.match(migration, /ARRAY\[.*\]::text\[\]/);
 
