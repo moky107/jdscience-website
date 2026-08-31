@@ -20,6 +20,7 @@ export const SHOP_PRODUCT_TYPES = [
   { value: "revision_notes", label: "Revision Notes" },
   { value: "answer_sheet", label: "Answer Sheet" },
   { value: "practice_questions", label: "Practice Questions & Mark Schemes" },
+  { value: "exam_walkthrough", label: "Exam Walkthrough" },
   { value: "study_pack", label: "Study Pack" },
   { value: "book", label: "Book" },
   { value: "physical_book", label: "Physical Book" },
