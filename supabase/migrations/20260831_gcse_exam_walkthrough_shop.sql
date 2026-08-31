@@ -16,6 +16,8 @@ insert into public.shop_products (
   is_published,
   published,
   download_path,
+  image_path,
+  preview_path,
   keywords,
   sort_order,
   is_featured
@@ -34,6 +36,8 @@ insert into public.shop_products (
     true,
     true,
     'downloads/gcse-chemistry-exam-walkthrough-pack.pdf',
+    'images/gcse-chemistry-exam-walkthrough-cover.png',
+    'previews/gcse-chemistry-exam-walkthrough-preview.pdf',
     ARRAY['GCSE', 'IGCSE', 'Chemistry', 'Exam Walkthrough', 'Revision', 'Mark scheme']::text[],
     120,
     true
@@ -52,6 +56,8 @@ insert into public.shop_products (
     true,
     true,
     'downloads/gcse-biology-exam-walkthrough-pack.pdf',
+    'images/gcse-biology-exam-walkthrough-cover.png',
+    'previews/gcse-biology-exam-walkthrough-preview.pdf',
     ARRAY['GCSE', 'IGCSE', 'Biology', 'Exam Walkthrough', 'Revision', 'Mark scheme']::text[],
     121,
     true
@@ -70,6 +76,8 @@ insert into public.shop_products (
     true,
     true,
     'downloads/gcse-physics-exam-walkthrough-pack.pdf',
+    'images/gcse-physics-exam-walkthrough-cover.png',
+    'previews/gcse-physics-exam-walkthrough-preview.pdf',
     ARRAY['GCSE', 'IGCSE', 'Physics', 'Exam Walkthrough', 'Revision', 'Mark scheme']::text[],
     122,
     true
@@ -88,6 +96,8 @@ insert into public.shop_products (
     true,
     true,
     'downloads/gcse-science-exam-walkthrough-bundle.zip',
+    'images/gcse-science-exam-walkthrough-bundle-cover.png',
+    'images/gcse-science-exam-walkthrough-bundle-cover.png',
     ARRAY['GCSE', 'IGCSE', 'Combined Science', 'Bundle', 'Chemistry', 'Biology', 'Physics', 'Exam Walkthrough']::text[],
     123,
     true
@@ -105,6 +115,8 @@ on conflict (slug) do update set
   is_published = excluded.is_published,
   published = excluded.published,
   download_path = coalesce(public.shop_products.download_path, excluded.download_path),
+  image_path = coalesce(public.shop_products.image_path, excluded.image_path),
+  preview_path = coalesce(public.shop_products.preview_path, excluded.preview_path),
   keywords = excluded.keywords,
   sort_order = excluded.sort_order,
   is_featured = excluded.is_featured,
