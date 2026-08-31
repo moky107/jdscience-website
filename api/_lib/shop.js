@@ -27,6 +27,7 @@ export const SHOP_PRODUCT_TYPES = new Set([
   'revision_notes',
   'answer_sheet',
   'practice_questions',
+  'exam_walkthrough',
   'study_pack',
   'book',
   'physical_book',
