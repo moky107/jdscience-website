@@ -23,6 +23,7 @@ import { EDEXCEL_SCIENCE_MATHS_RESOURCES } from "./edexcelScienceMathsResources"
 import { OCR_SCIENCE_MATHS_RESOURCES } from "./ocrScienceMathsResources";
 import { EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES } from "./eduqasWjecScienceMathsResources";
 import { EDUQAS_GCSE_MATHEMATICS_RESOURCES } from "./eduqasGcseMathematicsResources";
+import { EDUQAS_GCSE_MATHEMATICS_WALKTHROUGHS } from "./eduqasGcseMathematicsWalkthroughs";
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
@@ -117,6 +118,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...OCR_SCIENCE_MATHS_RESOURCES,
   ...EDUQAS_WJEC_SCIENCE_MATHS_RESOURCES,
   ...EDUQAS_GCSE_MATHEMATICS_RESOURCES,
+  ...EDUQAS_GCSE_MATHEMATICS_WALKTHROUGHS,
   ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
@@ -1208,8 +1210,10 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
               }
               return (
                 <a key={video.id} href={video.file_url} target="_blank" rel="noreferrer" className="folder-file"
-                  style={{ display: "block", textAlign: "left", padding: isMobile ? "14px 16px" : "12px 14px", borderRadius: 12, border: "1px solid #e2e8f0", background: "#fff", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}>
+                  style={{ display: "block", textAlign: "left", padding: isMobile ? "14px 16px" : "12px 14px", borderRadius: 12, border: "1px solid #e2e8f0", background: "#fff", fontSize: isMobile ? 16 : 14, color: "#0f172a", textDecoration: "none", boxShadow: "0 4px 14px rgba(0,0,0,.06)" }}
+                  title={video.description || video.title}>
                   ▶️ {video.title}
+                  {video.source_attribution ? <span style={{ display: "block", fontSize: 12, color: "#64748b", fontWeight: 600, marginTop: 4 }}>↗ {video.source_attribution}</span> : null}
                 </a>
               );
             })}
