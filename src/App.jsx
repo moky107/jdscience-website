@@ -27,6 +27,7 @@ import { EDUQAS_GCSE_MATHEMATICS_WALKTHROUGHS } from "./eduqasGcseMathematicsWal
 import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
+import { PEARSON_BTEC_HSC_RESOURCES } from "./pearsonBtecHealthSocialCareResources";
 import {
   BTEC_APPLIED_SCIENCE_RESOURCES,
   BTEC_APPLIED_SCIENCE_TOPICS,
@@ -124,6 +125,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...JD_SCIENCE_WORKSHEETS,
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
+  ...PEARSON_BTEC_HSC_RESOURCES,
   ...BTEC_APPLIED_SCIENCE_RESOURCES,
   ...ELEVEN_PLUS_RESOURCES,
 ];

@@ -127,6 +127,7 @@ function writeSitemap() {
     { loc: `${SITE}/resources/a-level/physics/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/resources/a-level/biology/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/resources/btec/applied-science/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
+    { loc: `${SITE}/resources/btec/health-and-social-care/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
     { loc: `${SITE}/resources/t-level/science/`, lastmod: today, changefreq: "weekly", priority: "0.9" },
   ];
 

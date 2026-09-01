@@ -9,6 +9,7 @@ import { EDUQAS_GCSE_MATHEMATICS_RESOURCES } from "../src/eduqasGcseMathematicsR
 import { NCFE_TLEVEL_RESOURCES } from "../src/ncfeTLevelResources.js";
 import { OCR_SCIENCE_MATHS_RESOURCES } from "../src/ocrScienceMathsResources.js";
 import { PEARSON_BTEC_RESOURCES } from "../src/pearsonBtecResources.js";
+import { PEARSON_BTEC_HSC_RESOURCES } from "../src/pearsonBtecHealthSocialCareResources.js";
 
 const EXAM_CATEGORIES = new Set(["Past Questions", "Mark Schemes", "Examiner Reports"]);
 
@@ -22,6 +23,7 @@ const catalogues = [
   ["Eduqas GCSE Mathematics", EDUQAS_GCSE_MATHEMATICS_RESOURCES],
   ["NCFE T-Level", NCFE_TLEVEL_RESOURCES],
   ["Pearson BTEC", PEARSON_BTEC_RESOURCES],
+  ["Pearson BTEC Health and Social Care", PEARSON_BTEC_HSC_RESOURCES],
 ];
 
 let examItems = 0;
