@@ -1,6 +1,9 @@
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import {
+  clipStripeMetadata,
+  parseShopItemsMetadata,
+  stripeMetadataItemFields,
   PUBLIC_PRODUCT_SELECT,
   SHOP_STORAGE_BUCKET,
   attachProductAssetUrls,
@@ -215,7 +218,7 @@ export async function handleShopPublicRequest(req, res) {
       if (error && !isMissingShopTable(error)) return res.status(500).json({ error: error.message || 'Failed to load order.' });
       let items = order?.items;
       if (!Array.isArray(items) || !items.length) {
-        try { items = JSON.parse(session.metadata?.items_json || '[]'); } catch { items = []; }
+        try { items = parseShopItemsMetadata(session.metadata); } catch { items = []; }
       }
       return res.status(200).json({
         ok: true,
@@ -256,7 +259,9 @@ export async function handleShopPublicRequest(req, res) {
       const sessionEmail = String(session.customer_email || session.metadata?.customer_email || '').toLowerCase();
       if (sessionEmail !== customerEmail) return res.status(403).json({ error: 'This download link does not match your email address.' });
       const { data: order } = await supabase.from('shop_orders').select('items').eq('stripe_session_id', sessionId).maybeSingle();
-      const items = Array.isArray(order?.items) ? order.items : JSON.parse(session.metadata?.items_json || '[]');
+      const items = Array.isArray(order?.items) && order.items.length
+        ? order.items
+        : parseShopItemsMetadata(session.metadata);
       const line = items.find((item) => String(item.product_id) === String(productId));
       if (!line || !line.is_digital) return res.status(404).json({ error: 'Digital download not found for this order.' });
       const { data: product } = await supabase.from('shop_products').select('id, title, download_path, product_kind').eq('id', productId).maybeSingle();
@@ -621,12 +626,12 @@ export async function handleShopCheckoutRequest(req, res, body) {
     mode: 'payment',
     success_url: `${baseUrl}/shop?shop_success=true&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${baseUrl}/shop?shop_canceled=true`,
-    metadata: {
+    metadata: clipStripeMetadata({
       order_type: 'shop',
       customer_name: customerName,
       customer_email: customerEmail,
       shipping_phone: shippingPhone || '',
-      items_json: JSON.stringify(order.lines).slice(0, 4500),
+      ...stripeMetadataItemFields(order.lines),
       subtotal_pence: String(order.subtotal_pence),
       total_pence: String(order.total_pence),
       has_physical: order.has_physical ? 'true' : 'false',
@@ -639,7 +644,7 @@ export async function handleShopCheckoutRequest(req, res, body) {
       shipping_country: shipping.shipping_country || '',
       terms_accepted: 'true',
       terms_version: String(body.terms_version || TERMS_VERSION).slice(0, 20),
-    },
+    }),
   };
   if (order.has_physical) sessionConfig.shipping_address_collection = { allowed_countries: ['GB'] };
 

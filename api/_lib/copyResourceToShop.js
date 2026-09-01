@@ -1,10 +1,14 @@
 import {
   classifyResourceProductType,
   cleanShopTitle,
+  findDuplicateShopProduct,
   isCopyableTeachingResource,
+  planResourceShopCopy,
   productTypeLabelForCopy,
   resourceFileExtension,
+  shopCopySkipReason,
 } from "../../src/resourceShopClassify.js";
+import { resolveCopyPricePence } from "../../src/shopStandardPrices.js";
 import {
   persistShopProductRow,
   SHOP_PRODUCT_TYPES,
@@ -29,9 +33,12 @@ const CONTENT_TYPES = {
 export {
   classifyResourceProductType,
   cleanShopTitle,
+  findDuplicateShopProduct,
   isCopyableTeachingResource,
+  planResourceShopCopy,
   productTypeLabelForCopy,
   resourceFileExtension,
+  shopCopySkipReason,
 };
 
 export function shopLevelFromResource(level) {
@@ -52,12 +59,9 @@ export function buildCopyProductFields(resource, { price_pence, product_type, do
   if (!SHOP_PRODUCT_TYPES.has(type)) {
     return { ok: false, error: `Unsupported product type: ${type}` };
   }
-  if (price_pence === "" || price_pence == null) {
-    return { ok: false, error: "Enter a price before publishing to the Shop." };
-  }
-  const price = Math.round(Number(price_pence));
-  if (!Number.isFinite(price) || price < 0) {
-    return { ok: false, error: "Enter a valid price before publishing to the Shop." };
+  const priced = resolveCopyPricePence(type, price_pence);
+  if (!priced.ok) {
+    return { ok: false, error: priced.error };
   }
 
   const title = cleanShopTitle(resource);
@@ -90,7 +94,7 @@ export function buildCopyProductFields(resource, { price_pence, product_type, do
       title,
       short_description: short || `${typeLabel} from JDScience`,
       description,
-      price_pence: price,
+      price_pence: priced.price_pence,
       sale_price_pence: null,
       product_type: type,
       product_kind: "digital",
@@ -202,10 +206,6 @@ export async function copyResourceToShop(supabase, {
   product_type,
   publish = true,
 }) {
-  if (price_pence === "" || price_pence == null) {
-    return { ok: false, status: 400, error: "Enter a price before publishing to the Shop." };
-  }
-
   const id = Number(resourceId);
   if (!Number.isFinite(id)) {
     return { ok: false, status: 400, error: "A valid resource id is required." };
@@ -219,12 +219,30 @@ export async function copyResourceToShop(supabase, {
   if (loadError) throw loadError;
   if (!resource) return { ok: false, status: 404, error: "Resource not found." };
 
-  if (!isCopyableTeachingResource(resource)) {
+  const skip = shopCopySkipReason(resource);
+  if (skip) {
+    const messages = {
+      third_party_copyright: "This file looks like third-party exam material and cannot be sold in the Shop.",
+      not_original_jdscience: "Only original JDScience teaching files can be copied to the Shop.",
+      exam_material_category: "Past papers, mark schemes and examiner reports cannot be copied to the Shop.",
+      answer_sheet_bundled_with_worksheet: "Answer sheets stay bundled with worksheet packs and are not sold separately.",
+      unsupported_file_type: "Only PowerPoint, PDF and Word teaching files can be copied to the Shop.",
+      unsupported_product_type: "This resource type is not sold in the Shop.",
+      no_approved_price: "Enter a price before publishing to the Shop.",
+      missing_file: "Resource has no downloadable file.",
+    };
     return {
       ok: false,
       status: 400,
-      error: "Only JDScience teaching files (.ppt, .pptx, .pdf, .doc, .docx) outside past papers can be copied to the Shop.",
+      reason: skip,
+      error: messages[skip] || "This resource cannot be copied to the Shop.",
     };
+  }
+
+  const type = product_type || classifyResourceProductType(resource);
+  const priced = resolveCopyPricePence(type, price_pence);
+  if (!priced.ok) {
+    return { ok: false, status: 400, error: priced.error };
   }
 
   const existing = await findShopProductForResource(supabase, id);
@@ -246,6 +264,21 @@ export async function copyResourceToShop(supabase, {
     };
   }
 
+  const { data: shopRows, error: shopListError } = await supabase
+    .from("shop_products")
+    .select("id, title, slug, product_type, source_resource_id");
+  if (shopListError) throw shopListError;
+  const titleDuplicate = findDuplicateShopProduct(shopRows || [], resource, type);
+  if (titleDuplicate?.id) {
+    return {
+      ok: true,
+      skipped: true,
+      reason: "already_in_shop",
+      product: titleDuplicate,
+      error: "A matching Shop product already exists. Duplicate copy blocked.",
+    };
+  }
+
   const downloaded = await downloadResourceBytes(supabase, resource);
   if (!downloaded.ok) return { ok: false, status: 400, error: downloaded.error };
 
@@ -253,8 +286,8 @@ export async function copyResourceToShop(supabase, {
   if (!uploaded.ok) return { ok: false, status: 400, error: uploaded.error };
 
   const built = buildCopyProductFields(resource, {
-    price_pence,
-    product_type: product_type || classifyResourceProductType(resource),
+    price_pence: priced.price_pence,
+    product_type: type,
     download_path: uploaded.path,
     image_path: null,
     preview_path: null,

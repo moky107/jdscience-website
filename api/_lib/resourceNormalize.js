@@ -113,7 +113,7 @@ function isExamMaterialCategory(resource) {
   return EXAM_MATERIAL_CATEGORIES.test(String(resource?.resource_category || ""));
 }
 
-function isOriginalJdScienceFile(resource) {
+export function isOriginalJdScienceFile(resource) {
   const file = `${decodeResourceLabel(resource.file_name || "")} ${decodeResourceLabel(resource.title || "")} ${resource.file_url || ""}`;
   return /jdscience/i.test(file) || String(resource.file_url || "").startsWith("/worksheets/") || String(resource.file_url || resource.file_url_override || "").startsWith("/resources/11-plus/");
 }

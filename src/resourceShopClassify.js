@@ -1,7 +1,15 @@
-import { decodeResourceLabel } from "./resourceNormalize.js";
+import {
+  decodeResourceLabel,
+  hasAwardingBodyUrl,
+  isHostedOfficialExamCopy,
+  isOriginalJdScienceFile,
+  looksLikeOfficialPaper,
+} from "./resourceNormalize.js";
+import { approvedPricePenceForType, titlesLookLikeSameShopProduct } from "./shopStandardPrices.js";
 
 const TEACHING_EXTENSIONS = new Set(["ppt", "pptx", "pdf", "doc", "docx"]);
 const EXCLUDED_CATEGORIES = new Set(["past questions", "mark schemes", "examiner reports"]);
+const COPYABLE_SHOP_TYPES = new Set(["powerpoint", "worksheet", "revision_notes"]);
 
 export function resourceFileExtension(resource) {
   const name = decodeResourceLabel(resource?.file_name || resource?.title || "");
@@ -44,15 +52,27 @@ export function classifyResourceProductType(resource) {
   return "other";
 }
 
-export function isCopyableTeachingResource(resource) {
-  if (!resource || resource.id == null || resource.id === "") return false;
-  if (Number.isNaN(Number(resource.id))) return false;
+export function shopCopySkipReason(resource) {
+  if (!resource || resource.id == null || resource.id === "") return "missing_resource";
+  if (Number.isNaN(Number(resource.id))) return "invalid_id";
+  if (hasAwardingBodyUrl(resource) || looksLikeOfficialPaper(resource) || isHostedOfficialExamCopy(resource)) {
+    return "third_party_copyright";
+  }
+  if (!isOriginalJdScienceFile(resource)) return "not_original_jdscience";
   const category = String(resource.resource_category || "").toLowerCase();
-  if (EXCLUDED_CATEGORIES.has(category)) return false;
+  if (EXCLUDED_CATEGORIES.has(category)) return "exam_material_category";
   const ext = resourceFileExtension(resource);
-  if (!TEACHING_EXTENSIONS.has(ext)) return false;
-  if (!resource.file_url && !resource.storage_path) return false;
-  return true;
+  if (!TEACHING_EXTENSIONS.has(ext)) return "unsupported_file_type";
+  if (!resource.file_url && !resource.storage_path) return "missing_file";
+  const type = classifyResourceProductType(resource);
+  if (type === "answer_sheet") return "answer_sheet_bundled_with_worksheet";
+  if (!COPYABLE_SHOP_TYPES.has(type)) return "unsupported_product_type";
+  if (approvedPricePenceForType(type) == null) return "no_approved_price";
+  return null;
+}
+
+export function isCopyableTeachingResource(resource) {
+  return shopCopySkipReason(resource) == null;
 }
 
 export function cleanShopTitle(resource) {
@@ -69,4 +89,44 @@ export function productTypeLabelForCopy(type) {
   if (type === "answer_sheet") return "Answer Sheet";
   if (type === "revision_notes") return "Revision Notes";
   return type || "Resource";
+}
+
+export function planResourceShopCopy(resource, existingShopProducts = []) {
+  const skip = shopCopySkipReason(resource);
+  const product_type = resource ? classifyResourceProductType(resource) : "other";
+  const title = resource ? cleanShopTitle(resource) : "";
+  if (skip) {
+    return { ok: false, skip, title, product_type, price_pence: null };
+  }
+  const duplicate = findDuplicateShopProduct(existingShopProducts, resource, product_type);
+  if (duplicate) {
+    return {
+      ok: false,
+      skip: "already_in_shop",
+      title,
+      product_type,
+      price_pence: approvedPricePenceForType(product_type),
+      existing_id: duplicate.id || null,
+    };
+  }
+  return {
+    ok: true,
+    skip: null,
+    title,
+    product_type,
+    price_pence: approvedPricePenceForType(product_type),
+  };
+}
+
+export function findDuplicateShopProduct(existingShopProducts, resource, productType) {
+  const list = Array.isArray(existingShopProducts) ? existingShopProducts : [];
+  const id = Number(resource?.id);
+  const type = productType || classifyResourceProductType(resource);
+  const title = cleanShopTitle(resource);
+  return list.find((row) => {
+    if (!row) return false;
+    if (id && Number(row.source_resource_id) === id) return true;
+    if (row.product_type && row.product_type !== type) return false;
+    return titlesLookLikeSameShopProduct(row.title, title);
+  }) || null;
 }
