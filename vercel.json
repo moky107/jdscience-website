@@ -2,7 +2,7 @@
   "functions": {
     "api/education-posts.js": {
       "maxDuration": 60,
-      "includeFiles": "content/lessons/**"
+      "includeFiles": "content/{lessons,shop/btec-hsc-unit2-walkthroughs}/**"
     },
     "api/admin-education-posts.js": {
       "maxDuration": 60

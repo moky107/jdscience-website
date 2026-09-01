@@ -7,6 +7,7 @@ export const SHOP_SUBJECTS = [
   "Maths",
   "English",
   "Applied Science",
+  "Health and Social Care",
   "Mixed",
   "General",
 ];

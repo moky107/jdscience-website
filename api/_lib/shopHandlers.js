@@ -32,6 +32,7 @@ import {
   correctSpecialisedCellsClassification,
 } from './shop.js';
 import { countMissingUnit1Products, ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
+import { countMissingBtecHscUnit2Walkthroughs, ensureMissingBtecHscUnit2Walkthroughs } from './publishBtecHscUnit2Walkthroughs.js';
 import { copyResourceToShop, copyResourcesToShopBulk } from './copyResourceToShop.js';
 import { parseRequestBody, safeTrim } from './tutors.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './requireTerms.js';
@@ -179,6 +180,7 @@ export async function handleShopPublicRequest(req, res) {
   let obsoleteSeedCleanup = null;
   let specialisedCellsFix = null;
   let unit1Ensure = null;
+  let hscUnit2Ensure = null;
   if (kind === 'shop-products') {
     obsoleteSeedCleanup = await deleteObsoleteSeededUnit1Products(supabase);
     specialisedCellsFix = await correctSpecialisedCellsClassification(supabase);
@@ -194,6 +196,20 @@ export async function handleShopPublicRequest(req, res) {
         unit1Ensure = await ensureMissingUnit1ShopProducts(supabase, { maxCreate: 10 });
       } catch (err) {
         unit1Ensure = { ok: false, error: safeShopErrorMessage(err) };
+      }
+    }
+    let missingHscUnit2 = 0;
+    try {
+      missingHscUnit2 = await countMissingBtecHscUnit2Walkthroughs(supabase);
+    } catch {
+      missingHscUnit2 = 9;
+    }
+    const wantsHscUnit2 = req.query?.ensure_hsc_unit2 === '1' || req.query?.ensure_hsc_unit2 === 'true' || missingHscUnit2 === 9;
+    if (wantsHscUnit2) {
+      try {
+        hscUnit2Ensure = await ensureMissingBtecHscUnit2Walkthroughs(supabase, { maxCreate: 9 });
+      } catch (err) {
+        hscUnit2Ensure = { ok: false, error: safeShopErrorMessage(err) };
       }
     }
   }
@@ -369,6 +385,16 @@ export async function handleShopPublicRequest(req, res) {
         skipped: unit1Ensure.skipped || 0,
         reason: unit1Ensure.reason || null,
         error: unit1Ensure.error || null,
+      };
+    }
+    if (hscUnit2Ensure) {
+      extra.hscUnit2Ensure = {
+        ok: hscUnit2Ensure.ok !== false,
+        created: hscUnit2Ensure.created || 0,
+        updated: hscUnit2Ensure.updated || 0,
+        skipped: hscUnit2Ensure.skipped || 0,
+        reason: hscUnit2Ensure.reason || null,
+        error: hscUnit2Ensure.error || null,
       };
     }
     if (specialisedCellsFix?.updated) extra.specialisedCellsFixed = true;

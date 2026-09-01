@@ -29,6 +29,7 @@ const SUBJECT_PLACEHOLDER = {
   Maths: { from: "#2563eb", to: "#1e3a8a", soft: "#eff6ff" },
   English: { from: "#db2777", to: "#9d174d", soft: "#fdf2f8" },
   "Applied Science": { from: "#0d9488", to: "#115e59", soft: "#f0fdfa" },
+  "Health and Social Care": { from: "#0f766e", to: "#134e4a", soft: "#f0fdfa" },
   Mixed: { from: "#64748b", to: "#334155", soft: "#f8fafc" },
   General: { from: "#009688", to: "#004d40", soft: "#ecfeff" },
 };
