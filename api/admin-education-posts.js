@@ -1,5 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 import { handleShopAdminRequest, wantsShopAdminRequest } from './_lib/shopHandlers.js';
+import { handleResourceUploadRequest, wantsResourceUploadRequest } from './_lib/resourceUpload.js';
 import { parseRequestBody, safeTrim } from './_lib/tutors.js';
 
 const CATEGORIES = new Set(['revision-advice', 'exam-tips', 'education-news']);
@@ -51,12 +52,17 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const body = parseRequestBody(req.body) || {};
+
+  if (wantsResourceUploadRequest(req, body)) {
+    return handleResourceUploadRequest(req, res, body);
+  }
+
   const adminPassword = process.env.ADMIN_PASSWORD;
   if (!adminPassword) {
     return res.status(500).json({ error: 'Admin dashboard is not configured yet.' });
   }
 
-  const body = parseRequestBody(req.body) || {};
   const provided = req.headers['x-admin-password'] || body.password;
   if (!provided || !safeEqual(provided, adminPassword)) {
     return res.status(401).json({ error: 'Incorrect password.' });
