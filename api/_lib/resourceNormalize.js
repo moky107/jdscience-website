@@ -143,7 +143,7 @@ export function resourceOpenHref(resource) {
   if (!resource) return "#";
   if (resource.file_type === "video-embed") return resource.file_url;
   if (isHostedOfficialExamCopy(resource)) return "#";
-  if (hasAwardingBodyUrl(resource) && (looksLikeOfficialPaper(resource) || isExamMaterialCategory(resource))) {
+  if (hasAwardingBodyUrl(resource)) {
     return resource.file_url_override || resource.file_url;
   }
   if (resource.storage_path && resource.id != null && !String(resource.id).startsWith("static-")) {

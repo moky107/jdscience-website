@@ -261,6 +261,7 @@ function buildStaticResourceItems() {
     section: resource.section || null,
     topic_slug: resource.topic_slug || null,
     source_attribution: resource.source_attribution || null,
+    file_url_override: resource.file_url_override || null,
   }));
 }
 
@@ -967,6 +968,55 @@ function BtecAppliedScienceTopicCard({ topic, resources, isMobile }) {
   );
 }
 
+function isBtecHealthSocialCarePearson(item) {
+  return (
+    levelKey(item?.level) === "BTEC"
+    && slugify(item?.subject) === "health-and-social-care"
+    && /^https:\/\/qualifications\.pearson\.com\//i.test(item?.file_url_override || item?.file_url || "")
+  );
+}
+
+function PearsonHscOpenCard({ item, isMobile }) {
+  const href = resourceOpenHref(item);
+  const isPdf = /\.pdf$/i.test(item.file_url_override || item.file_url || item.file_name || "");
+  return (
+    <article style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 14, padding: isMobile ? 16 : 18, boxShadow: "0 4px 14px rgba(15,23,42,.06)", display: "flex", flexDirection: "column", gap: 8 }}>
+      <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>{item.resource_category}</div>
+      <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{item.title}</h3>
+      {item.series_label ? <div style={{ fontSize: 13, fontWeight: 700, color: TEAL }}>{item.series_label}</div> : null}
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        style={{ marginTop: "auto", display: "inline-block", textAlign: "center", padding: "12px 16px", minHeight: 44, borderRadius: 10, background: TEAL, color: "#fff", fontWeight: 800, textDecoration: "none" }}
+      >
+        {isPdf ? "Open PDF" : "Open Pearson library"}
+      </a>
+    </article>
+  );
+}
+
+function PearsonHscLibrary({ resources, activeRes, isMobile }) {
+  const items = resources.filter((item) => (
+    isBtecHealthSocialCarePearson(item)
+    && slugify(item.resource_category) === slugify(activeRes)
+  ));
+  if (items.length === 0) return null;
+  return (
+    <div style={{ marginBottom: 28 }}>
+      <div style={{ marginBottom: 14 }}>
+        <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>Public Pearson files</div>
+        <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.5 }}>
+          These Health and Social Care papers and specifications are public Pearson files. Click Open PDF to view them in a new tab. No JD Science account is needed.
+        </p>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
+        {items.map((item) => <PearsonHscOpenCard key={item.id || item.file_name} item={item} isMobile={isMobile} />)}
+      </div>
+    </div>
+  );
+}
+
 function BtecAppliedScienceLibrary({ resources, isMobile }) {
   const items = resources.filter(isBtecAppliedScienceOriginal);
   if (items.length === 0 && BTEC_APPLIED_SCIENCE_TOPICS.length === 0) return null;
@@ -1073,6 +1123,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     resources.filter((r) => {
       if (isElevenPlusOriginal(r)) return false;
       if (isBtecAppliedScienceOriginal(r)) return false;
+      if (isBtecHealthSocialCarePearson(r)) return false;
       const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
       if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
         return false;
@@ -1250,6 +1301,10 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
 
         {activeLevel === "BTEC" && slugify(activeSubject) === slugify("Applied Science") && (
           <BtecAppliedScienceLibrary resources={resources} isMobile={isMobile} />
+        )}
+
+        {activeLevel === "BTEC" && slugify(activeSubject) === slugify("Health and Social Care") && (
+          <PearsonHscLibrary resources={resources} activeRes={activeRes} isMobile={isMobile} />
         )}
 
         <div style={{ fontSize: 12, fontWeight: 700, color: "#94a3b8", textTransform: "uppercase", marginBottom: 6 }}>{activeLevel === "11+" ? "School Type" : "Exam Board"}</div>

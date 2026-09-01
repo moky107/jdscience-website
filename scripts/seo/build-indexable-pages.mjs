@@ -7,6 +7,7 @@ import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
 import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "../../src/elevenPlusResources.js";
+import { PEARSON_BTEC_HSC_RESOURCES } from "../../src/pearsonBtecHealthSocialCareResources.js";
 import { writeTermsPage } from "./write-terms-page.mjs";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
 import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
@@ -367,6 +368,33 @@ function writeResourcePages(subjects) {
   return topicCount;
 }
 
+function pearsonOpenCard(item) {
+  const isPdf = /\.pdf$/i.test(item.file_url_override || "");
+  return `<article class="resource-card">
+    <div class="subject">${escapeHtml(item.resource_category)}</div>
+    <h3>${escapeHtml(item.title)}</h3>
+    ${item.series_label ? `<p>${escapeHtml(item.series_label)}</p>` : ""}
+    <a class="btn" href="${escapeHtml(item.file_url_override)}" target="_blank" rel="noreferrer">${isPdf ? "Open PDF" : "Open Pearson library"}</a>
+  </article>`;
+}
+
+function hscOpenLinksHtml() {
+  const groups = [
+    ["Past Questions", "Past questions"],
+    ["Specifications", "Specifications"],
+    ["Mark Schemes", "Mark schemes"],
+    ["Examiner Reports", "Examiner reports"],
+  ];
+  return groups.map(([category, heading]) => {
+    const items = PEARSON_BTEC_HSC_RESOURCES.filter((item) => item.resource_category === category);
+    if (!items.length) return "";
+    return `
+      <h2>${escapeHtml(heading)}</h2>
+      <div class="cards">${items.map(pearsonOpenCard).join("")}</div>
+    `;
+  }).join("");
+}
+
 function writeFeaturedLandingPages() {
   for (const page of FEATURED_RESOURCE_LANDINGS) {
     const categoryCards = RESOURCE_TYPES.map((type) => card(
@@ -380,6 +408,9 @@ function writeFeaturedLandingPages() {
       `${page.levelLabel} ${page.subject} resources filtered to ${board}.`,
     )).join("");
     const related = page.related.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.text)}</a></li>`).join("");
+    const hscOpenLinks = page.path === "/resources/btec/health-and-social-care/"
+      ? `<p class="callout">Public Pearson files open in a new tab. No JD Science account is needed.</p>${hscOpenLinksHtml()}`
+      : "";
     writePage(`resources/${page.levelSlug}/${page.subjectSlug}`, renderPublicPage({
       title: page.title,
       description: page.description,
@@ -405,7 +436,7 @@ function writeFeaturedLandingPages() {
         },
       ],
       bodyHtml: `
-        <p>${escapeHtml(page.intro)}</p>
+        <p>${escapeHtml(page.intro)}</p>${hscOpenLinks ? `\n        ${hscOpenLinks}` : ""}
         <h2>Resource categories</h2>
         <p>These links open the current <a href="${escapeHtml(papersHref({ level: page.level, subject: page.subject }))}">${escapeHtml(page.levelLabel)} ${escapeHtml(page.subject)} past papers</a> browser. Uploads, Supabase records and static files stay in that system.</p>
         <div class="cards">${categoryCards}</div>
