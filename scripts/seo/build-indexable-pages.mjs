@@ -8,6 +8,7 @@ import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } 
 import { papersHref } from "../../src/papersQuery.js";
 import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "../../src/elevenPlusResources.js";
 import { PEARSON_BTEC_HSC_RESOURCES } from "../../src/pearsonBtecHealthSocialCareResources.js";
+import { JD_SCIENCE_HSC_RESOURCES } from "../../src/jdScienceHscResources.js";
 import { writeTermsPage } from "./write-terms-page.mjs";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
 import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
@@ -370,23 +371,25 @@ function writeResourcePages(subjects) {
 
 function pearsonOpenCard(item) {
   const isPdf = /\.pdf$/i.test(item.file_url_override || "");
+  const label = isPdf ? "Open PDF" : (/qualifications\.pearson\.com/i.test(item.file_url_override || "") ? "Open Pearson library" : "Open PDF");
   return `<article class="resource-card">
     <div class="subject">${escapeHtml(item.resource_category)}</div>
     <h3>${escapeHtml(item.title)}</h3>
     ${item.series_label ? `<p>${escapeHtml(item.series_label)}</p>` : ""}
-    <a class="btn" href="${escapeHtml(item.file_url_override)}" target="_blank" rel="noreferrer">${isPdf ? "Open PDF" : "Open Pearson library"}</a>
+    <a class="btn" href="${escapeHtml(item.file_url_override)}" target="${/^https?:\/\//i.test(item.file_url_override || "") ? "_blank" : "_self"}" rel="noreferrer">${label}</a>
   </article>`;
 }
 
 function hscOpenLinksHtml() {
   const groups = [
-    ["Past Questions", "Past questions"],
+    ["Past Questions", "JDScience practice papers"],
+    ["Mark Schemes", "JDScience mark schemes"],
     ["Specifications", "Specifications"],
-    ["Mark Schemes", "Mark schemes"],
     ["Examiner Reports", "Examiner reports"],
   ];
+  const all = [...JD_SCIENCE_HSC_RESOURCES, ...PEARSON_BTEC_HSC_RESOURCES];
   return groups.map(([category, heading]) => {
-    const items = PEARSON_BTEC_HSC_RESOURCES.filter((item) => item.resource_category === category);
+    const items = all.filter((item) => item.resource_category === category);
     if (!items.length) return "";
     return `
       <h2>${escapeHtml(heading)}</h2>
@@ -409,7 +412,7 @@ function writeFeaturedLandingPages() {
     )).join("");
     const related = page.related.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.text)}</a></li>`).join("");
     const hscOpenLinks = page.path === "/resources/btec/health-and-social-care/"
-      ? `<p class="callout">Public Pearson files open in a new tab. No JD Science account is needed.</p>${hscOpenLinksHtml()}`
+      ? `<p class="callout">Original JDScience practice papers open as PDFs on this site. No JD Science account is needed. Official Pearson papers remain on Pearson.</p>${hscOpenLinksHtml()}`
       : "";
     writePage(`resources/${page.levelSlug}/${page.subjectSlug}`, renderPublicPage({
       title: page.title,

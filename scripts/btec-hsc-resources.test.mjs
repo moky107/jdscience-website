@@ -29,19 +29,12 @@ for (const item of PEARSON_BTEC_HSC_RESOURCES) {
     file_url: item.file_url_override,
   });
   assert.equal(href, item.file_url_override, `${item.title} must open the Pearson URL`);
-  const isPdf = /\.pdf$/i.test(item.file_url_override);
-  const isLibrary = /\.html(?:$|\?)/i.test(item.file_url_override);
-  assert.ok(isPdf || isLibrary, `${item.title} must open a Pearson PDF or library page`);
 }
 
-const publicPdfs = PEARSON_BTEC_HSC_RESOURCES.filter((item) => /\.pdf$/i.test(item.file_url_override));
-assert.ok(publicPdfs.some((item) => item.file_name === "31490h-unit1-que-2022.pdf"));
-assert.ok(publicPdfs.some((item) => item.file_name === "31491h-unit2-que-202201.pdf"));
-assert.ok(publicPdfs.some((item) => /btec-nat-excert-hsc/i.test(item.file_name)));
 assert.equal(
-  exam.filter((item) => item.resource_category === "Past Questions" && /\.pdf$/i.test(item.file_url_override)).length,
-  2,
-  "only verified public Pearson question papers should be listed as PDFs",
+  exam.filter((item) => /\.pdf$/i.test(item.file_url_override)).length,
+  0,
+  "official Pearson exam papers must not be hosted or deep-linked as JD Science copies",
 );
 
 const keys = PEARSON_BTEC_HSC_RESOURCES.map(
@@ -55,10 +48,10 @@ assert.equal(files.length, new Set(files).size, "duplicate HSC file names");
 const landingPath = "public/resources/btec/health-and-social-care/index.html";
 if (fs.existsSync(landingPath)) {
   const landing = fs.readFileSync(landingPath, "utf8");
-  assert.match(landing, /31490h-unit1-que-2022\.pdf/);
-  assert.match(landing, /31491h-unit2-que-202201\.pdf/);
+  assert.match(landing, /JDScience_BTEC_HSC_Unit1_Practice_Set_A\.pdf/);
   assert.match(landing, /Open PDF/);
+  assert.doesNotMatch(landing, /31490h-unit1-que-2022/);
   assert.doesNotMatch(landing, /Exam-Series=/);
 }
 
-console.log(`btec health and social care catalogue tests passed (${PEARSON_BTEC_HSC_RESOURCES.length} items)`);
+console.log(`btec health and social care Pearson-link tests passed (${PEARSON_BTEC_HSC_RESOURCES.length} items)`);

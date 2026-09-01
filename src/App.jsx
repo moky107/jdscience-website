@@ -28,6 +28,7 @@ import { JD_SCIENCE_WORKSHEETS } from "./jdScienceWorksheets";
 import { NCFE_TLEVEL_RESOURCES } from "./ncfeTLevelResources";
 import { PEARSON_BTEC_RESOURCES } from "./pearsonBtecResources";
 import { PEARSON_BTEC_HSC_RESOURCES } from "./pearsonBtecHealthSocialCareResources";
+import { JD_SCIENCE_HSC_RESOURCES } from "./jdScienceHscResources";
 import {
   BTEC_APPLIED_SCIENCE_RESOURCES,
   BTEC_APPLIED_SCIENCE_TOPICS,
@@ -126,6 +127,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...NCFE_TLEVEL_RESOURCES,
   ...PEARSON_BTEC_RESOURCES,
   ...PEARSON_BTEC_HSC_RESOURCES,
+  ...JD_SCIENCE_HSC_RESOURCES,
   ...BTEC_APPLIED_SCIENCE_RESOURCES,
   ...ELEVEN_PLUS_RESOURCES,
 ];
@@ -976,6 +978,14 @@ function isBtecHealthSocialCarePearson(item) {
   );
 }
 
+function isJdScienceHscOriginal(item) {
+  return String(item?.file_url || item?.file_url_override || "").includes("/resources/btec-level-3/health-and-social-care/");
+}
+
+function isHscLibraryItem(item) {
+  return isBtecHealthSocialCarePearson(item) || isJdScienceHscOriginal(item);
+}
+
 function PearsonHscOpenCard({ item, isMobile }) {
   const href = resourceOpenHref(item);
   const isPdf = /\.pdf$/i.test(item.file_url_override || item.file_url || item.file_name || "");
@@ -990,7 +1000,7 @@ function PearsonHscOpenCard({ item, isMobile }) {
         rel="noreferrer"
         style={{ marginTop: "auto", display: "inline-block", textAlign: "center", padding: "12px 16px", minHeight: 44, borderRadius: 10, background: TEAL, color: "#fff", fontWeight: 800, textDecoration: "none" }}
       >
-        {isPdf ? "Open PDF" : "Open Pearson library"}
+        {isPdf ? "Open PDF" : (isJdScienceHscOriginal(item) ? "Open PDF" : "Open Pearson library")}
       </a>
     </article>
   );
@@ -998,16 +1008,16 @@ function PearsonHscOpenCard({ item, isMobile }) {
 
 function PearsonHscLibrary({ resources, activeRes, isMobile }) {
   const items = resources.filter((item) => (
-    isBtecHealthSocialCarePearson(item)
+    isHscLibraryItem(item)
     && slugify(item.resource_category) === slugify(activeRes)
   ));
   if (items.length === 0) return null;
   return (
     <div style={{ marginBottom: 28 }}>
       <div style={{ marginBottom: 14 }}>
-        <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>Public Pearson files</div>
+        <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>JDScience practice papers</div>
         <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 14, lineHeight: 1.5 }}>
-          These Health and Social Care papers and specifications are public Pearson files. Click Open PDF to view them in a new tab. No JD Science account is needed.
+          JDScience practice papers and mark schemes open as PDFs on this site. Official Pearson papers stay on Pearson’s library.
         </p>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
@@ -1123,7 +1133,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     resources.filter((r) => {
       if (isElevenPlusOriginal(r)) return false;
       if (isBtecAppliedScienceOriginal(r)) return false;
-      if (isBtecHealthSocialCarePearson(r)) return false;
+      if (isHscLibraryItem(r)) return false;
       const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
       if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
         return false;

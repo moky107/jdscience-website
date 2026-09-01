@@ -170,7 +170,7 @@ export const FEATURED_RESOURCE_LANDINGS = [
     heading: "BTEC Health and Social Care Resources",
     title: "BTEC Health and Social Care Resources | Past Papers & Mark Schemes | JDScience",
     description: "Open official Pearson BTEC Health and Social Care past questions, mark schemes and examiner reports from the JDScience resource library.",
-    intro: "This BTEC Health and Social Care page opens public Pearson files for Unit 1 Human Lifespan Development and Unit 2 Working in Health and Social Care. Click Open PDF on a paper or specification to view it in a new tab. Mark schemes and examiner reports stay on Pearson’s own library. Recent locked papers remain available only to registered centres. Related pages for BTEC Applied Science and T-Level Healthcare Science sit below if you are moving between vocational courses.",
+    intro: "This BTEC Health and Social Care page opens original JDScience practice papers and mark schemes for Unit 1 Human Lifespan Development and Unit 2 Working in Health and Social Care. Click Open PDF to view a paper in a new tab — no account is needed. Official Pearson specifications and Pearson’s past-paper library stay on Pearson. Related pages for BTEC Applied Science and T-Level Healthcare Science sit below if you are moving between vocational courses.",
     related: [
       { href: "/resources/btec/applied-science/", text: "BTEC Applied Science resources" },
       { href: "/papers?level=T-Level&subject=Healthcare%20Science", text: "T-Level Healthcare Science papers" },

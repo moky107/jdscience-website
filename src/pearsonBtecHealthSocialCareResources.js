@@ -1,9 +1,8 @@
-/* Official Pearson BTEC Nationals Health and Social Care (2016) exam materials.
-   Only public Pearson URLs are listed so a student click opens a real file or library.
-   Copyrighted papers are not copied into JD Science storage. */
+/* Official Pearson BTEC Nationals Health and Social Care (2016) links.
+   Original JDScience practice papers are listed separately and hosted on JD Science.
+   Copyrighted Pearson exam papers are not copied into JD Science storage. */
 
 const PEARSON = "https://qualifications.pearson.com";
-const EXTERNAL = `${PEARSON}/content/dam/pdf/BTEC-Nationals/Health-and-Social-Care/2016/External-assessments`;
 const SPECS = `${PEARSON}/content/dam/pdf/BTEC-Nationals/Health-and-Social-Care/2016/specification-and-sample-assessments`;
 const PAST_PAPERS = `${PEARSON}/en/support/support-topics/exams/past-papers.html?Qualification-Family=BTEC-Nationals`;
 const COURSE = `${PEARSON}/en/qualifications/btec-nationals/health-and-social-care-2016.html`;
@@ -22,32 +21,7 @@ function row({ category, title, file, series, url, attribution }) {
   };
 }
 
-function pearsonPdf({ category, title, file, series, folder, attribution = "Open Pearson PDF" }) {
-  return row({
-    category,
-    title,
-    file,
-    series,
-    url: `${folder}/${file}`,
-    attribution,
-  });
-}
-
 export const PEARSON_BTEC_HSC_RESOURCES = [
-  pearsonPdf({
-    category: "Past Questions",
-    title: "Unit 1: Human Lifespan Development",
-    file: "31490h-unit1-que-2022.pdf",
-    series: "January 2022",
-    folder: EXTERNAL,
-  }),
-  pearsonPdf({
-    category: "Past Questions",
-    title: "Unit 2: Working in Health and Social Care",
-    file: "31491h-unit2-que-202201.pdf",
-    series: "January 2022",
-    folder: EXTERNAL,
-  }),
   row({
     category: "Past Questions",
     title: "Official Pearson past-paper library",
@@ -72,19 +46,21 @@ export const PEARSON_BTEC_HSC_RESOURCES = [
     url: PAST_PAPERS,
     attribution: "Open Pearson library",
   }),
-  pearsonPdf({
+  row({
     category: "Specifications",
     title: "BTEC National Extended Certificate in Health and Social Care",
     file: "9781446938003-btec-nat-excert-hsc-ag-spec-iss3c.pdf",
     series: "2016 specification",
-    folder: SPECS,
+    url: `${SPECS}/9781446938003-btec-nat-excert-hsc-ag-spec-iss3c.pdf`,
+    attribution: "Open Pearson PDF",
   }),
-  pearsonPdf({
+  row({
     category: "Specifications",
     title: "BTEC National Diploma in Health and Social Care",
     file: "9781446950937_BTEC_Nat_Dip_HSC_AG_Spec_ISS10_150622.pdf",
     series: "2016 specification",
-    folder: SPECS,
+    url: `${SPECS}/9781446950937_BTEC_Nat_Dip_HSC_AG_Spec_ISS10_150622.pdf`,
+    attribution: "Open Pearson PDF",
   }),
   row({
     category: "Specifications",

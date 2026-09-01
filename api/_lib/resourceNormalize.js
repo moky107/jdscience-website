@@ -115,7 +115,11 @@ function isExamMaterialCategory(resource) {
 
 function isOriginalJdScienceFile(resource) {
   const file = `${decodeResourceLabel(resource.file_name || "")} ${decodeResourceLabel(resource.title || "")} ${resource.file_url || ""}`;
-  return /jdscience/i.test(file) || String(resource.file_url || "").startsWith("/worksheets/") || String(resource.file_url || resource.file_url_override || "").startsWith("/resources/11-plus/");
+  const url = `${resource.file_url || ""} ${resource.file_url_override || ""}`;
+  return /jdscience/i.test(file)
+    || String(resource.file_url || "").startsWith("/worksheets/")
+    || String(resource.file_url || resource.file_url_override || "").startsWith("/resources/11-plus/")
+    || url.includes("/resources/btec-level-3/");
 }
 
 export function isHostedOfficialExamCopy(resource) {
@@ -148,6 +152,9 @@ export function resourceOpenHref(resource) {
   }
   if (resource.storage_path && resource.id != null && !String(resource.id).startsWith("static-")) {
     return `/api/education-posts?kind=file&id=${encodeURIComponent(resource.id)}`;
+  }
+  if (isOriginalJdScienceFile(resource)) {
+    return resource.file_url_override || resource.file_url;
   }
   return resource.file_url;
 }
