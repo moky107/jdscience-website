@@ -87,6 +87,8 @@ const PROFILE_PHOTO_ACCEPT = ".jpg,.jpeg,.png,.webp";
 const DOCUMENT_ACCEPT = ".pdf,.doc,.docx,.jpg,.jpeg,.png,.webp";
 const PROFILE_PHOTO_MAX_BYTES = 5 * 1024 * 1024;
 const DOCUMENT_MAX_BYTES = 8 * 1024 * 1024;
+const RESOURCE_UPLOAD_MAX_BYTES = 25 * 1024 * 1024;
+const RESOURCE_UPLOAD_MAX_MB = Math.round(RESOURCE_UPLOAD_MAX_BYTES / (1024 * 1024));
 
 const PLACEHOLDER_RESOURCE_LINKS = {
   Specifications: ["Specification (Current)", "Specification (Legacy)"],
@@ -291,6 +293,63 @@ function formatTutorStorageError(error) {
     return 'Tutor uploads are not configured yet. Create the private Supabase Storage bucket "tutor-applications" or run the SQL in supabase/tutor_workflow.sql.';
   }
   return message || "Failed to upload file.";
+}
+
+function formatResourceUploadError(error, fallback = "Upload failed.") {
+  const message = String(error?.message || error?.error || error || "").trim();
+  if (/failed to fetch|networkerror|load failed|network request failed/i.test(message)) {
+    return "Network error — check your connection and try again.";
+  }
+  if (/jwt expired|invalid jwt|token expired|session expired|not authenticated|sign in again/i.test(message)) {
+    return "Your session expired. Sign in again and retry.";
+  }
+  if (/file is too large|payload too large|entity too large|413/i.test(message)) {
+    return `File is too large (maximum ${RESOURCE_UPLOAD_MAX_MB} MB).`;
+  }
+  if (/bucket not found|bucket unavailable|storage bucket unavailable/i.test(message)) {
+    return "Storage bucket unavailable. Contact support if this persists.";
+  }
+  if (/row-level security|permission denied|access denied|not have permission/i.test(message)) {
+    return "You do not have permission to upload resources. Sign in with an authorised admin account.";
+  }
+  if (/only pdf files are supported/i.test(message)) {
+    return message;
+  }
+  return message || fallback;
+}
+
+function isAllowedResourceFile(file) {
+  if (!file) return false;
+  const name = String(file.name || "").toLowerCase();
+  const ext = name.split(".").pop();
+  const allowed = new Set(["pdf", "doc", "docx", "ppt", "pptx", "xls", "xlsx", "png", "jpg", "jpeg", "txt", "md", "odt"]);
+  if (ext && allowed.has(ext)) return true;
+  const type = String(file.type || "").toLowerCase();
+  return type === "application/pdf" || type === "application/x-pdf";
+}
+
+async function adminResourceUploadRequest(accessToken, payload) {
+  if (!accessToken) {
+    throw new Error("Your session expired. Sign in again and retry.");
+  }
+  let resp;
+  try {
+    resp = await fetch("/api/admin-resource-upload", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(payload),
+    });
+  } catch (err) {
+    throw new Error(formatResourceUploadError(err, "Network error — check your connection and try again."));
+  }
+  const data = await resp.json().catch(() => ({}));
+  if (!resp.ok) {
+    throw new Error(formatResourceUploadError(data?.error || data, "Upload failed."));
+  }
+  return data;
 }
 
 function usePrefersReducedMotion() {
@@ -965,7 +1024,7 @@ function ElevenPlusLibrary({ resources, activeSubject, isMobile }) {
 }
 
 /* ------------------------- PAST PAPERS (Supabase) ------------------------- */
-function PastPapers({ subject, level, resType, board, isAdmin, resources, reload, onBook }) {
+function PastPapers({ subject, level, resType, board, isAdmin, resources, reload, onBook, accessToken }) {
   const isMobile = useIsMobile();
   const [activeLevel, setActiveLevel] = useState(level || "GCSE/IGCSE");
   const subjectsForLevel = SUBJECTS_BY_LEVEL[activeLevel] || [];
@@ -1292,6 +1351,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
         <UploadModal
           level={activeLevel} subject={activeSubject} board={uploadBoard} category={activeRes}
           close={() => setUploadBoard(null)} reload={reload}
+          accessToken={accessToken}
         />
       )}
       {copyTargets && (
@@ -1308,29 +1368,46 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
 }
 
 /* ------------------------------ UPLOAD MODAL (multi-file) ------------------------------ */
-function UploadModal({ level, subject, board, category, close, reload }) {
+function UploadModal({ level, subject, board, category, close, reload, accessToken }) {
   const [mode, setMode] = useState("file"); // "file" | "link"
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
   const [files, setFiles] = useState([]); // array of { file, name, progress, status, storage_path, url }
   const [drag, setDrag] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [formError, setFormError] = useState("");
   const inputRef = React.useRef(null);
 
   const addFiles = (fileList) => {
     if (!fileList || fileList.length === 0) return;
-    const arr = Array.from(fileList).map((f) => ({
-      file: f,
-      name: f.name,
-      title: f.name.replace(/\.[^.]+$/, ""),
-      progress: 0,
-      status: "ready", // ready|uploading|done|error
-      storage_path: null,
-      url: null,
-      error: null,
-    }));
+    const rejected = [];
+    const arr = Array.from(fileList).flatMap((f) => {
+      if (!isAllowedResourceFile(f)) {
+        rejected.push(`${f.name}: this file type is not supported.`);
+        return [];
+      }
+      if (f.size > RESOURCE_UPLOAD_MAX_BYTES) {
+        rejected.push(`${f.name}: file is too large (maximum ${RESOURCE_UPLOAD_MAX_MB} MB).`);
+        return [];
+      }
+      return [{
+        file: f,
+        name: f.name,
+        title: f.name.replace(/\.[^.]+$/, ""),
+        progress: 0,
+        status: "ready", // ready|uploading|done|error
+        storage_path: null,
+        url: null,
+        error: null,
+      }];
+    });
+    if (rejected.length) {
+      setFormError(rejected.join(" "));
+    } else {
+      setFormError("");
+    }
+    if (arr.length === 0) return;
     setFiles((cur) => [...cur, ...arr]);
-    // prefill title if empty
     if (!title && arr.length === 1) setTitle(arr[0].title);
   };
 
@@ -1345,31 +1422,75 @@ function UploadModal({ level, subject, board, category, close, reload }) {
 
   async function uploadSingle(fileObj, idx) {
     const f = fileObj.file;
-    const clean = `${Date.now()}-${slugify(f.name)}`;
-    const storage_path = `${slugify(level)}/${slugify(subject)}/${slugify(board)}/${slugify(category)}/${clean}`;
     try {
       fileObj.status = "uploading";
+      fileObj.progress = 10;
+      fileObj.error = null;
       setFiles((cur) => {
         const next = [...cur];
         next[idx] = { ...fileObj };
         return next;
       });
 
-      const up = await supabase.storage.from(BUCKET).upload(storage_path, f, { cacheControl: "3600", upsert: true });
-      if (up.error) throw up.error;
-      const publicUrl = supabase.storage.from(BUCKET).getPublicUrl(storage_path).data.publicUrl;
-
-      const { error } = await supabase.from("resources").insert({
-        level, subject, exam_board: board, resource_category: category,
-        title: fileObj.title || fileObj.name, file_name: fileObj.name,
-        file_url: publicUrl, file_type: f.type || fileObj.name.split(".").pop(), storage_path, published: true,
+      const prepared = await adminResourceUploadRequest(accessToken, {
+        action: "prepare",
+        level,
+        subject,
+        exam_board: board,
+        resource_category: category,
+        title: fileObj.title || fileObj.name.replace(/\.[^.]+$/, ""),
+        file_name: f.name,
+        contentType: f.type || "application/pdf",
+        fileSize: f.size,
       });
-      if (error) throw error;
+
+      fileObj.progress = 40;
+      setFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...fileObj };
+        return next;
+      });
+
+      let putResp;
+      try {
+        putResp = await fetch(prepared.signedUrl, {
+          method: "PUT",
+          headers: { "Content-Type": f.type || "application/pdf" },
+          body: f,
+        });
+      } catch (err) {
+        throw new Error(formatResourceUploadError(err, "Network error — check your connection and try again."));
+      }
+      if (!putResp.ok) {
+        throw new Error(putResp.status === 413
+          ? `File is too large (maximum ${RESOURCE_UPLOAD_MAX_MB} MB).`
+          : "Storage upload failed. Try again or choose a smaller PDF.");
+      }
+
+      fileObj.progress = 80;
+      setFiles((cur) => {
+        const next = [...cur];
+        next[idx] = { ...fileObj };
+        return next;
+      });
+
+      const completed = await adminResourceUploadRequest(accessToken, {
+        action: "complete",
+        level,
+        subject,
+        exam_board: board,
+        resource_category: category,
+        title: fileObj.title || fileObj.name.replace(/\.[^.]+$/, ""),
+        file_name: f.name,
+        contentType: f.type || "application/pdf",
+        fileSize: f.size,
+        storage_path: prepared.storage_path,
+      });
 
       fileObj.status = "done";
       fileObj.progress = 100;
-      fileObj.storage_path = storage_path;
-      fileObj.url = publicUrl;
+      fileObj.storage_path = prepared.storage_path;
+      fileObj.url = completed.publicUrl;
       setFiles((cur) => {
         const next = [...cur];
         next[idx] = { ...fileObj };
@@ -1378,7 +1499,7 @@ function UploadModal({ level, subject, board, category, close, reload }) {
       return { success: true };
     } catch (err) {
       fileObj.status = "error";
-      fileObj.error = err.message || String(err);
+      fileObj.error = formatResourceUploadError(err);
       setFiles((cur) => {
         const next = [...cur];
         next[idx] = { ...fileObj };
@@ -1389,28 +1510,43 @@ function UploadModal({ level, subject, board, category, close, reload }) {
   }
 
   async function save() {
+    setFormError("");
     if (mode === "link") {
-      if (!title.trim()) { alert("Please enter a title."); return; }
-      if (!link.trim()) { alert("Please paste a link."); return; }
+      if (!title.trim()) { setFormError("Please enter a title."); return; }
+      if (!link.trim()) { setFormError("Please paste a link."); return; }
       setBusy(true);
       try {
-        const { error } = await supabase.from("resources").insert({
-          level, subject, exam_board: board, resource_category: category,
-          title: title.trim(), file_name: title.trim(), file_url: link.trim(), file_type: "link", storage_path: null, published: true,
+        await adminResourceUploadRequest(accessToken, {
+          action: "link",
+          level,
+          subject,
+          exam_board: board,
+          resource_category: category,
+          title: title.trim(),
+          file_url: link.trim(),
         });
-        if (error) alert(error.message); else { reload(); close(); }
+        reload();
+        close();
+      } catch (err) {
+        setFormError(formatResourceUploadError(err));
       } finally { setBusy(false); }
       return;
     }
 
-    if (files.length === 0) { alert("Please choose or drop one or more files."); return; }
+    if (files.length === 0) { setFormError("Please choose or drop one or more files."); return; }
     setBusy(true);
+    let hadError = false;
     try {
       for (let i = 0; i < files.length; i++) {
         const fobj = files[i];
         if (fobj.status === "done") continue;
         if (!fobj.title) fobj.title = fobj.name.replace(/\.[^.]+$/, "");
-        await uploadSingle(fobj, i);
+        const result = await uploadSingle(fobj, i);
+        if (!result.success) hadError = true;
+      }
+      if (hadError) {
+        setFormError("One or more uploads failed. Fix the errors below and try again.");
+        return;
       }
       reload();
       close();
@@ -1454,11 +1590,11 @@ function UploadModal({ level, subject, board, category, close, reload }) {
                 borderRadius: 12, padding: "20px", textAlign: "center", cursor: "pointer", color: "#475569" }}>
               <div style={{ fontSize: 28 }}>📂</div>
               <div style={{ fontWeight: 700, marginTop: 6 }}>{files.length === 0 ? "Drag & drop files here (or click to browse)" : `${files.length} file(s) selected`}</div>
-              <div style={{ fontSize: 13, marginTop: 6 }}>Supports multiple files — Word, PDF, images, PPT, etc.</div>
+              <div style={{ fontSize: 13, marginTop: 6 }}>PDF, Word, PowerPoint and images · up to {RESOURCE_UPLOAD_MAX_MB} MB per file</div>
             </div>
 
             <input ref={inputRef} type="file" hidden multiple
-              accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.txt,.md,.odt" onChange={(e) => addFiles(e.target.files)} />
+              accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.png,.jpg,.jpeg,.txt,.md,.odt,application/pdf" onChange={(e) => addFiles(e.target.files)} />
 
             {files.length > 0 && (
               <div style={{ marginTop: 8, display: "flex", flexDirection: "column", gap: 8 }}>
@@ -1474,6 +1610,9 @@ function UploadModal({ level, subject, board, category, close, reload }) {
                       {f.status === "done" && <span style={{ color: "green" }}>Uploaded</span>}
                       {f.status === "error" && <span style={{ color: "#dc2626" }}>Error</span>}
                     </div>
+                    {f.error && (
+                      <div style={{ width: "100%", color: "#b91c1c", fontSize: 13, lineHeight: 1.45 }}>{f.error}</div>
+                    )}
                     <div style={{ display: "flex", gap: 8 }}>
                       <button onClick={() => {
                         const newTitle = prompt("Edit title for this file:", f.title);
@@ -1501,13 +1640,16 @@ function UploadModal({ level, subject, board, category, close, reload }) {
           </>
         )}
 
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
           <button onClick={save} disabled={busy}
             style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
             {busy ? "Uploading…" : "Save Resource(s)"}
           </button>
           <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>
         </div>
+        {formError && (
+          <div style={{ color: "#b91c1c", fontSize: 14, lineHeight: 1.5 }}>{formError}</div>
+        )}
       </div>
     </div>
   );
@@ -3786,7 +3928,8 @@ function App() {
             />
           ) : (
             <PastPapers subject={pickedSubject} level={pickedLevel} resType={pickedRes} board={pickedBoard}
-              isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")} />
+              isAdmin={isAdmin} resources={resources} reload={loadResources} onBook={() => handleScroll("book")}
+              accessToken={session?.access_token} />
           )}
         </main>
       )}
