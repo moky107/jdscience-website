@@ -18,6 +18,12 @@ import {
   shouldRotateShopProducts,
   sortShopProductsForHomepage,
 } from "./shopCarousel";
+import {
+  ANALYTICS_EVENTS,
+  isAmazonRetailer,
+  isChemistryCompanionProduct,
+  track,
+} from "./analytics";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";

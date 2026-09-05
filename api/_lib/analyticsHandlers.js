@@ -8,6 +8,14 @@ const ipBuckets = new Map();
 const cache = new Map();
 const CACHE_TTL_MS = 45_000;
 
+function isAnalyticsEventsMissing(error) {
+  const message = String(error?.message || error || '');
+  const code = String(error?.code || '');
+  return code === 'PGRST205'
+    || /analytics_events/i.test(message)
+      && (/does not exist/i.test(message) || /schema cache/i.test(message) || /could not find the table/i.test(message));
+}
+
 function clientIp(req) {
   const xf = req.headers['x-forwarded-for'];
   if (typeof xf === 'string' && xf.length) return xf.split(',')[0].trim();
@@ -107,7 +115,7 @@ export async function handleAnalyticsEventRequest(req, res) {
     const { error } = await supabase.from('analytics_events').insert(rows);
     if (error) {
       console.error('analytics-event insert failed:', error.message || error);
-      if (/relation .*analytics_events.* does not exist/i.test(error.message || '')) {
+      if (isAnalyticsEventsMissing(error)) {
         return res.status(503).json({
           error: 'Analytics table not created yet. Run supabase/migrations/20260905_analytics_events.sql',
           code: 'MIGRATION_REQUIRED',
@@ -173,7 +181,7 @@ export async function handleAdminAnalyticsRequest(req, res, bodyInput) {
       .limit(50000);
 
     if (eventsError) {
-      if (/relation .*analytics_events.* does not exist/i.test(eventsError.message || '')) {
+      if (isAnalyticsEventsMissing(eventsError)) {
         return res.status(503).json({
           ok: false,
           error: 'Analytics table not created yet.',
