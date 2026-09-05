@@ -220,6 +220,20 @@ export function ProductCard({ product, onView, onAdd, compact = false }) {
               href={product.external_url}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                if (isAmazonRetailer(product) || isChemistryCompanionProduct(product)) {
+                  track(ANALYTICS_EVENTS.AMAZON_BOOK_CLICK, {
+                    product_id: product.id,
+                    metadata: {
+                      product_slug: product.slug,
+                      title: product.title,
+                      retailer: retailerName(product) || "Amazon",
+                      is_chemistry_companion: isChemistryCompanionProduct(product),
+                      surface: "product_card",
+                    },
+                  });
+                }
+              }}
               style={{ flex: 1, minHeight: 48, borderRadius: 10, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer", display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none", padding: "0 10px", textAlign: "center" }}
             >
               {externalLabel}
