@@ -74,6 +74,16 @@ export function parseBoolean(value) {
   return false;
 }
 
+/**
+ * Bot honeypot fields. Avoid common autofill tokens like "company" — browsers often
+ * fill those for real applicants, which previously caused silent false-success drops.
+ */
+export const TUTOR_HONEYPOT_FIELDS = ['jd_bot_check', 'website_url_confirm'];
+
+export function isTutorApplicationSpam(body = {}) {
+  return TUTOR_HONEYPOT_FIELDS.some((field) => Boolean(safeTrim(body?.[field], 120)));
+}
+
 export function normalizeList(value) {
   if (Array.isArray(value)) {
     return value.map((item) => safeTrim(item, 120)).filter(Boolean);

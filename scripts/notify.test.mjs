@@ -85,6 +85,21 @@ assert.equal(payload.to, "jd943791@gmail.com");
 assert.equal(payload.reply_to, "amina@example.com");
 assert.match(payload.subject, /New booking: Amina Khan/);
 
+let attempts = 0;
+globalThis.fetch = async () => {
+  attempts += 1;
+  if (attempts === 1) return { ok: false, status: 500, text: async () => "temporary" };
+  return { ok: true, status: 200, text: async () => "" };
+};
+const retried = await sendTutorApplicationNotification({
+  tutor_name: "Sam Reed",
+  email_address: "sam@example.com",
+  subjects_taught: ["Biology"],
+});
+assert.equal(retried.sent, true);
+assert.equal(retried.attempt, 2);
+assert.equal(attempts, 2);
+
 globalThis.fetch = originalFetch;
 if (previousKey == null) delete process.env.RESEND_API_KEY;
 else process.env.RESEND_API_KEY = previousKey;

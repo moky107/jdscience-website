@@ -157,26 +157,32 @@ async function sendOwnerEmail({ subject, html, replyTo }) {
   const payload = { from, to, subject, html };
   if (replyTo) payload.reply_to = replyTo;
 
-  try {
-    const resp = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
+  let lastReason = "unknown";
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const resp = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
 
-    if (!resp.ok) {
+      if (resp.ok) {
+        return { sent: true, attempt };
+      }
+
       const detail = await resp.text().catch(() => "");
-      console.warn("Owner notification email failed:", resp.status, detail);
-      return { sent: false, reason: `http_${resp.status}` };
+      lastReason = `http_${resp.status}`;
+      console.warn("Owner notification email failed:", resp.status, detail, `(attempt ${attempt})`);
+    } catch (err) {
+      lastReason = "exception";
+      console.warn("Owner notification email error:", err?.message || err, `(attempt ${attempt})`);
     }
-    return { sent: true };
-  } catch (err) {
-    console.warn("Owner notification email error:", err?.message || err);
-    return { sent: false, reason: "exception" };
   }
+
+  return { sent: false, reason: lastReason };
 }
 
 export async function sendBookingNotification(booking = {}) {
