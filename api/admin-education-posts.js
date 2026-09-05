@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { handleShopAdminRequest, wantsShopAdminRequest } from './_lib/shopHandlers.js';
 import { handleResourceUploadRequest, wantsResourceUploadRequest } from './_lib/resourceUpload.js';
+import { handleAdminAnalyticsRequest, wantsAdminAnalyticsRequest } from './_lib/analyticsHandlers.js';
 import { parseRequestBody, safeTrim } from './_lib/tutors.js';
 
 const CATEGORIES = new Set(['revision-advice', 'exam-tips', 'education-news']);
@@ -78,6 +79,10 @@ export default async function handler(req, res) {
   const supabase = createClient(supabaseUrl, serviceRoleKey);
 
   try {
+    if (wantsAdminAnalyticsRequest(req, body)) {
+      return handleAdminAnalyticsRequest(req, res, body);
+    }
+
     if (wantsShopAdminRequest(req, body)) {
       return handleShopAdminRequest(req, res, body, supabase);
     }
