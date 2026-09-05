@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { sanitizeAnalyticsEvent, parseDateRange } from './analytics.js';
 import { aggregateAnalyticsDashboard } from './analyticsAggregate.js';
+import { fetchSearchConsoleMetrics, getSearchConsoleConfig } from './searchConsole.js';
 
 const RATE_WINDOW_MS = 60_000;
 const RATE_MAX = 120;
@@ -212,11 +213,8 @@ export async function handleAdminAnalyticsRequest(req, res, bodyInput) {
         .limit(5000),
     ]);
 
-    const searchConsoleConnected = Boolean(
-      process.env.GOOGLE_SEARCH_CONSOLE_CLIENT_EMAIL &&
-      process.env.GOOGLE_SEARCH_CONSOLE_PRIVATE_KEY &&
-      process.env.GOOGLE_SEARCH_CONSOLE_SITE_URL
-    );
+    const gscConfig = getSearchConsoleConfig();
+    const searchConsole = await fetchSearchConsoleMetrics(range);
 
     const dashboard = aggregateAnalyticsDashboard({
       events: events || [],
@@ -224,7 +222,8 @@ export async function handleAdminAnalyticsRequest(req, res, bodyInput) {
       shopOrders: ordersRes.error ? [] : (ordersRes.data || []),
       shopProducts: productsRes.error ? [] : (productsRes.data || []),
       bookings: bookingsRes.error ? [] : (bookingsRes.data || []),
-      searchConsoleConnected,
+      searchConsoleConnected: gscConfig.configured && searchConsole.connected,
+      searchConsole,
     });
 
     const payload = { dashboard };

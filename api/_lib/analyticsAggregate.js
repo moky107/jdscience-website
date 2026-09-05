@@ -99,6 +99,7 @@ export function aggregateAnalyticsDashboard({
   shopProducts = [],
   bookings = [],
   searchConsoleConnected = false,
+  searchConsole = null,
 } = {}) {
   const current = excludeAdmin(filterRange(events, range.start, range.end));
   const previous = excludeAdmin(filterRange(events, range.previousStart, range.previousEnd));
@@ -636,18 +637,24 @@ export function aggregateAnalyticsDashboard({
       })),
       note: 'Amazon clicks measure interest only. JDScience cannot confirm whether a visitor completed a purchase on Amazon.',
     },
-    search_console: {
-      connected: Boolean(searchConsoleConnected),
-      message: searchConsoleConnected
-        ? null
-        : 'Google Search Console not connected',
-      impressions: null,
-      clicks: null,
-      ctr: null,
-      average_position: null,
-      top_queries: [],
-      top_landing_pages: [],
-    },
+    search_console: searchConsole && typeof searchConsole === 'object'
+      ? searchConsole
+      : {
+        connected: Boolean(searchConsoleConnected),
+        message: searchConsoleConnected
+          ? null
+          : 'Google Search Console not connected',
+        impressions: null,
+        clicks: null,
+        ctr: null,
+        average_position: null,
+        top_queries: [],
+        top_landing_pages: [],
+        by_device: [],
+        by_country: [],
+        timeseries: [],
+        comparison: null,
+      },
     recent_conversions: recentConversions,
     empty: current.length === 0 && ordersInRange.length === 0 && bookingRows.length === 0,
   };
