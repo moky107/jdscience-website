@@ -636,24 +636,146 @@ export default function AdminAnalytics({ password, onBack }) {
             </div>
           </div>
 
-          <GroupHeading title="Google Search Performance" subtitle="Optional Search Console integration." />
+          <GroupHeading title="Google Search Performance" subtitle="Live Search Console metrics for the selected date range (server-side API)." />
           <div style={card}>
-            {dashboard.search_console?.connected ? (
-              <div>Search Console connected.</div>
-            ) : (
+            {!dashboard.search_console?.connected ? (
               <div>
-                <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>Google Search Console not connected</div>
-                <p style={{ margin: "10px 0 0", color: "#64748b", lineHeight: 1.6, maxWidth: 640 }}>
-                  To connect later, add these Vercel environment variables, then redeploy:
-                </p>
-                <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "#334155", lineHeight: 1.7 }}>
-                  <li><code>GOOGLE_SEARCH_CONSOLE_CLIENT_EMAIL</code></li>
-                  <li><code>GOOGLE_SEARCH_CONSOLE_PRIVATE_KEY</code></li>
-                  <li><code>GOOGLE_SEARCH_CONSOLE_SITE_URL</code> (e.g. <code>https://www.jdscience.co.uk/</code>)</li>
-                </ul>
+                <div style={{ fontWeight: 800, color: TEAL_DARK, fontSize: 18 }}>
+                  {dashboard.search_console?.error ? 'Search Console connection error' : 'Google Search Console not connected'}
+                </div>
+                {dashboard.search_console?.message && (
+                  <p style={{ margin: "10px 0 0", color: dashboard.search_console?.error ? "#991b1b" : "#64748b", lineHeight: 1.6, maxWidth: 720 }}>
+                    {dashboard.search_console.message}
+                  </p>
+                )}
+                {!dashboard.search_console?.configured && !dashboard.search_console?.error && (
+                  <>
+                    <p style={{ margin: "10px 0 0", color: "#64748b", lineHeight: 1.6, maxWidth: 640 }}>
+                      Add these Vercel environment variables (Production + Preview), then redeploy. Never use a VITE_ prefix.
+                    </p>
+                    <ul style={{ margin: "12px 0 0", paddingLeft: 18, color: "#334155", lineHeight: 1.7 }}>
+                      <li><code>GOOGLE_SEARCH_CONSOLE_CLIENT_EMAIL</code></li>
+                      <li><code>GOOGLE_SEARCH_CONSOLE_PRIVATE_KEY</code></li>
+                      <li><code>GOOGLE_SEARCH_CONSOLE_SITE_URL</code> — exact property id from Search Console (URL-prefix e.g. <code>https://www.jdscience.co.uk/</code> or domain <code>sc-domain:jdscience.co.uk</code>)</li>
+                    </ul>
+                  </>
+                )}
+                {dashboard.search_console?.client_email && (
+                  <p style={{ margin: "12px 0 0", color: "#334155", lineHeight: 1.6, maxWidth: 720 }}>
+                    Grant this service account access in Search Console → Settings → Users and permissions:
+                    {' '}<code>{dashboard.search_console.client_email}</code>
+                  </p>
+                )}
                 <p style={{ margin: "12px 0 0", color: "#94a3b8", fontSize: 13 }}>
                   The rest of this analytics dashboard works without Search Console.
                 </p>
+              </div>
+            ) : (
+              <div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12, marginBottom: 16 }}>
+                  <KpiCard title="Total clicks">
+                    <ChangeBadge block={dashboard.search_console.clicks_block || { current: dashboard.search_console.clicks, change_pct: null, direction: "flat" }} />
+                  </KpiCard>
+                  <KpiCard title="Total impressions">
+                    <ChangeBadge block={dashboard.search_console.impressions_block || { current: dashboard.search_console.impressions, change_pct: null, direction: "flat" }} />
+                  </KpiCard>
+                  <KpiCard title="Average CTR">
+                    <div style={{ marginTop: 8 }}>
+                      <div style={{ fontSize: 22, fontWeight: 800, color: TEAL_DARK }}>
+                        {dashboard.search_console.ctr_pct != null ? `${dashboard.search_console.ctr_pct}%` : "—"}
+                      </div>
+                      {dashboard.search_console.ctr_block?.change_pct != null && dashboard.search_console.ctr_block.direction !== "flat" && (
+                        <div style={{ marginTop: 6, fontSize: 12, fontWeight: 700, color: dashboard.search_console.ctr_block.direction === "up" ? "#166534" : "#991b1b" }}>
+                          {dashboard.search_console.ctr_block.direction === "up" ? "↑" : "↓"} {Math.abs(dashboard.search_console.ctr_block.change_pct)} pts vs previous period
+                        </div>
+                      )}
+                    </div>
+                  </KpiCard>
+                  <KpiCard title="Average position">
+                    <div style={{ marginTop: 8 }}>
+                      <div style={{ fontSize: 22, fontWeight: 800, color: TEAL_DARK }}>
+                        {dashboard.search_console.average_position != null ? dashboard.search_console.average_position : "—"}
+                      </div>
+                      {dashboard.search_console.position_block?.change_pct != null && dashboard.search_console.position_block.direction !== "flat" && (
+                        <div style={{ marginTop: 6, fontSize: 12, fontWeight: 700, color: "#64748b" }}>
+                          {dashboard.search_console.position_block.direction === "up" ? "↑" : "↓"} {Math.abs(dashboard.search_console.position_block.change_pct)}% vs previous (lower is better)
+                        </div>
+                      )}
+                    </div>
+                  </KpiCard>
+                </div>
+
+                <div style={{ fontWeight: 800, marginBottom: 8 }}>Search performance over time</div>
+                <LineChart
+                  series={(dashboard.search_console.timeseries || []).map((p) => ({ date: p.date, value: p.clicks }))}
+                />
+                <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 8, fontSize: 12, color: "#64748b" }}>
+                  <span>Chart shows daily Google Search clicks</span>
+                  {dashboard.search_console.date_range && (
+                    <span>
+                      API window: {dashboard.search_console.date_range.startDate} → {dashboard.search_console.date_range.endDate}
+                    </span>
+                  )}
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 12, marginTop: 18 }}>
+                  <div>
+                    <div style={{ fontWeight: 800, marginBottom: 10 }}>Top search queries</div>
+                    <SortableTable
+                      defaultSort={{ key: "clicks", dir: "desc" }}
+                      columns={[
+                        { key: "query", label: "Query" },
+                        { key: "clicks", label: "Clicks" },
+                        { key: "impressions", label: "Impr." },
+                        { key: "ctr_pct", label: "CTR %", render: (r) => `${r.ctr_pct}%` },
+                        { key: "position", label: "Pos." },
+                      ]}
+                      rows={dashboard.search_console.top_queries || []}
+                    />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 800, marginBottom: 10 }}>Top landing pages</div>
+                    <SortableTable
+                      defaultSort={{ key: "clicks", dir: "desc" }}
+                      columns={[
+                        { key: "page", label: "Page", render: (r) => {
+                          try {
+                            const u = new URL(r.page);
+                            return u.pathname + u.search;
+                          } catch {
+                            return r.page;
+                          }
+                        } },
+                        { key: "clicks", label: "Clicks" },
+                        { key: "impressions", label: "Impr." },
+                        { key: "ctr_pct", label: "CTR %", render: (r) => `${r.ctr_pct}%` },
+                        { key: "position", label: "Pos." },
+                      ]}
+                      rows={dashboard.search_console.top_landing_pages || []}
+                    />
+                  </div>
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12, marginTop: 18 }}>
+                  <div>
+                    <div style={{ fontWeight: 800, marginBottom: 10 }}>Devices</div>
+                    <BarList items={(dashboard.search_console.by_device || []).map((d) => ({
+                      key: String(d.device || "").toLowerCase(),
+                      value: d.clicks,
+                    }))} />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 800, marginBottom: 10 }}>Countries</div>
+                    <BarList items={(dashboard.search_console.by_country || []).map((d) => ({
+                      key: String(d.country || "").toUpperCase(),
+                      value: d.clicks,
+                    }))} />
+                  </div>
+                </div>
+
+                {dashboard.search_console.note && (
+                  <p style={{ margin: "14px 0 0", fontSize: 12, color: "#94a3b8", lineHeight: 1.5 }}>{dashboard.search_console.note}</p>
+                )}
               </div>
             )}
           </div>

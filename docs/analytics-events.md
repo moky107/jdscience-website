@@ -62,3 +62,19 @@ Inserts use the Supabase service role. Direct table SELECT/UPDATE/DELETE is deni
 Run once in Supabase SQL editor:
 
 `supabase/migrations/20260905_analytics_events.sql`
+
+## Google Search Console (optional)
+
+Server-side only. Uses these Vercel env vars (never `VITE_*`):
+
+- `GOOGLE_SEARCH_CONSOLE_CLIENT_EMAIL`
+- `GOOGLE_SEARCH_CONSOLE_PRIVATE_KEY`
+- `GOOGLE_SEARCH_CONSOLE_SITE_URL` — exact property id from Search Console
+
+Property form cannot be guessed from this repo. Copy the identifier from Search Console:
+
+- URL-prefix example: `https://www.jdscience.co.uk/`
+- Domain example: `sc-domain:jdscience.co.uk`
+
+Grant the service-account email access on the **existing** JDScience property (Users and permissions). Do not create a second property or change DNS verification.
+
