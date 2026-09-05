@@ -2,6 +2,7 @@ import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 import { sendBookingNotification, sendShopOrderNotifications } from './_lib/notify.js';
 import { isMissingShopTable } from './_lib/shop.js';
+import { recordServerAnalyticsEvent } from './_lib/analytics.js';
 
 /**
  * Vercel serverless function: Stripe webhook handler.
@@ -136,6 +137,24 @@ export default async function handler(req, res) {
           } catch (notifyErr) {
             console.warn('Shop order notification failed (ignored):', notifyErr?.message || notifyErr);
           }
+
+          for (const line of items) {
+            await recordServerAnalyticsEvent(supabase, {
+              event_name: 'purchase_completed',
+              session_id: session.id,
+              anonymous_visitor_id: `stripe_${session.id}`,
+              page_path: '/shop',
+              product_id: line.product_id || null,
+              source: 'Direct',
+              medium: 'server',
+              metadata: {
+                revenue_pence: (Number(line.unit_price_pence) || Number(line.unitPricePence) || 0) * (Number(line.quantity) || 1),
+                quantity: line.quantity || 1,
+                title: line.title || null,
+                checkout: 'shop',
+              },
+            });
+          }
         }
       } else {
         const supabase = createClient(supabaseUrl, serviceRoleKey);
@@ -168,6 +187,20 @@ export default async function handler(req, res) {
           console.error('Supabase insert error (bookings):', error);
         } else {
           console.log('Booking inserted for session:', session.id);
+          await recordServerAnalyticsEvent(supabase, {
+            event_name: 'tutor_booking_confirmed',
+            session_id: session.id,
+            anonymous_visitor_id: `stripe_${session.id}`,
+            page_path: '/',
+            source: 'Direct',
+            medium: 'server',
+            metadata: {
+              level: insertRow.level,
+              subject: insertRow.subject,
+              session_type: insertRow.session_type,
+              checkout: 'tutoring',
+            },
+          });
           // Best-effort owner notification — never let a mail failure break the webhook.
           try {
             await sendBookingNotification({

@@ -10,12 +10,18 @@ import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRE
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
 import AdminShopEditor from "./AdminShopEditor";
+import AdminAnalytics from "./AdminAnalytics";
 import CopyResourceToShopModal from "./CopyResourceToShopModal";
 import { isCopyableTeachingResource } from "./resourceShopClassify";
 import ShopPage from "./ShopPage";
 import ShopFeaturedSection from "./ShopFeaturedSection";
 import { addToBasket, basketCount as countBasketItems, readBasket } from "./shopBasket";
 import { isExternalProduct } from "./shopProductHelpers";
+import {
+  ANALYTICS_EVENTS,
+  startAnalyticsLifecycle,
+  track,
+} from "./analytics";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
@@ -45,6 +51,36 @@ const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources"; // Supabase Storage bucket name
+
+function trackResourceOpen(item, kind = "download") {
+  try {
+    const eventName = kind === "preview"
+      ? ANALYTICS_EVENTS.RESOURCE_PREVIEW
+      : ANALYTICS_EVENTS.RESOURCE_DOWNLOAD;
+    track(eventName, {
+      resource_id: item?.id || item?.file_name || item?.slug || null,
+      metadata: {
+        title: item?.title || null,
+        level: item?.level || null,
+        subject: item?.subject || null,
+        exam_board: item?.exam_board || item?.board || null,
+        resource_type: item?.resource_type || item?.res_type || item?.type || null,
+      },
+    });
+    track(ANALYTICS_EVENTS.RESOURCE_VIEW, {
+      resource_id: item?.id || item?.file_name || item?.slug || null,
+      metadata: {
+        title: item?.title || null,
+        level: item?.level || null,
+        subject: item?.subject || null,
+        exam_board: item?.exam_board || item?.board || null,
+        resource_type: item?.resource_type || item?.res_type || item?.type || null,
+      },
+    });
+  } catch {
+    /* never block downloads */
+  }
+}
 
 const BANNER_IMG = "/hero-students.png.png";
 const INTRO_VIDEO_SRC = "/homepage-promo.mp4";
@@ -946,14 +982,14 @@ function BtecAppliedScienceTopicCard({ topic, resources, isMobile }) {
       <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{topic.title}</h3>
       <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: "auto" }}>
         {worksheet ? (
-          <a href={resourceOpenHref(worksheet)} target="_blank" rel="noreferrer" style={{ ...btnStyle, background: TEAL, color: "#fff" }}>
+          <a href={resourceOpenHref(worksheet)} target="_blank" rel="noreferrer" onClick={() => trackResourceOpen(worksheet, "download")} style={{ ...btnStyle, background: TEAL, color: "#fff" }}>
             Worksheet PDF
           </a>
         ) : (
           <span style={{ ...btnStyle, background: "#f1f5f9", color: "#94a3b8", cursor: "default" }}>Worksheet PDF — coming soon</span>
         )}
         {answerSheet ? (
-          <a href={resourceOpenHref(answerSheet)} target="_blank" rel="noreferrer" style={{ ...btnStyle, background: "#ecfeff", color: TEAL_DARK, border: `1px solid ${TEAL}` }}>
+          <a href={resourceOpenHref(answerSheet)} target="_blank" rel="noreferrer" onClick={() => trackResourceOpen(answerSheet, "download")} style={{ ...btnStyle, background: "#ecfeff", color: TEAL_DARK, border: `1px solid ${TEAL}` }}>
             Answer Sheet PDF
           </a>
         ) : (
@@ -995,14 +1031,15 @@ function ElevenPlusCard({ item, isMobile }) {
       <div style={{ fontSize: 12, fontWeight: 800, color: TEAL_DARK, textTransform: "uppercase", letterSpacing: ".04em" }}>{item.subject}</div>
       <h3 style={{ margin: 0, fontSize: isMobile ? 18 : 17, color: "#0f172a", lineHeight: 1.3 }}>{item.title}</h3>
       {item.skill_area ? <div style={{ fontSize: 13, fontWeight: 700, color: TEAL }}>Skill area: {item.skill_area}</div> : null}
-      <a
-        href={href}
-        target="_blank"
-        rel="noreferrer"
-        style={{ marginTop: "auto", display: "inline-block", textAlign: "center", padding: "12px 16px", minHeight: 44, borderRadius: 10, background: TEAL, color: "#fff", fontWeight: 800, textDecoration: "none" }}
-      >
-        Open PDF
-      </a>
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => trackResourceOpen(item, "download")}
+          style={{ marginTop: "auto", display: "inline-block", textAlign: "center", padding: "12px 16px", minHeight: 44, borderRadius: 10, background: TEAL, color: "#fff", fontWeight: 800, textDecoration: "none" }}
+        >
+          Open PDF
+        </a>
     </article>
   );
 }
@@ -1146,7 +1183,15 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
             />
           </label>
         )}
-        <a href={resourceOpenHref(item)} target="_blank" rel="noreferrer" className="folder-file" style={fileLinkStyle} title={item.description || externalLabel || item.title}>
+        <a
+          href={resourceOpenHref(item)}
+          target="_blank"
+          rel="noreferrer"
+          className="folder-file"
+          style={fileLinkStyle}
+          title={item.description || externalLabel || item.title}
+          onClick={() => trackResourceOpen(item, activeRes === "Videos" ? "preview" : "download")}
+        >
           {activeRes === "Videos" ? "▶️" : "📄"} {item.title}
           {externalLabel ? <span style={{ display: "block", fontSize: 12, color: "#64748b", fontWeight: 600, marginTop: 4 }}>↗ {externalLabel}</span> : null}
         </a>
@@ -1747,10 +1792,17 @@ function Booking() {
         });
         const body = await resp.json().catch(() => ({}));
         if (!resp.ok) throw new Error(body?.error || "Failed to book free trial");
+        track(ANALYTICS_EVENTS.TUTOR_BOOKING_SUBMITTED, {
+          metadata: { session_type: "trial", level: form.level, subject: form.subject },
+        });
         setSent(true);
         setLoading(false);
         return;
       }
+
+      track(ANALYTICS_EVENTS.TUTOR_ENQUIRY_STARTED, {
+        metadata: { session_type: form.sessionType, level: form.level, subject: form.subject },
+      });
 
       const payload = {
         name: form.name,
@@ -2239,7 +2291,15 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
         const resp = await fetch(`/api/tutor-profiles?slug=${encodeURIComponent(slug)}`);
         const data = await resp.json().catch(() => ({}));
         if (!resp.ok) throw new Error(data?.error || "Tutor profile not found.");
-        if (!cancelled) setTutor(data.tutor || null);
+        if (!cancelled) {
+          setTutor(data.tutor || null);
+          if (data.tutor) {
+            track(ANALYTICS_EVENTS.TUTOR_PROFILE_VIEW, {
+              tutor_id: data.tutor.public_slug || data.tutor.id || slug,
+              metadata: { tutor_name: data.tutor.tutor_name || null },
+            });
+          }
+        }
       } catch (err) {
         if (!cancelled) setError(err.message || "Tutor profile not found.");
       } finally {
@@ -2673,6 +2733,9 @@ function Contact() {
 
       setSuccess("Thanks. Your message has been sent and we will reply soon.");
       setForm({ name: "", email: "", subject: "", message: "", company: "" });
+      track(ANALYTICS_EVENTS.CONTACT_FORM_SUBMITTED, {
+        metadata: { has_subject: Boolean(subject) },
+      });
     } catch (err) {
       setError(err.message || "Something went wrong while sending your message.");
     } finally {
@@ -2835,6 +2898,8 @@ function AdminLoginForm({ onCancel }) {
 
 function readAdminRoute() {
   try {
+    const path = window.location.pathname || "";
+    if (path === "/admin" || path.startsWith("/admin/")) return true;
     const params = new URLSearchParams(window.location.search);
     return params.get("admin") === "1" || window.location.hash === "#admin";
   } catch {
@@ -2842,28 +2907,49 @@ function readAdminRoute() {
   }
 }
 
+function readAdminSection() {
+  try {
+    const path = window.location.pathname || "";
+    if (path.startsWith("/admin/analytics")) return "analytics";
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("section") === "analytics") return "analytics";
+    return "bookings";
+  } catch {
+    return "bookings";
+  }
+}
+
 function normalizeAdminUrl() {
   try {
     if (!readAdminRoute()) return false;
-    if (window.location.pathname === "/" || window.location.pathname === "") return false;
-    const url = new URL(window.location.href);
-    url.pathname = "/";
-    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+    const path = window.location.pathname || "";
+    if (path === "/admin" || path.startsWith("/admin/")) {
+      if (path === "/admin/") {
+        window.history.replaceState({}, "", `/admin${window.location.search || ""}`);
+        return true;
+      }
+      return false;
+    }
+    const section = readAdminSection();
+    const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
+    window.history.replaceState({}, "", nextPath);
     return true;
   } catch {
     return false;
   }
 }
 
-function writeAdminRoute(enabled) {
+function writeAdminRoute(enabled, section = "bookings") {
   try {
-    const url = new URL(window.location.href);
     if (enabled) {
-      url.pathname = "/";
-      url.searchParams.set("admin", "1");
-    } else {
-      url.searchParams.delete("admin");
+      const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
+      window.history.pushState({}, "", nextPath);
+      return;
     }
+    const url = new URL(window.location.href);
+    url.pathname = "/";
+    url.searchParams.delete("admin");
+    url.searchParams.delete("section");
     if (url.hash === "#admin") url.hash = "";
     const next = `${url.pathname}${url.search}${url.hash}` || "/";
     window.history.pushState({}, "", next);
@@ -2904,7 +2990,7 @@ function applicationToEditForm(t) {
   };
 }
 
-function AdminDashboard({ onClose, onSiteLogout }) {
+function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSectionChange }) {
   const [password, setPassword] = useState(() => {
     try { return sessionStorage.getItem("jd_admin_pw") || ""; } catch { return ""; }
   });
@@ -2920,6 +3006,7 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   const [editingTutorId, setEditingTutorId] = useState(null);
   const [tutorEdits, setTutorEdits] = useState(null);
   const [tutorSaveMessage, setTutorSaveMessage] = useState("");
+  const activeSection = section === "analytics" ? "analytics" : "bookings";
 
   async function load(pw) {
     setLoading(true);
@@ -3203,12 +3290,48 @@ function AdminDashboard({ onClose, onSiteLogout }) {
   return (
     <div style={{ minHeight: "100vh", background: "#f8fafc", fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, sans-serif" }}>
       <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "14px 18px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", minWidth: 0 }}>
           <div style={{ width: 36, height: 36, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
-          <div style={{ fontWeight: 800 }}>Bookings Dashboard</div>
+          <div style={{ fontWeight: 800 }}>JDScience Admin</div>
+          <nav aria-label="Admin sections" style={{ display: "flex", gap: 6, flexWrap: "wrap", marginLeft: 4 }}>
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("bookings")}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 999,
+                border: activeSection === "bookings" ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
+                background: activeSection === "bookings" ? "#ecfeff" : "#fff",
+                color: activeSection === "bookings" ? TEAL_DARK : "#334155",
+                cursor: "pointer",
+                fontWeight: 800,
+                fontSize: 13,
+              }}
+            >
+              Bookings
+            </button>
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("analytics")}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 999,
+                border: activeSection === "analytics" ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
+                background: activeSection === "analytics" ? "#ecfeff" : "#fff",
+                color: activeSection === "analytics" ? TEAL_DARK : "#334155",
+                cursor: "pointer",
+                fontWeight: 800,
+                fontSize: 13,
+              }}
+            >
+              Analytics
+            </button>
+          </nav>
         </div>
         <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
+          {activeSection === "bookings" && (
+            <button onClick={() => load(password)} disabled={loading} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", cursor: "pointer", fontWeight: 700 }}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
+          )}
           {onClose ? (
             <button onClick={onClose} style={{ padding: "8px 14px", borderRadius: 8, border: "1px solid #e2e8f0", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>
               Close Admin Dashboard
@@ -3225,7 +3348,11 @@ function AdminDashboard({ onClose, onSiteLogout }) {
         </div>
       </header>
 
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 16px" }}>
+      <div style={{ maxWidth: activeSection === "analytics" ? 1280 : 1200, margin: "0 auto", padding: "20px 16px", width: "100%", minWidth: 0, overflowX: "hidden" }}>
+        {activeSection === "analytics" ? (
+          <AdminAnalytics password={password} onBack={() => onSectionChange?.("bookings")} />
+        ) : (
+          <>
         {error && (
           <div style={{ marginBottom: 12, padding: "10px 12px", borderRadius: 8, background: "#fef2f2", border: "1px solid #fecaca", color: "#991b1b", fontSize: 14 }}>
             {error}
@@ -3570,6 +3697,8 @@ function AdminDashboard({ onClose, onSiteLogout }) {
         </div>
         <AdminAdviceEditor password={password} />
         <AdminShopEditor password={password} />
+          </>
+        )}
       </div>
     </div>
   );
@@ -3621,6 +3750,7 @@ function App() {
   const [tutorApplicationOpen, setTutorApplicationOpen] = useState(false);
   const [selectedTutorSlug, setSelectedTutorSlug] = useState(null);
   const [adminRoute, setAdminRoute] = useState(readAdminRoute);
+  const [adminSection, setAdminSection] = useState(readAdminSection);
   const tutorTriggerRef = React.useRef(null);
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
@@ -3629,17 +3759,24 @@ function App() {
     applyDocumentMeta(page, { noIndex: adminRoute });
   }, [page, adminRoute, shopProductSlug]);
 
-  const goAdmin = () => {
-    writeAdminRoute(true);
+  const goAdmin = (section = "bookings") => {
+    writeAdminRoute(true, section);
     setAdminRoute(true);
+    setAdminSection(section === "analytics" ? "analytics" : "bookings");
     setPage("home");
     setShopProductSlug(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const setAdminSectionAndUrl = (section) => {
+    writeAdminRoute(true, section);
+    setAdminSection(section === "analytics" ? "analytics" : "bookings");
+  };
+
   const leaveAdmin = () => {
     writeAdminRoute(false);
     setAdminRoute(false);
+    setAdminSection("bookings");
   };
 
   const openAuth = (mode = "login", reason = "") => {
@@ -3662,6 +3799,7 @@ function App() {
         setPage("home");
       }
       setAdminRoute(readAdminRoute());
+      setAdminSection(readAdminSection());
       const nextPath = window.location.pathname;
       setShopProductSlug(readAdminRoute() ? null : shopSlugFromPathname(nextPath));
       setPage(readAdminRoute() ? "home" : pageFromPathname(nextPath));
@@ -3673,6 +3811,14 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const stop = startAnalyticsLifecycle(() => ({
+      page,
+      isAdmin: adminRoute || ADMIN_EMAILS.includes(session?.user?.email),
+    }));
+    return stop;
+  }, [page, adminRoute, session?.user?.email]);
+
   // Show a confirmation banner after Stripe Checkout redirects back.
   useEffect(() => {
     try {
@@ -3681,6 +3827,9 @@ function App() {
         setBanner({
           type: "success",
           text: "Payment successful — thank you! Your booking is confirmed. We'll email you shortly to arrange the session.",
+        });
+        track(ANALYTICS_EVENTS.TUTOR_BOOKING_SUBMITTED, {
+          metadata: { checkout: "tutoring" },
         });
         setPage("home");
         window.history.replaceState({}, "", "/");
@@ -3692,6 +3841,9 @@ function App() {
         setBanner({
           type: "success",
           text: "Shop payment successful — thank you! Your receipt and download instructions are below on the shop page.",
+        });
+        track(ANALYTICS_EVENTS.PURCHASE_COMPLETED, {
+          metadata: { checkout: "shop", session_present: Boolean(sessionId) },
         });
         setShopProductSlug(null);
         setPage("shop");
@@ -3805,6 +3957,14 @@ function App() {
     if (isExternalProduct(product)) return;
     addToBasket(product, 1);
     setShopBasketCount(countBasketItems(readBasket()));
+    track(ANALYTICS_EVENTS.ADD_TO_CART, {
+      product_id: product.id,
+      metadata: {
+        title: product.title,
+        product_slug: product.slug,
+        source: "featured",
+      },
+    });
   };
   const goHome = () => { leaveAdmin(); navigate("home"); };
   const handlePick = (lvl, subj) => { if (lvl) setPickedLevel(lvl); if (subj) setPickedSubject(subj); setPickedBoard(null); goPapers(); };
@@ -3844,7 +4004,14 @@ function App() {
       );
     }
     if (session && isAdmin) {
-      return <AdminDashboard onClose={goHome} onSiteLogout={logout} />;
+      return (
+        <AdminDashboard
+          onClose={goHome}
+          onSiteLogout={logout}
+          section={adminSection}
+          onSectionChange={setAdminSectionAndUrl}
+        />
+      );
     }
     if (session && !isAdmin) {
       return (

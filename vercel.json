@@ -38,6 +38,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/analytics-event", "destination": "/api/analytics-event" },
+    { "source": "/api/admin-analytics", "destination": "/api/admin-analytics" },
     { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },
     { "source": "/api/shop-products", "destination": "/api/education-posts?kind=shop-products" },
     { "source": "/api/shop-order", "destination": "/api/education-posts?kind=shop-order" },
@@ -46,6 +48,10 @@
     { "source": "/api/admin-shop-products", "destination": "/api/admin-education-posts?scope=shop" },
     { "source": "/api/admin-shop-orders", "destination": "/api/admin-education-posts?scope=shop-orders" },
     { "source": "/api/admin-resource-upload", "destination": "/api/admin-education-posts?scope=resource-upload" },
+    { "source": "/admin", "destination": "/" },
+    { "source": "/admin/", "destination": "/" },
+    { "source": "/admin/analytics", "destination": "/" },
+    { "source": "/admin/analytics/", "destination": "/" },
     { "source": "/papers", "destination": "/" },
     { "source": "/papers/", "destination": "/" },
     { "source": "/tutors", "destination": "/" },

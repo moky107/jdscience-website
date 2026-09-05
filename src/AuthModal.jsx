@@ -3,6 +3,7 @@ import { supabase } from "./supabaseClient";
 import TermsAgreement from "./TermsAgreement";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { markHasAccount } from "./visitorAuth";
+import { ANALYTICS_EVENTS, track } from "./analytics";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -88,11 +89,13 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
         }
         if (data.session) {
           markHasAccount();
+          track(ANALYTICS_EVENTS.SIGNUP_COMPLETED, { metadata: { immediate_session: true } });
           setInfo("Your account is ready. You are now signed in.");
           setTimeout(() => close(), 800);
           return;
         }
         markHasAccount();
+        track(ANALYTICS_EVENTS.SIGNUP_COMPLETED, { metadata: { immediate_session: false } });
         setInfo("Account created. Check your email and click the verification link, then log in to open resources.");
         return;
       }

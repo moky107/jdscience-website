@@ -25,6 +25,7 @@ export default defineConfig({
     servePublicHtml("/about", "public/about/index.html"),
     react(),
   ],
+  envPrefix: ["VITE_", "NEXT_PUBLIC_"],
   server: { host: true },
   preview: { host: true },
 });

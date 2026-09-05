@@ -33,6 +33,7 @@ export function shopSlugFromPathname(pathname) {
 }
 
 export function pageFromPathname(pathname) {
+  if (pathname === "/admin" || pathname === "/admin/" || pathname?.startsWith("/admin/")) return "home";
   if (pathname === "/papers" || pathname === "/papers/") return "papers";
   if (pathname === "/tutors" || pathname === "/tutors/") return "tutors";
   if (pathname === "/shop" || pathname === "/shop/") return "shop";

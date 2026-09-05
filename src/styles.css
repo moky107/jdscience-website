@@ -274,3 +274,27 @@ input, select, textarea {
     grid-template-columns: 1fr;
   }
 }
+
+/* Analytics dashboard */
+.jd-analytics-dashboard {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.jd-analytics-dashboard table {
+  max-width: 100%;
+}
+
+.jd-analytics-dashboard button,
+.jd-analytics-dashboard input,
+.jd-analytics-dashboard select {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .jd-analytics-dashboard {
+    padding-bottom: 24px;
+  }
+}
+

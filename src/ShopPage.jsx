@@ -22,6 +22,12 @@ import {
 import { formatPricePence, productOnSale } from "./shopFormat";
 import { ProductCard, productCardImageHeight, ProductImagePlaceholder } from "./ShopFeaturedSection";
 import { externalButtonLabel, externalLegalNote, externalSaleNotice, isExternalProduct, productShowsPrice, retailerName, retailerPriceHint } from "./shopProductHelpers";
+import {
+  ANALYTICS_EVENTS,
+  isAmazonRetailer,
+  isChemistryCompanionProduct,
+  track,
+} from "./analytics";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -110,6 +116,19 @@ function ProductDetail({ product, onBack, onAdd, onBuyNow }) {
                 href={product.external_url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  if (isAmazonRetailer(product) || isChemistryCompanionProduct(product)) {
+                    track(ANALYTICS_EVENTS.AMAZON_BOOK_CLICK, {
+                      product_id: product.id,
+                      metadata: {
+                        product_slug: product.slug,
+                        title: product.title,
+                        retailer: retailerName(product) || "Amazon",
+                        is_chemistry_companion: isChemistryCompanionProduct(product),
+                      },
+                    });
+                  }
+                }}
                 style={{ minHeight: 48, padding: "12px 18px", borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer", display: "inline-flex", alignItems: "center", textDecoration: "none" }}
               >
                 {externalLabel}
@@ -185,7 +204,12 @@ function BasketPanel({
             <span>{formatPricePence(subtotalPence)}</span>
           </div>
           {!checkoutOpen ? (
-            <button type="button" onClick={() => setCheckoutOpen(true)} style={{ width: "100%", minHeight: 48, marginTop: 16, borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
+            <button type="button" onClick={() => {
+              setCheckoutOpen(true);
+              track(ANALYTICS_EVENTS.CHECKOUT_STARTED, {
+                metadata: { source: "basket_panel", item_count: items.length },
+              });
+            }} style={{ width: "100%", minHeight: 48, marginTop: 16, borderRadius: 12, border: "none", background: TEAL, color: "#fff", fontWeight: 800, cursor: "pointer" }}>
               Checkout securely
             </button>
           ) : (
@@ -348,6 +372,26 @@ export default function ShopPage({
     return () => { cancelled = true; };
   }, [productSlug, filters]);
 
+  useEffect(() => {
+    if (!productDetail?.id) return;
+    track(ANALYTICS_EVENTS.PRODUCT_VIEW, {
+      product_id: productDetail.id,
+      metadata: {
+        title: productDetail.title,
+        product_slug: productDetail.slug,
+        product_type: productDetail.product_type,
+        level: productDetail.level,
+        subject: productDetail.subject,
+      },
+    });
+    if (productDetail.preview_url) {
+      track(ANALYTICS_EVENTS.PRODUCT_PREVIEW, {
+        product_id: productDetail.id,
+        metadata: { product_slug: productDetail.slug, title: productDetail.title },
+      });
+    }
+  }, [productDetail?.id]);
+
   function setCheckoutField(key, value) {
     setCheckoutForm((current) => ({ ...current, [key]: value }));
   }
@@ -360,13 +404,35 @@ export default function ShopPage({
     if (isExternalProduct(product)) return;
     const next = addToBasket(product, 1);
     refreshBasket(next);
-    if (buyNow) setCheckoutOpen(true);
+    track(ANALYTICS_EVENTS.ADD_TO_CART, {
+      product_id: product.id,
+      metadata: {
+        title: product.title,
+        product_slug: product.slug,
+        buy_now: buyNow,
+        unit_price_pence: product.effective_price_pence ?? product.price_pence,
+      },
+    });
+    if (buyNow) {
+      setCheckoutOpen(true);
+      track(ANALYTICS_EVENTS.CHECKOUT_STARTED, {
+        product_id: product.id,
+        metadata: { source: "buy_now", item_count: next.length },
+      });
+    }
   }
 
   async function handleCheckout(event) {
     event.preventDefault();
     setCheckoutError("");
     setCheckoutLoading(true);
+    track(ANALYTICS_EVENTS.CHECKOUT_STARTED, {
+      metadata: {
+        source: "basket",
+        item_count: basketItems.length,
+        subtotal_pence: subtotalPence,
+      },
+    });
     try {
       const resp = await fetch("/api/create-shop-checkout-session", {
         method: "POST",
