@@ -3996,6 +3996,18 @@ function App() {
   };
 
   if (adminRoute) {
+    if (import.meta.env.DEV && typeof window !== "undefined") {
+      const preview = new URLSearchParams(window.location.search).get("analytics_preview") === "1"
+        || window.location.pathname.startsWith("/admin/analytics");
+      // Local-only preview so the analytics UI can be verified without production admin secrets.
+      if (preview && new URLSearchParams(window.location.search).get("analytics_preview") === "1") {
+        return (
+          <div style={{ minHeight: "100vh", background: "#f8fafc", padding: "16px" }}>
+            <AdminAnalytics password="local-dev" />
+          </div>
+        );
+      }
+    }
     if (!authReady) {
       return (
         <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#f8fafc", color: "#64748b", fontWeight: 700 }}>

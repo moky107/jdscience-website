@@ -38,8 +38,8 @@
     }
   ],
   "rewrites": [
-    { "source": "/api/analytics-event", "destination": "/api/analytics-event" },
-    { "source": "/api/admin-analytics", "destination": "/api/admin-analytics" },
+    { "source": "/api/analytics-event", "destination": "/api/education-posts?kind=analytics-event" },
+    { "source": "/api/admin-analytics", "destination": "/api/admin-education-posts?scope=analytics" },
     { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },
     { "source": "/api/shop-products", "destination": "/api/education-posts?kind=shop-products" },
     { "source": "/api/shop-order", "destination": "/api/education-posts?kind=shop-order" },
