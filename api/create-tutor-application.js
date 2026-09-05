@@ -8,6 +8,7 @@ import {
   PROFILE_PHOTO_MAX_BYTES,
   TUTOR_ALLOWED_MODES,
   TUTOR_STORAGE_BUCKET,
+  isTutorApplicationSpam,
   isValidEmail,
   isValidPhone,
   makeTutorSlug,
@@ -56,7 +57,6 @@ export default async function handler(req, res) {
   const teaching_mode = safeTrim(body.teaching_mode, 40).toLowerCase();
   const availability_summary = safeTrim(body.availability_summary, 240);
   const rate_display = safeTrim(body.rate_display, 120);
-  const company = safeTrim(body.company, 120);
   const profile_photo_path = safeTrim(body.profile_photo_path, 400);
   const cv_path = safeTrim(body.cv_path, 400);
   const qualification_evidence_path = safeTrim(body.qualification_evidence_path, 400);
@@ -65,7 +65,9 @@ export default async function handler(req, res) {
   const consent_public_profile = parseBoolean(body.consent_public_profile);
   const accept_terms = hasAcceptedTerms(body);
 
-  if (company) {
+  // Silent discard for bots only. Do not treat autofilled "company" as spam.
+  if (isTutorApplicationSpam(body)) {
+    console.warn('Tutor application honeypot triggered — discarding without save.');
     return res.status(200).json({ ok: true });
   }
 
@@ -196,8 +198,9 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: error.message || `Failed to create tutor application in ${TUTOR_STORAGE_BUCKET}` });
     }
 
+    let notification = { sent: false, reason: "not_attempted" };
     try {
-      await sendTutorApplicationNotification({
+      notification = await sendTutorApplicationNotification({
         tutor_name,
         email_address,
         telephone_number,
@@ -214,11 +217,22 @@ export default async function handler(req, res) {
         rate_display: rateInfo.rateDisplay,
         profile_status: data?.profile_status || "pending",
       });
+      if (!notification?.sent) {
+        console.warn(
+          "Tutor application saved but owner notification was not sent:",
+          notification?.reason || "unknown"
+        );
+      }
     } catch (notifyErr) {
+      notification = { sent: false, reason: "exception" };
       console.warn("Tutor application notification failed (ignored):", notifyErr?.message || notifyErr);
     }
 
-    return res.status(200).json({ ok: true, application: data });
+    return res.status(200).json({
+      ok: true,
+      application: data,
+      notification_sent: Boolean(notification?.sent),
+    });
   } catch (err) {
     return res.status(500).json({ error: err?.message || 'Failed to create tutor application' });
   }

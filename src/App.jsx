@@ -2338,23 +2338,94 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
   );
 }
 
+function emptyTutorApplicationForm() {
+  return {
+    tutor_name: "",
+    email_address: "",
+    telephone_number: "",
+    location: "",
+    subjects_taught: [],
+    subjects_other: "",
+    levels_taught: [],
+    levels_other: "",
+    exam_boards_taught: "",
+    highest_relevant_qualification: "",
+    teaching_qualifications: "",
+    professional_memberships: "",
+    years_experience: "",
+    current_professional_role: "",
+    short_professional_biography: "",
+    tutoring_approach: "",
+    teaching_mode: "online",
+    availability_summary: "",
+    rate_display: "",
+    // Obscure honeypot name — do not use "company" (browsers autofill it).
+    jd_bot_check: "",
+    confirm_accurate: false,
+    consent_review_store: false,
+    consent_public_profile: false,
+    accept_terms: false,
+  };
+}
+
 function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   const isMobile = useIsMobile();
+  const formRef = React.useRef(null);
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState("");
   const [submitError, setSubmitError] = useState("");
   const [privacyExpanded, setPrivacyExpanded] = useState(false);
   const [errors, setErrors] = useState({});
-  const [form, setForm] = useState({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false, accept_terms: false });
+  const [form, setForm] = useState(emptyTutorApplicationForm);
   const [files, setFiles] = useState({ profile_photo: null, cv: null, qualification_evidence: null });
 
-  const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
-  const toggleChoice = (key, choice) => setForm((current) => {
-    const values = Array.isArray(current[key]) ? current[key] : [];
-    return { ...current, [key]: values.includes(choice) ? values.filter((item) => item !== choice) : [...values, choice] };
+  useEffect(() => {
+    if (!open) return;
+    setSuccess("");
+    setSubmitError("");
+    setErrors({});
+  }, [open]);
+
+  const clearFieldError = (key) => setErrors((current) => {
+    if (!current[key]) return current;
+    const next = { ...current };
+    delete next[key];
+    return next;
   });
-  const setFile = (key, file) => setFiles((current) => ({ ...current, [key]: file || null }));
-  const fieldError = (name) => errors[name] ? <div style={{ color: "#b91c1c", fontSize: 13, marginTop: 6 }}>{errors[name]}</div> : null;
+
+  const set = (key, value) => {
+    setForm((current) => ({ ...current, [key]: value }));
+    clearFieldError(key);
+  };
+  const toggleChoice = (key, choice) => {
+    setForm((current) => {
+      const values = Array.isArray(current[key]) ? current[key] : [];
+      return { ...current, [key]: values.includes(choice) ? values.filter((item) => item !== choice) : [...values, choice] };
+    });
+    clearFieldError(key);
+  };
+  const setFile = (key, file) => {
+    setFiles((current) => ({ ...current, [key]: file || null }));
+    clearFieldError(key);
+  };
+  const fieldError = (name) => errors[name] ? <div data-field-error={name} style={{ color: "#b91c1c", fontSize: 13, marginTop: 6 }}>{errors[name]}</div> : null;
+
+  function scrollToFirstError(nextErrors) {
+    const order = [
+      "tutor_name", "email_address", "telephone_number", "location", "profile_photo",
+      "subjects_taught", "subjects_other", "levels_taught", "levels_other",
+      "exam_boards_taught", "highest_relevant_qualification", "years_experience",
+      "current_professional_role", "short_professional_biography", "tutoring_approach",
+      "availability_summary", "rate_display", "cv", "qualification_evidence",
+      "confirm_accurate", "consent_review_store", "consent_public_profile", "accept_terms",
+    ];
+    const firstKey = order.find((key) => nextErrors[key]);
+    if (!firstKey || !formRef.current) return;
+    const target = formRef.current.querySelector(`[data-field-error="${firstKey}"]`);
+    if (target?.scrollIntoView) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 
   function validateFile(file, kind) {
     if (!file) return null;
@@ -2411,7 +2482,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   }
 
   function resetForm() {
-    setForm({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false, accept_terms: false });
+    setForm(emptyTutorApplicationForm());
     setFiles({ profile_photo: null, cv: null, qualification_evidence: null });
     setErrors({});
     setSubmitError("");
@@ -2424,7 +2495,10 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
     setErrors(validation);
     setSubmitError("");
     setSuccess("");
-    if (Object.keys(validation).length > 0) return;
+    if (Object.keys(validation).length > 0) {
+      scrollToFirstError(validation);
+      return;
+    }
 
     setSaving(true);
     try {
@@ -2467,7 +2541,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
           <button type="button" onClick={onClose} aria-label="Close tutor application form" style={{ width: 44, height: 44, borderRadius: 999, border: "1px solid #dbe3ef", background: "#fff", color: "#0f172a", cursor: "pointer", fontSize: 24, lineHeight: 1 }}>×</button>
         </div>
 
-        <form onSubmit={submit} style={{ marginTop: 20, display: "grid", gap: 20 }}>
+        <form ref={formRef} noValidate onSubmit={submit} style={{ marginTop: 20, display: "grid", gap: 20 }}>
           <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
             <h3 style={{ margin: 0, color: "#0f172a" }}>Personal details</h3>
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
@@ -2554,8 +2628,14 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 
             <div style={{ position: "absolute", left: "-9999px", width: 1, height: 1, overflow: "hidden" }} aria-hidden="true">
               <label>
-                Company
-                <input tabIndex={-1} autoComplete="off" value={form.company} onChange={(e) => set("company", e.target.value)} />
+                Leave blank
+                <input
+                  name="jd_bot_check"
+                  tabIndex={-1}
+                  autoComplete="new-password"
+                  value={form.jd_bot_check}
+                  onChange={(e) => set("jd_bot_check", e.target.value)}
+                />
               </label>
             </div>
 
@@ -2566,7 +2646,14 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
               {fieldError("consent_review_store")}
               <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_public_profile} onChange={(e) => set("consent_public_profile", e.target.checked)} /><span>I agree that an approved profile may be displayed publicly.</span></label>
               {fieldError("consent_public_profile")}
-              <TermsAgreement id="tutor-accept-terms" variant="tutor" checked={form.accept_terms} onChange={(value) => set("accept_terms", value)} disabled={saving} />
+              <TermsAgreement
+                id="tutor-accept-terms"
+                variant="tutor"
+                checked={form.accept_terms}
+                onChange={(value) => set("accept_terms", value)}
+                disabled={saving}
+                style={{ display: "flex", visibility: "visible", opacity: 1 }}
+              />
               {fieldError("accept_terms")}
               <div style={{ color: "#64748b", fontSize: 14 }}>
                 Read our <a href="#tutor-privacy-policy" onClick={(e) => { e.preventDefault(); setPrivacyExpanded((current) => !current); }} style={{ color: TEAL, fontWeight: 700 }}>privacy policy</a> before submitting.
@@ -2582,7 +2669,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
             <div style={{ color: "#64748b", fontSize: 13 }}>Applications are saved as pending until approved by JDScience.</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <button type="button" onClick={onClose} style={{ padding: "12px 16px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
-              <button type="submit" disabled={saving || !form.accept_terms} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving || !form.accept_terms ? "#94a3b8" : TEAL, color: "#fff", cursor: saving || !form.accept_terms ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
+              <button type="submit" disabled={saving} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
             </div>
           </div>
         </form>
