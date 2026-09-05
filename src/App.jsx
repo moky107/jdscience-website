@@ -2400,6 +2400,7 @@ function TutorProfileModal({ slug, triggerRef, onClose, onBook }) {
 
 function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   const isMobile = useIsMobile();
+  const formRef = React.useRef(null);
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState("");
   const [submitError, setSubmitError] = useState("");
@@ -2408,13 +2409,54 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
   const [form, setForm] = useState({ tutor_name: "", email_address: "", telephone_number: "", location: "", subjects_taught: [], subjects_other: "", levels_taught: [], levels_other: "", exam_boards_taught: "", highest_relevant_qualification: "", teaching_qualifications: "", professional_memberships: "", years_experience: "", current_professional_role: "", short_professional_biography: "", tutoring_approach: "", teaching_mode: "online", availability_summary: "", rate_display: "", company: "", confirm_accurate: false, consent_review_store: false, consent_public_profile: false, accept_terms: false });
   const [files, setFiles] = useState({ profile_photo: null, cv: null, qualification_evidence: null });
 
-  const set = (key, value) => setForm((current) => ({ ...current, [key]: value }));
-  const toggleChoice = (key, choice) => setForm((current) => {
-    const values = Array.isArray(current[key]) ? current[key] : [];
-    return { ...current, [key]: values.includes(choice) ? values.filter((item) => item !== choice) : [...values, choice] };
+  useEffect(() => {
+    if (!open) return;
+    setSuccess("");
+    setSubmitError("");
+    setErrors({});
+  }, [open]);
+
+  const clearFieldError = (key) => setErrors((current) => {
+    if (!current[key]) return current;
+    const next = { ...current };
+    delete next[key];
+    return next;
   });
-  const setFile = (key, file) => setFiles((current) => ({ ...current, [key]: file || null }));
-  const fieldError = (name) => errors[name] ? <div style={{ color: "#b91c1c", fontSize: 13, marginTop: 6 }}>{errors[name]}</div> : null;
+  const set = (key, value) => {
+    setForm((current) => ({ ...current, [key]: value }));
+    clearFieldError(key);
+  };
+  const toggleChoice = (key, choice) => {
+    setForm((current) => {
+      const values = Array.isArray(current[key]) ? current[key] : [];
+      return { ...current, [key]: values.includes(choice) ? values.filter((item) => item !== choice) : [...values, choice] };
+    });
+    clearFieldError(key);
+  };
+  const setFile = (key, file) => {
+    setFiles((current) => ({ ...current, [key]: file || null }));
+    clearFieldError(key);
+  };
+  const fieldError = (name) => errors[name] ? <div data-field-error={name} style={{ color: "#b91c1c", fontSize: 13, marginTop: 6 }}>{errors[name]}</div> : null;
+
+  function scrollToFirstError(nextErrors) {
+    const order = [
+      "tutor_name", "email_address", "telephone_number", "location", "profile_photo",
+      "subjects_taught", "subjects_other", "levels_taught", "levels_other",
+      "exam_boards_taught", "highest_relevant_qualification", "years_experience",
+      "current_professional_role", "short_professional_biography", "tutoring_approach",
+      "availability_summary", "rate_display", "cv", "qualification_evidence",
+      "confirm_accurate", "consent_review_store", "consent_public_profile", "accept_terms",
+    ];
+    const firstKey = order.find((key) => nextErrors[key]);
+    if (!firstKey || !formRef.current) return;
+    const target = formRef.current.querySelector(`[data-field-error="${firstKey}"]`)
+      || formRef.current.querySelector(`#tutor-accept-terms`)
+      || formRef.current.querySelector(`[name="${firstKey}"]`);
+    if (target && typeof target.scrollIntoView === "function") {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 
   function validateFile(file, kind) {
     if (!file) return null;
@@ -2484,7 +2526,11 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
     setErrors(validation);
     setSubmitError("");
     setSuccess("");
-    if (Object.keys(validation).length > 0) return;
+    if (Object.keys(validation).length > 0) {
+      // Defer so error nodes exist in the DOM before scrolling.
+      window.requestAnimationFrame(() => scrollToFirstError(validation));
+      return;
+    }
 
     setSaving(true);
     try {
@@ -2515,7 +2561,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 
   return (
     <ModalShell open={open} onClose={onClose} titleId="become-tutor-title" descriptionId="become-tutor-description" triggerRef={triggerRef} maxWidth={980}>
-      <div style={{ padding: isMobile ? 18 : 26 }}>
+      <div style={{ padding: isMobile ? "18px 18px max(24px, env(safe-area-inset-bottom))" : "26px 26px 32px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "start" }}>
           <div>
             <div id="become-tutor-description" style={{ color: TEAL_DARK, fontSize: 13, fontWeight: 800, textTransform: "uppercase", letterSpacing: ".08em" }}>JDScience Tutor Applications</div>
@@ -2524,20 +2570,20 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
               Submit your application below. Every application is reviewed by JDScience before a public tutor profile can be approved and published.
             </p>
           </div>
-          <button type="button" onClick={onClose} aria-label="Close tutor application form" style={{ width: 44, height: 44, borderRadius: 999, border: "1px solid #dbe3ef", background: "#fff", color: "#0f172a", cursor: "pointer", fontSize: 24, lineHeight: 1 }}>×</button>
+          <button type="button" onClick={onClose} aria-label="Close tutor application form" style={{ width: 44, height: 44, borderRadius: 999, border: "1px solid #dbe3ef", background: "#fff", color: "#0f172a", cursor: "pointer", fontSize: 24, lineHeight: 1, flexShrink: 0 }}>×</button>
         </div>
 
-        <form onSubmit={submit} style={{ marginTop: 20, display: "grid", gap: 20 }}>
+        <form ref={formRef} noValidate onSubmit={submit} style={{ marginTop: 20, display: "grid", gap: 20 }}>
           <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
             <h3 style={{ margin: 0, color: "#0f172a" }}>Personal details</h3>
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
-              <div><input required placeholder="Full name" value={form.tutor_name} onChange={(e) => set("tutor_name", e.target.value)} style={inp} />{fieldError("tutor_name")}</div>
-              <div><input required type="email" placeholder="Email address" value={form.email_address} onChange={(e) => set("email_address", e.target.value)} style={inp} />{fieldError("email_address")}</div>
-              <div><input required placeholder="Telephone number" value={form.telephone_number} onChange={(e) => set("telephone_number", e.target.value)} style={inp} />{fieldError("telephone_number")}</div>
-              <div><input required placeholder="Town or city" value={form.location} onChange={(e) => set("location", e.target.value)} style={inp} />{fieldError("location")}</div>
+              <div><input name="tutor_name" required placeholder="Full name" value={form.tutor_name} onChange={(e) => set("tutor_name", e.target.value)} style={inp} />{fieldError("tutor_name")}</div>
+              <div><input name="email_address" required type="email" placeholder="Email address" value={form.email_address} onChange={(e) => set("email_address", e.target.value)} style={inp} />{fieldError("email_address")}</div>
+              <div><input name="telephone_number" required placeholder="Telephone number" value={form.telephone_number} onChange={(e) => set("telephone_number", e.target.value)} style={inp} />{fieldError("telephone_number")}</div>
+              <div><input name="location" required placeholder="Town or city" value={form.location} onChange={(e) => set("location", e.target.value)} style={inp} />{fieldError("location")}</div>
               <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}>
                 <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Profile photograph</label>
-                <input type="file" accept={PROFILE_PHOTO_ACCEPT} onChange={(e) => setFile("profile_photo", e.target.files?.[0] || null)} style={inp} />
+                <input name="profile_photo" type="file" accept={PROFILE_PHOTO_ACCEPT} onChange={(e) => setFile("profile_photo", e.target.files?.[0] || null)} style={inp} />
                 <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.profile_photo ? files.profile_photo.name : "JPG, PNG or WebP up to 5MB."}</div>
                 {fieldError("profile_photo")}
               </div>
@@ -2557,7 +2603,7 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
                 ))}
               </div>
               {fieldError("subjects_taught")}
-              {form.subjects_taught.includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other subject" value={form.subjects_other} onChange={(e) => set("subjects_other", e.target.value)} style={inp} />{fieldError("subjects_other")}</div>}
+              {form.subjects_taught.includes("Other") && <div style={{ marginTop: 10 }}><input name="subjects_other" placeholder="Other subject" value={form.subjects_other} onChange={(e) => set("subjects_other", e.target.value)} style={inp} />{fieldError("subjects_other")}</div>}
             </div>
 
             <div style={{ marginTop: 16 }}>
@@ -2571,42 +2617,42 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
                 ))}
               </div>
               {fieldError("levels_taught")}
-              {form.levels_taught.includes("Other") && <div style={{ marginTop: 10 }}><input placeholder="Other level" value={form.levels_other} onChange={(e) => set("levels_other", e.target.value)} style={inp} />{fieldError("levels_other")}</div>}
+              {form.levels_taught.includes("Other") && <div style={{ marginTop: 10 }}><input name="levels_other" placeholder="Other level" value={form.levels_other} onChange={(e) => set("levels_other", e.target.value)} style={inp} />{fieldError("levels_other")}</div>}
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
-              <div><input placeholder="Exam boards taught" value={form.exam_boards_taught} onChange={(e) => set("exam_boards_taught", e.target.value)} style={inp} />{fieldError("exam_boards_taught")}</div>
-              <div><input placeholder="Highest relevant qualification" value={form.highest_relevant_qualification} onChange={(e) => set("highest_relevant_qualification", e.target.value)} style={inp} />{fieldError("highest_relevant_qualification")}</div>
-              <div><input placeholder="Teaching qualifications" value={form.teaching_qualifications} onChange={(e) => set("teaching_qualifications", e.target.value)} style={inp} /></div>
-              <div><input placeholder="Professional memberships" value={form.professional_memberships} onChange={(e) => set("professional_memberships", e.target.value)} style={inp} /></div>
-              <div><input placeholder="Years of teaching or tutoring experience" value={form.years_experience} onChange={(e) => set("years_experience", e.target.value)} style={inp} />{fieldError("years_experience")}</div>
-              <div><input placeholder="Current professional role" value={form.current_professional_role} onChange={(e) => set("current_professional_role", e.target.value)} style={inp} />{fieldError("current_professional_role")}</div>
-              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea rows={4} placeholder="Short professional biography" value={form.short_professional_biography} onChange={(e) => set("short_professional_biography", e.target.value)} style={inp} />{fieldError("short_professional_biography")}</div>
-              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea rows={4} placeholder="Tutoring approach" value={form.tutoring_approach} onChange={(e) => set("tutoring_approach", e.target.value)} style={inp} />{fieldError("tutoring_approach")}</div>
+              <div><input name="exam_boards_taught" placeholder="Exam boards taught" value={form.exam_boards_taught} onChange={(e) => set("exam_boards_taught", e.target.value)} style={inp} />{fieldError("exam_boards_taught")}</div>
+              <div><input name="highest_relevant_qualification" placeholder="Highest relevant qualification" value={form.highest_relevant_qualification} onChange={(e) => set("highest_relevant_qualification", e.target.value)} style={inp} />{fieldError("highest_relevant_qualification")}</div>
+              <div><input name="teaching_qualifications" placeholder="Teaching qualifications" value={form.teaching_qualifications} onChange={(e) => set("teaching_qualifications", e.target.value)} style={inp} /></div>
+              <div><input name="professional_memberships" placeholder="Professional memberships" value={form.professional_memberships} onChange={(e) => set("professional_memberships", e.target.value)} style={inp} /></div>
+              <div><input name="years_experience" placeholder="Years of teaching or tutoring experience" value={form.years_experience} onChange={(e) => set("years_experience", e.target.value)} style={inp} />{fieldError("years_experience")}</div>
+              <div><input name="current_professional_role" placeholder="Current professional role" value={form.current_professional_role} onChange={(e) => set("current_professional_role", e.target.value)} style={inp} />{fieldError("current_professional_role")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea name="short_professional_biography" rows={4} placeholder="Short professional biography" value={form.short_professional_biography} onChange={(e) => set("short_professional_biography", e.target.value)} style={inp} />{fieldError("short_professional_biography")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><textarea name="tutoring_approach" rows={4} placeholder="Tutoring approach" value={form.tutoring_approach} onChange={(e) => set("tutoring_approach", e.target.value)} style={inp} />{fieldError("tutoring_approach")}</div>
               <div>
-                <select value={form.teaching_mode} onChange={(e) => set("teaching_mode", e.target.value)} style={inp}>
+                <select name="teaching_mode" value={form.teaching_mode} onChange={(e) => set("teaching_mode", e.target.value)} style={inp}>
                   <option value="online">Online</option>
                   <option value="face-to-face">Face-to-face</option>
                   <option value="both">Both</option>
                 </select>
               </div>
-              <div><input placeholder="Availability" value={form.availability_summary} onChange={(e) => set("availability_summary", e.target.value)} style={inp} />{fieldError("availability_summary")}</div>
-              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><input placeholder="Hourly rate or rate range" value={form.rate_display} onChange={(e) => set("rate_display", e.target.value)} style={inp} />{fieldError("rate_display")}</div>
+              <div><input name="availability_summary" placeholder="Availability" value={form.availability_summary} onChange={(e) => set("availability_summary", e.target.value)} style={inp} />{fieldError("availability_summary")}</div>
+              <div style={{ gridColumn: isMobile ? "auto" : "1 / -1" }}><input name="rate_display" placeholder="Hourly rate or rate range" value={form.rate_display} onChange={(e) => set("rate_display", e.target.value)} style={inp} />{fieldError("rate_display")}</div>
             </div>
           </div>
 
-          <div style={{ borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20 }}>
+          <div style={{ position: "relative", borderRadius: 20, background: "#fff", border: "1px solid rgba(148, 163, 184, .18)", padding: isMobile ? 16 : 20, overflow: "visible" }}>
             <h3 style={{ margin: 0, color: "#0f172a" }}>Evidence and consent</h3>
             <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, marginTop: 16 }}>
               <div>
                 <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Optional CV upload</label>
-                <input type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("cv", e.target.files?.[0] || null)} style={inp} />
+                <input name="cv" type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("cv", e.target.files?.[0] || null)} style={inp} />
                 <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.cv ? files.cv.name : "PDF, DOC, DOCX or image up to 8MB."}</div>
                 {fieldError("cv")}
               </div>
               <div>
                 <label style={{ display: "block", fontWeight: 700, marginBottom: 8, color: "#334155" }}>Optional qualification evidence upload</label>
-                <input type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("qualification_evidence", e.target.files?.[0] || null)} style={inp} />
+                <input name="qualification_evidence" type="file" accept={DOCUMENT_ACCEPT} onChange={(e) => setFile("qualification_evidence", e.target.files?.[0] || null)} style={inp} />
                 <div style={{ fontSize: 12, color: "#64748b", marginTop: 6 }}>{files.qualification_evidence ? files.qualification_evidence.name : "Certificates or evidence up to 8MB."}</div>
                 {fieldError("qualification_evidence")}
               </div>
@@ -2619,14 +2665,30 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
               </label>
             </div>
 
-            <div style={{ marginTop: 16, display: "grid", gap: 10 }}>
-              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.confirm_accurate} onChange={(e) => set("confirm_accurate", e.target.checked)} /><span>I confirm that the information supplied is accurate.</span></label>
+            <div style={{ marginTop: 16, display: "grid", gap: 12 }}>
+              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "#334155", fontSize: 14, lineHeight: 1.55, cursor: "pointer" }}>
+                <input type="checkbox" checked={form.confirm_accurate} onChange={(e) => set("confirm_accurate", e.target.checked)} style={{ marginTop: 3, flexShrink: 0 }} />
+                <span>I confirm that the information supplied is accurate.</span>
+              </label>
               {fieldError("confirm_accurate")}
-              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_review_store} onChange={(e) => set("consent_review_store", e.target.checked)} /><span>I consent to JDScience reviewing and storing this application.</span></label>
+              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "#334155", fontSize: 14, lineHeight: 1.55, cursor: "pointer" }}>
+                <input type="checkbox" checked={form.consent_review_store} onChange={(e) => set("consent_review_store", e.target.checked)} style={{ marginTop: 3, flexShrink: 0 }} />
+                <span>I consent to JDScience reviewing and storing this application.</span>
+              </label>
               {fieldError("consent_review_store")}
-              <label style={{ display: "flex", alignItems: "start", gap: 10, color: "#334155" }}><input type="checkbox" checked={form.consent_public_profile} onChange={(e) => set("consent_public_profile", e.target.checked)} /><span>I agree that an approved profile may be displayed publicly.</span></label>
+              <label style={{ display: "flex", alignItems: "flex-start", gap: 10, color: "#334155", fontSize: 14, lineHeight: 1.55, cursor: "pointer" }}>
+                <input type="checkbox" checked={form.consent_public_profile} onChange={(e) => set("consent_public_profile", e.target.checked)} style={{ marginTop: 3, flexShrink: 0 }} />
+                <span>I agree that an approved profile may be displayed publicly.</span>
+              </label>
               {fieldError("consent_public_profile")}
-              <TermsAgreement id="tutor-accept-terms" variant="tutor" checked={form.accept_terms} onChange={(value) => set("accept_terms", value)} disabled={saving} />
+              <TermsAgreement
+                id="tutor-accept-terms"
+                variant="tutor"
+                checked={form.accept_terms}
+                onChange={(value) => set("accept_terms", value)}
+                disabled={saving}
+                style={{ display: "flex", visibility: "visible", opacity: 1 }}
+              />
               {fieldError("accept_terms")}
               <div style={{ color: "#64748b", fontSize: 14 }}>
                 Read our <a href="#tutor-privacy-policy" onClick={(e) => { e.preventDefault(); setPrivacyExpanded((current) => !current); }} style={{ color: TEAL, fontWeight: 700 }}>privacy policy</a> before submitting.
@@ -2636,13 +2698,13 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
           </div>
 
           {submitError && <div style={{ color: "#b91c1c", fontWeight: 700 }}>{submitError}</div>}
-          {success && <div style={{ color: "#166534", fontWeight: 700 }}>{success}</div>}
+          {success && <div role="status" style={{ color: "#166534", fontWeight: 700, padding: "12px 14px", borderRadius: 14, background: "#ecfdf5", border: "1px solid #bbf7d0" }}>{success}</div>}
 
-          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", paddingBottom: isMobile ? 8 : 0 }}>
             <div style={{ color: "#64748b", fontSize: 13 }}>Applications are saved as pending until approved by JDScience.</div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <button type="button" onClick={onClose} style={{ padding: "12px 16px", borderRadius: 14, border: "1px solid #cbd5e1", background: "#fff", color: "#0f172a", cursor: "pointer", fontWeight: 700 }}>Close</button>
-              <button type="submit" disabled={saving || !form.accept_terms} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving || !form.accept_terms ? "#94a3b8" : TEAL, color: "#fff", cursor: saving || !form.accept_terms ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
+              <button type="submit" disabled={saving} style={{ padding: "12px 18px", borderRadius: 14, border: "none", background: saving ? "#94a3b8" : TEAL, color: "#fff", cursor: saving ? "default" : "pointer", fontWeight: 800 }}>{saving ? "Submitting…" : "Submit Application"}</button>
             </div>
           </div>
         </form>

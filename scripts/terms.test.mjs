@@ -92,7 +92,22 @@ assert.match(app, /variant="tutor"/);
 assert.match(app, /variant="booking"/);
 assert.match(app, /href="\/terms\/"/);
 assert.match(app, /TutorChoosingNotice/);
+assert.match(app, /noValidate/);
+assert.match(app, /clearFieldError/);
+assert.match(app, /disabled=\{saving\}/);
+assert.doesNotMatch(app, /disabled=\{saving \|\| !form\.accept_terms\}/);
+assert.match(app, /id="tutor-accept-terms"/);
 assert.match(fs.readFileSync(path.join(root, "src", "TutorChoosingNotice.jsx"), "utf8"), /TUTOR_CHOOSING_NOTICE/);
+
+const termsAgreement = fs.readFileSync(path.join(root, "src", "TermsAgreement.jsx"), "utf8");
+assert.match(termsAgreement, /variant = "register"/);
+assert.match(termsAgreement, /tutor:\s*\n\s*"I have read and agree to the Terms and Conditions\."/);
+assert.match(termsAgreement, /I have read and agree to the Terms and Conditions/);
+assert.match(termsAgreement, /target="_blank"/);
+assert.match(termsAgreement, /TERMS_PATH/);
+assert.match(termsAgreement, /aria-required="true"/);
+assert.doesNotMatch(termsAgreement, /^\s*required\s*$/m);
+assert.match(termsAgreement, /stopPropagation/);
 
 assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /jd_signed_in=1/);
 assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /Googlebot/);
