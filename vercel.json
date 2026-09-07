@@ -35,12 +35,35 @@
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
       ]
+    },
+    {
+      "source": "/homepage-promo.mp4",
+      "headers": [
+        { "key": "Content-Type", "value": "video/mp4" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "Accept-Ranges", "value": "bytes" }
+      ]
+    },
+    {
+      "source": "/homepage-promo-poster.jpg",
+      "headers": [
+        { "key": "Content-Type", "value": "image/jpeg" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/avatar-fallback.svg",
+      "headers": [
+        { "key": "Content-Type", "value": "image/svg+xml" },
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
     }
   ],
   "rewrites": [
     { "source": "/api/analytics-event", "destination": "/api/education-posts?kind=analytics-event" },
     { "source": "/api/admin-analytics", "destination": "/api/admin-education-posts?scope=analytics" },
     { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },
+    { "source": "/api/tutor-photo", "destination": "/api/tutor-profiles?asset=photo" },
     { "source": "/api/shop-products", "destination": "/api/education-posts?kind=shop-products" },
     { "source": "/api/shop-order", "destination": "/api/education-posts?kind=shop-order" },
     { "source": "/api/shop-download", "destination": "/api/education-posts?kind=shop-download" },
@@ -60,6 +83,6 @@
     { "source": "/shop/", "destination": "/" },
     { "source": "/shop/:slug", "destination": "/" },
     { "source": "/shop/:slug/", "destination": "/" },
-    { "source": "/((?!api/|resources/|worksheets/|about/|terms/|tutors/joseph-danso|sitemap\\.xml|robots\\.txt|llms\\.txt|site\\.webmanifest|og-image\\.png|favicon\\.svg).*)", "destination": "/" }
+    { "source": "/((?!api/|resources/|worksheets/|about/|terms/|tutors/joseph-danso|sitemap\\.xml|robots\\.txt|llms\\.txt|site\\.webmanifest|og-image\\.png|favicon\\.svg|avatar-fallback\\.svg|homepage-promo\\.mp4|homepage-promo-poster\\.jpg|hero-students\\.png\\.png).*)", "destination": "/" }
   ]
 }

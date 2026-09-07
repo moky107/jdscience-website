@@ -9,6 +9,16 @@ export const DOCUMENT_EXTENSIONS = new Set(['pdf', 'doc', 'docx', 'jpg', 'jpeg',
 export const PROFILE_PHOTO_MAX_BYTES = 5 * 1024 * 1024;
 export const DOCUMENT_MAX_BYTES = 8 * 1024 * 1024;
 
+/** Private-document signed URL TTL (1 hour). */
+export const TUTOR_PRIVATE_SIGNED_TTL_SECONDS = 3600;
+/**
+ * Fallback signed URL TTL for profile photos when the stable /api/tutor-photo
+ * route is unavailable (e.g. unpublished admin previews).
+ */
+export const PROFILE_PHOTO_SIGNED_TTL_SECONDS = 60 * 60 * 24 * 7;
+export const TUTOR_PHOTO_API_PATH = '/api/tutor-photo';
+export const LOCAL_AVATAR_FALLBACK = '/avatar-fallback.svg';
+
 export const PUBLIC_TUTOR_SELECT = [
   'id',
   'public_slug',
@@ -215,6 +225,75 @@ function getFileExtension(path) {
   return parts.length > 1 ? parts.pop() : '';
 }
 
+/**
+ * Normalise legacy and newly uploaded tutor storage paths so signing / public
+ * proxy URLs resolve to the same object.
+ */
+export function normalizeTutorStoragePath(path) {
+  if (path == null) return null;
+  let value = String(path).trim();
+  if (!value) return null;
+
+  try {
+    value = decodeURIComponent(value);
+  } catch {
+    /* keep raw value when decoding fails */
+  }
+
+  value = value.split('#')[0].split('?')[0].trim();
+  if (!value) return null;
+
+  value = value.replace(/^https?:\/\/[^/]+\/storage\/v1\/object\/(?:public|sign|authenticated)\//i, '');
+  value = value.replace(/^\/+/, '');
+
+  const bucketPrefix = `${TUTOR_STORAGE_BUCKET}/`;
+  while (value.toLowerCase().startsWith(bucketPrefix)) {
+    value = value.slice(bucketPrefix.length);
+  }
+
+  value = value.replace(/^(?:applications\/)+/i, 'applications/');
+  value = value.replace(/\/{2,}/g, '/');
+
+  if (!value || value.includes('..')) return null;
+  return value;
+}
+
+export function mimeTypeForTutorPath(path) {
+  const extension = getFileExtension(path);
+  switch (extension) {
+    case 'jpg':
+    case 'jpeg':
+      return 'image/jpeg';
+    case 'png':
+      return 'image/png';
+    case 'webp':
+      return 'image/webp';
+    case 'gif':
+      return 'image/gif';
+    case 'pdf':
+      return 'application/pdf';
+    default:
+      return 'application/octet-stream';
+  }
+}
+
+export function isPublishedTutorRow(row) {
+  if (!row) return false;
+  const status = String(row.profile_status || '').trim().toLowerCase();
+  if (status !== 'approved') return false;
+  if (row.is_published !== true) return false;
+  return Boolean(String(row.public_slug || '').trim());
+}
+
+/** Stable same-origin URL for published tutor profile photos (no expiring token). */
+export function buildTutorPhotoApiUrl(slug, storagePath) {
+  const safeSlug = safeTrim(slug, 120);
+  const normalized = normalizeTutorStoragePath(storagePath);
+  if (!safeSlug || !normalized) return null;
+  const version = encodeURIComponent(normalized.split('/').pop() || '1');
+  return `${TUTOR_PHOTO_API_PATH}?slug=${encodeURIComponent(safeSlug)}&v=${version}`;
+}
+
 function normalizeStorageMetadata(file) {
   const metadata = file?.metadata || {};
   return {
@@ -229,7 +308,7 @@ function normalizeStorageMetadata(file) {
 }
 
 export async function validateStoredFile(supabase, path, { required, allowedExtensions, maxBytes, expectedFolder }) {
-  const normalizedPath = safeTrim(path, 400);
+  const normalizedPath = normalizeTutorStoragePath(path);
   if (!normalizedPath) {
     return required
       ? { ok: false, error: 'A required uploaded file is missing.' }
@@ -271,9 +350,12 @@ export async function validateStoredFile(supabase, path, { required, allowedExte
   return { ok: true, path: normalizedPath, size: meta.bytes, mimeType: meta.mimeType };
 }
 
-export async function signTutorAsset(supabase, path, expiresIn = 3600) {
-  if (!path) return null;
-  const { data, error } = await supabase.storage.from(TUTOR_STORAGE_BUCKET).createSignedUrl(path, expiresIn);
+export async function signTutorAsset(supabase, path, expiresIn = TUTOR_PRIVATE_SIGNED_TTL_SECONDS) {
+  const normalized = normalizeTutorStoragePath(path);
+  if (!normalized) return null;
+  const { data, error } = await supabase.storage
+    .from(TUTOR_STORAGE_BUCKET)
+    .createSignedUrl(normalized, expiresIn);
   if (error) return null;
   return data?.signedUrl || null;
 }
@@ -281,10 +363,28 @@ export async function signTutorAsset(supabase, path, expiresIn = 3600) {
 export async function attachTutorAssetUrls(supabase, row, includePrivate = false) {
   if (!row) return row;
   const next = { ...row };
-  next.profile_photo_url = await signTutorAsset(supabase, row.profile_photo_path);
+  const photoPath = normalizeTutorStoragePath(row.profile_photo_path);
+  next.profile_photo_path = photoPath;
+
+  if (isPublishedTutorRow(row) && photoPath) {
+    next.profile_photo_url = buildTutorPhotoApiUrl(row.public_slug, photoPath);
+  } else {
+    next.profile_photo_url = await signTutorAsset(
+      supabase,
+      photoPath,
+      PROFILE_PHOTO_SIGNED_TTL_SECONDS,
+    );
+  }
+
   if (includePrivate) {
-    next.cv_url = await signTutorAsset(supabase, row.cv_path);
-    next.qualification_evidence_url = await signTutorAsset(supabase, row.qualification_evidence_path);
+    next.cv_path = normalizeTutorStoragePath(row.cv_path);
+    next.qualification_evidence_path = normalizeTutorStoragePath(row.qualification_evidence_path);
+    next.cv_url = await signTutorAsset(supabase, next.cv_path, TUTOR_PRIVATE_SIGNED_TTL_SECONDS);
+    next.qualification_evidence_url = await signTutorAsset(
+      supabase,
+      next.qualification_evidence_path,
+      TUTOR_PRIVATE_SIGNED_TTL_SECONDS,
+    );
   }
   return next;
 }
