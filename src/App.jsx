@@ -44,7 +44,7 @@ import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
-import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
+import { mergeResourceCatalog, resourceMatchesPageContext, resourceOpenHref } from "./resourceNormalize";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -386,6 +386,13 @@ async function adminResourceUploadRequest(accessToken, payload) {
   }
   const data = await resp.json().catch(() => ({}));
   if (!resp.ok) {
+    if (data?.needsConfirmation) {
+      const err = new Error(data.error || "Automatic classification is uncertain.");
+      err.needsConfirmation = true;
+      err.reasons = data.reasons || [];
+      err.suggested = data.suggested || null;
+      throw err;
+    }
     throw new Error(formatResourceUploadError(data?.error || data, "Upload failed."));
   }
   return data;
@@ -1111,6 +1118,7 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
     resources.filter((r) => {
       if (isElevenPlusOriginal(r)) return false;
       if (isBtecAppliedScienceOriginal(r)) return false;
+      if (!resourceMatchesPageContext(r, { level: activeLevel, subject: activeSubject })) return false;
       const titleBlob = `${r.title || ""} ${r.file_name || ""} ${r.storage_path || ""} ${r.file_url || ""}`;
       if (slugify(activeSubject) === "biology" && /physics/i.test(titleBlob) && !/physical chemistry/i.test(titleBlob)) {
         return false;
@@ -1424,6 +1432,8 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
   const [drag, setDrag] = useState(false);
   const [busy, setBusy] = useState(false);
   const [formError, setFormError] = useState("");
+  const [confirmClassification, setConfirmClassification] = useState(false);
+  const [classificationNotice, setClassificationNotice] = useState(null);
   const inputRef = React.useRef(null);
 
   const addFiles = (fileList) => {
@@ -1490,6 +1500,7 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
         file_name: f.name,
         contentType: f.type || "application/pdf",
         fileSize: f.size,
+        confirm_classification: confirmClassification,
       });
 
       fileObj.progress = 40;
@@ -1533,6 +1544,7 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
         contentType: f.type || "application/pdf",
         fileSize: f.size,
         storage_path: prepared.storage_path,
+        confirm_classification: confirmClassification,
       });
 
       fileObj.status = "done";
@@ -1546,6 +1558,13 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
       });
       return { success: true };
     } catch (err) {
+      if (err?.needsConfirmation) {
+        setClassificationNotice({
+          reasons: err.reasons || [],
+          suggested: err.suggested || null,
+        });
+        setConfirmClassification(false);
+      }
       fileObj.status = "error";
       fileObj.error = formatResourceUploadError(err);
       setFiles((cur) => {
@@ -1688,9 +1707,31 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
           </>
         )}
 
+        {classificationNotice && (
+          <div style={{ border: "1px solid #fcd34d", background: "#fffbeb", borderRadius: 12, padding: 12, color: "#92400e", fontSize: 13, lineHeight: 1.5 }}>
+            <div style={{ fontWeight: 800, marginBottom: 6 }}>Classification needs confirmation</div>
+            <ul style={{ margin: "0 0 8px", paddingLeft: 18 }}>
+              {(classificationNotice.reasons || []).map((reason) => <li key={reason}>{reason}</li>)}
+            </ul>
+            {classificationNotice.suggested && (
+              <div style={{ marginBottom: 8 }}>
+                Suggested: {classificationNotice.suggested.level} · {classificationNotice.suggested.subject} · {classificationNotice.suggested.exam_board} · {classificationNotice.suggested.resource_category}
+              </div>
+            )}
+            <label style={{ display: "flex", gap: 8, alignItems: "flex-start", cursor: "pointer" }}>
+              <input
+                type="checkbox"
+                checked={confirmClassification}
+                onChange={(e) => setConfirmClassification(e.target.checked)}
+              />
+              <span>I confirm the selected level, subject, exam board and resource type are correct.</span>
+            </label>
+          </div>
+        )}
+
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-          <button onClick={save} disabled={busy}
-            style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+          <button onClick={save} disabled={busy || (classificationNotice && !confirmClassification)}
+            style={{ padding: 12, borderRadius: 8, background: busy || (classificationNotice && !confirmClassification) ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy || (classificationNotice && !confirmClassification) ? "default" : "pointer", fontWeight: 800 }}>
             {busy ? "Uploading…" : "Save Resource(s)"}
           </button>
           <button type="button" onClick={close} style={{ background: "none", border: 0, color: "#64748b", cursor: "pointer" }}>Cancel</button>

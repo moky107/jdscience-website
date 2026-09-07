@@ -1,9 +1,50 @@
 import { createClient } from '@supabase/supabase-js';
+import {
+  assessResourceClassification,
+  inferResourceCategory,
+  inferResourceExamBoard,
+  inferResourceLevel,
+  inferResourceSubject,
+  levelKey,
+  looksLikeEdexcelGcseChemistryTopic,
+  looksLikeTLevelResource,
+} from './resourceNormalize.js';
 import { parseRequestBody, safeTrim, slugify } from './tutors.js';
 
 export const RESOURCES_BUCKET = 'resources';
 export const RESOURCE_UPLOAD_MAX_BYTES = 25 * 1024 * 1024;
 export const ADMIN_RESOURCE_EMAILS = ['jd943791@gmail.com'];
+
+export const ALLOWED_RESOURCE_LEVELS = [
+  '11+',
+  'GCSE',
+  'IGCSE',
+  'GCSE/IGCSE',
+  'A-Level',
+  'T-Level',
+  'BTEC',
+];
+
+export const ALLOWED_RESOURCE_CATEGORIES = [
+  'Specifications',
+  'Revision Notes',
+  'Past Questions',
+  'Mark Schemes',
+  'Examiner Reports',
+  'Worksheets',
+  'Videos',
+  'Resource',
+];
+
+export const SUBJECTS_BY_RESOURCE_LEVEL = {
+  '11+': ['English', 'Maths', 'Verbal Reasoning', 'Non-Verbal Reasoning', 'Mixed Practice', 'Parent Guide'],
+  GCSE: ['Biology', 'Chemistry', 'Physics', 'Maths'],
+  IGCSE: ['Biology', 'Chemistry', 'Physics', 'Maths'],
+  'GCSE/IGCSE': ['Biology', 'Chemistry', 'Physics', 'Maths'],
+  'A-Level': ['Biology', 'Chemistry', 'Physics', 'Maths'],
+  'T-Level': ['Science', 'Laboratory Sciences', 'Food Sciences', 'Health', 'Healthcare Science'],
+  BTEC: ['Applied Science', 'Health and Social Care', 'Engineering', 'Business', 'Computing'],
+};
 
 const PDF_CONTENT_TYPES = new Set([
   'application/pdf',
@@ -81,8 +122,16 @@ function resourceFileExtension(fileName) {
   return 'bin';
 }
 
+function normalizeDeclaredLevel(level) {
+  const key = levelKey(level);
+  if (key === 'GCSE/IGCSE' || key === 'A-Level' || key === 'T-Level' || key === 'BTEC' || key === '11+') {
+    return key;
+  }
+  return level;
+}
+
 export function validateResourceUploadMeta(body) {
-  const level = safeTrim(body.level, 40);
+  const levelRaw = safeTrim(body.level, 40);
   const subject = safeTrim(body.subject, 80);
   const exam_board = safeTrim(body.exam_board, 40);
   const resource_category = safeTrim(body.resource_category, 40);
@@ -90,9 +139,27 @@ export function validateResourceUploadMeta(body) {
   const file_name = safeTrim(body.file_name, 180);
   const contentType = safeTrim(body.contentType, 120);
   const fileSize = Number(body.fileSize);
+  const confirmClassification = Boolean(body.confirm_classification);
 
-  if (!level || !subject || !exam_board || !resource_category) {
+  if (!levelRaw || !subject || !exam_board || !resource_category) {
     return { ok: false, error: 'Level, subject, exam board and section are required.' };
+  }
+  if (!ALLOWED_RESOURCE_LEVELS.some((item) => levelKey(item) === levelKey(levelRaw) || item === levelRaw)) {
+    return { ok: false, error: 'Level is not recognised. Choose a valid qualification level.' };
+  }
+  if (!ALLOWED_RESOURCE_CATEGORIES.includes(resource_category)) {
+    return {
+      ok: false,
+      error: `Resource type must be one of: ${ALLOWED_RESOURCE_CATEGORIES.join(', ')}.`,
+    };
+  }
+  const level = normalizeDeclaredLevel(levelRaw);
+  const allowedSubjects = SUBJECTS_BY_RESOURCE_LEVEL[level] || SUBJECTS_BY_RESOURCE_LEVEL[levelRaw] || [];
+  if (allowedSubjects.length && !allowedSubjects.some((item) => slugify(item) === slugify(subject))) {
+    return {
+      ok: false,
+      error: `Subject "${subject}" is not valid for ${level}. Choose a subject that belongs to that level.`,
+    };
   }
   if (!title) {
     return { ok: false, error: 'Title is required.' };
@@ -113,9 +180,66 @@ export function validateResourceUploadMeta(body) {
     return { ok: false, error: 'This file type is not supported. Use PDF, Word, PowerPoint, Excel or image files.' };
   }
 
+  const probe = {
+    level,
+    subject,
+    exam_board,
+    resource_category,
+    title,
+    file_name,
+  };
+  const inferredLevel = inferResourceLevel(probe);
+  const inferredSubject = inferResourceSubject(probe);
+  const inferredBoard = inferResourceExamBoard(probe);
+  const inferredCategory = inferResourceCategory(probe);
+  const assessment = assessResourceClassification(probe);
+
+  const conflicts = [];
+  if (looksLikeTLevelResource(probe) && levelKey(level) !== 'T-Level') {
+    conflicts.push('This file looks like a T-Level resource but a different level was selected.');
+  }
+  if (looksLikeEdexcelGcseChemistryTopic(probe) && levelKey(level) !== 'GCSE/IGCSE') {
+    conflicts.push('This file matches Edexcel GCSE Chemistry topics but a different level was selected.');
+  }
+  if (looksLikeEdexcelGcseChemistryTopic(probe) && exam_board !== 'Edexcel') {
+    conflicts.push('This Edexcel GCSE Chemistry topic file is listed under a different exam board.');
+  }
+  if (inferredSubject && slugify(inferredSubject) !== slugify(subject)) {
+    conflicts.push(`Filename suggests subject "${inferredSubject}" but "${subject}" was selected.`);
+  }
+  if (resource_category === 'Resource') {
+    conflicts.push('Resource type is set to the neutral fallback "Resource". Confirm this is intentional.');
+  }
+
+  if ((assessment.uncertain || conflicts.length) && !confirmClassification) {
+    return {
+      ok: false,
+      needsConfirmation: true,
+      error: 'Automatic classification is uncertain. Confirm the level, subject, exam board and type before uploading.',
+      reasons: [...new Set([...assessment.reasons, ...conflicts])],
+      suggested: {
+        level: inferredLevel,
+        subject: inferredSubject,
+        exam_board: inferredBoard,
+        resource_category: inferredCategory,
+      },
+    };
+  }
+
   return {
     ok: true,
-    fields: { level, subject, exam_board, resource_category, title, file_name, contentType, fileSize },
+    fields: {
+      level,
+      subject,
+      exam_board,
+      resource_category,
+      title,
+      file_name,
+      contentType,
+      fileSize,
+      confirm_classification: confirmClassification,
+      classification_uncertain: Boolean(assessment.uncertain || conflicts.length),
+    },
   };
 }
 
@@ -178,7 +302,16 @@ export async function prepareResourceUpload(supabase, fields) {
 
 export async function completeResourceUpload(supabase, body) {
   const parsed = validateResourceUploadMeta(body);
-  if (!parsed.ok) return { ok: false, status: 400, error: parsed.error };
+  if (!parsed.ok) {
+    return {
+      ok: false,
+      status: 400,
+      error: parsed.error,
+      needsConfirmation: Boolean(parsed.needsConfirmation),
+      reasons: parsed.reasons || [],
+      suggested: parsed.suggested || null,
+    };
+  }
 
   const storage_path = safeTrim(body.storage_path, 400);
   if (!storage_path) {
@@ -308,7 +441,14 @@ export async function handleResourceUploadRequest(req, res, body) {
   try {
     if (action === 'prepare') {
       const parsed = validateResourceUploadMeta(body);
-      if (!parsed.ok) return res.status(400).json({ error: parsed.error });
+      if (!parsed.ok) {
+        return res.status(400).json({
+          error: parsed.error,
+          needsConfirmation: Boolean(parsed.needsConfirmation),
+          reasons: parsed.reasons || [],
+          suggested: parsed.suggested || null,
+        });
+      }
 
       const prepared = await prepareResourceUpload(supabase, parsed.fields);
       if (!prepared.ok) return res.status(prepared.status).json({ error: prepared.error });
@@ -323,7 +463,14 @@ export async function handleResourceUploadRequest(req, res, body) {
 
     if (action === 'complete') {
       const completed = await completeResourceUpload(supabase, body);
-      if (!completed.ok) return res.status(completed.status).json({ error: completed.error });
+      if (!completed.ok) {
+        return res.status(completed.status).json({
+          error: completed.error,
+          needsConfirmation: Boolean(completed.needsConfirmation),
+          reasons: completed.reasons || [],
+          suggested: completed.suggested || null,
+        });
+      }
       return res.status(200).json({
         ok: true,
         resource: completed.resource,
