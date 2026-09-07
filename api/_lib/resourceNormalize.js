@@ -26,6 +26,7 @@ function blob(resource) {
     decodeResourceLabel(resource.title),
     resource.storage_path || "",
     resource.file_url || "",
+    resource.series_label || "",
   ].join(" ").toLowerCase();
 }
 
@@ -39,9 +40,85 @@ export function levelKey(level) {
   return level;
 }
 
+/** Explicit JDScience authorship markers only — never storage path / host alone. */
+export function isJdScienceAuthored(resource) {
+  const title = decodeResourceLabel(resource?.title || "");
+  const file = decodeResourceLabel(resource?.file_name || "");
+  const series = String(resource?.series_label || "");
+  const url = `${resource?.file_url_override || ""} ${resource?.file_url || ""}`;
+  if (/jdscience|jd\s*science/i.test(`${title} ${file} ${series}`)) return true;
+  // Public original worksheet HTML/PDF library only — not Supabase ".../worksheets/..." storage folders.
+  if (/(?:^|[\s"'])\/worksheets\//i.test(url) || /^\/worksheets\//i.test(String(resource?.file_url_override || "")) || /^\/worksheets\//i.test(String(resource?.file_url || ""))) {
+    return true;
+  }
+  if (/\/resources\/11-plus\//i.test(url) && /jdscience/i.test(`${title} ${file} ${url}`)) return true;
+  return false;
+}
+
+const EDEXCEL_GCSE_CHEM_TOPIC_RE =
+  /topic\s*_?\s*1\b.*key\s*concepts|key\s*concepts\s*in\s*chemistry|topic\s*_?\s*2\b.*states\s*of\s*matter|topic\s*_?\s*3\b.*chemical\s*changes|topic\s*_?\s*4\b.*extracting\s*metals|topic\s*_?\s*5\b.*separate\s*chemistry|topic\s*_?\s*6\b.*groups\s*in\s*the\s*periodic|topic\s*_?\s*7\b.*rates\s*(and|&)\s*energy|topic\s*_?\s*8\b.*fuels\s*(and|&)\s*earth|topic\s*_?\s*9\b.*separate\s*chemistry/i;
+
+const TLEVEL_SIGNAL_RE =
+  /\bt[\s_-]*level\b|\btlevel\b|specification\s*points?\s*a1[0-5]|core\s*chemistry\s*a1[0-5]|a10\s*[-–—to]+\s*a15/i;
+
+const ALEVEL_CHEM_SIGNAL_RE =
+  /\ba[\s_-]*level\b|mass\s*spectra|infrared|further\s*equilibrium|topic\s*2\.12|hess'?s?\s*law|calorimetr/i;
+
+export function looksLikeTLevelResource(resource) {
+  return TLEVEL_SIGNAL_RE.test(blob(resource));
+}
+
+export function looksLikeEdexcelGcseChemistryTopic(resource) {
+  const text = blob(resource).replace(/[_-]+/g, " ");
+  if (TLEVEL_SIGNAL_RE.test(text)) return false;
+  if (ALEVEL_CHEM_SIGNAL_RE.test(text) && !EDEXCEL_GCSE_CHEM_TOPIC_RE.test(text)) return false;
+  return EDEXCEL_GCSE_CHEM_TOPIC_RE.test(text);
+}
+
+export function inferResourceLevel(resource) {
+  if (looksLikeTLevelResource(resource)) return "T-Level";
+  if (looksLikeEdexcelGcseChemistryTopic(resource)) return "GCSE/IGCSE";
+  return levelKey(resource.level) || resource.level;
+}
+
+export function inferResourceExamBoard(resource) {
+  const text = blob(resource);
+  if (looksLikeTLevelResource(resource)) {
+    if (/ncfe/.test(text)) return "NCFE";
+    if (/pearson|edexcel/.test(text)) return "Pearson";
+    return resource.exam_board || "Pearson";
+  }
+  if (looksLikeEdexcelGcseChemistryTopic(resource)) return "Edexcel";
+  // Prefer explicit board tokens in the filename/title over a mismatched stored board.
+  if (/\baqa\b/.test(text) && !/\bedexcel\b/.test(text)) return "AQA";
+  if (/\bedexcel\b/.test(text) && !/\baqa\b/.test(text)) return "Edexcel";
+  if (/\bocr\b/.test(text)) return "OCR";
+  if (/\beduqas\b/.test(text)) return "Eduqas";
+  if (/\bwjec\b/.test(text)) return "WJEC";
+  return resource.exam_board;
+}
+
 export function inferResourceSubject(resource) {
-  const level = levelKey(resource.level);
-  if (level === "T-Level" || level === "BTEC") return resource.subject;
+  const level = inferResourceLevel(resource);
+  if (level === "T-Level") {
+    const text = blob(resource);
+    if (/food\s*science/.test(text)) return "Food Sciences";
+    if (/laboratory/.test(text)) return "Laboratory Sciences";
+    if (/healthcare\s*science/.test(text)) return "Healthcare Science";
+    if (/\bhealth\b/.test(text) && !/healthcare/.test(text) && !/chemistry|physics|biology|science\b/.test(text)) {
+      return "Health";
+    }
+    // Core chemistry / science decks belong under T-Level Science, even if a GCSE Chemistry subject was stored.
+    if (/core\s*chemistry|a10|a15|t[\s_-]*level.*chem|chem.*t[\s_-]*level|\bscience\b/.test(text)) {
+      return "Science";
+    }
+    if (resource.subject && /science|laboratory|food|health/i.test(resource.subject)) {
+      return resource.subject;
+    }
+    return "Science";
+  }
+  if (level === "BTEC") return resource.subject;
+  if (looksLikeEdexcelGcseChemistryTopic(resource)) return "Chemistry";
   const text = blob(resource);
   const name = `${decodeResourceLabel(resource.file_name)} ${decodeResourceLabel(resource.title)}`.toLowerCase();
   if (/\b8463\d|\b8463-|\b1ph0/.test(text)) return "Physics";
@@ -62,7 +139,15 @@ export function inferResourceCategory(resource) {
   if (/_QU(?:\s*\(\d+\))?\.PDF/i.test(file) || /-QP-/i.test(file) || /-INS-/i.test(file) || /-PT-/i.test(file)) {
     return "Past Questions";
   }
-  return resource.resource_category;
+  if (/worksheet|workbook|fill[_\s-]?in/i.test(file) && !/revision\s*notes?/i.test(file)) {
+    return "Worksheets";
+  }
+  if (/\.pptx?$/i.test(file) && /revision|notes|deck|teaching/i.test(file)) {
+    return resource.resource_category || "Revision Notes";
+  }
+  const current = String(resource.resource_category || "").trim();
+  if (!current) return "Resource";
+  return current;
 }
 
 const DEAD_PHYSICS_UNDER_BIOLOGY_IDS = new Set([65, 66, 67, 68, 69]);
@@ -114,8 +199,11 @@ function isExamMaterialCategory(resource) {
 }
 
 function isOriginalJdScienceFile(resource) {
-  const file = `${decodeResourceLabel(resource.file_name || "")} ${decodeResourceLabel(resource.title || "")} ${resource.file_url || ""}`;
-  return /jdscience/i.test(file) || String(resource.file_url || "").startsWith("/worksheets/") || String(resource.file_url || resource.file_url_override || "").startsWith("/resources/11-plus/");
+  if (isJdScienceAuthored(resource)) return true;
+  const url = String(resource?.file_url_override || resource?.file_url || "");
+  // Hosted 11+ originals are JD Science materials even when the filename omits the brand.
+  if (url.startsWith("/resources/11-plus/")) return true;
+  return false;
 }
 
 export function isHostedOfficialExamCopy(resource) {
@@ -173,24 +261,26 @@ const BIOLOGY_TOPICS = [
   { re: /\becology|\btopic\s*7\b|\bb7\b/i, n: 7, label: "Ecology", slug: "ecology" },
 ];
 
+/** GCSE Chemistry topic labels — only used when level is GCSE/IGCSE. */
 const CHEMISTRY_TOPICS = [
+  { re: /\btopic\s*_?\s*7\b|rates\s*(and|&)\s*energy/i, n: 7, label: "Rates and energy changes", slug: "rates-and-energy-changes" },
   { re: /\bc3\b|quantitative/i, n: 3, label: "Quantitative chemistry", slug: "quantitative-chemistry" },
   { re: /\bc2\b|bonding/i, n: 2, label: "Bonding and structure", slug: "bonding" },
-  { re: /\bc5\b|energy changes/i, n: 5, label: "Energy changes", slug: "energy-changes" },
+  { re: /\bc5\b|(?<!rates\s(and|&)\s)energy changes/i, n: 5, label: "Energy changes", slug: "energy-changes" },
   { re: /\bc6\b|rate and extent/i, n: 6, label: "Rate and extent", slug: "rate-and-extent" },
   { re: /\bc7\b|organic chemistry/i, n: 7, label: "Organic chemistry", slug: "organic-chemistry" },
   { re: /\bc8\b|chemical analysis/i, n: 8, label: "Chemical analysis", slug: "chemical-analysis" },
   { re: /\bc9\b|atmosphere/i, n: 9, label: "Atmosphere", slug: "atmosphere" },
   { re: /\bc10\b|using resources/i, n: 10, label: "Using resources", slug: "using-resources" },
-  { re: /\bc1\b|key concepts|\btopic\s*1\b/i, n: 1, label: "Key concepts", slug: "key-concepts" },
-  { re: /\btopic\s*2\b|states of matter/i, n: 2, label: "States of matter", slug: "states-of-matter" },
+  { re: /\bc1\b|key concepts|\btopic\s*_?\s*1\b/i, n: 1, label: "Key concepts", slug: "key-concepts" },
+  { re: /\btopic\s*_?\s*2\b|states of matter/i, n: 2, label: "States of matter", slug: "states-of-matter" },
   { re: /\bc4\b/i, n: 4, label: "Chemical changes", slug: "chemical-changes" },
-  { re: /\btopic\s*3\b|chemical changes/i, n: 3, label: "Chemical changes", slug: "chemical-changes" },
-  { re: /\btopic\s*4\b|extracting metals/i, n: 4, label: "Extracting metals", slug: "extracting-metals" },
-  { re: /\btopic\s*5\b|separate chemistry 1/i, n: 5, label: "Separate chemistry 1", slug: "separate-chemistry-1" },
-  { re: /\btopic\s*6\b|groups in the periodic/i, n: 6, label: "Periodic table groups", slug: "periodic-table-groups" },
-  { re: /\btopic\s*8\b|fuels and earth/i, n: 8, label: "Fuels and earth science", slug: "fuels-and-earth-science" },
-  { re: /\btopic\s*9\b|separate chemistry 2/i, n: 9, label: "Separate chemistry 2", slug: "separate-chemistry-2" },
+  { re: /\btopic\s*_?\s*3\b|chemical changes/i, n: 3, label: "Chemical changes", slug: "chemical-changes" },
+  { re: /\btopic\s*_?\s*4\b|extracting metals/i, n: 4, label: "Extracting metals", slug: "extracting-metals" },
+  { re: /\btopic\s*_?\s*5\b|separate chemistry 1/i, n: 5, label: "Separate chemistry 1", slug: "separate-chemistry-1" },
+  { re: /\btopic\s*_?\s*6\b|groups in the periodic/i, n: 6, label: "Periodic table groups", slug: "periodic-table-groups" },
+  { re: /\btopic\s*_?\s*8\b|fuels and earth/i, n: 8, label: "Fuels and earth science", slug: "fuels-and-earth-science" },
+  { re: /\btopic\s*_?\s*9\b|separate chemistry 2/i, n: 9, label: "Separate chemistry 2", slug: "separate-chemistry-2" },
 ];
 
 function pathBasename(resource) {
@@ -260,15 +350,59 @@ function jdTitle(subject, topic) {
   return `JDScience ${subject}`;
 }
 
+function edexcelGcseChemistryTitle(resource) {
+  const haystack = blob(resource).replace(/[_-]+/g, " ");
+  const topic = matchTopic(CHEMISTRY_TOPICS, haystack);
+  const authored = isJdScienceAuthored(resource);
+  const category = String(inferResourceCategory(resource) || "").toLowerCase();
+  const kind = category.includes("worksheet") ? "worksheet" : category.includes("revision") ? "revision notes" : "resource";
+  if (topic?.n) {
+    const base = `Edexcel GCSE Chemistry Topic ${topic.n}: ${topic.label}`;
+    if (authored && kind === "worksheet") return `JDScience worksheet — ${base}`;
+    if (authored) return `JDScience ${kind} — ${base}`;
+    return base;
+  }
+  const cleaned = titleCasePhrase(stripTitleBoilerplate(resource.title || resource.file_name || ""));
+  return cleaned || "Edexcel GCSE Chemistry resource";
+}
+
+function tLevelTitle(resource) {
+  const haystack = blob(resource).replace(/[_-]+/g, " ");
+  const authored = isJdScienceAuthored(resource);
+  const category = String(inferResourceCategory(resource) || "").toLowerCase();
+  if (/core chemistry|a10|a15/.test(haystack)) {
+    if (category.includes("worksheet")) {
+      return authored
+        ? "JDScience worksheet — T-Level Science Core Chemistry (A10–A15)"
+        : "T-Level Science Core Chemistry worksheets (A10–A15)";
+    }
+    return authored
+      ? "JDScience revision notes — T-Level Science Core Chemistry (A10–A15)"
+      : "T-Level Science Core Chemistry (A10–A15)";
+  }
+  const cleaned = titleCasePhrase(
+    stripTitleBoilerplate(resource.title || resource.file_name || "")
+      .replace(/\btlevel\b/ig, "T-Level")
+      .replace(/\bt level\b/ig, "T-Level"),
+  );
+  return cleaned || "T-Level Science resource";
+}
+
 export function tidyResourceTitle(resource) {
   const decodedTitle = decodeResourceLabel(resource.title || "");
+  if (looksLikeTLevelResource(resource)) return tLevelTitle(resource);
+  if (looksLikeEdexcelGcseChemistryTopic(resource)) return edexcelGcseChemistryTitle(resource);
+
   if (!looksLikeUploadedDeck(resource)) return decodedTitle || decodeResourceLabel(resource.file_name || "");
+
+  const authored = isJdScienceAuthored(resource);
   const haystack = blob(resource).replace(/[_-]+/g, " ");
+  const level = inferResourceLevel(resource);
   const subject = inferResourceSubject(resource) || "Resource";
   const category = String(resource.resource_category || "").toLowerCase();
   const isNotes = category.includes("revision");
 
-  if (isNotes) {
+  if (isNotes && authored) {
     if (subject === "Physics" || /\bphysics\b/.test(haystack)) {
       const topic = matchTopic(PHYSICS_TOPICS, haystack);
       if (topic) return jdTitle("Physics", topic);
@@ -277,7 +411,7 @@ export function tidyResourceTitle(resource) {
       const topic = matchTopic(BIOLOGY_TOPICS, haystack);
       if (topic) return jdTitle("Biology", topic);
     }
-    if (subject === "Chemistry" || /\bchemistr/.test(haystack)) {
+    if (level === "GCSE/IGCSE" && (subject === "Chemistry" || /\bchemistr/.test(haystack))) {
       const topic = matchTopic(CHEMISTRY_TOPICS, haystack);
       if (topic) return jdTitle("Chemistry", topic);
     }
@@ -289,10 +423,27 @@ export function tidyResourceTitle(resource) {
     .replace(/\s+/g, " ")
     .trim();
   cleaned = cleaned.replace(/\bmodules\s+(\d+)\s+(\d+)\b/ig, "modules $1-$2");
-  if (cleaned && subject && !new RegExp(`^${subject}$`, "i").test(cleaned)) {
-    return `JDScience ${subject}: ${titleCasePhrase(cleaned)}`;
+
+  if (!cleaned) {
+    return authored ? `JDScience ${subject}` : (decodedTitle || "Resource");
   }
-  return cleaned ? `JDScience ${titleCasePhrase(cleaned)}` : decodedTitle;
+
+  const phrase = titleCasePhrase(cleaned);
+  if (!authored) {
+    // Neutral label — never invent "JDScience Worksheet" from storage path alone.
+    if (subject && !new RegExp(`^${subject}$`, "i").test(cleaned)) {
+      return `${subject}: ${phrase}`;
+    }
+    return phrase;
+  }
+
+  if (category.includes("worksheet")) {
+    return `JDScience worksheet — ${subject}: ${phrase}`;
+  }
+  if (cleaned && subject && !new RegExp(`^${subject}$`, "i").test(cleaned)) {
+    return `JDScience ${subject}: ${phrase}`;
+  }
+  return `JDScience ${phrase}`;
 }
 
 export function tidyDownloadFilename(resource) {
@@ -301,14 +452,23 @@ export function tidyDownloadFilename(resource) {
   const extMatch = original.match(/\.(pptx?|pdf|html)$/i);
   const ext = extMatch ? extMatch[0].toLowerCase() : "";
   const haystack = blob(resource).replace(/[_-]+/g, " ");
+  const level = inferResourceLevel(resource);
   const subject = slugify(inferResourceSubject(resource) || "resource");
   const category = String(resource.resource_category || "").toLowerCase();
   const isNotes = category.includes("revision");
+  const authored = isJdScienceAuthored(resource);
   let topicSlug = "";
   if (isNotes) {
-    const list = subject === "physics" ? PHYSICS_TOPICS : subject === "biology" ? BIOLOGY_TOPICS : subject === "chemistry" ? CHEMISTRY_TOPICS : [];
-    const topic = matchTopic(list, haystack);
-    if (topic) topicSlug = topic.slug;
+    if (subject === "physics") {
+      const topic = matchTopic(PHYSICS_TOPICS, haystack);
+      if (topic) topicSlug = topic.slug;
+    } else if (subject === "biology") {
+      const topic = matchTopic(BIOLOGY_TOPICS, haystack);
+      if (topic) topicSlug = topic.slug;
+    } else if (subject === "chemistry" && (level === "GCSE/IGCSE" || looksLikeEdexcelGcseChemistryTopic(resource))) {
+      const topic = matchTopic(CHEMISTRY_TOPICS, haystack);
+      if (topic) topicSlug = topic.slug;
+    }
   }
   if (!topicSlug) {
     topicSlug = slugify(
@@ -316,8 +476,77 @@ export function tidyDownloadFilename(resource) {
         .replace(new RegExp(`^${inferResourceSubject(resource) || ""}\\s+`, "i"), ""),
     );
   }
-  const base = ["jdscience", subject, topicSlug].filter(Boolean).join("-").replace(/-+/g, "-");
+  const prefix = authored ? "jdscience" : slugify(level || "resource");
+  const base = [prefix, subject, topicSlug].filter(Boolean).join("-").replace(/-+/g, "-");
   return ext ? `${base}${ext}` : base;
+}
+
+/**
+ * Assess whether automatic classification is trustworthy for upload/edit flows.
+ * Uncertain cases should be confirmed by an admin rather than silently labelled.
+ */
+export function assessResourceClassification(resource) {
+  const reasons = [];
+  const suggested = {
+    level: inferResourceLevel(resource),
+    subject: inferResourceSubject(resource),
+    exam_board: inferResourceExamBoard(resource),
+    resource_category: inferResourceCategory(resource),
+  };
+
+  const declaredLevel = levelKey(resource.level);
+  const declaredSubject = resource.subject;
+  const declaredBoard = resource.exam_board;
+  const declaredCategory = resource.resource_category;
+
+  if (looksLikeTLevelResource(resource) && declaredLevel && declaredLevel !== "T-Level") {
+    reasons.push("Filename/title indicates T-Level but another level was selected.");
+  }
+  if (looksLikeEdexcelGcseChemistryTopic(resource) && declaredLevel && declaredLevel !== "GCSE/IGCSE") {
+    reasons.push("Filename/title matches Edexcel GCSE Chemistry topics but another level was selected.");
+  }
+  if (looksLikeEdexcelGcseChemistryTopic(resource) && declaredBoard && declaredBoard !== "Edexcel") {
+    reasons.push("Edexcel GCSE Chemistry topic file listed under a different exam board.");
+  }
+  if (suggested.subject && declaredSubject && slugify(suggested.subject) !== slugify(declaredSubject)) {
+    reasons.push(`Subject signal (${suggested.subject}) conflicts with selected subject (${declaredSubject}).`);
+  }
+  if (!declaredCategory || String(declaredCategory).toLowerCase() === "resource") {
+    reasons.push("Resource type is missing or neutral.");
+  }
+  if (!isJdScienceAuthored(resource) && /worksheet/i.test(String(declaredCategory || ""))) {
+    // Allowed, but do not auto-brand as JDScience worksheet.
+  }
+  if (!resource.title && !resource.file_name) {
+    reasons.push("Title and filename are both missing.");
+  }
+
+  const uncertain = reasons.length > 0;
+  return {
+    ok: !uncertain,
+    uncertain,
+    reasons,
+    suggested,
+    needs_review: uncertain,
+  };
+}
+
+/** Hide resources from a page whose level/subject conflict with verified signals. */
+export function resourceMatchesPageContext(resource, { level, subject } = {}) {
+  if (!resource) return false;
+  const canonical = {
+    ...resource,
+    level: inferResourceLevel(resource),
+    subject: inferResourceSubject(resource),
+  };
+  if (level && levelKey(canonical.level) !== levelKey(level)) return false;
+  if (subject && slugify(canonical.subject) !== slugify(subject)) return false;
+  // Prevent T-Level chemistry material appearing under GCSE Chemistry.
+  if (levelKey(level) === "GCSE/IGCSE" && looksLikeTLevelResource(resource)) return false;
+  if (levelKey(level) === "GCSE/IGCSE" && slugify(subject) === "chemistry" && looksLikeTLevelResource(resource)) {
+    return false;
+  }
+  return true;
 }
 
 function resourceDedupeKey(resource) {
@@ -340,24 +569,50 @@ function resourceScore(resource) {
   if (url.startsWith("/resources/") && !resource.storage_path) score += 3;
   if (resource.storage_path) score += 2;
   if (String(resource.id || "").startsWith("static-")) score += 1;
+  if (isJdScienceAuthored(resource)) score += 1;
   return score;
 }
 
 export function canonicalizeResource(resource) {
   if (!resource || resource.published === false) return null;
   if (isDeadResource(resource)) return null;
-  const title = tidyResourceTitle(resource);
-  const fileName = looksLikeUploadedDeck(resource)
-    ? tidyDownloadFilename({ ...resource, title })
+
+  const level = inferResourceLevel(resource);
+  const subject = inferResourceSubject({ ...resource, level });
+  const exam_board = inferResourceExamBoard({ ...resource, level, subject });
+  const resource_category = inferResourceCategory({ ...resource, level, subject });
+  const assessment = assessResourceClassification({
+    ...resource,
+    level,
+    subject,
+    exam_board,
+    resource_category,
+  });
+
+  const titled = { ...resource, level, subject, exam_board, resource_category };
+  const title = tidyResourceTitle(titled);
+  const fileName = looksLikeUploadedDeck(titled)
+    ? tidyDownloadFilename({ ...titled, title })
     : decodeResourceLabel(resource.file_name || resource.title);
+
   const next = {
     ...resource,
+    level,
+    subject,
+    exam_board,
+    resource_category: resource_category || "Resource",
     title: title || resource.title,
     file_name: fileName || resource.file_name,
-    subject: inferResourceSubject({ ...resource, title, file_name: fileName }),
-    resource_category: inferResourceCategory({ ...resource, title, file_name: fileName }),
+    classification_uncertain: assessment.uncertain,
+    classification_reasons: assessment.reasons,
+    needs_review: assessment.needs_review,
   };
+
   if (isDeadResource(next) || (next.subject === "Biology" && isPhysicsNamed(resource))) return null;
+
+  // Final guard: never surface T-Level rows under a non-T-Level declared page via wrong level.
+  if (looksLikeTLevelResource(resource) && levelKey(next.level) !== "T-Level") return null;
+
   return next;
 }
 
@@ -379,7 +634,9 @@ export function repairPatchForResource(resource) {
     return { published: false };
   }
   const patch = {};
+  if (next.level && next.level !== resource.level) patch.level = next.level;
   if (next.subject && next.subject !== resource.subject) patch.subject = next.subject;
+  if (next.exam_board && next.exam_board !== resource.exam_board) patch.exam_board = next.exam_board;
   if (next.resource_category && next.resource_category !== resource.resource_category) {
     patch.resource_category = next.resource_category;
   }

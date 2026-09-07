@@ -57,6 +57,46 @@ const valid = validateResourceUploadMeta({
 assert.equal(valid.ok, true);
 assert.equal(valid.fields.level, 'BTEC');
 
+const invalidSubjectForLevel = validateResourceUploadMeta({
+  level: 'T-Level',
+  subject: 'Chemistry',
+  exam_board: 'Pearson',
+  resource_category: 'Worksheets',
+  title: 'Core Chemistry',
+  file_name: 'core-chemistry.pdf',
+  contentType: 'application/pdf',
+  fileSize: 1024,
+});
+assert.equal(invalidSubjectForLevel.ok, false);
+assert.match(invalidSubjectForLevel.error, /not valid for/i);
+
+const uncertainTLevelOnGcse = validateResourceUploadMeta({
+  level: 'GCSE/IGCSE',
+  subject: 'Chemistry',
+  exam_board: 'AQA',
+  resource_category: 'Worksheets',
+  title: 'TLevel_Chemistry_Worksheets_A10-A15',
+  file_name: 'TLevel_Chemistry_Worksheets_A10-A15.pdf',
+  contentType: 'application/pdf',
+  fileSize: 1024,
+});
+assert.equal(uncertainTLevelOnGcse.ok, false);
+assert.equal(uncertainTLevelOnGcse.needsConfirmation, true);
+
+const confirmedTLevelOnGcse = validateResourceUploadMeta({
+  level: 'GCSE/IGCSE',
+  subject: 'Chemistry',
+  exam_board: 'AQA',
+  resource_category: 'Worksheets',
+  title: 'TLevel_Chemistry_Worksheets_A10-A15',
+  file_name: 'TLevel_Chemistry_Worksheets_A10-A15.pdf',
+  contentType: 'application/pdf',
+  fileSize: 1024,
+  confirm_classification: true,
+});
+assert.equal(confirmedTLevelOnGcse.ok, true);
+assert.equal(confirmedTLevelOnGcse.fields.classification_uncertain, true);
+
 const tooLarge = validateResourceUploadMeta({
   level: 'BTEC',
   subject: 'Applied Science',
