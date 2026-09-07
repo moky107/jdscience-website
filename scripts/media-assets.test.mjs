@@ -1,4 +1,7 @@
 import assert from "node:assert/strict";
+import { readFileSync, existsSync, statSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   homepageVideoElementProps,
   homepageVideoSourceProps,
@@ -20,6 +23,8 @@ import {
   TUTOR_PHOTO_API_PATH,
   TUTOR_STORAGE_BUCKET,
 } from "../api/_lib/tutors.js";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 function test(name, fn) {
   try {
@@ -46,6 +51,22 @@ test("homepage video uses stable public mp4 with poster and autoplay-safe attrib
   assert.equal(props.loop, true);
   assert.equal(props.preload, "metadata");
   assert.ok(!String(source.src).includes("token="), "must not use signed video URLs");
+});
+
+test("homepage promo mp4 is publicly shipped with moov before mdat (faststart)", () => {
+  const videoPath = join(ROOT, "public", "homepage-promo.mp4");
+  const posterPath = join(ROOT, "public", "homepage-promo-poster.jpg");
+  const fallbackPath = join(ROOT, "public", "avatar-fallback.svg");
+  assert.ok(existsSync(videoPath), "homepage-promo.mp4 must exist in public/");
+  assert.ok(existsSync(posterPath), "homepage-promo-poster.jpg must exist in public/");
+  assert.ok(existsSync(fallbackPath), "avatar-fallback.svg must exist in public/");
+  assert.ok(statSync(videoPath).size > 100_000, "video file looks too small");
+  const bytes = readFileSync(videoPath);
+  const moov = bytes.indexOf(Buffer.from("moov"));
+  const mdat = bytes.indexOf(Buffer.from("mdat"));
+  assert.ok(moov >= 0, "mp4 must contain a moov atom");
+  assert.ok(mdat >= 0, "mp4 must contain an mdat atom");
+  assert.ok(moov < mdat, "moov must precede mdat so browsers can start playback early");
 });
 
 test("normalizeTutorStoragePath strips bucket prefixes, query tokens and duplicates", () => {
