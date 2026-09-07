@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import ResourceAccessGate from "./ResourceAccessGate";
@@ -24,6 +24,7 @@ import {
   startAnalyticsLifecycle,
   track,
 } from "./analytics";
+import CookieConsentBanner from "./CookieConsent";
 import { AQA_GCSE_MATHS_RESOURCES } from "./aqaGcseMathsResources";
 import { AQA_ALEVEL_CHEMISTRY_RESOURCES } from "./aqaAlevelChemistryResources";
 import { AQA_SCIENCE_RESOURCES } from "./aqaScienceResources";
@@ -2548,6 +2549,9 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
       const body = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(body?.error || "Failed to submit tutor application.");
 
+      track(ANALYTICS_EVENTS.TUTOR_APPLICATION_SUBMITTED, {
+        metadata: { has_profile_photo: Boolean(profilePhotoPath), has_cv: Boolean(cvPath) },
+      });
       setSuccess("Application submitted successfully. JDScience will review your application before any profile is published.");
       if (onSubmitted) onSubmitted();
       resetForm();
@@ -3785,6 +3789,7 @@ function App() {
   const [adminRoute, setAdminRoute] = useState(readAdminRoute);
   const [adminSection, setAdminSection] = useState(readAdminSection);
   const tutorTriggerRef = React.useRef(null);
+  const analyticsContextRef = useRef({ page: "home", isAdmin: false });
 
   const isAdmin = ADMIN_EMAILS.includes(session?.user?.email);
 
@@ -3845,12 +3850,16 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const stop = startAnalyticsLifecycle(() => ({
+    analyticsContextRef.current = {
       page,
       isAdmin: adminRoute || ADMIN_EMAILS.includes(session?.user?.email),
-    }));
-    return stop;
+    };
   }, [page, adminRoute, session?.user?.email]);
+
+  useEffect(() => {
+    const stop = startAnalyticsLifecycle(() => analyticsContextRef.current || {});
+    return stop;
+  }, []);
 
   // Show a confirmation banner after Stripe Checkout redirects back.
   useEffect(() => {
@@ -4005,7 +4014,12 @@ function App() {
   const handleResource = (res) => { setPickedRes(res); goPapers(); };
   const awaitingVisitorAuth = RESOURCE_LOGIN_REQUIRED && isResourceLibraryPage(page) && !authReady;
   const resourceLibraryLocked = RESOURCE_LOGIN_REQUIRED && isResourceLibraryPage(page) && authReady && !session;
-  const openTutorApplication = () => setTutorApplicationOpen(true);
+  const openTutorApplication = () => {
+    setTutorApplicationOpen(true);
+    track(ANALYTICS_EVENTS.TUTOR_APPLICATION_STARTED, {
+      metadata: { source: "become_tutor" },
+    });
+  };
   const closeTutorApplication = () => setTutorApplicationOpen(false);
   const openTutorProfile = (slug) => setSelectedTutorSlug(slug);
   const closeTutorProfile = () => setSelectedTutorSlug(null);
@@ -4187,6 +4201,7 @@ function App() {
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
       <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} />
+      <CookieConsentBanner />
     </div>
   );
 }

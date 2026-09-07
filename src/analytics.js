@@ -1,18 +1,22 @@
 /**
- * JDScience first-party analytics client.
+ * JDScience first-party analytics client + optional GA4 bridge.
  *
  * Privacy rules:
  * - Anonymous visitor + session IDs in localStorage/sessionStorage (not tracking cookies).
  * - No passwords, card data, messages, emails, or precise location.
  * - Admin traffic is flagged and excluded from public aggregates server-side.
  * - Failures never throw into page UX.
- * - GA4 is optional and only loads when a measurement ID is configured.
+ * - GA4 is optional and only loads when a measurement ID is configured AND
+ *   the visitor has accepted analytics cookies (UK PECR).
+ * - Localhost / obvious development hosts never load GA4.
+ * - Admin paths never send events to GA4.
  *
  * Event schema (see docs/analytics-events.md):
  * page_view, page_engagement, resource_view, resource_download, resource_preview,
  * product_view, product_preview, add_to_cart, checkout_started, purchase_completed,
  * tutor_page_view, tutor_profile_view, tutor_enquiry_started, tutor_booking_submitted,
- * tutor_booking_confirmed, amazon_book_click, contact_form_submitted, signup_completed
+ * tutor_booking_confirmed, tutor_application_started, tutor_application_submitted,
+ * amazon_book_click, contact_form_submitted, signup_completed
  */
 
 export const ANALYTICS_EVENTS = Object.freeze({
@@ -31,6 +35,8 @@ export const ANALYTICS_EVENTS = Object.freeze({
   TUTOR_ENQUIRY_STARTED: 'tutor_enquiry_started',
   TUTOR_BOOKING_SUBMITTED: 'tutor_booking_submitted',
   TUTOR_BOOKING_CONFIRMED: 'tutor_booking_confirmed',
+  TUTOR_APPLICATION_STARTED: 'tutor_application_started',
+  TUTOR_APPLICATION_SUBMITTED: 'tutor_application_submitted',
   AMAZON_BOOK_CLICK: 'amazon_book_click',
   CONTACT_FORM_SUBMITTED: 'contact_form_submitted',
   SIGNUP_COMPLETED: 'signup_completed',
@@ -40,10 +46,18 @@ const VISITOR_KEY = 'jd_analytics_vid';
 const SESSION_KEY = 'jd_analytics_sid';
 const SESSION_TS_KEY = 'jd_analytics_sid_ts';
 const UTM_KEY = 'jd_analytics_utm';
+export const ANALYTICS_CONSENT_KEY = 'jd_analytics_consent';
 const SESSION_TTL_MS = 30 * 60 * 1000;
 
 const recentEventKeys = new Map();
 const DEDUPE_MS = 2500;
+
+/** @type {'granted' | 'denied' | null} */
+let consentCache = null;
+let gaLoaded = false;
+let gaScriptEl = null;
+let lifecycleStarted = false;
+let lastGaPagePath = '';
 
 function randomId() {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) return crypto.randomUUID();
@@ -126,17 +140,30 @@ function deviceCategory() {
   return 'desktop';
 }
 
-function isAdminContext() {
+export function isAdminContext(pathname) {
   try {
-    if (typeof window === 'undefined') return false;
-    const path = window.location.pathname || '';
+    if (typeof window === 'undefined' && !pathname) return false;
+    const path = pathname != null ? String(pathname) : (window.location.pathname || '');
     if (path.startsWith('/admin')) return true;
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('admin') === '1') return true;
-    if (window.location.hash === '#admin') return true;
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('admin') === '1') return true;
+      if (window.location.hash === '#admin') return true;
+    }
   } catch {
     /* ignore */
   }
+  return false;
+}
+
+export function isLocalOrDevHost(hostname) {
+  const host = String(hostname || (typeof window !== 'undefined' ? window.location.hostname : '') || '')
+    .trim()
+    .toLowerCase();
+  if (!host) return true;
+  if (host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '::1') return true;
+  if (host.endsWith('.local') || host.endsWith('.localhost')) return true;
+  if (/^(192\.168\.|10\.|172\.(1[6-9]|2\d|3[0-1])\.)/.test(host)) return true;
   return false;
 }
 
@@ -173,37 +200,131 @@ function shouldDedupe(eventName, payload) {
   return false;
 }
 
-function getGaMeasurementId() {
+export function getGaMeasurementId() {
   try {
     const fromVite = typeof import.meta !== 'undefined'
-      ? (import.meta.env?.VITE_GA_MEASUREMENT_ID || import.meta.env?.NEXT_PUBLIC_GA_MEASUREMENT_ID)
+      ? (import.meta.env?.NEXT_PUBLIC_GA_MEASUREMENT_ID || import.meta.env?.VITE_GA_MEASUREMENT_ID)
       : '';
     const fromWindow = typeof window !== 'undefined' ? window.__JD_GA_MEASUREMENT_ID : '';
-    return String(fromVite || fromWindow || '').trim();
+    const id = String(fromVite || fromWindow || '').trim();
+    if (!/^G-[A-Z0-9]+$/i.test(id)) return '';
+    return id;
   } catch {
     return '';
   }
 }
 
-let gaLoaded = false;
-
-function ensureGa4() {
-  const id = getGaMeasurementId();
-  if (!id || typeof document === 'undefined' || gaLoaded) return id;
-  // Only load GA4 when an ID is configured. Site works without it.
-  // UK PECR: ensure your cookie/consent notice covers GA4 before enabling in production.
+export function getAnalyticsConsent() {
+  if (consentCache === 'granted' || consentCache === 'denied') return consentCache;
+  if (typeof window === 'undefined') return null;
   try {
-    window.dataLayer = window.dataLayer || [];
+    const raw = safeGet(localStorage, ANALYTICS_CONSENT_KEY);
+    if (raw === 'granted' || raw === 'denied') {
+      consentCache = raw;
+      return raw;
+    }
+  } catch {
+    /* ignore */
+  }
+  return null;
+}
+
+export function hasAnalyticsConsent() {
+  return getAnalyticsConsent() === 'granted';
+}
+
+export function needsAnalyticsConsentPrompt() {
+  if (!getGaMeasurementId()) return false;
+  if (isLocalOrDevHost()) return false;
+  return getAnalyticsConsent() == null;
+}
+
+/**
+ * Persist analytics cookie preference. When granted, load GA4 (non-blocking).
+ * @param {'granted' | 'denied'} value
+ */
+export function setAnalyticsConsent(value) {
+  const next = value === 'granted' ? 'granted' : 'denied';
+  consentCache = next;
+  if (typeof window !== 'undefined') {
+    safeSet(localStorage, ANALYTICS_CONSENT_KEY, next);
+    try {
+      window.dispatchEvent(new CustomEvent('jd-analytics-consent', { detail: { consent: next } }));
+    } catch {
+      /* ignore */
+    }
+  }
+  if (next === 'granted') {
+    ensureGa4();
+    // Record the current page once after consent (send_page_view is false at config).
+    if (typeof window !== 'undefined') {
+      const path = `${window.location.pathname}${window.location.search || ''}`;
+      lastGaPagePath = '';
+      sendToGa4(ANALYTICS_EVENTS.PAGE_VIEW, {
+        page_path: path,
+        page_location: window.location.href,
+        page_title: document.title || '',
+      });
+      lastGaPagePath = path;
+    }
+  }
+  return next;
+}
+
+export function shouldEnableGa4({ pathname, hostname } = {}) {
+  if (!getGaMeasurementId()) return false;
+  if (!hasAnalyticsConsent()) return false;
+  if (isLocalOrDevHost(hostname)) return false;
+  if (isAdminContext(pathname)) return false;
+  return true;
+}
+
+function installGtagStub() {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
     window.gtag = function gtag() {
       window.dataLayer.push(arguments);
     };
+  }
+}
+
+/**
+ * Load the GA4 gtag.js script asynchronously without blocking render.
+ * Returns the measurement ID when loaded / already loaded, else ''.
+ */
+export function ensureGa4() {
+  const id = getGaMeasurementId();
+  if (!id || typeof document === 'undefined') return '';
+  if (!shouldEnableGa4()) return '';
+  if (gaLoaded) return id;
+
+  try {
+    installGtagStub();
+    // Consent Mode defaults — storage already granted via our banner.
+    window.gtag('consent', 'update', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
     window.gtag('js', new Date());
-    window.gtag('config', id, { anonymize_ip: true, send_page_view: false });
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
-    script.onerror = () => { /* GA unavailable — ignore */ };
-    document.head.appendChild(script);
+    // send_page_view: false — SPA page views are sent explicitly once per route.
+    window.gtag('config', id, {
+      anonymize_ip: true,
+      send_page_view: false,
+      transport_type: 'beacon',
+    });
+
+    if (!document.querySelector(`script[data-jd-ga4="${id}"]`)) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.dataset.jdGa4 = id;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
+      script.onerror = () => { /* GA unavailable — ignore */ };
+      document.head.appendChild(script);
+      gaScriptEl = script;
+    }
     gaLoaded = true;
   } catch {
     /* ignore */
@@ -211,27 +332,55 @@ function ensureGa4() {
   return id;
 }
 
+const GA_EVENT_MAP = Object.freeze({
+  page_view: 'page_view',
+  resource_download: 'file_download',
+  resource_view: 'resource_view',
+  product_view: 'view_item',
+  product_preview: 'view_item',
+  add_to_cart: 'add_to_cart',
+  checkout_started: 'begin_checkout',
+  purchase_completed: 'purchase',
+  tutor_enquiry_started: 'generate_lead',
+  tutor_booking_submitted: 'generate_lead',
+  tutor_application_started: 'tutor_application_start',
+  tutor_application_submitted: 'tutor_application_submit',
+  amazon_book_click: 'outbound_click',
+  contact_form_submitted: 'generate_lead',
+  signup_completed: 'sign_up',
+});
+
 function sendToGa4(eventName, params = {}) {
   try {
+    if (!shouldEnableGa4({ pathname: params.page_path })) return;
     const id = ensureGa4();
     if (!id || typeof window.gtag !== 'function') return;
-    const gaMap = {
-      page_view: 'page_view',
-      resource_download: 'resource_download',
-      add_to_cart: 'add_to_cart',
-      checkout_started: 'begin_checkout',
-      purchase_completed: 'purchase',
-      tutor_booking_submitted: 'generate_lead',
-      amazon_book_click: 'outbound_click',
-      signup_completed: 'sign_up',
-      contact_form_submitted: 'generate_lead',
-    };
-    const mapped = gaMap[eventName];
+
+    const mapped = GA_EVENT_MAP[eventName];
     if (!mapped) return;
-    window.gtag('event', mapped, {
-      ...params,
+
+    // Prevent duplicate GA page_view for the same SPA path.
+    if (eventName === ANALYTICS_EVENTS.PAGE_VIEW) {
+      const path = String(params.page_path || '');
+      if (path && path === lastGaPagePath) return;
+      lastGaPagePath = path;
+    }
+
+    const safeParams = {
+      page_path: params.page_path,
+      page_location: params.page_location,
+      page_title: params.page_title,
+      item_id: params.item_id,
+      link_url: params.link_url,
+      event_category: params.event_category,
       send_to: id,
-    });
+    };
+    // Drop undefined keys so gtag does not receive empty noise
+    for (const key of Object.keys(safeParams)) {
+      if (safeParams[key] == null || safeParams[key] === '') delete safeParams[key];
+    }
+
+    window.gtag('event', mapped, safeParams);
   } catch {
     /* never break the site */
   }
@@ -274,18 +423,25 @@ export function track(eventName, details = {}) {
       tutor_id: details.tutor_id || details.tutorId || null,
       device_category: deviceCategory(),
       engagement_ms: details.engagement_ms ?? details.engagementMs ?? null,
-      is_admin: details.is_admin != null ? Boolean(details.is_admin) : isAdminContext(),
+      is_admin: details.is_admin != null ? Boolean(details.is_admin) : isAdminContext(pagePath),
       metadata: details.metadata && typeof details.metadata === 'object' ? details.metadata : {},
     };
 
     if (shouldDedupe(eventName, payload)) return;
 
-    // Fire-and-forget
+    // Fire-and-forget first-party ingest (always; admin flagged server-side)
     void postEvents([payload]);
-    sendToGa4(eventName, {
-      page_path: payload.page_path,
-      item_id: payload.product_id || payload.resource_id || undefined,
-    });
+
+    if (!payload.is_admin) {
+      sendToGa4(eventName, {
+        page_path: payload.page_path,
+        page_location: typeof window !== 'undefined' ? window.location.href : undefined,
+        page_title: typeof document !== 'undefined' ? document.title : undefined,
+        item_id: payload.product_id || payload.resource_id || undefined,
+        link_url: details.metadata?.link_url || details.metadata?.external_url || undefined,
+        event_category: eventName,
+      });
+    }
   } catch {
     /* swallow */
   }
@@ -306,6 +462,8 @@ export function trackPageEngagement(ms, extra = {}) {
  */
 export function startAnalyticsLifecycle(getContext = () => ({})) {
   if (typeof window === 'undefined') return () => {};
+  if (lifecycleStarted) return () => {};
+  lifecycleStarted = true;
 
   let pageStartedAt = Date.now();
   let lastPath = '';
@@ -326,23 +484,23 @@ export function startAnalyticsLifecycle(getContext = () => ({})) {
     lastPath = path;
     pageStartedAt = Date.now();
     const ctx = getContext() || {};
-    // Skip counting admin shell as customer traffic (still recorded with is_admin)
+    const isAdmin = Boolean(ctx.isAdmin) || path.startsWith('/admin');
     trackPageView({
       page_path: path,
-      is_admin: Boolean(ctx.isAdmin) || path.startsWith('/admin'),
+      is_admin: isAdmin,
       metadata: { page: ctx.page || null },
     });
-    if (path.startsWith('/tutors') || ctx.page === 'tutors') {
+    if (!isAdmin && (path.startsWith('/tutors') || ctx.page === 'tutors')) {
       track(ANALYTICS_EVENTS.TUTOR_PAGE_VIEW, {
         page_path: path,
-        is_admin: Boolean(ctx.isAdmin),
+        is_admin: false,
       });
     }
   };
 
-  // Initial
+  // Initial — never block render; GA only if consent already granted.
   captureUtmsFromUrl();
-  ensureGa4();
+  if (shouldEnableGa4()) ensureGa4();
   onNavigate();
 
   const onPop = () => onNavigate();
@@ -368,13 +526,30 @@ export function startAnalyticsLifecycle(getContext = () => ({})) {
   document.addEventListener('visibilitychange', onHide);
   window.addEventListener('pagehide', flushEngagement);
 
+  const onConsent = () => {
+    if (shouldEnableGa4()) ensureGa4();
+  };
+  window.addEventListener('jd-analytics-consent', onConsent);
+
   return () => {
+    lifecycleStarted = false;
     window.removeEventListener('popstate', onPop);
     document.removeEventListener('visibilitychange', onHide);
     window.removeEventListener('pagehide', flushEngagement);
+    window.removeEventListener('jd-analytics-consent', onConsent);
     history.pushState = origPush;
     history.replaceState = origReplace;
   };
+}
+
+/** Test helper — reset module-level GA / consent / dedupe state. */
+export function __resetAnalyticsForTests() {
+  consentCache = null;
+  gaLoaded = false;
+  gaScriptEl = null;
+  lifecycleStarted = false;
+  lastGaPagePath = '';
+  recentEventKeys.clear();
 }
 
 export function isChemistryCompanionProduct(product = {}) {
