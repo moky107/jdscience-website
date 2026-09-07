@@ -4,6 +4,8 @@ import AuthModal from "./AuthModal";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
+import HomepageIntroVideo from "./HomepageIntroVideo";
+import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
@@ -83,7 +85,6 @@ function trackResourceOpen(item, kind = "download") {
 }
 
 const BANNER_IMG = "/hero-students.png.png";
-const INTRO_VIDEO_SRC = "/homepage-promo.mp4";
 
 /* -------- Qualification-specific data (single source of truth) -------- */
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
@@ -1921,10 +1922,54 @@ function Booking() {
 }
 
 function TutorAvatar({ tutor, size = 72 }) {
-  if (tutor.profile_photo_url) {
-    return <img src={tutor.profile_photo_url} alt={`${tutor.tutor_name} profile`} style={{ width: size, height: size, borderRadius: 20, objectFit: "cover", background: "#e2e8f0", boxShadow: "0 12px 30px rgba(15, 23, 42, .16)", filter: "brightness(1.12) contrast(1.04) saturate(1.05)" }} />;
+  const [failed, setFailed] = useState(false);
+  const photoUrl = String(tutor?.profile_photo_url || "").trim();
+
+  useEffect(() => {
+    setFailed(false);
+  }, [photoUrl]);
+
+  if (!photoUrl && !failed) {
+    return (
+      <div
+        aria-hidden="true"
+        style={{
+          width: size,
+          height: size,
+          borderRadius: 20,
+          display: "grid",
+          placeItems: "center",
+          background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`,
+          color: "#fff",
+          fontWeight: 800,
+          boxShadow: "0 12px 30px rgba(15, 23, 42, .16)",
+        }}
+      >
+        {avatarInitials(tutor?.tutor_name)}
+      </div>
+    );
   }
-  return <div aria-hidden="true" style={{ width: size, height: size, borderRadius: 20, display: "grid", placeItems: "center", background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", fontWeight: 800, boxShadow: "0 12px 30px rgba(15, 23, 42, .16)" }}>{avatarInitials(tutor.tutor_name)}</div>;
+
+  const src = resolveTutorAvatarSrc(photoUrl, { failed });
+
+  return (
+    <img
+      src={src}
+      alt={`${tutor?.tutor_name || "Tutor"} profile`}
+      onError={() => {
+        if (src !== LOCAL_AVATAR_FALLBACK) setFailed(true);
+      }}
+      style={{
+        width: size,
+        height: size,
+        borderRadius: 20,
+        objectFit: "cover",
+        background: "#e2e8f0",
+        boxShadow: "0 12px 30px rgba(15, 23, 42, .16)",
+        filter: failed || src === LOCAL_AVATAR_FALLBACK ? "none" : "brightness(1.12) contrast(1.04) saturate(1.05)",
+      }}
+    />
+  );
 }
 
 function hasText(value) {
@@ -2661,19 +2706,7 @@ function VideoSection() {
         <p style={{ color: "#cbd5e1", fontSize: isMobile ? 15 : 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" }}>
           Watch this short introduction to see how learners use resources, past papers and tutoring support.
         </p>
-        <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,255,255,.18)", boxShadow: "0 24px 60px rgba(0,0,0,.35)" }}>
-          <video
-            title="How JD Science Works"
-            src={INTRO_VIDEO_SRC}
-            controls
-            muted
-            playsInline
-            preload="metadata"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", background: "#111827", filter: "brightness(1.22) contrast(1.04) saturate(1.06)" }}
-          >
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <HomepageIntroVideo isMobile={isMobile} />
       </div>
     </section>
   );
@@ -3561,7 +3594,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
                   <article key={applicationId} style={{ borderRadius: 16, border: "1px solid #e2e8f0", background: "#fff", padding: 16 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", gap: 14, alignItems: "start", flexWrap: "wrap" }}>
                       <div style={{ display: "flex", gap: 14, alignItems: "start", flex: 1, minWidth: 0 }}>
-                        {t.profile_photo_url ? <img src={t.profile_photo_url} alt={`${t.tutor_name || "Tutor"} application`} style={{ width: 74, height: 74, borderRadius: 18, objectFit: "cover", background: "#e2e8f0" }} /> : <div style={{ width: 74, height: 74, borderRadius: 18, background: `linear-gradient(135deg, ${TEAL}, ${TEAL_DARK})`, color: "#fff", display: "grid", placeItems: "center", fontWeight: 800 }}>{avatarInitials(t.tutor_name)}</div>}
+                        <TutorAvatar tutor={t} size={74} />
                         <div>
                           <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                             <h3 style={{ margin: 0, color: "#0f172a" }}>{t.tutor_name || "Unnamed tutor"}</h3>
