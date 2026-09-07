@@ -57,9 +57,10 @@ const chemistryAsPhysics = {
   published: true,
 };
 assert.equal(inferResourceSubject(chemistryAsPhysics), "Chemistry");
-assert.equal(isDeadResource(chemistryAsPhysics), true);
-assert.equal(canonicalizeResource(chemistryAsPhysics), null);
-assert.equal(resourceOpenHref(chemistryAsPhysics), "#");
+assert.equal(isHostedOfficialExamCopy(chemistryAsPhysics), false);
+assert.equal(isDeadResource(chemistryAsPhysics), false);
+assert.equal(canonicalizeResource(chemistryAsPhysics).subject, "Chemistry");
+assert.equal(resourceOpenHref(chemistryAsPhysics), "/api/education-posts?kind=file&id=151");
 
 const mathsPaperInNotes = {
   id: 438,
@@ -192,7 +193,7 @@ const merged = mergeResourceCatalog([
 
 assert.equal(merged.some((item) => item.id === 65), false);
 assert.equal(merged.some((item) => item.id === 70), true);
-assert.equal(merged.some((item) => item.id === 151), false);
+assert.equal(merged.some((item) => item.id === 151), true);
 assert.equal(merged.some((item) => item.title === "Biology 1 - Cell Biology"), false);
 assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.title === "Cell Biology"));
 assert.ok(merged.some((item) => item.subject === "Biology" && item.exam_board === "Edexcel" && item.id === 56));
