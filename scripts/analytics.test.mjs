@@ -12,6 +12,8 @@ import { aggregateAnalyticsDashboard } from "../api/_lib/analyticsAggregate.js";
 assert.equal(isAllowedEventName("page_view"), true);
 assert.equal(isAllowedEventName("hack_event"), false);
 assert.ok(ANALYTICS_EVENT_NAMES.includes("amazon_book_click"));
+assert.ok(ANALYTICS_EVENT_NAMES.includes("tutor_application_started"));
+assert.ok(ANALYTICS_EVENT_NAMES.includes("tutor_application_submitted"));
 
 const bad = sanitizeAnalyticsEvent({ event_name: "page_view" });
 assert.equal(bad.ok, false);
