@@ -290,7 +290,12 @@ export default function AdminAnalytics({ password, onBack }) {
       if (!resp.ok) throw new Error(data.error || "Failed to load analytics.");
       setDashboard(data.dashboard || null);
     } catch (err) {
-      setError(err.message || "Failed to load analytics.");
+      const message = String(err?.message || "");
+      if (/failed to fetch|networkerror|load failed|network request failed|fetch failed/i.test(message)) {
+        setError("Network error talking to the analytics API. Use https://www.jdscience.co.uk/admin/analytics and try again.");
+      } else {
+        setError(message || "Failed to load analytics.");
+      }
       setDashboard(null);
     } finally {
       setLoading(false);
