@@ -64,9 +64,25 @@ export function createServiceRoleClient() {
  * Node often surfaces "fetch failed"; browsers show "Failed to fetch".
  */
 export function formatSupabaseAdminError(error, fallback = 'Database request failed.') {
+  if (error?.code === 'INVALID_SUPABASE_URL' || error?.code === 'MISSING_SUPABASE_ENV') {
+    return {
+      status: 500,
+      error: String(error.message || fallback),
+      code: error.code,
+    };
+  }
+
   const message = String(error?.message || error || '').trim();
   const details = String(error?.details || error?.hint || error?.cause?.message || '').trim();
   const combined = `${message} ${details}`.trim();
+
+  if (/invalid or points at localhost|invalid supabase url/i.test(combined)) {
+    return {
+      status: 500,
+      error: message || 'Supabase URL is invalid. Set NEXT_PUBLIC_SUPABASE_URL in Vercel Production.',
+      code: 'INVALID_SUPABASE_URL',
+    };
+  }
 
   if (/failed to fetch|fetch failed|networkerror|load failed|network request failed|econnrefused|enotfound|getaddrinfo/i.test(combined)) {
     return {
