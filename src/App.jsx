@@ -53,6 +53,57 @@ const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 const ADMIN_EMAILS = ["jd943791@gmail.com"];
 const BUCKET = "resources"; // Supabase Storage bucket name
+const SITE_ORIGIN = "https://www.jdscience.co.uk";
+
+/** Keep admin API calls on www so apex→www 307 redirects cannot turn POSTs into "Failed to fetch". */
+function adminApiUrl(path) {
+  const normalised = path.startsWith("/") ? path : `/${path}`;
+  try {
+    if (typeof window !== "undefined" && window.location.hostname === "jdscience.co.uk") {
+      return `${SITE_ORIGIN}${normalised}`;
+    }
+  } catch {
+    /* ignore */
+  }
+  return normalised;
+}
+
+function formatAdminNetworkError(error, fallback = "Could not reach the admin API.") {
+  const message = String(error?.message || error || "").trim();
+  if (/failed to fetch|networkerror|load failed|network request failed|fetch failed/i.test(message)) {
+    return (
+      "Network error talking to the admin API. Use https://www.jdscience.co.uk/admin "
+      + "(not the apex domain), check your connection, then try again."
+    );
+  }
+  return message || fallback;
+}
+
+async function readAdminApiJson(resp) {
+  const text = await resp.text();
+  if (!text) return {};
+  try {
+    return JSON.parse(text);
+  } catch {
+    return {
+      error: `Admin API returned a non-JSON response (HTTP ${resp.status}).`,
+      raw: text.slice(0, 180),
+    };
+  }
+}
+
+function ensureWwwAdminHost() {
+  try {
+    if (typeof window === "undefined") return false;
+    if (window.location.hostname !== "jdscience.co.uk") return false;
+    const next = new URL(window.location.href);
+    next.hostname = "www.jdscience.co.uk";
+    window.location.replace(next.toString());
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 function trackResourceOpen(item, kind = "download") {
   try {
@@ -2886,9 +2937,10 @@ function AdminLoginForm({ onCancel }) {
     setBusy(true);
     setError("");
     try {
+      if (ensureWwwAdminHost()) return;
       const res = await supabase.auth.signInWithPassword({ email: email.trim(), password });
       if (res.error) {
-        setError(res.error.message);
+        setError(formatAdminNetworkError(res.error, res.error.message || "Login failed."));
         return;
       }
       const signedInEmail = res.data?.session?.user?.email;
@@ -2897,7 +2949,7 @@ function AdminLoginForm({ onCancel }) {
         setError("This account is not authorised for the admin dashboard.");
       }
     } catch (err) {
-      setError(err.message || "Login failed.");
+      setError(formatAdminNetworkError(err, "Login failed."));
     } finally {
       setBusy(false);
     }
@@ -2910,11 +2962,11 @@ function AdminLoginForm({ onCancel }) {
           <div style={{ width: 40, height: 40, borderRadius: 10, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
           <div>
             <h2 style={{ margin: 0, fontSize: 18 }}>Admin login</h2>
-            <div style={{ color: "#64748b", fontSize: 13 }}>Sign in to open the bookings dashboard</div>
+            <div style={{ color: "#64748b", fontSize: 13 }}>Sign in with your JDScience admin account</div>
           </div>
         </div>
-        <input autoFocus style={inp} type="email" placeholder="Admin email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input style={inp} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input autoFocus style={inp} type="email" placeholder="Admin email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input style={inp} type="password" placeholder="Account password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
         <button type="submit" disabled={busy} style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
           {busy ? "Signing in…" : "Open dashboard"}
@@ -3045,34 +3097,59 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
     setLoading(true);
     setError("");
     try {
-      const resp = await fetch("/api/admin-bookings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: pw }),
-      });
-      const data = await resp.json().catch(() => ({}));
+      if (ensureWwwAdminHost()) return;
+      if (!pw) {
+        setAuthed(false);
+        return;
+      }
+
+      const headers = { "Content-Type": "application/json" };
+      const body = { password: pw };
+
+      let resp;
+      try {
+        resp = await fetch(adminApiUrl("/api/admin-bookings"), {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        throw new Error(formatAdminNetworkError(err, "Failed to load bookings."));
+      }
+
+      const data = await readAdminApiJson(resp);
       if (!resp.ok) {
         throw new Error(
-          data?.error || (resp.status === 401 ? "Incorrect password." : "Failed to load bookings.")
+          data?.error
+            || (resp.status === 401 ? "Incorrect password." : `Failed to load bookings (HTTP ${resp.status}).`)
         );
       }
       setBookings(data.bookings || []);
       setAuthed(true);
       try { sessionStorage.setItem("jd_admin_pw", pw); } catch { /* ignore */ }
 
-      const tutorResp = await fetch("/api/admin-tutor-applications", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: pw }),
-      });
-      const tutorData = await tutorResp.json().catch(() => ({}));
+      let tutorResp;
+      try {
+        tutorResp = await fetch(adminApiUrl("/api/admin-tutor-applications"), {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        setError(formatAdminNetworkError(err, "Bookings loaded, but tutor applications could not be reached."));
+        setTutorApplications([]);
+        return;
+      }
+      const tutorData = await readAdminApiJson(tutorResp);
       if (!tutorResp.ok) {
-        throw new Error(tutorData?.error || "Failed to load tutor applications.");
+        setError(tutorData?.error || `Bookings loaded, but tutor applications failed (HTTP ${tutorResp.status}).`);
+        setTutorApplications([]);
+        return;
       }
       setTutorApplications(tutorData.applications || []);
       setTutorNotes(Object.fromEntries((tutorData.applications || []).map((item) => [String(item.id), item.admin_note || ""])));
     } catch (err) {
-      setError(err.message || "Something went wrong.");
+      setError(formatAdminNetworkError(err, "Something went wrong."));
       setAuthed(false);
     } finally {
       setLoading(false);
@@ -3088,7 +3165,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
 
   function submit(e) {
     e.preventDefault();
-    if (!password) { setError("Please enter the admin password."); return; }
+    if (!password) { setError("Please enter the admin dashboard password."); return; }
     load(password);
   }
 
@@ -3101,6 +3178,13 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
     setEditingTutorId(null);
     setTutorEdits(null);
     setTutorSaveMessage("");
+  }
+
+  async function adminAuthHeadersAndBody(extra = {}) {
+    const headers = { "Content-Type": "application/json" };
+    const body = { ...extra };
+    if (password) body.password = password;
+    return { headers, body };
   }
 
   async function updateTutorStatus(application, nextStatus) {
@@ -3120,19 +3204,24 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
     )));
 
     try {
-      const resp = await fetch("/api/update-tutor-profile-status", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          password,
-          id: application.id,
-          profile_status: nextStatus,
-          is_published: nextStatus === "approved",
-          admin_note: noteForApplication,
-        }),
+      const { headers, body } = await adminAuthHeadersAndBody({
+        id: application.id,
+        profile_status: nextStatus,
+        is_published: nextStatus === "approved",
+        admin_note: noteForApplication,
       });
+      let resp;
+      try {
+        resp = await fetch(adminApiUrl("/api/update-tutor-profile-status"), {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        throw new Error(formatAdminNetworkError(err, "Failed to update tutor profile status."));
+      }
 
-      const data = await resp.json().catch(() => ({}));
+      const data = await readAdminApiJson(resp);
       if (!resp.ok) {
         throw new Error(data?.error || "Failed to update tutor profile status.");
       }
@@ -3147,7 +3236,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
       setTutorApplications((rows) => rows.map((row) => (
         String(row.id) === applicationId ? { ...row, profile_status: previousStatus } : row
       )));
-      setError(err.message || "Failed to update tutor profile status.");
+      setError(formatAdminNetworkError(err, "Failed to update tutor profile status."));
     } finally {
       setTutorSavingId(null);
     }
@@ -3195,18 +3284,23 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
     setTutorSavingId(applicationId);
 
     try {
-      const resp = await fetch("/api/update-tutor-profile", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          password,
-          id: application.id,
-          publish,
-          admin_note: tutorNotes[applicationId] || "",
-          ...tutorEdits,
-        }),
+      const { headers, body } = await adminAuthHeadersAndBody({
+        id: application.id,
+        publish,
+        admin_note: tutorNotes[applicationId] || "",
+        ...tutorEdits,
       });
-      const data = await resp.json().catch(() => ({}));
+      let resp;
+      try {
+        resp = await fetch(adminApiUrl("/api/update-tutor-profile"), {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        throw new Error(formatAdminNetworkError(err, "Failed to update tutor profile."));
+      }
+      const data = await readAdminApiJson(resp);
       if (!resp.ok) {
         throw new Error(data?.error || "Failed to update tutor profile.");
       }
@@ -3222,7 +3316,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
       setTutorSaveMessage(publish ? "Profile saved and published." : "Profile saved.");
       if (publish) setEditingTutorId(null);
     } catch (err) {
-      setError(err.message || "Failed to update tutor profile.");
+      setError(formatAdminNetworkError(err, "Failed to update tutor profile."));
     } finally {
       setTutorSavingId(null);
     }
@@ -3245,17 +3339,22 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
     )));
 
     try {
-      const resp = await fetch("/api/update-booking-status", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          password,
-          id: booking.id,
-          status: nextStatus,
-        }),
+      const { headers, body } = await adminAuthHeadersAndBody({
+        id: booking.id,
+        status: nextStatus,
       });
+      let resp;
+      try {
+        resp = await fetch(adminApiUrl("/api/update-booking-status"), {
+          method: "POST",
+          headers,
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        throw new Error(formatAdminNetworkError(err, "Failed to update booking status."));
+      }
 
-      const data = await resp.json().catch(() => ({}));
+      const data = await readAdminApiJson(resp);
       if (!resp.ok) {
         throw new Error(data?.error || "Failed to update booking status.");
       }
@@ -3270,7 +3369,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
       setBookings((rows) => rows.map((row) => (
         String(row.id) === bookingId ? { ...row, status: previousStatus } : row
       )));
-      setError(err.message || "Failed to update booking status.");
+      setError(formatAdminNetworkError(err, "Failed to update booking status."));
     } finally {
       setStatusSavingId(null);
     }
@@ -3300,10 +3399,10 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
             <div style={{ width: 40, height: 40, borderRadius: 10, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
             <div>
               <h2 style={{ margin: 0, fontSize: 18 }}>Admin — Bookings</h2>
-              <div style={{ color: "#64748b", fontSize: 13 }}>Enter your password to continue</div>
+              <div style={{ color: "#64748b", fontSize: 13 }}>Enter the dashboard password (ADMIN_PASSWORD)</div>
             </div>
           </div>
-          <input autoFocus type="password" placeholder="Admin password" value={password} onChange={(e) => setPassword(e.target.value)} style={inp} />
+          <input autoFocus type="password" placeholder="Dashboard password" value={password} onChange={(e) => setPassword(e.target.value)} style={inp} />
           {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
           <button type="submit" disabled={loading} style={{ padding: 12, borderRadius: 8, background: loading ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: loading ? "default" : "pointer", fontWeight: 800 }}>
             {loading ? "Checking…" : "View bookings"}
@@ -4029,6 +4128,13 @@ function App() {
   };
 
   if (adminRoute) {
+    if (ensureWwwAdminHost()) {
+      return (
+        <div style={{ minHeight: "100vh", display: "grid", placeItems: "center", background: "#f8fafc", color: "#64748b", fontWeight: 700 }}>
+          Redirecting to www.jdscience.co.uk…
+        </div>
+      );
+    }
     if (import.meta.env.DEV && typeof window !== "undefined") {
       const preview = new URLSearchParams(window.location.search).get("analytics_preview") === "1"
         || window.location.pathname.startsWith("/admin/analytics");

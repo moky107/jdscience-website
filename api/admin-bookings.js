@@ -1,25 +1,17 @@
-import { createClient } from '@supabase/supabase-js';
+import { parseRequestBody } from './_lib/tutors.js';
+import { requireAdminPassword } from './_lib/adminAuth.js';
+import { createServiceRoleClient, formatSupabaseAdminError } from './_lib/supabaseAdmin.js';
 
 /**
  * Vercel serverless function: return all bookings for the admin dashboard.
  *
- * Authenticated with a simple shared password (ADMIN_PASSWORD env var), sent
- * either as JSON `{ password }` or an `x-admin-password` header. Uses the
- * Supabase service role key server-side so it can read every row regardless of
- * RLS. The service role key is never exposed to the browser.
+ * Authenticated with the existing shared ADMIN_PASSWORD (JSON `{ password }` or
+ * `x-admin-password`). Uses the service role key server-side so it can read every
+ * row regardless of RLS. The service role key is never exposed to the browser.
  *
- * Required env: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, ADMIN_PASSWORD
+ * Required env: ADMIN_PASSWORD, SUPABASE_SERVICE_ROLE_KEY
+ * Optional env: NEXT_PUBLIC_SUPABASE_URL / VITE_SUPABASE_URL (falls back to known project URL)
  */
-
-// Length-aware constant-time-ish comparison to avoid trivial timing leaks.
-function safeEqual(a, b) {
-  const sa = String(a || '');
-  const sb = String(b || '');
-  if (sa.length !== sb.length) return false;
-  let diff = 0;
-  for (let i = 0; i < sa.length; i++) diff |= sa.charCodeAt(i) ^ sb.charCodeAt(i);
-  return diff === 0;
-}
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -27,38 +19,14 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const adminPassword = process.env.ADMIN_PASSWORD;
-  if (!adminPassword) {
-    console.error('ADMIN_PASSWORD is not set in the environment.');
-    return res.status(500).json({
-      error: 'Admin dashboard is not configured yet. (Server missing ADMIN_PASSWORD.)',
-    });
-  }
-
-  let body = req.body;
-  if (typeof body === 'string') {
-    try {
-      body = JSON.parse(body);
-    } catch {
-      body = {};
-    }
-  }
-  body = body || {};
-
-  const provided = req.headers['x-admin-password'] || body.password;
-  if (!provided || !safeEqual(provided, adminPassword)) {
-    return res.status(401).json({ error: 'Incorrect password.' });
-  }
-
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!supabaseUrl || !serviceRoleKey) {
-    console.error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY');
-    return res.status(500).json({ error: 'Server not configured for database access.' });
+  const body = parseRequestBody(req.body) || {};
+  const auth = requireAdminPassword(req, body);
+  if (!auth.ok) {
+    return res.status(auth.status).json({ error: auth.error, code: auth.code });
   }
 
   try {
-    const supabase = createClient(supabaseUrl, serviceRoleKey);
+    const supabase = createServiceRoleClient();
     const { data, error } = await supabase
       .from('bookings')
       .select('*')
@@ -66,12 +34,14 @@ export default async function handler(req, res) {
 
     if (error) {
       console.error('Supabase select error (admin bookings):', error);
-      return res.status(500).json({ error: error.message || 'Failed to load bookings' });
+      const formatted = formatSupabaseAdminError(error, 'Failed to load bookings');
+      return res.status(formatted.status).json({ error: formatted.error, code: formatted.code });
     }
 
     return res.status(200).json({ ok: true, bookings: data || [] });
   } catch (err) {
     console.error('admin-bookings failed:', err?.message || err);
-    return res.status(500).json({ error: err?.message || 'Failed to load bookings' });
+    const formatted = formatSupabaseAdminError(err, 'Failed to load bookings');
+    return res.status(formatted.status).json({ error: formatted.error, code: formatted.code });
   }
 }
