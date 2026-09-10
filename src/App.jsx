@@ -7,7 +7,7 @@ import TutorChoosingNotice from "./TutorChoosingNotice";
 import HomepageIntroVideo from "./HomepageIntroVideo";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
-import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
+import { FEATURED_ROTATION_MS, featuredTutorWindow, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorSlotCount, tutorsForHomepage } from "./tutorRotation";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
@@ -2106,35 +2106,32 @@ function TutorCard({ tutor, onViewProfile, onBook, inView = true, prefersReduced
 
 function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBook }) {
   const isMobile = useIsMobile();
+  const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [sectionRef, inView] = useInView({ threshold: 0.15 });
   const rotatableTutors = tutorsForHomepage(tutors);
-  const canRotate = shouldRotateTutorProfiles(tutors);
-  const pageCount = tutorCarouselPageCount(tutors);
+  const slotCount = tutorSlotCount({ isMobile, isTablet });
+  const canRotate = shouldRotateTutorProfiles(tutors, slotCount);
+  const pageCount = tutorCarouselPageCount(tutors, slotCount);
   const [offset, setOffset] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [animKey, setAnimKey] = useState(0);
-  const [slideDir, setSlideDir] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const featuredTutors = featuredTutorWindow(rotatableTutors, slotCount, offset);
   const activePage = tutorCarouselPageIndex(offset, pageCount);
-  const currentTutor = rotatableTutors[activePage] || null;
+  const showViewAll = rotatableTutors.length > featuredTutors.length;
 
   useEffect(() => {
     setOffset(0);
-    setAnimKey((value) => value + 1);
-    setSlideDir(0);
-  }, [rotatableTutors.length]);
+  }, [rotatableTutors.length, slotCount]);
 
   useEffect(() => {
-    // 5 minutes between automatic tutor slides
+    // Advance tutor pages every few seconds so every published profile appears.
     if (prefersReducedMotion || !canRotate || paused) return undefined;
     const timer = window.setInterval(() => {
-      setSlideDir(1);
       setOffset((current) => current + 1);
-      setAnimKey((value) => value + 1);
-    }, ROTATION_INTERVAL_MS);
+    }, FEATURED_ROTATION_MS);
     return () => window.clearInterval(timer);
-  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length]);
+  }, [prefersReducedMotion, canRotate, paused, rotatableTutors.length, slotCount]);
 
   if (!loading && !error && rotatableTutors.length === 0) {
     return (
@@ -2160,21 +2157,15 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
 
   const goPrev = () => {
     setPaused(true);
-    setSlideDir(-1);
     setOffset((current) => current - 1);
-    setAnimKey((value) => value + 1);
   };
   const goNext = () => {
     setPaused(true);
-    setSlideDir(1);
     setOffset((current) => current + 1);
-    setAnimKey((value) => value + 1);
   };
   const goTo = (index) => {
     setPaused(true);
-    setSlideDir(index > activePage ? 1 : -1);
     setOffset(index);
-    setAnimKey((value) => value + 1);
   };
 
   const onTouchStart = (event) => {
@@ -2192,8 +2183,6 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
     else goNext();
   };
 
-  const slideFrom = prefersReducedMotion ? "translateX(0)" : (slideDir < 0 ? "translateX(-18px)" : "translateX(18px)");
-
   return (
     <section ref={sectionRef} aria-label="Meet our tutors carousel" style={{ padding: isMobile ? "40px 16px" : "56px 20px", background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -2208,18 +2197,20 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
             {canRotate && (
               <>
-                <button type="button" aria-label="Show previous tutor" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
-                <button type="button" aria-label="Show next tutor" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
+                <button type="button" aria-label="Show previous tutors" onClick={goPrev} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>‹</button>
+                <button type="button" aria-label="Show next tutors" onClick={goNext} onFocus={() => setPaused(true)} style={{ width: 48, height: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#fff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>›</button>
               </>
             )}
-            <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", minHeight: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>
+            {(showViewAll || rotatableTutors.length > 0) && (
+              <button type="button" onClick={onViewAll} style={{ padding: "11px 16px", minHeight: 48, borderRadius: 12, border: "1px solid rgba(0, 150, 136, .22)", background: "#ecfeff", color: TEAL_DARK, cursor: "pointer", fontWeight: 800 }}>View All Tutors</button>
+            )}
           </div>
         </div>
 
         {loading && <div style={{ color: "#64748b", marginTop: 18 }}>Loading tutors…</div>}
         {error && <div style={{ color: "#b91c1c", marginTop: 18 }}>{error}</div>}
 
-        {currentTutor && (
+        {featuredTutors.length > 0 && (
           <div
             role="region"
             aria-roledescription="carousel"
@@ -2232,37 +2223,41 @@ function TutorProfiles({ tutors, loading, error, onViewAll, onViewProfile, onBoo
             }}
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
-            style={{ marginTop: 22, maxWidth: isMobile ? "100%" : 420, marginLeft: "auto", marginRight: "auto" }}
+            style={{ marginTop: 22, overflow: "hidden" }}
           >
             <div
-              key={`${currentTutor.id || currentTutor.public_slug}-${animKey}`}
               style={{
+                display: "grid",
+                gridTemplateColumns: isMobile ? "1fr" : (isTablet ? "repeat(2, minmax(0, 1fr))" : "repeat(3, minmax(0, 1fr))"),
+                gap: 16,
                 transition: prefersReducedMotion ? "none" : "opacity .45s ease, transform .45s ease",
                 opacity: inView ? 1 : 0.92,
-                transform: inView ? "translateX(0)" : slideFrom,
-                animation: prefersReducedMotion || !inView ? "none" : "tutorCarouselIn .45s ease",
+                transform: inView ? "translateX(0)" : "translateX(8px)",
               }}
             >
-              <TutorCard
-                tutor={currentTutor}
-                onViewProfile={onViewProfile}
-                onBook={onBook}
-                inView={inView}
-                prefersReducedMotion={prefersReducedMotion}
-                delayMs={0}
-              />
+              {featuredTutors.map((tutor, index) => (
+                <TutorCard
+                  key={`${tutor.id || tutor.public_slug}-${offset}-${index}`}
+                  tutor={tutor}
+                  onViewProfile={onViewProfile}
+                  onBook={onBook}
+                  inView={inView}
+                  prefersReducedMotion={prefersReducedMotion}
+                  delayMs={index * 90}
+                />
+              ))}
             </div>
           </div>
         )}
 
         {canRotate && pageCount > 1 && (
           <div role="tablist" aria-label="Tutor carousel pages" style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16 }}>
-            {rotatableTutors.map((tutor, index) => (
+            {Array.from({ length: pageCount }, (_, index) => (
               <button
-                key={tutor.id || tutor.public_slug || index}
+                key={index}
                 type="button"
                 role="tab"
-                aria-label={`Show tutor ${tutor.tutor_name || index + 1} (${index + 1} of ${pageCount})`}
+                aria-label={`Show tutor set ${index + 1} of ${pageCount}`}
                 aria-selected={activePage === index}
                 onClick={() => goTo(index)}
                 onFocus={() => setPaused(true)}
@@ -3810,6 +3805,8 @@ function App() {
     writeAdminRoute(false);
     setAdminRoute(false);
     setAdminSection("bookings");
+    // Admin approve/publish does not remount the SPA — refresh the public list.
+    loadApprovedTutors({ bustCache: true });
   };
 
   const openAuth = (mode = "login", reason = "") => {
@@ -3948,11 +3945,14 @@ function App() {
     setResources(mergeResourceCatalog(data || [], staticItems));
   }
 
-  async function loadApprovedTutors() {
+  async function loadApprovedTutors({ bustCache = false } = {}) {
     setTutorsLoading(true);
     setTutorsError("");
     try {
-      const resp = await fetch("/api/tutor-profiles");
+      const url = bustCache
+        ? `/api/tutor-profiles?_=${Date.now()}`
+        : "/api/tutor-profiles";
+      const resp = await fetch(url, bustCache ? { cache: "no-store" } : undefined);
       const data = await resp.json().catch(() => ({}));
       if (!resp.ok) throw new Error(data?.error || "Failed to load tutor profiles.");
       setApprovedTutors(data.tutors || []);
