@@ -28,9 +28,11 @@ const tutors = [
 ];
 const homepage = tutorsForHomepage(tutors);
 assert.deepEqual(homepage.map((item) => item.public_slug), ["joseph-danso", "amina-khan", "sam-reed", "lee-okonkwo", "priya-shah"]);
-assert.equal(shouldRotateTutorProfiles(tutors), true);
-assert.equal(shouldRotateTutorProfiles(homepage.slice(0, 1)), false);
-assert.equal(tutorCarouselPageCount(homepage), homepage.length);
+assert.equal(shouldRotateTutorProfiles(tutors, 3), true);
+assert.equal(shouldRotateTutorProfiles(homepage.slice(0, 3), 3), false);
+assert.equal(shouldRotateTutorProfiles(homepage.slice(0, 1), 1), false);
+assert.equal(tutorCarouselPageCount(homepage, 3), homepage.length);
+assert.equal(tutorCarouselPageCount(homepage.slice(0, 3), 3), 1);
 assert.equal(tutorCarouselPageIndex(1, homepage.length), 1);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 0).map((item) => item.public_slug), ["joseph-danso", "amina-khan", "sam-reed"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["amina-khan", "sam-reed", "lee-okonkwo"]);
