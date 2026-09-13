@@ -67,8 +67,12 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Accept both hyphenated and spaced labels from older clients / DB rows.
+    const levelNorm = String(level).toLowerCase().replace(/\s+/g, '-');
     const isPremium =
-      level.includes('A-Level') || level.includes('T-Level') || level.includes('BTEC');
+      levelNorm.includes('a-level') ||
+      levelNorm.includes('t-level') ||
+      levelNorm.includes('btec');
     const isPackage = sessionType === 'package';
 
     let unitAmount;

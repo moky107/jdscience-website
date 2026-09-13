@@ -1724,7 +1724,11 @@ function Booking() {
 
   const set = (k, v) => setForm((f) => {
     const next = { ...f, [k]: v };
-    if (k === "level") next.subject = (SUBJECTS_BY_LEVEL[v] || [])[0] || "";
+    if (k === "level") {
+      const canonical = levelKey(v);
+      next.level = LEVELS.includes(canonical) ? canonical : v;
+      next.subject = (SUBJECTS_BY_LEVEL[next.level] || [])[0] || "";
+    }
     return next;
   });
 
@@ -1747,9 +1751,10 @@ function Booking() {
 
   function priceLabel(level, type) {
     if (type === "trial") return "Free";
-    const svc = services.find(s => s.level === level || s.slug === level);
+    const canonical = levelKey(level);
+    const svc = services.find((s) => levelKey(s.level) === canonical || s.slug === level || s.slug === canonical);
     if (!svc) {
-      const premium = level && (level.includes("A-Level") || level.includes("T-Level") || level.includes("BTEC"));
+      const premium = canonical === "A-Level" || canonical === "T-Level" || canonical === "BTEC";
       if (premium) return type === "package" ? "£400" : "£45/hr";
       return type === "package" ? "£300" : "£35/hr";
     }
@@ -1849,7 +1854,7 @@ function Booking() {
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
           <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths.</p>
           <ul style={{ lineHeight: 1.7, paddingLeft: 18, fontSize: isMobile ? 15 : 16 }}>
-            <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
+            <li>✓ 11+ / GCSE / A-Level / T-Level / BTEC — <b>£35–£45/hr</b></li>
             <li>✓ Free 30‑minute trial available for first-time students</li>
             <li>✓ Packages available for discount pricing</li>
           </ul>
@@ -1867,12 +1872,16 @@ function Booking() {
               <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
               <input placeholder="Phone (WhatsApp ok)" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inp} />
               <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
-                <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
-                  {services.length > 0 ? services.map(s => <option key={s.id} value={s.level}>{s.level}</option>)
-                    : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
+                {/* Always offer the full LEVELS list. tutoring_services is used for
+                    pricing only — if it only contains GCSE rows, other qualifications
+                    must still appear so students can book A-Level / T-Level / BTEC. */}
+                <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp} aria-label="Qualification level">
+                  {LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
                 </select>
-                <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
-                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s} value={s}>{s}</option>)}
+                <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp} aria-label="Subject">
+                  {(SUBJECTS_BY_LEVEL[form.level] || SUBJECTS_BY_LEVEL[levelKey(form.level)] || []).map((s) => (
+                    <option key={s} value={s}>{s}</option>
+                  ))}
                 </select>
               </div>
 
