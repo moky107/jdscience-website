@@ -30,15 +30,15 @@ const esbuild = await ensureDep("esbuild", "0.28.2");
 const EXPECTED = {
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
-  BTEC: ["Applied Science"],
-  "T-Level": ["Science"],
+  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
+  "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
 };
 
 const EXPECTED_LABELS = [
   "GCSE/IGCSE",
   "A-Level",
-  "BTEC Applied Science",
-  "T-Level Science",
+  "BTEC",
+  "T-Level",
 ];
 
 function installDom() {
@@ -180,7 +180,45 @@ try {
       `${level} must show subjects ${subjects.join(", ")}`
     );
     assert.equal(labels.includes("No Options"), false);
+
+    // Select the first real subject and confirm the controlled value sticks
+    // (mirrors the live form path used before API validation).
+    const chosen = subjects[0];
+    await act(async () => {
+      const proto = Object.getPrototypeOf(refreshedSubject);
+      const descriptor = Object.getOwnPropertyDescriptor(proto, "value");
+      descriptor.set.call(refreshedSubject, chosen);
+      refreshedSubject.dispatchEvent(new window.Event("change", { bubbles: true }));
+      await flush(40);
+    });
+    assert.equal(
+      document.querySelector('[data-testid="booking-subject"]').value,
+      chosen,
+      `${level} must accept subject ${chosen}`
+    );
   }
+
+  // Changing level after a subject was chosen must clear the previous subject.
+  await act(async () => {
+    const proto = Object.getPrototypeOf(levelSelect);
+    const descriptor = Object.getOwnPropertyDescriptor(proto, "value");
+    descriptor.set.call(levelSelect, "BTEC");
+    levelSelect.dispatchEvent(new window.Event("change", { bubbles: true }));
+    await flush(40);
+  });
+  assert.equal(document.querySelector('[data-testid="booking-subject"]').value, "");
+  await act(async () => {
+    const proto = Object.getPrototypeOf(levelSelect);
+    const descriptor = Object.getOwnPropertyDescriptor(proto, "value");
+    descriptor.set.call(levelSelect, "A-Level");
+    levelSelect.dispatchEvent(new window.Event("change", { bubbles: true }));
+    await flush(40);
+  });
+  assert.equal(document.querySelector('[data-testid="booking-subject"]').value, "");
+  assert.deepEqual(
+    optionLabels(document.querySelector('[data-testid="booking-subject"]')).slice(1),
+    EXPECTED["A-Level"]
+  );
 
   assert.ok(document.querySelector('[data-testid="booking-form"]'), "booking form root present");
   assert.ok(

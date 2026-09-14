@@ -41,8 +41,19 @@ assert.deepEqual(
 );
 assert.deepEqual(
   BOOKING_LEVEL_OPTIONS.map((opt) => opt.label),
-  ["GCSE/IGCSE", "A-Level", "BTEC Applied Science", "T-Level Science"]
+  ["GCSE/IGCSE", "A-Level", "BTEC", "T-Level"]
 );
+for (const opt of BOOKING_LEVEL_OPTIONS) {
+  assert.equal(
+    opt.label,
+    opt.value,
+    `Level dropdown label must exactly match bookingOptions key/value (${opt.value})`
+  );
+  assert.ok(
+    Object.prototype.hasOwnProperty.call(BOOKING_SUBJECTS_BY_LEVEL, opt.value),
+    `BOOKING_SUBJECTS_BY_LEVEL must have key ${opt.value}`
+  );
+}
 
 assert.equal(BOOKING_SUBJECT_PLACEHOLDER, "Select a subject");
 assert.match(BOOKING_SUBJECT_REQUIRED_MESSAGE, /select a subject/i);
@@ -50,8 +61,8 @@ assert.match(BOOKING_SUBJECT_REQUIRED_MESSAGE, /select a subject/i);
 const expectedSubjects = {
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
-  BTEC: ["Applied Science"],
-  "T-Level": ["Science"],
+  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
+  "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
 };
 
 for (const level of BOOKING_LEVEL_VALUES) {
@@ -82,8 +93,8 @@ for (const level of BOOKING_LEVEL_VALUES) {
   assert.equal(missing.error, BOOKING_SUBJECT_REQUIRED_MESSAGE);
 }
 
-assert.equal(bookingLevelLabel("BTEC"), "BTEC Applied Science");
-assert.equal(bookingLevelLabel("T-Level"), "T-Level Science");
+assert.equal(bookingLevelLabel("BTEC"), "BTEC");
+assert.equal(bookingLevelLabel("T-Level"), "T-Level");
 assert.equal(bookingLevelLabel("A-Level"), "A-Level");
 assert.equal(bookingLevelLabel("GCSE/IGCSE"), "GCSE/IGCSE");
 

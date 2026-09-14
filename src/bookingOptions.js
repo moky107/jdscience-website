@@ -3,8 +3,8 @@
  * Kept separate from resource-library SUBJECTS_BY_LEVEL so tutoring booking
  * can use science-focused options without changing the past-papers catalogue.
  *
- * Canonical `value` strings are what the UI submits and what the API / DB store.
- * `label` is display-only (e.g. "BTEC Applied Science" vs canonical "BTEC").
+ * Level dropdown `value` and visible `label` are identical and must match the
+ * keys in BOOKING_SUBJECTS_BY_LEVEL exactly (including hyphens/capitalisation).
  *
  * Lookup is exact-alias only — never substring matching. Unknown levels log a
  * development warning and surface a validation message instead of a silent [].
@@ -14,9 +14,9 @@ export const BOOKING_SUBJECT_PLACEHOLDER = "Select a subject";
 export const BOOKING_SUBJECT_REQUIRED_MESSAGE =
   "Please select a subject before submitting.";
 export const BOOKING_LEVEL_REQUIRED_MESSAGE =
-  "Please select a valid study level (GCSE/IGCSE, A-Level, BTEC Applied Science, or T-Level Science).";
+  "Please select a valid study level (GCSE/IGCSE, A-Level, BTEC, or T-Level).";
 export const BOOKING_UNKNOWN_LEVEL_MESSAGE =
-  "That study level is not recognised. Please choose GCSE/IGCSE, A-Level, BTEC Applied Science, or T-Level Science.";
+  "That study level is not recognised. Please choose GCSE/IGCSE, A-Level, BTEC, or T-Level.";
 
 /** Canonical level values saved to bookings / Stripe metadata. */
 export const BOOKING_LEVEL_VALUES = Object.freeze([
@@ -27,13 +27,13 @@ export const BOOKING_LEVEL_VALUES = Object.freeze([
 ]);
 
 /**
- * User-facing level options. `value` is canonical; `label` is display text.
+ * User-facing level options. `value` === `label` so dropdown values match map keys.
  */
 export const BOOKING_LEVEL_OPTIONS = Object.freeze([
   Object.freeze({ value: "GCSE/IGCSE", label: "GCSE/IGCSE" }),
   Object.freeze({ value: "A-Level", label: "A-Level" }),
-  Object.freeze({ value: "BTEC", label: "BTEC Applied Science" }),
-  Object.freeze({ value: "T-Level", label: "T-Level Science" }),
+  Object.freeze({ value: "BTEC", label: "BTEC" }),
+  Object.freeze({ value: "T-Level", label: "T-Level" }),
 ]);
 
 /** @deprecated Prefer BOOKING_LEVEL_OPTIONS; kept for callers that need values only. */
@@ -42,8 +42,13 @@ export const BOOKING_LEVELS = BOOKING_LEVEL_VALUES;
 export const BOOKING_SUBJECTS_BY_LEVEL = Object.freeze({
   "GCSE/IGCSE": Object.freeze(["Biology", "Chemistry", "Physics"]),
   "A-Level": Object.freeze(["Biology", "Chemistry", "Physics"]),
-  BTEC: Object.freeze(["Applied Science"]),
-  "T-Level": Object.freeze(["Science"]),
+  BTEC: Object.freeze(["Applied Science", "Biology", "Chemistry", "Physics"]),
+  "T-Level": Object.freeze([
+    "Health",
+    "Healthcare Science",
+    "Laboratory Sciences",
+    "Science",
+  ]),
 });
 
 /** Combined DB / legacy labels that must never drive the subject dropdown. */
