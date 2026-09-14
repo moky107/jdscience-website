@@ -14,41 +14,51 @@ export const BOOKING_SUBJECT_PLACEHOLDER = "Select a subject";
 export const BOOKING_SUBJECT_REQUIRED_MESSAGE =
   "Please select a subject before submitting.";
 export const BOOKING_LEVEL_REQUIRED_MESSAGE =
-  "Please select a valid study level (GCSE/IGCSE, A-Level, BTEC, or T-Level).";
+  "Please select a valid study level (11+, GCSE/IGCSE, A-Level, T-Level, or BTEC).";
 export const BOOKING_UNKNOWN_LEVEL_MESSAGE =
-  "That study level is not recognised. Please choose GCSE/IGCSE, A-Level, BTEC, or T-Level.";
+  "That study level is not recognised. Please choose 11+, GCSE/IGCSE, A-Level, T-Level, or BTEC.";
 
 /** Canonical level values saved to bookings / Stripe metadata. */
 export const BOOKING_LEVEL_VALUES = Object.freeze([
+  "11+",
   "GCSE/IGCSE",
   "A-Level",
-  "BTEC",
   "T-Level",
+  "BTEC",
 ]);
 
 /**
  * User-facing level options. `value` === `label` so dropdown values match map keys.
  */
 export const BOOKING_LEVEL_OPTIONS = Object.freeze([
+  Object.freeze({ value: "11+", label: "11+" }),
   Object.freeze({ value: "GCSE/IGCSE", label: "GCSE/IGCSE" }),
   Object.freeze({ value: "A-Level", label: "A-Level" }),
-  Object.freeze({ value: "BTEC", label: "BTEC" }),
   Object.freeze({ value: "T-Level", label: "T-Level" }),
+  Object.freeze({ value: "BTEC", label: "BTEC" }),
 ]);
 
 /** @deprecated Prefer BOOKING_LEVEL_OPTIONS; kept for callers that need values only. */
 export const BOOKING_LEVELS = BOOKING_LEVEL_VALUES;
 
 export const BOOKING_SUBJECTS_BY_LEVEL = Object.freeze({
+  "11+": Object.freeze([
+    "English",
+    "Maths",
+    "Verbal Reasoning",
+    "Non-Verbal Reasoning",
+    "Mixed Practice",
+    "Parent Guide",
+  ]),
   "GCSE/IGCSE": Object.freeze(["Biology", "Chemistry", "Physics"]),
   "A-Level": Object.freeze(["Biology", "Chemistry", "Physics"]),
-  BTEC: Object.freeze(["Applied Science", "Biology", "Chemistry", "Physics"]),
   "T-Level": Object.freeze([
     "Health",
     "Healthcare Science",
     "Laboratory Sciences",
     "Science",
   ]),
+  BTEC: Object.freeze(["Applied Science", "Biology", "Chemistry", "Physics"]),
 });
 
 /** Combined DB / legacy labels that must never drive the subject dropdown. */
@@ -63,6 +73,9 @@ export const LEGACY_COMBINED_BOOKING_LEVELS = Object.freeze([
  * No substring / includes matching.
  */
 const BOOKING_LEVEL_ALIASES = Object.freeze({
+  "11+": "11+",
+  "11 plus": "11+",
+  "11plus": "11+",
   "gcse/igcse": "GCSE/IGCSE",
   gcse: "GCSE/IGCSE",
   igcse: "GCSE/IGCSE",

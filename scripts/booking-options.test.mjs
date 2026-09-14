@@ -28,10 +28,11 @@ const createBookingSource = fs.readFileSync(path.join(root, "api/create-booking.
 const checkoutSource = fs.readFileSync(path.join(root, "api/create-checkout-session.js"), "utf8");
 
 assert.deepEqual(BOOKING_LEVEL_VALUES, [
+  "11+",
   "GCSE/IGCSE",
   "A-Level",
-  "BTEC",
   "T-Level",
+  "BTEC",
 ]);
 assert.deepEqual(BOOKING_LEVELS, BOOKING_LEVEL_VALUES);
 
@@ -41,7 +42,7 @@ assert.deepEqual(
 );
 assert.deepEqual(
   BOOKING_LEVEL_OPTIONS.map((opt) => opt.label),
-  ["GCSE/IGCSE", "A-Level", "BTEC", "T-Level"]
+  ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"]
 );
 for (const opt of BOOKING_LEVEL_OPTIONS) {
   assert.equal(
@@ -59,10 +60,18 @@ assert.equal(BOOKING_SUBJECT_PLACEHOLDER, "Select a subject");
 assert.match(BOOKING_SUBJECT_REQUIRED_MESSAGE, /select a subject/i);
 
 const expectedSubjects = {
+  "11+": [
+    "English",
+    "Maths",
+    "Verbal Reasoning",
+    "Non-Verbal Reasoning",
+    "Mixed Practice",
+    "Parent Guide",
+  ],
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
-  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
   "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
+  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
 };
 
 for (const level of BOOKING_LEVEL_VALUES) {
@@ -93,10 +102,14 @@ for (const level of BOOKING_LEVEL_VALUES) {
   assert.equal(missing.error, BOOKING_SUBJECT_REQUIRED_MESSAGE);
 }
 
+assert.equal(bookingLevelLabel("11+"), "11+");
 assert.equal(bookingLevelLabel("BTEC"), "BTEC");
 assert.equal(bookingLevelLabel("T-Level"), "T-Level");
 assert.equal(bookingLevelLabel("A-Level"), "A-Level");
 assert.equal(bookingLevelLabel("GCSE/IGCSE"), "GCSE/IGCSE");
+assert.equal(normalizeBookingLevel("11 plus"), "11+");
+assert.equal(normalizeBookingLevel("11plus"), "11+");
+assert.equal(isPremiumBookingLevel("11+"), false);
 
 assert.equal(normalizeBookingLevel("A-Level/T-Level/BTEC"), "");
 assert.equal(normalizeBookingLevel("A Level/T Level/BTEC"), "");

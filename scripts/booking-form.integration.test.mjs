@@ -28,17 +28,26 @@ const { JSDOM } = await ensureDep("jsdom", "24");
 const esbuild = await ensureDep("esbuild", "0.28.2");
 
 const EXPECTED = {
+  "11+": [
+    "English",
+    "Maths",
+    "Verbal Reasoning",
+    "Non-Verbal Reasoning",
+    "Mixed Practice",
+    "Parent Guide",
+  ],
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
-  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
   "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
+  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
 };
 
 const EXPECTED_LABELS = [
+  "11+",
   "GCSE/IGCSE",
   "A-Level",
-  "BTEC",
   "T-Level",
+  "BTEC",
 ];
 
 function installDom() {

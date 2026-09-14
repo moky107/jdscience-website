@@ -51,8 +51,8 @@ import {
 } from "./bookingOptions";
 
 // Guard: the live #book-anchor form must keep the four separated booking levels.
-if (!BOOKING_LEVEL_OPTIONS || BOOKING_LEVEL_OPTIONS.length < 4) {
-  throw new Error("bookingOptions.js must export the four booking level options used by BookingForm.");
+if (!BOOKING_LEVEL_OPTIONS || BOOKING_LEVEL_OPTIONS.length < 5) {
+  throw new Error("bookingOptions.js must export the five booking level options used by BookingForm.");
 }
 
 /* ============================================================
