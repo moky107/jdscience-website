@@ -71,7 +71,7 @@ const expectedSubjects = {
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
   "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
-  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
+  BTEC: ["Applied Science", "Biology", "Chemistry", "Health and Social Care", "Physics"],
 };
 
 for (const level of BOOKING_LEVEL_VALUES) {
