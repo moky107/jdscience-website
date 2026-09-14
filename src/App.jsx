@@ -45,6 +45,16 @@ import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname 
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
+import BookingForm from "./BookingForm";
+import {
+  BOOKING_LEVEL_OPTIONS,
+} from "./bookingOptions";
+
+// Guard: the live #book-anchor form must keep the four separated booking levels.
+if (!BOOKING_LEVEL_OPTIONS || BOOKING_LEVEL_OPTIONS.length < 4) {
+  throw new Error("bookingOptions.js must export the four booking level options used by BookingForm.");
+}
+
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -1704,222 +1714,8 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
 }
 
 /* -------------------------------- BOOKING --------------------------------- */
+/* Live booking UI lives in BookingForm.jsx (uses bookingOptions.js). Rendered at #book-anchor. */
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
-
-function Booking() {
-  const isMobile = useIsMobile();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    level: "GCSE/IGCSE",
-    subject: SUBJECTS_BY_LEVEL["GCSE/IGCSE"][0],
-    message: "",
-    sessionType: "single"
-  });
-  const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [acceptTerms, setAcceptTerms] = useState(false);
-  const [services, setServices] = useState([]);
-
-  const set = (k, v) => setForm((f) => {
-    const next = { ...f, [k]: v };
-    if (k === "level") next.subject = (SUBJECTS_BY_LEVEL[v] || [])[0] || "";
-    return next;
-  });
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const { data, error } = await supabase
-          .from("tutoring_services")
-          .select("*")
-          .eq("is_active", true)
-          .order("created_at", { ascending: true });
-
-        if (error) throw error;
-        if (data) setServices(data);
-      } catch (err) {
-        console.error("Could not load services:", err);
-      }
-    })();
-  }, []);
-
-  function priceLabel(level, type) {
-    if (type === "trial") return "Free";
-    const svc = services.find(s => s.level === level || s.slug === level);
-    if (!svc) {
-      const premium = level && (level.includes("A-Level") || level.includes("T-Level") || level.includes("BTEC"));
-      if (premium) return type === "package" ? "£400" : "£45/hr";
-      return type === "package" ? "£300" : "£35/hr";
-    }
-    return type === "package" ? `£${svc.package_price_10}` : `£${svc.price_per_hour}/hr`;
-  }
-
-  async function submit(e) {
-    e.preventDefault();
-    setLoading(true);
-
-    if (!form.name || !form.email) {
-      alert("Please enter name and email");
-      setLoading(false);
-      return;
-    }
-
-    if (!acceptTerms) {
-      alert(TERMS_ACCEPTANCE_ERROR);
-      setLoading(false);
-      return;
-    }
-
-    try {
-      // Free trials go through a server API that uses the service role key,
-      // so Supabase RLS does not block the insert.
-      if (form.sessionType === "trial") {
-        const resp = await fetch("/api/create-booking", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: form.name,
-            email: form.email,
-            phone: form.phone,
-            level: form.level,
-            subject: form.subject,
-            message: form.message,
-            sessionType: "trial",
-            accept_terms: true,
-            terms_version: TERMS_VERSION,
-          }),
-        });
-        const body = await resp.json().catch(() => ({}));
-        if (!resp.ok) throw new Error(body?.error || "Failed to book free trial");
-        track(ANALYTICS_EVENTS.TUTOR_BOOKING_SUBMITTED, {
-          metadata: { session_type: "trial", level: form.level, subject: form.subject },
-        });
-        setSent(true);
-        setLoading(false);
-        return;
-      }
-
-      track(ANALYTICS_EVENTS.TUTOR_ENQUIRY_STARTED, {
-        metadata: { session_type: form.sessionType, level: form.level, subject: form.subject },
-      });
-
-      const payload = {
-        name: form.name,
-        email: form.email,
-        phone: form.phone,
-        level: form.level,
-        subject: form.subject,
-        sessionType: form.sessionType === "package" ? "package" : "single",
-        message: form.message,
-        accept_terms: true,
-        terms_version: TERMS_VERSION,
-      };
-
-      const resp = await fetch("/api/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      const body = await resp.json().catch(() => ({}));
-      if (!resp.ok) {
-        throw new Error(body?.error || "Failed to create checkout session");
-      }
-
-      if (body.url) {
-        window.location.href = body.url;
-      } else {
-        throw new Error("Missing Stripe redirect URL");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Error: " + (err.message || "unknown"));
-      setLoading(false);
-    }
-  }
-
-  const price = priceLabel(form.level, form.sessionType);
-
-  return (
-    <section style={{ background: `linear-gradient(135deg,${TEAL_DARK},${TEAL})`, padding: isMobile ? "32px 16px" : "48px 20px", color: "#fff" }}>
-      <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
-        <div>
-          <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
-          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths.</p>
-          <ul style={{ lineHeight: 1.7, paddingLeft: 18, fontSize: isMobile ? 15 : 16 }}>
-            <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
-            <li>✓ Free 30‑minute trial available for first-time students</li>
-            <li>✓ Packages available for discount pricing</li>
-          </ul>
-        </div>
-        <div style={{ background: "#fff", borderRadius: 14, padding: isMobile ? 16 : 22, color: "#0f172a" }}>
-          {sent ? (
-            <div style={{ textAlign: "center", padding: "20px 0" }}>
-              <div style={{ fontSize: 40 }}>✅</div>
-              <h3>Thanks, {form.name || "there"}!</h3>
-              <p style={{ color: "#64748b" }}>We'll be in touch at {form.email || "your email"} soon.</p>
-            </div>
-          ) : (
-            <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <input required placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} style={inp} />
-              <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
-              <input placeholder="Phone (WhatsApp ok)" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inp} />
-              <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
-                <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
-                  {services.length > 0 ? services.map(s => <option key={s.id} value={s.level}>{s.level}</option>)
-                    : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
-                </select>
-                <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
-                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s} value={s}>{s}</option>)}
-                </select>
-              </div>
-
-              <div className="session-options" style={{ display: "flex", gap: 8 }}>
-                {[
-                  { id: "single", label: "Single session", hint: priceLabel(form.level, "single") },
-                  { id: "package", label: "10-session package", hint: priceLabel(form.level, "package") },
-                  { id: "trial", label: "Free 30-min trial", hint: "Free" },
-                ].map((opt) => {
-                  const active = form.sessionType === opt.id;
-                  return (
-                    <label key={opt.id} style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                      flex: 1,
-                      padding: "12px 14px",
-                      borderRadius: 10,
-                      border: `2px solid ${active ? TEAL : "#e2e8f0"}`,
-                      background: active ? "#ecfeff" : "#fff",
-                      cursor: "pointer",
-                      minHeight: 48,
-                    }}>
-                      <input type="radio" name="sessionType" checked={active} value={opt.id} onChange={() => set("sessionType", opt.id)} />
-                      <span>
-                        <span style={{ fontWeight: 800, display: "block", color: "#0f172a" }}>{opt.label}</span>
-                        <span style={{ fontSize: 13, color: "#64748b" }}>{opt.hint}</span>
-                      </span>
-                    </label>
-                  );
-                })}
-              </div>
-
-              <div style={{ fontWeight: 700, color: TEAL_DARK }}>Price: {price}</div>
-              <textarea placeholder="What would you like help with?" value={form.message} onChange={(e) => set("message", e.target.value)} rows={3} style={inp} />
-              <TutorChoosingNotice />
-              <TermsAgreement id="booking-accept-terms" variant="booking" checked={acceptTerms} onChange={setAcceptTerms} disabled={loading} />
-              <button type="submit" disabled={loading || !acceptTerms} style={{ padding: "14px 12px", minHeight: 48, borderRadius: 8, background: loading || !acceptTerms ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: loading || !acceptTerms ? "default" : "pointer", fontWeight: 800 }}>
-                {loading ? "Processing…" : "Request / Book"}
-              </button>
-            </form>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function TutorAvatar({ tutor, size = 72 }) {
   const [failed, setFailed] = useState(false);
@@ -4123,7 +3919,7 @@ function App() {
           <AdviceNewsSection />
           <LevelGrid onLevel={handleLevel} />
           <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
-          <div id="book-anchor"><Booking /></div>
+          <div id="book-anchor"><BookingForm /></div>
           <div id="contact-anchor"><Contact /></div>
           <VideoSection />
         </main>
