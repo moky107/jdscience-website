@@ -45,6 +45,15 @@ import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname 
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
+import {
+  BOOKING_LEVEL_OPTIONS,
+  BOOKING_SUBJECT_PLACEHOLDER,
+  BOOKING_SUBJECT_REQUIRED_MESSAGE,
+  findTutoringServiceForLevel,
+  isPremiumBookingLevel,
+  subjectsForBookingLevel,
+  validateBookingSelection,
+} from "./bookingOptions";
 /* ============================================================
    jdscience.co.uk — Teal Classic (Supabase-connected)
 ============================================================ */
@@ -1705,6 +1714,16 @@ function UploadModal({ level, subject, board, category, close, reload, accessTok
 
 /* -------------------------------- BOOKING --------------------------------- */
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
+const bookingSelectStyle = {
+  ...inp,
+  minHeight: 48,
+  appearance: "auto",
+  WebkitAppearance: "menulist",
+  MozAppearance: "menulist",
+  position: "relative",
+  zIndex: 2,
+  backgroundColor: "#fff",
+};
 
 function Booking() {
   const isMobile = useIsMobile();
@@ -1713,7 +1732,7 @@ function Booking() {
     email: "",
     phone: "",
     level: "GCSE/IGCSE",
-    subject: SUBJECTS_BY_LEVEL["GCSE/IGCSE"][0],
+    subject: "",
     message: "",
     sessionType: "single"
   });
@@ -1721,10 +1740,16 @@ function Booking() {
   const [loading, setLoading] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
   const [services, setServices] = useState([]);
+  const [subjectError, setSubjectError] = useState("");
+
+  const subjectOptions = subjectsForBookingLevel(form.level);
 
   const set = (k, v) => setForm((f) => {
     const next = { ...f, [k]: v };
-    if (k === "level") next.subject = (SUBJECTS_BY_LEVEL[v] || [])[0] || "";
+    if (k === "level") {
+      // Always reset subject when level changes so stale options cannot submit.
+      next.subject = "";
+    }
     return next;
   });
 
@@ -1738,6 +1763,8 @@ function Booking() {
           .order("created_at", { ascending: true });
 
         if (error) throw error;
+        // Pricing only — never use tutoring_services.level labels for the
+        // level/subject dropdowns (legacy rows use "A-Level/T-Level/BTEC").
         if (data) setServices(data);
       } catch (err) {
         console.error("Could not load services:", err);
@@ -1747,10 +1774,9 @@ function Booking() {
 
   function priceLabel(level, type) {
     if (type === "trial") return "Free";
-    const svc = services.find(s => s.level === level || s.slug === level);
+    const svc = findTutoringServiceForLevel(services, level);
     if (!svc) {
-      const premium = level && (level.includes("A-Level") || level.includes("T-Level") || level.includes("BTEC"));
-      if (premium) return type === "package" ? "£400" : "£45/hr";
+      if (isPremiumBookingLevel(level)) return type === "package" ? "£400" : "£45/hr";
       return type === "package" ? "£300" : "£35/hr";
     }
     return type === "package" ? `£${svc.package_price_10}` : `£${svc.price_per_hour}/hr`;
@@ -1759,9 +1785,17 @@ function Booking() {
   async function submit(e) {
     e.preventDefault();
     setLoading(true);
+    setSubjectError("");
 
     if (!form.name || !form.email) {
       alert("Please enter name and email");
+      setLoading(false);
+      return;
+    }
+
+    const selection = validateBookingSelection({ level: form.level, subject: form.subject });
+    if (!selection.ok) {
+      setSubjectError(selection.error || BOOKING_SUBJECT_REQUIRED_MESSAGE);
       setLoading(false);
       return;
     }
@@ -1783,8 +1817,8 @@ function Booking() {
             name: form.name,
             email: form.email,
             phone: form.phone,
-            level: form.level,
-            subject: form.subject,
+            level: selection.level,
+            subject: selection.subject,
             message: form.message,
             sessionType: "trial",
             accept_terms: true,
@@ -1794,7 +1828,7 @@ function Booking() {
         const body = await resp.json().catch(() => ({}));
         if (!resp.ok) throw new Error(body?.error || "Failed to book free trial");
         track(ANALYTICS_EVENTS.TUTOR_BOOKING_SUBMITTED, {
-          metadata: { session_type: "trial", level: form.level, subject: form.subject },
+          metadata: { session_type: "trial", level: selection.level, subject: selection.subject },
         });
         setSent(true);
         setLoading(false);
@@ -1802,15 +1836,15 @@ function Booking() {
       }
 
       track(ANALYTICS_EVENTS.TUTOR_ENQUIRY_STARTED, {
-        metadata: { session_type: form.sessionType, level: form.level, subject: form.subject },
+        metadata: { session_type: form.sessionType, level: selection.level, subject: selection.subject },
       });
 
       const payload = {
         name: form.name,
         email: form.email,
         phone: form.phone,
-        level: form.level,
-        subject: form.subject,
+        level: selection.level,
+        subject: selection.subject,
         sessionType: form.sessionType === "package" ? "package" : "single",
         message: form.message,
         accept_terms: true,
@@ -1847,14 +1881,14 @@ function Booking() {
       <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 28, alignItems: "center" }}>
         <div>
           <h2 style={{ fontSize: isMobile ? 24 : 28, marginTop: 0 }}>Book a Tutoring Session</h2>
-          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 lessons across science and maths.</p>
+          <p style={{ color: "rgba(255,255,255,.9)", lineHeight: 1.55 }}>Personalised 1-to-1 science lessons for GCSE, A-Level, BTEC and T-Level.</p>
           <ul style={{ lineHeight: 1.7, paddingLeft: 18, fontSize: isMobile ? 15 : 16 }}>
-            <li>✓ 11+ / GCSE / T-Level / BTEC — <b>£35–£45/hr</b></li>
+            <li>✓ GCSE / A-Level / T-Level / BTEC — <b>£35–£45/hr</b></li>
             <li>✓ Free 30‑minute trial available for first-time students</li>
             <li>✓ Packages available for discount pricing</li>
           </ul>
         </div>
-        <div style={{ background: "#fff", borderRadius: 14, padding: isMobile ? 16 : 22, color: "#0f172a" }}>
+        <div style={{ background: "#fff", borderRadius: 14, padding: isMobile ? 16 : 22, color: "#0f172a", overflow: "visible" }}>
           {sent ? (
             <div style={{ textAlign: "center", padding: "20px 0" }}>
               <div style={{ fontSize: 40 }}>✅</div>
@@ -1862,19 +1896,55 @@ function Booking() {
               <p style={{ color: "#64748b" }}>We'll be in touch at {form.email || "your email"} soon.</p>
             </div>
           ) : (
-            <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 12, overflow: "visible" }}>
               <input required placeholder="Your name" value={form.name} onChange={(e) => set("name", e.target.value)} style={inp} />
               <input required type="email" placeholder="Email" value={form.email} onChange={(e) => set("email", e.target.value)} style={inp} />
               <input placeholder="Phone (WhatsApp ok)" value={form.phone} onChange={(e) => set("phone", e.target.value)} style={inp} />
-              <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12 }}>
-                <select value={form.level} onChange={(e) => set("level", e.target.value)} style={inp}>
-                  {services.length > 0 ? services.map(s => <option key={s.id} value={s.level}>{s.level}</option>)
-                    : LEVELS.map((l) => <option key={l} value={l}>{l}</option>)}
-                </select>
-                <select value={form.subject} onChange={(e) => set("subject", e.target.value)} style={inp}>
-                  {(SUBJECTS_BY_LEVEL[form.level] || []).map((s) => <option key={s} value={s}>{s}</option>)}
-                </select>
+              <div className="booking-level-subject" style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 12, overflow: "visible" }}>
+                <label style={{ display: "flex", flexDirection: "column", gap: 6, minWidth: 0 }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: "#334155" }}>Level</span>
+                  <select
+                    className="booking-select"
+                    aria-label="Study level"
+                    value={form.level}
+                    onChange={(e) => {
+                      set("level", e.target.value);
+                      setSubjectError("");
+                    }}
+                    style={bookingSelectStyle}
+                    required
+                  >
+                    {BOOKING_LEVEL_OPTIONS.map((opt) => (
+                      <option key={opt.value} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                </label>
+                <label style={{ display: "flex", flexDirection: "column", gap: 6, minWidth: 0 }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: "#334155" }}>Subject</span>
+                  <select
+                    className="booking-select"
+                    aria-label="Subject"
+                    value={form.subject}
+                    onChange={(e) => {
+                      set("subject", e.target.value);
+                      setSubjectError("");
+                    }}
+                    style={{
+                      ...bookingSelectStyle,
+                      borderColor: subjectError ? "#dc2626" : "#e2e8f0",
+                    }}
+                    required
+                  >
+                    <option value="">{BOOKING_SUBJECT_PLACEHOLDER}</option>
+                    {subjectOptions.map((s) => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </label>
               </div>
+              {subjectError ? (
+                <div role="alert" style={{ color: "#b91c1c", fontSize: 13, fontWeight: 700, marginTop: -4 }}>
+                  {subjectError}
+                </div>
+              ) : null}
 
               <div className="session-options" style={{ display: "flex", gap: 8 }}>
                 {[
