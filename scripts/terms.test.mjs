@@ -87,11 +87,14 @@ assert.match(authModal, /termsAccepted/);
 assert.match(authModal, /mode === "register" && !termsAccepted/);
 
 const app = fs.readFileSync(path.join(root, "src", "App.jsx"), "utf8");
-assert.match(app, /accept_terms: true/);
+const bookingForm = fs.readFileSync(path.join(root, "src", "BookingForm.jsx"), "utf8");
+assert.match(app, /from "\.\/BookingForm"/);
+assert.match(bookingForm, /accept_terms: true/);
 assert.match(app, /variant="tutor"/);
-assert.match(app, /variant="booking"/);
+assert.match(bookingForm, /variant="booking"/);
 assert.match(app, /href="\/terms\/"/);
 assert.match(app, /TutorChoosingNotice/);
+assert.match(bookingForm, /TutorChoosingNotice/);
 assert.match(fs.readFileSync(path.join(root, "src", "TutorChoosingNotice.jsx"), "utf8"), /TUTOR_CHOOSING_NOTICE/);
 
 assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf8"), /jd_signed_in=1/);
