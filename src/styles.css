@@ -51,6 +51,22 @@ input, select, textarea {
   max-width: 100%;
 }
 
+/* Native booking selects: keep menus usable on iPhone Safari (no clipping). */
+.booking-level-subject,
+.booking-select {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.booking-select {
+  min-height: 48px;
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  background-color: #fff;
+}
+
 .stack-on-mobile {
   display: flex;
   flex-wrap: wrap;

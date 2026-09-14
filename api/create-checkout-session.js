@@ -2,6 +2,7 @@ import Stripe from 'stripe';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from './_lib/requireTerms.js';
 import { handleShopCheckoutRequest, isShopCheckoutRequest } from './_lib/shopHandlers.js';
 import { parseRequestBody } from './_lib/tutors.js';
+import { isPremiumBookingLevel, validateBookingSelection } from '../src/bookingOptions.js';
 
 /**
  * Vercel serverless function: create a Stripe Checkout session.
@@ -62,13 +63,17 @@ export default async function handler(req, res) {
       .json({ error: 'Missing required fields (name, email, level, subject).' });
   }
 
+  const selection = validateBookingSelection({ level, subject });
+  if (!selection.ok) {
+    return res.status(400).json({ error: selection.error });
+  }
+
   if (!hasAcceptedTerms(body)) {
     return res.status(400).json({ error: TERMS_ACCEPTANCE_ERROR });
   }
 
   try {
-    const isPremium =
-      level.includes('A-Level') || level.includes('T-Level') || level.includes('BTEC');
+    const isPremium = isPremiumBookingLevel(selection.level);
     const isPackage = sessionType === 'package';
 
     let unitAmount;
@@ -92,7 +97,7 @@ export default async function handler(req, res) {
           price_data: {
             currency: 'gbp',
             product_data: {
-              name: `${level} ${subject} - ${isPackage ? '10 Sessions' : 'Single Session'}`,
+              name: `${selection.level} ${selection.subject} - ${isPackage ? '10 Sessions' : 'Single Session'}`,
             },
             unit_amount: unitAmount,
           },
@@ -106,8 +111,8 @@ export default async function handler(req, res) {
         student_name: name,
         student_email: email,
         phone: phone || '',
-        level,
-        subject,
+        level: selection.level,
+        subject: selection.subject,
         session_type: isPackage ? 'package' : 'single',
         message: String(message || '').slice(0, 450),
         terms_accepted: 'true',
