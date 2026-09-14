@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 import { sendBookingNotification } from './_lib/notify.js';
 import { hasAcceptedTerms, TERMS_ACCEPTANCE_ERROR, termsAcceptancePayload } from './_lib/requireTerms.js';
+import { validateBookingSelection } from '../src/bookingOptions.js';
 
 /**
  * Vercel serverless function: create a free-trial (or unpaid) booking.
@@ -42,6 +43,11 @@ export default async function handler(req, res) {
       .json({ error: 'Missing required fields (name, email, level, subject).' });
   }
 
+  const selection = validateBookingSelection({ level, subject });
+  if (!selection.ok) {
+    return res.status(400).json({ error: selection.error });
+  }
+
   if (!hasAcceptedTerms(body)) {
     return res.status(400).json({ error: TERMS_ACCEPTANCE_ERROR });
   }
@@ -62,8 +68,8 @@ export default async function handler(req, res) {
       student_name: String(name).trim(),
       student_email: String(email).trim().toLowerCase(),
       phone: phone ? String(phone).trim() : null,
-      level: String(level).trim(),
-      subject: String(subject).trim(),
+      level: selection.level,
+      subject: selection.subject,
       session_type: 'trial',
       status: 'confirmed',
       meta: {

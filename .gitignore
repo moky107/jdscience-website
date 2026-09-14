@@ -22,3 +22,5 @@ yarn-error.log*
 .DS_Store
 package-lock.json
 __pycache__/
+
+.tmp-booking-form-it/

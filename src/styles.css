@@ -57,6 +57,23 @@ input, select, textarea {
   gap: 10px;
 }
 
+.booking-select {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  min-height: 48px;
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  background-color: #fff;
+}
+
+.booking-level-subject-row {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
 .hero-ctas {
   display: flex;
   gap: 12px;
