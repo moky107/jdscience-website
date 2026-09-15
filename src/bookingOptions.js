@@ -58,13 +58,7 @@ export const BOOKING_SUBJECTS_BY_LEVEL = Object.freeze({
     "Laboratory Sciences",
     "Science",
   ]),
-  BTEC: Object.freeze([
-    "Applied Science",
-    "Biology",
-    "Chemistry",
-    "Health and Social Care",
-    "Physics",
-  ]),
+  BTEC: Object.freeze(["Applied Science", "Health and Social Care"]),
 });
 
 /** Combined DB / legacy labels that must never drive the subject dropdown. */

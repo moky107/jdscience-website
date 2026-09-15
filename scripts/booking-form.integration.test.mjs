@@ -39,7 +39,7 @@ const EXPECTED = {
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
   "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
-  BTEC: ["Applied Science", "Biology", "Chemistry", "Health and Social Care", "Physics"],
+  BTEC: ["Applied Science", "Health and Social Care"],
 };
 
 const EXPECTED_LABELS = [
