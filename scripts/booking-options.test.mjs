@@ -71,7 +71,7 @@ const expectedSubjects = {
   "GCSE/IGCSE": ["Biology", "Chemistry", "Physics"],
   "A-Level": ["Biology", "Chemistry", "Physics"],
   "T-Level": ["Health", "Healthcare Science", "Laboratory Sciences", "Science"],
-  BTEC: ["Applied Science", "Biology", "Chemistry", "Physics"],
+  BTEC: ["Applied Science", "Health and Social Care"],
 };
 
 for (const level of BOOKING_LEVEL_VALUES) {
@@ -134,6 +134,22 @@ assert.equal(normalizeBookingLevel("BTEC"), "BTEC");
 assert.equal(normalizeBookingLevel("BTEC Applied Science"), "BTEC");
 assert.equal(normalizeBookingLevel("gcse"), "GCSE/IGCSE");
 assert.equal(normalizeBookingLevel("IGCSE"), "GCSE/IGCSE");
+
+assert.deepEqual(
+  validateBookingSelection({ level: "BTEC", subject: "Applied Science" }),
+  { ok: true, level: "BTEC", subject: "Applied Science" }
+);
+assert.deepEqual(
+  validateBookingSelection({ level: "BTEC", subject: "Health and Social Care" }),
+  { ok: true, level: "BTEC", subject: "Health and Social Care" }
+);
+assert.equal(isValidBookingSubject("BTEC", "Biology"), false);
+assert.equal(isValidBookingSubject("BTEC", "Chemistry"), false);
+assert.equal(isValidBookingSubject("BTEC", "Physics"), false);
+assert.equal(
+  validateBookingSelection({ level: "BTEC", subject: "Biology" }).ok,
+  false
+);
 
 // Exact aliases only — substring guesses must not succeed.
 assert.equal(normalizeBookingLevel("Advanced A-Level Chemistry pathway"), "");
