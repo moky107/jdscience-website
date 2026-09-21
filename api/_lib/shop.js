@@ -24,6 +24,8 @@ export const SHOP_PRODUCT_TYPES = new Set([
   'powerpoint',
   'pdf',
   'worksheet',
+  'worksheet_pack',
+  'sample_assignment',
   'revision_notes',
   'answer_sheet',
   'practice_questions',
@@ -54,6 +56,7 @@ export const PUBLIC_PRODUCT_SELECT = [
   'level',
   'subject',
   'exam_board',
+  'topic',
   'product_kind',
   'stock_quantity',
   'is_featured',
@@ -360,6 +363,7 @@ export function applyShopProductUpdate(existing, body = {}, options = {}) {
     level: body.level != null ? (safeTrim(body.level, 40) || null) : (existing.level || null),
     subject: body.subject != null ? (safeTrim(body.subject, 80) || null) : (existing.subject || null),
     exam_board: body.exam_board != null ? (safeTrim(body.exam_board, 40) || null) : (existing.exam_board || null),
+    topic: body.topic != null ? (safeTrim(body.topic, 120) || null) : (existing.topic || null),
     keywords: body.keywords !== undefined ? normalizeShopKeywords(body.keywords) : normalizeShopKeywords(existing.keywords),
     image_path,
     preview_path,
@@ -400,6 +404,7 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
   const level = safeTrim(body.level, 40) || null;
   const subject = safeTrim(body.subject, 80) || null;
   const exam_board = safeTrim(body.exam_board, 40) || null;
+  const topic = safeTrim(body.topic, 120) || null;
   const keywords = normalizeShopKeywords(body.keywords);
   const image_path = safeTrim(body.image_path, 400) || null;
   const preview_path = safeTrim(body.preview_path, 400) || null;
@@ -455,11 +460,11 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
       if (!SHOP_PRODUCT_KINDS.has(product_kind)) {
         return { ok: false, error: 'Choose digital or physical.' };
       }
-      if (product_kind === 'digital' && !download_path) {
-        return { ok: false, error: 'Digital products need a downloadable file path.' };
+      if (product_kind === 'digital' && (is_published === true) && !download_path) {
+        return { ok: false, error: 'Add a customer download file before publishing a digital product.' };
       }
-      if (product_kind === 'physical' && stock_quantity == null) {
-        return { ok: false, error: 'Physical products need a stock quantity.' };
+      if (product_kind === 'physical' && (is_published === true) && stock_quantity == null) {
+        return { ok: false, error: 'Physical products need a stock quantity before publishing.' };
       }
     }
   } else if (opens_external === true) {
@@ -482,6 +487,7 @@ export function normalizeProductInput(body = {}, { partial = false } = {}) {
     level,
     subject,
     exam_board,
+    topic,
     keywords,
     image_path,
     preview_path,
@@ -718,3 +724,74 @@ export async function deleteObsoleteSeededUnit1Products(supabase) {
   }
   return { deletedIds, error: null };
 }
+
+export const SHOP_UPLOAD_MAX_BYTES = 50 * 1024 * 1024;
+
+function basenameFromPath(path) {
+  const cleaned = String(path || '').trim();
+  if (!cleaned) return '';
+  const parts = cleaned.split('/');
+  return parts[parts.length - 1].toLowerCase();
+}
+
+function normalizeCompareText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+/** Detect likely duplicate shop products before create. */
+export function findLikelyShopDuplicates(existingProducts, candidate = {}, { excludeId = null } = {}) {
+  const title = normalizeCompareText(candidate.title);
+  const slug = normalizeCompareText(candidate.slug || slugifyProductTitle(candidate.title || ''));
+  const topic = normalizeCompareText(candidate.topic);
+  const subject = normalizeCompareText(candidate.subject);
+  const downloadName = basenameFromPath(candidate.download_path || candidate.filename || '');
+  const list = Array.isArray(existingProducts) ? existingProducts : [];
+
+  return list.filter((product) => {
+    if (!product) return false;
+    if (excludeId && String(product.id) === String(excludeId)) return false;
+    const reasons = [];
+    const productTitle = normalizeCompareText(product.title);
+    const productSlug = normalizeCompareText(product.slug);
+    const productTopic = normalizeCompareText(product.topic);
+    const productSubject = normalizeCompareText(product.subject);
+    const productDownload = basenameFromPath(product.download_path);
+
+    if (title && productTitle && title === productTitle) reasons.push('title');
+    if (slug && productSlug && slug === productSlug) reasons.push('slug');
+    if (downloadName && productDownload && downloadName === productDownload) reasons.push('filename');
+    if (
+      title
+      && productTitle
+      && subject
+      && productSubject
+      && subject === productSubject
+      && topic
+      && productTopic
+      && topic === productTopic
+      && title === productTitle
+    ) {
+      reasons.push('subject/topic');
+    }
+    product._duplicateReasons = [...new Set(reasons)];
+    return product._duplicateReasons.length > 0;
+  }).map((product) => ({
+    id: product.id,
+    title: product.title,
+    slug: product.slug,
+    subject: product.subject,
+    topic: product.topic,
+    download_path: product.download_path,
+    reasons: product._duplicateReasons || [],
+  }));
+}
+
+export function buildShopStoragePath(folder, filename) {
+  const safeName = safeTrim(filename, 120).replace(/[^a-zA-Z0-9._-]+/g, '-').slice(0, 80) || 'file';
+  return `${folder}/${Date.now()}-${safeName}`;
+}
+
