@@ -30,6 +30,11 @@ export default function PasswordRecoveryModal({ onComplete }) {
     }
     setBusy(true);
     try {
+      const { data: sessionData } = await supabase.auth.getSession();
+      if (!sessionData?.session) {
+        setError("This reset link is missing a valid session. Request a new Forgot password email and open the latest link.");
+        return;
+      }
       const { error: updateError } = await supabase.auth.updateUser({ password });
       if (updateError) {
         setError(updateError.message || "Could not update password.");

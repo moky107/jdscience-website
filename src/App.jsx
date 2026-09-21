@@ -3713,12 +3713,11 @@ function App() {
         setAuthReason("");
         setAuthOpen(true);
       } else if (params.get("recovery") === "1") {
-        // Recovery links land here; PASSWORD_RECOVERY auth event opens the set-password modal.
+        // Clear the flag from the URL. The set-password modal opens only when
+        // onAuthStateChange emits PASSWORD_RECOVERY (session established from the link).
         params.delete("recovery");
         const query = params.toString();
         window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
-        setPasswordRecoveryOpen(true);
-        setAuthOpen(false);
       }
     } catch {
       /* ignore */

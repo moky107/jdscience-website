@@ -20,6 +20,15 @@ assert.match(authModalSrc, /resetPasswordForEmail/);
 assert.match(authModalSrc, /Forgot password/);
 assert.match(authModalSrc, /Invalid login credentials/);
 
+const appSrc = fs.readFileSync(path.join(root, "src/App.jsx"), "utf8");
+assert.match(appSrc, /PASSWORD_RECOVERY/);
+assert.match(appSrc, /PasswordRecoveryModal/);
+// Must not open the set-password modal merely from ?recovery=1 before a session exists.
+assert.doesNotMatch(
+  appSrc,
+  /params\.get\("recovery"\) === "1"[\s\S]{0,400}setPasswordRecoveryOpen\(true\)/,
+);
+
 assert.equal(PRODUCTION_SITE_ORIGIN, "https://www.jdscience.co.uk");
 assert.equal(authEmailRedirectTo("https://www.jdscience.co.uk"), "https://www.jdscience.co.uk/?verified=1");
 assert.equal(
