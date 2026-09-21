@@ -1,6 +1,12 @@
 /**
- * End-to-end Admin Shop upload workflow against live Supabase.
+ * End-to-end Admin Shop upload workflow against live Supabase Storage + shop_products.
  * Mirrors AdminShopEditor: signed upload → create → draft → publish → edit → duplicate warn → public list.
+ *
+ * AUTH SAFETY: This script must NEVER call supabase.auth.admin.* or change any
+ * Auth user password/email. It uses the service role only for shop_products /
+ * storage product files. For UI login e2e, use a disposable test account or a
+ * local ADMIN_PASSWORD API gate — never the production admin Auth password.
+ * See scripts/authSafety.mjs.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -13,7 +19,17 @@ import {
   persistShopProductRow,
   slugifyProductTitle,
 } from "../api/_lib/shop.js";
+import { FORBIDDEN_SCRIPT_AUTH_PATTERNS } from "./authSafety.mjs";
 
+// Fail fast if this file is later edited to include Auth Admin mutations.
+const selfSrc = fs.readFileSync(new URL(import.meta.url), "utf8");
+for (const pattern of FORBIDDEN_SCRIPT_AUTH_PATTERNS) {
+  // Ignore this guard block's own pattern references by requiring "supabase." prefix usage.
+  if (/supabase\.auth\.admin\.(updateUserById|createUser|deleteUser|generateLink)\s*\(/.test(selfSrc)) {
+    console.error("admin-shop-e2e-upload.mjs must not call Auth Admin mutation APIs.");
+    process.exit(1);
+  }
+}
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!supabaseUrl || !serviceRoleKey) {
