@@ -119,6 +119,8 @@ assert.equal(isMissingShopTable({ message: "Could not find the table 'public.sho
 assert.equal(isMissingShopTable({ message: 'column shop_products.preview_path does not exist' }), false);
 assert.equal(isShopColumnMismatch({ message: 'column shop_products.preview_path does not exist' }), true);
 assert.equal(missingShopColumnName({ message: 'column shop_products.preview_path does not exist' }), 'preview_path');
+assert.equal(isShopColumnMismatch({ message: "Could not find the 'topic' column of 'shop_products' in the schema cache" }), true);
+assert.equal(missingShopColumnName({ message: "Could not find the 'topic' column of 'shop_products' in the schema cache" }), 'topic');
 assert.equal(isShopSchemaCacheStale({ message: "Could not find the table 'public.shop_products' in the schema cache" }), true);
 
 const sampleProduct = {

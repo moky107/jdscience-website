@@ -99,12 +99,18 @@ export function isShopSchemaCacheStale(error) {
 
 export function isShopColumnMismatch(error) {
   const msg = safeShopErrorMessage(error).toLowerCase();
-  return /column shop_(products|orders)\.[a-z0-9_]+ does not exist/.test(msg);
+  return (
+    /column shop_(products|orders)\.[a-z0-9_]+ does not exist/.test(msg)
+    || /could not find the ['"]?[a-z0-9_]+['"]? column of ['"]?shop_(products|orders)['"]?/.test(msg)
+  );
 }
 
 export function missingShopColumnName(error) {
-  const match = safeShopErrorMessage(error).match(/column shop_(?:products|orders)\.([a-z0-9_]+) does not exist/i);
-  return match?.[1] || null;
+  const msg = safeShopErrorMessage(error);
+  const postgres = msg.match(/column shop_(?:products|orders)\.([a-z0-9_]+) does not exist/i);
+  if (postgres?.[1]) return postgres[1];
+  const postgrest = msg.match(/could not find the ['"]?([a-z0-9_]+)['"]? column of ['"]?shop_(?:products|orders)['"]?/i);
+  return postgrest?.[1] || null;
 }
 
 export function shopSetupReason(error) {
