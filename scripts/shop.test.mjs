@@ -29,6 +29,7 @@ import {
   SPECIALISED_CELLS_LEVEL,
   SPECIALISED_CELLS_EXAM_BOARD,
   PROTECTED_BTEC_SPECIALISED_CELLS_ID,
+  findLikelyShopDuplicates,
 } from "../api/_lib/shop.js";
 import {
   externalButtonLabel as purchaseCta,
@@ -118,6 +119,8 @@ assert.equal(isMissingShopTable({ message: "Could not find the table 'public.sho
 assert.equal(isMissingShopTable({ message: 'column shop_products.preview_path does not exist' }), false);
 assert.equal(isShopColumnMismatch({ message: 'column shop_products.preview_path does not exist' }), true);
 assert.equal(missingShopColumnName({ message: 'column shop_products.preview_path does not exist' }), 'preview_path');
+assert.equal(isShopColumnMismatch({ message: "Could not find the 'topic' column of 'shop_products' in the schema cache" }), true);
+assert.equal(missingShopColumnName({ message: "Could not find the 'topic' column of 'shop_products' in the schema cache" }), 'topic');
 assert.equal(isShopSchemaCacheStale({ message: "Could not find the table 'public.shop_products' in the schema cache" }), true);
 
 const sampleProduct = {
@@ -353,19 +356,52 @@ const adminSource = fs.readFileSync(new URL("../src/AdminShopEditor.jsx", import
 assert.match(adminSource, /ShopFileUploadBox/, "AdminShopEditor must use ShopFileUploadBox");
 assert.match(adminSource, /Drag and drop a cover image here/);
 assert.match(adminSource, /Choose image file/);
+assert.match(adminSource, /\+ Add Product/);
+assert.match(adminSource, /Save as Draft/);
+assert.match(adminSource, /Save & Publish|Update & Publish/);
 assert.match(adminSource, /Product title/);
 assert.match(adminSource, /Purchase method/);
 assert.match(adminSource, /Sell directly on JDScience/);
 assert.match(adminSource, /External retailer/);
 assert.match(adminSource, /Retailer name/);
 assert.match(adminSource, /Price \(£\)/);
+assert.match(adminSource, /Unit \/ Topic/);
 assert.match(adminSource, /Cover image/);
-assert.match(adminSource, /Customer download/);
-assert.match(adminSource, /Update product/);
-assert.match(adminSource, /Product updated successfully/);
-assert.match(adminSource, /Are you sure you want to delete this product/);
+assert.match(adminSource, /Customer download|Main downloadable product file/);
+assert.match(adminSource, /shop-prepare-upload/);
 assert.match(adminSource, /shop-update/);
+assert.match(adminSource, /Delete .*permanently|Delete “/);
+assert.match(adminSource, /Unpublish/);
 assert.doesNotMatch(adminSource, /showDebug=\{true\}/);
+
+const createdDraftDigital = normalizeProductInput({
+  title: "Draft PowerPoint",
+  short_description: "Draft only",
+  price_pence: 500,
+  product_type: "powerpoint",
+  product_kind: "digital",
+  is_published: false,
+});
+assert.equal(createdDraftDigital.ok, true, "Draft digital products must save without a download file");
+
+const createdPublishedDigital = normalizeProductInput({
+  title: "Published PowerPoint",
+  short_description: "Needs file",
+  price_pence: 500,
+  product_type: "powerpoint",
+  product_kind: "digital",
+  is_published: true,
+});
+assert.equal(createdPublishedDigital.ok, false);
+assert.match(createdPublishedDigital.error, /download/i);
+
+const dupes = findLikelyShopDuplicates(
+  [{ id: "1", title: "Unit 8 Sample", slug: "unit-8-sample", subject: "Applied Science", topic: "Unit 8", download_path: "downloads/unit8.pdf" }],
+  { title: "Unit 8 Sample", slug: "unit-8-sample", subject: "Applied Science", topic: "Unit 8" },
+);
+assert.equal(dupes.length, 1);
+assert.ok(dupes[0].reasons.includes("title"));
+assert.ok(dupes[0].reasons.includes("slug"));
 
 const uploadSource = fs.readFileSync(new URL("../src/AdminShopFileUpload.jsx", import.meta.url), "utf8");
 assert.match(uploadSource, /type="file"/, "ShopFileUploadBox must render a native file input");

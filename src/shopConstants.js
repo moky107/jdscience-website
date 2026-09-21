@@ -16,9 +16,11 @@ export const SHOP_EXAM_BOARDS = ["AQA", "Edexcel", "OCR", "Eduqas", "WJEC", "Pea
 
 export const SHOP_PRODUCT_TYPES = [
   { value: "powerpoint", label: "PowerPoint" },
-  { value: "pdf", label: "PDF" },
   { value: "worksheet", label: "Worksheet" },
+  { value: "worksheet_pack", label: "Worksheet Pack" },
+  { value: "sample_assignment", label: "Sample Assignment / Exemplar" },
   { value: "revision_notes", label: "Revision Notes" },
+  { value: "pdf", label: "PDF" },
   { value: "answer_sheet", label: "Answer Sheet" },
   { value: "practice_questions", label: "Practice Questions & Mark Schemes" },
   { value: "exam_walkthrough", label: "Exam Walkthrough" },

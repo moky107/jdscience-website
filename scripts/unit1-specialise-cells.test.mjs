@@ -20,7 +20,7 @@ assert.doesNotMatch(shopHandlers, /publishUnit1SpecialiseCells/);
 assert.match(shopHandlers, /deleteObsoleteSeededUnit1Products/);
 assert.match(shopHandlers, /delete\(\)\.eq\('id', id\)/);
 assert.match(adminSource, /action: "shop-delete", id/);
-assert.match(adminSource, /removeProduct\(product\.id\)/);
+assert.match(adminSource, /removeProduct\(product\.id,\s*product\.title\)/);
 
 assert.doesNotMatch(pkg.scripts.build, /publish-unit1-specialise-cells/);
 assert.doesNotMatch(pkg.scripts.build, /publish-unit1-original-lessons/);

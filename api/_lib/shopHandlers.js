@@ -30,6 +30,9 @@ import {
   EXTERNAL_CHECKOUT_ERROR,
   deleteObsoleteSeededUnit1Products,
   correctSpecialisedCellsClassification,
+  findLikelyShopDuplicates,
+  buildShopStoragePath,
+  SHOP_UPLOAD_MAX_BYTES,
 } from './shop.js';
 import { countMissingUnit1Products, ensureMissingUnit1ShopProducts } from './publishUnit1OriginalLessons.js';
 import { countMissingBtecHscUnit2Walkthroughs, ensureMissingBtecHscUnit2Walkthroughs } from './publishBtecHscUnit2Walkthroughs.js';
@@ -412,15 +415,38 @@ export async function handleShopPublicRequest(req, res) {
 async function uploadBase64File(supabase, { folder, filename, contentType, base64 }) {
   const buffer = Buffer.from(base64, 'base64');
   if (!buffer.length) return { ok: false, error: 'Uploaded file is empty.' };
-  if (buffer.length > 25 * 1024 * 1024) return { ok: false, error: 'File is too large (max 25 MB).' };
-  const safeName = safeTrim(filename, 120).replace(/[^a-zA-Z0-9._-]+/g, '-').slice(0, 80) || 'file';
-  const path = `${folder}/${Date.now()}-${safeName}`;
+  if (buffer.length > SHOP_UPLOAD_MAX_BYTES) {
+    return { ok: false, error: `File is too large (max ${Math.round(SHOP_UPLOAD_MAX_BYTES / (1024 * 1024))} MB).` };
+  }
+  const path = buildShopStoragePath(folder, filename);
   const { error } = await supabase.storage.from(SHOP_STORAGE_BUCKET).upload(path, buffer, {
     contentType: contentType || 'application/octet-stream',
     upsert: false,
   });
   if (error) return { ok: false, error: error.message || 'Upload failed.' };
   return { ok: true, path };
+}
+
+async function prepareShopSignedUpload(supabase, { folder, filename, contentType, size }) {
+  if (!['images', 'previews', 'downloads'].includes(folder)) {
+    return { ok: false, error: 'Invalid upload folder.' };
+  }
+  const fileSize = Number(size) || 0;
+  if (fileSize > SHOP_UPLOAD_MAX_BYTES) {
+    return { ok: false, error: `File is too large (max ${Math.round(SHOP_UPLOAD_MAX_BYTES / (1024 * 1024))} MB).` };
+  }
+  const path = buildShopStoragePath(folder, filename);
+  const { data, error } = await supabase.storage.from(SHOP_STORAGE_BUCKET).createSignedUploadUrl(path);
+  if (error || !data?.signedUrl) {
+    return { ok: false, error: error?.message || 'Could not prepare upload.' };
+  }
+  return {
+    ok: true,
+    path,
+    signedUrl: data.signedUrl,
+    token: data.token,
+    contentType: contentType || 'application/octet-stream',
+  };
 }
 
 export function wantsShopAdminRequest(req, body) {
@@ -434,6 +460,9 @@ export function wantsShopAdminRequest(req, body) {
       'shop-update',
       'shop-delete',
       'shop-upload',
+      'shop-prepare-upload',
+      'shop-complete-upload',
+      'shop-check-duplicates',
       'shop-orders',
       'shop-copy-from-resource',
       'shop-copy-from-resources',
@@ -467,6 +496,39 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
     return res.status(200).json({ ok: true, path: upload.path, url });
   }
 
+  if (action === 'shop-prepare-upload') {
+    const folder = safeTrim(body.folder, 20);
+    const prepared = await prepareShopSignedUpload(supabase, {
+      folder,
+      filename: body.filename,
+      contentType: body.contentType,
+      size: body.size,
+    });
+    if (!prepared.ok) return res.status(400).json({ error: prepared.error });
+    return res.status(200).json(prepared);
+  }
+
+  if (action === 'shop-complete-upload') {
+    const path = safeTrim(body.path, 400);
+    if (!path || !/^(images|previews|downloads)\//.test(path)) {
+      return res.status(400).json({ error: 'Invalid storage path.' });
+    }
+    const url = await signedShopAssetUrl(supabase, path, 3600);
+    return res.status(200).json({ ok: true, path, url });
+  }
+
+  if (action === 'shop-check-duplicates') {
+    const { data, error } = await supabase.from('shop_products').select('id, title, slug, subject, topic, download_path');
+    if (error) {
+      if (isMissingShopTable(error)) return res.status(200).json({ ok: true, duplicates: [] });
+      throw error;
+    }
+    const duplicates = findLikelyShopDuplicates(data || [], body.product || body, {
+      excludeId: body.exclude_id || body.excludeId || null,
+    });
+    return res.status(200).json({ ok: true, duplicates });
+  }
+
   if (action === 'shop-list' || action === 'list') {
     await deleteObsoleteSeededUnit1Products(supabase);
     await correctSpecialisedCellsClassification(supabase);
@@ -485,6 +547,22 @@ export async function handleShopAdminRequest(req, res, body, supabase) {
   if (action === 'shop-create' || action === 'create') {
     const normalized = normalizeProductInput(body.product || body);
     if (!normalized.ok) return res.status(400).json({ error: normalized.error });
+    if (!body.force_duplicate && !body.forceDuplicate) {
+      const { data: existingRows } = await supabase
+        .from('shop_products')
+        .select('id, title, slug, subject, topic, download_path');
+      const duplicates = findLikelyShopDuplicates(existingRows || [], {
+        ...normalized.fields,
+        filename: body.filename,
+      });
+      if (duplicates.length) {
+        return res.status(409).json({
+          error: 'A similar product already exists. Do you still want to continue?',
+          duplicates,
+          requires_confirmation: true,
+        });
+      }
+    }
     const fields = {
       ...normalized.fields,
       slug: normalized.fields.slug || slugifyProductTitle(normalized.fields.title),

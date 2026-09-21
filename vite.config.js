@@ -196,11 +196,101 @@ function localAnalyticsApi() {
   };
 }
 
+function localShopAdminApi() {
+  return {
+    name: "local-shop-admin-api",
+    async configureServer(server) {
+      const adminPassword = process.env.ADMIN_PASSWORD;
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+      const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+      if (!adminPassword || !supabaseUrl || !serviceRoleKey) return;
+
+      const { createClient } = await import("@supabase/supabase-js");
+      const { handleShopAdminRequest, handleShopPublicRequest } = await import("./api/_lib/shopHandlers.js");
+
+      function safeEqual(a, b) {
+        const sa = String(a || "");
+        const sb = String(b || "");
+        if (sa.length !== sb.length) return false;
+        let diff = 0;
+        for (let i = 0; i < sa.length; i++) diff |= sa.charCodeAt(i) ^ sb.charCodeAt(i);
+        return diff === 0;
+      }
+
+      function sendJson(res, status, payload) {
+        res.statusCode = status;
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify(payload));
+      }
+
+      server.middlewares.use(async (req, res, next) => {
+        const url = (req.url || "").split("?")[0];
+        const isShopPublic = req.method === "GET" && url === "/api/shop-products";
+        const isAdminShop = req.method === "POST" && (
+          url === "/api/admin-shop-products"
+          || url === "/api/admin-shop-orders"
+          || url === "/api/admin-bookings"
+          || url === "/api/admin-tutor-applications"
+        );
+        if (!isShopPublic && !isAdminShop) return next();
+
+        try {
+          if (isShopPublic) {
+            const fakeReq = { method: "GET", url: "/api/shop-products", query: Object.fromEntries(new URL(req.url, "http://local").searchParams) };
+            const fakeRes = {
+              statusCode: 200,
+              setHeader() {},
+              status(code) { this.statusCode = code; return this; },
+              json(payload) { sendJson(res, this.statusCode || 200, payload); },
+            };
+            await handleShopPublicRequest(fakeReq, fakeRes);
+            return;
+          }
+
+          const body = await readJsonBody(req);
+          const provided = req.headers["x-admin-password"] || body.password;
+          if (!provided || !safeEqual(provided, adminPassword)) {
+            sendJson(res, 401, { error: "Incorrect password." });
+            return;
+          }
+
+          if (url === "/api/admin-bookings") {
+            sendJson(res, 200, { ok: true, bookings: [] });
+            return;
+          }
+          if (url === "/api/admin-tutor-applications") {
+            sendJson(res, 200, { ok: true, applications: [] });
+            return;
+          }
+
+          const supabase = createClient(supabaseUrl, serviceRoleKey);
+          const fakeReq = {
+            method: "POST",
+            url,
+            query: url === "/api/admin-shop-orders" ? { scope: "shop-orders" } : { scope: "shop" },
+            headers: req.headers,
+          };
+          const fakeRes = {
+            statusCode: 200,
+            setHeader() {},
+            status(code) { this.statusCode = code; return this; },
+            json(payload) { sendJson(res, this.statusCode || 200, payload); },
+          };
+          await handleShopAdminRequest(fakeReq, fakeRes, body, supabase);
+        } catch (err) {
+          sendJson(res, 500, { error: err.message || "Local shop API error." });
+        }
+      });
+    },
+  };
+}
+
 export default defineConfig({
   plugins: [
     servePublicHtml("/terms", "public/terms/index.html"),
     servePublicHtml("/about", "public/about/index.html"),
     localAnalyticsApi(),
+    localShopAdminApi(),
     react(),
   ],
   envPrefix: ["VITE_", "NEXT_PUBLIC_"],
