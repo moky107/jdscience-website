@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
+import PasswordRecoveryModal from "./PasswordRecoveryModal";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -3571,6 +3572,7 @@ function App() {
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [authReason, setAuthReason] = useState("");
+  const [passwordRecoveryOpen, setPasswordRecoveryOpen] = useState(false);
   const [resourceAuthPrompted, setResourceAuthPrompted] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
@@ -3621,7 +3623,13 @@ function App() {
       setSession(data.session);
       setAuthReady(true);
     });
-    const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
+    const { data: listener } = supabase.auth.onAuthStateChange((event, s) => {
+      setSession(s);
+      if (event === "PASSWORD_RECOVERY") {
+        setPasswordRecoveryOpen(true);
+        setAuthOpen(false);
+      }
+    });
     const onPopState = () => {
       if (normalizeAdminUrl()) {
         setShopProductSlug(null);
@@ -3704,6 +3712,13 @@ function App() {
         setAuthMode("login");
         setAuthReason("");
         setAuthOpen(true);
+      } else if (params.get("recovery") === "1") {
+        // Recovery links land here; PASSWORD_RECOVERY auth event opens the set-password modal.
+        params.delete("recovery");
+        const query = params.toString();
+        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
+        setPasswordRecoveryOpen(true);
+        setAuthOpen(false);
       }
     } catch {
       /* ignore */
@@ -3980,6 +3995,14 @@ function App() {
       )}
 
       {authOpen && <AuthModal key={`${authMode}-${authReason}`} initialMode={authMode} reason={authReason} close={() => setAuthOpen(false)} />}
+      {passwordRecoveryOpen && (
+        <PasswordRecoveryModal
+          onComplete={() => {
+            setPasswordRecoveryOpen(false);
+            setBanner({ type: "success", text: "Your password has been updated." });
+          }}
+        />
+      )}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
       <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} />
