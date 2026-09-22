@@ -394,18 +394,21 @@ assert.equal(
 assert.deepEqual(homepageTutorFallback(tutors).map((item) => item.public_slug), ["joseph-danso", "joseph-danso-4qy75y", "amina-khan", "sam-reed", "lee-okonkwo"]);
 assert.deepEqual(homepageTutorFallback([{ public_slug: "joseph-danso-4qy75y", tutor_name: "Joseph Danso" }]).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 const homepage = tutorsForHomepage(tutors);
-assert.equal(FEATURED_ROTATION_MS, 300000);
+assert.equal(FEATURED_ROTATION_MS, 8000);
 assert.equal(ROTATION_INTERVAL_MS, 300000);
-assert.equal(FEATURED_ROTATION_MS, ROTATION_INTERVAL_MS);
+assert.notEqual(FEATURED_ROTATION_MS, ROTATION_INTERVAL_MS);
 assert.equal(tutorSlotCount({ isMobile: true }), 1);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: true }), 2);
 assert.equal(tutorSlotCount({ isMobile: false, isTablet: false }), 3);
-assert.equal(shouldRotateTutorProfiles(tutors), true);
-assert.equal(shouldRotateTutorProfiles([{ public_slug: "amina-khan", is_published: true }]), false);
-assert.equal(tutorCarouselPageCount(homepage), homepage.length);
+assert.equal(shouldRotateTutorProfiles(tutors, 3), true);
+assert.equal(shouldRotateTutorProfiles(homepage.slice(0, 3), 3), false);
+assert.equal(shouldRotateTutorProfiles([{ public_slug: "amina-khan", is_published: true }], 1), false);
+assert.equal(tutorCarouselPageCount(homepage, 3), homepage.length);
+assert.equal(tutorCarouselPageCount(homepage.slice(0, 3), 3), 1);
 assert.equal(tutorCarouselPageIndex(4, homepage.length), 4 % homepage.length);
 assert.deepEqual(featuredTutorWindow(homepage, 1, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y"]);
 assert.deepEqual(featuredTutorWindow(homepage, 3, 1).map((item) => item.public_slug), ["joseph-danso-4qy75y", "amina-khan", "sam-reed"]);
+assert.deepEqual(featuredTutorWindow(homepage.slice(0, 3), 3, 0).map((item) => item.public_slug), ["joseph-danso", "joseph-danso-4qy75y", "amina-khan"]);
 
 assert.equal(SPECIALISED_CELLS_LEVEL, "BTEC Level 3");
 assert.equal(SPECIALISED_CELLS_EXAM_BOARD, "Pearson");
