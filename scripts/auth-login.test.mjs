@@ -16,7 +16,7 @@ assert.doesNotMatch(clientSrc, /SERVICE_ROLE|service_role/);
 assert.match(clientSrc, /signInWithPassword|persistSession|detectSessionInUrl/);
 
 assert.match(authModalSrc, /signInWithPassword/);
-assert.match(authModalSrc, /resetPasswordForEmail/);
+assert.match(authModalSrc, /requestPasswordRecoveryEmail|Forgot password/);
 assert.match(authModalSrc, /Forgot password/);
 
 const appSrc = fs.readFileSync(path.join(root, "src/App.jsx"), "utf8");
@@ -24,7 +24,9 @@ assert.match(appSrc, /PASSWORD_RECOVERY/);
 assert.match(appSrc, /PasswordRecoveryModal/);
 assert.match(appSrc, /function AdminLoginForm/);
 assert.match(appSrc, /Forgot password\?/);
-assert.match(appSrc, /resetPasswordForEmail/);
+assert.match(appSrc, /requestPasswordRecoveryEmail/);
+assert.doesNotMatch(appSrc, /resetPasswordForEmail/);
+assert.doesNotMatch(authModalSrc, /resetPasswordForEmail/);
 // Admin recovery must open the set-password UI even on /admin.
 assert.match(appSrc, /passwordRecoveryOpen[\s\S]{0,200}PasswordRecoveryModal/);
 // Must not open the set-password modal merely from ?recovery=1 before a session exists.

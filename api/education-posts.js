@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { hasAwardingBodyUrl, looksLikeOfficialPaper, tidyDownloadFilename } from './_lib/resourceNormalize.js';
 import { handleShopPublicRequest, wantsShopPublicRequest } from './_lib/shopHandlers.js';
 import { handleAnalyticsEventRequest, wantsAnalyticsEventRequest } from './_lib/analyticsHandlers.js';
+import { handlePasswordRecoveryRequest, wantsPasswordRecoveryRequest } from './_lib/passwordRecovery.js';
 
 function resourceSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -83,6 +84,7 @@ async function sendResourceFile(req, res) {
 
 export default async function handler(req, res) {
   if (wantsAnalyticsEventRequest(req)) return handleAnalyticsEventRequest(req, res);
+  if (wantsPasswordRecoveryRequest(req)) return handlePasswordRecoveryRequest(req, res);
   if (wantsShopPublicRequest(req)) return handleShopPublicRequest(req, res);
   if (wantsResourceFile(req)) return sendResourceFile(req, res);
 
