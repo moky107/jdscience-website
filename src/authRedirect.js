@@ -3,11 +3,14 @@ export const PRODUCTION_SITE_ORIGIN = "https://www.jdscience.co.uk";
 
 /**
  * Redirect target embedded in Supabase confirmation / recovery emails.
- * Always derived from the current browser origin so production mail
- * never bakes in localhost or a preview host from a previous session.
+ * Recovery links always target the live site so preview/localhost sessions
+ * never bake a non-production host into the owner's inbox.
+ * Verification links use the current origin when available.
  */
 export function authEmailRedirectTo(origin = typeof window !== "undefined" ? window.location.origin : "", { recovery = false } = {}) {
+  if (recovery) {
+    return `${PRODUCTION_SITE_ORIGIN}/?recovery=1`;
+  }
   const base = String(origin || "").replace(/\/$/, "") || PRODUCTION_SITE_ORIGIN;
-  if (recovery) return `${base}/?recovery=1`;
   return `${base}/?verified=1`;
 }

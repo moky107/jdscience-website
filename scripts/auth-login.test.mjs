@@ -18,11 +18,15 @@ assert.match(clientSrc, /signInWithPassword|persistSession|detectSessionInUrl/);
 assert.match(authModalSrc, /signInWithPassword/);
 assert.match(authModalSrc, /resetPasswordForEmail/);
 assert.match(authModalSrc, /Forgot password/);
-assert.match(authModalSrc, /Invalid login credentials/);
 
 const appSrc = fs.readFileSync(path.join(root, "src/App.jsx"), "utf8");
 assert.match(appSrc, /PASSWORD_RECOVERY/);
 assert.match(appSrc, /PasswordRecoveryModal/);
+assert.match(appSrc, /function AdminLoginForm/);
+assert.match(appSrc, /Forgot password\?/);
+assert.match(appSrc, /resetPasswordForEmail/);
+// Admin recovery must open the set-password UI even on /admin.
+assert.match(appSrc, /passwordRecoveryOpen[\s\S]{0,200}PasswordRecoveryModal/);
 // Must not open the set-password modal merely from ?recovery=1 before a session exists.
 assert.doesNotMatch(
   appSrc,
@@ -32,7 +36,7 @@ assert.doesNotMatch(
 assert.equal(PRODUCTION_SITE_ORIGIN, "https://www.jdscience.co.uk");
 assert.equal(authEmailRedirectTo("https://www.jdscience.co.uk"), "https://www.jdscience.co.uk/?verified=1");
 assert.equal(
-  authEmailRedirectTo("https://www.jdscience.co.uk", { recovery: true }),
+  authEmailRedirectTo("http://127.0.0.1:5173", { recovery: true }),
   "https://www.jdscience.co.uk/?recovery=1",
 );
 

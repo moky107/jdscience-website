@@ -43,9 +43,20 @@ for (const file of scriptFiles) {
       violations.push(`${path.relative(root, file)} matches ${pattern}`);
     }
   }
-  // Hard-coded production admin email + password mutation wording in scripts is banned.
   if (/auth\.admin\.(updateUserById|createUser|deleteUser|generateLink)/.test(src) && /jd943791@gmail\.com/i.test(src)) {
     violations.push(`${path.relative(root, file)} references protected admin email with Auth admin mutation API`);
+  }
+}
+
+// Broader repo audit: no committed helper may hard-code updating the production admin password.
+for (const file of [...walk(path.join(root, "api")), ...walk(path.join(root, "src")), ...scriptFiles]) {
+  const src = fs.readFileSync(file, "utf8");
+  const rel = path.relative(root, file);
+  if (/auth\.admin\.updateUserById\s*\(/.test(src) && /password\s*:/.test(src)) {
+    violations.push(`${rel} calls auth.admin.updateUserById with a password field`);
+  }
+  if (/jd943791@gmail\.com/i.test(src) && /updateUserById|admin\.createUser/.test(src) && /password/.test(src)) {
+    violations.push(`${rel} pairs production admin email with Auth credential mutation`);
   }
 }
 
