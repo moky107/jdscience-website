@@ -5,6 +5,7 @@ import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { markHasAccount } from "./visitorAuth";
 import { ANALYTICS_EVENTS, track } from "./analytics";
 import { authEmailRedirectTo } from "./authRedirect";
+import { requestPasswordRecoveryEmail } from "./passwordRecoveryClient";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -67,15 +68,13 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
     setError("");
     setInfo("");
     try {
-      const { error: resetError } = await supabase.auth.resetPasswordForEmail(trimmed, {
-        redirectTo: authEmailRedirectTo(undefined, { recovery: true }),
-      });
-      if (resetError) {
-        setError(resetError.message || "Could not send password reset email.");
+      const result = await requestPasswordRecoveryEmail(trimmed);
+      if (!result.ok) {
+        setError(result.error || "Could not send password reset email.");
         return;
       }
       setLastResendAt(Date.now());
-      setInfo("If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder.");
+      setInfo(result.message || "If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder.");
     } finally {
       setBusy(false);
     }

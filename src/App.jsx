@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import PasswordRecoveryModal from "./PasswordRecoveryModal";
-import { authEmailRedirectTo } from "./authRedirect";
+import { requestPasswordRecoveryEmail } from "./passwordRecoveryClient";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -2698,15 +2698,13 @@ function AdminLoginForm({ onCancel }) {
     setError("");
     setInfo("");
     try {
-      const { error: resetError } = await supabase.auth.resetPasswordForEmail(trimmed, {
-        redirectTo: authEmailRedirectTo(undefined, { recovery: true }),
-      });
-      if (resetError) {
-        setError(resetError.message || "Could not send password reset email.");
+      const result = await requestPasswordRecoveryEmail(trimmed);
+      if (!result.ok) {
+        setError(result.error || "Could not send password reset email.");
         return;
       }
       setLastResetAt(Date.now());
-      setInfo("If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder, then choose a new password on the link.");
+      setInfo(result.message || "If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder, then choose a new password on the link.");
     } finally {
       setBusy(false);
     }
