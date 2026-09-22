@@ -4,15 +4,12 @@ import TermsAgreement from "./TermsAgreement";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { markHasAccount } from "./visitorAuth";
 import { ANALYTICS_EVENTS, track } from "./analytics";
+import { authEmailRedirectTo } from "./authRedirect";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
 const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0", fontSize: 16, width: "100%", boxSizing: "border-box" };
-
-function authRedirectUrl() {
-  if (typeof window === "undefined") return undefined;
-  return `${window.location.origin}/?verified=1`;
-}
+const RESEND_COOLDOWN_MS = 30000;
 
 export default function AuthModal({ close, initialMode = "login", reason = "" }) {
   const [mode, setMode] = useState(initialMode === "register" ? "register" : "login");
@@ -23,11 +20,18 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
   const [info, setInfo] = useState("");
   const [busy, setBusy] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [lastResendAt, setLastResendAt] = useState(0);
 
   async function resendVerification() {
     const trimmed = email.trim();
     if (!trimmed) {
       setError("Enter the email address you registered with first.");
+      return;
+    }
+    const now = Date.now();
+    if (now - lastResendAt < RESEND_COOLDOWN_MS) {
+      const wait = Math.ceil((RESEND_COOLDOWN_MS - (now - lastResendAt)) / 1000);
+      setError(`Please wait ${wait}s before requesting another email.`);
       return;
     }
     setBusy(true);
@@ -36,11 +40,45 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
     const { error: resendError } = await supabase.auth.resend({
       type: "signup",
       email: trimmed,
-      options: { emailRedirectTo: authRedirectUrl() },
+      options: { emailRedirectTo: authEmailRedirectTo() },
     });
     setBusy(false);
     if (resendError) setError(resendError.message);
-    else setInfo("A new verification email has been sent. Check your inbox and spam folder.");
+    else {
+      setLastResendAt(Date.now());
+      setInfo("A new verification email has been sent. Check your inbox and spam folder.");
+    }
+  }
+
+  async function sendPasswordReset() {
+    const trimmed = email.trim();
+    if (!trimmed) {
+      setError("Enter your account email address first, then click Forgot password.");
+      return;
+    }
+    const now = Date.now();
+    if (now - lastResendAt < RESEND_COOLDOWN_MS) {
+      const wait = Math.ceil((RESEND_COOLDOWN_MS - (now - lastResendAt)) / 1000);
+      setError(`Please wait ${wait}s before requesting another email.`);
+      return;
+    }
+    if (busy) return;
+    setBusy(true);
+    setError("");
+    setInfo("");
+    try {
+      const { error: resetError } = await supabase.auth.resetPasswordForEmail(trimmed, {
+        redirectTo: authEmailRedirectTo(undefined, { recovery: true }),
+      });
+      if (resetError) {
+        setError(resetError.message || "Could not send password reset email.");
+        return;
+      }
+      setLastResendAt(Date.now());
+      setInfo("If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder.");
+    } finally {
+      setBusy(false);
+    }
   }
 
   async function submit(e) {
@@ -75,7 +113,7 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
           email: trimmedEmail,
           password,
           options: {
-            emailRedirectTo: authRedirectUrl(),
+            emailRedirectTo: authEmailRedirectTo(),
             data: {
               terms_accepted: true,
               terms_version: TERMS_VERSION,
@@ -105,9 +143,14 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
         password,
       });
       if (signInError) {
+        // Surface the real GoTrue message (commonly "Invalid login credentials").
+        // Do not replace it with a generic wrapper that hides the underlying cause.
         const message = signInError.message || "Login failed.";
-        if (/confirm|not confirmed|verification/i.test(message)) {
+        const code = signInError.code || "";
+        if (/confirm|not confirmed|verification/i.test(`${message} ${code}`)) {
           setError("Please verify your email first. Check your inbox, then try again.");
+        } else if (code === "invalid_credentials" || /invalid login credentials/i.test(message)) {
+          setError("Invalid login credentials. Check your email and password, or use Forgot password to reset.");
         } else {
           setError(message);
         }
@@ -150,6 +193,11 @@ export default function AuthModal({ close, initialMode = "login", reason = "" })
         <button type="submit" disabled={busy || (mode === "register" && !termsAccepted)} style={{ padding: 14, minHeight: 48, borderRadius: 8, background: busy || (mode === "register" && !termsAccepted) ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy || (mode === "register" && !termsAccepted) ? "default" : "pointer", fontWeight: 800 }}>
           {busy ? "Please wait…" : (mode === "login" ? "Login" : "Register")}
         </button>
+        {mode === "login" && (
+          <button type="button" onClick={sendPasswordReset} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: "pointer", fontWeight: 700, minHeight: 44 }}>
+            Forgot password?
+          </button>
+        )}
         {(mode === "register" || /verify your email/i.test(error)) && (
           <button type="button" onClick={resendVerification} disabled={busy} style={{ background: "none", border: 0, color: TEAL_DARK, cursor: "pointer", fontWeight: 700, minHeight: 44 }}>
             Resend verification email

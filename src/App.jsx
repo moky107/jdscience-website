@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
+import PasswordRecoveryModal from "./PasswordRecoveryModal";
+import { authEmailRedirectTo } from "./authRedirect";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -2674,17 +2676,58 @@ function AdminLoginForm({ onCancel }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [info, setInfo] = useState("");
   const [busy, setBusy] = useState(false);
+  const [lastResetAt, setLastResetAt] = useState(0);
+
+  async function sendPasswordReset() {
+    const trimmed = email.trim();
+    if (!trimmed) {
+      setError("Enter your admin email address first, then click Forgot password.");
+      setInfo("");
+      return;
+    }
+    const now = Date.now();
+    if (now - lastResetAt < 30000) {
+      const wait = Math.ceil((30000 - (now - lastResetAt)) / 1000);
+      setError(`Please wait ${wait}s before requesting another email.`);
+      return;
+    }
+    if (busy) return;
+    setBusy(true);
+    setError("");
+    setInfo("");
+    try {
+      const { error: resetError } = await supabase.auth.resetPasswordForEmail(trimmed, {
+        redirectTo: authEmailRedirectTo(undefined, { recovery: true }),
+      });
+      if (resetError) {
+        setError(resetError.message || "Could not send password reset email.");
+        return;
+      }
+      setLastResetAt(Date.now());
+      setInfo("If an account exists for that email, a password reset link has been sent. Check your inbox and spam folder, then choose a new password on the link.");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function submit(e) {
     e.preventDefault();
     if (busy) return;
     setBusy(true);
     setError("");
+    setInfo("");
     try {
       const res = await supabase.auth.signInWithPassword({ email: email.trim(), password });
       if (res.error) {
-        setError(res.error.message);
+        const message = res.error.message || "Login failed.";
+        const code = res.error.code || "";
+        if (code === "invalid_credentials" || /invalid login credentials/i.test(message)) {
+          setError("Invalid login credentials. Check your email and password, or use Forgot password below to set a new one.");
+        } else {
+          setError(message);
+        }
         return;
       }
       const signedInEmail = res.data?.session?.user?.email;
@@ -2709,14 +2752,33 @@ function AdminLoginForm({ onCancel }) {
             <div style={{ color: "#64748b", fontSize: 13 }}>Sign in to open the bookings dashboard</div>
           </div>
         </div>
-        <input autoFocus style={inp} type="email" placeholder="Admin email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input style={inp} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input autoFocus style={inp} type="email" autoComplete="username" placeholder="Admin email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input style={inp} type="password" autoComplete="current-password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
         {error && <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>}
-        <button type="submit" disabled={busy} style={{ padding: 12, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
+        {info && <div style={{ color: "#166534", fontSize: 14 }}>{info}</div>}
+        <button type="submit" disabled={busy} style={{ padding: 12, minHeight: 48, borderRadius: 8, background: busy ? "#94a3b8" : TEAL, color: "#fff", border: "none", cursor: busy ? "default" : "pointer", fontWeight: 800 }}>
           {busy ? "Signing in…" : "Open dashboard"}
         </button>
+        <button
+          type="button"
+          onClick={sendPasswordReset}
+          disabled={busy}
+          style={{
+            padding: "12px 14px",
+            minHeight: 48,
+            borderRadius: 8,
+            border: `2px solid ${TEAL}`,
+            background: "#ecfeff",
+            color: TEAL_DARK,
+            cursor: busy ? "default" : "pointer",
+            fontWeight: 800,
+            fontSize: 15,
+          }}
+        >
+          Forgot password?
+        </button>
         {onCancel && (
-          <button type="button" onClick={onCancel} style={{ textAlign: "center", color: TEAL, background: "none", border: 0, cursor: "pointer", fontSize: 14 }}>
+          <button type="button" onClick={onCancel} style={{ textAlign: "center", color: TEAL, background: "none", border: 0, cursor: "pointer", fontSize: 14, minHeight: 44 }}>
             ← Return to website
           </button>
         )}
@@ -3571,6 +3633,7 @@ function App() {
   const [authOpen, setAuthOpen] = useState(false);
   const [authMode, setAuthMode] = useState("login");
   const [authReason, setAuthReason] = useState("");
+  const [passwordRecoveryOpen, setPasswordRecoveryOpen] = useState(false);
   const [resourceAuthPrompted, setResourceAuthPrompted] = useState(false);
   const [banner, setBanner] = useState(null); // { type: 'success'|'canceled', text }
   const [approvedTutors, setApprovedTutors] = useState([]);
@@ -3621,7 +3684,13 @@ function App() {
       setSession(data.session);
       setAuthReady(true);
     });
-    const { data: listener } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
+    const { data: listener } = supabase.auth.onAuthStateChange((event, s) => {
+      setSession(s);
+      if (event === "PASSWORD_RECOVERY") {
+        setPasswordRecoveryOpen(true);
+        setAuthOpen(false);
+      }
+    });
     const onPopState = () => {
       if (normalizeAdminUrl()) {
         setShopProductSlug(null);
@@ -3704,6 +3773,12 @@ function App() {
         setAuthMode("login");
         setAuthReason("");
         setAuthOpen(true);
+      } else if (params.get("recovery") === "1") {
+        // Clear the flag from the URL. The set-password modal opens only when
+        // onAuthStateChange emits PASSWORD_RECOVERY (session established from the link).
+        params.delete("recovery");
+        const query = params.toString();
+        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
       }
     } catch {
       /* ignore */
@@ -3844,6 +3919,17 @@ function App() {
         </div>
       );
     }
+    // Password recovery must win over the dashboard shell so the admin can set a new password.
+    if (passwordRecoveryOpen) {
+      return (
+        <PasswordRecoveryModal
+          onComplete={() => {
+            setPasswordRecoveryOpen(false);
+            setBanner({ type: "success", text: "Your password has been updated. You can open the admin dashboard." });
+          }}
+        />
+      );
+    }
     if (session && isAdmin) {
       return (
         <AdminDashboard
@@ -3980,6 +4066,14 @@ function App() {
       )}
 
       {authOpen && <AuthModal key={`${authMode}-${authReason}`} initialMode={authMode} reason={authReason} close={() => setAuthOpen(false)} />}
+      {passwordRecoveryOpen && (
+        <PasswordRecoveryModal
+          onComplete={() => {
+            setPasswordRecoveryOpen(false);
+            setBanner({ type: "success", text: "Your password has been updated." });
+          }}
+        />
+      )}
       <TutorApplicationForm open={tutorApplicationOpen} onClose={closeTutorApplication} onSubmitted={loadApprovedTutors} triggerRef={tutorTriggerRef} />
       <TutorProfileModal slug={selectedTutorSlug} onClose={closeTutorProfile} onBook={handleBookTutor} triggerRef={tutorTriggerRef} />
       <Footer onContact={() => handleScroll("contact")} onTutor={openTutorApplication} onAdvice={() => handleScroll("advice")} onPapers={goPapers} onWorksheets={() => handleResource("Worksheets")} onTutors={goTutors} onHome={goHome} />
