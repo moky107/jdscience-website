@@ -3,7 +3,11 @@ import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import PasswordRecoveryModal from "./PasswordRecoveryModal";
 import { requestPasswordRecoveryEmail } from "./passwordRecoveryClient";
-import { consumePasswordRecoveryFromUrl } from "./passwordRecoverySession";
+import {
+  bootstrapPasswordRecovery,
+  consumeEarlyPasswordRecoveryFlag,
+  onEarlyPasswordRecovery,
+} from "./passwordRecoverySession";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -3679,17 +3683,55 @@ function App() {
   useEffect(() => {
     loadResources();
     loadApprovedTutors();
+    let cancelled = false;
+
+    const openRecovery = () => {
+      if (!cancelled) {
+        setPasswordRecoveryOpen(true);
+        setAuthOpen(false);
+      }
+    };
+
+    // If PASSWORD_RECOVERY already fired during client init (before React), open now.
+    if (consumeEarlyPasswordRecoveryFlag()) {
+      openRecovery();
+    }
+    const stopEarly = onEarlyPasswordRecovery(openRecovery);
+
     supabase.auth.getSession().then(({ data }) => {
+      if (cancelled) return;
       setSession(data.session);
       setAuthReady(true);
     });
     const { data: listener } = supabase.auth.onAuthStateChange((event, s) => {
       setSession(s);
       if (event === "PASSWORD_RECOVERY") {
-        setPasswordRecoveryOpen(true);
-        setAuthOpen(false);
+        openRecovery();
       }
     });
+
+    // Cold-start recovery bootstrap: establish session from URL and open modal
+    // even when the PASSWORD_RECOVERY event was missed before mount.
+    (async () => {
+      try {
+        const result = await bootstrapPasswordRecovery(supabase);
+        if (cancelled) return;
+        if (result.showModal) {
+          openRecovery();
+        } else if (result.errorMessage) {
+          setBanner({
+            type: "canceled",
+            text: result.errorMessage,
+          });
+          setAuthMode("login");
+          setAuthReason("Your reset link expired. You can request a new one from Forgot password.");
+          setAuthOpen(true);
+        }
+      } catch {
+        /* ignore */
+      }
+    })();
+
     const onPopState = () => {
       if (normalizeAdminUrl()) {
         setShopProductSlug(null);
@@ -3703,6 +3745,8 @@ function App() {
     };
     window.addEventListener("popstate", onPopState);
     return () => {
+      cancelled = true;
+      stopEarly();
       listener.subscription.unsubscribe();
       window.removeEventListener("popstate", onPopState);
     };
@@ -3772,22 +3816,9 @@ function App() {
         setAuthMode("login");
         setAuthReason("");
         setAuthOpen(true);
-      } else if (params.get("recovery") === "1") {
-        // First-party recovery links carry token_hash; verifyOtp establishes the
-        // PASSWORD_RECOVERY session. Legacy hash-fragment links still rely on
-        // detectSessionInUrl — only the ?recovery=1 flag is cleared then.
-        (async () => {
-          const result = await consumePasswordRecoveryFromUrl(supabase);
-          if (result.handled && !result.ok) {
-            setBanner({
-              type: "canceled",
-              text: result.errorMessage || "This reset link is invalid or has expired. Request a new Forgot password email.",
-            });
-          }
-        })().catch(() => {
-          /* ignore */
-        });
       }
+      // recovery=1 is handled in the auth bootstrap effect above so ?recovery=1
+      // is not stripped before the recovery session can be established.
     } catch {
       /* ignore */
     }
@@ -3933,7 +3964,18 @@ function App() {
         <PasswordRecoveryModal
           onComplete={() => {
             setPasswordRecoveryOpen(false);
-            setBanner({ type: "success", text: "Your password has been updated. You can open the admin dashboard." });
+            setSession(null);
+            setBanner({ type: "success", text: "Your password has been updated. Sign in at /admin with your new password." });
+          }}
+          onRequestNewLink={() => {
+            setPasswordRecoveryOpen(false);
+            setAuthMode("login");
+            setAuthReason("Request a new password reset from Forgot password.");
+            setAuthOpen(true);
+            if (typeof window !== "undefined" && !window.location.pathname.startsWith("/admin")) {
+              window.history.replaceState({}, "", "/admin");
+              setAdminRoute(true);
+            }
           }}
         />
       );
@@ -4078,7 +4120,18 @@ function App() {
         <PasswordRecoveryModal
           onComplete={() => {
             setPasswordRecoveryOpen(false);
-            setBanner({ type: "success", text: "Your password has been updated." });
+            setSession(null);
+            setBanner({ type: "success", text: "Your password has been updated. Sign in at /admin with your new password." });
+          }}
+          onRequestNewLink={() => {
+            setPasswordRecoveryOpen(false);
+            setAuthMode("login");
+            setAuthReason("Request a new password reset from Forgot password.");
+            setAuthOpen(true);
+            if (typeof window !== "undefined") {
+              window.history.replaceState({}, "", "/admin");
+              setAdminRoute(true);
+            }
           }}
         />
       )}

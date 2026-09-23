@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { attachEarlyPasswordRecoveryListener } from "./passwordRecoverySession.js";
 
 // The project URL and anon (publishable) key are safe to expose in the browser.
 // They can be overridden via Vite env vars (VITE_*) without a code change;
@@ -15,3 +16,6 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
     autoRefreshToken: true,
   },
 });
+
+// Capture PASSWORD_RECOVERY during client initialize() before React mounts.
+attachEarlyPasswordRecoveryListener(supabase);

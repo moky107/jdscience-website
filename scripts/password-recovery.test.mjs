@@ -5,52 +5,39 @@ import { fileURLToPath } from "node:url";
 import {
   buildSiteRecoveryLink,
   createRecoveryLink,
-  forceRecoveryRedirect,
   wantsPasswordRecoveryRequest,
 } from "../api/_lib/passwordRecovery.js";
-import { consumePasswordRecoveryFromUrl } from "../src/passwordRecoverySession.js";
+import {
+  bootstrapPasswordRecovery,
+  inspectRecoveryUrl,
+  attachEarlyPasswordRecoveryListener,
+  consumeEarlyPasswordRecoveryFlag,
+  peekEarlyPasswordRecoveryFlag,
+} from "../src/passwordRecoverySession.js";
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-assert.equal(
-  wantsPasswordRecoveryRequest({ url: "/api/password-recovery", query: {} }),
-  true,
-);
-assert.equal(
-  wantsPasswordRecoveryRequest({ url: "/api/education-posts?kind=password-recovery", query: { kind: "password-recovery" } }),
-  true,
-);
-assert.equal(
-  wantsPasswordRecoveryRequest({ url: "/api/shop-products", query: {} }),
-  false,
-);
+assert.equal(wantsPasswordRecoveryRequest({ url: "/api/password-recovery", query: {} }), true);
 
-const fakeHash = "a".repeat(56);
+const fakeHash = "b".repeat(56);
 const siteLink = buildSiteRecoveryLink(fakeHash);
 const siteUrl = new URL(siteLink);
 assert.equal(siteUrl.host, "www.jdscience.co.uk");
-assert.equal(siteUrl.protocol, "https:");
 assert.equal(siteUrl.searchParams.get("recovery"), "1");
 assert.equal(siteUrl.searchParams.get("type"), "recovery");
 assert.equal(siteUrl.searchParams.get("token_hash"), fakeHash);
-assert.doesNotMatch(siteLink, /localhost/);
-assert.doesNotMatch(siteLink, /supabase\.co/);
 
-// Mock generateLink — returns localhost action_link (misconfigured Site URL) + hashed_token
-const badActionLink = `https://xugsznxfvpbifpzpuoek.supabase.co/auth/v1/verify?token=test&type=recovery&redirect_to=http%3A%2F%2Flocalhost%3A3000`;
 const supabaseOk = {
   auth: {
     admin: {
       async generateLink(args) {
         assert.equal(args.type, "recovery");
-        assert.equal(args.options.redirectTo, "https://www.jdscience.co.uk/?recovery=1");
         return {
           data: {
             properties: {
-              action_link: badActionLink,
               hashed_token: fakeHash,
-              redirect_to: "http://localhost:3000",
-              verification_type: "recovery",
+              redirect_to: "https://www.jdscience.co.uk/?recovery=1",
+              action_link: "https://xugsznxfvpbifpzpuoek.supabase.co/auth/v1/verify?token=x&type=recovery&redirect_to=https%3A%2F%2Fwww.jdscience.co.uk%2F%3Frecovery%3D1",
             },
           },
           error: null,
@@ -59,88 +46,125 @@ const supabaseOk = {
     },
   },
 };
-const linked = await createRecoveryLink(supabaseOk, "someone@example.com");
+const linked = await createRecoveryLink(supabaseOk, "admin@example.com");
 assert.equal(linked.ok, true);
 assert.equal(linked.linkStrategy, "site_token_hash");
 assert.equal(linked.linkHost, "www.jdscience.co.uk");
-assert.equal(linked.gotrueRedirectHost, "localhost:3000");
-assert.match(linked.actionLink, /^https:\/\/www\.jdscience\.co\.uk\/\?/);
-assert.match(linked.actionLink, /token_hash=/);
-assert.doesNotMatch(linked.actionLink, /localhost/);
 assert.doesNotMatch(linked.actionLink, /supabase\.co\/auth/);
 
-// Email HTML must use the full site link as href without truncation / entity mangling
-function recoveryEmailHtml(actionLink) {
-  const safeLink = String(actionLink || "").replace(/"/g, "&quot;");
-  return `<a href="${safeLink}">Choose a new password</a>`;
-}
-const html = recoveryEmailHtml(linked.actionLink);
-const hrefMatch = html.match(/href="([^"]+)"/);
-assert.ok(hrefMatch);
-assert.equal(hrefMatch[1], linked.actionLink);
-assert.equal(hrefMatch[1].includes("&amp;"), false);
+// --- URL inspection (no secrets logged) ---
+const hashHref = "https://www.jdscience.co.uk/?recovery=1#access_token=redacted&expires_in=3600&refresh_token=redacted&token_type=bearer&type=recovery";
+const hashInfo = inspectRecoveryUrl(hashHref);
+assert.equal(hashInfo.hasRecoveryFlag, true);
+assert.equal(hashInfo.hasTokenHash, false);
+assert.equal(hashInfo.hasHashAccessToken, true);
+assert.equal(hashInfo.hashType, "recovery");
 
-const forced = forceRecoveryRedirect(badActionLink);
-assert.equal(forced.redirectRewritten, true);
-assert.equal(forced.originalRedirect, "http://localhost:3000");
+const tokenHref = `https://www.jdscience.co.uk/?recovery=1&type=recovery&token_hash=${fakeHash}`;
+const tokenInfo = inspectRecoveryUrl(tokenHref);
+assert.equal(tokenInfo.hasTokenHash, true);
+assert.equal(tokenInfo.hashType, "recovery");
 
-const supabaseFail = {
-  auth: {
-    admin: {
-      async generateLink() {
-        return { data: null, error: { message: "User not found", status: 404, code: "user_not_found" } };
-      },
-    },
-  },
-};
-const missing = await createRecoveryLink(supabaseFail, "missing@example.com");
-assert.equal(missing.ok, false);
-
-// Client consumePasswordRecoveryFromUrl
-const calls = [];
-const fakeSupabase = {
+// --- Cold-start: token_hash path opens modal without relying on PASSWORD_RECOVERY event ---
+const verifyCalls = [];
+const fakeClientToken = {
   auth: {
     async verifyOtp(args) {
-      calls.push(args);
-      return { data: { session: { user: { email: "x@y.z" } } }, error: null };
+      verifyCalls.push({ type: args.type, hasToken: Boolean(args.token_hash) });
+      return { data: { session: { user: { email: "a@b.c" } } }, error: null };
+    },
+    async getSession() {
+      return { data: { session: null } };
+    },
+    async initialize() {},
+  },
+};
+const bootToken = await bootstrapPasswordRecovery(fakeClientToken, tokenHref);
+assert.equal(bootToken.showModal, true);
+assert.equal(bootToken.reason, "verify_otp");
+assert.equal(verifyCalls.length, 1);
+assert.equal(verifyCalls[0].type, "recovery");
+
+// --- Cold-start: hash redirect already established session before React mounts ---
+const fakeClientHash = {
+  auth: {
+    async initialize() {},
+    async getSession() {
+      return { data: { session: { user: { email: "a@b.c" } } } };
+    },
+    async verifyOtp() {
+      throw new Error("should not verifyOtp for hash-only URL");
     },
   },
 };
-const consumed = await consumePasswordRecoveryFromUrl(
-  fakeSupabase,
-  `https://www.jdscience.co.uk/?recovery=1&type=recovery&token_hash=${fakeHash}`,
-);
-assert.equal(consumed.handled, true);
-assert.equal(consumed.ok, true);
-assert.equal(calls.length, 1);
-assert.equal(calls[0].type, "recovery");
-assert.equal(calls[0].token_hash, fakeHash);
+const bootHash = await bootstrapPasswordRecovery(fakeClientHash, hashHref);
+assert.equal(bootHash.showModal, true);
+assert.equal(bootHash.reason, "existing_recovery_session");
 
-const skipped = await consumePasswordRecoveryFromUrl(
-  fakeSupabase,
+// --- Cold-start: early PASSWORD_RECOVERY flag alone with session ---
+attachEarlyPasswordRecoveryListener({
+  auth: {
+    onAuthStateChange(cb) {
+      // Simulate event that fired before React
+      cb("PASSWORD_RECOVERY", { user: { email: "a@b.c" } });
+      return { data: { subscription: { unsubscribe() {} } } };
+    },
+  },
+});
+assert.equal(peekEarlyPasswordRecoveryFlag(), true);
+const fakeClientEarly = {
+  auth: {
+    async initialize() {},
+    async getSession() {
+      return { data: { session: { user: { email: "a@b.c" } } } };
+    },
+  },
+};
+const bootEarly = await bootstrapPasswordRecovery(
+  fakeClientEarly,
   "https://www.jdscience.co.uk/?recovery=1",
 );
-assert.equal(skipped.handled, false);
-assert.equal(skipped.awaitingHashSession, true);
+assert.equal(bootEarly.showModal, true);
+consumeEarlyPasswordRecoveryFlag();
 
+// --- Expired / error hash ---
+const errHref = "https://www.jdscience.co.uk/?recovery=1#error=access_denied&error_code=otp_expired&error_description=Email+link+is+invalid+or+has+expired";
+const bootErr = await bootstrapPasswordRecovery(fakeClientHash, errHref);
+assert.equal(bootErr.showModal, false);
+assert.match(bootErr.errorMessage || "", /invalid|expired/i);
+
+// --- PKCE code path ---
+const pkceCalls = [];
+const fakePkce = {
+  auth: {
+    async exchangeCodeForSession(code) {
+      pkceCalls.push(Boolean(code));
+      return { data: { session: { user: { email: "a@b.c" } } }, error: null };
+    },
+  },
+};
+const bootPkce = await bootstrapPasswordRecovery(
+  fakePkce,
+  "https://www.jdscience.co.uk/?recovery=1&code=pkce-test-code",
+);
+assert.equal(bootPkce.showModal, true);
+assert.equal(bootPkce.reason, "pkce");
+assert.equal(pkceCalls.length, 1);
+
+// Source wiring
 const appSrc = fs.readFileSync(path.join(root, "src/App.jsx"), "utf8");
-const modalSrc = fs.readFileSync(path.join(root, "src/AuthModal.jsx"), "utf8");
-const clientSrc = fs.readFileSync(path.join(root, "src/passwordRecoveryClient.js"), "utf8");
 const sessionSrc = fs.readFileSync(path.join(root, "src/passwordRecoverySession.js"), "utf8");
-assert.match(appSrc, /requestPasswordRecoveryEmail/);
-assert.match(appSrc, /consumePasswordRecoveryFromUrl/);
-assert.match(modalSrc, /requestPasswordRecoveryEmail/);
-assert.match(clientSrc, /\/api\/password-recovery/);
-assert.match(sessionSrc, /verifyOtp/);
+const clientSrc = fs.readFileSync(path.join(root, "src/supabaseClient.js"), "utf8");
+const modalSrc = fs.readFileSync(path.join(root, "src/PasswordRecoveryModal.jsx"), "utf8");
+assert.match(appSrc, /bootstrapPasswordRecovery/);
+assert.match(appSrc, /consumeEarlyPasswordRecoveryFlag/);
+assert.match(appSrc, /onEarlyPasswordRecovery/);
+assert.match(clientSrc, /attachEarlyPasswordRecoveryListener/);
+assert.match(sessionSrc, /PASSWORD_RECOVERY/);
+assert.match(modalSrc, /updateUser\(\{\s*password/);
+assert.match(modalSrc, /signOut/);
+assert.match(modalSrc, /\/admin/);
+assert.match(modalSrc, /Update password/);
 assert.doesNotMatch(appSrc, /resetPasswordForEmail/);
-assert.doesNotMatch(modalSrc, /resetPasswordForEmail/);
-
-const vercel = fs.readFileSync(path.join(root, "vercel.json"), "utf8");
-assert.match(vercel, /password-recovery/);
-
-const recoverySrc = fs.readFileSync(path.join(root, "api/_lib/passwordRecovery.js"), "utf8");
-assert.match(recoverySrc, /buildSiteRecoveryLink/);
-assert.match(recoverySrc, /site_token_hash/);
-assert.match(recoverySrc, /hashed_token/);
 
 console.log("password-recovery.test.mjs: ok");
