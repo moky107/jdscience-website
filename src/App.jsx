@@ -3,6 +3,7 @@ import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import PasswordRecoveryModal from "./PasswordRecoveryModal";
 import { requestPasswordRecoveryEmail } from "./passwordRecoveryClient";
+import { consumePasswordRecoveryFromUrl } from "./passwordRecoverySession";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -3772,11 +3773,20 @@ function App() {
         setAuthReason("");
         setAuthOpen(true);
       } else if (params.get("recovery") === "1") {
-        // Clear the flag from the URL. The set-password modal opens only when
-        // onAuthStateChange emits PASSWORD_RECOVERY (session established from the link).
-        params.delete("recovery");
-        const query = params.toString();
-        window.history.replaceState({}, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash || ""}`);
+        // First-party recovery links carry token_hash; verifyOtp establishes the
+        // PASSWORD_RECOVERY session. Legacy hash-fragment links still rely on
+        // detectSessionInUrl — only the ?recovery=1 flag is cleared then.
+        (async () => {
+          const result = await consumePasswordRecoveryFromUrl(supabase);
+          if (result.handled && !result.ok) {
+            setBanner({
+              type: "canceled",
+              text: result.errorMessage || "This reset link is invalid or has expired. Request a new Forgot password email.",
+            });
+          }
+        })().catch(() => {
+          /* ignore */
+        });
       }
     } catch {
       /* ignore */

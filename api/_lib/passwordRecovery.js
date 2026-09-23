@@ -76,10 +76,25 @@ function extractFromHost(from) {
 }
 
 /**
- * GoTrue may ignore redirectTo when Site URL / allow-list are misconfigured
- * (commonly falling back to http://localhost:3000). Rewrite the query param on
- * the generated action_link so the emailed URL targets production recovery.
+ * GoTrue's action_link always redirects to the Auth Site URL when the requested
+ * redirectTo is not on the allow-list. Production Site URL is still localhost,
+ * so action_link ends at http://localhost:3000 (unopenable on phones).
+ *
+ * Instead, email a first-party URL that carries hashed_token; the browser
+ * opens www.jdscience.co.uk and the client calls verifyOtp locally.
  */
+export function buildSiteRecoveryLink(hashedToken, redirectTo = RECOVERY_REDIRECT) {
+  const token = String(hashedToken || '').trim();
+  if (!token) {
+    throw new Error('missing_hashed_token');
+  }
+  const url = new URL(redirectTo);
+  url.searchParams.set('type', 'recovery');
+  url.searchParams.set('token_hash', token);
+  return url.toString();
+}
+
+/** @deprecated kept for tests that assert rewrite behaviour on legacy action_links */
 export function forceRecoveryRedirect(actionLink, redirectTo = RECOVERY_REDIRECT) {
   try {
     const url = new URL(actionLink);
@@ -294,7 +309,9 @@ function recoveryEmailHtml(actionLink) {
 
 /**
  * Create a recovery link without sending via GoTrue's built-in mailer.
- * Returns { ok, actionLink } or { ok:false, reason } — never throws with tokens.
+ * Returns { ok, actionLink } where actionLink is a first-party JDScience URL
+ * (never the GoTrue /auth/v1/verify URL that redirects to Site URL / localhost).
+ * Never throws with tokens; never logs token_hash / action_link.
  */
 export async function createRecoveryLink(supabase, email) {
   const { data, error } = await supabase.auth.admin.generateLink({
@@ -310,24 +327,39 @@ export async function createRecoveryLink(supabase, email) {
       code: error.code || null,
     };
   }
-  const rawLink = data?.properties?.action_link || data?.action_link || null;
-  if (!rawLink) {
-    return { ok: false, reason: 'missing_action_link' };
+  const hashedToken = data?.properties?.hashed_token || null;
+  const gotrueRedirect = data?.properties?.redirect_to || null;
+  if (!hashedToken) {
+    return { ok: false, reason: 'missing_hashed_token' };
   }
-  const forced = forceRecoveryRedirect(rawLink, RECOVERY_REDIRECT);
-  if (forced.redirectRewritten) {
+  let actionLink;
+  try {
+    actionLink = buildSiteRecoveryLink(hashedToken, RECOVERY_REDIRECT);
+  } catch {
+    return { ok: false, reason: 'invalid_hashed_token' };
+  }
+  let linkHost = null;
+  let linkPath = null;
+  try {
+    const parsed = new URL(actionLink);
+    linkHost = parsed.host;
+    linkPath = parsed.pathname;
+  } catch {
+    /* ignore */
+  }
+  if (gotrueRedirect && /localhost|127\.0\.0\.1/i.test(String(gotrueRedirect))) {
     console.warn(
-      'password-recovery redirect rewritten:',
-      `from=${forced.originalRedirect}`,
-      `to=${forced.redirectTo}`,
+      'password-recovery: GoTrue Site URL is still localhost; using first-party token_hash link instead of action_link',
     );
   }
   return {
     ok: true,
-    actionLink: forced.actionLink,
-    redirectTo: forced.redirectTo,
-    redirectRewritten: forced.redirectRewritten,
-    originalRedirect: forced.originalRedirect,
+    actionLink,
+    redirectTo: RECOVERY_REDIRECT,
+    linkHost,
+    linkPath,
+    linkStrategy: 'site_token_hash',
+    gotrueRedirectHost: safeHost(gotrueRedirect),
   };
 }
 
@@ -421,8 +453,9 @@ export async function handlePasswordRecoveryRequest(req, res) {
         ? {
             diagnostics: {
               generateLink: 'ok',
-              redirectRewritten: !!link.redirectRewritten,
-              originalRedirectHost: safeHost(link.originalRedirect),
+              linkStrategy: link.linkStrategy || null,
+              linkHost: link.linkHost || null,
+              gotrueRedirectHost: link.gotrueRedirectHost || null,
               resendHttpStatus: mailed.httpStatus || null,
               resendId: mailed.resendId || null,
               lastEvent: mailed.lastEvent || null,
@@ -442,9 +475,10 @@ export async function handlePasswordRecoveryRequest(req, res) {
       ? {
           diagnostics: {
             generateLink: 'ok',
-            redirectRewritten: !!link.redirectRewritten,
-            originalRedirectHost: safeHost(link.originalRedirect),
+            linkStrategy: link.linkStrategy || null,
+            linkHost: link.linkHost || null,
             redirectHost: safeHost(link.redirectTo),
+            gotrueRedirectHost: link.gotrueRedirectHost || null,
             resendHttpStatus: mailed.httpStatus || 200,
             resendId: mailed.resendId || null,
             lastEvent: mailed.lastEvent || null,
