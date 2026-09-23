@@ -1,14 +1,15 @@
-import { PRODUCTION_SITE_ORIGIN } from "./authRedirect.js";
+import { PASSWORD_RESET_PATH, PRODUCTION_SITE_ORIGIN } from "./authRedirect.js";
 
 /**
  * Password-recovery cold-start helpers.
  *
  * Recovery can arrive as:
  *   A) First-party email link:
- *      https://www.jdscience.co.uk/?recovery=1&type=recovery&token_hash=…
+ *      https://www.jdscience.co.uk/reset-password?type=recovery&token_hash=…
  *   B) GoTrue verify redirect (Site URL allow-list OK):
- *      https://www.jdscience.co.uk/?recovery=1#access_token=…&type=recovery
- *   C) PKCE: ?code=…&recovery=1
+ *      https://www.jdscience.co.uk/reset-password#access_token=…&type=recovery
+ *   C) PKCE: /reset-password?code=…
+ *   D) Legacy: /?recovery=1&…
  *
  * Supabase may emit PASSWORD_RECOVERY during client initialize() via setTimeout(0)
  * BEFORE React mounts. Capture that event at module load, and on App startup
@@ -79,14 +80,20 @@ export function inspectRecoveryUrl(href = typeof window !== "undefined" ? window
       hasHashError: false,
       hashErrorCode: null,
       hashErrorDescription: null,
+      isResetPasswordPath: false,
     };
   }
 
+  const path = (url.pathname || "/").replace(/\/$/, "") || "/";
+  const onResetPath = path === PASSWORD_RESET_PATH;
   const hashParams = new URLSearchParams(url.hash ? url.hash.replace(/^#/, "") : "");
   const typeParam = url.searchParams.get("type") || hashParams.get("type");
   const hasTokenHash = Boolean(url.searchParams.get("token_hash"));
   const hasPkceCode = Boolean(url.searchParams.get("code"));
-  const hasRecoveryFlag = url.searchParams.get("recovery") === "1" || typeParam === "recovery";
+  const hasRecoveryFlag =
+    onResetPath
+    || url.searchParams.get("recovery") === "1"
+    || typeParam === "recovery";
   const hashError = hashParams.get("error");
   const hashErrorCode = hashParams.get("error_code");
   const hashErrorDescription = hashParams.get("error_description");
@@ -100,7 +107,17 @@ export function inspectRecoveryUrl(href = typeof window !== "undefined" ? window
     hasHashError: Boolean(hashError),
     hashErrorCode,
     hashErrorDescription: hashErrorDescription ? decodeURIComponent(hashErrorDescription.replace(/\+/g, " ")) : null,
+    isResetPasswordPath: onResetPath,
   };
+}
+
+function isResetPasswordPath(href) {
+  try {
+    const path = (new URL(href).pathname || "/").replace(/\/$/, "") || "/";
+    return path === PASSWORD_RESET_PATH;
+  } catch {
+    return false;
+  }
 }
 
 export function stripRecoveryParamsFromUrl(href = typeof window !== "undefined" ? window.location.href : "") {
@@ -115,9 +132,10 @@ export function stripRecoveryParamsFromUrl(href = typeof window !== "undefined" 
   url.searchParams.delete("type");
   url.searchParams.delete("recovery");
   url.searchParams.delete("code");
-  // Clear auth hash fragments (tokens / errors) without logging them.
-  const next = `${url.pathname}${url.searchParams.toString() ? `?${url.searchParams.toString()}` : ""}`;
-  window.history.replaceState({}, "", next || "/");
+  // Keep /reset-password path; clear auth hash fragments without logging them.
+  const path = url.pathname || PASSWORD_RESET_PATH;
+  const next = `${path}${url.searchParams.toString() ? `?${url.searchParams.toString()}` : ""}`;
+  window.history.replaceState({}, "", next || PASSWORD_RESET_PATH);
 }
 
 /**
@@ -146,14 +164,15 @@ export async function bootstrapPasswordRecovery(supabase, href = typeof window !
     info.hasRecoveryFlag
     || info.hasTokenHash
     || (info.hasHashAccessToken && info.hashType === "recovery")
-    || earlyFlag;
+    || earlyFlag
+    || isResetPasswordPath(href);
 
   if (!recoveryIntent) {
     return { showModal: false, reason: "no_recovery_intent" };
   }
 
   // A) Explicit token_hash from our Resend email
-  if (info.hasTokenHash && info.hashType === "recovery") {
+  if (info.hasTokenHash && (info.hashType === "recovery" || info.isResetPasswordPath || info.hasRecoveryFlag)) {
     let url;
     try {
       url = new URL(href);

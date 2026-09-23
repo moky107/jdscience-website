@@ -39,7 +39,9 @@ assert.equal(PRODUCTION_SITE_ORIGIN, "https://www.jdscience.co.uk");
 assert.equal(authEmailRedirectTo("https://www.jdscience.co.uk"), "https://www.jdscience.co.uk/?verified=1");
 assert.equal(
   authEmailRedirectTo("http://127.0.0.1:5173", { recovery: true }),
-  "https://www.jdscience.co.uk/?recovery=1",
+  "https://www.jdscience.co.uk/reset-password",
 );
+assert.match(appSrc, /ResetPasswordPage/);
+assert.match(appSrc, /isPasswordResetPath/);
 
 console.log("auth-login.test.mjs: ok");

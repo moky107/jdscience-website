@@ -76,6 +76,8 @@
     { "source": "/admin/", "destination": "/" },
     { "source": "/admin/analytics", "destination": "/" },
     { "source": "/admin/analytics/", "destination": "/" },
+    { "source": "/reset-password", "destination": "/" },
+    { "source": "/reset-password/", "destination": "/" },
     { "source": "/papers", "destination": "/" },
     { "source": "/papers/", "destination": "/" },
     { "source": "/tutors", "destination": "/" },

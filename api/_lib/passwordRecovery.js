@@ -11,9 +11,9 @@
  */
 
 import { createClient } from '@supabase/supabase-js';
-import { PRODUCTION_SITE_ORIGIN } from '../../src/authRedirect.js';
+import { PASSWORD_RESET_URL } from '../../src/authRedirect.js';
 
-const RECOVERY_REDIRECT = `${PRODUCTION_SITE_ORIGIN}/?recovery=1`;
+const RECOVERY_REDIRECT = PASSWORD_RESET_URL;
 const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
 const RATE_MAX_PER_EMAIL = 3;
 const RATE_MAX_PER_IP = 10;
@@ -76,12 +76,8 @@ function extractFromHost(from) {
 }
 
 /**
- * GoTrue's action_link always redirects to the Auth Site URL when the requested
- * redirectTo is not on the allow-list. Production Site URL is still localhost,
- * so action_link ends at http://localhost:3000 (unopenable on phones).
- *
- * Instead, email a first-party URL that carries hashed_token; the browser
- * opens www.jdscience.co.uk and the client calls verifyOtp locally.
+ * Prefer a first-party /reset-password URL with hashed_token over GoTrue
+ * action_link, so email clients open a dedicated page (never homepage/admin login).
  */
 export function buildSiteRecoveryLink(hashedToken, redirectTo = RECOVERY_REDIRECT) {
   const token = String(hashedToken || '').trim();
@@ -92,6 +88,15 @@ export function buildSiteRecoveryLink(hashedToken, redirectTo = RECOVERY_REDIREC
   url.searchParams.set('type', 'recovery');
   url.searchParams.set('token_hash', token);
   return url.toString();
+}
+
+/** Escape a URL for use inside an HTML attribute (email clients are strict about &). */
+export function escapeHtmlAttr(value) {
+  return String(value || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 /** @deprecated kept for tests that assert rewrite behaviour on legacy action_links */
@@ -284,7 +289,8 @@ export async function sendResendEmail({ to, subject, html, replyTo }) {
 }
 
 function recoveryEmailHtml(actionLink) {
-  const safeLink = String(actionLink || '').replace(/"/g, '&quot;');
+  // Email clients often mangle unescaped & in href (dropping type/token_hash).
+  const safeLink = escapeHtmlAttr(actionLink);
   return `
   <div style="font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto;color:#0f172a;">
     <div style="background:linear-gradient(135deg,#004d40,#009688);color:#fff;padding:18px 20px;border-radius:12px 12px 0 0;">

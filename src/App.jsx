@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { supabase } from "./supabaseClient";
 import AuthModal from "./AuthModal";
 import PasswordRecoveryModal from "./PasswordRecoveryModal";
+import ResetPasswordPage from "./ResetPasswordPage";
 import { requestPasswordRecoveryEmail } from "./passwordRecoveryClient";
 import {
   bootstrapPasswordRecovery,
   consumeEarlyPasswordRecoveryFlag,
   onEarlyPasswordRecovery,
 } from "./passwordRecoverySession";
+import { isPasswordResetPath } from "./authRedirect";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
@@ -3937,6 +3939,11 @@ function App() {
     setSession(null);
     leaveAdmin();
   };
+
+  // Dedicated recovery route — never show homepage or admin login here.
+  if (isPasswordResetPath(typeof window !== "undefined" ? window.location.pathname : "")) {
+    return <ResetPasswordPage />;
+  }
 
   if (adminRoute) {
     if (import.meta.env.DEV && typeof window !== "undefined") {
