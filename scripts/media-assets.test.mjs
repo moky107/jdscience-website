@@ -95,20 +95,11 @@ test("homepage hero carousel rotates chemistry → physics → biology every 60s
 });
 
 test("homepage hero subject banner images are shipped under public/images/", () => {
-  const missing = [];
   for (const slide of HERO_SLIDES) {
     const relative = slide.src.replace(/^\//, "");
     const absolute = join(ROOT, "public", relative);
-    if (!existsSync(absolute)) {
-      missing.push(relative);
-      continue;
-    }
+    assert.ok(existsSync(absolute), `missing hero banner: ${relative}`);
     assert.ok(statSync(absolute).size > 20_000, `${relative} looks too small`);
-  }
-  if (missing.length) {
-    console.warn(
-      `warn - hero banner images not yet in repo (fallback hero will show): ${missing.join(", ")}`,
-    );
   }
 });
 
