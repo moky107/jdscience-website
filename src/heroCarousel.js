@@ -1,12 +1,24 @@
-/** Homepage hero banner carousel — chemistry → physics → biology. */
+/** Homepage hero banner carousel — original hero + chemistry → physics → biology. */
 
-export const HERO_ROTATION_MS = 60_000;
+export const HERO_ROTATION_MS = 20_000;
+
+/** Legacy single hero image — also kept as a carousel slide. */
+export const HERO_FALLBACK_IMG = "/hero-students.png.png";
 
 /**
- * Subject banners layered under the existing Hero copy.
+ * Banners layered under the existing Hero copy.
+ * Keeps the original hero, then adds the subject banners.
  * Chemistry uses the Joseph Younger classroom banner.
  */
 export const HERO_SLIDES = [
+  {
+    id: "original",
+    src: HERO_FALLBACK_IMG,
+    alt: "Students learning together",
+    label: "JD Science",
+    /** Match the previous single-hero crop. */
+    objectPosition: { desktop: "center 34%", tablet: "center 34%", mobile: "center 28%" },
+  },
   {
     id: "chemistry",
     src: "/images/jdscience-banner-chemistry-joseph-younger.png",
@@ -32,9 +44,6 @@ export const HERO_SLIDES = [
     objectPosition: { desktop: "64% 34%", tablet: "68% 32%", mobile: "72% 30%" },
   },
 ];
-
-/** Legacy single hero image — used only if a subject banner fails to load. */
-export const HERO_FALLBACK_IMG = "/hero-students.png.png";
 
 export function heroSlideIndex(index, length = HERO_SLIDES.length) {
   const n = Math.max(1, Number(length) || 1);

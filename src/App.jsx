@@ -826,7 +826,7 @@ function Hero({ onScroll, onBrowse, onShop }) {
     <section
       className="hero-banner"
       aria-roledescription="carousel"
-      aria-label="JDScience subject banners"
+      aria-label="JDScience homepage banners"
       onMouseEnter={() => setHoverPaused(true)}
       onMouseLeave={() => setHoverPaused(false)}
       onFocusCapture={() => setHoverPaused(true)}
