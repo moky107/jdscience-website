@@ -10,6 +10,13 @@ import {
   INTRO_VIDEO_TYPE,
 } from "../src/homepageVideo.js";
 import {
+  HERO_FALLBACK_IMG,
+  HERO_ROTATION_MS,
+  HERO_SLIDES,
+  heroObjectPosition,
+  heroSlideIndex,
+} from "../src/heroCarousel.js";
+import {
   LOCAL_AVATAR_FALLBACK,
   resolveTutorAvatarSrc,
   shouldUseAvatarImage,
@@ -67,6 +74,42 @@ test("homepage promo mp4 is publicly shipped with moov before mdat (faststart)",
   assert.ok(moov >= 0, "mp4 must contain a moov atom");
   assert.ok(mdat >= 0, "mp4 must contain an mdat atom");
   assert.ok(moov < mdat, "moov must precede mdat so browsers can start playback early");
+});
+
+test("homepage hero carousel rotates chemistry → physics → biology every 60s", () => {
+  assert.equal(HERO_ROTATION_MS, 60_000);
+  assert.deepEqual(
+    HERO_SLIDES.map((slide) => slide.id),
+    ["chemistry", "physics", "biology"],
+  );
+  assert.equal(
+    HERO_SLIDES[0].src,
+    "/images/jdscience-banner-chemistry-joseph-younger.png",
+  );
+  assert.equal(HERO_SLIDES[1].src, "/images/jdscience-banner-physics.png");
+  assert.equal(HERO_SLIDES[2].src, "/images/jdscience-banner-biology.png");
+  assert.equal(heroSlideIndex(-1), 2);
+  assert.equal(heroSlideIndex(3), 0);
+  assert.match(heroObjectPosition(HERO_SLIDES[0], { isMobile: true }), /%/);
+  assert.ok(existsSync(join(ROOT, "public", HERO_FALLBACK_IMG.replace(/^\//, ""))));
+});
+
+test("homepage hero subject banner images are shipped under public/images/", () => {
+  const missing = [];
+  for (const slide of HERO_SLIDES) {
+    const relative = slide.src.replace(/^\//, "");
+    const absolute = join(ROOT, "public", relative);
+    if (!existsSync(absolute)) {
+      missing.push(relative);
+      continue;
+    }
+    assert.ok(statSync(absolute).size > 20_000, `${relative} looks too small`);
+  }
+  if (missing.length) {
+    console.warn(
+      `warn - hero banner images not yet in repo (fallback hero will show): ${missing.join(", ")}`,
+    );
+  }
 });
 
 test("normalizeTutorStoragePath strips bucket prefixes, query tokens and duplicates", () => {

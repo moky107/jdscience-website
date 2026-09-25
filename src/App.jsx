@@ -17,6 +17,13 @@ import HomepageIntroVideo from "./HomepageIntroVideo";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
+import {
+  HERO_FALLBACK_IMG,
+  HERO_ROTATION_MS,
+  HERO_SLIDES,
+  heroObjectPosition,
+  heroSlideIndex,
+} from "./heroCarousel";
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
@@ -102,8 +109,6 @@ function trackResourceOpen(item, kind = "download") {
     /* never block downloads */
   }
 }
-
-const BANNER_IMG = "/hero-students.png.png";
 
 /* -------- Qualification-specific data (single source of truth) -------- */
 const LEVELS = ["11+", "GCSE/IGCSE", "A-Level", "T-Level", "BTEC"];
@@ -731,6 +736,14 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, onSho
 function Hero({ onScroll, onBrowse, onShop }) {
   const isMobile = useIsMobile();
   const isTablet = useIsMobile(1024);
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [userPaused, setUserPaused] = useState(false);
+  const [hoverPaused, setHoverPaused] = useState(false);
+  const [failedSrcs, setFailedSrcs] = useState(() => new Set());
+  const paused = userPaused || hoverPaused;
+  const activeIndex = heroSlideIndex(slideIndex, HERO_SLIDES.length);
+  const activeSlide = HERO_SLIDES[activeIndex];
   const heroOffset = isMobile ? 0 : isTablet ? -18 : -36;
   const heroGreen = "#0f766e";
   const heroGreenHover = "#0d9488";
@@ -761,20 +774,142 @@ function Hero({ onScroll, onBrowse, onShop }) {
     el.style.background = heroGreen;
     el.style.borderColor = heroGreen;
   };
+
+  useEffect(() => {
+    if (paused || HERO_SLIDES.length < 2) return undefined;
+    const timer = window.setInterval(() => {
+      setSlideIndex((current) => current + 1);
+    }, HERO_ROTATION_MS);
+    return () => window.clearInterval(timer);
+  }, [paused]);
+
+  const goPrev = () => {
+    setUserPaused(true);
+    setSlideIndex((current) => current - 1);
+  };
+  const goNext = () => {
+    setUserPaused(true);
+    setSlideIndex((current) => current + 1);
+  };
+  const goTo = (index) => {
+    setUserPaused(true);
+    setSlideIndex(index);
+  };
+  const markFailed = (src) => {
+    setFailedSrcs((prev) => {
+      if (prev.has(src)) return prev;
+      const next = new Set(prev);
+      next.add(src);
+      return next;
+    });
+  };
+
+  const controlBtnStyle = {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    border: "1px solid rgba(255,255,255,.55)",
+    background: "rgba(15, 23, 42, .42)",
+    color: "#fff",
+    cursor: "pointer",
+    fontWeight: 800,
+    fontSize: 22,
+    lineHeight: 1,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backdropFilter: "blur(6px)",
+    outlineOffset: 3,
+  };
+
   return (
-    <section style={{ position: "relative", minHeight: isMobile ? "auto" : 480, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", color: "#fff", overflow: "hidden" }}>
-      <img src={BANNER_IMG} alt="Students learning together"
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: isMobile ? "center 28%" : "center 34%", filter: "brightness(1.10) contrast(1.04) saturate(1.04)" }} />
-      <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.16) 48%, rgba(0,0,0,.28) 100%)" }} />
-      <div style={{ position: "relative", zIndex: 2, maxWidth: 760, width: "100%", padding: isMobile ? "48px 18px 36px" : "40px 18px", transform: `translateY(${heroOffset}px)`, textShadow: "0 2px 10px rgba(0,0,0,.34)" }}>
+    <section
+      className="hero-banner"
+      aria-roledescription="carousel"
+      aria-label="JDScience subject banners"
+      onMouseEnter={() => setHoverPaused(true)}
+      onMouseLeave={() => setHoverPaused(false)}
+      onFocusCapture={() => setHoverPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setHoverPaused(false);
+      }}
+      style={{
+        position: "relative",
+        minHeight: isMobile ? 420 : 480,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: isMobile ? "center" : "flex-start",
+        textAlign: isMobile ? "center" : "left",
+        color: "#fff",
+        overflow: "hidden",
+        background: "#0f766e",
+      }}
+    >
+      <div className="hero-banner-slides" aria-hidden="true">
+        {HERO_SLIDES.map((slide, index) => {
+          const isActive = index === activeIndex;
+          const src = failedSrcs.has(slide.src) ? HERO_FALLBACK_IMG : slide.src;
+          return (
+            <img
+              key={slide.id}
+              className={`hero-banner-slide${isActive ? " is-active" : ""}`}
+              src={src}
+              alt=""
+              width={1920}
+              height={800}
+              decoding="async"
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              onError={() => markFailed(slide.src)}
+              style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: heroObjectPosition(slide, { isMobile, isTablet }),
+                opacity: isActive ? 1 : 0,
+                transition: prefersReducedMotion ? "none" : "opacity .7s ease",
+                filter: "brightness(1.06) contrast(1.03) saturate(1.04)",
+                pointerEvents: "none",
+              }}
+            />
+          );
+        })}
+      </div>
+      {/* Stronger left wash so headline stays readable on green; right stays open for people. */}
+      <div
+        className="hero-banner-overlay"
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: isMobile
+            ? "linear-gradient(180deg, rgba(6, 55, 48, .55) 0%, rgba(6, 55, 48, .42) 42%, rgba(15, 23, 42, .55) 100%)"
+            : "linear-gradient(90deg, rgba(6, 55, 48, .82) 0%, rgba(6, 55, 48, .62) 34%, rgba(6, 55, 48, .28) 58%, rgba(15, 23, 42, .12) 100%)",
+          pointerEvents: "none",
+        }}
+      />
+      <div
+        className="hero-banner-content"
+        style={{
+          position: "relative",
+          zIndex: 2,
+          maxWidth: isMobile ? 760 : 640,
+          width: "100%",
+          padding: isMobile ? "48px 18px 72px" : "48px 28px 56px",
+          marginLeft: isMobile ? 0 : "clamp(12px, 4vw, 56px)",
+          transform: `translateY(${heroOffset}px)`,
+          textShadow: "0 2px 12px rgba(0,0,0,.42)",
+        }}
+      >
         <div style={{ display: "inline-block", background: "rgba(255,255,255,.16)", padding: isMobile ? "8px 12px" : "7px 15px", borderRadius: 20, marginBottom: 14, fontSize: isMobile ? 13 : 15, fontWeight: 700, maxWidth: "100%", lineHeight: 1.35 }}>🏆 Expert Science &amp; Maths Tutoring for Everyone</div>
         <h1 style={{ fontSize: isMobile ? 28 : 44, margin: "0 0 14px", lineHeight: 1.2, fontWeight: 800 }}>
           Learn Smarter. Revise Better. <span style={{ color: "#fbbf24" }}>Achieve More.</span>
         </h1>
-        <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: "0 auto", lineHeight: 1.55 }}>
+        <p style={{ fontSize: isMobile ? 16 : 18, color: "rgba(255,255,255,.95)", maxWidth: 600, margin: isMobile ? "0 auto" : "0", lineHeight: 1.55 }}>
           Past papers, revision notes, videos and expert tutoring for GCSE, A Level, T Level and BTEC.
         </p>
-        <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+        <div className="hero-ctas" style={{ marginTop: 24, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: isMobile ? "center" : "flex-start" }}>
           <a
             href="/papers"
             onClick={(e) => { e.preventDefault(); onBrowse(); }}
@@ -803,6 +938,49 @@ function Hero({ onScroll, onBrowse, onShop }) {
             Book a Tutor
           </a>
         </div>
+      </div>
+
+      <div className="hero-banner-controls" style={{ position: "absolute", zIndex: 3, left: 0, right: 0, bottom: isMobile ? 12 : 18, display: "flex", alignItems: "center", justifyContent: "center", gap: 10, padding: "0 16px", flexWrap: "wrap" }}>
+        <button type="button" aria-label="Show previous banner" onClick={goPrev} style={controlBtnStyle}>‹</button>
+        <div role="tablist" aria-label="Banner slides" style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          {HERO_SLIDES.map((slide, index) => {
+            const selected = index === activeIndex;
+            return (
+              <button
+                key={slide.id}
+                type="button"
+                role="tab"
+                aria-label={`Show ${slide.label} banner (${index + 1} of ${HERO_SLIDES.length})`}
+                aria-selected={selected}
+                onClick={() => goTo(index)}
+                style={{
+                  width: selected ? 22 : 12,
+                  height: 12,
+                  borderRadius: 999,
+                  border: "1px solid rgba(255,255,255,.65)",
+                  background: selected ? "#ffffff" : "rgba(255,255,255,.35)",
+                  cursor: "pointer",
+                  padding: 0,
+                  outlineOffset: 3,
+                  transition: prefersReducedMotion ? "none" : "width .2s ease, background-color .2s ease",
+                }}
+              />
+            );
+          })}
+        </div>
+        <button type="button" aria-label="Show next banner" onClick={goNext} style={controlBtnStyle}>›</button>
+        <button
+          type="button"
+          aria-label={userPaused ? "Resume banner rotation" : "Pause banner rotation"}
+          aria-pressed={userPaused}
+          onClick={() => setUserPaused((value) => !value)}
+          style={{ ...controlBtnStyle, width: "auto", minWidth: 44, padding: "0 14px", fontSize: 13, letterSpacing: ".02em" }}
+        >
+          {userPaused ? "Play" : "Pause"}
+        </button>
+        <span className="visually-hidden" aria-live="polite">
+          {activeSlide.label} banner
+        </span>
       </div>
     </section>
   );
