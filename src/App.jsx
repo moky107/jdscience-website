@@ -738,10 +738,7 @@ function Hero({ onScroll, onBrowse, onShop }) {
   const isTablet = useIsMobile(1024);
   const prefersReducedMotion = usePrefersReducedMotion();
   const [slideIndex, setSlideIndex] = useState(0);
-  const [userPaused, setUserPaused] = useState(false);
-  const [hoverPaused, setHoverPaused] = useState(false);
   const [failedSrcs, setFailedSrcs] = useState(() => new Set());
-  const paused = userPaused || hoverPaused;
   const activeIndex = heroSlideIndex(slideIndex, HERO_SLIDES.length);
   const activeSlide = HERO_SLIDES[activeIndex];
   const heroOffset = isMobile ? 0 : isTablet ? -18 : -36;
@@ -776,23 +773,20 @@ function Hero({ onScroll, onBrowse, onShop }) {
   };
 
   useEffect(() => {
-    if (paused || HERO_SLIDES.length < 2) return undefined;
+    if (HERO_SLIDES.length < 2) return undefined;
     const timer = window.setInterval(() => {
       setSlideIndex((current) => current + 1);
     }, HERO_ROTATION_MS);
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, []);
 
   const goPrev = () => {
-    setUserPaused(true);
     setSlideIndex((current) => current - 1);
   };
   const goNext = () => {
-    setUserPaused(true);
     setSlideIndex((current) => current + 1);
   };
   const goTo = (index) => {
-    setUserPaused(true);
     setSlideIndex(index);
   };
   const markFailed = (src) => {
@@ -827,12 +821,6 @@ function Hero({ onScroll, onBrowse, onShop }) {
       className="hero-banner"
       aria-roledescription="carousel"
       aria-label="JDScience homepage banners"
-      onMouseEnter={() => setHoverPaused(true)}
-      onMouseLeave={() => setHoverPaused(false)}
-      onFocusCapture={() => setHoverPaused(true)}
-      onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setHoverPaused(false);
-      }}
       style={{
         position: "relative",
         minHeight: isMobile ? 420 : 480,
@@ -969,15 +957,6 @@ function Hero({ onScroll, onBrowse, onShop }) {
           })}
         </div>
         <button type="button" aria-label="Show next banner" onClick={goNext} style={controlBtnStyle}>›</button>
-        <button
-          type="button"
-          aria-label={userPaused ? "Resume banner rotation" : "Pause banner rotation"}
-          aria-pressed={userPaused}
-          onClick={() => setUserPaused((value) => !value)}
-          style={{ ...controlBtnStyle, width: "auto", minWidth: 44, padding: "0 14px", fontSize: 13, letterSpacing: ".02em" }}
-        >
-          {userPaused ? "Play" : "Pause"}
-        </button>
         <span className="visually-hidden" aria-live="polite">
           {activeSlide.label} banner
         </span>
