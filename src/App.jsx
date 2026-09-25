@@ -823,7 +823,7 @@ function Hero({ onScroll, onBrowse, onShop }) {
       aria-label="JDScience homepage banners"
       style={{
         position: "relative",
-        minHeight: isMobile ? 420 : 480,
+        minHeight: isMobile ? 440 : 560,
         display: "flex",
         alignItems: "center",
         justifyContent: isMobile ? "center" : "flex-start",
