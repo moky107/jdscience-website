@@ -22,10 +22,13 @@ export const HERO_SLIDES = [
   {
     id: "chemistry",
     src: "/images/jdscience-banner-chemistry-joseph-younger.png",
-    alt: "Joseph Younger teaching chemistry with students in a classroom",
+    alt: "Joseph Younger supervising students during a chemistry lab experiment",
     label: "Chemistry",
-    /** Bias right for Joseph; keep Y higher so heads are not clipped. */
-    objectPosition: { desktop: "70% 30%", tablet: "74% 28%", mobile: "82% 28%" },
+    /**
+     * Banner-aspect asset keeps Joseph's supervising gesture + students in frame.
+     * Bias right toward Joseph; mid Y so heads and lab work stay visible together.
+     */
+    objectPosition: { desktop: "72% 45%", tablet: "76% 42%", mobile: "88% 38%" },
   },
   {
     id: "physics",
