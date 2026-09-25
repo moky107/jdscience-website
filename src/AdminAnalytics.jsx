@@ -270,7 +270,7 @@ export default function AdminAnalytics({ password, onBack }) {
     setError("");
     setMigrationRequired(false);
     try {
-      const body = { password, range: nextRange };
+      const body = { password, range: nextRange, scope: "analytics" };
       if (nextRange === "custom") {
         body.start = customStart;
         body.end = customEnd;
@@ -288,7 +288,10 @@ export default function AdminAnalytics({ password, onBack }) {
         return;
       }
       if (!resp.ok) throw new Error(data.error || "Failed to load analytics.");
-      setDashboard(data.dashboard || null);
+      if (!data.dashboard) {
+        throw new Error("Analytics response was empty. Try refreshing, or check that /api/admin-analytics is deployed.");
+      }
+      setDashboard(data.dashboard);
     } catch (err) {
       setError(err.message || "Failed to load analytics.");
       setDashboard(null);
@@ -374,8 +377,15 @@ export default function AdminAnalytics({ password, onBack }) {
         <div style={{ marginBottom: 16, padding: 14, borderRadius: 12, background: "#fef2f2", border: "1px solid #fecaca", color: "#991b1b" }}>
           {error}
           {migrationRequired && (
-            <div style={{ marginTop: 8, color: "#7f1d1d", fontSize: 14, lineHeight: 1.55 }}>
-              Run <code>supabase/migrations/20260905_analytics_events.sql</code> in the Supabase SQL editor, then refresh.
+            <div style={{ marginTop: 10, color: "#7f1d1d", fontSize: 14, lineHeight: 1.55 }}>
+              <p style={{ margin: "0 0 8px" }}>
+                One-time setup: open the Supabase SQL editor for project <code>xugsznxfvpbifpzpuoek</code>, paste and run
+                {" "}
+                <code>supabase/migrations/20260905_analytics_events.sql</code>, then click Refresh here.
+              </p>
+              <p style={{ margin: 0, color: "#9f1239" }}>
+                Until that table exists, visits and downloads cannot be stored — the Analytics tab will stay empty.
+              </p>
             </div>
           )}
         </div>
