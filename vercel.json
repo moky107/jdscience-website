@@ -52,6 +52,12 @@
       ]
     },
     {
+      "source": "/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
       "source": "/avatar-fallback.svg",
       "headers": [
         { "key": "Content-Type", "value": "image/svg+xml" },
