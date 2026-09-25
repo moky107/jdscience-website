@@ -12,22 +12,24 @@ export const HERO_SLIDES = [
     src: "/images/jdscience-banner-chemistry-joseph-younger.png",
     alt: "Joseph Younger teaching chemistry with students in a classroom",
     label: "Chemistry",
-    /** Favour the right side so Joseph and students stay in frame. */
-    objectPosition: { desktop: "68% 42%", tablet: "72% 40%", mobile: "78% 38%" },
+    /** Bias right for Joseph; keep Y higher so heads are not clipped. */
+    objectPosition: { desktop: "70% 30%", tablet: "74% 28%", mobile: "82% 28%" },
   },
   {
     id: "physics",
     src: "/images/jdscience-banner-physics.png",
     alt: "Physics tutoring banner with students learning together",
     label: "Physics",
-    objectPosition: { desktop: "68% 42%", tablet: "72% 40%", mobile: "78% 38%" },
+    /** Slightly lower focal point so probes / LEDs stay in frame with faces. */
+    objectPosition: { desktop: "62% 46%", tablet: "66% 44%", mobile: "70% 40%" },
   },
   {
     id: "biology",
     src: "/images/jdscience-banner-biology.png",
     alt: "Biology tutoring banner with students learning together",
     label: "Biology",
-    objectPosition: { desktop: "68% 42%", tablet: "72% 40%", mobile: "78% 38%" },
+    /** Center-right cluster around the microscope; preserve headroom. */
+    objectPosition: { desktop: "64% 34%", tablet: "68% 32%", mobile: "72% 30%" },
   },
 ];
 
