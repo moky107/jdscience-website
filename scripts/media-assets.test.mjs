@@ -19,14 +19,17 @@ import {
 import {
   LOCAL_AVATAR_FALLBACK,
   resolveTutorAvatarSrc,
+  shouldHideTutorPhoto,
   shouldUseAvatarImage,
 } from "../src/tutorAvatar.js";
 import {
   buildTutorPhotoApiUrl,
+  isFounderTutorSlug,
   isPublishedTutorRow,
   mimeTypeForTutorPath,
   normalizeTutorStoragePath,
   PROFILE_PHOTO_SIGNED_TTL_SECONDS,
+  toPublicTutor,
   TUTOR_PHOTO_API_PATH,
   TUTOR_STORAGE_BUCKET,
 } from "../api/_lib/tutors.js";
@@ -173,6 +176,32 @@ test("avatar fallback switches once without looping on the fallback asset", () =
   assert.equal(shouldUseAvatarImage("https://cdn.example/photo.jpg", false), true);
   assert.equal(shouldUseAvatarImage("", false), false);
   assert.equal(shouldUseAvatarImage("", true), true);
+});
+
+test("Joseph Danso tutor profile photo is hidden (initials avatar instead)", () => {
+  assert.equal(shouldHideTutorPhoto({ public_slug: "joseph-danso" }), true);
+  assert.equal(shouldHideTutorPhoto({ public_slug: "joseph-danso-4qy75y" }), true);
+  assert.equal(shouldHideTutorPhoto({ public_slug: "belinda-cooke-jre77z" }), false);
+  assert.equal(
+    shouldUseAvatarImage("https://cdn.example/joseph.jpg", false, { public_slug: "joseph-danso" }),
+    false,
+  );
+  assert.equal(
+    shouldUseAvatarImage("https://cdn.example/other.jpg", false, { public_slug: "belinda-cooke-jre77z" }),
+    true,
+  );
+  assert.equal(isFounderTutorSlug("joseph-danso"), true);
+  assert.equal(isFounderTutorSlug("joseph-danso-abc123"), true);
+  assert.equal(isFounderTutorSlug("belinda-cooke"), false);
+  assert.equal(
+    toPublicTutor({
+      id: "1",
+      public_slug: "joseph-danso",
+      tutor_name: "Joseph Danso",
+      profile_photo_url: "/api/tutor-photo?slug=joseph-danso",
+    }).profile_photo_url,
+    null,
+  );
 });
 
 console.log("All media/tutor photo regression checks passed.");
