@@ -14,7 +14,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import HomepageIntroVideo from "./HomepageIntroVideo";
-import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
+import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc, shouldHideTutorPhoto } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
 import {
@@ -1885,7 +1885,8 @@ const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0"
 
 function TutorAvatar({ tutor, size = 72 }) {
   const [failed, setFailed] = useState(false);
-  const photoUrl = String(tutor?.profile_photo_url || "").trim();
+  const hidePhoto = shouldHideTutorPhoto(tutor);
+  const photoUrl = hidePhoto ? "" : String(tutor?.profile_photo_url || "").trim();
 
   useEffect(() => {
     setFailed(false);
