@@ -98,6 +98,20 @@ test("homepage hero carousel keeps original hero then chemistry → physics → 
   assert.ok(existsSync(join(ROOT, "public", HERO_FALLBACK_IMG.replace(/^\//, ""))));
 });
 
+test("chemistry banner is hard-cropped and framed so Joseph's hands stay out of the hero", () => {
+  const chemistry = HERO_SLIDES.find((slide) => slide.id === "chemistry");
+  assert.ok(chemistry);
+  assert.match(chemistry.alt, /supervising/i);
+  assert.deepEqual(chemistry.objectPosition, {
+    desktop: "74% 48%",
+    tablet: "78% 46%",
+    mobile: "86% 42%",
+  });
+  assert.equal(heroObjectPosition(chemistry, {}), "74% 48%");
+  assert.equal(heroObjectPosition(chemistry, { isTablet: true }), "78% 46%");
+  assert.equal(heroObjectPosition(chemistry, { isMobile: true }), "86% 42%");
+});
+
 test("homepage hero subject banner images are shipped under public/images/", () => {
   for (const slide of HERO_SLIDES) {
     const relative = slide.src.replace(/^\//, "");
