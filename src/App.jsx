@@ -230,11 +230,35 @@ function videoEmbedSrc(url) {
   return null;
 }
 
-function ResourceVideoPlayer({ title, src }) {
+/* Direct video files (e.g. Supabase Storage MP4s) play in a native <video> element. */
+function directVideoSrc(url, fileType) {
+  const raw = String(url || "").trim();
+  if (!raw) return null;
+  if (/^video\//i.test(String(fileType || ""))) return raw;
+  try {
+    const parsed = new URL(raw, typeof window !== "undefined" ? window.location.origin : "https://jdscience.co.uk");
+    if (/\.(mp4|webm|ogg|ogv|mov|m4v)$/i.test(parsed.pathname)) return raw;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function ResourceVideoPlayer({ title, src, direct = false }) {
   return (
     <div style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)", padding: 16 }}>
       <h3 style={{ margin: "0 0 12px", fontSize: 18, color: "#0f172a", lineHeight: 1.35 }}>{title}</h3>
       <div className="resource-video-embed" style={{ position: "relative", overflow: "hidden", aspectRatio: "1920 / 1080", borderRadius: 10, background: "#000" }}>
+        {direct ? (
+          <video
+            src={src}
+            controls
+            playsInline
+            preload="metadata"
+            title={title}
+            style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, objectFit: "contain", background: "#000" }}
+          />
+        ) : (
         <iframe
           src={src}
           loading="lazy"
@@ -243,6 +267,7 @@ function ResourceVideoPlayer({ title, src }) {
           allow="encrypted-media; fullscreen; microphone; screen-wake-lock"
           style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, border: "none", padding: 0, margin: 0, overflow: "hidden", maxWidth: "none" }}
         />
+        )}
       </div>
     </div>
   );
@@ -1490,6 +1515,10 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
               const embedSrc = videoEmbedSrc(video.file_url);
               if (embedSrc) {
                 return <ResourceVideoPlayer key={video.id} title={video.title} src={embedSrc} />;
+              }
+              const fileSrc = directVideoSrc(video.file_url, video.file_type);
+              if (fileSrc) {
+                return <ResourceVideoPlayer key={video.id} title={video.title} src={fileSrc} direct />;
               }
               return (
                 <a key={video.id} href={video.file_url} target="_blank" rel="noreferrer" className="folder-file"
