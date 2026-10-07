@@ -1,0 +1,261 @@
+[
+  {
+    "id": "01",
+    "slug": "lesson-route-and-retrieval",
+    "title": "MSK Disorders: Lesson Route and Retrieval",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Unit 8 · Learning Aim A · A.P2",
+        "heading": "Musculoskeletal Disorders",
+        "sub": "How a change in tissue can alter movement and function",
+        "bullets": ["40-minute lesson route", "Teacher: Joseph Danso", "JD Science"],
+        "vo": "Welcome to this JD Science lesson for Unit 8 Learning Aim A. We are focusing on musculoskeletal disorders — and specifically on how a change in tissue can alter movement and function."
+      },
+      {
+        "layout": "do_now",
+        "eyebrow": "Do Now · 3 minutes · Write independently",
+        "heading": "Retrieval — no notes",
+        "items": [
+          "1. Name one bone.",
+          "2. Name one type of joint movement.",
+          "3. Name one structure that protects a joint."
+        ],
+        "vo": "Begin with three minutes of silent retrieval. Without notes, write one bone, one type of joint movement, and one structure that protects a joint. This warms up the knowledge we will stretch in the rest of the lesson."
+      },
+      {
+        "layout": "route",
+        "eyebrow": "Lesson route",
+        "heading": "Where this lesson goes",
+        "steps": [
+          { "n": "01", "t": "Read + Encode", "d": "Build a four-column table from the information sheet" },
+          { "n": "02", "t": "Model + Sort", "d": "See the osteoarthritis chain, then sort by tissue" },
+          { "n": "03", "t": "Guided practice", "d": "Check explanations on short cases" },
+          { "n": "04", "t": "Independent evidence", "d": "Prove you can explain tissue change to movement" }
+        ],
+        "vo": "Here is the route. First you read and encode. Then we model osteoarthritis and sort disorders by tissue. Next comes guided case practice. Finally you produce independent evidence that links tissue change to movement."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Success criterion",
+        "heading": "Explain the chain, not just the label",
+        "body": "Disorder → tissue change → effect on movement → management",
+        "vo": "Your success criterion is clear: do not stop at naming the disorder. Explain the chain — which tissue changes, how that alters movement, and what management targets that change."
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "slug": "read-and-encode",
+    "title": "MSK Disorders: Read and Encode",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Read + Encode · 7 minutes · Silent",
+        "heading": "Meet the disorders",
+        "sub": "Read with a purpose before you apply",
+        "bullets": ["Information sheet open", "Four-column table", "Paraphrase, don't copy"],
+        "vo": "This section is purposeful reading. You will turn the information sheet into a clear four-column table so every disorder is ready to use later in sorting and cases."
+      },
+      {
+        "layout": "columns4",
+        "eyebrow": "Your table",
+        "heading": "Four columns to fill",
+        "cards": [
+          { "t": "Disorder", "d": "Name it accurately" },
+          { "t": "Tissue affected", "d": "What structure has changed?" },
+          { "t": "Effect on movement", "d": "How does function change?" },
+          { "t": "Management", "d": "What targets that change?" }
+        ],
+        "vo": "Set up four columns: disorder, tissue affected, effect on movement, and management. Those four ideas are the language of Learning Aim A."
+      },
+      {
+        "layout": "checklist",
+        "eyebrow": "Rules for encoding",
+        "heading": "How to work",
+        "items": [
+          "Seven minutes of silent individual reading",
+          "Complete at least six of the twelve disorders",
+          "Paraphrase in your own words — do not copy",
+          "Keep your information sheet out for the whole lesson"
+        ],
+        "vo": "Work silently for seven minutes. Aim for at least six of the twelve disorders. Paraphrase rather than copy, and keep the sheet available — you will need it for sorting and cases."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Why this matters",
+        "heading": "Encoding makes retrieval reliable",
+        "body": "A tidy table lets you sort by tissue and explain cases without guessing.",
+        "vo": "Encoding now pays off later. When you sort by tissue or tackle a case, you will retrieve from your table instead of guessing from memory."
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "slug": "osteoarthritis-model",
+    "title": "MSK Disorders: Osteoarthritis Model",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Teacher model · I do · 4 minutes",
+        "heading": "From tissue change to movement",
+        "sub": "Osteoarthritis as a four-part explanation chain",
+        "bullets": ["Watch the chain", "Notice the tissue link", "Reuse the structure"],
+        "vo": "Watch a strong model answer using osteoarthritis. The goal is to explain why movement changes — not only to list symptoms."
+      },
+      {
+        "layout": "chain",
+        "eyebrow": "The four-part chain",
+        "heading": "Structure → Function → Movement → Management",
+        "steps": [
+          { "n": "01", "t": "Structure", "d": "Articular cartilage thins and roughens at the joint surface" },
+          { "n": "02", "t": "Function", "d": "Smooth, low-friction gliding is reduced; bone ends stress more" },
+          { "n": "03", "t": "Movement", "d": "Pain, stiffness and reduced range of motion limit loading and gait" },
+          { "n": "04", "t": "Management", "d": "Exercise, weight management, analgesia; surgery if severe" }
+        ],
+        "vo": "Structure: cartilage thins and roughens. Function: low-friction gliding falls and bone ends take more stress. Movement: pain and stiffness cut range of motion and alter gait. Management targets that chain — activity, load, pain relief, and surgery if needed."
+      },
+      {
+        "layout": "compare",
+        "eyebrow": "Weak versus strong",
+        "heading": "Do not stop at symptoms",
+        "left": { "t": "Weak", "d": "Osteoarthritis causes joint pain and stiffness." },
+        "right": { "t": "Strong", "d": "Cartilage wear raises friction, so pain and stiffness reduce range of motion and loading." },
+        "vo": "A weak answer only names pain and stiffness. A strong answer links cartilage wear to friction, then to limited movement. That is the standard for A.P2."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Takeaway",
+        "heading": "Reuse this chain for every disorder",
+        "body": "Ask: which tissue changed, and how does that change movement?",
+        "vo": "Reuse this chain for every disorder you meet. Always ask which tissue changed, and how that change alters movement."
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "slug": "tissue-sort",
+    "title": "MSK Disorders: Tissue Sort",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Guided sort · Feedback",
+        "heading": "Tissue explains the symptoms",
+        "sub": "Twelve disorders · four tissue groups",
+        "bullets": ["Sort by primary tissue", "Expect matching symptoms", "Check outliers carefully"],
+        "vo": "Now sort the twelve disorders into four tissue groups. The group you choose should explain the symptoms you expect."
+      },
+      {
+        "layout": "table",
+        "eyebrow": "Correct sort",
+        "heading": "Four groups by primary tissue change",
+        "rows": [
+          { "group": "Bone mineralisation", "tissue": "Bone matrix / density", "count": "4", "items": "Osteoporosis · Osteomalacia · Rickets · Paget's" },
+          { "group": "Bone infection / growth", "tissue": "Bone and marrow", "count": "2", "items": "Osteomyelitis · Bone tumours" },
+          { "group": "Muscle / motor control", "tissue": "Fibres / neurones", "count": "2", "items": "Muscular dystrophy · MND" },
+          { "group": "Joint / alignment", "tissue": "Joints and spine", "count": "4", "items": "OA · Hip dysplasia · Scoliosis · Hypermobility" }
+        ],
+        "vo": "Bone mineralisation covers osteoporosis, osteomalacia, rickets and Paget's. Infection or abnormal growth covers osteomyelitis and bone tumours. Muscle or motor control covers muscular dystrophy and motor neurone disease. Joint and alignment covers osteoarthritis, hip dysplasia, scoliosis and hypermobility."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Check point",
+        "heading": "Why is MND under motor control?",
+        "body": "Motor neurone disease damages the signal to muscle, not the muscle fibre as the primary tissue.",
+        "vo": "Check: motor neurone disease sits under motor control because the primary failure is the nerve signal to muscle, not a primary muscle-fibre disease like dystrophy."
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "slug": "case-practice",
+    "title": "MSK Disorders: Case Practice",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Guided practice · Feedback",
+        "heading": "Check the explanation, not just the label",
+        "sub": "Short cases · finger show · full chain",
+        "bullets": ["Four fingers = full chain", "Two fingers = partial", "One finger = name only"],
+        "vo": "Use short cases to practise. Show fingers for how complete your explanation is: all four parts, two parts, or the disorder name only."
+      },
+      {
+        "layout": "case",
+        "eyebrow": "Case A",
+        "heading": "Post-surgical bone pain, swelling and fever",
+        "points": [
+          { "t": "Likely disorder", "d": "Osteomyelitis" },
+          { "t": "Tissue", "d": "Bone and bone marrow — infection and inflammation" },
+          { "t": "Movement", "d": "Pain and swelling limit loading and range" },
+          { "t": "Management", "d": "Antibiotics and surgical debridement when needed" }
+        ],
+        "vo": "Case A: post-surgical bone pain with swelling and fever points to osteomyelitis. Infected bone and marrow cause pain that limits loading. Management is antibiotics, with debridement if required."
+      },
+      {
+        "layout": "case",
+        "eyebrow": "Case B",
+        "heading": "Child with bowed legs and vitamin D deficiency",
+        "points": [
+          { "t": "Likely disorder", "d": "Rickets" },
+          { "t": "Tissue", "d": "Growing bone and growth plates — poor mineralisation" },
+          { "t": "Movement", "d": "Softened bones bow; gait and alignment change" },
+          { "t": "Management", "d": "Vitamin D and calcium; address deficiency cause" }
+        ],
+        "vo": "Case B: a child with bowed legs and low vitamin D suggests rickets. Growing bones mineralise poorly, soften, and bow under weight, changing gait. Management restores vitamin D and calcium."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Practice rule",
+        "heading": "Name · tissue · movement · management",
+        "body": "If you only name the disorder, upgrade your answer before you move on.",
+        "vo": "If you only name the disorder, upgrade the answer before moving on. Aim for name, tissue, movement effect, and management every time."
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "slug": "hinge-question",
+    "title": "MSK Disorders: Hinge Question",
+    "series": "BTEC L3 Applied Science · Unit 8 · A.P2",
+    "slides": [
+      {
+        "layout": "title",
+        "eyebrow": "Hinge question · Feedback",
+        "heading": "Prove the discriminating fact",
+        "sub": "One clue that forces the correct disorder",
+        "bullets": ["Spot the hinge clue", "Eliminate by tissue", "State why B must be right"],
+        "vo": "Finish with a hinge question. The aim is to spot the single fact that forces the correct disorder and rules the others out."
+      },
+      {
+        "layout": "answer",
+        "eyebrow": "Correct answer",
+        "heading": "Answer B — Rickets",
+        "body": "Defective mineralisation of growing bones and growth plates, often from vitamin D deficiency. Softened bones bow under body weight.",
+        "vo": "The correct answer is rickets. The discriminating clue is growing bones with poor mineralisation, so softened bone can bow under body weight."
+      },
+      {
+        "layout": "distractors",
+        "eyebrow": "Why the others fail",
+        "heading": "Eliminate with tissue logic",
+        "items": [
+          { "t": "A · Osteoporosis", "d": "Density falls as resorption outpaces formation — not a growth-plate mineralisation problem." },
+          { "t": "C · Osteomyelitis", "d": "Bacterial bone infection with inflammation — no infection signs in the stem." },
+          { "t": "D · Muscular dystrophy", "d": "Affects skeletal muscle fibres, not bone mineralisation." }
+        ],
+        "vo": "Osteoporosis is about adult density balance, not growth-plate mineralisation. Osteomyelitis needs infection signs. Muscular dystrophy targets muscle fibres, not bone. Only rickets fits growing bones that soften and bow."
+      },
+      {
+        "layout": "key_idea",
+        "eyebrow": "Exit ticket",
+        "heading": "What single fact forced answer B?",
+        "body": "Write one sentence from your information sheet that made rickets unavoidable.",
+        "vo": "Exit ticket: write one sentence from your sheet that made rickets unavoidable. If you can state that discriminating fact, you are ready for independent evidence."
+      }
+    ]
+  }
+]

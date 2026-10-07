@@ -56,6 +56,7 @@ import {
   BTEC_APPLIED_SCIENCE_RESOURCES,
   BTEC_APPLIED_SCIENCE_TOPICS,
 } from "./btecAppliedScienceResources";
+import { BTEC_APPLIED_SCIENCE_VIDEOS } from "./btecAppliedScienceVideos";
 import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
@@ -188,6 +189,7 @@ const STATIC_RESOURCE_ITEMS = [
   ...PEARSON_BTEC_RESOURCES,
   ...PEARSON_BTEC_HSC_RESOURCES,
   ...BTEC_APPLIED_SCIENCE_RESOURCES,
+  ...BTEC_APPLIED_SCIENCE_VIDEOS,
   ...ELEVEN_PLUS_RESOURCES,
 ];
 
@@ -247,7 +249,18 @@ function directVideoSrc(url, fileType) {
 function ResourceVideoPlayer({ title, src, direct = false }) {
   return (
     <div style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)", padding: 16 }}>
-      <h3 style={{ margin: "0 0 12px", fontSize: 18, color: "#0f172a", lineHeight: 1.35 }}>{title}</h3>
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 12 }}>
+        <h3 style={{ margin: 0, fontSize: 18, color: "#0f172a", lineHeight: 1.35 }}>{title}</h3>
+        {direct ? (
+          <a
+            href={src}
+            download
+            style={{ flexShrink: 0, fontSize: 13, fontWeight: 700, color: TEAL_DARK, textDecoration: "none", padding: "6px 10px", borderRadius: 8, background: "#f0fdfa", border: "1px solid #99f6e4" }}
+          >
+            Download
+          </a>
+        ) : null}
+      </div>
       <div className="resource-video-embed" style={{ position: "relative", overflow: "hidden", aspectRatio: "1920 / 1080", borderRadius: 10, background: "#000" }}>
         {direct ? (
           <video
