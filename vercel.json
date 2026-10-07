@@ -45,6 +45,14 @@
       ]
     },
     {
+      "source": "/resources/btec/applied-science/videos/(.*).mp4",
+      "headers": [
+        { "key": "Content-Type", "value": "video/mp4" },
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
+        { "key": "Accept-Ranges", "value": "bytes" }
+      ]
+    },
+    {
       "source": "/homepage-promo-poster.jpg",
       "headers": [
         { "key": "Content-Type", "value": "image/jpeg" },
