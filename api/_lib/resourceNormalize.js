@@ -120,11 +120,11 @@ function isOriginalJdScienceFile(resource) {
 
 export function isHostedOfficialExamCopy(resource) {
   if (!resource || hasAwardingBodyUrl(resource) || isOriginalJdScienceFile(resource)) return false;
+  if (resource.storage_path) return false;
   if (looksLikeOfficialPaper(resource)) return true;
   if (!isExamMaterialCategory(resource)) return false;
   const file = decodeResourceLabel(resource.file_name || resource.title || "");
   const url = resource.file_url || "";
-  if (resource.storage_path) return true;
   if (url.startsWith("/resources/") && /\.pdf$/i.test(file || url)) return true;
   if (!url && !resource.file_url_override && /\.pdf$/i.test(file)) return true;
   return false;
