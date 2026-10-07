@@ -18,6 +18,14 @@ export const TUTOR_PRIVATE_SIGNED_TTL_SECONDS = 3600;
 export const PROFILE_PHOTO_SIGNED_TTL_SECONDS = 60 * 60 * 24 * 7;
 export const TUTOR_PHOTO_API_PATH = '/api/tutor-photo';
 export const LOCAL_AVATAR_FALLBACK = '/avatar-fallback.svg';
+/** Founder slug — public profile photo is withheld on purpose. */
+export const FOUNDER_SLUG = 'joseph-danso';
+
+export function isFounderTutorSlug(slug) {
+  const value = String(slug || '').trim().toLowerCase();
+  if (!value) return false;
+  return value === FOUNDER_SLUG || value.startsWith(`${FOUNDER_SLUG}-`);
+}
 
 export const PUBLIC_TUTOR_SELECT = [
   'id',
@@ -366,7 +374,10 @@ export async function attachTutorAssetUrls(supabase, row, includePrivate = false
   const photoPath = normalizeTutorStoragePath(row.profile_photo_path);
   next.profile_photo_path = photoPath;
 
-  if (isPublishedTutorRow(row) && photoPath) {
+  // Keep Joseph's photo available to admin (includePrivate) but never on public cards.
+  if (!includePrivate && isFounderTutorSlug(row.public_slug)) {
+    next.profile_photo_url = null;
+  } else if (isPublishedTutorRow(row) && photoPath) {
     next.profile_photo_url = buildTutorPhotoApiUrl(row.public_slug, photoPath);
   } else {
     next.profile_photo_url = await signTutorAsset(
@@ -395,11 +406,12 @@ export async function attachTutorAssetUrlsToMany(supabase, rows, includePrivate 
 
 export function toPublicTutor(row) {
   if (!row) return row;
+  const hidePhoto = isFounderTutorSlug(row.public_slug);
   return {
     id: row.id,
     public_slug: row.public_slug,
     tutor_name: row.tutor_name,
-    profile_photo_url: row.profile_photo_url || null,
+    profile_photo_url: hidePhoto ? null : (row.profile_photo_url || null),
     subjects_taught: row.subjects_taught || [],
     levels_taught: row.levels_taught || [],
     exam_boards_taught: row.exam_boards_taught || '',
