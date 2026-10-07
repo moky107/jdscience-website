@@ -103,5 +103,12 @@ assert.match(fs.readFileSync(path.join(root, "public", "resource-gate.js"), "utf
 
 const apiFiles = fs.readdirSync(path.join(root, "api")).filter((name) => name.endsWith(".js"));
 assert.equal(apiFiles.length, 12, "Vercel Hobby must keep exactly 12 top-level API functions");
+assert.ok(apiFiles.includes("admin-analytics.js"), "dedicated /api/admin-analytics function must exist");
+assert.ok(!apiFiles.includes("update-tutor-profile-status.js"), "status updates must share update-tutor-profile to stay within Hobby limit");
+
+const vercelConfig = JSON.parse(fs.readFileSync(path.join(root, "vercel.json"), "utf8"));
+const rewriteSources = (vercelConfig.rewrites || []).map((rule) => rule.source);
+assert.ok(rewriteSources.includes("/api/update-tutor-profile-status"), "status path must rewrite into update-tutor-profile");
+assert.ok(!rewriteSources.includes("/api/admin-analytics"), "admin-analytics must be a dedicated function, not a rewrite");
 
 console.log("terms.test.mjs: ok");

@@ -80,6 +80,7 @@ export default async function handler(req, res) {
 
   try {
     if (wantsAdminAnalyticsRequest(req, body)) {
+      body.scope = 'analytics';
       return handleAdminAnalyticsRequest(req, res, body);
     }
 

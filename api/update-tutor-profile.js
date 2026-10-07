@@ -1,10 +1,19 @@
 import { createClient } from '@supabase/supabase-js';
 import {
+  TUTOR_ALLOWED_STATUSES,
   attachTutorAssetUrls,
   normalizeTutorProfileFields,
   parseBoolean,
   parseRequestBody,
+  safeTrim,
 } from './_lib/tutors.js';
+
+/**
+ * Admin tutor profile updates.
+ * Also serves /api/update-tutor-profile-status via vercel.json rewrite
+ * (?action=status) so the project stays within the Vercel Hobby 12-function limit
+ * while keeping a dedicated /api/admin-analytics function.
+ */
 
 function safeEqual(a, b) {
   const sa = String(a || '');
@@ -13,6 +22,48 @@ function safeEqual(a, b) {
   let diff = 0;
   for (let i = 0; i < sa.length; i++) diff |= sa.charCodeAt(i) ^ sb.charCodeAt(i);
   return diff === 0;
+}
+
+function wantsStatusUpdate(req, body = {}) {
+  const action = String(req.query?.action || body.action || '');
+  const url = String(req.url || '');
+  const original = String(req.headers?.['x-forwarded-uri'] || req.headers?.['x-invoke-path'] || '');
+  return action === 'status'
+    || url.includes('/api/update-tutor-profile-status')
+    || url.includes('action=status')
+    || original.includes('/api/update-tutor-profile-status')
+    || original.includes('action=status');
+}
+
+async function handleStatusUpdate(req, res, body, supabase) {
+  const id = body.id;
+  const profile_status = safeTrim(body.profile_status, 40).toLowerCase();
+  const admin_note = safeTrim(body.admin_note, 2000) || null;
+  const is_published = parseBoolean(body.is_published);
+
+  if (!id) return res.status(400).json({ error: 'Missing tutor application id.' });
+  if (!TUTOR_ALLOWED_STATUSES.has(profile_status)) {
+    return res.status(400).json({ error: 'Invalid status. Allowed: pending, approved, rejected, suspended.' });
+  }
+
+  try {
+    const nextPublished = profile_status === 'approved' ? true : is_published && profile_status === 'approved';
+    const { data, error } = await supabase
+      .from('tutor_profiles')
+      .update({ profile_status, admin_note, is_published: nextPublished })
+      .eq('id', id)
+      .select('*')
+      .single();
+
+    if (error) {
+      return res.status(500).json({ error: error.message || 'Failed to update tutor profile status' });
+    }
+
+    const application = await attachTutorAssetUrls(supabase, data, true);
+    return res.status(200).json({ ok: true, application });
+  } catch (err) {
+    return res.status(500).json({ error: err?.message || 'Failed to update tutor profile status' });
+  }
 }
 
 export default async function handler(req, res) {
@@ -32,6 +83,18 @@ export default async function handler(req, res) {
     return res.status(401).json({ error: 'Incorrect password.' });
   }
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceRoleKey) {
+    return res.status(500).json({ error: 'Server not configured for database access.' });
+  }
+
+  const supabase = createClient(supabaseUrl, serviceRoleKey);
+
+  if (wantsStatusUpdate(req, body)) {
+    return handleStatusUpdate(req, res, body, supabase);
+  }
+
   const id = body.id;
   if (!id) return res.status(400).json({ error: 'Missing tutor application id.' });
 
@@ -47,14 +110,7 @@ export default async function handler(req, res) {
     update.is_published = true;
   }
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!supabaseUrl || !serviceRoleKey) {
-    return res.status(500).json({ error: 'Server not configured for database access.' });
-  }
-
   try {
-    const supabase = createClient(supabaseUrl, serviceRoleKey);
     const { data, error } = await supabase
       .from('tutor_profiles')
       .update(update)

@@ -68,7 +68,6 @@
   "rewrites": [
     { "source": "/api/analytics-event", "destination": "/api/education-posts?kind=analytics-event" },
     { "source": "/api/password-recovery", "destination": "/api/education-posts?kind=password-recovery" },
-    { "source": "/api/admin-analytics", "destination": "/api/admin-education-posts?scope=analytics" },
     { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },
     { "source": "/api/tutor-photo", "destination": "/api/tutor-profiles?asset=photo" },
     { "source": "/api/shop-products", "destination": "/api/education-posts?kind=shop-products" },
@@ -78,6 +77,7 @@
     { "source": "/api/admin-shop-products", "destination": "/api/admin-education-posts?scope=shop" },
     { "source": "/api/admin-shop-orders", "destination": "/api/admin-education-posts?scope=shop-orders" },
     { "source": "/api/admin-resource-upload", "destination": "/api/admin-education-posts?scope=resource-upload" },
+    { "source": "/api/update-tutor-profile-status", "destination": "/api/update-tutor-profile?action=status" },
     { "source": "/admin", "destination": "/" },
     { "source": "/admin/", "destination": "/" },
     { "source": "/admin/analytics", "destination": "/" },
