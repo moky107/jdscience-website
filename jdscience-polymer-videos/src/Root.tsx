@@ -4,11 +4,12 @@ import { getAudioDurationInSeconds } from "@remotion/media-utils";
 import { resolveAudioFile } from "./audioMap";
 import { LESSONS, Lesson } from "./lessons";
 import { PolymerLesson, PolymerLessonProps } from "./PolymerLesson";
+import { timingForLessonId } from "./timing";
 import { FPS, HEIGHT, WIDTH } from "./theme";
 
 const DEFAULT_SECONDS = 60;
 
-function sceneStartsFor(lesson: Lesson, totalFrames: number): number[] {
+function sceneStartsFromWeights(lesson: Lesson, totalFrames: number): number[] {
   const weights = lesson.scenes.map((s) => s.weight);
   const sum = weights.reduce((a, b) => a + b, 0) || 1;
   const starts: number[] = [];
@@ -20,12 +21,19 @@ function sceneStartsFor(lesson: Lesson, totalFrames: number): number[] {
   return starts;
 }
 
+function sceneStartsFromTiming(startsSec: number[], fps: number): number[] {
+  return startsSec.map((s) => Math.round(s * fps));
+}
+
 const makeMetadata =
   (lesson: Lesson): CalculateMetadataFunction<PolymerLessonProps> =>
   async ({ props }) => {
-    const audioFile = props.audioFile ?? resolveAudioFile(lesson);
-    let seconds = DEFAULT_SECONDS;
-    if (audioFile) {
+    const timing = timingForLessonId(lesson.id);
+    const audioFile =
+      props.audioFile ?? timing?.file ?? resolveAudioFile(lesson);
+
+    let seconds = timing?.durationSec ?? DEFAULT_SECONDS;
+    if (!timing && audioFile) {
       const candidates = [
         `audio/${audioFile}`,
         `public/audio/${audioFile}`,
@@ -40,9 +48,17 @@ const makeMetadata =
         }
       }
     }
-    // Small pad so the last word is not clipped
-    const durationInFrames = Math.max(FPS * 5, Math.ceil((seconds + 0.35) * FPS));
-    const sceneStarts = sceneStartsFor(lesson, durationInFrames);
+
+    const durationInFrames = Math.max(
+      FPS * 5,
+      Math.ceil((seconds + 0.35) * FPS),
+    );
+
+    const sceneStarts =
+      timing && timing.sceneStartsSec.length === lesson.scenes.length
+        ? sceneStartsFromTiming(timing.sceneStartsSec, FPS)
+        : sceneStartsFromWeights(lesson, durationInFrames);
+
     return {
       durationInFrames,
       props: {
@@ -57,23 +73,35 @@ const makeMetadata =
 export const RemotionRoot: React.FC = () => {
   return (
     <>
-      {LESSONS.map((lesson) => (
-        <Composition
-          key={lesson.compositionId}
-          id={lesson.compositionId}
-          component={PolymerLesson}
-          durationInFrames={FPS * DEFAULT_SECONDS}
-          fps={FPS}
-          width={WIDTH}
-          height={HEIGHT}
-          defaultProps={{
-            lesson,
-            audioFile: resolveAudioFile(lesson),
-            sceneStarts: sceneStartsFor(lesson, FPS * DEFAULT_SECONDS),
-          }}
-          calculateMetadata={makeMetadata(lesson)}
-        />
-      ))}
+      {LESSONS.map((lesson) => {
+        const timing = timingForLessonId(lesson.id);
+        const audioFile = timing?.file ?? resolveAudioFile(lesson);
+        const durationInFrames = Math.ceil(
+          ((timing?.durationSec ?? DEFAULT_SECONDS) + 0.35) * FPS,
+        );
+        const sceneStarts =
+          timing && timing.sceneStartsSec.length === lesson.scenes.length
+            ? sceneStartsFromTiming(timing.sceneStartsSec, FPS)
+            : sceneStartsFromWeights(lesson, durationInFrames);
+
+        return (
+          <Composition
+            key={lesson.compositionId}
+            id={lesson.compositionId}
+            component={PolymerLesson}
+            durationInFrames={durationInFrames}
+            fps={FPS}
+            width={WIDTH}
+            height={HEIGHT}
+            defaultProps={{
+              lesson,
+              audioFile,
+              sceneStarts,
+            }}
+            calculateMetadata={makeMetadata(lesson)}
+          />
+        );
+      })}
     </>
   );
 };
