@@ -25,9 +25,11 @@ __pycache__/
 
 .tmp-booking-form-it/
 
-# Empirical-formulae video working files (keep the finished mp4, pptx, timing map)
-content/videos/empirical-formula/frames/
-content/videos/empirical-formula/source/*.wav
-content/videos/empirical-formula/source/reference.mp4
-content/videos/empirical-formula/build/
-content/videos/empirical-formula/qa/
+# Video production working files (keep finished mp4, pptx, timing map, master mp3)
+content/videos/_inbox/*
+!content/videos/_inbox/README.md
+content/videos/*/frames/
+content/videos/*/source/*.wav
+content/videos/*/source/reference.mp4
+content/videos/*/build/
+content/videos/*/qa/
