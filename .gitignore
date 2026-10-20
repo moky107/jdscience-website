@@ -24,3 +24,10 @@ package-lock.json
 __pycache__/
 
 .tmp-booking-form-it/
+
+# Empirical-formulae video working files (keep the finished mp4, pptx, timing map)
+content/videos/empirical-formula/frames/
+content/videos/empirical-formula/source/*.wav
+content/videos/empirical-formula/source/reference.mp4
+content/videos/empirical-formula/build/
+content/videos/empirical-formula/qa/

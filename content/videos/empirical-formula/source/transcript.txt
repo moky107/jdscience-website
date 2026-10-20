@@ -1,0 +1,83 @@
+[0.00-3.52] In today's video, we want to look at empirical formulae.
+[4.48-10.40] It builds on what we learned in our previous lesson about relative atomic mass and relative formula mass.
+[10.86-20.26] Today, we will explain what an empirical formula is, how it is calculated and work through examples using both masses and percentage composition.
+[20.26-26.54] You will also have the opportunity to try some questions yourself before we go through the answers together.
+[27.14-27.58] Let's begin.
+[28.48-30.32] What is an empirical formula?
+[30.94-36.84] An empirical formula shows the simplest whole number ratio of atoms of each element in a compound.
+[37.46-42.88] For example, glucose has the molecular formula C6H12O6.
+[42.18-42.90] C6H12O6.
+[43.32-49.60] This means that one molecule contains six carbon atoms, twelve hydrogen atoms, and six atoms.
+[50.64-56.68] If we divide all these numbers by six we obtain a ratio of one to two to one.
+[57.08-61.50] Therefore the empirical formula of glucose is CH2O.
+[62.04-70.36] Notice that an empirical formula shows the simplest ratio of atoms, rather than necessarily showing the actual number of atoms in a molecule.
+[71.04-73.24] How do we calculate an empirical formula?
+[73.74-73.90] There.
+[73.98-75.14] are four steps involved.
+[75.84-78.52] First, write down the mass of each element.
+[79.02-84.46] Second, divide each mass by its relative atomic mass to calculate the number of moles.
+[85.14-88.80] Third, divide all the mole values by the smallest value.
+[89.26-93.74] Finally, use the simplest whole number ratio to write the empirical formula.
+[94.22-96.22] Let's apply these steps to an example.
+[96.94-97.46] Example 1.
+[98.02-100.44] Calculating empirical formula from masses.
+[100.90-106.38] A compound contains 2 .4 grams of magnesium and 1 .6 grams of oxygen.
+[106.84-108.62] Calculate its empirical formula.
+[109.12-114.32] The relative atomic masses are magnesium 24 and oxygen 16.
+[114.82-118.84] First, divide the mass of magnesium by its relative atomic mass.
+[119.24-136.12] 2 .4 divided by 24 gives 0 MgO.
+[136.44-137.32] MgO.
+[137.84-138.80] MgO.
+[142.38-144.90] empirical formula is MgO.
+[145.64-146.48] Practice question 1.
+[147.06-148.06] Now it's your turn.
+[148.54-153.62] A compound contains 4 .6 grams of sodium and 1 .6 grams of oxygen.
+[154.02-159.08] The relative atomic masses are sodium 23 and oxygen 16.
+[159.64-161.42] Calculate its empirical formula.
+[161.96-166.94] Pause the video Let's check your answer.
+[167.44-171.12] First, divide the mass of sodium by its relative atomic mass.
+[171.50-176.16] 4 .6 divided by 23 gives 0 .2 moles.
+[176.56-182.30] For oxygen, 1 .6 divided by 16 gives 0 .1 moles.
+[182.78-187.06] Next, divide both values by the smallest which is 0 .1.
+[187.44-192.06] For sodium, 0 .2 divided by 0 .1 gives 2.
+[192.40-197.14] For oxygen, 0 .1 divided by 0 .1 gives 1.
+[197.64-202.12] Therefore, the simplest ratio of sodium to oxygen is 2 to 1.
+[202.12-202.36] 1.
+[202.56-205.40] The empirical formula is Na2O.
+[205.92-207.36] Well done if you got that correct.
+[208.40-209.08] Example 2.
+[209.68-212.22] Calculating empirical formula from percentages.
+[212.98-218.70] Sometimes examination questions give us the percentage composition of a compound rather than the masses.
+[219.24-224.72] The method is almost the same except that we first assume a total mass of 100g.
+[225.32-226.60] Let's consider an example.
+[227.18-234.20] A compound contains 40 % carbon, 6 .7 % hydrogen and 53 .3 % oxygen.
+[234.70-236.58] Calculate its empirical formula.
+[237.02-242.84] The relative atomic masses are carbon 12, hydrogen 1 and oxygen 16.
+[243.34-246.52] First, assume we have 100 grams of the compound.
+[246.94-253.84] This gives us 40 grams of carbon, 6 .7 grams of hydrogen and 53 .3 grams of oxygen.
+[254.26-257.66] Now, divide each mass by its relative atomic mass.
+[258.16-263.58] For carbon, 40 divided by 12 gives approximately 3 .33 moles.
+[264.04-268.78] For hydrogen 6 .7 divided by 1 gives 6 .7 moles.
+[269.16-275.58] For oxygen 53 .3 divided by 16 gives approximately 3 .33 moles.
+[276.08-280.96] Next divide all three values by the smallest approximately 3 .33.
+[281.48-285.36] This gives us a ratio of approximately 1 to 2 to 1.
+[285.68-289.18] Therefore, the empirical formula is CH2O.
+[289.68-295.64] Remember, when percentages are given, assume 100g first, then follow the same steps.
+[296.30-297.46] Practice question 2.
+[297.88-300.06] Now, let's try our final question.
+[300.52-308.50] A compound contains 52 .2 % carbon, 13 .0 % hydrogen and 34 .8 % oxygen.
+[308.90-314.72] The relative atomic masses are carbon -12, hydrogen -1 and oxygen -16.
+[315.32-317.14] Calculate its empirical formula.
+[317.74-319.70] Pause the video and work through the calculation.
+[320.40-321.38] Let's check your answer.
+[322.08-325.04] First, assume we have 100g of the compound.
+[325.56-332.70] This gives us 52 .2g of carbon, 13g of hydrogen and 34 .8g of oxygen.
+[333.14-336.56] Next, divide each mass by its relative atomic mass.
+[337.00-342.32] For carbon, 52 .2 divided by 12 gives 4 .35 moles.
+[342.70-347.06] For hydrogen, 13 divided by 1 gives 13 moles.
+[347.72-354.14] For oxygen, 34 .8 divided by 16 gives 2 .175 moles.
+[354.82-359.60] Now, divide all 3 values by the smallest, which is 2 .175.
+[360.66-365.88] For carbon, For hydrogen, we obtain approximately 6.
+[366.52-368.56] For oxygen, we obtain 1.
+[369.38-373.92] Therefore, the simplest whole number ratio is 2 to 6 to 1.
+[374.50-378.02] The empirical formula is C2H6O.
