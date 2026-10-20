@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
 import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
+import { GCSE_CHEMISTRY_VIDEOS } from "../../src/gcseChemistryVideos.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
 import { papersHref } from "../../src/papersQuery.js";
@@ -18,7 +19,7 @@ const EXTRA_HOSTED_RESOURCES = [
   ...HOSTED_REVISION_NOTES,
   ...ELEVEN_PLUS_RESOURCES,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
-  { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Videos", title: "Topic 1 Key Concepts In Chemistry", embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e" },
+  ...GCSE_CHEMISTRY_VIDEOS,
 ];
 
 function slugify(value) {
@@ -62,6 +63,44 @@ function topicFromHosted(item) {
     .replace(/\s+notes$/i, "")
     .trim();
   return { slug: item.topicSlug || slugify(title), title };
+}
+
+function isDirectVideoHref(href) {
+  return /\.mp4(?:$|[?#])/i.test(String(href || ""));
+}
+
+function videoPlayerHtml(items, topicTitle) {
+  const videos = items.filter((item) => isDirectVideoHref(item.href));
+  if (!videos.length) return "";
+  return `
+            <style>
+              .lesson-video { margin: 0 0 24px; background: #0f172a; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 16px rgba(15,23,42,.05); }
+              .lesson-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+              .lesson-video figcaption { background: #fff; padding: 10px 14px; }
+              .lesson-video figcaption .download { margin: 0; }
+            </style>
+            ${videos.map((item) => `<figure class="lesson-video">
+              <video controls playsinline preload="metadata" title="${escapeHtml(item.label || topicTitle)}">
+                <source src="${escapeHtml(item.href)}" type="video/mp4" />
+              </video>
+              <figcaption><a class="download" href="${escapeHtml(item.href)}" download>Download ${escapeHtml(item.label || topicTitle)} (MP4)</a></figcaption>
+            </figure>`).join("")}`;
+}
+
+function publishHostedVideoFiles() {
+  let copied = 0;
+  for (const item of GCSE_CHEMISTRY_VIDEOS) {
+    if (!item.source_path || !item.file_url_override) continue;
+    const src = path.join(root, item.source_path);
+    const dest = path.join(publicDir, item.file_url_override.replace(/^\//, ""));
+    if (!fs.existsSync(src)) {
+      throw new Error(`Missing GCSE Chemistry video source: ${item.source_path}`);
+    }
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    fs.copyFileSync(src, dest);
+    copied += 1;
+  }
+  return copied;
 }
 
 function writePage(relPath, html) {
@@ -322,7 +361,8 @@ function writeResourcePages(subjects) {
       for (const topic of topicList) {
         const topicPath = `${categoryPath}${topic.slug}/`;
         const title = `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category} | JD Science`;
-        const noteLinks = topic.items.filter((item) => item.href && item.href !== topicPath);
+        const noteLinks = topic.items.filter((item) => item.href && item.href !== topicPath && !isDirectVideoHref(item.href));
+        const videoHtml = videoPlayerHtml(topic.items, topic.title);
         const downloadLink = topic.downloadHref
           ? `<p><a class="download" href="${escapeHtml(topic.downloadHref)}">${escapeHtml(topic.downloadLabel || "Download slides")}</a></p>`
           : "";
@@ -350,9 +390,18 @@ function writeResourcePages(subjects) {
             isAccessibleForFree: true,
             provider: { "@type": "EducationalOrganization", name: "JD Science", url: SITE_ORIGIN },
             author: { "@id": `${SITE_ORIGIN}/tutors/joseph-danso/#person` },
+            ...(topic.items.some((item) => isDirectVideoHref(item.href))
+              ? {
+                encoding: topic.items.filter((item) => isDirectVideoHref(item.href)).map((item) => ({
+                  "@type": "MediaObject",
+                  contentUrl: `${SITE_ORIGIN}${item.href}`,
+                  encodingFormat: "video/mp4",
+                })),
+              }
+              : {}),
           },
           bodyHtml: `
-            ${topic.notesHtml || `<p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}.</p>`}
+            ${topic.notesHtml || `<p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}.</p>`}${videoHtml}
             ${downloadLink}
             ${noteLinks.length ? `<h2>Open these resources</h2><ul>${noteLinks.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}</ul>` : ""}
             <p>${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
@@ -535,9 +584,10 @@ function writeElevenPlusPages() {
 writeAboutPage();
 writeJosephPage();
 writeTermsPage(publicDir);
+const hostedVideosCopied = publishHostedVideoFiles();
 const subjects = collectTopics();
 const topicCount = writeResourcePages(subjects);
 writeFeaturedLandingPages();
 writeMissingFeaturedHubs(subjects);
 writeElevenPlusPages();
-console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages, ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings and 11+ PDF library pages.`);
+console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages, ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings and 11+ PDF library pages. Copied ${hostedVideosCopied} GCSE Chemistry lesson videos.`);

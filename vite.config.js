@@ -24,6 +24,25 @@ function servePublicHtml(url, relativeFile) {
   };
 }
 
+function servePublicDirectoryIndex() {
+  const publicDir = path.resolve("public");
+  return {
+    name: "serve-public-directory-index",
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const pathName = decodeURIComponent((req.url || "").split("?")[0]);
+        if (!pathName.startsWith("/resources/") && !pathName.startsWith("/worksheets/")) return next();
+        if (path.extname(pathName)) return next();
+        const relative = `${pathName.replace(/\/+$/, "")}/index.html`;
+        const file = path.resolve(publicDir, `.${relative}`);
+        if (!file.startsWith(publicDir + path.sep) || !fs.existsSync(file)) return next();
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.end(fs.readFileSync(file));
+      });
+    },
+  };
+}
+
 const localEvents = [];
 
 function readJsonBody(req) {
@@ -198,6 +217,7 @@ function localAnalyticsApi() {
 
 export default defineConfig({
   plugins: [
+    servePublicDirectoryIndex(),
     servePublicHtml("/terms", "public/terms/index.html"),
     servePublicHtml("/about", "public/about/index.html"),
     localAnalyticsApi(),

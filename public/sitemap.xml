@@ -1087,14 +1087,44 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/atom-economy/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/calculating-moles/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/concentration/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/empirical-formulae/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/key-concepts-in-chemistry/</loc>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jdscience.co.uk/resources/gcse/chemistry/videos/percentage-by-mass/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
