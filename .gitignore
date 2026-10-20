@@ -33,3 +33,4 @@ content/videos/*/source/*.wav
 content/videos/*/source/reference.mp4
 content/videos/*/build/
 content/videos/*/qa/
+content/videos/studio/out/

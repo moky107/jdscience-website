@@ -5,7 +5,7 @@ Editable 1080p30 rebuilds. The **original ElevenLabs narration is the master clo
 | Lesson | Status |
 | --- | --- |
 | [Calculating Empirical Formulae](empirical-formula/) | Built — see PR deliverables |
-| Calculating Moles | Waiting on source MP3 (chat blocks `.mp3` / `.mp4`) |
+| Calculating Moles | 60 s sample in `moles/` — original MP3 still not in this workspace |
 | Calculating Concentration | Waiting on source |
 | Percentage by Mass | Waiting on source |
 | Atom Economy | Waiting on source |

@@ -1,0 +1,176 @@
+{
+  "topic": "moles",
+  "title": "Calculating Moles",
+  "audio": null,
+  "duration": 60.0,
+  "slides": [
+    {
+      "t": 0.0,
+      "id": "intro",
+      "cue": "in today's video",
+      "note": "Professional introduction"
+    },
+    {
+      "t": 12.2,
+      "id": "concept",
+      "cue": "a mole is the amount",
+      "note": "Particles, amount, mass"
+    },
+    {
+      "t": 36.4,
+      "id": "formula",
+      "cue": "number of moles equals",
+      "note": "n = m / Mr and Mg working"
+    }
+  ],
+  "reveals": [
+    {
+      "t": 0.0,
+      "slide": "intro",
+      "item": "title"
+    },
+    {
+      "t": 5.2,
+      "slide": "intro",
+      "item": "agenda"
+    },
+    {
+      "t": 10.4,
+      "slide": "intro",
+      "item": "begin"
+    },
+    {
+      "t": 12.2,
+      "slide": "concept",
+      "item": "def"
+    },
+    {
+      "t": 16.4,
+      "slide": "concept",
+      "item": "avogadro"
+    },
+    {
+      "t": 20.4,
+      "slide": "concept",
+      "item": "name"
+    },
+    {
+      "t": 24.8,
+      "slide": "concept",
+      "item": "mass_link"
+    },
+    {
+      "t": 32.4,
+      "slide": "concept",
+      "item": "molar"
+    },
+    {
+      "t": 36.4,
+      "slide": "formula",
+      "item": "n"
+    },
+    {
+      "t": 38.4,
+      "slide": "formula",
+      "item": "m"
+    },
+    {
+      "t": 40.4,
+      "slide": "formula",
+      "item": "mr"
+    },
+    {
+      "t": 42.4,
+      "slide": "formula",
+      "item": "mg"
+    },
+    {
+      "t": 44.2,
+      "slide": "formula",
+      "item": "ar"
+    },
+    {
+      "t": 46.4,
+      "slide": "formula",
+      "item": "twelve"
+    },
+    {
+      "t": 48.6,
+      "slide": "formula",
+      "item": "twenty_four"
+    },
+    {
+      "t": 51.4,
+      "slide": "formula",
+      "item": "half"
+    },
+    {
+      "t": 54.2,
+      "slide": "formula",
+      "item": "answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.0,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 16.4,
+      "target": "avogadro",
+      "cue": "6.02"
+    },
+    {
+      "t": 20.4,
+      "target": "avogadro",
+      "cue": "avogadro"
+    },
+    {
+      "t": 24.8,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 36.4,
+      "target": "n",
+      "cue": "number of moles"
+    },
+    {
+      "t": 38.4,
+      "target": "m",
+      "cue": "mass divided"
+    },
+    {
+      "t": 40.4,
+      "target": "mr",
+      "cue": "molar mass"
+    },
+    {
+      "t": 42.4,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 46.4,
+      "target": "twelve",
+      "cue": "twelve"
+    },
+    {
+      "t": 48.6,
+      "target": "twenty_four",
+      "cue": "twenty-four"
+    },
+    {
+      "t": 51.4,
+      "target": "half",
+      "cue": "zero point five"
+    },
+    {
+      "t": 56.0,
+      "target": null,
+      "cue": null
+    }
+  ],
+  "notes": "Cue-map timings. When the original ElevenLabs MP3 is present, transcribe.py replaces these with word-level timestamps."
+}
