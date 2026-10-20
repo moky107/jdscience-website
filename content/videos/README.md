@@ -2,23 +2,13 @@
 
 Editable 1080p30 rebuilds. The **original ElevenLabs narration is the master clock**.
 
-| Lesson | Status |
-| --- | --- |
-| [Calculating Empirical Formulae](empirical-formula/) | Built — see PR deliverables |
-| Calculating Moles | 60 s sample in `moles/` — original MP3 still not in this workspace |
-| Calculating Concentration | Waiting on source |
-| Percentage by Mass | Waiting on source |
-| Atom Economy | Waiting on source |
+| Lesson | Deliverable | Duration |
+| --- | --- | --- |
+| [Calculating Empirical Formulae](empirical-formula/) | `jdscience-empirical-formulae-1080p.mp4` | 6:20 |
+| [Calculating Moles](moles/) | `jdscience-moles-1080p.mp4` (+ 60 s sample) | 4:59 |
+| [Calculating Concentration](concentration/) | `jdscience-concentration-1080p.mp4` | 4:29 |
+| [Percentage by Mass](percentage-by-mass/) | `jdscience-percentage-by-mass-1080p.mp4` | 4:27 |
+| [Atom Economy](atom-economy/) | `jdscience-atom-economy-1080p.mp4` | 5:07 |
 
-## Send source files
-
-Cursor chat rejects raw MP3 and MP4. Use the drop path in [`_inbox/README.md`](_inbox/README.md):
-
-1. Zip the files and attach the zip in chat, or
-2. Paste a public WeTransfer / Dropbox / Drive link, or
-3. `git push` onto `cursor/empirical-formula-video-641d` under `content/videos/<topic>/source/`
-
-```bash
-python3 scripts/jdscience_video/ingest.py --topic moles moles-source.zip
-python3 scripts/jdscience_video/ingest.py --topic moles 'https://…'
-```
+Source AAC lives in `content/videos/<topic>/source/narration_master.m4a`.
+Rebuild with `python3 scripts/jdscience_video/render.py --topic <slug> --video`.

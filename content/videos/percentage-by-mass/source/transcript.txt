@@ -1,0 +1,46 @@
+[0.00–6.54] Hello and welcome back to JD science. In today's video we want to look at percentage by mass.
+[7.28–12.88] This builds on what we learnt about relative atomic mass and relative formula mass. We
+[12.88–18.54] will explain what percentage by mass means, how it is calculated and work through an example.
+[19.32–23.40] You will also have an opportunity to try a question before we go through the answer
+[23.40–25.04] together. Let's begin.
+[26.14–27.92] What is percentage by mass?
+[28.64–33.94] Percentage by mass tells us what proportion of the total mass of a compound comes from a
+[33.94–39.90] particular element. For example, water contains hydrogen and oxygen. Although
+[39.90–45.44] water contains two hydrogen atoms and only one oxygen atom, oxygen contributes
+[45.44–54.56] most of the mass becauselandish by mass allows us to calculate exactly how much
+[54.56–57.58] of the total mass is contributed by each element.
+[58.60–63.50] How do we calculate percentage by mass? To calculate the percentage by mass of an
+[63.50–68.32] element in a compound, we use the following formula. Percentage by mass
+[68.32–73.64] equals the total relative atomic mass contribution of the element divided by
+[73.64–78.96] the relative formula mass of the compound multiplied by 100. In simpler
+[78.96–84.10] terms, we first calculate the relative formula mass of the whole compound. Next,
+[84.10–88.82] we calculate the mass contribution of the element we are interested in. We then
+[88.82–94.06] divide that contribution by the total relative formula mass and multiply by 100.
+[94.74–101.02] Let's apply this method to an example. Worked example 1. Water. Calculate the
+[101.02–106.86] percentage by mass of oxygen in water. The chemical formula of water is H2O.
+[107.40–113.90] The relative atomic masses are hydrogen 1 and oxygen 16. First, calculate the
+[113.90–120.92] relative formula mass of water. 2 multiplied by 1 plus 16 gives 18. Therefore
+[120.92–126.90] the relative formula mass of water is 18. Next, identify the mass contribution
+[126.90–133.14] of oxygen. There is one oxygen atom with a relative atomic mass of 16. Therefore
+[133.14–140.36] the contribution of oxygen is 16. Now divide 16 by 18 and multiply by 100.
+[140.82–146.20] This gives approximately 88.9 percent. Therefore oxygen makes up
+[146.20–152.70] approximately 88.9 percent of the mass of water. Worked example 2. Carbon
+[152.70–158.24] dioxide. Let's consider another example. Calculate the percentage by mass of
+[158.24–164.06] carbon in carbon dioxide. Carbon dioxide has the formula CO2. The
+[164.06–170.20] relative atomic masses are carbon 12 and oxygen 16. First, calculate the
+[170.20–178.00] relative formula mass. 12 plus 2 multiplied by 16 gives 44. Next, identify
+[178.00–184.20] the mass contribution of carbon. There is one carbon atom so its contribution is
+[184.20–192.64] 12. Divide 12 by 44 and multiply by 100. This gives approximately 27.3 percent.
+[193.06–198.70] Therefore carbon makes up approximately 27.3 percent of the mass of carbon
+[198.70–204.98] dioxide. Practice question. Now it's your turn. Calculate the percentage by mass of
+[204.98–212.30] calcium in calcium carbonate, CaCO3. The relative atomic masses are calcium 40,
+[212.88–219.78] carbon 12 and oxygen 16. Pause the video and try the question. Let's check your
+[219.78–225.56] answer. First, calculate the relative formula mass of calcium carbonate. 40
+[225.56–233.12] plus 12 plus 3 multiplied by 16 gives 100. Next, identify the mass contribution
+[233.12–236.54] of calcium. There is one calcium atom with a
+[236.54–243.28] a relative atomic mass of 40. Therefore divide 40 by 100 and multiply by 100.
+[243.62–249.18] This gives 40 percent. The and percentage by mass of calcium in calcium carbonate is
+[249.18–254.62] 40 percent. Well done if you got that correct. Closing. That brings us to the
+[254.62–259.94] end of today's lesson on percentage by mass. Remember the key is to calculate
+[259.94–264.86] the relative formula mass correctly and identify the total mass contribution of
+[264.86–266.42] the element you are interested in.

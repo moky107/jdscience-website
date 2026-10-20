@@ -26,10 +26,20 @@ AUDIO_DIRS = [
 
 
 def find_audio(topic: str) -> Path | None:
+    """Prefer the original AAC extracted from the voice-verified MP4."""
+    source = ROOT / "content/videos" / topic / "source"
+    preferred = [
+        source / "narration_master.m4a",
+        source / "narration_master.mp3",
+        ROOT / "content/videos/studio/audio" / f"{topic}.mp3",
+    ]
+    for path in preferred:
+        if path.is_file():
+            return path
     lesson = LESSONS[topic]
-    names = lesson["audio_names"] + ("narration_master.mp3",)
+    names = lesson["audio_names"] + ("narration_master.mp3", "narration_master.m4a")
     extra = [
-        ROOT / "content/videos" / topic / "source" / "narration_master.mp3",
+        source,
         ROOT / "content/videos/_inbox",
     ]
     search: list[Path] = []
@@ -41,15 +51,17 @@ def find_audio(topic: str) -> Path | None:
             continue
         for name in names:
             search.append(folder / name)
+        search.extend(sorted(folder.glob("*.m4a")))
         search.extend(sorted(folder.glob("*.mp3")))
         search.extend(sorted(folder.glob("*.bin")))
     seen: set[Path] = set()
+    needle = topic.replace("-", "")
     for path in search:
         if path in seen or not path.is_file():
             continue
         seen.add(path)
-        lowered = path.name.lower()
-        if topic.replace("-", "") in lowered.replace("-", "").replace("_", "") or path.name in names:
+        lowered = path.name.lower().replace("-", "").replace("_", "")
+        if needle in lowered or path.name in names:
             return path
         if topic == "moles" and "mole" in lowered:
             return path

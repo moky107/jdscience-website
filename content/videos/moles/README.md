@@ -1,22 +1,15 @@
-# Calculating Moles — 60 s sample
+# Calculating Moles — JDScience rebuild
 
-JDScience Video Studio rebuild. Pictures follow a cue-timed narration map (intro → mole concept → `n = m / Mr` with cursor 12 → 24 → 0.5 mol).
-
-The **original ElevenLabs MP3 is not in this workspace yet** (Cursor chat blocks `.mp3`). This sample uses a silent audio track so the cloned voice is not replaced. Drop `moles.mp3` into `content/videos/studio/audio/`, then:
-
-```bash
-python3 scripts/jdscience_video/transcribe.py --topic moles
-python3 scripts/jdscience_video/render.py --topic moles --sample
-```
-
-That re-times every cut, reveal and pointer from word-level Whisper timestamps and remuxes the original recording unchanged.
-
-## Files
+1920×1080 30 fps lesson rebuilt from the original ElevenLabs narration
+(`source/narration_master.m4a`). Cuts, reveals and the pointer follow
+word-level Whisper timestamps. Voice, pitch and speed are unchanged.
 
 | File | Role |
 | --- | --- |
-| `jdscience-moles-60s-sample.mp4` | 1920×1080 30 fps sample |
+| `jdscience-moles-60s-sample.mp4` | First 60 s (intro → mole → Avogadro, cursor on 6.02 × 10²³) |
+| `jdscience-moles-1080p.mp4` | Full lesson (~4:59) |
 | `timing_map.json` | Scene / reveal / cursor map |
-| `QA_REPORT.md` | Sync notes |
+| `source/narration_master.m4a` | Original cloned-voice AAC |
 
-Full lesson (Mg, CO₂, water practice) waits on that master MP3 and on approval of this sample.
+Practice answers stay hidden until “Let's check your answer”.
+The 12 ÷ 24 → 0.5 mol working appears only as those numbers are spoken.

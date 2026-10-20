@@ -1,0 +1,466 @@
+{
+  "topic": "percentage-by-mass",
+  "title": "Percentage by Mass",
+  "audio": "/workspace/content/videos/percentage-by-mass/source/narration_master.m4a",
+  "duration": 266.59,
+  "slides": [
+    {
+      "t": 0.0,
+      "id": "intro",
+      "note": "Hello \u2014 percentage by mass"
+    },
+    {
+      "t": 26.14,
+      "id": "concept",
+      "note": "What is percentage by mass?"
+    },
+    {
+      "t": 58.48,
+      "id": "formula",
+      "note": "How do we calculate it?"
+    },
+    {
+      "t": 97.74,
+      "id": "example1",
+      "note": "Oxygen in water"
+    },
+    {
+      "t": 150.8,
+      "id": "example2",
+      "note": "Carbon in carbon dioxide"
+    },
+    {
+      "t": 199.96,
+      "id": "practice_q",
+      "note": "Calcium in CaCO3"
+    },
+    {
+      "t": 219.1,
+      "id": "practice_ans",
+      "note": "Let's check your answer"
+    },
+    {
+      "t": 253.88,
+      "id": "close",
+      "note": "End of lesson"
+    }
+  ],
+  "reveals": [
+    {
+      "t": 0.0,
+      "slide": "intro",
+      "item": "title"
+    },
+    {
+      "t": 13.42,
+      "slide": "intro",
+      "item": "a1"
+    },
+    {
+      "t": 16.34,
+      "slide": "intro",
+      "item": "a2"
+    },
+    {
+      "t": 17.44,
+      "slide": "intro",
+      "item": "a3"
+    },
+    {
+      "t": 21.06,
+      "slide": "intro",
+      "item": "a4"
+    },
+    {
+      "t": 28.64,
+      "slide": "concept",
+      "item": "def"
+    },
+    {
+      "t": 36.88,
+      "slide": "concept",
+      "item": "water"
+    },
+    {
+      "t": 36.88,
+      "slide": "concept",
+      "item": "h"
+    },
+    {
+      "t": 38.42,
+      "slide": "concept",
+      "item": "o"
+    },
+    {
+      "t": 40.76,
+      "slide": "concept",
+      "item": "most_r"
+    },
+    {
+      "t": 44.54,
+      "slide": "concept",
+      "item": "most"
+    },
+    {
+      "t": 67.44,
+      "slide": "formula",
+      "item": "eq"
+    },
+    {
+      "t": 79.9,
+      "slide": "formula",
+      "item": "s1"
+    },
+    {
+      "t": 84.1,
+      "slide": "formula",
+      "item": "s2"
+    },
+    {
+      "t": 88.82,
+      "slide": "formula",
+      "item": "s3"
+    },
+    {
+      "t": 105.86,
+      "slide": "example1",
+      "item": "h2o"
+    },
+    {
+      "t": 109.48,
+      "slide": "example1",
+      "item": "h1"
+    },
+    {
+      "t": 111.08,
+      "slide": "example1",
+      "item": "o16"
+    },
+    {
+      "t": 116.18,
+      "slide": "example1",
+      "item": "mr"
+    },
+    {
+      "t": 119.28,
+      "slide": "example1",
+      "item": "mr18"
+    },
+    {
+      "t": 131.64,
+      "slide": "example1",
+      "item": "ox"
+    },
+    {
+      "t": 137.2,
+      "slide": "example1",
+      "item": "div"
+    },
+    {
+      "t": 142.04,
+      "slide": "example1",
+      "item": "pct"
+    },
+    {
+      "t": 162.32,
+      "slide": "example2",
+      "item": "co2"
+    },
+    {
+      "t": 165.94,
+      "slide": "example2",
+      "item": "c12"
+    },
+    {
+      "t": 167.42,
+      "slide": "example2",
+      "item": "o16"
+    },
+    {
+      "t": 171.92,
+      "slide": "example2",
+      "item": "mr"
+    },
+    {
+      "t": 175.24,
+      "slide": "example2",
+      "item": "mr44"
+    },
+    {
+      "t": 184.2,
+      "slide": "example2",
+      "item": "carb"
+    },
+    {
+      "t": 185.5,
+      "slide": "example2",
+      "item": "div"
+    },
+    {
+      "t": 190.62,
+      "slide": "example2",
+      "item": "pct"
+    },
+    {
+      "t": 203.12,
+      "slide": "practice_q",
+      "item": "q"
+    },
+    {
+      "t": 211.0,
+      "slide": "practice_q",
+      "item": "ca"
+    },
+    {
+      "t": 212.88,
+      "slide": "practice_q",
+      "item": "c"
+    },
+    {
+      "t": 214.44,
+      "slide": "practice_q",
+      "item": "o"
+    },
+    {
+      "t": 216.38,
+      "slide": "practice_q",
+      "item": "pause"
+    },
+    {
+      "t": 225.2,
+      "slide": "practice_ans",
+      "item": "mr"
+    },
+    {
+      "t": 229.3,
+      "slide": "practice_ans",
+      "item": "mr100"
+    },
+    {
+      "t": 237.9,
+      "slide": "practice_ans",
+      "item": "ca"
+    },
+    {
+      "t": 240.0,
+      "slide": "practice_ans",
+      "item": "div"
+    },
+    {
+      "t": 243.88,
+      "slide": "practice_ans",
+      "item": "pct"
+    },
+    {
+      "t": 250.56,
+      "slide": "practice_ans",
+      "item": "well"
+    },
+    {
+      "t": 259.94,
+      "slide": "close",
+      "item": "eq"
+    },
+    {
+      "t": 259.94,
+      "slide": "close",
+      "item": "tip"
+    },
+    {
+      "t": 264.0,
+      "slide": "close",
+      "item": "brand"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.0,
+      "target": null
+    },
+    {
+      "t": 40.76,
+      "target": "h"
+    },
+    {
+      "t": 43.04,
+      "target": "o"
+    },
+    {
+      "t": 44.54,
+      "target": "most"
+    },
+    {
+      "t": 57.0,
+      "target": null
+    },
+    {
+      "t": 67.44,
+      "target": "eq"
+    },
+    {
+      "t": 79.9,
+      "target": "s1"
+    },
+    {
+      "t": 84.1,
+      "target": "s2"
+    },
+    {
+      "t": 88.82,
+      "target": "s3"
+    },
+    {
+      "t": 94.0,
+      "target": null
+    },
+    {
+      "t": 105.86,
+      "target": "h2o"
+    },
+    {
+      "t": 109.48,
+      "target": "h1"
+    },
+    {
+      "t": 111.08,
+      "target": "o16"
+    },
+    {
+      "t": 116.18,
+      "target": "mr2"
+    },
+    {
+      "t": 118.24,
+      "target": "mr16"
+    },
+    {
+      "t": 119.28,
+      "target": "mr18"
+    },
+    {
+      "t": 135.12,
+      "target": "ox"
+    },
+    {
+      "t": 137.2,
+      "target": "d16"
+    },
+    {
+      "t": 138.0,
+      "target": "d18"
+    },
+    {
+      "t": 142.04,
+      "target": "pct"
+    },
+    {
+      "t": 150.0,
+      "target": null
+    },
+    {
+      "t": 162.32,
+      "target": "co2"
+    },
+    {
+      "t": 165.94,
+      "target": "c12"
+    },
+    {
+      "t": 167.42,
+      "target": "o16"
+    },
+    {
+      "t": 171.92,
+      "target": "mr12"
+    },
+    {
+      "t": 174.08,
+      "target": "mr16"
+    },
+    {
+      "t": 175.24,
+      "target": "mr44"
+    },
+    {
+      "t": 184.2,
+      "target": "carb"
+    },
+    {
+      "t": 185.5,
+      "target": "d12"
+    },
+    {
+      "t": 186.22,
+      "target": "d44"
+    },
+    {
+      "t": 190.62,
+      "target": "pct"
+    },
+    {
+      "t": 199.5,
+      "target": null
+    },
+    {
+      "t": 207.5,
+      "target": "q"
+    },
+    {
+      "t": 211.0,
+      "target": "ca"
+    },
+    {
+      "t": 212.88,
+      "target": "c"
+    },
+    {
+      "t": 214.44,
+      "target": "o"
+    },
+    {
+      "t": 216.38,
+      "target": "pause"
+    },
+    {
+      "t": 219.0,
+      "target": null
+    },
+    {
+      "t": 225.2,
+      "target": "m40"
+    },
+    {
+      "t": 225.9,
+      "target": "m12"
+    },
+    {
+      "t": 226.76,
+      "target": "m16"
+    },
+    {
+      "t": 229.3,
+      "target": "mr100"
+    },
+    {
+      "t": 237.9,
+      "target": "ca"
+    },
+    {
+      "t": 240.0,
+      "target": "d40"
+    },
+    {
+      "t": 240.8,
+      "target": "d100"
+    },
+    {
+      "t": 243.88,
+      "target": "pct"
+    },
+    {
+      "t": 250.5,
+      "target": null
+    }
+  ],
+  "notes": "Master clock is the original ElevenLabs narration. Slide cuts, reveals and cursor events use word-level timestamps."
+}

@@ -45,17 +45,21 @@ def supnum(n: str | int) -> str:
 
 
 def chem(text: str) -> str:
+    """Subscript digits that follow an element symbol; leave coefficients unchanged."""
     out: list[str] = []
     i = 0
+    prev_letter = False
     while i < len(text):
-        if text[i].isdigit():
+        if text[i].isdigit() and prev_letter:
             j = i
             while j < len(text) and text[j].isdigit():
                 j += 1
             out.append(subnum(text[i:j]))
             i = j
+            prev_letter = False
         else:
             out.append(text[i])
+            prev_letter = text[i].isalpha()
             i += 1
     return "".join(out)
 

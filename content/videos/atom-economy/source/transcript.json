@@ -1,0 +1,3296 @@
+{
+  "duration": 306.67,
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "and",
+      "start": 0.32,
+      "end": 0.74
+    },
+    {
+      "word": "welcome",
+      "start": 0.74,
+      "end": 1.08
+    },
+    {
+      "word": "back",
+      "start": 1.08,
+      "end": 1.48
+    },
+    {
+      "word": "to",
+      "start": 1.48,
+      "end": 1.72
+    },
+    {
+      "word": "JD",
+      "start": 1.72,
+      "end": 2.06
+    },
+    {
+      "word": "Science.",
+      "start": 2.06,
+      "end": 2.42
+    },
+    {
+      "word": "In",
+      "start": 3.16,
+      "end": 3.3
+    },
+    {
+      "word": "today's",
+      "start": 3.3,
+      "end": 3.68
+    },
+    {
+      "word": "video,",
+      "start": 3.68,
+      "end": 4.02
+    },
+    {
+      "word": "we",
+      "start": 4.34,
+      "end": 4.4
+    },
+    {
+      "word": "want",
+      "start": 4.4,
+      "end": 4.6
+    },
+    {
+      "word": "to",
+      "start": 4.6,
+      "end": 4.74
+    },
+    {
+      "word": "look",
+      "start": 4.74,
+      "end": 4.92
+    },
+    {
+      "word": "at",
+      "start": 4.92,
+      "end": 5.26
+    },
+    {
+      "word": "atom",
+      "start": 5.26,
+      "end": 5.58
+    },
+    {
+      "word": "economy.",
+      "start": 5.58,
+      "end": 6.12
+    },
+    {
+      "word": "This",
+      "start": 6.74,
+      "end": 7.04
+    },
+    {
+      "word": "builds",
+      "start": 7.04,
+      "end": 7.36
+    },
+    {
+      "word": "on",
+      "start": 7.36,
+      "end": 7.64
+    },
+    {
+      "word": "our",
+      "start": 7.64,
+      "end": 7.84
+    },
+    {
+      "word": "understanding",
+      "start": 7.84,
+      "end": 8.34
+    },
+    {
+      "word": "of",
+      "start": 8.34,
+      "end": 8.74
+    },
+    {
+      "word": "chemical",
+      "start": 8.74,
+      "end": 9.04
+    },
+    {
+      "word": "equations",
+      "start": 9.04,
+      "end": 9.64
+    },
+    {
+      "word": "and",
+      "start": 9.64,
+      "end": 10.04
+    },
+    {
+      "word": "relative",
+      "start": 10.04,
+      "end": 10.46
+    },
+    {
+      "word": "formula",
+      "start": 10.46,
+      "end": 10.92
+    },
+    {
+      "word": "mass.",
+      "start": 10.92,
+      "end": 11.34
+    },
+    {
+      "word": "We",
+      "start": 18.02,
+      "end": 18.7
+    },
+    {
+      "word": "will",
+      "start": 18.7,
+      "end": 18.86
+    },
+    {
+      "word": "then",
+      "start": 18.86,
+      "end": 19.06
+    },
+    {
+      "word": "work",
+      "start": 19.06,
+      "end": 19.32
+    },
+    {
+      "word": "through",
+      "start": 19.32,
+      "end": 19.56
+    },
+    {
+      "word": "an",
+      "start": 19.56,
+      "end": 19.7
+    },
+    {
+      "word": "example",
+      "start": 19.7,
+      "end": 20.2
+    },
+    {
+      "word": "before",
+      "start": 20.2,
+      "end": 20.66
+    },
+    {
+      "word": "giving",
+      "start": 20.66,
+      "end": 20.94
+    },
+    {
+      "word": "you",
+      "start": 20.94,
+      "end": 21.18
+    },
+    {
+      "word": "a",
+      "start": 21.18,
+      "end": 21.36
+    },
+    {
+      "word": "question",
+      "start": 21.36,
+      "end": 21.62
+    },
+    {
+      "word": "to",
+      "start": 21.62,
+      "end": 21.92
+    },
+    {
+      "word": "try",
+      "start": 21.92,
+      "end": 22.18
+    },
+    {
+      "word": "yourself.",
+      "start": 22.18,
+      "end": 22.58
+    },
+    {
+      "word": "Let's",
+      "start": 23.32,
+      "end": 23.54
+    },
+    {
+      "word": "begin.",
+      "start": 23.54,
+      "end": 23.82
+    },
+    {
+      "word": "What",
+      "start": 24.58,
+      "end": 24.66
+    },
+    {
+      "word": "is",
+      "start": 24.66,
+      "end": 25.1
+    },
+    {
+      "word": "atom",
+      "start": 25.1,
+      "end": 25.48
+    },
+    {
+      "word": "economy?",
+      "start": 25.48,
+      "end": 25.96
+    },
+    {
+      "word": "Atom",
+      "start": 26.68,
+      "end": 26.9
+    },
+    {
+      "word": "economy",
+      "start": 26.9,
+      "end": 27.32
+    },
+    {
+      "word": "is",
+      "start": 27.32,
+      "end": 27.66
+    },
+    {
+      "word": "a",
+      "start": 27.66,
+      "end": 27.84
+    },
+    {
+      "word": "measure",
+      "start": 27.84,
+      "end": 28.04
+    },
+    {
+      "word": "of",
+      "start": 28.04,
+      "end": 28.36
+    },
+    {
+      "word": "how",
+      "start": 28.36,
+      "end": 28.64
+    },
+    {
+      "word": "efficiently",
+      "start": 28.64,
+      "end": 29.22
+    },
+    {
+      "word": "the",
+      "start": 29.22,
+      "end": 29.62
+    },
+    {
+      "word": "atoms",
+      "start": 29.62,
+      "end": 30.02
+    },
+    {
+      "word": "of",
+      "start": 30.02,
+      "end": 30.24
+    },
+    {
+      "word": "the",
+      "start": 30.24,
+      "end": 30.36
+    },
+    {
+      "word": "reactants",
+      "start": 30.36,
+      "end": 31.0
+    },
+    {
+      "word": "are",
+      "start": 31.0,
+      "end": 31.42
+    },
+    {
+      "word": "used",
+      "start": 31.42,
+      "end": 31.7
+    },
+    {
+      "word": "to",
+      "start": 31.7,
+      "end": 31.94
+    },
+    {
+      "word": "produce",
+      "start": 31.94,
+      "end": 32.24
+    },
+    {
+      "word": "the",
+      "start": 32.24,
+      "end": 32.48
+    },
+    {
+      "word": "desired",
+      "start": 32.48,
+      "end": 32.92
+    },
+    {
+      "word": "product",
+      "start": 32.92,
+      "end": 33.34
+    },
+    {
+      "word": "in",
+      "start": 33.34,
+      "end": 33.62
+    },
+    {
+      "word": "a",
+      "start": 33.62,
+      "end": 33.76
+    },
+    {
+      "word": "chemical",
+      "start": 33.76,
+      "end": 34.06
+    },
+    {
+      "word": "reaction.",
+      "start": 34.06,
+      "end": 34.64
+    },
+    {
+      "word": "In",
+      "start": 35.06,
+      "end": 35.26
+    },
+    {
+      "word": "some",
+      "start": 35.26,
+      "end": 35.54
+    },
+    {
+      "word": "chemical",
+      "start": 35.54,
+      "end": 35.94
+    },
+    {
+      "word": "reactions,",
+      "start": 35.94,
+      "end": 36.56
+    },
+    {
+      "word": "more",
+      "start": 36.78,
+      "end": 37.06
+    },
+    {
+      "word": "than",
+      "start": 37.06,
+      "end": 37.26
+    },
+    {
+      "word": "one",
+      "start": 37.26,
+      "end": 37.56
+    },
+    {
+      "word": "product",
+      "start": 37.56,
+      "end": 37.92
+    },
+    {
+      "word": "is",
+      "start": 37.92,
+      "end": 38.12
+    },
+    {
+      "word": "formed.",
+      "start": 38.12,
+      "end": 38.54
+    },
+    {
+      "word": "One",
+      "start": 39.1,
+      "end": 39.32
+    },
+    {
+      "word": "product",
+      "start": 39.32,
+      "end": 39.68
+    },
+    {
+      "word": "may",
+      "start": 39.68,
+      "end": 39.88
+    },
+    {
+      "word": "be",
+      "start": 39.88,
+      "end": 40.06
+    },
+    {
+      "word": "useful",
+      "start": 40.06,
+      "end": 40.52
+    },
+    {
+      "word": "while",
+      "start": 40.52,
+      "end": 40.96
+    },
+    {
+      "word": "the",
+      "start": 40.96,
+      "end": 41.14
+    },
+    {
+      "word": "others",
+      "start": 41.14,
+      "end": 41.5
+    },
+    {
+      "word": "may",
+      "start": 41.5,
+      "end": 41.72
+    },
+    {
+      "word": "be",
+      "start": 41.72,
+      "end": 41.86
+    },
+    {
+      "word": "unwanted",
+      "start": 41.86,
+      "end": 42.4
+    },
+    {
+      "word": "byproducts.",
+      "start": 42.4,
+      "end": 43.18
+    },
+    {
+      "word": "A",
+      "start": 43.84,
+      "end": 43.98
+    },
+    {
+      "word": "reaction",
+      "start": 43.98,
+      "end": 44.3
+    },
+    {
+      "word": "with",
+      "start": 44.3,
+      "end": 44.62
+    },
+    {
+      "word": "a",
+      "start": 44.62,
+      "end": 44.76
+    },
+    {
+      "word": "high",
+      "start": 44.76,
+      "end": 45.1
+    },
+    {
+      "word": "atom",
+      "start": 45.1,
+      "end": 45.44
+    },
+    {
+      "word": "economy",
+      "start": 45.44,
+      "end": 45.92
+    },
+    {
+      "word": "uses",
+      "start": 45.92,
+      "end": 46.48
+    },
+    {
+      "word": "a",
+      "start": 46.48,
+      "end": 46.8
+    },
+    {
+      "word": "large",
+      "start": 46.8,
+      "end": 47.1
+    },
+    {
+      "word": "proportion",
+      "start": 47.1,
+      "end": 47.52
+    },
+    {
+      "word": "of",
+      "start": 47.52,
+      "end": 47.84
+    },
+    {
+      "word": "the",
+      "start": 47.84,
+      "end": 47.98
+    },
+    {
+      "word": "reactant",
+      "start": 47.98,
+      "end": 48.5
+    },
+    {
+      "word": "atoms",
+      "start": 48.5,
+      "end": 48.86
+    },
+    {
+      "word": "to",
+      "start": 48.86,
+      "end": 49.18
+    },
+    {
+      "word": "make",
+      "start": 49.18,
+      "end": 49.38
+    },
+    {
+      "word": "the",
+      "start": 49.38,
+      "end": 49.56
+    },
+    {
+      "word": "desired",
+      "start": 49.56,
+      "end": 49.98
+    },
+    {
+      "word": "product.",
+      "start": 49.98,
+      "end": 50.48
+    },
+    {
+      "word": "A",
+      "start": 50.92,
+      "end": 51.08
+    },
+    {
+      "word": "reaction",
+      "start": 51.08,
+      "end": 51.42
+    },
+    {
+      "word": "with",
+      "start": 51.42,
+      "end": 51.7
+    },
+    {
+      "word": "a",
+      "start": 51.7,
+      "end": 51.86
+    },
+    {
+      "word": "low",
+      "start": 51.86,
+      "end": 52.1
+    },
+    {
+      "word": "atom",
+      "start": 52.1,
+      "end": 52.44
+    },
+    {
+      "word": "economy",
+      "start": 52.44,
+      "end": 52.92
+    },
+    {
+      "word": "produces",
+      "start": 52.92,
+      "end": 53.58
+    },
+    {
+      "word": "a",
+      "start": 53.58,
+      "end": 53.94
+    },
+    {
+      "word": "greater",
+      "start": 53.94,
+      "end": 54.2
+    },
+    {
+      "word": "proportion",
+      "start": 54.2,
+      "end": 54.84
+    },
+    {
+      "word": "of",
+      "start": 54.84,
+      "end": 55.12
+    },
+    {
+      "word": "unwanted",
+      "start": 55.12,
+      "end": 55.68
+    },
+    {
+      "word": "byproducts.",
+      "start": 55.68,
+      "end": 56.46
+    },
+    {
+      "word": "Atom",
+      "start": 57.24,
+      "end": 57.38
+    },
+    {
+      "word": "economy",
+      "start": 57.38,
+      "end": 57.78
+    },
+    {
+      "word": "is",
+      "start": 57.78,
+      "end": 58.1
+    },
+    {
+      "word": "particularly",
+      "start": 58.1,
+      "end": 58.54
+    },
+    {
+      "word": "important",
+      "start": 58.54,
+      "end": 59.24
+    },
+    {
+      "word": "in",
+      "start": 59.24,
+      "end": 59.6
+    },
+    {
+      "word": "industrial",
+      "start": 59.6,
+      "end": 60.1
+    },
+    {
+      "word": "chemistry",
+      "start": 60.1,
+      "end": 60.7
+    },
+    {
+      "word": "because",
+      "start": 60.7,
+      "end": 61.3
+    },
+    {
+      "word": "it",
+      "start": 61.3,
+      "end": 61.46
+    },
+    {
+      "word": "helps",
+      "start": 61.46,
+      "end": 61.76
+    },
+    {
+      "word": "manufacturers",
+      "start": 61.76,
+      "end": 62.48
+    },
+    {
+      "word": "reduce",
+      "start": 62.48,
+      "end": 63.0
+    },
+    {
+      "word": "waste",
+      "start": 63.0,
+      "end": 63.4
+    },
+    {
+      "word": "and",
+      "start": 63.4,
+      "end": 63.94
+    },
+    {
+      "word": "use",
+      "start": 63.94,
+      "end": 64.22
+    },
+    {
+      "word": "raw",
+      "start": 64.22,
+      "end": 64.52
+    },
+    {
+      "word": "materials",
+      "start": 64.52,
+      "end": 65.06
+    },
+    {
+      "word": "more",
+      "start": 65.06,
+      "end": 65.4
+    },
+    {
+      "word": "efficiently.",
+      "start": 65.4,
+      "end": 65.96
+    },
+    {
+      "word": "How",
+      "start": 66.7,
+      "end": 66.8
+    },
+    {
+      "word": "do",
+      "start": 66.8,
+      "end": 66.96
+    },
+    {
+      "word": "we",
+      "start": 66.96,
+      "end": 67.14
+    },
+    {
+      "word": "calculate",
+      "start": 67.14,
+      "end": 67.66
+    },
+    {
+      "word": "atom",
+      "start": 67.66,
+      "end": 68.04
+    },
+    {
+      "word": "economy?",
+      "start": 68.04,
+      "end": 68.52
+    },
+    {
+      "word": "We",
+      "start": 69.0,
+      "end": 69.2
+    },
+    {
+      "word": "use",
+      "start": 69.2,
+      "end": 69.48
+    },
+    {
+      "word": "the",
+      "start": 69.48,
+      "end": 69.68
+    },
+    {
+      "word": "following",
+      "start": 69.68,
+      "end": 70.06
+    },
+    {
+      "word": "formula.",
+      "start": 70.06,
+      "end": 70.6
+    },
+    {
+      "word": "Atom",
+      "start": 71.24,
+      "end": 71.36
+    },
+    {
+      "word": "economy",
+      "start": 71.36,
+      "end": 71.84
+    },
+    {
+      "word": "equals",
+      "start": 71.84,
+      "end": 72.4
+    },
+    {
+      "word": "the",
+      "start": 72.4,
+      "end": 72.68
+    },
+    {
+      "word": "relative",
+      "start": 72.68,
+      "end": 73.06
+    },
+    {
+      "word": "formula",
+      "start": 73.06,
+      "end": 73.52
+    },
+    {
+      "word": "mass",
+      "start": 73.52,
+      "end": 73.86
+    },
+    {
+      "word": "of",
+      "start": 73.86,
+      "end": 74.08
+    },
+    {
+      "word": "the",
+      "start": 74.08,
+      "end": 74.22
+    },
+    {
+      "word": "desired",
+      "start": 74.22,
+      "end": 74.62
+    },
+    {
+      "word": "product",
+      "start": 74.62,
+      "end": 75.14
+    },
+    {
+      "word": "taking",
+      "start": 75.14,
+      "end": 75.66
+    },
+    {
+      "word": "account",
+      "start": 75.66,
+      "end": 76.08
+    },
+    {
+      "word": "of",
+      "start": 76.08,
+      "end": 76.32
+    },
+    {
+      "word": "its",
+      "start": 76.32,
+      "end": 76.46
+    },
+    {
+      "word": "coefficient",
+      "start": 76.46,
+      "end": 76.98
+    },
+    {
+      "word": "in",
+      "start": 76.98,
+      "end": 77.3
+    },
+    {
+      "word": "the",
+      "start": 77.3,
+      "end": 77.42
+    },
+    {
+      "word": "balanced",
+      "start": 77.42,
+      "end": 77.72
+    },
+    {
+      "word": "equation",
+      "start": 77.72,
+      "end": 78.32
+    },
+    {
+      "word": "divided",
+      "start": 78.32,
+      "end": 79.04
+    },
+    {
+      "word": "by",
+      "start": 79.04,
+      "end": 79.42
+    },
+    {
+      "word": "the",
+      "start": 79.42,
+      "end": 79.54
+    },
+    {
+      "word": "total",
+      "start": 79.54,
+      "end": 79.96
+    },
+    {
+      "word": "relative",
+      "start": 79.96,
+      "end": 80.4
+    },
+    {
+      "word": "formula",
+      "start": 80.4,
+      "end": 80.8
+    },
+    {
+      "word": "mass",
+      "start": 80.8,
+      "end": 81.14
+    },
+    {
+      "word": "of",
+      "start": 81.14,
+      "end": 81.38
+    },
+    {
+      "word": "all",
+      "start": 81.38,
+      "end": 81.72
+    },
+    {
+      "word": "products",
+      "start": 81.72,
+      "end": 82.22
+    },
+    {
+      "word": "also",
+      "start": 82.22,
+      "end": 82.8
+    },
+    {
+      "word": "taking",
+      "start": 82.8,
+      "end": 83.16
+    },
+    {
+      "word": "account",
+      "start": 83.16,
+      "end": 83.54
+    },
+    {
+      "word": "of",
+      "start": 83.54,
+      "end": 83.74
+    },
+    {
+      "word": "their",
+      "start": 83.74,
+      "end": 83.9
+    },
+    {
+      "word": "coefficients",
+      "start": 83.9,
+      "end": 84.5
+    },
+    {
+      "word": "multiplied",
+      "start": 84.5,
+      "end": 85.4
+    },
+    {
+      "word": "by",
+      "start": 85.4,
+      "end": 85.72
+    },
+    {
+      "word": "100.",
+      "start": 85.72,
+      "end": 86.34
+    },
+    {
+      "word": "Before",
+      "start": 86.9,
+      "end": 87.18
+    },
+    {
+      "word": "carrying",
+      "start": 87.18,
+      "end": 87.52
+    },
+    {
+      "word": "out",
+      "start": 87.52,
+      "end": 87.74
+    },
+    {
+      "word": "the",
+      "start": 87.74,
+      "end": 87.88
+    },
+    {
+      "word": "calculation,",
+      "start": 87.88,
+      "end": 88.52
+    },
+    {
+      "word": "always",
+      "start": 89.04,
+      "end": 89.3
+    },
+    {
+      "word": "make",
+      "start": 89.3,
+      "end": 89.58
+    },
+    {
+      "word": "sure",
+      "start": 89.58,
+      "end": 89.84
+    },
+    {
+      "word": "the",
+      "start": 89.84,
+      "end": 90.06
+    },
+    {
+      "word": "chemical",
+      "start": 90.06,
+      "end": 90.38
+    },
+    {
+      "word": "equation",
+      "start": 90.38,
+      "end": 90.82
+    },
+    {
+      "word": "is",
+      "start": 90.82,
+      "end": 91.2
+    },
+    {
+      "word": "balanced.",
+      "start": 91.2,
+      "end": 91.64
+    },
+    {
+      "word": "Let's",
+      "start": 92.26,
+      "end": 92.56
+    },
+    {
+      "word": "look",
+      "start": 92.56,
+      "end": 92.68
+    },
+    {
+      "word": "at",
+      "start": 92.68,
+      "end": 92.8
+    },
+    {
+      "word": "an",
+      "start": 92.8,
+      "end": 92.94
+    },
+    {
+      "word": "example.",
+      "start": 92.94,
+      "end": 93.46
+    },
+    {
+      "word": "Worked",
+      "start": 94.14,
+      "end": 94.34
+    },
+    {
+      "word": "example.",
+      "start": 94.34,
+      "end": 94.8
+    },
+    {
+      "word": "Calcium",
+      "start": 95.52,
+      "end": 95.8
+    },
+    {
+      "word": "carbonate",
+      "start": 95.8,
+      "end": 96.36
+    },
+    {
+      "word": "decomposition.",
+      "start": 96.36,
+      "end": 97.12
+    },
+    {
+      "word": "When",
+      "start": 97.84,
+      "end": 97.94
+    },
+    {
+      "word": "calcium",
+      "start": 97.94,
+      "end": 98.36
+    },
+    {
+      "word": "carbonate",
+      "start": 98.36,
+      "end": 98.94
+    },
+    {
+      "word": "is",
+      "start": 98.94,
+      "end": 99.08
+    },
+    {
+      "word": "heated,",
+      "start": 99.08,
+      "end": 99.5
+    },
+    {
+      "word": "it",
+      "start": 99.74,
+      "end": 100.06
+    },
+    {
+      "word": "causes",
+      "start": 100.06,
+      "end": 100.7
+    },
+    {
+      "word": "to",
+      "start": 100.7,
+      "end": 100.94
+    },
+    {
+      "word": "form",
+      "start": 100.94,
+      "end": 101.22
+    },
+    {
+      "word": "calcium",
+      "start": 101.22,
+      "end": 101.68
+    },
+    {
+      "word": "oxide",
+      "start": 101.68,
+      "end": 102.18
+    },
+    {
+      "word": "and",
+      "start": 102.18,
+      "end": 102.52
+    },
+    {
+      "word": "carbon",
+      "start": 102.52,
+      "end": 102.84
+    },
+    {
+      "word": "dioxide.",
+      "start": 102.84,
+      "end": 103.42
+    },
+    {
+      "word": "The",
+      "start": 103.98,
+      "end": 104.16
+    },
+    {
+      "word": "balanced",
+      "start": 104.16,
+      "end": 104.52
+    },
+    {
+      "word": "chemical",
+      "start": 104.52,
+      "end": 104.8
+    },
+    {
+      "word": "equation",
+      "start": 104.8,
+      "end": 105.44
+    },
+    {
+      "word": "is",
+      "start": 105.44,
+      "end": 106.06
+    },
+    {
+      "word": "CaCO3",
+      "start": 106.06,
+      "end": 107.64
+    },
+    {
+      "word": "yields",
+      "start": 107.64,
+      "end": 108.14
+    },
+    {
+      "word": "CaO",
+      "start": 108.14,
+      "end": 109.12
+    },
+    {
+      "word": "plus",
+      "start": 109.12,
+      "end": 109.38
+    },
+    {
+      "word": "CO2.",
+      "start": 109.38,
+      "end": 110.22
+    },
+    {
+      "word": "Suppose",
+      "start": 110.74,
+      "end": 111.04
+    },
+    {
+      "word": "calcium",
+      "start": 111.04,
+      "end": 111.5
+    },
+    {
+      "word": "oxide",
+      "start": 111.5,
+      "end": 111.94
+    },
+    {
+      "word": "is",
+      "start": 111.94,
+      "end": 112.22
+    },
+    {
+      "word": "the",
+      "start": 112.22,
+      "end": 112.38
+    },
+    {
+      "word": "desired",
+      "start": 112.38,
+      "end": 112.78
+    },
+    {
+      "word": "product.",
+      "start": 112.78,
+      "end": 113.26
+    },
+    {
+      "word": "Calculate",
+      "start": 113.84,
+      "end": 114.32
+    },
+    {
+      "word": "the",
+      "start": 114.32,
+      "end": 114.46
+    },
+    {
+      "word": "atom",
+      "start": 114.46,
+      "end": 114.8
+    },
+    {
+      "word": "economy",
+      "start": 114.8,
+      "end": 115.2
+    },
+    {
+      "word": "of",
+      "start": 115.2,
+      "end": 115.52
+    },
+    {
+      "word": "this",
+      "start": 115.52,
+      "end": 115.76
+    },
+    {
+      "word": "reaction.",
+      "start": 115.76,
+      "end": 116.24
+    },
+    {
+      "word": "The",
+      "start": 116.74,
+      "end": 116.88
+    },
+    {
+      "word": "relative",
+      "start": 116.88,
+      "end": 117.26
+    },
+    {
+      "word": "atomic",
+      "start": 117.26,
+      "end": 117.66
+    },
+    {
+      "word": "masses",
+      "start": 117.66,
+      "end": 118.04
+    },
+    {
+      "word": "are",
+      "start": 118.04,
+      "end": 118.5
+    },
+    {
+      "word": "calcium",
+      "start": 118.5,
+      "end": 119.18
+    },
+    {
+      "word": "40,",
+      "start": 119.18,
+      "end": 119.8
+    },
+    {
+      "word": "carbon",
+      "start": 120.38,
+      "end": 120.64
+    },
+    {
+      "word": "12",
+      "start": 120.64,
+      "end": 121.22
+    },
+    {
+      "word": "and",
+      "start": 121.22,
+      "end": 121.78
+    },
+    {
+      "word": "oxygen",
+      "start": 121.78,
+      "end": 122.3
+    },
+    {
+      "word": "16.",
+      "start": 122.3,
+      "end": 122.98
+    },
+    {
+      "word": "First,",
+      "start": 123.54,
+      "end": 123.96
+    },
+    {
+      "word": "calculate",
+      "start": 124.38,
+      "end": 124.7
+    },
+    {
+      "word": "the",
+      "start": 124.7,
+      "end": 124.98
+    },
+    {
+      "word": "relative",
+      "start": 124.98,
+      "end": 125.38
+    },
+    {
+      "word": "formula",
+      "start": 125.38,
+      "end": 125.74
+    },
+    {
+      "word": "mass",
+      "start": 125.74,
+      "end": 126.12
+    },
+    {
+      "word": "of",
+      "start": 126.12,
+      "end": 126.38
+    },
+    {
+      "word": "calcium",
+      "start": 126.38,
+      "end": 126.76
+    },
+    {
+      "word": "oxide.",
+      "start": 126.76,
+      "end": 127.34
+    },
+    {
+      "word": "Calcium",
+      "start": 127.34,
+      "end": 128.2
+    },
+    {
+      "word": "oxide",
+      "start": 128.2,
+      "end": 128.66
+    },
+    {
+      "word": "contains",
+      "start": 128.66,
+      "end": 129.12
+    },
+    {
+      "word": "1",
+      "start": 129.12,
+      "end": 129.56
+    },
+    {
+      "word": "calcium",
+      "start": 129.56,
+      "end": 129.98
+    },
+    {
+      "word": "atom",
+      "start": 129.98,
+      "end": 130.36
+    },
+    {
+      "word": "and",
+      "start": 130.36,
+      "end": 130.7
+    },
+    {
+      "word": "1",
+      "start": 130.7,
+      "end": 131.0
+    },
+    {
+      "word": "oxygen",
+      "start": 131.0,
+      "end": 131.44
+    },
+    {
+      "word": "atom.",
+      "start": 131.44,
+      "end": 132.02
+    },
+    {
+      "word": "40",
+      "start": 132.52,
+      "end": 132.72
+    },
+    {
+      "word": "plus",
+      "start": 132.72,
+      "end": 132.96
+    },
+    {
+      "word": "16",
+      "start": 132.96,
+      "end": 133.54
+    },
+    {
+      "word": "gives",
+      "start": 133.54,
+      "end": 133.98
+    },
+    {
+      "word": "56.",
+      "start": 133.98,
+      "end": 134.72
+    },
+    {
+      "word": "Next,",
+      "start": 135.4,
+      "end": 135.74
+    },
+    {
+      "word": "calculate",
+      "start": 136.12,
+      "end": 136.42
+    },
+    {
+      "word": "the",
+      "start": 136.42,
+      "end": 136.7
+    },
+    {
+      "word": "relative",
+      "start": 136.7,
+      "end": 137.08
+    },
+    {
+      "word": "formula",
+      "start": 137.08,
+      "end": 137.46
+    },
+    {
+      "word": "mass",
+      "start": 137.46,
+      "end": 137.82
+    },
+    {
+      "word": "of",
+      "start": 137.82,
+      "end": 138.08
+    },
+    {
+      "word": "carbon",
+      "start": 138.08,
+      "end": 138.4
+    },
+    {
+      "word": "dioxide.",
+      "start": 138.4,
+      "end": 139.02
+    },
+    {
+      "word": "12",
+      "start": 139.58,
+      "end": 139.94
+    },
+    {
+      "word": "plus",
+      "start": 139.94,
+      "end": 140.2
+    },
+    {
+      "word": "2",
+      "start": 140.2,
+      "end": 140.68
+    },
+    {
+      "word": "multiplied",
+      "start": 140.68,
+      "end": 141.08
+    },
+    {
+      "word": "by",
+      "start": 141.08,
+      "end": 141.52
+    },
+    {
+      "word": "16",
+      "start": 141.52,
+      "end": 142.04
+    },
+    {
+      "word": "gives",
+      "start": 142.04,
+      "end": 142.5
+    },
+    {
+      "word": "44.",
+      "start": 142.5,
+      "end": 143.22
+    },
+    {
+      "word": "Now",
+      "start": 143.76,
+      "end": 144.04
+    },
+    {
+      "word": "calculate",
+      "start": 144.04,
+      "end": 144.5
+    },
+    {
+      "word": "the",
+      "start": 144.5,
+      "end": 144.78
+    },
+    {
+      "word": "total",
+      "start": 144.78,
+      "end": 145.14
+    },
+    {
+      "word": "relative",
+      "start": 145.14,
+      "end": 145.56
+    },
+    {
+      "word": "formula",
+      "start": 145.56,
+      "end": 145.9
+    },
+    {
+      "word": "mass",
+      "start": 145.9,
+      "end": 146.3
+    },
+    {
+      "word": "of",
+      "start": 146.3,
+      "end": 146.52
+    },
+    {
+      "word": "the",
+      "start": 146.52,
+      "end": 146.64
+    },
+    {
+      "word": "products.",
+      "start": 146.64,
+      "end": 147.08
+    },
+    {
+      "word": "56",
+      "start": 147.68,
+      "end": 148.12
+    },
+    {
+      "word": "plus",
+      "start": 148.12,
+      "end": 148.46
+    },
+    {
+      "word": "44",
+      "start": 148.46,
+      "end": 149.06
+    },
+    {
+      "word": "gives",
+      "start": 149.06,
+      "end": 149.58
+    },
+    {
+      "word": "100.",
+      "start": 149.58,
+      "end": 150.34
+    },
+    {
+      "word": "Next,",
+      "start": 150.94,
+      "end": 151.2
+    },
+    {
+      "word": "divide",
+      "start": 151.56,
+      "end": 151.86
+    },
+    {
+      "word": "the",
+      "start": 151.86,
+      "end": 152.08
+    },
+    {
+      "word": "relative",
+      "start": 152.08,
+      "end": 152.48
+    },
+    {
+      "word": "formula",
+      "start": 152.48,
+      "end": 152.86
+    },
+    {
+      "word": "mass",
+      "start": 152.86,
+      "end": 153.18
+    },
+    {
+      "word": "of",
+      "start": 153.18,
+      "end": 153.38
+    },
+    {
+      "word": "the",
+      "start": 153.38,
+      "end": 153.52
+    },
+    {
+      "word": "desired",
+      "start": 153.52,
+      "end": 153.92
+    },
+    {
+      "word": "product",
+      "start": 153.92,
+      "end": 154.32
+    },
+    {
+      "word": "by",
+      "start": 154.32,
+      "end": 154.76
+    },
+    {
+      "word": "the",
+      "start": 154.76,
+      "end": 154.92
+    },
+    {
+      "word": "total",
+      "start": 154.92,
+      "end": 155.3
+    },
+    {
+      "word": "relative",
+      "start": 155.3,
+      "end": 155.72
+    },
+    {
+      "word": "formula",
+      "start": 155.72,
+      "end": 156.06
+    },
+    {
+      "word": "mass",
+      "start": 156.06,
+      "end": 156.38
+    },
+    {
+      "word": "of",
+      "start": 156.38,
+      "end": 156.56
+    },
+    {
+      "word": "the",
+      "start": 156.56,
+      "end": 156.68
+    },
+    {
+      "word": "products.",
+      "start": 156.68,
+      "end": 157.16
+    },
+    {
+      "word": "56",
+      "start": 157.7,
+      "end": 158.16
+    },
+    {
+      "word": "divided",
+      "start": 158.16,
+      "end": 158.64
+    },
+    {
+      "word": "by",
+      "start": 158.64,
+      "end": 158.98
+    },
+    {
+      "word": "100",
+      "start": 158.98,
+      "end": 159.64
+    },
+    {
+      "word": "multiplied",
+      "start": 159.64,
+      "end": 160.12
+    },
+    {
+      "word": "by",
+      "start": 160.12,
+      "end": 160.58
+    },
+    {
+      "word": "100",
+      "start": 160.58,
+      "end": 161.14
+    },
+    {
+      "word": "gives",
+      "start": 161.14,
+      "end": 161.6
+    },
+    {
+      "word": "56%.",
+      "start": 161.6,
+      "end": 162.92
+    },
+    {
+      "word": "Therefore,",
+      "start": 162.92,
+      "end": 163.74
+    },
+    {
+      "word": "the",
+      "start": 164.06,
+      "end": 164.1
+    },
+    {
+      "word": "atom",
+      "start": 164.1,
+      "end": 164.44
+    },
+    {
+      "word": "economy",
+      "start": 164.44,
+      "end": 164.86
+    },
+    {
+      "word": "of",
+      "start": 164.86,
+      "end": 165.1
+    },
+    {
+      "word": "this",
+      "start": 165.1,
+      "end": 165.28
+    },
+    {
+      "word": "reaction",
+      "start": 165.28,
+      "end": 165.74
+    },
+    {
+      "word": "is",
+      "start": 165.74,
+      "end": 166.04
+    },
+    {
+      "word": "56%.",
+      "start": 166.04,
+      "end": 167.36
+    },
+    {
+      "word": "This",
+      "start": 167.36,
+      "end": 167.7
+    },
+    {
+      "word": "means",
+      "start": 167.7,
+      "end": 167.98
+    },
+    {
+      "word": "that",
+      "start": 167.98,
+      "end": 168.34
+    },
+    {
+      "word": "56",
+      "start": 168.34,
+      "end": 169.02
+    },
+    {
+      "word": "%",
+      "start": 169.02,
+      "end": 169.46
+    },
+    {
+      "word": "of",
+      "start": 169.46,
+      "end": 169.7
+    },
+    {
+      "word": "the",
+      "start": 169.7,
+      "end": 169.84
+    },
+    {
+      "word": "mass",
+      "start": 169.84,
+      "end": 170.12
+    },
+    {
+      "word": "of",
+      "start": 170.12,
+      "end": 170.32
+    },
+    {
+      "word": "the",
+      "start": 170.32,
+      "end": 170.46
+    },
+    {
+      "word": "reactants",
+      "start": 170.46,
+      "end": 171.14
+    },
+    {
+      "word": "is",
+      "start": 171.14,
+      "end": 171.38
+    },
+    {
+      "word": "incorporated",
+      "start": 171.38,
+      "end": 171.94
+    },
+    {
+      "word": "into",
+      "start": 171.94,
+      "end": 172.54
+    },
+    {
+      "word": "the",
+      "start": 172.54,
+      "end": 172.76
+    },
+    {
+      "word": "desired",
+      "start": 172.76,
+      "end": 173.18
+    },
+    {
+      "word": "product,",
+      "start": 173.18,
+      "end": 173.72
+    },
+    {
+      "word": "calcium",
+      "start": 174.24,
+      "end": 174.52
+    },
+    {
+      "word": "oxide.",
+      "start": 174.52,
+      "end": 175.06
+    },
+    {
+      "word": "The",
+      "start": 175.68,
+      "end": 175.86
+    },
+    {
+      "word": "remaining",
+      "start": 175.86,
+      "end": 176.2
+    },
+    {
+      "word": "44",
+      "start": 176.2,
+      "end": 176.98
+    },
+    {
+      "word": "%",
+      "start": 176.98,
+      "end": 177.34
+    },
+    {
+      "word": "is",
+      "start": 177.34,
+      "end": 177.76
+    },
+    {
+      "word": "incorporated",
+      "start": 177.76,
+      "end": 178.38
+    },
+    {
+      "word": "into",
+      "start": 178.38,
+      "end": 178.98
+    },
+    {
+      "word": "carbon",
+      "start": 178.98,
+      "end": 179.36
+    },
+    {
+      "word": "dioxide.",
+      "start": 179.36,
+      "end": 180.0
+    },
+    {
+      "word": "Practice",
+      "start": 180.82,
+      "end": 181.1
+    },
+    {
+      "word": "question.",
+      "start": 181.1,
+      "end": 181.38
+    },
+    {
+      "word": "Now",
+      "start": 182.28,
+      "end": 182.38
+    },
+    {
+      "word": "it's",
+      "start": 182.38,
+      "end": 182.78
+    },
+    {
+      "word": "your",
+      "start": 182.78,
+      "end": 182.98
+    },
+    {
+      "word": "turn.",
+      "start": 182.98,
+      "end": 183.3
+    },
+    {
+      "word": "Hydrogen",
+      "start": 183.3,
+      "end": 184.4
+    },
+    {
+      "word": "peroxide",
+      "start": 184.4,
+      "end": 185.04
+    },
+    {
+      "word": "decomposes",
+      "start": 185.04,
+      "end": 185.88
+    },
+    {
+      "word": "to",
+      "start": 185.88,
+      "end": 186.2
+    },
+    {
+      "word": "form",
+      "start": 186.2,
+      "end": 186.48
+    },
+    {
+      "word": "water",
+      "start": 186.48,
+      "end": 186.8
+    },
+    {
+      "word": "and",
+      "start": 186.8,
+      "end": 187.26
+    },
+    {
+      "word": "oxygen.",
+      "start": 187.26,
+      "end": 187.74
+    },
+    {
+      "word": "The",
+      "start": 188.38,
+      "end": 188.56
+    },
+    {
+      "word": "balanced",
+      "start": 188.56,
+      "end": 188.94
+    },
+    {
+      "word": "chemical",
+      "start": 188.94,
+      "end": 189.26
+    },
+    {
+      "word": "equation",
+      "start": 189.26,
+      "end": 189.66
+    },
+    {
+      "word": "is",
+      "start": 189.9,
+      "end": 190.3
+    },
+    {
+      "word": "2H2O2",
+      "start": 190.3,
+      "end": 192.32
+    },
+    {
+      "word": "yields",
+      "start": 192.32,
+      "end": 192.76
+    },
+    {
+      "word": "2H2O",
+      "start": 192.76,
+      "end": 194.16
+    },
+    {
+      "word": "plus",
+      "start": 194.16,
+      "end": 194.48
+    },
+    {
+      "word": "O2.",
+      "start": 194.48,
+      "end": 195.1
+    },
+    {
+      "word": "Suppose",
+      "start": 195.9,
+      "end": 196.14
+    },
+    {
+      "word": "water",
+      "start": 196.14,
+      "end": 196.62
+    },
+    {
+      "word": "is",
+      "start": 196.62,
+      "end": 196.94
+    },
+    {
+      "word": "the",
+      "start": 196.94,
+      "end": 197.1
+    },
+    {
+      "word": "desired",
+      "start": 197.1,
+      "end": 197.5
+    },
+    {
+      "word": "product.",
+      "start": 197.5,
+      "end": 197.96
+    },
+    {
+      "word": "Calculate",
+      "start": 198.62,
+      "end": 199.1
+    },
+    {
+      "word": "the",
+      "start": 199.1,
+      "end": 199.24
+    },
+    {
+      "word": "atom",
+      "start": 199.24,
+      "end": 199.56
+    },
+    {
+      "word": "economy",
+      "start": 199.56,
+      "end": 199.98
+    },
+    {
+      "word": "of",
+      "start": 199.98,
+      "end": 200.3
+    },
+    {
+      "word": "this",
+      "start": 200.3,
+      "end": 200.52
+    },
+    {
+      "word": "reaction.",
+      "start": 200.52,
+      "end": 201.04
+    },
+    {
+      "word": "The",
+      "start": 201.56,
+      "end": 201.7
+    },
+    {
+      "word": "relative",
+      "start": 201.7,
+      "end": 202.1
+    },
+    {
+      "word": "atomic",
+      "start": 202.1,
+      "end": 202.52
+    },
+    {
+      "word": "masses",
+      "start": 202.52,
+      "end": 202.9
+    },
+    {
+      "word": "are",
+      "start": 202.9,
+      "end": 203.44
+    },
+    {
+      "word": "hydrogen",
+      "start": 203.44,
+      "end": 204.12
+    },
+    {
+      "word": "1",
+      "start": 204.12,
+      "end": 204.7
+    },
+    {
+      "word": "and",
+      "start": 204.7,
+      "end": 205.38
+    },
+    {
+      "word": "oxygen",
+      "start": 205.38,
+      "end": 205.88
+    },
+    {
+      "word": "16.",
+      "start": 205.88,
+      "end": 206.64
+    },
+    {
+      "word": "Pause",
+      "start": 207.42,
+      "end": 207.5
+    },
+    {
+      "word": "the",
+      "start": 207.5,
+      "end": 207.66
+    },
+    {
+      "word": "video",
+      "start": 207.66,
+      "end": 207.94
+    },
+    {
+      "word": "and",
+      "start": 207.94,
+      "end": 208.28
+    },
+    {
+      "word": "try",
+      "start": 208.28,
+      "end": 208.52
+    },
+    {
+      "word": "the",
+      "start": 208.52,
+      "end": 208.68
+    },
+    {
+      "word": "question.",
+      "start": 208.68,
+      "end": 209.06
+    },
+    {
+      "word": "Remember",
+      "start": 209.9,
+      "end": 210.0
+    },
+    {
+      "word": "to",
+      "start": 210.0,
+      "end": 210.3
+    },
+    {
+      "word": "consider",
+      "start": 210.3,
+      "end": 210.62
+    },
+    {
+      "word": "the",
+      "start": 210.62,
+      "end": 210.92
+    },
+    {
+      "word": "numbers",
+      "start": 210.92,
+      "end": 211.16
+    },
+    {
+      "word": "in",
+      "start": 211.16,
+      "end": 211.5
+    },
+    {
+      "word": "front",
+      "start": 211.5,
+      "end": 211.76
+    },
+    {
+      "word": "of",
+      "start": 211.76,
+      "end": 211.98
+    },
+    {
+      "word": "the",
+      "start": 211.98,
+      "end": 212.12
+    },
+    {
+      "word": "chemical",
+      "start": 212.12,
+      "end": 212.46
+    },
+    {
+      "word": "formulae.",
+      "start": 212.46,
+      "end": 213.1
+    },
+    {
+      "word": "Checking",
+      "start": 213.58,
+      "end": 213.86
+    },
+    {
+      "word": "the",
+      "start": 213.86,
+      "end": 214.14
+    },
+    {
+      "word": "answer.",
+      "start": 214.14,
+      "end": 214.5
+    },
+    {
+      "word": "Let's",
+      "start": 215.08,
+      "end": 215.34
+    },
+    {
+      "word": "check",
+      "start": 215.34,
+      "end": 215.52
+    },
+    {
+      "word": "your",
+      "start": 215.52,
+      "end": 215.76
+    },
+    {
+      "word": "answer.",
+      "start": 215.76,
+      "end": 216.14
+    },
+    {
+      "word": "First,",
+      "start": 216.8,
+      "end": 217.08
+    },
+    {
+      "word": "calculate",
+      "start": 217.48,
+      "end": 217.82
+    },
+    {
+      "word": "the",
+      "start": 217.82,
+      "end": 218.1
+    },
+    {
+      "word": "relative",
+      "start": 218.1,
+      "end": 218.48
+    },
+    {
+      "word": "formula",
+      "start": 218.48,
+      "end": 218.9
+    },
+    {
+      "word": "mass",
+      "start": 218.9,
+      "end": 219.26
+    },
+    {
+      "word": "of",
+      "start": 219.26,
+      "end": 219.44
+    },
+    {
+      "word": "water.",
+      "start": 219.44,
+      "end": 219.86
+    },
+    {
+      "word": "2",
+      "start": 220.44,
+      "end": 220.7
+    },
+    {
+      "word": "multiplied",
+      "start": 220.7,
+      "end": 221.34
+    },
+    {
+      "word": "by",
+      "start": 221.34,
+      "end": 221.6
+    },
+    {
+      "word": "1",
+      "start": 221.6,
+      "end": 222.04
+    },
+    {
+      "word": "plus",
+      "start": 222.04,
+      "end": 222.34
+    },
+    {
+      "word": "16",
+      "start": 222.34,
+      "end": 222.96
+    },
+    {
+      "word": "gives",
+      "start": 222.96,
+      "end": 223.4
+    },
+    {
+      "word": "18.",
+      "start": 223.4,
+      "end": 224.04
+    },
+    {
+      "word": "However,",
+      "start": 224.56,
+      "end": 224.94
+    },
+    {
+      "word": "the",
+      "start": 225.38,
+      "end": 225.44
+    },
+    {
+      "word": "balanced",
+      "start": 225.44,
+      "end": 225.82
+    },
+    {
+      "word": "equation",
+      "start": 225.82,
+      "end": 226.2
+    },
+    {
+      "word": "shows",
+      "start": 226.2,
+      "end": 226.68
+    },
+    {
+      "word": "that",
+      "start": 226.68,
+      "end": 226.94
+    },
+    {
+      "word": "2",
+      "start": 226.94,
+      "end": 227.3
+    },
+    {
+      "word": "molecules",
+      "start": 227.3,
+      "end": 227.66
+    },
+    {
+      "word": "of",
+      "start": 227.66,
+      "end": 227.96
+    },
+    {
+      "word": "water",
+      "start": 227.96,
+      "end": 228.2
+    },
+    {
+      "word": "are",
+      "start": 228.2,
+      "end": 228.44
+    },
+    {
+      "word": "produced.",
+      "start": 228.44,
+      "end": 228.82
+    },
+    {
+      "word": "Therefore,",
+      "start": 229.46,
+      "end": 229.82
+    },
+    {
+      "word": "we",
+      "start": 230.1,
+      "end": 230.22
+    },
+    {
+      "word": "multiply",
+      "start": 230.22,
+      "end": 230.66
+    },
+    {
+      "word": "18",
+      "start": 230.66,
+      "end": 231.3
+    },
+    {
+      "word": "by",
+      "start": 231.3,
+      "end": 231.54
+    },
+    {
+      "word": "2",
+      "start": 231.54,
+      "end": 231.98
+    },
+    {
+      "word": "giving",
+      "start": 231.98,
+      "end": 232.38
+    },
+    {
+      "word": "36.",
+      "start": 232.38,
+      "end": 233.06
+    },
+    {
+      "word": "Next,",
+      "start": 233.68,
+      "end": 234.14
+    },
+    {
+      "word": "calculate",
+      "start": 234.48,
+      "end": 234.8
+    },
+    {
+      "word": "the",
+      "start": 234.8,
+      "end": 235.08
+    },
+    {
+      "word": "relative",
+      "start": 235.08,
+      "end": 235.46
+    },
+    {
+      "word": "formula",
+      "start": 235.46,
+      "end": 235.86
+    },
+    {
+      "word": "mass",
+      "start": 235.86,
+      "end": 236.24
+    },
+    {
+      "word": "of",
+      "start": 236.24,
+      "end": 236.44
+    },
+    {
+      "word": "oxygen",
+      "start": 236.44,
+      "end": 236.84
+    },
+    {
+      "word": "gas.",
+      "start": 236.84,
+      "end": 237.26
+    },
+    {
+      "word": "Oxygen",
+      "start": 237.82,
+      "end": 238.34
+    },
+    {
+      "word": "gas",
+      "start": 238.34,
+      "end": 238.6
+    },
+    {
+      "word": "is",
+      "start": 238.6,
+      "end": 238.9
+    },
+    {
+      "word": "O2.",
+      "start": 238.9,
+      "end": 239.46
+    },
+    {
+      "word": "2",
+      "start": 239.46,
+      "end": 240.3
+    },
+    {
+      "word": "multiplied",
+      "start": 240.3,
+      "end": 240.92
+    },
+    {
+      "word": "by",
+      "start": 240.92,
+      "end": 241.18
+    },
+    {
+      "word": "16",
+      "start": 241.18,
+      "end": 241.72
+    },
+    {
+      "word": "gives",
+      "start": 241.72,
+      "end": 242.14
+    },
+    {
+      "word": "32.",
+      "start": 242.14,
+      "end": 242.78
+    },
+    {
+      "word": "Now",
+      "start": 243.4,
+      "end": 243.7
+    },
+    {
+      "word": "calculate",
+      "start": 243.7,
+      "end": 244.14
+    },
+    {
+      "word": "the",
+      "start": 244.14,
+      "end": 244.48
+    },
+    {
+      "word": "total",
+      "start": 244.48,
+      "end": 244.84
+    },
+    {
+      "word": "relative",
+      "start": 244.84,
+      "end": 245.3
+    },
+    {
+      "word": "formula",
+      "start": 245.3,
+      "end": 245.76
+    },
+    {
+      "word": "mass",
+      "start": 245.76,
+      "end": 246.1
+    },
+    {
+      "word": "of",
+      "start": 246.1,
+      "end": 246.36
+    },
+    {
+      "word": "all",
+      "start": 246.36,
+      "end": 246.62
+    },
+    {
+      "word": "products.",
+      "start": 246.62,
+      "end": 247.14
+    },
+    {
+      "word": "36",
+      "start": 248.32,
+      "end": 248.34
+    },
+    {
+      "word": "plus",
+      "start": 248.34,
+      "end": 248.76
+    },
+    {
+      "word": "32",
+      "start": 248.76,
+      "end": 249.42
+    },
+    {
+      "word": "gives",
+      "start": 249.42,
+      "end": 249.9
+    },
+    {
+      "word": "68.",
+      "start": 249.9,
+      "end": 250.6
+    },
+    {
+      "word": "Finally,",
+      "start": 251.24,
+      "end": 251.74
+    },
+    {
+      "word": "divide",
+      "start": 252.1,
+      "end": 252.32
+    },
+    {
+      "word": "36",
+      "start": 252.32,
+      "end": 253.0
+    },
+    {
+      "word": "by",
+      "start": 253.0,
+      "end": 253.28
+    },
+    {
+      "word": "68",
+      "start": 253.28,
+      "end": 253.86
+    },
+    {
+      "word": "and",
+      "start": 253.86,
+      "end": 254.28
+    },
+    {
+      "word": "multiply",
+      "start": 254.28,
+      "end": 254.76
+    },
+    {
+      "word": "by",
+      "start": 254.76,
+      "end": 255.02
+    },
+    {
+      "word": "100.",
+      "start": 255.02,
+      "end": 255.64
+    },
+    {
+      "word": "This",
+      "start": 256.12,
+      "end": 256.38
+    },
+    {
+      "word": "gives",
+      "start": 256.38,
+      "end": 256.66
+    },
+    {
+      "word": "approximately",
+      "start": 256.66,
+      "end": 257.38
+    },
+    {
+      "word": "52",
+      "start": 257.38,
+      "end": 258.2
+    },
+    {
+      "word": ".9%.",
+      "start": 258.2,
+      "end": 259.52
+    },
+    {
+      "word": "Therefore,",
+      "start": 259.52,
+      "end": 260.36
+    },
+    {
+      "word": "the",
+      "start": 260.7,
+      "end": 260.74
+    },
+    {
+      "word": "atom",
+      "start": 260.74,
+      "end": 261.06
+    },
+    {
+      "word": "economy",
+      "start": 261.06,
+      "end": 261.52
+    },
+    {
+      "word": "is",
+      "start": 261.52,
+      "end": 261.84
+    },
+    {
+      "word": "approximately",
+      "start": 261.84,
+      "end": 262.36
+    },
+    {
+      "word": "52",
+      "start": 262.36,
+      "end": 263.22
+    },
+    {
+      "word": ".9%.",
+      "start": 263.22,
+      "end": 264.64
+    },
+    {
+      "word": "Well",
+      "start": 264.64,
+      "end": 265.1
+    },
+    {
+      "word": "done",
+      "start": 265.1,
+      "end": 265.38
+    },
+    {
+      "word": "if",
+      "start": 265.38,
+      "end": 265.58
+    },
+    {
+      "word": "you",
+      "start": 265.58,
+      "end": 267.86
+    },
+    {
+      "word": "want",
+      "start": 269.46,
+      "end": 269.58
+    },
+    {
+      "word": "a",
+      "start": 269.58,
+      "end": 269.58
+    },
+    {
+      "word": "mass",
+      "start": 269.58,
+      "end": 269.7
+    },
+    {
+      "word": "of",
+      "start": 269.7,
+      "end": 269.9
+    },
+    {
+      "word": "water",
+      "start": 269.9,
+      "end": 270.26
+    },
+    {
+      "word": "by",
+      "start": 270.26,
+      "end": 270.54
+    },
+    {
+      "word": "2",
+      "start": 270.54,
+      "end": 270.94
+    },
+    {
+      "word": "because",
+      "start": 270.94,
+      "end": 271.54
+    },
+    {
+      "word": "of",
+      "start": 271.54,
+      "end": 271.7
+    },
+    {
+      "word": "the",
+      "start": 271.7,
+      "end": 271.84
+    },
+    {
+      "word": "coefficient",
+      "start": 271.84,
+      "end": 272.28
+    },
+    {
+      "word": "in",
+      "start": 272.28,
+      "end": 272.6
+    },
+    {
+      "word": "the",
+      "start": 272.6,
+      "end": 272.7
+    },
+    {
+      "word": "balanced",
+      "start": 272.7,
+      "end": 273.04
+    },
+    {
+      "word": "equation.",
+      "start": 273.04,
+      "end": 273.56
+    },
+    {
+      "word": "Forgetting",
+      "start": 274.28,
+      "end": 274.7
+    },
+    {
+      "word": "to",
+      "start": 274.7,
+      "end": 274.82
+    },
+    {
+      "word": "include",
+      "start": 274.82,
+      "end": 275.2
+    },
+    {
+      "word": "coefficients",
+      "start": 275.2,
+      "end": 275.76
+    },
+    {
+      "word": "is",
+      "start": 275.76,
+      "end": 276.14
+    },
+    {
+      "word": "a",
+      "start": 276.14,
+      "end": 276.32
+    },
+    {
+      "word": "common",
+      "start": 276.32,
+      "end": 276.6
+    },
+    {
+      "word": "mistake",
+      "start": 276.6,
+      "end": 277.04
+    },
+    {
+      "word": "in",
+      "start": 277.04,
+      "end": 277.36
+    },
+    {
+      "word": "atom",
+      "start": 277.36,
+      "end": 277.62
+    },
+    {
+      "word": "economy",
+      "start": 277.62,
+      "end": 278.04
+    },
+    {
+      "word": "calculations.",
+      "start": 278.04,
+      "end": 278.92
+    },
+    {
+      "word": "Closing.",
+      "start": 279.48,
+      "end": 279.88
+    },
+    {
+      "word": "That",
+      "start": 280.64,
+      "end": 280.64
+    },
+    {
+      "word": "brings",
+      "start": 280.64,
+      "end": 280.88
+    },
+    {
+      "word": "us",
+      "start": 280.88,
+      "end": 281.08
+    },
+    {
+      "word": "to",
+      "start": 281.08,
+      "end": 281.26
+    },
+    {
+      "word": "the",
+      "start": 281.26,
+      "end": 281.38
+    },
+    {
+      "word": "end",
+      "start": 281.38,
+      "end": 281.64
+    },
+    {
+      "word": "of",
+      "start": 281.64,
+      "end": 281.88
+    },
+    {
+      "word": "today's",
+      "start": 281.88,
+      "end": 282.26
+    },
+    {
+      "word": "lesson",
+      "start": 282.26,
+      "end": 282.56
+    },
+    {
+      "word": "on",
+      "start": 282.56,
+      "end": 282.88
+    },
+    {
+      "word": "atom",
+      "start": 282.88,
+      "end": 283.26
+    },
+    {
+      "word": "economy.",
+      "start": 283.26,
+      "end": 283.74
+    },
+    {
+      "word": "Remember,",
+      "start": 284.42,
+      "end": 284.7
+    },
+    {
+      "word": "a",
+      "start": 285.14,
+      "end": 285.36
+    },
+    {
+      "word": "higher",
+      "start": 285.36,
+      "end": 285.72
+    },
+    {
+      "word": "atom",
+      "start": 285.72,
+      "end": 286.08
+    },
+    {
+      "word": "economy",
+      "start": 286.08,
+      "end": 286.6
+    },
+    {
+      "word": "generally",
+      "start": 286.6,
+      "end": 286.98
+    },
+    {
+      "word": "means",
+      "start": 286.98,
+      "end": 287.48
+    },
+    {
+      "word": "that",
+      "start": 287.48,
+      "end": 287.74
+    },
+    {
+      "word": "a",
+      "start": 287.74,
+      "end": 287.9
+    },
+    {
+      "word": "greater",
+      "start": 287.9,
+      "end": 288.2
+    },
+    {
+      "word": "proportion",
+      "start": 288.2,
+      "end": 288.68
+    },
+    {
+      "word": "of",
+      "start": 288.68,
+      "end": 288.96
+    },
+    {
+      "word": "the",
+      "start": 288.96,
+      "end": 289.08
+    },
+    {
+      "word": "reactant",
+      "start": 289.08,
+      "end": 289.6
+    },
+    {
+      "word": "atoms",
+      "start": 289.6,
+      "end": 290.06
+    },
+    {
+      "word": "ends",
+      "start": 290.06,
+      "end": 290.52
+    },
+    {
+      "word": "up",
+      "start": 290.52,
+      "end": 290.78
+    },
+    {
+      "word": "in",
+      "start": 290.78,
+      "end": 290.98
+    },
+    {
+      "word": "the",
+      "start": 290.98,
+      "end": 291.1
+    },
+    {
+      "word": "desired",
+      "start": 291.1,
+      "end": 291.52
+    },
+    {
+      "word": "product.",
+      "start": 291.52,
+      "end": 291.92
+    },
+    {
+      "word": "This",
+      "start": 292.52,
+      "end": 292.74
+    },
+    {
+      "word": "is",
+      "start": 292.74,
+      "end": 292.92
+    },
+    {
+      "word": "particularly",
+      "start": 292.92,
+      "end": 293.44
+    },
+    {
+      "word": "important",
+      "start": 293.44,
+      "end": 294.04
+    },
+    {
+      "word": "in",
+      "start": 294.04,
+      "end": 294.38
+    },
+    {
+      "word": "green",
+      "start": 294.38,
+      "end": 294.64
+    },
+    {
+      "word": "chemistry",
+      "start": 294.64,
+      "end": 295.1
+    },
+    {
+      "word": "and",
+      "start": 295.1,
+      "end": 295.46
+    },
+    {
+      "word": "industrial",
+      "start": 295.46,
+      "end": 295.98
+    },
+    {
+      "word": "manufacturing,",
+      "start": 295.98,
+      "end": 296.74
+    },
+    {
+      "word": "where",
+      "start": 297.12,
+      "end": 297.36
+    },
+    {
+      "word": "reducing",
+      "start": 297.36,
+      "end": 297.86
+    },
+    {
+      "word": "waste",
+      "start": 297.86,
+      "end": 298.24
+    },
+    {
+      "word": "can",
+      "start": 298.24,
+      "end": 298.5
+    },
+    {
+      "word": "save",
+      "start": 298.5,
+      "end": 298.78
+    },
+    {
+      "word": "resources",
+      "start": 298.78,
+      "end": 299.26
+    },
+    {
+      "word": "and",
+      "start": 299.26,
+      "end": 299.74
+    },
+    {
+      "word": "lower",
+      "start": 299.74,
+      "end": 299.98
+    },
+    {
+      "word": "costs.",
+      "start": 299.98,
+      "end": 300.42
+    },
+    {
+      "word": "Thank",
+      "start": 301.08,
+      "end": 301.3
+    },
+    {
+      "word": "you",
+      "start": 301.3,
+      "end": 301.5
+    },
+    {
+      "word": "for",
+      "start": 301.5,
+      "end": 301.68
+    },
+    {
+      "word": "watching",
+      "start": 301.68,
+      "end": 302.04
+    },
+    {
+      "word": "JD",
+      "start": 302.04,
+      "end": 302.36
+    },
+    {
+      "word": "Science.",
+      "start": 302.36,
+      "end": 302.86
+    },
+    {
+      "word": "Please",
+      "start": 303.54,
+      "end": 303.78
+    },
+    {
+      "word": "like",
+      "start": 303.78,
+      "end": 304.06
+    },
+    {
+      "word": "the",
+      "start": 304.06,
+      "end": 304.24
+    },
+    {
+      "word": "video,",
+      "start": 304.24,
+      "end": 304.62
+    },
+    {
+      "word": "subscribe",
+      "start": 304.98,
+      "end": 305.3
+    },
+    {
+      "word": "to",
+      "start": 305.3,
+      "end": 305.58
+    },
+    {
+      "word": "the",
+      "start": 305.58,
+      "end": 305.7
+    },
+    {
+      "word": "channel",
+      "start": 305.7,
+      "end": 306.0
+    },
+    {
+      "word": "and",
+      "start": 306.0,
+      "end": 306.48
+    },
+    {
+      "word": "share.",
+      "start": 306.48,
+      "end": 306.64
+    }
+  ],
+  "full_text": "Hello and welcome back to JD Science. In today's video, we want to look at atom economy. This builds on our understanding of chemical equations and relative formula mass. We will then work through an example before giving you a question to try yourself. Let's begin. What is atom economy? Atom economy is a measure of how efficiently the atoms of the reactants are used to produce the desired product in a chemical reaction. In some chemical reactions, more than one product is formed. One product may be useful while the others may be unwanted byproducts. A reaction with a high atom economy uses a large proportion of the reactant atoms to make the desired product. A reaction with a low atom economy produces a greater proportion of unwanted byproducts. Atom economy is particularly important in industrial chemistry because it helps manufacturers reduce waste and use raw materials more efficiently. How do we calculate atom economy? We use the following formula. Atom economy equals the relative formula mass of the desired product taking account of its coefficient in the balanced equation divided by the total relative formula mass of all products also taking account of their coefficients multiplied by 100. Before carrying out the calculation, always make sure the chemical equation is balanced. Let's look at an example. Worked example. Calcium carbonate decomposition. When calcium carbonate is heated, it causes to form calcium oxide and carbon dioxide. The balanced chemical equation is CaCO3 yields CaO plus CO2. Suppose calcium oxide is the desired product. Calculate the atom economy of this reaction. The relative atomic masses are calcium 40, carbon 12 and oxygen 16. First, calculate the relative formula mass of calcium oxide. Calcium oxide contains 1 calcium atom and 1 oxygen atom. 40 plus 16 gives 56. Next, calculate the relative formula mass of carbon dioxide. 12 plus 2 multiplied by 16 gives 44. Now calculate the total relative formula mass of the products. 56 plus 44 gives 100. Next, divide the relative formula mass of the desired product by the total relative formula mass of the products. 56 divided by 100 multiplied by 100 gives 56%. Therefore, the atom economy of this reaction is 56%. This means that 56% of the mass of the reactants is incorporated into the desired product, calcium oxide. The remaining 44% is incorporated into carbon dioxide. Practice question. Now it's your turn. Hydrogen peroxide decomposes to form water and oxygen. The balanced chemical equation is 2H2O2 yields 2H2O plus O2. Suppose water is the desired product. Calculate the atom economy of this reaction. The relative atomic masses are hydrogen 1 and oxygen 16. Pause the video and try the question. Remember to consider the numbers in front of the chemical formulae. Checking the answer. Let's check your answer. First, calculate the relative formula mass of water. 2 multiplied by 1 plus 16 gives 18. However, the balanced equation shows that 2 molecules of water are produced. Therefore, we multiply 18 by 2 giving 36. Next, calculate the relative formula mass of oxygen gas. Oxygen gas is O2. 2 multiplied by 16 gives 32. Now calculate the total relative formula mass of all products. 36 plus 32 gives 68. Finally, divide 36 by 68 and multiply by 100. This gives approximately 52.9%. Therefore, the atom economy is approximately 52.9%. Well done if you want a mass of water by 2 because of the coefficient in the balanced equation. Forgetting to include coefficients is a common mistake in atom economy calculations. Closing. That brings us to the end of today's lesson on atom economy. Remember, a higher atom economy generally means that a greater proportion of the reactant atoms ends up in the desired product. This is particularly important in green chemistry and industrial manufacturing, where reducing waste can save resources and lower costs. Thank you for watching JD Science. Please like the video, subscribe to the channel and share."
+}

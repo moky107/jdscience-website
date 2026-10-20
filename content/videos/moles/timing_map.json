@@ -1,26 +1,63 @@
 {
   "topic": "moles",
   "title": "Calculating Moles",
-  "audio": null,
-  "duration": 60.0,
+  "audio": "/workspace/content/videos/moles/source/narration_master.m4a",
+  "duration": 299.33,
   "slides": [
     {
       "t": 0.0,
       "id": "intro",
-      "cue": "in today's video",
-      "note": "Professional introduction"
+      "note": "Hello and welcome \u2014 calculating moles"
     },
     {
-      "t": 12.2,
+      "t": 32.04,
       "id": "concept",
-      "cue": "a mole is the amount",
-      "note": "Particles, amount, mass"
+      "note": "What is a mole?"
     },
     {
-      "t": 36.4,
+      "t": 47.8,
+      "id": "avogadro",
+      "note": "One mole contains 6.02 \u00d7 10^23 particles"
+    },
+    {
+      "t": 60.06,
+      "id": "same_n",
+      "note": "One mole of carbon / water \u2014 same number, different mass"
+    },
+    {
+      "t": 85.38,
+      "id": "molar",
+      "note": "What is molar mass?"
+    },
+    {
+      "t": 124.88,
       "id": "formula",
-      "cue": "number of moles equals",
-      "note": "n = m / Mr and Mg working"
+      "note": "How do we calculate moles?"
+    },
+    {
+      "t": 143.64,
+      "id": "example1",
+      "note": "Worked example 1 \u2014 12 g of magnesium"
+    },
+    {
+      "t": 174.86,
+      "id": "example2",
+      "note": "Worked example 2 \u2014 mass of 2 mol CO2"
+    },
+    {
+      "t": 225.72,
+      "id": "practice_q",
+      "note": "Practice \u2014 9 g of water, pause"
+    },
+    {
+      "t": 240.5,
+      "id": "practice_ans",
+      "note": "Let's check your answer"
+    },
+    {
+      "t": 271.04,
+      "id": "close",
+      "note": "That brings us to the end"
     }
   ],
   "reveals": [
@@ -30,147 +67,607 @@
       "item": "title"
     },
     {
-      "t": 5.2,
+      "t": 15.6,
       "slide": "intro",
-      "item": "agenda"
+      "item": "a1"
     },
     {
-      "t": 10.4,
+      "t": 17.54,
       "slide": "intro",
-      "item": "begin"
+      "item": "a2"
     },
     {
-      "t": 12.2,
-      "slide": "concept",
-      "item": "def"
+      "t": 21.04,
+      "slide": "intro",
+      "item": "a3"
     },
     {
-      "t": 16.4,
-      "slide": "concept",
-      "item": "avogadro"
+      "t": 27.1,
+      "slide": "intro",
+      "item": "a4"
     },
     {
-      "t": 20.4,
+      "t": 34.14,
       "slide": "concept",
+      "item": "tiny"
+    },
+    {
+      "t": 41.16,
+      "slide": "concept",
+      "item": "count"
+    },
+    {
+      "t": 45.66,
+      "slide": "concept",
+      "item": "unit"
+    },
+    {
+      "t": 47.8,
+      "slide": "avogadro",
+      "item": "one"
+    },
+    {
+      "t": 49.92,
+      "slide": "avogadro",
+      "item": "avo"
+    },
+    {
+      "t": 56.62,
+      "slide": "avogadro",
       "item": "name"
     },
     {
-      "t": 24.8,
-      "slide": "concept",
-      "item": "mass_link"
+      "t": 60.62,
+      "slide": "same_n",
+      "item": "carbon"
     },
     {
-      "t": 32.4,
-      "slide": "concept",
-      "item": "molar"
+      "t": 70.02,
+      "slide": "same_n",
+      "item": "water"
     },
     {
-      "t": 36.4,
+      "t": 78.64,
+      "slide": "same_n",
+      "item": "diff"
+    },
+    {
+      "t": 87.86,
+      "slide": "molar",
+      "item": "def"
+    },
+    {
+      "t": 96.46,
+      "slide": "molar",
+      "item": "mg24"
+    },
+    {
+      "t": 103.22,
+      "slide": "molar",
+      "item": "g24"
+    },
+    {
+      "t": 107.3,
+      "slide": "molar",
+      "item": "h2o"
+    },
+    {
+      "t": 115.22,
+      "slide": "molar",
+      "item": "two"
+    },
+    {
+      "t": 117.2,
+      "slide": "molar",
+      "item": "plus16"
+    },
+    {
+      "t": 118.38,
+      "slide": "molar",
+      "item": "eq18"
+    },
+    {
+      "t": 122.72,
+      "slide": "molar",
+      "item": "g18"
+    },
+    {
+      "t": 130.9,
       "slide": "formula",
       "item": "n"
     },
     {
-      "t": 38.4,
+      "t": 132.08,
       "slide": "formula",
       "item": "m"
     },
     {
-      "t": 40.4,
+      "t": 133.6,
       "slide": "formula",
       "item": "mr"
     },
     {
-      "t": 42.4,
+      "t": 135.12,
       "slide": "formula",
-      "item": "mg"
+      "item": "units"
     },
     {
-      "t": 44.2,
+      "t": 140.48,
       "slide": "formula",
-      "item": "ar"
+      "item": "apply"
     },
     {
-      "t": 46.4,
-      "slide": "formula",
+      "t": 147.16,
+      "slide": "example1",
+      "item": "q12"
+    },
+    {
+      "t": 151.62,
+      "slide": "example1",
+      "item": "q24"
+    },
+    {
+      "t": 155.68,
+      "slide": "example1",
+      "item": "fn"
+    },
+    {
+      "t": 162.04,
+      "slide": "example1",
       "item": "twelve"
     },
     {
-      "t": 48.6,
-      "slide": "formula",
+      "t": 163.1,
+      "slide": "example1",
       "item": "twenty_four"
     },
     {
-      "t": 51.4,
-      "slide": "formula",
+      "t": 164.14,
+      "slide": "example1",
       "item": "half"
     },
     {
-      "t": 54.2,
-      "slide": "formula",
-      "item": "answer"
+      "t": 168.56,
+      "slide": "example1",
+      "item": "ans"
+    },
+    {
+      "t": 185.82,
+      "slide": "example2",
+      "item": "rearr"
+    },
+    {
+      "t": 192.54,
+      "slide": "example2",
+      "item": "co2"
+    },
+    {
+      "t": 200.88,
+      "slide": "example2",
+      "item": "c12"
+    },
+    {
+      "t": 202.88,
+      "slide": "example2",
+      "item": "o16"
+    },
+    {
+      "t": 207.54,
+      "slide": "example2",
+      "item": "mr"
+    },
+    {
+      "t": 211.54,
+      "slide": "example2",
+      "item": "mr44"
+    },
+    {
+      "t": 216.72,
+      "slide": "example2",
+      "item": "times"
+    },
+    {
+      "t": 219.22,
+      "slide": "example2",
+      "item": "t88"
+    },
+    {
+      "t": 223.92,
+      "slide": "example2",
+      "item": "ans"
+    },
+    {
+      "t": 228.82,
+      "slide": "practice_q",
+      "item": "q"
+    },
+    {
+      "t": 234.74,
+      "slide": "practice_q",
+      "item": "h"
+    },
+    {
+      "t": 236.86,
+      "slide": "practice_q",
+      "item": "o"
+    },
+    {
+      "t": 237.5,
+      "slide": "practice_q",
+      "item": "ask"
+    },
+    {
+      "t": 237.88,
+      "slide": "practice_q",
+      "item": "pause"
+    },
+    {
+      "t": 246.36,
+      "slide": "practice_ans",
+      "item": "h2o"
+    },
+    {
+      "t": 247.82,
+      "slide": "practice_ans",
+      "item": "mr"
+    },
+    {
+      "t": 250.92,
+      "slide": "practice_ans",
+      "item": "mr18"
+    },
+    {
+      "t": 259.46,
+      "slide": "practice_ans",
+      "item": "nine"
+    },
+    {
+      "t": 260.54,
+      "slide": "practice_ans",
+      "item": "eighteen"
+    },
+    {
+      "t": 261.48,
+      "slide": "practice_ans",
+      "item": "half"
+    },
+    {
+      "t": 264.16,
+      "slide": "practice_ans",
+      "item": "ans"
+    },
+    {
+      "t": 267.96,
+      "slide": "practice_ans",
+      "item": "well"
+    },
+    {
+      "t": 275.58,
+      "slide": "close",
+      "item": "n"
+    },
+    {
+      "t": 285.28,
+      "slide": "close",
+      "item": "m"
+    },
+    {
+      "t": 289.74,
+      "slide": "close",
+      "item": "brand"
     }
   ],
   "cursor": [
     {
       "t": 0.0,
       "target": null,
-      "cue": null
+      "cue": "intro hidden"
     },
     {
-      "t": 16.4,
-      "target": "avogadro",
+      "t": 49.92,
+      "target": "avo",
       "cue": "6.02"
     },
     {
-      "t": 20.4,
-      "target": "avogadro",
-      "cue": "avogadro"
+      "t": 53.02,
+      "target": "avo",
+      "cue": "10 to the 23"
     },
     {
-      "t": 24.8,
+      "t": 56.62,
+      "target": "name",
+      "cue": "Avogadro constant"
+    },
+    {
+      "t": 59.8,
       "target": null,
       "cue": null
     },
     {
-      "t": 36.4,
+      "t": 60.62,
+      "target": "c_atom",
+      "cue": "carbon atoms"
+    },
+    {
+      "t": 62.84,
+      "target": "carbon",
+      "cue": "6.02 carbon"
+    },
+    {
+      "t": 68.42,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 70.02,
+      "target": "water",
+      "cue": "water molecules"
+    },
+    {
+      "t": 74.14,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 78.64,
+      "target": "diff",
+      "cue": "do not have the same mass"
+    },
+    {
+      "t": 84.22,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 97.4,
+      "target": "ar24",
+      "cue": "magnesium is 24"
+    },
+    {
+      "t": 103.22,
+      "target": "g24",
+      "cue": "24 grams"
+    },
+    {
+      "t": 107.3,
+      "target": "h2o",
+      "cue": "H2O"
+    },
+    {
+      "t": 115.22,
+      "target": "two",
+      "cue": "Two multiplied by one"
+    },
+    {
+      "t": 117.2,
+      "target": "plus16",
+      "cue": "plus 16"
+    },
+    {
+      "t": 118.38,
+      "target": "eq18",
+      "cue": "gives 18"
+    },
+    {
+      "t": 122.72,
+      "target": "g18",
+      "cue": "18 grams"
+    },
+    {
+      "t": 124.5,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 130.9,
       "target": "n",
-      "cue": "number of moles"
+      "cue": "Number of moles"
     },
     {
-      "t": 38.4,
+      "t": 132.08,
       "target": "m",
-      "cue": "mass divided"
+      "cue": "equals mass"
     },
     {
-      "t": 40.4,
+      "t": 133.6,
       "target": "mr",
       "cue": "molar mass"
     },
     {
-      "t": 42.4,
+      "t": 134.8,
       "target": null,
       "cue": null
     },
     {
-      "t": 46.4,
+      "t": 147.16,
+      "target": "q12",
+      "cue": "12 grams of magnesium"
+    },
+    {
+      "t": 151.62,
+      "target": "q24",
+      "cue": "magnesium is 24"
+    },
+    {
+      "t": 155.68,
+      "target": "fn",
+      "cue": "write down the formula"
+    },
+    {
+      "t": 162.04,
       "target": "twelve",
-      "cue": "twelve"
+      "cue": "12 divided"
     },
     {
-      "t": 48.6,
+      "t": 163.1,
       "target": "twenty_four",
-      "cue": "twenty-four"
+      "cue": "by 24"
     },
     {
-      "t": 51.4,
+      "t": 164.14,
       "target": "half",
-      "cue": "zero point five"
+      "cue": "gives 0.5"
     },
     {
-      "t": 56.0,
+      "t": 168.56,
+      "target": "ans",
+      "cue": "0.5 moles"
+    },
+    {
+      "t": 174.0,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 185.82,
+      "target": "rearr",
+      "cue": "Mass equals"
+    },
+    {
+      "t": 192.54,
+      "target": "co2",
+      "cue": "two moles of carbon dioxide"
+    },
+    {
+      "t": 200.88,
+      "target": "c12",
+      "cue": "carbon is 12"
+    },
+    {
+      "t": 202.88,
+      "target": "o16",
+      "cue": "oxygen is 16"
+    },
+    {
+      "t": 207.54,
+      "target": "mr12",
+      "cue": "12 plus"
+    },
+    {
+      "t": 208.42,
+      "target": "mr2",
+      "cue": "2 multiplied"
+    },
+    {
+      "t": 209.98,
+      "target": "mr16",
+      "cue": "by 16"
+    },
+    {
+      "t": 211.54,
+      "target": "mr44",
+      "cue": "gives 44"
+    },
+    {
+      "t": 216.72,
+      "target": "two",
+      "cue": "2 multiplied by 44"
+    },
+    {
+      "t": 218.08,
+      "target": "t44",
+      "cue": "by 44"
+    },
+    {
+      "t": 219.22,
+      "target": "t88",
+      "cue": "gives 88"
+    },
+    {
+      "t": 223.92,
+      "target": "ans",
+      "cue": "88 grams"
+    },
+    {
+      "t": 225.5,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 230.54,
+      "target": "q",
+      "cue": "9 grams of water"
+    },
+    {
+      "t": 234.74,
+      "target": "h",
+      "cue": "hydrogen 1"
+    },
+    {
+      "t": 236.86,
+      "target": "o",
+      "cue": "oxygen 16"
+    },
+    {
+      "t": 237.88,
+      "target": "pause",
+      "cue": "Pause the video"
+    },
+    {
+      "t": 240.2,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 246.36,
+      "target": "h2o",
+      "cue": "Water is H2O"
+    },
+    {
+      "t": 247.82,
+      "target": "mr2",
+      "cue": "2 multiplied by 1"
+    },
+    {
+      "t": 249.86,
+      "target": "mr16",
+      "cue": "plus 16"
+    },
+    {
+      "t": 250.92,
+      "target": "mr18",
+      "cue": "gives 18"
+    },
+    {
+      "t": 259.46,
+      "target": "nine",
+      "cue": "9 divided"
+    },
+    {
+      "t": 260.54,
+      "target": "eighteen",
+      "cue": "by 18"
+    },
+    {
+      "t": 261.48,
+      "target": "half",
+      "cue": "gives 0.5"
+    },
+    {
+      "t": 264.16,
+      "target": "ans",
+      "cue": "0.5 moles"
+    },
+    {
+      "t": 267.9,
+      "target": null,
+      "cue": null
+    },
+    {
+      "t": 281.8,
+      "target": "n",
+      "cue": "divide the mass by the molar mass"
+    },
+    {
+      "t": 285.28,
+      "target": "m",
+      "cue": "multiply the number of moles"
+    },
+    {
+      "t": 289.5,
       "target": null,
       "cue": null
     }
   ],
-  "notes": "Cue-map timings. When the original ElevenLabs MP3 is present, transcribe.py replaces these with word-level timestamps."
+  "notes": "Master clock is the original ElevenLabs narration. Slide cuts, reveals and cursor events use word-level timestamps."
 }

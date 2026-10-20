@@ -33,14 +33,8 @@ def lerp(a: float, b: float, t: float) -> float:
 
 
 def load_lesson(topic: str, duration_cap: float | None = None) -> dict:
+    """Always use video_data.py — do not prefer a stale timing_map.json."""
     base = deepcopy(LESSONS[topic])
-    timing_path = ROOT / "content/videos" / topic / "timing_map.json"
-    if timing_path.exists():
-        data = json.loads(timing_path.read_text())
-        base["slides"] = data["slides"]
-        base["reveals"] = data["reveals"]
-        base["cursor"] = data["cursor"]
-        base["duration"] = float(data["duration"])
     if duration_cap is not None:
         base["duration"] = min(float(base["duration"]), duration_cap)
         base["slides"] = [s for s in base["slides"] if s["t"] < base["duration"]]
@@ -49,13 +43,30 @@ def load_lesson(topic: str, duration_cap: float | None = None) -> dict:
     return base
 
 
+def write_timing_map(topic: str, lesson: dict, audio: Path | None, dest: Path) -> None:
+    dest.write_text(json.dumps({
+        "topic": topic,
+        "title": lesson["title"],
+        "audio": str(audio) if audio else None,
+        "duration": lesson["duration"],
+        "slides": lesson["slides"],
+        "reveals": lesson["reveals"],
+        "cursor": lesson["cursor"],
+        "notes": (
+            "Master clock is the original ElevenLabs narration. "
+            "Slide cuts, reveals and cursor events use word-level timestamps."
+        ),
+    }, indent=2))
+    print("wrote", dest)
+
+
 class SlideCache:
     def __init__(self, lesson: dict) -> None:
         self.lesson = lesson
         self._cache: dict[tuple, tuple[Image.Image, dict]] = {}
 
     def get(self, slide_id: str, revealed: list[str], t: float) -> tuple[Image.Image, dict]:
-        animate = slide_id in {"intro", "concept"}
+        animate = slide_id in self.lesson.get("animate", {"intro", "concept"})
         key_t = round(t * 8) / 8 if animate else 0
         key = (slide_id, tuple(revealed), key_t)
         if key not in self._cache:
@@ -225,15 +236,21 @@ def encode_video(lesson: dict, audio: Path | None, dest: Path) -> None:
         "-i", "pipe:0",
     ]
     if audio and audio.exists():
-        cmd += ["-i", str(audio), "-map", "0:v:0", "-map", "1:a:0", "-c:a", "aac", "-b:a", "192k"]
+        cmd += ["-i", str(audio), "-map", "0:v:0", "-map", "1:a:0"]
+        if audio.suffix.lower() in {".m4a", ".aac", ".mp4"}:
+            cmd += ["-c:a", "copy"]
+        else:
+            cmd += ["-c:a", "aac", "-b:a", "192k"]
     else:
-        cmd += ["-f", "lavfi", "-i", f"anullsrc=r=44100:cl=stereo:d={lesson['duration']}",
-                "-map", "0:v:0", "-map", "1:a:0", "-c:a", "aac", "-b:a", "96k"]
+        raise SystemExit(
+            "Original ElevenLabs narration not found — refusing to encode a silent or placeholder track."
+        )
     cmd += [
         "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "18",
+        "-t", f"{lesson['duration']:.3f}",
         "-movflags", "+faststart", "-shortest", str(dest),
     ]
-    print("encoding", nframes, "frames ->", dest, "audio", audio or "silent-placeholder")
+    print("encoding", nframes, "frames ->", dest, "audio", audio)
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     assert proc.stdin is not None
     try:
@@ -271,26 +288,19 @@ def main(argv: list[str] | None = None) -> None:
         if audio is None:
             raise SystemExit("Original ElevenLabs MP3 not found — cannot transcribe.")
         transcribe_mod.main(["--topic", topic, "--audio", str(audio)])
+    if audio is None:
+        raise SystemExit(
+            f"Original ElevenLabs narration not found for {topic}. "
+            f"Expected content/videos/{topic}/source/narration_master.m4a"
+        )
     cap = 60.0 if args.sample else None
     lesson = load_lesson(topic, duration_cap=cap)
     map_path = out / "timing_map.json"
-    if not map_path.exists():
-        map_path.write_text(json.dumps({
-            "topic": topic,
-            "title": lesson["title"],
-            "audio": str(audio) if audio else None,
-            "duration": lesson["duration"],
-            "slides": lesson["slides"],
-            "reveals": lesson["reveals"],
-            "cursor": lesson["cursor"],
-            "notes": (
-                "Cue-map timings. When the original ElevenLabs MP3 is present, "
-                "transcribe.py replaces these with word-level timestamps."
-            ),
-        }, indent=2))
-        print("wrote", map_path)
+    write_timing_map(topic, load_lesson(topic), audio, map_path)
     if args.preview or args.video or args.sample:
-        times = [1.0, 6.0, 11.0, 16.5, 21.0, 28.0, 37.0, 39.0, 41.0, 47.0, 49.0, 52.0, 55.0, 58.5]
+        times = lesson.get("sample_qa_times" if args.sample else "qa_times") or [
+            1.0, 6.0, 16.5, 21.0, 32.5, 50.0, 56.8,
+        ]
         preview(lesson, times, out / "qa")
     if args.video or args.sample:
         name = f"jdscience-{topic}-60s-sample.mp4" if args.sample else f"jdscience-{topic}-1080p.mp4"

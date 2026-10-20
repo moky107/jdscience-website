@@ -1,0 +1,43 @@
+[0.00–5.92] Hello and welcome back to JD Science. In today's video, we want to look at concentration.
+[6.66–12.52] This builds on our understanding of mass, volume and solutions. We will explain what
+[12.52–17.96] concentration means, how it is calculated and work through examples using concentration
+[17.96–24.00] in grams per cubic decimeter and moles per cubic decimeter. You will also have an opportunity
+[24.00–29.00] to try a question yourself before we go through the answer together. Let's begin.
+[30.10–35.96] What is concentration? Concentration tells us how much solute is dissolved in a given
+[35.96–42.14] volume of solution. A solute is the substance being dissolved, while a solvent is the liquid
+[42.14–48.30] that dissolves it. For example, when sodium chloride dissolves in water, sodium chloride
+[48.30–52.90] is the solute and water is the solvent. The resulting mixture is
+[52.90–57.40] is called a solution. A concentrated solution contains more dissolved
+[57.40–63.02] solute per unit volume than a dilute solution. Concentration can be expressed in different
+[63.02–68.96] units depending on the information provided. Calculating concentration in grams per cubic
+[68.96–74.94] decimeter. When concentration is expressed in grams per cubic decimeter, we use the following
+[75.44–81.82] formula. Concentration equals mass of solute divided by volume of solution. The mass must
+[81.82–87.92] be in grams and the volume must be in cubic decimeters. Remember that 1 cubic decimeter
+[87.92–94.34] is equal to 1000 cubic centimeters. Therefore, if the volume is given in cubic centimeters,
+[94.94–98.20] we must divide it by 1000 before using the formula.
+[98.88–105.16] Let's look at an example. Worked example 1. A student dissolves 10 grams of sodium chloride
+[105.16–112.40] in water to make 250 cubic centimeters of solution. Calculate the concentration in grams per cubic
+[112.40–119.76] decimeter. First, convert convert the volume into cubic decimeters. 250 divided by 1000
+[119.76–128.32] gives 0.25 cubic decimeters. Next, divide the mass by the volume. 10 divided by 0.25
+[128.32–135.02] gives 40. Therefore, the concentration is 40 grams per cubic decimeter. Notice that we
+[135.02–140.62] use the final volume of the solution, not simply the volume of water added. Calculating
+[140.62–146.84] concentration in moles per cubic decimeter. Sometimes, concentration is expressed in moles
+[146.84–148.98] per cubic decimeter rather than
+[148.98–155.70] grams per cubic decimeter. In this case, we use concentration equals number of moles divided
+[155.70–162.58] by volume in cubic decimeters. Let's apply this formula. Worked example 2. A solution
+[162.58–170.08] contains 0.5 moles of sodium hydroxide in 250 cubic centimeters of solution. Calculate
+[170.08–178.26] its concentration in moles per cubic decimeter. First, convert 250 cubic centimeters into cubic
+[178.26–186.68] decimeters. This gives 0.25 cubic decimeters. Next, divide the number of moles by the volume.
+[187.28–195.90] 0.5 divided by 0.25 gives 2. Therefore, the concentration is 2 moles per cubic decimeter.
+[196.46–203.30] Practice question. Now, it's your turn. A student dissolves 8 grams of potassium chloride in water
+[203.30–209.46] to make 200 cubic centimeters of solution. Calculate the concentration in grams per
+[209.46–214.60] cubic decimeter. Pause the video and try the question. Let's check your answer.
+[215.38–222.46] First, convert 200 cubic centimeters into cubic decimeters. 200 divided by 1000
+[222.46–231.84] gives 0.2 cubic decimeters. Next, divide the mass by the volume. 8 divided by 0.2 gives 40.
+[232.40–238.54] Therefore, the concentration is 40 grams per cubic decimeter. Well done if you got that correct.
+[239.32–243.24] Closing. That brings us to the end of today's lesson on concentration.
+[244.18–249.50] Remember that concentration tells us how much solute is present in a given volume of solution.
+[250.20–255.52] Always check the units carefully, particularly when converting cubic centimeters into cubic
+[255.52–260.62] decimeters. Thank you for watching JD Science. If you found this lesson helpful,
+[260.62–264.92] please like the video, subscribe to the channel and share it with other learners.
+[265.74–268.36] Until next time, keep learning and keep practicing.
