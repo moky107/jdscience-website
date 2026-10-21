@@ -63,6 +63,13 @@ export const GCSE_CHEMISTRY_LESSON_VIDEOS = [
     source_path: "content/videos/atom-economy/jdscience-atom-economy-1080p.mp4",
     description: "Atom economy from the Mr of the desired product and the total Mr of all products, with a practice question.",
   }),
+  lesson({
+    title: "Six-Mark Exam Technique",
+    topicSlug: "six-mark-questions",
+    file_name: "jdscience-six-mark-questions-1080p.mp4",
+    source_path: "content/videos/six-mark-questions/jdscience-six-mark-questions-1080p.mp4",
+    description: "How to get full marks in GCSE Chemistry six-mark questions: command words, levels of response, and the Point–Science–Explain–Link–Check structure.",
+  }),
 ];
 
 export const GCSE_CHEMISTRY_VIDEOS = [

@@ -1,0 +1,6930 @@
+{
+  "duration": 482.37,
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.32,
+      "prob": 0.96
+    },
+    {
+      "word": "and",
+      "start": 0.32,
+      "end": 0.76,
+      "prob": 0.821
+    },
+    {
+      "word": "welcome",
+      "start": 0.76,
+      "end": 1.06,
+      "prob": 0.972
+    },
+    {
+      "word": "back",
+      "start": 1.06,
+      "end": 1.46,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.46,
+      "end": 1.7,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.7,
+      "end": 2.0,
+      "prob": 0.923
+    },
+    {
+      "word": "Science.",
+      "start": 2.0,
+      "end": 2.38,
+      "prob": 0.5
+    },
+    {
+      "word": "Have",
+      "start": 3.3,
+      "end": 3.4,
+      "prob": 0.995
+    },
+    {
+      "word": "you",
+      "start": 3.4,
+      "end": 3.6,
+      "prob": 0.999
+    },
+    {
+      "word": "ever",
+      "start": 3.6,
+      "end": 3.9,
+      "prob": 0.997
+    },
+    {
+      "word": "answered",
+      "start": 3.9,
+      "end": 4.34,
+      "prob": 0.993
+    },
+    {
+      "word": "a",
+      "start": 4.34,
+      "end": 4.54,
+      "prob": 0.993
+    },
+    {
+      "word": "6",
+      "start": 4.54,
+      "end": 4.88,
+      "prob": 0.507
+    },
+    {
+      "word": "-mark",
+      "start": 4.88,
+      "end": 5.08,
+      "prob": 0.64
+    },
+    {
+      "word": "question",
+      "start": 5.08,
+      "end": 5.58,
+      "prob": 0.986
+    },
+    {
+      "word": "in",
+      "start": 5.58,
+      "end": 5.84,
+      "prob": 0.996
+    },
+    {
+      "word": "GCSE",
+      "start": 5.84,
+      "end": 6.42,
+      "prob": 0.994
+    },
+    {
+      "word": "chemistry,",
+      "start": 6.42,
+      "end": 7.0,
+      "prob": 0.734
+    },
+    {
+      "word": "written",
+      "start": 7.36,
+      "end": 7.7,
+      "prob": 0.997
+    },
+    {
+      "word": "almost",
+      "start": 7.7,
+      "end": 8.16,
+      "prob": 0.974
+    },
+    {
+      "word": "half",
+      "start": 8.16,
+      "end": 8.54,
+      "prob": 0.989
+    },
+    {
+      "word": "a",
+      "start": 8.54,
+      "end": 8.74,
+      "prob": 0.984
+    },
+    {
+      "word": "page",
+      "start": 8.74,
+      "end": 9.1,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 9.1,
+      "end": 9.62,
+      "prob": 0.631
+    },
+    {
+      "word": "still",
+      "start": 9.62,
+      "end": 9.98,
+      "prob": 0.996
+    },
+    {
+      "word": "received",
+      "start": 9.98,
+      "end": 10.46,
+      "prob": 0.993
+    },
+    {
+      "word": "only",
+      "start": 10.46,
+      "end": 10.76,
+      "prob": 0.988
+    },
+    {
+      "word": "2",
+      "start": 10.76,
+      "end": 11.2,
+      "prob": 0.621
+    },
+    {
+      "word": "or",
+      "start": 11.2,
+      "end": 11.44,
+      "prob": 0.91
+    },
+    {
+      "word": "3",
+      "start": 11.44,
+      "end": 11.82,
+      "prob": 0.995
+    },
+    {
+      "word": "marks?",
+      "start": 11.82,
+      "end": 12.02,
+      "prob": 0.984
+    },
+    {
+      "word": "Perhaps",
+      "start": 12.76,
+      "end": 13.14,
+      "prob": 0.996
+    },
+    {
+      "word": "you",
+      "start": 13.14,
+      "end": 13.36,
+      "prob": 0.986
+    },
+    {
+      "word": "understood",
+      "start": 13.36,
+      "end": 13.9,
+      "prob": 0.988
+    },
+    {
+      "word": "the",
+      "start": 13.9,
+      "end": 14.1,
+      "prob": 0.993
+    },
+    {
+      "word": "chemistry",
+      "start": 14.1,
+      "end": 14.5,
+      "prob": 0.993
+    },
+    {
+      "word": "but",
+      "start": 14.5,
+      "end": 15.04,
+      "prob": 0.623
+    },
+    {
+      "word": "could",
+      "start": 15.04,
+      "end": 15.22,
+      "prob": 0.995
+    },
+    {
+      "word": "not",
+      "start": 15.22,
+      "end": 15.5,
+      "prob": 0.997
+    },
+    {
+      "word": "understand",
+      "start": 15.5,
+      "end": 16.04,
+      "prob": 0.998
+    },
+    {
+      "word": "why",
+      "start": 16.04,
+      "end": 16.46,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 16.46,
+      "end": 16.68,
+      "prob": 0.992
+    },
+    {
+      "word": "examiner",
+      "start": 16.68,
+      "end": 17.04,
+      "prob": 0.993
+    },
+    {
+      "word": "did",
+      "start": 17.04,
+      "end": 17.34,
+      "prob": 0.99
+    },
+    {
+      "word": "not",
+      "start": 17.34,
+      "end": 17.64,
+      "prob": 0.999
+    },
+    {
+      "word": "award",
+      "start": 17.64,
+      "end": 18.02,
+      "prob": 0.995
+    },
+    {
+      "word": "you",
+      "start": 18.02,
+      "end": 18.24,
+      "prob": 0.996
+    },
+    {
+      "word": "full",
+      "start": 18.24,
+      "end": 18.5,
+      "prob": 0.97
+    },
+    {
+      "word": "marks.",
+      "start": 18.5,
+      "end": 18.9,
+      "prob": 0.999
+    },
+    {
+      "word": "In",
+      "start": 19.52,
+      "end": 19.78,
+      "prob": 0.993
+    },
+    {
+      "word": "today's",
+      "start": 19.78,
+      "end": 20.14,
+      "prob": 0.987
+    },
+    {
+      "word": "video,",
+      "start": 20.14,
+      "end": 20.48,
+      "prob": 0.998
+    },
+    {
+      "word": "I",
+      "start": 20.68,
+      "end": 21.02,
+      "prob": 0.997
+    },
+    {
+      "word": "will",
+      "start": 21.02,
+      "end": 21.16,
+      "prob": 0.993
+    },
+    {
+      "word": "show",
+      "start": 21.16,
+      "end": 21.4,
+      "prob": 0.997
+    },
+    {
+      "word": "you",
+      "start": 21.4,
+      "end": 21.6,
+      "prob": 0.985
+    },
+    {
+      "word": "how",
+      "start": 21.6,
+      "end": 21.88,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 21.88,
+      "end": 22.1,
+      "prob": 0.998
+    },
+    {
+      "word": "approach",
+      "start": 22.1,
+      "end": 22.42,
+      "prob": 0.999
+    },
+    {
+      "word": "6",
+      "start": 22.42,
+      "end": 22.84,
+      "prob": 0.874
+    },
+    {
+      "word": "-mark",
+      "start": 22.84,
+      "end": 23.06,
+      "prob": 0.922
+    },
+    {
+      "word": "questions,",
+      "start": 23.06,
+      "end": 23.58,
+      "prob": 0.993
+    },
+    {
+      "word": "organise",
+      "start": 24.04,
+      "end": 24.38,
+      "prob": 0.697
+    },
+    {
+      "word": "your",
+      "start": 24.38,
+      "end": 24.72,
+      "prob": 0.993
+    },
+    {
+      "word": "scientific",
+      "start": 24.72,
+      "end": 25.2,
+      "prob": 0.727
+    },
+    {
+      "word": "explanations",
+      "start": 25.2,
+      "end": 26.02,
+      "prob": 0.955
+    },
+    {
+      "word": "and",
+      "start": 26.02,
+      "end": 26.58,
+      "prob": 0.905
+    },
+    {
+      "word": "improve",
+      "start": 26.58,
+      "end": 27.0,
+      "prob": 0.995
+    },
+    {
+      "word": "your",
+      "start": 27.0,
+      "end": 27.26,
+      "prob": 0.991
+    },
+    {
+      "word": "chances",
+      "start": 27.26,
+      "end": 27.58,
+      "prob": 0.987
+    },
+    {
+      "word": "of",
+      "start": 27.58,
+      "end": 27.94,
+      "prob": 0.993
+    },
+    {
+      "word": "achieving",
+      "start": 27.94,
+      "end": 28.36,
+      "prob": 0.994
+    },
+    {
+      "word": "all",
+      "start": 28.36,
+      "end": 28.78,
+      "prob": 0.966
+    },
+    {
+      "word": "6",
+      "start": 28.78,
+      "end": 29.14,
+      "prob": 0.314
+    },
+    {
+      "word": "marks.",
+      "start": 29.14,
+      "end": 29.48,
+      "prob": 0.955
+    },
+    {
+      "word": "Before",
+      "start": 30.24,
+      "end": 30.46,
+      "prob": 0.941
+    },
+    {
+      "word": "we",
+      "start": 30.46,
+      "end": 30.64,
+      "prob": 0.996
+    },
+    {
+      "word": "begin,",
+      "start": 30.64,
+      "end": 30.98,
+      "prob": 0.99
+    },
+    {
+      "word": "remember",
+      "start": 31.64,
+      "end": 31.66,
+      "prob": 0.957
+    },
+    {
+      "word": "to",
+      "start": 31.66,
+      "end": 32.0,
+      "prob": 0.996
+    },
+    {
+      "word": "subscribe",
+      "start": 32.0,
+      "end": 32.38,
+      "prob": 0.976
+    },
+    {
+      "word": "to",
+      "start": 32.38,
+      "end": 32.7,
+      "prob": 0.995
+    },
+    {
+      "word": "JD",
+      "start": 32.7,
+      "end": 32.96,
+      "prob": 0.893
+    },
+    {
+      "word": "Science",
+      "start": 32.96,
+      "end": 33.36,
+      "prob": 0.613
+    },
+    {
+      "word": "for",
+      "start": 33.36,
+      "end": 33.64,
+      "prob": 0.996
+    },
+    {
+      "word": "more",
+      "start": 33.64,
+      "end": 33.94,
+      "prob": 0.998
+    },
+    {
+      "word": "GCSE",
+      "start": 33.94,
+      "end": 34.58,
+      "prob": 0.994
+    },
+    {
+      "word": "chemistry",
+      "start": 34.58,
+      "end": 34.92,
+      "prob": 0.437
+    },
+    {
+      "word": "lessons",
+      "start": 34.92,
+      "end": 35.46,
+      "prob": 0.991
+    },
+    {
+      "word": "and",
+      "start": 35.46,
+      "end": 35.8,
+      "prob": 0.987
+    },
+    {
+      "word": "examination",
+      "start": 35.8,
+      "end": 36.3,
+      "prob": 0.977
+    },
+    {
+      "word": "tips.",
+      "start": 36.3,
+      "end": 36.88,
+      "prob": 0.997
+    },
+    {
+      "word": "You",
+      "start": 37.4,
+      "end": 37.56,
+      "prob": 0.988
+    },
+    {
+      "word": "can",
+      "start": 37.56,
+      "end": 37.7,
+      "prob": 0.997
+    },
+    {
+      "word": "also",
+      "start": 37.7,
+      "end": 37.98,
+      "prob": 0.979
+    },
+    {
+      "word": "visit",
+      "start": 37.98,
+      "end": 38.32,
+      "prob": 0.999
+    },
+    {
+      "word": "jdscience",
+      "start": 38.32,
+      "end": 39.14,
+      "prob": 0.697
+    },
+    {
+      "word": ".co",
+      "start": 39.14,
+      "end": 39.68,
+      "prob": 0.999
+    },
+    {
+      "word": ".uk",
+      "start": 39.68,
+      "end": 40.26,
+      "prob": 0.999
+    },
+    {
+      "word": "for",
+      "start": 40.26,
+      "end": 40.82,
+      "prob": 0.988
+    },
+    {
+      "word": "more",
+      "start": 40.82,
+      "end": 41.06,
+      "prob": 0.997
+    },
+    {
+      "word": "explanations",
+      "start": 41.06,
+      "end": 41.7,
+      "prob": 0.975
+    },
+    {
+      "word": "and",
+      "start": 41.7,
+      "end": 42.04,
+      "prob": 0.992
+    },
+    {
+      "word": "revision",
+      "start": 42.04,
+      "end": 42.4,
+      "prob": 0.993
+    },
+    {
+      "word": "resources.",
+      "start": 42.4,
+      "end": 43.0,
+      "prob": 0.996
+    },
+    {
+      "word": "Now,",
+      "start": 43.62,
+      "end": 43.88,
+      "prob": 0.918
+    },
+    {
+      "word": "the",
+      "start": 44.14,
+      "end": 44.32,
+      "prob": 0.974
+    },
+    {
+      "word": "first",
+      "start": 44.32,
+      "end": 44.56,
+      "prob": 0.991
+    },
+    {
+      "word": "thing",
+      "start": 44.56,
+      "end": 44.78,
+      "prob": 0.994
+    },
+    {
+      "word": "you",
+      "start": 44.78,
+      "end": 44.92,
+      "prob": 0.989
+    },
+    {
+      "word": "need",
+      "start": 44.92,
+      "end": 45.06,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 45.06,
+      "end": 45.22,
+      "prob": 0.998
+    },
+    {
+      "word": "understand",
+      "start": 45.22,
+      "end": 45.7,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 45.7,
+      "end": 46.02,
+      "prob": 0.973
+    },
+    {
+      "word": "that",
+      "start": 46.02,
+      "end": 46.2,
+      "prob": 0.997
+    },
+    {
+      "word": "writing",
+      "start": 46.2,
+      "end": 46.58,
+      "prob": 0.98
+    },
+    {
+      "word": "a",
+      "start": 46.58,
+      "end": 46.84,
+      "prob": 0.996
+    },
+    {
+      "word": "long",
+      "start": 46.84,
+      "end": 47.06,
+      "prob": 0.996
+    },
+    {
+      "word": "answer",
+      "start": 47.06,
+      "end": 47.54,
+      "prob": 0.997
+    },
+    {
+      "word": "does",
+      "start": 47.54,
+      "end": 47.82,
+      "prob": 0.98
+    },
+    {
+      "word": "not",
+      "start": 47.82,
+      "end": 48.2,
+      "prob": 0.984
+    },
+    {
+      "word": "automatically",
+      "start": 48.2,
+      "end": 48.82,
+      "prob": 0.998
+    },
+    {
+      "word": "earn",
+      "start": 48.82,
+      "end": 49.22,
+      "prob": 0.173
+    },
+    {
+      "word": "you",
+      "start": 49.22,
+      "end": 49.46,
+      "prob": 0.993
+    },
+    {
+      "word": "more",
+      "start": 49.46,
+      "end": 49.74,
+      "prob": 0.996
+    },
+    {
+      "word": "marks.",
+      "start": 49.74,
+      "end": 50.2,
+      "prob": 0.994
+    },
+    {
+      "word": "What",
+      "start": 50.86,
+      "end": 51.0,
+      "prob": 0.953
+    },
+    {
+      "word": "matters",
+      "start": 51.0,
+      "end": 51.36,
+      "prob": 0.994
+    },
+    {
+      "word": "is",
+      "start": 51.36,
+      "end": 51.7,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 51.7,
+      "end": 51.88,
+      "prob": 0.991
+    },
+    {
+      "word": "accuracy,",
+      "start": 51.88,
+      "end": 52.46,
+      "prob": 0.996
+    },
+    {
+      "word": "relevance",
+      "start": 52.78,
+      "end": 53.14,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 53.14,
+      "end": 53.62,
+      "prob": 0.732
+    },
+    {
+      "word": "quality",
+      "start": 53.62,
+      "end": 54.1,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 54.1,
+      "end": 54.4,
+      "prob": 0.996
+    },
+    {
+      "word": "your",
+      "start": 54.4,
+      "end": 54.56,
+      "prob": 0.994
+    },
+    {
+      "word": "scientific",
+      "start": 54.56,
+      "end": 55.06,
+      "prob": 0.995
+    },
+    {
+      "word": "explanation.",
+      "start": 55.06,
+      "end": 55.84,
+      "prob": 0.023
+    },
+    {
+      "word": "Many",
+      "start": 56.3,
+      "end": 56.76,
+      "prob": 0.923
+    },
+    {
+      "word": "GCSE",
+      "start": 56.76,
+      "end": 57.4,
+      "prob": 0.987
+    },
+    {
+      "word": "chemistry",
+      "start": 57.4,
+      "end": 57.78,
+      "prob": 0.407
+    },
+    {
+      "word": "6",
+      "start": 57.78,
+      "end": 58.24,
+      "prob": 0.526
+    },
+    {
+      "word": "-mark",
+      "start": 58.24,
+      "end": 58.44,
+      "prob": 0.509
+    },
+    {
+      "word": "questions",
+      "start": 58.44,
+      "end": 58.92,
+      "prob": 0.979
+    },
+    {
+      "word": "are",
+      "start": 58.92,
+      "end": 59.22,
+      "prob": 0.997
+    },
+    {
+      "word": "assessed",
+      "start": 59.22,
+      "end": 59.56,
+      "prob": 0.995
+    },
+    {
+      "word": "using",
+      "start": 59.56,
+      "end": 60.04,
+      "prob": 0.991
+    },
+    {
+      "word": "levels",
+      "start": 60.04,
+      "end": 60.32,
+      "prob": 0.936
+    },
+    {
+      "word": "of",
+      "start": 60.32,
+      "end": 60.62,
+      "prob": 0.991
+    },
+    {
+      "word": "response.",
+      "start": 60.62,
+      "end": 61.04,
+      "prob": 0.995
+    },
+    {
+      "word": "These",
+      "start": 61.76,
+      "end": 61.98,
+      "prob": 0.989
+    },
+    {
+      "word": "marking",
+      "start": 61.98,
+      "end": 62.28,
+      "prob": 0.953
+    },
+    {
+      "word": "schemes",
+      "start": 62.28,
+      "end": 62.66,
+      "prob": 0.998
+    },
+    {
+      "word": "consider",
+      "start": 62.66,
+      "end": 63.18,
+      "prob": 0.981
+    },
+    {
+      "word": "the",
+      "start": 63.18,
+      "end": 63.5,
+      "prob": 0.998
+    },
+    {
+      "word": "overall",
+      "start": 63.5,
+      "end": 63.92,
+      "prob": 0.999
+    },
+    {
+      "word": "quality",
+      "start": 63.92,
+      "end": 64.4,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 64.4,
+      "end": 64.58,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 64.58,
+      "end": 64.7,
+      "prob": 0.989
+    },
+    {
+      "word": "answer,",
+      "start": 64.7,
+      "end": 65.12,
+      "prob": 0.988
+    },
+    {
+      "word": "including",
+      "start": 65.5,
+      "end": 65.9,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 65.9,
+      "end": 66.18,
+      "prob": 0.985
+    },
+    {
+      "word": "scientific",
+      "start": 66.18,
+      "end": 66.64,
+      "prob": 0.998
+    },
+    {
+      "word": "knowledge,",
+      "start": 66.64,
+      "end": 67.06,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 67.46,
+      "end": 67.6,
+      "prob": 0.988
+    },
+    {
+      "word": "detail",
+      "start": 67.6,
+      "end": 68.02,
+      "prob": 0.979
+    },
+    {
+      "word": "of",
+      "start": 68.02,
+      "end": 68.22,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 68.22,
+      "end": 68.34,
+      "prob": 0.995
+    },
+    {
+      "word": "explanation",
+      "start": 68.34,
+      "end": 68.8,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 68.8,
+      "end": 69.44,
+      "prob": 0.845
+    },
+    {
+      "word": "how",
+      "start": 69.44,
+      "end": 69.68,
+      "prob": 0.999
+    },
+    {
+      "word": "logically",
+      "start": 69.68,
+      "end": 70.14,
+      "prob": 0.987
+    },
+    {
+      "word": "your",
+      "start": 70.14,
+      "end": 70.48,
+      "prob": 0.99
+    },
+    {
+      "word": "ideas",
+      "start": 70.48,
+      "end": 70.9,
+      "prob": 0.996
+    },
+    {
+      "word": "are",
+      "start": 70.9,
+      "end": 71.2,
+      "prob": 0.999
+    },
+    {
+      "word": "organised.",
+      "start": 71.2,
+      "end": 71.66,
+      "prob": 0.606
+    },
+    {
+      "word": "Some",
+      "start": 72.42,
+      "end": 72.66,
+      "prob": 0.993
+    },
+    {
+      "word": "questions",
+      "start": 72.66,
+      "end": 73.02,
+      "prob": 0.989
+    },
+    {
+      "word": "use",
+      "start": 73.02,
+      "end": 73.4,
+      "prob": 0.994
+    },
+    {
+      "word": "3",
+      "start": 73.4,
+      "end": 73.76,
+      "prob": 0.481
+    },
+    {
+      "word": "levels,",
+      "start": 73.76,
+      "end": 74.12,
+      "prob": 0.192
+    },
+    {
+      "word": "with",
+      "start": 74.42,
+      "end": 74.66,
+      "prob": 0.991
+    },
+    {
+      "word": "level",
+      "start": 74.66,
+      "end": 74.84,
+      "prob": 0.838
+    },
+    {
+      "word": "1",
+      "start": 74.84,
+      "end": 75.22,
+      "prob": 0.725
+    },
+    {
+      "word": "covering",
+      "start": 75.22,
+      "end": 75.62,
+      "prob": 0.983
+    },
+    {
+      "word": "1",
+      "start": 75.62,
+      "end": 75.94,
+      "prob": 0.762
+    },
+    {
+      "word": "or",
+      "start": 75.94,
+      "end": 76.04,
+      "prob": 0.895
+    },
+    {
+      "word": "2",
+      "start": 76.04,
+      "end": 76.32,
+      "prob": 0.991
+    },
+    {
+      "word": "marks,",
+      "start": 76.32,
+      "end": 76.52,
+      "prob": 0.977
+    },
+    {
+      "word": "level",
+      "start": 77.06,
+      "end": 77.18,
+      "prob": 0.922
+    },
+    {
+      "word": "2,",
+      "start": 77.18,
+      "end": 77.58,
+      "prob": 0.992
+    },
+    {
+      "word": "3",
+      "start": 77.8,
+      "end": 77.96,
+      "prob": 0.978
+    },
+    {
+      "word": "or",
+      "start": 77.96,
+      "end": 78.1,
+      "prob": 0.951
+    },
+    {
+      "word": "4",
+      "start": 78.1,
+      "end": 78.4,
+      "prob": 0.998
+    },
+    {
+      "word": "marks",
+      "start": 78.4,
+      "end": 78.66,
+      "prob": 0.969
+    },
+    {
+      "word": "and",
+      "start": 78.66,
+      "end": 79.16,
+      "prob": 0.62
+    },
+    {
+      "word": "level",
+      "start": 79.16,
+      "end": 79.38,
+      "prob": 0.964
+    },
+    {
+      "word": "3,",
+      "start": 79.38,
+      "end": 79.82,
+      "prob": 0.995
+    },
+    {
+      "word": "5",
+      "start": 80.04,
+      "end": 80.28,
+      "prob": 0.979
+    },
+    {
+      "word": "or",
+      "start": 80.28,
+      "end": 80.46,
+      "prob": 0.972
+    },
+    {
+      "word": "6",
+      "start": 80.46,
+      "end": 80.74,
+      "prob": 0.999
+    },
+    {
+      "word": "marks.",
+      "start": 80.74,
+      "end": 81.12,
+      "prob": 0.995
+    },
+    {
+      "word": "However,",
+      "start": 81.56,
+      "end": 82.0,
+      "prob": 0.997
+    },
+    {
+      "word": "other",
+      "start": 82.38,
+      "end": 82.56,
+      "prob": 0.989
+    },
+    {
+      "word": "6",
+      "start": 82.56,
+      "end": 82.86,
+      "prob": 0.924
+    },
+    {
+      "word": "-mark",
+      "start": 82.86,
+      "end": 83.04,
+      "prob": 0.552
+    },
+    {
+      "word": "questions",
+      "start": 83.04,
+      "end": 83.48,
+      "prob": 0.986
+    },
+    {
+      "word": "are",
+      "start": 83.48,
+      "end": 83.74,
+      "prob": 0.995
+    },
+    {
+      "word": "marked",
+      "start": 83.74,
+      "end": 84.0,
+      "prob": 0.99
+    },
+    {
+      "word": "using",
+      "start": 84.0,
+      "end": 84.4,
+      "prob": 0.984
+    },
+    {
+      "word": "individual",
+      "start": 84.4,
+      "end": 84.96,
+      "prob": 0.996
+    },
+    {
+      "word": "marking",
+      "start": 84.96,
+      "end": 85.48,
+      "prob": 0.991
+    },
+    {
+      "word": "points.",
+      "start": 85.48,
+      "end": 85.96,
+      "prob": 0.998
+    },
+    {
+      "word": "To",
+      "start": 86.56,
+      "end": 86.68,
+      "prob": 0.975
+    },
+    {
+      "word": "achieve",
+      "start": 86.68,
+      "end": 87.0,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 87.0,
+      "end": 87.22,
+      "prob": 0.994
+    },
+    {
+      "word": "highest",
+      "start": 87.22,
+      "end": 87.54,
+      "prob": 0.996
+    },
+    {
+      "word": "marks,",
+      "start": 87.54,
+      "end": 87.96,
+      "prob": 0.99
+    },
+    {
+      "word": "you",
+      "start": 88.34,
+      "end": 88.44,
+      "prob": 0.996
+    },
+    {
+      "word": "must",
+      "start": 88.44,
+      "end": 88.74,
+      "prob": 0.966
+    },
+    {
+      "word": "understand",
+      "start": 88.74,
+      "end": 89.36,
+      "prob": 0.997
+    },
+    {
+      "word": "exactly",
+      "start": 89.36,
+      "end": 89.9,
+      "prob": 0.986
+    },
+    {
+      "word": "what",
+      "start": 89.9,
+      "end": 90.28,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 90.28,
+      "end": 90.44,
+      "prob": 0.99
+    },
+    {
+      "word": "question",
+      "start": 90.44,
+      "end": 90.76,
+      "prob": 0.995
+    },
+    {
+      "word": "requires.",
+      "start": 90.76,
+      "end": 91.28,
+      "prob": 0.998
+    },
+    {
+      "word": "This",
+      "start": 91.96,
+      "end": 92.1,
+      "prob": 0.926
+    },
+    {
+      "word": "brings",
+      "start": 92.1,
+      "end": 92.34,
+      "prob": 0.993
+    },
+    {
+      "word": "us",
+      "start": 92.34,
+      "end": 92.6,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 92.6,
+      "end": 92.8,
+      "prob": 0.998
+    },
+    {
+      "word": "command",
+      "start": 92.8,
+      "end": 93.16,
+      "prob": 0.851
+    },
+    {
+      "word": "words.",
+      "start": 93.16,
+      "end": 93.62,
+      "prob": 0.988
+    },
+    {
+      "word": "If",
+      "start": 94.2,
+      "end": 94.36,
+      "prob": 0.974
+    },
+    {
+      "word": "the",
+      "start": 94.36,
+      "end": 94.52,
+      "prob": 0.992
+    },
+    {
+      "word": "question",
+      "start": 94.52,
+      "end": 94.82,
+      "prob": 0.996
+    },
+    {
+      "word": "asks",
+      "start": 94.82,
+      "end": 95.2,
+      "prob": 0.993
+    },
+    {
+      "word": "you",
+      "start": 95.2,
+      "end": 95.44,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 95.44,
+      "end": 95.62,
+      "prob": 0.995
+    },
+    {
+      "word": "describe,",
+      "start": 95.62,
+      "end": 96.1,
+      "prob": 0.945
+    },
+    {
+      "word": "you",
+      "start": 96.52,
+      "end": 96.72,
+      "prob": 0.997
+    },
+    {
+      "word": "need",
+      "start": 96.72,
+      "end": 96.92,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 96.92,
+      "end": 97.1,
+      "prob": 0.998
+    },
+    {
+      "word": "give",
+      "start": 97.1,
+      "end": 97.24,
+      "prob": 0.989
+    },
+    {
+      "word": "an",
+      "start": 97.24,
+      "end": 97.38,
+      "prob": 0.997
+    },
+    {
+      "word": "account",
+      "start": 97.38,
+      "end": 97.72,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 97.72,
+      "end": 97.94,
+      "prob": 0.992
+    },
+    {
+      "word": "what",
+      "start": 97.94,
+      "end": 98.18,
+      "prob": 0.994
+    },
+    {
+      "word": "happens.",
+      "start": 98.18,
+      "end": 98.6,
+      "prob": 0.996
+    },
+    {
+      "word": "If",
+      "start": 99.08,
+      "end": 99.36,
+      "prob": 0.994
+    },
+    {
+      "word": "it",
+      "start": 99.36,
+      "end": 99.46,
+      "prob": 0.996
+    },
+    {
+      "word": "asks",
+      "start": 99.46,
+      "end": 99.7,
+      "prob": 0.995
+    },
+    {
+      "word": "you",
+      "start": 99.7,
+      "end": 99.94,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 99.94,
+      "end": 100.08,
+      "prob": 0.991
+    },
+    {
+      "word": "explain,",
+      "start": 100.08,
+      "end": 100.52,
+      "prob": 0.989
+    },
+    {
+      "word": "you",
+      "start": 100.9,
+      "end": 101.1,
+      "prob": 0.998
+    },
+    {
+      "word": "must",
+      "start": 101.1,
+      "end": 101.36,
+      "prob": 0.996
+    },
+    {
+      "word": "provide",
+      "start": 101.36,
+      "end": 101.82,
+      "prob": 0.998
+    },
+    {
+      "word": "scientific",
+      "start": 101.82,
+      "end": 102.34,
+      "prob": 0.915
+    },
+    {
+      "word": "reasons.",
+      "start": 102.34,
+      "end": 102.94,
+      "prob": 0.992
+    },
+    {
+      "word": "If",
+      "start": 103.5,
+      "end": 103.64,
+      "prob": 0.991
+    },
+    {
+      "word": "it",
+      "start": 103.64,
+      "end": 103.76,
+      "prob": 0.994
+    },
+    {
+      "word": "asks",
+      "start": 103.76,
+      "end": 104.02,
+      "prob": 0.994
+    },
+    {
+      "word": "you",
+      "start": 104.02,
+      "end": 104.24,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 104.24,
+      "end": 104.4,
+      "prob": 0.995
+    },
+    {
+      "word": "compare,",
+      "start": 104.4,
+      "end": 104.86,
+      "prob": 0.952
+    },
+    {
+      "word": "identify",
+      "start": 105.46,
+      "end": 105.82,
+      "prob": 0.989
+    },
+    {
+      "word": "relevant",
+      "start": 105.82,
+      "end": 106.34,
+      "prob": 0.992
+    },
+    {
+      "word": "similarities",
+      "start": 106.34,
+      "end": 106.9,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 106.9,
+      "end": 107.4,
+      "prob": 0.994
+    },
+    {
+      "word": "differences.",
+      "start": 107.4,
+      "end": 107.86,
+      "prob": 0.997
+    },
+    {
+      "word": "And",
+      "start": 108.5,
+      "end": 108.62,
+      "prob": 0.894
+    },
+    {
+      "word": "if",
+      "start": 108.62,
+      "end": 108.72,
+      "prob": 0.926
+    },
+    {
+      "word": "it",
+      "start": 108.72,
+      "end": 108.84,
+      "prob": 0.993
+    },
+    {
+      "word": "asks",
+      "start": 108.84,
+      "end": 109.08,
+      "prob": 0.997
+    },
+    {
+      "word": "you",
+      "start": 109.08,
+      "end": 109.3,
+      "prob": 0.991
+    },
+    {
+      "word": "to",
+      "start": 109.3,
+      "end": 109.44,
+      "prob": 0.991
+    },
+    {
+      "word": "evaluate,",
+      "start": 109.44,
+      "end": 110.02,
+      "prob": 0.997
+    },
+    {
+      "word": "consider",
+      "start": 110.54,
+      "end": 110.78,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 110.78,
+      "end": 111.02,
+      "prob": 0.993
+    },
+    {
+      "word": "evidence",
+      "start": 111.02,
+      "end": 111.42,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 111.42,
+      "end": 111.78,
+      "prob": 0.969
+    },
+    {
+      "word": "reach",
+      "start": 111.78,
+      "end": 112.04,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 112.04,
+      "end": 112.28,
+      "prob": 0.996
+    },
+    {
+      "word": "justified",
+      "start": 112.28,
+      "end": 112.84,
+      "prob": 0.967
+    },
+    {
+      "word": "judgment.",
+      "start": 112.84,
+      "end": 113.28,
+      "prob": 0.481
+    },
+    {
+      "word": "Understanding",
+      "start": 114.0,
+      "end": 114.48,
+      "prob": 0.986
+    },
+    {
+      "word": "these",
+      "start": 114.48,
+      "end": 114.82,
+      "prob": 0.99
+    },
+    {
+      "word": "command",
+      "start": 114.82,
+      "end": 115.18,
+      "prob": 0.931
+    },
+    {
+      "word": "words",
+      "start": 115.18,
+      "end": 115.46,
+      "prob": 0.994
+    },
+    {
+      "word": "is",
+      "start": 115.46,
+      "end": 115.7,
+      "prob": 0.996
+    },
+    {
+      "word": "essential",
+      "start": 115.7,
+      "end": 116.28,
+      "prob": 0.999
+    },
+    {
+      "word": "because",
+      "start": 116.28,
+      "end": 116.92,
+      "prob": 0.733
+    },
+    {
+      "word": "knowing",
+      "start": 116.92,
+      "end": 117.24,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 117.24,
+      "end": 117.48,
+      "prob": 0.995
+    },
+    {
+      "word": "chemistry",
+      "start": 117.48,
+      "end": 117.8,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 117.8,
+      "end": 118.1,
+      "prob": 0.997
+    },
+    {
+      "word": "not",
+      "start": 118.1,
+      "end": 118.4,
+      "prob": 0.995
+    },
+    {
+      "word": "enough",
+      "start": 118.4,
+      "end": 118.76,
+      "prob": 0.999
+    },
+    {
+      "word": "if",
+      "start": 118.76,
+      "end": 119.04,
+      "prob": 0.984
+    },
+    {
+      "word": "you",
+      "start": 119.04,
+      "end": 119.18,
+      "prob": 0.999
+    },
+    {
+      "word": "fail",
+      "start": 119.18,
+      "end": 119.44,
+      "prob": 0.985
+    },
+    {
+      "word": "to",
+      "start": 119.44,
+      "end": 119.7,
+      "prob": 0.998
+    },
+    {
+      "word": "answer",
+      "start": 119.7,
+      "end": 119.9,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 119.9,
+      "end": 120.12,
+      "prob": 0.997
+    },
+    {
+      "word": "question",
+      "start": 120.12,
+      "end": 120.46,
+      "prob": 0.995
+    },
+    {
+      "word": "correctly.",
+      "start": 120.46,
+      "end": 121.0,
+      "prob": 0.999
+    },
+    {
+      "word": "Now,",
+      "start": 121.56,
+      "end": 121.8,
+      "prob": 0.979
+    },
+    {
+      "word": "let",
+      "start": 122.04,
+      "end": 122.22,
+      "prob": 0.994
+    },
+    {
+      "word": "me",
+      "start": 122.22,
+      "end": 122.36,
+      "prob": 0.999
+    },
+    {
+      "word": "introduce",
+      "start": 122.36,
+      "end": 122.72,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 122.72,
+      "end": 122.96,
+      "prob": 0.996
+    },
+    {
+      "word": "simple",
+      "start": 122.96,
+      "end": 123.4,
+      "prob": 0.998
+    },
+    {
+      "word": "structure",
+      "start": 123.4,
+      "end": 123.78,
+      "prob": 0.999
+    },
+    {
+      "word": "that",
+      "start": 123.78,
+      "end": 124.06,
+      "prob": 0.997
+    },
+    {
+      "word": "can",
+      "start": 124.06,
+      "end": 124.18,
+      "prob": 0.996
+    },
+    {
+      "word": "help",
+      "start": 124.18,
+      "end": 124.42,
+      "prob": 0.999
+    },
+    {
+      "word": "you",
+      "start": 124.42,
+      "end": 124.68,
+      "prob": 0.988
+    },
+    {
+      "word": "organise",
+      "start": 124.68,
+      "end": 124.98,
+      "prob": 0.706
+    },
+    {
+      "word": "your",
+      "start": 124.98,
+      "end": 125.34,
+      "prob": 0.991
+    },
+    {
+      "word": "6",
+      "start": 125.34,
+      "end": 125.64,
+      "prob": 0.335
+    },
+    {
+      "word": "-mark",
+      "start": 125.64,
+      "end": 125.88,
+      "prob": 0.549
+    },
+    {
+      "word": "answers.",
+      "start": 125.88,
+      "end": 126.32,
+      "prob": 0.995
+    },
+    {
+      "word": "I",
+      "start": 126.32,
+      "end": 127.02,
+      "prob": 0.525
+    },
+    {
+      "word": "call",
+      "start": 127.02,
+      "end": 127.28,
+      "prob": 0.989
+    },
+    {
+      "word": "it",
+      "start": 127.28,
+      "end": 127.56,
+      "prob": 0.994
+    },
+    {
+      "word": "Point,",
+      "start": 127.56,
+      "end": 128.04,
+      "prob": 0.27
+    },
+    {
+      "word": "Science,",
+      "start": 128.58,
+      "end": 128.82,
+      "prob": 0.968
+    },
+    {
+      "word": "Explain,",
+      "start": 129.24,
+      "end": 129.68,
+      "prob": 0.885
+    },
+    {
+      "word": "Link",
+      "start": 130.12,
+      "end": 130.38,
+      "prob": 0.99
+    },
+    {
+      "word": "and",
+      "start": 130.38,
+      "end": 130.84,
+      "prob": 0.665
+    },
+    {
+      "word": "Check.",
+      "start": 130.84,
+      "end": 131.18,
+      "prob": 0.993
+    },
+    {
+      "word": "Start",
+      "start": 132.0,
+      "end": 132.02,
+      "prob": 0.957
+    },
+    {
+      "word": "with",
+      "start": 132.02,
+      "end": 132.22,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 132.22,
+      "end": 132.42,
+      "prob": 0.996
+    },
+    {
+      "word": "point.",
+      "start": 132.42,
+      "end": 132.7,
+      "prob": 0.959
+    },
+    {
+      "word": "Make",
+      "start": 133.16,
+      "end": 133.4,
+      "prob": 0.993
+    },
+    {
+      "word": "a",
+      "start": 133.4,
+      "end": 133.6,
+      "prob": 0.997
+    },
+    {
+      "word": "clear",
+      "start": 133.6,
+      "end": 133.88,
+      "prob": 0.999
+    },
+    {
+      "word": "statement",
+      "start": 133.88,
+      "end": 134.28,
+      "prob": 0.998
+    },
+    {
+      "word": "that",
+      "start": 134.28,
+      "end": 134.58,
+      "prob": 0.994
+    },
+    {
+      "word": "directly",
+      "start": 134.58,
+      "end": 135.06,
+      "prob": 0.986
+    },
+    {
+      "word": "addresses",
+      "start": 135.06,
+      "end": 135.6,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 135.6,
+      "end": 135.84,
+      "prob": 0.995
+    },
+    {
+      "word": "question.",
+      "start": 135.84,
+      "end": 136.2,
+      "prob": 0.995
+    },
+    {
+      "word": "Next,",
+      "start": 136.94,
+      "end": 137.1,
+      "prob": 0.984
+    },
+    {
+      "word": "provide",
+      "start": 137.54,
+      "end": 137.74,
+      "prob": 0.954
+    },
+    {
+      "word": "the",
+      "start": 137.74,
+      "end": 138.0,
+      "prob": 0.996
+    },
+    {
+      "word": "science.",
+      "start": 138.0,
+      "end": 138.36,
+      "prob": 0.93
+    },
+    {
+      "word": "Introduce",
+      "start": 138.96,
+      "end": 139.44,
+      "prob": 0.984
+    },
+    {
+      "word": "the",
+      "start": 139.44,
+      "end": 139.6,
+      "prob": 0.991
+    },
+    {
+      "word": "relevant",
+      "start": 139.6,
+      "end": 139.94,
+      "prob": 0.998
+    },
+    {
+      "word": "scientific",
+      "start": 139.94,
+      "end": 140.46,
+      "prob": 0.993
+    },
+    {
+      "word": "principles,",
+      "start": 140.46,
+      "end": 141.08,
+      "prob": 0.983
+    },
+    {
+      "word": "concepts",
+      "start": 141.52,
+      "end": 141.8,
+      "prob": 0.997
+    },
+    {
+      "word": "or",
+      "start": 141.8,
+      "end": 142.18,
+      "prob": 0.908
+    },
+    {
+      "word": "evidence.",
+      "start": 142.18,
+      "end": 142.62,
+      "prob": 0.998
+    },
+    {
+      "word": "Then,",
+      "start": 143.3,
+      "end": 143.52,
+      "prob": 0.993
+    },
+    {
+      "word": "explain.",
+      "start": 143.88,
+      "end": 144.26,
+      "prob": 0.866
+    },
+    {
+      "word": "Develop",
+      "start": 145.2,
+      "end": 145.2,
+      "prob": 0.992
+    },
+    {
+      "word": "your",
+      "start": 145.2,
+      "end": 145.46,
+      "prob": 0.997
+    },
+    {
+      "word": "answer",
+      "start": 145.46,
+      "end": 145.78,
+      "prob": 0.99
+    },
+    {
+      "word": "by",
+      "start": 145.78,
+      "end": 146.08,
+      "prob": 0.996
+    },
+    {
+      "word": "showing",
+      "start": 146.08,
+      "end": 146.38,
+      "prob": 0.996
+    },
+    {
+      "word": "why",
+      "start": 146.38,
+      "end": 146.78,
+      "prob": 0.991
+    },
+    {
+      "word": "something",
+      "start": 146.78,
+      "end": 147.16,
+      "prob": 0.999
+    },
+    {
+      "word": "happens",
+      "start": 147.16,
+      "end": 147.56,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 147.56,
+      "end": 148.0,
+      "prob": 0.95
+    },
+    {
+      "word": "how",
+      "start": 148.0,
+      "end": 148.3,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 148.3,
+      "end": 148.48,
+      "prob": 0.991
+    },
+    {
+      "word": "scientific",
+      "start": 148.48,
+      "end": 148.94,
+      "prob": 0.998
+    },
+    {
+      "word": "concepts",
+      "start": 148.94,
+      "end": 149.4,
+      "prob": 0.999
+    },
+    {
+      "word": "are",
+      "start": 149.4,
+      "end": 149.66,
+      "prob": 0.999
+    },
+    {
+      "word": "connected.",
+      "start": 149.66,
+      "end": 149.98,
+      "prob": 0.998
+    },
+    {
+      "word": "After",
+      "start": 150.68,
+      "end": 150.88,
+      "prob": 0.995
+    },
+    {
+      "word": "that,",
+      "start": 150.88,
+      "end": 151.26,
+      "prob": 0.998
+    },
+    {
+      "word": "link",
+      "start": 151.62,
+      "end": 151.76,
+      "prob": 0.994
+    },
+    {
+      "word": "your",
+      "start": 151.76,
+      "end": 151.96,
+      "prob": 0.995
+    },
+    {
+      "word": "explanation",
+      "start": 151.96,
+      "end": 152.42,
+      "prob": 0.997
+    },
+    {
+      "word": "back",
+      "start": 152.42,
+      "end": 152.92,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 152.92,
+      "end": 153.12,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 153.12,
+      "end": 153.26,
+      "prob": 0.997
+    },
+    {
+      "word": "question.",
+      "start": 153.26,
+      "end": 153.62,
+      "prob": 0.998
+    },
+    {
+      "word": "Finally,",
+      "start": 154.18,
+      "end": 154.68,
+      "prob": 0.686
+    },
+    {
+      "word": "check.",
+      "start": 155.12,
+      "end": 155.3,
+      "prob": 0.752
+    },
+    {
+      "word": "Make",
+      "start": 155.76,
+      "end": 155.92,
+      "prob": 0.992
+    },
+    {
+      "word": "sure",
+      "start": 155.92,
+      "end": 156.24,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 156.24,
+      "end": 156.48,
+      "prob": 0.975
+    },
+    {
+      "word": "answer",
+      "start": 156.48,
+      "end": 156.78,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 156.78,
+      "end": 157.18,
+      "prob": 0.997
+    },
+    {
+      "word": "complete,",
+      "start": 157.18,
+      "end": 157.68,
+      "prob": 0.991
+    },
+    {
+      "word": "scientifically",
+      "start": 158.28,
+      "end": 158.7,
+      "prob": 0.994
+    },
+    {
+      "word": "accurate",
+      "start": 158.7,
+      "end": 159.5,
+      "prob": 0.986
+    },
+    {
+      "word": "and",
+      "start": 159.5,
+      "end": 160.08,
+      "prob": 0.667
+    },
+    {
+      "word": "addresses",
+      "start": 160.08,
+      "end": 160.56,
+      "prob": 0.991
+    },
+    {
+      "word": "every",
+      "start": 160.56,
+      "end": 161.16,
+      "prob": 0.995
+    },
+    {
+      "word": "part",
+      "start": 161.16,
+      "end": 161.5,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 161.5,
+      "end": 161.68,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 161.68,
+      "end": 161.8,
+      "prob": 0.997
+    },
+    {
+      "word": "question.",
+      "start": 161.8,
+      "end": 162.24,
+      "prob": 0.996
+    },
+    {
+      "word": "Remember",
+      "start": 162.98,
+      "end": 163.28,
+      "prob": 0.995
+    },
+    {
+      "word": "these",
+      "start": 163.28,
+      "end": 163.66,
+      "prob": 0.984
+    },
+    {
+      "word": "5",
+      "start": 163.66,
+      "end": 164.04,
+      "prob": 0.275
+    },
+    {
+      "word": "words,",
+      "start": 164.04,
+      "end": 164.54,
+      "prob": 0.989
+    },
+    {
+      "word": "Point,",
+      "start": 165.26,
+      "end": 165.42,
+      "prob": 0.085
+    },
+    {
+      "word": "Science,",
+      "start": 166.26,
+      "end": 166.52,
+      "prob": 0.906
+    },
+    {
+      "word": "Explain,",
+      "start": 167.22,
+      "end": 167.64,
+      "prob": 0.843
+    },
+    {
+      "word": "Link",
+      "start": 168.24,
+      "end": 168.58,
+      "prob": 0.979
+    },
+    {
+      "word": "and",
+      "start": 168.58,
+      "end": 169.2,
+      "prob": 0.798
+    },
+    {
+      "word": "Check.",
+      "start": 169.2,
+      "end": 169.6,
+      "prob": 0.946
+    },
+    {
+      "word": "This",
+      "start": 170.52,
+      "end": 170.7,
+      "prob": 0.992
+    },
+    {
+      "word": "is",
+      "start": 170.7,
+      "end": 170.94,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 170.94,
+      "end": 171.1,
+      "prob": 0.993
+    },
+    {
+      "word": "planning",
+      "start": 171.1,
+      "end": 171.42,
+      "prob": 0.982
+    },
+    {
+      "word": "technique,",
+      "start": 171.42,
+      "end": 171.94,
+      "prob": 0.997
+    },
+    {
+      "word": "not",
+      "start": 172.32,
+      "end": 172.48,
+      "prob": 0.994
+    },
+    {
+      "word": "an",
+      "start": 172.48,
+      "end": 172.72,
+      "prob": 0.991
+    },
+    {
+      "word": "official",
+      "start": 172.72,
+      "end": 173.1,
+      "prob": 0.993
+    },
+    {
+      "word": "marking",
+      "start": 173.1,
+      "end": 173.48,
+      "prob": 0.98
+    },
+    {
+      "word": "formula",
+      "start": 173.48,
+      "end": 173.96,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 173.96,
+      "end": 174.6,
+      "prob": 0.692
+    },
+    {
+      "word": "you",
+      "start": 174.6,
+      "end": 174.72,
+      "prob": 0.998
+    },
+    {
+      "word": "should",
+      "start": 174.72,
+      "end": 174.9,
+      "prob": 0.998
+    },
+    {
+      "word": "adapt",
+      "start": 174.9,
+      "end": 175.24,
+      "prob": 0.99
+    },
+    {
+      "word": "it",
+      "start": 175.24,
+      "end": 175.5,
+      "prob": 0.971
+    },
+    {
+      "word": "to",
+      "start": 175.5,
+      "end": 175.68,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 175.68,
+      "end": 175.82,
+      "prob": 0.993
+    },
+    {
+      "word": "question.",
+      "start": 175.82,
+      "end": 176.22,
+      "prob": 0.996
+    },
+    {
+      "word": "Let's",
+      "start": 176.84,
+      "end": 177.2,
+      "prob": 0.953
+    },
+    {
+      "word": "apply",
+      "start": 177.2,
+      "end": 177.5,
+      "prob": 0.995
+    },
+    {
+      "word": "this",
+      "start": 177.5,
+      "end": 177.74,
+      "prob": 0.993
+    },
+    {
+      "word": "structure",
+      "start": 177.74,
+      "end": 178.04,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 178.04,
+      "end": 178.46,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 178.46,
+      "end": 178.6,
+      "prob": 0.972
+    },
+    {
+      "word": "practical",
+      "start": 178.6,
+      "end": 179.1,
+      "prob": 0.99
+    },
+    {
+      "word": "GCSE",
+      "start": 179.1,
+      "end": 179.98,
+      "prob": 0.991
+    },
+    {
+      "word": "chemistry",
+      "start": 179.98,
+      "end": 180.4,
+      "prob": 0.818
+    },
+    {
+      "word": "example.",
+      "start": 180.4,
+      "end": 181.0,
+      "prob": 0.993
+    },
+    {
+      "word": "Here",
+      "start": 181.64,
+      "end": 182.02,
+      "prob": 0.674
+    },
+    {
+      "word": "is",
+      "start": 182.02,
+      "end": 182.3,
+      "prob": 0.992
+    },
+    {
+      "word": "our",
+      "start": 182.3,
+      "end": 182.5,
+      "prob": 0.993
+    },
+    {
+      "word": "examination",
+      "start": 182.5,
+      "end": 183.06,
+      "prob": 0.968
+    },
+    {
+      "word": "style",
+      "start": 183.06,
+      "end": 183.58,
+      "prob": 0.807
+    },
+    {
+      "word": "question.",
+      "start": 183.58,
+      "end": 184.28,
+      "prob": 0.993
+    },
+    {
+      "word": "Explain",
+      "start": 185.16,
+      "end": 185.16,
+      "prob": 0.394
+    },
+    {
+      "word": "how",
+      "start": 185.16,
+      "end": 185.56,
+      "prob": 0.99
+    },
+    {
+      "word": "increasing",
+      "start": 185.56,
+      "end": 186.14,
+      "prob": 0.986
+    },
+    {
+      "word": "temperature",
+      "start": 186.14,
+      "end": 186.84,
+      "prob": 0.996
+    },
+    {
+      "word": "affects",
+      "start": 186.84,
+      "end": 187.34,
+      "prob": 0.98
+    },
+    {
+      "word": "the",
+      "start": 187.34,
+      "end": 187.64,
+      "prob": 0.998
+    },
+    {
+      "word": "rate",
+      "start": 187.64,
+      "end": 187.86,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 187.86,
+      "end": 188.1,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 188.1,
+      "end": 188.22,
+      "prob": 0.99
+    },
+    {
+      "word": "chemical",
+      "start": 188.22,
+      "end": 188.54,
+      "prob": 0.998
+    },
+    {
+      "word": "reaction.",
+      "start": 188.54,
+      "end": 189.16,
+      "prob": 0.999
+    },
+    {
+      "word": "Use",
+      "start": 189.82,
+      "end": 190.1,
+      "prob": 0.993
+    },
+    {
+      "word": "collision",
+      "start": 190.1,
+      "end": 190.52,
+      "prob": 0.915
+    },
+    {
+      "word": "theory",
+      "start": 190.52,
+      "end": 191.02,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 191.02,
+      "end": 191.38,
+      "prob": 0.996
+    },
+    {
+      "word": "your",
+      "start": 191.38,
+      "end": 191.54,
+      "prob": 0.997
+    },
+    {
+      "word": "answer.",
+      "start": 191.54,
+      "end": 191.98,
+      "prob": 0.992
+    },
+    {
+      "word": "6",
+      "start": 192.54,
+      "end": 192.76,
+      "prob": 0.364
+    },
+    {
+      "word": "marks.",
+      "start": 192.76,
+      "end": 193.12,
+      "prob": 0.914
+    },
+    {
+      "word": "First,",
+      "start": 194.24,
+      "end": 194.24,
+      "prob": 0.97
+    },
+    {
+      "word": "notice",
+      "start": 194.64,
+      "end": 194.96,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 194.96,
+      "end": 195.22,
+      "prob": 0.998
+    },
+    {
+      "word": "command",
+      "start": 195.22,
+      "end": 195.56,
+      "prob": 0.963
+    },
+    {
+      "word": "word",
+      "start": 195.56,
+      "end": 195.98,
+      "prob": 0.99
+    },
+    {
+      "word": "EXPLAIN.",
+      "start": 195.98,
+      "end": 196.9,
+      "prob": 0.766
+    },
+    {
+      "word": "This",
+      "start": 197.58,
+      "end": 197.84,
+      "prob": 0.992
+    },
+    {
+      "word": "means",
+      "start": 197.84,
+      "end": 198.12,
+      "prob": 0.998
+    },
+    {
+      "word": "we",
+      "start": 198.12,
+      "end": 198.48,
+      "prob": 0.96
+    },
+    {
+      "word": "must",
+      "start": 198.48,
+      "end": 198.74,
+      "prob": 0.987
+    },
+    {
+      "word": "give",
+      "start": 198.74,
+      "end": 199.08,
+      "prob": 0.997
+    },
+    {
+      "word": "scientific",
+      "start": 199.08,
+      "end": 199.66,
+      "prob": 0.997
+    },
+    {
+      "word": "reasons.",
+      "start": 199.66,
+      "end": 200.28,
+      "prob": 0.997
+    },
+    {
+      "word": "A",
+      "start": 201.0,
+      "end": 201.18,
+      "prob": 0.997
+    },
+    {
+      "word": "weak",
+      "start": 201.18,
+      "end": 201.42,
+      "prob": 0.991
+    },
+    {
+      "word": "answer",
+      "start": 201.42,
+      "end": 201.78,
+      "prob": 0.999
+    },
+    {
+      "word": "might",
+      "start": 201.78,
+      "end": 202.04,
+      "prob": 0.994
+    },
+    {
+      "word": "say,",
+      "start": 202.04,
+      "end": 202.42,
+      "prob": 0.997
+    },
+    {
+      "word": "when",
+      "start": 203.04,
+      "end": 203.12,
+      "prob": 0.216
+    },
+    {
+      "word": "temperature",
+      "start": 203.12,
+      "end": 203.52,
+      "prob": 0.991
+    },
+    {
+      "word": "increases,",
+      "start": 203.52,
+      "end": 204.28,
+      "prob": 0.998
+    },
+    {
+      "word": "particles",
+      "start": 204.72,
+      "end": 205.02,
+      "prob": 0.997
+    },
+    {
+      "word": "move",
+      "start": 205.02,
+      "end": 205.36,
+      "prob": 0.997
+    },
+    {
+      "word": "faster",
+      "start": 205.36,
+      "end": 205.84,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 205.84,
+      "end": 206.22,
+      "prob": 0.894
+    },
+    {
+      "word": "the",
+      "start": 206.22,
+      "end": 206.34,
+      "prob": 0.994
+    },
+    {
+      "word": "reaction",
+      "start": 206.34,
+      "end": 206.74,
+      "prob": 0.397
+    },
+    {
+      "word": "becomes",
+      "start": 206.74,
+      "end": 207.14,
+      "prob": 0.956
+    },
+    {
+      "word": "faster.",
+      "start": 207.14,
+      "end": 207.68,
+      "prob": 0.992
+    },
+    {
+      "word": "Although",
+      "start": 208.52,
+      "end": 208.76,
+      "prob": 0.988
+    },
+    {
+      "word": "this",
+      "start": 208.76,
+      "end": 209.04,
+      "prob": 0.98
+    },
+    {
+      "word": "statement",
+      "start": 209.04,
+      "end": 209.36,
+      "prob": 0.998
+    },
+    {
+      "word": "contains",
+      "start": 209.36,
+      "end": 209.9,
+      "prob": 0.995
+    },
+    {
+      "word": "correct",
+      "start": 209.9,
+      "end": 210.28,
+      "prob": 0.985
+    },
+    {
+      "word": "information,",
+      "start": 210.28,
+      "end": 210.92,
+      "prob": 0.999
+    },
+    {
+      "word": "it",
+      "start": 211.28,
+      "end": 211.52,
+      "prob": 0.996
+    },
+    {
+      "word": "does",
+      "start": 211.52,
+      "end": 211.68,
+      "prob": 0.997
+    },
+    {
+      "word": "not",
+      "start": 211.68,
+      "end": 211.98,
+      "prob": 0.998
+    },
+    {
+      "word": "explain",
+      "start": 211.98,
+      "end": 212.44,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 212.44,
+      "end": 212.66,
+      "prob": 0.998
+    },
+    {
+      "word": "chemistry",
+      "start": 212.66,
+      "end": 213.1,
+      "prob": 0.995
+    },
+    {
+      "word": "in",
+      "start": 213.1,
+      "end": 213.4,
+      "prob": 0.996
+    },
+    {
+      "word": "sufficient",
+      "start": 213.4,
+      "end": 213.82,
+      "prob": 0.996
+    },
+    {
+      "word": "detail.",
+      "start": 213.82,
+      "end": 214.38,
+      "prob": 0.994
+    },
+    {
+      "word": "Now,",
+      "start": 215.18,
+      "end": 215.34,
+      "prob": 0.977
+    },
+    {
+      "word": "listen",
+      "start": 215.74,
+      "end": 215.88,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 215.88,
+      "end": 216.14,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 216.14,
+      "end": 216.26,
+      "prob": 0.996
+    },
+    {
+      "word": "stronger",
+      "start": 216.26,
+      "end": 216.62,
+      "prob": 0.998
+    },
+    {
+      "word": "answer.",
+      "start": 216.62,
+      "end": 217.18,
+      "prob": 0.998
+    },
+    {
+      "word": "When",
+      "start": 217.82,
+      "end": 217.96,
+      "prob": 0.842
+    },
+    {
+      "word": "the",
+      "start": 217.96,
+      "end": 218.14,
+      "prob": 0.996
+    },
+    {
+      "word": "temperature",
+      "start": 218.14,
+      "end": 218.46,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 218.46,
+      "end": 218.84,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 218.84,
+      "end": 218.96,
+      "prob": 0.992
+    },
+    {
+      "word": "reacting",
+      "start": 218.96,
+      "end": 219.38,
+      "prob": 0.956
+    },
+    {
+      "word": "mixture",
+      "start": 219.38,
+      "end": 219.78,
+      "prob": 0.999
+    },
+    {
+      "word": "increases,",
+      "start": 219.78,
+      "end": 220.54,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 221.02,
+      "end": 221.14,
+      "prob": 0.997
+    },
+    {
+      "word": "particles",
+      "start": 221.14,
+      "end": 221.62,
+      "prob": 0.997
+    },
+    {
+      "word": "gain",
+      "start": 221.62,
+      "end": 221.96,
+      "prob": 0.996
+    },
+    {
+      "word": "kinetic",
+      "start": 221.96,
+      "end": 222.52,
+      "prob": 0.993
+    },
+    {
+      "word": "energy.",
+      "start": 222.52,
+      "end": 223.06,
+      "prob": 1.0
+    },
+    {
+      "word": "As",
+      "start": 223.52,
+      "end": 223.74,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 223.74,
+      "end": 223.86,
+      "prob": 0.999
+    },
+    {
+      "word": "result,",
+      "start": 223.86,
+      "end": 224.28,
+      "prob": 1.0
+    },
+    {
+      "word": "they",
+      "start": 224.62,
+      "end": 224.8,
+      "prob": 0.998
+    },
+    {
+      "word": "move",
+      "start": 224.8,
+      "end": 225.0,
+      "prob": 0.997
+    },
+    {
+      "word": "faster",
+      "start": 225.0,
+      "end": 225.48,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 225.48,
+      "end": 225.9,
+      "prob": 0.985
+    },
+    {
+      "word": "collide",
+      "start": 225.9,
+      "end": 226.28,
+      "prob": 0.995
+    },
+    {
+      "word": "more",
+      "start": 226.28,
+      "end": 226.6,
+      "prob": 0.999
+    },
+    {
+      "word": "frequently.",
+      "start": 226.6,
+      "end": 227.04,
+      "prob": 0.999
+    },
+    {
+      "word": "The",
+      "start": 227.76,
+      "end": 227.96,
+      "prob": 0.994
+    },
+    {
+      "word": "increased",
+      "start": 227.96,
+      "end": 228.44,
+      "prob": 0.992
+    },
+    {
+      "word": "kinetic",
+      "start": 228.44,
+      "end": 228.9,
+      "prob": 0.998
+    },
+    {
+      "word": "energy",
+      "start": 228.9,
+      "end": 229.4,
+      "prob": 0.999
+    },
+    {
+      "word": "also",
+      "start": 229.4,
+      "end": 229.74,
+      "prob": 0.997
+    },
+    {
+      "word": "means",
+      "start": 229.74,
+      "end": 230.16,
+      "prob": 0.998
+    },
+    {
+      "word": "that",
+      "start": 230.16,
+      "end": 230.42,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 230.42,
+      "end": 230.56,
+      "prob": 0.995
+    },
+    {
+      "word": "greater",
+      "start": 230.56,
+      "end": 230.86,
+      "prob": 0.998
+    },
+    {
+      "word": "proportion",
+      "start": 230.86,
+      "end": 231.34,
+      "prob": 0.991
+    },
+    {
+      "word": "of",
+      "start": 231.34,
+      "end": 231.62,
+      "prob": 0.999
+    },
+    {
+      "word": "particles",
+      "start": 231.62,
+      "end": 232.16,
+      "prob": 0.993
+    },
+    {
+      "word": "have",
+      "start": 232.16,
+      "end": 232.6,
+      "prob": 0.667
+    },
+    {
+      "word": "energy",
+      "start": 232.6,
+      "end": 233.12,
+      "prob": 0.976
+    },
+    {
+      "word": "equal",
+      "start": 233.12,
+      "end": 233.56,
+      "prob": 0.988
+    },
+    {
+      "word": "to",
+      "start": 233.56,
+      "end": 233.9,
+      "prob": 0.997
+    },
+    {
+      "word": "or",
+      "start": 233.9,
+      "end": 234.18,
+      "prob": 0.789
+    },
+    {
+      "word": "greater",
+      "start": 234.18,
+      "end": 234.52,
+      "prob": 0.998
+    },
+    {
+      "word": "than",
+      "start": 234.52,
+      "end": 234.94,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 234.94,
+      "end": 235.3,
+      "prob": 0.991
+    },
+    {
+      "word": "activation",
+      "start": 235.3,
+      "end": 235.9,
+      "prob": 0.987
+    },
+    {
+      "word": "energy",
+      "start": 235.9,
+      "end": 236.38,
+      "prob": 0.999
+    },
+    {
+      "word": "required",
+      "start": 236.38,
+      "end": 236.92,
+      "prob": 0.998
+    },
+    {
+      "word": "for",
+      "start": 236.92,
+      "end": 237.2,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 237.2,
+      "end": 237.32,
+      "prob": 0.996
+    },
+    {
+      "word": "reaction.",
+      "start": 237.32,
+      "end": 237.78,
+      "prob": 0.997
+    },
+    {
+      "word": "Consequently,",
+      "start": 238.5,
+      "end": 238.9,
+      "prob": 0.993
+    },
+    {
+      "word": "a",
+      "start": 239.46,
+      "end": 239.62,
+      "prob": 0.997
+    },
+    {
+      "word": "greater",
+      "start": 239.62,
+      "end": 239.92,
+      "prob": 0.998
+    },
+    {
+      "word": "proportion",
+      "start": 239.92,
+      "end": 240.38,
+      "prob": 0.996
+    },
+    {
+      "word": "of",
+      "start": 240.38,
+      "end": 240.68,
+      "prob": 0.999
+    },
+    {
+      "word": "collisions",
+      "start": 240.68,
+      "end": 241.06,
+      "prob": 0.997
+    },
+    {
+      "word": "are",
+      "start": 241.06,
+      "end": 241.44,
+      "prob": 0.996
+    },
+    {
+      "word": "successful.",
+      "start": 241.44,
+      "end": 242.02,
+      "prob": 0.997
+    },
+    {
+      "word": "The",
+      "start": 242.56,
+      "end": 242.84,
+      "prob": 0.993
+    },
+    {
+      "word": "number",
+      "start": 242.84,
+      "end": 243.08,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 243.08,
+      "end": 243.4,
+      "prob": 0.998
+    },
+    {
+      "word": "successful",
+      "start": 243.4,
+      "end": 243.78,
+      "prob": 0.996
+    },
+    {
+      "word": "collisions",
+      "start": 243.78,
+      "end": 244.32,
+      "prob": 0.991
+    },
+    {
+      "word": "per",
+      "start": 244.32,
+      "end": 244.58,
+      "prob": 0.991
+    },
+    {
+      "word": "second",
+      "start": 244.58,
+      "end": 244.98,
+      "prob": 0.997
+    },
+    {
+      "word": "therefore",
+      "start": 244.98,
+      "end": 245.5,
+      "prob": 0.888
+    },
+    {
+      "word": "increases,",
+      "start": 245.5,
+      "end": 246.14,
+      "prob": 0.996
+    },
+    {
+      "word": "resulting",
+      "start": 246.66,
+      "end": 246.94,
+      "prob": 0.999
+    },
+    {
+      "word": "in",
+      "start": 246.94,
+      "end": 247.36,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 247.36,
+      "end": 247.52,
+      "prob": 0.995
+    },
+    {
+      "word": "faster",
+      "start": 247.52,
+      "end": 247.88,
+      "prob": 0.998
+    },
+    {
+      "word": "rate",
+      "start": 247.88,
+      "end": 248.22,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 248.22,
+      "end": 248.42,
+      "prob": 0.999
+    },
+    {
+      "word": "reaction.",
+      "start": 248.42,
+      "end": 248.88,
+      "prob": 0.996
+    },
+    {
+      "word": "Now,",
+      "start": 249.62,
+      "end": 249.82,
+      "prob": 0.975
+    },
+    {
+      "word": "why",
+      "start": 250.14,
+      "end": 250.4,
+      "prob": 0.996
+    },
+    {
+      "word": "is",
+      "start": 250.4,
+      "end": 250.6,
+      "prob": 0.995
+    },
+    {
+      "word": "this",
+      "start": 250.6,
+      "end": 250.78,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 250.78,
+      "end": 251.02,
+      "prob": 0.994
+    },
+    {
+      "word": "strong",
+      "start": 251.02,
+      "end": 251.42,
+      "prob": 0.992
+    },
+    {
+      "word": "answer?",
+      "start": 251.42,
+      "end": 251.88,
+      "prob": 0.999
+    },
+    {
+      "word": "First,",
+      "start": 252.46,
+      "end": 252.86,
+      "prob": 0.981
+    },
+    {
+      "word": "we",
+      "start": 253.24,
+      "end": 253.42,
+      "prob": 0.998
+    },
+    {
+      "word": "identified",
+      "start": 253.42,
+      "end": 253.86,
+      "prob": 0.955
+    },
+    {
+      "word": "the",
+      "start": 253.86,
+      "end": 254.26,
+      "prob": 0.999
+    },
+    {
+      "word": "effect",
+      "start": 254.26,
+      "end": 254.56,
+      "prob": 0.944
+    },
+    {
+      "word": "of",
+      "start": 254.56,
+      "end": 254.82,
+      "prob": 0.999
+    },
+    {
+      "word": "temperature",
+      "start": 254.82,
+      "end": 255.24,
+      "prob": 0.995
+    },
+    {
+      "word": "on",
+      "start": 255.24,
+      "end": 255.56,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 255.56,
+      "end": 255.7,
+      "prob": 0.998
+    },
+    {
+      "word": "kinetic",
+      "start": 255.7,
+      "end": 256.1,
+      "prob": 0.991
+    },
+    {
+      "word": "energy",
+      "start": 256.1,
+      "end": 256.44,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 256.44,
+      "end": 256.7,
+      "prob": 0.999
+    },
+    {
+      "word": "particles.",
+      "start": 256.7,
+      "end": 257.28,
+      "prob": 0.995
+    },
+    {
+      "word": "Next,",
+      "start": 257.28,
+      "end": 258.12,
+      "prob": 0.967
+    },
+    {
+      "word": "we",
+      "start": 258.54,
+      "end": 258.74,
+      "prob": 0.997
+    },
+    {
+      "word": "explained",
+      "start": 258.74,
+      "end": 259.18,
+      "prob": 0.995
+    },
+    {
+      "word": "how",
+      "start": 259.18,
+      "end": 259.58,
+      "prob": 0.992
+    },
+    {
+      "word": "increased",
+      "start": 259.58,
+      "end": 260.1,
+      "prob": 0.98
+    },
+    {
+      "word": "kinetic",
+      "start": 260.1,
+      "end": 260.5,
+      "prob": 0.997
+    },
+    {
+      "word": "energy",
+      "start": 260.5,
+      "end": 261.06,
+      "prob": 0.999
+    },
+    {
+      "word": "affects",
+      "start": 261.06,
+      "end": 261.46,
+      "prob": 0.971
+    },
+    {
+      "word": "particle",
+      "start": 261.46,
+      "end": 262.0,
+      "prob": 0.994
+    },
+    {
+      "word": "movement",
+      "start": 262.0,
+      "end": 262.42,
+      "prob": 0.995
+    },
+    {
+      "word": "and",
+      "start": 262.42,
+      "end": 262.96,
+      "prob": 0.989
+    },
+    {
+      "word": "collision",
+      "start": 262.96,
+      "end": 263.32,
+      "prob": 0.998
+    },
+    {
+      "word": "frequency.",
+      "start": 263.32,
+      "end": 263.96,
+      "prob": 0.997
+    },
+    {
+      "word": "We",
+      "start": 264.5,
+      "end": 264.76,
+      "prob": 0.995
+    },
+    {
+      "word": "then",
+      "start": 264.76,
+      "end": 265.0,
+      "prob": 0.998
+    },
+    {
+      "word": "introduced",
+      "start": 265.0,
+      "end": 265.58,
+      "prob": 0.997
+    },
+    {
+      "word": "activation",
+      "start": 265.58,
+      "end": 266.16,
+      "prob": 0.949
+    },
+    {
+      "word": "energy,",
+      "start": 266.16,
+      "end": 266.74,
+      "prob": 1.0
+    },
+    {
+      "word": "which",
+      "start": 267.04,
+      "end": 267.26,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 267.26,
+      "end": 267.4,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 267.4,
+      "end": 267.6,
+      "prob": 0.998
+    },
+    {
+      "word": "minimum",
+      "start": 267.6,
+      "end": 267.9,
+      "prob": 0.996
+    },
+    {
+      "word": "energy",
+      "start": 267.9,
+      "end": 268.42,
+      "prob": 0.996
+    },
+    {
+      "word": "colliding",
+      "start": 268.42,
+      "end": 268.96,
+      "prob": 0.998
+    },
+    {
+      "word": "particles",
+      "start": 268.96,
+      "end": 269.5,
+      "prob": 0.984
+    },
+    {
+      "word": "need",
+      "start": 269.5,
+      "end": 269.88,
+      "prob": 0.996
+    },
+    {
+      "word": "for",
+      "start": 269.88,
+      "end": 270.32,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 270.32,
+      "end": 270.46,
+      "prob": 0.987
+    },
+    {
+      "word": "reaction",
+      "start": 270.46,
+      "end": 270.8,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 270.8,
+      "end": 271.06,
+      "prob": 0.999
+    },
+    {
+      "word": "occur.",
+      "start": 271.06,
+      "end": 271.46,
+      "prob": 1.0
+    },
+    {
+      "word": "We",
+      "start": 271.94,
+      "end": 272.28,
+      "prob": 0.998
+    },
+    {
+      "word": "explained",
+      "start": 272.28,
+      "end": 272.7,
+      "prob": 0.984
+    },
+    {
+      "word": "that",
+      "start": 272.7,
+      "end": 272.96,
+      "prob": 0.994
+    },
+    {
+      "word": "at",
+      "start": 272.96,
+      "end": 273.14,
+      "prob": 0.982
+    },
+    {
+      "word": "higher",
+      "start": 273.14,
+      "end": 273.44,
+      "prob": 0.991
+    },
+    {
+      "word": "temperatures,",
+      "start": 273.44,
+      "end": 273.96,
+      "prob": 0.991
+    },
+    {
+      "word": "a",
+      "start": 274.34,
+      "end": 274.5,
+      "prob": 0.998
+    },
+    {
+      "word": "greater",
+      "start": 274.5,
+      "end": 274.82,
+      "prob": 0.998
+    },
+    {
+      "word": "proportion",
+      "start": 274.82,
+      "end": 275.26,
+      "prob": 0.996
+    },
+    {
+      "word": "of",
+      "start": 275.26,
+      "end": 275.54,
+      "prob": 0.999
+    },
+    {
+      "word": "collisions",
+      "start": 275.54,
+      "end": 275.96,
+      "prob": 0.998
+    },
+    {
+      "word": "have",
+      "start": 275.96,
+      "end": 276.44,
+      "prob": 0.994
+    },
+    {
+      "word": "sufficient",
+      "start": 276.44,
+      "end": 276.9,
+      "prob": 0.999
+    },
+    {
+      "word": "energy",
+      "start": 276.9,
+      "end": 277.4,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 277.4,
+      "end": 277.66,
+      "prob": 0.999
+    },
+    {
+      "word": "produce",
+      "start": 277.66,
+      "end": 277.98,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 277.98,
+      "end": 278.2,
+      "prob": 0.997
+    },
+    {
+      "word": "reaction.",
+      "start": 278.2,
+      "end": 278.64,
+      "prob": 0.999
+    },
+    {
+      "word": "Finally,",
+      "start": 279.26,
+      "end": 279.62,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 280.0,
+      "end": 280.28,
+      "prob": 0.0
+    },
+    {
+      "word": "the",
+      "start": 280.28,
+      "end": 280.98,
+      "prob": 0.305
+    },
+    {
+      "word": "scientific",
+      "start": 280.98,
+      "end": 281.48,
+      "prob": 0.832
+    },
+    {
+      "word": "ideas",
+      "start": 281.48,
+      "end": 282.06,
+      "prob": 0.979
+    },
+    {
+      "word": "to",
+      "start": 282.06,
+      "end": 282.46,
+      "prob": 0.986
+    },
+    {
+      "word": "the",
+      "start": 282.46,
+      "end": 282.62,
+      "prob": 0.99
+    },
+    {
+      "word": "increased",
+      "start": 282.62,
+      "end": 283.08,
+      "prob": 0.989
+    },
+    {
+      "word": "rate",
+      "start": 283.08,
+      "end": 283.42,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 283.42,
+      "end": 283.6,
+      "prob": 0.997
+    },
+    {
+      "word": "reaction.",
+      "start": 283.6,
+      "end": 284.08,
+      "prob": 0.996
+    },
+    {
+      "word": "Notice",
+      "start": 284.84,
+      "end": 285.0,
+      "prob": 0.943
+    },
+    {
+      "word": "that",
+      "start": 285.0,
+      "end": 285.36,
+      "prob": 0.983
+    },
+    {
+      "word": "we",
+      "start": 285.36,
+      "end": 285.52,
+      "prob": 0.997
+    },
+    {
+      "word": "did",
+      "start": 285.52,
+      "end": 285.66,
+      "prob": 0.99
+    },
+    {
+      "word": "not",
+      "start": 285.66,
+      "end": 285.9,
+      "prob": 0.998
+    },
+    {
+      "word": "simply",
+      "start": 285.9,
+      "end": 286.4,
+      "prob": 0.991
+    },
+    {
+      "word": "list",
+      "start": 286.4,
+      "end": 286.66,
+      "prob": 0.991
+    },
+    {
+      "word": "facts.",
+      "start": 286.66,
+      "end": 287.08,
+      "prob": 0.991
+    },
+    {
+      "word": "We",
+      "start": 287.64,
+      "end": 287.88,
+      "prob": 0.994
+    },
+    {
+      "word": "developed",
+      "start": 287.88,
+      "end": 288.28,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 288.28,
+      "end": 288.56,
+      "prob": 0.997
+    },
+    {
+      "word": "logical",
+      "start": 288.56,
+      "end": 288.94,
+      "prob": 0.994
+    },
+    {
+      "word": "explanation",
+      "start": 288.94,
+      "end": 289.56,
+      "prob": 0.999
+    },
+    {
+      "word": "in",
+      "start": 289.56,
+      "end": 290.22,
+      "prob": 0.952
+    },
+    {
+      "word": "which",
+      "start": 290.22,
+      "end": 290.46,
+      "prob": 0.999
+    },
+    {
+      "word": "each",
+      "start": 290.46,
+      "end": 290.76,
+      "prob": 0.999
+    },
+    {
+      "word": "scientific",
+      "start": 290.76,
+      "end": 291.3,
+      "prob": 0.998
+    },
+    {
+      "word": "statement",
+      "start": 291.3,
+      "end": 291.82,
+      "prob": 0.991
+    },
+    {
+      "word": "supported",
+      "start": 291.82,
+      "end": 292.38,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 292.38,
+      "end": 292.62,
+      "prob": 0.998
+    },
+    {
+      "word": "next.",
+      "start": 292.62,
+      "end": 292.94,
+      "prob": 0.993
+    },
+    {
+      "word": "This",
+      "start": 293.52,
+      "end": 293.86,
+      "prob": 0.994
+    },
+    {
+      "word": "is",
+      "start": 293.86,
+      "end": 294.08,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 294.08,
+      "end": 294.26,
+      "prob": 0.998
+    },
+    {
+      "word": "kind",
+      "start": 294.26,
+      "end": 294.46,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 294.46,
+      "end": 294.64,
+      "prob": 0.999
+    },
+    {
+      "word": "reasoning",
+      "start": 294.64,
+      "end": 294.96,
+      "prob": 0.998
+    },
+    {
+      "word": "that",
+      "start": 294.96,
+      "end": 295.26,
+      "prob": 0.997
+    },
+    {
+      "word": "can",
+      "start": 295.26,
+      "end": 295.4,
+      "prob": 0.997
+    },
+    {
+      "word": "help",
+      "start": 295.4,
+      "end": 295.62,
+      "prob": 0.998
+    },
+    {
+      "word": "you",
+      "start": 295.62,
+      "end": 295.84,
+      "prob": 0.996
+    },
+    {
+      "word": "achieve",
+      "start": 295.84,
+      "end": 296.16,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 296.16,
+      "end": 296.4,
+      "prob": 0.997
+    },
+    {
+      "word": "highest",
+      "start": 296.4,
+      "end": 296.74,
+      "prob": 0.997
+    },
+    {
+      "word": "marks,",
+      "start": 296.74,
+      "end": 297.24,
+      "prob": 0.997
+    },
+    {
+      "word": "although",
+      "start": 297.48,
+      "end": 297.88,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 297.88,
+      "end": 298.08,
+      "prob": 0.994
+    },
+    {
+      "word": "exact",
+      "start": 298.08,
+      "end": 298.44,
+      "prob": 0.997
+    },
+    {
+      "word": "mark",
+      "start": 298.44,
+      "end": 298.74,
+      "prob": 0.986
+    },
+    {
+      "word": "depends",
+      "start": 298.74,
+      "end": 299.12,
+      "prob": 0.998
+    },
+    {
+      "word": "on",
+      "start": 299.12,
+      "end": 299.32,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 299.32,
+      "end": 299.48,
+      "prob": 0.994
+    },
+    {
+      "word": "question",
+      "start": 299.48,
+      "end": 299.84,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 299.84,
+      "end": 300.3,
+      "prob": 0.984
+    },
+    {
+      "word": "its",
+      "start": 300.3,
+      "end": 300.48,
+      "prob": 0.964
+    },
+    {
+      "word": "official",
+      "start": 300.48,
+      "end": 300.88,
+      "prob": 0.997
+    },
+    {
+      "word": "marking",
+      "start": 300.88,
+      "end": 301.24,
+      "prob": 0.976
+    },
+    {
+      "word": "scheme.",
+      "start": 301.24,
+      "end": 301.6,
+      "prob": 0.994
+    },
+    {
+      "word": "Now,",
+      "start": 302.32,
+      "end": 302.52,
+      "prob": 0.971
+    },
+    {
+      "word": "let's",
+      "start": 302.74,
+      "end": 303.04,
+      "prob": 0.942
+    },
+    {
+      "word": "consider",
+      "start": 303.04,
+      "end": 303.42,
+      "prob": 0.998
+    },
+    {
+      "word": "another",
+      "start": 303.42,
+      "end": 303.9,
+      "prob": 0.995
+    },
+    {
+      "word": "type",
+      "start": 303.9,
+      "end": 304.24,
+      "prob": 0.992
+    },
+    {
+      "word": "of",
+      "start": 304.24,
+      "end": 304.44,
+      "prob": 0.998
+    },
+    {
+      "word": "six",
+      "start": 304.44,
+      "end": 304.66,
+      "prob": 0.513
+    },
+    {
+      "word": "-mark",
+      "start": 304.66,
+      "end": 304.86,
+      "prob": 0.768
+    },
+    {
+      "word": "question.",
+      "start": 304.86,
+      "end": 305.32,
+      "prob": 0.996
+    },
+    {
+      "word": "Imagine",
+      "start": 306.06,
+      "end": 306.3,
+      "prob": 0.991
+    },
+    {
+      "word": "you",
+      "start": 306.3,
+      "end": 306.6,
+      "prob": 0.992
+    },
+    {
+      "word": "are",
+      "start": 306.6,
+      "end": 306.72,
+      "prob": 0.876
+    },
+    {
+      "word": "asked",
+      "start": 306.72,
+      "end": 306.96,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 306.96,
+      "end": 307.14,
+      "prob": 0.999
+    },
+    {
+      "word": "evaluate",
+      "start": 307.14,
+      "end": 307.62,
+      "prob": 0.998
+    },
+    {
+      "word": "two",
+      "start": 307.62,
+      "end": 308.0,
+      "prob": 0.976
+    },
+    {
+      "word": "methods",
+      "start": 308.0,
+      "end": 308.36,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 308.36,
+      "end": 308.66,
+      "prob": 0.996
+    },
+    {
+      "word": "producing",
+      "start": 308.66,
+      "end": 309.04,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 309.04,
+      "end": 309.28,
+      "prob": 0.999
+    },
+    {
+      "word": "chemical.",
+      "start": 309.28,
+      "end": 309.6,
+      "prob": 0.997
+    },
+    {
+      "word": "You",
+      "start": 310.02,
+      "end": 310.4,
+      "prob": 0.237
+    },
+    {
+      "word": "might",
+      "start": 310.4,
+      "end": 310.6,
+      "prob": 0.97
+    },
+    {
+      "word": "need",
+      "start": 310.6,
+      "end": 310.8,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 310.8,
+      "end": 310.98,
+      "prob": 0.998
+    },
+    {
+      "word": "compare",
+      "start": 310.98,
+      "end": 311.32,
+      "prob": 0.992
+    },
+    {
+      "word": "their",
+      "start": 311.32,
+      "end": 311.58,
+      "prob": 0.97
+    },
+    {
+      "word": "percentage",
+      "start": 311.58,
+      "end": 311.98,
+      "prob": 0.987
+    },
+    {
+      "word": "yields,",
+      "start": 311.98,
+      "end": 312.56,
+      "prob": 0.991
+    },
+    {
+      "word": "atom",
+      "start": 313.02,
+      "end": 313.24,
+      "prob": 0.955
+    },
+    {
+      "word": "economies,",
+      "start": 313.24,
+      "end": 313.76,
+      "prob": 0.978
+    },
+    {
+      "word": "energy",
+      "start": 314.26,
+      "end": 314.56,
+      "prob": 0.997
+    },
+    {
+      "word": "requirements,",
+      "start": 314.56,
+      "end": 315.2,
+      "prob": 0.996
+    },
+    {
+      "word": "costs",
+      "start": 315.64,
+      "end": 315.92,
+      "prob": 0.98
+    },
+    {
+      "word": "and",
+      "start": 315.92,
+      "end": 316.44,
+      "prob": 0.688
+    },
+    {
+      "word": "environmental",
+      "start": 316.44,
+      "end": 317.02,
+      "prob": 0.997
+    },
+    {
+      "word": "impacts.",
+      "start": 317.02,
+      "end": 317.74,
+      "prob": 0.984
+    },
+    {
+      "word": "For",
+      "start": 318.28,
+      "end": 318.46,
+      "prob": 0.99
+    },
+    {
+      "word": "example,",
+      "start": 318.46,
+      "end": 318.82,
+      "prob": 0.999
+    },
+    {
+      "word": "one",
+      "start": 319.52,
+      "end": 319.64,
+      "prob": 0.985
+    },
+    {
+      "word": "method",
+      "start": 319.64,
+      "end": 320.0,
+      "prob": 0.995
+    },
+    {
+      "word": "might",
+      "start": 320.0,
+      "end": 320.22,
+      "prob": 0.974
+    },
+    {
+      "word": "produce",
+      "start": 320.22,
+      "end": 320.56,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 320.56,
+      "end": 320.76,
+      "prob": 0.996
+    },
+    {
+      "word": "higher",
+      "start": 320.76,
+      "end": 321.06,
+      "prob": 0.996
+    },
+    {
+      "word": "yield,",
+      "start": 321.06,
+      "end": 321.46,
+      "prob": 0.999
+    },
+    {
+      "word": "but",
+      "start": 321.66,
+      "end": 321.84,
+      "prob": 0.996
+    },
+    {
+      "word": "require",
+      "start": 321.84,
+      "end": 322.26,
+      "prob": 0.987
+    },
+    {
+      "word": "more",
+      "start": 322.26,
+      "end": 322.52,
+      "prob": 0.999
+    },
+    {
+      "word": "energy.",
+      "start": 322.52,
+      "end": 322.98,
+      "prob": 0.999
+    },
+    {
+      "word": "Another",
+      "start": 323.36,
+      "end": 323.64,
+      "prob": 0.981
+    },
+    {
+      "word": "might",
+      "start": 323.64,
+      "end": 324.04,
+      "prob": 0.787
+    },
+    {
+      "word": "produce",
+      "start": 324.04,
+      "end": 324.44,
+      "prob": 0.995
+    },
+    {
+      "word": "less",
+      "start": 324.44,
+      "end": 324.78,
+      "prob": 0.998
+    },
+    {
+      "word": "waste,",
+      "start": 324.78,
+      "end": 325.24,
+      "prob": 0.997
+    },
+    {
+      "word": "but",
+      "start": 325.46,
+      "end": 325.62,
+      "prob": 0.998
+    },
+    {
+      "word": "be",
+      "start": 325.62,
+      "end": 325.78,
+      "prob": 0.992
+    },
+    {
+      "word": "more",
+      "start": 325.78,
+      "end": 326.02,
+      "prob": 0.999
+    },
+    {
+      "word": "expensive.",
+      "start": 326.02,
+      "end": 326.62,
+      "prob": 0.999
+    },
+    {
+      "word": "A",
+      "start": 327.2,
+      "end": 327.32,
+      "prob": 0.988
+    },
+    {
+      "word": "strong",
+      "start": 327.32,
+      "end": 327.66,
+      "prob": 0.996
+    },
+    {
+      "word": "evaluation",
+      "start": 327.66,
+      "end": 328.26,
+      "prob": 0.999
+    },
+    {
+      "word": "would",
+      "start": 328.26,
+      "end": 328.7,
+      "prob": 0.993
+    },
+    {
+      "word": "explain",
+      "start": 328.7,
+      "end": 329.2,
+      "prob": 0.997
+    },
+    {
+      "word": "these",
+      "start": 329.2,
+      "end": 329.5,
+      "prob": 0.996
+    },
+    {
+      "word": "differences",
+      "start": 329.5,
+      "end": 330.0,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 330.0,
+      "end": 330.58,
+      "prob": 0.889
+    },
+    {
+      "word": "reach",
+      "start": 330.58,
+      "end": 330.82,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 330.82,
+      "end": 331.02,
+      "prob": 0.994
+    },
+    {
+      "word": "justified",
+      "start": 331.02,
+      "end": 331.54,
+      "prob": 0.996
+    },
+    {
+      "word": "conclusion",
+      "start": 331.54,
+      "end": 332.16,
+      "prob": 0.998
+    },
+    {
+      "word": "based",
+      "start": 332.16,
+      "end": 332.66,
+      "prob": 0.939
+    },
+    {
+      "word": "on",
+      "start": 332.66,
+      "end": 332.9,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 332.9,
+      "end": 333.02,
+      "prob": 0.992
+    },
+    {
+      "word": "evidence",
+      "start": 333.02,
+      "end": 333.4,
+      "prob": 0.998
+    },
+    {
+      "word": "provided.",
+      "start": 333.4,
+      "end": 334.02,
+      "prob": 0.998
+    },
+    {
+      "word": "Simply",
+      "start": 334.6,
+      "end": 334.86,
+      "prob": 0.989
+    },
+    {
+      "word": "listing",
+      "start": 334.86,
+      "end": 335.34,
+      "prob": 0.982
+    },
+    {
+      "word": "advantages",
+      "start": 335.34,
+      "end": 335.9,
+      "prob": 0.988
+    },
+    {
+      "word": "and",
+      "start": 335.9,
+      "end": 336.26,
+      "prob": 0.994
+    },
+    {
+      "word": "disadvantages",
+      "start": 336.26,
+      "end": 336.94,
+      "prob": 0.999
+    },
+    {
+      "word": "may",
+      "start": 336.94,
+      "end": 337.36,
+      "prob": 0.992
+    },
+    {
+      "word": "not",
+      "start": 337.36,
+      "end": 337.6,
+      "prob": 0.998
+    },
+    {
+      "word": "be",
+      "start": 337.6,
+      "end": 337.8,
+      "prob": 0.999
+    },
+    {
+      "word": "enough.",
+      "start": 337.8,
+      "end": 338.14,
+      "prob": 1.0
+    },
+    {
+      "word": "You",
+      "start": 338.14,
+      "end": 338.74,
+      "prob": 0.193
+    },
+    {
+      "word": "need",
+      "start": 338.74,
+      "end": 338.96,
+      "prob": 0.989
+    },
+    {
+      "word": "to",
+      "start": 338.96,
+      "end": 339.12,
+      "prob": 0.998
+    },
+    {
+      "word": "explain",
+      "start": 339.12,
+      "end": 339.56,
+      "prob": 0.994
+    },
+    {
+      "word": "their",
+      "start": 339.56,
+      "end": 339.84,
+      "prob": 0.993
+    },
+    {
+      "word": "significance",
+      "start": 339.84,
+      "end": 340.36,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 340.36,
+      "end": 340.94,
+      "prob": 0.958
+    },
+    {
+      "word": "support",
+      "start": 340.94,
+      "end": 341.36,
+      "prob": 0.996
+    },
+    {
+      "word": "your",
+      "start": 341.36,
+      "end": 341.6,
+      "prob": 0.996
+    },
+    {
+      "word": "final",
+      "start": 341.6,
+      "end": 341.98,
+      "prob": 0.988
+    },
+    {
+      "word": "judgment.",
+      "start": 341.98,
+      "end": 342.32,
+      "prob": 0.405
+    },
+    {
+      "word": "This",
+      "start": 342.9,
+      "end": 343.1,
+      "prob": 0.984
+    },
+    {
+      "word": "shows",
+      "start": 343.1,
+      "end": 343.42,
+      "prob": 0.985
+    },
+    {
+      "word": "why",
+      "start": 343.42,
+      "end": 343.78,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 343.78,
+      "end": 343.98,
+      "prob": 0.997
+    },
+    {
+      "word": "answer",
+      "start": 343.98,
+      "end": 344.26,
+      "prob": 0.982
+    },
+    {
+      "word": "structure",
+      "start": 344.26,
+      "end": 344.7,
+      "prob": 0.997
+    },
+    {
+      "word": "must",
+      "start": 344.7,
+      "end": 345.02,
+      "prob": 0.997
+    },
+    {
+      "word": "be",
+      "start": 345.02,
+      "end": 345.26,
+      "prob": 0.997
+    },
+    {
+      "word": "adapted",
+      "start": 345.26,
+      "end": 345.62,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 345.62,
+      "end": 345.96,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 345.96,
+      "end": 346.1,
+      "prob": 0.998
+    },
+    {
+      "word": "command",
+      "start": 346.1,
+      "end": 346.42,
+      "prob": 0.951
+    },
+    {
+      "word": "word.",
+      "start": 346.42,
+      "end": 346.88,
+      "prob": 0.977
+    },
+    {
+      "word": "Now,",
+      "start": 347.5,
+      "end": 347.64,
+      "prob": 0.95
+    },
+    {
+      "word": "let's",
+      "start": 347.9,
+      "end": 348.24,
+      "prob": 0.983
+    },
+    {
+      "word": "discuss",
+      "start": 348.24,
+      "end": 348.54,
+      "prob": 0.997
+    },
+    {
+      "word": "some",
+      "start": 348.54,
+      "end": 348.84,
+      "prob": 0.997
+    },
+    {
+      "word": "common",
+      "start": 348.84,
+      "end": 349.18,
+      "prob": 0.998
+    },
+    {
+      "word": "mistakes",
+      "start": 349.18,
+      "end": 349.6,
+      "prob": 0.985
+    },
+    {
+      "word": "students",
+      "start": 349.6,
+      "end": 350.02,
+      "prob": 0.986
+    },
+    {
+      "word": "make.",
+      "start": 350.02,
+      "end": 350.52,
+      "prob": 0.998
+    },
+    {
+      "word": "The",
+      "start": 351.14,
+      "end": 351.14,
+      "prob": 0.97
+    },
+    {
+      "word": "first",
+      "start": 351.14,
+      "end": 351.42,
+      "prob": 0.994
+    },
+    {
+      "word": "mistake",
+      "start": 351.42,
+      "end": 351.82,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 351.82,
+      "end": 352.18,
+      "prob": 0.996
+    },
+    {
+      "word": "repeating",
+      "start": 352.18,
+      "end": 352.6,
+      "prob": 0.985
+    },
+    {
+      "word": "the",
+      "start": 352.6,
+      "end": 352.9,
+      "prob": 0.998
+    },
+    {
+      "word": "question",
+      "start": 352.9,
+      "end": 353.36,
+      "prob": 0.996
+    },
+    {
+      "word": "instead",
+      "start": 353.36,
+      "end": 353.84,
+      "prob": 0.925
+    },
+    {
+      "word": "of",
+      "start": 353.84,
+      "end": 354.0,
+      "prob": 0.999
+    },
+    {
+      "word": "explaining",
+      "start": 354.0,
+      "end": 354.48,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 354.48,
+      "end": 354.76,
+      "prob": 0.998
+    },
+    {
+      "word": "science.",
+      "start": 354.76,
+      "end": 355.22,
+      "prob": 0.987
+    },
+    {
+      "word": "For",
+      "start": 355.74,
+      "end": 355.86,
+      "prob": 0.985
+    },
+    {
+      "word": "example,",
+      "start": 355.86,
+      "end": 356.26,
+      "prob": 0.999
+    },
+    {
+      "word": "saying",
+      "start": 356.9,
+      "end": 356.94,
+      "prob": 0.977
+    },
+    {
+      "word": "that",
+      "start": 356.94,
+      "end": 357.2,
+      "prob": 0.993
+    },
+    {
+      "word": "increasing",
+      "start": 357.2,
+      "end": 357.74,
+      "prob": 0.868
+    },
+    {
+      "word": "temperature",
+      "start": 357.74,
+      "end": 358.36,
+      "prob": 0.995
+    },
+    {
+      "word": "makes",
+      "start": 358.36,
+      "end": 358.66,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 358.66,
+      "end": 358.86,
+      "prob": 0.991
+    },
+    {
+      "word": "reaction",
+      "start": 358.86,
+      "end": 359.2,
+      "prob": 0.999
+    },
+    {
+      "word": "faster",
+      "start": 359.2,
+      "end": 359.84,
+      "prob": 0.998
+    },
+    {
+      "word": "does",
+      "start": 359.84,
+      "end": 360.36,
+      "prob": 0.955
+    },
+    {
+      "word": "not",
+      "start": 360.36,
+      "end": 360.62,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 360.62,
+      "end": 361.08,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 361.08,
+      "end": 361.5,
+      "prob": 0.997
+    },
+    {
+      "word": "it",
+      "start": 361.5,
+      "end": 361.68,
+      "prob": 0.999
+    },
+    {
+      "word": "happens.",
+      "start": 361.68,
+      "end": 362.04,
+      "prob": 0.999
+    },
+    {
+      "word": "The",
+      "start": 362.66,
+      "end": 362.78,
+      "prob": 0.996
+    },
+    {
+      "word": "second",
+      "start": 362.78,
+      "end": 363.06,
+      "prob": 0.997
+    },
+    {
+      "word": "mistake",
+      "start": 363.06,
+      "end": 363.52,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 363.52,
+      "end": 363.84,
+      "prob": 0.998
+    },
+    {
+      "word": "using",
+      "start": 363.84,
+      "end": 364.22,
+      "prob": 0.998
+    },
+    {
+      "word": "vague",
+      "start": 364.22,
+      "end": 364.66,
+      "prob": 0.991
+    },
+    {
+      "word": "scientific",
+      "start": 364.66,
+      "end": 365.2,
+      "prob": 0.985
+    },
+    {
+      "word": "language.",
+      "start": 365.2,
+      "end": 365.84,
+      "prob": 0.999
+    },
+    {
+      "word": "Instead",
+      "start": 365.84,
+      "end": 366.6,
+      "prob": 0.885
+    },
+    {
+      "word": "of",
+      "start": 366.6,
+      "end": 366.78,
+      "prob": 0.998
+    },
+    {
+      "word": "saying",
+      "start": 366.78,
+      "end": 367.02,
+      "prob": 0.997
+    },
+    {
+      "word": "that",
+      "start": 367.02,
+      "end": 367.24,
+      "prob": 0.982
+    },
+    {
+      "word": "particles",
+      "start": 367.24,
+      "end": 367.76,
+      "prob": 0.992
+    },
+    {
+      "word": "become",
+      "start": 367.76,
+      "end": 368.14,
+      "prob": 0.991
+    },
+    {
+      "word": "more",
+      "start": 368.14,
+      "end": 368.36,
+      "prob": 0.997
+    },
+    {
+      "word": "excited,",
+      "start": 368.36,
+      "end": 369.0,
+      "prob": 0.952
+    },
+    {
+      "word": "explain",
+      "start": 369.5,
+      "end": 369.86,
+      "prob": 0.978
+    },
+    {
+      "word": "that",
+      "start": 369.86,
+      "end": 370.08,
+      "prob": 0.992
+    },
+    {
+      "word": "they",
+      "start": 370.08,
+      "end": 370.28,
+      "prob": 0.996
+    },
+    {
+      "word": "gain",
+      "start": 370.28,
+      "end": 370.54,
+      "prob": 0.988
+    },
+    {
+      "word": "kinetic",
+      "start": 370.54,
+      "end": 371.04,
+      "prob": 0.984
+    },
+    {
+      "word": "energy.",
+      "start": 371.04,
+      "end": 371.56,
+      "prob": 0.999
+    },
+    {
+      "word": "The",
+      "start": 372.12,
+      "end": 372.12,
+      "prob": 0.868
+    },
+    {
+      "word": "third",
+      "start": 372.12,
+      "end": 372.38,
+      "prob": 0.984
+    },
+    {
+      "word": "mistake",
+      "start": 372.38,
+      "end": 372.84,
+      "prob": 0.993
+    },
+    {
+      "word": "is",
+      "start": 372.84,
+      "end": 373.16,
+      "prob": 0.989
+    },
+    {
+      "word": "listing",
+      "start": 373.16,
+      "end": 373.54,
+      "prob": 0.963
+    },
+    {
+      "word": "scientific",
+      "start": 373.54,
+      "end": 374.1,
+      "prob": 0.998
+    },
+    {
+      "word": "facts",
+      "start": 374.1,
+      "end": 374.6,
+      "prob": 0.997
+    },
+    {
+      "word": "without",
+      "start": 374.6,
+      "end": 375.08,
+      "prob": 0.993
+    },
+    {
+      "word": "connecting",
+      "start": 375.08,
+      "end": 375.56,
+      "prob": 0.998
+    },
+    {
+      "word": "them.",
+      "start": 375.56,
+      "end": 376.0,
+      "prob": 0.999
+    },
+    {
+      "word": "Remember",
+      "start": 376.52,
+      "end": 376.56,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 376.56,
+      "end": 376.82,
+      "prob": 0.998
+    },
+    {
+      "word": "use",
+      "start": 376.82,
+      "end": 377.06,
+      "prob": 0.999
+    },
+    {
+      "word": "words",
+      "start": 377.06,
+      "end": 377.4,
+      "prob": 0.996
+    },
+    {
+      "word": "such",
+      "start": 377.4,
+      "end": 377.7,
+      "prob": 0.988
+    },
+    {
+      "word": "as",
+      "start": 377.7,
+      "end": 378.22,
+      "prob": 0.998
+    },
+    {
+      "word": "because,",
+      "start": 378.22,
+      "end": 378.4,
+      "prob": 0.338
+    },
+    {
+      "word": "therefore,",
+      "start": 378.88,
+      "end": 379.44,
+      "prob": 0.991
+    },
+    {
+      "word": "consequently",
+      "start": 379.84,
+      "end": 380.34,
+      "prob": 0.992
+    },
+    {
+      "word": "and",
+      "start": 380.34,
+      "end": 381.02,
+      "prob": 0.541
+    },
+    {
+      "word": "as",
+      "start": 381.02,
+      "end": 381.34,
+      "prob": 0.991
+    },
+    {
+      "word": "a",
+      "start": 381.34,
+      "end": 381.46,
+      "prob": 0.998
+    },
+    {
+      "word": "result.",
+      "start": 381.46,
+      "end": 381.84,
+      "prob": 1.0
+    },
+    {
+      "word": "These",
+      "start": 382.32,
+      "end": 382.52,
+      "prob": 0.994
+    },
+    {
+      "word": "help",
+      "start": 382.52,
+      "end": 382.76,
+      "prob": 0.997
+    },
+    {
+      "word": "you",
+      "start": 382.76,
+      "end": 382.98,
+      "prob": 0.996
+    },
+    {
+      "word": "develop",
+      "start": 382.98,
+      "end": 383.32,
+      "prob": 0.995
+    },
+    {
+      "word": "clear",
+      "start": 383.32,
+      "end": 383.8,
+      "prob": 0.998
+    },
+    {
+      "word": "scientific",
+      "start": 383.8,
+      "end": 384.44,
+      "prob": 0.968
+    },
+    {
+      "word": "explanations.",
+      "start": 384.44,
+      "end": 385.2,
+      "prob": 0.995
+    },
+    {
+      "word": "Another",
+      "start": 385.84,
+      "end": 386.08,
+      "prob": 0.991
+    },
+    {
+      "word": "mistake",
+      "start": 386.08,
+      "end": 386.56,
+      "prob": 0.992
+    },
+    {
+      "word": "is",
+      "start": 386.56,
+      "end": 386.88,
+      "prob": 0.996
+    },
+    {
+      "word": "including",
+      "start": 386.88,
+      "end": 387.38,
+      "prob": 0.989
+    },
+    {
+      "word": "irrelevant",
+      "start": 387.38,
+      "end": 387.98,
+      "prob": 0.986
+    },
+    {
+      "word": "information.",
+      "start": 387.98,
+      "end": 388.7,
+      "prob": 0.999
+    },
+    {
+      "word": "If",
+      "start": 389.16,
+      "end": 389.32,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 389.32,
+      "end": 389.48,
+      "prob": 0.996
+    },
+    {
+      "word": "question",
+      "start": 389.48,
+      "end": 389.82,
+      "prob": 0.995
+    },
+    {
+      "word": "asks",
+      "start": 389.82,
+      "end": 390.12,
+      "prob": 0.989
+    },
+    {
+      "word": "about",
+      "start": 390.12,
+      "end": 390.5,
+      "prob": 0.998
+    },
+    {
+      "word": "temperature",
+      "start": 390.5,
+      "end": 390.82,
+      "prob": 0.995
+    },
+    {
+      "word": "and",
+      "start": 390.82,
+      "end": 391.22,
+      "prob": 0.996
+    },
+    {
+      "word": "reaction",
+      "start": 391.22,
+      "end": 391.56,
+      "prob": 0.998
+    },
+    {
+      "word": "rate,",
+      "start": 391.56,
+      "end": 392.0,
+      "prob": 0.993
+    },
+    {
+      "word": "do",
+      "start": 392.0,
+      "end": 392.46,
+      "prob": 0.188
+    },
+    {
+      "word": "not",
+      "start": 392.46,
+      "end": 392.66,
+      "prob": 0.998
+    },
+    {
+      "word": "spend",
+      "start": 392.66,
+      "end": 392.92,
+      "prob": 0.996
+    },
+    {
+      "word": "time",
+      "start": 392.92,
+      "end": 393.28,
+      "prob": 0.996
+    },
+    {
+      "word": "discussing",
+      "start": 393.28,
+      "end": 393.8,
+      "prob": 0.998
+    },
+    {
+      "word": "catalysts",
+      "start": 393.8,
+      "end": 394.54,
+      "prob": 0.927
+    },
+    {
+      "word": "or",
+      "start": 394.54,
+      "end": 394.72,
+      "prob": 0.968
+    },
+    {
+      "word": "surface",
+      "start": 394.72,
+      "end": 395.14,
+      "prob": 0.995
+    },
+    {
+      "word": "area",
+      "start": 395.14,
+      "end": 395.58,
+      "prob": 0.989
+    },
+    {
+      "word": "unless",
+      "start": 395.58,
+      "end": 396.1,
+      "prob": 0.932
+    },
+    {
+      "word": "they",
+      "start": 396.1,
+      "end": 396.34,
+      "prob": 0.997
+    },
+    {
+      "word": "are",
+      "start": 396.34,
+      "end": 396.46,
+      "prob": 0.994
+    },
+    {
+      "word": "relevant",
+      "start": 396.46,
+      "end": 396.8,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 396.8,
+      "end": 397.0,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 397.0,
+      "end": 397.14,
+      "prob": 0.998
+    },
+    {
+      "word": "question.",
+      "start": 397.14,
+      "end": 397.54,
+      "prob": 0.997
+    },
+    {
+      "word": "Focus",
+      "start": 397.96,
+      "end": 398.2,
+      "prob": 0.983
+    },
+    {
+      "word": "on",
+      "start": 398.2,
+      "end": 398.58,
+      "prob": 0.999
+    },
+    {
+      "word": "what",
+      "start": 398.58,
+      "end": 398.78,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 398.78,
+      "end": 398.94,
+      "prob": 0.996
+    },
+    {
+      "word": "examiner",
+      "start": 398.94,
+      "end": 399.34,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 399.34,
+      "end": 399.68,
+      "prob": 0.997
+    },
+    {
+      "word": "asking.",
+      "start": 399.68,
+      "end": 400.16,
+      "prob": 0.999
+    },
+    {
+      "word": "Before",
+      "start": 400.64,
+      "end": 400.88,
+      "prob": 0.968
+    },
+    {
+      "word": "moving",
+      "start": 400.88,
+      "end": 401.14,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 401.14,
+      "end": 401.36,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 401.36,
+      "end": 401.48,
+      "prob": 0.998
+    },
+    {
+      "word": "next",
+      "start": 401.48,
+      "end": 401.68,
+      "prob": 0.999
+    },
+    {
+      "word": "question,",
+      "start": 401.68,
+      "end": 402.16,
+      "prob": 0.998
+    },
+    {
+      "word": "always",
+      "start": 402.56,
+      "end": 402.82,
+      "prob": 0.99
+    },
+    {
+      "word": "check",
+      "start": 402.82,
+      "end": 403.14,
+      "prob": 0.999
+    },
+    {
+      "word": "your",
+      "start": 403.14,
+      "end": 403.4,
+      "prob": 0.997
+    },
+    {
+      "word": "answer.",
+      "start": 403.4,
+      "end": 403.86,
+      "prob": 0.998
+    },
+    {
+      "word": "Have",
+      "start": 404.3,
+      "end": 404.36,
+      "prob": 0.956
+    },
+    {
+      "word": "you",
+      "start": 404.36,
+      "end": 404.52,
+      "prob": 1.0
+    },
+    {
+      "word": "addressed",
+      "start": 404.52,
+      "end": 404.84,
+      "prob": 0.864
+    },
+    {
+      "word": "the",
+      "start": 404.84,
+      "end": 405.08,
+      "prob": 0.998
+    },
+    {
+      "word": "command",
+      "start": 405.08,
+      "end": 405.38,
+      "prob": 0.937
+    },
+    {
+      "word": "word?",
+      "start": 405.38,
+      "end": 405.7,
+      "prob": 0.979
+    },
+    {
+      "word": "Have",
+      "start": 406.2,
+      "end": 406.32,
+      "prob": 0.996
+    },
+    {
+      "word": "you",
+      "start": 406.32,
+      "end": 406.5,
+      "prob": 1.0
+    },
+    {
+      "word": "included",
+      "start": 406.5,
+      "end": 406.9,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 406.9,
+      "end": 407.16,
+      "prob": 0.995
+    },
+    {
+      "word": "relevant",
+      "start": 407.16,
+      "end": 407.5,
+      "prob": 0.999
+    },
+    {
+      "word": "scientific",
+      "start": 407.5,
+      "end": 408.06,
+      "prob": 0.998
+    },
+    {
+      "word": "concepts?",
+      "start": 408.06,
+      "end": 408.64,
+      "prob": 0.999
+    },
+    {
+      "word": "Have",
+      "start": 409.24,
+      "end": 409.36,
+      "prob": 0.997
+    },
+    {
+      "word": "you",
+      "start": 409.36,
+      "end": 409.54,
+      "prob": 1.0
+    },
+    {
+      "word": "explained",
+      "start": 409.54,
+      "end": 409.94,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 409.94,
+      "end": 410.16,
+      "prob": 0.999
+    },
+    {
+      "word": "relationships",
+      "start": 410.16,
+      "end": 410.72,
+      "prob": 0.983
+    },
+    {
+      "word": "between",
+      "start": 410.72,
+      "end": 411.22,
+      "prob": 1.0
+    },
+    {
+      "word": "them?",
+      "start": 411.22,
+      "end": 411.46,
+      "prob": 0.999
+    },
+    {
+      "word": "Have",
+      "start": 411.82,
+      "end": 412.02,
+      "prob": 0.998
+    },
+    {
+      "word": "you",
+      "start": 412.02,
+      "end": 412.22,
+      "prob": 0.998
+    },
+    {
+      "word": "used",
+      "start": 412.22,
+      "end": 412.5,
+      "prob": 0.998
+    },
+    {
+      "word": "accurate",
+      "start": 412.5,
+      "end": 413.0,
+      "prob": 0.994
+    },
+    {
+      "word": "scientific",
+      "start": 413.0,
+      "end": 413.62,
+      "prob": 0.996
+    },
+    {
+      "word": "terminology?",
+      "start": 413.62,
+      "end": 414.12,
+      "prob": 1.0
+    },
+    {
+      "word": "And",
+      "start": 414.82,
+      "end": 414.98,
+      "prob": 0.954
+    },
+    {
+      "word": "most",
+      "start": 414.98,
+      "end": 415.16,
+      "prob": 0.896
+    },
+    {
+      "word": "importantly,",
+      "start": 415.16,
+      "end": 415.76,
+      "prob": 0.999
+    },
+    {
+      "word": "have",
+      "start": 416.28,
+      "end": 416.36,
+      "prob": 0.994
+    },
+    {
+      "word": "you",
+      "start": 416.36,
+      "end": 416.56,
+      "prob": 0.999
+    },
+    {
+      "word": "answered",
+      "start": 416.56,
+      "end": 416.94,
+      "prob": 0.997
+    },
+    {
+      "word": "every",
+      "start": 416.94,
+      "end": 417.36,
+      "prob": 0.998
+    },
+    {
+      "word": "part",
+      "start": 417.36,
+      "end": 417.66,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 417.66,
+      "end": 417.84,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 417.84,
+      "end": 417.96,
+      "prob": 0.999
+    },
+    {
+      "word": "question?",
+      "start": 417.96,
+      "end": 418.36,
+      "prob": 0.999
+    },
+    {
+      "word": "Remember,",
+      "start": 418.36,
+      "end": 419.18,
+      "prob": 0.477
+    },
+    {
+      "word": "there",
+      "start": 419.52,
+      "end": 419.74,
+      "prob": 0.987
+    },
+    {
+      "word": "is",
+      "start": 419.74,
+      "end": 419.88,
+      "prob": 0.989
+    },
+    {
+      "word": "no",
+      "start": 419.88,
+      "end": 420.16,
+      "prob": 0.991
+    },
+    {
+      "word": "single",
+      "start": 420.16,
+      "end": 420.56,
+      "prob": 0.999
+    },
+    {
+      "word": "paragraph",
+      "start": 420.56,
+      "end": 421.12,
+      "prob": 0.993
+    },
+    {
+      "word": "that",
+      "start": 421.12,
+      "end": 421.4,
+      "prob": 0.991
+    },
+    {
+      "word": "guarantees",
+      "start": 421.4,
+      "end": 421.88,
+      "prob": 0.993
+    },
+    {
+      "word": "six",
+      "start": 421.88,
+      "end": 422.28,
+      "prob": 0.529
+    },
+    {
+      "word": "marks",
+      "start": 422.28,
+      "end": 422.6,
+      "prob": 0.99
+    },
+    {
+      "word": "in",
+      "start": 422.6,
+      "end": 422.86,
+      "prob": 0.993
+    },
+    {
+      "word": "every",
+      "start": 422.86,
+      "end": 423.32,
+      "prob": 0.995
+    },
+    {
+      "word": "GCSE",
+      "start": 423.32,
+      "end": 424.02,
+      "prob": 0.993
+    },
+    {
+      "word": "chemistry",
+      "start": 424.02,
+      "end": 424.46,
+      "prob": 0.843
+    },
+    {
+      "word": "question.",
+      "start": 424.46,
+      "end": 425.02,
+      "prob": 0.992
+    },
+    {
+      "word": "Different",
+      "start": 425.44,
+      "end": 425.74,
+      "prob": 0.992
+    },
+    {
+      "word": "questions",
+      "start": 425.74,
+      "end": 426.18,
+      "prob": 0.996
+    },
+    {
+      "word": "require",
+      "start": 426.18,
+      "end": 426.62,
+      "prob": 0.989
+    },
+    {
+      "word": "different",
+      "start": 426.62,
+      "end": 427.08,
+      "prob": 0.997
+    },
+    {
+      "word": "knowledge",
+      "start": 427.08,
+      "end": 427.42,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 427.42,
+      "end": 427.82,
+      "prob": 0.939
+    },
+    {
+      "word": "different",
+      "start": 427.82,
+      "end": 428.16,
+      "prob": 0.997
+    },
+    {
+      "word": "types",
+      "start": 428.16,
+      "end": 428.44,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 428.44,
+      "end": 428.66,
+      "prob": 0.999
+    },
+    {
+      "word": "reasoning.",
+      "start": 428.66,
+      "end": 429.0,
+      "prob": 0.999
+    },
+    {
+      "word": "The",
+      "start": 429.48,
+      "end": 429.6,
+      "prob": 0.992
+    },
+    {
+      "word": "best",
+      "start": 429.6,
+      "end": 429.8,
+      "prob": 1.0
+    },
+    {
+      "word": "way",
+      "start": 429.8,
+      "end": 430.0,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 430.0,
+      "end": 430.2,
+      "prob": 0.999
+    },
+    {
+      "word": "improve",
+      "start": 430.2,
+      "end": 430.6,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 430.6,
+      "end": 431.0,
+      "prob": 0.965
+    },
+    {
+      "word": "to",
+      "start": 431.0,
+      "end": 431.18,
+      "prob": 0.996
+    },
+    {
+      "word": "practice",
+      "start": 431.18,
+      "end": 431.56,
+      "prob": 0.807
+    },
+    {
+      "word": "past",
+      "start": 431.56,
+      "end": 431.92,
+      "prob": 0.867
+    },
+    {
+      "word": "paper",
+      "start": 431.92,
+      "end": 432.22,
+      "prob": 0.955
+    },
+    {
+      "word": "questions",
+      "start": 432.22,
+      "end": 432.7,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 432.7,
+      "end": 433.2,
+      "prob": 0.949
+    },
+    {
+      "word": "compare",
+      "start": 433.2,
+      "end": 433.58,
+      "prob": 0.997
+    },
+    {
+      "word": "your",
+      "start": 433.58,
+      "end": 433.82,
+      "prob": 0.997
+    },
+    {
+      "word": "answers",
+      "start": 433.82,
+      "end": 434.12,
+      "prob": 0.997
+    },
+    {
+      "word": "with",
+      "start": 434.12,
+      "end": 434.42,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 434.42,
+      "end": 434.56,
+      "prob": 0.99
+    },
+    {
+      "word": "official",
+      "start": 434.56,
+      "end": 434.92,
+      "prob": 0.996
+    },
+    {
+      "word": "marking",
+      "start": 434.92,
+      "end": 435.28,
+      "prob": 0.966
+    },
+    {
+      "word": "schemes.",
+      "start": 435.28,
+      "end": 435.86,
+      "prob": 0.997
+    },
+    {
+      "word": "So,",
+      "start": 436.36,
+      "end": 436.6,
+      "prob": 0.974
+    },
+    {
+      "word": "the",
+      "start": 436.88,
+      "end": 437.0,
+      "prob": 0.993
+    },
+    {
+      "word": "next",
+      "start": 437.0,
+      "end": 437.2,
+      "prob": 0.999
+    },
+    {
+      "word": "time",
+      "start": 437.2,
+      "end": 437.44,
+      "prob": 0.999
+    },
+    {
+      "word": "you",
+      "start": 437.44,
+      "end": 437.58,
+      "prob": 0.995
+    },
+    {
+      "word": "encounter",
+      "start": 437.58,
+      "end": 437.92,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 437.92,
+      "end": 438.16,
+      "prob": 0.996
+    },
+    {
+      "word": "six",
+      "start": 438.16,
+      "end": 438.4,
+      "prob": 0.88
+    },
+    {
+      "word": "mark",
+      "start": 438.4,
+      "end": 438.62,
+      "prob": 0.782
+    },
+    {
+      "word": "question,",
+      "start": 438.62,
+      "end": 439.12,
+      "prob": 0.997
+    },
+    {
+      "word": "don't",
+      "start": 439.52,
+      "end": 439.72,
+      "prob": 0.992
+    },
+    {
+      "word": "panic.",
+      "start": 439.72,
+      "end": 440.08,
+      "prob": 1.0
+    },
+    {
+      "word": "Remember",
+      "start": 440.52,
+      "end": 440.9,
+      "prob": 0.997
+    },
+    {
+      "word": "our",
+      "start": 440.9,
+      "end": 441.22,
+      "prob": 0.994
+    },
+    {
+      "word": "structure.",
+      "start": 441.22,
+      "end": 441.7,
+      "prob": 0.998
+    },
+    {
+      "word": "Point,",
+      "start": 442.44,
+      "end": 442.44,
+      "prob": 0.507
+    },
+    {
+      "word": "science,",
+      "start": 443.1,
+      "end": 443.26,
+      "prob": 0.629
+    },
+    {
+      "word": "explain,",
+      "start": 443.74,
+      "end": 444.16,
+      "prob": 0.987
+    },
+    {
+      "word": "link",
+      "start": 444.68,
+      "end": 444.9,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 444.9,
+      "end": 445.42,
+      "prob": 0.73
+    },
+    {
+      "word": "check.",
+      "start": 445.42,
+      "end": 445.76,
+      "prob": 0.984
+    },
+    {
+      "word": "Read",
+      "start": 446.28,
+      "end": 446.44,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 446.44,
+      "end": 446.62,
+      "prob": 0.999
+    },
+    {
+      "word": "question",
+      "start": 446.62,
+      "end": 446.94,
+      "prob": 0.996
+    },
+    {
+      "word": "carefully.",
+      "start": 446.94,
+      "end": 447.52,
+      "prob": 0.999
+    },
+    {
+      "word": "Identify",
+      "start": 447.52,
+      "end": 448.54,
+      "prob": 0.594
+    },
+    {
+      "word": "the",
+      "start": 448.54,
+      "end": 448.72,
+      "prob": 0.992
+    },
+    {
+      "word": "relevant",
+      "start": 448.72,
+      "end": 449.06,
+      "prob": 0.995
+    },
+    {
+      "word": "chemistry",
+      "start": 449.06,
+      "end": 449.6,
+      "prob": 0.988
+    },
+    {
+      "word": "and",
+      "start": 449.6,
+      "end": 450.06,
+      "prob": 0.857
+    },
+    {
+      "word": "organise",
+      "start": 450.06,
+      "end": 450.44,
+      "prob": 0.651
+    },
+    {
+      "word": "your",
+      "start": 450.44,
+      "end": 450.76,
+      "prob": 0.997
+    },
+    {
+      "word": "explanation",
+      "start": 450.76,
+      "end": 451.34,
+      "prob": 0.984
+    },
+    {
+      "word": "logically.",
+      "start": 451.34,
+      "end": 452.0,
+      "prob": 0.992
+    },
+    {
+      "word": "With",
+      "start": 452.44,
+      "end": 452.58,
+      "prob": 0.991
+    },
+    {
+      "word": "regular",
+      "start": 452.58,
+      "end": 452.94,
+      "prob": 0.983
+    },
+    {
+      "word": "practice,",
+      "start": 452.94,
+      "end": 453.4,
+      "prob": 0.932
+    },
+    {
+      "word": "you",
+      "start": 453.84,
+      "end": 453.88,
+      "prob": 0.996
+    },
+    {
+      "word": "can",
+      "start": 453.88,
+      "end": 454.02,
+      "prob": 0.995
+    },
+    {
+      "word": "develop",
+      "start": 454.02,
+      "end": 454.36,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 454.36,
+      "end": 454.64,
+      "prob": 0.997
+    },
+    {
+      "word": "confidence",
+      "start": 454.64,
+      "end": 455.04,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 455.04,
+      "end": 455.36,
+      "prob": 0.993
+    },
+    {
+      "word": "scientific",
+      "start": 455.36,
+      "end": 455.86,
+      "prob": 0.996
+    },
+    {
+      "word": "reasoning",
+      "start": 455.86,
+      "end": 456.38,
+      "prob": 0.998
+    },
+    {
+      "word": "needed",
+      "start": 456.38,
+      "end": 456.82,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 456.82,
+      "end": 457.1,
+      "prob": 0.999
+    },
+    {
+      "word": "achieve",
+      "start": 457.1,
+      "end": 457.46,
+      "prob": 0.997
+    },
+    {
+      "word": "higher",
+      "start": 457.46,
+      "end": 457.82,
+      "prob": 0.994
+    },
+    {
+      "word": "marks.",
+      "start": 457.82,
+      "end": 458.22,
+      "prob": 0.998
+    },
+    {
+      "word": "I",
+      "start": 458.78,
+      "end": 458.88,
+      "prob": 0.968
+    },
+    {
+      "word": "hope",
+      "start": 458.88,
+      "end": 459.04,
+      "prob": 0.999
+    },
+    {
+      "word": "you",
+      "start": 459.04,
+      "end": 459.22,
+      "prob": 0.994
+    },
+    {
+      "word": "have",
+      "start": 459.22,
+      "end": 459.32,
+      "prob": 0.957
+    },
+    {
+      "word": "found",
+      "start": 459.32,
+      "end": 459.54,
+      "prob": 0.997
+    },
+    {
+      "word": "this",
+      "start": 459.54,
+      "end": 459.74,
+      "prob": 0.996
+    },
+    {
+      "word": "lesson",
+      "start": 459.74,
+      "end": 460.02,
+      "prob": 0.992
+    },
+    {
+      "word": "helpful.",
+      "start": 460.02,
+      "end": 460.42,
+      "prob": 0.996
+    },
+    {
+      "word": "If",
+      "start": 460.92,
+      "end": 461.04,
+      "prob": 0.984
+    },
+    {
+      "word": "you",
+      "start": 461.04,
+      "end": 461.18,
+      "prob": 0.999
+    },
+    {
+      "word": "have,",
+      "start": 461.18,
+      "end": 461.5,
+      "prob": 0.999
+    },
+    {
+      "word": "please",
+      "start": 461.82,
+      "end": 462.04,
+      "prob": 0.992
+    },
+    {
+      "word": "subscribe",
+      "start": 462.04,
+      "end": 462.52,
+      "prob": 0.99
+    },
+    {
+      "word": "to",
+      "start": 462.52,
+      "end": 462.86,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 462.86,
+      "end": 463.08,
+      "prob": 0.9
+    },
+    {
+      "word": "Science.",
+      "start": 463.08,
+      "end": 463.52,
+      "prob": 0.687
+    },
+    {
+      "word": "Like",
+      "start": 463.94,
+      "end": 464.12,
+      "prob": 0.99
+    },
+    {
+      "word": "this",
+      "start": 464.12,
+      "end": 464.36,
+      "prob": 0.994
+    },
+    {
+      "word": "video",
+      "start": 464.36,
+      "end": 464.68,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 464.68,
+      "end": 465.2,
+      "prob": 0.872
+    },
+    {
+      "word": "share",
+      "start": 465.2,
+      "end": 465.42,
+      "prob": 0.996
+    },
+    {
+      "word": "it",
+      "start": 465.42,
+      "end": 465.58,
+      "prob": 0.99
+    },
+    {
+      "word": "with",
+      "start": 465.58,
+      "end": 465.7,
+      "prob": 0.999
+    },
+    {
+      "word": "other",
+      "start": 465.7,
+      "end": 465.96,
+      "prob": 0.992
+    },
+    {
+      "word": "students",
+      "start": 465.96,
+      "end": 466.32,
+      "prob": 0.998
+    },
+    {
+      "word": "preparing",
+      "start": 466.32,
+      "end": 466.82,
+      "prob": 0.987
+    },
+    {
+      "word": "for",
+      "start": 466.82,
+      "end": 467.1,
+      "prob": 0.997
+    },
+    {
+      "word": "their",
+      "start": 467.1,
+      "end": 467.26,
+      "prob": 0.992
+    },
+    {
+      "word": "GCSE",
+      "start": 467.26,
+      "end": 467.96,
+      "prob": 0.996
+    },
+    {
+      "word": "chemistry",
+      "start": 467.96,
+      "end": 468.32,
+      "prob": 0.473
+    },
+    {
+      "word": "examinations.",
+      "start": 468.32,
+      "end": 469.16,
+      "prob": 0.988
+    },
+    {
+      "word": "And",
+      "start": 469.53,
+      "end": 469.9,
+      "prob": 0.339
+    },
+    {
+      "word": "remember",
+      "start": 469.9,
+      "end": 470.18,
+      "prob": 0.965
+    },
+    {
+      "word": "to",
+      "start": 470.18,
+      "end": 470.42,
+      "prob": 0.995
+    },
+    {
+      "word": "visit",
+      "start": 470.42,
+      "end": 470.7,
+      "prob": 0.999
+    },
+    {
+      "word": "jdscience",
+      "start": 470.7,
+      "end": 471.54,
+      "prob": 0.677
+    },
+    {
+      "word": ".co",
+      "start": 471.54,
+      "end": 472.08,
+      "prob": 0.999
+    },
+    {
+      "word": ".uk",
+      "start": 472.08,
+      "end": 472.56,
+      "prob": 0.999
+    },
+    {
+      "word": "for",
+      "start": 472.56,
+      "end": 473.0,
+      "prob": 0.988
+    },
+    {
+      "word": "more",
+      "start": 473.0,
+      "end": 473.28,
+      "prob": 0.998
+    },
+    {
+      "word": "chemistry",
+      "start": 473.28,
+      "end": 473.68,
+      "prob": 0.964
+    },
+    {
+      "word": "explanations,",
+      "start": 473.68,
+      "end": 474.42,
+      "prob": 0.981
+    },
+    {
+      "word": "revision",
+      "start": 474.92,
+      "end": 475.1,
+      "prob": 0.991
+    },
+    {
+      "word": "lessons",
+      "start": 475.1,
+      "end": 475.58,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 475.58,
+      "end": 476.04,
+      "prob": 0.795
+    },
+    {
+      "word": "examination",
+      "start": 476.04,
+      "end": 476.54,
+      "prob": 0.99
+    },
+    {
+      "word": "tips.",
+      "start": 476.54,
+      "end": 477.08,
+      "prob": 0.997
+    },
+    {
+      "word": "Thank",
+      "start": 477.48,
+      "end": 477.62,
+      "prob": 0.95
+    },
+    {
+      "word": "you",
+      "start": 477.62,
+      "end": 477.8,
+      "prob": 0.992
+    },
+    {
+      "word": "for",
+      "start": 477.8,
+      "end": 477.98,
+      "prob": 0.996
+    },
+    {
+      "word": "watching",
+      "start": 477.98,
+      "end": 478.36,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 478.36,
+      "end": 478.82,
+      "prob": 0.745
+    },
+    {
+      "word": "I",
+      "start": 478.82,
+      "end": 478.94,
+      "prob": 0.985
+    },
+    {
+      "word": "look",
+      "start": 478.94,
+      "end": 479.12,
+      "prob": 0.995
+    },
+    {
+      "word": "forward",
+      "start": 479.12,
+      "end": 479.4,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 479.4,
+      "end": 479.6,
+      "prob": 0.996
+    },
+    {
+      "word": "seeing",
+      "start": 479.6,
+      "end": 479.88,
+      "prob": 0.992
+    },
+    {
+      "word": "you",
+      "start": 479.88,
+      "end": 480.14,
+      "prob": 0.991
+    },
+    {
+      "word": "in",
+      "start": 480.14,
+      "end": 480.32,
+      "prob": 0.983
+    },
+    {
+      "word": "the",
+      "start": 480.32,
+      "end": 480.46,
+      "prob": 0.995
+    },
+    {
+      "word": "next",
+      "start": 480.46,
+      "end": 480.86,
+      "prob": 0.999
+    },
+    {
+      "word": "JD",
+      "start": 480.86,
+      "end": 481.22,
+      "prob": 0.857
+    },
+    {
+      "word": "Science",
+      "start": 481.22,
+      "end": 481.6,
+      "prob": 0.762
+    },
+    {
+      "word": "lesson.",
+      "start": 481.6,
+      "end": 482.0,
+      "prob": 0.86
+    }
+  ],
+  "full_text": "Hello and welcome back to JD Science. Have you ever answered a 6-mark question in GCSE chemistry, written almost half a page and still received only 2 or 3 marks? Perhaps you understood the chemistry but could not understand why the examiner did not award you full marks. In today's video, I will show you how to approach 6-mark questions, organise your scientific explanations and improve your chances of achieving all 6 marks. Before we begin, remember to subscribe to JD Science for more GCSE chemistry lessons and examination tips. You can also visit jdscience.co.uk for more explanations and revision resources. Now, the first thing you need to understand is that writing a long answer does not automatically earn you more marks. What matters is the accuracy, relevance and quality of your scientific explanation. Many GCSE chemistry 6-mark questions are assessed using levels of response. These marking schemes consider the overall quality of your answer, including your scientific knowledge, the detail of your explanation and how logically your ideas are organised. Some questions use 3 levels, with level 1 covering 1 or 2 marks, level 2, 3 or 4 marks and level 3, 5 or 6 marks. However, other 6-mark questions are marked using individual marking points. To achieve the highest marks, you must understand exactly what the question requires. This brings us to command words. If the question asks you to describe, you need to give an account of what happens. If it asks you to explain, you must provide scientific reasons. If it asks you to compare, identify relevant similarities and differences. And if it asks you to evaluate, consider the evidence and reach a justified judgment. Understanding these command words is essential because knowing the chemistry is not enough if you fail to answer the question correctly. Now, let me introduce a simple structure that can help you organise your 6-mark answers. I call it Point, Science, Explain, Link and Check. Start with your point. Make a clear statement that directly addresses the question. Next, provide the science. Introduce the relevant scientific principles, concepts or evidence. Then, explain. Develop your answer by showing why something happens and how the scientific concepts are connected. After that, link your explanation back to the question. Finally, check. Make sure your answer is complete, scientifically accurate and addresses every part of the question. Remember these 5 words, Point, Science, Explain, Link and Check. This is a planning technique, not an official marking formula and you should adapt it to the question. Let's apply this structure to a practical GCSE chemistry example. Here is our examination style question. Explain how increasing temperature affects the rate of a chemical reaction. Use collision theory in your answer. 6 marks. First, notice the command word EXPLAIN. This means we must give scientific reasons. A weak answer might say, when temperature increases, particles move faster and the reaction becomes faster. Although this statement contains correct information, it does not explain the chemistry in sufficient detail. Now, listen to a stronger answer. When the temperature of a reacting mixture increases, the particles gain kinetic energy. As a result, they move faster and collide more frequently. The increased kinetic energy also means that a greater proportion of particles have energy equal to or greater than the activation energy required for the reaction. Consequently, a greater proportion of collisions are successful. The number of successful collisions per second therefore increases, resulting in a faster rate of reaction. Now, why is this a strong answer? First, we identified the effect of temperature on the kinetic energy of particles. Next, we explained how increased kinetic energy affects particle movement and collision frequency. We then introduced activation energy, which is the minimum energy colliding particles need for a reaction to occur. We explained that at higher temperatures, a greater proportion of collisions have sufficient energy to produce a reaction. Finally, to the scientific ideas to the increased rate of reaction. Notice that we did not simply list facts. We developed a logical explanation in which each scientific statement supported the next. This is the kind of reasoning that can help you achieve the highest marks, although the exact mark depends on the question and its official marking scheme. Now, let's consider another type of six-mark question. Imagine you are asked to evaluate two methods of producing a chemical. You might need to compare their percentage yields, atom economies, energy requirements, costs and environmental impacts. For example, one method might produce a higher yield, but require more energy. Another might produce less waste, but be more expensive. A strong evaluation would explain these differences and reach a justified conclusion based on the evidence provided. Simply listing advantages and disadvantages may not be enough. You need to explain their significance and support your final judgment. This shows why the answer structure must be adapted to the command word. Now, let's discuss some common mistakes students make. The first mistake is repeating the question instead of explaining the science. For example, saying that increasing temperature makes a reaction faster does not explain why it happens. The second mistake is using vague scientific language. Instead of saying that particles become more excited, explain that they gain kinetic energy. The third mistake is listing scientific facts without connecting them. Remember to use words such as because, therefore, consequently and as a result. These help you develop clear scientific explanations. Another mistake is including irrelevant information. If the question asks about temperature and reaction rate, do not spend time discussing catalysts or surface area unless they are relevant to the question. Focus on what the examiner is asking. Before moving to the next question, always check your answer. Have you addressed the command word? Have you included the relevant scientific concepts? Have you explained the relationships between them? Have you used accurate scientific terminology? And most importantly, have you answered every part of the question? Remember, there is no single paragraph that guarantees six marks in every GCSE chemistry question. Different questions require different knowledge and different types of reasoning. The best way to improve is to practice past paper questions and compare your answers with the official marking schemes. So, the next time you encounter a six mark question, don't panic. Remember our structure. Point, science, explain, link and check. Read the question carefully. Identify the relevant chemistry and organise your explanation logically. With regular practice, you can develop the confidence and scientific reasoning needed to achieve higher marks. I hope you have found this lesson helpful. If you have, please subscribe to JD Science. Like this video and share it with other students preparing for their GCSE chemistry examinations. And remember to visit jdscience.co.uk for more chemistry explanations, revision lessons and examination tips. Thank you for watching and I look forward to seeing you in the next JD Science lesson."
+}

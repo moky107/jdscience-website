@@ -212,7 +212,9 @@ def frame_image(lesson: dict, t: float, cache: SlideCache) -> Image.Image:
         opacity = 0.0
         tgt = None
     img = draw_highlight(img, spots, tgt if opacity > 0.15 else None, opacity)
-    return draw_cursor(img, x, y, opacity)
+    if lesson.get("pointer", True):
+        return draw_cursor(img, x, y, opacity)
+    return img
 
 
 def preview(lesson: dict, times: list[float], dest: Path) -> None:
