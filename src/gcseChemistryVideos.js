@@ -29,6 +29,13 @@ export const GCSE_CHEMISTRY_KEY_CONCEPTS_VIDEO = {
 
 export const GCSE_CHEMISTRY_LESSON_VIDEOS = [
   lesson({
+    title: "Six-Mark Exam Technique",
+    topicSlug: "six-mark-questions",
+    file_name: "jdscience-six-mark-questions-1080p.mp4",
+    source_path: "content/videos/six-mark-questions/jdscience-six-mark-questions-1080p.mp4",
+    description: "How to get full marks in GCSE Chemistry six-mark questions: command words, levels of response, and the Point–Science–Explain–Link–Check structure.",
+  }),
+  lesson({
     title: "Calculating Moles",
     topicSlug: "calculating-moles",
     file_name: "jdscience-moles-1080p.mp4",
@@ -62,13 +69,6 @@ export const GCSE_CHEMISTRY_LESSON_VIDEOS = [
     file_name: "jdscience-atom-economy-1080p.mp4",
     source_path: "content/videos/atom-economy/jdscience-atom-economy-1080p.mp4",
     description: "Atom economy from the Mr of the desired product and the total Mr of all products, with a practice question.",
-  }),
-  lesson({
-    title: "Six-Mark Exam Technique",
-    topicSlug: "six-mark-questions",
-    file_name: "jdscience-six-mark-questions-1080p.mp4",
-    source_path: "content/videos/six-mark-questions/jdscience-six-mark-questions-1080p.mp4",
-    description: "How to get full marks in GCSE Chemistry six-mark questions: command words, levels of response, and the Point–Science–Explain–Link–Check structure.",
   }),
 ];
 
