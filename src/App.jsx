@@ -14,6 +14,13 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import HomepageIntroVideo from "./HomepageIntroVideo";
+import {
+  CHEMISTRY_VIDEOS_HREF,
+  TODAYS_VIDEO,
+  TODAYS_VIDEO_HEADING,
+  TODAYS_VIDEO_PAGE_HREF,
+  TODAYS_VIDEO_SUBTITLE,
+} from "./homepageVideo";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
@@ -2690,11 +2697,19 @@ function VideoSection() {
   return (
     <section style={{ background: "#071025", color: "#fff", padding: isMobile ? "40px 16px" : "56px 20px" }}>
       <div style={{ maxWidth: 980, margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontSize: isMobile ? 24 : 38, margin: 0 }}>How JD Science Works</h2>
+        <h2 style={{ fontSize: isMobile ? 24 : 38, margin: 0 }}>{TODAYS_VIDEO_HEADING}</h2>
         <p style={{ color: "#cbd5e1", fontSize: isMobile ? 15 : 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" }}>
-          Watch this short introduction to see how learners use resources, past papers and tutoring support.
+          {TODAYS_VIDEO_SUBTITLE}
         </p>
         <HomepageIntroVideo isMobile={isMobile} />
+        <p style={{ margin: "18px 0 0", display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}>
+          <a href={TODAYS_VIDEO_PAGE_HREF} style={{ color: "#99f6e4", fontWeight: 700, textDecoration: "none" }}>
+            Open {TODAYS_VIDEO.title}
+          </a>
+          <a href={CHEMISTRY_VIDEOS_HREF} style={{ color: "#99f6e4", fontWeight: 700, textDecoration: "none" }}>
+            All GCSE Chemistry videos
+          </a>
+        </p>
       </div>
     </section>
   );

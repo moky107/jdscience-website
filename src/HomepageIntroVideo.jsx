@@ -37,7 +37,7 @@ export default function HomepageIntroVideo({ isMobile = false }) {
     }
   }, []);
 
-  const videoProps = homepageVideoElementProps({ autoPlay: true });
+  const videoProps = homepageVideoElementProps({ autoPlay: false });
   const sourceProps = homepageVideoSourceProps();
 
   return (
@@ -72,7 +72,7 @@ export default function HomepageIntroVideo({ isMobile = false }) {
               Video unavailable
             </div>
             <p style={{ margin: 0, color: "#cbd5e1", lineHeight: 1.55, fontSize: isMobile ? 14 : 16 }}>
-              The introduction video could not be loaded. Please refresh the page or try again later.
+              Today's video could not be loaded. Please refresh the page or try again later.
             </p>
           </div>
         </div>
@@ -89,9 +89,8 @@ export default function HomepageIntroVideo({ isMobile = false }) {
               inset: 0,
               width: "100%",
               height: "100%",
-              objectFit: "cover",
-              background: "#111827",
-              filter: "brightness(1.22) contrast(1.04) saturate(1.06)",
+              objectFit: "contain",
+              background: "#0a1731",
             }}
           >
             <source {...sourceProps} />
@@ -102,7 +101,7 @@ export default function HomepageIntroVideo({ isMobile = false }) {
             <button
               type="button"
               onClick={handlePlayClick}
-              aria-label="Play introduction video"
+              aria-label="Play today's video"
               style={{
                 position: "absolute",
                 left: "50%",

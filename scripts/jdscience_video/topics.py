@@ -34,6 +34,11 @@ TOPICS: tuple[Topic, ...] = (
         "Calculating Empirical Formulae",
         ("empirical", "empirical-formula", "empiricalformula"),
     ),
+    Topic(
+        "six-mark-questions",
+        "Six-Mark Exam Technique",
+        ("six-mark", "sixmark", "6-mark", "6mark", "exam-technique"),
+    ),
 )
 
 SLUGS = {topic.slug for topic in TOPICS}

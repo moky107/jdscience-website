@@ -21,11 +21,11 @@ function test(name, fn) {
   }
 }
 
-test("catalog publishes five full GCSE Chemistry lessons plus Key Concepts, not the 60s sample", () => {
-  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 5);
+test("catalog publishes six full GCSE Chemistry lessons plus Key Concepts, not the 60s sample", () => {
+  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 6);
   assert.deepEqual(
     GCSE_CHEMISTRY_LESSON_VIDEOS.map((item) => item.topicSlug),
-    ["calculating-moles", "concentration", "percentage-by-mass", "empirical-formulae", "atom-economy"],
+    ["six-mark-questions", "calculating-moles", "concentration", "percentage-by-mass", "empirical-formulae", "atom-economy"],
   );
   assert.equal(GCSE_CHEMISTRY_VIDEOS.at(-1).title, GCSE_CHEMISTRY_KEY_CONCEPTS_VIDEO.title);
   for (const item of GCSE_CHEMISTRY_LESSON_VIDEOS) {

@@ -28,6 +28,7 @@ GOLD = (232, 194, 71)
 WHITE = (255, 255, 255)
 LINE = (42, 92, 128)
 GREEN = (94, 214, 165)
+RED = (232, 88, 98)
 CURSOR = (255, 196, 64)
 CURSOR_EDGE = (255, 248, 230)
 STRAPLINE = "Learn Smarter. Revise Better. Achieve More."

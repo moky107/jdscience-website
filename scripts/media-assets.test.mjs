@@ -8,6 +8,9 @@ import {
   INTRO_VIDEO_POSTER,
   INTRO_VIDEO_SRC,
   INTRO_VIDEO_TYPE,
+  TODAYS_VIDEO,
+  TODAYS_VIDEO_HEADING,
+  TODAYS_VIDEO_PAGE_HREF,
 } from "../src/homepageVideo.js";
 import {
   HERO_FALLBACK_IMG,
@@ -43,31 +46,37 @@ function test(name, fn) {
   }
 }
 
-test("homepage video uses stable public mp4 with poster and autoplay-safe attributes", () => {
-  const props = homepageVideoElementProps({ autoPlay: true });
+test("homepage today's video uses the six-mark Chemistry lesson with sound and no autoplay loop", () => {
+  const props = homepageVideoElementProps();
   const source = homepageVideoSourceProps();
+  assert.equal(TODAYS_VIDEO_HEADING, "Today's video");
+  assert.equal(TODAYS_VIDEO.topicSlug, "six-mark-questions");
   assert.equal(source.src, INTRO_VIDEO_SRC);
   assert.equal(source.type, INTRO_VIDEO_TYPE);
-  assert.equal(INTRO_VIDEO_SRC, "/homepage-promo.mp4");
+  assert.equal(
+    INTRO_VIDEO_SRC,
+    "/resources/gcse/chemistry/videos/six-mark-questions/jdscience-six-mark-questions-1080p.mp4",
+  );
   assert.equal(props.poster, INTRO_VIDEO_POSTER);
-  assert.equal(props.poster, "/homepage-promo-poster.jpg");
+  assert.equal(props.poster, "/resources/gcse/chemistry/videos/six-mark-questions/poster.jpg");
+  assert.equal(TODAYS_VIDEO_PAGE_HREF, "/resources/gcse/chemistry/videos/six-mark-questions/");
   assert.equal(props.controls, true);
-  assert.equal(props.muted, true);
+  assert.equal(props.muted, false);
   assert.equal(props.playsInline, true);
-  assert.equal(props.autoPlay, true);
-  assert.equal(props.loop, true);
+  assert.equal(props.autoPlay, false);
+  assert.equal(props.loop, false);
   assert.equal(props.preload, "metadata");
   assert.ok(!String(source.src).includes("token="), "must not use signed video URLs");
 });
 
-test("homepage promo mp4 is publicly shipped with moov before mdat (faststart)", () => {
-  const videoPath = join(ROOT, "public", "homepage-promo.mp4");
-  const posterPath = join(ROOT, "public", "homepage-promo-poster.jpg");
+test("homepage today's video mp4 is publicly shipped with moov before mdat (faststart)", () => {
+  const videoPath = join(ROOT, "public", INTRO_VIDEO_SRC.replace(/^\//, ""));
+  const posterPath = join(ROOT, "public", INTRO_VIDEO_POSTER.replace(/^\//, ""));
   const fallbackPath = join(ROOT, "public", "avatar-fallback.svg");
-  assert.ok(existsSync(videoPath), "homepage-promo.mp4 must exist in public/");
-  assert.ok(existsSync(posterPath), "homepage-promo-poster.jpg must exist in public/");
+  assert.ok(existsSync(videoPath), `${INTRO_VIDEO_SRC} must exist in public/`);
+  assert.ok(existsSync(posterPath), `${INTRO_VIDEO_POSTER} must exist in public/`);
   assert.ok(existsSync(fallbackPath), "avatar-fallback.svg must exist in public/");
-  assert.ok(statSync(videoPath).size > 100_000, "video file looks too small");
+  assert.ok(statSync(videoPath).size > 1_000_000, "video file looks too small");
   const bytes = readFileSync(videoPath);
   const moov = bytes.indexOf(Buffer.from("moov"));
   const mdat = bytes.indexOf(Buffer.from("mdat"));

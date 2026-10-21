@@ -1,0 +1,103 @@
+[0.00–6.42] Hello and welcome back to JD Science. Have you ever answered a 6-mark question in GCSE
+[6.42–13.90] chemistry, written almost half a page and still received only 2 or 3 marks? Perhaps you understood
+[13.90–18.90] the chemistry but could not understand why the examiner did not award you full marks.
+[19.52–24.72] In today's video, I will show you how to approach 6-mark questions, organise your
+[24.72–29.48] scientific explanations and improve your chances of achieving all 6 marks.
+[30.24–35.80] Before we begin, remember to subscribe to JD Science for more GCSE chemistry lessons and
+[35.80–43.00] examination tips. You can also visit jdscience.co.uk for more explanations and revision resources.
+[43.62–48.82] Now, the first thing you need to understand is that writing a long answer does not automatically
+[48.82–55.06] earn you more marks. What matters is the accuracy, relevance and quality of your scientific
+[55.06–61.98] explanation. Many GCSE chemistry 6-mark questions are assessed using levels of response. These
+[61.98–67.06] marking schemes consider the overall quality of your answer, including your scientific knowledge,
+[67.46–73.76] the detail of your explanation and how logically your ideas are organised. Some questions use 3
+[73.76–81.12] levels, with level 1 covering 1 or 2 marks, level 2, 3 or 4 marks and level 3, 5 or 6 marks.
+[81.56–85.96] However, other 6-mark questions are marked using individual marking points.
+[86.56–91.28] To achieve the highest marks, you must understand exactly what the question requires.
+[91.96–96.10] This brings us to command words. If the question asks you to describe,
+[96.52–101.82] you need to give an account of what happens. If it asks you to explain, you must provide
+[101.82–107.86] scientific reasons. If it asks you to compare, identify relevant similarities and differences.
+[108.50–113.28] And if it asks you to evaluate, consider the evidence and reach a justified judgment.
+[114.00–117.80] Understanding these command words is essential because knowing the chemistry
+[117.80–121.00] is not enough if you fail to answer the question correctly.
+[121.56–126.32] Now, let me introduce a simple structure that can help you organise your 6-mark answers.
+[126.32–131.18] I call it Point, Science, Explain, Link and Check.
+[132.00–136.20] Start with your point. Make a clear statement that directly addresses the question.
+[136.94–142.62] Next, provide the science. Introduce the relevant scientific principles, concepts or evidence.
+[143.30–148.94] Then, explain. Develop your answer by showing why something happens and how the scientific
+[148.94–153.62] concepts are connected. After that, link your explanation back to the question.
+[154.18–157.68] Finally, check. Make sure your answer is complete,
+[158.28–162.24] scientifically accurate and addresses every part of the question.
+[162.98–169.60] Remember these 5 words, Point, Science, Explain, Link and Check.
+[170.52–176.22] This is a planning technique, not an official marking formula and you should adapt it to the question.
+[176.84–181.00] Let's apply this structure to a practical GCSE chemistry example.
+[181.72–184.28] Here is our examination style question.
+[185.16–189.16] Explain how increasing temperature affects the rate of a chemical reaction.
+[189.82–193.12] Use collision theory in your answer. 6 marks.
+[194.24–200.28] First, notice the command word EXPLAIN. This means we must give scientific reasons.
+[201.00–206.34] A weak answer might say, when temperature increases, particles move faster and the
+[206.34–210.92] reaction becomes faster. Although this statement contains correct information,
+[211.28–214.38] it does not explain the chemistry in sufficient detail.
+[215.18–219.78] Now, listen to a stronger answer. When the temperature of a reacting mixture
+[219.78–226.60] increases, the particles gain kinetic energy. As a result, they move faster and collide more
+[226.60–232.16] frequently. The increased kinetic energy also means that a greater proportion of particles
+[232.16–237.78] have energy equal to or greater than the activation energy required for the reaction.
+[238.50–242.02] Consequently, a greater proportion of collisions are successful.
+[242.56–246.14] The number of successful collisions per second therefore increases,
+[246.66–248.88] resulting in a faster rate of reaction.
+[249.62–251.88] Now, why is this a strong answer?
+[252.46–257.28] First, we identified the effect of temperature on the kinetic energy of particles.
+[257.28–263.96] Next, we explained how increased kinetic energy affects particle movement and collision frequency.
+[264.50–269.88] We then introduced activation energy, which is the minimum energy colliding particles need
+[269.88–273.96] for a reaction to occur. We explained that at higher temperatures,
+[274.34–278.64] a greater proportion of collisions have sufficient energy to produce a reaction.
+[279.26–280.98] Finally, to the
+[280.98–284.08] scientific ideas to the increased rate of reaction.
+[284.84–290.46] Notice that we did not simply list facts. We developed a logical explanation in which
+[290.46–295.62] each scientific statement supported the next. This is the kind of reasoning that can help
+[295.62–299.84] you achieve the highest marks, although the exact mark depends on the question
+[299.84–301.60] and its official marking scheme.
+[302.32–305.32] Now, let's consider another type of six-mark question.
+[306.06–309.60] Imagine you are asked to evaluate two methods of producing a chemical.
+[310.16–315.20] You might need to compare their percentage yields, atom economies, energy requirements,
+[315.64–321.46] costs and environmental impacts. For example, one method might produce a higher yield,
+[321.66–326.62] but require more energy. Another might produce less waste, but be more expensive.
+[327.20–332.16] A strong evaluation would explain these differences and reach a justified conclusion
+[332.16–338.14] based on the evidence provided. Simply listing advantages and disadvantages may not be enough.
+[338.14–342.32] You need to explain their significance and support your final judgment.
+[342.90–346.88] This shows why the answer structure must be adapted to the command word.
+[347.50–350.52] Now, let's discuss some common mistakes students make.
+[351.14–355.22] The first mistake is repeating the question instead of explaining the science.
+[355.74–359.84] For example, saying that increasing temperature makes a reaction faster
+[359.84–362.04] does not explain why it happens.
+[362.66–365.84] The second mistake is using vague scientific language.
+[365.84–371.56] Instead of saying that particles become more excited, explain that they gain kinetic energy.
+[372.12–376.00] The third mistake is listing scientific facts without connecting them.
+[376.52–381.84] Remember to use words such as because, therefore, consequently and as a result.
+[382.32–385.20] These help you develop clear scientific explanations.
+[385.84–388.70] Another mistake is including irrelevant information.
+[389.16–392.00] If the question asks about temperature and reaction rate,
+[392.00–395.58] do not spend time discussing catalysts or surface area
+[395.58–400.16] unless they are relevant to the question. Focus on what the examiner is asking.
+[400.64–403.86] Before moving to the next question, always check your answer.
+[404.30–405.70] Have you addressed the command word?
+[406.20–408.64] Have you included the relevant scientific concepts?
+[409.24–411.46] Have you explained the relationships between them?
+[411.82–414.12] Have you used accurate scientific terminology?
+[414.82–418.36] And most importantly, have you answered every part of the question?
+[418.36–425.02] Remember, there is no single paragraph that guarantees six marks in every GCSE chemistry question.
+[425.44–429.00] Different questions require different knowledge and different types of reasoning.
+[429.48–432.70] The best way to improve is to practice past paper questions
+[432.70–435.86] and compare your answers with the official marking schemes.
+[436.36–440.08] So, the next time you encounter a six mark question, don't panic.
+[440.52–441.70] Remember our structure.
+[442.44–445.76] Point, science, explain, link and check.
+[446.28–447.52] Read the question carefully.
+[447.52–452.00] Identify the relevant chemistry and organise your explanation logically.
+[452.44–455.04] With regular practice, you can develop the confidence
+[455.04–458.22] and scientific reasoning needed to achieve higher marks.
+[458.78–460.42] I hope you have found this lesson helpful.
+[460.92–463.52] If you have, please subscribe to JD Science.
+[463.94–469.16] Like this video and share it with other students preparing for their GCSE chemistry examinations.
+[469.80–474.42] And remember to visit jdscience.co.uk for more chemistry explanations,
+[474.92–477.08] revision lessons and examination tips.
+[477.48–482.00] Thank you for watching and I look forward to seeing you in the next JD Science lesson.
