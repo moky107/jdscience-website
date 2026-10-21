@@ -60,6 +60,7 @@ import { ELEVEN_PLUS_RESOURCES } from "./elevenPlusResources";
 import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname } from "./seo";
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
+import { GCSE_CHEMISTRY_VIDEOS } from "./gcseChemistryVideos";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
 import BookingForm from "./BookingForm";
 import {
@@ -164,16 +165,7 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 
 const STATIC_RESOURCE_ITEMS = [
   ...hostedRevisionNotesForCatalog(),
-  // GCSE Chemistry — Videos
-  {
-    level: "GCSE/IGCSE",
-    subject: "Chemistry",
-    exam_board: "Edexcel",
-    resource_category: "Videos",
-    title: "Topic 1 Key Concepts In Chemistry",
-    embed_url: "https://share.synthesia.io/embeds/videos/99d5e9d6-8756-4051-9e53-246cc6af911e",
-    all_boards: true,
-  },
+  ...GCSE_CHEMISTRY_VIDEOS,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...AQA_GCSE_MATHS_RESOURCES,
   ...AQA_ALEVEL_CHEMISTRY_RESOURCES,
@@ -311,6 +303,15 @@ function resourceFolderLevel(level) {
   return slugify(key);
 }
 
+function staticResourceFileType(resource) {
+  if (resource.embed_url) return "video-embed";
+  const name = `${resource.file_name || ""} ${resource.file_url_override || ""}`;
+  if (/\.html(?:$|[?#])/i.test(name)) return "text/html";
+  if (/\.mp4(?:$|[?#])/i.test(name)) return "video/mp4";
+  if (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) return "application/pdf";
+  return "application/octet-stream";
+}
+
 function staticResourceFileUrl(resource) {
   if (resource.file_url_override) return resource.file_url_override;
   const category = String(resource.resource_category || "");
@@ -333,11 +334,7 @@ function buildStaticResourceItems() {
     title: resource.title,
     file_name: resource.file_name || resource.title,
     file_url: resource.embed_url || staticResourceFileUrl(resource),
-    file_type: resource.embed_url
-      ? "video-embed"
-      : /\.html$/i.test(resource.file_name || resource.file_url_override || "")
-        ? "text/html"
-        : (resource.file_url_override || /\.pdf$/i.test(resource.file_name || "")) ? "application/pdf" : "application/octet-stream",
+    file_type: staticResourceFileType(resource),
     storage_path: null,
     published: true,
     series_label: resource.series_label || null,

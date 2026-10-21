@@ -1,0 +1,1063 @@
+{
+  "duration": 380.46,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "transition_s": 0.4,
+  "audio": "source/narration_master.mp3",
+  "slides": [
+    {
+      "t": 0.0,
+      "id": "title",
+      "note": "In today's video, we want to look at empirical formulae"
+    },
+    {
+      "t": 28.12,
+      "id": "definition",
+      "note": "What is an empirical formula?"
+    },
+    {
+      "t": 62.04,
+      "id": "key_idea",
+      "note": "Notice that an empirical formula shows the simplest ratio"
+    },
+    {
+      "t": 71.04,
+      "id": "method",
+      "note": "How do we calculate an empirical formula?"
+    },
+    {
+      "t": 96.94,
+      "id": "example1",
+      "note": "Example 1. Calculating empirical formula from masses"
+    },
+    {
+      "t": 145.64,
+      "id": "practice1_q",
+      "note": "Practice question 1. Now it's your turn"
+    },
+    {
+      "t": 165.84,
+      "id": "practice1_ans",
+      "note": "Let's check your answer"
+    },
+    {
+      "t": 208.4,
+      "id": "example2",
+      "note": "Example 2. Calculating empirical formula from percentages"
+    },
+    {
+      "t": 254.26,
+      "id": "example2_work",
+      "note": "Now, divide each mass by its relative atomic mass"
+    },
+    {
+      "t": 296.3,
+      "id": "practice2_q",
+      "note": "Practice question 2"
+    },
+    {
+      "t": 320.4,
+      "id": "practice2_ans",
+      "note": "Let's check your answer"
+    },
+    {
+      "t": 378.02,
+      "id": "close",
+      "note": "Well done if you got that correct"
+    }
+  ],
+  "reveals": [
+    {
+      "t": 10.86,
+      "slide": "title",
+      "item": "a1"
+    },
+    {
+      "t": 14.56,
+      "slide": "title",
+      "item": "a2"
+    },
+    {
+      "t": 17.48,
+      "slide": "title",
+      "item": "a3"
+    },
+    {
+      "t": 20.88,
+      "slide": "title",
+      "item": "a4"
+    },
+    {
+      "t": 28.12,
+      "slide": "definition",
+      "item": "def"
+    },
+    {
+      "t": 37.5,
+      "slide": "definition",
+      "item": "glucose"
+    },
+    {
+      "t": 50.86,
+      "slide": "definition",
+      "item": "ratio"
+    },
+    {
+      "t": 57.54,
+      "slide": "definition",
+      "item": "ch2o"
+    },
+    {
+      "t": 62.04,
+      "slide": "key_idea",
+      "item": "mol"
+    },
+    {
+      "t": 62.5,
+      "slide": "key_idea",
+      "item": "emp"
+    },
+    {
+      "t": 66.56,
+      "slide": "key_idea",
+      "item": "same"
+    },
+    {
+      "t": 73.98,
+      "slide": "method",
+      "item": "s1"
+    },
+    {
+      "t": 75.84,
+      "slide": "method",
+      "item": "s1"
+    },
+    {
+      "t": 79.02,
+      "slide": "method",
+      "item": "s2"
+    },
+    {
+      "t": 85.14,
+      "slide": "method",
+      "item": "s3"
+    },
+    {
+      "t": 89.26,
+      "slide": "method",
+      "item": "s4"
+    },
+    {
+      "t": 100.9,
+      "slide": "example1",
+      "item": "mg"
+    },
+    {
+      "t": 100.9,
+      "slide": "example1",
+      "item": "mg_mass"
+    },
+    {
+      "t": 103.5,
+      "slide": "example1",
+      "item": "o"
+    },
+    {
+      "t": 103.5,
+      "slide": "example1",
+      "item": "o_mass"
+    },
+    {
+      "t": 109.12,
+      "slide": "example1",
+      "item": "mg_ar"
+    },
+    {
+      "t": 112.4,
+      "slide": "example1",
+      "item": "o_ar"
+    },
+    {
+      "t": 119.32,
+      "slide": "example1",
+      "item": "mg_mol"
+    },
+    {
+      "t": 123.92,
+      "slide": "example1",
+      "item": "o_mol"
+    },
+    {
+      "t": 129.62,
+      "slide": "example1",
+      "item": "smallest"
+    },
+    {
+      "t": 133.98,
+      "slide": "example1",
+      "item": "mg_ratio"
+    },
+    {
+      "t": 136.42,
+      "slide": "example1",
+      "item": "o_ratio"
+    },
+    {
+      "t": 139.1,
+      "slide": "example1",
+      "item": "overall"
+    },
+    {
+      "t": 142.28,
+      "slide": "example1",
+      "item": "formula"
+    },
+    {
+      "t": 148.54,
+      "slide": "practice1_q",
+      "item": "masses"
+    },
+    {
+      "t": 154.02,
+      "slide": "practice1_q",
+      "item": "ar"
+    },
+    {
+      "t": 159.64,
+      "slide": "practice1_q",
+      "item": "ask"
+    },
+    {
+      "t": 161.96,
+      "slide": "practice1_q",
+      "item": "pause"
+    },
+    {
+      "t": 167.44,
+      "slide": "practice1_ans",
+      "item": "na"
+    },
+    {
+      "t": 167.44,
+      "slide": "practice1_ans",
+      "item": "na_mass"
+    },
+    {
+      "t": 167.44,
+      "slide": "practice1_ans",
+      "item": "na_ar"
+    },
+    {
+      "t": 171.5,
+      "slide": "practice1_ans",
+      "item": "na_mol"
+    },
+    {
+      "t": 176.56,
+      "slide": "practice1_ans",
+      "item": "o"
+    },
+    {
+      "t": 176.56,
+      "slide": "practice1_ans",
+      "item": "o_mass"
+    },
+    {
+      "t": 176.56,
+      "slide": "practice1_ans",
+      "item": "o_ar"
+    },
+    {
+      "t": 176.56,
+      "slide": "practice1_ans",
+      "item": "o_mol"
+    },
+    {
+      "t": 182.78,
+      "slide": "practice1_ans",
+      "item": "smallest"
+    },
+    {
+      "t": 187.44,
+      "slide": "practice1_ans",
+      "item": "na_ratio"
+    },
+    {
+      "t": 192.4,
+      "slide": "practice1_ans",
+      "item": "o_ratio"
+    },
+    {
+      "t": 197.64,
+      "slide": "practice1_ans",
+      "item": "overall"
+    },
+    {
+      "t": 202.56,
+      "slide": "practice1_ans",
+      "item": "formula"
+    },
+    {
+      "t": 219.24,
+      "slide": "example2",
+      "item": "assume"
+    },
+    {
+      "t": 227.18,
+      "slide": "example2",
+      "item": "pct"
+    },
+    {
+      "t": 237.02,
+      "slide": "example2",
+      "item": "ar"
+    },
+    {
+      "t": 243.34,
+      "slide": "example2",
+      "item": "assume"
+    },
+    {
+      "t": 246.94,
+      "slide": "example2",
+      "item": "grams"
+    },
+    {
+      "t": 258.16,
+      "slide": "example2_work",
+      "item": "c"
+    },
+    {
+      "t": 258.16,
+      "slide": "example2_work",
+      "item": "c_mass"
+    },
+    {
+      "t": 258.16,
+      "slide": "example2_work",
+      "item": "c_ar"
+    },
+    {
+      "t": 258.16,
+      "slide": "example2_work",
+      "item": "c_mol"
+    },
+    {
+      "t": 264.04,
+      "slide": "example2_work",
+      "item": "h"
+    },
+    {
+      "t": 264.04,
+      "slide": "example2_work",
+      "item": "h_mass"
+    },
+    {
+      "t": 264.04,
+      "slide": "example2_work",
+      "item": "h_ar"
+    },
+    {
+      "t": 264.04,
+      "slide": "example2_work",
+      "item": "h_mol"
+    },
+    {
+      "t": 269.16,
+      "slide": "example2_work",
+      "item": "o"
+    },
+    {
+      "t": 269.16,
+      "slide": "example2_work",
+      "item": "o_mass"
+    },
+    {
+      "t": 269.16,
+      "slide": "example2_work",
+      "item": "o_ar"
+    },
+    {
+      "t": 269.16,
+      "slide": "example2_work",
+      "item": "o_mol"
+    },
+    {
+      "t": 276.08,
+      "slide": "example2_work",
+      "item": "c_ratio"
+    },
+    {
+      "t": 276.08,
+      "slide": "example2_work",
+      "item": "h_ratio"
+    },
+    {
+      "t": 276.08,
+      "slide": "example2_work",
+      "item": "o_ratio"
+    },
+    {
+      "t": 281.48,
+      "slide": "example2_work",
+      "item": "overall"
+    },
+    {
+      "t": 285.68,
+      "slide": "example2_work",
+      "item": "formula"
+    },
+    {
+      "t": 300.52,
+      "slide": "practice2_q",
+      "item": "c"
+    },
+    {
+      "t": 303.2,
+      "slide": "practice2_q",
+      "item": "h"
+    },
+    {
+      "t": 306.26,
+      "slide": "practice2_q",
+      "item": "o"
+    },
+    {
+      "t": 308.9,
+      "slide": "practice2_q",
+      "item": "ar"
+    },
+    {
+      "t": 317.74,
+      "slide": "practice2_q",
+      "item": "pause"
+    },
+    {
+      "t": 322.08,
+      "slide": "practice2_ans",
+      "item": "c"
+    },
+    {
+      "t": 325.56,
+      "slide": "practice2_ans",
+      "item": "c_mass"
+    },
+    {
+      "t": 327.4,
+      "slide": "practice2_ans",
+      "item": "h"
+    },
+    {
+      "t": 327.4,
+      "slide": "practice2_ans",
+      "item": "h_mass"
+    },
+    {
+      "t": 329.4,
+      "slide": "practice2_ans",
+      "item": "o"
+    },
+    {
+      "t": 329.4,
+      "slide": "practice2_ans",
+      "item": "o_mass"
+    },
+    {
+      "t": 337.0,
+      "slide": "practice2_ans",
+      "item": "c_ar"
+    },
+    {
+      "t": 337.0,
+      "slide": "practice2_ans",
+      "item": "c_mol"
+    },
+    {
+      "t": 342.7,
+      "slide": "practice2_ans",
+      "item": "h_ar"
+    },
+    {
+      "t": 342.7,
+      "slide": "practice2_ans",
+      "item": "h_mol"
+    },
+    {
+      "t": 347.72,
+      "slide": "practice2_ans",
+      "item": "o_ar"
+    },
+    {
+      "t": 347.72,
+      "slide": "practice2_ans",
+      "item": "o_mol"
+    },
+    {
+      "t": 354.82,
+      "slide": "practice2_ans",
+      "item": "smallest"
+    },
+    {
+      "t": 360.26,
+      "slide": "practice2_ans",
+      "item": "c_ratio"
+    },
+    {
+      "t": 363.12,
+      "slide": "practice2_ans",
+      "item": "h_ratio"
+    },
+    {
+      "t": 366.56,
+      "slide": "practice2_ans",
+      "item": "o_ratio"
+    },
+    {
+      "t": 369.38,
+      "slide": "practice2_ans",
+      "item": "overall"
+    },
+    {
+      "t": 374.5,
+      "slide": "practice2_ans",
+      "item": "formula"
+    },
+    {
+      "t": 378.02,
+      "slide": "close",
+      "item": "na2o"
+    },
+    {
+      "t": 378.2,
+      "slide": "close",
+      "item": "c2h6o"
+    },
+    {
+      "t": 378.4,
+      "slide": "close",
+      "item": "brand"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.0,
+      "target": null
+    },
+    {
+      "t": 37.5,
+      "target": "glucose",
+      "hold": 5.0
+    },
+    {
+      "t": 43.36,
+      "target": "c6",
+      "hold": 3.5
+    },
+    {
+      "t": 47.34,
+      "target": "h12",
+      "hold": 2.0
+    },
+    {
+      "t": 49.2,
+      "target": "o6",
+      "hold": 1.5
+    },
+    {
+      "t": 50.86,
+      "target": "r6a",
+      "hold": 1.2
+    },
+    {
+      "t": 52.4,
+      "target": "r6b",
+      "hold": 1.0
+    },
+    {
+      "t": 53.48,
+      "target": "out1",
+      "hold": 0.8
+    },
+    {
+      "t": 54.4,
+      "target": "out2",
+      "hold": 0.8
+    },
+    {
+      "t": 55.4,
+      "target": "out3",
+      "hold": 1.2
+    },
+    {
+      "t": 57.54,
+      "target": "ch2o",
+      "hold": 4.0
+    },
+    {
+      "t": 62.04,
+      "target": "mol",
+      "hold": 3.0
+    },
+    {
+      "t": 64.5,
+      "target": "emp",
+      "hold": 5.0
+    },
+    {
+      "t": 71.0,
+      "target": null
+    },
+    {
+      "t": 75.84,
+      "target": "s1",
+      "hold": 3.0
+    },
+    {
+      "t": 79.02,
+      "target": "s2",
+      "hold": 5.5
+    },
+    {
+      "t": 85.14,
+      "target": "s3",
+      "hold": 4.0
+    },
+    {
+      "t": 89.26,
+      "target": "s4",
+      "hold": 5.0
+    },
+    {
+      "t": 94.22,
+      "target": null
+    },
+    {
+      "t": 100.9,
+      "target": "mg_mass",
+      "hold": 2.2
+    },
+    {
+      "t": 103.5,
+      "target": "o_mass",
+      "hold": 3.0
+    },
+    {
+      "t": 109.12,
+      "target": "mg_ar",
+      "hold": 2.5
+    },
+    {
+      "t": 112.4,
+      "target": "o_ar",
+      "hold": 2.2
+    },
+    {
+      "t": 114.82,
+      "target": null
+    },
+    {
+      "t": 119.32,
+      "target": "mg_mass",
+      "hold": 0.7
+    },
+    {
+      "t": 120.68,
+      "target": "mg_ar",
+      "hold": 0.7
+    },
+    {
+      "t": 121.74,
+      "target": "mg_mol",
+      "hold": 1.8
+    },
+    {
+      "t": 123.92,
+      "target": "o_mass",
+      "hold": 0.9
+    },
+    {
+      "t": 126.24,
+      "target": "o_ar",
+      "hold": 0.8
+    },
+    {
+      "t": 127.7,
+      "target": "o_mol",
+      "hold": 1.6
+    },
+    {
+      "t": 129.62,
+      "target": "small_01",
+      "hold": 3.8
+    },
+    {
+      "t": 134.16,
+      "target": "mg_ratio",
+      "hold": 2.0
+    },
+    {
+      "t": 136.64,
+      "target": "o_ratio",
+      "hold": 2.2
+    },
+    {
+      "t": 139.1,
+      "target": "overall",
+      "hold": 3.0
+    },
+    {
+      "t": 142.28,
+      "target": "mgo",
+      "hold": 3.2
+    },
+    {
+      "t": 145.5,
+      "target": null
+    },
+    {
+      "t": 148.54,
+      "target": "na_mass",
+      "hold": 2.4
+    },
+    {
+      "t": 151.5,
+      "target": "o_mass",
+      "hold": 2.2
+    },
+    {
+      "t": 154.02,
+      "target": "na_ar",
+      "hold": 2.4
+    },
+    {
+      "t": 157.2,
+      "target": "o_ar",
+      "hold": 2.0
+    },
+    {
+      "t": 159.64,
+      "target": "ask",
+      "hold": 2.0
+    },
+    {
+      "t": 161.9,
+      "target": null
+    },
+    {
+      "t": 171.5,
+      "target": "na_mass",
+      "hold": 0.9
+    },
+    {
+      "t": 173.1,
+      "target": "na_ar",
+      "hold": 0.9
+    },
+    {
+      "t": 174.4,
+      "target": "na_mol",
+      "hold": 2.0
+    },
+    {
+      "t": 176.56,
+      "target": "o_mass",
+      "hold": 1.0
+    },
+    {
+      "t": 178.8,
+      "target": "o_ar",
+      "hold": 1.0
+    },
+    {
+      "t": 180.4,
+      "target": "o_mol",
+      "hold": 2.0
+    },
+    {
+      "t": 182.78,
+      "target": "smallest",
+      "hold": 4.4
+    },
+    {
+      "t": 187.44,
+      "target": "na_ratio",
+      "hold": 4.6
+    },
+    {
+      "t": 192.4,
+      "target": "o_ratio",
+      "hold": 4.8
+    },
+    {
+      "t": 197.64,
+      "target": "overall",
+      "hold": 4.6
+    },
+    {
+      "t": 202.56,
+      "target": "na2o",
+      "hold": 3.2
+    },
+    {
+      "t": 205.92,
+      "target": null
+    },
+    {
+      "t": 219.24,
+      "target": "assume",
+      "hold": 6.0
+    },
+    {
+      "t": 227.18,
+      "target": "c_pct",
+      "hold": 2.2
+    },
+    {
+      "t": 229.8,
+      "target": "h_pct",
+      "hold": 2.2
+    },
+    {
+      "t": 232.06,
+      "target": "o_pct",
+      "hold": 2.5
+    },
+    {
+      "t": 237.02,
+      "target": "c_ar",
+      "hold": 2.0
+    },
+    {
+      "t": 240.5,
+      "target": "h_ar",
+      "hold": 1.8
+    },
+    {
+      "t": 242.0,
+      "target": "o_ar",
+      "hold": 1.3
+    },
+    {
+      "t": 243.34,
+      "target": "assume",
+      "hold": 3.3
+    },
+    {
+      "t": 246.94,
+      "target": "c_g",
+      "hold": 2.2
+    },
+    {
+      "t": 249.4,
+      "target": "h_g",
+      "hold": 2.0
+    },
+    {
+      "t": 251.5,
+      "target": "o_g",
+      "hold": 2.5
+    },
+    {
+      "t": 254.2,
+      "target": null
+    },
+    {
+      "t": 258.16,
+      "target": "c_mass",
+      "hold": 1.2
+    },
+    {
+      "t": 259.8,
+      "target": "c_ar",
+      "hold": 1.2
+    },
+    {
+      "t": 261.4,
+      "target": "c_mol",
+      "hold": 2.4
+    },
+    {
+      "t": 264.04,
+      "target": "h_mass",
+      "hold": 1.2
+    },
+    {
+      "t": 265.7,
+      "target": "h_ar",
+      "hold": 1.0
+    },
+    {
+      "t": 267.0,
+      "target": "h_mol",
+      "hold": 2.0
+    },
+    {
+      "t": 269.16,
+      "target": "o_mass",
+      "hold": 1.4
+    },
+    {
+      "t": 271.4,
+      "target": "o_ar",
+      "hold": 1.2
+    },
+    {
+      "t": 273.2,
+      "target": "o_mol",
+      "hold": 2.6
+    },
+    {
+      "t": 276.08,
+      "target": "c_ratio",
+      "hold": 2.0
+    },
+    {
+      "t": 279.4,
+      "target": "h_ratio",
+      "hold": 2.0
+    },
+    {
+      "t": 281.48,
+      "target": "overall",
+      "hold": 4.0
+    },
+    {
+      "t": 285.68,
+      "target": "ch2o",
+      "hold": 3.8
+    },
+    {
+      "t": 289.68,
+      "target": "assume",
+      "hold": 0.0
+    },
+    {
+      "t": 289.7,
+      "target": null
+    },
+    {
+      "t": 300.52,
+      "target": "c",
+      "hold": 2.5
+    },
+    {
+      "t": 303.2,
+      "target": "h",
+      "hold": 2.8
+    },
+    {
+      "t": 306.26,
+      "target": "o",
+      "hold": 2.4
+    },
+    {
+      "t": 308.9,
+      "target": "ar",
+      "hold": 6.0
+    },
+    {
+      "t": 315.32,
+      "target": null
+    },
+    {
+      "t": 322.08,
+      "target": null
+    },
+    {
+      "t": 325.56,
+      "target": "c_mass",
+      "hold": 1.8
+    },
+    {
+      "t": 327.4,
+      "target": "h_mass",
+      "hold": 1.8
+    },
+    {
+      "t": 329.4,
+      "target": "o_mass",
+      "hold": 3.0
+    },
+    {
+      "t": 337.0,
+      "target": "c_mass",
+      "hold": 1.2
+    },
+    {
+      "t": 338.8,
+      "target": "c_ar",
+      "hold": 1.0
+    },
+    {
+      "t": 340.2,
+      "target": "c_mol",
+      "hold": 2.2
+    },
+    {
+      "t": 342.7,
+      "target": "h_mass",
+      "hold": 1.2
+    },
+    {
+      "t": 344.4,
+      "target": "h_ar",
+      "hold": 1.0
+    },
+    {
+      "t": 345.5,
+      "target": "h_mol",
+      "hold": 2.0
+    },
+    {
+      "t": 347.72,
+      "target": "o_mass",
+      "hold": 1.4
+    },
+    {
+      "t": 350.2,
+      "target": "o_ar",
+      "hold": 1.2
+    },
+    {
+      "t": 351.8,
+      "target": "o_mol",
+      "hold": 2.8
+    },
+    {
+      "t": 354.82,
+      "target": "small",
+      "hold": 4.6
+    },
+    {
+      "t": 360.26,
+      "target": "c_ratio",
+      "hold": 2.6
+    },
+    {
+      "t": 363.12,
+      "target": "h_ratio",
+      "hold": 3.2
+    },
+    {
+      "t": 366.56,
+      "target": "o_ratio",
+      "hold": 2.6
+    },
+    {
+      "t": 369.38,
+      "target": "overall",
+      "hold": 4.8
+    },
+    {
+      "t": 374.5,
+      "target": "c2h6o",
+      "hold": 3.4
+    },
+    {
+      "t": 378.0,
+      "target": null
+    }
+  ],
+  "notes": "Master clock is the extracted ElevenLabs narration. Slide cuts follow spoken topic changes. Cursor events use word-level timestamps from faster-whisper small.en. If a number could not be aligned confidently the cursor is left hidden."
+}

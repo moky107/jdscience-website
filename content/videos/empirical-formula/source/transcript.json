@@ -1,0 +1,4960 @@
+{
+  "duration": 380.4589375,
+  "language": "en",
+  "model": "faster-whisper small.en chunked",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.52,
+      "text": "In today's video, we want to look at empirical formulae.",
+      "chunk": 0
+    },
+    {
+      "start": 4.48,
+      "end": 9.42,
+      "text": "It builds on what we learned in our previous lesson about relative atomic mass and relative",
+      "chunk": 0
+    },
+    {
+      "start": 9.42,
+      "end": 16.5,
+      "text": "formula mass. Today, we will explain what an empirical formula is, how it is calculated and",
+      "chunk": 0
+    },
+    {
+      "start": 16.5,
+      "end": 20.26,
+      "text": "work through examples using both masses and percentage composition.",
+      "chunk": 0
+    },
+    {
+      "start": 20.26,
+      "end": 24.8,
+      "text": "You will also have the opportunity to try some questions yourself before...",
+      "chunk": 0
+    },
+    {
+      "start": 20.0,
+      "end": 25.32,
+      "text": "You will also have the opportunity to try some questions yourself before we go",
+      "chunk": 1
+    },
+    {
+      "start": 25.32,
+      "end": 31.42,
+      "text": "through the answers together. Let's begin. What is an empirical formula? An empirical",
+      "chunk": 1
+    },
+    {
+      "start": 31.42,
+      "end": 36.44,
+      "text": "formula shows the simplest whole number ratio of atoms of each element in a",
+      "chunk": 1
+    },
+    {
+      "start": 36.44,
+      "end": 43.84,
+      "text": "compound. For example, glucose has the molecular formula C6H12O6. This means",
+      "chunk": 1
+    },
+    {
+      "start": 43.84,
+      "end": 44.84,
+      "text": "that one molecule",
+      "chunk": 1
+    },
+    {
+      "start": 42.18,
+      "end": 49.36,
+      "text": "C6H12O6. This means that one molecule contains six carbon atoms, twelve hydrogen atoms, and six",
+      "chunk": 2
+    },
+    {
+      "start": 49.36,
+      "end": 57.54,
+      "text": "atoms. If we divide all these numbers by six we obtain a ratio of one to two to one. Therefore",
+      "chunk": 2
+    },
+    {
+      "start": 57.54,
+      "end": 64.86,
+      "text": "the empirical formula of glucose is CH2O. Notice that an empirical formula shows the simplest",
+      "chunk": 2
+    },
+    {
+      "start": 60.84,
+      "end": 67.56,
+      "text": "CH2O. Notice that an empirical formula shows the simplest ratio of atoms, rather than necessarily",
+      "chunk": 3
+    },
+    {
+      "start": 67.56,
+      "end": 73.9,
+      "text": "showing the actual number of atoms in a molecule. How do we calculate an empirical formula? There.",
+      "chunk": 3
+    },
+    {
+      "start": 73.98,
+      "end": 80.36,
+      "text": "There are four steps involved. First, write down the mass of each element. Second, divide",
+      "chunk": 3
+    },
+    {
+      "start": 80.36,
+      "end": 84.44,
+      "text": "each mass by its relative atomic mass to calculate the number of moles.",
+      "chunk": 3
+    },
+    {
+      "start": 80.0,
+      "end": 86.18,
+      "text": "Divide each mass by its relative atomic mass to calculate the number of moles. Third, divide",
+      "chunk": 4
+    },
+    {
+      "start": 86.18,
+      "end": 92.08,
+      "text": "all the mole values by the smallest value. Finally, use the simplest whole number ratio",
+      "chunk": 4
+    },
+    {
+      "start": 92.08,
+      "end": 96.22,
+      "text": "to write the empirical formula. Let's apply these steps to an example.",
+      "chunk": 4
+    },
+    {
+      "start": 96.94,
+      "end": 103.88,
+      "text": "Example 1. Calculating empirical formula from masses. A compound contains 2.4 grams of magnesium",
+      "chunk": 4
+    },
+    {
+      "start": 103.88,
+      "end": 104.98,
+      "text": "in and one point",
+      "chunk": 4
+    },
+    {
+      "start": 100.0,
+      "end": 108.02,
+      "text": "A compound contains 2.4 grams of magnesium and 1.6 grams of oxygen. Calculate its empirical",
+      "chunk": 5
+    },
+    {
+      "start": 108.02,
+      "end": 116.5,
+      "text": "formula. The relative atomic masses are magnesium 24 and oxygen 16. First, divide the mass of",
+      "chunk": 5
+    },
+    {
+      "start": 116.5,
+      "end": 124.42,
+      "text": "magnesium by its relative atomic mass. 2.4 divided by 24 gives 0.1 moles. For oxygen,",
+      "chunk": 5
+    },
+    {
+      "start": 124.42,
+      "end": 124.92,
+      "text": "1.",
+      "chunk": 5
+    },
+    {
+      "start": 134.72,
+      "end": 144.98,
+      "text": "MgO. MgO. MgO. MgO.",
+      "chunk": 6
+    },
+    {
+      "start": 140.0,
+      "end": 147.56,
+      "text": "The simplest ratio is 1 to 1. The empirical formula is MgO. Practice question 1. Now it's",
+      "chunk": 7
+    },
+    {
+      "start": 147.56,
+      "end": 154.58,
+      "text": "your turn. A compound contains 4.6 grams of sodium and 1.6 grams of oxygen. The relative",
+      "chunk": 7
+    },
+    {
+      "start": 154.58,
+      "end": 162.22,
+      "text": "atomic masses are sodium 23 and oxygen 16. Calculate its empirical formula. Pause the",
+      "chunk": 7
+    },
+    {
+      "start": 162.22,
+      "end": 164.98,
+      "text": "video and try the question before we go through the answers.",
+      "chunk": 7
+    },
+    {
+      "start": 165.3,
+      "end": 184.98,
+      "text": "Let's check your answer. First, divide the mass of sodium by its relative atomic mass. 4.6 divided by 23 gives 0.2 moles. For oxygen, 1.6 divided by 16 gives 0.1 moles. Next, divide both values by the sodium.",
+      "chunk": 8
+    },
+    {
+      "start": 180.0,
+      "end": 202.12,
+      "text": "Sodium gives 0.1 moles. Next, divide both values by the smallest which is 0.1. For sodium, 0.2 divided by 0.1 gives 2. For oxygen, 0.1 divided by 0.1 gives 1. Therefore, the simplest ratio of sodium to oxygen is 2 to 1.",
+      "chunk": 9
+    },
+    {
+      "start": 202.12,
+      "end": 204.98,
+      "text": "1. The empirical formula is Na2.",
+      "chunk": 9
+    },
+    {
+      "start": 200.0,
+      "end": 207.36,
+      "text": "Sodium to oxygen is 2 to 1. The empirical formula is Na2O. Well done if you got that correct.",
+      "chunk": 10
+    },
+    {
+      "start": 208.4,
+      "end": 218.7,
+      "text": "Example 2. Calculating empirical formula from percentages. Sometimes examination questions give us the percentage composition of a compound rather than the masses.",
+      "chunk": 10
+    },
+    {
+      "start": 219.24,
+      "end": 224.7,
+      "text": "The method is almost the same except that we first assume a total mass of 100g.",
+      "chunk": 10
+    },
+    {
+      "start": 220.0,
+      "end": 225.92,
+      "text": "It's almost the same, except that we first assume a total mass of 100g. Let's consider",
+      "chunk": 11
+    },
+    {
+      "start": 225.92,
+      "end": 235.5,
+      "text": "an example. A compound contains 40% carbon, 6.7% hydrogen and 53.3% oxygen. Calculate its",
+      "chunk": 11
+    },
+    {
+      "start": 235.5,
+      "end": 243.74,
+      "text": "empirical formula. The relative atomic masses are carbon 12, hydrogen 1 and oxygen 16. First,",
+      "chunk": 11
+    },
+    {
+      "start": 243.74,
+      "end": 244.98,
+      "text": "Next, assume we have one.",
+      "chunk": 11
+    },
+    {
+      "start": 240.0,
+      "end": 247.44,
+      "text": "hydrogen 1 and oxygen 16. First, assume we have 100 grams of the compound. This gives",
+      "chunk": 12
+    },
+    {
+      "start": 247.44,
+      "end": 255.94,
+      "text": "us 40 grams of carbon, 6.7 grams of hydrogen and 53.3 grams of oxygen. Now, divide each mass",
+      "chunk": 12
+    },
+    {
+      "start": 255.94,
+      "end": 263.56,
+      "text": "by its relative atomic mass. For carbon, 40 divided by 12 gives approximately 3.33 moles.",
+      "chunk": 12
+    },
+    {
+      "start": 263.56,
+      "end": 264.6,
+      "text": "For hydrogen,",
+      "chunk": 12
+    },
+    {
+      "start": 260.0,
+      "end": 284.98,
+      "text": "Oxygen divided by 12 gives approximately 3.33 moles. For hydrogen 6.7 divided by 1 gives 6.7 moles. For oxygen 53.3 divided by 16 gives approximately 3.33 moles. Next divide all three values by the smallest approximately 3.33. This gives us a ratio of approximately 1 to 2 to 1.",
+      "chunk": 13
+    },
+    {
+      "start": 280.0,
+      "end": 287.46,
+      "text": "CH3.33. This gives us a ratio of approximately 1 to 2 to 1. Therefore, the empirical formula",
+      "chunk": 14
+    },
+    {
+      "start": 287.46,
+      "end": 295.64,
+      "text": "is CH2O. Remember, when percentages are given, assume 100g first, then follow the same steps.",
+      "chunk": 14
+    },
+    {
+      "start": 296.3,
+      "end": 301.06,
+      "text": "Practice question 2. Now, let's try our final question. A compound",
+      "chunk": 14
+    },
+    {
+      "start": 301.06,
+      "end": 304.98,
+      "text": "contains 52.2% carbon, 13.0% carbon, 13.0% carbon, 13.0% carbon, 13.0% carbon",
+      "chunk": 14
+    },
+    {
+      "start": 300.0,
+      "end": 311.82,
+      "text": "A compound contains 52.2% carbon, 13.0% hydrogen and 34.8% oxygen. The relative atomic masses are carbon-12,",
+      "chunk": 15
+    },
+    {
+      "start": 312.4,
+      "end": 319.22,
+      "text": "hydrogen-1 and oxygen-16. Calculate its empirical formula. Pause the video and work through the",
+      "chunk": 15
+    },
+    {
+      "start": 319.22,
+      "end": 324.64,
+      "text": "calculation. Let's check your answer. First, assume we have 100 grams of the",
+      "chunk": 15
+    },
+    {
+      "start": 324.64,
+      "end": 324.98,
+      "text": "compound.",
+      "chunk": 15
+    },
+    {
+      "start": 320.0,
+      "end": 332.7,
+      "text": "Let's check your answer. First, assume we have 100g of the compound. This gives us 52.2g of carbon, 13g of hydrogen and 34.8g of oxygen.",
+      "chunk": 16
+    },
+    {
+      "start": 333.14,
+      "end": 342.32,
+      "text": "Next, divide each mass by its relative atomic mass. For carbon, 52.2 divided by 12 gives 4.35 moles.",
+      "chunk": 16
+    },
+    {
+      "start": 342.32,
+      "end": 344.98,
+      "text": "For hydrogen, 13 divided by",
+      "chunk": 16
+    },
+    {
+      "start": 340.0,
+      "end": 350.52,
+      "text": "MgO2H12 gives 4.35 moles. For hydrogen, 13 divided by 1 gives 13 moles. For oxygen, 34.8 divided",
+      "chunk": 17
+    },
+    {
+      "start": 350.52,
+      "end": 361.3,
+      "text": "by 16 gives 2.175 moles. Now, divide all 3 values by the smallest, which is 2.175. For carbon,",
+      "chunk": 17
+    },
+    {
+      "start": 360.0,
+      "end": 369.64,
+      "text": "For carbon, we obtain 2. For hydrogen, we obtain approximately 6. For oxygen, we obtain 1. Therefore,",
+      "chunk": 18
+    },
+    {
+      "start": 370.06,
+      "end": 379.04,
+      "text": "the simplest whole number ratio is 2 to 6 to 1. The empirical formula is C2H6O. Well done",
+      "chunk": 18
+    },
+    {
+      "start": 379.04,
+      "end": 380.02,
+      "text": "if you got that correct.",
+      "chunk": 18
+    },
+    {
+      "start": 380.0,
+      "end": 380.42,
+      "text": "MgO. MgO. MgO.",
+      "chunk": 19
+    }
+  ],
+  "words": [
+    {
+      "word": "In",
+      "start": 0.0,
+      "end": 0.22,
+      "prob": 0.933
+    },
+    {
+      "word": "today's",
+      "start": 0.22,
+      "end": 0.6,
+      "prob": 0.981
+    },
+    {
+      "word": "video,",
+      "start": 0.6,
+      "end": 1.0,
+      "prob": 0.997
+    },
+    {
+      "word": "we",
+      "start": 1.36,
+      "end": 1.44,
+      "prob": 0.996
+    },
+    {
+      "word": "want",
+      "start": 1.44,
+      "end": 1.64,
+      "prob": 0.972
+    },
+    {
+      "word": "to",
+      "start": 1.64,
+      "end": 1.78,
+      "prob": 0.999
+    },
+    {
+      "word": "look",
+      "start": 1.78,
+      "end": 1.96,
+      "prob": 0.995
+    },
+    {
+      "word": "at",
+      "start": 1.96,
+      "end": 2.16,
+      "prob": 0.999
+    },
+    {
+      "word": "empirical",
+      "start": 2.16,
+      "end": 2.76,
+      "prob": 0.852
+    },
+    {
+      "word": "formulae.",
+      "start": 2.76,
+      "end": 3.52,
+      "prob": 0.99
+    },
+    {
+      "word": "It",
+      "start": 4.48,
+      "end": 4.48,
+      "prob": 0.202
+    },
+    {
+      "word": "builds",
+      "start": 4.48,
+      "end": 4.64,
+      "prob": 0.99
+    },
+    {
+      "word": "on",
+      "start": 4.64,
+      "end": 4.88,
+      "prob": 0.982
+    },
+    {
+      "word": "what",
+      "start": 4.88,
+      "end": 5.06,
+      "prob": 0.982
+    },
+    {
+      "word": "we",
+      "start": 5.06,
+      "end": 5.26,
+      "prob": 0.996
+    },
+    {
+      "word": "learned",
+      "start": 5.26,
+      "end": 5.5,
+      "prob": 0.496
+    },
+    {
+      "word": "in",
+      "start": 5.5,
+      "end": 5.74,
+      "prob": 0.985
+    },
+    {
+      "word": "our",
+      "start": 5.74,
+      "end": 5.9,
+      "prob": 0.984
+    },
+    {
+      "word": "previous",
+      "start": 5.9,
+      "end": 6.28,
+      "prob": 0.996
+    },
+    {
+      "word": "lesson",
+      "start": 6.28,
+      "end": 6.7,
+      "prob": 0.96
+    },
+    {
+      "word": "about",
+      "start": 6.7,
+      "end": 7.1,
+      "prob": 0.979
+    },
+    {
+      "word": "relative",
+      "start": 7.1,
+      "end": 7.62,
+      "prob": 0.963
+    },
+    {
+      "word": "atomic",
+      "start": 7.62,
+      "end": 8.06,
+      "prob": 0.996
+    },
+    {
+      "word": "mass",
+      "start": 8.06,
+      "end": 8.4,
+      "prob": 0.991
+    },
+    {
+      "word": "and",
+      "start": 8.4,
+      "end": 8.98,
+      "prob": 0.972
+    },
+    {
+      "word": "relative",
+      "start": 8.98,
+      "end": 9.42,
+      "prob": 0.984
+    },
+    {
+      "word": "formula",
+      "start": 9.42,
+      "end": 9.9,
+      "prob": 0.966
+    },
+    {
+      "word": "mass.",
+      "start": 9.9,
+      "end": 10.4,
+      "prob": 0.97
+    },
+    {
+      "word": "Today,",
+      "start": 10.86,
+      "end": 11.18,
+      "prob": 0.982
+    },
+    {
+      "word": "we",
+      "start": 11.48,
+      "end": 11.68,
+      "prob": 0.993
+    },
+    {
+      "word": "will",
+      "start": 11.68,
+      "end": 11.8,
+      "prob": 0.973
+    },
+    {
+      "word": "explain",
+      "start": 11.8,
+      "end": 12.24,
+      "prob": 0.996
+    },
+    {
+      "word": "what",
+      "start": 12.24,
+      "end": 12.58,
+      "prob": 0.987
+    },
+    {
+      "word": "an",
+      "start": 12.58,
+      "end": 12.74,
+      "prob": 0.983
+    },
+    {
+      "word": "empirical",
+      "start": 12.74,
+      "end": 13.18,
+      "prob": 0.992
+    },
+    {
+      "word": "formula",
+      "start": 13.18,
+      "end": 13.7,
+      "prob": 0.997
+    },
+    {
+      "word": "is,",
+      "start": 13.7,
+      "end": 14.18,
+      "prob": 0.994
+    },
+    {
+      "word": "how",
+      "start": 14.66,
+      "end": 14.92,
+      "prob": 0.993
+    },
+    {
+      "word": "it",
+      "start": 14.92,
+      "end": 15.08,
+      "prob": 0.988
+    },
+    {
+      "word": "is",
+      "start": 15.08,
+      "end": 15.22,
+      "prob": 0.994
+    },
+    {
+      "word": "calculated",
+      "start": 15.22,
+      "end": 15.78,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 15.78,
+      "end": 16.5,
+      "prob": 0.4
+    },
+    {
+      "word": "work",
+      "start": 16.5,
+      "end": 16.8,
+      "prob": 0.987
+    },
+    {
+      "word": "through",
+      "start": 16.8,
+      "end": 17.02,
+      "prob": 0.992
+    },
+    {
+      "word": "examples",
+      "start": 17.02,
+      "end": 17.44,
+      "prob": 0.986
+    },
+    {
+      "word": "using",
+      "start": 17.44,
+      "end": 18.0,
+      "prob": 0.977
+    },
+    {
+      "word": "both",
+      "start": 18.0,
+      "end": 18.28,
+      "prob": 0.997
+    },
+    {
+      "word": "masses",
+      "start": 18.28,
+      "end": 18.68,
+      "prob": 0.941
+    },
+    {
+      "word": "and",
+      "start": 18.68,
+      "end": 19.16,
+      "prob": 0.996
+    },
+    {
+      "word": "percentage",
+      "start": 19.16,
+      "end": 19.66,
+      "prob": 0.972
+    },
+    {
+      "word": "composition.",
+      "start": 19.66,
+      "end": 20.26,
+      "prob": 0.955
+    },
+    {
+      "word": "You",
+      "start": 20.26,
+      "end": 21.06,
+      "prob": 0.623
+    },
+    {
+      "word": "will",
+      "start": 21.06,
+      "end": 21.2,
+      "prob": 0.945
+    },
+    {
+      "word": "also",
+      "start": 21.2,
+      "end": 21.56,
+      "prob": 0.988
+    },
+    {
+      "word": "have",
+      "start": 21.56,
+      "end": 21.76,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 21.76,
+      "end": 21.92,
+      "prob": 0.993
+    },
+    {
+      "word": "opportunity",
+      "start": 21.92,
+      "end": 22.32,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 22.32,
+      "end": 22.76,
+      "prob": 0.997
+    },
+    {
+      "word": "try",
+      "start": 22.76,
+      "end": 23.04,
+      "prob": 0.997
+    },
+    {
+      "word": "some",
+      "start": 23.04,
+      "end": 23.28,
+      "prob": 0.993
+    },
+    {
+      "word": "questions",
+      "start": 23.28,
+      "end": 23.64,
+      "prob": 0.996
+    },
+    {
+      "word": "yourself",
+      "start": 23.64,
+      "end": 24.2,
+      "prob": 0.99
+    },
+    {
+      "word": "before",
+      "start": 24.2,
+      "end": 24.96,
+      "prob": 0.936
+    },
+    {
+      "word": "we",
+      "start": 24.96,
+      "end": 25.14,
+      "prob": 0.996
+    },
+    {
+      "word": "go",
+      "start": 25.14,
+      "end": 25.32,
+      "prob": 0.993
+    },
+    {
+      "word": "through",
+      "start": 25.32,
+      "end": 25.52,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 25.52,
+      "end": 25.68,
+      "prob": 0.994
+    },
+    {
+      "word": "answers",
+      "start": 25.68,
+      "end": 26.02,
+      "prob": 0.997
+    },
+    {
+      "word": "together.",
+      "start": 26.02,
+      "end": 26.54,
+      "prob": 0.99
+    },
+    {
+      "word": "Let's",
+      "start": 27.14,
+      "end": 27.28,
+      "prob": 0.977
+    },
+    {
+      "word": "begin.",
+      "start": 27.28,
+      "end": 27.58,
+      "prob": 0.997
+    },
+    {
+      "word": "What",
+      "start": 28.48,
+      "end": 28.48,
+      "prob": 0.864
+    },
+    {
+      "word": "is",
+      "start": 28.48,
+      "end": 28.9,
+      "prob": 0.991
+    },
+    {
+      "word": "an",
+      "start": 28.9,
+      "end": 29.2,
+      "prob": 0.993
+    },
+    {
+      "word": "empirical",
+      "start": 29.2,
+      "end": 29.64,
+      "prob": 0.976
+    },
+    {
+      "word": "formula?",
+      "start": 29.64,
+      "end": 30.32,
+      "prob": 0.999
+    },
+    {
+      "word": "An",
+      "start": 30.94,
+      "end": 31.0,
+      "prob": 0.978
+    },
+    {
+      "word": "empirical",
+      "start": 31.0,
+      "end": 31.42,
+      "prob": 0.996
+    },
+    {
+      "word": "formula",
+      "start": 31.42,
+      "end": 31.98,
+      "prob": 0.999
+    },
+    {
+      "word": "shows",
+      "start": 31.98,
+      "end": 32.38,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 32.38,
+      "end": 32.66,
+      "prob": 0.999
+    },
+    {
+      "word": "simplest",
+      "start": 32.66,
+      "end": 33.2,
+      "prob": 0.996
+    },
+    {
+      "word": "whole",
+      "start": 33.2,
+      "end": 33.6,
+      "prob": 0.987
+    },
+    {
+      "word": "number",
+      "start": 33.6,
+      "end": 33.9,
+      "prob": 0.909
+    },
+    {
+      "word": "ratio",
+      "start": 33.9,
+      "end": 34.36,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 34.36,
+      "end": 34.6,
+      "prob": 0.999
+    },
+    {
+      "word": "atoms",
+      "start": 34.6,
+      "end": 35.02,
+      "prob": 0.996
+    },
+    {
+      "word": "of",
+      "start": 35.02,
+      "end": 35.3,
+      "prob": 0.993
+    },
+    {
+      "word": "each",
+      "start": 35.3,
+      "end": 35.58,
+      "prob": 0.999
+    },
+    {
+      "word": "element",
+      "start": 35.58,
+      "end": 35.96,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 35.96,
+      "end": 36.3,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 36.3,
+      "end": 36.44,
+      "prob": 0.999
+    },
+    {
+      "word": "compound.",
+      "start": 36.44,
+      "end": 36.84,
+      "prob": 0.999
+    },
+    {
+      "word": "For",
+      "start": 37.46,
+      "end": 37.52,
+      "prob": 0.987
+    },
+    {
+      "word": "example,",
+      "start": 37.52,
+      "end": 37.98,
+      "prob": 0.999
+    },
+    {
+      "word": "glucose",
+      "start": 38.44,
+      "end": 38.76,
+      "prob": 0.976
+    },
+    {
+      "word": "has",
+      "start": 38.76,
+      "end": 39.2,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 39.2,
+      "end": 39.38,
+      "prob": 0.996
+    },
+    {
+      "word": "molecular",
+      "start": 39.38,
+      "end": 39.66,
+      "prob": 0.999
+    },
+    {
+      "word": "formula",
+      "start": 39.66,
+      "end": 40.38,
+      "prob": 0.999
+    },
+    {
+      "word": "C6H12O6.",
+      "start": 40.38,
+      "end": 42.88,
+      "prob": 0.951
+    },
+    {
+      "word": "C6H12O6.",
+      "start": 42.18,
+      "end": 42.9,
+      "prob": 0.834
+    },
+    {
+      "word": "This",
+      "start": 43.32,
+      "end": 43.54,
+      "prob": 0.969
+    },
+    {
+      "word": "means",
+      "start": 43.54,
+      "end": 43.84,
+      "prob": 0.995
+    },
+    {
+      "word": "that",
+      "start": 43.84,
+      "end": 44.14,
+      "prob": 0.98
+    },
+    {
+      "word": "one",
+      "start": 44.14,
+      "end": 44.48,
+      "prob": 0.871
+    },
+    {
+      "word": "molecule",
+      "start": 44.48,
+      "end": 44.98,
+      "prob": 0.997
+    },
+    {
+      "word": "contains",
+      "start": 44.98,
+      "end": 45.48,
+      "prob": 0.987
+    },
+    {
+      "word": "six",
+      "start": 45.48,
+      "end": 45.96,
+      "prob": 0.408
+    },
+    {
+      "word": "carbon",
+      "start": 45.96,
+      "end": 46.36,
+      "prob": 0.987
+    },
+    {
+      "word": "atoms,",
+      "start": 46.36,
+      "end": 46.84,
+      "prob": 0.989
+    },
+    {
+      "word": "twelve",
+      "start": 47.3,
+      "end": 47.52,
+      "prob": 0.462
+    },
+    {
+      "word": "hydrogen",
+      "start": 47.52,
+      "end": 48.06,
+      "prob": 0.997
+    },
+    {
+      "word": "atoms,",
+      "start": 48.06,
+      "end": 48.62,
+      "prob": 0.994
+    },
+    {
+      "word": "and",
+      "start": 48.98,
+      "end": 49.08,
+      "prob": 0.991
+    },
+    {
+      "word": "six",
+      "start": 49.08,
+      "end": 49.36,
+      "prob": 0.978
+    },
+    {
+      "word": "atoms.",
+      "start": 49.36,
+      "end": 49.6,
+      "prob": 0.404
+    },
+    {
+      "word": "If",
+      "start": 50.64,
+      "end": 51.0,
+      "prob": 0.977
+    },
+    {
+      "word": "we",
+      "start": 51.0,
+      "end": 51.2,
+      "prob": 0.996
+    },
+    {
+      "word": "divide",
+      "start": 51.2,
+      "end": 51.56,
+      "prob": 0.992
+    },
+    {
+      "word": "all",
+      "start": 51.56,
+      "end": 51.92,
+      "prob": 0.96
+    },
+    {
+      "word": "these",
+      "start": 51.92,
+      "end": 52.16,
+      "prob": 0.921
+    },
+    {
+      "word": "numbers",
+      "start": 52.16,
+      "end": 52.44,
+      "prob": 0.958
+    },
+    {
+      "word": "by",
+      "start": 52.44,
+      "end": 52.74,
+      "prob": 0.996
+    },
+    {
+      "word": "six",
+      "start": 52.74,
+      "end": 53.1,
+      "prob": 0.704
+    },
+    {
+      "word": "we",
+      "start": 53.1,
+      "end": 53.76,
+      "prob": 0.224
+    },
+    {
+      "word": "obtain",
+      "start": 53.76,
+      "end": 54.12,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 54.12,
+      "end": 54.32,
+      "prob": 0.985
+    },
+    {
+      "word": "ratio",
+      "start": 54.32,
+      "end": 54.68,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 54.68,
+      "end": 54.98,
+      "prob": 0.985
+    },
+    {
+      "word": "one",
+      "start": 54.98,
+      "end": 55.36,
+      "prob": 0.53
+    },
+    {
+      "word": "to",
+      "start": 55.36,
+      "end": 55.7,
+      "prob": 0.97
+    },
+    {
+      "word": "two",
+      "start": 55.7,
+      "end": 56.06,
+      "prob": 0.99
+    },
+    {
+      "word": "to",
+      "start": 56.06,
+      "end": 56.34,
+      "prob": 0.963
+    },
+    {
+      "word": "one.",
+      "start": 56.34,
+      "end": 56.68,
+      "prob": 0.998
+    },
+    {
+      "word": "Therefore",
+      "start": 57.08,
+      "end": 57.54,
+      "prob": 0.982
+    },
+    {
+      "word": "the",
+      "start": 57.54,
+      "end": 57.96,
+      "prob": 0.608
+    },
+    {
+      "word": "empirical",
+      "start": 57.96,
+      "end": 58.36,
+      "prob": 0.979
+    },
+    {
+      "word": "formula",
+      "start": 58.36,
+      "end": 58.88,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 58.88,
+      "end": 59.2,
+      "prob": 0.979
+    },
+    {
+      "word": "glucose",
+      "start": 59.2,
+      "end": 59.64,
+      "prob": 0.994
+    },
+    {
+      "word": "is",
+      "start": 59.64,
+      "end": 60.1,
+      "prob": 0.986
+    },
+    {
+      "word": "CH2O.",
+      "start": 60.1,
+      "end": 61.5,
+      "prob": 0.872
+    },
+    {
+      "word": "Notice",
+      "start": 62.04,
+      "end": 62.18,
+      "prob": 0.984
+    },
+    {
+      "word": "that",
+      "start": 62.18,
+      "end": 62.6,
+      "prob": 0.99
+    },
+    {
+      "word": "an",
+      "start": 62.6,
+      "end": 62.76,
+      "prob": 0.976
+    },
+    {
+      "word": "empirical",
+      "start": 62.76,
+      "end": 63.18,
+      "prob": 0.979
+    },
+    {
+      "word": "formula",
+      "start": 63.18,
+      "end": 63.72,
+      "prob": 0.999
+    },
+    {
+      "word": "shows",
+      "start": 63.72,
+      "end": 64.12,
+      "prob": 0.989
+    },
+    {
+      "word": "the",
+      "start": 64.12,
+      "end": 64.34,
+      "prob": 0.998
+    },
+    {
+      "word": "simplest",
+      "start": 64.34,
+      "end": 64.84,
+      "prob": 0.992
+    },
+    {
+      "word": "ratio",
+      "start": 64.84,
+      "end": 65.34,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 65.34,
+      "end": 65.56,
+      "prob": 0.999
+    },
+    {
+      "word": "atoms,",
+      "start": 65.56,
+      "end": 66.1,
+      "prob": 0.997
+    },
+    {
+      "word": "rather",
+      "start": 66.44,
+      "end": 66.78,
+      "prob": 0.998
+    },
+    {
+      "word": "than",
+      "start": 66.78,
+      "end": 67.08,
+      "prob": 0.993
+    },
+    {
+      "word": "necessarily",
+      "start": 67.08,
+      "end": 67.56,
+      "prob": 0.984
+    },
+    {
+      "word": "showing",
+      "start": 67.56,
+      "end": 68.08,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 68.08,
+      "end": 68.3,
+      "prob": 0.995
+    },
+    {
+      "word": "actual",
+      "start": 68.3,
+      "end": 68.74,
+      "prob": 0.998
+    },
+    {
+      "word": "number",
+      "start": 68.74,
+      "end": 69.04,
+      "prob": 0.994
+    },
+    {
+      "word": "of",
+      "start": 69.04,
+      "end": 69.32,
+      "prob": 0.997
+    },
+    {
+      "word": "atoms",
+      "start": 69.32,
+      "end": 69.6,
+      "prob": 0.997
+    },
+    {
+      "word": "in",
+      "start": 69.6,
+      "end": 69.86,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 69.86,
+      "end": 69.98,
+      "prob": 0.989
+    },
+    {
+      "word": "molecule.",
+      "start": 69.98,
+      "end": 70.36,
+      "prob": 0.998
+    },
+    {
+      "word": "How",
+      "start": 71.04,
+      "end": 71.2,
+      "prob": 0.983
+    },
+    {
+      "word": "do",
+      "start": 71.2,
+      "end": 71.36,
+      "prob": 0.992
+    },
+    {
+      "word": "we",
+      "start": 71.36,
+      "end": 71.54,
+      "prob": 0.998
+    },
+    {
+      "word": "calculate",
+      "start": 71.54,
+      "end": 72.06,
+      "prob": 0.998
+    },
+    {
+      "word": "an",
+      "start": 72.06,
+      "end": 72.3,
+      "prob": 0.991
+    },
+    {
+      "word": "empirical",
+      "start": 72.3,
+      "end": 72.7,
+      "prob": 0.988
+    },
+    {
+      "word": "formula?",
+      "start": 72.7,
+      "end": 73.24,
+      "prob": 0.999
+    },
+    {
+      "word": "There.",
+      "start": 73.74,
+      "end": 73.9,
+      "prob": 0.991
+    },
+    {
+      "word": "are",
+      "start": 73.98,
+      "end": 74.0,
+      "prob": 0.935
+    },
+    {
+      "word": "four",
+      "start": 74.0,
+      "end": 74.3,
+      "prob": 0.871
+    },
+    {
+      "word": "steps",
+      "start": 74.3,
+      "end": 74.64,
+      "prob": 0.997
+    },
+    {
+      "word": "involved.",
+      "start": 74.64,
+      "end": 75.14,
+      "prob": 0.988
+    },
+    {
+      "word": "First,",
+      "start": 75.84,
+      "end": 76.08,
+      "prob": 0.971
+    },
+    {
+      "word": "write",
+      "start": 76.64,
+      "end": 76.82,
+      "prob": 0.991
+    },
+    {
+      "word": "down",
+      "start": 76.82,
+      "end": 77.1,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 77.1,
+      "end": 77.28,
+      "prob": 0.996
+    },
+    {
+      "word": "mass",
+      "start": 77.28,
+      "end": 77.54,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 77.54,
+      "end": 77.8,
+      "prob": 0.993
+    },
+    {
+      "word": "each",
+      "start": 77.8,
+      "end": 78.08,
+      "prob": 0.998
+    },
+    {
+      "word": "element.",
+      "start": 78.08,
+      "end": 78.52,
+      "prob": 0.996
+    },
+    {
+      "word": "Second,",
+      "start": 79.02,
+      "end": 79.44,
+      "prob": 0.995
+    },
+    {
+      "word": "divide",
+      "start": 80.32,
+      "end": 80.36,
+      "prob": 0.992
+    },
+    {
+      "word": "each",
+      "start": 80.36,
+      "end": 80.66,
+      "prob": 0.345
+    },
+    {
+      "word": "mass",
+      "start": 80.66,
+      "end": 81.04,
+      "prob": 0.996
+    },
+    {
+      "word": "by",
+      "start": 81.04,
+      "end": 81.32,
+      "prob": 0.996
+    },
+    {
+      "word": "its",
+      "start": 81.32,
+      "end": 81.46,
+      "prob": 0.963
+    },
+    {
+      "word": "relative",
+      "start": 81.46,
+      "end": 81.88,
+      "prob": 0.995
+    },
+    {
+      "word": "atomic",
+      "start": 81.88,
+      "end": 82.3,
+      "prob": 0.997
+    },
+    {
+      "word": "mass",
+      "start": 82.3,
+      "end": 82.64,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 82.64,
+      "end": 82.92,
+      "prob": 0.985
+    },
+    {
+      "word": "calculate",
+      "start": 82.92,
+      "end": 83.34,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 83.34,
+      "end": 83.64,
+      "prob": 0.995
+    },
+    {
+      "word": "number",
+      "start": 83.64,
+      "end": 83.84,
+      "prob": 0.996
+    },
+    {
+      "word": "of",
+      "start": 83.84,
+      "end": 84.24,
+      "prob": 0.997
+    },
+    {
+      "word": "moles.",
+      "start": 84.24,
+      "end": 84.46,
+      "prob": 0.978
+    },
+    {
+      "word": "Third,",
+      "start": 85.14,
+      "end": 85.36,
+      "prob": 0.977
+    },
+    {
+      "word": "divide",
+      "start": 85.82,
+      "end": 86.18,
+      "prob": 0.99
+    },
+    {
+      "word": "all",
+      "start": 86.18,
+      "end": 86.58,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 86.58,
+      "end": 86.76,
+      "prob": 0.976
+    },
+    {
+      "word": "mole",
+      "start": 86.76,
+      "end": 86.98,
+      "prob": 0.987
+    },
+    {
+      "word": "values",
+      "start": 86.98,
+      "end": 87.4,
+      "prob": 0.99
+    },
+    {
+      "word": "by",
+      "start": 87.4,
+      "end": 87.68,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 87.68,
+      "end": 87.86,
+      "prob": 0.995
+    },
+    {
+      "word": "smallest",
+      "start": 87.86,
+      "end": 88.26,
+      "prob": 0.997
+    },
+    {
+      "word": "value.",
+      "start": 88.26,
+      "end": 88.8,
+      "prob": 0.993
+    },
+    {
+      "word": "Finally,",
+      "start": 89.26,
+      "end": 89.64,
+      "prob": 0.997
+    },
+    {
+      "word": "use",
+      "start": 90.04,
+      "end": 90.28,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 90.28,
+      "end": 90.48,
+      "prob": 0.998
+    },
+    {
+      "word": "simplest",
+      "start": 90.48,
+      "end": 90.94,
+      "prob": 0.989
+    },
+    {
+      "word": "whole",
+      "start": 90.94,
+      "end": 91.3,
+      "prob": 0.962
+    },
+    {
+      "word": "number",
+      "start": 91.3,
+      "end": 91.6,
+      "prob": 0.869
+    },
+    {
+      "word": "ratio",
+      "start": 91.6,
+      "end": 92.08,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 92.08,
+      "end": 92.38,
+      "prob": 0.997
+    },
+    {
+      "word": "write",
+      "start": 92.38,
+      "end": 92.62,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 92.62,
+      "end": 92.8,
+      "prob": 0.997
+    },
+    {
+      "word": "empirical",
+      "start": 92.8,
+      "end": 93.2,
+      "prob": 0.936
+    },
+    {
+      "word": "formula.",
+      "start": 93.2,
+      "end": 93.74,
+      "prob": 1.0
+    },
+    {
+      "word": "Let's",
+      "start": 94.22,
+      "end": 94.5,
+      "prob": 0.978
+    },
+    {
+      "word": "apply",
+      "start": 94.5,
+      "end": 94.8,
+      "prob": 0.999
+    },
+    {
+      "word": "these",
+      "start": 94.8,
+      "end": 95.06,
+      "prob": 0.992
+    },
+    {
+      "word": "steps",
+      "start": 95.06,
+      "end": 95.34,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 95.34,
+      "end": 95.58,
+      "prob": 0.997
+    },
+    {
+      "word": "an",
+      "start": 95.58,
+      "end": 95.68,
+      "prob": 0.997
+    },
+    {
+      "word": "example.",
+      "start": 95.68,
+      "end": 96.22,
+      "prob": 0.999
+    },
+    {
+      "word": "Example",
+      "start": 96.94,
+      "end": 96.96,
+      "prob": 0.966
+    },
+    {
+      "word": "1.",
+      "start": 96.96,
+      "end": 97.46,
+      "prob": 0.749
+    },
+    {
+      "word": "Calculating",
+      "start": 98.02,
+      "end": 98.62,
+      "prob": 0.987
+    },
+    {
+      "word": "empirical",
+      "start": 98.62,
+      "end": 99.0,
+      "prob": 0.524
+    },
+    {
+      "word": "formula",
+      "start": 99.0,
+      "end": 99.68,
+      "prob": 0.998
+    },
+    {
+      "word": "from",
+      "start": 99.68,
+      "end": 100.0,
+      "prob": 0.995
+    },
+    {
+      "word": "masses.",
+      "start": 100.0,
+      "end": 100.44,
+      "prob": 0.978
+    },
+    {
+      "word": "A",
+      "start": 100.9,
+      "end": 101.08,
+      "prob": 0.994
+    },
+    {
+      "word": "compound",
+      "start": 101.08,
+      "end": 101.5,
+      "prob": 0.999
+    },
+    {
+      "word": "contains",
+      "start": 101.5,
+      "end": 102.02,
+      "prob": 0.992
+    },
+    {
+      "word": "2",
+      "start": 102.02,
+      "end": 102.42,
+      "prob": 0.988
+    },
+    {
+      "word": ".4",
+      "start": 102.42,
+      "end": 103.02,
+      "prob": 0.986
+    },
+    {
+      "word": "grams",
+      "start": 103.02,
+      "end": 103.22,
+      "prob": 0.544
+    },
+    {
+      "word": "of",
+      "start": 103.22,
+      "end": 103.46,
+      "prob": 0.992
+    },
+    {
+      "word": "magnesium",
+      "start": 103.46,
+      "end": 103.88,
+      "prob": 0.841
+    },
+    {
+      "word": "and",
+      "start": 103.88,
+      "end": 104.6,
+      "prob": 0.962
+    },
+    {
+      "word": "1",
+      "start": 104.6,
+      "end": 104.86,
+      "prob": 0.993
+    },
+    {
+      "word": ".6",
+      "start": 104.86,
+      "end": 105.4,
+      "prob": 0.998
+    },
+    {
+      "word": "grams",
+      "start": 105.4,
+      "end": 105.68,
+      "prob": 0.977
+    },
+    {
+      "word": "of",
+      "start": 105.68,
+      "end": 105.88,
+      "prob": 0.992
+    },
+    {
+      "word": "oxygen.",
+      "start": 105.88,
+      "end": 106.38,
+      "prob": 0.986
+    },
+    {
+      "word": "Calculate",
+      "start": 106.84,
+      "end": 107.38,
+      "prob": 0.991
+    },
+    {
+      "word": "its",
+      "start": 107.38,
+      "end": 107.58,
+      "prob": 0.954
+    },
+    {
+      "word": "empirical",
+      "start": 107.58,
+      "end": 108.02,
+      "prob": 0.993
+    },
+    {
+      "word": "formula.",
+      "start": 108.02,
+      "end": 108.62,
+      "prob": 0.997
+    },
+    {
+      "word": "The",
+      "start": 109.12,
+      "end": 109.18,
+      "prob": 0.986
+    },
+    {
+      "word": "relative",
+      "start": 109.18,
+      "end": 109.56,
+      "prob": 0.981
+    },
+    {
+      "word": "atomic",
+      "start": 109.56,
+      "end": 109.98,
+      "prob": 0.997
+    },
+    {
+      "word": "masses",
+      "start": 109.98,
+      "end": 110.36,
+      "prob": 0.984
+    },
+    {
+      "word": "are",
+      "start": 110.36,
+      "end": 110.82,
+      "prob": 0.997
+    },
+    {
+      "word": "magnesium",
+      "start": 110.82,
+      "end": 111.48,
+      "prob": 0.5
+    },
+    {
+      "word": "24",
+      "start": 111.48,
+      "end": 112.44,
+      "prob": 0.637
+    },
+    {
+      "word": "and",
+      "start": 112.44,
+      "end": 113.06,
+      "prob": 0.957
+    },
+    {
+      "word": "oxygen",
+      "start": 113.06,
+      "end": 113.6,
+      "prob": 0.984
+    },
+    {
+      "word": "16.",
+      "start": 113.6,
+      "end": 114.32,
+      "prob": 0.982
+    },
+    {
+      "word": "First,",
+      "start": 114.82,
+      "end": 115.26,
+      "prob": 0.987
+    },
+    {
+      "word": "divide",
+      "start": 115.58,
+      "end": 115.92,
+      "prob": 0.99
+    },
+    {
+      "word": "the",
+      "start": 115.92,
+      "end": 116.14,
+      "prob": 0.998
+    },
+    {
+      "word": "mass",
+      "start": 116.14,
+      "end": 116.34,
+      "prob": 0.994
+    },
+    {
+      "word": "of",
+      "start": 116.34,
+      "end": 116.5,
+      "prob": 0.998
+    },
+    {
+      "word": "magnesium",
+      "start": 116.5,
+      "end": 117.06,
+      "prob": 0.732
+    },
+    {
+      "word": "by",
+      "start": 117.06,
+      "end": 117.38,
+      "prob": 0.988
+    },
+    {
+      "word": "its",
+      "start": 117.38,
+      "end": 117.5,
+      "prob": 0.966
+    },
+    {
+      "word": "relative",
+      "start": 117.5,
+      "end": 117.92,
+      "prob": 0.996
+    },
+    {
+      "word": "atomic",
+      "start": 117.92,
+      "end": 118.34,
+      "prob": 0.998
+    },
+    {
+      "word": "mass.",
+      "start": 118.34,
+      "end": 118.84,
+      "prob": 0.999
+    },
+    {
+      "word": "2",
+      "start": 119.24,
+      "end": 119.36,
+      "prob": 0.958
+    },
+    {
+      "word": ".4",
+      "start": 119.36,
+      "end": 120.0,
+      "prob": 0.989
+    },
+    {
+      "word": "divided",
+      "start": 120.0,
+      "end": 120.36,
+      "prob": 0.822
+    },
+    {
+      "word": "by",
+      "start": 120.36,
+      "end": 120.68,
+      "prob": 0.995
+    },
+    {
+      "word": "24",
+      "start": 120.68,
+      "end": 121.16,
+      "prob": 0.992
+    },
+    {
+      "word": "gives",
+      "start": 121.16,
+      "end": 121.76,
+      "prob": 0.945
+    },
+    {
+      "word": "0",
+      "start": 121.76,
+      "end": 122.26,
+      "prob": 0.97
+    },
+    {
+      "word": "MgO.",
+      "start": 134.72,
+      "end": 136.12,
+      "prob": 0.467
+    },
+    {
+      "word": "MgO.",
+      "start": 136.44,
+      "end": 137.32,
+      "prob": 0.654
+    },
+    {
+      "word": "MgO.",
+      "start": 137.84,
+      "end": 138.8,
+      "prob": 0.76
+    },
+    {
+      "word": "empirical",
+      "start": 142.38,
+      "end": 142.76,
+      "prob": 0.968
+    },
+    {
+      "word": "formula",
+      "start": 142.76,
+      "end": 143.36,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 143.36,
+      "end": 143.74,
+      "prob": 0.994
+    },
+    {
+      "word": "MgO.",
+      "start": 143.74,
+      "end": 144.9,
+      "prob": 0.848
+    },
+    {
+      "word": "Practice",
+      "start": 145.64,
+      "end": 145.68,
+      "prob": 0.505
+    },
+    {
+      "word": "question",
+      "start": 145.68,
+      "end": 145.96,
+      "prob": 0.887
+    },
+    {
+      "word": "1.",
+      "start": 145.96,
+      "end": 146.48,
+      "prob": 0.71
+    },
+    {
+      "word": "Now",
+      "start": 147.06,
+      "end": 147.18,
+      "prob": 0.988
+    },
+    {
+      "word": "it's",
+      "start": 147.18,
+      "end": 147.56,
+      "prob": 0.898
+    },
+    {
+      "word": "your",
+      "start": 147.56,
+      "end": 147.74,
+      "prob": 0.994
+    },
+    {
+      "word": "turn.",
+      "start": 147.74,
+      "end": 148.06,
+      "prob": 0.999
+    },
+    {
+      "word": "A",
+      "start": 148.54,
+      "end": 148.6,
+      "prob": 0.983
+    },
+    {
+      "word": "compound",
+      "start": 148.6,
+      "end": 149.0,
+      "prob": 0.998
+    },
+    {
+      "word": "contains",
+      "start": 149.0,
+      "end": 149.52,
+      "prob": 0.992
+    },
+    {
+      "word": "4",
+      "start": 149.52,
+      "end": 149.92,
+      "prob": 0.989
+    },
+    {
+      "word": ".6",
+      "start": 149.92,
+      "end": 150.5,
+      "prob": 0.994
+    },
+    {
+      "word": "grams",
+      "start": 150.5,
+      "end": 150.7,
+      "prob": 0.529
+    },
+    {
+      "word": "of",
+      "start": 150.7,
+      "end": 150.94,
+      "prob": 0.997
+    },
+    {
+      "word": "sodium",
+      "start": 150.94,
+      "end": 151.36,
+      "prob": 0.972
+    },
+    {
+      "word": "and",
+      "start": 151.36,
+      "end": 151.88,
+      "prob": 0.954
+    },
+    {
+      "word": "1",
+      "start": 151.88,
+      "end": 152.16,
+      "prob": 0.994
+    },
+    {
+      "word": ".6",
+      "start": 152.16,
+      "end": 152.66,
+      "prob": 0.999
+    },
+    {
+      "word": "grams",
+      "start": 152.66,
+      "end": 152.92,
+      "prob": 0.986
+    },
+    {
+      "word": "of",
+      "start": 152.92,
+      "end": 153.14,
+      "prob": 0.994
+    },
+    {
+      "word": "oxygen.",
+      "start": 153.14,
+      "end": 153.62,
+      "prob": 0.983
+    },
+    {
+      "word": "The",
+      "start": 154.02,
+      "end": 154.18,
+      "prob": 0.994
+    },
+    {
+      "word": "relative",
+      "start": 154.18,
+      "end": 154.58,
+      "prob": 0.993
+    },
+    {
+      "word": "atomic",
+      "start": 154.58,
+      "end": 154.98,
+      "prob": 0.998
+    },
+    {
+      "word": "masses",
+      "start": 154.98,
+      "end": 155.38,
+      "prob": 0.983
+    },
+    {
+      "word": "are",
+      "start": 155.38,
+      "end": 155.82,
+      "prob": 0.997
+    },
+    {
+      "word": "sodium",
+      "start": 155.82,
+      "end": 156.56,
+      "prob": 0.744
+    },
+    {
+      "word": "23",
+      "start": 156.56,
+      "end": 157.3,
+      "prob": 0.825
+    },
+    {
+      "word": "and",
+      "start": 157.3,
+      "end": 157.88,
+      "prob": 0.971
+    },
+    {
+      "word": "oxygen",
+      "start": 157.88,
+      "end": 158.4,
+      "prob": 0.979
+    },
+    {
+      "word": "16.",
+      "start": 158.4,
+      "end": 159.08,
+      "prob": 0.981
+    },
+    {
+      "word": "Calculate",
+      "start": 159.64,
+      "end": 160.14,
+      "prob": 0.994
+    },
+    {
+      "word": "its",
+      "start": 160.14,
+      "end": 160.36,
+      "prob": 0.935
+    },
+    {
+      "word": "empirical",
+      "start": 160.36,
+      "end": 160.8,
+      "prob": 0.998
+    },
+    {
+      "word": "formula.",
+      "start": 160.8,
+      "end": 161.42,
+      "prob": 0.999
+    },
+    {
+      "word": "Pause",
+      "start": 161.96,
+      "end": 162.06,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 162.06,
+      "end": 162.22,
+      "prob": 0.997
+    },
+    {
+      "word": "video",
+      "start": 162.22,
+      "end": 162.6,
+      "prob": 0.938
+    },
+    {
+      "word": "Let's",
+      "start": 165.3,
+      "end": 166.1,
+      "prob": 0.495
+    },
+    {
+      "word": "check",
+      "start": 166.1,
+      "end": 166.3,
+      "prob": 0.878
+    },
+    {
+      "word": "your",
+      "start": 166.3,
+      "end": 166.54,
+      "prob": 0.974
+    },
+    {
+      "word": "answer.",
+      "start": 166.54,
+      "end": 166.94,
+      "prob": 0.991
+    },
+    {
+      "word": "First,",
+      "start": 167.44,
+      "end": 167.68,
+      "prob": 0.795
+    },
+    {
+      "word": "divide",
+      "start": 168.3,
+      "end": 168.34,
+      "prob": 0.973
+    },
+    {
+      "word": "the",
+      "start": 168.34,
+      "end": 168.54,
+      "prob": 0.997
+    },
+    {
+      "word": "mass",
+      "start": 168.54,
+      "end": 168.74,
+      "prob": 0.99
+    },
+    {
+      "word": "of",
+      "start": 168.74,
+      "end": 168.92,
+      "prob": 0.999
+    },
+    {
+      "word": "sodium",
+      "start": 168.92,
+      "end": 169.34,
+      "prob": 0.933
+    },
+    {
+      "word": "by",
+      "start": 169.34,
+      "end": 169.6,
+      "prob": 0.996
+    },
+    {
+      "word": "its",
+      "start": 169.6,
+      "end": 169.76,
+      "prob": 0.97
+    },
+    {
+      "word": "relative",
+      "start": 169.76,
+      "end": 170.12,
+      "prob": 0.995
+    },
+    {
+      "word": "atomic",
+      "start": 170.12,
+      "end": 170.58,
+      "prob": 0.997
+    },
+    {
+      "word": "mass.",
+      "start": 170.58,
+      "end": 171.12,
+      "prob": 0.999
+    },
+    {
+      "word": "4",
+      "start": 171.5,
+      "end": 171.56,
+      "prob": 0.65
+    },
+    {
+      "word": ".6",
+      "start": 171.56,
+      "end": 172.28,
+      "prob": 0.992
+    },
+    {
+      "word": "divided",
+      "start": 172.28,
+      "end": 172.7,
+      "prob": 0.8
+    },
+    {
+      "word": "by",
+      "start": 172.7,
+      "end": 173.02,
+      "prob": 0.995
+    },
+    {
+      "word": "23",
+      "start": 173.02,
+      "end": 173.68,
+      "prob": 0.993
+    },
+    {
+      "word": "gives",
+      "start": 173.68,
+      "end": 174.3,
+      "prob": 0.943
+    },
+    {
+      "word": "0",
+      "start": 174.3,
+      "end": 174.92,
+      "prob": 0.993
+    },
+    {
+      "word": ".2",
+      "start": 174.92,
+      "end": 175.54,
+      "prob": 0.994
+    },
+    {
+      "word": "moles.",
+      "start": 175.54,
+      "end": 176.16,
+      "prob": 0.911
+    },
+    {
+      "word": "For",
+      "start": 176.56,
+      "end": 176.7,
+      "prob": 0.983
+    },
+    {
+      "word": "oxygen,",
+      "start": 176.7,
+      "end": 177.2,
+      "prob": 0.943
+    },
+    {
+      "word": "1",
+      "start": 177.66,
+      "end": 177.9,
+      "prob": 0.988
+    },
+    {
+      "word": ".6",
+      "start": 177.9,
+      "end": 178.6,
+      "prob": 0.994
+    },
+    {
+      "word": "divided",
+      "start": 178.6,
+      "end": 178.94,
+      "prob": 0.987
+    },
+    {
+      "word": "by",
+      "start": 178.94,
+      "end": 179.28,
+      "prob": 0.992
+    },
+    {
+      "word": "16",
+      "start": 179.28,
+      "end": 179.86,
+      "prob": 0.996
+    },
+    {
+      "word": "gives",
+      "start": 179.86,
+      "end": 180.42,
+      "prob": 0.987
+    },
+    {
+      "word": "0",
+      "start": 180.42,
+      "end": 181.04,
+      "prob": 0.997
+    },
+    {
+      "word": ".1",
+      "start": 181.04,
+      "end": 181.64,
+      "prob": 0.997
+    },
+    {
+      "word": "moles.",
+      "start": 181.64,
+      "end": 182.3,
+      "prob": 0.993
+    },
+    {
+      "word": "Next,",
+      "start": 182.78,
+      "end": 182.98,
+      "prob": 0.981
+    },
+    {
+      "word": "divide",
+      "start": 183.42,
+      "end": 183.66,
+      "prob": 0.985
+    },
+    {
+      "word": "both",
+      "start": 183.66,
+      "end": 184.06,
+      "prob": 0.994
+    },
+    {
+      "word": "values",
+      "start": 184.06,
+      "end": 184.48,
+      "prob": 0.975
+    },
+    {
+      "word": "by",
+      "start": 184.48,
+      "end": 184.8,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 184.8,
+      "end": 184.96,
+      "prob": 0.988
+    },
+    {
+      "word": "smallest",
+      "start": 184.96,
+      "end": 185.42,
+      "prob": 0.998
+    },
+    {
+      "word": "which",
+      "start": 185.42,
+      "end": 185.92,
+      "prob": 0.501
+    },
+    {
+      "word": "is",
+      "start": 185.92,
+      "end": 186.1,
+      "prob": 0.996
+    },
+    {
+      "word": "0",
+      "start": 186.1,
+      "end": 186.42,
+      "prob": 0.988
+    },
+    {
+      "word": ".1.",
+      "start": 186.42,
+      "end": 187.06,
+      "prob": 0.998
+    },
+    {
+      "word": "For",
+      "start": 187.44,
+      "end": 187.64,
+      "prob": 0.983
+    },
+    {
+      "word": "sodium,",
+      "start": 187.64,
+      "end": 188.06,
+      "prob": 0.912
+    },
+    {
+      "word": "0",
+      "start": 188.38,
+      "end": 188.82,
+      "prob": 0.99
+    },
+    {
+      "word": ".2",
+      "start": 188.82,
+      "end": 189.46,
+      "prob": 0.997
+    },
+    {
+      "word": "divided",
+      "start": 189.46,
+      "end": 189.9,
+      "prob": 0.791
+    },
+    {
+      "word": "by",
+      "start": 189.9,
+      "end": 190.2,
+      "prob": 0.993
+    },
+    {
+      "word": "0",
+      "start": 190.2,
+      "end": 190.54,
+      "prob": 0.996
+    },
+    {
+      "word": ".1",
+      "start": 190.54,
+      "end": 191.26,
+      "prob": 0.999
+    },
+    {
+      "word": "gives",
+      "start": 191.26,
+      "end": 191.58,
+      "prob": 0.985
+    },
+    {
+      "word": "2.",
+      "start": 191.58,
+      "end": 192.06,
+      "prob": 0.934
+    },
+    {
+      "word": "For",
+      "start": 192.4,
+      "end": 192.64,
+      "prob": 0.99
+    },
+    {
+      "word": "oxygen,",
+      "start": 192.64,
+      "end": 193.12,
+      "prob": 0.959
+    },
+    {
+      "word": "0",
+      "start": 193.5,
+      "end": 193.9,
+      "prob": 0.995
+    },
+    {
+      "word": ".1",
+      "start": 193.9,
+      "end": 194.58,
+      "prob": 0.998
+    },
+    {
+      "word": "divided",
+      "start": 194.58,
+      "end": 194.92,
+      "prob": 0.983
+    },
+    {
+      "word": "by",
+      "start": 194.92,
+      "end": 195.24,
+      "prob": 0.992
+    },
+    {
+      "word": "0",
+      "start": 195.24,
+      "end": 195.58,
+      "prob": 0.999
+    },
+    {
+      "word": ".1",
+      "start": 195.58,
+      "end": 196.28,
+      "prob": 0.999
+    },
+    {
+      "word": "gives",
+      "start": 196.28,
+      "end": 196.62,
+      "prob": 0.991
+    },
+    {
+      "word": "1.",
+      "start": 196.62,
+      "end": 197.14,
+      "prob": 0.979
+    },
+    {
+      "word": "Therefore,",
+      "start": 197.64,
+      "end": 197.9,
+      "prob": 0.989
+    },
+    {
+      "word": "the",
+      "start": 198.36,
+      "end": 198.42,
+      "prob": 0.996
+    },
+    {
+      "word": "simplest",
+      "start": 198.42,
+      "end": 198.86,
+      "prob": 0.997
+    },
+    {
+      "word": "ratio",
+      "start": 198.86,
+      "end": 199.38,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 199.38,
+      "end": 199.68,
+      "prob": 0.995
+    },
+    {
+      "word": "sodium",
+      "start": 199.68,
+      "end": 200.02,
+      "prob": 0.959
+    },
+    {
+      "word": "to",
+      "start": 200.02,
+      "end": 200.28,
+      "prob": 0.995
+    },
+    {
+      "word": "oxygen",
+      "start": 200.28,
+      "end": 200.78,
+      "prob": 0.996
+    },
+    {
+      "word": "is",
+      "start": 200.78,
+      "end": 201.12,
+      "prob": 0.996
+    },
+    {
+      "word": "2",
+      "start": 201.12,
+      "end": 201.54,
+      "prob": 0.932
+    },
+    {
+      "word": "to",
+      "start": 201.54,
+      "end": 201.78,
+      "prob": 0.968
+    },
+    {
+      "word": "1.",
+      "start": 201.78,
+      "end": 202.12,
+      "prob": 0.989
+    },
+    {
+      "word": "1.",
+      "start": 202.12,
+      "end": 202.36,
+      "prob": 0.106
+    },
+    {
+      "word": "The",
+      "start": 202.56,
+      "end": 202.62,
+      "prob": 0.925
+    },
+    {
+      "word": "empirical",
+      "start": 202.62,
+      "end": 202.98,
+      "prob": 0.946
+    },
+    {
+      "word": "formula",
+      "start": 202.98,
+      "end": 203.56,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 203.56,
+      "end": 203.92,
+      "prob": 0.978
+    },
+    {
+      "word": "Na2O.",
+      "start": 203.92,
+      "end": 205.4,
+      "prob": 0.863
+    },
+    {
+      "word": "Well",
+      "start": 205.92,
+      "end": 205.94,
+      "prob": 0.921
+    },
+    {
+      "word": "done",
+      "start": 205.94,
+      "end": 206.28,
+      "prob": 0.994
+    },
+    {
+      "word": "if",
+      "start": 206.28,
+      "end": 206.5,
+      "prob": 0.902
+    },
+    {
+      "word": "you",
+      "start": 206.5,
+      "end": 206.62,
+      "prob": 0.989
+    },
+    {
+      "word": "got",
+      "start": 206.62,
+      "end": 206.78,
+      "prob": 0.977
+    },
+    {
+      "word": "that",
+      "start": 206.78,
+      "end": 207.02,
+      "prob": 0.973
+    },
+    {
+      "word": "correct.",
+      "start": 207.02,
+      "end": 207.36,
+      "prob": 0.975
+    },
+    {
+      "word": "Example",
+      "start": 208.4,
+      "end": 208.46,
+      "prob": 0.855
+    },
+    {
+      "word": "2.",
+      "start": 208.46,
+      "end": 209.08,
+      "prob": 0.816
+    },
+    {
+      "word": "Calculating",
+      "start": 209.68,
+      "end": 210.26,
+      "prob": 0.976
+    },
+    {
+      "word": "empirical",
+      "start": 210.26,
+      "end": 210.66,
+      "prob": 0.779
+    },
+    {
+      "word": "formula",
+      "start": 210.66,
+      "end": 211.32,
+      "prob": 0.998
+    },
+    {
+      "word": "from",
+      "start": 211.32,
+      "end": 211.62,
+      "prob": 0.995
+    },
+    {
+      "word": "percentages.",
+      "start": 211.62,
+      "end": 212.22,
+      "prob": 0.973
+    },
+    {
+      "word": "Sometimes",
+      "start": 212.98,
+      "end": 213.46,
+      "prob": 0.984
+    },
+    {
+      "word": "examination",
+      "start": 213.46,
+      "end": 214.2,
+      "prob": 0.427
+    },
+    {
+      "word": "questions",
+      "start": 214.2,
+      "end": 214.74,
+      "prob": 0.994
+    },
+    {
+      "word": "give",
+      "start": 214.74,
+      "end": 215.22,
+      "prob": 0.958
+    },
+    {
+      "word": "us",
+      "start": 215.22,
+      "end": 215.42,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 215.42,
+      "end": 215.58,
+      "prob": 0.977
+    },
+    {
+      "word": "percentage",
+      "start": 215.58,
+      "end": 215.98,
+      "prob": 0.943
+    },
+    {
+      "word": "composition",
+      "start": 215.98,
+      "end": 216.54,
+      "prob": 0.982
+    },
+    {
+      "word": "of",
+      "start": 216.54,
+      "end": 216.94,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 216.94,
+      "end": 217.08,
+      "prob": 0.985
+    },
+    {
+      "word": "compound",
+      "start": 217.08,
+      "end": 217.54,
+      "prob": 0.998
+    },
+    {
+      "word": "rather",
+      "start": 217.54,
+      "end": 217.92,
+      "prob": 0.896
+    },
+    {
+      "word": "than",
+      "start": 217.92,
+      "end": 218.26,
+      "prob": 0.986
+    },
+    {
+      "word": "the",
+      "start": 218.26,
+      "end": 218.36,
+      "prob": 0.979
+    },
+    {
+      "word": "masses.",
+      "start": 218.36,
+      "end": 218.7,
+      "prob": 0.984
+    },
+    {
+      "word": "The",
+      "start": 219.24,
+      "end": 219.4,
+      "prob": 0.986
+    },
+    {
+      "word": "method",
+      "start": 219.4,
+      "end": 219.72,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 219.72,
+      "end": 219.96,
+      "prob": 0.997
+    },
+    {
+      "word": "almost",
+      "start": 219.96,
+      "end": 220.4,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 220.4,
+      "end": 220.64,
+      "prob": 0.997
+    },
+    {
+      "word": "same",
+      "start": 220.64,
+      "end": 220.98,
+      "prob": 1.0
+    },
+    {
+      "word": "except",
+      "start": 220.98,
+      "end": 221.52,
+      "prob": 0.55
+    },
+    {
+      "word": "that",
+      "start": 221.52,
+      "end": 221.74,
+      "prob": 0.965
+    },
+    {
+      "word": "we",
+      "start": 221.74,
+      "end": 221.94,
+      "prob": 0.995
+    },
+    {
+      "word": "first",
+      "start": 221.94,
+      "end": 222.18,
+      "prob": 0.978
+    },
+    {
+      "word": "assume",
+      "start": 222.18,
+      "end": 222.66,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 222.64,
+      "end": 222.92,
+      "prob": 0.992
+    },
+    {
+      "word": "total",
+      "start": 222.92,
+      "end": 223.22,
+      "prob": 0.995
+    },
+    {
+      "word": "mass",
+      "start": 223.22,
+      "end": 223.56,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 223.56,
+      "end": 223.84,
+      "prob": 0.997
+    },
+    {
+      "word": "100g.",
+      "start": 223.84,
+      "end": 224.72,
+      "prob": 0.739
+    },
+    {
+      "word": "Let's",
+      "start": 225.32,
+      "end": 225.6,
+      "prob": 0.978
+    },
+    {
+      "word": "consider",
+      "start": 225.6,
+      "end": 225.92,
+      "prob": 0.992
+    },
+    {
+      "word": "an",
+      "start": 225.92,
+      "end": 226.14,
+      "prob": 0.992
+    },
+    {
+      "word": "example.",
+      "start": 226.14,
+      "end": 226.6,
+      "prob": 0.999
+    },
+    {
+      "word": "A",
+      "start": 227.18,
+      "end": 227.24,
+      "prob": 0.984
+    },
+    {
+      "word": "compound",
+      "start": 227.24,
+      "end": 227.64,
+      "prob": 0.997
+    },
+    {
+      "word": "contains",
+      "start": 227.64,
+      "end": 228.18,
+      "prob": 0.988
+    },
+    {
+      "word": "40",
+      "start": 228.18,
+      "end": 228.7,
+      "prob": 0.985
+    },
+    {
+      "word": "%",
+      "start": 228.7,
+      "end": 229.1,
+      "prob": 0.958
+    },
+    {
+      "word": "carbon,",
+      "start": 229.1,
+      "end": 229.52,
+      "prob": 0.924
+    },
+    {
+      "word": "6",
+      "start": 229.84,
+      "end": 230.14,
+      "prob": 0.999
+    },
+    {
+      "word": ".7",
+      "start": 230.14,
+      "end": 230.72,
+      "prob": 0.988
+    },
+    {
+      "word": "%",
+      "start": 230.72,
+      "end": 231.06,
+      "prob": 0.984
+    },
+    {
+      "word": "hydrogen",
+      "start": 231.06,
+      "end": 231.5,
+      "prob": 0.988
+    },
+    {
+      "word": "and",
+      "start": 231.5,
+      "end": 232.14,
+      "prob": 0.789
+    },
+    {
+      "word": "53",
+      "start": 232.14,
+      "end": 232.72,
+      "prob": 0.995
+    },
+    {
+      "word": ".3",
+      "start": 232.72,
+      "end": 233.3,
+      "prob": 0.998
+    },
+    {
+      "word": "%",
+      "start": 233.3,
+      "end": 233.72,
+      "prob": 0.993
+    },
+    {
+      "word": "oxygen.",
+      "start": 233.72,
+      "end": 234.2,
+      "prob": 0.989
+    },
+    {
+      "word": "Calculate",
+      "start": 234.7,
+      "end": 235.28,
+      "prob": 0.991
+    },
+    {
+      "word": "its",
+      "start": 235.28,
+      "end": 235.5,
+      "prob": 0.931
+    },
+    {
+      "word": "empirical",
+      "start": 235.5,
+      "end": 235.96,
+      "prob": 0.992
+    },
+    {
+      "word": "formula.",
+      "start": 235.96,
+      "end": 236.58,
+      "prob": 0.996
+    },
+    {
+      "word": "The",
+      "start": 237.02,
+      "end": 237.1,
+      "prob": 0.99
+    },
+    {
+      "word": "relative",
+      "start": 237.1,
+      "end": 237.5,
+      "prob": 0.989
+    },
+    {
+      "word": "atomic",
+      "start": 237.5,
+      "end": 237.9,
+      "prob": 0.997
+    },
+    {
+      "word": "masses",
+      "start": 237.9,
+      "end": 238.32,
+      "prob": 0.977
+    },
+    {
+      "word": "are",
+      "start": 238.32,
+      "end": 238.8,
+      "prob": 0.996
+    },
+    {
+      "word": "carbon",
+      "start": 238.8,
+      "end": 239.46,
+      "prob": 0.807
+    },
+    {
+      "word": "12,",
+      "start": 239.46,
+      "end": 239.9,
+      "prob": 0.409
+    },
+    {
+      "word": "hydrogen",
+      "start": 240.5,
+      "end": 240.76,
+      "prob": 0.993
+    },
+    {
+      "word": "1",
+      "start": 240.76,
+      "end": 241.28,
+      "prob": 0.983
+    },
+    {
+      "word": "and",
+      "start": 241.28,
+      "end": 241.72,
+      "prob": 0.868
+    },
+    {
+      "word": "oxygen",
+      "start": 241.72,
+      "end": 242.2,
+      "prob": 0.988
+    },
+    {
+      "word": "16.",
+      "start": 242.2,
+      "end": 242.84,
+      "prob": 0.986
+    },
+    {
+      "word": "First,",
+      "start": 243.34,
+      "end": 243.76,
+      "prob": 0.969
+    },
+    {
+      "word": "assume",
+      "start": 244.12,
+      "end": 244.4,
+      "prob": 0.989
+    },
+    {
+      "word": "we",
+      "start": 244.4,
+      "end": 244.62,
+      "prob": 0.982
+    },
+    {
+      "word": "have",
+      "start": 244.62,
+      "end": 244.84,
+      "prob": 0.999
+    },
+    {
+      "word": "100",
+      "start": 244.84,
+      "end": 245.44,
+      "prob": 0.975
+    },
+    {
+      "word": "grams",
+      "start": 245.44,
+      "end": 245.72,
+      "prob": 0.728
+    },
+    {
+      "word": "of",
+      "start": 245.72,
+      "end": 245.98,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 245.98,
+      "end": 246.08,
+      "prob": 0.997
+    },
+    {
+      "word": "compound.",
+      "start": 246.08,
+      "end": 246.52,
+      "prob": 0.998
+    },
+    {
+      "word": "This",
+      "start": 246.94,
+      "end": 247.22,
+      "prob": 0.988
+    },
+    {
+      "word": "gives",
+      "start": 247.22,
+      "end": 247.44,
+      "prob": 0.994
+    },
+    {
+      "word": "us",
+      "start": 247.44,
+      "end": 247.72,
+      "prob": 0.999
+    },
+    {
+      "word": "40",
+      "start": 247.72,
+      "end": 248.18,
+      "prob": 0.992
+    },
+    {
+      "word": "grams",
+      "start": 248.18,
+      "end": 248.42,
+      "prob": 0.981
+    },
+    {
+      "word": "of",
+      "start": 248.42,
+      "end": 248.68,
+      "prob": 0.995
+    },
+    {
+      "word": "carbon,",
+      "start": 248.68,
+      "end": 249.08,
+      "prob": 0.984
+    },
+    {
+      "word": "6",
+      "start": 249.38,
+      "end": 249.64,
+      "prob": 0.997
+    },
+    {
+      "word": ".7",
+      "start": 249.64,
+      "end": 250.22,
+      "prob": 0.992
+    },
+    {
+      "word": "grams",
+      "start": 250.22,
+      "end": 250.44,
+      "prob": 0.989
+    },
+    {
+      "word": "of",
+      "start": 250.44,
+      "end": 250.7,
+      "prob": 0.991
+    },
+    {
+      "word": "hydrogen",
+      "start": 250.7,
+      "end": 251.16,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 251.16,
+      "end": 251.68,
+      "prob": 0.788
+    },
+    {
+      "word": "53",
+      "start": 251.68,
+      "end": 252.24,
+      "prob": 0.994
+    },
+    {
+      "word": ".3",
+      "start": 252.24,
+      "end": 252.86,
+      "prob": 0.996
+    },
+    {
+      "word": "grams",
+      "start": 252.86,
+      "end": 253.12,
+      "prob": 0.99
+    },
+    {
+      "word": "of",
+      "start": 253.12,
+      "end": 253.36,
+      "prob": 0.995
+    },
+    {
+      "word": "oxygen.",
+      "start": 253.36,
+      "end": 253.84,
+      "prob": 0.997
+    },
+    {
+      "word": "Now,",
+      "start": 254.26,
+      "end": 254.6,
+      "prob": 0.995
+    },
+    {
+      "word": "divide",
+      "start": 254.96,
+      "end": 255.24,
+      "prob": 0.994
+    },
+    {
+      "word": "each",
+      "start": 255.24,
+      "end": 255.64,
+      "prob": 0.999
+    },
+    {
+      "word": "mass",
+      "start": 255.64,
+      "end": 255.94,
+      "prob": 0.996
+    },
+    {
+      "word": "by",
+      "start": 255.94,
+      "end": 256.26,
+      "prob": 0.997
+    },
+    {
+      "word": "its",
+      "start": 256.26,
+      "end": 256.38,
+      "prob": 0.958
+    },
+    {
+      "word": "relative",
+      "start": 256.38,
+      "end": 256.84,
+      "prob": 0.996
+    },
+    {
+      "word": "atomic",
+      "start": 256.84,
+      "end": 257.26,
+      "prob": 0.998
+    },
+    {
+      "word": "mass.",
+      "start": 257.26,
+      "end": 257.66,
+      "prob": 0.999
+    },
+    {
+      "word": "For",
+      "start": 258.16,
+      "end": 258.32,
+      "prob": 0.997
+    },
+    {
+      "word": "carbon,",
+      "start": 258.32,
+      "end": 258.72,
+      "prob": 0.969
+    },
+    {
+      "word": "40",
+      "start": 259.14,
+      "end": 259.52,
+      "prob": 0.992
+    },
+    {
+      "word": "divided",
+      "start": 259.52,
+      "end": 259.88,
+      "prob": 0.847
+    },
+    {
+      "word": "by",
+      "start": 259.88,
+      "end": 260.22,
+      "prob": 0.996
+    },
+    {
+      "word": "12",
+      "start": 260.22,
+      "end": 260.6,
+      "prob": 0.996
+    },
+    {
+      "word": "gives",
+      "start": 260.6,
+      "end": 261.02,
+      "prob": 0.966
+    },
+    {
+      "word": "approximately",
+      "start": 261.02,
+      "end": 261.68,
+      "prob": 0.994
+    },
+    {
+      "word": "3",
+      "start": 261.68,
+      "end": 262.22,
+      "prob": 0.993
+    },
+    {
+      "word": ".33",
+      "start": 262.24,
+      "end": 263.02,
+      "prob": 0.995
+    },
+    {
+      "word": "moles.",
+      "start": 263.02,
+      "end": 263.58,
+      "prob": 0.899
+    },
+    {
+      "word": "For",
+      "start": 264.04,
+      "end": 264.16,
+      "prob": 0.978
+    },
+    {
+      "word": "hydrogen",
+      "start": 264.16,
+      "end": 264.66,
+      "prob": 0.89
+    },
+    {
+      "word": "6",
+      "start": 264.66,
+      "end": 265.2,
+      "prob": 0.28
+    },
+    {
+      "word": ".7",
+      "start": 265.2,
+      "end": 265.9,
+      "prob": 0.99
+    },
+    {
+      "word": "divided",
+      "start": 265.9,
+      "end": 266.24,
+      "prob": 0.843
+    },
+    {
+      "word": "by",
+      "start": 266.24,
+      "end": 266.56,
+      "prob": 0.984
+    },
+    {
+      "word": "1",
+      "start": 266.56,
+      "end": 267.02,
+      "prob": 0.928
+    },
+    {
+      "word": "gives",
+      "start": 267.02,
+      "end": 267.28,
+      "prob": 0.965
+    },
+    {
+      "word": "6",
+      "start": 267.28,
+      "end": 267.7,
+      "prob": 0.996
+    },
+    {
+      "word": ".7",
+      "start": 267.7,
+      "end": 268.28,
+      "prob": 0.991
+    },
+    {
+      "word": "moles.",
+      "start": 268.28,
+      "end": 268.78,
+      "prob": 0.987
+    },
+    {
+      "word": "For",
+      "start": 269.16,
+      "end": 269.26,
+      "prob": 0.987
+    },
+    {
+      "word": "oxygen",
+      "start": 269.26,
+      "end": 269.78,
+      "prob": 0.941
+    },
+    {
+      "word": "53",
+      "start": 269.78,
+      "end": 270.44,
+      "prob": 0.78
+    },
+    {
+      "word": ".3",
+      "start": 270.44,
+      "end": 271.32,
+      "prob": 0.994
+    },
+    {
+      "word": "divided",
+      "start": 271.32,
+      "end": 271.64,
+      "prob": 0.959
+    },
+    {
+      "word": "by",
+      "start": 271.64,
+      "end": 271.94,
+      "prob": 0.992
+    },
+    {
+      "word": "16",
+      "start": 271.94,
+      "end": 272.5,
+      "prob": 0.995
+    },
+    {
+      "word": "gives",
+      "start": 272.5,
+      "end": 272.94,
+      "prob": 0.989
+    },
+    {
+      "word": "approximately",
+      "start": 272.94,
+      "end": 273.58,
+      "prob": 0.991
+    },
+    {
+      "word": "3",
+      "start": 273.58,
+      "end": 274.14,
+      "prob": 0.997
+    },
+    {
+      "word": ".33",
+      "start": 274.14,
+      "end": 274.88,
+      "prob": 0.998
+    },
+    {
+      "word": "moles.",
+      "start": 274.88,
+      "end": 275.58,
+      "prob": 0.991
+    },
+    {
+      "word": "Next",
+      "start": 276.08,
+      "end": 276.24,
+      "prob": 0.99
+    },
+    {
+      "word": "divide",
+      "start": 276.24,
+      "end": 276.88,
+      "prob": 0.519
+    },
+    {
+      "word": "all",
+      "start": 276.88,
+      "end": 277.26,
+      "prob": 0.993
+    },
+    {
+      "word": "three",
+      "start": 277.26,
+      "end": 277.56,
+      "prob": 0.748
+    },
+    {
+      "word": "values",
+      "start": 277.56,
+      "end": 277.96,
+      "prob": 0.997
+    },
+    {
+      "word": "by",
+      "start": 277.96,
+      "end": 278.22,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 278.22,
+      "end": 278.4,
+      "prob": 0.997
+    },
+    {
+      "word": "smallest",
+      "start": 278.4,
+      "end": 278.84,
+      "prob": 0.998
+    },
+    {
+      "word": "approximately",
+      "start": 278.84,
+      "end": 279.72,
+      "prob": 0.79
+    },
+    {
+      "word": "3",
+      "start": 279.72,
+      "end": 280.3,
+      "prob": 0.99
+    },
+    {
+      "word": ".33.",
+      "start": 280.3,
+      "end": 280.96,
+      "prob": 0.997
+    },
+    {
+      "word": "This",
+      "start": 281.48,
+      "end": 281.74,
+      "prob": 0.978
+    },
+    {
+      "word": "gives",
+      "start": 281.74,
+      "end": 281.96,
+      "prob": 0.997
+    },
+    {
+      "word": "us",
+      "start": 281.96,
+      "end": 282.18,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 282.18,
+      "end": 282.32,
+      "prob": 0.998
+    },
+    {
+      "word": "ratio",
+      "start": 282.32,
+      "end": 282.68,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 282.7,
+      "end": 283.0,
+      "prob": 0.996
+    },
+    {
+      "word": "approximately",
+      "start": 283.0,
+      "end": 283.46,
+      "prob": 0.972
+    },
+    {
+      "word": "1",
+      "start": 283.46,
+      "end": 284.18,
+      "prob": 0.856
+    },
+    {
+      "word": "to",
+      "start": 284.18,
+      "end": 284.44,
+      "prob": 0.8
+    },
+    {
+      "word": "2",
+      "start": 284.44,
+      "end": 284.8,
+      "prob": 0.982
+    },
+    {
+      "word": "to",
+      "start": 284.8,
+      "end": 284.98,
+      "prob": 0.981
+    },
+    {
+      "word": "1.",
+      "start": 284.98,
+      "end": 285.36,
+      "prob": 0.984
+    },
+    {
+      "word": "Therefore,",
+      "start": 285.68,
+      "end": 286.14,
+      "prob": 0.99
+    },
+    {
+      "word": "the",
+      "start": 286.42,
+      "end": 286.54,
+      "prob": 0.996
+    },
+    {
+      "word": "empirical",
+      "start": 286.54,
+      "end": 286.9,
+      "prob": 0.971
+    },
+    {
+      "word": "formula",
+      "start": 286.9,
+      "end": 287.46,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 287.46,
+      "end": 287.84,
+      "prob": 0.995
+    },
+    {
+      "word": "CH2O.",
+      "start": 287.84,
+      "end": 289.18,
+      "prob": 0.965
+    },
+    {
+      "word": "Remember,",
+      "start": 289.68,
+      "end": 289.9,
+      "prob": 0.99
+    },
+    {
+      "word": "when",
+      "start": 290.34,
+      "end": 290.5,
+      "prob": 0.995
+    },
+    {
+      "word": "percentages",
+      "start": 290.5,
+      "end": 290.94,
+      "prob": 0.976
+    },
+    {
+      "word": "are",
+      "start": 290.94,
+      "end": 291.28,
+      "prob": 0.997
+    },
+    {
+      "word": "given,",
+      "start": 291.28,
+      "end": 291.58,
+      "prob": 0.998
+    },
+    {
+      "word": "assume",
+      "start": 291.98,
+      "end": 292.22,
+      "prob": 0.996
+    },
+    {
+      "word": "100g",
+      "start": 292.22,
+      "end": 293.14,
+      "prob": 0.619
+    },
+    {
+      "word": "first,",
+      "start": 293.14,
+      "end": 293.58,
+      "prob": 0.971
+    },
+    {
+      "word": "then",
+      "start": 294.06,
+      "end": 294.34,
+      "prob": 0.992
+    },
+    {
+      "word": "follow",
+      "start": 294.34,
+      "end": 294.72,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 294.72,
+      "end": 294.94,
+      "prob": 0.996
+    },
+    {
+      "word": "same",
+      "start": 294.94,
+      "end": 295.2,
+      "prob": 0.989
+    },
+    {
+      "word": "steps.",
+      "start": 295.2,
+      "end": 295.64,
+      "prob": 0.997
+    },
+    {
+      "word": "Practice",
+      "start": 296.3,
+      "end": 296.58,
+      "prob": 0.732
+    },
+    {
+      "word": "question",
+      "start": 296.58,
+      "end": 296.86,
+      "prob": 0.732
+    },
+    {
+      "word": "2.",
+      "start": 296.86,
+      "end": 297.46,
+      "prob": 0.842
+    },
+    {
+      "word": "Now,",
+      "start": 297.88,
+      "end": 298.22,
+      "prob": 0.99
+    },
+    {
+      "word": "let's",
+      "start": 298.44,
+      "end": 298.72,
+      "prob": 0.954
+    },
+    {
+      "word": "try",
+      "start": 298.72,
+      "end": 298.96,
+      "prob": 0.998
+    },
+    {
+      "word": "our",
+      "start": 298.96,
+      "end": 299.2,
+      "prob": 0.979
+    },
+    {
+      "word": "final",
+      "start": 299.2,
+      "end": 299.6,
+      "prob": 0.998
+    },
+    {
+      "word": "question.",
+      "start": 299.6,
+      "end": 300.06,
+      "prob": 0.998
+    },
+    {
+      "word": "A",
+      "start": 300.52,
+      "end": 300.66,
+      "prob": 0.985
+    },
+    {
+      "word": "compound",
+      "start": 300.66,
+      "end": 301.06,
+      "prob": 0.997
+    },
+    {
+      "word": "contains",
+      "start": 301.06,
+      "end": 301.62,
+      "prob": 0.897
+    },
+    {
+      "word": "52",
+      "start": 301.62,
+      "end": 302.3,
+      "prob": 0.96
+    },
+    {
+      "word": ".2",
+      "start": 302.32,
+      "end": 302.9,
+      "prob": 0.987
+    },
+    {
+      "word": "%",
+      "start": 302.9,
+      "end": 303.26,
+      "prob": 0.922
+    },
+    {
+      "word": "carbon,",
+      "start": 303.26,
+      "end": 303.68,
+      "prob": 0.911
+    },
+    {
+      "word": "13",
+      "start": 304.0,
+      "end": 304.44,
+      "prob": 0.994
+    },
+    {
+      "word": ".0",
+      "start": 304.44,
+      "end": 305.04,
+      "prob": 0.997
+    },
+    {
+      "word": "%",
+      "start": 305.04,
+      "end": 305.46,
+      "prob": 0.995
+    },
+    {
+      "word": "hydrogen",
+      "start": 305.46,
+      "end": 305.94,
+      "prob": 0.991
+    },
+    {
+      "word": "and",
+      "start": 305.94,
+      "end": 306.44,
+      "prob": 0.652
+    },
+    {
+      "word": "34",
+      "start": 306.44,
+      "end": 307.02,
+      "prob": 0.998
+    },
+    {
+      "word": ".8",
+      "start": 307.02,
+      "end": 307.56,
+      "prob": 0.998
+    },
+    {
+      "word": "%",
+      "start": 307.56,
+      "end": 308.06,
+      "prob": 0.989
+    },
+    {
+      "word": "oxygen.",
+      "start": 308.06,
+      "end": 308.5,
+      "prob": 0.99
+    },
+    {
+      "word": "The",
+      "start": 308.9,
+      "end": 309.06,
+      "prob": 0.989
+    },
+    {
+      "word": "relative",
+      "start": 309.06,
+      "end": 309.44,
+      "prob": 0.985
+    },
+    {
+      "word": "atomic",
+      "start": 309.44,
+      "end": 309.86,
+      "prob": 0.996
+    },
+    {
+      "word": "masses",
+      "start": 309.86,
+      "end": 310.24,
+      "prob": 0.97
+    },
+    {
+      "word": "are",
+      "start": 310.24,
+      "end": 310.74,
+      "prob": 0.996
+    },
+    {
+      "word": "carbon",
+      "start": 310.74,
+      "end": 311.38,
+      "prob": 0.805
+    },
+    {
+      "word": "-12,",
+      "start": 311.38,
+      "end": 311.82,
+      "prob": 0.774
+    },
+    {
+      "word": "hydrogen",
+      "start": 312.4,
+      "end": 312.7,
+      "prob": 0.992
+    },
+    {
+      "word": "-1",
+      "start": 312.7,
+      "end": 313.18,
+      "prob": 0.957
+    },
+    {
+      "word": "and",
+      "start": 313.18,
+      "end": 313.62,
+      "prob": 0.844
+    },
+    {
+      "word": "oxygen",
+      "start": 313.62,
+      "end": 314.12,
+      "prob": 0.986
+    },
+    {
+      "word": "-16.",
+      "start": 314.12,
+      "end": 314.72,
+      "prob": 0.977
+    },
+    {
+      "word": "Calculate",
+      "start": 315.32,
+      "end": 315.86,
+      "prob": 0.991
+    },
+    {
+      "word": "its",
+      "start": 315.86,
+      "end": 316.06,
+      "prob": 0.956
+    },
+    {
+      "word": "empirical",
+      "start": 316.06,
+      "end": 316.52,
+      "prob": 0.994
+    },
+    {
+      "word": "formula.",
+      "start": 316.52,
+      "end": 317.14,
+      "prob": 0.996
+    },
+    {
+      "word": "Pause",
+      "start": 317.74,
+      "end": 317.8,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 317.8,
+      "end": 317.94,
+      "prob": 0.993
+    },
+    {
+      "word": "video",
+      "start": 317.94,
+      "end": 318.24,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 318.24,
+      "end": 318.56,
+      "prob": 0.966
+    },
+    {
+      "word": "work",
+      "start": 318.56,
+      "end": 318.84,
+      "prob": 0.995
+    },
+    {
+      "word": "through",
+      "start": 318.84,
+      "end": 319.08,
+      "prob": 0.988
+    },
+    {
+      "word": "the",
+      "start": 319.08,
+      "end": 319.22,
+      "prob": 0.995
+    },
+    {
+      "word": "calculation.",
+      "start": 319.22,
+      "end": 319.7,
+      "prob": 0.742
+    },
+    {
+      "word": "Let's",
+      "start": 320.4,
+      "end": 320.62,
+      "prob": 0.911
+    },
+    {
+      "word": "check",
+      "start": 320.62,
+      "end": 320.78,
+      "prob": 0.997
+    },
+    {
+      "word": "your",
+      "start": 320.78,
+      "end": 321.0,
+      "prob": 0.991
+    },
+    {
+      "word": "answer.",
+      "start": 321.0,
+      "end": 321.38,
+      "prob": 0.993
+    },
+    {
+      "word": "First,",
+      "start": 322.08,
+      "end": 322.3,
+      "prob": 0.98
+    },
+    {
+      "word": "assume",
+      "start": 322.7,
+      "end": 322.92,
+      "prob": 0.984
+    },
+    {
+      "word": "we",
+      "start": 322.92,
+      "end": 323.16,
+      "prob": 0.97
+    },
+    {
+      "word": "have",
+      "start": 323.16,
+      "end": 323.38,
+      "prob": 0.998
+    },
+    {
+      "word": "100g",
+      "start": 323.38,
+      "end": 324.24,
+      "prob": 0.689
+    },
+    {
+      "word": "of",
+      "start": 324.24,
+      "end": 324.5,
+      "prob": 0.978
+    },
+    {
+      "word": "the",
+      "start": 324.5,
+      "end": 324.64,
+      "prob": 0.991
+    },
+    {
+      "word": "compound.",
+      "start": 324.64,
+      "end": 325.04,
+      "prob": 0.996
+    },
+    {
+      "word": "This",
+      "start": 325.56,
+      "end": 325.76,
+      "prob": 0.979
+    },
+    {
+      "word": "gives",
+      "start": 325.76,
+      "end": 325.98,
+      "prob": 0.982
+    },
+    {
+      "word": "us",
+      "start": 325.98,
+      "end": 326.24,
+      "prob": 0.998
+    },
+    {
+      "word": "52",
+      "start": 326.24,
+      "end": 326.86,
+      "prob": 0.987
+    },
+    {
+      "word": ".2g",
+      "start": 326.86,
+      "end": 327.8,
+      "prob": 0.72
+    },
+    {
+      "word": "of",
+      "start": 327.8,
+      "end": 327.96,
+      "prob": 0.892
+    },
+    {
+      "word": "carbon,",
+      "start": 327.96,
+      "end": 328.26,
+      "prob": 0.837
+    },
+    {
+      "word": "13g",
+      "start": 328.66,
+      "end": 329.36,
+      "prob": 0.937
+    },
+    {
+      "word": "of",
+      "start": 329.36,
+      "end": 329.58,
+      "prob": 0.962
+    },
+    {
+      "word": "hydrogen",
+      "start": 329.58,
+      "end": 330.06,
+      "prob": 0.98
+    },
+    {
+      "word": "and",
+      "start": 330.06,
+      "end": 330.6,
+      "prob": 0.746
+    },
+    {
+      "word": "34",
+      "start": 330.6,
+      "end": 331.12,
+      "prob": 0.997
+    },
+    {
+      "word": ".8g",
+      "start": 331.12,
+      "end": 331.94,
+      "prob": 0.982
+    },
+    {
+      "word": "of",
+      "start": 331.94,
+      "end": 332.2,
+      "prob": 0.969
+    },
+    {
+      "word": "oxygen.",
+      "start": 332.2,
+      "end": 332.7,
+      "prob": 0.982
+    },
+    {
+      "word": "Next,",
+      "start": 333.14,
+      "end": 333.5,
+      "prob": 0.994
+    },
+    {
+      "word": "divide",
+      "start": 334.02,
+      "end": 334.12,
+      "prob": 0.994
+    },
+    {
+      "word": "each",
+      "start": 334.12,
+      "end": 334.52,
+      "prob": 0.997
+    },
+    {
+      "word": "mass",
+      "start": 334.52,
+      "end": 334.82,
+      "prob": 0.995
+    },
+    {
+      "word": "by",
+      "start": 334.82,
+      "end": 335.12,
+      "prob": 0.997
+    },
+    {
+      "word": "its",
+      "start": 335.12,
+      "end": 335.26,
+      "prob": 0.931
+    },
+    {
+      "word": "relative",
+      "start": 335.26,
+      "end": 335.7,
+      "prob": 0.993
+    },
+    {
+      "word": "atomic",
+      "start": 335.7,
+      "end": 336.12,
+      "prob": 0.998
+    },
+    {
+      "word": "mass.",
+      "start": 336.12,
+      "end": 336.56,
+      "prob": 0.999
+    },
+    {
+      "word": "For",
+      "start": 337.0,
+      "end": 337.18,
+      "prob": 0.994
+    },
+    {
+      "word": "carbon,",
+      "start": 337.18,
+      "end": 337.54,
+      "prob": 0.895
+    },
+    {
+      "word": "52",
+      "start": 337.86,
+      "end": 338.34,
+      "prob": 0.996
+    },
+    {
+      "word": ".2",
+      "start": 338.34,
+      "end": 339.04,
+      "prob": 0.996
+    },
+    {
+      "word": "divided",
+      "start": 339.04,
+      "end": 339.38,
+      "prob": 0.594
+    },
+    {
+      "word": "by",
+      "start": 339.38,
+      "end": 339.72,
+      "prob": 0.987
+    },
+    {
+      "word": "12",
+      "start": 339.72,
+      "end": 340.14,
+      "prob": 0.992
+    },
+    {
+      "word": "gives",
+      "start": 340.14,
+      "end": 340.54,
+      "prob": 0.935
+    },
+    {
+      "word": "4",
+      "start": 340.54,
+      "end": 340.98,
+      "prob": 0.995
+    },
+    {
+      "word": ".35",
+      "start": 340.98,
+      "end": 341.72,
+      "prob": 0.992
+    },
+    {
+      "word": "moles.",
+      "start": 341.72,
+      "end": 342.32,
+      "prob": 0.834
+    },
+    {
+      "word": "For",
+      "start": 342.7,
+      "end": 342.8,
+      "prob": 0.96
+    },
+    {
+      "word": "hydrogen,",
+      "start": 342.8,
+      "end": 343.3,
+      "prob": 0.698
+    },
+    {
+      "word": "13",
+      "start": 343.8,
+      "end": 344.24,
+      "prob": 0.988
+    },
+    {
+      "word": "divided",
+      "start": 344.24,
+      "end": 344.62,
+      "prob": 0.708
+    },
+    {
+      "word": "by",
+      "start": 344.62,
+      "end": 344.96,
+      "prob": 0.99
+    },
+    {
+      "word": "1",
+      "start": 344.96,
+      "end": 345.44,
+      "prob": 0.946
+    },
+    {
+      "word": "gives",
+      "start": 345.44,
+      "end": 345.78,
+      "prob": 0.956
+    },
+    {
+      "word": "13",
+      "start": 345.78,
+      "end": 346.52,
+      "prob": 0.991
+    },
+    {
+      "word": "moles.",
+      "start": 346.52,
+      "end": 347.06,
+      "prob": 0.972
+    },
+    {
+      "word": "For",
+      "start": 347.72,
+      "end": 347.84,
+      "prob": 0.987
+    },
+    {
+      "word": "oxygen,",
+      "start": 347.84,
+      "end": 348.3,
+      "prob": 0.909
+    },
+    {
+      "word": "34",
+      "start": 348.68,
+      "end": 349.34,
+      "prob": 0.996
+    },
+    {
+      "word": ".8",
+      "start": 349.34,
+      "end": 350.08,
+      "prob": 0.989
+    },
+    {
+      "word": "divided",
+      "start": 350.08,
+      "end": 350.52,
+      "prob": 0.973
+    },
+    {
+      "word": "by",
+      "start": 350.52,
+      "end": 350.84,
+      "prob": 0.992
+    },
+    {
+      "word": "16",
+      "start": 350.84,
+      "end": 351.42,
+      "prob": 0.996
+    },
+    {
+      "word": "gives",
+      "start": 351.42,
+      "end": 352.0,
+      "prob": 0.974
+    },
+    {
+      "word": "2",
+      "start": 352.0,
+      "end": 352.44,
+      "prob": 0.996
+    },
+    {
+      "word": ".175",
+      "start": 352.44,
+      "end": 353.36,
+      "prob": 0.998
+    },
+    {
+      "word": "moles.",
+      "start": 353.36,
+      "end": 354.14,
+      "prob": 0.98
+    },
+    {
+      "word": "Now,",
+      "start": 354.82,
+      "end": 355.1,
+      "prob": 0.991
+    },
+    {
+      "word": "divide",
+      "start": 355.48,
+      "end": 355.82,
+      "prob": 0.988
+    },
+    {
+      "word": "all",
+      "start": 355.82,
+      "end": 356.22,
+      "prob": 0.992
+    },
+    {
+      "word": "3",
+      "start": 356.22,
+      "end": 356.52,
+      "prob": 0.413
+    },
+    {
+      "word": "values",
+      "start": 356.52,
+      "end": 356.94,
+      "prob": 0.991
+    },
+    {
+      "word": "by",
+      "start": 356.94,
+      "end": 357.26,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 357.26,
+      "end": 357.44,
+      "prob": 0.994
+    },
+    {
+      "word": "smallest,",
+      "start": 357.44,
+      "end": 357.88,
+      "prob": 0.991
+    },
+    {
+      "word": "which",
+      "start": 358.26,
+      "end": 358.36,
+      "prob": 0.993
+    },
+    {
+      "word": "is",
+      "start": 358.36,
+      "end": 358.52,
+      "prob": 0.996
+    },
+    {
+      "word": "2",
+      "start": 358.52,
+      "end": 358.82,
+      "prob": 0.992
+    },
+    {
+      "word": ".175.",
+      "start": 358.82,
+      "end": 359.6,
+      "prob": 0.997
+    },
+    {
+      "word": "For",
+      "start": 360.66,
+      "end": 360.92,
+      "prob": 0.995
+    },
+    {
+      "word": "carbon,",
+      "start": 360.92,
+      "end": 361.3,
+      "prob": 0.897
+    },
+    {
+      "word": "For",
+      "start": 363.16,
+      "end": 363.4,
+      "prob": 0.989
+    },
+    {
+      "word": "hydrogen,",
+      "start": 363.4,
+      "end": 363.78,
+      "prob": 0.966
+    },
+    {
+      "word": "we",
+      "start": 364.3,
+      "end": 364.36,
+      "prob": 0.997
+    },
+    {
+      "word": "obtain",
+      "start": 364.36,
+      "end": 364.76,
+      "prob": 0.994
+    },
+    {
+      "word": "approximately",
+      "start": 364.76,
+      "end": 365.38,
+      "prob": 0.977
+    },
+    {
+      "word": "6.",
+      "start": 365.38,
+      "end": 365.88,
+      "prob": 0.957
+    },
+    {
+      "word": "For",
+      "start": 366.52,
+      "end": 366.78,
+      "prob": 0.996
+    },
+    {
+      "word": "oxygen,",
+      "start": 366.78,
+      "end": 367.16,
+      "prob": 0.985
+    },
+    {
+      "word": "we",
+      "start": 367.5,
+      "end": 367.7,
+      "prob": 0.998
+    },
+    {
+      "word": "obtain",
+      "start": 367.7,
+      "end": 368.08,
+      "prob": 0.998
+    },
+    {
+      "word": "1.",
+      "start": 368.08,
+      "end": 368.56,
+      "prob": 0.955
+    },
+    {
+      "word": "Therefore,",
+      "start": 369.38,
+      "end": 369.64,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 370.06,
+      "end": 370.2,
+      "prob": 0.997
+    },
+    {
+      "word": "simplest",
+      "start": 370.2,
+      "end": 370.64,
+      "prob": 0.995
+    },
+    {
+      "word": "whole",
+      "start": 370.64,
+      "end": 370.98,
+      "prob": 0.881
+    },
+    {
+      "word": "number",
+      "start": 370.98,
+      "end": 371.28,
+      "prob": 0.899
+    },
+    {
+      "word": "ratio",
+      "start": 371.28,
+      "end": 371.76,
+      "prob": 0.993
+    },
+    {
+      "word": "is",
+      "start": 371.76,
+      "end": 372.12,
+      "prob": 0.995
+    },
+    {
+      "word": "2",
+      "start": 372.12,
+      "end": 372.58,
+      "prob": 0.969
+    },
+    {
+      "word": "to",
+      "start": 372.58,
+      "end": 372.9,
+      "prob": 0.88
+    },
+    {
+      "word": "6",
+      "start": 372.9,
+      "end": 373.24,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 373.24,
+      "end": 373.58,
+      "prob": 0.994
+    },
+    {
+      "word": "1.",
+      "start": 373.58,
+      "end": 373.92,
+      "prob": 0.992
+    },
+    {
+      "word": "The",
+      "start": 374.5,
+      "end": 374.68,
+      "prob": 0.99
+    },
+    {
+      "word": "empirical",
+      "start": 374.68,
+      "end": 375.06,
+      "prob": 0.974
+    },
+    {
+      "word": "formula",
+      "start": 375.06,
+      "end": 375.62,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 375.62,
+      "end": 376.06,
+      "prob": 0.995
+    },
+    {
+      "word": "C2H6O.",
+      "start": 376.06,
+      "end": 378.02,
+      "prob": 0.965
+    }
+  ],
+  "full_text": "In today's video, we want to look at empirical formulae. It builds on what we learned in our previous lesson about relative atomic mass and relative formula mass. Today, we will explain what an empirical formula is, how it is calculated and work through examples using both masses and percentage composition. You will also have the opportunity to try some questions yourself before we go through the answers together. Let's begin. What is an empirical formula? An empirical formula shows the simplest whole number ratio of atoms of each element in a compound. For example, glucose has the molecular formula C6H12O6. C6H12O6. This means that one molecule contains six carbon atoms, twelve hydrogen atoms, and six atoms. If we divide all these numbers by six we obtain a ratio of one to two to one. Therefore the empirical formula of glucose is CH2O. Notice that an empirical formula shows the simplest ratio of atoms, rather than necessarily showing the actual number of atoms in a molecule. How do we calculate an empirical formula? There. are four steps involved. First, write down the mass of each element. Second, divide each mass by its relative atomic mass to calculate the number of moles. Third, divide all the mole values by the smallest value. Finally, use the simplest whole number ratio to write the empirical formula. Let's apply these steps to an example. Example 1. Calculating empirical formula from masses. A compound contains 2 .4 grams of magnesium and 1 .6 grams of oxygen. Calculate its empirical formula. The relative atomic masses are magnesium 24 and oxygen 16. First, divide the mass of magnesium by its relative atomic mass. 2 .4 divided by 24 gives 0 MgO. MgO. MgO. empirical formula is MgO. Practice question 1. Now it's your turn. A compound contains 4 .6 grams of sodium and 1 .6 grams of oxygen. The relative atomic masses are sodium 23 and oxygen 16. Calculate its empirical formula. Pause the video Let's check your answer. First, divide the mass of sodium by its relative atomic mass. 4 .6 divided by 23 gives 0 .2 moles. For oxygen, 1 .6 divided by 16 gives 0 .1 moles. Next, divide both values by the smallest which is 0 .1. For sodium, 0 .2 divided by 0 .1 gives 2. For oxygen, 0 .1 divided by 0 .1 gives 1. Therefore, the simplest ratio of sodium to oxygen is 2 to 1. 1. The empirical formula is Na2O. Well done if you got that correct. Example 2. Calculating empirical formula from percentages. Sometimes examination questions give us the percentage composition of a compound rather than the masses. The method is almost the same except that we first assume a total mass of 100g. Let's consider an example. A compound contains 40 % carbon, 6 .7 % hydrogen and 53 .3 % oxygen. Calculate its empirical formula. The relative atomic masses are carbon 12, hydrogen 1 and oxygen 16. First, assume we have 100 grams of the compound. This gives us 40 grams of carbon, 6 .7 grams of hydrogen and 53 .3 grams of oxygen. Now, divide each mass by its relative atomic mass. For carbon, 40 divided by 12 gives approximately 3 .33 moles. For hydrogen 6 .7 divided by 1 gives 6 .7 moles. For oxygen 53 .3 divided by 16 gives approximately 3 .33 moles. Next divide all three values by the smallest approximately 3 .33. This gives us a ratio of approximately 1 to 2 to 1. Therefore, the empirical formula is CH2O. Remember, when percentages are given, assume 100g first, then follow the same steps. Practice question 2. Now, let's try our final question. A compound contains 52 .2 % carbon, 13 .0 % hydrogen and 34 .8 % oxygen. The relative atomic masses are carbon -12, hydrogen -1 and oxygen -16. Calculate its empirical formula. Pause the video and work through the calculation. Let's check your answer. First, assume we have 100g of the compound. This gives us 52 .2g of carbon, 13g of hydrogen and 34 .8g of oxygen. Next, divide each mass by its relative atomic mass. For carbon, 52 .2 divided by 12 gives 4 .35 moles. For hydrogen, 13 divided by 1 gives 13 moles. For oxygen, 34 .8 divided by 16 gives 2 .175 moles. Now, divide all 3 values by the smallest, which is 2 .175. For carbon, For hydrogen, we obtain approximately 6. For oxygen, we obtain 1. Therefore, the simplest whole number ratio is 2 to 6 to 1. The empirical formula is C2H6O."
+}

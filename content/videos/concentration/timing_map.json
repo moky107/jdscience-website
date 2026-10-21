@@ -1,0 +1,510 @@
+{
+  "topic": "concentration",
+  "title": "Calculating Concentration",
+  "audio": "/workspace/content/videos/concentration/source/narration_master.m4a",
+  "duration": 268.75,
+  "slides": [
+    {
+      "t": 0.0,
+      "id": "intro",
+      "note": "Hello \u2014 concentration"
+    },
+    {
+      "t": 30.1,
+      "id": "concept",
+      "note": "What is concentration?"
+    },
+    {
+      "t": 37.72,
+      "id": "solute_solvent",
+      "note": "Solute, solvent, solution"
+    },
+    {
+      "t": 54.72,
+      "id": "conc_dilute",
+      "note": "Concentrated vs dilute"
+    },
+    {
+      "t": 66.38,
+      "id": "formula_g",
+      "note": "c = mass / volume in g dm-3"
+    },
+    {
+      "t": 86.08,
+      "id": "convert",
+      "note": "1 dm3 = 1000 cm3"
+    },
+    {
+      "t": 100.74,
+      "id": "example1",
+      "note": "10 g NaCl in 250 cm3"
+    },
+    {
+      "t": 140.08,
+      "id": "formula_mol",
+      "note": "c = n / V in mol dm-3"
+    },
+    {
+      "t": 160.38,
+      "id": "example2",
+      "note": "0.5 mol NaOH in 250 cm3"
+    },
+    {
+      "t": 196.46,
+      "id": "practice_q",
+      "note": "8 g KCl in 200 cm3"
+    },
+    {
+      "t": 213.54,
+      "id": "practice_ans",
+      "note": "Let's check your answer"
+    },
+    {
+      "t": 240.48,
+      "id": "close",
+      "note": "End of lesson"
+    }
+  ],
+  "reveals": [
+    {
+      "t": 0.0,
+      "slide": "intro",
+      "item": "title"
+    },
+    {
+      "t": 12.18,
+      "slide": "intro",
+      "item": "a1"
+    },
+    {
+      "t": 14.66,
+      "slide": "intro",
+      "item": "a2"
+    },
+    {
+      "t": 20.54,
+      "slide": "intro",
+      "item": "a3"
+    },
+    {
+      "t": 24.38,
+      "slide": "intro",
+      "item": "a4"
+    },
+    {
+      "t": 32.26,
+      "slide": "concept",
+      "item": "def"
+    },
+    {
+      "t": 34.0,
+      "slide": "concept",
+      "item": "solute"
+    },
+    {
+      "t": 35.96,
+      "slide": "concept",
+      "item": "vol"
+    },
+    {
+      "t": 37.72,
+      "slide": "solute_solvent",
+      "item": "solute"
+    },
+    {
+      "t": 41.02,
+      "slide": "solute_solvent",
+      "item": "solvent"
+    },
+    {
+      "t": 52.94,
+      "slide": "solute_solvent",
+      "item": "solution"
+    },
+    {
+      "t": 54.72,
+      "slide": "conc_dilute",
+      "item": "conc"
+    },
+    {
+      "t": 59.3,
+      "slide": "conc_dilute",
+      "item": "dilute"
+    },
+    {
+      "t": 76.26,
+      "slide": "formula_g",
+      "item": "c"
+    },
+    {
+      "t": 77.28,
+      "slide": "formula_g",
+      "item": "m"
+    },
+    {
+      "t": 79.34,
+      "slide": "formula_g",
+      "item": "v"
+    },
+    {
+      "t": 76.26,
+      "slide": "formula_g",
+      "item": "eq"
+    },
+    {
+      "t": 80.96,
+      "slide": "formula_g",
+      "item": "units"
+    },
+    {
+      "t": 86.62,
+      "slide": "convert",
+      "item": "eq"
+    },
+    {
+      "t": 94.96,
+      "slide": "convert",
+      "item": "rule"
+    },
+    {
+      "t": 103.4,
+      "slide": "example1",
+      "item": "m10"
+    },
+    {
+      "t": 106.42,
+      "slide": "example1",
+      "item": "v250"
+    },
+    {
+      "t": 117.48,
+      "slide": "example1",
+      "item": "conv"
+    },
+    {
+      "t": 120.32,
+      "slide": "example1",
+      "item": "v025"
+    },
+    {
+      "t": 126.26,
+      "slide": "example1",
+      "item": "div"
+    },
+    {
+      "t": 128.32,
+      "slide": "example1",
+      "item": "c40"
+    },
+    {
+      "t": 133.88,
+      "slide": "example1",
+      "item": "note"
+    },
+    {
+      "t": 152.36,
+      "slide": "formula_mol",
+      "item": "c"
+    },
+    {
+      "t": 154.1,
+      "slide": "formula_mol",
+      "item": "n"
+    },
+    {
+      "t": 156.08,
+      "slide": "formula_mol",
+      "item": "v"
+    },
+    {
+      "t": 152.36,
+      "slide": "formula_mol",
+      "item": "eq"
+    },
+    {
+      "t": 163.1,
+      "slide": "example2",
+      "item": "n05"
+    },
+    {
+      "t": 166.26,
+      "slide": "example2",
+      "item": "v250"
+    },
+    {
+      "t": 174.76,
+      "slide": "example2",
+      "item": "conv"
+    },
+    {
+      "t": 180.24,
+      "slide": "example2",
+      "item": "v025"
+    },
+    {
+      "t": 187.28,
+      "slide": "example2",
+      "item": "div"
+    },
+    {
+      "t": 190.3,
+      "slide": "example2",
+      "item": "c2"
+    },
+    {
+      "t": 200.84,
+      "slide": "practice_q",
+      "item": "q"
+    },
+    {
+      "t": 203.94,
+      "slide": "practice_q",
+      "item": "v"
+    },
+    {
+      "t": 206.94,
+      "slide": "practice_q",
+      "item": "ask"
+    },
+    {
+      "t": 210.98,
+      "slide": "practice_q",
+      "item": "pause"
+    },
+    {
+      "t": 216.4,
+      "slide": "practice_ans",
+      "item": "conv"
+    },
+    {
+      "t": 222.96,
+      "slide": "practice_ans",
+      "item": "v02"
+    },
+    {
+      "t": 228.96,
+      "slide": "practice_ans",
+      "item": "div"
+    },
+    {
+      "t": 230.88,
+      "slide": "practice_ans",
+      "item": "c40"
+    },
+    {
+      "t": 237.02,
+      "slide": "practice_ans",
+      "item": "well"
+    },
+    {
+      "t": 244.84,
+      "slide": "close",
+      "item": "g"
+    },
+    {
+      "t": 250.2,
+      "slide": "close",
+      "item": "n"
+    },
+    {
+      "t": 256.8,
+      "slide": "close",
+      "item": "brand"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.0,
+      "target": null
+    },
+    {
+      "t": 37.92,
+      "target": "solute"
+    },
+    {
+      "t": 41.02,
+      "target": "solvent"
+    },
+    {
+      "t": 52.94,
+      "target": "solution"
+    },
+    {
+      "t": 54.5,
+      "target": null
+    },
+    {
+      "t": 54.86,
+      "target": "conc"
+    },
+    {
+      "t": 59.3,
+      "target": "dilute"
+    },
+    {
+      "t": 65.5,
+      "target": null
+    },
+    {
+      "t": 76.26,
+      "target": "c"
+    },
+    {
+      "t": 77.28,
+      "target": "m"
+    },
+    {
+      "t": 79.34,
+      "target": "v"
+    },
+    {
+      "t": 80.8,
+      "target": null
+    },
+    {
+      "t": 86.62,
+      "target": "one"
+    },
+    {
+      "t": 88.9,
+      "target": "thousand"
+    },
+    {
+      "t": 94.96,
+      "target": "rule"
+    },
+    {
+      "t": 98.5,
+      "target": null
+    },
+    {
+      "t": 103.4,
+      "target": "m10"
+    },
+    {
+      "t": 106.42,
+      "target": "v250"
+    },
+    {
+      "t": 117.48,
+      "target": "c250"
+    },
+    {
+      "t": 119.06,
+      "target": "c1000"
+    },
+    {
+      "t": 120.32,
+      "target": "v025"
+    },
+    {
+      "t": 126.26,
+      "target": "d10"
+    },
+    {
+      "t": 127.18,
+      "target": "d025"
+    },
+    {
+      "t": 128.32,
+      "target": "c40"
+    },
+    {
+      "t": 135.0,
+      "target": null
+    },
+    {
+      "t": 152.36,
+      "target": "eq"
+    },
+    {
+      "t": 154.1,
+      "target": "n"
+    },
+    {
+      "t": 156.08,
+      "target": "v"
+    },
+    {
+      "t": 158.2,
+      "target": null
+    },
+    {
+      "t": 163.1,
+      "target": "n05"
+    },
+    {
+      "t": 166.26,
+      "target": "v250"
+    },
+    {
+      "t": 175.14,
+      "target": "c250"
+    },
+    {
+      "t": 180.24,
+      "target": "v025"
+    },
+    {
+      "t": 187.28,
+      "target": "d05"
+    },
+    {
+      "t": 189.12,
+      "target": "d025"
+    },
+    {
+      "t": 190.3,
+      "target": "c2"
+    },
+    {
+      "t": 196.0,
+      "target": null
+    },
+    {
+      "t": 200.84,
+      "target": "q"
+    },
+    {
+      "t": 203.94,
+      "target": "v"
+    },
+    {
+      "t": 210.98,
+      "target": "pause"
+    },
+    {
+      "t": 213.4,
+      "target": null
+    },
+    {
+      "t": 220.56,
+      "target": "c200"
+    },
+    {
+      "t": 221.84,
+      "target": "c1000"
+    },
+    {
+      "t": 222.96,
+      "target": "v02"
+    },
+    {
+      "t": 228.96,
+      "target": "d8"
+    },
+    {
+      "t": 229.92,
+      "target": "d02"
+    },
+    {
+      "t": 230.88,
+      "target": "c40"
+    },
+    {
+      "t": 237.0,
+      "target": null
+    }
+  ],
+  "notes": "Master clock is the original ElevenLabs narration. Slide cuts, reveals and cursor events use word-level timestamps."
+}

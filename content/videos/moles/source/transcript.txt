@@ -1,0 +1,45 @@
+[0.00–6.48] Hello and welcome back to JD Science. In today's video, we want to look at the mole and how
+[6.48–12.14] it is used in chemical calculations. This builds on what we learnt about relative atomic
+[12.14–18.64] mass and relative formula mass. We will explain what a mole is, how to calculate the number
+[18.64–25.14] of moles from a given mass and how to calculate mass when the number of moles is known. You
+[25.14–29.78] will also have the opportunity to try a question before we work through the answer together.
+[30.32–39.18] Let's begin. What is a mole? Atoms, molecules and ions are extremely small particles. Because
+[39.18–45.66] of their small size, chemists cannot conveniently count them individually. Instead, we use a
+[45.66–55.30] unit called the mole. One mole contains approximately 6.02 x 10 to the power of 23 particles. This
+[55.30–62.10] number is known as the Avogadro constant. For example, one mole of carbon atoms contains
+[62.10–70.44] approximately 6.02 x 10 to the power of 23 carbon atoms. Similarly, one mole of water
+[70.44–76.76] molecules contains the same number of water molecules. However, one mole of carbon and
+[76.76–82.90] one mole of water do not have the same mass. Their masses depend on their relative atomic
+[82.90–90.68] or formula masses. What is molar mass? Molar mass is the mass of one mole of a substance.
+[91.24–98.02] It is measured in grams per mole. For example, the relative atomic mass of magnesium is 24.
+[98.54–106.18] Therefore, one mole of magnesium has a mass of approximately 24 grams. Water has the chemical
+[106.98–114.02] formula H2O. Its relative formula mass is calculated by adding two hydrogen atoms and one oxygen
+[114.02–122.46] atom. Two multiplied by one plus 16 gives 18. Therefore, one mole of water has a mass
+[122.46–129.70] of 18 grams. How do we calculate moles? To calculate the number of moles, we use the
+[129.70–137.24] formula. Number of moles equals mass divided by molar mass. The mass must be in grams while
+[137.24–142.50] molar mass is measured in grams per mole. Let's apply this formula to an example.
+[143.64–149.86] Worked example 1. Calculate the number of moles in 12 grams of magnesium. The relative
+[149.86–156.82] atomic mass of magnesium is 24. First, write down the formula. Number of magnesium equals
+[156.82–165.34] mass divided by molar mass. Next, substitute the values. 12 divided by 24 gives 0.5
+[165.34–172.40] Therefore, 12 grams of magnesium contains 0.5 moles. This means we have half a mole
+[172.40–178.86] of magnesium atoms. Worked example 2. Calculating mass. Sometimes
+[178.86–184.56] we are given the number of moles and asked to calculate the mass. In this case, we rearrange
+[184.56–192.04] the formula. Mass equals number of moles multiplied by molar mass. For example, calculate the
+[192.04–199.24] mass of two moles of carbon dioxide. Carbon dioxide has the formula CO2. The relative
+[199.24–206.10] atomic mass of carbon is 12 while oxygen is 16. Therefore, the relative formula mass
+[206.10–214.94] of carbon is 12 plus 2 multiplied by 16. This gives 44. Now, multiply the number of
+[214.94–222.50] moles by the molar mass. 2 multiplied by 44 gives 88. Therefore, the mass of two moles
+[222.50–228.18] of carbon dioxide is 88 grams. Practice question. Now it's your turn.
+[228.82–234.74] Calculate the number of moles in 9 grams of water. The relative atomic masses are hydrogen,
+[234.74–239.80] 1, and oxygen, 16. Pause the video and try the question.
+[240.50–245.98] Let's check your answer. First, calculate the relative formula mass of water. Water
+[245.98–254.28] is H2O. 2 multiplied by 1 plus 16 gives 18. Therefore, the molar mass of water is
+[254.28–261.48] 18 grams per mole. Next, divide the mass by the molar mass. 9 divided by 18 gives
+[261.48–269.56] 0.5. Therefore, 9 grams of water contains 0.5 moles. Well done if you got that correct.
+[270.18–270.60] Closing
+[271.16–276.84] That brings us to the end of today's lesson on moles. Remember, the mole allows chemists
+[276.84–281.80] to measure the amount of substance using a standard number of particles. To calculate
+[281.80–287.64] moles, divide the mass by the molar mass. To calculate mass, multiply the number of
+[287.82–292.30] moles by the molar mass. Thank you for watching JD Science. Please
+[292.30–297.78] like, subscribe and share this video with other learners. Until next time, keep learning
+[297.78–299.02] and keep practising.
