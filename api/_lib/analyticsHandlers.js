@@ -61,9 +61,12 @@ export function wantsAnalyticsEventRequest(req) {
 export function wantsAdminAnalyticsRequest(req, body = {}) {
   const scope = String(req.query?.scope || body.scope || '');
   const url = String(req.url || '');
+  const original = String(req.headers?.['x-forwarded-uri'] || req.headers?.['x-invoke-path'] || '');
   return scope === 'analytics'
     || url.includes('/api/admin-analytics')
-    || url.includes('scope=analytics');
+    || url.includes('scope=analytics')
+    || original.includes('/api/admin-analytics')
+    || original.includes('scope=analytics');
 }
 
 export async function handleAnalyticsEventRequest(req, res) {

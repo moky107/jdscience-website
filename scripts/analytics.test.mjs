@@ -8,6 +8,7 @@ import {
   ANALYTICS_EVENT_NAMES,
 } from "../api/_lib/analytics.js";
 import { aggregateAnalyticsDashboard } from "../api/_lib/analyticsAggregate.js";
+import { wantsAdminAnalyticsRequest } from "../api/_lib/analyticsHandlers.js";
 
 assert.equal(isAllowedEventName("page_view"), true);
 assert.equal(isAllowedEventName("hack_event"), false);
@@ -128,5 +129,10 @@ assert.match(dashboard.search_console.message, /not connected/i);
 assert.ok(dashboard.amazon.referral_paths.some((r) => r.path.includes("Facebook")));
 assert.ok(dashboard.shop.funnel.length === 5);
 assert.equal(dashboard.empty, false);
+
+assert.equal(wantsAdminAnalyticsRequest({ url: "/api/admin-education-posts", query: {} }, {}), false);
+assert.equal(wantsAdminAnalyticsRequest({ url: "/api/admin-education-posts?scope=analytics", query: { scope: "analytics" } }, {}), true);
+assert.equal(wantsAdminAnalyticsRequest({ url: "/api/admin-education-posts", query: {} }, { scope: "analytics" }), true);
+assert.equal(wantsAdminAnalyticsRequest({ url: "/api/admin-analytics", query: {} }, {}), true);
 
 console.log("analytics.test.mjs: ok");
