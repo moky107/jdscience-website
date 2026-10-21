@@ -19,14 +19,17 @@ import {
 import {
   LOCAL_AVATAR_FALLBACK,
   resolveTutorAvatarSrc,
+  shouldHideTutorPhoto,
   shouldUseAvatarImage,
 } from "../src/tutorAvatar.js";
 import {
   buildTutorPhotoApiUrl,
+  isFounderTutorSlug,
   isPublishedTutorRow,
   mimeTypeForTutorPath,
   normalizeTutorStoragePath,
   PROFILE_PHOTO_SIGNED_TTL_SECONDS,
+  toPublicTutor,
   TUTOR_PHOTO_API_PATH,
   TUTOR_STORAGE_BUCKET,
 } from "../api/_lib/tutors.js";
@@ -93,6 +96,20 @@ test("homepage hero carousel keeps original hero then chemistry → physics → 
   assert.equal(heroSlideIndex(4), 0);
   assert.match(heroObjectPosition(HERO_SLIDES[0], { isMobile: true }), /%/);
   assert.ok(existsSync(join(ROOT, "public", HERO_FALLBACK_IMG.replace(/^\//, ""))));
+});
+
+test("chemistry banner is hard-cropped and framed so Joseph's hands stay out of the hero", () => {
+  const chemistry = HERO_SLIDES.find((slide) => slide.id === "chemistry");
+  assert.ok(chemistry);
+  assert.match(chemistry.alt, /supervising/i);
+  assert.deepEqual(chemistry.objectPosition, {
+    desktop: "74% 48%",
+    tablet: "78% 46%",
+    mobile: "86% 42%",
+  });
+  assert.equal(heroObjectPosition(chemistry, {}), "74% 48%");
+  assert.equal(heroObjectPosition(chemistry, { isTablet: true }), "78% 46%");
+  assert.equal(heroObjectPosition(chemistry, { isMobile: true }), "86% 42%");
 });
 
 test("homepage hero subject banner images are shipped under public/images/", () => {
@@ -173,6 +190,32 @@ test("avatar fallback switches once without looping on the fallback asset", () =
   assert.equal(shouldUseAvatarImage("https://cdn.example/photo.jpg", false), true);
   assert.equal(shouldUseAvatarImage("", false), false);
   assert.equal(shouldUseAvatarImage("", true), true);
+});
+
+test("Joseph Danso tutor profile photo is hidden (initials avatar instead)", () => {
+  assert.equal(shouldHideTutorPhoto({ public_slug: "joseph-danso" }), true);
+  assert.equal(shouldHideTutorPhoto({ public_slug: "joseph-danso-4qy75y" }), true);
+  assert.equal(shouldHideTutorPhoto({ public_slug: "belinda-cooke-jre77z" }), false);
+  assert.equal(
+    shouldUseAvatarImage("https://cdn.example/joseph.jpg", false, { public_slug: "joseph-danso" }),
+    false,
+  );
+  assert.equal(
+    shouldUseAvatarImage("https://cdn.example/other.jpg", false, { public_slug: "belinda-cooke-jre77z" }),
+    true,
+  );
+  assert.equal(isFounderTutorSlug("joseph-danso"), true);
+  assert.equal(isFounderTutorSlug("joseph-danso-abc123"), true);
+  assert.equal(isFounderTutorSlug("belinda-cooke"), false);
+  assert.equal(
+    toPublicTutor({
+      id: "1",
+      public_slug: "joseph-danso",
+      tutor_name: "Joseph Danso",
+      profile_photo_url: "/api/tutor-photo?slug=joseph-danso",
+    }).profile_photo_url,
+    null,
+  );
 });
 
 console.log("All media/tutor photo regression checks passed.");
