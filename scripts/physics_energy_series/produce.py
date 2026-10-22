@@ -80,12 +80,9 @@ async def _edge(text: str, dest: Path) -> list[dict]:
     return words
 
 
-def _eleven(text: str, dest: Path) -> list[dict] | None:
-    key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
-    voice = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
-    if not key or not voice:
-        return None
+def _eleven_once(text: str, dest: Path, key: str, voice: str) -> list[dict]:
     import base64
+    import urllib.error
     import urllib.request
 
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps"
@@ -99,8 +96,12 @@ def _eleven(text: str, dest: Path) -> list[dict] | None:
         "Content-Type": "application/json",
         "Accept": "application/json",
     })
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        data = json.loads(resp.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=180) as resp:
+            data = json.loads(resp.read().decode())
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode(errors="replace")[:500]
+        raise RuntimeError(f"ElevenLabs HTTP {exc.code}: {detail}") from exc
     dest.write_bytes(base64.b64decode(data["audio_base64"]))
     alignment = data.get("alignment") or data.get("normalized_alignment") or {}
     chars = alignment.get("characters") or []
@@ -126,11 +127,37 @@ def _eleven(text: str, dest: Path) -> list[dict] | None:
     return words
 
 
+def _eleven(text: str, dest: Path) -> list[dict] | None:
+    key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    voice = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
+    if not key or not voice:
+        return None
+    last = None
+    for attempt in range(5):
+        try:
+            return _eleven_once(text, dest, key, voice)
+        except Exception as exc:  # transient auth / rate-limit / network
+            last = exc
+            detail = str(exc)
+            if "quota_exceeded" in detail:
+                raise RuntimeError(
+                    f"ElevenLabs quota exceeded while narrating {dest.name}. "
+                    f"Top up characters at https://elevenlabs.io/app/subscription/api then re-run "
+                    f"with --force-audio. Detail: {detail}"
+                ) from exc
+            wait = 2.0 * (attempt + 1)
+            print(f"    elevenlabs retry {attempt + 1}/5 after {wait:.0f}s: {exc}", flush=True)
+            import time
+            time.sleep(wait)
+    raise RuntimeError(f"ElevenLabs narration failed for {dest.name}: {last}")
+
+
 async def synthesize(text: str, dest: Path) -> list[dict]:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    eleven = _eleven(text, dest)
-    if eleven is not None:
-        return eleven
+    key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    voice = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
+    if key and voice:
+        return _eleven(text, dest)
     last = None
     for attempt in range(4):
         try:

@@ -1,8 +1,8 @@
 {
   "title": "Energy Stores and Pathways",
   "file": "01_Energy_Stores_and_Pathways.mp4",
-  "duration": 214.48200000000003,
-  "voice": "en-NG-AbeoNeural",
+  "duration": 231.70142900000005,
+  "voice": "elevenlabs",
   "scenes": [
     {
       "index": 0,
@@ -10,7 +10,7 @@
       "diagram": "title",
       "title": "Energy Stores and Pathways",
       "start": 0.45,
-      "duration": 22.272,
+      "duration": 24.973061,
       "pause": 0.0,
       "text": "Hello and welcome back to JD Science. In today's lesson, we will identify the main energy stores, explain the pathways by which energy is transferred, and apply this knowledge to GCSE examination questions. If you find these explanations useful, please subscribe to JD Science and visit jdscience.co.uk for further revision resources."
     },
@@ -19,8 +19,8 @@
       "layout": "explain",
       "diagram": "stores",
       "title": "Eight energy stores",
-      "start": 23.022,
-      "duration": 53.16,
+      "start": 25.723061,
+      "duration": 58.592653,
       "pause": 0.0,
       "text": "Energy cannot be created or destroyed. It can be transferred between stores, but the total energy is conserved. In GCSE Physics, the eight energy stores are chemical, kinetic, gravitational potential, elastic potential, thermal or internal, magnetic, electrostatic and nuclear. Food, fuels and batteries have chemical energy stores. Moving objects have kinetic energy stores. Raised objects have gravitational potential energy stores. A stretched spring or elastic band has an elastic potential energy store. Every object has an internal energy store, which can change when its temperature changes or its state changes. Magnetic and electrostatic stores are associated with interactions involving magnetic and electric fields, while the nuclear store is associated with atomic nuclei."
     },
@@ -29,8 +29,8 @@
       "layout": "explain",
       "diagram": "pathways",
       "title": "Four transfer pathways",
-      "start": 76.48199999999999,
-      "duration": 27.744,
+      "start": 84.615714,
+      "duration": 29.988571,
       "pause": 0.0,
       "text": "There are four ways in which energy can be transferred: mechanically, when a force does work; electrically, when charges move through a potential difference; by heating, because of a temperature difference; and by radiation, including electromagnetic waves and sound waves. Remember that light and sound are transfer mechanisms, not energy stores. To describe an energy change, identify the initial store, the transfer pathway and the final store."
     },
@@ -39,8 +39,8 @@
       "layout": "explain",
       "diagram": "toycar",
       "title": "Battery-powered toy car",
-      "start": 104.52599999999998,
-      "duration": 25.872,
+      "start": 114.904285,
+      "duration": 29.857959,
       "pause": 0.0,
       "text": "Consider a battery-powered toy car. The battery's chemical energy store decreases. Energy is transferred electrically to the motor, then mechanically to the moving car, increasing its kinetic energy store. Some energy is also transferred to the internal energy stores of the motor and surroundings, and some is carried away by sound. The energy has not disappeared: it has been transferred to other stores."
     },
@@ -49,8 +49,8 @@
       "layout": "question",
       "diagram": "catapult",
       "title": "Your turn",
-      "start": 130.69799999999998,
-      "duration": 12.24,
+      "start": 145.06224400000002,
+      "duration": 12.486531,
       "pause": 5.0,
       "text": "Now it is your turn. A catapult fires a pellet using a stretched elastic band. Pause the video and name the initial energy store, the final energy store and the transfer pathway."
     },
@@ -59,8 +59,8 @@
       "layout": "answer",
       "diagram": "catapult",
       "title": "Worked answer",
-      "start": 148.238,
-      "duration": 16.392,
+      "start": 162.84877500000005,
+      "duration": 17.136327,
       "pause": 0.0,
       "text": "The stretched band initially has an elastic potential energy store. When released, the band exerts a force on the pellet and transfers energy mechanically, increasing the pellet's kinetic energy store. Some energy may also be transferred to the surroundings."
     },
@@ -69,8 +69,8 @@
       "layout": "exam",
       "diagram": "tea",
       "title": "GCSE-style question",
-      "start": 164.93,
-      "duration": 30.888,
+      "start": 180.28510200000005,
+      "duration": 33.044898,
       "pause": 0.0,
       "text": "Here is a GCSE-style question worth two marks. A student holds a hot cup of tea. Describe how energy is transferred from the tea to the surrounding air. A model answer is: because the tea is hotter than the surrounding air, energy is transferred by heating from the tea to the air. The tea's internal energy store decreases, while the internal energy store of the surroundings increases. Award one mark for the heating transfer and one for correctly identifying the changes in the energy stores."
     },
@@ -79,8 +79,8 @@
       "layout": "end",
       "diagram": "end",
       "title": "Keep practising",
-      "start": 196.11800000000002,
-      "duration": 17.664,
+      "start": 213.63000000000005,
+      "duration": 17.371429,
       "pause": 0.0,
       "text": "The key examination technique is to name both the store and the pathway accurately. If this lesson helped, please like the video, subscribe to JD Science and visit jdscience.co.uk for more GCSE Physics explanations. Thank you for watching, and keep practising."
     }

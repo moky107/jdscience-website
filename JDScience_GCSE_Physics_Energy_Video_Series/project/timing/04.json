@@ -1,8 +1,8 @@
 {
   "title": "Energy Stores and Systems",
   "file": "04_Energy_Stores_and_Systems.mp4",
-  "duration": 208.35000000000002,
-  "voice": "en-NG-AbeoNeural",
+  "duration": 214.18673399999997,
+  "voice": "elevenlabs",
   "scenes": [
     {
       "index": 0,
@@ -10,7 +10,7 @@
       "diagram": "title",
       "title": "Energy Stores and Systems",
       "start": 0.45,
-      "duration": 21.72,
+      "duration": 23.405714,
       "pause": 0.0,
       "text": "Hello and welcome back to JD Science. Today we will look at energy stores within systems and trace how energy moves when objects interact. We will use a thrown ball, a skier and a braking lorry to practise the kind of explanation needed in GCSE Physics. Please subscribe and visit jdscience.co.uk for more resources."
     },
@@ -19,8 +19,8 @@
       "layout": "explain",
       "diagram": "system",
       "title": "Systems and stores",
-      "start": 22.47,
-      "duration": 49.128,
+      "start": 24.155714,
+      "duration": 45.583673,
       "pause": 0.0,
       "text": "In Physics, a system is an object or group of objects being considered. We can track energy entering or leaving a system and energy transferred between stores within it. Energy is conserved: it does not vanish when a machine slows down or an object stops moving. It is transferred into other stores, often the internal energy stores of the objects and their surroundings. A helpful method is to identify the system, name the initial energy store, explain the transfer pathway and state which store increases. If there are several transfers, follow them in order. Remember that energy is measured in joules. One kilojoule equals one thousand joules, and one megajoule equals one million joules. Convert quantities into consistent units before comparing them."
     },
@@ -29,8 +29,8 @@
       "layout": "explain",
       "diagram": "ballpath",
       "title": "A ball thrown upwards",
-      "start": 71.898,
-      "duration": 41.568,
+      "start": 70.03938699999999,
+      "duration": 44.852245,
       "pause": 0.0,
       "text": "Imagine throwing a ball vertically upwards. Immediately after release, the ball has kinetic energy. As it rises, gravity does negative work on the ball: the ball's kinetic energy store decreases and its gravitational potential energy store increases. At its highest point, its speed is momentarily zero, so its kinetic energy is zero. As it falls, its gravitational potential energy store decreases while its kinetic energy increases. If air resistance is negligible, the sum of these two stores remains constant. In reality, some energy is transferred to the internal energy stores of the air and ball because of air resistance."
     },
@@ -39,8 +39,8 @@
       "layout": "question",
       "diagram": "skier",
       "title": "Your turn",
-      "start": 113.76599999999999,
-      "duration": 11.544,
+      "start": 115.19163199999998,
+      "duration": 10.161633,
       "pause": 5.0,
       "text": "Now it is your turn. A skier starts from rest at the top of a slope and moves downhill. Pause the video and describe at least two energy stores and one transfer pathway."
     },
@@ -49,8 +49,8 @@
       "layout": "answer",
       "diagram": "skier",
       "title": "Worked answer",
-      "start": 130.61,
-      "duration": 24.816,
+      "start": 130.65326499999998,
+      "duration": 25.861224,
       "pause": 0.0,
       "text": "At the top, the skier has gravitational potential energy relative to the bottom of the slope. As the skier descends, gravity transfers energy mechanically, decreasing the gravitational potential energy store and increasing the kinetic energy store. Friction and air resistance also transfer energy to the internal energy stores of the skis, snow and air. Sound can carry some energy away."
     },
@@ -59,8 +59,8 @@
       "layout": "exam",
       "diagram": "lorry",
       "title": "GCSE-style question",
-      "start": 155.72600000000003,
-      "duration": 37.392,
+      "start": 156.81448899999998,
+      "duration": 42.814694,
       "pause": 0.0,
       "text": "Here is a three-mark GCSE-style question. A lorry travels along a road and the driver brakes until it stops. Describe the energy changes. A model answer is: the lorry's kinetic energy store decreases. Friction at the brakes transfers energy mechanically to the internal energy stores of the brake components, which become hotter. Energy is also transferred to the surroundings, including by heating and sound. Award one mark for the decreasing kinetic store, one for the increasing internal energy store of the brakes, and one for a correct account of energy transfer to the surroundings."
     },
@@ -69,8 +69,8 @@
       "layout": "end",
       "diagram": "end",
       "title": "Keep practising",
-      "start": 193.41800000000003,
-      "duration": 14.232,
+      "start": 199.929183,
+      "duration": 13.557551,
       "pause": 0.0,
       "text": "Remember: start with the system, identify the stores, and explain the transfer. Subscribe to JD Science and visit jdscience.co.uk for further GCSE Physics revision. Thank you for watching."
     }

@@ -1,8 +1,8 @@
 {
   "title": "Kinetic Energy",
   "file": "03_Kinetic_Energy.mp4",
-  "duration": 210.52200000000002,
-  "voice": "en-NG-AbeoNeural",
+  "duration": 215.818979,
+  "voice": "elevenlabs",
   "scenes": [
     {
       "index": 0,
@@ -10,7 +10,7 @@
       "diagram": "title",
       "title": "Kinetic Energy",
       "start": 0.45,
-      "duration": 19.08,
+      "duration": 20.610612,
       "pause": 0.0,
       "text": "Hello and welcome back to JD Science. In today's lesson we will explain kinetic energy, learn why speed has such a large effect on it, and work through calculations and GCSE examination questions. Please subscribe to JD Science and visit jdscience.co.uk for more revision support."
     },
@@ -19,8 +19,8 @@
       "layout": "explain",
       "diagram": "ke",
       "title": "Kinetic energy",
-      "start": 19.83,
-      "duration": 27.192,
+      "start": 21.360612,
+      "duration": 26.148571,
       "pause": 0.0,
       "text": "Kinetic energy is the energy stored by an object because it is moving. The equation is kinetic energy equals one half multiplied by mass multiplied by speed squared. In symbols, E sub k equals one half m v squared. The mass must be in kilograms, the speed in metres per second and the energy in joules. In this equation, v represents speed, although you may hear it called velocity in some explanations."
     },
@@ -29,8 +29,8 @@
       "layout": "explain",
       "diagram": "ke_square",
       "title": "Why speed matters",
-      "start": 47.321999999999996,
-      "duration": 30.288,
+      "start": 47.809183,
+      "duration": 30.223673,
       "pause": 0.0,
       "text": "The most important feature of the equation is the square on the speed. If an object's speed doubles while its mass remains constant, its kinetic energy becomes four times as large. If its speed triples, its kinetic energy becomes nine times as large. By contrast, doubling the mass at the same speed only doubles the kinetic energy. This explains why an increase in road speed can produce a disproportionately large increase in the energy that must be transferred when a vehicle stops."
     },
@@ -39,8 +39,8 @@
       "layout": "explain",
       "diagram": "ke_car",
       "title": "Worked example",
-      "start": 77.91,
-      "duration": 29.184,
+      "start": 78.33285599999999,
+      "duration": 25.573878,
       "pause": 0.0,
       "text": "For calculations, first square the speed, then multiply by the mass and finally divide by two. Consider a car with a mass of 1,200 kilograms travelling at 20 metres per second. Twenty squared is 400. Multiply 400 by 1,200 to obtain 480,000. Half of that is 240,000 joules, or 240 kilojoules. This is the car's kinetic energy."
     },
@@ -49,8 +49,8 @@
       "layout": "question",
       "diagram": "ball_ke",
       "title": "Your turn",
-      "start": 107.39399999999999,
-      "duration": 11.688,
+      "start": 104.206734,
+      "duration": 11.41551,
       "pause": 5.0,
       "text": "Now it is your turn. A ball has a mass of 0.15 kilograms and travels at eight metres per second. Pause the video and calculate its kinetic energy."
     },
@@ -59,8 +59,8 @@
       "layout": "answer",
       "diagram": "ball_ke",
       "title": "Worked answer",
-      "start": 124.38199999999999,
-      "duration": 15.0,
+      "start": 120.92224399999999,
+      "duration": 16.195918,
       "pause": 0.0,
       "text": "Eight squared is 64; 0.15 multiplied by 64 equals 9.6; half of 9.6 is 4.8 joules. Remember that forgetting to square the speed or forgetting the factor of one half are common errors."
     },
@@ -69,8 +69,8 @@
       "layout": "exam",
       "diagram": "cycle",
       "title": "GCSE-style question",
-      "start": 139.68200000000002,
-      "duration": 52.68,
+      "start": 137.418162,
+      "duration": 60.604082,
       "pause": 0.0,
       "text": "Here is a GCSE-style question. A cyclist and bicycle have a combined mass of 80 kilograms and travel at six metres per second. Part A, worth three marks: calculate their kinetic energy. Part B, worth two marks: explain what happens to their kinetic energy if their speed doubles. For Part A, one half multiplied by 80 multiplied by six squared equals 40 multiplied by 36, giving 1,440 joules. Award one mark for the equation or correct use of the squared speed, one for substitution and one for the answer with its unit. For Part B, kinetic energy is proportional to speed squared. Doubling speed gives two squared, which is four, so the kinetic energy becomes four times as large. Award one mark for the squared relationship and one for the factor of four."
     },
@@ -79,8 +79,8 @@
       "layout": "end",
       "diagram": "end",
       "title": "Keep practising",
-      "start": 192.66200000000003,
-      "duration": 17.16,
+      "start": 198.322244,
+      "duration": 16.796735,
       "pause": 0.0,
       "text": "When answering GCSE questions, always check whether the mass or the speed has changed. They affect kinetic energy differently. Subscribe to JD Science and visit jdscience.co.uk for more explanations and practice. Thank you for watching."
     }
