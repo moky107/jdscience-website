@@ -1,0 +1,108 @@
+{
+  "title": "Non-Renewable Energy Resources",
+  "file": "09_Non_Renewable_Energy_Resources.mp4",
+  "duration": 296.37979700000005,
+  "voice": "elevenlabs",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Non-Renewable Energy Resources",
+      "start": 0.45,
+      "duration": 22.648163,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we will examine non-renewable energy resources, including coal, oil, natural gas and nuclear fuels. We will compare their advantages and disadvantages and practise GCSE examination questions. Please subscribe and visit jdscience.co.uk for more revision resources."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "finite",
+      "title": "Non-renewable resources",
+      "start": 23.398163,
+      "duration": 34.951837,
+      "pause": 0.0,
+      "text": "A non-renewable energy resource is used faster than it is naturally replaced on human timescales, so its accessible supply is finite. Coal, oil and natural gas are fossil fuels formed from ancient organic material over millions of years. They are extracted from the Earth and burnt to release energy from their chemical stores. Uranium is also a finite resource, but in a nuclear power station energy is released through nuclear fission rather than combustion."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "coal",
+      "title": "Coal",
+      "start": 58.64999999999999,
+      "duration": 26.644898,
+      "pause": 0.0,
+      "text": "Coal is mined and may be burnt to heat water, producing steam that drives a turbine and generator. It has historically provided controllable electricity generation, but mining can damage environments and endanger workers. Burning coal releases carbon dioxide, which contributes to climate change, and may release other pollutants such as sulfur dioxide and particulates."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "oilgas",
+      "title": "Oil and natural gas",
+      "start": 85.59489799999999,
+      "duration": 41.691429,
+      "pause": 0.0,
+      "text": "Oil is extracted from underground reservoirs and refined into fuels, including petrol, diesel and aviation fuel. Liquid fuels are relatively easy to store and transport and have a high energy density. However, oil is finite, burning it releases carbon dioxide, and spills can damage ecosystems. Natural gas is extracted from gas fields and used for heating, industry and electricity generation. It usually releases less carbon dioxide per unit of electricity than coal, but it is still a fossil fuel. Methane leakage during extraction and distribution is an additional environmental concern."
+    },
+    {
+      "index": 4,
+      "layout": "explain",
+      "diagram": "nuclear",
+      "title": "Nuclear fuel",
+      "start": 127.58632699999998,
+      "duration": 41.822041,
+      "pause": 0.0,
+      "text": "Nuclear power stations use controlled fission reactions to release energy from nuclear fuel. The energy heats water or another coolant, enabling steam to drive turbines and generators. Nuclear power produces very low direct carbon dioxide emissions during operation and can provide large amounts of controllable electricity. However, power stations are expensive to build and decommission, radioactive waste requires careful long-term management, and safety systems are essential. The amount of energy released per kilogram of nuclear fuel is very high, but this does not make the resource infinite."
+    },
+    {
+      "index": 5,
+      "layout": "explain",
+      "diagram": "compare_fuels",
+      "title": "Coal compared with gas",
+      "start": 169.708368,
+      "duration": 24.659592,
+      "pause": 0.0,
+      "text": "Let us compare coal and gas. For electricity generation, gas usually releases less carbon dioxide than coal for the same electrical output. Nevertheless, both are finite fuels and both contribute to greenhouse gas emissions. A strong comparison should consider cost, reliability, pollution and climate impact rather than calling one fuel completely clean."
+    },
+    {
+      "index": 6,
+      "layout": "question",
+      "diagram": "oil",
+      "title": "Your turn",
+      "start": 194.66796000000002,
+      "duration": 5.250612,
+      "pause": 5.0,
+      "text": "Now it is your turn. Name one advantage and one disadvantage of oil. Pause the video."
+    },
+    {
+      "index": 7,
+      "layout": "answer",
+      "diagram": "oil",
+      "title": "Worked answer",
+      "start": 205.21857200000002,
+      "duration": 19.487347,
+      "pause": 0.0,
+      "text": "One advantage is that it can be refined into high-energy-density transport fuels that are convenient to store and transport. One disadvantage is that burning it releases carbon dioxide. You could also mention its finite supply or the environmental impact of spills."
+    },
+    {
+      "index": 8,
+      "layout": "exam",
+      "diagram": "compare_fuels",
+      "title": "GCSE-style question",
+      "start": 225.00591900000003,
+      "duration": 55.196735,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question. Part A, worth two marks: give two disadvantages of using coal to generate electricity. Model answer: coal combustion releases carbon dioxide, contributing to climate change; coal mining can damage the environment and pose risks to workers. Award one mark for each valid disadvantage. Part B, worth two marks: explain why nuclear fuel is classified as non-renewable despite its high energy density. Model answer: uranium exists in finite accessible deposits and is not replenished on human timescales. Although a small mass of fuel can release a large amount of energy, the fuel supply is not unlimited. Award one mark for finite uranium and one for distinguishing energy density from renewability."
+    },
+    {
+      "index": 9,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 280.50265400000006,
+      "duration": 15.177143,
+      "pause": 0.0,
+      "text": "Remember: evaluate each resource using evidence and avoid claiming that any finite fuel lasts indefinitely. Subscribe to JD Science and visit jdscience.co.uk. Thank you for watching."
+    }
+  ]
+}
