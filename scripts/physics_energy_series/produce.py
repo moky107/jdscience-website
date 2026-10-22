@@ -89,7 +89,14 @@ def _eleven_once(text: str, dest: Path, key: str, voice: str) -> list[dict]:
     payload = json.dumps({
         "text": text,
         "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-        "voice_settings": {"stability": 0.5, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": True},
+        # Max similarity to the Instant Clone; lower stability keeps more of the
+        # recorded timbre. Do not remap accent or language.
+        "voice_settings": {
+            "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.30")),
+            "similarity_boost": float(os.environ.get("ELEVENLABS_SIMILARITY", "1.0")),
+            "style": 0.0,
+            "use_speaker_boost": True,
+        },
     }).encode()
     req = urllib.request.Request(url, data=payload, headers={
         "xi-api-key": key,
@@ -270,7 +277,15 @@ async def ensure_scene_audio(video_n: int, index: int, text: str, force: bool) -
     mp3 = folder / f"s{index:02d}.mp3"
     meta = folder / f"s{index:02d}.json"
     spoken = speakable(text)
-    signature = json.dumps({"text": spoken, "voice": VOICE, "rate": RATE, "eleven": bool(os.environ.get("ELEVENLABS_API_KEY"))})
+    signature = json.dumps({
+        "text": spoken,
+        "voice": VOICE,
+        "rate": RATE,
+        "eleven": bool(os.environ.get("ELEVENLABS_API_KEY")),
+        "stability": float(os.environ.get("ELEVENLABS_STABILITY", "0.30")),
+        "similarity": float(os.environ.get("ELEVENLABS_SIMILARITY", "1.0")),
+        "model": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
+    })
     if mp3.exists() and meta.exists() and not force:
         saved = json.loads(meta.read_text())
         if saved.get("signature") == signature:
