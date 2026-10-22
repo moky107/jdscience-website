@@ -1,0 +1,88 @@
+{
+  "title": "Gravitational Potential Energy",
+  "file": "02_Gravitational_Potential_Energy.mp4",
+  "duration": 210.21000000000004,
+  "voice": "en-NG-AbeoNeural",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Gravitational Potential Energy",
+      "start": 0.45,
+      "duration": 23.496,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we are exploring gravitational potential energy, often shortened to GPE. We will explain how an object gains GPE, calculate changes in its energy store, and practise a GCSE examination question. Subscribe for more clear Physics explanations and visit jdscience.co.uk for revision resources."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "gpe",
+      "title": "Gravitational potential energy",
+      "start": 24.246,
+      "duration": 40.08,
+      "pause": 0.0,
+      "text": "When you lift an object, you do work against the force of gravity. Energy is transferred to the object's gravitational potential energy store. When the object falls, its gravitational potential energy store decreases and, if we ignore air resistance, its kinetic energy store increases by the same amount. The equation is: change in gravitational potential energy equals mass multiplied by gravitational field strength multiplied by change in vertical height. In symbols, delta E sub p equals m times g times delta h. Mass is measured in kilograms, gravitational field strength in newtons per kilogram, height in metres and energy in joules."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "gpe_method",
+      "title": "Calculation method",
+      "start": 64.62599999999999,
+      "duration": 34.824,
+      "pause": 0.0,
+      "text": "A reliable calculation method is to write the equation, identify each value with its unit, substitute and calculate, then state the answer with its unit. Be particularly careful to use the vertical change in height, not the distance travelled along a slope. If mass is given in grams, divide by one thousand to convert it into kilograms. Use the value of gravitational field strength supplied in the question. GCSE questions often use ten newtons per kilogram, although the value near Earth's surface is approximately 9.8 newtons per kilogram."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "piledriver",
+      "title": "Worked example",
+      "start": 99.74999999999999,
+      "duration": 25.488,
+      "pause": 0.0,
+      "text": "Let us consider a pile driver. A hammer with a mass of 120 kilograms is raised through a vertical height of four metres. Taking g as ten newtons per kilogram, the change in GPE equals 120 multiplied by ten multiplied by four. That is 4,800 joules. The hammer has gained 4,800 joules in its gravitational potential energy store."
+    },
+    {
+      "index": 4,
+      "layout": "question",
+      "diagram": "bag",
+      "title": "Your turn",
+      "start": 125.53799999999998,
+      "duration": 13.776,
+      "pause": 5.0,
+      "text": "Now it is your turn. A two-kilogram shopping bag is lifted vertically by three metres. Use g equals ten newtons per kilogram. Pause the video and calculate the increase in GPE."
+    },
+    {
+      "index": 5,
+      "layout": "answer",
+      "diagram": "bag",
+      "title": "Worked answer",
+      "start": 144.614,
+      "duration": 12.672,
+      "pause": 0.0,
+      "text": "The answer is two multiplied by ten multiplied by three, which equals 60 joules. If you obtained 60 joules, well done. If not, check the units and the vertical height."
+    },
+    {
+      "index": 6,
+      "layout": "exam",
+      "diagram": "crane",
+      "title": "GCSE-style question",
+      "start": 157.586,
+      "duration": 34.8,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question worth three marks. A crane lifts a 500-kilogram load through a vertical height of 20 metres. Gravitational field strength is ten newtons per kilogram. Calculate the increase in GPE. The model answer is: delta E sub p equals m g delta h; 500 multiplied by ten multiplied by 20 equals 100,000 joules, or one times ten to the power of five joules. Award one mark for the correct equation, one for correct substitution and one for the correct answer with its unit."
+    },
+    {
+      "index": 7,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 192.68600000000004,
+      "duration": 16.824,
+      "pause": 0.0,
+      "text": "Remember to show your working even when you use a calculator. Method marks can be awarded if a final arithmetic error occurs. For more worked examples, subscribe to JD Science and visit jdscience.co.uk. Thank you for watching."
+    }
+  ]
+}
