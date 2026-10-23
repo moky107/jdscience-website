@@ -1,16 +1,17 @@
 {
   "title": "Energy Efficiency",
   "file": "06_Energy_Efficiency.mp4",
-  "duration": 208.41000000000003,
-  "voice": "en-NG-AbeoNeural",
+  "duration": 222.672653,
+  "voice": "elevenlabs-clone",
+  "model": "eleven_multilingual_v2",
   "scenes": [
     {
       "index": 0,
       "layout": "title",
       "diagram": "title",
       "title": "Energy Efficiency",
-      "start": 0.45,
-      "duration": 19.92,
+      "start": 0.5,
+      "duration": 21.55102,
       "pause": 0.0,
       "text": "Hello and welcome back to JD Science. In this lesson, we will define energy efficiency, calculate it as a decimal or percentage, and practise questions involving a wind turbine, a lamp and an electric motor. Please subscribe to JD Science and visit jdscience.co.uk for further support."
     },
@@ -19,8 +20,8 @@
       "layout": "explain",
       "diagram": "efficiency",
       "title": "What efficiency means",
-      "start": 20.67,
-      "duration": 28.872,
+      "start": 22.45102,
+      "duration": 32.444082,
       "pause": 0.0,
       "text": "Efficiency measures the proportion of the total energy input that is transferred usefully. The equation is efficiency equals useful energy output divided by total energy input. To express efficiency as a percentage, multiply the decimal answer by one hundred. You can also calculate efficiency using useful power output divided by total power input. Use energy with energy, or power with power; do not mix them in the same ratio."
     },
@@ -29,8 +30,8 @@
       "layout": "explain",
       "diagram": "eff_loss",
       "title": "Why efficiency is below 100%",
-      "start": 49.842,
-      "duration": 23.64,
+      "start": 55.295102,
+      "duration": 26.226939,
       "pause": 0.0,
       "text": "A perfectly efficient device would transfer all its input energy usefully, but real devices usually transfer some energy into unwanted stores. For example, friction and electrical resistance can increase the internal energy stores of components and their surroundings. Efficiency cannot exceed one, or one hundred per cent, when the inputs and outputs are correctly defined."
     },
@@ -39,8 +40,8 @@
       "layout": "explain",
       "diagram": "wind",
       "title": "Worked example",
-      "start": 73.782,
-      "duration": 37.992,
+      "start": 81.92204100000001,
+      "duration": 37.694694,
       "pause": 0.0,
       "text": "Let us consider a wind turbine. Suppose the available power in the wind is 500 megawatts and the useful electrical power output is 120 megawatts. We use the power form of the efficiency equation. Divide 120 by 500 to obtain 0.24. Multiply by one hundred to obtain 24 per cent. The turbine's efficiency is 24 per cent under these stated conditions. Notice that megawatts measure power, not energy. If we were given energy in megajoules instead, we would use the energy form of the same ratio."
     },
@@ -49,8 +50,8 @@
       "layout": "question",
       "diagram": "lamp",
       "title": "Your turn",
-      "start": 112.074,
-      "duration": 11.64,
+      "start": 120.01673500000001,
+      "duration": 10.684082,
       "pause": 5.0,
       "text": "Now it is your turn. A lamp receives 60 joules of electrical energy and transfers 12 joules usefully as light. Pause the video and calculate its efficiency."
     },
@@ -59,8 +60,8 @@
       "layout": "answer",
       "diagram": "lamp",
       "title": "Worked answer",
-      "start": 129.014,
-      "duration": 14.76,
+      "start": 136.100817,
+      "duration": 15.307755,
       "pause": 0.0,
       "text": "Twelve divided by 60 equals 0.2. Multiplying by one hundred gives 20 per cent. The remaining 80 per cent is transferred in ways not counted as useful, largely increasing internal energy stores."
     },
@@ -69,8 +70,8 @@
       "layout": "exam",
       "diagram": "motor",
       "title": "GCSE-style question",
-      "start": 144.074,
-      "duration": 43.584,
+      "start": 151.808572,
+      "duration": 48.013061,
       "pause": 0.0,
       "text": "Here is a GCSE-style question. An electric motor receives 800 joules of electrical energy and transfers 560 joules usefully to mechanical motion. Part A, worth two marks: calculate its efficiency as a percentage. Part B, worth one mark: suggest why its efficiency is less than one hundred per cent. For Part A, 560 divided by 800 equals 0.7, or 70 per cent. Award one mark for the correct ratio and one for 70 per cent. For Part B, friction or electrical resistance transfers some energy to internal energy stores rather than useful motion. Award one mark for a valid unwanted transfer."
     },
@@ -79,8 +80,8 @@
       "layout": "end",
       "diagram": "end",
       "title": "Keep practising",
-      "start": 187.95800000000003,
-      "duration": 19.752,
+      "start": 200.221633,
+      "duration": 21.55102,
       "pause": 0.0,
       "text": "Remember: efficiency is useful output divided by total input, with consistent quantities and units. If the question asks for a percentage, multiply by one hundred. Subscribe to JD Science and visit jdscience.co.uk for more worked examples. Thank you for watching."
     }

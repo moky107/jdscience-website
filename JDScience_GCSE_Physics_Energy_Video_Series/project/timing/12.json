@@ -1,16 +1,17 @@
 {
   "title": "Trends in Energy Use",
   "file": "12_Trends_in_Energy_Use.mp4",
-  "duration": 259.542,
-  "voice": "en-NG-AbeoNeural",
+  "duration": 289.606531,
+  "voice": "elevenlabs-clone",
+  "model": "eleven_multilingual_v2",
   "scenes": [
     {
       "index": 0,
       "layout": "title",
       "diagram": "title",
       "title": "Trends in Energy Use",
-      "start": 0.45,
-      "duration": 22.128,
+      "start": 0.5,
+      "duration": 26.331429,
       "pause": 0.0,
       "text": "Hello and welcome back to JD Science. In our final lesson in this series, we will examine trends in energy demand and the changing use of renewable and non-renewable resources. We will also learn how to interpret graphs accurately in GCSE Physics. Please subscribe and visit jdscience.co.uk for more revision resources."
     },
@@ -19,8 +20,8 @@
       "layout": "explain",
       "diagram": "demand",
       "title": "Energy demand",
-      "start": 22.878,
-      "duration": 33.168,
+      "start": 27.231429,
+      "duration": 34.925714,
       "pause": 0.0,
       "text": "Global energy demand has generally increased over the long term, although growth varies by country and year. Population growth is one driver: more people need transport, heating, cooling, industry and electricity. Economic development and greater access to appliances and technology can increase energy demand per person. However, energy efficiency improvements, changes in industry and government policies can reduce or slow demand. It is therefore too simplistic to say that energy use per person always increases everywhere."
     },
@@ -29,8 +30,8 @@
       "layout": "explain",
       "diagram": "measures",
       "title": "Read the measure carefully",
-      "start": 56.346,
-      "duration": 40.896,
+      "start": 62.557142999999996,
+      "duration": 42.527347,
       "pause": 0.0,
       "text": "The energy mix is also changing. Renewable electricity generation has grown strongly in many countries, but electricity is only one part of total energy use. Transport, heating and industrial processes also consume energy. When you read a graph or a percentage, check whether it refers to total primary energy, final energy consumption or electricity generation. These measures are not interchangeable. Avoid memorising an undated claim such as 'renewables account for twenty per cent of all energy' because the answer depends on the definition, country and year. Use the figures and dates given in the examination source."
     },
@@ -39,8 +40,8 @@
       "layout": "explain",
       "diagram": "graph",
       "title": "How to read a trend graph",
-      "start": 97.54199999999999,
-      "duration": 27.024,
+      "start": 105.48449,
+      "duration": 28.029388,
       "pause": 0.0,
       "text": "When analysing a trend graph, first read the title, axes, units, dates and key. Describe the overall pattern using words such as increases, decreases, remains stable or fluctuates. Next, quote relevant values where available. Finally, explain the trend using a justified scientific or social factor. Do not invent reasons that cannot be supported by the information provided."
     },
@@ -49,8 +50,8 @@
       "layout": "explain",
       "diagram": "graph_example",
       "title": "Illustrative trend",
-      "start": 124.86599999999999,
-      "duration": 22.152,
+      "start": 133.913878,
+      "duration": 26.462041,
       "pause": 0.0,
       "text": "For example, suppose a graph shows global electricity demand increasing between two specified years. You might state that demand rose, quote the values from the graph and suggest that population growth and increased access to electrical devices contributed. If the graph shows a sudden fall in a particular year, describe it rather than pretending the trend is perfectly smooth."
     },
@@ -59,8 +60,8 @@
       "layout": "question",
       "diagram": "demand",
       "title": "Your turn",
-      "start": 147.31799999999998,
-      "duration": 7.944,
+      "start": 160.77591900000002,
+      "duration": 5.799184,
       "pause": 5.0,
       "text": "Now it is your turn. Name two factors that may increase global energy demand. Pause the video."
     },
@@ -69,8 +70,8 @@
       "layout": "answer",
       "diagram": "demand",
       "title": "Worked answer",
-      "start": 160.56199999999998,
-      "duration": 13.536,
+      "start": 171.97510300000002,
+      "duration": 16.195918,
       "pause": 0.0,
       "text": "Two valid factors are population growth and increased energy use associated with economic development. Increased transport, industrial activity or demand for cooling may also be relevant, depending on the question."
     },
@@ -79,8 +80,8 @@
       "layout": "exam",
       "diagram": "graph_example",
       "title": "GCSE-style question",
-      "start": 174.398,
-      "duration": 58.632,
+      "start": 188.57102100000003,
+      "duration": 74.109388,
       "pause": 0.0,
       "text": "Here is a GCSE-style question about interpreting a graph of renewable energy generation over several decades. Part A, worth two marks: explain why electricity generated from wood-based biomass might increase more slowly than electricity from some other renewables. A suitable answer, if supported by the graph and context, is that sustainably available biomass feedstock is limited and expanding production can compete with land needed for food or conservation. Award one mark for a relevant constraint and one for explaining how it limits growth. Part B, worth two marks: explain why wind power output can vary even when the number of turbines increases. A model answer is: wind speed varies with weather conditions, so turbines do not operate at rated power continuously; therefore, the amount of electricity generated changes even with the same installed capacity. Award one mark for variable wind conditions and one for linking this to changing output."
     },
@@ -89,8 +90,8 @@
       "layout": "end",
       "diagram": "end",
       "title": "Keep practising",
-      "start": 233.33,
-      "duration": 25.512,
+      "start": 263.08040900000003,
+      "duration": 25.626122,
       "pause": 0.0,
       "text": "Remember that graph questions depend on the actual data. Without seeing the graph, it is not possible to give a definitive mark scheme for questions asking why a particular line rises or falls. Read the evidence first, then construct your explanation. For more GCSE Physics lessons, subscribe to JD Science and visit jdscience.co.uk. Thank you for watching and keep learning."
     }
