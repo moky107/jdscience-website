@@ -201,6 +201,7 @@ function looksLikeUploadedDeck(resource) {
   const hostedUrl = `${resource.file_url_override || ""} ${resource.file_url || ""}`;
   if (hostedUrl.includes("/resources/11-plus/")) return false;
   if (hostedUrl.includes("/resources/gcse/chemistry/videos/")) return false;
+  if (hostedUrl.includes("/resources/gcse/physics/videos/")) return false;
   if (/^videos$/i.test(String(resource.resource_category || ""))) return false;
   if (looksLikeOfficialPaper(resource)) return false;
   const title = String(resource.title || "");

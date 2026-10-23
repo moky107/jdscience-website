@@ -9,6 +9,10 @@ Editable 1080p30 rebuilds. The **original ElevenLabs narration is the master clo
 | [Calculating Concentration](concentration/) | `jdscience-concentration-1080p.mp4` | 4:29 |
 | [Percentage by Mass](percentage-by-mass/) | `jdscience-percentage-by-mass-1080p.mp4` | 4:27 |
 | [Atom Economy](atom-economy/) | `jdscience-atom-economy-1080p.mp4` | 5:07 |
+| GCSE Physics energy series (12 lessons) | `jdscience-*-1080p.mp4` under each topic folder | ~3–5 min each |
 
-Source AAC lives in `content/videos/<topic>/source/narration_master.m4a`.
-Rebuild with `python3 scripts/jdscience_video/render.py --topic <slug> --video`.
+Physics energy lessons use the **ElevenLabs cloned voice** (original accent). Do not replace those MP4s with Azure Neural / `en-NG-AbeoNeural` builds.
+
+Source AAC for chemistry lessons lives in `content/videos/<topic>/source/narration_master.m4a`.
+Rebuild chemistry with `python3 scripts/jdscience_video/render.py --topic <slug> --video`.
+Rebuild physics energy with `python3 -m scripts.physics_energy_series.produce` when that package is present and `ELEVENLABS_*` is set.
