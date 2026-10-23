@@ -34,3 +34,8 @@ content/videos/*/source/reference.mp4
 content/videos/*/build/
 content/videos/*/qa/
 content/videos/studio/out/
+
+# Physics energy series working frames and local zip
+JDScience_GCSE_Physics_Energy_Video_Series/project/build/
+JDScience_GCSE_Physics_Energy_Video_Series/project/stills/
+JDScience_GCSE_Physics_Energy_Video_Series/JDScience_GCSE_Physics_Energy_Videos.zip

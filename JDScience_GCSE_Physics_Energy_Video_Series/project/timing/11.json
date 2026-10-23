@@ -1,0 +1,99 @@
+{
+  "title": "Security and Reliability of Energy Supplies",
+  "file": "11_Energy_Security_and_Reliability.mp4",
+  "duration": 244.46693900000005,
+  "voice": "elevenlabs-clone",
+  "model": "eleven_multilingual_v2",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Security and Reliability of Energy Supplies",
+      "start": 0.5,
+      "duration": 24.372245,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we will explore energy security, reliability and why countries such as the United Kingdom use a mixture of energy resources. We will practise applying these ideas to GCSE examination questions. Please subscribe and visit jdscience.co.uk for more revision resources."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "security",
+      "title": "Security and reliability",
+      "start": 25.272244999999998,
+      "duration": 33.880816,
+      "pause": 0.0,
+      "text": "Energy security means having sufficient energy available at an affordable cost when it is needed, with resilience to disruptions in supply. Reliability describes how consistently an energy source or system can deliver electricity when required. These are related but different ideas. A power station may be controllable yet still depend on imported fuel, while a variable renewable resource may contribute to a reliable electricity system when combined with storage, transmission and other generation."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "reliability",
+      "title": "How consistently can it deliver?",
+      "start": 59.553061,
+      "duration": 37.616327,
+      "pause": 0.0,
+      "text": "Gas-fired and nuclear power stations can generally provide electricity independently of the immediate weather, although they require fuel, maintenance and occasionally experience outages. Coal and oil can also provide controllable generation where plants remain in service. Wind and solar output depend on weather and time of day. Hydroelectric generation depends on water availability, but reservoirs can make its output relatively controllable. Tidal generation is variable yet highly predictable because tidal cycles can be forecast."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "mix",
+      "title": "Why use an energy mix?",
+      "start": 97.569388,
+      "duration": 29.910204,
+      "pause": 0.0,
+      "text": "An energy mix means using several different sources of energy. This reduces dependence on one fuel or technology. If gas prices rise or wind speeds fall, other resources can contribute. Energy storage, electricity interconnectors, demand management and flexible generation can help balance supply and demand. The most secure mix depends on cost, geography, emissions, infrastructure and the ability to respond to changes."
+    },
+    {
+      "index": 4,
+      "layout": "explain",
+      "diagram": "town",
+      "title": "A town powered only by wind",
+      "start": 127.879592,
+      "duration": 26.827755,
+      "pause": 0.0,
+      "text": "Consider a town powered entirely by wind turbines. On a calm day, the turbines may generate little electricity. A more resilient arrangement might combine wind with solar, battery storage, grid connections and controllable generation. This allows electricity demand to be met when wind output is low. Notice that the solution does not have to rely solely on fossil fuels; it depends on the whole system."
+    },
+    {
+      "index": 5,
+      "layout": "question",
+      "diagram": "solar_supply",
+      "title": "Your turn",
+      "start": 155.107347,
+      "duration": 9.325714,
+      "pause": 5.0,
+      "text": "Now it is your turn. Explain why solar power alone cannot provide a continuous supply of electricity without storage or backup. Pause the video."
+    },
+    {
+      "index": 6,
+      "layout": "answer",
+      "diagram": "solar_supply",
+      "title": "Worked answer",
+      "start": 169.83306100000001,
+      "duration": 15.46449,
+      "pause": 0.0,
+      "text": "Solar photovoltaic panels do not produce electricity at night and generate less during some cloudy periods. Storage or alternative generation is therefore needed to maintain supply when sunlight is insufficient."
+    },
+    {
+      "index": 7,
+      "layout": "exam",
+      "diagram": "mix",
+      "title": "GCSE-style question",
+      "start": 185.69755100000003,
+      "duration": 34.298776,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question worth two marks. Explain one advantage of a country using an energy mix rather than relying entirely on coal. A model answer is: using several energy sources reduces dependence on coal, so if coal becomes more expensive or supply is disrupted, other resources can continue supplying electricity. Award one mark for reduced dependence or greater resilience and one mark for the explanation of how this protects supply or consumers."
+    },
+    {
+      "index": 8,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 220.39632700000004,
+      "duration": 23.170612,
+      "pause": 0.0,
+      "text": "In examination answers, avoid describing all renewable sources as unreliable or all non-renewable sources as guaranteed. Explain the conditions and how the electricity system manages them. Subscribe to JD Science and visit jdscience.co.uk for more GCSE Physics support. Thank you for watching."
+    }
+  ]
+}

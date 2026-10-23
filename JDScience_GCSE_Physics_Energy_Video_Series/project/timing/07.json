@@ -1,0 +1,89 @@
+{
+  "title": "Reducing Unwanted Energy Transfers",
+  "file": "07_Reducing_Unwanted_Energy_Transfers.mp4",
+  "duration": 219.82530600000004,
+  "voice": "elevenlabs-clone",
+  "model": "eleven_multilingual_v2",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Reducing Unwanted Energy Transfers",
+      "start": 0.5,
+      "duration": 28.682449,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we will identify unwanted energy transfers and explain how engineers reduce them using lubrication, insulation and changes to electrical resistance. We will finish with a GCSE examination question about cavity wall insulation. Please subscribe and visit jdscience.co.uk for more Physics revision."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "unwanted",
+      "title": "Unwanted energy transfers",
+      "start": 29.582448999999997,
+      "duration": 25.730612,
+      "pause": 0.0,
+      "text": "Whenever energy is transferred by a device, not all of it may reach the intended useful store. Friction between moving parts increases their internal energy stores. Electrical resistance causes wires and components to warm up when current flows. Warm buildings transfer energy to cooler surroundings. Some devices also transfer energy by sound when that sound is not useful."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "methods",
+      "title": "How engineers reduce transfers",
+      "start": 55.713060999999996,
+      "duration": 37.746939,
+      "pause": 0.0,
+      "text": "A useful approach is to identify the unwanted transfer, explain which energy store increases and choose a method that reduces the transfer. Lubrication forms a layer between moving surfaces and reduces friction. Streamlining can reduce air resistance, which is another force opposing motion. Thermal insulation reduces the rate of energy transfer between places at different temperatures. In electrical circuits, lower-resistance conductors can reduce energy dissipated by heating for a given current, although practical design also depends on cost and safety."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "engine",
+      "title": "Lubricating an engine",
+      "start": 93.86,
+      "duration": 27.428571,
+      "pause": 0.0,
+      "text": "Consider a car engine. Without adequate lubrication, moving metal surfaces rub against each other. Friction transfers energy into their internal energy stores, increasing temperature and wasting energy that could otherwise contribute to useful motion. Engine oil reduces friction and therefore reduces this unwanted transfer. It does not eliminate all energy losses, but it can improve efficiency and reduce wear."
+    },
+    {
+      "index": 4,
+      "layout": "question",
+      "diagram": "bike",
+      "title": "Your turn",
+      "start": 121.68857100000001,
+      "duration": 9.874286,
+      "pause": 5.0,
+      "text": "Now it is your turn. A motorbike loses energy because of friction in its moving parts and air resistance. Pause the video and suggest a way to reduce each."
+    },
+    {
+      "index": 5,
+      "layout": "answer",
+      "diagram": "bike",
+      "title": "Worked answer",
+      "start": 136.962857,
+      "duration": 16.248163,
+      "pause": 0.0,
+      "text": "Lubricating moving parts reduces friction. Streamlined bodywork reduces drag. Both reduce the energy transferred into unwanted internal energy stores, so a greater proportion of the input energy can contribute to useful motion."
+    },
+    {
+      "index": 6,
+      "layout": "exam",
+      "diagram": "cavity",
+      "title": "GCSE-style question",
+      "start": 153.61102000000002,
+      "duration": 44.538776,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question worth three marks. Explain how cavity wall insulation reduces the rate of energy transfer from a heated house. A model answer is: insulating foam has a low thermal conductivity, so energy passes through it relatively slowly by conduction. It also traps air in small pockets, reducing conduction and preventing large convection currents within the cavity. Consequently, less energy is transferred from the warm interior to the colder exterior each second. Award one mark for low thermal conductivity, one for the role of trapped air or reduced convection, and one for the reduced rate of energy transfer."
+    },
+    {
+      "index": 7,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 198.54979600000004,
+      "duration": 20.37551,
+      "pause": 0.0,
+      "text": "An important distinction is that insulation slows energy transfer; it does not stop it completely. Use the phrase 'rate of energy transfer' in your examination answers. Subscribe to JD Science and visit jdscience.co.uk for more lessons and examination practice. Thank you for watching."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "Energy Transfers in a System",
+  "file": "05_Energy_Transfers_in_a_System.mp4",
+  "duration": 228.70693900000003,
+  "voice": "elevenlabs-clone",
+  "model": "eleven_multilingual_v2",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Energy Transfers in a System",
+      "start": 0.5,
+      "duration": 19.226122,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we will explore conservation of energy, what scientists mean by a closed system, and how to calculate energy that is dissipated to the surroundings. If you find this lesson helpful, please subscribe and visit jdscience.co.uk."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "closed",
+      "title": "Closed and isolated systems",
+      "start": 20.126122,
+      "duration": 38.112653,
+      "pause": 0.0,
+      "text": "Energy cannot be created or destroyed. It can be transferred between stores by mechanical work, electrical work, heating or radiation. In a closed system, no energy is transferred into or out of the system, so the total energy remains constant. Be careful: in thermodynamics, a closed system may exchange energy but not matter with its surroundings. For GCSE energy-conservation questions, the important condition is that no energy crosses the boundary of the system when we claim its total energy stays constant; this is more precisely an isolated system."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "dissipated",
+      "title": "Useful and dissipated energy",
+      "start": 58.638775,
+      "duration": 25.077551,
+      "pause": 0.0,
+      "text": "In practical questions, a device takes in energy and transfers it into useful and less useful forms. Less useful energy is often described as wasted or dissipated. It has not been destroyed. It has been spread into surrounding internal energy stores, making it harder to use for the intended purpose. If we account for every transfer, the total energy input equals the total energy output."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "sankey",
+      "title": "Calculating dissipated energy",
+      "start": 84.11632600000002,
+      "duration": 33.515102,
+      "pause": 0.0,
+      "text": "To calculate dissipated energy, write down the total input, add the stated useful outputs and subtract them from the input. For example, suppose a device receives 100 joules of energy and transfers 45 joules by light and 36 joules by sound. If these are the only useful outputs, their total is 81 joules. Subtract 81 from 100 to obtain 19 joules dissipated to the surroundings. In a real mobile phone, whether sound or light is useful depends on what the phone is being used for."
+    },
+    {
+      "index": 4,
+      "layout": "question",
+      "diagram": "kettle",
+      "title": "Your turn",
+      "start": 118.03142800000002,
+      "duration": 15.699592,
+      "pause": 5.0,
+      "text": "Now it is your turn. A kettle receives 2,000 joules of electrical energy, and 1,800 joules increase the internal energy store of the water. Calculate the energy transferred elsewhere. Pause the video."
+    },
+    {
+      "index": 5,
+      "layout": "answer",
+      "diagram": "kettle",
+      "title": "Worked answer",
+      "start": 139.13102000000003,
+      "duration": 10.44898,
+      "pause": 0.0,
+      "text": "Two thousand minus 1,800 equals 200 joules. That energy may increase the internal energy stores of the kettle and surroundings. It has not vanished."
+    },
+    {
+      "index": 6,
+      "layout": "exam",
+      "diagram": "fan",
+      "title": "GCSE-style question",
+      "start": 149.98000000000005,
+      "duration": 61.100408,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question. An electric fan receives 300 joules of energy. It transfers 180 joules usefully to moving air and 90 joules to internal energy stores. Part A, worth two marks: calculate the energy transferred by sound, assuming these are all the outputs. Part B, worth two marks: explain why the energy supplied equals the total energy transferred. For Part A, 300 minus 180 minus 90 equals 30 joules. Award one mark for the subtraction and one for 30 joules. For Part B, energy is conserved, meaning it cannot be created or destroyed; therefore, when all transfers are accounted for, total energy input equals total energy output. Award one mark for conservation and one for linking it to the energy balance."
+    },
+    {
+      "index": 7,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 211.48040800000004,
+      "duration": 16.326531,
+      "pause": 0.0,
+      "text": "In your examination, avoid saying energy is 'used up'. Say it is transferred or dissipated. Subscribe to JD Science and visit jdscience.co.uk for more GCSE revision. Thank you for watching."
+    }
+  ]
+}
