@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
 """Build the 12 narrated GCSE Physics conservation-of-energy videos.
 
-Narration uses the ElevenLabs cloned voice unchanged when ELEVENLABS_API_KEY
-and ELEVENLABS_VOICE_ID are set. No accent conversion is applied. If those
-variables are absent, speech uses the West African English voice
-en-NG-AbeoNeural. British en-GB voices are never used.
+Narration uses only the ElevenLabs cloned voice from ELEVENLABS_API_KEY and
+ELEVENLABS_VOICE_ID. No accent conversion is applied, and no substitute voice
+is used if authentication or synthesis fails.
 """
 
 from __future__ import annotations
 
 import argparse
 import asyncio
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 import wave
 from pathlib import Path
 
@@ -29,14 +31,13 @@ from .scenes import assert_coverage, build_scenes  # noqa: E402
 from .scripts_text import VIDEOS  # noqa: E402
 from .ui import BG, H, W  # noqa: E402
 
-# West African English, male. Do not switch this to an en-GB voice.
-VOICE = "en-NG-AbeoNeural"
-RATE = "-4%"
 FPS = 30
-INTRO = 0.45
-GAP = 0.30
-TAIL = 0.70
+INTRO = 0.50
+GAP = 0.40
+TAIL = 0.90
 SR = 48000
+ELEVEN_MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")
+ELEVEN_SETTINGS = {"stability": 0.50, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": True}
 
 
 def speakable(text: str) -> str:
@@ -58,49 +59,47 @@ def ffprobe_duration(path: Path) -> float:
     return float(out)
 
 
-async def _edge(text: str, dest: Path) -> list[dict]:
-    import edge_tts
-
-    if VOICE.lower().startswith("en-gb"):
-        raise RuntimeError("British en-GB voices are disabled for this series")
-    communicate = edge_tts.Communicate(text, VOICE, rate=RATE, boundary="WordBoundary")
-    audio = bytearray()
-    words = []
-    async for chunk in communicate.stream():
-        if chunk["type"] == "audio":
-            audio.extend(chunk["data"])
-        elif chunk["type"] == "WordBoundary":
-            offset = float(chunk["offset"])
-            duration = float(chunk["duration"])
-            if offset > 1000:
-                offset /= 1e7
-                duration /= 1e7
-            words.append({"text": chunk["text"], "start": offset, "end": offset + duration})
-    dest.write_bytes(audio)
-    return words
-
-
-def _eleven(text: str, dest: Path) -> list[dict] | None:
+def _credentials() -> tuple[str, str]:
     key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
     voice = os.environ.get("ELEVENLABS_VOICE_ID", "").strip()
     if not key or not voice:
-        return None
-    import base64
-    import urllib.request
+        raise RuntimeError(
+            "ElevenLabs authentication failed: ELEVENLABS_API_KEY and "
+            "ELEVENLABS_VOICE_ID must both be set. No substitute voice was used."
+        )
+    return key, voice
 
+
+def _voice_token() -> str:
+    _key, voice = _credentials()
+    return hashlib.sha256(voice.encode()).hexdigest()[:16]
+
+
+def _eleven(text: str, dest: Path) -> list[dict]:
+    import base64
+
+    key, voice = _credentials()
     url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps"
     payload = json.dumps({
         "text": text,
-        "model_id": os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2"),
-        "voice_settings": {"stability": 0.5, "similarity_boost": 0.85, "style": 0.0, "use_speaker_boost": True},
+        "model_id": ELEVEN_MODEL,
+        "voice_settings": ELEVEN_SETTINGS,
+        "apply_text_normalization": "on",
     }).encode()
     req = urllib.request.Request(url, data=payload, headers={
         "xi-api-key": key,
         "Content-Type": "application/json",
         "Accept": "application/json",
     })
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        data = json.loads(resp.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=180) as resp:
+            data = json.loads(resp.read().decode())
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", "replace")[:800]
+        raise RuntimeError(
+            f"ElevenLabs HTTP {exc.code} for {dest.name}: {body}. "
+            "No substitute voice was used."
+        ) from exc
     dest.write_bytes(base64.b64decode(data["audio_base64"]))
     alignment = data.get("alignment") or data.get("normalized_alignment") or {}
     chars = alignment.get("characters") or []
@@ -123,22 +122,34 @@ def _eleven(text: str, dest: Path) -> list[dict] | None:
         wend = en
     if buf:
         words.append({"text": buf, "start": wstart, "end": wend})
+    if not dest.stat().st_size:
+        raise RuntimeError(f"ElevenLabs returned empty audio for {dest.name}. No substitute voice was used.")
     return words
 
 
 async def synthesize(text: str, dest: Path) -> list[dict]:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    eleven = _eleven(text, dest)
-    if eleven is not None:
-        return eleven
     last = None
-    for attempt in range(4):
+    for attempt in range(5):
         try:
-            return await _edge(text, dest)
-        except Exception as exc:  # network hiccup
-            last = exc
-            await asyncio.sleep(1.5 * (attempt + 1))
-    raise RuntimeError(f"Narration failed for {dest.name}: {last}")
+            return _eleven(text, dest)
+        except RuntimeError as exc:
+            last = str(exc)
+            retryable = "HTTP 429" in last or "HTTP 500" in last or "HTTP 502" in last or "HTTP 503" in last
+            if retryable and attempt < 4:
+                await asyncio.sleep(2 ** attempt)
+                continue
+            raise
+        except Exception as exc:
+            last = f"{type(exc).__name__}: {exc}"
+            if attempt < 4:
+                await asyncio.sleep(1.5 * (attempt + 1))
+                continue
+            raise RuntimeError(
+                f"ElevenLabs narration failed for {dest.name}: {last}. "
+                "No substitute voice was used."
+            ) from exc
+    raise RuntimeError(f"ElevenLabs narration failed for {dest.name}: {last}. No substitute voice was used.")
 
 
 def expand_tokens(raw: list[dict]) -> list[tuple[str, float, float]]:
@@ -243,7 +254,13 @@ async def ensure_scene_audio(video_n: int, index: int, text: str, force: bool) -
     mp3 = folder / f"s{index:02d}.mp3"
     meta = folder / f"s{index:02d}.json"
     spoken = speakable(text)
-    signature = json.dumps({"text": spoken, "voice": VOICE, "rate": RATE, "eleven": bool(os.environ.get("ELEVENLABS_API_KEY"))})
+    signature = json.dumps({
+        "text": spoken,
+        "provider": "elevenlabs",
+        "voice": _voice_token(),
+        "model": ELEVEN_MODEL,
+        "settings": ELEVEN_SETTINGS,
+    }, sort_keys=True)
     if mp3.exists() and meta.exists() and not force:
         saved = json.loads(meta.read_text())
         if saved.get("signature") == signature:
@@ -388,7 +405,7 @@ def render_video(video: dict, scenes, timed, force: bool) -> Path:
         "ffmpeg", "-y", "-v", "error", "-i", str(silent), "-i", str(master),
         "-map", "0:v:0", "-map", "1:a:0", "-t", f"{total:.3f}",
         "-c:v", "copy",
-        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aformat=channel_layouts=stereo",
+        "-af", "aformat=channel_layouts=stereo",
         "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
         "-movflags", "+faststart",
         "-metadata", f"title={video['title']}",
@@ -400,7 +417,8 @@ def render_video(video: dict, scenes, timed, force: bool) -> Path:
         "title": video["title"],
         "file": video["file"],
         "duration": total,
-        "voice": "elevenlabs" if os.environ.get("ELEVENLABS_API_KEY") else VOICE,
+        "voice": "elevenlabs-clone",
+        "model": ELEVEN_MODEL,
         "scenes": [
             {
                 "index": item["scene"].index,
@@ -456,7 +474,7 @@ def qa(path: Path) -> None:
     print(f"  QA {path.name}: {duration:.1f}s  {video['width']}x{video['height']} {video['r_frame_rate']}  mean {mean.group(1)} dB", flush=True)
 
 
-async def build(numbers: list[int], force_audio: bool, force_video: bool, stills: bool) -> None:
+async def build(numbers: list[int], force_audio: bool, force_video: bool, stills: bool, audio_only: bool) -> None:
     assert_coverage()
     OUT.mkdir(parents=True, exist_ok=True)
     selected = [v for v in VIDEOS if v["n"] in numbers]
@@ -479,6 +497,9 @@ async def build(numbers: list[int], force_audio: bool, force_video: bool, stills
             if missing:
                 print(f"    cue not aligned: {missing}", flush=True)
             timed.append((words, duration))
+        if audio_only:
+            print(f"  audio ready for video {video['n']}", flush=True)
+            continue
         if stills:
             still_dir = OUT / "project" / "stills" / f"{video['n']:02d}"
             still_dir.mkdir(parents=True, exist_ok=True)
@@ -500,9 +521,10 @@ def main() -> None:
     parser.add_argument("--force-audio", action="store_true")
     parser.add_argument("--force-video", action="store_true")
     parser.add_argument("--stills", action="store_true")
+    parser.add_argument("--audio-only", action="store_true")
     args = parser.parse_args()
     numbers = list(range(1, 13)) if args.all or not args.video else args.video
-    asyncio.run(build(numbers, args.force_audio, args.force_video, args.stills))
+    asyncio.run(build(numbers, args.force_audio, args.force_video, args.stills, args.audio_only))
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ import math
 
 from PIL import Image, ImageDraw
 
+from .meta import OBJECTIVES
 from .scenes import Scene
 from .ui import (
     AMBER,
@@ -1562,7 +1563,7 @@ def _focus_height(scene, view):
 def render_frame(scene: Scene, t: float, words, flag_times, countdown, progress: float) -> Image.Image:
     view = View(scene, t, words, flag_times, countdown, progress)
     img = Image.new("RGB", (W, H), BG)
-    d = chrome(img, scene.footer, scene.index + 1, scene.total, progress)
+    d = chrome(img, scene.footer, scene.index + 1, scene.total, progress, scene.video_n)
     if scene.layout == "title":
         _title(d, scene, view)
     elif scene.layout == "end":
@@ -1579,20 +1580,33 @@ def render_frame(scene: Scene, t: float, words, flag_times, countdown, progress:
 
 
 def _title(d, scene, view):
-    d.text((88, 150), "GCSE PHYSICS", font=font("bold", 18), fill=TEAL_BAR)
-    y = 190
-    for line in wrap(scene.video_title, font("bold", 54), 1600):
-        d.text((88, y), line, font=font("bold", 54), fill=WHITE)
-        y += 64
-    d.text((88, y + 6), scene.subtitle, font=font("regular", 24), fill=MUTED)
+    pill(d, (88, 126), f"VIDEO {scene.video_n:02d} OF 12", TEAL_BAR, BG, 16)
+    pill(d, (318, 126), "CONSERVATION OF ENERGY", GOLD, BG, 16)
+    y = 188
+    for line in wrap(scene.video_title, font("bold", 52), 1120):
+        d.text((88, y), line, font=font("bold", 52), fill=WHITE)
+        y += 60
+    d.text((88, y + 4), scene.subtitle, font=font("regular", 24), fill=MUTED)
+    objectives = OBJECTIVES.get(scene.video_n, ())
+    if objectives:
+        card(d, (1260, 168, 1832, 520), fill=NAVY_DEEP, accent=TEAL_BAR, outline=LINE)
+        d.text((1290, 196), "IN THIS LESSON", font=font("bold", 16), fill=TEAL_BAR)
+        oy = 236
+        for i, item in enumerate(objectives, start=1):
+            d.ellipse((1290, oy + 8, 1318, oy + 36), outline=TEAL_BAR, width=2)
+            d.text((1304, oy + 22), str(i), font=font("bold", 16), fill=TEAL_BAR, anchor="mm")
+            for line in wrap(item, font("regular", 22), 470):
+                d.text((1336, oy), line, font=font("regular", 22), fill=WHITE)
+                oy += 28
+            oy += 18
     spans = _sentence_spans(scene)
-    y = y + 70
+    y = max(y + 56, 360)
     for i, ((start, end), sentence) in enumerate(zip(spans, scene.sentences)):
         if start >= len(view.words) or view.words[start][1] > view.t + LEAD:
             continue
-        lines = wrap(sentence, font("regular", 26), 1560)
+        lines = wrap(sentence, font("regular", 26), 1100)
         h = 28 + len(lines) * 34
-        card(d, (88, y, 1832, y + h), accent=TEAL if i else GOLD)
+        card(d, (88, y, 1220, y + h), accent=TEAL if i else GOLD)
         ly = y + 14
         for line in lines:
             d.text((124, ly), line, font=font("regular", 26), fill=WHITE)
@@ -1601,15 +1615,16 @@ def _title(d, scene, view):
 
 
 def _end(d, scene, view):
-    mark = logo().resize((96, 96))
-    # paste needs the image; chrome already used the draw on img. We only have draw here.
-    # Redraw logo via text badge so this function stays on the draw context.
-    rounded(d, (88, 180, 184, 276), 24, TEAL_MID)
-    d.text((136, 228), "JD", font=font("bold", 42), fill=WHITE, anchor="mm")
-    d.text((210, 214), "JD SCIENCE", font=font("bold", 36), fill=WHITE, anchor="lm")
-    d.text((210, 258), "Learn smarter. Revise better. Achieve more.", font=font("regular", 22), fill=MUTED, anchor="lm")
+    rounded(d, (88, 150, 184, 246), 24, TEAL_MID)
+    d.text((136, 198), "JD", font=font("bold", 42), fill=WHITE, anchor="mm")
+    d.text((210, 184), "JD SCIENCE", font=font("bold", 36), fill=WHITE, anchor="lm")
+    d.text((210, 228), "Learn smarter. Revise better. Achieve more.", font=font("regular", 22), fill=MUTED, anchor="lm")
+    card(d, (1260, 150, 1832, 318), fill=NAVY_DEEP, accent=GOLD, outline=LINE)
+    d.text((1292, 178), "SUBSCRIBE", font=font("bold", 16), fill=GOLD)
+    d.text((1292, 214), "JD Science on YouTube", font=font("bold", 26), fill=WHITE)
+    d.text((1292, 258), "jdscience.co.uk", font=font("bold", 28), fill=TEAL_BAR)
     spans = _sentence_spans(scene)
-    y = 320
+    y = 340
     for (start, end), sentence in zip(spans, scene.sentences):
         if start >= len(view.words) or view.words[start][1] > view.t + LEAD:
             continue
@@ -1621,8 +1636,6 @@ def _end(d, scene, view):
             d.text((120, ly), line, font=font("regular", 26), fill=WHITE)
             ly += 34
         y += h + 12
-    if any(view.on(flag) for flag in ("web",)) or "jdscience.co.uk" in " ".join(w for w, ts in view.words if ts <= view.t + LEAD):
-        d.text((88, min(y + 20, 900)), "jdscience.co.uk", font=font("bold", 48), fill=TEAL_BAR)
 
 
 def _explain(d, scene, view):

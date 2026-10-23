@@ -77,7 +77,14 @@ def rounded(d: ImageDraw.ImageDraw, box, radius, fill, outline=None, width=2):
     d.rounded_rectangle(box, radius, fill=fill, outline=outline, width=width if outline else 1)
 
 
-def chrome(img: Image.Image, footer: str, page: int, total: int, progress: float) -> ImageDraw.ImageDraw:
+def chrome(
+    img: Image.Image,
+    footer: str,
+    page: int,
+    total: int,
+    progress: float,
+    video_n: int | None = None,
+) -> ImageDraw.ImageDraw:
     d = ImageDraw.Draw(img)
     d.rectangle((0, 0, W, 10), fill=(18, 70, 82))
     pw = int(max(0.0, min(1.0, progress)) * W)
@@ -86,8 +93,9 @@ def chrome(img: Image.Image, footer: str, page: int, total: int, progress: float
     img.paste(logo(), (56, 28), logo())
     d.text((122, 42), "JD", font=font("bold", 22), fill=TEAL_BAR, anchor="lm")
     d.text((158, 42), "SCIENCE", font=font("semibold", 22), fill=INK, anchor="lm")
-    d.rounded_rectangle((1480, 26, 1864, 62), 16, fill=NAVY_DEEP, outline=LINE, width=2)
-    d.text((1672, 44), "UNIT 3  ·  ENERGY", font=font("semibold", 16), fill=TEAL_BAR, anchor="mm")
+    badge = f"UNIT 3  ·  VIDEO {video_n:02d}/12" if video_n else "UNIT 3  ·  ENERGY"
+    d.rounded_rectangle((1390, 26, 1864, 62), 16, fill=NAVY_DEEP, outline=LINE, width=2)
+    d.text((1627, 44), badge, font=font("semibold", 16), fill=TEAL_BAR, anchor="mm")
     rounded(d, (48, 96, W - 48, H - 72), 28, NAVY_CARD, LINE, 2)
     d.rectangle((0, H - 56, W, H), fill=(7, 16, 34))
     d.text((56, H - 28), f"GCSE PHYSICS   ·   {footer}", font=font("medium", 16), fill=MUTED, anchor="lm")
