@@ -67,6 +67,27 @@
       ]
     },
     {
+      "source": "/resources/t-level/science/videos/(.*)\\.vtt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/vtt; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/resources/t-level/science/videos/(.*)\\.jpg",
+      "headers": [
+        { "key": "Content-Type", "value": "image/jpeg" },
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/resources/t-level/science/videos/(.*)\\.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
       "source": "/homepage-promo-poster.jpg",
       "headers": [
         { "key": "Content-Type", "value": "image/jpeg" },
