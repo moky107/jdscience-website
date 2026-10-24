@@ -76,6 +76,12 @@ def main() -> None:
         ("a11-1", "A11.1", "Collision Theory", "Activation energy  ·  orientation", "Collision", "Theory", "Why most collisions fail", "collide"),
         ("a11-2", "A11.2", "Temperature & Rate", "Kinetic energy  ·  Maxwell–Boltzmann", "Temperature", "and Rate", "Why heating speeds reactions", "mb"),
         ("a11-3", "A11.3", "Catalysts", "Alternative pathway  ·  lower Ea", "Catalysts", "and Rate", "Same curve, lower Ea", "profile"),
+        ("a12-1", "A12.1", "Factors Affecting Rate", "Surface area  ·  concentration  ·  pressure", "Factors", "Affecting Rate", "Why powder reacts faster", "collide"),
+        ("a12-2", "A12.2", "Calculating Rate", "Change in amount  ÷  time", "Calculating", "Rate", "Worked rate calculations", "mb"),
+        ("a12-3", "A12.3", "Enthalpy Changes", "H  ·  ΔH  ·  energy profiles", "Enthalpy", "Changes", "Exo, endo and Ea", "profile"),
+        ("a12-4", "A12.4", "Industrial Catalysts", "Lower Ea  ·  faster turnaround", "Industrial", "Catalysts", "Rate, turnaround, cost", "profile"),
+        ("a12-5", "A12.5", "Reversible Reactions", "Dynamic equilibrium  ·  Le Chatelier", "Reversible", "Reactions", "Opposing the change", "mb"),
+        ("a12-6", "A12.6", "The Haber Process", "450 °C  ·  200 atm  ·  iron", "The Haber", "Process", "Yield, rate and cost", "profile"),
     ]
     for folder, spec, title, line, t1, t2, hook, kind in jobs:
         repo = ROOT / "content/tlevel-chemistry" / folder

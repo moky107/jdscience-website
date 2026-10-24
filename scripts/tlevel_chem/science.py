@@ -127,7 +127,88 @@ def particle_chamber(d, box, t: float, temp: str = "high", collisions: bool = Tr
     d.text((x1 - 24, y0 + 18), "faster particles" if temp == "high" else "slower particles", font=font("semibold", 16), fill=TEAL_BAR if temp == "high" else ORANGE, anchor="rt")
 
 
-def energy_profile(d, box, *, catalysed: bool, progress: float = 1.0, ea_uncat: float = 85, ea_cat: float = 52):
+def volume_time(d, box, *, series: list[tuple[str, tuple[int, int, int], list[tuple[float, float]]]], title="Gas volume vs time"):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=TEAL)
+    plot = (x0 + 80, y0 + 70, x1 - 36, y1 - 56)
+    px0, py0, px1, py1 = plot
+    d.line((px0, py1, px1, py1), fill=LINE, width=3)
+    d.line((px0, py0, px0, py1), fill=LINE, width=3)
+    d.text((px1, py1 + 16), "time →", font=font("semibold", 16), fill=MUTED, anchor="rt")
+    d.text((px0 - 12, py0), "gas volume", font=font("semibold", 16), fill=MUTED, anchor="rb")
+    tmax = max(p[0] for _, _, pts in series for p in pts) or 1
+    vmax = max(p[1] for _, _, pts in series for p in pts) or 1
+    for label, colour, pts in series:
+        coords = [(px0 + (x / tmax) * (px1 - px0), py1 - (y / vmax) * (py1 - py0)) for x, y in pts]
+        d.line(coords, fill=colour, width=5)
+        d.text((coords[-1][0] - 8, coords[-1][1] - 12), label, font=font("bold", 18), fill=colour, anchor="rb")
+    d.text((x0 + 24, y0 + 16), title, font=font("semibold", 20), fill=WHITE)
+
+
+def chips_scene(d, box, form: str, title: str):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=ORANGE if form == "large" else TEAL)
+    inner = (x0 + 20, y0 + 58, x1 - 20, y1 - 20)
+    d.rounded_rectangle(inner, 16, outline=LINE, width=2)
+    rng = random.Random(3 if form == "large" else 7)
+    cx0, cy0, cx1, cy1 = inner
+    if form == "large":
+        sizes = [70, 64, 58]
+        n = 6
+    elif form == "small":
+        sizes = [28, 24, 22]
+        n = 22
+    else:
+        sizes = [8, 7, 6]
+        n = 90
+    for i in range(n):
+        w = sizes[i % len(sizes)]
+        px = cx0 + 16 + rng.random() * max(8, (cx1 - cx0 - 40 - w))
+        py = cy0 + 16 + rng.random() * max(8, (cy1 - cy0 - 40 - w))
+        d.rounded_rectangle((px, py, px + w, py + w * 0.7), 4, fill=ORANGE if form == "large" else TEAL_BAR, outline=WHITE)
+    d.text((x0 + 24, y0 + 16), title, font=font("bold", 20), fill=WHITE)
+    d.text((x1 - 24, y0 + 18), form, font=font("semibold", 16), fill=TEAL_BAR, anchor="rt")
+
+
+def concentration_boxes(d, box, conc: float, title: str):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=TEAL)
+    inner = (x0 + 20, y0 + 58, x1 - 20, y1 - 20)
+    d.rounded_rectangle(inner, 16, outline=LINE, width=2)
+    n = int(8 + conc * 14)
+    rng = random.Random(int(conc * 10))
+    cx0, cy0, cx1, cy1 = inner
+    for _ in range(n):
+        px = cx0 + 16 + rng.random() * (cx1 - cx0 - 32)
+        py = cy0 + 16 + rng.random() * (cy1 - cy0 - 32)
+        d.ellipse((px - 7, py - 7, px + 7, py + 7), fill=TEAL_BAR, outline=WHITE)
+    d.text((x0 + 24, y0 + 16), title, font=font("bold", 20), fill=WHITE)
+    d.text((x1 - 24, y0 + 18), f"{conc:.2f} mol dm⁻³", font=font("semibold", 16), fill=TEAL_BAR, anchor="rt")
+
+
+def pressure_boxes(d, box, compressed: bool):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=GOLD if compressed else TEAL)
+    if compressed:
+        inner = (x0 + 80, y0 + 80, x1 - 80, y1 - 40)
+    else:
+        inner = (x0 + 24, y0 + 70, x1 - 24, y1 - 24)
+    d.rounded_rectangle(inner, 14, outline=LINE, width=3)
+    rng = random.Random(5)
+    n = 16
+    cx0, cy0, cx1, cy1 = inner
+    for _ in range(n):
+        px = cx0 + 14 + rng.random() * (cx1 - cx0 - 28)
+        py = cy0 + 14 + rng.random() * (cy1 - cy0 - 28)
+        d.ellipse((px - 8, py - 8, px + 8, py + 8), fill=GOLD if compressed else TEAL_BAR, outline=WHITE)
+    if compressed:
+        d.rectangle((x0 + 24, y0 + 58, x1 - 24, inner[1] - 8), fill=(40, 55, 80), outline=LINE)
+        d.text((x0 + 24, y0 + 16), "After compression · same T", font=font("bold", 20), fill=WHITE)
+    else:
+        d.text((x0 + 24, y0 + 16), "Before compression · same T", font=font("bold", 20), fill=WHITE)
+
+
+def energy_profile(d, box, *, catalysed: bool, progress: float = 1.0, ea_uncat: float = 85, ea_cat: float = 52, direction: str = "exo"):
     x0, y0, x1, y1 = box
     card(d, box, fill=NAVY_ROW, accent=GREEN if catalysed else GOLD)
     plot = (x0 + 70, y0 + 70, x1 - 40, y1 - 50)
@@ -140,8 +221,8 @@ def energy_profile(d, box, *, catalysed: bool, progress: float = 1.0, ea_uncat: 
     def curve(ea, colour, label):
         height = max(80, py1 - py0)
         peak_x = px0 + 0.42 * (px1 - px0)
-        start_y = py1 - height * 0.22
-        end_y = py1 - height * 0.38
+        start_y = py1 - height * (0.42 if direction == "exo" else 0.22)
+        end_y = py1 - height * (0.22 if direction == "exo" else 0.42)
         peak_span = height * (0.22 + 0.55 * (ea / max(ea_uncat, ea_cat, 1)))
         peak_y = max(py0 + 20, py1 - peak_span)
         pts = []
@@ -185,3 +266,44 @@ def causal_pills(d, box, items: list[tuple[str, str, bool]]):
             text_block(d, (x + 18, y0 + 100), body, font("regular", 18), MUTED, w - 36)
         if i < n - 1 and show:
             d.polygon([(x + w + 2, (y0 + y1) / 2 - 8), (x + w + 14, (y0 + y1) / 2), (x + w + 2, (y0 + y1) / 2 + 8)], fill=TEAL_BAR)
+
+
+def data_table(d, box, rows: list[list[str]], title: str = ""):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=TEAL)
+    if title:
+        d.text((x0 + 24, y0 + 16), title, font=font("semibold", 20), fill=WHITE)
+    cols = len(rows[0])
+    gap = 8
+    top = y0 + (56 if title else 20)
+    row_h = min(56, (y1 - top - 16) // max(1, len(rows)))
+    col_w = (x1 - x0 - 32) // cols
+    for r, row in enumerate(rows):
+        for c, cell in enumerate(row):
+            xx = x0 + 16 + c * col_w
+            yy = top + r * row_h
+            fill = (18, 42, 56) if r == 0 else (12, 28, 44)
+            d.rounded_rectangle((xx, yy, xx + col_w - gap, yy + row_h - 6), 8, fill=fill)
+            d.text((xx + 12, yy + row_h / 2 - 3), cell, font=font("bold" if r == 0 else "regular", 18), fill=WHITE if r == 0 else MUTED, anchor="lm")
+
+
+def mole_balance(d, box, left: str, right: str, note: str):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=GREEN)
+    d.text(((x0 + x1) / 2, y0 + 70), left, font=font("bold", 36), fill=WHITE, anchor="mm")
+    d.text(((x0 + x1) / 2, y0 + 150), "⇌", font=font("bold", 54), fill=TEAL_BAR, anchor="mm")
+    d.text(((x0 + x1) / 2, y0 + 230), right, font=font("bold", 36), fill=WHITE, anchor="mm")
+    text_block(d, (x0 + 40, y0 + 300), note, font("regular", 22), MUTED, x1 - x0 - 80)
+
+
+def haber_panel(d, box, temp="450 °C", pressure="200 atm", catalyst="iron"):
+    x0, y0, x1, y1 = box
+    card(d, box, fill=NAVY_ROW, accent=GOLD)
+    items = [("Temperature", temp), ("Pressure", pressure), ("Catalyst", catalyst)]
+    w = (x1 - x0 - 64) // 3
+    for i, (k, v) in enumerate(items):
+        x = x0 + 24 + i * (w + 8)
+        d.rounded_rectangle((x, y0 + 80, x + w, y1 - 30), 16, fill=(18, 42, 56))
+        d.text((x + w / 2, y0 + 130), k, font=font("semibold", 20), fill=MUTED, anchor="mm")
+        d.text((x + w / 2, y0 + 200), v, font=font("bold", 36), fill=GOLD, anchor="mm")
+    d.text((x0 + 24, y0 + 20), "Typical Haber conditions — a compromise", font=font("semibold", 22), fill=WHITE)

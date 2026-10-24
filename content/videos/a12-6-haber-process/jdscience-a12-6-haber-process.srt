@@ -1,0 +1,524 @@
+1
+00:00:00,116 --> 00:00:03,320
+Hello and welcome back to J D Science.
+
+2
+00:00:04,029 --> 00:00:07,639
+In today's T-Level Chemistry lesson, we are going to study A
+
+3
+00:00:07,721 --> 00:00:10,124
+twelve point six, The Haber Process.
+
+4
+00:00:10,646 --> 00:00:13,572
+By the end of this lesson, you should be able to state
+
+5
+00:00:13,618 --> 00:00:17,322
+typical Haber conditions, explain their economic effect,
+
+6
+00:00:17,368 --> 00:00:21,165
+and describe the compromise between equilibrium yield and reaction
+
+7
+00:00:21,234 --> 00:00:21,629
+rate.
+
+8
+00:00:22,152 --> 00:00:25,913
+The equation is nitrogen plus three hydrogen in equilibrium
+
+9
+00:00:26,029 --> 00:00:27,167
+with two ammonia.
+
+10
+00:00:27,620 --> 00:00:30,917
+The forward reaction has delta H less than zero.
+
+11
+00:00:31,312 --> 00:00:32,600
+It is exothermic.
+
+12
+00:00:32,937 --> 00:00:36,571
+The industrial aim is ammonia at a useful rate and
+
+13
+00:00:36,629 --> 00:00:40,263
+a useful yield, at an economically acceptable cost.
+
+14
+00:00:40,600 --> 00:00:44,535
+Typical conditions in the lesson are about four hundred and fifty degrees
+
+15
+00:00:44,593 --> 00:00:48,204
+Celsius, about two hundred atmospheres, and an iron
+
+16
+00:00:48,274 --> 00:00:49,028
+catalyst.
+
+17
+00:00:49,423 --> 00:00:53,568
+Unreacted nitrogen and hydrogen can be separated from ammonia
+
+18
+00:00:53,626 --> 00:00:54,624
+and recycled.
+
+19
+00:00:55,077 --> 00:00:58,607
+Conditions are not chosen to maximise one factor alone.
+
+20
+00:00:59,059 --> 00:01:00,545
+Retrieve Le Chatelier.
+
+21
+00:01:00,882 --> 00:01:04,063
+Lower temperature favours the exothermic direction.
+
+22
+00:01:04,400 --> 00:01:07,383
+Increasing pressure favours fewer gas moles.
+
+23
+00:01:07,592 --> 00:01:11,377
+A catalyst lowers activation energy and increases rate,
+
+24
+00:01:11,551 --> 00:01:13,931
+but does not change the equilibrium position.
+
+25
+00:01:14,059 --> 00:01:15,266
+Count the gas moles.
+
+26
+00:01:15,603 --> 00:01:19,144
+One nitrogen plus three hydrogen is four moles of gas.
+
+27
+00:01:19,423 --> 00:01:21,792
+Two ammonia is two moles of gas.
+
+28
+00:01:22,001 --> 00:01:25,844
+Increasing pressure favours the side with fewer gas moles, so
+
+29
+00:01:25,902 --> 00:01:29,663
+the equilibrium shifts toward ammonia and the equilibrium yield
+
+30
+00:01:29,745 --> 00:01:31,254
+of ammonia increases.
+
+31
+00:01:31,591 --> 00:01:33,251
+Temperature is a compromise.
+
+32
+00:01:33,587 --> 00:01:37,383
+Lower temperature gives a higher ammonia equilibrium yield,
+
+33
+00:01:37,534 --> 00:01:41,180
+because it favours the exothermic forward reaction, but the
+
+34
+00:01:41,261 --> 00:01:42,329
+rate is slower.
+
+35
+00:01:42,782 --> 00:01:46,799
+Higher temperature gives a faster rate, but a lower equilibrium
+
+36
+00:01:46,880 --> 00:01:50,201
+yield, because it favours the endothermic reverse.
+
+37
+00:01:50,654 --> 00:01:54,532
+About four hundred and fifty degrees Celsius is fast enough,
+
+38
+00:01:54,613 --> 00:01:56,842
+with a useful equilibrium yield.
+
+39
+00:01:57,121 --> 00:02:00,035
+That is a compromise between rate and yield.
+
+40
+00:02:00,162 --> 00:02:02,206
+Pressure is also a compromise.
+
+41
+00:02:02,484 --> 00:02:06,211
+Higher pressure increases ammonia equilibrium yield.
+
+42
+00:02:06,548 --> 00:02:10,344
+Extremely high pressure needs more energy for compression,
+
+43
+00:02:10,553 --> 00:02:14,257
+stronger and more expensive equipment, and higher capital
+
+44
+00:02:14,338 --> 00:02:15,720
+and operating costs.
+
+45
+00:02:15,964 --> 00:02:19,574
+About two hundred atmospheres is high, but economically
+
+46
+00:02:19,632 --> 00:02:20,317
+practical.
+
+47
+00:02:20,596 --> 00:02:23,255
+Exact plant conditions can vary.
+
+48
+00:02:23,498 --> 00:02:27,353
+The specification focus is the compromise, not one
+
+49
+00:02:27,399 --> 00:02:28,665
+global optimum.
+
+50
+00:02:29,060 --> 00:02:32,694
+The iron catalyst provides an alternative pathway with
+
+51
+00:02:32,786 --> 00:02:34,447
+lower activation energy.
+
+52
+00:02:34,841 --> 00:02:38,707
+It increases the rate of the forward and reverse reactions,
+
+53
+00:02:38,858 --> 00:02:41,261
+so equilibrium is reached faster.
+
+54
+00:02:41,598 --> 00:02:45,290
+It does not change the equilibrium position, the equilibrium
+
+55
+00:02:45,371 --> 00:02:49,493
+composition, or the equilibrium yield at fixed temperature
+
+56
+00:02:49,551 --> 00:02:50,329
+and pressure.
+
+57
+00:02:50,782 --> 00:02:52,836
+It does not change delta H.
+
+58
+00:02:53,173 --> 00:02:56,749
+It means the plant does not have to raise temperature only to
+
+59
+00:02:56,831 --> 00:03:00,116
+get a useful rate, which would lower the ammonia yield.
+
+60
+00:03:00,232 --> 00:03:01,440
+Compare the options.
+
+61
+00:03:01,486 --> 00:03:05,120
+Three hundred degrees Celsius at two hundred atmospheres gives a
+
+62
+00:03:05,236 --> 00:03:08,336
+high yield but is too slow for efficient production.
+
+63
+00:03:08,452 --> 00:03:12,284
+Six hundred and fifty degrees Celsius at two hundred atmospheres
+
+64
+00:03:12,353 --> 00:03:16,022
+is fast, but the ammonia equilibrium yield is reduced.
+
+65
+00:03:16,150 --> 00:03:19,981
+Four hundred and fifty degrees Celsius, two hundred atmospheres
+
+66
+00:03:20,039 --> 00:03:23,951
+and iron gives a useful yield and a useful rate.
+
+67
+00:03:24,160 --> 00:03:28,108
+Plant X is offered three hundred and fifty, four hundred
+
+68
+00:03:28,142 --> 00:03:32,067
+and fifty or six hundred degrees Celsius, and one hundred,
+
+69
+00:03:32,090 --> 00:03:36,142
+two hundred or four hundred atmospheres, with iron available.
+
+70
+00:03:36,478 --> 00:03:40,147
+Three hundred and fifty degrees Celsius has a higher yield
+
+71
+00:03:40,356 --> 00:03:41,401
+but is slower.
+
+72
+00:03:41,854 --> 00:03:45,534
+Six hundred degrees Celsius has a higher rate but a
+
+73
+00:03:45,615 --> 00:03:46,451
+lower yield.
+
+74
+00:03:46,730 --> 00:03:50,805
+Four hundred atmospheres gives more yield but more compression
+
+75
+00:03:50,886 --> 00:03:51,397
+cost.
+
+76
+00:03:51,734 --> 00:03:55,670
+One hundred atmospheres costs less but gives a lower yield
+
+77
+00:03:55,821 --> 00:03:57,632
+than two hundred atmospheres.
+
+78
+00:03:58,027 --> 00:04:01,823
+The indicative industrial choice is about four hundred and fifty
+
+79
+00:04:01,881 --> 00:04:05,840
+degrees Celsius and about two hundred atmospheres with iron.
+
+80
+00:04:06,204 --> 00:04:07,760
+Correct the misconceptions.
+
+81
+00:04:07,934 --> 00:04:11,904
+The lowest possible temperature is not chosen, because the rate
+
+82
+00:04:11,951 --> 00:04:13,042
+would be too slow.
+
+83
+00:04:13,379 --> 00:04:17,501
+The highest possible pressure is not chosen, because of energy,
+
+84
+00:04:17,559 --> 00:04:18,964
+equipment and cost.
+
+85
+00:04:19,207 --> 00:04:22,075
+Iron does not increase equilibrium yield.
+
+86
+00:04:22,284 --> 00:04:26,139
+Higher temperature does not always improve production, because
+
+87
+00:04:26,185 --> 00:04:30,086
+for this reaction it decreases the ammonia equilibrium
+
+88
+00:04:30,179 --> 00:04:30,678
+yield.
+
+89
+00:04:31,293 --> 00:04:33,372
+Examination-style question.
+
+90
+00:04:33,708 --> 00:04:34,614
+Part a.
+
+91
+00:04:35,067 --> 00:04:38,561
+State typical temperature, pressure and catalyst.
+
+92
+00:04:38,956 --> 00:04:39,862
+Three marks.
+
+93
+00:04:40,315 --> 00:04:44,285
+About four hundred and fifty degrees Celsius, about two hundred
+
+94
+00:04:44,401 --> 00:04:46,340
+atmospheres, and iron.
+
+95
+00:04:47,048 --> 00:04:47,757
+Part b.
+
+96
+00:04:48,000 --> 00:04:51,959
+Why is a lower temperature not used, even though yield
+
+97
+00:04:52,006 --> 00:04:52,900
+would be higher?
+
+98
+00:04:53,515 --> 00:04:54,351
+Three marks.
+
+99
+00:04:54,874 --> 00:04:58,717
+Lower temperature favours the exothermic forward reaction,
+
+100
+00:04:58,833 --> 00:05:02,803
+so yield is higher, but the rate is lower, so production
+
+101
+00:05:02,873 --> 00:05:06,228
+is too slow or less economically efficient.
+
+102
+00:05:06,844 --> 00:05:07,645
+Part c.
+
+103
+00:05:08,098 --> 00:05:10,594
+Why does higher pressure increase yield?
+
+104
+00:05:11,418 --> 00:05:12,161
+Two marks.
+
+105
+00:05:12,278 --> 00:05:16,074
+There are two moles of gas against four, so the equilibrium shifts
+
+106
+00:05:16,132 --> 00:05:17,351
+toward ammonia.
+
+107
+00:05:17,630 --> 00:05:18,361
+Part d.
+
+108
+00:05:18,535 --> 00:05:21,345
+Why is industrial pressure a compromise?
+
+109
+00:05:21,624 --> 00:05:22,506
+Three marks.
+
+110
+00:05:22,564 --> 00:05:24,874
+Higher pressure increases yield.
+
+111
+00:05:25,118 --> 00:05:28,799
+Very high pressure increases compression, equipment and
+
+112
+00:05:28,880 --> 00:05:29,391
+cost.
+
+113
+00:05:29,634 --> 00:05:33,477
+Industry balances yield against economic and engineering
+
+114
+00:05:33,559 --> 00:05:34,116
+cost.
+
+115
+00:05:34,453 --> 00:05:35,323
+Part e.
+
+116
+00:05:35,660 --> 00:05:38,121
+What does the iron catalyst do?
+
+117
+00:05:38,330 --> 00:05:39,155
+Two marks.
+
+118
+00:05:39,491 --> 00:05:43,195
+It provides a lower activation-energy pathway,
+
+119
+00:05:43,404 --> 00:05:47,571
+so rate increases and equilibrium is reached faster,
+
+120
+00:05:47,653 --> 00:05:50,288
+without changing the equilibrium position.
+
+121
+00:05:50,683 --> 00:05:53,109
+Before we finish, complete the model.
+
+122
+00:05:53,562 --> 00:05:57,219
+Haber ammonia is made at about four hundred and fifty
+
+123
+00:05:57,277 --> 00:06:01,155
+degrees Celsius and about two hundred atmospheres
+
+124
+00:06:01,248 --> 00:06:02,154
+with iron.
+
+125
+00:06:02,606 --> 00:06:06,496
+Temperature and pressure are compromises between yield, rate
+
+126
+00:06:06,542 --> 00:06:07,332
+and cost.
+
+127
+00:06:07,483 --> 00:06:11,268
+The catalyst speeds both directions without changing
+
+128
+00:06:11,349 --> 00:06:14,611
+the equilibrium yield at fixed conditions.
+
+129
+00:06:14,890 --> 00:06:19,104
+If you found this useful, please subscribe to J D Science,
+
+130
+00:06:19,348 --> 00:06:23,063
+and visit j d science dot co dot u k for
+
+131
+00:06:23,121 --> 00:06:27,161
+more explanations, worksheets and T-Level Chemistry lessons.
+

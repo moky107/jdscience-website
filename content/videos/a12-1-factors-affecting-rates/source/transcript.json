@@ -1,0 +1,4291 @@
+{
+  "slug": "a12-1-factors-affecting-rates",
+  "title": "Factors Affecting Rates of Chemical Reactions",
+  "audio": "/workspace/content/videos/a12-1-factors-affecting-rates/source/narration_master.mp3",
+  "duration": 384.183,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A twelve point one, Factors Affecting Rates of Chemical Reactions.\n\nBy the end of this lesson, you should be able to explain how surface area, concentration and pressure change rate, using collision theory, and identify control variables in a rate investigation.\n\nRetrieve collision theory. A successful collision needs sufficient energy and the correct spatial orientation.\n\nReaction rate depends on how frequently those successful collisions occur per unit time.\n\nThe common idea across A twelve point one is collision frequency. If reacting particles collide more often, there are more opportunities for successful collisions, so rate increases. Energy and orientation still matter. More collisions does not mean every collision is successful.\n\nSpecification point A twelve point one point one: surface area.\n\nFor the same mass of solid, smaller pieces have a greater total exposed surface area. Only surface particles are directly available for collisions with the other reactant.\n\nWatch the particle models. Large chips expose less surface. Small chips expose more. Powder exposes the most surface for the same mass.\n\nThe teacher PowerPoint uses two experiments, both with two point zero grams of solid. Experiment A, large chips, reaches the endpoint in ninety five seconds. Experiment B, small chips, reaches the same endpoint in forty eight seconds.\n\nB is faster. The same mass of small chips has a greater total surface area, so collision frequency at the solid surface is higher.\n\nThe student workbook uses a third trial as well. Large chips, ninety six seconds. Small chips, fifty one seconds. Powder, twenty nine seconds. Those times are not the same as the PowerPoint pair, so keep the two datasets separate. The scientific pattern is the same: as particle size decreases, time to the same endpoint decreases.\n\nA common error is to say that smaller particles contain more substance. For the same mass, the amount of substance is the same. What changes is the exposed surface area.\n\nNow specification point A twelve point one point two: concentration.\n\nConcentration is how much dissolved reactant is present in a given volume. At higher concentration there are more reactant particles per unit volume.\n\nTemperature is unchanged, so the particles do not need to move faster. They simply meet more often because they are packed more closely.\n\nThe shared concentration dataset is: zero point five zero moles per cubic decimetre takes one hundred and twenty seconds; one point zero zero takes sixty four seconds; one point five zero takes forty three seconds; two point zero zero takes thirty one seconds.\n\nHigher concentration means fewer seconds to the same endpoint, so rate increases.\n\nDo not assume that doubling concentration exactly doubles rate unless the evidence says so.\n\nSpecification point A twelve point one point three: pressure, for gases.\n\nAt constant temperature, increasing pressure can put the same number of gas particles in a smaller volume. The particles are closer together, so there are more particles per unit volume and collisions become more frequent.\n\nDo not claim that average kinetic energy has increased if temperature is unchanged. Pressure can rise by reducing volume at constant temperature. That is not the same as heating the mixture.\n\nOn a gas-volume versus time graph, a faster reaction has a steeper initial curve. If the same limiting amount reacts, the final product amount can be the same, reached sooner.\n\nWhen you plan an investigation, change only the intended factor. For surface area, control mass of solid, concentration and volume of the other reactant, temperature and apparatus. For concentration, also control the surface area or mass of any solid.\n\nCorrect the misconceptions. Smaller pieces do not contain more substance. Higher concentration does not make particles faster if temperature is unchanged. Higher gas pressure does not always mean higher temperature. And more collisions does not make every collision successful.\n\nExamination-style question.\n\nPart a. Explain why a powdered solid reacts faster than the same mass of large pieces. Three marks.\n\nPowder has a greater total surface area. Collision frequency at the surface increases. Successful collisions occur more frequently, so rate increases.\n\nPart b. Explain why increasing reactant concentration increases rate. Three marks.\n\nThere are more particles per unit volume. Collision frequency increases. Successful collisions per unit time increase.\n\nPart c. Explain why increasing the pressure of gaseous reactants increases rate. Three marks.\n\nAt constant temperature the same particles occupy a smaller volume, so they are closer together. Collision frequency increases, and successful collisions occur more frequently.\n\nPart d. State one control variable for a surface-area investigation and explain why you control it. Two marks.\n\nControl the mass of solid, or the concentration of the other reactant, or temperature. That isolates surface area so the comparison is valid.\n\nBefore we finish, complete the model.\n\nSurface area, concentration and pressure all change how often particles collide. More frequent collisions give more successful collisions per unit time, so rate increases. Energy and orientation still decide which collisions succeed.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.151,
+      "end": 0.511
+    },
+    {
+      "word": "and",
+      "start": 0.604,
+      "end": 0.731
+    },
+    {
+      "word": "welcome",
+      "start": 0.813,
+      "end": 1.207
+    },
+    {
+      "word": "back",
+      "start": 1.254,
+      "end": 1.44
+    },
+    {
+      "word": "to",
+      "start": 1.509,
+      "end": 1.579
+    },
+    {
+      "word": "J",
+      "start": 1.649,
+      "end": 1.8
+    },
+    {
+      "word": "D",
+      "start": 1.869,
+      "end": 1.939
+    },
+    {
+      "word": "Science.",
+      "start": 2.055,
+      "end": 2.717
+    },
+    {
+      "word": "In",
+      "start": 2.926,
+      "end": 3.1
+    },
+    {
+      "word": "today's",
+      "start": 3.158,
+      "end": 3.553
+    },
+    {
+      "word": "T-Level",
+      "start": 3.622,
+      "end": 4.11
+    },
+    {
+      "word": "Chemistry",
+      "start": 4.18,
+      "end": 4.621
+    },
+    {
+      "word": "lesson,",
+      "start": 4.679,
+      "end": 5.294
+    },
+    {
+      "word": "we",
+      "start": 5.468,
+      "end": 5.608
+    },
+    {
+      "word": "are",
+      "start": 5.654,
+      "end": 5.782
+    },
+    {
+      "word": "going",
+      "start": 5.828,
+      "end": 6.014
+    },
+    {
+      "word": "to",
+      "start": 6.072,
+      "end": 6.13
+    },
+    {
+      "word": "study",
+      "start": 6.2,
+      "end": 6.571
+    },
+    {
+      "word": "A",
+      "start": 6.653,
+      "end": 6.687
+    },
+    {
+      "word": "twelve",
+      "start": 6.757,
+      "end": 7.082
+    },
+    {
+      "word": "point",
+      "start": 7.129,
+      "end": 7.407
+    },
+    {
+      "word": "one,",
+      "start": 7.5,
+      "end": 7.825
+    },
+    {
+      "word": "Factors",
+      "start": 7.999,
+      "end": 8.649
+    },
+    {
+      "word": "Affecting",
+      "start": 8.766,
+      "end": 9.392
+    },
+    {
+      "word": "Rates",
+      "start": 9.474,
+      "end": 9.857
+    },
+    {
+      "word": "of",
+      "start": 10.008,
+      "end": 10.159
+    },
+    {
+      "word": "Chemical",
+      "start": 10.24,
+      "end": 10.681
+    },
+    {
+      "word": "Reactions.",
+      "start": 10.762,
+      "end": 11.587
+    },
+    {
+      "word": "By",
+      "start": 11.831,
+      "end": 11.97
+    },
+    {
+      "word": "the",
+      "start": 12.028,
+      "end": 12.109
+    },
+    {
+      "word": "end",
+      "start": 12.179,
+      "end": 12.307
+    },
+    {
+      "word": "of",
+      "start": 12.365,
+      "end": 12.434
+    },
+    {
+      "word": "this",
+      "start": 12.481,
+      "end": 12.62
+    },
+    {
+      "word": "lesson,",
+      "start": 12.69,
+      "end": 13.235
+    },
+    {
+      "word": "you",
+      "start": 13.41,
+      "end": 13.502
+    },
+    {
+      "word": "should",
+      "start": 13.549,
+      "end": 13.769
+    },
+    {
+      "word": "be",
+      "start": 13.816,
+      "end": 13.92
+    },
+    {
+      "word": "able",
+      "start": 13.978,
+      "end": 14.292
+    },
+    {
+      "word": "to",
+      "start": 14.338,
+      "end": 14.408
+    },
+    {
+      "word": "explain",
+      "start": 14.478,
+      "end": 14.965
+    },
+    {
+      "word": "how",
+      "start": 15.081,
+      "end": 15.349
+    },
+    {
+      "word": "surface",
+      "start": 15.523,
+      "end": 15.999
+    },
+    {
+      "word": "area,",
+      "start": 16.045,
+      "end": 16.579
+    },
+    {
+      "word": "concentration",
+      "start": 16.788,
+      "end": 17.659
+    },
+    {
+      "word": "and",
+      "start": 17.74,
+      "end": 17.914
+    },
+    {
+      "word": "pressure",
+      "start": 18.007,
+      "end": 18.425
+    },
+    {
+      "word": "change",
+      "start": 18.472,
+      "end": 18.808
+    },
+    {
+      "word": "rate,",
+      "start": 18.866,
+      "end": 19.25
+    },
+    {
+      "word": "using",
+      "start": 19.528,
+      "end": 19.865
+    },
+    {
+      "word": "collision",
+      "start": 19.923,
+      "end": 20.295
+    },
+    {
+      "word": "theory,",
+      "start": 20.364,
+      "end": 20.852
+    },
+    {
+      "word": "and",
+      "start": 21.003,
+      "end": 21.2
+    },
+    {
+      "word": "identify",
+      "start": 21.281,
+      "end": 21.932
+    },
+    {
+      "word": "control",
+      "start": 22.013,
+      "end": 22.419
+    },
+    {
+      "word": "variables",
+      "start": 22.477,
+      "end": 23.058
+    },
+    {
+      "word": "in",
+      "start": 23.139,
+      "end": 23.278
+    },
+    {
+      "word": "a",
+      "start": 23.348,
+      "end": 23.371
+    },
+    {
+      "word": "rate",
+      "start": 23.464,
+      "end": 23.685
+    },
+    {
+      "word": "investigation.",
+      "start": 23.731,
+      "end": 24.73
+    },
+    {
+      "word": "Retrieve",
+      "start": 25.252,
+      "end": 25.856
+    },
+    {
+      "word": "collision",
+      "start": 25.925,
+      "end": 26.355
+    },
+    {
+      "word": "theory.",
+      "start": 26.425,
+      "end": 26.901
+    },
+    {
+      "word": "A",
+      "start": 27.11,
+      "end": 27.191
+    },
+    {
+      "word": "successful",
+      "start": 27.272,
+      "end": 27.818
+    },
+    {
+      "word": "collision",
+      "start": 27.887,
+      "end": 28.282
+    },
+    {
+      "word": "needs",
+      "start": 28.34,
+      "end": 28.561
+    },
+    {
+      "word": "sufficient",
+      "start": 28.596,
+      "end": 29.13
+    },
+    {
+      "word": "energy",
+      "start": 29.211,
+      "end": 29.687
+    },
+    {
+      "word": "and",
+      "start": 29.966,
+      "end": 30.186
+    },
+    {
+      "word": "the",
+      "start": 30.244,
+      "end": 30.314
+    },
+    {
+      "word": "correct",
+      "start": 30.372,
+      "end": 30.743
+    },
+    {
+      "word": "spatial",
+      "start": 30.836,
+      "end": 31.405
+    },
+    {
+      "word": "orientation.",
+      "start": 31.474,
+      "end": 32.392
+    },
+    {
+      "word": "Reaction",
+      "start": 32.844,
+      "end": 33.378
+    },
+    {
+      "word": "rate",
+      "start": 33.46,
+      "end": 33.692
+    },
+    {
+      "word": "depends",
+      "start": 33.727,
+      "end": 34.214
+    },
+    {
+      "word": "on",
+      "start": 34.272,
+      "end": 34.423
+    },
+    {
+      "word": "how",
+      "start": 34.493,
+      "end": 34.644
+    },
+    {
+      "word": "frequently",
+      "start": 34.737,
+      "end": 35.271
+    },
+    {
+      "word": "those",
+      "start": 35.329,
+      "end": 35.526
+    },
+    {
+      "word": "successful",
+      "start": 35.561,
+      "end": 36.107
+    },
+    {
+      "word": "collisions",
+      "start": 36.176,
+      "end": 36.711
+    },
+    {
+      "word": "occur",
+      "start": 36.78,
+      "end": 37.175
+    },
+    {
+      "word": "per",
+      "start": 37.291,
+      "end": 37.477
+    },
+    {
+      "word": "unit",
+      "start": 37.57,
+      "end": 37.848
+    },
+    {
+      "word": "time.",
+      "start": 37.895,
+      "end": 38.359
+    },
+    {
+      "word": "The",
+      "start": 38.882,
+      "end": 39.009
+    },
+    {
+      "word": "common",
+      "start": 39.079,
+      "end": 39.392
+    },
+    {
+      "word": "idea",
+      "start": 39.462,
+      "end": 40.008
+    },
+    {
+      "word": "across",
+      "start": 40.159,
+      "end": 40.716
+    },
+    {
+      "word": "A",
+      "start": 40.832,
+      "end": 41.041
+    },
+    {
+      "word": "twelve",
+      "start": 41.157,
+      "end": 41.598
+    },
+    {
+      "word": "point",
+      "start": 41.656,
+      "end": 41.958
+    },
+    {
+      "word": "one",
+      "start": 42.051,
+      "end": 42.411
+    },
+    {
+      "word": "is",
+      "start": 42.562,
+      "end": 42.817
+    },
+    {
+      "word": "collision",
+      "start": 42.933,
+      "end": 43.409
+    },
+    {
+      "word": "frequency.",
+      "start": 43.479,
+      "end": 44.176
+    },
+    {
+      "word": "If",
+      "start": 44.57,
+      "end": 44.756
+    },
+    {
+      "word": "reacting",
+      "start": 44.838,
+      "end": 45.325
+    },
+    {
+      "word": "particles",
+      "start": 45.395,
+      "end": 45.975
+    },
+    {
+      "word": "collide",
+      "start": 46.057,
+      "end": 46.533
+    },
+    {
+      "word": "more",
+      "start": 46.579,
+      "end": 46.834
+    },
+    {
+      "word": "often,",
+      "start": 46.892,
+      "end": 47.403
+    },
+    {
+      "word": "there",
+      "start": 47.531,
+      "end": 47.763
+    },
+    {
+      "word": "are",
+      "start": 47.81,
+      "end": 47.972
+    },
+    {
+      "word": "more",
+      "start": 48.018,
+      "end": 48.239
+    },
+    {
+      "word": "opportunities",
+      "start": 48.285,
+      "end": 49.098
+    },
+    {
+      "word": "for",
+      "start": 49.168,
+      "end": 49.342
+    },
+    {
+      "word": "successful",
+      "start": 49.423,
+      "end": 50.015
+    },
+    {
+      "word": "collisions,",
+      "start": 50.097,
+      "end": 50.84
+    },
+    {
+      "word": "so",
+      "start": 50.991,
+      "end": 51.188
+    },
+    {
+      "word": "rate",
+      "start": 51.281,
+      "end": 51.525
+    },
+    {
+      "word": "increases.",
+      "start": 51.594,
+      "end": 52.349
+    },
+    {
+      "word": "Energy",
+      "start": 52.628,
+      "end": 53.069
+    },
+    {
+      "word": "and",
+      "start": 53.127,
+      "end": 53.243
+    },
+    {
+      "word": "orientation",
+      "start": 53.324,
+      "end": 54.056
+    },
+    {
+      "word": "still",
+      "start": 54.137,
+      "end": 54.439
+    },
+    {
+      "word": "matter.",
+      "start": 54.508,
+      "end": 54.915
+    },
+    {
+      "word": "More",
+      "start": 55.251,
+      "end": 55.507
+    },
+    {
+      "word": "collisions",
+      "start": 55.553,
+      "end": 56.087
+    },
+    {
+      "word": "does",
+      "start": 56.145,
+      "end": 56.343
+    },
+    {
+      "word": "not",
+      "start": 56.412,
+      "end": 56.61
+    },
+    {
+      "word": "mean",
+      "start": 56.703,
+      "end": 56.981
+    },
+    {
+      "word": "every",
+      "start": 57.074,
+      "end": 57.364
+    },
+    {
+      "word": "collision",
+      "start": 57.434,
+      "end": 57.899
+    },
+    {
+      "word": "is",
+      "start": 57.98,
+      "end": 58.096
+    },
+    {
+      "word": "successful.",
+      "start": 58.154,
+      "end": 58.92
+    },
+    {
+      "word": "Specification",
+      "start": 59.094,
+      "end": 59.977
+    },
+    {
+      "word": "point",
+      "start": 60.046,
+      "end": 60.325
+    },
+    {
+      "word": "A",
+      "start": 60.418,
+      "end": 60.569
+    },
+    {
+      "word": "twelve",
+      "start": 60.65,
+      "end": 61.022
+    },
+    {
+      "word": "point",
+      "start": 61.068,
+      "end": 61.335
+    },
+    {
+      "word": "one",
+      "start": 61.416,
+      "end": 61.66
+    },
+    {
+      "word": "point",
+      "start": 61.718,
+      "end": 62.008
+    },
+    {
+      "word": "one:",
+      "start": 62.125,
+      "end": 62.519
+    },
+    {
+      "word": "surface",
+      "start": 62.763,
+      "end": 63.227
+    },
+    {
+      "word": "area.",
+      "start": 63.286,
+      "end": 63.854
+    },
+    {
+      "word": "For",
+      "start": 64.063,
+      "end": 64.237
+    },
+    {
+      "word": "the",
+      "start": 64.295,
+      "end": 64.388
+    },
+    {
+      "word": "same",
+      "start": 64.469,
+      "end": 64.748
+    },
+    {
+      "word": "mass",
+      "start": 64.806,
+      "end": 65.096
+    },
+    {
+      "word": "of",
+      "start": 65.154,
+      "end": 65.247
+    },
+    {
+      "word": "solid,",
+      "start": 65.363,
+      "end": 65.793
+    },
+    {
+      "word": "smaller",
+      "start": 65.816,
+      "end": 66.211
+    },
+    {
+      "word": "pieces",
+      "start": 66.269,
+      "end": 66.756
+    },
+    {
+      "word": "have",
+      "start": 66.873,
+      "end": 67.105
+    },
+    {
+      "word": "a",
+      "start": 67.14,
+      "end": 67.174
+    },
+    {
+      "word": "greater",
+      "start": 67.256,
+      "end": 67.639
+    },
+    {
+      "word": "total",
+      "start": 67.709,
+      "end": 68.057
+    },
+    {
+      "word": "exposed",
+      "start": 68.126,
+      "end": 68.568
+    },
+    {
+      "word": "surface",
+      "start": 68.602,
+      "end": 69.044
+    },
+    {
+      "word": "area.",
+      "start": 69.113,
+      "end": 69.578
+    },
+    {
+      "word": "Only",
+      "start": 69.694,
+      "end": 70.042
+    },
+    {
+      "word": "surface",
+      "start": 70.123,
+      "end": 70.541
+    },
+    {
+      "word": "particles",
+      "start": 70.576,
+      "end": 71.099
+    },
+    {
+      "word": "are",
+      "start": 71.168,
+      "end": 71.366
+    },
+    {
+      "word": "directly",
+      "start": 71.412,
+      "end": 71.865
+    },
+    {
+      "word": "available",
+      "start": 71.923,
+      "end": 72.55
+    },
+    {
+      "word": "for",
+      "start": 72.596,
+      "end": 72.759
+    },
+    {
+      "word": "collisions",
+      "start": 72.829,
+      "end": 73.432
+    },
+    {
+      "word": "with",
+      "start": 73.49,
+      "end": 73.664
+    },
+    {
+      "word": "the",
+      "start": 73.711,
+      "end": 73.804
+    },
+    {
+      "word": "other",
+      "start": 73.885,
+      "end": 74.164
+    },
+    {
+      "word": "reactant.",
+      "start": 74.222,
+      "end": 74.837
+    },
+    {
+      "word": "Watch",
+      "start": 75.046,
+      "end": 75.348
+    },
+    {
+      "word": "the",
+      "start": 75.429,
+      "end": 75.51
+    },
+    {
+      "word": "particle",
+      "start": 75.568,
+      "end": 76.033
+    },
+    {
+      "word": "models.",
+      "start": 76.079,
+      "end": 76.579
+    },
+    {
+      "word": "Large",
+      "start": 76.822,
+      "end": 77.217
+    },
+    {
+      "word": "chips",
+      "start": 77.287,
+      "end": 77.74
+    },
+    {
+      "word": "expose",
+      "start": 77.856,
+      "end": 78.413
+    },
+    {
+      "word": "less",
+      "start": 78.494,
+      "end": 78.761
+    },
+    {
+      "word": "surface.",
+      "start": 78.807,
+      "end": 79.388
+    },
+    {
+      "word": "Small",
+      "start": 79.481,
+      "end": 79.841
+    },
+    {
+      "word": "chips",
+      "start": 79.899,
+      "end": 80.247
+    },
+    {
+      "word": "expose",
+      "start": 80.34,
+      "end": 80.897
+    },
+    {
+      "word": "more.",
+      "start": 80.967,
+      "end": 81.362
+    },
+    {
+      "word": "Powder",
+      "start": 81.698,
+      "end": 82.093
+    },
+    {
+      "word": "exposes",
+      "start": 82.163,
+      "end": 82.801
+    },
+    {
+      "word": "the",
+      "start": 82.871,
+      "end": 82.952
+    },
+    {
+      "word": "most",
+      "start": 83.022,
+      "end": 83.289
+    },
+    {
+      "word": "surface",
+      "start": 83.335,
+      "end": 83.742
+    },
+    {
+      "word": "for",
+      "start": 83.777,
+      "end": 83.881
+    },
+    {
+      "word": "the",
+      "start": 83.927,
+      "end": 84.009
+    },
+    {
+      "word": "same",
+      "start": 84.067,
+      "end": 84.357
+    },
+    {
+      "word": "mass.",
+      "start": 84.403,
+      "end": 84.891
+    },
+    {
+      "word": "The",
+      "start": 85.042,
+      "end": 85.17
+    },
+    {
+      "word": "teacher",
+      "start": 85.228,
+      "end": 85.588
+    },
+    {
+      "word": "PowerPoint",
+      "start": 85.646,
+      "end": 86.261
+    },
+    {
+      "word": "uses",
+      "start": 86.342,
+      "end": 86.691
+    },
+    {
+      "word": "two",
+      "start": 86.749,
+      "end": 86.9
+    },
+    {
+      "word": "experiments,",
+      "start": 86.969,
+      "end": 87.968
+    },
+    {
+      "word": "both",
+      "start": 88.119,
+      "end": 88.374
+    },
+    {
+      "word": "with",
+      "start": 88.432,
+      "end": 88.606
+    },
+    {
+      "word": "two",
+      "start": 88.653,
+      "end": 88.85
+    },
+    {
+      "word": "point",
+      "start": 88.931,
+      "end": 89.187
+    },
+    {
+      "word": "zero",
+      "start": 89.233,
+      "end": 89.593
+    },
+    {
+      "word": "grams",
+      "start": 89.674,
+      "end": 90.046
+    },
+    {
+      "word": "of",
+      "start": 90.116,
+      "end": 90.185
+    },
+    {
+      "word": "solid.",
+      "start": 90.266,
+      "end": 90.766
+    },
+    {
+      "word": "Experiment",
+      "start": 91.01,
+      "end": 91.741
+    },
+    {
+      "word": "A,",
+      "start": 91.811,
+      "end": 92.205
+    },
+    {
+      "word": "large",
+      "start": 92.333,
+      "end": 92.67
+    },
+    {
+      "word": "chips,",
+      "start": 92.716,
+      "end": 93.25
+    },
+    {
+      "word": "reaches",
+      "start": 93.424,
+      "end": 93.831
+    },
+    {
+      "word": "the",
+      "start": 93.889,
+      "end": 93.982
+    },
+    {
+      "word": "endpoint",
+      "start": 94.063,
+      "end": 94.562
+    },
+    {
+      "word": "in",
+      "start": 94.632,
+      "end": 94.748
+    },
+    {
+      "word": "ninety",
+      "start": 94.841,
+      "end": 95.165
+    },
+    {
+      "word": "five",
+      "start": 95.247,
+      "end": 95.502
+    },
+    {
+      "word": "seconds.",
+      "start": 95.549,
+      "end": 96.176
+    },
+    {
+      "word": "Experiment",
+      "start": 96.419,
+      "end": 97.162
+    },
+    {
+      "word": "B,",
+      "start": 97.232,
+      "end": 97.662
+    },
+    {
+      "word": "small",
+      "start": 97.813,
+      "end": 98.184
+    },
+    {
+      "word": "chips,",
+      "start": 98.254,
+      "end": 98.753
+    },
+    {
+      "word": "reaches",
+      "start": 98.927,
+      "end": 99.322
+    },
+    {
+      "word": "the",
+      "start": 99.38,
+      "end": 99.461
+    },
+    {
+      "word": "same",
+      "start": 99.519,
+      "end": 99.798
+    },
+    {
+      "word": "endpoint",
+      "start": 99.856,
+      "end": 100.332
+    },
+    {
+      "word": "in",
+      "start": 100.39,
+      "end": 100.471
+    },
+    {
+      "word": "forty",
+      "start": 100.552,
+      "end": 100.866
+    },
+    {
+      "word": "eight",
+      "start": 100.924,
+      "end": 101.098
+    },
+    {
+      "word": "seconds.",
+      "start": 101.145,
+      "end": 101.748
+    },
+    {
+      "word": "B",
+      "start": 102.085,
+      "end": 102.294
+    },
+    {
+      "word": "is",
+      "start": 102.538,
+      "end": 102.712
+    },
+    {
+      "word": "faster.",
+      "start": 102.793,
+      "end": 103.374
+    },
+    {
+      "word": "The",
+      "start": 103.618,
+      "end": 103.757
+    },
+    {
+      "word": "same",
+      "start": 103.815,
+      "end": 104.094
+    },
+    {
+      "word": "mass",
+      "start": 104.14,
+      "end": 104.384
+    },
+    {
+      "word": "of",
+      "start": 104.43,
+      "end": 104.5
+    },
+    {
+      "word": "small",
+      "start": 104.558,
+      "end": 104.848
+    },
+    {
+      "word": "chips",
+      "start": 104.906,
+      "end": 105.208
+    },
+    {
+      "word": "has",
+      "start": 105.266,
+      "end": 105.429
+    },
+    {
+      "word": "a",
+      "start": 105.487,
+      "end": 105.522
+    },
+    {
+      "word": "greater",
+      "start": 105.603,
+      "end": 106.021
+    },
+    {
+      "word": "total",
+      "start": 106.079,
+      "end": 106.427
+    },
+    {
+      "word": "surface",
+      "start": 106.497,
+      "end": 106.938
+    },
+    {
+      "word": "area,",
+      "start": 106.984,
+      "end": 107.379
+    },
+    {
+      "word": "so",
+      "start": 107.414,
+      "end": 107.6
+    },
+    {
+      "word": "collision",
+      "start": 107.681,
+      "end": 108.111
+    },
+    {
+      "word": "frequency",
+      "start": 108.169,
+      "end": 108.749
+    },
+    {
+      "word": "at",
+      "start": 108.819,
+      "end": 108.981
+    },
+    {
+      "word": "the",
+      "start": 109.028,
+      "end": 109.097
+    },
+    {
+      "word": "solid",
+      "start": 109.155,
+      "end": 109.515
+    },
+    {
+      "word": "surface",
+      "start": 109.562,
+      "end": 110.096
+    },
+    {
+      "word": "is",
+      "start": 110.154,
+      "end": 110.351
+    },
+    {
+      "word": "higher.",
+      "start": 110.421,
+      "end": 110.874
+    },
+    {
+      "word": "The",
+      "start": 111.268,
+      "end": 111.42
+    },
+    {
+      "word": "student",
+      "start": 111.489,
+      "end": 111.907
+    },
+    {
+      "word": "workbook",
+      "start": 111.954,
+      "end": 112.407
+    },
+    {
+      "word": "uses",
+      "start": 112.488,
+      "end": 112.836
+    },
+    {
+      "word": "a",
+      "start": 112.918,
+      "end": 112.952
+    },
+    {
+      "word": "third",
+      "start": 113.034,
+      "end": 113.301
+    },
+    {
+      "word": "trial",
+      "start": 113.335,
+      "end": 113.661
+    },
+    {
+      "word": "as",
+      "start": 113.719,
+      "end": 113.846
+    },
+    {
+      "word": "well.",
+      "start": 113.916,
+      "end": 114.276
+    },
+    {
+      "word": "Large",
+      "start": 114.671,
+      "end": 115.007
+    },
+    {
+      "word": "chips,",
+      "start": 115.042,
+      "end": 115.553
+    },
+    {
+      "word": "ninety",
+      "start": 115.704,
+      "end": 116.017
+    },
+    {
+      "word": "six",
+      "start": 116.064,
+      "end": 116.261
+    },
+    {
+      "word": "seconds.",
+      "start": 116.308,
+      "end": 116.9
+    },
+    {
+      "word": "Small",
+      "start": 117.144,
+      "end": 117.538
+    },
+    {
+      "word": "chips,",
+      "start": 117.596,
+      "end": 118.084
+    },
+    {
+      "word": "fifty",
+      "start": 118.293,
+      "end": 118.664
+    },
+    {
+      "word": "one",
+      "start": 118.734,
+      "end": 118.908
+    },
+    {
+      "word": "seconds.",
+      "start": 118.943,
+      "end": 119.547
+    },
+    {
+      "word": "Powder,",
+      "start": 119.884,
+      "end": 120.406
+    },
+    {
+      "word": "twenty",
+      "start": 120.464,
+      "end": 120.836
+    },
+    {
+      "word": "nine",
+      "start": 120.905,
+      "end": 121.161
+    },
+    {
+      "word": "seconds.",
+      "start": 121.207,
+      "end": 121.834
+    },
+    {
+      "word": "Those",
+      "start": 122.229,
+      "end": 122.542
+    },
+    {
+      "word": "times",
+      "start": 122.577,
+      "end": 122.914
+    },
+    {
+      "word": "are",
+      "start": 122.983,
+      "end": 123.158
+    },
+    {
+      "word": "not",
+      "start": 123.216,
+      "end": 123.39
+    },
+    {
+      "word": "the",
+      "start": 123.436,
+      "end": 123.517
+    },
+    {
+      "word": "same",
+      "start": 123.575,
+      "end": 123.831
+    },
+    {
+      "word": "as",
+      "start": 123.877,
+      "end": 123.993
+    },
+    {
+      "word": "the",
+      "start": 124.051,
+      "end": 124.121
+    },
+    {
+      "word": "PowerPoint",
+      "start": 124.179,
+      "end": 124.725
+    },
+    {
+      "word": "pair,",
+      "start": 124.783,
+      "end": 125.189
+    },
+    {
+      "word": "so",
+      "start": 125.363,
+      "end": 125.549
+    },
+    {
+      "word": "keep",
+      "start": 125.63,
+      "end": 125.851
+    },
+    {
+      "word": "the",
+      "start": 125.909,
+      "end": 125.979
+    },
+    {
+      "word": "two",
+      "start": 126.037,
+      "end": 126.223
+    },
+    {
+      "word": "datasets",
+      "start": 126.304,
+      "end": 126.884
+    },
+    {
+      "word": "separate.",
+      "start": 126.908,
+      "end": 127.511
+    },
+    {
+      "word": "The",
+      "start": 127.848,
+      "end": 127.975
+    },
+    {
+      "word": "scientific",
+      "start": 128.033,
+      "end": 128.626
+    },
+    {
+      "word": "pattern",
+      "start": 128.684,
+      "end": 129.078
+    },
+    {
+      "word": "is",
+      "start": 129.136,
+      "end": 129.241
+    },
+    {
+      "word": "the",
+      "start": 129.299,
+      "end": 129.38
+    },
+    {
+      "word": "same:",
+      "start": 129.438,
+      "end": 129.879
+    },
+    {
+      "word": "as",
+      "start": 130.03,
+      "end": 130.239
+    },
+    {
+      "word": "particle",
+      "start": 130.332,
+      "end": 130.832
+    },
+    {
+      "word": "size",
+      "start": 130.878,
+      "end": 131.18
+    },
+    {
+      "word": "decreases,",
+      "start": 131.215,
+      "end": 131.958
+    },
+    {
+      "word": "time",
+      "start": 132.039,
+      "end": 132.387
+    },
+    {
+      "word": "to",
+      "start": 132.422,
+      "end": 132.492
+    },
+    {
+      "word": "the",
+      "start": 132.573,
+      "end": 132.654
+    },
+    {
+      "word": "same",
+      "start": 132.712,
+      "end": 133.003
+    },
+    {
+      "word": "endpoint",
+      "start": 133.061,
+      "end": 133.583
+    },
+    {
+      "word": "decreases.",
+      "start": 133.641,
+      "end": 134.407
+    },
+    {
+      "word": "A",
+      "start": 134.5,
+      "end": 134.616
+    },
+    {
+      "word": "common",
+      "start": 134.732,
+      "end": 135.092
+    },
+    {
+      "word": "error",
+      "start": 135.185,
+      "end": 135.534
+    },
+    {
+      "word": "is",
+      "start": 135.603,
+      "end": 135.708
+    },
+    {
+      "word": "to",
+      "start": 135.766,
+      "end": 135.835
+    },
+    {
+      "word": "say",
+      "start": 135.952,
+      "end": 136.323
+    },
+    {
+      "word": "that",
+      "start": 136.532,
+      "end": 136.776
+    },
+    {
+      "word": "smaller",
+      "start": 136.834,
+      "end": 137.229
+    },
+    {
+      "word": "particles",
+      "start": 137.298,
+      "end": 137.867
+    },
+    {
+      "word": "contain",
+      "start": 137.925,
+      "end": 138.413
+    },
+    {
+      "word": "more",
+      "start": 138.506,
+      "end": 138.761
+    },
+    {
+      "word": "substance.",
+      "start": 138.808,
+      "end": 139.516
+    },
+    {
+      "word": "For",
+      "start": 139.69,
+      "end": 139.864
+    },
+    {
+      "word": "the",
+      "start": 139.91,
+      "end": 139.98
+    },
+    {
+      "word": "same",
+      "start": 140.05,
+      "end": 140.317
+    },
+    {
+      "word": "mass,",
+      "start": 140.375,
+      "end": 140.851
+    },
+    {
+      "word": "the",
+      "start": 140.967,
+      "end": 141.095
+    },
+    {
+      "word": "amount",
+      "start": 141.153,
+      "end": 141.513
+    },
+    {
+      "word": "of",
+      "start": 141.571,
+      "end": 141.64
+    },
+    {
+      "word": "substance",
+      "start": 141.71,
+      "end": 142.291
+    },
+    {
+      "word": "is",
+      "start": 142.337,
+      "end": 142.441
+    },
+    {
+      "word": "the",
+      "start": 142.5,
+      "end": 142.604
+    },
+    {
+      "word": "same.",
+      "start": 142.662,
+      "end": 143.103
+    },
+    {
+      "word": "What",
+      "start": 143.44,
+      "end": 143.66
+    },
+    {
+      "word": "changes",
+      "start": 143.719,
+      "end": 144.299
+    },
+    {
+      "word": "is",
+      "start": 144.415,
+      "end": 144.613
+    },
+    {
+      "word": "the",
+      "start": 144.671,
+      "end": 144.752
+    },
+    {
+      "word": "exposed",
+      "start": 144.81,
+      "end": 145.321
+    },
+    {
+      "word": "surface",
+      "start": 145.356,
+      "end": 145.785
+    },
+    {
+      "word": "area.",
+      "start": 145.82,
+      "end": 146.331
+    },
+    {
+      "word": "Now",
+      "start": 146.667,
+      "end": 146.865
+    },
+    {
+      "word": "specification",
+      "start": 146.935,
+      "end": 147.747
+    },
+    {
+      "word": "point",
+      "start": 147.817,
+      "end": 148.084
+    },
+    {
+      "word": "A",
+      "start": 148.154,
+      "end": 148.328
+    },
+    {
+      "word": "twelve",
+      "start": 148.421,
+      "end": 148.757
+    },
+    {
+      "word": "point",
+      "start": 148.815,
+      "end": 149.059
+    },
+    {
+      "word": "one",
+      "start": 149.129,
+      "end": 149.303
+    },
+    {
+      "word": "point",
+      "start": 149.349,
+      "end": 149.605
+    },
+    {
+      "word": "two:",
+      "start": 149.651,
+      "end": 150.023
+    },
+    {
+      "word": "concentration.",
+      "start": 150.197,
+      "end": 151.091
+    },
+    {
+      "word": "Concentration",
+      "start": 151.428,
+      "end": 152.205
+    },
+    {
+      "word": "is",
+      "start": 152.322,
+      "end": 152.519
+    },
+    {
+      "word": "how",
+      "start": 152.612,
+      "end": 152.809
+    },
+    {
+      "word": "much",
+      "start": 152.867,
+      "end": 153.065
+    },
+    {
+      "word": "dissolved",
+      "start": 153.134,
+      "end": 153.692
+    },
+    {
+      "word": "reactant",
+      "start": 153.75,
+      "end": 154.318
+    },
+    {
+      "word": "is",
+      "start": 154.388,
+      "end": 154.551
+    },
+    {
+      "word": "present",
+      "start": 154.632,
+      "end": 155.003
+    },
+    {
+      "word": "in",
+      "start": 155.05,
+      "end": 155.12
+    },
+    {
+      "word": "a",
+      "start": 155.166,
+      "end": 155.189
+    },
+    {
+      "word": "given",
+      "start": 155.247,
+      "end": 155.503
+    },
+    {
+      "word": "volume.",
+      "start": 155.584,
+      "end": 156.002
+    },
+    {
+      "word": "At",
+      "start": 156.397,
+      "end": 156.571
+    },
+    {
+      "word": "higher",
+      "start": 156.664,
+      "end": 156.977
+    },
+    {
+      "word": "concentration",
+      "start": 157.035,
+      "end": 157.883
+    },
+    {
+      "word": "there",
+      "start": 158.057,
+      "end": 158.254
+    },
+    {
+      "word": "are",
+      "start": 158.289,
+      "end": 158.405
+    },
+    {
+      "word": "more",
+      "start": 158.463,
+      "end": 158.765
+    },
+    {
+      "word": "reactant",
+      "start": 158.892,
+      "end": 159.415
+    },
+    {
+      "word": "particles",
+      "start": 159.473,
+      "end": 160.019
+    },
+    {
+      "word": "per",
+      "start": 160.135,
+      "end": 160.378
+    },
+    {
+      "word": "unit",
+      "start": 160.506,
+      "end": 160.762
+    },
+    {
+      "word": "volume.",
+      "start": 160.831,
+      "end": 161.307
+    },
+    {
+      "word": "Temperature",
+      "start": 161.644,
+      "end": 162.236
+    },
+    {
+      "word": "is",
+      "start": 162.294,
+      "end": 162.422
+    },
+    {
+      "word": "unchanged,",
+      "start": 162.491,
+      "end": 163.037
+    },
+    {
+      "word": "so",
+      "start": 163.06,
+      "end": 163.2
+    },
+    {
+      "word": "the",
+      "start": 163.269,
+      "end": 163.339
+    },
+    {
+      "word": "particles",
+      "start": 163.397,
+      "end": 163.908
+    },
+    {
+      "word": "do",
+      "start": 163.966,
+      "end": 164.082
+    },
+    {
+      "word": "not",
+      "start": 164.163,
+      "end": 164.291
+    },
+    {
+      "word": "need",
+      "start": 164.349,
+      "end": 164.546
+    },
+    {
+      "word": "to",
+      "start": 164.593,
+      "end": 164.663
+    },
+    {
+      "word": "move",
+      "start": 164.744,
+      "end": 164.953
+    },
+    {
+      "word": "faster.",
+      "start": 164.988,
+      "end": 165.545
+    },
+    {
+      "word": "They",
+      "start": 165.824,
+      "end": 166.021
+    },
+    {
+      "word": "simply",
+      "start": 166.102,
+      "end": 166.485
+    },
+    {
+      "word": "meet",
+      "start": 166.555,
+      "end": 166.776
+    },
+    {
+      "word": "more",
+      "start": 166.892,
+      "end": 167.17
+    },
+    {
+      "word": "often",
+      "start": 167.24,
+      "end": 167.635
+    },
+    {
+      "word": "because",
+      "start": 167.751,
+      "end": 168.215
+    },
+    {
+      "word": "they",
+      "start": 168.262,
+      "end": 168.401
+    },
+    {
+      "word": "are",
+      "start": 168.447,
+      "end": 168.563
+    },
+    {
+      "word": "packed",
+      "start": 168.622,
+      "end": 168.958
+    },
+    {
+      "word": "more",
+      "start": 169.074,
+      "end": 169.295
+    },
+    {
+      "word": "closely.",
+      "start": 169.341,
+      "end": 169.922
+    },
+    {
+      "word": "The",
+      "start": 170.317,
+      "end": 170.444
+    },
+    {
+      "word": "shared",
+      "start": 170.502,
+      "end": 170.804
+    },
+    {
+      "word": "concentration",
+      "start": 170.862,
+      "end": 171.536
+    },
+    {
+      "word": "dataset",
+      "start": 171.605,
+      "end": 172.197
+    },
+    {
+      "word": "is:",
+      "start": 172.313,
+      "end": 172.848
+    },
+    {
+      "word": "zero",
+      "start": 173.184,
+      "end": 173.544
+    },
+    {
+      "word": "point",
+      "start": 173.614,
+      "end": 173.846
+    },
+    {
+      "word": "five",
+      "start": 173.916,
+      "end": 174.241
+    },
+    {
+      "word": "zero",
+      "start": 174.299,
+      "end": 174.589
+    },
+    {
+      "word": "moles",
+      "start": 174.659,
+      "end": 174.972
+    },
+    {
+      "word": "per",
+      "start": 175.054,
+      "end": 175.216
+    },
+    {
+      "word": "cubic",
+      "start": 175.309,
+      "end": 175.669
+    },
+    {
+      "word": "decimetre",
+      "start": 175.739,
+      "end": 176.459
+    },
+    {
+      "word": "takes",
+      "start": 176.575,
+      "end": 176.888
+    },
+    {
+      "word": "one",
+      "start": 177.004,
+      "end": 177.236
+    },
+    {
+      "word": "hundred",
+      "start": 177.283,
+      "end": 177.608
+    },
+    {
+      "word": "and",
+      "start": 177.654,
+      "end": 177.747
+    },
+    {
+      "word": "twenty",
+      "start": 177.782,
+      "end": 178.107
+    },
+    {
+      "word": "seconds;",
+      "start": 178.165,
+      "end": 178.699
+    },
+    {
+      "word": "one",
+      "start": 178.978,
+      "end": 179.198
+    },
+    {
+      "word": "point",
+      "start": 179.257,
+      "end": 179.512
+    },
+    {
+      "word": "zero",
+      "start": 179.558,
+      "end": 179.837
+    },
+    {
+      "word": "zero",
+      "start": 179.907,
+      "end": 180.243
+    },
+    {
+      "word": "takes",
+      "start": 180.371,
+      "end": 180.696
+    },
+    {
+      "word": "sixty",
+      "start": 180.743,
+      "end": 181.091
+    },
+    {
+      "word": "four",
+      "start": 181.149,
+      "end": 181.358
+    },
+    {
+      "word": "seconds;",
+      "start": 181.428,
+      "end": 182.008
+    },
+    {
+      "word": "one",
+      "start": 182.182,
+      "end": 182.38
+    },
+    {
+      "word": "point",
+      "start": 182.426,
+      "end": 182.67
+    },
+    {
+      "word": "five",
+      "start": 182.74,
+      "end": 183.041
+    },
+    {
+      "word": "zero",
+      "start": 183.088,
+      "end": 183.413
+    },
+    {
+      "word": "takes",
+      "start": 183.541,
+      "end": 183.854
+    },
+    {
+      "word": "forty",
+      "start": 183.935,
+      "end": 184.249
+    },
+    {
+      "word": "three",
+      "start": 184.295,
+      "end": 184.516
+    },
+    {
+      "word": "seconds;",
+      "start": 184.562,
+      "end": 185.154
+    },
+    {
+      "word": "two",
+      "start": 185.329,
+      "end": 185.503
+    },
+    {
+      "word": "point",
+      "start": 185.572,
+      "end": 185.793
+    },
+    {
+      "word": "zero",
+      "start": 185.839,
+      "end": 186.095
+    },
+    {
+      "word": "zero",
+      "start": 186.153,
+      "end": 186.478
+    },
+    {
+      "word": "takes",
+      "start": 186.594,
+      "end": 186.907
+    },
+    {
+      "word": "thirty",
+      "start": 186.977,
+      "end": 187.325
+    },
+    {
+      "word": "one",
+      "start": 187.395,
+      "end": 187.592
+    },
+    {
+      "word": "seconds.",
+      "start": 187.651,
+      "end": 188.289
+    },
+    {
+      "word": "Higher",
+      "start": 188.684,
+      "end": 189.044
+    },
+    {
+      "word": "concentration",
+      "start": 189.102,
+      "end": 189.891
+    },
+    {
+      "word": "means",
+      "start": 190.007,
+      "end": 190.297
+    },
+    {
+      "word": "fewer",
+      "start": 190.413,
+      "end": 190.727
+    },
+    {
+      "word": "seconds",
+      "start": 190.82,
+      "end": 191.342
+    },
+    {
+      "word": "to",
+      "start": 191.47,
+      "end": 191.609
+    },
+    {
+      "word": "the",
+      "start": 191.691,
+      "end": 191.772
+    },
+    {
+      "word": "same",
+      "start": 191.841,
+      "end": 192.132
+    },
+    {
+      "word": "endpoint,",
+      "start": 192.201,
+      "end": 192.875
+    },
+    {
+      "word": "so",
+      "start": 193.049,
+      "end": 193.246
+    },
+    {
+      "word": "rate",
+      "start": 193.362,
+      "end": 193.629
+    },
+    {
+      "word": "increases.",
+      "start": 193.687,
+      "end": 194.372
+    },
+    {
+      "word": "Do",
+      "start": 194.547,
+      "end": 194.674
+    },
+    {
+      "word": "not",
+      "start": 194.744,
+      "end": 194.872
+    },
+    {
+      "word": "assume",
+      "start": 194.918,
+      "end": 195.29
+    },
+    {
+      "word": "that",
+      "start": 195.336,
+      "end": 195.487
+    },
+    {
+      "word": "doubling",
+      "start": 195.557,
+      "end": 195.917
+    },
+    {
+      "word": "concentration",
+      "start": 195.986,
+      "end": 196.706
+    },
+    {
+      "word": "exactly",
+      "start": 196.787,
+      "end": 197.368
+    },
+    {
+      "word": "doubles",
+      "start": 197.437,
+      "end": 197.797
+    },
+    {
+      "word": "rate",
+      "start": 197.89,
+      "end": 198.239
+    },
+    {
+      "word": "unless",
+      "start": 198.448,
+      "end": 198.982
+    },
+    {
+      "word": "the",
+      "start": 199.028,
+      "end": 199.144
+    },
+    {
+      "word": "evidence",
+      "start": 199.225,
+      "end": 199.852
+    },
+    {
+      "word": "says",
+      "start": 199.968,
+      "end": 200.259
+    },
+    {
+      "word": "so.",
+      "start": 200.305,
+      "end": 200.677
+    },
+    {
+      "word": "Specification",
+      "start": 201.071,
+      "end": 202.023
+    },
+    {
+      "word": "point",
+      "start": 202.093,
+      "end": 202.395
+    },
+    {
+      "word": "A",
+      "start": 202.488,
+      "end": 202.697
+    },
+    {
+      "word": "twelve",
+      "start": 202.813,
+      "end": 203.184
+    },
+    {
+      "word": "point",
+      "start": 203.231,
+      "end": 203.475
+    },
+    {
+      "word": "one",
+      "start": 203.556,
+      "end": 203.777
+    },
+    {
+      "word": "point",
+      "start": 203.835,
+      "end": 204.102
+    },
+    {
+      "word": "three:",
+      "start": 204.16,
+      "end": 204.636
+    },
+    {
+      "word": "pressure,",
+      "start": 204.879,
+      "end": 205.472
+    },
+    {
+      "word": "for",
+      "start": 205.553,
+      "end": 205.715
+    },
+    {
+      "word": "gases.",
+      "start": 205.773,
+      "end": 206.458
+    },
+    {
+      "word": "At",
+      "start": 206.853,
+      "end": 207.015
+    },
+    {
+      "word": "constant",
+      "start": 207.108,
+      "end": 207.549
+    },
+    {
+      "word": "temperature,",
+      "start": 207.584,
+      "end": 208.269
+    },
+    {
+      "word": "increasing",
+      "start": 208.443,
+      "end": 209.024
+    },
+    {
+      "word": "pressure",
+      "start": 209.094,
+      "end": 209.663
+    },
+    {
+      "word": "can",
+      "start": 209.837,
+      "end": 210.034
+    },
+    {
+      "word": "put",
+      "start": 210.104,
+      "end": 210.289
+    },
+    {
+      "word": "the",
+      "start": 210.336,
+      "end": 210.417
+    },
+    {
+      "word": "same",
+      "start": 210.498,
+      "end": 210.789
+    },
+    {
+      "word": "number",
+      "start": 210.835,
+      "end": 211.079
+    },
+    {
+      "word": "of",
+      "start": 211.125,
+      "end": 211.172
+    },
+    {
+      "word": "gas",
+      "start": 211.241,
+      "end": 211.427
+    },
+    {
+      "word": "particles",
+      "start": 211.509,
+      "end": 212.182
+    },
+    {
+      "word": "in",
+      "start": 212.391,
+      "end": 212.542
+    },
+    {
+      "word": "a",
+      "start": 212.6,
+      "end": 212.623
+    },
+    {
+      "word": "smaller",
+      "start": 212.693,
+      "end": 213.122
+    },
+    {
+      "word": "volume.",
+      "start": 213.192,
+      "end": 213.68
+    },
+    {
+      "word": "The",
+      "start": 214.074,
+      "end": 214.214
+    },
+    {
+      "word": "particles",
+      "start": 214.283,
+      "end": 214.841
+    },
+    {
+      "word": "are",
+      "start": 214.887,
+      "end": 215.003
+    },
+    {
+      "word": "closer",
+      "start": 215.061,
+      "end": 215.514
+    },
+    {
+      "word": "together,",
+      "start": 215.584,
+      "end": 216.222
+    },
+    {
+      "word": "so",
+      "start": 216.431,
+      "end": 216.756
+    },
+    {
+      "word": "there",
+      "start": 216.872,
+      "end": 217.081
+    },
+    {
+      "word": "are",
+      "start": 217.128,
+      "end": 217.244
+    },
+    {
+      "word": "more",
+      "start": 217.29,
+      "end": 217.511
+    },
+    {
+      "word": "particles",
+      "start": 217.569,
+      "end": 218.126
+    },
+    {
+      "word": "per",
+      "start": 218.196,
+      "end": 218.347
+    },
+    {
+      "word": "unit",
+      "start": 218.44,
+      "end": 218.707
+    },
+    {
+      "word": "volume",
+      "start": 218.765,
+      "end": 219.229
+    },
+    {
+      "word": "and",
+      "start": 219.403,
+      "end": 219.601
+    },
+    {
+      "word": "collisions",
+      "start": 219.682,
+      "end": 220.274
+    },
+    {
+      "word": "become",
+      "start": 220.344,
+      "end": 220.727
+    },
+    {
+      "word": "more",
+      "start": 220.785,
+      "end": 220.994
+    },
+    {
+      "word": "frequent.",
+      "start": 221.052,
+      "end": 221.644
+    },
+    {
+      "word": "Do",
+      "start": 222.259,
+      "end": 222.41
+    },
+    {
+      "word": "not",
+      "start": 222.492,
+      "end": 222.666
+    },
+    {
+      "word": "claim",
+      "start": 222.736,
+      "end": 223.13
+    },
+    {
+      "word": "that",
+      "start": 223.2,
+      "end": 223.363
+    },
+    {
+      "word": "average",
+      "start": 223.432,
+      "end": 223.897
+    },
+    {
+      "word": "kinetic",
+      "start": 223.943,
+      "end": 224.431
+    },
+    {
+      "word": "energy",
+      "start": 224.512,
+      "end": 224.918
+    },
+    {
+      "word": "has",
+      "start": 225.0,
+      "end": 225.185
+    },
+    {
+      "word": "increased",
+      "start": 225.302,
+      "end": 225.905
+    },
+    {
+      "word": "if",
+      "start": 225.975,
+      "end": 226.126
+    },
+    {
+      "word": "temperature",
+      "start": 226.184,
+      "end": 226.695
+    },
+    {
+      "word": "is",
+      "start": 226.741,
+      "end": 226.822
+    },
+    {
+      "word": "unchanged.",
+      "start": 226.892,
+      "end": 227.589
+    },
+    {
+      "word": "Pressure",
+      "start": 227.983,
+      "end": 228.413
+    },
+    {
+      "word": "can",
+      "start": 228.459,
+      "end": 228.634
+    },
+    {
+      "word": "rise",
+      "start": 228.726,
+      "end": 229.133
+    },
+    {
+      "word": "by",
+      "start": 229.191,
+      "end": 229.342
+    },
+    {
+      "word": "reducing",
+      "start": 229.423,
+      "end": 229.911
+    },
+    {
+      "word": "volume",
+      "start": 229.992,
+      "end": 230.41
+    },
+    {
+      "word": "at",
+      "start": 230.468,
+      "end": 230.596
+    },
+    {
+      "word": "constant",
+      "start": 230.665,
+      "end": 231.141
+    },
+    {
+      "word": "temperature.",
+      "start": 231.176,
+      "end": 231.873
+    },
+    {
+      "word": "That",
+      "start": 232.326,
+      "end": 232.627
+    },
+    {
+      "word": "is",
+      "start": 232.697,
+      "end": 232.825
+    },
+    {
+      "word": "not",
+      "start": 232.894,
+      "end": 233.057
+    },
+    {
+      "word": "the",
+      "start": 233.103,
+      "end": 233.196
+    },
+    {
+      "word": "same",
+      "start": 233.266,
+      "end": 233.556
+    },
+    {
+      "word": "as",
+      "start": 233.591,
+      "end": 233.696
+    },
+    {
+      "word": "heating",
+      "start": 233.765,
+      "end": 234.055
+    },
+    {
+      "word": "the",
+      "start": 234.113,
+      "end": 234.183
+    },
+    {
+      "word": "mixture.",
+      "start": 234.23,
+      "end": 234.798
+    },
+    {
+      "word": "On",
+      "start": 235.135,
+      "end": 235.309
+    },
+    {
+      "word": "a",
+      "start": 235.356,
+      "end": 235.379
+    },
+    {
+      "word": "gas-volume",
+      "start": 235.46,
+      "end": 236.261
+    },
+    {
+      "word": "versus",
+      "start": 236.308,
+      "end": 236.714
+    },
+    {
+      "word": "time",
+      "start": 236.795,
+      "end": 237.132
+    },
+    {
+      "word": "graph,",
+      "start": 237.179,
+      "end": 237.631
+    },
+    {
+      "word": "a",
+      "start": 237.805,
+      "end": 237.887
+    },
+    {
+      "word": "faster",
+      "start": 238.003,
+      "end": 238.467
+    },
+    {
+      "word": "reaction",
+      "start": 238.525,
+      "end": 239.013
+    },
+    {
+      "word": "has",
+      "start": 239.082,
+      "end": 239.245
+    },
+    {
+      "word": "a",
+      "start": 239.315,
+      "end": 239.338
+    },
+    {
+      "word": "steeper",
+      "start": 239.407,
+      "end": 239.872
+    },
+    {
+      "word": "initial",
+      "start": 239.953,
+      "end": 240.359
+    },
+    {
+      "word": "curve.",
+      "start": 240.429,
+      "end": 240.917
+    },
+    {
+      "word": "If",
+      "start": 241.253,
+      "end": 241.416
+    },
+    {
+      "word": "the",
+      "start": 241.474,
+      "end": 241.555
+    },
+    {
+      "word": "same",
+      "start": 241.637,
+      "end": 241.915
+    },
+    {
+      "word": "limiting",
+      "start": 241.973,
+      "end": 242.403
+    },
+    {
+      "word": "amount",
+      "start": 242.449,
+      "end": 242.751
+    },
+    {
+      "word": "reacts,",
+      "start": 242.809,
+      "end": 243.378
+    },
+    {
+      "word": "the",
+      "start": 243.552,
+      "end": 243.668
+    },
+    {
+      "word": "final",
+      "start": 243.75,
+      "end": 244.109
+    },
+    {
+      "word": "product",
+      "start": 244.167,
+      "end": 244.562
+    },
+    {
+      "word": "amount",
+      "start": 244.62,
+      "end": 244.934
+    },
+    {
+      "word": "can",
+      "start": 244.98,
+      "end": 245.096
+    },
+    {
+      "word": "be",
+      "start": 245.154,
+      "end": 245.247
+    },
+    {
+      "word": "the",
+      "start": 245.294,
+      "end": 245.375
+    },
+    {
+      "word": "same,",
+      "start": 245.445,
+      "end": 245.886
+    },
+    {
+      "word": "reached",
+      "start": 246.037,
+      "end": 246.327
+    },
+    {
+      "word": "sooner.",
+      "start": 246.373,
+      "end": 246.896
+    },
+    {
+      "word": "When",
+      "start": 247.04,
+      "end": 247.261
+    },
+    {
+      "word": "you",
+      "start": 247.319,
+      "end": 247.412
+    },
+    {
+      "word": "plan",
+      "start": 247.481,
+      "end": 247.795
+    },
+    {
+      "word": "an",
+      "start": 247.864,
+      "end": 247.934
+    },
+    {
+      "word": "investigation,",
+      "start": 247.992,
+      "end": 248.851
+    },
+    {
+      "word": "change",
+      "start": 248.898,
+      "end": 249.292
+    },
+    {
+      "word": "only",
+      "start": 249.35,
+      "end": 249.641
+    },
+    {
+      "word": "the",
+      "start": 249.687,
+      "end": 249.757
+    },
+    {
+      "word": "intended",
+      "start": 249.815,
+      "end": 250.256
+    },
+    {
+      "word": "factor.",
+      "start": 250.326,
+      "end": 250.825
+    },
+    {
+      "word": "For",
+      "start": 251.069,
+      "end": 251.243
+    },
+    {
+      "word": "surface",
+      "start": 251.312,
+      "end": 251.777
+    },
+    {
+      "word": "area,",
+      "start": 251.8,
+      "end": 252.23
+    },
+    {
+      "word": "control",
+      "start": 252.299,
+      "end": 252.729
+    },
+    {
+      "word": "mass",
+      "start": 252.799,
+      "end": 253.077
+    },
+    {
+      "word": "of",
+      "start": 253.193,
+      "end": 253.344
+    },
+    {
+      "word": "solid,",
+      "start": 253.437,
+      "end": 253.948
+    },
+    {
+      "word": "concentration",
+      "start": 254.064,
+      "end": 254.888
+    },
+    {
+      "word": "and",
+      "start": 254.958,
+      "end": 255.074
+    },
+    {
+      "word": "volume",
+      "start": 255.155,
+      "end": 255.515
+    },
+    {
+      "word": "of",
+      "start": 255.562,
+      "end": 255.666
+    },
+    {
+      "word": "the",
+      "start": 255.724,
+      "end": 255.806
+    },
+    {
+      "word": "other",
+      "start": 255.875,
+      "end": 256.096
+    },
+    {
+      "word": "reactant,",
+      "start": 256.165,
+      "end": 256.827
+    },
+    {
+      "word": "temperature",
+      "start": 256.92,
+      "end": 257.524
+    },
+    {
+      "word": "and",
+      "start": 257.57,
+      "end": 257.686
+    },
+    {
+      "word": "apparatus.",
+      "start": 257.756,
+      "end": 258.522
+    },
+    {
+      "word": "For",
+      "start": 258.696,
+      "end": 258.87
+    },
+    {
+      "word": "concentration,",
+      "start": 258.928,
+      "end": 259.811
+    },
+    {
+      "word": "also",
+      "start": 259.834,
+      "end": 260.182
+    },
+    {
+      "word": "control",
+      "start": 260.264,
+      "end": 260.658
+    },
+    {
+      "word": "the",
+      "start": 260.716,
+      "end": 260.786
+    },
+    {
+      "word": "surface",
+      "start": 260.844,
+      "end": 261.274
+    },
+    {
+      "word": "area",
+      "start": 261.332,
+      "end": 261.785
+    },
+    {
+      "word": "or",
+      "start": 261.912,
+      "end": 262.133
+    },
+    {
+      "word": "mass",
+      "start": 262.249,
+      "end": 262.632
+    },
+    {
+      "word": "of",
+      "start": 262.748,
+      "end": 262.899
+    },
+    {
+      "word": "any",
+      "start": 263.015,
+      "end": 263.247
+    },
+    {
+      "word": "solid.",
+      "start": 263.305,
+      "end": 263.816
+    },
+    {
+      "word": "Correct",
+      "start": 263.99,
+      "end": 264.374
+    },
+    {
+      "word": "the",
+      "start": 264.408,
+      "end": 264.478
+    },
+    {
+      "word": "misconceptions.",
+      "start": 264.536,
+      "end": 265.5
+    },
+    {
+      "word": "Smaller",
+      "start": 265.778,
+      "end": 266.185
+    },
+    {
+      "word": "pieces",
+      "start": 266.231,
+      "end": 266.603
+    },
+    {
+      "word": "do",
+      "start": 266.661,
+      "end": 266.754
+    },
+    {
+      "word": "not",
+      "start": 266.835,
+      "end": 266.986
+    },
+    {
+      "word": "contain",
+      "start": 267.032,
+      "end": 267.45
+    },
+    {
+      "word": "more",
+      "start": 267.52,
+      "end": 267.706
+    },
+    {
+      "word": "substance.",
+      "start": 267.74,
+      "end": 268.46
+    },
+    {
+      "word": "Higher",
+      "start": 268.704,
+      "end": 269.052
+    },
+    {
+      "word": "concentration",
+      "start": 269.122,
+      "end": 269.865
+    },
+    {
+      "word": "does",
+      "start": 269.923,
+      "end": 270.097
+    },
+    {
+      "word": "not",
+      "start": 270.155,
+      "end": 270.318
+    },
+    {
+      "word": "make",
+      "start": 270.387,
+      "end": 270.585
+    },
+    {
+      "word": "particles",
+      "start": 270.631,
+      "end": 271.142
+    },
+    {
+      "word": "faster",
+      "start": 271.212,
+      "end": 271.665
+    },
+    {
+      "word": "if",
+      "start": 271.746,
+      "end": 271.862
+    },
+    {
+      "word": "temperature",
+      "start": 271.932,
+      "end": 272.477
+    },
+    {
+      "word": "is",
+      "start": 272.524,
+      "end": 272.628
+    },
+    {
+      "word": "unchanged.",
+      "start": 272.721,
+      "end": 273.394
+    },
+    {
+      "word": "Higher",
+      "start": 273.638,
+      "end": 273.986
+    },
+    {
+      "word": "gas",
+      "start": 274.056,
+      "end": 274.288
+    },
+    {
+      "word": "pressure",
+      "start": 274.37,
+      "end": 274.764
+    },
+    {
+      "word": "does",
+      "start": 274.811,
+      "end": 274.996
+    },
+    {
+      "word": "not",
+      "start": 275.043,
+      "end": 275.217
+    },
+    {
+      "word": "always",
+      "start": 275.275,
+      "end": 275.67
+    },
+    {
+      "word": "mean",
+      "start": 275.751,
+      "end": 275.983
+    },
+    {
+      "word": "higher",
+      "start": 276.076,
+      "end": 276.355
+    },
+    {
+      "word": "temperature.",
+      "start": 276.424,
+      "end": 277.121
+    },
+    {
+      "word": "And",
+      "start": 277.295,
+      "end": 277.458
+    },
+    {
+      "word": "more",
+      "start": 277.539,
+      "end": 277.771
+    },
+    {
+      "word": "collisions",
+      "start": 277.818,
+      "end": 278.352
+    },
+    {
+      "word": "does",
+      "start": 278.41,
+      "end": 278.596
+    },
+    {
+      "word": "not",
+      "start": 278.654,
+      "end": 278.805
+    },
+    {
+      "word": "make",
+      "start": 278.874,
+      "end": 279.083
+    },
+    {
+      "word": "every",
+      "start": 279.13,
+      "end": 279.385
+    },
+    {
+      "word": "collision",
+      "start": 279.431,
+      "end": 279.861
+    },
+    {
+      "word": "successful.",
+      "start": 279.931,
+      "end": 280.662
+    },
+    {
+      "word": "Examination-style",
+      "start": 280.999,
+      "end": 282.241
+    },
+    {
+      "word": "question.",
+      "start": 282.288,
+      "end": 282.926
+    },
+    {
+      "word": "Part",
+      "start": 283.135,
+      "end": 283.53
+    },
+    {
+      "word": "a.",
+      "start": 283.623,
+      "end": 284.11
+    },
+    {
+      "word": "Explain",
+      "start": 284.284,
+      "end": 284.818
+    },
+    {
+      "word": "why",
+      "start": 284.888,
+      "end": 285.086
+    },
+    {
+      "word": "a",
+      "start": 285.155,
+      "end": 285.178
+    },
+    {
+      "word": "powdered",
+      "start": 285.271,
+      "end": 285.701
+    },
+    {
+      "word": "solid",
+      "start": 285.759,
+      "end": 286.13
+    },
+    {
+      "word": "reacts",
+      "start": 286.188,
+      "end": 286.583
+    },
+    {
+      "word": "faster",
+      "start": 286.653,
+      "end": 287.199
+    },
+    {
+      "word": "than",
+      "start": 287.349,
+      "end": 287.547
+    },
+    {
+      "word": "the",
+      "start": 287.593,
+      "end": 287.675
+    },
+    {
+      "word": "same",
+      "start": 287.733,
+      "end": 288.023
+    },
+    {
+      "word": "mass",
+      "start": 288.069,
+      "end": 288.313
+    },
+    {
+      "word": "of",
+      "start": 288.36,
+      "end": 288.429
+    },
+    {
+      "word": "large",
+      "start": 288.545,
+      "end": 288.824
+    },
+    {
+      "word": "pieces.",
+      "start": 288.87,
+      "end": 289.509
+    },
+    {
+      "word": "Three",
+      "start": 289.752,
+      "end": 290.066
+    },
+    {
+      "word": "marks.",
+      "start": 290.124,
+      "end": 290.728
+    },
+    {
+      "word": "Powder",
+      "start": 290.902,
+      "end": 291.389
+    },
+    {
+      "word": "has",
+      "start": 291.505,
+      "end": 291.703
+    },
+    {
+      "word": "a",
+      "start": 291.761,
+      "end": 291.796
+    },
+    {
+      "word": "greater",
+      "start": 291.865,
+      "end": 292.202
+    },
+    {
+      "word": "total",
+      "start": 292.283,
+      "end": 292.655
+    },
+    {
+      "word": "surface",
+      "start": 292.725,
+      "end": 293.177
+    },
+    {
+      "word": "area.",
+      "start": 293.224,
+      "end": 293.758
+    },
+    {
+      "word": "Collision",
+      "start": 294.036,
+      "end": 294.512
+    },
+    {
+      "word": "frequency",
+      "start": 294.594,
+      "end": 295.163
+    },
+    {
+      "word": "at",
+      "start": 295.232,
+      "end": 295.325
+    },
+    {
+      "word": "the",
+      "start": 295.372,
+      "end": 295.441
+    },
+    {
+      "word": "surface",
+      "start": 295.488,
+      "end": 295.929
+    },
+    {
+      "word": "increases.",
+      "start": 295.975,
+      "end": 296.753
+    },
+    {
+      "word": "Successful",
+      "start": 297.032,
+      "end": 297.717
+    },
+    {
+      "word": "collisions",
+      "start": 297.786,
+      "end": 298.262
+    },
+    {
+      "word": "occur",
+      "start": 298.309,
+      "end": 298.692
+    },
+    {
+      "word": "more",
+      "start": 298.971,
+      "end": 299.214
+    },
+    {
+      "word": "frequently,",
+      "start": 299.273,
+      "end": 300.085
+    },
+    {
+      "word": "so",
+      "start": 300.236,
+      "end": 300.434
+    },
+    {
+      "word": "rate",
+      "start": 300.526,
+      "end": 300.77
+    },
+    {
+      "word": "increases.",
+      "start": 300.828,
+      "end": 301.664
+    },
+    {
+      "word": "Part",
+      "start": 301.838,
+      "end": 302.14
+    },
+    {
+      "word": "b.",
+      "start": 302.198,
+      "end": 302.581
+    },
+    {
+      "word": "Explain",
+      "start": 302.825,
+      "end": 303.441
+    },
+    {
+      "word": "why",
+      "start": 303.51,
+      "end": 303.812
+    },
+    {
+      "word": "increasing",
+      "start": 303.905,
+      "end": 304.485
+    },
+    {
+      "word": "reactant",
+      "start": 304.555,
+      "end": 304.996
+    },
+    {
+      "word": "concentration",
+      "start": 305.042,
+      "end": 305.797
+    },
+    {
+      "word": "increases",
+      "start": 305.878,
+      "end": 306.47
+    },
+    {
+      "word": "rate.",
+      "start": 306.563,
+      "end": 307.028
+    },
+    {
+      "word": "Three",
+      "start": 307.237,
+      "end": 307.527
+    },
+    {
+      "word": "marks.",
+      "start": 307.585,
+      "end": 308.084
+    },
+    {
+      "word": "There",
+      "start": 308.235,
+      "end": 308.467
+    },
+    {
+      "word": "are",
+      "start": 308.502,
+      "end": 308.642
+    },
+    {
+      "word": "more",
+      "start": 308.688,
+      "end": 308.897
+    },
+    {
+      "word": "particles",
+      "start": 308.955,
+      "end": 309.547
+    },
+    {
+      "word": "per",
+      "start": 309.663,
+      "end": 309.814
+    },
+    {
+      "word": "unit",
+      "start": 309.907,
+      "end": 310.174
+    },
+    {
+      "word": "volume.",
+      "start": 310.244,
+      "end": 310.778
+    },
+    {
+      "word": "Collision",
+      "start": 310.987,
+      "end": 311.428
+    },
+    {
+      "word": "frequency",
+      "start": 311.486,
+      "end": 312.032
+    },
+    {
+      "word": "increases.",
+      "start": 312.101,
+      "end": 312.856
+    },
+    {
+      "word": "Successful",
+      "start": 313.1,
+      "end": 313.773
+    },
+    {
+      "word": "collisions",
+      "start": 313.831,
+      "end": 314.284
+    },
+    {
+      "word": "per",
+      "start": 314.354,
+      "end": 314.505
+    },
+    {
+      "word": "unit",
+      "start": 314.621,
+      "end": 314.957
+    },
+    {
+      "word": "time",
+      "start": 315.108,
+      "end": 315.491
+    },
+    {
+      "word": "increase.",
+      "start": 315.573,
+      "end": 316.269
+    },
+    {
+      "word": "Part",
+      "start": 316.478,
+      "end": 316.78
+    },
+    {
+      "word": "c.",
+      "start": 316.85,
+      "end": 317.268
+    },
+    {
+      "word": "Explain",
+      "start": 317.477,
+      "end": 317.999
+    },
+    {
+      "word": "why",
+      "start": 318.057,
+      "end": 318.231
+    },
+    {
+      "word": "increasing",
+      "start": 318.313,
+      "end": 318.823
+    },
+    {
+      "word": "the",
+      "start": 318.882,
+      "end": 318.951
+    },
+    {
+      "word": "pressure",
+      "start": 319.021,
+      "end": 319.416
+    },
+    {
+      "word": "of",
+      "start": 319.462,
+      "end": 319.532
+    },
+    {
+      "word": "gaseous",
+      "start": 319.613,
+      "end": 320.043
+    },
+    {
+      "word": "reactants",
+      "start": 320.112,
+      "end": 320.681
+    },
+    {
+      "word": "increases",
+      "start": 320.797,
+      "end": 321.412
+    },
+    {
+      "word": "rate.",
+      "start": 321.529,
+      "end": 321.947
+    },
+    {
+      "word": "Three",
+      "start": 322.121,
+      "end": 322.399
+    },
+    {
+      "word": "marks.",
+      "start": 322.457,
+      "end": 322.991
+    },
+    {
+      "word": "At",
+      "start": 323.2,
+      "end": 323.386
+    },
+    {
+      "word": "constant",
+      "start": 323.444,
+      "end": 323.897
+    },
+    {
+      "word": "temperature",
+      "start": 323.932,
+      "end": 324.628
+    },
+    {
+      "word": "the",
+      "start": 324.721,
+      "end": 324.872
+    },
+    {
+      "word": "same",
+      "start": 324.942,
+      "end": 325.186
+    },
+    {
+      "word": "particles",
+      "start": 325.232,
+      "end": 325.766
+    },
+    {
+      "word": "occupy",
+      "start": 325.836,
+      "end": 326.347
+    },
+    {
+      "word": "a",
+      "start": 326.416,
+      "end": 326.451
+    },
+    {
+      "word": "smaller",
+      "start": 326.521,
+      "end": 326.916
+    },
+    {
+      "word": "volume,",
+      "start": 326.974,
+      "end": 327.403
+    },
+    {
+      "word": "so",
+      "start": 327.519,
+      "end": 327.717
+    },
+    {
+      "word": "they",
+      "start": 327.775,
+      "end": 327.902
+    },
+    {
+      "word": "are",
+      "start": 327.937,
+      "end": 328.03
+    },
+    {
+      "word": "closer",
+      "start": 328.065,
+      "end": 328.425
+    },
+    {
+      "word": "together.",
+      "start": 328.483,
+      "end": 329.087
+    },
+    {
+      "word": "Collision",
+      "start": 329.296,
+      "end": 329.737
+    },
+    {
+      "word": "frequency",
+      "start": 329.795,
+      "end": 330.329
+    },
+    {
+      "word": "increases,",
+      "start": 330.399,
+      "end": 331.223
+    },
+    {
+      "word": "and",
+      "start": 331.374,
+      "end": 331.571
+    },
+    {
+      "word": "successful",
+      "start": 331.629,
+      "end": 332.187
+    },
+    {
+      "word": "collisions",
+      "start": 332.245,
+      "end": 332.79
+    },
+    {
+      "word": "occur",
+      "start": 332.848,
+      "end": 333.15
+    },
+    {
+      "word": "more",
+      "start": 333.266,
+      "end": 333.452
+    },
+    {
+      "word": "frequently.",
+      "start": 333.487,
+      "end": 334.23
+    },
+    {
+      "word": "Part",
+      "start": 334.474,
+      "end": 334.752
+    },
+    {
+      "word": "d.",
+      "start": 334.799,
+      "end": 335.112
+    },
+    {
+      "word": "State",
+      "start": 335.391,
+      "end": 335.774
+    },
+    {
+      "word": "one",
+      "start": 335.82,
+      "end": 335.971
+    },
+    {
+      "word": "control",
+      "start": 336.017,
+      "end": 336.401
+    },
+    {
+      "word": "variable",
+      "start": 336.47,
+      "end": 337.039
+    },
+    {
+      "word": "for",
+      "start": 337.097,
+      "end": 337.26
+    },
+    {
+      "word": "a",
+      "start": 337.318,
+      "end": 337.341
+    },
+    {
+      "word": "surface-area",
+      "start": 337.411,
+      "end": 338.247
+    },
+    {
+      "word": "investigation",
+      "start": 338.328,
+      "end": 339.21
+    },
+    {
+      "word": "and",
+      "start": 339.419,
+      "end": 339.628
+    },
+    {
+      "word": "explain",
+      "start": 339.698,
+      "end": 340.243
+    },
+    {
+      "word": "why",
+      "start": 340.313,
+      "end": 340.476
+    },
+    {
+      "word": "you",
+      "start": 340.545,
+      "end": 340.638
+    },
+    {
+      "word": "control",
+      "start": 340.708,
+      "end": 341.126
+    },
+    {
+      "word": "it.",
+      "start": 341.195,
+      "end": 341.463
+    },
+    {
+      "word": "Two",
+      "start": 341.741,
+      "end": 341.95
+    },
+    {
+      "word": "marks.",
+      "start": 342.031,
+      "end": 342.531
+    },
+    {
+      "word": "Control",
+      "start": 342.74,
+      "end": 343.181
+    },
+    {
+      "word": "the",
+      "start": 343.227,
+      "end": 343.297
+    },
+    {
+      "word": "mass",
+      "start": 343.355,
+      "end": 343.576
+    },
+    {
+      "word": "of",
+      "start": 343.634,
+      "end": 343.703
+    },
+    {
+      "word": "solid,",
+      "start": 343.785,
+      "end": 344.4
+    },
+    {
+      "word": "or",
+      "start": 344.795,
+      "end": 344.946
+    },
+    {
+      "word": "the",
+      "start": 345.004,
+      "end": 345.073
+    },
+    {
+      "word": "concentration",
+      "start": 345.12,
+      "end": 345.874
+    },
+    {
+      "word": "of",
+      "start": 345.956,
+      "end": 346.083
+    },
+    {
+      "word": "the",
+      "start": 346.141,
+      "end": 346.223
+    },
+    {
+      "word": "other",
+      "start": 346.281,
+      "end": 346.524
+    },
+    {
+      "word": "reactant,",
+      "start": 346.583,
+      "end": 347.221
+    },
+    {
+      "word": "or",
+      "start": 347.302,
+      "end": 347.453
+    },
+    {
+      "word": "temperature.",
+      "start": 347.523,
+      "end": 348.161
+    },
+    {
+      "word": "That",
+      "start": 348.37,
+      "end": 348.603
+    },
+    {
+      "word": "isolates",
+      "start": 348.696,
+      "end": 349.322
+    },
+    {
+      "word": "surface",
+      "start": 349.439,
+      "end": 349.915
+    },
+    {
+      "word": "area",
+      "start": 349.961,
+      "end": 350.379
+    },
+    {
+      "word": "so",
+      "start": 350.553,
+      "end": 350.727
+    },
+    {
+      "word": "the",
+      "start": 350.797,
+      "end": 350.867
+    },
+    {
+      "word": "comparison",
+      "start": 350.925,
+      "end": 351.54
+    },
+    {
+      "word": "is",
+      "start": 351.621,
+      "end": 351.749
+    },
+    {
+      "word": "valid.",
+      "start": 351.831,
+      "end": 352.365
+    },
+    {
+      "word": "Before",
+      "start": 352.701,
+      "end": 353.085
+    },
+    {
+      "word": "we",
+      "start": 353.119,
+      "end": 353.224
+    },
+    {
+      "word": "finish,",
+      "start": 353.294,
+      "end": 353.874
+    },
+    {
+      "word": "complete",
+      "start": 354.083,
+      "end": 354.513
+    },
+    {
+      "word": "the",
+      "start": 354.547,
+      "end": 354.617
+    },
+    {
+      "word": "model.",
+      "start": 354.675,
+      "end": 355.151
+    },
+    {
+      "word": "Surface",
+      "start": 355.488,
+      "end": 356.092
+    },
+    {
+      "word": "area,",
+      "start": 356.138,
+      "end": 356.707
+    },
+    {
+      "word": "concentration",
+      "start": 356.823,
+      "end": 357.636
+    },
+    {
+      "word": "and",
+      "start": 357.694,
+      "end": 357.787
+    },
+    {
+      "word": "pressure",
+      "start": 357.856,
+      "end": 358.321
+    },
+    {
+      "word": "all",
+      "start": 358.39,
+      "end": 358.634
+    },
+    {
+      "word": "change",
+      "start": 358.704,
+      "end": 359.064
+    },
+    {
+      "word": "how",
+      "start": 359.122,
+      "end": 359.296
+    },
+    {
+      "word": "often",
+      "start": 359.366,
+      "end": 359.667
+    },
+    {
+      "word": "particles",
+      "start": 359.725,
+      "end": 360.213
+    },
+    {
+      "word": "collide.",
+      "start": 360.283,
+      "end": 360.875
+    },
+    {
+      "word": "More",
+      "start": 361.27,
+      "end": 361.49
+    },
+    {
+      "word": "frequent",
+      "start": 361.537,
+      "end": 361.92
+    },
+    {
+      "word": "collisions",
+      "start": 361.978,
+      "end": 362.628
+    },
+    {
+      "word": "give",
+      "start": 362.779,
+      "end": 363.034
+    },
+    {
+      "word": "more",
+      "start": 363.104,
+      "end": 363.336
+    },
+    {
+      "word": "successful",
+      "start": 363.383,
+      "end": 363.952
+    },
+    {
+      "word": "collisions",
+      "start": 364.01,
+      "end": 364.52
+    },
+    {
+      "word": "per",
+      "start": 364.59,
+      "end": 364.753
+    },
+    {
+      "word": "unit",
+      "start": 364.845,
+      "end": 365.101
+    },
+    {
+      "word": "time,",
+      "start": 365.147,
+      "end": 365.6
+    },
+    {
+      "word": "so",
+      "start": 365.774,
+      "end": 365.983
+    },
+    {
+      "word": "rate",
+      "start": 366.099,
+      "end": 366.343
+    },
+    {
+      "word": "increases.",
+      "start": 366.39,
+      "end": 367.121
+    },
+    {
+      "word": "Energy",
+      "start": 367.365,
+      "end": 367.829
+    },
+    {
+      "word": "and",
+      "start": 367.899,
+      "end": 368.015
+    },
+    {
+      "word": "orientation",
+      "start": 368.085,
+      "end": 368.863
+    },
+    {
+      "word": "still",
+      "start": 369.072,
+      "end": 369.373
+    },
+    {
+      "word": "decide",
+      "start": 369.431,
+      "end": 369.977
+    },
+    {
+      "word": "which",
+      "start": 370.093,
+      "end": 370.349
+    },
+    {
+      "word": "collisions",
+      "start": 370.407,
+      "end": 370.952
+    },
+    {
+      "word": "succeed.",
+      "start": 370.987,
+      "end": 371.73
+    },
+    {
+      "word": "If",
+      "start": 371.939,
+      "end": 372.09
+    },
+    {
+      "word": "you",
+      "start": 372.137,
+      "end": 372.206
+    },
+    {
+      "word": "found",
+      "start": 372.299,
+      "end": 372.52
+    },
+    {
+      "word": "this",
+      "start": 372.555,
+      "end": 372.717
+    },
+    {
+      "word": "useful,",
+      "start": 372.787,
+      "end": 373.332
+    },
+    {
+      "word": "please",
+      "start": 373.483,
+      "end": 373.774
+    },
+    {
+      "word": "subscribe",
+      "start": 373.797,
+      "end": 374.331
+    },
+    {
+      "word": "to",
+      "start": 374.366,
+      "end": 374.447
+    },
+    {
+      "word": "J",
+      "start": 374.563,
+      "end": 374.737
+    },
+    {
+      "word": "D",
+      "start": 374.83,
+      "end": 374.876
+    },
+    {
+      "word": "Science,",
+      "start": 374.993,
+      "end": 375.527
+    },
+    {
+      "word": "and",
+      "start": 375.701,
+      "end": 375.875
+    },
+    {
+      "word": "visit",
+      "start": 375.945,
+      "end": 376.351
+    },
+    {
+      "word": "j",
+      "start": 376.746,
+      "end": 376.92
+    },
+    {
+      "word": "d",
+      "start": 376.978,
+      "end": 377.106
+    },
+    {
+      "word": "science",
+      "start": 377.164,
+      "end": 377.593
+    },
+    {
+      "word": "dot",
+      "start": 377.64,
+      "end": 377.849
+    },
+    {
+      "word": "co",
+      "start": 377.918,
+      "end": 378.174
+    },
+    {
+      "word": "dot",
+      "start": 378.325,
+      "end": 378.685
+    },
+    {
+      "word": "u",
+      "start": 378.859,
+      "end": 379.033
+    },
+    {
+      "word": "k",
+      "start": 379.103,
+      "end": 379.346
+    },
+    {
+      "word": "for",
+      "start": 379.741,
+      "end": 379.938
+    },
+    {
+      "word": "more",
+      "start": 380.008,
+      "end": 380.229
+    },
+    {
+      "word": "explanations,",
+      "start": 380.287,
+      "end": 381.216
+    },
+    {
+      "word": "worksheets",
+      "start": 381.343,
+      "end": 381.947
+    },
+    {
+      "word": "and",
+      "start": 382.017,
+      "end": 382.191
+    },
+    {
+      "word": "T-Level",
+      "start": 382.272,
+      "end": 382.818
+    },
+    {
+      "word": "Chemistry",
+      "start": 382.911,
+      "end": 383.41
+    },
+    {
+      "word": "lessons.",
+      "start": 383.468,
+      "end": 384.002
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

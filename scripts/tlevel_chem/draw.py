@@ -27,6 +27,7 @@ from jdscience_video.theme import (
 )
 from tlevel_chem.diagrams import ORANGE, collision_frame, energy_bar
 from tlevel_chem.lessons import LESSONS
+from tlevel_chem.draw_a12 import render_a12
 from tlevel_chem.science import causal_pills, energy_profile, maxwell_boltzmann, particle_chamber
 
 
@@ -562,6 +563,10 @@ def render_slide(lesson: dict, slide_id: str, revealed: Iterable[str], t: float)
             ["r1", "r2", "r3"],
         )
         return img
+
+    a12 = render_a12(lesson, slide, revealed, t, img, d)
+    if a12 is not None:
+        return a12
 
     heading(d, lesson["title"], slide_id)
     return img

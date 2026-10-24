@@ -1,73 +1,50 @@
 # T-Level Chemistry A11/A12 source review
 
-Primary sources for this pilot are the original PDF binaries, not Markdown extracts.
+Updated 24 October 2026, Europe/London.
 
-## Confirmed original PDFs (readable)
+## Original PDF binaries used
 
-Inspected with `file` and `pdfinfo` on 24 October 2026.
+| File | Used for |
+| --- | --- |
+| A_11.1 Teacher PowerPoint + student workbook | A11.1 video and worksheet |
+| A_11.2 Teacher PowerPoint + student + teacher answer workbooks | A11.2 |
+| A_11.3 Teacher PowerPoint + student + teacher answer workbooks | A11.3 |
+| A12.5 Teacher PowerPoint PDF | A12.5 video science |
+| A12.6 student + teacher answer workbooks | A12.6 |
 
-| File | Type | Pages | Size |
+A11.1 Teacher Answer Workbook was never supplied. That private scheme remains derived from the PowerPoint answers and student questions.
+
+## Markdown extracts used (original PDFs missing)
+
+A12.1–A12.4 teacher PowerPoints, student workbooks and teacher answers exist only as markdown extracts of the original PDFs. A12.5 student/teacher workbooks and the A12.6 teacher PowerPoint are also extracts.
+
+Those lessons were produced from the extract text only. Nothing was invented to fill gaps. Diagram-only slides with no extractable text use the teacher “expected diagram” wording from the same extract set.
+
+## Discrepancies — reported, not silently chosen
+
+### A12.1 timing
+
+| Source | Large chips | Small chips | Powder |
 | --- | --- | --- | --- |
-| A_11.1_Teacher_PowerPoint_508a.pdf | PDF 1.7, 960×540 | 25 | 154181 |
-| A11.1_T_Level_Chemistry_Student_Workbook_9e83.pdf | PDF 1.7, letter | 6 | 157043 |
-| A_11.2_Teacher_PowerPoint_2135.pdf | PDF 1.7 | 26 | 274470 |
-| A11.2 student + teacher answer workbooks | PDF 1.7 | 32 / 33 | present |
-| A_11.3_Teacher_PowerPoint_e055.pdf | PDF 1.7 | 27 | 239324 |
-| A11.3 student + teacher answer workbooks | PDF 1.7 | 34 / 34 | present |
-| A12.5_Teacher_PowerPoint_335b.pdf | PDF 1.7 | 32 | 1616691 |
-| A12.6 student + teacher answer workbooks | PDF 1.7 | 42 / 42 | present |
+| Teacher PowerPoint extract | **95 s** | **48 s** | not given |
+| Student workbook + teacher answers | **96 s** | **51 s** | **29 s** |
 
-A11.1 Teacher Answer Workbook was **not** supplied. The private marking scheme is derived from the teacher PowerPoint answer slides and the student workbook questions, and is flagged as such.
+The video teaches both tables as separate datasets and states that they must not be merged. The scientific conclusion is the same: smaller particles, greater surface area, shorter time to the same endpoint. The worksheet prints both tables.
 
-## A11.1 content used in the pilot
+### A12.5 exam 10.1 mark split
 
-Taken from the original teacher PowerPoint:
+Workbook: continue (1) + equal rates (1) + closed system (1).  
+PDF teacher slides: equal rates (2) + closed system (1).  
+Same science; both splits appear on the teacher scheme.
 
-- A11.1.1 activation energy = minimum collision energy for a successful reaction
-- A11.1.2 correct spatial orientation
-- Two tests: energy **and** orientation
-- Guided application at Ea = 45 kJ mol⁻¹: A 30 correct; B 55 incorrect; C 50 correct
-- Exam style P/Q at Ea = 62 kJ mol⁻¹: 58 correct orientation; 70 incorrect orientation
-- Misconceptions and plenary model
+### A11.1 tables
 
-## Inconsistencies held for review
+Teacher PowerPoint guided A/B/C (30 / 55 / 50 with orientation) is not student table 2.2 (energy-only 30 / 45 / 52 / 58). The video teaches A/B/C. The worksheet keeps both.
 
-### A12.1 timing discrepancy (do not silently choose)
+### A12.6 temperatures
 
-From the completed source audit, A12.1 teacher slides and the student workbook do not use the same times:
-
-- Teacher slides: **95 s** and **48 s**
-- Student workbook: **96 s**, **51 s** and **29 s**
-
-No A12.1 original PDF is in the current upload set. Do not produce A12.1 until these values are reconciled against the original teacher PowerPoint, student workbook and teacher answer workbook.
-
-### A11.1 tables are not identical
-
-- Teacher PowerPoint guided application: collisions A/B/C at 30 / 55 / 50 kJ mol⁻¹ with orientation stated.
-- Student workbook table 2.2: energy-only rows A–D at 30 / 45 / 52 / 58 kJ mol⁻¹.
-- Student workbook table 4: five two-condition scenarios, including 62 / 70 and 62 / 61.
-
-The video teaches the teacher PowerPoint A/B/C set. The student worksheet includes both the energy-only table and the five two-condition scenarios. The marking scheme keeps them separate.
-
-### Student workbook page-count metadata
-
-`pdfinfo` reports 6 pages for the A11.1 student workbook. `file` reported 30 pages for the same binary. The extracted text and rendered pages are a 6-page letter document. Treat 6 as the working page count.
-
-## Title reconciliation (24 October 2026, Europe/London)
-
-Original PDFs confirm:
-
-- A11.2 **Temperature and Rate of Reaction** (matches the approved production list)
-- A11.3 **Catalysts and Reaction Rate** (matches the approved production list)
-- A12.5 **Reversible Reactions** (original teacher PowerPoint)
-- A12.6 **The Haber Process** (original student and teacher workbooks)
-
-The earlier catalog titles for A11.2/A11.3 (factors affecting rate / Maxwell–Boltzmann as standalone topics) were incorrect and have been replaced.
-
-## Missing original PDFs for later topics
-
-A12.1–A12.4 exist only as Markdown extracts in the upload folder, not as PDF binaries. A12.1 still has the 95 s / 48 s versus 96 s / 51 s / 29 s timing split. Those four topics are listed as coming soon and are **not** produced in this batch.
+One worked option uses **650 °C**; Plant X uses **600 °C**. Different scenarios, not a conflict.
 
 ## Privacy
 
-Teacher answer workbooks and marking schemes stay out of the public website catalog.
+Teacher answer workbooks and marking schemes stay out of public Git paths and public storage URLs. Website teacher downloads use `/api/teacher-marking-scheme` and short-lived signed URLs from the private `teacher-resources` bucket.

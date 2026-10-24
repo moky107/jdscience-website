@@ -44,6 +44,7 @@ content/tlevel-chemistry/private/
 
 # Original teacher answer workbooks — stay private
 content/tlevel-chemistry/sources/*Teacher_Answer_Workbook*
+content/tlevel-chemistry/sources/extracts/*Teacher_Answer*
 
 # Large hosted T-Level MP4s live in Supabase, not Git
 public/resources/t-level/science/videos/*/*.mp4

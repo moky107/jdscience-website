@@ -22,7 +22,7 @@ TEAL_DARK = (0, 77, 64)
 LIGHT = (248, 250, 252)
 
 
-def _page(title: str, subtitle: str, page_no: int, total: int, confidential: bool = False) -> tuple[Image.Image, ImageDraw.ImageDraw]:
+def _page(title: str, subtitle: str, page_no: int, total: int, confidential: bool = False, spec: str = "A11 / A12") -> tuple[Image.Image, ImageDraw.ImageDraw]:
     img = Image.new("RGB", PAGE, LIGHT)
     d = ImageDraw.Draw(img)
     d.rectangle((0, 0, PAGE[0], 92), fill=TEAL_DARK)
@@ -35,7 +35,7 @@ def _page(title: str, subtitle: str, page_no: int, total: int, confidential: boo
         d.text((PAGE[0] - 198, 46), "TEACHER ONLY", font=font("bold", 16), fill=WHITE, anchor="mm")
     d.text((MARGIN, 118), subtitle, font=font("regular", 16), fill=MUTED)
     d.text((PAGE[0] - MARGIN, PAGE[1] - 28), f"{page_no} / {total}", font=font("medium", 14), fill=MUTED, anchor="rm")
-    d.text((MARGIN, PAGE[1] - 28), "jdscience.co.uk  ·  T-Level Science  ·  Chemistry  ·  A11.1", font=font("medium", 13), fill=MUTED, anchor="lm")
+    d.text((MARGIN, PAGE[1] - 28), f"jdscience.co.uk  ·  T-Level Science  ·  Chemistry  ·  {spec}", font=font("medium", 13), fill=MUTED, anchor="lm")
     return img, d
 
 

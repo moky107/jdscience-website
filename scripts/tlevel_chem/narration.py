@@ -210,5 +210,7 @@ A11_3 = LessonScript(
     ]),
 )
 
-LESSONS = [A11_1, A11_2, A11_3]
+from tlevel_chem.narration_a12 import A12_LESSONS
+
+LESSONS = [A11_1, A11_2, A11_3, *A12_LESSONS]
 BY_SLUG = {lesson.slug: lesson for lesson in LESSONS}

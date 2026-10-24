@@ -61,7 +61,7 @@
   </header>
   <main>
     
-            <div class="callout">Original JD Science T-Level Chemistry lesson. Captions are available in the player. Learning outcomes are in the video and on the student worksheet. Answer booklets stay with teachers and are not published here.</div><p>Activation energy, successful and unsuccessful collisions, and why particles must meet in the correct spatial orientation.</p>
+            <div class="callout">Original JD Science T-Level Chemistry lesson. Captions are available in the player. Learning outcomes are listed below and on the student worksheet. Teacher marking schemes require an authorised teacher sign-in and are not stored at a public URL.</div><p>Activation energy, successful and unsuccessful collisions, and why particles must meet in the correct spatial orientation.</p><h2>Learning outcomes</h2><ul><li>Explain why reacting particles must collide</li><li>Define activation energy</li><li>Distinguish successful and unsuccessful collisions</li><li>Explain correct spatial orientation</li></ul>
             <style>
               .lesson-video { margin: 0 0 24px; background: #0f172a; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 16px rgba(15,23,42,.05); }
               .lesson-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
@@ -76,6 +76,43 @@
               <figcaption><a class="download" href="https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/t-level/science/videos/a11-1-collision-theory/jdscience-a11-1-collision-theory-1080p.mp4" download>Download A11.1 Principles of Collision Theory (MP4)</a></figcaption>
             </figure>
             <p><a class="download" href="/resources/t-level/science/videos/a11-1-collision-theory/jdscience-a11-1-collision-theory-worksheet.pdf">Download student worksheet (PDF)</a></p>
+            <p><button type="button" class="download" data-teacher-scheme="a11-1-collision-theory">Teacher marking scheme (sign in required)</button></p>
+            <p class="meta">Marking schemes are issued only to authorised teacher accounts as short-lived signed links. They are not published as public files.</p>
+            <script>
+            (function () {
+              const button = document.querySelector("[data-teacher-scheme]");
+              if (!button) return;
+              button.addEventListener("click", async function () {
+                const slug = button.getAttribute("data-teacher-scheme");
+                const key = Object.keys(localStorage).find(function (name) { return name.indexOf("sb-") === 0 && name.indexOf("-auth-token") !== -1; });
+                let token = "";
+                try {
+                  const raw = key ? JSON.parse(localStorage.getItem(key) || "{}") : {};
+                  token = raw.access_token || (raw.currentSession && raw.currentSession.access_token) || "";
+                } catch (error) { token = ""; }
+                if (!token) {
+                  window.location.href = "/#auth";
+                  return;
+                }
+                button.disabled = true;
+                try {
+                  const response = await fetch("/api/teacher-marking-scheme?slug=" + encodeURIComponent(slug), {
+                    headers: { Authorization: "Bearer " + token }
+                  });
+                  const data = await response.json();
+                  if (!response.ok) {
+                    button.disabled = false;
+                    window.alert(data.error || "Teacher download is not available.");
+                    return;
+                  }
+                  window.location.href = data.url;
+                } catch (error) {
+                  button.disabled = false;
+                  window.alert("Teacher download failed. Sign in and try again.");
+                }
+              });
+            }());
+            </script>
             
             <p>Taught with support from <a href="/tutors/joseph-danso/">Joseph Danso</a>, Science Lecturer in London. <a href="/#book-anchor">Book a session</a>.</p>
           

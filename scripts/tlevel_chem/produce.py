@@ -111,7 +111,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--slug", choices=sorted(LESSONS), default="a11-1-collision-theory")
+    parser.add_argument("--slug", choices=sorted(LESSONS), default="a12-1-factors-affecting-rates")
     parser.add_argument("--out", type=Path, default=Path("/opt/cursor/artifacts"))
     parser.add_argument("--skip-tts", action="store_true")
     parser.add_argument("--no-video", action="store_true")

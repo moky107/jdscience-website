@@ -258,6 +258,9 @@ function collectTopics() {
       topics.get(slug).downloadHref = item.downloadHref;
       topics.get(slug).downloadLabel = item.downloadLabel;
     }
+    if (item.teacherSchemeSlug && !topics.get(slug).teacherSchemeSlug) {
+      topics.get(slug).teacherSchemeSlug = item.teacherSchemeSlug;
+    }
   }
 
   return [...subjects.values()].sort((a, b) => `${a.level} ${a.subject}`.localeCompare(`${b.level} ${b.subject}`));
@@ -387,6 +390,45 @@ function writeResourcePages(subjects) {
         const downloadLink = topic.downloadHref
           ? `<p><a class="download" href="${escapeHtml(topic.downloadHref)}">${escapeHtml(topic.downloadLabel || "Download slides")}</a></p>`
           : "";
+        const teacherLink = topic.teacherSchemeSlug
+          ? `<p><button type="button" class="download" data-teacher-scheme="${escapeHtml(topic.teacherSchemeSlug)}">Teacher marking scheme (sign in required)</button></p>
+            <p class="meta">Marking schemes are issued only to authorised teacher accounts as short-lived signed links. They are not published as public files.</p>
+            <script>
+            (function () {
+              const button = document.querySelector("[data-teacher-scheme]");
+              if (!button) return;
+              button.addEventListener("click", async function () {
+                const slug = button.getAttribute("data-teacher-scheme");
+                const key = Object.keys(localStorage).find(function (name) { return name.indexOf("sb-") === 0 && name.indexOf("-auth-token") !== -1; });
+                let token = "";
+                try {
+                  const raw = key ? JSON.parse(localStorage.getItem(key) || "{}") : {};
+                  token = raw.access_token || (raw.currentSession && raw.currentSession.access_token) || "";
+                } catch (error) { token = ""; }
+                if (!token) {
+                  window.location.href = "/#auth";
+                  return;
+                }
+                button.disabled = true;
+                try {
+                  const response = await fetch("/api/teacher-marking-scheme?slug=" + encodeURIComponent(slug), {
+                    headers: { Authorization: "Bearer " + token }
+                  });
+                  const data = await response.json();
+                  if (!response.ok) {
+                    button.disabled = false;
+                    window.alert(data.error || "Teacher download is not available.");
+                    return;
+                  }
+                  window.location.href = data.url;
+                } catch (error) {
+                  button.disabled = false;
+                  window.alert("Teacher download failed. Sign in and try again.");
+                }
+              });
+            }());
+            </script>`
+          : "";
         writePage(`resources/${subject.levelSlug}/${subject.subjectSlug}/${categorySlug(category)}/${topic.slug}`, renderPublicPage({
           title,
           description: `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category.toLowerCase()} from JD Science. Original practice and revision for UK students, with tutoring from Joseph Danso.`,
@@ -424,6 +466,7 @@ function writeResourcePages(subjects) {
           bodyHtml: `
             ${topic.notesHtml || `<p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}.</p>`}${videoHtml}
             ${downloadLink}
+            ${teacherLink}
             ${noteLinks.length ? `<h2>Open these resources</h2><ul>${noteLinks.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}</ul>` : ""}
             <p>${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
               ? `Taught with support from <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a>, Science Lecturer in London.`

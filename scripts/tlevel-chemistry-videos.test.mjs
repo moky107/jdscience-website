@@ -42,13 +42,9 @@ test("catalog lists the nine A11/A12 Chemistry topics under T-Level Science Vide
   }
 });
 
-test("A11.1–A11.3 are hosted playable lessons", () => {
+test("all nine A11/A12 lessons are hosted playable lessons", () => {
   const ready = TLEVEL_CHEMISTRY_VIDEOS.filter((item) => item.hosted);
-  assert.deepEqual(ready.map((item) => item.topicSlug), [
-    "a11-1-collision-theory",
-    "a11-2-temperature-and-rate",
-    "a11-3-catalysts",
-  ]);
+  assert.equal(ready.length, 9);
   for (const lesson of ready) {
     assert.equal(
       lesson.file_url_override,
@@ -60,7 +56,7 @@ test("A11.1–A11.3 are hosted playable lessons", () => {
 });
 
 test("student worksheets are public and teacher mark schemes are not catalogued", () => {
-  for (const slug of ["a11-1-collision-theory", "a11-2-temperature-and-rate", "a11-3-catalysts"]) {
+  for (const slug of TLEVEL_CHEMISTRY_VIDEOS.map((item) => item.topicSlug)) {
     const worksheet = join(ROOT, `public/resources/t-level/science/videos/${slug}/jdscience-${slug}-worksheet.pdf`);
     assert.ok(existsSync(worksheet), `missing public student worksheet ${slug}`);
   }

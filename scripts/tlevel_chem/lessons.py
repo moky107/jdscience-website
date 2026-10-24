@@ -149,8 +149,11 @@ A11_3 = _lesson(
     {"profile"},
 )
 
+from tlevel_chem.lessons_a12 import A12_LESSON_MAP
+
 LESSONS = {
     "a11-1-collision-theory": A11_1,
     "a11-2-temperature-and-rate": A11_2,
     "a11-3-catalysts": A11_3,
+    **A12_LESSON_MAP,
 }

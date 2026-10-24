@@ -1,0 +1,151 @@
+{
+  "slug": "a12-3-enthalpy-changes",
+  "duration": 277.29,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.128,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 13.688,
+      "aligned": true,
+      "cue": "define H and delta H"
+    },
+    {
+      "id": "hdef",
+      "t": 27.991,
+      "aligned": true,
+      "cue": "Enthalpy, H, is the energy content"
+    },
+    {
+      "id": "exo",
+      "t": 80.468,
+      "aligned": true,
+      "cue": "Watch the exothermic profile"
+    },
+    {
+      "id": "endo",
+      "t": 114.079,
+      "aligned": true,
+      "cue": "Watch the endothermic profile"
+    },
+    {
+      "id": "fortyfive",
+      "t": 126.421,
+      "aligned": true,
+      "cue": "forty five kilojoules to the surroundings"
+    },
+    {
+      "id": "cat",
+      "t": 140.771,
+      "aligned": true,
+      "cue": "A catalyst provides an alternative pathway"
+    },
+    {
+      "id": "myths",
+      "t": 157.188,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 192.284,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 246.399,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 268.121,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 13.808,
+      "aligned": true,
+      "cue": "define H and delta H"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 18.947,
+      "aligned": true,
+      "cue": "exothermic and endothermic"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 22.059,
+      "aligned": true,
+      "cue": "read enthalpy diagrams"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 24.868,
+      "aligned": true,
+      "cue": "what a catalyst does and does not change"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 203.674,
+      "aligned": true,
+      "cue": "Delta H equals H products minus H reactants"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 215.319,
+      "aligned": true,
+      "cue": "Products are lower in enthalpy"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 227.579,
+      "aligned": true,
+      "cue": "Delta H is positive"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 238.423,
+      "aligned": true,
+      "cue": "The catalyst provides a lower E a pathway"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 248.872,
+      "aligned": true,
+      "cue": "H is the energy content of a state"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 254.538,
+      "aligned": true,
+      "cue": "Exothermic, delta H negative"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 259.971,
+      "aligned": true,
+      "cue": "A catalyst changes the pathway peak"
+    }
+  ]
+}
