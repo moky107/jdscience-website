@@ -390,6 +390,15 @@ function writeResourcePages(subjects) {
         const downloadLink = topic.downloadHref
           ? `<p><a class="download" href="${escapeHtml(topic.downloadHref)}">${escapeHtml(topic.downloadLabel || "Download slides")}</a></p>`
           : "";
+        const siblingNav = (subject.levelSlug === "t-level" && subject.subjectSlug === "science" && category === "Videos")
+          ? `<p><a class="download" href="https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/t-level/science/downloads/${topic.slug}/${topic.slug}-transcript.txt">Read the full transcript</a></p>
+            <h2>More T-Level Chemistry topics</h2><div class="cards">${topicList.filter((item) => item.slug !== topic.slug).map((item) => card(
+            `${categoryPath}${item.slug}/`,
+            item.title,
+            item.description || item.title,
+            item.poster_url,
+          )).join("")}</div>`
+          : "";
         const teacherLink = topic.teacherSchemeSlug
           ? `<p><button type="button" class="download" data-teacher-scheme="${escapeHtml(topic.teacherSchemeSlug)}">Teacher marking scheme (sign in required)</button></p>
             <p class="meta">Marking schemes are issued only to authorised teacher accounts as short-lived signed links. They are not published as public files.</p>
@@ -467,6 +476,7 @@ function writeResourcePages(subjects) {
             ${topic.notesHtml || `<p>This is the public JD Science page for <strong>${escapeHtml(topic.title)}</strong> in ${escapeHtml(levelLabel(subject.level))} ${escapeHtml(subject.subject)} ${escapeHtml(category.toLowerCase())}.</p>`}${videoHtml}
             ${downloadLink}
             ${teacherLink}
+            ${siblingNav}
             ${noteLinks.length ? `<h2>Open these resources</h2><ul>${noteLinks.map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label || item.board)}</a>${item.answersHref ? ` · <a href="${escapeHtml(item.answersHref)}">Answers</a>` : ""}</li>`).join("")}</ul>` : ""}
             <p>${JOSEPH_TEACHING_SUBJECTS.includes(subject.subject)
               ? `Taught with support from <a href="${JOSEPH_DANSO.profilePath}">Joseph Danso</a>, Science Lecturer in London.`

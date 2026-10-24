@@ -63,3 +63,15 @@ test("student worksheets are public and teacher mark schemes are not catalogued"
   const publicTree = readFileSync(join(ROOT, "src/tlevelChemistryVideos.js"), "utf8");
   assert.doesNotMatch(publicTree, /teacher-marking-scheme|Teacher Answer Workbook/);
 });
+
+test("each topic page has captions, worksheet, teacher button and sibling navigation", () => {
+  for (const slug of TLEVEL_CHEMISTRY_VIDEOS.map((item) => item.topicSlug)) {
+    const page = readFileSync(join(ROOT, `public/resources/t-level/science/videos/${slug}/index.html`), "utf8");
+    assert.match(page, /captions\.vtt/);
+    assert.match(page, new RegExp(`jdscience-${slug}-worksheet\\.pdf`));
+    assert.match(page, /data-teacher-scheme=/);
+    assert.match(page, /More T-Level Chemistry topics/);
+    assert.match(page, /Read the full transcript/);
+    assert.doesNotMatch(page, /teacher-resources\/t-level\/science\/marking-schemes/);
+  }
+});
