@@ -1,0 +1,5531 @@
+{
+  "slug": "potable-water",
+  "title": "Potable Water and Waste Water Treatment",
+  "audio": "/workspace/content/videos/potable-water/source/narration_master.mp3",
+  "duration": 558.759,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's GCSE Chemistry lesson, we are going to explore potable water, water treatment and the processes used to make water safe for human consumption.\n\nWe will also examine how waste water is treated and why obtaining drinking water from seawater can be expensive.\n\nLet us begin with an important question.\n\nIs the water that comes out of your tap chemically pure?\n\nThe answer is no.\n\nAlthough tap water is treated to make it safe to drink, it still contains small amounts of dissolved substances.\n\nIn chemistry, we use the term potable water to describe water that is safe to drink.\n\nPotable water must contain sufficiently low levels of dissolved salts and harmful microorganisms.\n\nHowever, it does not need to be chemically pure.\n\nChemically pure water contains only H two O molecules.\n\nPotable water may contain dissolved minerals, such as calcium and magnesium compounds, provided their concentrations are safe.\n\nNow, let us consider where our drinking water comes from.\n\nIn many parts of the United Kingdom, water is collected from rivers, lakes, reservoirs and underground sources.\n\nBefore this water can be supplied to homes, it must undergo treatment.\n\nThe exact treatment process depends on the quality of the source water.\n\nLet us examine some of the main stages.\n\nThe first stage often involves screening.\n\nWater passes through screens that remove large objects such as leaves, branches and other debris.\n\nNext, suspended particles may be removed by sedimentation.\n\nDuring sedimentation, water is allowed to stand or flow slowly through a tank so that heavier suspended particles settle at the bottom.\n\nIn many treatment plants, chemicals are added to help small suspended particles clump together into larger particles that can settle more easily.\n\nThis process is called coagulation and flocculation.\n\nThe water may then pass through filters containing materials such as sand and gravel.\n\nFiltration removes remaining suspended particles and helps reduce the amount of unwanted material in the water.\n\nHowever, filtration alone does not necessarily remove all harmful microorganisms.\n\nFor this reason, the water must also be disinfected.\n\nOne common method is chlorination.\n\nDuring chlorination, a carefully controlled amount of chlorine is added to kill or inactivate harmful microorganisms.\n\nOther disinfection methods include ultraviolet radiation and ozone treatment.\n\nThe treated water is then tested to ensure that it meets the required drinking-water quality standards before distribution.\n\nNow, let us consider waste water.\n\nWaste water includes water that has been used in homes, businesses and industries.\n\nSewage is a form of waste water that may contain human waste, food residues, detergents and microorganisms.\n\nBefore it can be safely discharged into the environment, sewage must be treated.\n\nLet us examine the main stages of sewage treatment.\n\nFirst, large objects are removed by screening.\n\nThe sewage then passes through tanks where solids can settle.\n\nThis process separates the sewage into a liquid component, called effluent, and a solid-rich component, called sludge.\n\nThe sludge may undergo anaerobic digestion.\n\nDuring this process, microorganisms break down organic matter in the absence of oxygen.\n\nOne useful product is biogas, which contains methane and can be used as a fuel.\n\nThe liquid effluent undergoes further biological treatment.\n\nIn aerobic treatment, air is supplied so that microorganisms can break down dissolved and suspended organic matter.\n\nFurther settling and additional treatment may then take place before the treated effluent is discharged or reused.\n\nThe exact treatment stages depend on the treatment works and the required water quality.\n\nNow, let us examine another important source of water: seawater.\n\nSeawater contains a high concentration of dissolved salts, making it unsuitable for ordinary drinking without treatment.\n\nThe process of removing dissolved salts from seawater is called desalination.\n\nOne method of desalination is distillation.\n\nDuring distillation, seawater is heated so that water evaporates.\n\nThe water vapour is then cooled and condensed to produce liquid water.\n\nMost dissolved salts remain behind because they do not evaporate with the water under these conditions.\n\nAnother method is reverse osmosis.\n\nIn reverse osmosis, high pressure forces water through a specialised membrane that allows water molecules to pass while rejecting most dissolved salts.\n\nBoth methods can produce water suitable for drinking after any necessary additional treatment.\n\nHowever, desalination is often more expensive than treating freshwater.\n\nWhy?\n\nDistillation requires substantial energy to heat and evaporate water.\n\nReverse osmosis requires energy to generate the high pressure needed to force water through the membrane.\n\nDesalination plants also require specialised equipment, maintenance and careful management of concentrated salt waste.\n\nNow, let us work through an example.\n\nImagine that water is collected from a river for use as drinking water.\n\nThe water may contain leaves, suspended soil particles and microorganisms.\n\nFirst, screening removes large debris.\n\nNext, sedimentation and filtration remove suspended particles.\n\nFinally, disinfection reduces harmful microorganisms to safe levels.\n\nThe water is tested before being supplied to consumers.\n\nNotice that different treatment stages remove different types of contamination.\n\nThis is why a combination of processes is often necessary.\n\nLet us test your understanding.\n\nWhat is potable water?\n\nWater that is safe to drink.\n\nDoes potable water have to be chemically pure?\n\nNo. It may contain small amounts of dissolved substances.\n\nWhich treatment process uses chlorine to kill or inactivate harmful microorganisms?\n\nChlorination.\n\nAnd what is the name of the process used to remove dissolved salts from seawater?\n\nDesalination.\n\nNow, let us tackle a GCSE examination question.\n\nExplain why desalination is often more expensive than obtaining potable water from freshwater sources. This question is worth four marks.\n\nA model answer would be:\n\nSeawater contains high concentrations of dissolved salts that must be removed before it can be used as drinking water. Desalination by distillation requires large amounts of energy to heat and evaporate the water. Reverse osmosis also requires energy to generate high pressure across a membrane. These processes require specialised equipment and operating costs, making desalination generally more expensive than conventional freshwater treatment.\n\nNotice that the answer identifies the problem, explains the scientific processes involved and links them to the higher cost.\n\nBefore we finish, remember these important points.\n\nPotable water is safe to drink but is not necessarily chemically pure.\n\nFreshwater treatment commonly involves filtration and disinfection.\n\nSewage treatment separates solids from liquids and uses biological processes to remove organic matter.\n\nDesalination removes dissolved salts from seawater, but it can require considerable energy.\n\nIf you found this lesson useful, please subscribe to JD Science and visit j d science dot co dot u k for more GCSE Chemistry explanations, practical investigations and examination practice.\n\nThank you for watching, and I look forward to seeing you in the next lesson.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.128,
+      "end": 0.534
+    },
+    {
+      "word": "and",
+      "start": 0.662,
+      "end": 0.836
+    },
+    {
+      "word": "welcome",
+      "start": 0.917,
+      "end": 1.335
+    },
+    {
+      "word": "back",
+      "start": 1.37,
+      "end": 1.591
+    },
+    {
+      "word": "to",
+      "start": 1.672,
+      "end": 1.811
+    },
+    {
+      "word": "J",
+      "start": 1.927,
+      "end": 2.136
+    },
+    {
+      "word": "D",
+      "start": 2.218,
+      "end": 2.299
+    },
+    {
+      "word": "Science.",
+      "start": 2.426,
+      "end": 3.181
+    },
+    {
+      "word": "In",
+      "start": 3.46,
+      "end": 3.634
+    },
+    {
+      "word": "today's",
+      "start": 3.704,
+      "end": 4.249
+    },
+    {
+      "word": "G",
+      "start": 4.458,
+      "end": 4.69
+    },
+    {
+      "word": "C",
+      "start": 4.807,
+      "end": 4.923
+    },
+    {
+      "word": "S",
+      "start": 5.132,
+      "end": 5.329
+    },
+    {
+      "word": "E",
+      "start": 5.48,
+      "end": 5.654
+    },
+    {
+      "word": "Chemistry",
+      "start": 5.77,
+      "end": 6.374
+    },
+    {
+      "word": "lesson,",
+      "start": 6.455,
+      "end": 6.978
+    },
+    {
+      "word": "we",
+      "start": 7.094,
+      "end": 7.279
+    },
+    {
+      "word": "are",
+      "start": 7.338,
+      "end": 7.488
+    },
+    {
+      "word": "going",
+      "start": 7.535,
+      "end": 7.767
+    },
+    {
+      "word": "to",
+      "start": 7.825,
+      "end": 7.895
+    },
+    {
+      "word": "explore",
+      "start": 8.011,
+      "end": 8.545
+    },
+    {
+      "word": "potable",
+      "start": 8.638,
+      "end": 9.207
+    },
+    {
+      "word": "water,",
+      "start": 9.253,
+      "end": 9.845
+    },
+    {
+      "word": "water",
+      "start": 10.054,
+      "end": 10.449
+    },
+    {
+      "word": "treatment",
+      "start": 10.507,
+      "end": 11.088
+    },
+    {
+      "word": "and",
+      "start": 11.262,
+      "end": 11.482
+    },
+    {
+      "word": "the",
+      "start": 11.529,
+      "end": 11.598
+    },
+    {
+      "word": "processes",
+      "start": 11.668,
+      "end": 12.307
+    },
+    {
+      "word": "used",
+      "start": 12.423,
+      "end": 12.759
+    },
+    {
+      "word": "to",
+      "start": 12.806,
+      "end": 12.887
+    },
+    {
+      "word": "make",
+      "start": 12.968,
+      "end": 13.177
+    },
+    {
+      "word": "water",
+      "start": 13.235,
+      "end": 13.595
+    },
+    {
+      "word": "safe",
+      "start": 13.677,
+      "end": 14.106
+    },
+    {
+      "word": "for",
+      "start": 14.176,
+      "end": 14.385
+    },
+    {
+      "word": "human",
+      "start": 14.454,
+      "end": 14.814
+    },
+    {
+      "word": "consumption.",
+      "start": 14.884,
+      "end": 15.708
+    },
+    {
+      "word": "We",
+      "start": 16.324,
+      "end": 16.463
+    },
+    {
+      "word": "will",
+      "start": 16.521,
+      "end": 16.695
+    },
+    {
+      "word": "also",
+      "start": 16.765,
+      "end": 17.101
+    },
+    {
+      "word": "examine",
+      "start": 17.194,
+      "end": 17.868
+    },
+    {
+      "word": "how",
+      "start": 17.937,
+      "end": 18.146
+    },
+    {
+      "word": "waste",
+      "start": 18.262,
+      "end": 18.61
+    },
+    {
+      "word": "water",
+      "start": 18.657,
+      "end": 19.028
+    },
+    {
+      "word": "is",
+      "start": 19.098,
+      "end": 19.214
+    },
+    {
+      "word": "treated",
+      "start": 19.284,
+      "end": 19.829
+    },
+    {
+      "word": "and",
+      "start": 19.911,
+      "end": 20.12
+    },
+    {
+      "word": "why",
+      "start": 20.201,
+      "end": 20.514
+    },
+    {
+      "word": "obtaining",
+      "start": 20.619,
+      "end": 21.223
+    },
+    {
+      "word": "drinking",
+      "start": 21.304,
+      "end": 21.745
+    },
+    {
+      "word": "water",
+      "start": 21.826,
+      "end": 22.268
+    },
+    {
+      "word": "from",
+      "start": 22.442,
+      "end": 22.686
+    },
+    {
+      "word": "seawater",
+      "start": 22.802,
+      "end": 23.603
+    },
+    {
+      "word": "can",
+      "start": 24.056,
+      "end": 24.299
+    },
+    {
+      "word": "be",
+      "start": 24.381,
+      "end": 24.543
+    },
+    {
+      "word": "expensive.",
+      "start": 24.613,
+      "end": 25.518
+    },
+    {
+      "word": "Let",
+      "start": 25.855,
+      "end": 26.041
+    },
+    {
+      "word": "us",
+      "start": 26.122,
+      "end": 26.215
+    },
+    {
+      "word": "begin",
+      "start": 26.296,
+      "end": 26.621
+    },
+    {
+      "word": "with",
+      "start": 26.679,
+      "end": 26.842
+    },
+    {
+      "word": "an",
+      "start": 26.888,
+      "end": 26.97
+    },
+    {
+      "word": "important",
+      "start": 27.028,
+      "end": 27.585
+    },
+    {
+      "word": "question.",
+      "start": 27.655,
+      "end": 28.305
+    },
+    {
+      "word": "Is",
+      "start": 28.514,
+      "end": 28.723
+    },
+    {
+      "word": "the",
+      "start": 28.792,
+      "end": 28.897
+    },
+    {
+      "word": "water",
+      "start": 28.978,
+      "end": 29.431
+    },
+    {
+      "word": "that",
+      "start": 29.512,
+      "end": 29.686
+    },
+    {
+      "word": "comes",
+      "start": 29.779,
+      "end": 30.139
+    },
+    {
+      "word": "out",
+      "start": 30.232,
+      "end": 30.487
+    },
+    {
+      "word": "of",
+      "start": 30.557,
+      "end": 30.627
+    },
+    {
+      "word": "your",
+      "start": 30.696,
+      "end": 30.847
+    },
+    {
+      "word": "tap",
+      "start": 30.905,
+      "end": 31.219
+    },
+    {
+      "word": "chemically",
+      "start": 31.393,
+      "end": 32.078
+    },
+    {
+      "word": "pure?",
+      "start": 32.194,
+      "end": 32.717
+    },
+    {
+      "word": "The",
+      "start": 32.96,
+      "end": 33.1
+    },
+    {
+      "word": "answer",
+      "start": 33.181,
+      "end": 33.587
+    },
+    {
+      "word": "is",
+      "start": 33.669,
+      "end": 33.785
+    },
+    {
+      "word": "no.",
+      "start": 33.878,
+      "end": 34.284
+    },
+    {
+      "word": "Although",
+      "start": 34.493,
+      "end": 34.957
+    },
+    {
+      "word": "tap",
+      "start": 35.015,
+      "end": 35.306
+    },
+    {
+      "word": "water",
+      "start": 35.422,
+      "end": 35.886
+    },
+    {
+      "word": "is",
+      "start": 35.979,
+      "end": 36.141
+    },
+    {
+      "word": "treated",
+      "start": 36.211,
+      "end": 36.664
+    },
+    {
+      "word": "to",
+      "start": 36.722,
+      "end": 36.815
+    },
+    {
+      "word": "make",
+      "start": 36.896,
+      "end": 37.128
+    },
+    {
+      "word": "it",
+      "start": 37.175,
+      "end": 37.268
+    },
+    {
+      "word": "safe",
+      "start": 37.36,
+      "end": 37.709
+    },
+    {
+      "word": "to",
+      "start": 37.744,
+      "end": 37.836
+    },
+    {
+      "word": "drink,",
+      "start": 37.918,
+      "end": 38.405
+    },
+    {
+      "word": "it",
+      "start": 38.684,
+      "end": 38.847
+    },
+    {
+      "word": "still",
+      "start": 38.928,
+      "end": 39.253
+    },
+    {
+      "word": "contains",
+      "start": 39.334,
+      "end": 39.868
+    },
+    {
+      "word": "small",
+      "start": 39.926,
+      "end": 40.356
+    },
+    {
+      "word": "amounts",
+      "start": 40.437,
+      "end": 40.89
+    },
+    {
+      "word": "of",
+      "start": 40.983,
+      "end": 41.134
+    },
+    {
+      "word": "dissolved",
+      "start": 41.25,
+      "end": 41.865
+    },
+    {
+      "word": "substances.",
+      "start": 41.935,
+      "end": 42.852
+    },
+    {
+      "word": "In",
+      "start": 43.177,
+      "end": 43.34
+    },
+    {
+      "word": "chemistry,",
+      "start": 43.444,
+      "end": 44.245
+    },
+    {
+      "word": "we",
+      "start": 44.361,
+      "end": 44.547
+    },
+    {
+      "word": "use",
+      "start": 44.64,
+      "end": 44.919
+    },
+    {
+      "word": "the",
+      "start": 44.965,
+      "end": 45.035
+    },
+    {
+      "word": "term",
+      "start": 45.093,
+      "end": 45.441
+    },
+    {
+      "word": "potable",
+      "start": 45.708,
+      "end": 46.358
+    },
+    {
+      "word": "water",
+      "start": 46.416,
+      "end": 46.834
+    },
+    {
+      "word": "to",
+      "start": 47.043,
+      "end": 47.182
+    },
+    {
+      "word": "describe",
+      "start": 47.252,
+      "end": 47.809
+    },
+    {
+      "word": "water",
+      "start": 47.867,
+      "end": 48.32
+    },
+    {
+      "word": "that",
+      "start": 48.448,
+      "end": 48.657
+    },
+    {
+      "word": "is",
+      "start": 48.727,
+      "end": 48.831
+    },
+    {
+      "word": "safe",
+      "start": 48.889,
+      "end": 49.191
+    },
+    {
+      "word": "to",
+      "start": 49.237,
+      "end": 49.319
+    },
+    {
+      "word": "drink.",
+      "start": 49.388,
+      "end": 49.841
+    },
+    {
+      "word": "Potable",
+      "start": 50.178,
+      "end": 50.758
+    },
+    {
+      "word": "water",
+      "start": 50.816,
+      "end": 51.223
+    },
+    {
+      "word": "must",
+      "start": 51.397,
+      "end": 51.676
+    },
+    {
+      "word": "contain",
+      "start": 51.745,
+      "end": 52.221
+    },
+    {
+      "word": "sufficiently",
+      "start": 52.279,
+      "end": 53.046
+    },
+    {
+      "word": "low",
+      "start": 53.162,
+      "end": 53.463
+    },
+    {
+      "word": "levels",
+      "start": 53.672,
+      "end": 54.195
+    },
+    {
+      "word": "of",
+      "start": 54.346,
+      "end": 54.485
+    },
+    {
+      "word": "dissolved",
+      "start": 54.601,
+      "end": 55.124
+    },
+    {
+      "word": "salts",
+      "start": 55.193,
+      "end": 55.669
+    },
+    {
+      "word": "and",
+      "start": 55.901,
+      "end": 56.157
+    },
+    {
+      "word": "harmful",
+      "start": 56.273,
+      "end": 56.772
+    },
+    {
+      "word": "microorganisms.",
+      "start": 56.865,
+      "end": 58.177
+    },
+    {
+      "word": "However,",
+      "start": 58.456,
+      "end": 59.187
+    },
+    {
+      "word": "it",
+      "start": 59.257,
+      "end": 59.419
+    },
+    {
+      "word": "does",
+      "start": 59.477,
+      "end": 59.698
+    },
+    {
+      "word": "not",
+      "start": 59.779,
+      "end": 60.011
+    },
+    {
+      "word": "need",
+      "start": 60.127,
+      "end": 60.383
+    },
+    {
+      "word": "to",
+      "start": 60.429,
+      "end": 60.499
+    },
+    {
+      "word": "be",
+      "start": 60.58,
+      "end": 60.685
+    },
+    {
+      "word": "chemically",
+      "start": 60.743,
+      "end": 61.277
+    },
+    {
+      "word": "pure.",
+      "start": 61.335,
+      "end": 61.811
+    },
+    {
+      "word": "Chemically",
+      "start": 62.055,
+      "end": 62.624
+    },
+    {
+      "word": "pure",
+      "start": 62.693,
+      "end": 62.949
+    },
+    {
+      "word": "water",
+      "start": 62.995,
+      "end": 63.402
+    },
+    {
+      "word": "contains",
+      "start": 63.518,
+      "end": 64.098
+    },
+    {
+      "word": "only",
+      "start": 64.214,
+      "end": 64.644
+    },
+    {
+      "word": "H",
+      "start": 64.818,
+      "end": 65.155
+    },
+    {
+      "word": "two",
+      "start": 65.329,
+      "end": 65.631
+    },
+    {
+      "word": "O",
+      "start": 65.805,
+      "end": 65.979
+    },
+    {
+      "word": "molecules.",
+      "start": 66.072,
+      "end": 66.826
+    },
+    {
+      "word": "Potable",
+      "start": 67.105,
+      "end": 67.639
+    },
+    {
+      "word": "water",
+      "start": 67.686,
+      "end": 68.08
+    },
+    {
+      "word": "may",
+      "start": 68.162,
+      "end": 68.371
+    },
+    {
+      "word": "contain",
+      "start": 68.429,
+      "end": 68.963
+    },
+    {
+      "word": "dissolved",
+      "start": 69.044,
+      "end": 69.566
+    },
+    {
+      "word": "minerals,",
+      "start": 69.636,
+      "end": 70.251
+    },
+    {
+      "word": "such",
+      "start": 70.379,
+      "end": 70.646
+    },
+    {
+      "word": "as",
+      "start": 70.704,
+      "end": 70.809
+    },
+    {
+      "word": "calcium",
+      "start": 70.902,
+      "end": 71.517
+    },
+    {
+      "word": "and",
+      "start": 71.726,
+      "end": 72.016
+    },
+    {
+      "word": "magnesium",
+      "start": 72.109,
+      "end": 72.817
+    },
+    {
+      "word": "compounds,",
+      "start": 72.898,
+      "end": 73.641
+    },
+    {
+      "word": "provided",
+      "start": 73.85,
+      "end": 74.535
+    },
+    {
+      "word": "their",
+      "start": 74.582,
+      "end": 74.756
+    },
+    {
+      "word": "concentrations",
+      "start": 74.814,
+      "end": 75.778
+    },
+    {
+      "word": "are",
+      "start": 75.859,
+      "end": 76.068
+    },
+    {
+      "word": "safe.",
+      "start": 76.126,
+      "end": 76.66
+    },
+    {
+      "word": "Now,",
+      "start": 77.113,
+      "end": 77.333
+    },
+    {
+      "word": "let",
+      "start": 77.357,
+      "end": 77.531
+    },
+    {
+      "word": "us",
+      "start": 77.6,
+      "end": 77.705
+    },
+    {
+      "word": "consider",
+      "start": 77.786,
+      "end": 78.401
+    },
+    {
+      "word": "where",
+      "start": 78.483,
+      "end": 78.738
+    },
+    {
+      "word": "our",
+      "start": 78.808,
+      "end": 79.017
+    },
+    {
+      "word": "drinking",
+      "start": 79.086,
+      "end": 79.504
+    },
+    {
+      "word": "water",
+      "start": 79.574,
+      "end": 79.899
+    },
+    {
+      "word": "comes",
+      "start": 79.957,
+      "end": 80.236
+    },
+    {
+      "word": "from.",
+      "start": 80.305,
+      "end": 80.7
+    },
+    {
+      "word": "In",
+      "start": 81.037,
+      "end": 81.223
+    },
+    {
+      "word": "many",
+      "start": 81.304,
+      "end": 81.559
+    },
+    {
+      "word": "parts",
+      "start": 81.641,
+      "end": 82.012
+    },
+    {
+      "word": "of",
+      "start": 82.07,
+      "end": 82.151
+    },
+    {
+      "word": "the",
+      "start": 82.209,
+      "end": 82.279
+    },
+    {
+      "word": "United",
+      "start": 82.337,
+      "end": 82.778
+    },
+    {
+      "word": "Kingdom,",
+      "start": 82.825,
+      "end": 83.382
+    },
+    {
+      "word": "water",
+      "start": 83.591,
+      "end": 84.021
+    },
+    {
+      "word": "is",
+      "start": 84.102,
+      "end": 84.23
+    },
+    {
+      "word": "collected",
+      "start": 84.299,
+      "end": 84.891
+    },
+    {
+      "word": "from",
+      "start": 84.973,
+      "end": 85.182
+    },
+    {
+      "word": "rivers,",
+      "start": 85.298,
+      "end": 85.959
+    },
+    {
+      "word": "lakes,",
+      "start": 86.203,
+      "end": 86.714
+    },
+    {
+      "word": "reservoirs",
+      "start": 86.993,
+      "end": 87.736
+    },
+    {
+      "word": "and",
+      "start": 87.852,
+      "end": 88.084
+    },
+    {
+      "word": "underground",
+      "start": 88.2,
+      "end": 88.874
+    },
+    {
+      "word": "sources.",
+      "start": 88.955,
+      "end": 89.71
+    },
+    {
+      "word": "Before",
+      "start": 89.988,
+      "end": 90.44
+    },
+    {
+      "word": "this",
+      "start": 90.487,
+      "end": 90.661
+    },
+    {
+      "word": "water",
+      "start": 90.742,
+      "end": 91.137
+    },
+    {
+      "word": "can",
+      "start": 91.207,
+      "end": 91.381
+    },
+    {
+      "word": "be",
+      "start": 91.451,
+      "end": 91.543
+    },
+    {
+      "word": "supplied",
+      "start": 91.59,
+      "end": 92.124
+    },
+    {
+      "word": "to",
+      "start": 92.182,
+      "end": 92.275
+    },
+    {
+      "word": "homes,",
+      "start": 92.368,
+      "end": 92.96
+    },
+    {
+      "word": "it",
+      "start": 93.296,
+      "end": 93.447
+    },
+    {
+      "word": "must",
+      "start": 93.517,
+      "end": 93.796
+    },
+    {
+      "word": "undergo",
+      "start": 93.912,
+      "end": 94.469
+    },
+    {
+      "word": "treatment.",
+      "start": 94.539,
+      "end": 95.351
+    },
+    {
+      "word": "The",
+      "start": 96.176,
+      "end": 96.327
+    },
+    {
+      "word": "exact",
+      "start": 96.408,
+      "end": 96.838
+    },
+    {
+      "word": "treatment",
+      "start": 96.872,
+      "end": 97.348
+    },
+    {
+      "word": "process",
+      "start": 97.395,
+      "end": 97.894
+    },
+    {
+      "word": "depends",
+      "start": 97.964,
+      "end": 98.475
+    },
+    {
+      "word": "on",
+      "start": 98.556,
+      "end": 98.73
+    },
+    {
+      "word": "the",
+      "start": 98.776,
+      "end": 98.846
+    },
+    {
+      "word": "quality",
+      "start": 98.916,
+      "end": 99.519
+    },
+    {
+      "word": "of",
+      "start": 99.694,
+      "end": 99.856
+    },
+    {
+      "word": "the",
+      "start": 99.937,
+      "end": 100.03
+    },
+    {
+      "word": "source",
+      "start": 100.1,
+      "end": 100.425
+    },
+    {
+      "word": "water.",
+      "start": 100.483,
+      "end": 101.052
+    },
+    {
+      "word": "Let",
+      "start": 101.667,
+      "end": 101.853
+    },
+    {
+      "word": "us",
+      "start": 101.923,
+      "end": 102.039
+    },
+    {
+      "word": "examine",
+      "start": 102.12,
+      "end": 102.619
+    },
+    {
+      "word": "some",
+      "start": 102.666,
+      "end": 102.863
+    },
+    {
+      "word": "of",
+      "start": 102.898,
+      "end": 102.979
+    },
+    {
+      "word": "the",
+      "start": 103.037,
+      "end": 103.107
+    },
+    {
+      "word": "main",
+      "start": 103.177,
+      "end": 103.42
+    },
+    {
+      "word": "stages.",
+      "start": 103.502,
+      "end": 104.338
+    },
+    {
+      "word": "The",
+      "start": 104.79,
+      "end": 104.918
+    },
+    {
+      "word": "first",
+      "start": 104.999,
+      "end": 105.278
+    },
+    {
+      "word": "stage",
+      "start": 105.313,
+      "end": 105.708
+    },
+    {
+      "word": "often",
+      "start": 105.777,
+      "end": 106.149
+    },
+    {
+      "word": "involves",
+      "start": 106.218,
+      "end": 106.706
+    },
+    {
+      "word": "screening.",
+      "start": 106.764,
+      "end": 107.6
+    },
+    {
+      "word": "Water",
+      "start": 108.053,
+      "end": 108.447
+    },
+    {
+      "word": "passes",
+      "start": 108.517,
+      "end": 108.935
+    },
+    {
+      "word": "through",
+      "start": 108.993,
+      "end": 109.26
+    },
+    {
+      "word": "screens",
+      "start": 109.318,
+      "end": 109.817
+    },
+    {
+      "word": "that",
+      "start": 109.875,
+      "end": 110.049
+    },
+    {
+      "word": "remove",
+      "start": 110.131,
+      "end": 110.537
+    },
+    {
+      "word": "large",
+      "start": 110.607,
+      "end": 110.967
+    },
+    {
+      "word": "objects",
+      "start": 111.048,
+      "end": 111.628
+    },
+    {
+      "word": "such",
+      "start": 111.803,
+      "end": 112.093
+    },
+    {
+      "word": "as",
+      "start": 112.139,
+      "end": 112.267
+    },
+    {
+      "word": "leaves,",
+      "start": 112.418,
+      "end": 113.068
+    },
+    {
+      "word": "branches",
+      "start": 113.242,
+      "end": 113.788
+    },
+    {
+      "word": "and",
+      "start": 113.857,
+      "end": 113.985
+    },
+    {
+      "word": "other",
+      "start": 114.078,
+      "end": 114.345
+    },
+    {
+      "word": "debris.",
+      "start": 114.403,
+      "end": 114.891
+    },
+    {
+      "word": "Next,",
+      "start": 115.506,
+      "end": 115.982
+    },
+    {
+      "word": "suspended",
+      "start": 116.156,
+      "end": 116.876
+    },
+    {
+      "word": "particles",
+      "start": 116.946,
+      "end": 117.584
+    },
+    {
+      "word": "may",
+      "start": 117.735,
+      "end": 117.967
+    },
+    {
+      "word": "be",
+      "start": 118.049,
+      "end": 118.153
+    },
+    {
+      "word": "removed",
+      "start": 118.223,
+      "end": 118.71
+    },
+    {
+      "word": "by",
+      "start": 118.792,
+      "end": 118.966
+    },
+    {
+      "word": "sedimentation.",
+      "start": 119.059,
+      "end": 120.115
+    },
+    {
+      "word": "During",
+      "start": 120.638,
+      "end": 120.963
+    },
+    {
+      "word": "sedimentation,",
+      "start": 121.044,
+      "end": 122.124
+    },
+    {
+      "word": "water",
+      "start": 122.333,
+      "end": 122.716
+    },
+    {
+      "word": "is",
+      "start": 122.797,
+      "end": 122.925
+    },
+    {
+      "word": "allowed",
+      "start": 122.983,
+      "end": 123.354
+    },
+    {
+      "word": "to",
+      "start": 123.389,
+      "end": 123.459
+    },
+    {
+      "word": "stand",
+      "start": 123.529,
+      "end": 123.97
+    },
+    {
+      "word": "or",
+      "start": 124.097,
+      "end": 124.283
+    },
+    {
+      "word": "flow",
+      "start": 124.364,
+      "end": 124.666
+    },
+    {
+      "word": "slowly",
+      "start": 124.759,
+      "end": 125.433
+    },
+    {
+      "word": "through",
+      "start": 125.514,
+      "end": 125.793
+    },
+    {
+      "word": "a",
+      "start": 125.839,
+      "end": 125.862
+    },
+    {
+      "word": "tank",
+      "start": 125.932,
+      "end": 126.292
+    },
+    {
+      "word": "so",
+      "start": 126.629,
+      "end": 126.803
+    },
+    {
+      "word": "that",
+      "start": 126.873,
+      "end": 127.047
+    },
+    {
+      "word": "heavier",
+      "start": 127.163,
+      "end": 127.627
+    },
+    {
+      "word": "suspended",
+      "start": 127.697,
+      "end": 128.277
+    },
+    {
+      "word": "particles",
+      "start": 128.359,
+      "end": 128.951
+    },
+    {
+      "word": "settle",
+      "start": 129.009,
+      "end": 129.438
+    },
+    {
+      "word": "at",
+      "start": 129.485,
+      "end": 129.647
+    },
+    {
+      "word": "the",
+      "start": 129.694,
+      "end": 129.775
+    },
+    {
+      "word": "bottom.",
+      "start": 129.845,
+      "end": 130.39
+    },
+    {
+      "word": "In",
+      "start": 130.843,
+      "end": 131.041
+    },
+    {
+      "word": "many",
+      "start": 131.133,
+      "end": 131.424
+    },
+    {
+      "word": "treatment",
+      "start": 131.482,
+      "end": 131.923
+    },
+    {
+      "word": "plants,",
+      "start": 131.969,
+      "end": 132.515
+    },
+    {
+      "word": "chemicals",
+      "start": 132.631,
+      "end": 133.212
+    },
+    {
+      "word": "are",
+      "start": 133.27,
+      "end": 133.409
+    },
+    {
+      "word": "added",
+      "start": 133.467,
+      "end": 133.862
+    },
+    {
+      "word": "to",
+      "start": 134.013,
+      "end": 134.164
+    },
+    {
+      "word": "help",
+      "start": 134.28,
+      "end": 134.535
+    },
+    {
+      "word": "small",
+      "start": 134.616,
+      "end": 135.069
+    },
+    {
+      "word": "suspended",
+      "start": 135.151,
+      "end": 135.708
+    },
+    {
+      "word": "particles",
+      "start": 135.777,
+      "end": 136.323
+    },
+    {
+      "word": "clump",
+      "start": 136.393,
+      "end": 136.706
+    },
+    {
+      "word": "together",
+      "start": 136.764,
+      "end": 137.194
+    },
+    {
+      "word": "into",
+      "start": 137.264,
+      "end": 137.473
+    },
+    {
+      "word": "larger",
+      "start": 137.6,
+      "end": 137.983
+    },
+    {
+      "word": "particles",
+      "start": 138.065,
+      "end": 138.75
+    },
+    {
+      "word": "that",
+      "start": 138.901,
+      "end": 139.121
+    },
+    {
+      "word": "can",
+      "start": 139.179,
+      "end": 139.342
+    },
+    {
+      "word": "settle",
+      "start": 139.423,
+      "end": 139.806
+    },
+    {
+      "word": "more",
+      "start": 139.876,
+      "end": 140.085
+    },
+    {
+      "word": "easily.",
+      "start": 140.166,
+      "end": 140.816
+    },
+    {
+      "word": "This",
+      "start": 141.432,
+      "end": 141.664
+    },
+    {
+      "word": "process",
+      "start": 141.745,
+      "end": 142.337
+    },
+    {
+      "word": "is",
+      "start": 142.395,
+      "end": 142.523
+    },
+    {
+      "word": "called",
+      "start": 142.604,
+      "end": 142.917
+    },
+    {
+      "word": "coagulation",
+      "start": 142.987,
+      "end": 143.997
+    },
+    {
+      "word": "and",
+      "start": 144.206,
+      "end": 144.415
+    },
+    {
+      "word": "flocculation.",
+      "start": 144.508,
+      "end": 145.471
+    },
+    {
+      "word": "The",
+      "start": 146.087,
+      "end": 146.238
+    },
+    {
+      "word": "water",
+      "start": 146.296,
+      "end": 146.632
+    },
+    {
+      "word": "may",
+      "start": 146.69,
+      "end": 146.841
+    },
+    {
+      "word": "then",
+      "start": 146.911,
+      "end": 147.132
+    },
+    {
+      "word": "pass",
+      "start": 147.225,
+      "end": 147.538
+    },
+    {
+      "word": "through",
+      "start": 147.596,
+      "end": 147.91
+    },
+    {
+      "word": "filters",
+      "start": 147.991,
+      "end": 148.594
+    },
+    {
+      "word": "containing",
+      "start": 148.664,
+      "end": 149.21
+    },
+    {
+      "word": "materials",
+      "start": 149.268,
+      "end": 149.837
+    },
+    {
+      "word": "such",
+      "start": 149.883,
+      "end": 150.127
+    },
+    {
+      "word": "as",
+      "start": 150.185,
+      "end": 150.278
+    },
+    {
+      "word": "sand",
+      "start": 150.359,
+      "end": 150.731
+    },
+    {
+      "word": "and",
+      "start": 150.812,
+      "end": 150.963
+    },
+    {
+      "word": "gravel.",
+      "start": 151.033,
+      "end": 151.66
+    },
+    {
+      "word": "Filtration",
+      "start": 151.996,
+      "end": 152.809
+    },
+    {
+      "word": "removes",
+      "start": 152.89,
+      "end": 153.494
+    },
+    {
+      "word": "remaining",
+      "start": 153.645,
+      "end": 154.167
+    },
+    {
+      "word": "suspended",
+      "start": 154.237,
+      "end": 154.817
+    },
+    {
+      "word": "particles",
+      "start": 154.875,
+      "end": 155.584
+    },
+    {
+      "word": "and",
+      "start": 155.92,
+      "end": 156.118
+    },
+    {
+      "word": "helps",
+      "start": 156.234,
+      "end": 156.571
+    },
+    {
+      "word": "reduce",
+      "start": 156.652,
+      "end": 157.151
+    },
+    {
+      "word": "the",
+      "start": 157.197,
+      "end": 157.302
+    },
+    {
+      "word": "amount",
+      "start": 157.36,
+      "end": 157.72
+    },
+    {
+      "word": "of",
+      "start": 157.766,
+      "end": 157.836
+    },
+    {
+      "word": "unwanted",
+      "start": 157.987,
+      "end": 158.66
+    },
+    {
+      "word": "material",
+      "start": 158.718,
+      "end": 159.357
+    },
+    {
+      "word": "in",
+      "start": 159.473,
+      "end": 159.636
+    },
+    {
+      "word": "the",
+      "start": 159.694,
+      "end": 159.775
+    },
+    {
+      "word": "water.",
+      "start": 159.833,
+      "end": 160.344
+    },
+    {
+      "word": "However,",
+      "start": 160.739,
+      "end": 161.47
+    },
+    {
+      "word": "filtration",
+      "start": 161.714,
+      "end": 162.515
+    },
+    {
+      "word": "alone",
+      "start": 162.585,
+      "end": 163.061
+    },
+    {
+      "word": "does",
+      "start": 163.142,
+      "end": 163.421
+    },
+    {
+      "word": "not",
+      "start": 163.514,
+      "end": 163.711
+    },
+    {
+      "word": "necessarily",
+      "start": 163.781,
+      "end": 164.535
+    },
+    {
+      "word": "remove",
+      "start": 164.64,
+      "end": 165.151
+    },
+    {
+      "word": "all",
+      "start": 165.209,
+      "end": 165.534
+    },
+    {
+      "word": "harmful",
+      "start": 165.685,
+      "end": 166.346
+    },
+    {
+      "word": "microorganisms.",
+      "start": 166.509,
+      "end": 167.786
+    },
+    {
+      "word": "For",
+      "start": 168.111,
+      "end": 168.285
+    },
+    {
+      "word": "this",
+      "start": 168.355,
+      "end": 168.518
+    },
+    {
+      "word": "reason,",
+      "start": 168.599,
+      "end": 169.121
+    },
+    {
+      "word": "the",
+      "start": 169.284,
+      "end": 169.411
+    },
+    {
+      "word": "water",
+      "start": 169.493,
+      "end": 169.829
+    },
+    {
+      "word": "must",
+      "start": 169.887,
+      "end": 170.108
+    },
+    {
+      "word": "also",
+      "start": 170.178,
+      "end": 170.549
+    },
+    {
+      "word": "be",
+      "start": 170.642,
+      "end": 170.758
+    },
+    {
+      "word": "disinfected.",
+      "start": 170.816,
+      "end": 171.803
+    },
+    {
+      "word": "One",
+      "start": 172.244,
+      "end": 172.511
+    },
+    {
+      "word": "common",
+      "start": 172.569,
+      "end": 172.906
+    },
+    {
+      "word": "method",
+      "start": 172.976,
+      "end": 173.359
+    },
+    {
+      "word": "is",
+      "start": 173.429,
+      "end": 173.603
+    },
+    {
+      "word": "chlorination.",
+      "start": 173.684,
+      "end": 174.729
+    },
+    {
+      "word": "During",
+      "start": 175.054,
+      "end": 175.449
+    },
+    {
+      "word": "chlorination,",
+      "start": 175.518,
+      "end": 176.47
+    },
+    {
+      "word": "a",
+      "start": 176.668,
+      "end": 176.761
+    },
+    {
+      "word": "carefully",
+      "start": 176.842,
+      "end": 177.26
+    },
+    {
+      "word": "controlled",
+      "start": 177.318,
+      "end": 177.91
+    },
+    {
+      "word": "amount",
+      "start": 177.968,
+      "end": 178.409
+    },
+    {
+      "word": "of",
+      "start": 178.456,
+      "end": 178.537
+    },
+    {
+      "word": "chlorine",
+      "start": 178.63,
+      "end": 179.257
+    },
+    {
+      "word": "is",
+      "start": 179.408,
+      "end": 179.605
+    },
+    {
+      "word": "added",
+      "start": 179.698,
+      "end": 180.093
+    },
+    {
+      "word": "to",
+      "start": 180.151,
+      "end": 180.255
+    },
+    {
+      "word": "kill",
+      "start": 180.336,
+      "end": 180.661
+    },
+    {
+      "word": "or",
+      "start": 180.778,
+      "end": 180.975
+    },
+    {
+      "word": "inactivate",
+      "start": 181.068,
+      "end": 181.881
+    },
+    {
+      "word": "harmful",
+      "start": 181.939,
+      "end": 182.531
+    },
+    {
+      "word": "microorganisms.",
+      "start": 182.74,
+      "end": 184.121
+    },
+    {
+      "word": "Other",
+      "start": 185.096,
+      "end": 185.422
+    },
+    {
+      "word": "disinfection",
+      "start": 185.48,
+      "end": 186.153
+    },
+    {
+      "word": "methods",
+      "start": 186.223,
+      "end": 186.583
+    },
+    {
+      "word": "include",
+      "start": 186.641,
+      "end": 187.082
+    },
+    {
+      "word": "ultraviolet",
+      "start": 187.151,
+      "end": 187.918
+    },
+    {
+      "word": "radiation",
+      "start": 187.987,
+      "end": 188.696
+    },
+    {
+      "word": "and",
+      "start": 188.823,
+      "end": 189.021
+    },
+    {
+      "word": "ozone",
+      "start": 189.102,
+      "end": 189.578
+    },
+    {
+      "word": "treatment.",
+      "start": 189.613,
+      "end": 190.367
+    },
+    {
+      "word": "The",
+      "start": 190.983,
+      "end": 191.122
+    },
+    {
+      "word": "treated",
+      "start": 191.18,
+      "end": 191.563
+    },
+    {
+      "word": "water",
+      "start": 191.621,
+      "end": 192.028
+    },
+    {
+      "word": "is",
+      "start": 192.144,
+      "end": 192.306
+    },
+    {
+      "word": "then",
+      "start": 192.364,
+      "end": 192.55
+    },
+    {
+      "word": "tested",
+      "start": 192.62,
+      "end": 193.142
+    },
+    {
+      "word": "to",
+      "start": 193.189,
+      "end": 193.281
+    },
+    {
+      "word": "ensure",
+      "start": 193.374,
+      "end": 193.816
+    },
+    {
+      "word": "that",
+      "start": 193.874,
+      "end": 194.025
+    },
+    {
+      "word": "it",
+      "start": 194.083,
+      "end": 194.175
+    },
+    {
+      "word": "meets",
+      "start": 194.245,
+      "end": 194.512
+    },
+    {
+      "word": "the",
+      "start": 194.582,
+      "end": 194.663
+    },
+    {
+      "word": "required",
+      "start": 194.733,
+      "end": 195.302
+    },
+    {
+      "word": "drinking-water",
+      "start": 195.476,
+      "end": 196.311
+    },
+    {
+      "word": "quality",
+      "start": 196.369,
+      "end": 196.81
+    },
+    {
+      "word": "standards",
+      "start": 196.868,
+      "end": 197.461
+    },
+    {
+      "word": "before",
+      "start": 197.53,
+      "end": 197.925
+    },
+    {
+      "word": "distribution.",
+      "start": 197.983,
+      "end": 198.935
+    },
+    {
+      "word": "Now,",
+      "start": 199.144,
+      "end": 199.481
+    },
+    {
+      "word": "let",
+      "start": 199.597,
+      "end": 199.794
+    },
+    {
+      "word": "us",
+      "start": 199.875,
+      "end": 199.992
+    },
+    {
+      "word": "consider",
+      "start": 200.073,
+      "end": 200.677
+    },
+    {
+      "word": "waste",
+      "start": 200.92,
+      "end": 201.373
+    },
+    {
+      "word": "water.",
+      "start": 201.443,
+      "end": 201.988
+    },
+    {
+      "word": "Waste",
+      "start": 202.232,
+      "end": 202.592
+    },
+    {
+      "word": "water",
+      "start": 202.65,
+      "end": 202.999
+    },
+    {
+      "word": "includes",
+      "start": 203.08,
+      "end": 203.544
+    },
+    {
+      "word": "water",
+      "start": 203.614,
+      "end": 204.032
+    },
+    {
+      "word": "that",
+      "start": 204.16,
+      "end": 204.392
+    },
+    {
+      "word": "has",
+      "start": 204.461,
+      "end": 204.612
+    },
+    {
+      "word": "been",
+      "start": 204.682,
+      "end": 204.879
+    },
+    {
+      "word": "used",
+      "start": 204.961,
+      "end": 205.263
+    },
+    {
+      "word": "in",
+      "start": 205.344,
+      "end": 205.483
+    },
+    {
+      "word": "homes,",
+      "start": 205.599,
+      "end": 206.191
+    },
+    {
+      "word": "businesses",
+      "start": 206.365,
+      "end": 207.039
+    },
+    {
+      "word": "and",
+      "start": 207.12,
+      "end": 207.341
+    },
+    {
+      "word": "industries.",
+      "start": 207.457,
+      "end": 208.293
+    },
+    {
+      "word": "Sewage",
+      "start": 208.571,
+      "end": 209.163
+    },
+    {
+      "word": "is",
+      "start": 209.222,
+      "end": 209.477
+    },
+    {
+      "word": "a",
+      "start": 209.547,
+      "end": 209.593
+    },
+    {
+      "word": "form",
+      "start": 209.709,
+      "end": 210.011
+    },
+    {
+      "word": "of",
+      "start": 210.081,
+      "end": 210.185
+    },
+    {
+      "word": "waste",
+      "start": 210.301,
+      "end": 210.626
+    },
+    {
+      "word": "water",
+      "start": 210.673,
+      "end": 211.067
+    },
+    {
+      "word": "that",
+      "start": 211.184,
+      "end": 211.416
+    },
+    {
+      "word": "may",
+      "start": 211.485,
+      "end": 211.648
+    },
+    {
+      "word": "contain",
+      "start": 211.706,
+      "end": 212.147
+    },
+    {
+      "word": "human",
+      "start": 212.228,
+      "end": 212.623
+    },
+    {
+      "word": "waste,",
+      "start": 212.716,
+      "end": 213.285
+    },
+    {
+      "word": "food",
+      "start": 213.459,
+      "end": 213.749
+    },
+    {
+      "word": "residues,",
+      "start": 213.819,
+      "end": 214.585
+    },
+    {
+      "word": "detergents",
+      "start": 214.678,
+      "end": 215.549
+    },
+    {
+      "word": "and",
+      "start": 215.618,
+      "end": 215.804
+    },
+    {
+      "word": "microorganisms.",
+      "start": 215.885,
+      "end": 217.244
+    },
+    {
+      "word": "Before",
+      "start": 217.638,
+      "end": 218.045
+    },
+    {
+      "word": "it",
+      "start": 218.103,
+      "end": 218.219
+    },
+    {
+      "word": "can",
+      "start": 218.277,
+      "end": 218.428
+    },
+    {
+      "word": "be",
+      "start": 218.498,
+      "end": 218.602
+    },
+    {
+      "word": "safely",
+      "start": 218.66,
+      "end": 219.113
+    },
+    {
+      "word": "discharged",
+      "start": 219.183,
+      "end": 219.821
+    },
+    {
+      "word": "into",
+      "start": 219.879,
+      "end": 220.1
+    },
+    {
+      "word": "the",
+      "start": 220.181,
+      "end": 220.251
+    },
+    {
+      "word": "environment,",
+      "start": 220.32,
+      "end": 221.11
+    },
+    {
+      "word": "sewage",
+      "start": 221.354,
+      "end": 221.946
+    },
+    {
+      "word": "must",
+      "start": 222.062,
+      "end": 222.329
+    },
+    {
+      "word": "be",
+      "start": 222.398,
+      "end": 222.515
+    },
+    {
+      "word": "treated.",
+      "start": 222.573,
+      "end": 223.223
+    },
+    {
+      "word": "Let",
+      "start": 223.559,
+      "end": 223.757
+    },
+    {
+      "word": "us",
+      "start": 223.827,
+      "end": 223.931
+    },
+    {
+      "word": "examine",
+      "start": 224.012,
+      "end": 224.535
+    },
+    {
+      "word": "the",
+      "start": 224.57,
+      "end": 224.639
+    },
+    {
+      "word": "main",
+      "start": 224.72,
+      "end": 224.929
+    },
+    {
+      "word": "stages",
+      "start": 224.999,
+      "end": 225.464
+    },
+    {
+      "word": "of",
+      "start": 225.522,
+      "end": 225.591
+    },
+    {
+      "word": "sewage",
+      "start": 225.672,
+      "end": 226.09
+    },
+    {
+      "word": "treatment.",
+      "start": 226.137,
+      "end": 226.822
+    },
+    {
+      "word": "First,",
+      "start": 227.344,
+      "end": 227.902
+    },
+    {
+      "word": "large",
+      "start": 228.076,
+      "end": 228.401
+    },
+    {
+      "word": "objects",
+      "start": 228.47,
+      "end": 228.923
+    },
+    {
+      "word": "are",
+      "start": 228.958,
+      "end": 229.109
+    },
+    {
+      "word": "removed",
+      "start": 229.167,
+      "end": 229.562
+    },
+    {
+      "word": "by",
+      "start": 229.62,
+      "end": 229.771
+    },
+    {
+      "word": "screening.",
+      "start": 229.864,
+      "end": 230.618
+    },
+    {
+      "word": "The",
+      "start": 230.897,
+      "end": 231.036
+    },
+    {
+      "word": "sewage",
+      "start": 231.106,
+      "end": 231.512
+    },
+    {
+      "word": "then",
+      "start": 231.558,
+      "end": 231.744
+    },
+    {
+      "word": "passes",
+      "start": 231.837,
+      "end": 232.313
+    },
+    {
+      "word": "through",
+      "start": 232.371,
+      "end": 232.65
+    },
+    {
+      "word": "tanks",
+      "start": 232.708,
+      "end": 233.184
+    },
+    {
+      "word": "where",
+      "start": 233.428,
+      "end": 233.683
+    },
+    {
+      "word": "solids",
+      "start": 233.73,
+      "end": 234.182
+    },
+    {
+      "word": "can",
+      "start": 234.24,
+      "end": 234.438
+    },
+    {
+      "word": "settle.",
+      "start": 234.531,
+      "end": 235.041
+    },
+    {
+      "word": "This",
+      "start": 235.436,
+      "end": 235.692
+    },
+    {
+      "word": "process",
+      "start": 235.808,
+      "end": 236.377
+    },
+    {
+      "word": "separates",
+      "start": 236.423,
+      "end": 236.969
+    },
+    {
+      "word": "the",
+      "start": 237.015,
+      "end": 237.096
+    },
+    {
+      "word": "sewage",
+      "start": 237.178,
+      "end": 237.572
+    },
+    {
+      "word": "into",
+      "start": 237.642,
+      "end": 237.932
+    },
+    {
+      "word": "a",
+      "start": 238.025,
+      "end": 238.072
+    },
+    {
+      "word": "liquid",
+      "start": 238.188,
+      "end": 238.629
+    },
+    {
+      "word": "component,",
+      "start": 238.687,
+      "end": 239.453
+    },
+    {
+      "word": "called",
+      "start": 239.662,
+      "end": 240.022
+    },
+    {
+      "word": "effluent,",
+      "start": 240.138,
+      "end": 240.939
+    },
+    {
+      "word": "and",
+      "start": 241.113,
+      "end": 241.299
+    },
+    {
+      "word": "a",
+      "start": 241.357,
+      "end": 241.38
+    },
+    {
+      "word": "solid-rich",
+      "start": 241.462,
+      "end": 242.147
+    },
+    {
+      "word": "component,",
+      "start": 242.205,
+      "end": 242.936
+    },
+    {
+      "word": "called",
+      "start": 243.087,
+      "end": 243.505
+    },
+    {
+      "word": "sludge.",
+      "start": 243.749,
+      "end": 244.492
+    },
+    {
+      "word": "The",
+      "start": 244.829,
+      "end": 244.98
+    },
+    {
+      "word": "sludge",
+      "start": 245.049,
+      "end": 245.456
+    },
+    {
+      "word": "may",
+      "start": 245.502,
+      "end": 245.676
+    },
+    {
+      "word": "undergo",
+      "start": 245.769,
+      "end": 246.303
+    },
+    {
+      "word": "anaerobic",
+      "start": 246.454,
+      "end": 247.116
+    },
+    {
+      "word": "digestion.",
+      "start": 247.197,
+      "end": 248.079
+    },
+    {
+      "word": "During",
+      "start": 248.416,
+      "end": 248.799
+    },
+    {
+      "word": "this",
+      "start": 248.857,
+      "end": 248.997
+    },
+    {
+      "word": "process,",
+      "start": 249.066,
+      "end": 249.763
+    },
+    {
+      "word": "microorganisms",
+      "start": 249.972,
+      "end": 251.086
+    },
+    {
+      "word": "break",
+      "start": 251.202,
+      "end": 251.504
+    },
+    {
+      "word": "down",
+      "start": 251.586,
+      "end": 251.899
+    },
+    {
+      "word": "organic",
+      "start": 251.992,
+      "end": 252.538
+    },
+    {
+      "word": "matter",
+      "start": 252.631,
+      "end": 253.048
+    },
+    {
+      "word": "in",
+      "start": 253.223,
+      "end": 253.385
+    },
+    {
+      "word": "the",
+      "start": 253.443,
+      "end": 253.536
+    },
+    {
+      "word": "absence",
+      "start": 253.617,
+      "end": 254.175
+    },
+    {
+      "word": "of",
+      "start": 254.221,
+      "end": 254.302
+    },
+    {
+      "word": "oxygen.",
+      "start": 254.418,
+      "end": 255.103
+    },
+    {
+      "word": "One",
+      "start": 255.347,
+      "end": 255.591
+    },
+    {
+      "word": "useful",
+      "start": 255.661,
+      "end": 256.055
+    },
+    {
+      "word": "product",
+      "start": 256.137,
+      "end": 256.59
+    },
+    {
+      "word": "is",
+      "start": 256.671,
+      "end": 256.833
+    },
+    {
+      "word": "biogas,",
+      "start": 256.949,
+      "end": 257.878
+    },
+    {
+      "word": "which",
+      "start": 257.994,
+      "end": 258.238
+    },
+    {
+      "word": "contains",
+      "start": 258.308,
+      "end": 258.865
+    },
+    {
+      "word": "methane",
+      "start": 258.981,
+      "end": 259.678
+    },
+    {
+      "word": "and",
+      "start": 259.794,
+      "end": 260.014
+    },
+    {
+      "word": "can",
+      "start": 260.084,
+      "end": 260.258
+    },
+    {
+      "word": "be",
+      "start": 260.328,
+      "end": 260.432
+    },
+    {
+      "word": "used",
+      "start": 260.502,
+      "end": 260.792
+    },
+    {
+      "word": "as",
+      "start": 260.85,
+      "end": 260.99
+    },
+    {
+      "word": "a",
+      "start": 261.048,
+      "end": 261.083
+    },
+    {
+      "word": "fuel.",
+      "start": 261.164,
+      "end": 261.71
+    },
+    {
+      "word": "The",
+      "start": 261.837,
+      "end": 261.977
+    },
+    {
+      "word": "liquid",
+      "start": 262.069,
+      "end": 262.464
+    },
+    {
+      "word": "effluent",
+      "start": 262.58,
+      "end": 263.207
+    },
+    {
+      "word": "undergoes",
+      "start": 263.323,
+      "end": 263.962
+    },
+    {
+      "word": "further",
+      "start": 264.078,
+      "end": 264.473
+    },
+    {
+      "word": "biological",
+      "start": 264.566,
+      "end": 265.285
+    },
+    {
+      "word": "treatment.",
+      "start": 265.367,
+      "end": 266.063
+    },
+    {
+      "word": "In",
+      "start": 266.272,
+      "end": 266.458
+    },
+    {
+      "word": "aerobic",
+      "start": 266.551,
+      "end": 267.027
+    },
+    {
+      "word": "treatment,",
+      "start": 267.085,
+      "end": 267.793
+    },
+    {
+      "word": "air",
+      "start": 267.967,
+      "end": 268.234
+    },
+    {
+      "word": "is",
+      "start": 268.315,
+      "end": 268.42
+    },
+    {
+      "word": "supplied",
+      "start": 268.466,
+      "end": 269.116
+    },
+    {
+      "word": "so",
+      "start": 269.36,
+      "end": 269.558
+    },
+    {
+      "word": "that",
+      "start": 269.627,
+      "end": 269.801
+    },
+    {
+      "word": "microorganisms",
+      "start": 269.883,
+      "end": 271.195
+    },
+    {
+      "word": "can",
+      "start": 271.438,
+      "end": 271.671
+    },
+    {
+      "word": "break",
+      "start": 271.74,
+      "end": 272.077
+    },
+    {
+      "word": "down",
+      "start": 272.17,
+      "end": 272.495
+    },
+    {
+      "word": "dissolved",
+      "start": 272.669,
+      "end": 273.296
+    },
+    {
+      "word": "and",
+      "start": 273.366,
+      "end": 273.517
+    },
+    {
+      "word": "suspended",
+      "start": 273.575,
+      "end": 274.236
+    },
+    {
+      "word": "organic",
+      "start": 274.352,
+      "end": 274.933
+    },
+    {
+      "word": "matter.",
+      "start": 275.026,
+      "end": 275.513
+    },
+    {
+      "word": "Further",
+      "start": 276.21,
+      "end": 276.616
+    },
+    {
+      "word": "settling",
+      "start": 276.674,
+      "end": 277.127
+    },
+    {
+      "word": "and",
+      "start": 277.197,
+      "end": 277.371
+    },
+    {
+      "word": "additional",
+      "start": 277.441,
+      "end": 277.952
+    },
+    {
+      "word": "treatment",
+      "start": 278.01,
+      "end": 278.578
+    },
+    {
+      "word": "may",
+      "start": 278.787,
+      "end": 278.996
+    },
+    {
+      "word": "then",
+      "start": 279.066,
+      "end": 279.263
+    },
+    {
+      "word": "take",
+      "start": 279.345,
+      "end": 279.612
+    },
+    {
+      "word": "place",
+      "start": 279.681,
+      "end": 280.355
+    },
+    {
+      "word": "before",
+      "start": 280.413,
+      "end": 280.877
+    },
+    {
+      "word": "the",
+      "start": 280.924,
+      "end": 281.017
+    },
+    {
+      "word": "treated",
+      "start": 281.075,
+      "end": 281.516
+    },
+    {
+      "word": "effluent",
+      "start": 281.609,
+      "end": 282.224
+    },
+    {
+      "word": "is",
+      "start": 282.305,
+      "end": 282.503
+    },
+    {
+      "word": "discharged",
+      "start": 282.572,
+      "end": 283.408
+    },
+    {
+      "word": "or",
+      "start": 283.536,
+      "end": 283.745
+    },
+    {
+      "word": "reused.",
+      "start": 283.826,
+      "end": 284.616
+    },
+    {
+      "word": "The",
+      "start": 285.22,
+      "end": 285.371
+    },
+    {
+      "word": "exact",
+      "start": 285.464,
+      "end": 285.916
+    },
+    {
+      "word": "treatment",
+      "start": 285.963,
+      "end": 286.474
+    },
+    {
+      "word": "stages",
+      "start": 286.52,
+      "end": 287.101
+    },
+    {
+      "word": "depend",
+      "start": 287.379,
+      "end": 287.902
+    },
+    {
+      "word": "on",
+      "start": 287.983,
+      "end": 288.146
+    },
+    {
+      "word": "the",
+      "start": 288.204,
+      "end": 288.273
+    },
+    {
+      "word": "treatment",
+      "start": 288.331,
+      "end": 288.889
+    },
+    {
+      "word": "works",
+      "start": 289.005,
+      "end": 289.457
+    },
+    {
+      "word": "and",
+      "start": 289.736,
+      "end": 290.015
+    },
+    {
+      "word": "the",
+      "start": 290.084,
+      "end": 290.189
+    },
+    {
+      "word": "required",
+      "start": 290.282,
+      "end": 290.793
+    },
+    {
+      "word": "water",
+      "start": 290.862,
+      "end": 291.153
+    },
+    {
+      "word": "quality.",
+      "start": 291.199,
+      "end": 291.745
+    },
+    {
+      "word": "Now,",
+      "start": 291.866,
+      "end": 292.272
+    },
+    {
+      "word": "let",
+      "start": 292.481,
+      "end": 292.667
+    },
+    {
+      "word": "us",
+      "start": 292.737,
+      "end": 292.841
+    },
+    {
+      "word": "examine",
+      "start": 292.911,
+      "end": 293.48
+    },
+    {
+      "word": "another",
+      "start": 293.561,
+      "end": 294.107
+    },
+    {
+      "word": "important",
+      "start": 294.258,
+      "end": 294.873
+    },
+    {
+      "word": "source",
+      "start": 294.931,
+      "end": 295.326
+    },
+    {
+      "word": "of",
+      "start": 295.384,
+      "end": 295.5
+    },
+    {
+      "word": "water:",
+      "start": 295.581,
+      "end": 296.022
+    },
+    {
+      "word": "seawater.",
+      "start": 296.417,
+      "end": 297.149
+    },
+    {
+      "word": "Seawater",
+      "start": 297.392,
+      "end": 298.066
+    },
+    {
+      "word": "contains",
+      "start": 298.182,
+      "end": 298.751
+    },
+    {
+      "word": "a",
+      "start": 298.832,
+      "end": 298.902
+    },
+    {
+      "word": "high",
+      "start": 299.018,
+      "end": 299.285
+    },
+    {
+      "word": "concentration",
+      "start": 299.343,
+      "end": 300.283
+    },
+    {
+      "word": "of",
+      "start": 300.492,
+      "end": 300.678
+    },
+    {
+      "word": "dissolved",
+      "start": 300.759,
+      "end": 301.317
+    },
+    {
+      "word": "salts,",
+      "start": 301.409,
+      "end": 301.99
+    },
+    {
+      "word": "making",
+      "start": 302.083,
+      "end": 302.501
+    },
+    {
+      "word": "it",
+      "start": 302.582,
+      "end": 302.721
+    },
+    {
+      "word": "unsuitable",
+      "start": 302.837,
+      "end": 303.789
+    },
+    {
+      "word": "for",
+      "start": 303.882,
+      "end": 304.08
+    },
+    {
+      "word": "ordinary",
+      "start": 304.196,
+      "end": 304.776
+    },
+    {
+      "word": "drinking",
+      "start": 304.846,
+      "end": 305.322
+    },
+    {
+      "word": "without",
+      "start": 305.415,
+      "end": 305.798
+    },
+    {
+      "word": "treatment.",
+      "start": 305.833,
+      "end": 306.46
+    },
+    {
+      "word": "The",
+      "start": 306.796,
+      "end": 306.936
+    },
+    {
+      "word": "process",
+      "start": 307.017,
+      "end": 307.609
+    },
+    {
+      "word": "of",
+      "start": 307.667,
+      "end": 307.76
+    },
+    {
+      "word": "removing",
+      "start": 307.841,
+      "end": 308.352
+    },
+    {
+      "word": "dissolved",
+      "start": 308.422,
+      "end": 308.886
+    },
+    {
+      "word": "salts",
+      "start": 308.944,
+      "end": 309.385
+    },
+    {
+      "word": "from",
+      "start": 309.513,
+      "end": 309.757
+    },
+    {
+      "word": "seawater",
+      "start": 309.873,
+      "end": 310.558
+    },
+    {
+      "word": "is",
+      "start": 310.767,
+      "end": 310.964
+    },
+    {
+      "word": "called",
+      "start": 311.057,
+      "end": 311.464
+    },
+    {
+      "word": "desalination.",
+      "start": 311.638,
+      "end": 312.81
+    },
+    {
+      "word": "One",
+      "start": 313.205,
+      "end": 313.437
+    },
+    {
+      "word": "method",
+      "start": 313.472,
+      "end": 313.786
+    },
+    {
+      "word": "of",
+      "start": 313.855,
+      "end": 313.948
+    },
+    {
+      "word": "desalination",
+      "start": 314.029,
+      "end": 314.865
+    },
+    {
+      "word": "is",
+      "start": 314.947,
+      "end": 315.121
+    },
+    {
+      "word": "distillation.",
+      "start": 315.237,
+      "end": 316.189
+    },
+    {
+      "word": "During",
+      "start": 316.642,
+      "end": 317.025
+    },
+    {
+      "word": "distillation,",
+      "start": 317.095,
+      "end": 317.954
+    },
+    {
+      "word": "seawater",
+      "start": 318.07,
+      "end": 318.685
+    },
+    {
+      "word": "is",
+      "start": 318.766,
+      "end": 318.894
+    },
+    {
+      "word": "heated",
+      "start": 318.975,
+      "end": 319.451
+    },
+    {
+      "word": "so",
+      "start": 319.625,
+      "end": 319.834
+    },
+    {
+      "word": "that",
+      "start": 319.904,
+      "end": 320.078
+    },
+    {
+      "word": "water",
+      "start": 320.171,
+      "end": 320.589
+    },
+    {
+      "word": "evaporates.",
+      "start": 320.705,
+      "end": 321.75
+    },
+    {
+      "word": "The",
+      "start": 322.203,
+      "end": 322.354
+    },
+    {
+      "word": "water",
+      "start": 322.435,
+      "end": 322.772
+    },
+    {
+      "word": "vapour",
+      "start": 322.83,
+      "end": 323.225
+    },
+    {
+      "word": "is",
+      "start": 323.306,
+      "end": 323.468
+    },
+    {
+      "word": "then",
+      "start": 323.526,
+      "end": 323.735
+    },
+    {
+      "word": "cooled",
+      "start": 323.852,
+      "end": 324.293
+    },
+    {
+      "word": "and",
+      "start": 324.386,
+      "end": 324.583
+    },
+    {
+      "word": "condensed",
+      "start": 324.676,
+      "end": 325.28
+    },
+    {
+      "word": "to",
+      "start": 325.314,
+      "end": 325.396
+    },
+    {
+      "word": "produce",
+      "start": 325.477,
+      "end": 325.907
+    },
+    {
+      "word": "liquid",
+      "start": 325.953,
+      "end": 326.29
+    },
+    {
+      "word": "water.",
+      "start": 326.336,
+      "end": 326.859
+    },
+    {
+      "word": "Most",
+      "start": 327.195,
+      "end": 327.509
+    },
+    {
+      "word": "dissolved",
+      "start": 327.578,
+      "end": 328.101
+    },
+    {
+      "word": "salts",
+      "start": 328.159,
+      "end": 328.53
+    },
+    {
+      "word": "remain",
+      "start": 328.623,
+      "end": 329.03
+    },
+    {
+      "word": "behind",
+      "start": 329.111,
+      "end": 329.622
+    },
+    {
+      "word": "because",
+      "start": 329.831,
+      "end": 330.249
+    },
+    {
+      "word": "they",
+      "start": 330.283,
+      "end": 330.423
+    },
+    {
+      "word": "do",
+      "start": 330.469,
+      "end": 330.55
+    },
+    {
+      "word": "not",
+      "start": 330.632,
+      "end": 330.806
+    },
+    {
+      "word": "evaporate",
+      "start": 330.887,
+      "end": 331.688
+    },
+    {
+      "word": "with",
+      "start": 331.746,
+      "end": 331.92
+    },
+    {
+      "word": "the",
+      "start": 331.967,
+      "end": 332.037
+    },
+    {
+      "word": "water",
+      "start": 332.095,
+      "end": 332.443
+    },
+    {
+      "word": "under",
+      "start": 332.559,
+      "end": 332.884
+    },
+    {
+      "word": "these",
+      "start": 332.954,
+      "end": 333.174
+    },
+    {
+      "word": "conditions.",
+      "start": 333.221,
+      "end": 334.057
+    },
+    {
+      "word": "Another",
+      "start": 334.579,
+      "end": 335.02
+    },
+    {
+      "word": "method",
+      "start": 335.09,
+      "end": 335.462
+    },
+    {
+      "word": "is",
+      "start": 335.543,
+      "end": 335.705
+    },
+    {
+      "word": "reverse",
+      "start": 335.787,
+      "end": 336.239
+    },
+    {
+      "word": "osmosis.",
+      "start": 336.297,
+      "end": 337.307
+    },
+    {
+      "word": "In",
+      "start": 337.551,
+      "end": 337.714
+    },
+    {
+      "word": "reverse",
+      "start": 337.795,
+      "end": 338.248
+    },
+    {
+      "word": "osmosis,",
+      "start": 338.306,
+      "end": 339.304
+    },
+    {
+      "word": "high",
+      "start": 339.432,
+      "end": 339.664
+    },
+    {
+      "word": "pressure",
+      "start": 339.722,
+      "end": 340.094
+    },
+    {
+      "word": "forces",
+      "start": 340.14,
+      "end": 340.558
+    },
+    {
+      "word": "water",
+      "start": 340.651,
+      "end": 341.069
+    },
+    {
+      "word": "through",
+      "start": 341.405,
+      "end": 341.684
+    },
+    {
+      "word": "a",
+      "start": 341.742,
+      "end": 341.777
+    },
+    {
+      "word": "specialised",
+      "start": 341.847,
+      "end": 342.532
+    },
+    {
+      "word": "membrane",
+      "start": 342.59,
+      "end": 343.124
+    },
+    {
+      "word": "that",
+      "start": 343.193,
+      "end": 343.391
+    },
+    {
+      "word": "allows",
+      "start": 343.449,
+      "end": 343.82
+    },
+    {
+      "word": "water",
+      "start": 343.948,
+      "end": 344.285
+    },
+    {
+      "word": "molecules",
+      "start": 344.343,
+      "end": 344.854
+    },
+    {
+      "word": "to",
+      "start": 344.9,
+      "end": 344.981
+    },
+    {
+      "word": "pass",
+      "start": 345.074,
+      "end": 345.469
+    },
+    {
+      "word": "while",
+      "start": 345.806,
+      "end": 346.084
+    },
+    {
+      "word": "rejecting",
+      "start": 346.131,
+      "end": 346.734
+    },
+    {
+      "word": "most",
+      "start": 346.943,
+      "end": 347.268
+    },
+    {
+      "word": "dissolved",
+      "start": 347.315,
+      "end": 347.814
+    },
+    {
+      "word": "salts.",
+      "start": 347.895,
+      "end": 348.441
+    },
+    {
+      "word": "Both",
+      "start": 349.265,
+      "end": 349.544
+    },
+    {
+      "word": "methods",
+      "start": 349.625,
+      "end": 350.032
+    },
+    {
+      "word": "can",
+      "start": 350.09,
+      "end": 350.252
+    },
+    {
+      "word": "produce",
+      "start": 350.31,
+      "end": 350.763
+    },
+    {
+      "word": "water",
+      "start": 350.833,
+      "end": 351.169
+    },
+    {
+      "word": "suitable",
+      "start": 351.251,
+      "end": 351.796
+    },
+    {
+      "word": "for",
+      "start": 351.854,
+      "end": 351.994
+    },
+    {
+      "word": "drinking",
+      "start": 352.063,
+      "end": 352.539
+    },
+    {
+      "word": "after",
+      "start": 352.713,
+      "end": 353.085
+    },
+    {
+      "word": "any",
+      "start": 353.166,
+      "end": 353.422
+    },
+    {
+      "word": "necessary",
+      "start": 353.503,
+      "end": 354.165
+    },
+    {
+      "word": "additional",
+      "start": 354.443,
+      "end": 355.024
+    },
+    {
+      "word": "treatment.",
+      "start": 355.082,
+      "end": 355.709
+    },
+    {
+      "word": "However,",
+      "start": 355.987,
+      "end": 356.649
+    },
+    {
+      "word": "desalination",
+      "start": 356.893,
+      "end": 357.694
+    },
+    {
+      "word": "is",
+      "start": 357.763,
+      "end": 357.88
+    },
+    {
+      "word": "often",
+      "start": 357.972,
+      "end": 358.344
+    },
+    {
+      "word": "more",
+      "start": 358.402,
+      "end": 358.599
+    },
+    {
+      "word": "expensive",
+      "start": 358.646,
+      "end": 359.226
+    },
+    {
+      "word": "than",
+      "start": 359.261,
+      "end": 359.4
+    },
+    {
+      "word": "treating",
+      "start": 359.447,
+      "end": 359.807
+    },
+    {
+      "word": "freshwater.",
+      "start": 359.877,
+      "end": 360.712
+    },
+    {
+      "word": "Why?",
+      "start": 361.165,
+      "end": 361.746
+    },
+    {
+      "word": "Distillation",
+      "start": 362.361,
+      "end": 363.162
+    },
+    {
+      "word": "requires",
+      "start": 363.278,
+      "end": 363.894
+    },
+    {
+      "word": "substantial",
+      "start": 363.952,
+      "end": 364.66
+    },
+    {
+      "word": "energy",
+      "start": 364.753,
+      "end": 365.159
+    },
+    {
+      "word": "to",
+      "start": 365.229,
+      "end": 365.31
+    },
+    {
+      "word": "heat",
+      "start": 365.403,
+      "end": 365.705
+    },
+    {
+      "word": "and",
+      "start": 365.821,
+      "end": 365.983
+    },
+    {
+      "word": "evaporate",
+      "start": 366.053,
+      "end": 366.668
+    },
+    {
+      "word": "water.",
+      "start": 366.738,
+      "end": 367.307
+    },
+    {
+      "word": "Reverse",
+      "start": 367.922,
+      "end": 368.421
+    },
+    {
+      "word": "osmosis",
+      "start": 368.491,
+      "end": 369.292
+    },
+    {
+      "word": "requires",
+      "start": 369.443,
+      "end": 370.082
+    },
+    {
+      "word": "energy",
+      "start": 370.198,
+      "end": 370.674
+    },
+    {
+      "word": "to",
+      "start": 370.755,
+      "end": 370.848
+    },
+    {
+      "word": "generate",
+      "start": 370.929,
+      "end": 371.44
+    },
+    {
+      "word": "the",
+      "start": 371.475,
+      "end": 371.568
+    },
+    {
+      "word": "high",
+      "start": 371.649,
+      "end": 371.881
+    },
+    {
+      "word": "pressure",
+      "start": 371.951,
+      "end": 372.415
+    },
+    {
+      "word": "needed",
+      "start": 372.485,
+      "end": 372.856
+    },
+    {
+      "word": "to",
+      "start": 372.903,
+      "end": 372.984
+    },
+    {
+      "word": "force",
+      "start": 373.1,
+      "end": 373.46
+    },
+    {
+      "word": "water",
+      "start": 373.53,
+      "end": 373.959
+    },
+    {
+      "word": "through",
+      "start": 374.075,
+      "end": 374.354
+    },
+    {
+      "word": "the",
+      "start": 374.389,
+      "end": 374.458
+    },
+    {
+      "word": "membrane.",
+      "start": 374.516,
+      "end": 375.19
+    },
+    {
+      "word": "Desalination",
+      "start": 375.898,
+      "end": 376.769
+    },
+    {
+      "word": "plants",
+      "start": 376.838,
+      "end": 377.233
+    },
+    {
+      "word": "also",
+      "start": 377.303,
+      "end": 377.639
+    },
+    {
+      "word": "require",
+      "start": 377.721,
+      "end": 378.162
+    },
+    {
+      "word": "specialised",
+      "start": 378.197,
+      "end": 378.893
+    },
+    {
+      "word": "equipment,",
+      "start": 378.951,
+      "end": 379.694
+    },
+    {
+      "word": "maintenance",
+      "start": 379.903,
+      "end": 380.716
+    },
+    {
+      "word": "and",
+      "start": 380.786,
+      "end": 380.983
+    },
+    {
+      "word": "careful",
+      "start": 381.076,
+      "end": 381.54
+    },
+    {
+      "word": "management",
+      "start": 381.622,
+      "end": 382.19
+    },
+    {
+      "word": "of",
+      "start": 382.283,
+      "end": 382.457
+    },
+    {
+      "word": "concentrated",
+      "start": 382.574,
+      "end": 383.328
+    },
+    {
+      "word": "salt",
+      "start": 383.41,
+      "end": 383.735
+    },
+    {
+      "word": "waste.",
+      "start": 383.804,
+      "end": 384.338
+    },
+    {
+      "word": "Now,",
+      "start": 384.954,
+      "end": 385.476
+    },
+    {
+      "word": "let",
+      "start": 385.813,
+      "end": 385.987
+    },
+    {
+      "word": "us",
+      "start": 386.045,
+      "end": 386.149
+    },
+    {
+      "word": "work",
+      "start": 386.231,
+      "end": 386.486
+    },
+    {
+      "word": "through",
+      "start": 386.544,
+      "end": 386.823
+    },
+    {
+      "word": "an",
+      "start": 386.881,
+      "end": 386.997
+    },
+    {
+      "word": "example.",
+      "start": 387.067,
+      "end": 387.798
+    },
+    {
+      "word": "Imagine",
+      "start": 388.193,
+      "end": 388.715
+    },
+    {
+      "word": "that",
+      "start": 388.762,
+      "end": 388.924
+    },
+    {
+      "word": "water",
+      "start": 389.006,
+      "end": 389.412
+    },
+    {
+      "word": "is",
+      "start": 389.493,
+      "end": 389.632
+    },
+    {
+      "word": "collected",
+      "start": 389.714,
+      "end": 390.271
+    },
+    {
+      "word": "from",
+      "start": 390.341,
+      "end": 390.573
+    },
+    {
+      "word": "a",
+      "start": 390.643,
+      "end": 390.677
+    },
+    {
+      "word": "river",
+      "start": 390.759,
+      "end": 391.095
+    },
+    {
+      "word": "for",
+      "start": 391.246,
+      "end": 391.455
+    },
+    {
+      "word": "use",
+      "start": 391.571,
+      "end": 391.885
+    },
+    {
+      "word": "as",
+      "start": 391.931,
+      "end": 392.093
+    },
+    {
+      "word": "drinking",
+      "start": 392.186,
+      "end": 392.604
+    },
+    {
+      "word": "water.",
+      "start": 392.674,
+      "end": 393.138
+    },
+    {
+      "word": "The",
+      "start": 393.533,
+      "end": 393.672
+    },
+    {
+      "word": "water",
+      "start": 393.742,
+      "end": 394.044
+    },
+    {
+      "word": "may",
+      "start": 394.102,
+      "end": 394.265
+    },
+    {
+      "word": "contain",
+      "start": 394.323,
+      "end": 394.694
+    },
+    {
+      "word": "leaves,",
+      "start": 394.787,
+      "end": 395.309
+    },
+    {
+      "word": "suspended",
+      "start": 395.46,
+      "end": 396.122
+    },
+    {
+      "word": "soil",
+      "start": 396.192,
+      "end": 396.494
+    },
+    {
+      "word": "particles",
+      "start": 396.563,
+      "end": 397.202
+    },
+    {
+      "word": "and",
+      "start": 397.318,
+      "end": 397.55
+    },
+    {
+      "word": "microorganisms.",
+      "start": 397.643,
+      "end": 398.932
+    },
+    {
+      "word": "First,",
+      "start": 399.21,
+      "end": 399.663
+    },
+    {
+      "word": "screening",
+      "start": 399.837,
+      "end": 400.418
+    },
+    {
+      "word": "removes",
+      "start": 400.534,
+      "end": 400.952
+    },
+    {
+      "word": "large",
+      "start": 401.068,
+      "end": 401.416
+    },
+    {
+      "word": "debris.",
+      "start": 401.463,
+      "end": 402.02
+    },
+    {
+      "word": "Next,",
+      "start": 402.357,
+      "end": 402.879
+    },
+    {
+      "word": "sedimentation",
+      "start": 403.053,
+      "end": 404.017
+    },
+    {
+      "word": "and",
+      "start": 404.098,
+      "end": 404.272
+    },
+    {
+      "word": "filtration",
+      "start": 404.354,
+      "end": 405.108
+    },
+    {
+      "word": "remove",
+      "start": 405.317,
+      "end": 405.735
+    },
+    {
+      "word": "suspended",
+      "start": 405.782,
+      "end": 406.374
+    },
+    {
+      "word": "particles.",
+      "start": 406.432,
+      "end": 407.233
+    },
+    {
+      "word": "Finally,",
+      "start": 407.511,
+      "end": 408.278
+    },
+    {
+      "word": "disinfection",
+      "start": 408.487,
+      "end": 409.288
+    },
+    {
+      "word": "reduces",
+      "start": 409.369,
+      "end": 409.891
+    },
+    {
+      "word": "harmful",
+      "start": 409.972,
+      "end": 410.402
+    },
+    {
+      "word": "microorganisms",
+      "start": 410.472,
+      "end": 411.424
+    },
+    {
+      "word": "to",
+      "start": 411.47,
+      "end": 411.563
+    },
+    {
+      "word": "safe",
+      "start": 411.679,
+      "end": 411.969
+    },
+    {
+      "word": "levels.",
+      "start": 412.004,
+      "end": 412.527
+    },
+    {
+      "word": "The",
+      "start": 412.701,
+      "end": 412.828
+    },
+    {
+      "word": "water",
+      "start": 412.886,
+      "end": 413.2
+    },
+    {
+      "word": "is",
+      "start": 413.281,
+      "end": 413.386
+    },
+    {
+      "word": "tested",
+      "start": 413.455,
+      "end": 413.931
+    },
+    {
+      "word": "before",
+      "start": 413.989,
+      "end": 414.338
+    },
+    {
+      "word": "being",
+      "start": 414.396,
+      "end": 414.628
+    },
+    {
+      "word": "supplied",
+      "start": 414.686,
+      "end": 415.139
+    },
+    {
+      "word": "to",
+      "start": 415.174,
+      "end": 415.243
+    },
+    {
+      "word": "consumers.",
+      "start": 415.325,
+      "end": 416.091
+    },
+    {
+      "word": "Notice",
+      "start": 416.335,
+      "end": 416.799
+    },
+    {
+      "word": "that",
+      "start": 416.845,
+      "end": 417.02
+    },
+    {
+      "word": "different",
+      "start": 417.101,
+      "end": 417.496
+    },
+    {
+      "word": "treatment",
+      "start": 417.53,
+      "end": 417.972
+    },
+    {
+      "word": "stages",
+      "start": 418.03,
+      "end": 418.587
+    },
+    {
+      "word": "remove",
+      "start": 418.924,
+      "end": 419.365
+    },
+    {
+      "word": "different",
+      "start": 419.411,
+      "end": 419.829
+    },
+    {
+      "word": "types",
+      "start": 419.876,
+      "end": 420.189
+    },
+    {
+      "word": "of",
+      "start": 420.247,
+      "end": 420.34
+    },
+    {
+      "word": "contamination.",
+      "start": 420.433,
+      "end": 421.443
+    },
+    {
+      "word": "This",
+      "start": 421.652,
+      "end": 421.873
+    },
+    {
+      "word": "is",
+      "start": 421.942,
+      "end": 422.047
+    },
+    {
+      "word": "why",
+      "start": 422.14,
+      "end": 422.465
+    },
+    {
+      "word": "a",
+      "start": 422.558,
+      "end": 422.616
+    },
+    {
+      "word": "combination",
+      "start": 422.732,
+      "end": 423.451
+    },
+    {
+      "word": "of",
+      "start": 423.544,
+      "end": 423.672
+    },
+    {
+      "word": "processes",
+      "start": 423.788,
+      "end": 424.415
+    },
+    {
+      "word": "is",
+      "start": 424.485,
+      "end": 424.624
+    },
+    {
+      "word": "often",
+      "start": 424.717,
+      "end": 425.054
+    },
+    {
+      "word": "necessary.",
+      "start": 425.1,
+      "end": 425.809
+    },
+    {
+      "word": "Let",
+      "start": 426.052,
+      "end": 426.285
+    },
+    {
+      "word": "us",
+      "start": 426.354,
+      "end": 426.47
+    },
+    {
+      "word": "test",
+      "start": 426.552,
+      "end": 426.842
+    },
+    {
+      "word": "your",
+      "start": 426.888,
+      "end": 427.039
+    },
+    {
+      "word": "understanding.",
+      "start": 427.109,
+      "end": 427.887
+    },
+    {
+      "word": "What",
+      "start": 427.98,
+      "end": 428.258
+    },
+    {
+      "word": "is",
+      "start": 428.34,
+      "end": 428.549
+    },
+    {
+      "word": "potable",
+      "start": 428.665,
+      "end": 429.222
+    },
+    {
+      "word": "water?",
+      "start": 429.268,
+      "end": 429.791
+    },
+    {
+      "word": "Water",
+      "start": 430.035,
+      "end": 430.534
+    },
+    {
+      "word": "that",
+      "start": 430.685,
+      "end": 430.917
+    },
+    {
+      "word": "is",
+      "start": 430.987,
+      "end": 431.08
+    },
+    {
+      "word": "safe",
+      "start": 431.138,
+      "end": 431.451
+    },
+    {
+      "word": "to",
+      "start": 431.498,
+      "end": 431.59
+    },
+    {
+      "word": "drink.",
+      "start": 431.672,
+      "end": 432.043
+    },
+    {
+      "word": "Does",
+      "start": 432.124,
+      "end": 432.38
+    },
+    {
+      "word": "potable",
+      "start": 432.496,
+      "end": 433.03
+    },
+    {
+      "word": "water",
+      "start": 433.076,
+      "end": 433.413
+    },
+    {
+      "word": "have",
+      "start": 433.471,
+      "end": 433.645
+    },
+    {
+      "word": "to",
+      "start": 433.68,
+      "end": 433.75
+    },
+    {
+      "word": "be",
+      "start": 433.82,
+      "end": 433.912
+    },
+    {
+      "word": "chemically",
+      "start": 433.97,
+      "end": 434.539
+    },
+    {
+      "word": "pure?",
+      "start": 434.621,
+      "end": 435.085
+    },
+    {
+      "word": "No.",
+      "start": 435.329,
+      "end": 435.782
+    },
+    {
+      "word": "It",
+      "start": 435.956,
+      "end": 436.153
+    },
+    {
+      "word": "may",
+      "start": 436.234,
+      "end": 436.432
+    },
+    {
+      "word": "contain",
+      "start": 436.513,
+      "end": 437.035
+    },
+    {
+      "word": "small",
+      "start": 437.117,
+      "end": 437.546
+    },
+    {
+      "word": "amounts",
+      "start": 437.604,
+      "end": 437.976
+    },
+    {
+      "word": "of",
+      "start": 438.034,
+      "end": 438.115
+    },
+    {
+      "word": "dissolved",
+      "start": 438.196,
+      "end": 438.742
+    },
+    {
+      "word": "substances.",
+      "start": 438.8,
+      "end": 439.764
+    },
+    {
+      "word": "Which",
+      "start": 440.008,
+      "end": 440.333
+    },
+    {
+      "word": "treatment",
+      "start": 440.391,
+      "end": 440.902
+    },
+    {
+      "word": "process",
+      "start": 440.96,
+      "end": 441.459
+    },
+    {
+      "word": "uses",
+      "start": 441.54,
+      "end": 441.877
+    },
+    {
+      "word": "chlorine",
+      "start": 441.946,
+      "end": 442.504
+    },
+    {
+      "word": "to",
+      "start": 442.55,
+      "end": 442.655
+    },
+    {
+      "word": "kill",
+      "start": 442.748,
+      "end": 443.026
+    },
+    {
+      "word": "or",
+      "start": 443.119,
+      "end": 443.282
+    },
+    {
+      "word": "inactivate",
+      "start": 443.375,
+      "end": 444.083
+    },
+    {
+      "word": "harmful",
+      "start": 444.141,
+      "end": 444.536
+    },
+    {
+      "word": "microorganisms?",
+      "start": 444.594,
+      "end": 445.801
+    },
+    {
+      "word": "Chlorination.",
+      "start": 446.196,
+      "end": 447.241
+    },
+    {
+      "word": "And",
+      "start": 447.856,
+      "end": 448.03
+    },
+    {
+      "word": "what",
+      "start": 448.111,
+      "end": 448.297
+    },
+    {
+      "word": "is",
+      "start": 448.355,
+      "end": 448.448
+    },
+    {
+      "word": "the",
+      "start": 448.495,
+      "end": 448.576
+    },
+    {
+      "word": "name",
+      "start": 448.657,
+      "end": 448.889
+    },
+    {
+      "word": "of",
+      "start": 448.924,
+      "end": 448.994
+    },
+    {
+      "word": "the",
+      "start": 449.04,
+      "end": 449.11
+    },
+    {
+      "word": "process",
+      "start": 449.168,
+      "end": 449.725
+    },
+    {
+      "word": "used",
+      "start": 449.841,
+      "end": 450.12
+    },
+    {
+      "word": "to",
+      "start": 450.155,
+      "end": 450.236
+    },
+    {
+      "word": "remove",
+      "start": 450.329,
+      "end": 450.735
+    },
+    {
+      "word": "dissolved",
+      "start": 450.782,
+      "end": 451.293
+    },
+    {
+      "word": "salts",
+      "start": 451.351,
+      "end": 451.78
+    },
+    {
+      "word": "from",
+      "start": 451.85,
+      "end": 452.036
+    },
+    {
+      "word": "seawater?",
+      "start": 452.117,
+      "end": 452.976
+    },
+    {
+      "word": "Desalination.",
+      "start": 453.684,
+      "end": 454.834
+    },
+    {
+      "word": "Now,",
+      "start": 455.356,
+      "end": 455.565
+    },
+    {
+      "word": "let",
+      "start": 455.6,
+      "end": 455.762
+    },
+    {
+      "word": "us",
+      "start": 455.832,
+      "end": 455.925
+    },
+    {
+      "word": "tackle",
+      "start": 455.995,
+      "end": 456.413
+    },
+    {
+      "word": "a",
+      "start": 456.494,
+      "end": 456.563
+    },
+    {
+      "word": "G",
+      "start": 456.656,
+      "end": 456.83
+    },
+    {
+      "word": "C",
+      "start": 456.981,
+      "end": 457.156
+    },
+    {
+      "word": "S",
+      "start": 457.365,
+      "end": 457.539
+    },
+    {
+      "word": "E",
+      "start": 457.69,
+      "end": 457.841
+    },
+    {
+      "word": "examination",
+      "start": 457.91,
+      "end": 458.735
+    },
+    {
+      "word": "question.",
+      "start": 458.804,
+      "end": 459.466
+    },
+    {
+      "word": "Explain",
+      "start": 459.861,
+      "end": 460.406
+    },
+    {
+      "word": "why",
+      "start": 460.476,
+      "end": 460.639
+    },
+    {
+      "word": "desalination",
+      "start": 460.72,
+      "end": 461.579
+    },
+    {
+      "word": "is",
+      "start": 461.649,
+      "end": 461.753
+    },
+    {
+      "word": "often",
+      "start": 461.823,
+      "end": 462.102
+    },
+    {
+      "word": "more",
+      "start": 462.171,
+      "end": 462.345
+    },
+    {
+      "word": "expensive",
+      "start": 462.38,
+      "end": 462.995
+    },
+    {
+      "word": "than",
+      "start": 463.03,
+      "end": 463.181
+    },
+    {
+      "word": "obtaining",
+      "start": 463.251,
+      "end": 463.727
+    },
+    {
+      "word": "potable",
+      "start": 463.808,
+      "end": 464.296
+    },
+    {
+      "word": "water",
+      "start": 464.342,
+      "end": 464.702
+    },
+    {
+      "word": "from",
+      "start": 464.772,
+      "end": 464.992
+    },
+    {
+      "word": "freshwater",
+      "start": 465.109,
+      "end": 465.759
+    },
+    {
+      "word": "sources.",
+      "start": 465.828,
+      "end": 466.513
+    },
+    {
+      "word": "This",
+      "start": 466.722,
+      "end": 466.908
+    },
+    {
+      "word": "question",
+      "start": 466.978,
+      "end": 467.43
+    },
+    {
+      "word": "is",
+      "start": 467.5,
+      "end": 467.616
+    },
+    {
+      "word": "worth",
+      "start": 467.686,
+      "end": 467.953
+    },
+    {
+      "word": "four",
+      "start": 468.011,
+      "end": 468.255
+    },
+    {
+      "word": "marks.",
+      "start": 468.324,
+      "end": 468.893
+    },
+    {
+      "word": "A",
+      "start": 469.137,
+      "end": 469.23
+    },
+    {
+      "word": "model",
+      "start": 469.323,
+      "end": 469.671
+    },
+    {
+      "word": "answer",
+      "start": 469.787,
+      "end": 470.17
+    },
+    {
+      "word": "would",
+      "start": 470.228,
+      "end": 470.426
+    },
+    {
+      "word": "be:",
+      "start": 470.472,
+      "end": 470.809
+    },
+    {
+      "word": "Seawater",
+      "start": 471.146,
+      "end": 471.842
+    },
+    {
+      "word": "contains",
+      "start": 471.924,
+      "end": 472.469
+    },
+    {
+      "word": "high",
+      "start": 472.539,
+      "end": 472.759
+    },
+    {
+      "word": "concentrations",
+      "start": 472.818,
+      "end": 473.735
+    },
+    {
+      "word": "of",
+      "start": 473.816,
+      "end": 473.932
+    },
+    {
+      "word": "dissolved",
+      "start": 474.013,
+      "end": 474.524
+    },
+    {
+      "word": "salts",
+      "start": 474.594,
+      "end": 475.081
+    },
+    {
+      "word": "that",
+      "start": 475.534,
+      "end": 475.72
+    },
+    {
+      "word": "must",
+      "start": 475.79,
+      "end": 475.975
+    },
+    {
+      "word": "be",
+      "start": 476.022,
+      "end": 476.103
+    },
+    {
+      "word": "removed",
+      "start": 476.161,
+      "end": 476.556
+    },
+    {
+      "word": "before",
+      "start": 476.591,
+      "end": 476.939
+    },
+    {
+      "word": "it",
+      "start": 476.986,
+      "end": 477.067
+    },
+    {
+      "word": "can",
+      "start": 477.113,
+      "end": 477.264
+    },
+    {
+      "word": "be",
+      "start": 477.311,
+      "end": 477.392
+    },
+    {
+      "word": "used",
+      "start": 477.45,
+      "end": 477.705
+    },
+    {
+      "word": "as",
+      "start": 477.752,
+      "end": 477.833
+    },
+    {
+      "word": "drinking",
+      "start": 477.891,
+      "end": 478.263
+    },
+    {
+      "word": "water.",
+      "start": 478.321,
+      "end": 478.739
+    },
+    {
+      "word": "Desalination",
+      "start": 478.913,
+      "end": 479.876
+    },
+    {
+      "word": "by",
+      "start": 479.969,
+      "end": 480.143
+    },
+    {
+      "word": "distillation",
+      "start": 480.225,
+      "end": 481.049
+    },
+    {
+      "word": "requires",
+      "start": 481.223,
+      "end": 481.78
+    },
+    {
+      "word": "large",
+      "start": 481.873,
+      "end": 482.175
+    },
+    {
+      "word": "amounts",
+      "start": 482.21,
+      "end": 482.558
+    },
+    {
+      "word": "of",
+      "start": 482.593,
+      "end": 482.663
+    },
+    {
+      "word": "energy",
+      "start": 482.779,
+      "end": 483.29
+    },
+    {
+      "word": "to",
+      "start": 483.371,
+      "end": 483.499
+    },
+    {
+      "word": "heat",
+      "start": 483.615,
+      "end": 483.894
+    },
+    {
+      "word": "and",
+      "start": 484.01,
+      "end": 484.172
+    },
+    {
+      "word": "evaporate",
+      "start": 484.23,
+      "end": 484.88
+    },
+    {
+      "word": "the",
+      "start": 484.915,
+      "end": 484.985
+    },
+    {
+      "word": "water.",
+      "start": 485.043,
+      "end": 485.531
+    },
+    {
+      "word": "Reverse",
+      "start": 485.739,
+      "end": 486.204
+    },
+    {
+      "word": "osmosis",
+      "start": 486.262,
+      "end": 487.121
+    },
+    {
+      "word": "also",
+      "start": 487.214,
+      "end": 487.632
+    },
+    {
+      "word": "requires",
+      "start": 487.713,
+      "end": 488.236
+    },
+    {
+      "word": "energy",
+      "start": 488.352,
+      "end": 488.921
+    },
+    {
+      "word": "to",
+      "start": 489.037,
+      "end": 489.164
+    },
+    {
+      "word": "generate",
+      "start": 489.246,
+      "end": 489.791
+    },
+    {
+      "word": "high",
+      "start": 489.849,
+      "end": 490.082
+    },
+    {
+      "word": "pressure",
+      "start": 490.14,
+      "end": 490.627
+    },
+    {
+      "word": "across",
+      "start": 490.709,
+      "end": 491.231
+    },
+    {
+      "word": "a",
+      "start": 491.266,
+      "end": 491.301
+    },
+    {
+      "word": "membrane.",
+      "start": 491.394,
+      "end": 491.962
+    },
+    {
+      "word": "These",
+      "start": 492.055,
+      "end": 492.311
+    },
+    {
+      "word": "processes",
+      "start": 492.369,
+      "end": 493.077
+    },
+    {
+      "word": "require",
+      "start": 493.193,
+      "end": 493.692
+    },
+    {
+      "word": "specialised",
+      "start": 493.739,
+      "end": 494.366
+    },
+    {
+      "word": "equipment",
+      "start": 494.412,
+      "end": 494.958
+    },
+    {
+      "word": "and",
+      "start": 495.016,
+      "end": 495.144
+    },
+    {
+      "word": "operating",
+      "start": 495.225,
+      "end": 495.782
+    },
+    {
+      "word": "costs,",
+      "start": 495.863,
+      "end": 496.514
+    },
+    {
+      "word": "making",
+      "start": 496.723,
+      "end": 497.117
+    },
+    {
+      "word": "desalination",
+      "start": 497.199,
+      "end": 498.174
+    },
+    {
+      "word": "generally",
+      "start": 498.255,
+      "end": 498.801
+    },
+    {
+      "word": "more",
+      "start": 498.87,
+      "end": 499.045
+    },
+    {
+      "word": "expensive",
+      "start": 499.091,
+      "end": 499.822
+    },
+    {
+      "word": "than",
+      "start": 499.869,
+      "end": 500.066
+    },
+    {
+      "word": "conventional",
+      "start": 500.182,
+      "end": 500.844
+    },
+    {
+      "word": "freshwater",
+      "start": 500.914,
+      "end": 501.541
+    },
+    {
+      "word": "treatment.",
+      "start": 501.599,
+      "end": 502.284
+    },
+    {
+      "word": "Notice",
+      "start": 502.737,
+      "end": 503.259
+    },
+    {
+      "word": "that",
+      "start": 503.305,
+      "end": 503.503
+    },
+    {
+      "word": "the",
+      "start": 503.561,
+      "end": 503.654
+    },
+    {
+      "word": "answer",
+      "start": 503.747,
+      "end": 504.176
+    },
+    {
+      "word": "identifies",
+      "start": 504.246,
+      "end": 505.047
+    },
+    {
+      "word": "the",
+      "start": 505.128,
+      "end": 505.21
+    },
+    {
+      "word": "problem,",
+      "start": 505.279,
+      "end": 505.871
+    },
+    {
+      "word": "explains",
+      "start": 506.022,
+      "end": 506.765
+    },
+    {
+      "word": "the",
+      "start": 506.858,
+      "end": 506.974
+    },
+    {
+      "word": "scientific",
+      "start": 507.021,
+      "end": 507.624
+    },
+    {
+      "word": "processes",
+      "start": 507.694,
+      "end": 508.275
+    },
+    {
+      "word": "involved",
+      "start": 508.345,
+      "end": 508.914
+    },
+    {
+      "word": "and",
+      "start": 509.192,
+      "end": 509.39
+    },
+    {
+      "word": "links",
+      "start": 509.517,
+      "end": 509.831
+    },
+    {
+      "word": "them",
+      "start": 509.877,
+      "end": 510.063
+    },
+    {
+      "word": "to",
+      "start": 510.144,
+      "end": 510.237
+    },
+    {
+      "word": "the",
+      "start": 510.307,
+      "end": 510.376
+    },
+    {
+      "word": "higher",
+      "start": 510.446,
+      "end": 510.701
+    },
+    {
+      "word": "cost.",
+      "start": 510.771,
+      "end": 511.189
+    },
+    {
+      "word": "Before",
+      "start": 511.468,
+      "end": 511.839
+    },
+    {
+      "word": "we",
+      "start": 511.874,
+      "end": 511.979
+    },
+    {
+      "word": "finish,",
+      "start": 512.06,
+      "end": 512.594
+    },
+    {
+      "word": "remember",
+      "start": 512.803,
+      "end": 513.43
+    },
+    {
+      "word": "these",
+      "start": 513.604,
+      "end": 513.941
+    },
+    {
+      "word": "important",
+      "start": 513.987,
+      "end": 514.498
+    },
+    {
+      "word": "points.",
+      "start": 514.556,
+      "end": 515.009
+    },
+    {
+      "word": "Potable",
+      "start": 515.183,
+      "end": 515.729
+    },
+    {
+      "word": "water",
+      "start": 515.775,
+      "end": 516.135
+    },
+    {
+      "word": "is",
+      "start": 516.216,
+      "end": 516.344
+    },
+    {
+      "word": "safe",
+      "start": 516.402,
+      "end": 516.692
+    },
+    {
+      "word": "to",
+      "start": 516.727,
+      "end": 516.82
+    },
+    {
+      "word": "drink",
+      "start": 516.901,
+      "end": 517.226
+    },
+    {
+      "word": "but",
+      "start": 517.47,
+      "end": 517.679
+    },
+    {
+      "word": "is",
+      "start": 517.737,
+      "end": 517.865
+    },
+    {
+      "word": "not",
+      "start": 517.981,
+      "end": 518.225
+    },
+    {
+      "word": "necessarily",
+      "start": 518.306,
+      "end": 519.142
+    },
+    {
+      "word": "chemically",
+      "start": 519.316,
+      "end": 519.931
+    },
+    {
+      "word": "pure.",
+      "start": 520.013,
+      "end": 520.489
+    },
+    {
+      "word": "Freshwater",
+      "start": 520.732,
+      "end": 521.417
+    },
+    {
+      "word": "treatment",
+      "start": 521.476,
+      "end": 522.021
+    },
+    {
+      "word": "commonly",
+      "start": 522.172,
+      "end": 522.683
+    },
+    {
+      "word": "involves",
+      "start": 522.753,
+      "end": 523.356
+    },
+    {
+      "word": "filtration",
+      "start": 523.507,
+      "end": 524.262
+    },
+    {
+      "word": "and",
+      "start": 524.355,
+      "end": 524.552
+    },
+    {
+      "word": "disinfection.",
+      "start": 524.61,
+      "end": 525.492
+    },
+    {
+      "word": "Sewage",
+      "start": 525.771,
+      "end": 526.305
+    },
+    {
+      "word": "treatment",
+      "start": 526.34,
+      "end": 526.874
+    },
+    {
+      "word": "separates",
+      "start": 527.025,
+      "end": 527.605
+    },
+    {
+      "word": "solids",
+      "start": 527.652,
+      "end": 528.07
+    },
+    {
+      "word": "from",
+      "start": 528.116,
+      "end": 528.29
+    },
+    {
+      "word": "liquids",
+      "start": 528.372,
+      "end": 528.859
+    },
+    {
+      "word": "and",
+      "start": 528.975,
+      "end": 529.196
+    },
+    {
+      "word": "uses",
+      "start": 529.312,
+      "end": 529.718
+    },
+    {
+      "word": "biological",
+      "start": 529.834,
+      "end": 530.566
+    },
+    {
+      "word": "processes",
+      "start": 530.635,
+      "end": 531.309
+    },
+    {
+      "word": "to",
+      "start": 531.402,
+      "end": 531.529
+    },
+    {
+      "word": "remove",
+      "start": 531.611,
+      "end": 532.052
+    },
+    {
+      "word": "organic",
+      "start": 532.122,
+      "end": 532.656
+    },
+    {
+      "word": "matter.",
+      "start": 532.725,
+      "end": 533.132
+    },
+    {
+      "word": "Desalination",
+      "start": 533.526,
+      "end": 534.56
+    },
+    {
+      "word": "removes",
+      "start": 534.711,
+      "end": 535.279
+    },
+    {
+      "word": "dissolved",
+      "start": 535.372,
+      "end": 535.918
+    },
+    {
+      "word": "salts",
+      "start": 535.999,
+      "end": 536.417
+    },
+    {
+      "word": "from",
+      "start": 536.487,
+      "end": 536.707
+    },
+    {
+      "word": "seawater,",
+      "start": 536.789,
+      "end": 537.485
+    },
+    {
+      "word": "but",
+      "start": 537.532,
+      "end": 537.729
+    },
+    {
+      "word": "it",
+      "start": 537.787,
+      "end": 537.88
+    },
+    {
+      "word": "can",
+      "start": 537.938,
+      "end": 538.101
+    },
+    {
+      "word": "require",
+      "start": 538.182,
+      "end": 538.693
+    },
+    {
+      "word": "considerable",
+      "start": 538.751,
+      "end": 539.529
+    },
+    {
+      "word": "energy.",
+      "start": 539.61,
+      "end": 540.26
+    },
+    {
+      "word": "If",
+      "start": 540.434,
+      "end": 540.574
+    },
+    {
+      "word": "you",
+      "start": 540.62,
+      "end": 540.701
+    },
+    {
+      "word": "found",
+      "start": 540.794,
+      "end": 541.015
+    },
+    {
+      "word": "this",
+      "start": 541.061,
+      "end": 541.212
+    },
+    {
+      "word": "lesson",
+      "start": 541.294,
+      "end": 541.619
+    },
+    {
+      "word": "useful,",
+      "start": 541.7,
+      "end": 542.246
+    },
+    {
+      "word": "please",
+      "start": 542.362,
+      "end": 542.64
+    },
+    {
+      "word": "subscribe",
+      "start": 542.675,
+      "end": 543.186
+    },
+    {
+      "word": "to",
+      "start": 543.221,
+      "end": 543.302
+    },
+    {
+      "word": "J",
+      "start": 543.395,
+      "end": 543.569
+    },
+    {
+      "word": "D",
+      "start": 543.627,
+      "end": 543.709
+    },
+    {
+      "word": "Science",
+      "start": 543.825,
+      "end": 544.277
+    },
+    {
+      "word": "and",
+      "start": 544.324,
+      "end": 544.486
+    },
+    {
+      "word": "visit",
+      "start": 544.556,
+      "end": 544.904
+    },
+    {
+      "word": "j",
+      "start": 545.032,
+      "end": 545.206
+    },
+    {
+      "word": "d",
+      "start": 545.253,
+      "end": 545.369
+    },
+    {
+      "word": "science",
+      "start": 545.438,
+      "end": 545.88
+    },
+    {
+      "word": "dot",
+      "start": 545.949,
+      "end": 546.182
+    },
+    {
+      "word": "co",
+      "start": 546.274,
+      "end": 546.507
+    },
+    {
+      "word": "dot",
+      "start": 546.576,
+      "end": 546.808
+    },
+    {
+      "word": "u",
+      "start": 546.901,
+      "end": 547.029
+    },
+    {
+      "word": "k",
+      "start": 547.11,
+      "end": 547.284
+    },
+    {
+      "word": "for",
+      "start": 547.563,
+      "end": 547.749
+    },
+    {
+      "word": "more",
+      "start": 547.819,
+      "end": 548.027
+    },
+    {
+      "word": "G",
+      "start": 548.051,
+      "end": 548.167
+    },
+    {
+      "word": "C",
+      "start": 548.283,
+      "end": 548.411
+    },
+    {
+      "word": "S",
+      "start": 548.585,
+      "end": 548.736
+    },
+    {
+      "word": "E",
+      "start": 548.852,
+      "end": 549.026
+    },
+    {
+      "word": "Chemistry",
+      "start": 549.142,
+      "end": 549.653
+    },
+    {
+      "word": "explanations,",
+      "start": 549.734,
+      "end": 550.628
+    },
+    {
+      "word": "practical",
+      "start": 550.779,
+      "end": 551.325
+    },
+    {
+      "word": "investigations",
+      "start": 551.406,
+      "end": 552.404
+    },
+    {
+      "word": "and",
+      "start": 552.521,
+      "end": 552.73
+    },
+    {
+      "word": "examination",
+      "start": 552.811,
+      "end": 553.635
+    },
+    {
+      "word": "practice.",
+      "start": 553.705,
+      "end": 554.297
+    },
+    {
+      "word": "Thank",
+      "start": 554.506,
+      "end": 554.784
+    },
+    {
+      "word": "you",
+      "start": 554.843,
+      "end": 554.947
+    },
+    {
+      "word": "for",
+      "start": 555.017,
+      "end": 555.156
+    },
+    {
+      "word": "watching,",
+      "start": 555.226,
+      "end": 555.771
+    },
+    {
+      "word": "and",
+      "start": 555.887,
+      "end": 556.073
+    },
+    {
+      "word": "I",
+      "start": 556.166,
+      "end": 556.189
+    },
+    {
+      "word": "look",
+      "start": 556.271,
+      "end": 556.445
+    },
+    {
+      "word": "forward",
+      "start": 556.503,
+      "end": 556.793
+    },
+    {
+      "word": "to",
+      "start": 556.828,
+      "end": 556.886
+    },
+    {
+      "word": "seeing",
+      "start": 556.967,
+      "end": 557.234
+    },
+    {
+      "word": "you",
+      "start": 557.292,
+      "end": 557.432
+    },
+    {
+      "word": "in",
+      "start": 557.548,
+      "end": 557.675
+    },
+    {
+      "word": "the",
+      "start": 557.733,
+      "end": 557.803
+    },
+    {
+      "word": "next",
+      "start": 557.884,
+      "end": 558.117
+    },
+    {
+      "word": "lesson.",
+      "start": 558.175,
+      "end": 558.581
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

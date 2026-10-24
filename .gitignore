@@ -34,3 +34,7 @@ content/videos/*/source/reference.mp4
 content/videos/*/build/
 content/videos/*/qa/
 content/videos/studio/out/
+
+# Foundations working audio chunks
+content/videos/*/source/chunk_*.mp3
+content/videos/*/source/narration_master_parts/

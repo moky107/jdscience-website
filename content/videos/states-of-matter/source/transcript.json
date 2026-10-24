@@ -1,0 +1,4546 @@
+{
+  "slug": "states-of-matter",
+  "title": "States of Matter",
+  "audio": "/workspace/content/videos/states-of-matter/source/narration_master.mp3",
+  "duration": 415.765,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's lesson, we are going to explore the three states of matter: solids, liquids and gases. We will examine how their particles are arranged, how they move, and how this explains the different properties of each state.\n\nBy the end of this lesson, you should be able to describe the arrangement and movement of particles in solids, liquids and gases, explain their properties using the particle model, and answer GCSE examination questions confidently.\n\nLet us begin with a simple question. Why does a piece of ice maintain its shape, while water flows and steam spreads throughout its surroundings?\n\nThe answer lies in the arrangement and movement of particles.\n\nEverything around us is made of particles. In the particle model, these particles are represented as small spheres. The way they are arranged and the energy they possess determine whether a substance exists as a solid, liquid or gas.\n\nLet us begin with solids.\n\nIn a solid, particles are packed closely together, usually in a regular arrangement. Strong forces of attraction hold the particles in fixed positions. However, the particles are not completely stationary. They vibrate about their fixed positions.\n\nBecause the particles cannot move freely from one position to another, a solid has a fixed shape and a fixed volume.\n\nSolids are also very difficult to compress because their particles are already packed closely together, leaving very little space between them.\n\nThink about an ice cube. It maintains its shape even when you place it on a plate because the water molecules are held in fixed positions within the solid structure.\n\nNow, let us consider liquids.\n\nIn a liquid, the particles remain close together, but they are arranged irregularly and can move past one another.\n\nThe forces of attraction between particles are still important, but the particles have sufficient energy to move around each other.\n\nThis explains why liquids can flow and take the shape of their containers.\n\nFor example, when you pour water into a glass, it takes the shape of the bottom of the glass. When you pour the same water into a bottle, its shape changes, but its volume remains approximately the same.\n\nLiquids have a fixed volume but no fixed shape.\n\nLike solids, liquids are difficult to compress because there is very little space between their particles.\n\nNow, let us examine gases.\n\nIn a gas, particles are much farther apart than in solids and liquids. The forces of attraction between them are generally negligible, and the particles move rapidly and randomly in all directions.\n\nBecause the particles move freely, a gas has neither a fixed shape nor a fixed volume.\n\nInstead, it spreads out to fill the entire container.\n\nFor example, when perfume is sprayed in one corner of a room, its gaseous particles spread through the air. This process is called diffusion.\n\nGases can also be compressed easily because there are large spaces between their particles.\n\nConsider air inside a syringe. When you push the plunger while blocking the opening, the air occupies a smaller volume because the gas particles move closer together.\n\nNow, let us compare ice, liquid water and steam.\n\nAll three contain the same chemical substance, H two O. The difference is not the chemical identity of the particles, but their arrangement, movement and energy.\n\nIn ice, the water molecules vibrate about fixed positions.\n\nIn liquid water, the molecules move past one another.\n\nIn steam, the water molecules move rapidly and randomly, with large spaces between them.\n\nHere is an important GCSE examination point. When a substance changes state, its particles do not become larger or smaller. It is their arrangement, movement and separation that change.\n\nLet us test your understanding.\n\nImagine three containers. The first contains ice, the second contains liquid water, and the third contains water vapour.\n\nWhich substance has particles vibrating about fixed positions?\n\nThat is correct: ice.\n\nWhich has particles that move past one another while remaining close together?\n\nLiquid water.\n\nAnd which has particles that are widely separated and move rapidly in random directions?\n\nWater vapour.\n\nNow, let us tackle a GCSE examination question.\n\nExplain why gases can be compressed easily, whereas solids cannot. This question is worth three marks.\n\nA full-mark answer would be:\n\nIn a gas, particles are far apart, with large spaces between them. When pressure is applied, the particles can be pushed closer together, reducing the volume. In a solid, particles are already packed closely together, with very little space between them, so the volume cannot be reduced significantly.\n\nNotice that we have not simply stated that gases can be compressed. We have explained why, using the arrangement of particles.\n\nThat is exactly what examiners are looking for when a question asks you to explain.\n\nBefore we finish, remember these three key ideas.\n\nSolids have a fixed shape and volume because their particles vibrate about fixed positions.\n\nLiquids have a fixed volume but take the shape of their containers because their particles can move past one another.\n\nGases have no fixed shape or volume because their particles move freely and are widely separated.\n\nIf you found this explanation helpful, please subscribe to JD Science and visit j d science dot co dot u k for more GCSE Chemistry explanations, worked examples and examination practice.\n\nThank you for watching, and I look forward to seeing you in the next lesson.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.522
+    },
+    {
+      "word": "and",
+      "start": 0.65,
+      "end": 0.894
+    },
+    {
+      "word": "welcome",
+      "start": 1.01,
+      "end": 1.474
+    },
+    {
+      "word": "back",
+      "start": 1.521,
+      "end": 1.741
+    },
+    {
+      "word": "to",
+      "start": 1.811,
+      "end": 1.962
+    },
+    {
+      "word": "J",
+      "start": 2.078,
+      "end": 2.252
+    },
+    {
+      "word": "D",
+      "start": 2.334,
+      "end": 2.403
+    },
+    {
+      "word": "Science.",
+      "start": 2.554,
+      "end": 3.228
+    },
+    {
+      "word": "In",
+      "start": 3.622,
+      "end": 3.773
+    },
+    {
+      "word": "today's",
+      "start": 3.831,
+      "end": 4.249
+    },
+    {
+      "word": "lesson,",
+      "start": 4.342,
+      "end": 4.911
+    },
+    {
+      "word": "we",
+      "start": 5.12,
+      "end": 5.283
+    },
+    {
+      "word": "are",
+      "start": 5.341,
+      "end": 5.48
+    },
+    {
+      "word": "going",
+      "start": 5.526,
+      "end": 5.747
+    },
+    {
+      "word": "to",
+      "start": 5.805,
+      "end": 5.863
+    },
+    {
+      "word": "explore",
+      "start": 5.944,
+      "end": 6.455
+    },
+    {
+      "word": "the",
+      "start": 6.49,
+      "end": 6.571
+    },
+    {
+      "word": "three",
+      "start": 6.653,
+      "end": 6.943
+    },
+    {
+      "word": "states",
+      "start": 7.001,
+      "end": 7.396
+    },
+    {
+      "word": "of",
+      "start": 7.465,
+      "end": 7.57
+    },
+    {
+      "word": "matter:",
+      "start": 7.686,
+      "end": 8.22
+    },
+    {
+      "word": "solids,",
+      "start": 8.499,
+      "end": 9.276
+    },
+    {
+      "word": "liquids",
+      "start": 9.451,
+      "end": 10.089
+    },
+    {
+      "word": "and",
+      "start": 10.298,
+      "end": 10.53
+    },
+    {
+      "word": "gases.",
+      "start": 10.646,
+      "end": 11.355
+    },
+    {
+      "word": "We",
+      "start": 11.749,
+      "end": 11.923
+    },
+    {
+      "word": "will",
+      "start": 11.97,
+      "end": 12.156
+    },
+    {
+      "word": "examine",
+      "start": 12.214,
+      "end": 12.678
+    },
+    {
+      "word": "how",
+      "start": 12.736,
+      "end": 12.934
+    },
+    {
+      "word": "their",
+      "start": 13.026,
+      "end": 13.235
+    },
+    {
+      "word": "particles",
+      "start": 13.317,
+      "end": 13.909
+    },
+    {
+      "word": "are",
+      "start": 13.967,
+      "end": 14.118
+    },
+    {
+      "word": "arranged,",
+      "start": 14.164,
+      "end": 14.93
+    },
+    {
+      "word": "how",
+      "start": 15.174,
+      "end": 15.406
+    },
+    {
+      "word": "they",
+      "start": 15.499,
+      "end": 15.662
+    },
+    {
+      "word": "move,",
+      "start": 15.743,
+      "end": 16.242
+    },
+    {
+      "word": "and",
+      "start": 16.37,
+      "end": 16.567
+    },
+    {
+      "word": "how",
+      "start": 16.66,
+      "end": 16.869
+    },
+    {
+      "word": "this",
+      "start": 16.951,
+      "end": 17.136
+    },
+    {
+      "word": "explains",
+      "start": 17.218,
+      "end": 17.856
+    },
+    {
+      "word": "the",
+      "start": 17.926,
+      "end": 18.019
+    },
+    {
+      "word": "different",
+      "start": 18.1,
+      "end": 18.518
+    },
+    {
+      "word": "properties",
+      "start": 18.576,
+      "end": 19.18
+    },
+    {
+      "word": "of",
+      "start": 19.238,
+      "end": 19.343
+    },
+    {
+      "word": "each",
+      "start": 19.459,
+      "end": 19.702
+    },
+    {
+      "word": "state.",
+      "start": 19.772,
+      "end": 20.318
+    },
+    {
+      "word": "By",
+      "start": 20.713,
+      "end": 20.887
+    },
+    {
+      "word": "the",
+      "start": 20.956,
+      "end": 21.049
+    },
+    {
+      "word": "end",
+      "start": 21.13,
+      "end": 21.281
+    },
+    {
+      "word": "of",
+      "start": 21.363,
+      "end": 21.444
+    },
+    {
+      "word": "this",
+      "start": 21.525,
+      "end": 21.711
+    },
+    {
+      "word": "lesson,",
+      "start": 21.804,
+      "end": 22.373
+    },
+    {
+      "word": "you",
+      "start": 22.582,
+      "end": 22.698
+    },
+    {
+      "word": "should",
+      "start": 22.756,
+      "end": 22.976
+    },
+    {
+      "word": "be",
+      "start": 23.023,
+      "end": 23.127
+    },
+    {
+      "word": "able",
+      "start": 23.185,
+      "end": 23.464
+    },
+    {
+      "word": "to",
+      "start": 23.499,
+      "end": 23.58
+    },
+    {
+      "word": "describe",
+      "start": 23.661,
+      "end": 24.207
+    },
+    {
+      "word": "the",
+      "start": 24.242,
+      "end": 24.323
+    },
+    {
+      "word": "arrangement",
+      "start": 24.381,
+      "end": 25.031
+    },
+    {
+      "word": "and",
+      "start": 25.101,
+      "end": 25.252
+    },
+    {
+      "word": "movement",
+      "start": 25.333,
+      "end": 25.867
+    },
+    {
+      "word": "of",
+      "start": 25.96,
+      "end": 26.134
+    },
+    {
+      "word": "particles",
+      "start": 26.25,
+      "end": 26.935
+    },
+    {
+      "word": "in",
+      "start": 27.017,
+      "end": 27.168
+    },
+    {
+      "word": "solids,",
+      "start": 27.284,
+      "end": 27.853
+    },
+    {
+      "word": "liquids",
+      "start": 27.911,
+      "end": 28.363
+    },
+    {
+      "word": "and",
+      "start": 28.41,
+      "end": 28.549
+    },
+    {
+      "word": "gases,",
+      "start": 28.631,
+      "end": 29.327
+    },
+    {
+      "word": "explain",
+      "start": 29.606,
+      "end": 30.209
+    },
+    {
+      "word": "their",
+      "start": 30.268,
+      "end": 30.43
+    },
+    {
+      "word": "properties",
+      "start": 30.5,
+      "end": 31.243
+    },
+    {
+      "word": "using",
+      "start": 31.487,
+      "end": 31.939
+    },
+    {
+      "word": "the",
+      "start": 31.997,
+      "end": 32.079
+    },
+    {
+      "word": "particle",
+      "start": 32.148,
+      "end": 32.659
+    },
+    {
+      "word": "model,",
+      "start": 32.706,
+      "end": 33.251
+    },
+    {
+      "word": "and",
+      "start": 33.46,
+      "end": 33.658
+    },
+    {
+      "word": "answer",
+      "start": 33.774,
+      "end": 34.308
+    },
+    {
+      "word": "G",
+      "start": 34.482,
+      "end": 34.657
+    },
+    {
+      "word": "C",
+      "start": 34.831,
+      "end": 35.005
+    },
+    {
+      "word": "S",
+      "start": 35.249,
+      "end": 35.423
+    },
+    {
+      "word": "E",
+      "start": 35.597,
+      "end": 35.771
+    },
+    {
+      "word": "examination",
+      "start": 35.922,
+      "end": 36.816
+    },
+    {
+      "word": "questions",
+      "start": 36.886,
+      "end": 37.466
+    },
+    {
+      "word": "confidently.",
+      "start": 37.675,
+      "end": 38.616
+    },
+    {
+      "word": "Let",
+      "start": 38.859,
+      "end": 39.034
+    },
+    {
+      "word": "us",
+      "start": 39.103,
+      "end": 39.208
+    },
+    {
+      "word": "begin",
+      "start": 39.289,
+      "end": 39.672
+    },
+    {
+      "word": "with",
+      "start": 39.742,
+      "end": 39.951
+    },
+    {
+      "word": "a",
+      "start": 39.997,
+      "end": 40.032
+    },
+    {
+      "word": "simple",
+      "start": 40.113,
+      "end": 40.496
+    },
+    {
+      "word": "question.",
+      "start": 40.543,
+      "end": 41.193
+    },
+    {
+      "word": "Why",
+      "start": 41.588,
+      "end": 41.82
+    },
+    {
+      "word": "does",
+      "start": 41.901,
+      "end": 42.11
+    },
+    {
+      "word": "a",
+      "start": 42.157,
+      "end": 42.191
+    },
+    {
+      "word": "piece",
+      "start": 42.261,
+      "end": 42.528
+    },
+    {
+      "word": "of",
+      "start": 42.563,
+      "end": 42.644
+    },
+    {
+      "word": "ice",
+      "start": 42.76,
+      "end": 43.074
+    },
+    {
+      "word": "maintain",
+      "start": 43.132,
+      "end": 43.666
+    },
+    {
+      "word": "its",
+      "start": 43.782,
+      "end": 43.968
+    },
+    {
+      "word": "shape,",
+      "start": 44.014,
+      "end": 44.548
+    },
+    {
+      "word": "while",
+      "start": 44.827,
+      "end": 45.14
+    },
+    {
+      "word": "water",
+      "start": 45.21,
+      "end": 45.616
+    },
+    {
+      "word": "flows",
+      "start": 45.686,
+      "end": 46.174
+    },
+    {
+      "word": "and",
+      "start": 46.243,
+      "end": 46.406
+    },
+    {
+      "word": "steam",
+      "start": 46.487,
+      "end": 46.847
+    },
+    {
+      "word": "spreads",
+      "start": 46.928,
+      "end": 47.393
+    },
+    {
+      "word": "throughout",
+      "start": 47.474,
+      "end": 47.996
+    },
+    {
+      "word": "its",
+      "start": 48.066,
+      "end": 48.205
+    },
+    {
+      "word": "surroundings?",
+      "start": 48.24,
+      "end": 49.262
+    },
+    {
+      "word": "The",
+      "start": 49.703,
+      "end": 49.854
+    },
+    {
+      "word": "answer",
+      "start": 49.947,
+      "end": 50.353
+    },
+    {
+      "word": "lies",
+      "start": 50.423,
+      "end": 50.713
+    },
+    {
+      "word": "in",
+      "start": 50.783,
+      "end": 50.864
+    },
+    {
+      "word": "the",
+      "start": 50.911,
+      "end": 50.992
+    },
+    {
+      "word": "arrangement",
+      "start": 51.05,
+      "end": 51.723
+    },
+    {
+      "word": "and",
+      "start": 51.781,
+      "end": 51.932
+    },
+    {
+      "word": "movement",
+      "start": 52.048,
+      "end": 52.547
+    },
+    {
+      "word": "of",
+      "start": 52.605,
+      "end": 52.675
+    },
+    {
+      "word": "particles.",
+      "start": 52.791,
+      "end": 53.697
+    },
+    {
+      "word": "Everything",
+      "start": 54.08,
+      "end": 54.602
+    },
+    {
+      "word": "around",
+      "start": 54.672,
+      "end": 55.055
+    },
+    {
+      "word": "us",
+      "start": 55.136,
+      "end": 55.264
+    },
+    {
+      "word": "is",
+      "start": 55.334,
+      "end": 55.473
+    },
+    {
+      "word": "made",
+      "start": 55.601,
+      "end": 55.914
+    },
+    {
+      "word": "of",
+      "start": 55.96,
+      "end": 56.065
+    },
+    {
+      "word": "particles.",
+      "start": 56.181,
+      "end": 57.052
+    },
+    {
+      "word": "In",
+      "start": 57.447,
+      "end": 57.597
+    },
+    {
+      "word": "the",
+      "start": 57.632,
+      "end": 57.702
+    },
+    {
+      "word": "particle",
+      "start": 57.772,
+      "end": 58.282
+    },
+    {
+      "word": "model,",
+      "start": 58.329,
+      "end": 58.863
+    },
+    {
+      "word": "these",
+      "start": 58.944,
+      "end": 59.188
+    },
+    {
+      "word": "particles",
+      "start": 59.258,
+      "end": 59.861
+    },
+    {
+      "word": "are",
+      "start": 59.931,
+      "end": 60.105
+    },
+    {
+      "word": "represented",
+      "start": 60.152,
+      "end": 60.941
+    },
+    {
+      "word": "as",
+      "start": 61.057,
+      "end": 61.278
+    },
+    {
+      "word": "small",
+      "start": 61.394,
+      "end": 61.87
+    },
+    {
+      "word": "spheres.",
+      "start": 61.986,
+      "end": 62.81
+    },
+    {
+      "word": "The",
+      "start": 63.263,
+      "end": 63.402
+    },
+    {
+      "word": "way",
+      "start": 63.472,
+      "end": 63.646
+    },
+    {
+      "word": "they",
+      "start": 63.704,
+      "end": 63.832
+    },
+    {
+      "word": "are",
+      "start": 63.878,
+      "end": 63.995
+    },
+    {
+      "word": "arranged",
+      "start": 64.041,
+      "end": 64.691
+    },
+    {
+      "word": "and",
+      "start": 64.772,
+      "end": 64.97
+    },
+    {
+      "word": "the",
+      "start": 65.028,
+      "end": 65.109
+    },
+    {
+      "word": "energy",
+      "start": 65.202,
+      "end": 65.608
+    },
+    {
+      "word": "they",
+      "start": 65.678,
+      "end": 65.829
+    },
+    {
+      "word": "possess",
+      "start": 65.899,
+      "end": 66.537
+    },
+    {
+      "word": "determine",
+      "start": 66.781,
+      "end": 67.373
+    },
+    {
+      "word": "whether",
+      "start": 67.408,
+      "end": 67.71
+    },
+    {
+      "word": "a",
+      "start": 67.779,
+      "end": 67.814
+    },
+    {
+      "word": "substance",
+      "start": 67.93,
+      "end": 68.603
+    },
+    {
+      "word": "exists",
+      "start": 68.673,
+      "end": 69.311
+    },
+    {
+      "word": "as",
+      "start": 69.393,
+      "end": 69.579
+    },
+    {
+      "word": "a",
+      "start": 69.648,
+      "end": 69.683
+    },
+    {
+      "word": "solid,",
+      "start": 69.764,
+      "end": 70.345
+    },
+    {
+      "word": "liquid",
+      "start": 70.519,
+      "end": 70.995
+    },
+    {
+      "word": "or",
+      "start": 71.076,
+      "end": 71.25
+    },
+    {
+      "word": "gas.",
+      "start": 71.32,
+      "end": 71.912
+    },
+    {
+      "word": "Let",
+      "start": 72.365,
+      "end": 72.551
+    },
+    {
+      "word": "us",
+      "start": 72.62,
+      "end": 72.713
+    },
+    {
+      "word": "begin",
+      "start": 72.794,
+      "end": 73.096
+    },
+    {
+      "word": "with",
+      "start": 73.178,
+      "end": 73.363
+    },
+    {
+      "word": "solids.",
+      "start": 73.421,
+      "end": 74.106
+    },
+    {
+      "word": "In",
+      "start": 74.443,
+      "end": 74.606
+    },
+    {
+      "word": "a",
+      "start": 74.664,
+      "end": 74.687
+    },
+    {
+      "word": "solid,",
+      "start": 74.757,
+      "end": 75.151
+    },
+    {
+      "word": "particles",
+      "start": 75.175,
+      "end": 75.709
+    },
+    {
+      "word": "are",
+      "start": 75.755,
+      "end": 75.871
+    },
+    {
+      "word": "packed",
+      "start": 75.929,
+      "end": 76.243
+    },
+    {
+      "word": "closely",
+      "start": 76.312,
+      "end": 76.788
+    },
+    {
+      "word": "together,",
+      "start": 76.846,
+      "end": 77.485
+    },
+    {
+      "word": "usually",
+      "start": 77.659,
+      "end": 78.24
+    },
+    {
+      "word": "in",
+      "start": 78.356,
+      "end": 78.518
+    },
+    {
+      "word": "a",
+      "start": 78.599,
+      "end": 78.634
+    },
+    {
+      "word": "regular",
+      "start": 78.785,
+      "end": 79.331
+    },
+    {
+      "word": "arrangement.",
+      "start": 79.401,
+      "end": 80.295
+    },
+    {
+      "word": "Strong",
+      "start": 80.538,
+      "end": 80.887
+    },
+    {
+      "word": "forces",
+      "start": 80.956,
+      "end": 81.386
+    },
+    {
+      "word": "of",
+      "start": 81.444,
+      "end": 81.537
+    },
+    {
+      "word": "attraction",
+      "start": 81.606,
+      "end": 82.222
+    },
+    {
+      "word": "hold",
+      "start": 82.303,
+      "end": 82.617
+    },
+    {
+      "word": "the",
+      "start": 82.663,
+      "end": 82.744
+    },
+    {
+      "word": "particles",
+      "start": 82.825,
+      "end": 83.545
+    },
+    {
+      "word": "in",
+      "start": 83.719,
+      "end": 83.905
+    },
+    {
+      "word": "fixed",
+      "start": 84.021,
+      "end": 84.358
+    },
+    {
+      "word": "positions.",
+      "start": 84.428,
+      "end": 85.217
+    },
+    {
+      "word": "However,",
+      "start": 85.461,
+      "end": 86.099
+    },
+    {
+      "word": "the",
+      "start": 86.216,
+      "end": 86.343
+    },
+    {
+      "word": "particles",
+      "start": 86.412,
+      "end": 86.993
+    },
+    {
+      "word": "are",
+      "start": 87.063,
+      "end": 87.26
+    },
+    {
+      "word": "not",
+      "start": 87.318,
+      "end": 87.504
+    },
+    {
+      "word": "completely",
+      "start": 87.585,
+      "end": 88.166
+    },
+    {
+      "word": "stationary.",
+      "start": 88.235,
+      "end": 89.048
+    },
+    {
+      "word": "They",
+      "start": 89.129,
+      "end": 89.303
+    },
+    {
+      "word": "vibrate",
+      "start": 89.396,
+      "end": 90.07
+    },
+    {
+      "word": "about",
+      "start": 90.128,
+      "end": 90.546
+    },
+    {
+      "word": "their",
+      "start": 90.604,
+      "end": 90.789
+    },
+    {
+      "word": "fixed",
+      "start": 90.859,
+      "end": 91.126
+    },
+    {
+      "word": "positions.",
+      "start": 91.161,
+      "end": 91.916
+    },
+    {
+      "word": "Because",
+      "start": 92.043,
+      "end": 92.426
+    },
+    {
+      "word": "the",
+      "start": 92.461,
+      "end": 92.531
+    },
+    {
+      "word": "particles",
+      "start": 92.601,
+      "end": 93.146
+    },
+    {
+      "word": "cannot",
+      "start": 93.216,
+      "end": 93.587
+    },
+    {
+      "word": "move",
+      "start": 93.704,
+      "end": 93.959
+    },
+    {
+      "word": "freely",
+      "start": 94.017,
+      "end": 94.574
+    },
+    {
+      "word": "from",
+      "start": 94.818,
+      "end": 95.062
+    },
+    {
+      "word": "one",
+      "start": 95.178,
+      "end": 95.41
+    },
+    {
+      "word": "position",
+      "start": 95.468,
+      "end": 95.967
+    },
+    {
+      "word": "to",
+      "start": 96.026,
+      "end": 96.13
+    },
+    {
+      "word": "another,",
+      "start": 96.211,
+      "end": 96.734
+    },
+    {
+      "word": "a",
+      "start": 96.885,
+      "end": 96.978
+    },
+    {
+      "word": "solid",
+      "start": 97.105,
+      "end": 97.639
+    },
+    {
+      "word": "has",
+      "start": 97.79,
+      "end": 98.022
+    },
+    {
+      "word": "a",
+      "start": 98.092,
+      "end": 98.127
+    },
+    {
+      "word": "fixed",
+      "start": 98.243,
+      "end": 98.58
+    },
+    {
+      "word": "shape",
+      "start": 98.615,
+      "end": 98.998
+    },
+    {
+      "word": "and",
+      "start": 99.079,
+      "end": 99.323
+    },
+    {
+      "word": "a",
+      "start": 99.404,
+      "end": 99.427
+    },
+    {
+      "word": "fixed",
+      "start": 99.543,
+      "end": 99.892
+    },
+    {
+      "word": "volume.",
+      "start": 99.973,
+      "end": 100.519
+    },
+    {
+      "word": "Solids",
+      "start": 100.762,
+      "end": 101.262
+    },
+    {
+      "word": "are",
+      "start": 101.308,
+      "end": 101.471
+    },
+    {
+      "word": "also",
+      "start": 101.517,
+      "end": 101.854
+    },
+    {
+      "word": "very",
+      "start": 101.97,
+      "end": 102.248
+    },
+    {
+      "word": "difficult",
+      "start": 102.318,
+      "end": 102.852
+    },
+    {
+      "word": "to",
+      "start": 102.899,
+      "end": 102.968
+    },
+    {
+      "word": "compress",
+      "start": 103.05,
+      "end": 103.618
+    },
+    {
+      "word": "because",
+      "start": 103.897,
+      "end": 104.28
+    },
+    {
+      "word": "their",
+      "start": 104.315,
+      "end": 104.478
+    },
+    {
+      "word": "particles",
+      "start": 104.547,
+      "end": 105.104
+    },
+    {
+      "word": "are",
+      "start": 105.186,
+      "end": 105.441
+    },
+    {
+      "word": "already",
+      "start": 105.499,
+      "end": 105.975
+    },
+    {
+      "word": "packed",
+      "start": 106.068,
+      "end": 106.405
+    },
+    {
+      "word": "closely",
+      "start": 106.498,
+      "end": 106.927
+    },
+    {
+      "word": "together,",
+      "start": 106.985,
+      "end": 107.543
+    },
+    {
+      "word": "leaving",
+      "start": 107.717,
+      "end": 108.088
+    },
+    {
+      "word": "very",
+      "start": 108.17,
+      "end": 108.413
+    },
+    {
+      "word": "little",
+      "start": 108.471,
+      "end": 108.727
+    },
+    {
+      "word": "space",
+      "start": 108.762,
+      "end": 109.284
+    },
+    {
+      "word": "between",
+      "start": 109.342,
+      "end": 109.783
+    },
+    {
+      "word": "them.",
+      "start": 109.83,
+      "end": 110.19
+    },
+    {
+      "word": "Think",
+      "start": 110.805,
+      "end": 111.118
+    },
+    {
+      "word": "about",
+      "start": 111.188,
+      "end": 111.583
+    },
+    {
+      "word": "an",
+      "start": 111.653,
+      "end": 111.769
+    },
+    {
+      "word": "ice",
+      "start": 111.885,
+      "end": 112.187
+    },
+    {
+      "word": "cube.",
+      "start": 112.233,
+      "end": 112.628
+    },
+    {
+      "word": "It",
+      "start": 112.906,
+      "end": 113.057
+    },
+    {
+      "word": "maintains",
+      "start": 113.127,
+      "end": 113.719
+    },
+    {
+      "word": "its",
+      "start": 113.8,
+      "end": 113.963
+    },
+    {
+      "word": "shape",
+      "start": 114.009,
+      "end": 114.416
+    },
+    {
+      "word": "even",
+      "start": 114.497,
+      "end": 114.81
+    },
+    {
+      "word": "when",
+      "start": 114.857,
+      "end": 115.019
+    },
+    {
+      "word": "you",
+      "start": 115.066,
+      "end": 115.17
+    },
+    {
+      "word": "place",
+      "start": 115.252,
+      "end": 115.6
+    },
+    {
+      "word": "it",
+      "start": 115.658,
+      "end": 115.762
+    },
+    {
+      "word": "on",
+      "start": 115.844,
+      "end": 115.983
+    },
+    {
+      "word": "a",
+      "start": 116.029,
+      "end": 116.064
+    },
+    {
+      "word": "plate",
+      "start": 116.146,
+      "end": 116.622
+    },
+    {
+      "word": "because",
+      "start": 116.714,
+      "end": 117.098
+    },
+    {
+      "word": "the",
+      "start": 117.132,
+      "end": 117.214
+    },
+    {
+      "word": "water",
+      "start": 117.283,
+      "end": 117.609
+    },
+    {
+      "word": "molecules",
+      "start": 117.678,
+      "end": 118.224
+    },
+    {
+      "word": "are",
+      "start": 118.294,
+      "end": 118.491
+    },
+    {
+      "word": "held",
+      "start": 118.538,
+      "end": 118.816
+    },
+    {
+      "word": "in",
+      "start": 118.898,
+      "end": 119.025
+    },
+    {
+      "word": "fixed",
+      "start": 119.141,
+      "end": 119.455
+    },
+    {
+      "word": "positions",
+      "start": 119.513,
+      "end": 120.175
+    },
+    {
+      "word": "within",
+      "start": 120.302,
+      "end": 120.662
+    },
+    {
+      "word": "the",
+      "start": 120.709,
+      "end": 120.79
+    },
+    {
+      "word": "solid",
+      "start": 120.871,
+      "end": 121.254
+    },
+    {
+      "word": "structure.",
+      "start": 121.301,
+      "end": 121.951
+    },
+    {
+      "word": "Now,",
+      "start": 122.288,
+      "end": 122.485
+    },
+    {
+      "word": "let",
+      "start": 122.52,
+      "end": 122.671
+    },
+    {
+      "word": "us",
+      "start": 122.74,
+      "end": 122.822
+    },
+    {
+      "word": "consider",
+      "start": 122.88,
+      "end": 123.321
+    },
+    {
+      "word": "liquids.",
+      "start": 123.391,
+      "end": 124.006
+    },
+    {
+      "word": "In",
+      "start": 124.285,
+      "end": 124.447
+    },
+    {
+      "word": "a",
+      "start": 124.517,
+      "end": 124.54
+    },
+    {
+      "word": "liquid,",
+      "start": 124.621,
+      "end": 125.202
+    },
+    {
+      "word": "the",
+      "start": 125.329,
+      "end": 125.457
+    },
+    {
+      "word": "particles",
+      "start": 125.538,
+      "end": 126.154
+    },
+    {
+      "word": "remain",
+      "start": 126.281,
+      "end": 126.699
+    },
+    {
+      "word": "close",
+      "start": 126.816,
+      "end": 127.175
+    },
+    {
+      "word": "together,",
+      "start": 127.21,
+      "end": 127.826
+    },
+    {
+      "word": "but",
+      "start": 127.942,
+      "end": 128.139
+    },
+    {
+      "word": "they",
+      "start": 128.174,
+      "end": 128.336
+    },
+    {
+      "word": "are",
+      "start": 128.406,
+      "end": 128.615
+    },
+    {
+      "word": "arranged",
+      "start": 128.662,
+      "end": 129.242
+    },
+    {
+      "word": "irregularly",
+      "start": 129.358,
+      "end": 130.148
+    },
+    {
+      "word": "and",
+      "start": 130.391,
+      "end": 130.658
+    },
+    {
+      "word": "can",
+      "start": 130.775,
+      "end": 130.972
+    },
+    {
+      "word": "move",
+      "start": 131.088,
+      "end": 131.401
+    },
+    {
+      "word": "past",
+      "start": 131.471,
+      "end": 131.808
+    },
+    {
+      "word": "one",
+      "start": 131.889,
+      "end": 132.086
+    },
+    {
+      "word": "another.",
+      "start": 132.121,
+      "end": 132.632
+    },
+    {
+      "word": "The",
+      "start": 132.911,
+      "end": 133.05
+    },
+    {
+      "word": "forces",
+      "start": 133.143,
+      "end": 133.596
+    },
+    {
+      "word": "of",
+      "start": 133.689,
+      "end": 133.816
+    },
+    {
+      "word": "attraction",
+      "start": 133.897,
+      "end": 134.466
+    },
+    {
+      "word": "between",
+      "start": 134.536,
+      "end": 134.896
+    },
+    {
+      "word": "particles",
+      "start": 134.977,
+      "end": 135.523
+    },
+    {
+      "word": "are",
+      "start": 135.616,
+      "end": 135.825
+    },
+    {
+      "word": "still",
+      "start": 135.883,
+      "end": 136.15
+    },
+    {
+      "word": "important,",
+      "start": 136.208,
+      "end": 136.986
+    },
+    {
+      "word": "but",
+      "start": 137.264,
+      "end": 137.438
+    },
+    {
+      "word": "the",
+      "start": 137.473,
+      "end": 137.554
+    },
+    {
+      "word": "particles",
+      "start": 137.636,
+      "end": 138.193
+    },
+    {
+      "word": "have",
+      "start": 138.251,
+      "end": 138.39
+    },
+    {
+      "word": "sufficient",
+      "start": 138.437,
+      "end": 138.971
+    },
+    {
+      "word": "energy",
+      "start": 139.052,
+      "end": 139.447
+    },
+    {
+      "word": "to",
+      "start": 139.517,
+      "end": 139.598
+    },
+    {
+      "word": "move",
+      "start": 139.679,
+      "end": 139.923
+    },
+    {
+      "word": "around",
+      "start": 139.969,
+      "end": 140.294
+    },
+    {
+      "word": "each",
+      "start": 140.352,
+      "end": 140.515
+    },
+    {
+      "word": "other.",
+      "start": 140.573,
+      "end": 141.014
+    },
+    {
+      "word": "This",
+      "start": 141.467,
+      "end": 141.757
+    },
+    {
+      "word": "explains",
+      "start": 141.85,
+      "end": 142.616
+    },
+    {
+      "word": "why",
+      "start": 142.709,
+      "end": 143.0
+    },
+    {
+      "word": "liquids",
+      "start": 143.116,
+      "end": 143.545
+    },
+    {
+      "word": "can",
+      "start": 143.603,
+      "end": 143.743
+    },
+    {
+      "word": "flow",
+      "start": 143.835,
+      "end": 144.137
+    },
+    {
+      "word": "and",
+      "start": 144.207,
+      "end": 144.335
+    },
+    {
+      "word": "take",
+      "start": 144.404,
+      "end": 144.648
+    },
+    {
+      "word": "the",
+      "start": 144.683,
+      "end": 144.764
+    },
+    {
+      "word": "shape",
+      "start": 144.822,
+      "end": 145.136
+    },
+    {
+      "word": "of",
+      "start": 145.182,
+      "end": 145.252
+    },
+    {
+      "word": "their",
+      "start": 145.322,
+      "end": 145.484
+    },
+    {
+      "word": "containers.",
+      "start": 145.542,
+      "end": 146.483
+    },
+    {
+      "word": "For",
+      "start": 146.877,
+      "end": 147.04
+    },
+    {
+      "word": "example,",
+      "start": 147.098,
+      "end": 147.748
+    },
+    {
+      "word": "when",
+      "start": 147.922,
+      "end": 148.12
+    },
+    {
+      "word": "you",
+      "start": 148.166,
+      "end": 148.259
+    },
+    {
+      "word": "pour",
+      "start": 148.352,
+      "end": 148.607
+    },
+    {
+      "word": "water",
+      "start": 148.688,
+      "end": 149.06
+    },
+    {
+      "word": "into",
+      "start": 149.141,
+      "end": 149.35
+    },
+    {
+      "word": "a",
+      "start": 149.443,
+      "end": 149.478
+    },
+    {
+      "word": "glass,",
+      "start": 149.547,
+      "end": 150.14
+    },
+    {
+      "word": "it",
+      "start": 150.383,
+      "end": 150.534
+    },
+    {
+      "word": "takes",
+      "start": 150.604,
+      "end": 150.929
+    },
+    {
+      "word": "the",
+      "start": 150.975,
+      "end": 151.057
+    },
+    {
+      "word": "shape",
+      "start": 151.115,
+      "end": 151.44
+    },
+    {
+      "word": "of",
+      "start": 151.498,
+      "end": 151.626
+    },
+    {
+      "word": "the",
+      "start": 151.695,
+      "end": 151.777
+    },
+    {
+      "word": "bottom",
+      "start": 151.835,
+      "end": 152.16
+    },
+    {
+      "word": "of",
+      "start": 152.276,
+      "end": 152.404
+    },
+    {
+      "word": "the",
+      "start": 152.473,
+      "end": 152.554
+    },
+    {
+      "word": "glass.",
+      "start": 152.612,
+      "end": 153.251
+    },
+    {
+      "word": "When",
+      "start": 153.646,
+      "end": 153.855
+    },
+    {
+      "word": "you",
+      "start": 153.901,
+      "end": 153.971
+    },
+    {
+      "word": "pour",
+      "start": 154.029,
+      "end": 154.249
+    },
+    {
+      "word": "the",
+      "start": 154.308,
+      "end": 154.377
+    },
+    {
+      "word": "same",
+      "start": 154.435,
+      "end": 154.714
+    },
+    {
+      "word": "water",
+      "start": 154.772,
+      "end": 155.143
+    },
+    {
+      "word": "into",
+      "start": 155.236,
+      "end": 155.469
+    },
+    {
+      "word": "a",
+      "start": 155.561,
+      "end": 155.596
+    },
+    {
+      "word": "bottle,",
+      "start": 155.654,
+      "end": 156.188
+    },
+    {
+      "word": "its",
+      "start": 156.467,
+      "end": 156.711
+    },
+    {
+      "word": "shape",
+      "start": 156.757,
+      "end": 157.129
+    },
+    {
+      "word": "changes,",
+      "start": 157.187,
+      "end": 158.046
+    },
+    {
+      "word": "but",
+      "start": 158.383,
+      "end": 158.592
+    },
+    {
+      "word": "its",
+      "start": 158.661,
+      "end": 158.847
+    },
+    {
+      "word": "volume",
+      "start": 158.917,
+      "end": 159.555
+    },
+    {
+      "word": "remains",
+      "start": 159.729,
+      "end": 160.24
+    },
+    {
+      "word": "approximately",
+      "start": 160.287,
+      "end": 161.192
+    },
+    {
+      "word": "the",
+      "start": 161.308,
+      "end": 161.448
+    },
+    {
+      "word": "same.",
+      "start": 161.517,
+      "end": 162.005
+    },
+    {
+      "word": "Liquids",
+      "start": 162.458,
+      "end": 162.969
+    },
+    {
+      "word": "have",
+      "start": 163.027,
+      "end": 163.282
+    },
+    {
+      "word": "a",
+      "start": 163.352,
+      "end": 163.41
+    },
+    {
+      "word": "fixed",
+      "start": 163.526,
+      "end": 163.897
+    },
+    {
+      "word": "volume",
+      "start": 164.013,
+      "end": 164.629
+    },
+    {
+      "word": "but",
+      "start": 164.803,
+      "end": 165.024
+    },
+    {
+      "word": "no",
+      "start": 165.105,
+      "end": 165.291
+    },
+    {
+      "word": "fixed",
+      "start": 165.407,
+      "end": 165.732
+    },
+    {
+      "word": "shape.",
+      "start": 165.767,
+      "end": 166.266
+    },
+    {
+      "word": "Like",
+      "start": 166.661,
+      "end": 166.916
+    },
+    {
+      "word": "solids,",
+      "start": 166.963,
+      "end": 167.683
+    },
+    {
+      "word": "liquids",
+      "start": 167.892,
+      "end": 168.344
+    },
+    {
+      "word": "are",
+      "start": 168.403,
+      "end": 168.588
+    },
+    {
+      "word": "difficult",
+      "start": 168.646,
+      "end": 169.146
+    },
+    {
+      "word": "to",
+      "start": 169.192,
+      "end": 169.262
+    },
+    {
+      "word": "compress",
+      "start": 169.343,
+      "end": 169.912
+    },
+    {
+      "word": "because",
+      "start": 170.086,
+      "end": 170.434
+    },
+    {
+      "word": "there",
+      "start": 170.469,
+      "end": 170.666
+    },
+    {
+      "word": "is",
+      "start": 170.713,
+      "end": 170.829
+    },
+    {
+      "word": "very",
+      "start": 170.945,
+      "end": 171.247
+    },
+    {
+      "word": "little",
+      "start": 171.317,
+      "end": 171.584
+    },
+    {
+      "word": "space",
+      "start": 171.63,
+      "end": 172.036
+    },
+    {
+      "word": "between",
+      "start": 172.083,
+      "end": 172.443
+    },
+    {
+      "word": "their",
+      "start": 172.478,
+      "end": 172.64
+    },
+    {
+      "word": "particles.",
+      "start": 172.698,
+      "end": 173.441
+    },
+    {
+      "word": "Now,",
+      "start": 173.778,
+      "end": 174.184
+    },
+    {
+      "word": "let",
+      "start": 174.393,
+      "end": 174.567
+    },
+    {
+      "word": "us",
+      "start": 174.637,
+      "end": 174.753
+    },
+    {
+      "word": "examine",
+      "start": 174.823,
+      "end": 175.369
+    },
+    {
+      "word": "gases.",
+      "start": 175.438,
+      "end": 176.146
+    },
+    {
+      "word": "In",
+      "start": 176.39,
+      "end": 176.576
+    },
+    {
+      "word": "a",
+      "start": 176.634,
+      "end": 176.669
+    },
+    {
+      "word": "gas,",
+      "start": 176.75,
+      "end": 177.319
+    },
+    {
+      "word": "particles",
+      "start": 177.528,
+      "end": 178.085
+    },
+    {
+      "word": "are",
+      "start": 178.143,
+      "end": 178.259
+    },
+    {
+      "word": "much",
+      "start": 178.283,
+      "end": 178.492
+    },
+    {
+      "word": "farther",
+      "start": 178.573,
+      "end": 179.002
+    },
+    {
+      "word": "apart",
+      "start": 179.072,
+      "end": 179.606
+    },
+    {
+      "word": "than",
+      "start": 179.699,
+      "end": 179.908
+    },
+    {
+      "word": "in",
+      "start": 179.978,
+      "end": 180.059
+    },
+    {
+      "word": "solids",
+      "start": 180.175,
+      "end": 180.721
+    },
+    {
+      "word": "and",
+      "start": 180.802,
+      "end": 181.023
+    },
+    {
+      "word": "liquids.",
+      "start": 181.139,
+      "end": 181.824
+    },
+    {
+      "word": "The",
+      "start": 182.102,
+      "end": 182.242
+    },
+    {
+      "word": "forces",
+      "start": 182.334,
+      "end": 182.776
+    },
+    {
+      "word": "of",
+      "start": 182.834,
+      "end": 182.915
+    },
+    {
+      "word": "attraction",
+      "start": 182.985,
+      "end": 183.507
+    },
+    {
+      "word": "between",
+      "start": 183.565,
+      "end": 183.936
+    },
+    {
+      "word": "them",
+      "start": 183.983,
+      "end": 184.169
+    },
+    {
+      "word": "are",
+      "start": 184.25,
+      "end": 184.459
+    },
+    {
+      "word": "generally",
+      "start": 184.517,
+      "end": 185.028
+    },
+    {
+      "word": "negligible,",
+      "start": 185.109,
+      "end": 185.957
+    },
+    {
+      "word": "and",
+      "start": 186.166,
+      "end": 186.316
+    },
+    {
+      "word": "the",
+      "start": 186.363,
+      "end": 186.444
+    },
+    {
+      "word": "particles",
+      "start": 186.525,
+      "end": 187.152
+    },
+    {
+      "word": "move",
+      "start": 187.268,
+      "end": 187.57
+    },
+    {
+      "word": "rapidly",
+      "start": 187.652,
+      "end": 188.22
+    },
+    {
+      "word": "and",
+      "start": 188.279,
+      "end": 188.371
+    },
+    {
+      "word": "randomly",
+      "start": 188.464,
+      "end": 189.091
+    },
+    {
+      "word": "in",
+      "start": 189.161,
+      "end": 189.265
+    },
+    {
+      "word": "all",
+      "start": 189.381,
+      "end": 189.637
+    },
+    {
+      "word": "directions.",
+      "start": 189.707,
+      "end": 190.566
+    },
+    {
+      "word": "Because",
+      "start": 190.902,
+      "end": 191.297
+    },
+    {
+      "word": "the",
+      "start": 191.332,
+      "end": 191.413
+    },
+    {
+      "word": "particles",
+      "start": 191.483,
+      "end": 192.145
+    },
+    {
+      "word": "move",
+      "start": 192.296,
+      "end": 192.655
+    },
+    {
+      "word": "freely,",
+      "start": 192.725,
+      "end": 193.422
+    },
+    {
+      "word": "a",
+      "start": 193.666,
+      "end": 193.758
+    },
+    {
+      "word": "gas",
+      "start": 193.875,
+      "end": 194.234
+    },
+    {
+      "word": "has",
+      "start": 194.304,
+      "end": 194.478
+    },
+    {
+      "word": "neither",
+      "start": 194.56,
+      "end": 194.861
+    },
+    {
+      "word": "a",
+      "start": 194.931,
+      "end": 194.966
+    },
+    {
+      "word": "fixed",
+      "start": 195.094,
+      "end": 195.465
+    },
+    {
+      "word": "shape",
+      "start": 195.535,
+      "end": 196.057
+    },
+    {
+      "word": "nor",
+      "start": 196.231,
+      "end": 196.464
+    },
+    {
+      "word": "a",
+      "start": 196.533,
+      "end": 196.556
+    },
+    {
+      "word": "fixed",
+      "start": 196.673,
+      "end": 197.032
+    },
+    {
+      "word": "volume.",
+      "start": 197.149,
+      "end": 197.868
+    },
+    {
+      "word": "Instead,",
+      "start": 198.205,
+      "end": 198.867
+    },
+    {
+      "word": "it",
+      "start": 198.925,
+      "end": 199.099
+    },
+    {
+      "word": "spreads",
+      "start": 199.169,
+      "end": 199.633
+    },
+    {
+      "word": "out",
+      "start": 199.691,
+      "end": 199.877
+    },
+    {
+      "word": "to",
+      "start": 199.935,
+      "end": 200.028
+    },
+    {
+      "word": "fill",
+      "start": 200.144,
+      "end": 200.423
+    },
+    {
+      "word": "the",
+      "start": 200.492,
+      "end": 200.573
+    },
+    {
+      "word": "entire",
+      "start": 200.643,
+      "end": 201.13
+    },
+    {
+      "word": "container.",
+      "start": 201.177,
+      "end": 201.92
+    },
+    {
+      "word": "For",
+      "start": 202.442,
+      "end": 202.628
+    },
+    {
+      "word": "example,",
+      "start": 202.698,
+      "end": 203.417
+    },
+    {
+      "word": "when",
+      "start": 203.626,
+      "end": 203.847
+    },
+    {
+      "word": "perfume",
+      "start": 203.928,
+      "end": 204.358
+    },
+    {
+      "word": "is",
+      "start": 204.381,
+      "end": 204.451
+    },
+    {
+      "word": "sprayed",
+      "start": 204.497,
+      "end": 205.02
+    },
+    {
+      "word": "in",
+      "start": 205.101,
+      "end": 205.205
+    },
+    {
+      "word": "one",
+      "start": 205.321,
+      "end": 205.519
+    },
+    {
+      "word": "corner",
+      "start": 205.577,
+      "end": 205.914
+    },
+    {
+      "word": "of",
+      "start": 205.972,
+      "end": 206.041
+    },
+    {
+      "word": "a",
+      "start": 206.099,
+      "end": 206.123
+    },
+    {
+      "word": "room,",
+      "start": 206.204,
+      "end": 206.61
+    },
+    {
+      "word": "its",
+      "start": 206.935,
+      "end": 207.133
+    },
+    {
+      "word": "gaseous",
+      "start": 207.249,
+      "end": 207.76
+    },
+    {
+      "word": "particles",
+      "start": 207.829,
+      "end": 208.503
+    },
+    {
+      "word": "spread",
+      "start": 208.735,
+      "end": 209.153
+    },
+    {
+      "word": "through",
+      "start": 209.199,
+      "end": 209.466
+    },
+    {
+      "word": "the",
+      "start": 209.501,
+      "end": 209.594
+    },
+    {
+      "word": "air.",
+      "start": 209.675,
+      "end": 210.151
+    },
+    {
+      "word": "This",
+      "start": 210.732,
+      "end": 210.964
+    },
+    {
+      "word": "process",
+      "start": 211.045,
+      "end": 211.649
+    },
+    {
+      "word": "is",
+      "start": 211.858,
+      "end": 212.044
+    },
+    {
+      "word": "called",
+      "start": 212.113,
+      "end": 212.415
+    },
+    {
+      "word": "diffusion.",
+      "start": 212.496,
+      "end": 213.321
+    },
+    {
+      "word": "Gases",
+      "start": 214.006,
+      "end": 214.482
+    },
+    {
+      "word": "can",
+      "start": 214.54,
+      "end": 214.714
+    },
+    {
+      "word": "also",
+      "start": 214.772,
+      "end": 215.109
+    },
+    {
+      "word": "be",
+      "start": 215.19,
+      "end": 215.271
+    },
+    {
+      "word": "compressed",
+      "start": 215.318,
+      "end": 215.979
+    },
+    {
+      "word": "easily",
+      "start": 216.212,
+      "end": 216.734
+    },
+    {
+      "word": "because",
+      "start": 217.001,
+      "end": 217.361
+    },
+    {
+      "word": "there",
+      "start": 217.396,
+      "end": 217.535
+    },
+    {
+      "word": "are",
+      "start": 217.57,
+      "end": 217.663
+    },
+    {
+      "word": "large",
+      "start": 217.709,
+      "end": 217.988
+    },
+    {
+      "word": "spaces",
+      "start": 218.023,
+      "end": 218.556
+    },
+    {
+      "word": "between",
+      "start": 218.614,
+      "end": 218.986
+    },
+    {
+      "word": "their",
+      "start": 219.032,
+      "end": 219.183
+    },
+    {
+      "word": "particles.",
+      "start": 219.241,
+      "end": 220.043
+    },
+    {
+      "word": "Consider",
+      "start": 220.472,
+      "end": 221.076
+    },
+    {
+      "word": "air",
+      "start": 221.192,
+      "end": 221.471
+    },
+    {
+      "word": "inside",
+      "start": 221.587,
+      "end": 222.063
+    },
+    {
+      "word": "a",
+      "start": 222.086,
+      "end": 222.121
+    },
+    {
+      "word": "syringe.",
+      "start": 222.19,
+      "end": 222.98
+    },
+    {
+      "word": "When",
+      "start": 223.317,
+      "end": 223.526
+    },
+    {
+      "word": "you",
+      "start": 223.572,
+      "end": 223.653
+    },
+    {
+      "word": "push",
+      "start": 223.723,
+      "end": 223.943
+    },
+    {
+      "word": "the",
+      "start": 223.99,
+      "end": 224.071
+    },
+    {
+      "word": "plunger",
+      "start": 224.129,
+      "end": 224.57
+    },
+    {
+      "word": "while",
+      "start": 224.64,
+      "end": 224.884
+    },
+    {
+      "word": "blocking",
+      "start": 224.919,
+      "end": 225.29
+    },
+    {
+      "word": "the",
+      "start": 225.348,
+      "end": 225.43
+    },
+    {
+      "word": "opening,",
+      "start": 225.511,
+      "end": 226.126
+    },
+    {
+      "word": "the",
+      "start": 226.254,
+      "end": 226.405
+    },
+    {
+      "word": "air",
+      "start": 226.486,
+      "end": 226.741
+    },
+    {
+      "word": "occupies",
+      "start": 226.823,
+      "end": 227.566
+    },
+    {
+      "word": "a",
+      "start": 227.659,
+      "end": 227.728
+    },
+    {
+      "word": "smaller",
+      "start": 227.821,
+      "end": 228.297
+    },
+    {
+      "word": "volume",
+      "start": 228.367,
+      "end": 228.901
+    },
+    {
+      "word": "because",
+      "start": 229.052,
+      "end": 229.4
+    },
+    {
+      "word": "the",
+      "start": 229.423,
+      "end": 229.493
+    },
+    {
+      "word": "gas",
+      "start": 229.563,
+      "end": 229.818
+    },
+    {
+      "word": "particles",
+      "start": 229.911,
+      "end": 230.561
+    },
+    {
+      "word": "move",
+      "start": 230.689,
+      "end": 230.944
+    },
+    {
+      "word": "closer",
+      "start": 230.991,
+      "end": 231.397
+    },
+    {
+      "word": "together.",
+      "start": 231.467,
+      "end": 232.163
+    },
+    {
+      "word": "Now,",
+      "start": 232.779,
+      "end": 233.197
+    },
+    {
+      "word": "let",
+      "start": 233.289,
+      "end": 233.464
+    },
+    {
+      "word": "us",
+      "start": 233.533,
+      "end": 233.626
+    },
+    {
+      "word": "compare",
+      "start": 233.696,
+      "end": 234.137
+    },
+    {
+      "word": "ice,",
+      "start": 234.218,
+      "end": 234.752
+    },
+    {
+      "word": "liquid",
+      "start": 234.927,
+      "end": 235.321
+    },
+    {
+      "word": "water",
+      "start": 235.379,
+      "end": 235.774
+    },
+    {
+      "word": "and",
+      "start": 235.867,
+      "end": 236.041
+    },
+    {
+      "word": "steam.",
+      "start": 236.123,
+      "end": 236.715
+    },
+    {
+      "word": "All",
+      "start": 237.167,
+      "end": 237.458
+    },
+    {
+      "word": "three",
+      "start": 237.539,
+      "end": 237.818
+    },
+    {
+      "word": "contain",
+      "start": 237.876,
+      "end": 238.328
+    },
+    {
+      "word": "the",
+      "start": 238.386,
+      "end": 238.468
+    },
+    {
+      "word": "same",
+      "start": 238.537,
+      "end": 238.816
+    },
+    {
+      "word": "chemical",
+      "start": 238.851,
+      "end": 239.304
+    },
+    {
+      "word": "substance,",
+      "start": 239.397,
+      "end": 240.186
+    },
+    {
+      "word": "H",
+      "start": 240.36,
+      "end": 240.639
+    },
+    {
+      "word": "two",
+      "start": 240.755,
+      "end": 240.952
+    },
+    {
+      "word": "O.",
+      "start": 241.034,
+      "end": 241.428
+    },
+    {
+      "word": "The",
+      "start": 241.881,
+      "end": 242.02
+    },
+    {
+      "word": "difference",
+      "start": 242.078,
+      "end": 242.543
+    },
+    {
+      "word": "is",
+      "start": 242.578,
+      "end": 242.682
+    },
+    {
+      "word": "not",
+      "start": 242.763,
+      "end": 242.926
+    },
+    {
+      "word": "the",
+      "start": 242.972,
+      "end": 243.042
+    },
+    {
+      "word": "chemical",
+      "start": 243.1,
+      "end": 243.576
+    },
+    {
+      "word": "identity",
+      "start": 243.692,
+      "end": 244.342
+    },
+    {
+      "word": "of",
+      "start": 244.424,
+      "end": 244.528
+    },
+    {
+      "word": "the",
+      "start": 244.598,
+      "end": 244.667
+    },
+    {
+      "word": "particles,",
+      "start": 244.749,
+      "end": 245.678
+    },
+    {
+      "word": "but",
+      "start": 245.887,
+      "end": 246.072
+    },
+    {
+      "word": "their",
+      "start": 246.119,
+      "end": 246.339
+    },
+    {
+      "word": "arrangement,",
+      "start": 246.386,
+      "end": 247.233
+    },
+    {
+      "word": "movement",
+      "start": 247.407,
+      "end": 247.953
+    },
+    {
+      "word": "and",
+      "start": 248.104,
+      "end": 248.325
+    },
+    {
+      "word": "energy.",
+      "start": 248.417,
+      "end": 249.033
+    },
+    {
+      "word": "In",
+      "start": 249.37,
+      "end": 249.567
+    },
+    {
+      "word": "ice,",
+      "start": 249.695,
+      "end": 250.252
+    },
+    {
+      "word": "the",
+      "start": 250.461,
+      "end": 250.589
+    },
+    {
+      "word": "water",
+      "start": 250.67,
+      "end": 250.995
+    },
+    {
+      "word": "molecules",
+      "start": 251.041,
+      "end": 251.61
+    },
+    {
+      "word": "vibrate",
+      "start": 251.68,
+      "end": 252.249
+    },
+    {
+      "word": "about",
+      "start": 252.295,
+      "end": 252.609
+    },
+    {
+      "word": "fixed",
+      "start": 252.69,
+      "end": 253.015
+    },
+    {
+      "word": "positions.",
+      "start": 253.073,
+      "end": 253.874
+    },
+    {
+      "word": "In",
+      "start": 254.211,
+      "end": 254.385
+    },
+    {
+      "word": "liquid",
+      "start": 254.478,
+      "end": 254.838
+    },
+    {
+      "word": "water,",
+      "start": 254.884,
+      "end": 255.477
+    },
+    {
+      "word": "the",
+      "start": 255.651,
+      "end": 255.767
+    },
+    {
+      "word": "molecules",
+      "start": 255.836,
+      "end": 256.417
+    },
+    {
+      "word": "move",
+      "start": 256.498,
+      "end": 256.73
+    },
+    {
+      "word": "past",
+      "start": 256.8,
+      "end": 257.16
+    },
+    {
+      "word": "one",
+      "start": 257.241,
+      "end": 257.427
+    },
+    {
+      "word": "another.",
+      "start": 257.462,
+      "end": 257.984
+    },
+    {
+      "word": "In",
+      "start": 258.251,
+      "end": 258.425
+    },
+    {
+      "word": "steam,",
+      "start": 258.495,
+      "end": 259.052
+    },
+    {
+      "word": "the",
+      "start": 259.215,
+      "end": 259.331
+    },
+    {
+      "word": "water",
+      "start": 259.389,
+      "end": 259.703
+    },
+    {
+      "word": "molecules",
+      "start": 259.761,
+      "end": 260.318
+    },
+    {
+      "word": "move",
+      "start": 260.434,
+      "end": 260.678
+    },
+    {
+      "word": "rapidly",
+      "start": 260.736,
+      "end": 261.305
+    },
+    {
+      "word": "and",
+      "start": 261.502,
+      "end": 261.699
+    },
+    {
+      "word": "randomly,",
+      "start": 261.816,
+      "end": 262.605
+    },
+    {
+      "word": "with",
+      "start": 262.802,
+      "end": 263.023
+    },
+    {
+      "word": "large",
+      "start": 263.139,
+      "end": 263.476
+    },
+    {
+      "word": "spaces",
+      "start": 263.534,
+      "end": 264.138
+    },
+    {
+      "word": "between",
+      "start": 264.207,
+      "end": 264.59
+    },
+    {
+      "word": "them.",
+      "start": 264.637,
+      "end": 264.939
+    },
+    {
+      "word": "Here",
+      "start": 265.31,
+      "end": 265.635
+    },
+    {
+      "word": "is",
+      "start": 265.717,
+      "end": 265.914
+    },
+    {
+      "word": "an",
+      "start": 265.972,
+      "end": 266.065
+    },
+    {
+      "word": "important",
+      "start": 266.123,
+      "end": 266.773
+    },
+    {
+      "word": "G",
+      "start": 266.936,
+      "end": 267.133
+    },
+    {
+      "word": "C",
+      "start": 267.307,
+      "end": 267.47
+    },
+    {
+      "word": "S",
+      "start": 267.667,
+      "end": 267.864
+    },
+    {
+      "word": "E",
+      "start": 268.062,
+      "end": 268.329
+    },
+    {
+      "word": "examination",
+      "start": 268.433,
+      "end": 269.304
+    },
+    {
+      "word": "point.",
+      "start": 269.374,
+      "end": 269.826
+    },
+    {
+      "word": "When",
+      "start": 270.059,
+      "end": 270.256
+    },
+    {
+      "word": "a",
+      "start": 270.302,
+      "end": 270.337
+    },
+    {
+      "word": "substance",
+      "start": 270.407,
+      "end": 270.964
+    },
+    {
+      "word": "changes",
+      "start": 271.022,
+      "end": 271.533
+    },
+    {
+      "word": "state,",
+      "start": 271.591,
+      "end": 272.148
+    },
+    {
+      "word": "its",
+      "start": 272.346,
+      "end": 272.543
+    },
+    {
+      "word": "particles",
+      "start": 272.624,
+      "end": 273.274
+    },
+    {
+      "word": "do",
+      "start": 273.344,
+      "end": 273.437
+    },
+    {
+      "word": "not",
+      "start": 273.53,
+      "end": 273.692
+    },
+    {
+      "word": "become",
+      "start": 273.762,
+      "end": 274.134
+    },
+    {
+      "word": "larger",
+      "start": 274.18,
+      "end": 274.621
+    },
+    {
+      "word": "or",
+      "start": 274.714,
+      "end": 274.865
+    },
+    {
+      "word": "smaller.",
+      "start": 274.923,
+      "end": 275.666
+    },
+    {
+      "word": "It",
+      "start": 275.91,
+      "end": 276.061
+    },
+    {
+      "word": "is",
+      "start": 276.131,
+      "end": 276.247
+    },
+    {
+      "word": "their",
+      "start": 276.316,
+      "end": 276.549
+    },
+    {
+      "word": "arrangement,",
+      "start": 276.607,
+      "end": 277.315
+    },
+    {
+      "word": "movement",
+      "start": 277.431,
+      "end": 278.023
+    },
+    {
+      "word": "and",
+      "start": 278.093,
+      "end": 278.232
+    },
+    {
+      "word": "separation",
+      "start": 278.313,
+      "end": 279.079
+    },
+    {
+      "word": "that",
+      "start": 279.149,
+      "end": 279.347
+    },
+    {
+      "word": "change.",
+      "start": 279.416,
+      "end": 280.043
+    },
+    {
+      "word": "Let",
+      "start": 280.438,
+      "end": 280.647
+    },
+    {
+      "word": "us",
+      "start": 280.728,
+      "end": 280.856
+    },
+    {
+      "word": "test",
+      "start": 280.937,
+      "end": 281.309
+    },
+    {
+      "word": "your",
+      "start": 281.39,
+      "end": 281.576
+    },
+    {
+      "word": "understanding.",
+      "start": 281.669,
+      "end": 282.597
+    },
+    {
+      "word": "Imagine",
+      "start": 282.984,
+      "end": 283.681
+    },
+    {
+      "word": "three",
+      "start": 283.843,
+      "end": 284.145
+    },
+    {
+      "word": "containers.",
+      "start": 284.203,
+      "end": 285.051
+    },
+    {
+      "word": "The",
+      "start": 285.376,
+      "end": 285.503
+    },
+    {
+      "word": "first",
+      "start": 285.561,
+      "end": 285.852
+    },
+    {
+      "word": "contains",
+      "start": 285.91,
+      "end": 286.49
+    },
+    {
+      "word": "ice,",
+      "start": 286.606,
+      "end": 287.106
+    },
+    {
+      "word": "the",
+      "start": 287.28,
+      "end": 287.384
+    },
+    {
+      "word": "second",
+      "start": 287.454,
+      "end": 287.86
+    },
+    {
+      "word": "contains",
+      "start": 287.941,
+      "end": 288.464
+    },
+    {
+      "word": "liquid",
+      "start": 288.568,
+      "end": 288.963
+    },
+    {
+      "word": "water,",
+      "start": 289.044,
+      "end": 289.625
+    },
+    {
+      "word": "and",
+      "start": 289.822,
+      "end": 289.996
+    },
+    {
+      "word": "the",
+      "start": 290.043,
+      "end": 290.113
+    },
+    {
+      "word": "third",
+      "start": 290.182,
+      "end": 290.484
+    },
+    {
+      "word": "contains",
+      "start": 290.554,
+      "end": 291.169
+    },
+    {
+      "word": "water",
+      "start": 291.332,
+      "end": 291.703
+    },
+    {
+      "word": "vapour.",
+      "start": 291.773,
+      "end": 292.365
+    },
+    {
+      "word": "Which",
+      "start": 292.794,
+      "end": 293.061
+    },
+    {
+      "word": "substance",
+      "start": 293.178,
+      "end": 293.735
+    },
+    {
+      "word": "has",
+      "start": 293.781,
+      "end": 293.932
+    },
+    {
+      "word": "particles",
+      "start": 294.048,
+      "end": 294.687
+    },
+    {
+      "word": "vibrating",
+      "start": 294.849,
+      "end": 295.5
+    },
+    {
+      "word": "about",
+      "start": 295.581,
+      "end": 295.883
+    },
+    {
+      "word": "fixed",
+      "start": 295.964,
+      "end": 296.289
+    },
+    {
+      "word": "positions?",
+      "start": 296.347,
+      "end": 297.148
+    },
+    {
+      "word": "That",
+      "start": 297.38,
+      "end": 297.566
+    },
+    {
+      "word": "is",
+      "start": 297.624,
+      "end": 297.717
+    },
+    {
+      "word": "correct:",
+      "start": 297.787,
+      "end": 298.332
+    },
+    {
+      "word": "ice.",
+      "start": 298.495,
+      "end": 299.052
+    },
+    {
+      "word": "Which",
+      "start": 299.435,
+      "end": 299.667
+    },
+    {
+      "word": "has",
+      "start": 299.714,
+      "end": 299.865
+    },
+    {
+      "word": "particles",
+      "start": 299.946,
+      "end": 300.515
+    },
+    {
+      "word": "that",
+      "start": 300.561,
+      "end": 300.712
+    },
+    {
+      "word": "move",
+      "start": 300.782,
+      "end": 301.026
+    },
+    {
+      "word": "past",
+      "start": 301.084,
+      "end": 301.386
+    },
+    {
+      "word": "one",
+      "start": 301.455,
+      "end": 301.641
+    },
+    {
+      "word": "another",
+      "start": 301.676,
+      "end": 302.105
+    },
+    {
+      "word": "while",
+      "start": 302.175,
+      "end": 302.419
+    },
+    {
+      "word": "remaining",
+      "start": 302.454,
+      "end": 302.883
+    },
+    {
+      "word": "close",
+      "start": 302.941,
+      "end": 303.255
+    },
+    {
+      "word": "together?",
+      "start": 303.29,
+      "end": 303.917
+    },
+    {
+      "word": "Liquid",
+      "start": 304.253,
+      "end": 304.694
+    },
+    {
+      "word": "water.",
+      "start": 304.764,
+      "end": 305.345
+    },
+    {
+      "word": "And",
+      "start": 305.681,
+      "end": 305.855
+    },
+    {
+      "word": "which",
+      "start": 305.925,
+      "end": 306.146
+    },
+    {
+      "word": "has",
+      "start": 306.204,
+      "end": 306.378
+    },
+    {
+      "word": "particles",
+      "start": 306.471,
+      "end": 307.04
+    },
+    {
+      "word": "that",
+      "start": 307.086,
+      "end": 307.237
+    },
+    {
+      "word": "are",
+      "start": 307.284,
+      "end": 307.434
+    },
+    {
+      "word": "widely",
+      "start": 307.492,
+      "end": 307.934
+    },
+    {
+      "word": "separated",
+      "start": 307.992,
+      "end": 308.7
+    },
+    {
+      "word": "and",
+      "start": 308.874,
+      "end": 309.141
+    },
+    {
+      "word": "move",
+      "start": 309.211,
+      "end": 309.478
+    },
+    {
+      "word": "rapidly",
+      "start": 309.524,
+      "end": 310.0
+    },
+    {
+      "word": "in",
+      "start": 310.058,
+      "end": 310.128
+    },
+    {
+      "word": "random",
+      "start": 310.209,
+      "end": 310.604
+    },
+    {
+      "word": "directions?",
+      "start": 310.685,
+      "end": 311.486
+    },
+    {
+      "word": "Water",
+      "start": 312.102,
+      "end": 312.485
+    },
+    {
+      "word": "vapour.",
+      "start": 312.543,
+      "end": 313.112
+    },
+    {
+      "word": "Now,",
+      "start": 313.39,
+      "end": 313.565
+    },
+    {
+      "word": "let",
+      "start": 313.588,
+      "end": 313.715
+    },
+    {
+      "word": "us",
+      "start": 313.773,
+      "end": 313.855
+    },
+    {
+      "word": "tackle",
+      "start": 313.913,
+      "end": 314.249
+    },
+    {
+      "word": "a",
+      "start": 314.296,
+      "end": 314.331
+    },
+    {
+      "word": "G",
+      "start": 314.412,
+      "end": 314.586
+    },
+    {
+      "word": "C",
+      "start": 314.679,
+      "end": 314.795
+    },
+    {
+      "word": "S",
+      "start": 315.039,
+      "end": 315.155
+    },
+    {
+      "word": "E",
+      "start": 315.329,
+      "end": 315.48
+    },
+    {
+      "word": "examination",
+      "start": 315.596,
+      "end": 316.467
+    },
+    {
+      "word": "question.",
+      "start": 316.548,
+      "end": 317.198
+    },
+    {
+      "word": "Explain",
+      "start": 317.535,
+      "end": 318.139
+    },
+    {
+      "word": "why",
+      "start": 318.209,
+      "end": 318.441
+    },
+    {
+      "word": "gases",
+      "start": 318.522,
+      "end": 318.963
+    },
+    {
+      "word": "can",
+      "start": 319.033,
+      "end": 319.219
+    },
+    {
+      "word": "be",
+      "start": 319.288,
+      "end": 319.404
+    },
+    {
+      "word": "compressed",
+      "start": 319.462,
+      "end": 320.031
+    },
+    {
+      "word": "easily,",
+      "start": 320.136,
+      "end": 320.809
+    },
+    {
+      "word": "whereas",
+      "start": 321.007,
+      "end": 321.436
+    },
+    {
+      "word": "solids",
+      "start": 321.506,
+      "end": 321.993
+    },
+    {
+      "word": "cannot.",
+      "start": 322.109,
+      "end": 322.783
+    },
+    {
+      "word": "This",
+      "start": 323.061,
+      "end": 323.282
+    },
+    {
+      "word": "question",
+      "start": 323.363,
+      "end": 323.921
+    },
+    {
+      "word": "is",
+      "start": 324.037,
+      "end": 324.234
+    },
+    {
+      "word": "worth",
+      "start": 324.327,
+      "end": 324.629
+    },
+    {
+      "word": "three",
+      "start": 324.733,
+      "end": 325.024
+    },
+    {
+      "word": "marks.",
+      "start": 325.082,
+      "end": 325.639
+    },
+    {
+      "word": "A",
+      "start": 326.034,
+      "end": 326.127
+    },
+    {
+      "word": "full-mark",
+      "start": 326.231,
+      "end": 326.858
+    },
+    {
+      "word": "answer",
+      "start": 326.939,
+      "end": 327.299
+    },
+    {
+      "word": "would",
+      "start": 327.357,
+      "end": 327.555
+    },
+    {
+      "word": "be:",
+      "start": 327.613,
+      "end": 328.007
+    },
+    {
+      "word": "In",
+      "start": 328.251,
+      "end": 328.414
+    },
+    {
+      "word": "a",
+      "start": 328.472,
+      "end": 328.495
+    },
+    {
+      "word": "gas,",
+      "start": 328.565,
+      "end": 329.075
+    },
+    {
+      "word": "particles",
+      "start": 329.192,
+      "end": 329.9
+    },
+    {
+      "word": "are",
+      "start": 329.993,
+      "end": 330.225
+    },
+    {
+      "word": "far",
+      "start": 330.294,
+      "end": 330.55
+    },
+    {
+      "word": "apart,",
+      "start": 330.608,
+      "end": 331.212
+    },
+    {
+      "word": "with",
+      "start": 331.363,
+      "end": 331.595
+    },
+    {
+      "word": "large",
+      "start": 331.699,
+      "end": 332.024
+    },
+    {
+      "word": "spaces",
+      "start": 332.048,
+      "end": 332.523
+    },
+    {
+      "word": "between",
+      "start": 332.593,
+      "end": 332.953
+    },
+    {
+      "word": "them.",
+      "start": 333.011,
+      "end": 333.359
+    },
+    {
+      "word": "When",
+      "start": 333.603,
+      "end": 333.824
+    },
+    {
+      "word": "pressure",
+      "start": 333.905,
+      "end": 334.346
+    },
+    {
+      "word": "is",
+      "start": 334.416,
+      "end": 334.578
+    },
+    {
+      "word": "applied,",
+      "start": 334.636,
+      "end": 335.275
+    },
+    {
+      "word": "the",
+      "start": 335.426,
+      "end": 335.565
+    },
+    {
+      "word": "particles",
+      "start": 335.647,
+      "end": 336.308
+    },
+    {
+      "word": "can",
+      "start": 336.424,
+      "end": 336.61
+    },
+    {
+      "word": "be",
+      "start": 336.68,
+      "end": 336.784
+    },
+    {
+      "word": "pushed",
+      "start": 336.866,
+      "end": 337.26
+    },
+    {
+      "word": "closer",
+      "start": 337.353,
+      "end": 337.76
+    },
+    {
+      "word": "together,",
+      "start": 337.806,
+      "end": 338.479
+    },
+    {
+      "word": "reducing",
+      "start": 338.723,
+      "end": 339.35
+    },
+    {
+      "word": "the",
+      "start": 339.42,
+      "end": 339.501
+    },
+    {
+      "word": "volume.",
+      "start": 339.571,
+      "end": 340.151
+    },
+    {
+      "word": "In",
+      "start": 340.674,
+      "end": 340.848
+    },
+    {
+      "word": "a",
+      "start": 340.894,
+      "end": 340.917
+    },
+    {
+      "word": "solid,",
+      "start": 341.01,
+      "end": 341.649
+    },
+    {
+      "word": "particles",
+      "start": 341.858,
+      "end": 342.531
+    },
+    {
+      "word": "are",
+      "start": 342.624,
+      "end": 342.856
+    },
+    {
+      "word": "already",
+      "start": 342.903,
+      "end": 343.332
+    },
+    {
+      "word": "packed",
+      "start": 343.414,
+      "end": 343.762
+    },
+    {
+      "word": "closely",
+      "start": 343.878,
+      "end": 344.435
+    },
+    {
+      "word": "together,",
+      "start": 344.493,
+      "end": 345.097
+    },
+    {
+      "word": "with",
+      "start": 345.341,
+      "end": 345.561
+    },
+    {
+      "word": "very",
+      "start": 345.631,
+      "end": 345.898
+    },
+    {
+      "word": "little",
+      "start": 345.956,
+      "end": 346.223
+    },
+    {
+      "word": "space",
+      "start": 346.258,
+      "end": 346.618
+    },
+    {
+      "word": "between",
+      "start": 346.664,
+      "end": 347.071
+    },
+    {
+      "word": "them,",
+      "start": 347.129,
+      "end": 347.442
+    },
+    {
+      "word": "so",
+      "start": 347.593,
+      "end": 347.791
+    },
+    {
+      "word": "the",
+      "start": 347.86,
+      "end": 347.941
+    },
+    {
+      "word": "volume",
+      "start": 348.011,
+      "end": 348.522
+    },
+    {
+      "word": "cannot",
+      "start": 348.58,
+      "end": 348.928
+    },
+    {
+      "word": "be",
+      "start": 348.986,
+      "end": 349.068
+    },
+    {
+      "word": "reduced",
+      "start": 349.138,
+      "end": 349.602
+    },
+    {
+      "word": "significantly.",
+      "start": 349.648,
+      "end": 350.705
+    },
+    {
+      "word": "Notice",
+      "start": 351.32,
+      "end": 351.878
+    },
+    {
+      "word": "that",
+      "start": 351.947,
+      "end": 352.191
+    },
+    {
+      "word": "we",
+      "start": 352.261,
+      "end": 352.412
+    },
+    {
+      "word": "have",
+      "start": 352.493,
+      "end": 352.679
+    },
+    {
+      "word": "not",
+      "start": 352.737,
+      "end": 352.946
+    },
+    {
+      "word": "simply",
+      "start": 353.004,
+      "end": 353.399
+    },
+    {
+      "word": "stated",
+      "start": 353.457,
+      "end": 353.967
+    },
+    {
+      "word": "that",
+      "start": 354.246,
+      "end": 354.467
+    },
+    {
+      "word": "gases",
+      "start": 354.548,
+      "end": 354.977
+    },
+    {
+      "word": "can",
+      "start": 355.047,
+      "end": 355.186
+    },
+    {
+      "word": "be",
+      "start": 355.256,
+      "end": 355.349
+    },
+    {
+      "word": "compressed.",
+      "start": 355.407,
+      "end": 356.162
+    },
+    {
+      "word": "We",
+      "start": 356.487,
+      "end": 356.638
+    },
+    {
+      "word": "have",
+      "start": 356.696,
+      "end": 356.858
+    },
+    {
+      "word": "explained",
+      "start": 356.905,
+      "end": 357.485
+    },
+    {
+      "word": "why,",
+      "start": 357.555,
+      "end": 358.182
+    },
+    {
+      "word": "using",
+      "start": 358.426,
+      "end": 358.832
+    },
+    {
+      "word": "the",
+      "start": 358.902,
+      "end": 359.018
+    },
+    {
+      "word": "arrangement",
+      "start": 359.076,
+      "end": 359.761
+    },
+    {
+      "word": "of",
+      "start": 359.83,
+      "end": 359.935
+    },
+    {
+      "word": "particles.",
+      "start": 360.039,
+      "end": 360.887
+    },
+    {
+      "word": "That",
+      "start": 361.328,
+      "end": 361.618
+    },
+    {
+      "word": "is",
+      "start": 361.676,
+      "end": 361.781
+    },
+    {
+      "word": "exactly",
+      "start": 361.862,
+      "end": 362.419
+    },
+    {
+      "word": "what",
+      "start": 362.478,
+      "end": 362.686
+    },
+    {
+      "word": "examiners",
+      "start": 362.756,
+      "end": 363.395
+    },
+    {
+      "word": "are",
+      "start": 363.441,
+      "end": 363.546
+    },
+    {
+      "word": "looking",
+      "start": 363.58,
+      "end": 363.882
+    },
+    {
+      "word": "for",
+      "start": 363.952,
+      "end": 364.265
+    },
+    {
+      "word": "when",
+      "start": 364.474,
+      "end": 364.695
+    },
+    {
+      "word": "a",
+      "start": 364.741,
+      "end": 364.765
+    },
+    {
+      "word": "question",
+      "start": 364.846,
+      "end": 365.299
+    },
+    {
+      "word": "asks",
+      "start": 365.415,
+      "end": 365.844
+    },
+    {
+      "word": "you",
+      "start": 365.914,
+      "end": 366.019
+    },
+    {
+      "word": "to",
+      "start": 366.077,
+      "end": 366.146
+    },
+    {
+      "word": "explain.",
+      "start": 366.215,
+      "end": 366.912
+    },
+    {
+      "word": "Before",
+      "start": 367.353,
+      "end": 367.736
+    },
+    {
+      "word": "we",
+      "start": 367.771,
+      "end": 367.876
+    },
+    {
+      "word": "finish,",
+      "start": 367.945,
+      "end": 368.526
+    },
+    {
+      "word": "remember",
+      "start": 368.805,
+      "end": 369.339
+    },
+    {
+      "word": "these",
+      "start": 369.431,
+      "end": 369.664
+    },
+    {
+      "word": "three",
+      "start": 369.722,
+      "end": 370.012
+    },
+    {
+      "word": "key",
+      "start": 370.082,
+      "end": 370.36
+    },
+    {
+      "word": "ideas.",
+      "start": 370.476,
+      "end": 371.254
+    },
+    {
+      "word": "Solids",
+      "start": 371.858,
+      "end": 372.52
+    },
+    {
+      "word": "have",
+      "start": 372.856,
+      "end": 373.065
+    },
+    {
+      "word": "a",
+      "start": 373.1,
+      "end": 373.123
+    },
+    {
+      "word": "fixed",
+      "start": 373.205,
+      "end": 373.518
+    },
+    {
+      "word": "shape",
+      "start": 373.599,
+      "end": 374.087
+    },
+    {
+      "word": "and",
+      "start": 374.238,
+      "end": 374.493
+    },
+    {
+      "word": "volume",
+      "start": 374.586,
+      "end": 375.132
+    },
+    {
+      "word": "because",
+      "start": 375.294,
+      "end": 375.747
+    },
+    {
+      "word": "their",
+      "start": 375.782,
+      "end": 375.968
+    },
+    {
+      "word": "particles",
+      "start": 376.026,
+      "end": 376.711
+    },
+    {
+      "word": "vibrate",
+      "start": 376.943,
+      "end": 377.605
+    },
+    {
+      "word": "about",
+      "start": 377.675,
+      "end": 378.046
+    },
+    {
+      "word": "fixed",
+      "start": 378.127,
+      "end": 378.429
+    },
+    {
+      "word": "positions.",
+      "start": 378.487,
+      "end": 379.3
+    },
+    {
+      "word": "Liquids",
+      "start": 379.997,
+      "end": 380.473
+    },
+    {
+      "word": "have",
+      "start": 380.531,
+      "end": 380.693
+    },
+    {
+      "word": "a",
+      "start": 380.716,
+      "end": 380.751
+    },
+    {
+      "word": "fixed",
+      "start": 380.832,
+      "end": 381.099
+    },
+    {
+      "word": "volume",
+      "start": 381.169,
+      "end": 381.668
+    },
+    {
+      "word": "but",
+      "start": 381.843,
+      "end": 382.028
+    },
+    {
+      "word": "take",
+      "start": 382.063,
+      "end": 382.307
+    },
+    {
+      "word": "the",
+      "start": 382.342,
+      "end": 382.423
+    },
+    {
+      "word": "shape",
+      "start": 382.481,
+      "end": 382.783
+    },
+    {
+      "word": "of",
+      "start": 382.829,
+      "end": 382.899
+    },
+    {
+      "word": "their",
+      "start": 382.957,
+      "end": 383.12
+    },
+    {
+      "word": "containers",
+      "start": 383.166,
+      "end": 383.816
+    },
+    {
+      "word": "because",
+      "start": 384.06,
+      "end": 384.396
+    },
+    {
+      "word": "their",
+      "start": 384.431,
+      "end": 384.605
+    },
+    {
+      "word": "particles",
+      "start": 384.652,
+      "end": 385.186
+    },
+    {
+      "word": "can",
+      "start": 385.244,
+      "end": 385.395
+    },
+    {
+      "word": "move",
+      "start": 385.465,
+      "end": 385.674
+    },
+    {
+      "word": "past",
+      "start": 385.732,
+      "end": 386.08
+    },
+    {
+      "word": "one",
+      "start": 386.161,
+      "end": 386.324
+    },
+    {
+      "word": "another.",
+      "start": 386.359,
+      "end": 386.858
+    },
+    {
+      "word": "Gases",
+      "start": 387.38,
+      "end": 387.821
+    },
+    {
+      "word": "have",
+      "start": 387.891,
+      "end": 388.077
+    },
+    {
+      "word": "no",
+      "start": 388.135,
+      "end": 388.297
+    },
+    {
+      "word": "fixed",
+      "start": 388.39,
+      "end": 388.773
+    },
+    {
+      "word": "shape",
+      "start": 388.855,
+      "end": 389.284
+    },
+    {
+      "word": "or",
+      "start": 389.342,
+      "end": 389.505
+    },
+    {
+      "word": "volume",
+      "start": 389.586,
+      "end": 390.109
+    },
+    {
+      "word": "because",
+      "start": 390.283,
+      "end": 390.654
+    },
+    {
+      "word": "their",
+      "start": 390.701,
+      "end": 390.863
+    },
+    {
+      "word": "particles",
+      "start": 390.91,
+      "end": 391.467
+    },
+    {
+      "word": "move",
+      "start": 391.583,
+      "end": 391.827
+    },
+    {
+      "word": "freely",
+      "start": 391.885,
+      "end": 392.372
+    },
+    {
+      "word": "and",
+      "start": 392.616,
+      "end": 392.849
+    },
+    {
+      "word": "are",
+      "start": 392.941,
+      "end": 393.162
+    },
+    {
+      "word": "widely",
+      "start": 393.22,
+      "end": 393.65
+    },
+    {
+      "word": "separated.",
+      "start": 393.719,
+      "end": 394.544
+    },
+    {
+      "word": "If",
+      "start": 395.066,
+      "end": 395.205
+    },
+    {
+      "word": "you",
+      "start": 395.252,
+      "end": 395.333
+    },
+    {
+      "word": "found",
+      "start": 395.426,
+      "end": 395.681
+    },
+    {
+      "word": "this",
+      "start": 395.728,
+      "end": 395.879
+    },
+    {
+      "word": "explanation",
+      "start": 395.96,
+      "end": 396.703
+    },
+    {
+      "word": "helpful,",
+      "start": 396.784,
+      "end": 397.423
+    },
+    {
+      "word": "please",
+      "start": 397.597,
+      "end": 397.887
+    },
+    {
+      "word": "subscribe",
+      "start": 397.91,
+      "end": 398.537
+    },
+    {
+      "word": "to",
+      "start": 398.572,
+      "end": 398.653
+    },
+    {
+      "word": "J",
+      "start": 398.746,
+      "end": 398.921
+    },
+    {
+      "word": "D",
+      "start": 398.99,
+      "end": 399.06
+    },
+    {
+      "word": "Science",
+      "start": 399.234,
+      "end": 399.814
+    },
+    {
+      "word": "and",
+      "start": 399.965,
+      "end": 400.209
+    },
+    {
+      "word": "visit",
+      "start": 400.279,
+      "end": 400.592
+    },
+    {
+      "word": "j",
+      "start": 400.65,
+      "end": 400.825
+    },
+    {
+      "word": "d",
+      "start": 400.883,
+      "end": 400.999
+    },
+    {
+      "word": "science",
+      "start": 401.127,
+      "end": 401.603
+    },
+    {
+      "word": "dot",
+      "start": 401.661,
+      "end": 401.916
+    },
+    {
+      "word": "co",
+      "start": 401.986,
+      "end": 402.253
+    },
+    {
+      "word": "dot",
+      "start": 402.346,
+      "end": 402.59
+    },
+    {
+      "word": "u",
+      "start": 402.706,
+      "end": 402.822
+    },
+    {
+      "word": "k",
+      "start": 402.903,
+      "end": 403.112
+    },
+    {
+      "word": "for",
+      "start": 403.565,
+      "end": 403.774
+    },
+    {
+      "word": "more",
+      "start": 403.844,
+      "end": 404.122
+    },
+    {
+      "word": "G",
+      "start": 404.192,
+      "end": 404.366
+    },
+    {
+      "word": "C",
+      "start": 404.494,
+      "end": 404.668
+    },
+    {
+      "word": "S",
+      "start": 404.946,
+      "end": 405.121
+    },
+    {
+      "word": "E",
+      "start": 405.272,
+      "end": 405.423
+    },
+    {
+      "word": "Chemistry",
+      "start": 405.539,
+      "end": 406.096
+    },
+    {
+      "word": "explanations,",
+      "start": 406.166,
+      "end": 407.303
+    },
+    {
+      "word": "worked",
+      "start": 407.698,
+      "end": 408.046
+    },
+    {
+      "word": "examples",
+      "start": 408.116,
+      "end": 408.766
+    },
+    {
+      "word": "and",
+      "start": 408.847,
+      "end": 409.01
+    },
+    {
+      "word": "examination",
+      "start": 409.091,
+      "end": 409.881
+    },
+    {
+      "word": "practice.",
+      "start": 409.95,
+      "end": 410.647
+    },
+    {
+      "word": "Thank",
+      "start": 411.262,
+      "end": 411.541
+    },
+    {
+      "word": "you",
+      "start": 411.611,
+      "end": 411.703
+    },
+    {
+      "word": "for",
+      "start": 411.773,
+      "end": 411.924
+    },
+    {
+      "word": "watching,",
+      "start": 411.994,
+      "end": 412.621
+    },
+    {
+      "word": "and",
+      "start": 412.772,
+      "end": 412.934
+    },
+    {
+      "word": "I",
+      "start": 413.015,
+      "end": 413.039
+    },
+    {
+      "word": "look",
+      "start": 413.108,
+      "end": 413.282
+    },
+    {
+      "word": "forward",
+      "start": 413.352,
+      "end": 413.712
+    },
+    {
+      "word": "to",
+      "start": 413.758,
+      "end": 413.84
+    },
+    {
+      "word": "seeing",
+      "start": 413.921,
+      "end": 414.188
+    },
+    {
+      "word": "you",
+      "start": 414.258,
+      "end": 414.362
+    },
+    {
+      "word": "in",
+      "start": 414.478,
+      "end": 414.583
+    },
+    {
+      "word": "the",
+      "start": 414.641,
+      "end": 414.71
+    },
+    {
+      "word": "next",
+      "start": 414.78,
+      "end": 415.036
+    },
+    {
+      "word": "lesson.",
+      "start": 415.105,
+      "end": 415.581
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

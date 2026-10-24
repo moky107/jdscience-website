@@ -1,0 +1,176 @@
+{
+  "slug": "chromatography",
+  "duration": 400.3,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 14.698,
+      "aligned": true,
+      "cue": "how paper chromatography works"
+    },
+    {
+      "id": "ink",
+      "t": 25.693,
+      "aligned": true,
+      "cue": "writing on a piece of paper using a black felt-tip"
+    },
+    {
+      "id": "phases",
+      "t": 49.772,
+      "aligned": true,
+      "cue": "stationary phase and the mobile phase"
+    },
+    {
+      "id": "method",
+      "t": 79.227,
+      "aligned": true,
+      "cue": "draw a pencil line near the bottom"
+    },
+    {
+      "id": "run",
+      "t": 119.06,
+      "aligned": true,
+      "cue": "The solvent gradually moves up the paper"
+    },
+    {
+      "id": "identify",
+      "t": 169.367,
+      "aligned": true,
+      "cue": "how chromatography can help identify"
+    },
+    {
+      "id": "rf",
+      "t": 196.198,
+      "aligned": true,
+      "cue": "Now, let us examine R F values"
+    },
+    {
+      "id": "ex1",
+      "t": 226.511,
+      "aligned": true,
+      "cue": "One dye travels six centimetres"
+    },
+    {
+      "id": "ex2",
+      "t": 273.891,
+      "aligned": true,
+      "cue": "A dye travels three point five centimetres"
+    },
+    {
+      "id": "compare",
+      "t": 298.923,
+      "aligned": true,
+      "cue": "R F values should only be compared"
+    },
+    {
+      "id": "exam",
+      "t": 318.056,
+      "aligned": true,
+      "cue": "Explain why two dyes in a mixture separate"
+    },
+    {
+      "id": "recap",
+      "t": 363.545,
+      "aligned": true,
+      "cue": "chromatography is used to separate and help identify"
+    },
+    {
+      "id": "outro",
+      "t": 385.337,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 14.818,
+      "aligned": true,
+      "cue": "how paper chromatography works"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 17.357,
+      "aligned": true,
+      "cue": "why different substances separate"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 20.561,
+      "aligned": true,
+      "cue": "calculate R F values"
+    },
+    {
+      "slide": "method",
+      "item": "base",
+      "t": 83.952,
+      "aligned": true,
+      "cue": "This is called the baseline"
+    },
+    {
+      "slide": "method",
+      "item": "spot",
+      "t": 95.168,
+      "aligned": true,
+      "cue": "small spot of the ink sample"
+    },
+    {
+      "slide": "method",
+      "item": "level",
+      "t": 105.628,
+      "aligned": true,
+      "cue": "solvent level must remain below"
+    },
+    {
+      "slide": "ex1",
+      "item": "formula",
+      "t": 236.171,
+      "aligned": true,
+      "cue": "We begin with the formula"
+    },
+    {
+      "slide": "ex1",
+      "item": "sub",
+      "t": 245.634,
+      "aligned": true,
+      "cue": "six divided by eight"
+    },
+    {
+      "slide": "ex1",
+      "item": "ans",
+      "t": 249.43,
+      "aligned": true,
+      "cue": "zero point seven five"
+    },
+    {
+      "slide": "ex2",
+      "item": "pause",
+      "t": 282.831,
+      "aligned": true,
+      "cue": "Pause for a moment"
+    },
+    {
+      "slide": "ex2",
+      "item": "ans",
+      "t": 285.594,
+      "aligned": true,
+      "cue": "The correct answer is zero point five"
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 327.646,
+      "aligned": true,
+      "cue": "The two dyes have different solubilities"
+    }
+  ]
+}

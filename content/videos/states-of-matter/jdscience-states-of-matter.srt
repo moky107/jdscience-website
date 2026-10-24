@@ -1,0 +1,504 @@
+1
+00:00:00,116 --> 00:00:03,228
+Hello and welcome back to J D Science.
+
+2
+00:00:03,622 --> 00:00:07,396
+In today's lesson, we are going to explore the three states
+
+3
+00:00:07,465 --> 00:00:11,355
+of matter: solids, liquids and gases.
+
+4
+00:00:11,749 --> 00:00:15,406
+We will examine how their particles are arranged, how
+
+5
+00:00:15,499 --> 00:00:19,180
+they move, and how this explains the different properties
+
+6
+00:00:19,238 --> 00:00:20,318
+of each state.
+
+7
+00:00:20,713 --> 00:00:24,207
+By the end of this lesson, you should be able to describe
+
+8
+00:00:24,242 --> 00:00:27,853
+the arrangement and movement of particles in solids,
+
+9
+00:00:27,911 --> 00:00:31,939
+liquids and gases, explain their properties using
+
+10
+00:00:31,997 --> 00:00:35,771
+the particle model, and answer G C S E
+
+11
+00:00:35,922 --> 00:00:38,616
+examination questions confidently.
+
+12
+00:00:38,859 --> 00:00:41,193
+Let us begin with a simple question.
+
+13
+00:00:41,588 --> 00:00:45,616
+Why does a piece of ice maintain its shape, while water
+
+14
+00:00:45,686 --> 00:00:49,262
+flows and steam spreads throughout its surroundings?
+
+15
+00:00:49,703 --> 00:00:53,697
+The answer lies in the arrangement and movement of particles.
+
+16
+00:00:54,080 --> 00:00:57,052
+Everything around us is made of particles.
+
+17
+00:00:57,447 --> 00:01:01,278
+In the particle model, these particles are represented as
+
+18
+00:01:01,394 --> 00:01:02,810
+small spheres.
+
+19
+00:01:03,263 --> 00:01:07,373
+The way they are arranged and the energy they possess determine
+
+20
+00:01:07,408 --> 00:01:11,250
+whether a substance exists as a solid, liquid or
+
+21
+00:01:11,320 --> 00:01:11,912
+gas.
+
+22
+00:01:12,365 --> 00:01:14,106
+Let us begin with solids.
+
+23
+00:01:14,443 --> 00:01:18,240
+In a solid, particles are packed closely together, usually
+
+24
+00:01:18,356 --> 00:01:20,295
+in a regular arrangement.
+
+25
+00:01:20,538 --> 00:01:24,358
+Strong forces of attraction hold the particles in fixed
+
+26
+00:01:24,428 --> 00:01:25,217
+positions.
+
+27
+00:01:25,461 --> 00:01:29,048
+However, the particles are not completely stationary.
+
+28
+00:01:29,129 --> 00:01:31,916
+They vibrate about their fixed positions.
+
+29
+00:01:32,043 --> 00:01:35,967
+Because the particles cannot move freely from one position
+
+30
+00:01:36,026 --> 00:01:39,892
+to another, a solid has a fixed shape and a fixed
+
+31
+00:01:39,973 --> 00:01:40,519
+volume.
+
+32
+00:01:40,762 --> 00:01:44,478
+Solids are also very difficult to compress because their
+
+33
+00:01:44,547 --> 00:01:48,413
+particles are already packed closely together, leaving very
+
+34
+00:01:48,471 --> 00:01:50,190
+little space between them.
+
+35
+00:01:50,805 --> 00:01:52,628
+Think about an ice cube.
+
+36
+00:01:52,906 --> 00:01:56,622
+It maintains its shape even when you place it on a plate
+
+37
+00:01:56,714 --> 00:02:00,662
+because the water molecules are held in fixed positions within
+
+38
+00:02:00,709 --> 00:02:01,951
+the solid structure.
+
+39
+00:02:02,288 --> 00:02:04,006
+Now, let us consider liquids.
+
+40
+00:02:04,285 --> 00:02:08,139
+In a liquid, the particles remain close together, but
+
+41
+00:02:08,174 --> 00:02:11,808
+they are arranged irregularly and can move past
+
+42
+00:02:11,889 --> 00:02:12,632
+one another.
+
+43
+00:02:12,911 --> 00:02:16,986
+The forces of attraction between particles are still important,
+
+44
+00:02:17,264 --> 00:02:21,014
+but the particles have sufficient energy to move around each other.
+
+45
+00:02:21,467 --> 00:02:25,136
+This explains why liquids can flow and take the shape
+
+46
+00:02:25,182 --> 00:02:26,483
+of their containers.
+
+47
+00:02:26,877 --> 00:02:30,534
+For example, when you pour water into a glass, it
+
+48
+00:02:30,604 --> 00:02:33,251
+takes the shape of the bottom of the glass.
+
+49
+00:02:33,646 --> 00:02:38,046
+When you pour the same water into a bottle, its shape changes,
+
+50
+00:02:38,383 --> 00:02:42,005
+but its volume remains approximately the same.
+
+51
+00:02:42,458 --> 00:02:46,266
+Liquids have a fixed volume but no fixed shape.
+
+52
+00:02:46,661 --> 00:02:50,434
+Like solids, liquids are difficult to compress because
+
+53
+00:02:50,469 --> 00:02:53,441
+there is very little space between their particles.
+
+54
+00:02:53,778 --> 00:02:56,146
+Now, let us examine gases.
+
+55
+00:02:56,390 --> 00:03:00,059
+In a gas, particles are much farther apart than in
+
+56
+00:03:00,175 --> 00:03:01,824
+solids and liquids.
+
+57
+00:03:02,102 --> 00:03:05,957
+The forces of attraction between them are generally negligible,
+
+58
+00:03:06,166 --> 00:03:10,566
+and the particles move rapidly and randomly in all directions.
+
+59
+00:03:10,902 --> 00:03:14,861
+Because the particles move freely, a gas has neither
+
+60
+00:03:14,931 --> 00:03:17,868
+a fixed shape nor a fixed volume.
+
+61
+00:03:18,205 --> 00:03:21,920
+Instead, it spreads out to fill the entire container.
+
+62
+00:03:22,442 --> 00:03:26,123
+For example, when perfume is sprayed in one corner of a
+
+63
+00:03:26,204 --> 00:03:30,151
+room, its gaseous particles spread through the air.
+
+64
+00:03:30,732 --> 00:03:33,321
+This process is called diffusion.
+
+65
+00:03:34,006 --> 00:03:37,663
+Gases can also be compressed easily because there are
+
+66
+00:03:37,709 --> 00:03:40,043
+large spaces between their particles.
+
+67
+00:03:40,472 --> 00:03:42,980
+Consider air inside a syringe.
+
+68
+00:03:43,317 --> 00:03:47,566
+When you push the plunger while blocking the opening, the air occupies
+
+69
+00:03:47,659 --> 00:03:51,397
+a smaller volume because the gas particles move closer
+
+70
+00:03:51,467 --> 00:03:52,163
+together.
+
+71
+00:03:52,779 --> 00:03:56,715
+Now, let us compare ice, liquid water and steam.
+
+72
+00:03:57,167 --> 00:04:00,952
+All three contain the same chemical substance, H two
+
+73
+00:04:01,034 --> 00:04:01,428
+O.
+
+74
+00:04:01,881 --> 00:04:05,678
+The difference is not the chemical identity of the particles,
+
+75
+00:04:05,887 --> 00:04:09,033
+but their arrangement, movement and energy.
+
+76
+00:04:09,370 --> 00:04:13,015
+In ice, the water molecules vibrate about fixed
+
+77
+00:04:13,073 --> 00:04:13,874
+positions.
+
+78
+00:04:14,211 --> 00:04:17,984
+In liquid water, the molecules move past one another.
+
+79
+00:04:18,251 --> 00:04:22,605
+In steam, the water molecules move rapidly and randomly,
+
+80
+00:04:22,802 --> 00:04:24,939
+with large spaces between them.
+
+81
+00:04:25,310 --> 00:04:29,304
+Here is an important G C S E examination
+
+82
+00:04:29,374 --> 00:04:29,826
+point.
+
+83
+00:04:30,059 --> 00:04:33,692
+When a substance changes state, its particles do not
+
+84
+00:04:33,762 --> 00:04:35,666
+become larger or smaller.
+
+85
+00:04:35,910 --> 00:04:40,043
+It is their arrangement, movement and separation that change.
+
+86
+00:04:40,438 --> 00:04:42,597
+Let us test your understanding.
+
+87
+00:04:42,984 --> 00:04:45,051
+Imagine three containers.
+
+88
+00:04:45,376 --> 00:04:49,625
+The first contains ice, the second contains liquid water,
+
+89
+00:04:49,822 --> 00:04:52,365
+and the third contains water vapour.
+
+90
+00:04:52,794 --> 00:04:57,148
+Which substance has particles vibrating about fixed positions?
+
+91
+00:04:57,380 --> 00:04:59,052
+That is correct: ice.
+
+92
+00:04:59,435 --> 00:05:03,255
+Which has particles that move past one another while remaining close
+
+93
+00:05:03,290 --> 00:05:03,917
+together?
+
+94
+00:05:04,253 --> 00:05:05,345
+Liquid water.
+
+95
+00:05:05,681 --> 00:05:09,478
+And which has particles that are widely separated and move
+
+96
+00:05:09,524 --> 00:05:11,486
+rapidly in random directions?
+
+97
+00:05:12,102 --> 00:05:13,112
+Water vapour.
+
+98
+00:05:13,390 --> 00:05:17,198
+Now, let us tackle a G C S E examination question.
+
+99
+00:05:17,535 --> 00:05:21,436
+Explain why gases can be compressed easily, whereas
+
+100
+00:05:21,506 --> 00:05:22,783
+solids cannot.
+
+101
+00:05:23,061 --> 00:05:25,639
+This question is worth three marks.
+
+102
+00:05:26,034 --> 00:05:29,900
+A full-mark answer would be: In a gas, particles
+
+103
+00:05:29,993 --> 00:05:33,359
+are far apart, with large spaces between them.
+
+104
+00:05:33,603 --> 00:05:37,260
+When pressure is applied, the particles can be pushed
+
+105
+00:05:37,353 --> 00:05:40,151
+closer together, reducing the volume.
+
+106
+00:05:40,674 --> 00:05:44,435
+In a solid, particles are already packed closely
+
+107
+00:05:44,493 --> 00:05:48,522
+together, with very little space between them, so the volume
+
+108
+00:05:48,580 --> 00:05:50,705
+cannot be reduced significantly.
+
+109
+00:05:51,320 --> 00:05:54,977
+Notice that we have not simply stated that gases
+
+110
+00:05:55,047 --> 00:05:56,162
+can be compressed.
+
+111
+00:05:56,487 --> 00:06:00,887
+We have explained why, using the arrangement of particles.
+
+112
+00:06:01,328 --> 00:06:05,299
+That is exactly what examiners are looking for when a question
+
+113
+00:06:05,415 --> 00:06:06,912
+asks you to explain.
+
+114
+00:06:07,353 --> 00:06:11,254
+Before we finish, remember these three key ideas.
+
+115
+00:06:11,858 --> 00:06:15,747
+Solids have a fixed shape and volume because
+
+116
+00:06:15,782 --> 00:06:19,300
+their particles vibrate about fixed positions.
+
+117
+00:06:19,997 --> 00:06:23,816
+Liquids have a fixed volume but take the shape of their containers
+
+118
+00:06:24,060 --> 00:06:26,858
+because their particles can move past one another.
+
+119
+00:06:27,380 --> 00:06:31,467
+Gases have no fixed shape or volume because their particles
+
+120
+00:06:31,583 --> 00:06:34,544
+move freely and are widely separated.
+
+121
+00:06:35,066 --> 00:06:38,921
+If you found this explanation helpful, please subscribe to J
+
+122
+00:06:38,990 --> 00:06:42,822
+D Science and visit j d science dot co dot u
+
+123
+00:06:42,903 --> 00:06:47,303
+k for more G C S E Chemistry explanations,
+
+124
+00:06:47,698 --> 00:06:50,647
+worked examples and examination practice.
+
+125
+00:06:51,262 --> 00:06:54,583
+Thank you for watching, and I look forward to seeing you in
+
+126
+00:06:54,641 --> 00:06:55,581
+the next lesson.
+

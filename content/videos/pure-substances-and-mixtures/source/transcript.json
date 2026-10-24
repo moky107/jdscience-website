@@ -1,0 +1,4271 @@
+{
+  "slug": "pure-substances-and-mixtures",
+  "title": "Pure Substances and Mixtures",
+  "audio": "/workspace/content/videos/pure-substances-and-mixtures/source/narration_master.mp3",
+  "duration": 374.674,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's GCSE Chemistry lesson, we are going to explore pure substances and mixtures.\n\nWe will learn how to distinguish between them, explain the difference between melting and boiling behaviour, and examine how scientists use melting point data to assess purity.\n\nLet us begin with an important question.\n\nIs bottled mineral water a pure substance?\n\nYou might think the answer is yes because the water looks clear and is safe to drink.\n\nHowever, in chemistry, the word pure has a very specific meaning.\n\nA pure substance contains only one element or one compound, with no other substances mixed with it.\n\nFor example, a sample containing only copper atoms is a pure element.\n\nSimilarly, a sample containing only water molecules is a pure compound.\n\nDistilled water is an example of water that can be very pure because most dissolved substances have been removed.\n\nA mixture, on the other hand, contains two or more substances that are not chemically bonded together.\n\nThe substances in a mixture retain their own chemical identities and can often be separated using physical methods.\n\nFor example, air is a mixture of gases, including nitrogen, oxygen, argon and carbon dioxide.\n\nSeawater is also a mixture because it contains water and dissolved salts, together with other substances.\n\nNow, let us consider an important difference between pure substances and mixtures.\n\nA pure substance has a sharp, characteristic melting point and boiling point at a given pressure.\n\nFor example, pure water melts at zero degrees Celsius and boils at one hundred degrees Celsius at normal atmospheric pressure.\n\nThese temperatures can be used to help identify the substance.\n\nMixtures, however, often melt or boil over a range of temperatures.\n\nThis is because the different substances present affect the melting and boiling behaviour.\n\nLet us consider an example involving ice.\n\nPure ice melts at approximately zero degrees Celsius under normal atmospheric pressure.\n\nHowever, if impurities are dissolved in the water, they can lower its freezing point.\n\nThis is why salt is spread on icy roads during winter.\n\nWhen salt dissolves in the water present on the ice, it lowers the freezing point, helping to prevent the water from refreezing at zero degrees Celsius.\n\nNow, let us consider how scientists use melting points to test purity.\n\nSuppose a scientist has a sample of a solid that is believed to be a particular chemical compound.\n\nThe pure compound has a known melting point of eighty degrees Celsius.\n\nIf the sample melts sharply at approximately eighty degrees Celsius, this supports the conclusion that it may be pure.\n\nHowever, if the sample begins melting at seventy-four degrees Celsius and finishes melting at seventy-nine degrees Celsius, this suggests that impurities may be present.\n\nFor many solids, impurities lower the melting point and broaden the melting range.\n\nIt is important to recognise that a melting point measurement alone does not always prove identity or complete purity, but it provides useful evidence.\n\nNow, let us compare pure water with seawater.\n\nPure water contains only H two O molecules.\n\nSeawater contains water molecules together with dissolved salts and other substances.\n\nAs a result, seawater does not have exactly the same freezing and boiling behaviour as pure water.\n\nDissolved salts generally lower the freezing point and raise the boiling point of water.\n\nLet us try a short activity.\n\nI will name five materials. Decide whether each is a pure substance or a mixture.\n\nFirst, oxygen gas containing only O two molecules.\n\nThis is a pure substance because it contains only one element.\n\nSecond, air.\n\nAir is a mixture because it contains several different gases.\n\nThird, sodium chloride containing only sodium chloride.\n\nThis is a pure compound.\n\nFourth, seawater.\n\nThis is a mixture because it contains water and dissolved substances.\n\nFinally, brass.\n\nBrass is a mixture, more specifically an alloy, mainly containing copper and zinc.\n\nNow, let us practise a GCSE examination question.\n\nA pure substance melts at eighty degrees Celsius. A student's sample melts between seventy-four and seventy-nine degrees Celsius. Explain what this suggests about the sample. This question is worth three marks.\n\nA model answer would be:\n\nThe sample is likely to contain impurities because it melts over a range of temperatures rather than at a sharp melting point. The melting range is also below the melting point of the pure substance. Impurities commonly lower and broaden the melting range of a solid.\n\nNotice how the answer uses the data provided and links it directly to scientific knowledge.\n\nThat is an important examination technique.\n\nBefore we finish, remember that pure substances contain only one element or compound, whereas mixtures contain two or more substances that are not chemically bonded together.\n\nPure substances have characteristic melting and boiling points at a given pressure, while mixtures often melt or boil over a range.\n\nIf you found this explanation helpful, please subscribe to JD Science and visit j d science dot co dot u k for more GCSE Chemistry lessons, worked examples and examination practice.\n\nThank you for watching, and I will see you in the next lesson.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.43
+    },
+    {
+      "word": "and",
+      "start": 0.511,
+      "end": 0.604
+    },
+    {
+      "word": "welcome",
+      "start": 0.662,
+      "end": 0.998
+    },
+    {
+      "word": "back",
+      "start": 1.033,
+      "end": 1.242
+    },
+    {
+      "word": "to",
+      "start": 1.3,
+      "end": 1.521
+    },
+    {
+      "word": "J",
+      "start": 1.765,
+      "end": 1.974
+    },
+    {
+      "word": "D",
+      "start": 2.043,
+      "end": 2.113
+    },
+    {
+      "word": "Science.",
+      "start": 2.264,
+      "end": 2.972
+    },
+    {
+      "word": "In",
+      "start": 3.251,
+      "end": 3.402
+    },
+    {
+      "word": "today's",
+      "start": 3.448,
+      "end": 3.924
+    },
+    {
+      "word": "G",
+      "start": 4.04,
+      "end": 4.214
+    },
+    {
+      "word": "C",
+      "start": 4.331,
+      "end": 4.447
+    },
+    {
+      "word": "S",
+      "start": 4.656,
+      "end": 4.83
+    },
+    {
+      "word": "E",
+      "start": 4.957,
+      "end": 4.992
+    },
+    {
+      "word": "Chemistry",
+      "start": 5.074,
+      "end": 5.515
+    },
+    {
+      "word": "lesson,",
+      "start": 5.573,
+      "end": 6.095
+    },
+    {
+      "word": "we",
+      "start": 6.304,
+      "end": 6.467
+    },
+    {
+      "word": "are",
+      "start": 6.513,
+      "end": 6.618
+    },
+    {
+      "word": "going",
+      "start": 6.653,
+      "end": 6.873
+    },
+    {
+      "word": "to",
+      "start": 6.931,
+      "end": 7.001
+    },
+    {
+      "word": "explore",
+      "start": 7.082,
+      "end": 7.721
+    },
+    {
+      "word": "pure",
+      "start": 7.79,
+      "end": 8.104
+    },
+    {
+      "word": "substances",
+      "start": 8.162,
+      "end": 8.951
+    },
+    {
+      "word": "and",
+      "start": 9.033,
+      "end": 9.207
+    },
+    {
+      "word": "mixtures.",
+      "start": 9.3,
+      "end": 10.194
+    },
+    {
+      "word": "We",
+      "start": 10.472,
+      "end": 10.646
+    },
+    {
+      "word": "will",
+      "start": 10.704,
+      "end": 10.89
+    },
+    {
+      "word": "learn",
+      "start": 10.96,
+      "end": 11.32
+    },
+    {
+      "word": "how",
+      "start": 11.529,
+      "end": 11.726
+    },
+    {
+      "word": "to",
+      "start": 11.807,
+      "end": 11.889
+    },
+    {
+      "word": "distinguish",
+      "start": 11.97,
+      "end": 12.643
+    },
+    {
+      "word": "between",
+      "start": 12.701,
+      "end": 13.119
+    },
+    {
+      "word": "them,",
+      "start": 13.189,
+      "end": 13.572
+    },
+    {
+      "word": "explain",
+      "start": 13.781,
+      "end": 14.373
+    },
+    {
+      "word": "the",
+      "start": 14.42,
+      "end": 14.489
+    },
+    {
+      "word": "difference",
+      "start": 14.547,
+      "end": 15.058
+    },
+    {
+      "word": "between",
+      "start": 15.105,
+      "end": 15.488
+    },
+    {
+      "word": "melting",
+      "start": 15.546,
+      "end": 15.999
+    },
+    {
+      "word": "and",
+      "start": 16.091,
+      "end": 16.254
+    },
+    {
+      "word": "boiling",
+      "start": 16.335,
+      "end": 16.695
+    },
+    {
+      "word": "behaviour,",
+      "start": 16.742,
+      "end": 17.38
+    },
+    {
+      "word": "and",
+      "start": 17.624,
+      "end": 17.798
+    },
+    {
+      "word": "examine",
+      "start": 17.879,
+      "end": 18.472
+    },
+    {
+      "word": "how",
+      "start": 18.541,
+      "end": 18.739
+    },
+    {
+      "word": "scientists",
+      "start": 18.831,
+      "end": 19.633
+    },
+    {
+      "word": "use",
+      "start": 19.749,
+      "end": 20.039
+    },
+    {
+      "word": "melting",
+      "start": 20.109,
+      "end": 20.492
+    },
+    {
+      "word": "point",
+      "start": 20.561,
+      "end": 20.828
+    },
+    {
+      "word": "data",
+      "start": 20.886,
+      "end": 21.235
+    },
+    {
+      "word": "to",
+      "start": 21.293,
+      "end": 21.397
+    },
+    {
+      "word": "assess",
+      "start": 21.49,
+      "end": 21.838
+    },
+    {
+      "word": "purity.",
+      "start": 21.931,
+      "end": 22.64
+    },
+    {
+      "word": "Let",
+      "start": 22.814,
+      "end": 22.976
+    },
+    {
+      "word": "us",
+      "start": 23.034,
+      "end": 23.127
+    },
+    {
+      "word": "begin",
+      "start": 23.197,
+      "end": 23.557
+    },
+    {
+      "word": "with",
+      "start": 23.638,
+      "end": 23.847
+    },
+    {
+      "word": "an",
+      "start": 23.905,
+      "end": 23.986
+    },
+    {
+      "word": "important",
+      "start": 24.033,
+      "end": 24.544
+    },
+    {
+      "word": "question.",
+      "start": 24.602,
+      "end": 25.217
+    },
+    {
+      "word": "Is",
+      "start": 25.554,
+      "end": 25.763
+    },
+    {
+      "word": "bottled",
+      "start": 25.855,
+      "end": 26.331
+    },
+    {
+      "word": "mineral",
+      "start": 26.448,
+      "end": 26.935
+    },
+    {
+      "word": "water",
+      "start": 27.051,
+      "end": 27.516
+    },
+    {
+      "word": "a",
+      "start": 27.69,
+      "end": 27.783
+    },
+    {
+      "word": "pure",
+      "start": 27.899,
+      "end": 28.294
+    },
+    {
+      "word": "substance?",
+      "start": 28.386,
+      "end": 29.269
+    },
+    {
+      "word": "You",
+      "start": 29.443,
+      "end": 29.582
+    },
+    {
+      "word": "might",
+      "start": 29.652,
+      "end": 29.861
+    },
+    {
+      "word": "think",
+      "start": 29.919,
+      "end": 30.198
+    },
+    {
+      "word": "the",
+      "start": 30.267,
+      "end": 30.383
+    },
+    {
+      "word": "answer",
+      "start": 30.465,
+      "end": 30.79
+    },
+    {
+      "word": "is",
+      "start": 30.848,
+      "end": 30.941
+    },
+    {
+      "word": "yes",
+      "start": 31.034,
+      "end": 31.417
+    },
+    {
+      "word": "because",
+      "start": 31.695,
+      "end": 32.09
+    },
+    {
+      "word": "the",
+      "start": 32.125,
+      "end": 32.195
+    },
+    {
+      "word": "water",
+      "start": 32.253,
+      "end": 32.543
+    },
+    {
+      "word": "looks",
+      "start": 32.589,
+      "end": 32.833
+    },
+    {
+      "word": "clear",
+      "start": 32.903,
+      "end": 33.24
+    },
+    {
+      "word": "and",
+      "start": 33.356,
+      "end": 33.507
+    },
+    {
+      "word": "is",
+      "start": 33.576,
+      "end": 33.658
+    },
+    {
+      "word": "safe",
+      "start": 33.692,
+      "end": 33.971
+    },
+    {
+      "word": "to",
+      "start": 34.006,
+      "end": 34.076
+    },
+    {
+      "word": "drink.",
+      "start": 34.145,
+      "end": 34.54
+    },
+    {
+      "word": "However,",
+      "start": 34.935,
+      "end": 35.585
+    },
+    {
+      "word": "in",
+      "start": 35.736,
+      "end": 35.887
+    },
+    {
+      "word": "chemistry,",
+      "start": 35.98,
+      "end": 36.699
+    },
+    {
+      "word": "the",
+      "start": 36.757,
+      "end": 36.885
+    },
+    {
+      "word": "word",
+      "start": 36.955,
+      "end": 37.187
+    },
+    {
+      "word": "pure",
+      "start": 37.257,
+      "end": 37.57
+    },
+    {
+      "word": "has",
+      "start": 37.617,
+      "end": 37.756
+    },
+    {
+      "word": "a",
+      "start": 37.814,
+      "end": 37.849
+    },
+    {
+      "word": "very",
+      "start": 37.907,
+      "end": 38.116
+    },
+    {
+      "word": "specific",
+      "start": 38.162,
+      "end": 38.731
+    },
+    {
+      "word": "meaning.",
+      "start": 38.801,
+      "end": 39.265
+    },
+    {
+      "word": "A",
+      "start": 39.544,
+      "end": 39.637
+    },
+    {
+      "word": "pure",
+      "start": 39.753,
+      "end": 40.043
+    },
+    {
+      "word": "substance",
+      "start": 40.101,
+      "end": 40.635
+    },
+    {
+      "word": "contains",
+      "start": 40.67,
+      "end": 41.158
+    },
+    {
+      "word": "only",
+      "start": 41.239,
+      "end": 41.494
+    },
+    {
+      "word": "one",
+      "start": 41.587,
+      "end": 41.843
+    },
+    {
+      "word": "element",
+      "start": 41.912,
+      "end": 42.4
+    },
+    {
+      "word": "or",
+      "start": 42.528,
+      "end": 42.725
+    },
+    {
+      "word": "one",
+      "start": 42.818,
+      "end": 43.038
+    },
+    {
+      "word": "compound,",
+      "start": 43.097,
+      "end": 43.816
+    },
+    {
+      "word": "with",
+      "start": 44.06,
+      "end": 44.281
+    },
+    {
+      "word": "no",
+      "start": 44.362,
+      "end": 44.617
+    },
+    {
+      "word": "other",
+      "start": 44.734,
+      "end": 45.012
+    },
+    {
+      "word": "substances",
+      "start": 45.07,
+      "end": 45.813
+    },
+    {
+      "word": "mixed",
+      "start": 45.987,
+      "end": 46.289
+    },
+    {
+      "word": "with",
+      "start": 46.336,
+      "end": 46.51
+    },
+    {
+      "word": "it.",
+      "start": 46.568,
+      "end": 46.754
+    },
+    {
+      "word": "For",
+      "start": 46.997,
+      "end": 47.16
+    },
+    {
+      "word": "example,",
+      "start": 47.23,
+      "end": 47.926
+    },
+    {
+      "word": "a",
+      "start": 48.1,
+      "end": 48.182
+    },
+    {
+      "word": "sample",
+      "start": 48.309,
+      "end": 48.762
+    },
+    {
+      "word": "containing",
+      "start": 48.797,
+      "end": 49.343
+    },
+    {
+      "word": "only",
+      "start": 49.424,
+      "end": 49.679
+    },
+    {
+      "word": "copper",
+      "start": 49.749,
+      "end": 50.074
+    },
+    {
+      "word": "atoms",
+      "start": 50.144,
+      "end": 50.55
+    },
+    {
+      "word": "is",
+      "start": 50.631,
+      "end": 50.794
+    },
+    {
+      "word": "a",
+      "start": 50.852,
+      "end": 50.887
+    },
+    {
+      "word": "pure",
+      "start": 50.957,
+      "end": 51.235
+    },
+    {
+      "word": "element.",
+      "start": 51.305,
+      "end": 51.874
+    },
+    {
+      "word": "Similarly,",
+      "start": 52.21,
+      "end": 52.977
+    },
+    {
+      "word": "a",
+      "start": 53.012,
+      "end": 53.104
+    },
+    {
+      "word": "sample",
+      "start": 53.186,
+      "end": 53.604
+    },
+    {
+      "word": "containing",
+      "start": 53.638,
+      "end": 54.173
+    },
+    {
+      "word": "only",
+      "start": 54.265,
+      "end": 54.544
+    },
+    {
+      "word": "water",
+      "start": 54.614,
+      "end": 54.927
+    },
+    {
+      "word": "molecules",
+      "start": 54.985,
+      "end": 55.577
+    },
+    {
+      "word": "is",
+      "start": 55.751,
+      "end": 55.96
+    },
+    {
+      "word": "a",
+      "start": 56.03,
+      "end": 56.065
+    },
+    {
+      "word": "pure",
+      "start": 56.146,
+      "end": 56.436
+    },
+    {
+      "word": "compound.",
+      "start": 56.494,
+      "end": 57.145
+    },
+    {
+      "word": "Distilled",
+      "start": 57.76,
+      "end": 58.306
+    },
+    {
+      "word": "water",
+      "start": 58.364,
+      "end": 58.77
+    },
+    {
+      "word": "is",
+      "start": 58.898,
+      "end": 59.095
+    },
+    {
+      "word": "an",
+      "start": 59.153,
+      "end": 59.234
+    },
+    {
+      "word": "example",
+      "start": 59.292,
+      "end": 59.908
+    },
+    {
+      "word": "of",
+      "start": 59.966,
+      "end": 60.082
+    },
+    {
+      "word": "water",
+      "start": 60.198,
+      "end": 60.604
+    },
+    {
+      "word": "that",
+      "start": 60.674,
+      "end": 60.86
+    },
+    {
+      "word": "can",
+      "start": 60.93,
+      "end": 61.115
+    },
+    {
+      "word": "be",
+      "start": 61.185,
+      "end": 61.324
+    },
+    {
+      "word": "very",
+      "start": 61.44,
+      "end": 61.812
+    },
+    {
+      "word": "pure",
+      "start": 61.905,
+      "end": 62.369
+    },
+    {
+      "word": "because",
+      "start": 62.543,
+      "end": 62.984
+    },
+    {
+      "word": "most",
+      "start": 63.077,
+      "end": 63.402
+    },
+    {
+      "word": "dissolved",
+      "start": 63.472,
+      "end": 63.983
+    },
+    {
+      "word": "substances",
+      "start": 64.018,
+      "end": 64.738
+    },
+    {
+      "word": "have",
+      "start": 64.819,
+      "end": 65.028
+    },
+    {
+      "word": "been",
+      "start": 65.074,
+      "end": 65.26
+    },
+    {
+      "word": "removed.",
+      "start": 65.318,
+      "end": 65.945
+    },
+    {
+      "word": "A",
+      "start": 66.398,
+      "end": 66.491
+    },
+    {
+      "word": "mixture,",
+      "start": 66.607,
+      "end": 67.094
+    },
+    {
+      "word": "on",
+      "start": 67.129,
+      "end": 67.268
+    },
+    {
+      "word": "the",
+      "start": 67.303,
+      "end": 67.385
+    },
+    {
+      "word": "other",
+      "start": 67.454,
+      "end": 67.652
+    },
+    {
+      "word": "hand,",
+      "start": 67.71,
+      "end": 68.081
+    },
+    {
+      "word": "contains",
+      "start": 68.139,
+      "end": 68.754
+    },
+    {
+      "word": "two",
+      "start": 68.929,
+      "end": 69.219
+    },
+    {
+      "word": "or",
+      "start": 69.335,
+      "end": 69.509
+    },
+    {
+      "word": "more",
+      "start": 69.59,
+      "end": 69.823
+    },
+    {
+      "word": "substances",
+      "start": 69.869,
+      "end": 70.6
+    },
+    {
+      "word": "that",
+      "start": 70.67,
+      "end": 70.868
+    },
+    {
+      "word": "are",
+      "start": 70.926,
+      "end": 71.065
+    },
+    {
+      "word": "not",
+      "start": 71.111,
+      "end": 71.262
+    },
+    {
+      "word": "chemically",
+      "start": 71.32,
+      "end": 71.82
+    },
+    {
+      "word": "bonded",
+      "start": 71.901,
+      "end": 72.354
+    },
+    {
+      "word": "together.",
+      "start": 72.388,
+      "end": 73.004
+    },
+    {
+      "word": "The",
+      "start": 73.34,
+      "end": 73.491
+    },
+    {
+      "word": "substances",
+      "start": 73.561,
+      "end": 74.176
+    },
+    {
+      "word": "in",
+      "start": 74.258,
+      "end": 74.362
+    },
+    {
+      "word": "a",
+      "start": 74.432,
+      "end": 74.455
+    },
+    {
+      "word": "mixture",
+      "start": 74.536,
+      "end": 75.07
+    },
+    {
+      "word": "retain",
+      "start": 75.221,
+      "end": 75.744
+    },
+    {
+      "word": "their",
+      "start": 75.825,
+      "end": 76.057
+    },
+    {
+      "word": "own",
+      "start": 76.127,
+      "end": 76.359
+    },
+    {
+      "word": "chemical",
+      "start": 76.44,
+      "end": 76.986
+    },
+    {
+      "word": "identities",
+      "start": 77.079,
+      "end": 77.95
+    },
+    {
+      "word": "and",
+      "start": 78.124,
+      "end": 78.356
+    },
+    {
+      "word": "can",
+      "start": 78.437,
+      "end": 78.623
+    },
+    {
+      "word": "often",
+      "start": 78.704,
+      "end": 79.053
+    },
+    {
+      "word": "be",
+      "start": 79.122,
+      "end": 79.25
+    },
+    {
+      "word": "separated",
+      "start": 79.308,
+      "end": 80.109
+    },
+    {
+      "word": "using",
+      "start": 80.237,
+      "end": 80.585
+    },
+    {
+      "word": "physical",
+      "start": 80.643,
+      "end": 81.108
+    },
+    {
+      "word": "methods.",
+      "start": 81.189,
+      "end": 81.769
+    },
+    {
+      "word": "For",
+      "start": 81.92,
+      "end": 82.083
+    },
+    {
+      "word": "example,",
+      "start": 82.141,
+      "end": 82.803
+    },
+    {
+      "word": "air",
+      "start": 82.861,
+      "end": 83.162
+    },
+    {
+      "word": "is",
+      "start": 83.244,
+      "end": 83.36
+    },
+    {
+      "word": "a",
+      "start": 83.406,
+      "end": 83.441
+    },
+    {
+      "word": "mixture",
+      "start": 83.511,
+      "end": 83.882
+    },
+    {
+      "word": "of",
+      "start": 83.929,
+      "end": 83.999
+    },
+    {
+      "word": "gases,",
+      "start": 84.115,
+      "end": 84.753
+    },
+    {
+      "word": "including",
+      "start": 84.788,
+      "end": 85.403
+    },
+    {
+      "word": "nitrogen,",
+      "start": 85.496,
+      "end": 86.158
+    },
+    {
+      "word": "oxygen,",
+      "start": 86.216,
+      "end": 86.924
+    },
+    {
+      "word": "argon",
+      "start": 86.994,
+      "end": 87.4
+    },
+    {
+      "word": "and",
+      "start": 87.47,
+      "end": 87.586
+    },
+    {
+      "word": "carbon",
+      "start": 87.644,
+      "end": 87.969
+    },
+    {
+      "word": "dioxide.",
+      "start": 88.016,
+      "end": 88.747
+    },
+    {
+      "word": "Seawater",
+      "start": 89.084,
+      "end": 89.722
+    },
+    {
+      "word": "is",
+      "start": 89.792,
+      "end": 89.931
+    },
+    {
+      "word": "also",
+      "start": 90.001,
+      "end": 90.396
+    },
+    {
+      "word": "a",
+      "start": 90.477,
+      "end": 90.523
+    },
+    {
+      "word": "mixture",
+      "start": 90.616,
+      "end": 91.104
+    },
+    {
+      "word": "because",
+      "start": 91.162,
+      "end": 91.545
+    },
+    {
+      "word": "it",
+      "start": 91.591,
+      "end": 91.684
+    },
+    {
+      "word": "contains",
+      "start": 91.742,
+      "end": 92.265
+    },
+    {
+      "word": "water",
+      "start": 92.358,
+      "end": 92.787
+    },
+    {
+      "word": "and",
+      "start": 92.88,
+      "end": 93.101
+    },
+    {
+      "word": "dissolved",
+      "start": 93.217,
+      "end": 93.867
+    },
+    {
+      "word": "salts,",
+      "start": 93.983,
+      "end": 94.645
+    },
+    {
+      "word": "together",
+      "start": 94.889,
+      "end": 95.4
+    },
+    {
+      "word": "with",
+      "start": 95.458,
+      "end": 95.655
+    },
+    {
+      "word": "other",
+      "start": 95.736,
+      "end": 96.026
+    },
+    {
+      "word": "substances.",
+      "start": 96.085,
+      "end": 97.048
+    },
+    {
+      "word": "Now,",
+      "start": 97.443,
+      "end": 97.838
+    },
+    {
+      "word": "let",
+      "start": 97.907,
+      "end": 98.07
+    },
+    {
+      "word": "us",
+      "start": 98.128,
+      "end": 98.198
+    },
+    {
+      "word": "consider",
+      "start": 98.256,
+      "end": 98.766
+    },
+    {
+      "word": "an",
+      "start": 98.848,
+      "end": 98.975
+    },
+    {
+      "word": "important",
+      "start": 99.033,
+      "end": 99.544
+    },
+    {
+      "word": "difference",
+      "start": 99.591,
+      "end": 100.044
+    },
+    {
+      "word": "between",
+      "start": 100.09,
+      "end": 100.439
+    },
+    {
+      "word": "pure",
+      "start": 100.508,
+      "end": 100.857
+    },
+    {
+      "word": "substances",
+      "start": 100.915,
+      "end": 101.646
+    },
+    {
+      "word": "and",
+      "start": 101.727,
+      "end": 101.913
+    },
+    {
+      "word": "mixtures.",
+      "start": 102.006,
+      "end": 102.737
+    },
+    {
+      "word": "A",
+      "start": 102.911,
+      "end": 103.004
+    },
+    {
+      "word": "pure",
+      "start": 103.097,
+      "end": 103.411
+    },
+    {
+      "word": "substance",
+      "start": 103.446,
+      "end": 103.991
+    },
+    {
+      "word": "has",
+      "start": 104.038,
+      "end": 104.177
+    },
+    {
+      "word": "a",
+      "start": 104.235,
+      "end": 104.27
+    },
+    {
+      "word": "sharp,",
+      "start": 104.328,
+      "end": 104.711
+    },
+    {
+      "word": "characteristic",
+      "start": 104.746,
+      "end": 105.582
+    },
+    {
+      "word": "melting",
+      "start": 105.663,
+      "end": 106.081
+    },
+    {
+      "word": "point",
+      "start": 106.162,
+      "end": 106.569
+    },
+    {
+      "word": "and",
+      "start": 106.685,
+      "end": 106.87
+    },
+    {
+      "word": "boiling",
+      "start": 106.952,
+      "end": 107.37
+    },
+    {
+      "word": "point",
+      "start": 107.451,
+      "end": 107.857
+    },
+    {
+      "word": "at",
+      "start": 107.973,
+      "end": 108.171
+    },
+    {
+      "word": "a",
+      "start": 108.217,
+      "end": 108.252
+    },
+    {
+      "word": "given",
+      "start": 108.322,
+      "end": 108.624
+    },
+    {
+      "word": "pressure.",
+      "start": 108.693,
+      "end": 109.285
+    },
+    {
+      "word": "For",
+      "start": 109.68,
+      "end": 109.889
+    },
+    {
+      "word": "example,",
+      "start": 109.97,
+      "end": 110.702
+    },
+    {
+      "word": "pure",
+      "start": 110.946,
+      "end": 111.306
+    },
+    {
+      "word": "water",
+      "start": 111.364,
+      "end": 111.77
+    },
+    {
+      "word": "melts",
+      "start": 111.863,
+      "end": 112.258
+    },
+    {
+      "word": "at",
+      "start": 112.374,
+      "end": 112.559
+    },
+    {
+      "word": "zero",
+      "start": 112.617,
+      "end": 113.093
+    },
+    {
+      "word": "degrees",
+      "start": 113.175,
+      "end": 113.581
+    },
+    {
+      "word": "Celsius",
+      "start": 113.627,
+      "end": 114.243
+    },
+    {
+      "word": "and",
+      "start": 114.359,
+      "end": 114.545
+    },
+    {
+      "word": "boils",
+      "start": 114.626,
+      "end": 115.09
+    },
+    {
+      "word": "at",
+      "start": 115.16,
+      "end": 115.323
+    },
+    {
+      "word": "one",
+      "start": 115.439,
+      "end": 115.682
+    },
+    {
+      "word": "hundred",
+      "start": 115.729,
+      "end": 116.054
+    },
+    {
+      "word": "degrees",
+      "start": 116.1,
+      "end": 116.483
+    },
+    {
+      "word": "Celsius",
+      "start": 116.53,
+      "end": 117.087
+    },
+    {
+      "word": "at",
+      "start": 117.261,
+      "end": 117.458
+    },
+    {
+      "word": "normal",
+      "start": 117.575,
+      "end": 118.039
+    },
+    {
+      "word": "atmospheric",
+      "start": 118.132,
+      "end": 118.956
+    },
+    {
+      "word": "pressure.",
+      "start": 119.037,
+      "end": 119.595
+    },
+    {
+      "word": "These",
+      "start": 119.769,
+      "end": 120.001
+    },
+    {
+      "word": "temperatures",
+      "start": 120.047,
+      "end": 120.628
+    },
+    {
+      "word": "can",
+      "start": 120.686,
+      "end": 120.837
+    },
+    {
+      "word": "be",
+      "start": 120.895,
+      "end": 120.988
+    },
+    {
+      "word": "used",
+      "start": 121.058,
+      "end": 121.301
+    },
+    {
+      "word": "to",
+      "start": 121.336,
+      "end": 121.429
+    },
+    {
+      "word": "help",
+      "start": 121.522,
+      "end": 121.777
+    },
+    {
+      "word": "identify",
+      "start": 121.859,
+      "end": 122.532
+    },
+    {
+      "word": "the",
+      "start": 122.602,
+      "end": 122.683
+    },
+    {
+      "word": "substance.",
+      "start": 122.753,
+      "end": 123.53
+    },
+    {
+      "word": "Mixtures,",
+      "start": 123.809,
+      "end": 124.436
+    },
+    {
+      "word": "however,",
+      "start": 124.471,
+      "end": 125.086
+    },
+    {
+      "word": "often",
+      "start": 125.237,
+      "end": 125.643
+    },
+    {
+      "word": "melt",
+      "start": 125.76,
+      "end": 126.143
+    },
+    {
+      "word": "or",
+      "start": 126.259,
+      "end": 126.421
+    },
+    {
+      "word": "boil",
+      "start": 126.537,
+      "end": 127.013
+    },
+    {
+      "word": "over",
+      "start": 127.188,
+      "end": 127.513
+    },
+    {
+      "word": "a",
+      "start": 127.594,
+      "end": 127.629
+    },
+    {
+      "word": "range",
+      "start": 127.745,
+      "end": 128.116
+    },
+    {
+      "word": "of",
+      "start": 128.163,
+      "end": 128.267
+    },
+    {
+      "word": "temperatures.",
+      "start": 128.349,
+      "end": 129.219
+    },
+    {
+      "word": "This",
+      "start": 129.556,
+      "end": 129.788
+    },
+    {
+      "word": "is",
+      "start": 129.846,
+      "end": 129.951
+    },
+    {
+      "word": "because",
+      "start": 130.02,
+      "end": 130.473
+    },
+    {
+      "word": "the",
+      "start": 130.508,
+      "end": 130.578
+    },
+    {
+      "word": "different",
+      "start": 130.636,
+      "end": 131.031
+    },
+    {
+      "word": "substances",
+      "start": 131.077,
+      "end": 131.762
+    },
+    {
+      "word": "present",
+      "start": 131.832,
+      "end": 132.4
+    },
+    {
+      "word": "affect",
+      "start": 132.517,
+      "end": 132.946
+    },
+    {
+      "word": "the",
+      "start": 132.981,
+      "end": 133.051
+    },
+    {
+      "word": "melting",
+      "start": 133.132,
+      "end": 133.538
+    },
+    {
+      "word": "and",
+      "start": 133.619,
+      "end": 133.759
+    },
+    {
+      "word": "boiling",
+      "start": 133.84,
+      "end": 134.246
+    },
+    {
+      "word": "behaviour.",
+      "start": 134.316,
+      "end": 135.198
+    },
+    {
+      "word": "Let",
+      "start": 135.593,
+      "end": 135.767
+    },
+    {
+      "word": "us",
+      "start": 135.837,
+      "end": 135.941
+    },
+    {
+      "word": "consider",
+      "start": 135.999,
+      "end": 136.475
+    },
+    {
+      "word": "an",
+      "start": 136.545,
+      "end": 136.615
+    },
+    {
+      "word": "example",
+      "start": 136.673,
+      "end": 137.184
+    },
+    {
+      "word": "involving",
+      "start": 137.23,
+      "end": 137.718
+    },
+    {
+      "word": "ice.",
+      "start": 137.834,
+      "end": 138.426
+    },
+    {
+      "word": "Pure",
+      "start": 138.879,
+      "end": 139.215
+    },
+    {
+      "word": "ice",
+      "start": 139.273,
+      "end": 139.587
+    },
+    {
+      "word": "melts",
+      "start": 139.68,
+      "end": 140.051
+    },
+    {
+      "word": "at",
+      "start": 140.144,
+      "end": 140.307
+    },
+    {
+      "word": "approximately",
+      "start": 140.365,
+      "end": 141.108
+    },
+    {
+      "word": "zero",
+      "start": 141.178,
+      "end": 141.526
+    },
+    {
+      "word": "degrees",
+      "start": 141.595,
+      "end": 141.979
+    },
+    {
+      "word": "Celsius",
+      "start": 142.06,
+      "end": 142.78
+    },
+    {
+      "word": "under",
+      "start": 142.989,
+      "end": 143.325
+    },
+    {
+      "word": "normal",
+      "start": 143.418,
+      "end": 143.894
+    },
+    {
+      "word": "atmospheric",
+      "start": 144.01,
+      "end": 144.835
+    },
+    {
+      "word": "pressure.",
+      "start": 144.951,
+      "end": 145.647
+    },
+    {
+      "word": "However,",
+      "start": 146.1,
+      "end": 146.797
+    },
+    {
+      "word": "if",
+      "start": 146.971,
+      "end": 147.145
+    },
+    {
+      "word": "impurities",
+      "start": 147.226,
+      "end": 147.911
+    },
+    {
+      "word": "are",
+      "start": 147.958,
+      "end": 148.062
+    },
+    {
+      "word": "dissolved",
+      "start": 148.097,
+      "end": 148.631
+    },
+    {
+      "word": "in",
+      "start": 148.678,
+      "end": 148.747
+    },
+    {
+      "word": "the",
+      "start": 148.794,
+      "end": 148.863
+    },
+    {
+      "word": "water,",
+      "start": 148.91,
+      "end": 149.502
+    },
+    {
+      "word": "they",
+      "start": 149.711,
+      "end": 149.873
+    },
+    {
+      "word": "can",
+      "start": 149.908,
+      "end": 150.048
+    },
+    {
+      "word": "lower",
+      "start": 150.129,
+      "end": 150.42
+    },
+    {
+      "word": "its",
+      "start": 150.501,
+      "end": 150.64
+    },
+    {
+      "word": "freezing",
+      "start": 150.721,
+      "end": 151.151
+    },
+    {
+      "word": "point.",
+      "start": 151.232,
+      "end": 151.824
+    },
+    {
+      "word": "This",
+      "start": 152.219,
+      "end": 152.428
+    },
+    {
+      "word": "is",
+      "start": 152.498,
+      "end": 152.602
+    },
+    {
+      "word": "why",
+      "start": 152.695,
+      "end": 152.974
+    },
+    {
+      "word": "salt",
+      "start": 153.09,
+      "end": 153.45
+    },
+    {
+      "word": "is",
+      "start": 153.519,
+      "end": 153.635
+    },
+    {
+      "word": "spread",
+      "start": 153.67,
+      "end": 154.065
+    },
+    {
+      "word": "on",
+      "start": 154.135,
+      "end": 154.251
+    },
+    {
+      "word": "icy",
+      "start": 154.367,
+      "end": 154.669
+    },
+    {
+      "word": "roads",
+      "start": 154.738,
+      "end": 154.994
+    },
+    {
+      "word": "during",
+      "start": 155.052,
+      "end": 155.342
+    },
+    {
+      "word": "winter.",
+      "start": 155.423,
+      "end": 155.957
+    },
+    {
+      "word": "When",
+      "start": 156.074,
+      "end": 156.306
+    },
+    {
+      "word": "salt",
+      "start": 156.399,
+      "end": 156.724
+    },
+    {
+      "word": "dissolves",
+      "start": 156.782,
+      "end": 157.386
+    },
+    {
+      "word": "in",
+      "start": 157.444,
+      "end": 157.525
+    },
+    {
+      "word": "the",
+      "start": 157.583,
+      "end": 157.653
+    },
+    {
+      "word": "water",
+      "start": 157.722,
+      "end": 158.105
+    },
+    {
+      "word": "present",
+      "start": 158.198,
+      "end": 158.628
+    },
+    {
+      "word": "on",
+      "start": 158.686,
+      "end": 158.779
+    },
+    {
+      "word": "the",
+      "start": 158.825,
+      "end": 158.918
+    },
+    {
+      "word": "ice,",
+      "start": 159.034,
+      "end": 159.533
+    },
+    {
+      "word": "it",
+      "start": 159.707,
+      "end": 159.87
+    },
+    {
+      "word": "lowers",
+      "start": 159.986,
+      "end": 160.485
+    },
+    {
+      "word": "the",
+      "start": 160.555,
+      "end": 160.636
+    },
+    {
+      "word": "freezing",
+      "start": 160.718,
+      "end": 161.136
+    },
+    {
+      "word": "point,",
+      "start": 161.228,
+      "end": 161.704
+    },
+    {
+      "word": "helping",
+      "start": 161.913,
+      "end": 162.32
+    },
+    {
+      "word": "to",
+      "start": 162.389,
+      "end": 162.459
+    },
+    {
+      "word": "prevent",
+      "start": 162.552,
+      "end": 162.993
+    },
+    {
+      "word": "the",
+      "start": 163.051,
+      "end": 163.121
+    },
+    {
+      "word": "water",
+      "start": 163.179,
+      "end": 163.516
+    },
+    {
+      "word": "from",
+      "start": 163.585,
+      "end": 163.794
+    },
+    {
+      "word": "refreezing",
+      "start": 163.875,
+      "end": 164.572
+    },
+    {
+      "word": "at",
+      "start": 164.642,
+      "end": 164.735
+    },
+    {
+      "word": "zero",
+      "start": 164.804,
+      "end": 165.199
+    },
+    {
+      "word": "degrees",
+      "start": 165.269,
+      "end": 165.675
+    },
+    {
+      "word": "Celsius.",
+      "start": 165.722,
+      "end": 166.465
+    },
+    {
+      "word": "Now,",
+      "start": 166.987,
+      "end": 167.347
+    },
+    {
+      "word": "let",
+      "start": 167.428,
+      "end": 167.602
+    },
+    {
+      "word": "us",
+      "start": 167.672,
+      "end": 167.765
+    },
+    {
+      "word": "consider",
+      "start": 167.835,
+      "end": 168.38
+    },
+    {
+      "word": "how",
+      "start": 168.462,
+      "end": 168.647
+    },
+    {
+      "word": "scientists",
+      "start": 168.74,
+      "end": 169.39
+    },
+    {
+      "word": "use",
+      "start": 169.472,
+      "end": 169.774
+    },
+    {
+      "word": "melting",
+      "start": 169.855,
+      "end": 170.226
+    },
+    {
+      "word": "points",
+      "start": 170.284,
+      "end": 170.598
+    },
+    {
+      "word": "to",
+      "start": 170.644,
+      "end": 170.726
+    },
+    {
+      "word": "test",
+      "start": 170.807,
+      "end": 171.051
+    },
+    {
+      "word": "purity.",
+      "start": 171.144,
+      "end": 171.817
+    },
+    {
+      "word": "Suppose",
+      "start": 172.061,
+      "end": 172.537
+    },
+    {
+      "word": "a",
+      "start": 172.572,
+      "end": 172.606
+    },
+    {
+      "word": "scientist",
+      "start": 172.676,
+      "end": 173.245
+    },
+    {
+      "word": "has",
+      "start": 173.291,
+      "end": 173.431
+    },
+    {
+      "word": "a",
+      "start": 173.5,
+      "end": 173.535
+    },
+    {
+      "word": "sample",
+      "start": 173.605,
+      "end": 174.081
+    },
+    {
+      "word": "of",
+      "start": 174.139,
+      "end": 174.255
+    },
+    {
+      "word": "a",
+      "start": 174.325,
+      "end": 174.348
+    },
+    {
+      "word": "solid",
+      "start": 174.418,
+      "end": 174.928
+    },
+    {
+      "word": "that",
+      "start": 175.137,
+      "end": 175.346
+    },
+    {
+      "word": "is",
+      "start": 175.416,
+      "end": 175.52
+    },
+    {
+      "word": "believed",
+      "start": 175.602,
+      "end": 176.066
+    },
+    {
+      "word": "to",
+      "start": 176.113,
+      "end": 176.182
+    },
+    {
+      "word": "be",
+      "start": 176.275,
+      "end": 176.472
+    },
+    {
+      "word": "a",
+      "start": 176.542,
+      "end": 176.612
+    },
+    {
+      "word": "particular",
+      "start": 176.728,
+      "end": 177.413
+    },
+    {
+      "word": "chemical",
+      "start": 177.506,
+      "end": 177.993
+    },
+    {
+      "word": "compound.",
+      "start": 178.063,
+      "end": 178.76
+    },
+    {
+      "word": "The",
+      "start": 179.096,
+      "end": 179.224
+    },
+    {
+      "word": "pure",
+      "start": 179.294,
+      "end": 179.561
+    },
+    {
+      "word": "compound",
+      "start": 179.607,
+      "end": 180.257
+    },
+    {
+      "word": "has",
+      "start": 180.501,
+      "end": 180.71
+    },
+    {
+      "word": "a",
+      "start": 180.78,
+      "end": 180.815
+    },
+    {
+      "word": "known",
+      "start": 180.931,
+      "end": 181.256
+    },
+    {
+      "word": "melting",
+      "start": 181.314,
+      "end": 181.662
+    },
+    {
+      "word": "point",
+      "start": 181.732,
+      "end": 182.045
+    },
+    {
+      "word": "of",
+      "start": 182.115,
+      "end": 182.196
+    },
+    {
+      "word": "eighty",
+      "start": 182.313,
+      "end": 182.603
+    },
+    {
+      "word": "degrees",
+      "start": 182.661,
+      "end": 183.067
+    },
+    {
+      "word": "Celsius.",
+      "start": 183.125,
+      "end": 183.938
+    },
+    {
+      "word": "If",
+      "start": 184.275,
+      "end": 184.437
+    },
+    {
+      "word": "the",
+      "start": 184.495,
+      "end": 184.588
+    },
+    {
+      "word": "sample",
+      "start": 184.658,
+      "end": 185.111
+    },
+    {
+      "word": "melts",
+      "start": 185.157,
+      "end": 185.459
+    },
+    {
+      "word": "sharply",
+      "start": 185.517,
+      "end": 186.074
+    },
+    {
+      "word": "at",
+      "start": 186.132,
+      "end": 186.295
+    },
+    {
+      "word": "approximately",
+      "start": 186.353,
+      "end": 187.073
+    },
+    {
+      "word": "eighty",
+      "start": 187.142,
+      "end": 187.409
+    },
+    {
+      "word": "degrees",
+      "start": 187.467,
+      "end": 187.816
+    },
+    {
+      "word": "Celsius,",
+      "start": 187.874,
+      "end": 188.663
+    },
+    {
+      "word": "this",
+      "start": 188.942,
+      "end": 189.186
+    },
+    {
+      "word": "supports",
+      "start": 189.232,
+      "end": 189.673
+    },
+    {
+      "word": "the",
+      "start": 189.72,
+      "end": 189.801
+    },
+    {
+      "word": "conclusion",
+      "start": 189.859,
+      "end": 190.498
+    },
+    {
+      "word": "that",
+      "start": 190.567,
+      "end": 190.776
+    },
+    {
+      "word": "it",
+      "start": 190.846,
+      "end": 190.974
+    },
+    {
+      "word": "may",
+      "start": 191.055,
+      "end": 191.264
+    },
+    {
+      "word": "be",
+      "start": 191.345,
+      "end": 191.508
+    },
+    {
+      "word": "pure.",
+      "start": 191.589,
+      "end": 192.193
+    },
+    {
+      "word": "However,",
+      "start": 192.587,
+      "end": 193.319
+    },
+    {
+      "word": "if",
+      "start": 193.563,
+      "end": 193.748
+    },
+    {
+      "word": "the",
+      "start": 193.806,
+      "end": 193.899
+    },
+    {
+      "word": "sample",
+      "start": 193.981,
+      "end": 194.433
+    },
+    {
+      "word": "begins",
+      "start": 194.491,
+      "end": 194.909
+    },
+    {
+      "word": "melting",
+      "start": 195.025,
+      "end": 195.56
+    },
+    {
+      "word": "at",
+      "start": 195.734,
+      "end": 195.954
+    },
+    {
+      "word": "seventy-four",
+      "start": 196.036,
+      "end": 196.674
+    },
+    {
+      "word": "degrees",
+      "start": 196.732,
+      "end": 197.104
+    },
+    {
+      "word": "Celsius",
+      "start": 197.15,
+      "end": 197.765
+    },
+    {
+      "word": "and",
+      "start": 198.16,
+      "end": 198.381
+    },
+    {
+      "word": "finishes",
+      "start": 198.474,
+      "end": 198.972
+    },
+    {
+      "word": "melting",
+      "start": 199.065,
+      "end": 199.472
+    },
+    {
+      "word": "at",
+      "start": 199.53,
+      "end": 199.646
+    },
+    {
+      "word": "seventy-nine",
+      "start": 199.704,
+      "end": 200.412
+    },
+    {
+      "word": "degrees",
+      "start": 200.447,
+      "end": 200.807
+    },
+    {
+      "word": "Celsius,",
+      "start": 200.876,
+      "end": 201.666
+    },
+    {
+      "word": "this",
+      "start": 201.782,
+      "end": 201.979
+    },
+    {
+      "word": "suggests",
+      "start": 202.026,
+      "end": 202.49
+    },
+    {
+      "word": "that",
+      "start": 202.548,
+      "end": 202.722
+    },
+    {
+      "word": "impurities",
+      "start": 202.781,
+      "end": 203.419
+    },
+    {
+      "word": "may",
+      "start": 203.5,
+      "end": 203.674
+    },
+    {
+      "word": "be",
+      "start": 203.744,
+      "end": 203.849
+    },
+    {
+      "word": "present.",
+      "start": 203.918,
+      "end": 204.522
+    },
+    {
+      "word": "For",
+      "start": 204.975,
+      "end": 205.172
+    },
+    {
+      "word": "many",
+      "start": 205.242,
+      "end": 205.486
+    },
+    {
+      "word": "solids,",
+      "start": 205.579,
+      "end": 206.101
+    },
+    {
+      "word": "impurities",
+      "start": 206.252,
+      "end": 206.96
+    },
+    {
+      "word": "lower",
+      "start": 207.076,
+      "end": 207.378
+    },
+    {
+      "word": "the",
+      "start": 207.436,
+      "end": 207.517
+    },
+    {
+      "word": "melting",
+      "start": 207.599,
+      "end": 207.993
+    },
+    {
+      "word": "point",
+      "start": 208.075,
+      "end": 208.481
+    },
+    {
+      "word": "and",
+      "start": 208.725,
+      "end": 208.969
+    },
+    {
+      "word": "broaden",
+      "start": 209.05,
+      "end": 209.549
+    },
+    {
+      "word": "the",
+      "start": 209.63,
+      "end": 209.735
+    },
+    {
+      "word": "melting",
+      "start": 209.851,
+      "end": 210.269
+    },
+    {
+      "word": "range.",
+      "start": 210.35,
+      "end": 210.826
+    },
+    {
+      "word": "It",
+      "start": 211.349,
+      "end": 211.546
+    },
+    {
+      "word": "is",
+      "start": 211.616,
+      "end": 211.743
+    },
+    {
+      "word": "important",
+      "start": 211.813,
+      "end": 212.37
+    },
+    {
+      "word": "to",
+      "start": 212.405,
+      "end": 212.475
+    },
+    {
+      "word": "recognise",
+      "start": 212.568,
+      "end": 213.206
+    },
+    {
+      "word": "that",
+      "start": 213.253,
+      "end": 213.45
+    },
+    {
+      "word": "a",
+      "start": 213.52,
+      "end": 213.578
+    },
+    {
+      "word": "melting",
+      "start": 213.694,
+      "end": 214.054
+    },
+    {
+      "word": "point",
+      "start": 214.123,
+      "end": 214.402
+    },
+    {
+      "word": "measurement",
+      "start": 214.484,
+      "end": 214.971
+    },
+    {
+      "word": "alone",
+      "start": 215.029,
+      "end": 215.424
+    },
+    {
+      "word": "does",
+      "start": 215.471,
+      "end": 215.68
+    },
+    {
+      "word": "not",
+      "start": 215.738,
+      "end": 215.923
+    },
+    {
+      "word": "always",
+      "start": 215.981,
+      "end": 216.365
+    },
+    {
+      "word": "prove",
+      "start": 216.434,
+      "end": 216.736
+    },
+    {
+      "word": "identity",
+      "start": 216.794,
+      "end": 217.491
+    },
+    {
+      "word": "or",
+      "start": 217.642,
+      "end": 217.793
+    },
+    {
+      "word": "complete",
+      "start": 217.851,
+      "end": 218.245
+    },
+    {
+      "word": "purity,",
+      "start": 218.28,
+      "end": 218.93
+    },
+    {
+      "word": "but",
+      "start": 219.0,
+      "end": 219.197
+    },
+    {
+      "word": "it",
+      "start": 219.267,
+      "end": 219.383
+    },
+    {
+      "word": "provides",
+      "start": 219.453,
+      "end": 220.01
+    },
+    {
+      "word": "useful",
+      "start": 220.161,
+      "end": 220.614
+    },
+    {
+      "word": "evidence.",
+      "start": 220.707,
+      "end": 221.334
+    },
+    {
+      "word": "Now,",
+      "start": 221.543,
+      "end": 221.891
+    },
+    {
+      "word": "let",
+      "start": 222.007,
+      "end": 222.193
+    },
+    {
+      "word": "us",
+      "start": 222.262,
+      "end": 222.355
+    },
+    {
+      "word": "compare",
+      "start": 222.425,
+      "end": 222.936
+    },
+    {
+      "word": "pure",
+      "start": 223.017,
+      "end": 223.365
+    },
+    {
+      "word": "water",
+      "start": 223.435,
+      "end": 223.934
+    },
+    {
+      "word": "with",
+      "start": 224.108,
+      "end": 224.352
+    },
+    {
+      "word": "seawater.",
+      "start": 224.468,
+      "end": 225.327
+    },
+    {
+      "word": "Pure",
+      "start": 225.571,
+      "end": 225.885
+    },
+    {
+      "word": "water",
+      "start": 225.931,
+      "end": 226.256
+    },
+    {
+      "word": "contains",
+      "start": 226.326,
+      "end": 226.837
+    },
+    {
+      "word": "only",
+      "start": 226.918,
+      "end": 227.301
+    },
+    {
+      "word": "H",
+      "start": 227.475,
+      "end": 227.812
+    },
+    {
+      "word": "two",
+      "start": 227.986,
+      "end": 228.3
+    },
+    {
+      "word": "O",
+      "start": 228.509,
+      "end": 228.718
+    },
+    {
+      "word": "molecules.",
+      "start": 228.892,
+      "end": 229.553
+    },
+    {
+      "word": "Seawater",
+      "start": 229.832,
+      "end": 230.552
+    },
+    {
+      "word": "contains",
+      "start": 230.622,
+      "end": 231.098
+    },
+    {
+      "word": "water",
+      "start": 231.156,
+      "end": 231.457
+    },
+    {
+      "word": "molecules",
+      "start": 231.516,
+      "end": 232.038
+    },
+    {
+      "word": "together",
+      "start": 232.084,
+      "end": 232.514
+    },
+    {
+      "word": "with",
+      "start": 232.583,
+      "end": 232.769
+    },
+    {
+      "word": "dissolved",
+      "start": 232.827,
+      "end": 233.361
+    },
+    {
+      "word": "salts",
+      "start": 233.443,
+      "end": 233.895
+    },
+    {
+      "word": "and",
+      "start": 233.965,
+      "end": 234.162
+    },
+    {
+      "word": "other",
+      "start": 234.29,
+      "end": 234.58
+    },
+    {
+      "word": "substances.",
+      "start": 234.638,
+      "end": 235.544
+    },
+    {
+      "word": "As",
+      "start": 235.695,
+      "end": 235.892
+    },
+    {
+      "word": "a",
+      "start": 235.962,
+      "end": 235.997
+    },
+    {
+      "word": "result,",
+      "start": 236.066,
+      "end": 236.577
+    },
+    {
+      "word": "seawater",
+      "start": 236.693,
+      "end": 237.286
+    },
+    {
+      "word": "does",
+      "start": 237.355,
+      "end": 237.576
+    },
+    {
+      "word": "not",
+      "start": 237.634,
+      "end": 237.773
+    },
+    {
+      "word": "have",
+      "start": 237.843,
+      "end": 238.098
+    },
+    {
+      "word": "exactly",
+      "start": 238.156,
+      "end": 238.772
+    },
+    {
+      "word": "the",
+      "start": 238.853,
+      "end": 238.934
+    },
+    {
+      "word": "same",
+      "start": 238.992,
+      "end": 239.259
+    },
+    {
+      "word": "freezing",
+      "start": 239.329,
+      "end": 239.851
+    },
+    {
+      "word": "and",
+      "start": 239.944,
+      "end": 240.107
+    },
+    {
+      "word": "boiling",
+      "start": 240.176,
+      "end": 240.629
+    },
+    {
+      "word": "behaviour",
+      "start": 240.687,
+      "end": 241.314
+    },
+    {
+      "word": "as",
+      "start": 241.465,
+      "end": 241.721
+    },
+    {
+      "word": "pure",
+      "start": 241.871,
+      "end": 242.243
+    },
+    {
+      "word": "water.",
+      "start": 242.313,
+      "end": 242.893
+    },
+    {
+      "word": "Dissolved",
+      "start": 243.23,
+      "end": 243.799
+    },
+    {
+      "word": "salts",
+      "start": 243.868,
+      "end": 244.275
+    },
+    {
+      "word": "generally",
+      "start": 244.426,
+      "end": 244.971
+    },
+    {
+      "word": "lower",
+      "start": 245.053,
+      "end": 245.436
+    },
+    {
+      "word": "the",
+      "start": 245.529,
+      "end": 245.598
+    },
+    {
+      "word": "freezing",
+      "start": 245.656,
+      "end": 246.039
+    },
+    {
+      "word": "point",
+      "start": 246.132,
+      "end": 246.481
+    },
+    {
+      "word": "and",
+      "start": 246.597,
+      "end": 246.852
+    },
+    {
+      "word": "raise",
+      "start": 246.968,
+      "end": 247.247
+    },
+    {
+      "word": "the",
+      "start": 247.282,
+      "end": 247.363
+    },
+    {
+      "word": "boiling",
+      "start": 247.433,
+      "end": 247.828
+    },
+    {
+      "word": "point",
+      "start": 247.897,
+      "end": 248.165
+    },
+    {
+      "word": "of",
+      "start": 248.234,
+      "end": 248.315
+    },
+    {
+      "word": "water.",
+      "start": 248.397,
+      "end": 248.896
+    },
+    {
+      "word": "Let",
+      "start": 249.07,
+      "end": 249.267
+    },
+    {
+      "word": "us",
+      "start": 249.337,
+      "end": 249.442
+    },
+    {
+      "word": "try",
+      "start": 249.488,
+      "end": 249.778
+    },
+    {
+      "word": "a",
+      "start": 249.86,
+      "end": 249.906
+    },
+    {
+      "word": "short",
+      "start": 250.022,
+      "end": 250.405
+    },
+    {
+      "word": "activity.",
+      "start": 250.498,
+      "end": 251.334
+    },
+    {
+      "word": "I",
+      "start": 251.415,
+      "end": 251.497
+    },
+    {
+      "word": "will",
+      "start": 251.578,
+      "end": 251.74
+    },
+    {
+      "word": "name",
+      "start": 251.787,
+      "end": 251.996
+    },
+    {
+      "word": "five",
+      "start": 252.042,
+      "end": 252.274
+    },
+    {
+      "word": "materials.",
+      "start": 252.309,
+      "end": 253.11
+    },
+    {
+      "word": "Decide",
+      "start": 253.354,
+      "end": 253.877
+    },
+    {
+      "word": "whether",
+      "start": 253.911,
+      "end": 254.225
+    },
+    {
+      "word": "each",
+      "start": 254.318,
+      "end": 254.585
+    },
+    {
+      "word": "is",
+      "start": 254.701,
+      "end": 254.91
+    },
+    {
+      "word": "a",
+      "start": 254.98,
+      "end": 255.014
+    },
+    {
+      "word": "pure",
+      "start": 255.084,
+      "end": 255.316
+    },
+    {
+      "word": "substance",
+      "start": 255.351,
+      "end": 255.932
+    },
+    {
+      "word": "or",
+      "start": 256.001,
+      "end": 256.199
+    },
+    {
+      "word": "a",
+      "start": 256.268,
+      "end": 256.292
+    },
+    {
+      "word": "mixture.",
+      "start": 256.35,
+      "end": 256.895
+    },
+    {
+      "word": "First,",
+      "start": 257.232,
+      "end": 257.824
+    },
+    {
+      "word": "oxygen",
+      "start": 257.94,
+      "end": 258.532
+    },
+    {
+      "word": "gas",
+      "start": 258.602,
+      "end": 259.008
+    },
+    {
+      "word": "containing",
+      "start": 259.217,
+      "end": 259.879
+    },
+    {
+      "word": "only",
+      "start": 260.007,
+      "end": 260.448
+    },
+    {
+      "word": "O",
+      "start": 260.599,
+      "end": 260.773
+    },
+    {
+      "word": "two",
+      "start": 260.854,
+      "end": 261.075
+    },
+    {
+      "word": "molecules.",
+      "start": 261.168,
+      "end": 262.015
+    },
+    {
+      "word": "This",
+      "start": 262.352,
+      "end": 262.619
+    },
+    {
+      "word": "is",
+      "start": 262.7,
+      "end": 262.84
+    },
+    {
+      "word": "a",
+      "start": 262.898,
+      "end": 262.932
+    },
+    {
+      "word": "pure",
+      "start": 262.99,
+      "end": 263.211
+    },
+    {
+      "word": "substance",
+      "start": 263.246,
+      "end": 263.768
+    },
+    {
+      "word": "because",
+      "start": 263.826,
+      "end": 264.163
+    },
+    {
+      "word": "it",
+      "start": 264.21,
+      "end": 264.291
+    },
+    {
+      "word": "contains",
+      "start": 264.337,
+      "end": 264.813
+    },
+    {
+      "word": "only",
+      "start": 264.894,
+      "end": 265.138
+    },
+    {
+      "word": "one",
+      "start": 265.208,
+      "end": 265.382
+    },
+    {
+      "word": "element.",
+      "start": 265.417,
+      "end": 265.94
+    },
+    {
+      "word": "Second,",
+      "start": 266.334,
+      "end": 266.903
+    },
+    {
+      "word": "air.",
+      "start": 266.973,
+      "end": 267.518
+    },
+    {
+      "word": "Air",
+      "start": 267.669,
+      "end": 268.018
+    },
+    {
+      "word": "is",
+      "start": 268.134,
+      "end": 268.296
+    },
+    {
+      "word": "a",
+      "start": 268.366,
+      "end": 268.401
+    },
+    {
+      "word": "mixture",
+      "start": 268.482,
+      "end": 268.865
+    },
+    {
+      "word": "because",
+      "start": 268.912,
+      "end": 269.19
+    },
+    {
+      "word": "it",
+      "start": 269.225,
+      "end": 269.283
+    },
+    {
+      "word": "contains",
+      "start": 269.33,
+      "end": 269.736
+    },
+    {
+      "word": "several",
+      "start": 269.782,
+      "end": 270.096
+    },
+    {
+      "word": "different",
+      "start": 270.154,
+      "end": 270.479
+    },
+    {
+      "word": "gases.",
+      "start": 270.514,
+      "end": 271.176
+    },
+    {
+      "word": "Third,",
+      "start": 271.419,
+      "end": 271.965
+    },
+    {
+      "word": "sodium",
+      "start": 272.209,
+      "end": 272.627
+    },
+    {
+      "word": "chloride",
+      "start": 272.697,
+      "end": 273.265
+    },
+    {
+      "word": "containing",
+      "start": 273.382,
+      "end": 273.927
+    },
+    {
+      "word": "only",
+      "start": 274.02,
+      "end": 274.357
+    },
+    {
+      "word": "sodium",
+      "start": 274.438,
+      "end": 274.879
+    },
+    {
+      "word": "chloride.",
+      "start": 274.949,
+      "end": 275.669
+    },
+    {
+      "word": "This",
+      "start": 276.114,
+      "end": 276.323
+    },
+    {
+      "word": "is",
+      "start": 276.381,
+      "end": 276.486
+    },
+    {
+      "word": "a",
+      "start": 276.544,
+      "end": 276.578
+    },
+    {
+      "word": "pure",
+      "start": 276.648,
+      "end": 276.892
+    },
+    {
+      "word": "compound.",
+      "start": 276.938,
+      "end": 277.554
+    },
+    {
+      "word": "Fourth,",
+      "start": 277.797,
+      "end": 278.378
+    },
+    {
+      "word": "seawater.",
+      "start": 278.587,
+      "end": 279.423
+    },
+    {
+      "word": "This",
+      "start": 279.701,
+      "end": 279.887
+    },
+    {
+      "word": "is",
+      "start": 279.945,
+      "end": 280.027
+    },
+    {
+      "word": "a",
+      "start": 280.085,
+      "end": 280.108
+    },
+    {
+      "word": "mixture",
+      "start": 280.189,
+      "end": 280.723
+    },
+    {
+      "word": "because",
+      "start": 280.77,
+      "end": 281.153
+    },
+    {
+      "word": "it",
+      "start": 281.188,
+      "end": 281.269
+    },
+    {
+      "word": "contains",
+      "start": 281.315,
+      "end": 281.733
+    },
+    {
+      "word": "water",
+      "start": 281.803,
+      "end": 282.151
+    },
+    {
+      "word": "and",
+      "start": 282.209,
+      "end": 282.325
+    },
+    {
+      "word": "dissolved",
+      "start": 282.395,
+      "end": 282.906
+    },
+    {
+      "word": "substances.",
+      "start": 282.952,
+      "end": 283.765
+    },
+    {
+      "word": "Finally,",
+      "start": 284.287,
+      "end": 284.938
+    },
+    {
+      "word": "brass.",
+      "start": 285.054,
+      "end": 285.681
+    },
+    {
+      "word": "Brass",
+      "start": 286.017,
+      "end": 286.308
+    },
+    {
+      "word": "is",
+      "start": 286.366,
+      "end": 286.458
+    },
+    {
+      "word": "a",
+      "start": 286.517,
+      "end": 286.54
+    },
+    {
+      "word": "mixture,",
+      "start": 286.598,
+      "end": 287.074
+    },
+    {
+      "word": "more",
+      "start": 287.19,
+      "end": 287.399
+    },
+    {
+      "word": "specifically",
+      "start": 287.422,
+      "end": 288.072
+    },
+    {
+      "word": "an",
+      "start": 288.142,
+      "end": 288.258
+    },
+    {
+      "word": "alloy,",
+      "start": 288.374,
+      "end": 288.908
+    },
+    {
+      "word": "mainly",
+      "start": 288.989,
+      "end": 289.326
+    },
+    {
+      "word": "containing",
+      "start": 289.384,
+      "end": 289.86
+    },
+    {
+      "word": "copper",
+      "start": 289.93,
+      "end": 290.243
+    },
+    {
+      "word": "and",
+      "start": 290.301,
+      "end": 290.406
+    },
+    {
+      "word": "zinc.",
+      "start": 290.475,
+      "end": 290.94
+    },
+    {
+      "word": "Now,",
+      "start": 291.276,
+      "end": 291.543
+    },
+    {
+      "word": "let",
+      "start": 291.567,
+      "end": 291.706
+    },
+    {
+      "word": "us",
+      "start": 291.764,
+      "end": 291.834
+    },
+    {
+      "word": "practise",
+      "start": 291.892,
+      "end": 292.298
+    },
+    {
+      "word": "a",
+      "start": 292.344,
+      "end": 292.391
+    },
+    {
+      "word": "G",
+      "start": 292.484,
+      "end": 292.658
+    },
+    {
+      "word": "C",
+      "start": 292.809,
+      "end": 293.018
+    },
+    {
+      "word": "S",
+      "start": 293.227,
+      "end": 293.378
+    },
+    {
+      "word": "E",
+      "start": 293.494,
+      "end": 293.738
+    },
+    {
+      "word": "examination",
+      "start": 293.889,
+      "end": 294.62
+    },
+    {
+      "word": "question.",
+      "start": 294.69,
+      "end": 295.224
+    },
+    {
+      "word": "A",
+      "start": 295.618,
+      "end": 295.711
+    },
+    {
+      "word": "pure",
+      "start": 295.827,
+      "end": 296.071
+    },
+    {
+      "word": "substance",
+      "start": 296.118,
+      "end": 296.617
+    },
+    {
+      "word": "melts",
+      "start": 296.687,
+      "end": 297.07
+    },
+    {
+      "word": "at",
+      "start": 297.163,
+      "end": 297.337
+    },
+    {
+      "word": "eighty",
+      "start": 297.464,
+      "end": 297.836
+    },
+    {
+      "word": "degrees",
+      "start": 297.894,
+      "end": 298.254
+    },
+    {
+      "word": "Celsius.",
+      "start": 298.289,
+      "end": 299.009
+    },
+    {
+      "word": "A",
+      "start": 299.218,
+      "end": 299.287
+    },
+    {
+      "word": "student's",
+      "start": 299.368,
+      "end": 299.856
+    },
+    {
+      "word": "sample",
+      "start": 299.972,
+      "end": 300.448
+    },
+    {
+      "word": "melts",
+      "start": 300.506,
+      "end": 300.773
+    },
+    {
+      "word": "between",
+      "start": 300.831,
+      "end": 301.226
+    },
+    {
+      "word": "seventy-four",
+      "start": 301.296,
+      "end": 302.027
+    },
+    {
+      "word": "and",
+      "start": 302.097,
+      "end": 302.225
+    },
+    {
+      "word": "seventy-nine",
+      "start": 302.317,
+      "end": 302.933
+    },
+    {
+      "word": "degrees",
+      "start": 302.968,
+      "end": 303.281
+    },
+    {
+      "word": "Celsius.",
+      "start": 303.316,
+      "end": 304.024
+    },
+    {
+      "word": "Explain",
+      "start": 304.268,
+      "end": 304.755
+    },
+    {
+      "word": "what",
+      "start": 304.825,
+      "end": 304.976
+    },
+    {
+      "word": "this",
+      "start": 305.023,
+      "end": 305.162
+    },
+    {
+      "word": "suggests",
+      "start": 305.208,
+      "end": 305.696
+    },
+    {
+      "word": "about",
+      "start": 305.742,
+      "end": 306.009
+    },
+    {
+      "word": "the",
+      "start": 306.044,
+      "end": 306.114
+    },
+    {
+      "word": "sample.",
+      "start": 306.172,
+      "end": 306.683
+    },
+    {
+      "word": "This",
+      "start": 307.136,
+      "end": 307.345
+    },
+    {
+      "word": "question",
+      "start": 307.414,
+      "end": 307.762
+    },
+    {
+      "word": "is",
+      "start": 307.821,
+      "end": 307.902
+    },
+    {
+      "word": "worth",
+      "start": 307.971,
+      "end": 308.227
+    },
+    {
+      "word": "three",
+      "start": 308.285,
+      "end": 308.552
+    },
+    {
+      "word": "marks.",
+      "start": 308.598,
+      "end": 309.121
+    },
+    {
+      "word": "A",
+      "start": 309.33,
+      "end": 309.411
+    },
+    {
+      "word": "model",
+      "start": 309.527,
+      "end": 309.829
+    },
+    {
+      "word": "answer",
+      "start": 309.922,
+      "end": 310.27
+    },
+    {
+      "word": "would",
+      "start": 310.328,
+      "end": 310.514
+    },
+    {
+      "word": "be:",
+      "start": 310.56,
+      "end": 310.862
+    },
+    {
+      "word": "The",
+      "start": 311.106,
+      "end": 311.234
+    },
+    {
+      "word": "sample",
+      "start": 311.292,
+      "end": 311.663
+    },
+    {
+      "word": "is",
+      "start": 311.71,
+      "end": 311.814
+    },
+    {
+      "word": "likely",
+      "start": 311.896,
+      "end": 312.279
+    },
+    {
+      "word": "to",
+      "start": 312.348,
+      "end": 312.441
+    },
+    {
+      "word": "contain",
+      "start": 312.523,
+      "end": 312.952
+    },
+    {
+      "word": "impurities",
+      "start": 313.033,
+      "end": 313.8
+    },
+    {
+      "word": "because",
+      "start": 313.974,
+      "end": 314.334
+    },
+    {
+      "word": "it",
+      "start": 314.38,
+      "end": 314.485
+    },
+    {
+      "word": "melts",
+      "start": 314.578,
+      "end": 314.914
+    },
+    {
+      "word": "over",
+      "start": 315.03,
+      "end": 315.286
+    },
+    {
+      "word": "a",
+      "start": 315.344,
+      "end": 315.367
+    },
+    {
+      "word": "range",
+      "start": 315.437,
+      "end": 315.727
+    },
+    {
+      "word": "of",
+      "start": 315.762,
+      "end": 315.843
+    },
+    {
+      "word": "temperatures",
+      "start": 315.913,
+      "end": 316.586
+    },
+    {
+      "word": "rather",
+      "start": 316.795,
+      "end": 317.108
+    },
+    {
+      "word": "than",
+      "start": 317.167,
+      "end": 317.317
+    },
+    {
+      "word": "at",
+      "start": 317.387,
+      "end": 317.503
+    },
+    {
+      "word": "a",
+      "start": 317.55,
+      "end": 317.585
+    },
+    {
+      "word": "sharp",
+      "start": 317.654,
+      "end": 317.968
+    },
+    {
+      "word": "melting",
+      "start": 318.037,
+      "end": 318.397
+    },
+    {
+      "word": "point.",
+      "start": 318.455,
+      "end": 318.885
+    },
+    {
+      "word": "The",
+      "start": 319.338,
+      "end": 319.454
+    },
+    {
+      "word": "melting",
+      "start": 319.535,
+      "end": 319.894
+    },
+    {
+      "word": "range",
+      "start": 319.964,
+      "end": 320.278
+    },
+    {
+      "word": "is",
+      "start": 320.336,
+      "end": 320.475
+    },
+    {
+      "word": "also",
+      "start": 320.545,
+      "end": 320.893
+    },
+    {
+      "word": "below",
+      "start": 320.974,
+      "end": 321.264
+    },
+    {
+      "word": "the",
+      "start": 321.334,
+      "end": 321.404
+    },
+    {
+      "word": "melting",
+      "start": 321.462,
+      "end": 321.81
+    },
+    {
+      "word": "point",
+      "start": 321.903,
+      "end": 322.17
+    },
+    {
+      "word": "of",
+      "start": 322.216,
+      "end": 322.286
+    },
+    {
+      "word": "the",
+      "start": 322.344,
+      "end": 322.414
+    },
+    {
+      "word": "pure",
+      "start": 322.483,
+      "end": 322.762
+    },
+    {
+      "word": "substance.",
+      "start": 322.809,
+      "end": 323.563
+    },
+    {
+      "word": "Impurities",
+      "start": 323.9,
+      "end": 324.666
+    },
+    {
+      "word": "commonly",
+      "start": 324.736,
+      "end": 325.223
+    },
+    {
+      "word": "lower",
+      "start": 325.316,
+      "end": 325.63
+    },
+    {
+      "word": "and",
+      "start": 325.711,
+      "end": 325.839
+    },
+    {
+      "word": "broaden",
+      "start": 325.897,
+      "end": 326.268
+    },
+    {
+      "word": "the",
+      "start": 326.338,
+      "end": 326.419
+    },
+    {
+      "word": "melting",
+      "start": 326.489,
+      "end": 326.884
+    },
+    {
+      "word": "range",
+      "start": 326.977,
+      "end": 327.29
+    },
+    {
+      "word": "of",
+      "start": 327.336,
+      "end": 327.429
+    },
+    {
+      "word": "a",
+      "start": 327.499,
+      "end": 327.522
+    },
+    {
+      "word": "solid.",
+      "start": 327.58,
+      "end": 328.079
+    },
+    {
+      "word": "Notice",
+      "start": 328.532,
+      "end": 328.95
+    },
+    {
+      "word": "how",
+      "start": 328.997,
+      "end": 329.24
+    },
+    {
+      "word": "the",
+      "start": 329.357,
+      "end": 329.484
+    },
+    {
+      "word": "answer",
+      "start": 329.566,
+      "end": 329.96
+    },
+    {
+      "word": "uses",
+      "start": 330.042,
+      "end": 330.39
+    },
+    {
+      "word": "the",
+      "start": 330.448,
+      "end": 330.529
+    },
+    {
+      "word": "data",
+      "start": 330.599,
+      "end": 330.936
+    },
+    {
+      "word": "provided",
+      "start": 331.017,
+      "end": 331.586
+    },
+    {
+      "word": "and",
+      "start": 331.667,
+      "end": 331.806
+    },
+    {
+      "word": "links",
+      "start": 331.876,
+      "end": 332.178
+    },
+    {
+      "word": "it",
+      "start": 332.236,
+      "end": 332.305
+    },
+    {
+      "word": "directly",
+      "start": 332.352,
+      "end": 332.84
+    },
+    {
+      "word": "to",
+      "start": 332.909,
+      "end": 333.025
+    },
+    {
+      "word": "scientific",
+      "start": 333.107,
+      "end": 333.687
+    },
+    {
+      "word": "knowledge.",
+      "start": 333.745,
+      "end": 334.302
+    },
+    {
+      "word": "That",
+      "start": 334.511,
+      "end": 334.778
+    },
+    {
+      "word": "is",
+      "start": 334.836,
+      "end": 334.953
+    },
+    {
+      "word": "an",
+      "start": 335.011,
+      "end": 335.092
+    },
+    {
+      "word": "important",
+      "start": 335.139,
+      "end": 335.626
+    },
+    {
+      "word": "examination",
+      "start": 335.684,
+      "end": 336.381
+    },
+    {
+      "word": "technique.",
+      "start": 336.439,
+      "end": 337.008
+    },
+    {
+      "word": "Before",
+      "start": 337.182,
+      "end": 337.484
+    },
+    {
+      "word": "we",
+      "start": 337.507,
+      "end": 337.588
+    },
+    {
+      "word": "finish,",
+      "start": 337.658,
+      "end": 338.169
+    },
+    {
+      "word": "remember",
+      "start": 338.448,
+      "end": 338.877
+    },
+    {
+      "word": "that",
+      "start": 338.935,
+      "end": 339.086
+    },
+    {
+      "word": "pure",
+      "start": 339.144,
+      "end": 339.423
+    },
+    {
+      "word": "substances",
+      "start": 339.481,
+      "end": 340.189
+    },
+    {
+      "word": "contain",
+      "start": 340.259,
+      "end": 340.653
+    },
+    {
+      "word": "only",
+      "start": 340.723,
+      "end": 340.932
+    },
+    {
+      "word": "one",
+      "start": 341.013,
+      "end": 341.28
+    },
+    {
+      "word": "element",
+      "start": 341.373,
+      "end": 341.884
+    },
+    {
+      "word": "or",
+      "start": 341.977,
+      "end": 342.14
+    },
+    {
+      "word": "compound,",
+      "start": 342.221,
+      "end": 342.859
+    },
+    {
+      "word": "whereas",
+      "start": 343.034,
+      "end": 343.405
+    },
+    {
+      "word": "mixtures",
+      "start": 343.521,
+      "end": 344.067
+    },
+    {
+      "word": "contain",
+      "start": 344.311,
+      "end": 344.798
+    },
+    {
+      "word": "two",
+      "start": 344.856,
+      "end": 345.019
+    },
+    {
+      "word": "or",
+      "start": 345.089,
+      "end": 345.17
+    },
+    {
+      "word": "more",
+      "start": 345.228,
+      "end": 345.402
+    },
+    {
+      "word": "substances",
+      "start": 345.448,
+      "end": 346.203
+    },
+    {
+      "word": "that",
+      "start": 346.331,
+      "end": 346.528
+    },
+    {
+      "word": "are",
+      "start": 346.563,
+      "end": 346.667
+    },
+    {
+      "word": "not",
+      "start": 346.726,
+      "end": 346.923
+    },
+    {
+      "word": "chemically",
+      "start": 346.993,
+      "end": 347.434
+    },
+    {
+      "word": "bonded",
+      "start": 347.492,
+      "end": 347.852
+    },
+    {
+      "word": "together.",
+      "start": 347.887,
+      "end": 348.432
+    },
+    {
+      "word": "Pure",
+      "start": 348.641,
+      "end": 348.943
+    },
+    {
+      "word": "substances",
+      "start": 348.989,
+      "end": 349.686
+    },
+    {
+      "word": "have",
+      "start": 349.756,
+      "end": 349.918
+    },
+    {
+      "word": "characteristic",
+      "start": 349.953,
+      "end": 350.685
+    },
+    {
+      "word": "melting",
+      "start": 350.766,
+      "end": 351.195
+    },
+    {
+      "word": "and",
+      "start": 351.242,
+      "end": 351.335
+    },
+    {
+      "word": "boiling",
+      "start": 351.404,
+      "end": 351.741
+    },
+    {
+      "word": "points",
+      "start": 351.799,
+      "end": 352.159
+    },
+    {
+      "word": "at",
+      "start": 352.229,
+      "end": 352.391
+    },
+    {
+      "word": "a",
+      "start": 352.438,
+      "end": 352.472
+    },
+    {
+      "word": "given",
+      "start": 352.542,
+      "end": 352.821
+    },
+    {
+      "word": "pressure,",
+      "start": 352.902,
+      "end": 353.471
+    },
+    {
+      "word": "while",
+      "start": 353.587,
+      "end": 353.866
+    },
+    {
+      "word": "mixtures",
+      "start": 353.912,
+      "end": 354.435
+    },
+    {
+      "word": "often",
+      "start": 354.551,
+      "end": 354.876
+    },
+    {
+      "word": "melt",
+      "start": 354.934,
+      "end": 355.178
+    },
+    {
+      "word": "or",
+      "start": 355.247,
+      "end": 355.34
+    },
+    {
+      "word": "boil",
+      "start": 355.398,
+      "end": 355.712
+    },
+    {
+      "word": "over",
+      "start": 355.828,
+      "end": 356.083
+    },
+    {
+      "word": "a",
+      "start": 356.164,
+      "end": 356.211
+    },
+    {
+      "word": "range.",
+      "start": 356.292,
+      "end": 356.791
+    },
+    {
+      "word": "If",
+      "start": 357.128,
+      "end": 357.267
+    },
+    {
+      "word": "you",
+      "start": 357.314,
+      "end": 357.395
+    },
+    {
+      "word": "found",
+      "start": 357.511,
+      "end": 357.72
+    },
+    {
+      "word": "this",
+      "start": 357.767,
+      "end": 357.906
+    },
+    {
+      "word": "explanation",
+      "start": 357.976,
+      "end": 358.73
+    },
+    {
+      "word": "helpful,",
+      "start": 358.811,
+      "end": 359.334
+    },
+    {
+      "word": "please",
+      "start": 359.415,
+      "end": 359.729
+    },
+    {
+      "word": "subscribe",
+      "start": 359.764,
+      "end": 360.39
+    },
+    {
+      "word": "to",
+      "start": 360.437,
+      "end": 360.518
+    },
+    {
+      "word": "J",
+      "start": 360.599,
+      "end": 360.774
+    },
+    {
+      "word": "D",
+      "start": 360.832,
+      "end": 360.89
+    },
+    {
+      "word": "Science",
+      "start": 361.064,
+      "end": 361.586
+    },
+    {
+      "word": "and",
+      "start": 361.621,
+      "end": 361.784
+    },
+    {
+      "word": "visit",
+      "start": 361.853,
+      "end": 362.19
+    },
+    {
+      "word": "j",
+      "start": 362.306,
+      "end": 362.55
+    },
+    {
+      "word": "d",
+      "start": 362.596,
+      "end": 362.689
+    },
+    {
+      "word": "science",
+      "start": 362.805,
+      "end": 363.293
+    },
+    {
+      "word": "dot",
+      "start": 363.339,
+      "end": 363.572
+    },
+    {
+      "word": "co",
+      "start": 363.653,
+      "end": 363.955
+    },
+    {
+      "word": "dot",
+      "start": 364.106,
+      "end": 364.373
+    },
+    {
+      "word": "u",
+      "start": 364.489,
+      "end": 364.582
+    },
+    {
+      "word": "k",
+      "start": 364.651,
+      "end": 364.988
+    },
+    {
+      "word": "for",
+      "start": 365.325,
+      "end": 365.487
+    },
+    {
+      "word": "more",
+      "start": 365.545,
+      "end": 365.754
+    },
+    {
+      "word": "G",
+      "start": 365.812,
+      "end": 365.963
+    },
+    {
+      "word": "C",
+      "start": 366.137,
+      "end": 366.288
+    },
+    {
+      "word": "S",
+      "start": 366.625,
+      "end": 366.776
+    },
+    {
+      "word": "E",
+      "start": 366.892,
+      "end": 367.008
+    },
+    {
+      "word": "Chemistry",
+      "start": 367.124,
+      "end": 367.6
+    },
+    {
+      "word": "lessons,",
+      "start": 367.658,
+      "end": 368.273
+    },
+    {
+      "word": "worked",
+      "start": 368.482,
+      "end": 368.772
+    },
+    {
+      "word": "examples",
+      "start": 368.831,
+      "end": 369.411
+    },
+    {
+      "word": "and",
+      "start": 369.481,
+      "end": 369.632
+    },
+    {
+      "word": "examination",
+      "start": 369.701,
+      "end": 370.398
+    },
+    {
+      "word": "practice.",
+      "start": 370.468,
+      "end": 371.06
+    },
+    {
+      "word": "Thank",
+      "start": 371.269,
+      "end": 371.524
+    },
+    {
+      "word": "you",
+      "start": 371.559,
+      "end": 371.64
+    },
+    {
+      "word": "for",
+      "start": 371.698,
+      "end": 371.814
+    },
+    {
+      "word": "watching,",
+      "start": 371.872,
+      "end": 372.348
+    },
+    {
+      "word": "and",
+      "start": 372.522,
+      "end": 372.708
+    },
+    {
+      "word": "I",
+      "start": 372.801,
+      "end": 372.836
+    },
+    {
+      "word": "will",
+      "start": 372.917,
+      "end": 373.08
+    },
+    {
+      "word": "see",
+      "start": 373.126,
+      "end": 373.289
+    },
+    {
+      "word": "you",
+      "start": 373.324,
+      "end": 373.416
+    },
+    {
+      "word": "in",
+      "start": 373.498,
+      "end": 373.567
+    },
+    {
+      "word": "the",
+      "start": 373.614,
+      "end": 373.683
+    },
+    {
+      "word": "next",
+      "start": 373.73,
+      "end": 373.939
+    },
+    {
+      "word": "lesson.",
+      "start": 374.009,
+      "end": 374.461
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

@@ -1,0 +1,191 @@
+{
+  "slug": "pure-substances-and-mixtures",
+  "duration": 374.674,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 10.472,
+      "aligned": true,
+      "cue": "We will learn how to distinguish"
+    },
+    {
+      "id": "mineral",
+      "t": 25.554,
+      "aligned": true,
+      "cue": "Is bottled mineral water a pure substance"
+    },
+    {
+      "id": "pure_def",
+      "t": 39.544,
+      "aligned": true,
+      "cue": "A pure substance contains only one element"
+    },
+    {
+      "id": "mixture_def",
+      "t": 66.398,
+      "aligned": true,
+      "cue": "A mixture, on the other hand"
+    },
+    {
+      "id": "sharp",
+      "t": 102.911,
+      "aligned": true,
+      "cue": "A pure substance has a sharp, characteristic"
+    },
+    {
+      "id": "salt_roads",
+      "t": 152.219,
+      "aligned": true,
+      "cue": "This is why salt is spread"
+    },
+    {
+      "id": "mp_test",
+      "t": 168.462,
+      "aligned": true,
+      "cue": "how scientists use melting points to test purity"
+    },
+    {
+      "id": "seawater",
+      "t": 222.425,
+      "aligned": true,
+      "cue": "compare pure water with seawater"
+    },
+    {
+      "id": "activity",
+      "t": 251.415,
+      "aligned": true,
+      "cue": "I will name five materials"
+    },
+    {
+      "id": "exam",
+      "t": 295.618,
+      "aligned": true,
+      "cue": "A pure substance melts at eighty degrees"
+    },
+    {
+      "id": "recap",
+      "t": 338.448,
+      "aligned": true,
+      "cue": "remember that pure substances contain only one"
+    },
+    {
+      "id": "outro",
+      "t": 359.415,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 11.97,
+      "aligned": true,
+      "cue": "distinguish between them"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 15.546,
+      "aligned": true,
+      "cue": "melting and boiling behaviour"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 20.109,
+      "aligned": true,
+      "cue": "melting point data"
+    },
+    {
+      "slide": "activity",
+      "item": "q1",
+      "t": 257.94,
+      "aligned": true,
+      "cue": "oxygen gas containing only"
+    },
+    {
+      "slide": "activity",
+      "item": "a1",
+      "t": 262.352,
+      "aligned": true,
+      "cue": "This is a pure substance because it contains only one element"
+    },
+    {
+      "slide": "activity",
+      "item": "q2",
+      "t": 266.334,
+      "aligned": true,
+      "cue": "Second, air."
+    },
+    {
+      "slide": "activity",
+      "item": "a2",
+      "t": 267.669,
+      "aligned": true,
+      "cue": "Air is a mixture because"
+    },
+    {
+      "slide": "activity",
+      "item": "q3",
+      "t": 271.419,
+      "aligned": true,
+      "cue": "Third, sodium chloride"
+    },
+    {
+      "slide": "activity",
+      "item": "a3",
+      "t": 276.114,
+      "aligned": true,
+      "cue": "This is a pure compound"
+    },
+    {
+      "slide": "activity",
+      "item": "q4",
+      "t": 277.797,
+      "aligned": true,
+      "cue": "Fourth, seawater"
+    },
+    {
+      "slide": "activity",
+      "item": "a4",
+      "t": 279.701,
+      "aligned": true,
+      "cue": "This is a mixture because it contains water and dissolved substances"
+    },
+    {
+      "slide": "activity",
+      "item": "q5",
+      "t": 284.287,
+      "aligned": true,
+      "cue": "Finally, brass"
+    },
+    {
+      "slide": "activity",
+      "item": "a5",
+      "t": 286.017,
+      "aligned": true,
+      "cue": "Brass is a mixture"
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 311.106,
+      "aligned": true,
+      "cue": "The sample is likely to contain impurities"
+    },
+    {
+      "slide": "mp_test",
+      "item": "range",
+      "t": 194.491,
+      "aligned": true,
+      "cue": "begins melting at seventy-four"
+    }
+  ]
+}

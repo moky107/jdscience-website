@@ -1,0 +1,4846 @@
+{
+  "slug": "chromatography",
+  "title": "Chromatography",
+  "audio": "/workspace/content/videos/chromatography/source/narration_master.mp3",
+  "duration": 400.3,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's GCSE Chemistry lesson, we are going to explore chromatography, an important separation technique used to identify and separate substances within mixtures.\n\nWe will examine how paper chromatography works, explain why different substances separate, and learn how to calculate R F values.\n\nLet us begin with a familiar example.\n\nImagine writing on a piece of paper using a black felt-tip pen.\n\nAlthough the ink appears black, it may contain several different coloured dyes.\n\nHow can we find out whether the ink contains one dye or a mixture of dyes?\n\nOne method is paper chromatography.\n\nChromatography separates substances according to how they distribute themselves between two phases.\n\nThese are called the stationary phase and the mobile phase.\n\nIn GCSE paper chromatography, the stationary phase is commonly described as the chromatography paper, while the mobile phase is the solvent moving through the paper.\n\nMore precisely, separation often depends on how substances interact with the paper and the water associated with its cellulose fibres, as well as the moving solvent.\n\nLet us examine how the experiment works.\n\nFirst, draw a pencil line near the bottom of a strip of chromatography paper.\n\nThis is called the baseline.\n\nWe use pencil rather than ink because graphite does not normally dissolve in the solvent and interfere with the results.\n\nNext, place a small spot of the ink sample on the baseline.\n\nAllow the spot to dry.\n\nThen place the paper inside a container containing a small amount of suitable solvent.\n\nThe solvent level must remain below the baseline.\n\nWhy is this important?\n\nIf the ink spot is submerged in the solvent, the sample may dissolve directly into the liquid rather than travelling up the paper.\n\nThe solvent gradually moves up the paper by capillary action.\n\nAs it moves, it carries the dissolved dyes with it.\n\nDifferent dyes travel different distances because they have different affinities for the mobile and stationary phases.\n\nA dye that is more strongly attracted to the mobile phase relative to the stationary phase generally travels farther.\n\nA dye that is more strongly retained by the stationary phase travels a shorter distance.\n\nAs a result, the different dyes separate into individual spots.\n\nWhen the solvent has travelled an appropriate distance, remove the paper and immediately mark the position of the solvent front with a pencil.\n\nAllow the paper to dry.\n\nThe resulting pattern of spots is called a chromatogram.\n\nNow, let us consider how chromatography can help identify substances.\n\nIf a sample produces one spot under a particular set of conditions, this suggests that it may contain only one component detectable by that method.\n\nIf it produces several spots, it contains several components.\n\nHowever, one spot does not conclusively prove that a substance is pure because different substances can sometimes travel the same distance.\n\nNow, let us examine R F values.\n\nR F stands for retention factor.\n\nThe R F value is calculated using the following formula:\n\nR F equals the distance travelled by the substance divided by the distance travelled by the solvent front.\n\nBoth distances must be measured from the baseline.\n\nThe distance travelled by a substance is measured to the centre of its spot.\n\nLet us work through an example.\n\nA student carries out paper chromatography.\n\nOne dye travels six centimetres from the baseline.\n\nThe solvent front travels eight centimetres from the same baseline.\n\nCalculate the R F value.\n\nWe begin with the formula.\n\nR F equals distance travelled by the substance divided by distance travelled by the solvent front.\n\nSubstituting the values gives six divided by eight.\n\nSix divided by eight equals zero point seven five.\n\nTherefore, the R F value is zero point seven five.\n\nNotice that R F values have no units because we are dividing one distance by another distance measured in the same units.\n\nFor ordinary paper chromatography, R F values normally lie between zero and one.\n\nNow, let us try another example.\n\nA dye travels three point five centimetres, while the solvent front travels seven centimetres.\n\nWhat is the R F value?\n\nPause for a moment and calculate your answer.\n\nThe correct answer is zero point five.\n\nWe obtain this by dividing three point five by seven.\n\nWell done if you got that correct.\n\nAn important point for your GCSE examination is that R F values should only be compared meaningfully when the chromatography conditions are the same.\n\nChanging the solvent, paper or experimental conditions can change the R F value.\n\nNow, let us tackle a GCSE examination question.\n\nExplain why two dyes in a mixture separate during paper chromatography. This question is worth three marks.\n\nA model answer would be:\n\nThe two dyes have different solubilities in the mobile phase and different attractions to the stationary phase. As the solvent moves through the paper, the dyes are carried at different rates. Consequently, they travel different distances and separate into individual spots.\n\nNotice that this answer explains the separation in terms of both phases, rather than simply saying that one dye moves faster than the other.\n\nThat is the level of scientific explanation required for a strong GCSE answer.\n\nBefore we finish, remember that chromatography is used to separate and help identify substances in mixtures.\n\nThe mobile phase moves through the stationary phase, carrying substances at different rates.\n\nThe R F value is calculated by dividing the distance travelled by a substance by the distance travelled by the solvent front.\n\nIf you found this explanation helpful, please subscribe to JD Science and visit j d science dot co dot u k for more GCSE Chemistry lessons, calculations and examination practice.\n\nThank you for watching, and I will see you in the next lesson.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.464
+    },
+    {
+      "word": "and",
+      "start": 0.58,
+      "end": 0.72
+    },
+    {
+      "word": "welcome",
+      "start": 0.766,
+      "end": 1.091
+    },
+    {
+      "word": "back",
+      "start": 1.115,
+      "end": 1.3
+    },
+    {
+      "word": "to",
+      "start": 1.358,
+      "end": 1.44
+    },
+    {
+      "word": "J",
+      "start": 1.509,
+      "end": 1.66
+    },
+    {
+      "word": "D",
+      "start": 1.73,
+      "end": 1.8
+    },
+    {
+      "word": "Science.",
+      "start": 1.916,
+      "end": 2.426
+    },
+    {
+      "word": "In",
+      "start": 2.543,
+      "end": 2.682
+    },
+    {
+      "word": "today's",
+      "start": 2.74,
+      "end": 3.17
+    },
+    {
+      "word": "G",
+      "start": 3.228,
+      "end": 3.402
+    },
+    {
+      "word": "C",
+      "start": 3.529,
+      "end": 3.646
+    },
+    {
+      "word": "S",
+      "start": 3.855,
+      "end": 4.005
+    },
+    {
+      "word": "E",
+      "start": 4.156,
+      "end": 4.307
+    },
+    {
+      "word": "Chemistry",
+      "start": 4.423,
+      "end": 4.911
+    },
+    {
+      "word": "lesson,",
+      "start": 4.981,
+      "end": 5.468
+    },
+    {
+      "word": "we",
+      "start": 5.677,
+      "end": 5.805
+    },
+    {
+      "word": "are",
+      "start": 5.84,
+      "end": 5.933
+    },
+    {
+      "word": "going",
+      "start": 5.968,
+      "end": 6.142
+    },
+    {
+      "word": "to",
+      "start": 6.188,
+      "end": 6.258
+    },
+    {
+      "word": "explore",
+      "start": 6.339,
+      "end": 6.757
+    },
+    {
+      "word": "chromatography,",
+      "start": 6.792,
+      "end": 7.709
+    },
+    {
+      "word": "an",
+      "start": 7.744,
+      "end": 7.906
+    },
+    {
+      "word": "important",
+      "start": 7.964,
+      "end": 8.429
+    },
+    {
+      "word": "separation",
+      "start": 8.475,
+      "end": 9.033
+    },
+    {
+      "word": "technique",
+      "start": 9.091,
+      "end": 9.555
+    },
+    {
+      "word": "used",
+      "start": 9.625,
+      "end": 9.892
+    },
+    {
+      "word": "to",
+      "start": 9.927,
+      "end": 9.985
+    },
+    {
+      "word": "identify",
+      "start": 10.066,
+      "end": 10.774
+    },
+    {
+      "word": "and",
+      "start": 10.948,
+      "end": 11.192
+    },
+    {
+      "word": "separate",
+      "start": 11.262,
+      "end": 11.726
+    },
+    {
+      "word": "substances",
+      "start": 11.761,
+      "end": 12.353
+    },
+    {
+      "word": "within",
+      "start": 12.411,
+      "end": 12.69
+    },
+    {
+      "word": "mixtures.",
+      "start": 12.759,
+      "end": 13.421
+    },
+    {
+      "word": "We",
+      "start": 13.816,
+      "end": 13.944
+    },
+    {
+      "word": "will",
+      "start": 13.99,
+      "end": 14.153
+    },
+    {
+      "word": "examine",
+      "start": 14.211,
+      "end": 14.64
+    },
+    {
+      "word": "how",
+      "start": 14.698,
+      "end": 14.849
+    },
+    {
+      "word": "paper",
+      "start": 14.918,
+      "end": 15.209
+    },
+    {
+      "word": "chromatography",
+      "start": 15.255,
+      "end": 16.033
+    },
+    {
+      "word": "works,",
+      "start": 16.103,
+      "end": 16.614
+    },
+    {
+      "word": "explain",
+      "start": 16.823,
+      "end": 17.287
+    },
+    {
+      "word": "why",
+      "start": 17.357,
+      "end": 17.508
+    },
+    {
+      "word": "different",
+      "start": 17.566,
+      "end": 17.925
+    },
+    {
+      "word": "substances",
+      "start": 17.96,
+      "end": 18.634
+    },
+    {
+      "word": "separate,",
+      "start": 18.68,
+      "end": 19.377
+    },
+    {
+      "word": "and",
+      "start": 19.586,
+      "end": 19.771
+    },
+    {
+      "word": "learn",
+      "start": 19.853,
+      "end": 20.131
+    },
+    {
+      "word": "how",
+      "start": 20.201,
+      "end": 20.352
+    },
+    {
+      "word": "to",
+      "start": 20.41,
+      "end": 20.48
+    },
+    {
+      "word": "calculate",
+      "start": 20.561,
+      "end": 21.176
+    },
+    {
+      "word": "R",
+      "start": 21.211,
+      "end": 21.455
+    },
+    {
+      "word": "F",
+      "start": 21.525,
+      "end": 21.675
+    },
+    {
+      "word": "values.",
+      "start": 21.803,
+      "end": 22.407
+    },
+    {
+      "word": "Let",
+      "start": 22.744,
+      "end": 22.929
+    },
+    {
+      "word": "us",
+      "start": 22.987,
+      "end": 23.069
+    },
+    {
+      "word": "begin",
+      "start": 23.15,
+      "end": 23.429
+    },
+    {
+      "word": "with",
+      "start": 23.487,
+      "end": 23.638
+    },
+    {
+      "word": "a",
+      "start": 23.684,
+      "end": 23.719
+    },
+    {
+      "word": "familiar",
+      "start": 23.777,
+      "end": 24.218
+    },
+    {
+      "word": "example.",
+      "start": 24.288,
+      "end": 24.88
+    },
+    {
+      "word": "Imagine",
+      "start": 25.158,
+      "end": 25.669
+    },
+    {
+      "word": "writing",
+      "start": 25.693,
+      "end": 26.064
+    },
+    {
+      "word": "on",
+      "start": 26.134,
+      "end": 26.238
+    },
+    {
+      "word": "a",
+      "start": 26.285,
+      "end": 26.319
+    },
+    {
+      "word": "piece",
+      "start": 26.378,
+      "end": 26.621
+    },
+    {
+      "word": "of",
+      "start": 26.656,
+      "end": 26.726
+    },
+    {
+      "word": "paper",
+      "start": 26.807,
+      "end": 27.167
+    },
+    {
+      "word": "using",
+      "start": 27.283,
+      "end": 27.62
+    },
+    {
+      "word": "a",
+      "start": 27.689,
+      "end": 27.724
+    },
+    {
+      "word": "black",
+      "start": 27.794,
+      "end": 28.061
+    },
+    {
+      "word": "felt-tip",
+      "start": 28.154,
+      "end": 28.723
+    },
+    {
+      "word": "pen.",
+      "start": 28.839,
+      "end": 29.303
+    },
+    {
+      "word": "Although",
+      "start": 29.64,
+      "end": 30.093
+    },
+    {
+      "word": "the",
+      "start": 30.128,
+      "end": 30.209
+    },
+    {
+      "word": "ink",
+      "start": 30.302,
+      "end": 30.511
+    },
+    {
+      "word": "appears",
+      "start": 30.557,
+      "end": 30.883
+    },
+    {
+      "word": "black,",
+      "start": 30.964,
+      "end": 31.463
+    },
+    {
+      "word": "it",
+      "start": 31.672,
+      "end": 31.811
+    },
+    {
+      "word": "may",
+      "start": 31.881,
+      "end": 32.02
+    },
+    {
+      "word": "contain",
+      "start": 32.078,
+      "end": 32.485
+    },
+    {
+      "word": "several",
+      "start": 32.554,
+      "end": 32.879
+    },
+    {
+      "word": "different",
+      "start": 32.937,
+      "end": 33.286
+    },
+    {
+      "word": "coloured",
+      "start": 33.332,
+      "end": 33.681
+    },
+    {
+      "word": "dyes.",
+      "start": 33.739,
+      "end": 34.238
+    },
+    {
+      "word": "How",
+      "start": 34.691,
+      "end": 34.853
+    },
+    {
+      "word": "can",
+      "start": 34.911,
+      "end": 35.051
+    },
+    {
+      "word": "we",
+      "start": 35.109,
+      "end": 35.201
+    },
+    {
+      "word": "find",
+      "start": 35.283,
+      "end": 35.573
+    },
+    {
+      "word": "out",
+      "start": 35.643,
+      "end": 35.817
+    },
+    {
+      "word": "whether",
+      "start": 35.863,
+      "end": 36.13
+    },
+    {
+      "word": "the",
+      "start": 36.188,
+      "end": 36.27
+    },
+    {
+      "word": "ink",
+      "start": 36.362,
+      "end": 36.537
+    },
+    {
+      "word": "contains",
+      "start": 36.583,
+      "end": 37.071
+    },
+    {
+      "word": "one",
+      "start": 37.14,
+      "end": 37.349
+    },
+    {
+      "word": "dye",
+      "start": 37.396,
+      "end": 37.663
+    },
+    {
+      "word": "or",
+      "start": 37.721,
+      "end": 37.872
+    },
+    {
+      "word": "a",
+      "start": 37.918,
+      "end": 37.941
+    },
+    {
+      "word": "mixture",
+      "start": 37.999,
+      "end": 38.348
+    },
+    {
+      "word": "of",
+      "start": 38.383,
+      "end": 38.441
+    },
+    {
+      "word": "dyes?",
+      "start": 38.522,
+      "end": 39.01
+    },
+    {
+      "word": "One",
+      "start": 39.532,
+      "end": 39.776
+    },
+    {
+      "word": "method",
+      "start": 39.845,
+      "end": 40.229
+    },
+    {
+      "word": "is",
+      "start": 40.298,
+      "end": 40.461
+    },
+    {
+      "word": "paper",
+      "start": 40.542,
+      "end": 40.867
+    },
+    {
+      "word": "chromatography.",
+      "start": 40.925,
+      "end": 41.958
+    },
+    {
+      "word": "Chromatography",
+      "start": 42.353,
+      "end": 43.212
+    },
+    {
+      "word": "separates",
+      "start": 43.282,
+      "end": 43.793
+    },
+    {
+      "word": "substances",
+      "start": 43.839,
+      "end": 44.617
+    },
+    {
+      "word": "according",
+      "start": 44.733,
+      "end": 45.221
+    },
+    {
+      "word": "to",
+      "start": 45.279,
+      "end": 45.349
+    },
+    {
+      "word": "how",
+      "start": 45.441,
+      "end": 45.627
+    },
+    {
+      "word": "they",
+      "start": 45.697,
+      "end": 45.825
+    },
+    {
+      "word": "distribute",
+      "start": 45.883,
+      "end": 46.452
+    },
+    {
+      "word": "themselves",
+      "start": 46.487,
+      "end": 47.021
+    },
+    {
+      "word": "between",
+      "start": 47.079,
+      "end": 47.439
+    },
+    {
+      "word": "two",
+      "start": 47.473,
+      "end": 47.636
+    },
+    {
+      "word": "phases.",
+      "start": 47.694,
+      "end": 48.391
+    },
+    {
+      "word": "These",
+      "start": 48.843,
+      "end": 49.099
+    },
+    {
+      "word": "are",
+      "start": 49.134,
+      "end": 49.273
+    },
+    {
+      "word": "called",
+      "start": 49.331,
+      "end": 49.621
+    },
+    {
+      "word": "the",
+      "start": 49.644,
+      "end": 49.714
+    },
+    {
+      "word": "stationary",
+      "start": 49.772,
+      "end": 50.469
+    },
+    {
+      "word": "phase",
+      "start": 50.527,
+      "end": 50.898
+    },
+    {
+      "word": "and",
+      "start": 50.945,
+      "end": 51.119
+    },
+    {
+      "word": "the",
+      "start": 51.177,
+      "end": 51.247
+    },
+    {
+      "word": "mobile",
+      "start": 51.305,
+      "end": 51.653
+    },
+    {
+      "word": "phase.",
+      "start": 51.676,
+      "end": 52.21
+    },
+    {
+      "word": "In",
+      "start": 52.547,
+      "end": 52.71
+    },
+    {
+      "word": "G",
+      "start": 52.779,
+      "end": 52.93
+    },
+    {
+      "word": "C",
+      "start": 53.046,
+      "end": 53.22
+    },
+    {
+      "word": "S",
+      "start": 53.395,
+      "end": 53.545
+    },
+    {
+      "word": "E",
+      "start": 53.662,
+      "end": 53.812
+    },
+    {
+      "word": "paper",
+      "start": 53.894,
+      "end": 54.207
+    },
+    {
+      "word": "chromatography,",
+      "start": 54.265,
+      "end": 55.345
+    },
+    {
+      "word": "the",
+      "start": 55.589,
+      "end": 55.693
+    },
+    {
+      "word": "stationary",
+      "start": 55.751,
+      "end": 56.355
+    },
+    {
+      "word": "phase",
+      "start": 56.413,
+      "end": 56.703
+    },
+    {
+      "word": "is",
+      "start": 56.75,
+      "end": 56.866
+    },
+    {
+      "word": "commonly",
+      "start": 56.936,
+      "end": 57.377
+    },
+    {
+      "word": "described",
+      "start": 57.435,
+      "end": 57.98
+    },
+    {
+      "word": "as",
+      "start": 58.038,
+      "end": 58.213
+    },
+    {
+      "word": "the",
+      "start": 58.271,
+      "end": 58.34
+    },
+    {
+      "word": "chromatography",
+      "start": 58.398,
+      "end": 59.188
+    },
+    {
+      "word": "paper,",
+      "start": 59.269,
+      "end": 59.792
+    },
+    {
+      "word": "while",
+      "start": 60.07,
+      "end": 60.326
+    },
+    {
+      "word": "the",
+      "start": 60.349,
+      "end": 60.419
+    },
+    {
+      "word": "mobile",
+      "start": 60.477,
+      "end": 60.848
+    },
+    {
+      "word": "phase",
+      "start": 60.871,
+      "end": 61.196
+    },
+    {
+      "word": "is",
+      "start": 61.243,
+      "end": 61.359
+    },
+    {
+      "word": "the",
+      "start": 61.417,
+      "end": 61.498
+    },
+    {
+      "word": "solvent",
+      "start": 61.568,
+      "end": 62.044
+    },
+    {
+      "word": "moving",
+      "start": 62.102,
+      "end": 62.392
+    },
+    {
+      "word": "through",
+      "start": 62.438,
+      "end": 62.659
+    },
+    {
+      "word": "the",
+      "start": 62.694,
+      "end": 62.763
+    },
+    {
+      "word": "paper.",
+      "start": 62.81,
+      "end": 63.344
+    },
+    {
+      "word": "More",
+      "start": 63.797,
+      "end": 63.994
+    },
+    {
+      "word": "precisely,",
+      "start": 64.041,
+      "end": 64.807
+    },
+    {
+      "word": "separation",
+      "start": 64.923,
+      "end": 65.759
+    },
+    {
+      "word": "often",
+      "start": 65.933,
+      "end": 66.351
+    },
+    {
+      "word": "depends",
+      "start": 66.409,
+      "end": 66.839
+    },
+    {
+      "word": "on",
+      "start": 66.897,
+      "end": 67.036
+    },
+    {
+      "word": "how",
+      "start": 67.129,
+      "end": 67.326
+    },
+    {
+      "word": "substances",
+      "start": 67.442,
+      "end": 68.139
+    },
+    {
+      "word": "interact",
+      "start": 68.22,
+      "end": 68.754
+    },
+    {
+      "word": "with",
+      "start": 68.801,
+      "end": 68.952
+    },
+    {
+      "word": "the",
+      "start": 68.986,
+      "end": 69.056
+    },
+    {
+      "word": "paper",
+      "start": 69.114,
+      "end": 69.509
+    },
+    {
+      "word": "and",
+      "start": 69.625,
+      "end": 69.811
+    },
+    {
+      "word": "the",
+      "start": 69.869,
+      "end": 69.938
+    },
+    {
+      "word": "water",
+      "start": 70.008,
+      "end": 70.38
+    },
+    {
+      "word": "associated",
+      "start": 70.438,
+      "end": 71.157
+    },
+    {
+      "word": "with",
+      "start": 71.216,
+      "end": 71.378
+    },
+    {
+      "word": "its",
+      "start": 71.425,
+      "end": 71.564
+    },
+    {
+      "word": "cellulose",
+      "start": 71.599,
+      "end": 72.214
+    },
+    {
+      "word": "fibres,",
+      "start": 72.26,
+      "end": 72.969
+    },
+    {
+      "word": "as",
+      "start": 73.085,
+      "end": 73.247
+    },
+    {
+      "word": "well",
+      "start": 73.329,
+      "end": 73.503
+    },
+    {
+      "word": "as",
+      "start": 73.561,
+      "end": 73.642
+    },
+    {
+      "word": "the",
+      "start": 73.7,
+      "end": 73.77
+    },
+    {
+      "word": "moving",
+      "start": 73.839,
+      "end": 74.176
+    },
+    {
+      "word": "solvent.",
+      "start": 74.257,
+      "end": 74.954
+    },
+    {
+      "word": "Let",
+      "start": 75.476,
+      "end": 75.674
+    },
+    {
+      "word": "us",
+      "start": 75.732,
+      "end": 75.836
+    },
+    {
+      "word": "examine",
+      "start": 75.918,
+      "end": 76.51
+    },
+    {
+      "word": "how",
+      "start": 76.556,
+      "end": 76.719
+    },
+    {
+      "word": "the",
+      "start": 76.789,
+      "end": 76.87
+    },
+    {
+      "word": "experiment",
+      "start": 76.916,
+      "end": 77.683
+    },
+    {
+      "word": "works.",
+      "start": 77.764,
+      "end": 78.356
+    },
+    {
+      "word": "First,",
+      "start": 78.693,
+      "end": 79.157
+    },
+    {
+      "word": "draw",
+      "start": 79.227,
+      "end": 79.471
+    },
+    {
+      "word": "a",
+      "start": 79.517,
+      "end": 79.54
+    },
+    {
+      "word": "pencil",
+      "start": 79.587,
+      "end": 79.97
+    },
+    {
+      "word": "line",
+      "start": 80.039,
+      "end": 80.341
+    },
+    {
+      "word": "near",
+      "start": 80.457,
+      "end": 80.713
+    },
+    {
+      "word": "the",
+      "start": 80.783,
+      "end": 80.852
+    },
+    {
+      "word": "bottom",
+      "start": 80.91,
+      "end": 81.259
+    },
+    {
+      "word": "of",
+      "start": 81.386,
+      "end": 81.537
+    },
+    {
+      "word": "a",
+      "start": 81.618,
+      "end": 81.642
+    },
+    {
+      "word": "strip",
+      "start": 81.711,
+      "end": 82.083
+    },
+    {
+      "word": "of",
+      "start": 82.176,
+      "end": 82.315
+    },
+    {
+      "word": "chromatography",
+      "start": 82.408,
+      "end": 83.186
+    },
+    {
+      "word": "paper.",
+      "start": 83.255,
+      "end": 83.778
+    },
+    {
+      "word": "This",
+      "start": 83.952,
+      "end": 84.138
+    },
+    {
+      "word": "is",
+      "start": 84.207,
+      "end": 84.3
+    },
+    {
+      "word": "called",
+      "start": 84.382,
+      "end": 84.683
+    },
+    {
+      "word": "the",
+      "start": 84.707,
+      "end": 84.776
+    },
+    {
+      "word": "baseline.",
+      "start": 84.834,
+      "end": 85.531
+    },
+    {
+      "word": "We",
+      "start": 85.705,
+      "end": 85.891
+    },
+    {
+      "word": "use",
+      "start": 85.949,
+      "end": 86.181
+    },
+    {
+      "word": "pencil",
+      "start": 86.251,
+      "end": 86.715
+    },
+    {
+      "word": "rather",
+      "start": 86.831,
+      "end": 87.168
+    },
+    {
+      "word": "than",
+      "start": 87.214,
+      "end": 87.365
+    },
+    {
+      "word": "ink",
+      "start": 87.458,
+      "end": 87.76
+    },
+    {
+      "word": "because",
+      "start": 87.934,
+      "end": 88.387
+    },
+    {
+      "word": "graphite",
+      "start": 88.445,
+      "end": 89.014
+    },
+    {
+      "word": "does",
+      "start": 89.072,
+      "end": 89.281
+    },
+    {
+      "word": "not",
+      "start": 89.351,
+      "end": 89.49
+    },
+    {
+      "word": "normally",
+      "start": 89.56,
+      "end": 90.001
+    },
+    {
+      "word": "dissolve",
+      "start": 90.07,
+      "end": 90.593
+    },
+    {
+      "word": "in",
+      "start": 90.651,
+      "end": 90.802
+    },
+    {
+      "word": "the",
+      "start": 90.848,
+      "end": 90.93
+    },
+    {
+      "word": "solvent",
+      "start": 90.988,
+      "end": 91.557
+    },
+    {
+      "word": "and",
+      "start": 91.708,
+      "end": 91.998
+    },
+    {
+      "word": "interfere",
+      "start": 92.114,
+      "end": 92.683
+    },
+    {
+      "word": "with",
+      "start": 92.718,
+      "end": 92.892
+    },
+    {
+      "word": "the",
+      "start": 92.938,
+      "end": 93.008
+    },
+    {
+      "word": "results.",
+      "start": 93.066,
+      "end": 93.774
+    },
+    {
+      "word": "Next,",
+      "start": 94.053,
+      "end": 94.575
+    },
+    {
+      "word": "place",
+      "start": 94.75,
+      "end": 95.051
+    },
+    {
+      "word": "a",
+      "start": 95.075,
+      "end": 95.109
+    },
+    {
+      "word": "small",
+      "start": 95.168,
+      "end": 95.481
+    },
+    {
+      "word": "spot",
+      "start": 95.539,
+      "end": 95.864
+    },
+    {
+      "word": "of",
+      "start": 95.922,
+      "end": 96.003
+    },
+    {
+      "word": "the",
+      "start": 96.061,
+      "end": 96.131
+    },
+    {
+      "word": "ink",
+      "start": 96.201,
+      "end": 96.375
+    },
+    {
+      "word": "sample",
+      "start": 96.433,
+      "end": 96.886
+    },
+    {
+      "word": "on",
+      "start": 96.955,
+      "end": 97.13
+    },
+    {
+      "word": "the",
+      "start": 97.176,
+      "end": 97.246
+    },
+    {
+      "word": "baseline.",
+      "start": 97.304,
+      "end": 97.954
+    },
+    {
+      "word": "Allow",
+      "start": 98.198,
+      "end": 98.558
+    },
+    {
+      "word": "the",
+      "start": 98.627,
+      "end": 98.697
+    },
+    {
+      "word": "spot",
+      "start": 98.732,
+      "end": 99.022
+    },
+    {
+      "word": "to",
+      "start": 99.068,
+      "end": 99.127
+    },
+    {
+      "word": "dry.",
+      "start": 99.196,
+      "end": 99.637
+    },
+    {
+      "word": "Then",
+      "start": 99.846,
+      "end": 100.055
+    },
+    {
+      "word": "place",
+      "start": 100.125,
+      "end": 100.404
+    },
+    {
+      "word": "the",
+      "start": 100.438,
+      "end": 100.508
+    },
+    {
+      "word": "paper",
+      "start": 100.578,
+      "end": 100.903
+    },
+    {
+      "word": "inside",
+      "start": 100.973,
+      "end": 101.344
+    },
+    {
+      "word": "a",
+      "start": 101.379,
+      "end": 101.414
+    },
+    {
+      "word": "container",
+      "start": 101.472,
+      "end": 102.017
+    },
+    {
+      "word": "containing",
+      "start": 102.261,
+      "end": 102.784
+    },
+    {
+      "word": "a",
+      "start": 102.842,
+      "end": 102.865
+    },
+    {
+      "word": "small",
+      "start": 102.923,
+      "end": 103.271
+    },
+    {
+      "word": "amount",
+      "start": 103.318,
+      "end": 103.666
+    },
+    {
+      "word": "of",
+      "start": 103.736,
+      "end": 103.829
+    },
+    {
+      "word": "suitable",
+      "start": 103.91,
+      "end": 104.386
+    },
+    {
+      "word": "solvent.",
+      "start": 104.421,
+      "end": 105.094
+    },
+    {
+      "word": "The",
+      "start": 105.431,
+      "end": 105.558
+    },
+    {
+      "word": "solvent",
+      "start": 105.628,
+      "end": 106.139
+    },
+    {
+      "word": "level",
+      "start": 106.209,
+      "end": 106.557
+    },
+    {
+      "word": "must",
+      "start": 106.766,
+      "end": 107.01
+    },
+    {
+      "word": "remain",
+      "start": 107.091,
+      "end": 107.462
+    },
+    {
+      "word": "below",
+      "start": 107.532,
+      "end": 107.799
+    },
+    {
+      "word": "the",
+      "start": 107.868,
+      "end": 107.938
+    },
+    {
+      "word": "baseline.",
+      "start": 108.008,
+      "end": 108.727
+    },
+    {
+      "word": "Why",
+      "start": 109.064,
+      "end": 109.285
+    },
+    {
+      "word": "is",
+      "start": 109.343,
+      "end": 109.447
+    },
+    {
+      "word": "this",
+      "start": 109.505,
+      "end": 109.645
+    },
+    {
+      "word": "important?",
+      "start": 109.703,
+      "end": 110.399
+    },
+    {
+      "word": "If",
+      "start": 110.794,
+      "end": 110.957
+    },
+    {
+      "word": "the",
+      "start": 111.015,
+      "end": 111.096
+    },
+    {
+      "word": "ink",
+      "start": 111.166,
+      "end": 111.328
+    },
+    {
+      "word": "spot",
+      "start": 111.398,
+      "end": 111.816
+    },
+    {
+      "word": "is",
+      "start": 111.897,
+      "end": 112.048
+    },
+    {
+      "word": "submerged",
+      "start": 112.106,
+      "end": 112.803
+    },
+    {
+      "word": "in",
+      "start": 112.884,
+      "end": 113.012
+    },
+    {
+      "word": "the",
+      "start": 113.058,
+      "end": 113.128
+    },
+    {
+      "word": "solvent,",
+      "start": 113.186,
+      "end": 113.824
+    },
+    {
+      "word": "the",
+      "start": 114.033,
+      "end": 114.149
+    },
+    {
+      "word": "sample",
+      "start": 114.219,
+      "end": 114.649
+    },
+    {
+      "word": "may",
+      "start": 114.695,
+      "end": 114.834
+    },
+    {
+      "word": "dissolve",
+      "start": 114.904,
+      "end": 115.31
+    },
+    {
+      "word": "directly",
+      "start": 115.345,
+      "end": 115.798
+    },
+    {
+      "word": "into",
+      "start": 115.844,
+      "end": 116.019
+    },
+    {
+      "word": "the",
+      "start": 116.1,
+      "end": 116.169
+    },
+    {
+      "word": "liquid",
+      "start": 116.228,
+      "end": 116.611
+    },
+    {
+      "word": "rather",
+      "start": 116.68,
+      "end": 117.017
+    },
+    {
+      "word": "than",
+      "start": 117.063,
+      "end": 117.214
+    },
+    {
+      "word": "travelling",
+      "start": 117.261,
+      "end": 117.737
+    },
+    {
+      "word": "up",
+      "start": 117.795,
+      "end": 117.911
+    },
+    {
+      "word": "the",
+      "start": 117.969,
+      "end": 118.05
+    },
+    {
+      "word": "paper.",
+      "start": 118.12,
+      "end": 118.666
+    },
+    {
+      "word": "The",
+      "start": 119.06,
+      "end": 119.2
+    },
+    {
+      "word": "solvent",
+      "start": 119.269,
+      "end": 119.722
+    },
+    {
+      "word": "gradually",
+      "start": 119.769,
+      "end": 120.21
+    },
+    {
+      "word": "moves",
+      "start": 120.279,
+      "end": 120.581
+    },
+    {
+      "word": "up",
+      "start": 120.651,
+      "end": 120.79
+    },
+    {
+      "word": "the",
+      "start": 120.86,
+      "end": 120.941
+    },
+    {
+      "word": "paper",
+      "start": 121.022,
+      "end": 121.429
+    },
+    {
+      "word": "by",
+      "start": 121.545,
+      "end": 121.707
+    },
+    {
+      "word": "capillary",
+      "start": 121.777,
+      "end": 122.416
+    },
+    {
+      "word": "action.",
+      "start": 122.474,
+      "end": 122.973
+    },
+    {
+      "word": "As",
+      "start": 123.182,
+      "end": 123.414
+    },
+    {
+      "word": "it",
+      "start": 123.496,
+      "end": 123.612
+    },
+    {
+      "word": "moves,",
+      "start": 123.705,
+      "end": 124.262
+    },
+    {
+      "word": "it",
+      "start": 124.413,
+      "end": 124.564
+    },
+    {
+      "word": "carries",
+      "start": 124.622,
+      "end": 125.04
+    },
+    {
+      "word": "the",
+      "start": 125.098,
+      "end": 125.179
+    },
+    {
+      "word": "dissolved",
+      "start": 125.249,
+      "end": 125.69
+    },
+    {
+      "word": "dyes",
+      "start": 125.748,
+      "end": 126.073
+    },
+    {
+      "word": "with",
+      "start": 126.154,
+      "end": 126.352
+    },
+    {
+      "word": "it.",
+      "start": 126.41,
+      "end": 126.654
+    },
+    {
+      "word": "Different",
+      "start": 126.897,
+      "end": 127.315
+    },
+    {
+      "word": "dyes",
+      "start": 127.373,
+      "end": 127.722
+    },
+    {
+      "word": "travel",
+      "start": 127.791,
+      "end": 128.175
+    },
+    {
+      "word": "different",
+      "start": 128.256,
+      "end": 128.627
+    },
+    {
+      "word": "distances",
+      "start": 128.674,
+      "end": 129.336
+    },
+    {
+      "word": "because",
+      "start": 129.672,
+      "end": 129.986
+    },
+    {
+      "word": "they",
+      "start": 130.009,
+      "end": 130.137
+    },
+    {
+      "word": "have",
+      "start": 130.183,
+      "end": 130.334
+    },
+    {
+      "word": "different",
+      "start": 130.38,
+      "end": 130.752
+    },
+    {
+      "word": "affinities",
+      "start": 130.798,
+      "end": 131.507
+    },
+    {
+      "word": "for",
+      "start": 131.75,
+      "end": 131.901
+    },
+    {
+      "word": "the",
+      "start": 131.948,
+      "end": 132.017
+    },
+    {
+      "word": "mobile",
+      "start": 132.075,
+      "end": 132.575
+    },
+    {
+      "word": "and",
+      "start": 132.621,
+      "end": 132.749
+    },
+    {
+      "word": "stationary",
+      "start": 132.807,
+      "end": 133.469
+    },
+    {
+      "word": "phases.",
+      "start": 133.527,
+      "end": 134.165
+    },
+    {
+      "word": "A",
+      "start": 134.444,
+      "end": 134.537
+    },
+    {
+      "word": "dye",
+      "start": 134.653,
+      "end": 134.943
+    },
+    {
+      "word": "that",
+      "start": 134.99,
+      "end": 135.129
+    },
+    {
+      "word": "is",
+      "start": 135.187,
+      "end": 135.268
+    },
+    {
+      "word": "more",
+      "start": 135.338,
+      "end": 135.524
+    },
+    {
+      "word": "strongly",
+      "start": 135.57,
+      "end": 136.034
+    },
+    {
+      "word": "attracted",
+      "start": 136.093,
+      "end": 136.673
+    },
+    {
+      "word": "to",
+      "start": 136.719,
+      "end": 136.801
+    },
+    {
+      "word": "the",
+      "start": 136.882,
+      "end": 136.952
+    },
+    {
+      "word": "mobile",
+      "start": 137.022,
+      "end": 137.474
+    },
+    {
+      "word": "phase",
+      "start": 137.498,
+      "end": 137.834
+    },
+    {
+      "word": "relative",
+      "start": 137.916,
+      "end": 138.461
+    },
+    {
+      "word": "to",
+      "start": 138.508,
+      "end": 138.601
+    },
+    {
+      "word": "the",
+      "start": 138.682,
+      "end": 138.752
+    },
+    {
+      "word": "stationary",
+      "start": 138.81,
+      "end": 139.425
+    },
+    {
+      "word": "phase",
+      "start": 139.471,
+      "end": 139.901
+    },
+    {
+      "word": "generally",
+      "start": 140.145,
+      "end": 140.679
+    },
+    {
+      "word": "travels",
+      "start": 140.737,
+      "end": 141.201
+    },
+    {
+      "word": "farther.",
+      "start": 141.271,
+      "end": 141.898
+    },
+    {
+      "word": "A",
+      "start": 142.235,
+      "end": 142.351
+    },
+    {
+      "word": "dye",
+      "start": 142.467,
+      "end": 142.815
+    },
+    {
+      "word": "that",
+      "start": 142.861,
+      "end": 143.012
+    },
+    {
+      "word": "is",
+      "start": 143.07,
+      "end": 143.152
+    },
+    {
+      "word": "more",
+      "start": 143.221,
+      "end": 143.407
+    },
+    {
+      "word": "strongly",
+      "start": 143.454,
+      "end": 143.883
+    },
+    {
+      "word": "retained",
+      "start": 143.964,
+      "end": 144.406
+    },
+    {
+      "word": "by",
+      "start": 144.44,
+      "end": 144.545
+    },
+    {
+      "word": "the",
+      "start": 144.615,
+      "end": 144.684
+    },
+    {
+      "word": "stationary",
+      "start": 144.742,
+      "end": 145.288
+    },
+    {
+      "word": "phase",
+      "start": 145.334,
+      "end": 145.601
+    },
+    {
+      "word": "travels",
+      "start": 145.636,
+      "end": 146.112
+    },
+    {
+      "word": "a",
+      "start": 146.159,
+      "end": 146.194
+    },
+    {
+      "word": "shorter",
+      "start": 146.263,
+      "end": 146.646
+    },
+    {
+      "word": "distance.",
+      "start": 146.704,
+      "end": 147.355
+    },
+    {
+      "word": "As",
+      "start": 147.877,
+      "end": 148.074
+    },
+    {
+      "word": "a",
+      "start": 148.132,
+      "end": 148.167
+    },
+    {
+      "word": "result,",
+      "start": 148.249,
+      "end": 148.817
+    },
+    {
+      "word": "the",
+      "start": 148.933,
+      "end": 149.061
+    },
+    {
+      "word": "different",
+      "start": 149.131,
+      "end": 149.514
+    },
+    {
+      "word": "dyes",
+      "start": 149.56,
+      "end": 149.886
+    },
+    {
+      "word": "separate",
+      "start": 149.944,
+      "end": 150.512
+    },
+    {
+      "word": "into",
+      "start": 150.57,
+      "end": 150.826
+    },
+    {
+      "word": "individual",
+      "start": 150.942,
+      "end": 151.581
+    },
+    {
+      "word": "spots.",
+      "start": 151.65,
+      "end": 152.347
+    },
+    {
+      "word": "When",
+      "start": 152.742,
+      "end": 152.939
+    },
+    {
+      "word": "the",
+      "start": 152.974,
+      "end": 153.044
+    },
+    {
+      "word": "solvent",
+      "start": 153.102,
+      "end": 153.601
+    },
+    {
+      "word": "has",
+      "start": 153.659,
+      "end": 153.798
+    },
+    {
+      "word": "travelled",
+      "start": 153.868,
+      "end": 154.309
+    },
+    {
+      "word": "an",
+      "start": 154.367,
+      "end": 154.437
+    },
+    {
+      "word": "appropriate",
+      "start": 154.483,
+      "end": 154.994
+    },
+    {
+      "word": "distance,",
+      "start": 155.029,
+      "end": 155.737
+    },
+    {
+      "word": "remove",
+      "start": 156.016,
+      "end": 156.387
+    },
+    {
+      "word": "the",
+      "start": 156.422,
+      "end": 156.504
+    },
+    {
+      "word": "paper",
+      "start": 156.562,
+      "end": 157.003
+    },
+    {
+      "word": "and",
+      "start": 157.154,
+      "end": 157.374
+    },
+    {
+      "word": "immediately",
+      "start": 157.444,
+      "end": 158.013
+    },
+    {
+      "word": "mark",
+      "start": 158.094,
+      "end": 158.373
+    },
+    {
+      "word": "the",
+      "start": 158.442,
+      "end": 158.512
+    },
+    {
+      "word": "position",
+      "start": 158.558,
+      "end": 159.046
+    },
+    {
+      "word": "of",
+      "start": 159.104,
+      "end": 159.162
+    },
+    {
+      "word": "the",
+      "start": 159.22,
+      "end": 159.302
+    },
+    {
+      "word": "solvent",
+      "start": 159.348,
+      "end": 159.754
+    },
+    {
+      "word": "front",
+      "start": 159.801,
+      "end": 160.149
+    },
+    {
+      "word": "with",
+      "start": 160.3,
+      "end": 160.497
+    },
+    {
+      "word": "a",
+      "start": 160.532,
+      "end": 160.567
+    },
+    {
+      "word": "pencil.",
+      "start": 160.637,
+      "end": 161.182
+    },
+    {
+      "word": "Allow",
+      "start": 161.298,
+      "end": 161.635
+    },
+    {
+      "word": "the",
+      "start": 161.693,
+      "end": 161.763
+    },
+    {
+      "word": "paper",
+      "start": 161.821,
+      "end": 162.134
+    },
+    {
+      "word": "to",
+      "start": 162.192,
+      "end": 162.262
+    },
+    {
+      "word": "dry.",
+      "start": 162.343,
+      "end": 162.901
+    },
+    {
+      "word": "The",
+      "start": 163.423,
+      "end": 163.551
+    },
+    {
+      "word": "resulting",
+      "start": 163.609,
+      "end": 164.096
+    },
+    {
+      "word": "pattern",
+      "start": 164.166,
+      "end": 164.503
+    },
+    {
+      "word": "of",
+      "start": 164.538,
+      "end": 164.596
+    },
+    {
+      "word": "spots",
+      "start": 164.654,
+      "end": 165.118
+    },
+    {
+      "word": "is",
+      "start": 165.292,
+      "end": 165.478
+    },
+    {
+      "word": "called",
+      "start": 165.559,
+      "end": 165.884
+    },
+    {
+      "word": "a",
+      "start": 165.966,
+      "end": 166.082
+    },
+    {
+      "word": "chromatogram.",
+      "start": 166.175,
+      "end": 167.127
+    },
+    {
+      "word": "Now,",
+      "start": 167.951,
+      "end": 168.299
+    },
+    {
+      "word": "let",
+      "start": 168.38,
+      "end": 168.543
+    },
+    {
+      "word": "us",
+      "start": 168.589,
+      "end": 168.671
+    },
+    {
+      "word": "consider",
+      "start": 168.717,
+      "end": 169.251
+    },
+    {
+      "word": "how",
+      "start": 169.367,
+      "end": 169.576
+    },
+    {
+      "word": "chromatography",
+      "start": 169.657,
+      "end": 170.458
+    },
+    {
+      "word": "can",
+      "start": 170.517,
+      "end": 170.667
+    },
+    {
+      "word": "help",
+      "start": 170.737,
+      "end": 170.946
+    },
+    {
+      "word": "identify",
+      "start": 171.016,
+      "end": 171.643
+    },
+    {
+      "word": "substances.",
+      "start": 171.712,
+      "end": 172.583
+    },
+    {
+      "word": "If",
+      "start": 172.792,
+      "end": 172.989
+    },
+    {
+      "word": "a",
+      "start": 173.059,
+      "end": 173.094
+    },
+    {
+      "word": "sample",
+      "start": 173.187,
+      "end": 173.732
+    },
+    {
+      "word": "produces",
+      "start": 173.791,
+      "end": 174.336
+    },
+    {
+      "word": "one",
+      "start": 174.429,
+      "end": 174.661
+    },
+    {
+      "word": "spot",
+      "start": 174.708,
+      "end": 175.114
+    },
+    {
+      "word": "under",
+      "start": 175.23,
+      "end": 175.486
+    },
+    {
+      "word": "a",
+      "start": 175.544,
+      "end": 175.578
+    },
+    {
+      "word": "particular",
+      "start": 175.648,
+      "end": 176.136
+    },
+    {
+      "word": "set",
+      "start": 176.194,
+      "end": 176.38
+    },
+    {
+      "word": "of",
+      "start": 176.426,
+      "end": 176.484
+    },
+    {
+      "word": "conditions,",
+      "start": 176.542,
+      "end": 177.25
+    },
+    {
+      "word": "this",
+      "start": 177.343,
+      "end": 177.541
+    },
+    {
+      "word": "suggests",
+      "start": 177.587,
+      "end": 178.063
+    },
+    {
+      "word": "that",
+      "start": 178.109,
+      "end": 178.284
+    },
+    {
+      "word": "it",
+      "start": 178.342,
+      "end": 178.411
+    },
+    {
+      "word": "may",
+      "start": 178.481,
+      "end": 178.632
+    },
+    {
+      "word": "contain",
+      "start": 178.69,
+      "end": 179.119
+    },
+    {
+      "word": "only",
+      "start": 179.236,
+      "end": 179.572
+    },
+    {
+      "word": "one",
+      "start": 179.654,
+      "end": 179.863
+    },
+    {
+      "word": "component",
+      "start": 179.921,
+      "end": 180.536
+    },
+    {
+      "word": "detectable",
+      "start": 180.594,
+      "end": 181.233
+    },
+    {
+      "word": "by",
+      "start": 181.291,
+      "end": 181.441
+    },
+    {
+      "word": "that",
+      "start": 181.5,
+      "end": 181.662
+    },
+    {
+      "word": "method.",
+      "start": 181.755,
+      "end": 182.243
+    },
+    {
+      "word": "If",
+      "start": 182.486,
+      "end": 182.649
+    },
+    {
+      "word": "it",
+      "start": 182.719,
+      "end": 182.788
+    },
+    {
+      "word": "produces",
+      "start": 182.846,
+      "end": 183.392
+    },
+    {
+      "word": "several",
+      "start": 183.438,
+      "end": 183.764
+    },
+    {
+      "word": "spots,",
+      "start": 183.81,
+      "end": 184.414
+    },
+    {
+      "word": "it",
+      "start": 184.565,
+      "end": 184.704
+    },
+    {
+      "word": "contains",
+      "start": 184.762,
+      "end": 185.238
+    },
+    {
+      "word": "several",
+      "start": 185.296,
+      "end": 185.656
+    },
+    {
+      "word": "components.",
+      "start": 185.714,
+      "end": 186.48
+    },
+    {
+      "word": "However,",
+      "start": 186.817,
+      "end": 187.502
+    },
+    {
+      "word": "one",
+      "start": 187.781,
+      "end": 188.048
+    },
+    {
+      "word": "spot",
+      "start": 188.082,
+      "end": 188.477
+    },
+    {
+      "word": "does",
+      "start": 188.547,
+      "end": 188.779
+    },
+    {
+      "word": "not",
+      "start": 188.86,
+      "end": 189.058
+    },
+    {
+      "word": "conclusively",
+      "start": 189.127,
+      "end": 189.847
+    },
+    {
+      "word": "prove",
+      "start": 189.917,
+      "end": 190.288
+    },
+    {
+      "word": "that",
+      "start": 190.323,
+      "end": 190.497
+    },
+    {
+      "word": "a",
+      "start": 190.544,
+      "end": 190.579
+    },
+    {
+      "word": "substance",
+      "start": 190.637,
+      "end": 191.159
+    },
+    {
+      "word": "is",
+      "start": 191.206,
+      "end": 191.333
+    },
+    {
+      "word": "pure",
+      "start": 191.449,
+      "end": 191.983
+    },
+    {
+      "word": "because",
+      "start": 192.099,
+      "end": 192.459
+    },
+    {
+      "word": "different",
+      "start": 192.506,
+      "end": 192.854
+    },
+    {
+      "word": "substances",
+      "start": 192.889,
+      "end": 193.481
+    },
+    {
+      "word": "can",
+      "start": 193.539,
+      "end": 193.69
+    },
+    {
+      "word": "sometimes",
+      "start": 193.76,
+      "end": 194.224
+    },
+    {
+      "word": "travel",
+      "start": 194.282,
+      "end": 194.677
+    },
+    {
+      "word": "the",
+      "start": 194.828,
+      "end": 194.956
+    },
+    {
+      "word": "same",
+      "start": 195.014,
+      "end": 195.269
+    },
+    {
+      "word": "distance.",
+      "start": 195.315,
+      "end": 195.954
+    },
+    {
+      "word": "Now,",
+      "start": 196.198,
+      "end": 196.418
+    },
+    {
+      "word": "let",
+      "start": 196.453,
+      "end": 196.604
+    },
+    {
+      "word": "us",
+      "start": 196.662,
+      "end": 196.755
+    },
+    {
+      "word": "examine",
+      "start": 196.825,
+      "end": 197.417
+    },
+    {
+      "word": "R",
+      "start": 197.533,
+      "end": 197.87
+    },
+    {
+      "word": "F",
+      "start": 198.148,
+      "end": 198.322
+    },
+    {
+      "word": "values.",
+      "start": 198.497,
+      "end": 199.193
+    },
+    {
+      "word": "R",
+      "start": 199.646,
+      "end": 199.925
+    },
+    {
+      "word": "F",
+      "start": 200.099,
+      "end": 200.273
+    },
+    {
+      "word": "stands",
+      "start": 200.389,
+      "end": 200.784
+    },
+    {
+      "word": "for",
+      "start": 200.842,
+      "end": 200.958
+    },
+    {
+      "word": "retention",
+      "start": 201.016,
+      "end": 201.573
+    },
+    {
+      "word": "factor.",
+      "start": 201.655,
+      "end": 202.2
+    },
+    {
+      "word": "The",
+      "start": 202.375,
+      "end": 202.525
+    },
+    {
+      "word": "R",
+      "start": 202.642,
+      "end": 202.851
+    },
+    {
+      "word": "F",
+      "start": 202.92,
+      "end": 203.094
+    },
+    {
+      "word": "value",
+      "start": 203.141,
+      "end": 203.501
+    },
+    {
+      "word": "is",
+      "start": 203.547,
+      "end": 203.652
+    },
+    {
+      "word": "calculated",
+      "start": 203.733,
+      "end": 204.441
+    },
+    {
+      "word": "using",
+      "start": 204.557,
+      "end": 204.906
+    },
+    {
+      "word": "the",
+      "start": 204.975,
+      "end": 205.056
+    },
+    {
+      "word": "following",
+      "start": 205.138,
+      "end": 205.614
+    },
+    {
+      "word": "formula:",
+      "start": 205.707,
+      "end": 206.322
+    },
+    {
+      "word": "R",
+      "start": 206.659,
+      "end": 206.833
+    },
+    {
+      "word": "F",
+      "start": 206.914,
+      "end": 207.123
+    },
+    {
+      "word": "equals",
+      "start": 207.297,
+      "end": 207.773
+    },
+    {
+      "word": "the",
+      "start": 207.82,
+      "end": 207.889
+    },
+    {
+      "word": "distance",
+      "start": 207.959,
+      "end": 208.447
+    },
+    {
+      "word": "travelled",
+      "start": 208.481,
+      "end": 208.957
+    },
+    {
+      "word": "by",
+      "start": 208.992,
+      "end": 209.097
+    },
+    {
+      "word": "the",
+      "start": 209.155,
+      "end": 209.236
+    },
+    {
+      "word": "substance",
+      "start": 209.306,
+      "end": 209.875
+    },
+    {
+      "word": "divided",
+      "start": 209.921,
+      "end": 210.467
+    },
+    {
+      "word": "by",
+      "start": 210.525,
+      "end": 210.641
+    },
+    {
+      "word": "the",
+      "start": 210.711,
+      "end": 210.792
+    },
+    {
+      "word": "distance",
+      "start": 210.85,
+      "end": 211.326
+    },
+    {
+      "word": "travelled",
+      "start": 211.361,
+      "end": 211.86
+    },
+    {
+      "word": "by",
+      "start": 211.906,
+      "end": 212.034
+    },
+    {
+      "word": "the",
+      "start": 212.104,
+      "end": 212.185
+    },
+    {
+      "word": "solvent",
+      "start": 212.255,
+      "end": 212.731
+    },
+    {
+      "word": "front.",
+      "start": 212.789,
+      "end": 213.207
+    },
+    {
+      "word": "Both",
+      "start": 213.543,
+      "end": 213.857
+    },
+    {
+      "word": "distances",
+      "start": 213.938,
+      "end": 214.6
+    },
+    {
+      "word": "must",
+      "start": 214.716,
+      "end": 214.983
+    },
+    {
+      "word": "be",
+      "start": 215.041,
+      "end": 215.157
+    },
+    {
+      "word": "measured",
+      "start": 215.227,
+      "end": 215.61
+    },
+    {
+      "word": "from",
+      "start": 215.668,
+      "end": 215.842
+    },
+    {
+      "word": "the",
+      "start": 215.9,
+      "end": 215.97
+    },
+    {
+      "word": "baseline.",
+      "start": 216.039,
+      "end": 216.771
+    },
+    {
+      "word": "The",
+      "start": 217.049,
+      "end": 217.177
+    },
+    {
+      "word": "distance",
+      "start": 217.247,
+      "end": 217.676
+    },
+    {
+      "word": "travelled",
+      "start": 217.711,
+      "end": 218.129
+    },
+    {
+      "word": "by",
+      "start": 218.164,
+      "end": 218.292
+    },
+    {
+      "word": "a",
+      "start": 218.361,
+      "end": 218.396
+    },
+    {
+      "word": "substance",
+      "start": 218.466,
+      "end": 219.035
+    },
+    {
+      "word": "is",
+      "start": 219.093,
+      "end": 219.244
+    },
+    {
+      "word": "measured",
+      "start": 219.336,
+      "end": 219.754
+    },
+    {
+      "word": "to",
+      "start": 219.871,
+      "end": 220.021
+    },
+    {
+      "word": "the",
+      "start": 220.103,
+      "end": 220.184
+    },
+    {
+      "word": "centre",
+      "start": 220.254,
+      "end": 220.648
+    },
+    {
+      "word": "of",
+      "start": 220.695,
+      "end": 220.764
+    },
+    {
+      "word": "its",
+      "start": 220.834,
+      "end": 220.962
+    },
+    {
+      "word": "spot.",
+      "start": 220.997,
+      "end": 221.542
+    },
+    {
+      "word": "Let",
+      "start": 221.879,
+      "end": 222.053
+    },
+    {
+      "word": "us",
+      "start": 222.111,
+      "end": 222.204
+    },
+    {
+      "word": "work",
+      "start": 222.285,
+      "end": 222.494
+    },
+    {
+      "word": "through",
+      "start": 222.529,
+      "end": 222.738
+    },
+    {
+      "word": "an",
+      "start": 222.761,
+      "end": 222.819
+    },
+    {
+      "word": "example.",
+      "start": 222.878,
+      "end": 223.504
+    },
+    {
+      "word": "A",
+      "start": 223.713,
+      "end": 223.795
+    },
+    {
+      "word": "student",
+      "start": 223.876,
+      "end": 224.259
+    },
+    {
+      "word": "carries",
+      "start": 224.317,
+      "end": 224.642
+    },
+    {
+      "word": "out",
+      "start": 224.689,
+      "end": 224.851
+    },
+    {
+      "word": "paper",
+      "start": 224.932,
+      "end": 225.246
+    },
+    {
+      "word": "chromatography.",
+      "start": 225.292,
+      "end": 226.233
+    },
+    {
+      "word": "One",
+      "start": 226.511,
+      "end": 226.767
+    },
+    {
+      "word": "dye",
+      "start": 226.825,
+      "end": 227.115
+    },
+    {
+      "word": "travels",
+      "start": 227.162,
+      "end": 227.556
+    },
+    {
+      "word": "six",
+      "start": 227.603,
+      "end": 227.823
+    },
+    {
+      "word": "centimetres",
+      "start": 227.858,
+      "end": 228.508
+    },
+    {
+      "word": "from",
+      "start": 228.566,
+      "end": 228.741
+    },
+    {
+      "word": "the",
+      "start": 228.81,
+      "end": 228.88
+    },
+    {
+      "word": "baseline.",
+      "start": 228.95,
+      "end": 229.646
+    },
+    {
+      "word": "The",
+      "start": 229.89,
+      "end": 230.018
+    },
+    {
+      "word": "solvent",
+      "start": 230.088,
+      "end": 230.494
+    },
+    {
+      "word": "front",
+      "start": 230.54,
+      "end": 230.819
+    },
+    {
+      "word": "travels",
+      "start": 230.877,
+      "end": 231.307
+    },
+    {
+      "word": "eight",
+      "start": 231.4,
+      "end": 231.609
+    },
+    {
+      "word": "centimetres",
+      "start": 231.655,
+      "end": 232.247
+    },
+    {
+      "word": "from",
+      "start": 232.282,
+      "end": 232.421
+    },
+    {
+      "word": "the",
+      "start": 232.479,
+      "end": 232.549
+    },
+    {
+      "word": "same",
+      "start": 232.595,
+      "end": 232.851
+    },
+    {
+      "word": "baseline.",
+      "start": 232.909,
+      "end": 233.617
+    },
+    {
+      "word": "Calculate",
+      "start": 233.896,
+      "end": 234.581
+    },
+    {
+      "word": "the",
+      "start": 234.627,
+      "end": 234.778
+    },
+    {
+      "word": "R",
+      "start": 234.894,
+      "end": 235.068
+    },
+    {
+      "word": "F",
+      "start": 235.184,
+      "end": 235.335
+    },
+    {
+      "word": "value.",
+      "start": 235.405,
+      "end": 235.893
+    },
+    {
+      "word": "We",
+      "start": 236.171,
+      "end": 236.334
+    },
+    {
+      "word": "begin",
+      "start": 236.403,
+      "end": 236.694
+    },
+    {
+      "word": "with",
+      "start": 236.74,
+      "end": 236.879
+    },
+    {
+      "word": "the",
+      "start": 236.914,
+      "end": 236.984
+    },
+    {
+      "word": "formula.",
+      "start": 237.042,
+      "end": 237.669
+    },
+    {
+      "word": "R",
+      "start": 237.843,
+      "end": 238.087
+    },
+    {
+      "word": "F",
+      "start": 238.18,
+      "end": 238.331
+    },
+    {
+      "word": "equals",
+      "start": 238.424,
+      "end": 238.784
+    },
+    {
+      "word": "distance",
+      "start": 238.853,
+      "end": 239.318
+    },
+    {
+      "word": "travelled",
+      "start": 239.341,
+      "end": 239.747
+    },
+    {
+      "word": "by",
+      "start": 239.782,
+      "end": 239.898
+    },
+    {
+      "word": "the",
+      "start": 239.956,
+      "end": 240.026
+    },
+    {
+      "word": "substance",
+      "start": 240.084,
+      "end": 240.595
+    },
+    {
+      "word": "divided",
+      "start": 240.63,
+      "end": 241.117
+    },
+    {
+      "word": "by",
+      "start": 241.164,
+      "end": 241.291
+    },
+    {
+      "word": "distance",
+      "start": 241.373,
+      "end": 241.825
+    },
+    {
+      "word": "travelled",
+      "start": 241.86,
+      "end": 242.255
+    },
+    {
+      "word": "by",
+      "start": 242.29,
+      "end": 242.406
+    },
+    {
+      "word": "the",
+      "start": 242.464,
+      "end": 242.534
+    },
+    {
+      "word": "solvent",
+      "start": 242.58,
+      "end": 242.998
+    },
+    {
+      "word": "front.",
+      "start": 243.056,
+      "end": 243.497
+    },
+    {
+      "word": "Substituting",
+      "start": 243.892,
+      "end": 244.67
+    },
+    {
+      "word": "the",
+      "start": 244.717,
+      "end": 244.786
+    },
+    {
+      "word": "values",
+      "start": 244.844,
+      "end": 245.227
+    },
+    {
+      "word": "gives",
+      "start": 245.297,
+      "end": 245.576
+    },
+    {
+      "word": "six",
+      "start": 245.634,
+      "end": 245.982
+    },
+    {
+      "word": "divided",
+      "start": 246.075,
+      "end": 246.551
+    },
+    {
+      "word": "by",
+      "start": 246.609,
+      "end": 246.748
+    },
+    {
+      "word": "eight.",
+      "start": 246.841,
+      "end": 247.166
+    },
+    {
+      "word": "Six",
+      "start": 247.341,
+      "end": 247.608
+    },
+    {
+      "word": "divided",
+      "start": 247.677,
+      "end": 248.153
+    },
+    {
+      "word": "by",
+      "start": 248.223,
+      "end": 248.362
+    },
+    {
+      "word": "eight",
+      "start": 248.478,
+      "end": 248.745
+    },
+    {
+      "word": "equals",
+      "start": 248.827,
+      "end": 249.279
+    },
+    {
+      "word": "zero",
+      "start": 249.43,
+      "end": 249.895
+    },
+    {
+      "word": "point",
+      "start": 249.988,
+      "end": 250.313
+    },
+    {
+      "word": "seven",
+      "start": 250.382,
+      "end": 250.696
+    },
+    {
+      "word": "five.",
+      "start": 250.777,
+      "end": 251.218
+    },
+    {
+      "word": "Therefore,",
+      "start": 251.507,
+      "end": 252.204
+    },
+    {
+      "word": "the",
+      "start": 252.296,
+      "end": 252.436
+    },
+    {
+      "word": "R",
+      "start": 252.517,
+      "end": 252.761
+    },
+    {
+      "word": "F",
+      "start": 252.854,
+      "end": 253.005
+    },
+    {
+      "word": "value",
+      "start": 253.086,
+      "end": 253.585
+    },
+    {
+      "word": "is",
+      "start": 253.655,
+      "end": 253.852
+    },
+    {
+      "word": "zero",
+      "start": 253.899,
+      "end": 254.212
+    },
+    {
+      "word": "point",
+      "start": 254.305,
+      "end": 254.618
+    },
+    {
+      "word": "seven",
+      "start": 254.688,
+      "end": 255.013
+    },
+    {
+      "word": "five.",
+      "start": 255.094,
+      "end": 255.547
+    },
+    {
+      "word": "Notice",
+      "start": 255.826,
+      "end": 256.314
+    },
+    {
+      "word": "that",
+      "start": 256.348,
+      "end": 256.557
+    },
+    {
+      "word": "R",
+      "start": 256.673,
+      "end": 256.882
+    },
+    {
+      "word": "F",
+      "start": 256.975,
+      "end": 257.103
+    },
+    {
+      "word": "values",
+      "start": 257.184,
+      "end": 257.579
+    },
+    {
+      "word": "have",
+      "start": 257.637,
+      "end": 257.811
+    },
+    {
+      "word": "no",
+      "start": 257.881,
+      "end": 258.032
+    },
+    {
+      "word": "units",
+      "start": 258.148,
+      "end": 258.647
+    },
+    {
+      "word": "because",
+      "start": 258.798,
+      "end": 259.216
+    },
+    {
+      "word": "we",
+      "start": 259.251,
+      "end": 259.344
+    },
+    {
+      "word": "are",
+      "start": 259.402,
+      "end": 259.506
+    },
+    {
+      "word": "dividing",
+      "start": 259.541,
+      "end": 260.098
+    },
+    {
+      "word": "one",
+      "start": 260.191,
+      "end": 260.412
+    },
+    {
+      "word": "distance",
+      "start": 260.47,
+      "end": 260.958
+    },
+    {
+      "word": "by",
+      "start": 261.004,
+      "end": 261.155
+    },
+    {
+      "word": "another",
+      "start": 261.225,
+      "end": 261.561
+    },
+    {
+      "word": "distance",
+      "start": 261.631,
+      "end": 262.13
+    },
+    {
+      "word": "measured",
+      "start": 262.188,
+      "end": 262.629
+    },
+    {
+      "word": "in",
+      "start": 262.687,
+      "end": 262.757
+    },
+    {
+      "word": "the",
+      "start": 262.815,
+      "end": 262.885
+    },
+    {
+      "word": "same",
+      "start": 262.931,
+      "end": 263.187
+    },
+    {
+      "word": "units.",
+      "start": 263.256,
+      "end": 263.825
+    },
+    {
+      "word": "For",
+      "start": 264.162,
+      "end": 264.336
+    },
+    {
+      "word": "ordinary",
+      "start": 264.406,
+      "end": 264.917
+    },
+    {
+      "word": "paper",
+      "start": 264.987,
+      "end": 265.393
+    },
+    {
+      "word": "chromatography,",
+      "start": 265.486,
+      "end": 266.426
+    },
+    {
+      "word": "R",
+      "start": 266.496,
+      "end": 266.67
+    },
+    {
+      "word": "F",
+      "start": 266.786,
+      "end": 266.995
+    },
+    {
+      "word": "values",
+      "start": 267.239,
+      "end": 267.819
+    },
+    {
+      "word": "normally",
+      "start": 268.028,
+      "end": 268.516
+    },
+    {
+      "word": "lie",
+      "start": 268.609,
+      "end": 269.05
+    },
+    {
+      "word": "between",
+      "start": 269.097,
+      "end": 269.48
+    },
+    {
+      "word": "zero",
+      "start": 269.549,
+      "end": 270.014
+    },
+    {
+      "word": "and",
+      "start": 270.13,
+      "end": 270.327
+    },
+    {
+      "word": "one.",
+      "start": 270.443,
+      "end": 270.768
+    },
+    {
+      "word": "Now,",
+      "start": 271.163,
+      "end": 271.662
+    },
+    {
+      "word": "let",
+      "start": 271.836,
+      "end": 272.022
+    },
+    {
+      "word": "us",
+      "start": 272.08,
+      "end": 272.173
+    },
+    {
+      "word": "try",
+      "start": 272.22,
+      "end": 272.475
+    },
+    {
+      "word": "another",
+      "start": 272.568,
+      "end": 272.951
+    },
+    {
+      "word": "example.",
+      "start": 273.009,
+      "end": 273.648
+    },
+    {
+      "word": "A",
+      "start": 273.891,
+      "end": 273.984
+    },
+    {
+      "word": "dye",
+      "start": 274.1,
+      "end": 274.367
+    },
+    {
+      "word": "travels",
+      "start": 274.402,
+      "end": 274.832
+    },
+    {
+      "word": "three",
+      "start": 274.913,
+      "end": 275.192
+    },
+    {
+      "word": "point",
+      "start": 275.261,
+      "end": 275.517
+    },
+    {
+      "word": "five",
+      "start": 275.587,
+      "end": 275.888
+    },
+    {
+      "word": "centimetres,",
+      "start": 275.923,
+      "end": 276.829
+    },
+    {
+      "word": "while",
+      "start": 277.038,
+      "end": 277.293
+    },
+    {
+      "word": "the",
+      "start": 277.316,
+      "end": 277.398
+    },
+    {
+      "word": "solvent",
+      "start": 277.456,
+      "end": 277.897
+    },
+    {
+      "word": "front",
+      "start": 277.967,
+      "end": 278.338
+    },
+    {
+      "word": "travels",
+      "start": 278.512,
+      "end": 279.104
+    },
+    {
+      "word": "seven",
+      "start": 279.255,
+      "end": 279.615
+    },
+    {
+      "word": "centimetres.",
+      "start": 279.673,
+      "end": 280.509
+    },
+    {
+      "word": "What",
+      "start": 280.718,
+      "end": 280.997
+    },
+    {
+      "word": "is",
+      "start": 281.078,
+      "end": 281.252
+    },
+    {
+      "word": "the",
+      "start": 281.31,
+      "end": 281.426
+    },
+    {
+      "word": "R",
+      "start": 281.542,
+      "end": 281.751
+    },
+    {
+      "word": "F",
+      "start": 281.844,
+      "end": 281.995
+    },
+    {
+      "word": "value?",
+      "start": 282.111,
+      "end": 282.622
+    },
+    {
+      "word": "Pause",
+      "start": 282.831,
+      "end": 283.168
+    },
+    {
+      "word": "for",
+      "start": 283.214,
+      "end": 283.342
+    },
+    {
+      "word": "a",
+      "start": 283.388,
+      "end": 283.411
+    },
+    {
+      "word": "moment",
+      "start": 283.481,
+      "end": 283.841
+    },
+    {
+      "word": "and",
+      "start": 283.911,
+      "end": 284.05
+    },
+    {
+      "word": "calculate",
+      "start": 284.131,
+      "end": 284.677
+    },
+    {
+      "word": "your",
+      "start": 284.712,
+      "end": 284.84
+    },
+    {
+      "word": "answer.",
+      "start": 284.886,
+      "end": 285.42
+    },
+    {
+      "word": "The",
+      "start": 285.594,
+      "end": 285.722
+    },
+    {
+      "word": "correct",
+      "start": 285.792,
+      "end": 286.186
+    },
+    {
+      "word": "answer",
+      "start": 286.244,
+      "end": 286.581
+    },
+    {
+      "word": "is",
+      "start": 286.662,
+      "end": 286.767
+    },
+    {
+      "word": "zero",
+      "start": 286.825,
+      "end": 287.185
+    },
+    {
+      "word": "point",
+      "start": 287.254,
+      "end": 287.51
+    },
+    {
+      "word": "five.",
+      "start": 287.579,
+      "end": 288.137
+    },
+    {
+      "word": "We",
+      "start": 288.381,
+      "end": 288.531
+    },
+    {
+      "word": "obtain",
+      "start": 288.601,
+      "end": 288.984
+    },
+    {
+      "word": "this",
+      "start": 289.054,
+      "end": 289.275
+    },
+    {
+      "word": "by",
+      "start": 289.391,
+      "end": 289.553
+    },
+    {
+      "word": "dividing",
+      "start": 289.634,
+      "end": 290.18
+    },
+    {
+      "word": "three",
+      "start": 290.261,
+      "end": 290.494
+    },
+    {
+      "word": "point",
+      "start": 290.552,
+      "end": 290.807
+    },
+    {
+      "word": "five",
+      "start": 290.877,
+      "end": 291.144
+    },
+    {
+      "word": "by",
+      "start": 291.202,
+      "end": 291.353
+    },
+    {
+      "word": "seven.",
+      "start": 291.434,
+      "end": 291.956
+    },
+    {
+      "word": "Well",
+      "start": 292.2,
+      "end": 292.432
+    },
+    {
+      "word": "done",
+      "start": 292.502,
+      "end": 292.746
+    },
+    {
+      "word": "if",
+      "start": 292.781,
+      "end": 292.85
+    },
+    {
+      "word": "you",
+      "start": 292.908,
+      "end": 292.99
+    },
+    {
+      "word": "got",
+      "start": 293.059,
+      "end": 293.222
+    },
+    {
+      "word": "that",
+      "start": 293.268,
+      "end": 293.419
+    },
+    {
+      "word": "correct.",
+      "start": 293.489,
+      "end": 294.069
+    },
+    {
+      "word": "An",
+      "start": 294.464,
+      "end": 294.627
+    },
+    {
+      "word": "important",
+      "start": 294.685,
+      "end": 295.207
+    },
+    {
+      "word": "point",
+      "start": 295.265,
+      "end": 295.509
+    },
+    {
+      "word": "for",
+      "start": 295.567,
+      "end": 295.695
+    },
+    {
+      "word": "your",
+      "start": 295.753,
+      "end": 295.881
+    },
+    {
+      "word": "G",
+      "start": 295.95,
+      "end": 296.101
+    },
+    {
+      "word": "C",
+      "start": 296.217,
+      "end": 296.31
+    },
+    {
+      "word": "S",
+      "start": 296.705,
+      "end": 296.879
+    },
+    {
+      "word": "E",
+      "start": 297.007,
+      "end": 297.181
+    },
+    {
+      "word": "examination",
+      "start": 297.262,
+      "end": 298.168
+    },
+    {
+      "word": "is",
+      "start": 298.319,
+      "end": 298.516
+    },
+    {
+      "word": "that",
+      "start": 298.586,
+      "end": 298.807
+    },
+    {
+      "word": "R",
+      "start": 298.923,
+      "end": 299.132
+    },
+    {
+      "word": "F",
+      "start": 299.283,
+      "end": 299.492
+    },
+    {
+      "word": "values",
+      "start": 299.666,
+      "end": 300.281
+    },
+    {
+      "word": "should",
+      "start": 300.409,
+      "end": 300.676
+    },
+    {
+      "word": "only",
+      "start": 300.746,
+      "end": 300.978
+    },
+    {
+      "word": "be",
+      "start": 301.036,
+      "end": 301.129
+    },
+    {
+      "word": "compared",
+      "start": 301.187,
+      "end": 301.814
+    },
+    {
+      "word": "meaningfully",
+      "start": 302.023,
+      "end": 302.812
+    },
+    {
+      "word": "when",
+      "start": 303.149,
+      "end": 303.358
+    },
+    {
+      "word": "the",
+      "start": 303.393,
+      "end": 303.474
+    },
+    {
+      "word": "chromatography",
+      "start": 303.532,
+      "end": 304.345
+    },
+    {
+      "word": "conditions",
+      "start": 304.414,
+      "end": 305.157
+    },
+    {
+      "word": "are",
+      "start": 305.331,
+      "end": 305.575
+    },
+    {
+      "word": "the",
+      "start": 305.622,
+      "end": 305.715
+    },
+    {
+      "word": "same.",
+      "start": 305.773,
+      "end": 306.144
+    },
+    {
+      "word": "Changing",
+      "start": 306.597,
+      "end": 307.073
+    },
+    {
+      "word": "the",
+      "start": 307.131,
+      "end": 307.212
+    },
+    {
+      "word": "solvent,",
+      "start": 307.282,
+      "end": 307.828
+    },
+    {
+      "word": "paper",
+      "start": 307.979,
+      "end": 308.408
+    },
+    {
+      "word": "or",
+      "start": 308.617,
+      "end": 308.791
+    },
+    {
+      "word": "experimental",
+      "start": 308.861,
+      "end": 309.685
+    },
+    {
+      "word": "conditions",
+      "start": 309.755,
+      "end": 310.417
+    },
+    {
+      "word": "can",
+      "start": 310.568,
+      "end": 310.823
+    },
+    {
+      "word": "change",
+      "start": 310.939,
+      "end": 311.357
+    },
+    {
+      "word": "the",
+      "start": 311.404,
+      "end": 311.508
+    },
+    {
+      "word": "R",
+      "start": 311.624,
+      "end": 311.833
+    },
+    {
+      "word": "F",
+      "start": 311.984,
+      "end": 312.135
+    },
+    {
+      "word": "value.",
+      "start": 312.344,
+      "end": 312.901
+    },
+    {
+      "word": "Now,",
+      "start": 313.354,
+      "end": 313.691
+    },
+    {
+      "word": "let",
+      "start": 313.76,
+      "end": 313.923
+    },
+    {
+      "word": "us",
+      "start": 313.981,
+      "end": 314.074
+    },
+    {
+      "word": "tackle",
+      "start": 314.132,
+      "end": 314.492
+    },
+    {
+      "word": "a",
+      "start": 314.538,
+      "end": 314.585
+    },
+    {
+      "word": "G",
+      "start": 314.666,
+      "end": 314.782
+    },
+    {
+      "word": "C",
+      "start": 314.991,
+      "end": 315.2
+    },
+    {
+      "word": "S",
+      "start": 315.409,
+      "end": 315.618
+    },
+    {
+      "word": "E",
+      "start": 315.792,
+      "end": 316.001
+    },
+    {
+      "word": "examination",
+      "start": 316.094,
+      "end": 316.907
+    },
+    {
+      "word": "question.",
+      "start": 316.976,
+      "end": 317.603
+    },
+    {
+      "word": "Explain",
+      "start": 318.056,
+      "end": 318.59
+    },
+    {
+      "word": "why",
+      "start": 318.648,
+      "end": 318.811
+    },
+    {
+      "word": "two",
+      "start": 318.881,
+      "end": 319.055
+    },
+    {
+      "word": "dyes",
+      "start": 319.136,
+      "end": 319.391
+    },
+    {
+      "word": "in",
+      "start": 319.461,
+      "end": 319.531
+    },
+    {
+      "word": "a",
+      "start": 319.589,
+      "end": 319.612
+    },
+    {
+      "word": "mixture",
+      "start": 319.682,
+      "end": 320.076
+    },
+    {
+      "word": "separate",
+      "start": 320.146,
+      "end": 320.68
+    },
+    {
+      "word": "during",
+      "start": 320.796,
+      "end": 321.133
+    },
+    {
+      "word": "paper",
+      "start": 321.203,
+      "end": 321.551
+    },
+    {
+      "word": "chromatography.",
+      "start": 321.62,
+      "end": 322.747
+    },
+    {
+      "word": "This",
+      "start": 323.199,
+      "end": 323.432
+    },
+    {
+      "word": "question",
+      "start": 323.501,
+      "end": 323.931
+    },
+    {
+      "word": "is",
+      "start": 324.001,
+      "end": 324.128
+    },
+    {
+      "word": "worth",
+      "start": 324.198,
+      "end": 324.465
+    },
+    {
+      "word": "three",
+      "start": 324.581,
+      "end": 324.871
+    },
+    {
+      "word": "marks.",
+      "start": 324.918,
+      "end": 325.475
+    },
+    {
+      "word": "A",
+      "start": 325.719,
+      "end": 325.8
+    },
+    {
+      "word": "model",
+      "start": 325.916,
+      "end": 326.264
+    },
+    {
+      "word": "answer",
+      "start": 326.334,
+      "end": 326.717
+    },
+    {
+      "word": "would",
+      "start": 326.775,
+      "end": 326.984
+    },
+    {
+      "word": "be:",
+      "start": 327.042,
+      "end": 327.437
+    },
+    {
+      "word": "The",
+      "start": 327.646,
+      "end": 327.809
+    },
+    {
+      "word": "two",
+      "start": 327.867,
+      "end": 328.018
+    },
+    {
+      "word": "dyes",
+      "start": 328.087,
+      "end": 328.412
+    },
+    {
+      "word": "have",
+      "start": 328.482,
+      "end": 328.645
+    },
+    {
+      "word": "different",
+      "start": 328.703,
+      "end": 329.097
+    },
+    {
+      "word": "solubilities",
+      "start": 329.144,
+      "end": 330.061
+    },
+    {
+      "word": "in",
+      "start": 330.189,
+      "end": 330.34
+    },
+    {
+      "word": "the",
+      "start": 330.386,
+      "end": 330.456
+    },
+    {
+      "word": "mobile",
+      "start": 330.514,
+      "end": 330.908
+    },
+    {
+      "word": "phase",
+      "start": 330.943,
+      "end": 331.373
+    },
+    {
+      "word": "and",
+      "start": 331.524,
+      "end": 331.733
+    },
+    {
+      "word": "different",
+      "start": 331.802,
+      "end": 332.197
+    },
+    {
+      "word": "attractions",
+      "start": 332.244,
+      "end": 332.813
+    },
+    {
+      "word": "to",
+      "start": 332.871,
+      "end": 332.964
+    },
+    {
+      "word": "the",
+      "start": 333.057,
+      "end": 333.126
+    },
+    {
+      "word": "stationary",
+      "start": 333.184,
+      "end": 333.73
+    },
+    {
+      "word": "phase.",
+      "start": 333.788,
+      "end": 334.322
+    },
+    {
+      "word": "As",
+      "start": 334.566,
+      "end": 334.752
+    },
+    {
+      "word": "the",
+      "start": 334.81,
+      "end": 334.879
+    },
+    {
+      "word": "solvent",
+      "start": 334.949,
+      "end": 335.437
+    },
+    {
+      "word": "moves",
+      "start": 335.553,
+      "end": 335.901
+    },
+    {
+      "word": "through",
+      "start": 335.947,
+      "end": 336.191
+    },
+    {
+      "word": "the",
+      "start": 336.226,
+      "end": 336.296
+    },
+    {
+      "word": "paper,",
+      "start": 336.342,
+      "end": 336.83
+    },
+    {
+      "word": "the",
+      "start": 336.946,
+      "end": 337.085
+    },
+    {
+      "word": "dyes",
+      "start": 337.201,
+      "end": 337.631
+    },
+    {
+      "word": "are",
+      "start": 337.701,
+      "end": 337.898
+    },
+    {
+      "word": "carried",
+      "start": 337.956,
+      "end": 338.351
+    },
+    {
+      "word": "at",
+      "start": 338.409,
+      "end": 338.571
+    },
+    {
+      "word": "different",
+      "start": 338.629,
+      "end": 339.047
+    },
+    {
+      "word": "rates.",
+      "start": 339.117,
+      "end": 339.605
+    },
+    {
+      "word": "Consequently,",
+      "start": 339.814,
+      "end": 340.719
+    },
+    {
+      "word": "they",
+      "start": 340.789,
+      "end": 340.975
+    },
+    {
+      "word": "travel",
+      "start": 341.033,
+      "end": 341.416
+    },
+    {
+      "word": "different",
+      "start": 341.532,
+      "end": 341.892
+    },
+    {
+      "word": "distances",
+      "start": 341.938,
+      "end": 342.681
+    },
+    {
+      "word": "and",
+      "start": 342.797,
+      "end": 343.006
+    },
+    {
+      "word": "separate",
+      "start": 343.099,
+      "end": 343.796
+    },
+    {
+      "word": "into",
+      "start": 343.97,
+      "end": 344.307
+    },
+    {
+      "word": "individual",
+      "start": 344.423,
+      "end": 345.073
+    },
+    {
+      "word": "spots.",
+      "start": 345.143,
+      "end": 345.7
+    },
+    {
+      "word": "Notice",
+      "start": 345.909,
+      "end": 346.373
+    },
+    {
+      "word": "that",
+      "start": 346.42,
+      "end": 346.617
+    },
+    {
+      "word": "this",
+      "start": 346.663,
+      "end": 346.872
+    },
+    {
+      "word": "answer",
+      "start": 346.989,
+      "end": 347.453
+    },
+    {
+      "word": "explains",
+      "start": 347.523,
+      "end": 348.15
+    },
+    {
+      "word": "the",
+      "start": 348.208,
+      "end": 348.289
+    },
+    {
+      "word": "separation",
+      "start": 348.359,
+      "end": 349.044
+    },
+    {
+      "word": "in",
+      "start": 349.125,
+      "end": 349.241
+    },
+    {
+      "word": "terms",
+      "start": 349.311,
+      "end": 349.601
+    },
+    {
+      "word": "of",
+      "start": 349.659,
+      "end": 349.74
+    },
+    {
+      "word": "both",
+      "start": 349.856,
+      "end": 350.1
+    },
+    {
+      "word": "phases,",
+      "start": 350.158,
+      "end": 350.832
+    },
+    {
+      "word": "rather",
+      "start": 351.006,
+      "end": 351.389
+    },
+    {
+      "word": "than",
+      "start": 351.435,
+      "end": 351.575
+    },
+    {
+      "word": "simply",
+      "start": 351.656,
+      "end": 352.027
+    },
+    {
+      "word": "saying",
+      "start": 352.085,
+      "end": 352.387
+    },
+    {
+      "word": "that",
+      "start": 352.457,
+      "end": 352.643
+    },
+    {
+      "word": "one",
+      "start": 352.759,
+      "end": 353.061
+    },
+    {
+      "word": "dye",
+      "start": 353.119,
+      "end": 353.421
+    },
+    {
+      "word": "moves",
+      "start": 353.502,
+      "end": 353.838
+    },
+    {
+      "word": "faster",
+      "start": 353.931,
+      "end": 354.396
+    },
+    {
+      "word": "than",
+      "start": 354.442,
+      "end": 354.593
+    },
+    {
+      "word": "the",
+      "start": 354.651,
+      "end": 354.744
+    },
+    {
+      "word": "other.",
+      "start": 354.814,
+      "end": 355.185
+    },
+    {
+      "word": "That",
+      "start": 355.394,
+      "end": 355.684
+    },
+    {
+      "word": "is",
+      "start": 355.754,
+      "end": 355.882
+    },
+    {
+      "word": "the",
+      "start": 355.928,
+      "end": 356.01
+    },
+    {
+      "word": "level",
+      "start": 356.091,
+      "end": 356.393
+    },
+    {
+      "word": "of",
+      "start": 356.474,
+      "end": 356.567
+    },
+    {
+      "word": "scientific",
+      "start": 356.683,
+      "end": 357.333
+    },
+    {
+      "word": "explanation",
+      "start": 357.391,
+      "end": 358.018
+    },
+    {
+      "word": "required",
+      "start": 358.099,
+      "end": 358.599
+    },
+    {
+      "word": "for",
+      "start": 358.657,
+      "end": 358.808
+    },
+    {
+      "word": "a",
+      "start": 358.866,
+      "end": 358.889
+    },
+    {
+      "word": "strong",
+      "start": 358.97,
+      "end": 359.411
+    },
+    {
+      "word": "G",
+      "start": 359.527,
+      "end": 359.771
+    },
+    {
+      "word": "C",
+      "start": 359.945,
+      "end": 360.096
+    },
+    {
+      "word": "S",
+      "start": 360.305,
+      "end": 360.456
+    },
+    {
+      "word": "E",
+      "start": 360.572,
+      "end": 360.688
+    },
+    {
+      "word": "answer.",
+      "start": 360.804,
+      "end": 361.397
+    },
+    {
+      "word": "Before",
+      "start": 361.548,
+      "end": 361.896
+    },
+    {
+      "word": "we",
+      "start": 361.942,
+      "end": 362.035
+    },
+    {
+      "word": "finish,",
+      "start": 362.116,
+      "end": 362.697
+    },
+    {
+      "word": "remember",
+      "start": 362.871,
+      "end": 363.278
+    },
+    {
+      "word": "that",
+      "start": 363.336,
+      "end": 363.475
+    },
+    {
+      "word": "chromatography",
+      "start": 363.545,
+      "end": 364.381
+    },
+    {
+      "word": "is",
+      "start": 364.45,
+      "end": 364.578
+    },
+    {
+      "word": "used",
+      "start": 364.659,
+      "end": 364.892
+    },
+    {
+      "word": "to",
+      "start": 364.915,
+      "end": 364.984
+    },
+    {
+      "word": "separate",
+      "start": 365.077,
+      "end": 365.669
+    },
+    {
+      "word": "and",
+      "start": 365.728,
+      "end": 365.902
+    },
+    {
+      "word": "help",
+      "start": 365.995,
+      "end": 366.227
+    },
+    {
+      "word": "identify",
+      "start": 366.308,
+      "end": 367.005
+    },
+    {
+      "word": "substances",
+      "start": 367.074,
+      "end": 367.748
+    },
+    {
+      "word": "in",
+      "start": 367.864,
+      "end": 367.991
+    },
+    {
+      "word": "mixtures.",
+      "start": 368.084,
+      "end": 368.758
+    },
+    {
+      "word": "The",
+      "start": 369.094,
+      "end": 369.211
+    },
+    {
+      "word": "mobile",
+      "start": 369.28,
+      "end": 369.675
+    },
+    {
+      "word": "phase",
+      "start": 369.71,
+      "end": 370.093
+    },
+    {
+      "word": "moves",
+      "start": 370.174,
+      "end": 370.476
+    },
+    {
+      "word": "through",
+      "start": 370.534,
+      "end": 370.813
+    },
+    {
+      "word": "the",
+      "start": 370.859,
+      "end": 370.929
+    },
+    {
+      "word": "stationary",
+      "start": 370.975,
+      "end": 371.533
+    },
+    {
+      "word": "phase,",
+      "start": 371.591,
+      "end": 372.09
+    },
+    {
+      "word": "carrying",
+      "start": 372.334,
+      "end": 372.763
+    },
+    {
+      "word": "substances",
+      "start": 372.844,
+      "end": 373.564
+    },
+    {
+      "word": "at",
+      "start": 373.657,
+      "end": 373.808
+    },
+    {
+      "word": "different",
+      "start": 373.866,
+      "end": 374.272
+    },
+    {
+      "word": "rates.",
+      "start": 374.342,
+      "end": 374.853
+    },
+    {
+      "word": "The",
+      "start": 375.097,
+      "end": 375.271
+    },
+    {
+      "word": "R",
+      "start": 375.387,
+      "end": 375.561
+    },
+    {
+      "word": "F",
+      "start": 375.712,
+      "end": 375.863
+    },
+    {
+      "word": "value",
+      "start": 375.979,
+      "end": 376.385
+    },
+    {
+      "word": "is",
+      "start": 376.42,
+      "end": 376.513
+    },
+    {
+      "word": "calculated",
+      "start": 376.583,
+      "end": 377.245
+    },
+    {
+      "word": "by",
+      "start": 377.303,
+      "end": 377.43
+    },
+    {
+      "word": "dividing",
+      "start": 377.523,
+      "end": 378.081
+    },
+    {
+      "word": "the",
+      "start": 378.139,
+      "end": 378.22
+    },
+    {
+      "word": "distance",
+      "start": 378.278,
+      "end": 378.742
+    },
+    {
+      "word": "travelled",
+      "start": 378.777,
+      "end": 379.207
+    },
+    {
+      "word": "by",
+      "start": 379.23,
+      "end": 379.358
+    },
+    {
+      "word": "a",
+      "start": 379.416,
+      "end": 379.439
+    },
+    {
+      "word": "substance",
+      "start": 379.509,
+      "end": 380.043
+    },
+    {
+      "word": "by",
+      "start": 380.089,
+      "end": 380.217
+    },
+    {
+      "word": "the",
+      "start": 380.287,
+      "end": 380.356
+    },
+    {
+      "word": "distance",
+      "start": 380.403,
+      "end": 380.914
+    },
+    {
+      "word": "travelled",
+      "start": 380.96,
+      "end": 381.413
+    },
+    {
+      "word": "by",
+      "start": 381.448,
+      "end": 381.622
+    },
+    {
+      "word": "the",
+      "start": 381.715,
+      "end": 381.796
+    },
+    {
+      "word": "solvent",
+      "start": 381.854,
+      "end": 382.26
+    },
+    {
+      "word": "front.",
+      "start": 382.307,
+      "end": 382.771
+    },
+    {
+      "word": "If",
+      "start": 382.945,
+      "end": 383.096
+    },
+    {
+      "word": "you",
+      "start": 383.143,
+      "end": 383.236
+    },
+    {
+      "word": "found",
+      "start": 383.352,
+      "end": 383.619
+    },
+    {
+      "word": "this",
+      "start": 383.665,
+      "end": 383.828
+    },
+    {
+      "word": "explanation",
+      "start": 383.897,
+      "end": 384.594
+    },
+    {
+      "word": "helpful,",
+      "start": 384.675,
+      "end": 385.221
+    },
+    {
+      "word": "please",
+      "start": 385.337,
+      "end": 385.627
+    },
+    {
+      "word": "subscribe",
+      "start": 385.65,
+      "end": 386.173
+    },
+    {
+      "word": "to",
+      "start": 386.208,
+      "end": 386.289
+    },
+    {
+      "word": "J",
+      "start": 386.382,
+      "end": 386.533
+    },
+    {
+      "word": "D",
+      "start": 386.626,
+      "end": 386.707
+    },
+    {
+      "word": "Science",
+      "start": 386.858,
+      "end": 387.334
+    },
+    {
+      "word": "and",
+      "start": 387.38,
+      "end": 387.543
+    },
+    {
+      "word": "visit",
+      "start": 387.612,
+      "end": 387.949
+    },
+    {
+      "word": "j",
+      "start": 388.065,
+      "end": 388.239
+    },
+    {
+      "word": "d",
+      "start": 388.309,
+      "end": 388.425
+    },
+    {
+      "word": "science",
+      "start": 388.506,
+      "end": 388.982
+    },
+    {
+      "word": "dot",
+      "start": 389.029,
+      "end": 389.226
+    },
+    {
+      "word": "co",
+      "start": 389.308,
+      "end": 389.575
+    },
+    {
+      "word": "dot",
+      "start": 389.691,
+      "end": 389.958
+    },
+    {
+      "word": "u",
+      "start": 390.074,
+      "end": 390.248
+    },
+    {
+      "word": "k",
+      "start": 390.329,
+      "end": 390.48
+    },
+    {
+      "word": "for",
+      "start": 390.933,
+      "end": 391.13
+    },
+    {
+      "word": "more",
+      "start": 391.2,
+      "end": 391.409
+    },
+    {
+      "word": "G",
+      "start": 391.444,
+      "end": 391.595
+    },
+    {
+      "word": "C",
+      "start": 391.746,
+      "end": 391.897
+    },
+    {
+      "word": "S",
+      "start": 392.106,
+      "end": 392.256
+    },
+    {
+      "word": "E",
+      "start": 392.407,
+      "end": 392.535
+    },
+    {
+      "word": "Chemistry",
+      "start": 392.651,
+      "end": 393.162
+    },
+    {
+      "word": "lessons,",
+      "start": 393.22,
+      "end": 393.812
+    },
+    {
+      "word": "calculations",
+      "start": 394.021,
+      "end": 394.811
+    },
+    {
+      "word": "and",
+      "start": 394.869,
+      "end": 395.02
+    },
+    {
+      "word": "examination",
+      "start": 395.101,
+      "end": 395.809
+    },
+    {
+      "word": "practice.",
+      "start": 395.879,
+      "end": 396.459
+    },
+    {
+      "word": "Thank",
+      "start": 396.738,
+      "end": 397.005
+    },
+    {
+      "word": "you",
+      "start": 397.051,
+      "end": 397.144
+    },
+    {
+      "word": "for",
+      "start": 397.202,
+      "end": 397.353
+    },
+    {
+      "word": "watching,",
+      "start": 397.434,
+      "end": 397.876
+    },
+    {
+      "word": "and",
+      "start": 397.899,
+      "end": 398.061
+    },
+    {
+      "word": "I",
+      "start": 398.177,
+      "end": 398.236
+    },
+    {
+      "word": "will",
+      "start": 398.328,
+      "end": 398.503
+    },
+    {
+      "word": "see",
+      "start": 398.561,
+      "end": 398.723
+    },
+    {
+      "word": "you",
+      "start": 398.781,
+      "end": 398.932
+    },
+    {
+      "word": "in",
+      "start": 399.06,
+      "end": 399.188
+    },
+    {
+      "word": "the",
+      "start": 399.234,
+      "end": 399.315
+    },
+    {
+      "word": "next",
+      "start": 399.373,
+      "end": 399.605
+    },
+    {
+      "word": "lesson.",
+      "start": 399.675,
+      "end": 400.128
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}
