@@ -1,0 +1,187 @@
+{
+  "slug": "a12-1-factors-affecting-rates",
+  "duration": 384.183,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.151,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 14.478,
+      "aligned": true,
+      "cue": "explain how surface area, concentration and pressure"
+    },
+    {
+      "id": "retrieve",
+      "t": 25.252,
+      "aligned": true,
+      "cue": "Retrieve collision theory"
+    },
+    {
+      "id": "common",
+      "t": 38.882,
+      "aligned": true,
+      "cue": "The common idea across A twelve point one"
+    },
+    {
+      "id": "sa",
+      "t": 62.763,
+      "aligned": true,
+      "cue": "surface area"
+    },
+    {
+      "id": "chips",
+      "t": 75.046,
+      "aligned": true,
+      "cue": "Watch the particle models"
+    },
+    {
+      "id": "ppt",
+      "t": 85.042,
+      "aligned": true,
+      "cue": "The teacher PowerPoint uses two experiments"
+    },
+    {
+      "id": "book",
+      "t": 111.268,
+      "aligned": true,
+      "cue": "The student workbook uses a third trial"
+    },
+    {
+      "id": "conc",
+      "t": 150.197,
+      "aligned": true,
+      "cue": "concentration"
+    },
+    {
+      "id": "conc_data",
+      "t": 170.317,
+      "aligned": true,
+      "cue": "The shared concentration dataset"
+    },
+    {
+      "id": "press",
+      "t": 204.879,
+      "aligned": true,
+      "cue": "pressure, for gases"
+    },
+    {
+      "id": "graph",
+      "t": 235.135,
+      "aligned": true,
+      "cue": "On a gas-volume versus time graph"
+    },
+    {
+      "id": "controls",
+      "t": 247.04,
+      "aligned": true,
+      "cue": "When you plan an investigation"
+    },
+    {
+      "id": "myths",
+      "t": 263.99,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 280.999,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 352.701,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 373.483,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 15.523,
+      "aligned": true,
+      "cue": "surface area, concentration and pressure"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 19.528,
+      "aligned": true,
+      "cue": "using collision theory"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 21.281,
+      "aligned": true,
+      "cue": "identify control variables"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 23.464,
+      "aligned": true,
+      "cue": "rate investigation"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 290.902,
+      "aligned": true,
+      "cue": "Powder has a greater total surface area"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 308.235,
+      "aligned": true,
+      "cue": "There are more particles per unit volume"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 324.721,
+      "aligned": true,
+      "cue": "the same particles occupy a smaller volume"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 342.74,
+      "aligned": true,
+      "cue": "Control the mass of solid"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 355.488,
+      "aligned": true,
+      "cue": "Surface area, concentration and pressure"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 361.27,
+      "aligned": true,
+      "cue": "More frequent collisions"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 367.365,
+      "aligned": true,
+      "cue": "Energy and orientation still decide"
+    }
+  ]
+}

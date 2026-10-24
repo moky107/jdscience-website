@@ -1,0 +1,524 @@
+1
+00:00:00,151 --> 00:00:02,717
+Hello and welcome back to J D Science.
+
+2
+00:00:02,926 --> 00:00:06,571
+In today's T-Level Chemistry lesson, we are going to study
+
+3
+00:00:06,653 --> 00:00:10,681
+A twelve point one, Factors Affecting Rates of Chemical
+
+4
+00:00:10,762 --> 00:00:11,587
+Reactions.
+
+5
+00:00:11,831 --> 00:00:14,965
+By the end of this lesson, you should be able to explain
+
+6
+00:00:15,081 --> 00:00:18,808
+how surface area, concentration and pressure change
+
+7
+00:00:18,866 --> 00:00:23,058
+rate, using collision theory, and identify control variables
+
+8
+00:00:23,139 --> 00:00:24,730
+in a rate investigation.
+
+9
+00:00:25,252 --> 00:00:26,901
+Retrieve collision theory.
+
+10
+00:00:27,110 --> 00:00:30,743
+A successful collision needs sufficient energy and the correct
+
+11
+00:00:30,836 --> 00:00:32,392
+spatial orientation.
+
+12
+00:00:32,844 --> 00:00:36,711
+Reaction rate depends on how frequently those successful collisions
+
+13
+00:00:36,780 --> 00:00:38,359
+occur per unit time.
+
+14
+00:00:38,882 --> 00:00:42,817
+The common idea across A twelve point one is
+
+15
+00:00:42,933 --> 00:00:44,176
+collision frequency.
+
+16
+00:00:44,570 --> 00:00:48,239
+If reacting particles collide more often, there are more
+
+17
+00:00:48,285 --> 00:00:52,349
+opportunities for successful collisions, so rate increases.
+
+18
+00:00:52,628 --> 00:00:54,915
+Energy and orientation still matter.
+
+19
+00:00:55,251 --> 00:00:58,920
+More collisions does not mean every collision is successful.
+
+20
+00:00:59,094 --> 00:01:03,227
+Specification point A twelve point one point one: surface
+
+21
+00:01:03,286 --> 00:01:03,854
+area.
+
+22
+00:01:04,063 --> 00:01:08,057
+For the same mass of solid, smaller pieces have a greater total
+
+23
+00:01:08,126 --> 00:01:09,578
+exposed surface area.
+
+24
+00:01:09,694 --> 00:01:13,432
+Only surface particles are directly available for collisions
+
+25
+00:01:13,490 --> 00:01:14,837
+with the other reactant.
+
+26
+00:01:15,046 --> 00:01:16,579
+Watch the particle models.
+
+27
+00:01:16,822 --> 00:01:19,388
+Large chips expose less surface.
+
+28
+00:01:19,481 --> 00:01:21,362
+Small chips expose more.
+
+29
+00:01:21,698 --> 00:01:24,891
+Powder exposes the most surface for the same mass.
+
+30
+00:01:25,042 --> 00:01:28,850
+The teacher PowerPoint uses two experiments, both with two
+
+31
+00:01:28,931 --> 00:01:30,766
+point zero grams of solid.
+
+32
+00:01:31,010 --> 00:01:34,748
+Experiment A, large chips, reaches the endpoint in
+
+33
+00:01:34,841 --> 00:01:36,176
+ninety five seconds.
+
+34
+00:01:36,419 --> 00:01:40,332
+Experiment B, small chips, reaches the same endpoint
+
+35
+00:01:40,390 --> 00:01:41,748
+in forty eight seconds.
+
+36
+00:01:42,085 --> 00:01:43,374
+B is faster.
+
+37
+00:01:43,618 --> 00:01:47,379
+The same mass of small chips has a greater total surface area,
+
+38
+00:01:47,414 --> 00:01:50,874
+so collision frequency at the solid surface is higher.
+
+39
+00:01:51,268 --> 00:01:54,276
+The student workbook uses a third trial as well.
+
+40
+00:01:54,671 --> 00:01:56,900
+Large chips, ninety six seconds.
+
+41
+00:01:57,144 --> 00:01:59,547
+Small chips, fifty one seconds.
+
+42
+00:01:59,884 --> 00:02:01,834
+Powder, twenty nine seconds.
+
+43
+00:02:02,229 --> 00:02:05,851
+Those times are not the same as the PowerPoint pair, so keep
+
+44
+00:02:05,909 --> 00:02:07,511
+the two datasets separate.
+
+45
+00:02:07,848 --> 00:02:11,958
+The scientific pattern is the same: as particle size decreases,
+
+46
+00:02:12,039 --> 00:02:14,407
+time to the same endpoint decreases.
+
+47
+00:02:14,500 --> 00:02:18,413
+A common error is to say that smaller particles contain
+
+48
+00:02:18,506 --> 00:02:19,516
+more substance.
+
+49
+00:02:19,690 --> 00:02:23,103
+For the same mass, the amount of substance is the same.
+
+50
+00:02:23,440 --> 00:02:26,331
+What changes is the exposed surface area.
+
+51
+00:02:26,667 --> 00:02:31,091
+Now specification point A twelve point one point two: concentration.
+
+52
+00:02:31,428 --> 00:02:35,120
+Concentration is how much dissolved reactant is present in
+
+53
+00:02:35,166 --> 00:02:36,002
+a given volume.
+
+54
+00:02:36,397 --> 00:02:40,019
+At higher concentration there are more reactant particles
+
+55
+00:02:40,135 --> 00:02:41,307
+per unit volume.
+
+56
+00:02:41,644 --> 00:02:45,545
+Temperature is unchanged, so the particles do not need to move faster.
+
+57
+00:02:45,824 --> 00:02:49,922
+They simply meet more often because they are packed more closely.
+
+58
+00:02:50,317 --> 00:02:54,241
+The shared concentration dataset is: zero point five
+
+59
+00:02:54,299 --> 00:02:58,107
+zero moles per cubic decimetre takes one hundred and twenty
+
+60
+00:02:58,165 --> 00:03:02,008
+seconds; one point zero zero takes sixty four seconds;
+
+61
+00:03:02,182 --> 00:03:05,793
+one point five zero takes forty three seconds; two point
+
+62
+00:03:05,839 --> 00:03:08,289
+zero zero takes thirty one seconds.
+
+63
+00:03:08,684 --> 00:03:12,875
+Higher concentration means fewer seconds to the same endpoint,
+
+64
+00:03:13,049 --> 00:03:14,372
+so rate increases.
+
+65
+00:03:14,547 --> 00:03:18,239
+Do not assume that doubling concentration exactly doubles rate
+
+66
+00:03:18,448 --> 00:03:20,677
+unless the evidence says so.
+
+67
+00:03:21,071 --> 00:03:25,472
+Specification point A twelve point one point three: pressure,
+
+68
+00:03:25,553 --> 00:03:26,458
+for gases.
+
+69
+00:03:26,853 --> 00:03:30,789
+At constant temperature, increasing pressure can put the same
+
+70
+00:03:30,835 --> 00:03:33,680
+number of gas particles in a smaller volume.
+
+71
+00:03:34,074 --> 00:03:38,126
+The particles are closer together, so there are more particles
+
+72
+00:03:38,196 --> 00:03:41,644
+per unit volume and collisions become more frequent.
+
+73
+00:03:42,259 --> 00:03:45,905
+Do not claim that average kinetic energy has increased
+
+74
+00:03:45,975 --> 00:03:47,589
+if temperature is unchanged.
+
+75
+00:03:47,983 --> 00:03:51,873
+Pressure can rise by reducing volume at constant temperature.
+
+76
+00:03:52,326 --> 00:03:54,798
+That is not the same as heating the mixture.
+
+77
+00:03:55,135 --> 00:03:59,013
+On a gas-volume versus time graph, a faster reaction
+
+78
+00:03:59,082 --> 00:04:00,917
+has a steeper initial curve.
+
+79
+00:04:01,253 --> 00:04:04,934
+If the same limiting amount reacts, the final product amount
+
+80
+00:04:04,980 --> 00:04:06,896
+can be the same, reached sooner.
+
+81
+00:04:07,040 --> 00:04:10,825
+When you plan an investigation, change only the intended factor.
+
+82
+00:04:11,069 --> 00:04:14,888
+For surface area, control mass of solid, concentration
+
+83
+00:04:14,958 --> 00:04:18,522
+and volume of the other reactant, temperature and apparatus.
+
+84
+00:04:18,696 --> 00:04:22,632
+For concentration, also control the surface area or mass
+
+85
+00:04:22,748 --> 00:04:23,816
+of any solid.
+
+86
+00:04:23,990 --> 00:04:25,500
+Correct the misconceptions.
+
+87
+00:04:25,778 --> 00:04:28,460
+Smaller pieces do not contain more substance.
+
+88
+00:04:28,704 --> 00:04:32,477
+Higher concentration does not make particles faster if temperature
+
+89
+00:04:32,524 --> 00:04:33,394
+is unchanged.
+
+90
+00:04:33,638 --> 00:04:37,121
+Higher gas pressure does not always mean higher temperature.
+
+91
+00:04:37,295 --> 00:04:40,662
+And more collisions does not make every collision successful.
+
+92
+00:04:40,999 --> 00:04:42,926
+Examination-style question.
+
+93
+00:04:43,135 --> 00:04:44,110
+Part a.
+
+94
+00:04:44,284 --> 00:04:48,023
+Explain why a powdered solid reacts faster than the same
+
+95
+00:04:48,069 --> 00:04:49,509
+mass of large pieces.
+
+96
+00:04:49,752 --> 00:04:50,728
+Three marks.
+
+97
+00:04:50,902 --> 00:04:53,758
+Powder has a greater total surface area.
+
+98
+00:04:54,036 --> 00:04:56,753
+Collision frequency at the surface increases.
+
+99
+00:04:57,032 --> 00:05:00,770
+Successful collisions occur more frequently, so rate
+
+100
+00:05:00,828 --> 00:05:01,664
+increases.
+
+101
+00:05:01,838 --> 00:05:02,581
+Part b.
+
+102
+00:05:02,825 --> 00:05:06,470
+Explain why increasing reactant concentration increases
+
+103
+00:05:06,563 --> 00:05:07,028
+rate.
+
+104
+00:05:07,237 --> 00:05:08,084
+Three marks.
+
+105
+00:05:08,235 --> 00:05:10,778
+There are more particles per unit volume.
+
+106
+00:05:10,987 --> 00:05:12,856
+Collision frequency increases.
+
+107
+00:05:13,100 --> 00:05:16,269
+Successful collisions per unit time increase.
+
+108
+00:05:16,478 --> 00:05:17,268
+Part c.
+
+109
+00:05:17,477 --> 00:05:21,412
+Explain why increasing the pressure of gaseous reactants increases
+
+110
+00:05:21,529 --> 00:05:21,947
+rate.
+
+111
+00:05:22,121 --> 00:05:22,991
+Three marks.
+
+112
+00:05:23,200 --> 00:05:26,916
+At constant temperature the same particles occupy a smaller
+
+113
+00:05:26,974 --> 00:05:29,087
+volume, so they are closer together.
+
+114
+00:05:29,296 --> 00:05:33,150
+Collision frequency increases, and successful collisions occur
+
+115
+00:05:33,266 --> 00:05:34,230
+more frequently.
+
+116
+00:05:34,474 --> 00:05:35,112
+Part d.
+
+117
+00:05:35,391 --> 00:05:39,210
+State one control variable for a surface-area investigation
+
+118
+00:05:39,419 --> 00:05:41,463
+and explain why you control it.
+
+119
+00:05:41,741 --> 00:05:42,531
+Two marks.
+
+120
+00:05:42,740 --> 00:05:46,524
+Control the mass of solid, or the concentration of the other
+
+121
+00:05:46,583 --> 00:05:48,161
+reactant, or temperature.
+
+122
+00:05:48,370 --> 00:05:52,365
+That isolates surface area so the comparison is valid.
+
+123
+00:05:52,701 --> 00:05:55,151
+Before we finish, complete the model.
+
+124
+00:05:55,488 --> 00:05:59,296
+Surface area, concentration and pressure all change how
+
+125
+00:05:59,366 --> 00:06:00,875
+often particles collide.
+
+126
+00:06:01,270 --> 00:06:05,101
+More frequent collisions give more successful collisions per unit
+
+127
+00:06:05,147 --> 00:06:07,121
+time, so rate increases.
+
+128
+00:06:07,365 --> 00:06:11,730
+Energy and orientation still decide which collisions succeed.
+
+129
+00:06:11,939 --> 00:06:15,875
+If you found this useful, please subscribe to J D Science, and
+
+130
+00:06:15,945 --> 00:06:19,938
+visit j d science dot co dot u k for
+
+131
+00:06:20,008 --> 00:06:24,002
+more explanations, worksheets and T-Level Chemistry lessons.
+

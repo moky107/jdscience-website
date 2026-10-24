@@ -1,0 +1,201 @@
+{
+  "slug": "a11-3-catalysts",
+  "duration": 416.0,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 14.245,
+      "aligned": true,
+      "cue": "define a catalyst accurately"
+    },
+    {
+      "id": "hook",
+      "t": 30.569,
+      "aligned": true,
+      "cue": "Retrieve collision theory"
+    },
+    {
+      "id": "defn",
+      "t": 63.61,
+      "aligned": true,
+      "cue": "A catalyst is a substance that increases the rate"
+    },
+    {
+      "id": "notmean",
+      "t": 87.167,
+      "aligned": true,
+      "cue": "A catalyst does not mean more reactant"
+    },
+    {
+      "id": "pathway",
+      "t": 102.863,
+      "aligned": true,
+      "cue": "A catalyst provides an alternative reaction pathway"
+    },
+    {
+      "id": "profile",
+      "t": 111.489,
+      "aligned": true,
+      "cue": "Watch the energy profile"
+    },
+    {
+      "id": "link",
+      "t": 132.132,
+      "aligned": true,
+      "cue": "Link that to collision theory"
+    },
+    {
+      "id": "evidence",
+      "t": 155.771,
+      "aligned": true,
+      "cue": "Use evidence"
+    },
+    {
+      "id": "mb_same",
+      "t": 187.861,
+      "aligned": true,
+      "cue": "A catalyst does not need a new Maxwell\u2013Boltzmann curve"
+    },
+    {
+      "id": "mb_left",
+      "t": 207.157,
+      "aligned": true,
+      "cue": "the catalysed E a is positioned to the left"
+    },
+    {
+      "id": "vs",
+      "t": 221.379,
+      "aligned": true,
+      "cue": "Do not confuse a catalyst with temperature"
+    },
+    {
+      "id": "guided",
+      "t": 245.18,
+      "aligned": true,
+      "cue": "Guided application. A reaction has E a of eighty five"
+    },
+    {
+      "id": "myths",
+      "t": 276.269,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 309.763,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 379.655,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 405.638,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 14.365,
+      "aligned": true,
+      "cue": "define a catalyst accurately"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 16.37,
+      "aligned": true,
+      "cue": "use evidence to decide"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 23.487,
+      "aligned": true,
+      "cue": "alternative pathway with lower activation energy"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 27.225,
+      "aligned": true,
+      "cue": "interpret that on a Maxwell\u2013Boltzmann"
+    },
+    {
+      "slide": "evidence",
+      "item": "ans",
+      "t": 172.036,
+      "aligned": true,
+      "cue": "That evidence is consistent with X acting as a catalyst"
+    },
+    {
+      "slide": "guided",
+      "item": "ans",
+      "t": 258.064,
+      "aligned": true,
+      "cue": "The fifty two kilojoules per mole line lies further left"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 315.986,
+      "aligned": true,
+      "cue": "A substance that increases the rate of a chemical reaction, without itself"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 331.079,
+      "aligned": true,
+      "cue": "It provides an alternative reaction pathway with lower activation energy"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 348.61,
+      "aligned": true,
+      "cue": "Use the same distribution at the same temperature"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 368.672,
+      "aligned": true,
+      "cue": "A greater proportion of particles have energy at least the lower E a"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 382.349,
+      "aligned": true,
+      "cue": "A catalyst increases rate without permanent chemical change"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 387.399,
+      "aligned": true,
+      "cue": "alternative pathway with lower activation energy"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 392.495,
+      "aligned": true,
+      "cue": "the Maxwell\u2013Boltzmann distribution stays the same"
+    }
+  ]
+}

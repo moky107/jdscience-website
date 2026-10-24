@@ -1,0 +1,4201 @@
+{
+  "slug": "a12-6-haber-process",
+  "title": "The Haber Process",
+  "audio": "/workspace/content/videos/a12-6-haber-process/source/narration_master.mp3",
+  "duration": 387.344,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A twelve point six, The Haber Process.\n\nBy the end of this lesson, you should be able to state typical Haber conditions, explain their economic effect, and describe the compromise between equilibrium yield and reaction rate.\n\nThe equation is nitrogen plus three hydrogen in equilibrium with two ammonia. The forward reaction has delta H less than zero. It is exothermic.\n\nThe industrial aim is ammonia at a useful rate and a useful yield, at an economically acceptable cost.\n\nTypical conditions in the lesson are about four hundred and fifty degrees Celsius, about two hundred atmospheres, and an iron catalyst.\n\nUnreacted nitrogen and hydrogen can be separated from ammonia and recycled. Conditions are not chosen to maximise one factor alone.\n\nRetrieve Le Chatelier. Lower temperature favours the exothermic direction. Increasing pressure favours fewer gas moles. A catalyst lowers activation energy and increases rate, but does not change the equilibrium position.\n\nCount the gas moles. One nitrogen plus three hydrogen is four moles of gas. Two ammonia is two moles of gas. Increasing pressure favours the side with fewer gas moles, so the equilibrium shifts toward ammonia and the equilibrium yield of ammonia increases.\n\nTemperature is a compromise. Lower temperature gives a higher ammonia equilibrium yield, because it favours the exothermic forward reaction, but the rate is slower. Higher temperature gives a faster rate, but a lower equilibrium yield, because it favours the endothermic reverse.\n\nAbout four hundred and fifty degrees Celsius is fast enough, with a useful equilibrium yield. That is a compromise between rate and yield.\n\nPressure is also a compromise. Higher pressure increases ammonia equilibrium yield. Extremely high pressure needs more energy for compression, stronger and more expensive equipment, and higher capital and operating costs.\n\nAbout two hundred atmospheres is high, but economically practical. Exact plant conditions can vary. The specification focus is the compromise, not one global optimum.\n\nThe iron catalyst provides an alternative pathway with lower activation energy. It increases the rate of the forward and reverse reactions, so equilibrium is reached faster.\n\nIt does not change the equilibrium position, the equilibrium composition, or the equilibrium yield at fixed temperature and pressure. It does not change delta H. It means the plant does not have to raise temperature only to get a useful rate, which would lower the ammonia yield.\n\nCompare the options. Three hundred degrees Celsius at two hundred atmospheres gives a high yield but is too slow for efficient production. Six hundred and fifty degrees Celsius at two hundred atmospheres is fast, but the ammonia equilibrium yield is reduced. Four hundred and fifty degrees Celsius, two hundred atmospheres and iron gives a useful yield and a useful rate.\n\nPlant X is offered three hundred and fifty, four hundred and fifty or six hundred degrees Celsius, and one hundred, two hundred or four hundred atmospheres, with iron available.\n\nThree hundred and fifty degrees Celsius has a higher yield but is slower. Six hundred degrees Celsius has a higher rate but a lower yield. Four hundred atmospheres gives more yield but more compression cost. One hundred atmospheres costs less but gives a lower yield than two hundred atmospheres. The indicative industrial choice is about four hundred and fifty degrees Celsius and about two hundred atmospheres with iron.\n\nCorrect the misconceptions. The lowest possible temperature is not chosen, because the rate would be too slow. The highest possible pressure is not chosen, because of energy, equipment and cost. Iron does not increase equilibrium yield. Higher temperature does not always improve production, because for this reaction it decreases the ammonia equilibrium yield.\n\nExamination-style question.\n\nPart a. State typical temperature, pressure and catalyst. Three marks.\n\nAbout four hundred and fifty degrees Celsius, about two hundred atmospheres, and iron.\n\nPart b. Why is a lower temperature not used, even though yield would be higher? Three marks.\n\nLower temperature favours the exothermic forward reaction, so yield is higher, but the rate is lower, so production is too slow or less economically efficient.\n\nPart c. Why does higher pressure increase yield? Two marks.\n\nThere are two moles of gas against four, so the equilibrium shifts toward ammonia.\n\nPart d. Why is industrial pressure a compromise? Three marks.\n\nHigher pressure increases yield. Very high pressure increases compression, equipment and cost. Industry balances yield against economic and engineering cost.\n\nPart e. What does the iron catalyst do? Two marks.\n\nIt provides a lower activation-energy pathway, so rate increases and equilibrium is reached faster, without changing the equilibrium position.\n\nBefore we finish, complete the model. Haber ammonia is made at about four hundred and fifty degrees Celsius and about two hundred atmospheres with iron. Temperature and pressure are compromises between yield, rate and cost. The catalyst speeds both directions without changing the equilibrium yield at fixed conditions.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.499
+    },
+    {
+      "word": "and",
+      "start": 0.673,
+      "end": 0.917
+    },
+    {
+      "word": "welcome",
+      "start": 0.975,
+      "end": 1.37
+    },
+    {
+      "word": "back",
+      "start": 1.405,
+      "end": 1.625
+    },
+    {
+      "word": "to",
+      "start": 1.707,
+      "end": 1.869
+    },
+    {
+      "word": "J",
+      "start": 1.985,
+      "end": 2.159
+    },
+    {
+      "word": "D",
+      "start": 2.252,
+      "end": 2.345
+    },
+    {
+      "word": "Science.",
+      "start": 2.519,
+      "end": 3.32
+    },
+    {
+      "word": "In",
+      "start": 4.029,
+      "end": 4.203
+    },
+    {
+      "word": "today's",
+      "start": 4.261,
+      "end": 4.679
+    },
+    {
+      "word": "T-Level",
+      "start": 4.748,
+      "end": 5.213
+    },
+    {
+      "word": "Chemistry",
+      "start": 5.271,
+      "end": 5.747
+    },
+    {
+      "word": "lesson,",
+      "start": 5.805,
+      "end": 6.246
+    },
+    {
+      "word": "we",
+      "start": 6.293,
+      "end": 6.432
+    },
+    {
+      "word": "are",
+      "start": 6.478,
+      "end": 6.594
+    },
+    {
+      "word": "going",
+      "start": 6.629,
+      "end": 6.838
+    },
+    {
+      "word": "to",
+      "start": 6.885,
+      "end": 6.954
+    },
+    {
+      "word": "study",
+      "start": 7.036,
+      "end": 7.454
+    },
+    {
+      "word": "A",
+      "start": 7.57,
+      "end": 7.639
+    },
+    {
+      "word": "twelve",
+      "start": 7.721,
+      "end": 8.057
+    },
+    {
+      "word": "point",
+      "start": 8.115,
+      "end": 8.382
+    },
+    {
+      "word": "six,",
+      "start": 8.452,
+      "end": 8.8
+    },
+    {
+      "word": "The",
+      "start": 8.835,
+      "end": 8.951
+    },
+    {
+      "word": "Haber",
+      "start": 9.021,
+      "end": 9.311
+    },
+    {
+      "word": "Process.",
+      "start": 9.369,
+      "end": 10.124
+    },
+    {
+      "word": "By",
+      "start": 10.646,
+      "end": 10.797
+    },
+    {
+      "word": "the",
+      "start": 10.855,
+      "end": 10.937
+    },
+    {
+      "word": "end",
+      "start": 11.006,
+      "end": 11.122
+    },
+    {
+      "word": "of",
+      "start": 11.18,
+      "end": 11.25
+    },
+    {
+      "word": "this",
+      "start": 11.308,
+      "end": 11.471
+    },
+    {
+      "word": "lesson,",
+      "start": 11.552,
+      "end": 12.016
+    },
+    {
+      "word": "you",
+      "start": 12.132,
+      "end": 12.225
+    },
+    {
+      "word": "should",
+      "start": 12.283,
+      "end": 12.504
+    },
+    {
+      "word": "be",
+      "start": 12.55,
+      "end": 12.666
+    },
+    {
+      "word": "able",
+      "start": 12.725,
+      "end": 13.015
+    },
+    {
+      "word": "to",
+      "start": 13.061,
+      "end": 13.142
+    },
+    {
+      "word": "state",
+      "start": 13.212,
+      "end": 13.572
+    },
+    {
+      "word": "typical",
+      "start": 13.618,
+      "end": 14.083
+    },
+    {
+      "word": "Haber",
+      "start": 14.164,
+      "end": 14.42
+    },
+    {
+      "word": "conditions,",
+      "start": 14.478,
+      "end": 15.279
+    },
+    {
+      "word": "explain",
+      "start": 15.453,
+      "end": 16.01
+    },
+    {
+      "word": "their",
+      "start": 16.079,
+      "end": 16.207
+    },
+    {
+      "word": "economic",
+      "start": 16.265,
+      "end": 16.776
+    },
+    {
+      "word": "effect,",
+      "start": 16.834,
+      "end": 17.322
+    },
+    {
+      "word": "and",
+      "start": 17.368,
+      "end": 17.542
+    },
+    {
+      "word": "describe",
+      "start": 17.612,
+      "end": 18.1
+    },
+    {
+      "word": "the",
+      "start": 18.134,
+      "end": 18.216
+    },
+    {
+      "word": "compromise",
+      "start": 18.285,
+      "end": 18.877
+    },
+    {
+      "word": "between",
+      "start": 18.924,
+      "end": 19.249
+    },
+    {
+      "word": "equilibrium",
+      "start": 19.342,
+      "end": 20.015
+    },
+    {
+      "word": "yield",
+      "start": 20.131,
+      "end": 20.422
+    },
+    {
+      "word": "and",
+      "start": 20.491,
+      "end": 20.654
+    },
+    {
+      "word": "reaction",
+      "start": 20.723,
+      "end": 21.165
+    },
+    {
+      "word": "rate.",
+      "start": 21.234,
+      "end": 21.629
+    },
+    {
+      "word": "The",
+      "start": 22.152,
+      "end": 22.268
+    },
+    {
+      "word": "equation",
+      "start": 22.314,
+      "end": 22.802
+    },
+    {
+      "word": "is",
+      "start": 22.871,
+      "end": 22.987
+    },
+    {
+      "word": "nitrogen",
+      "start": 23.08,
+      "end": 23.672
+    },
+    {
+      "word": "plus",
+      "start": 23.847,
+      "end": 24.09
+    },
+    {
+      "word": "three",
+      "start": 24.16,
+      "end": 24.392
+    },
+    {
+      "word": "hydrogen",
+      "start": 24.462,
+      "end": 24.984
+    },
+    {
+      "word": "in",
+      "start": 25.066,
+      "end": 25.17
+    },
+    {
+      "word": "equilibrium",
+      "start": 25.251,
+      "end": 25.913
+    },
+    {
+      "word": "with",
+      "start": 26.029,
+      "end": 26.227
+    },
+    {
+      "word": "two",
+      "start": 26.285,
+      "end": 26.47
+    },
+    {
+      "word": "ammonia.",
+      "start": 26.54,
+      "end": 27.167
+    },
+    {
+      "word": "The",
+      "start": 27.62,
+      "end": 27.736
+    },
+    {
+      "word": "forward",
+      "start": 27.806,
+      "end": 28.165
+    },
+    {
+      "word": "reaction",
+      "start": 28.212,
+      "end": 28.665
+    },
+    {
+      "word": "has",
+      "start": 28.723,
+      "end": 28.862
+    },
+    {
+      "word": "delta",
+      "start": 28.943,
+      "end": 29.268
+    },
+    {
+      "word": "H",
+      "start": 29.35,
+      "end": 29.593
+    },
+    {
+      "word": "less",
+      "start": 29.837,
+      "end": 30.081
+    },
+    {
+      "word": "than",
+      "start": 30.128,
+      "end": 30.29
+    },
+    {
+      "word": "zero.",
+      "start": 30.36,
+      "end": 30.917
+    },
+    {
+      "word": "It",
+      "start": 31.312,
+      "end": 31.451
+    },
+    {
+      "word": "is",
+      "start": 31.509,
+      "end": 31.602
+    },
+    {
+      "word": "exothermic.",
+      "start": 31.683,
+      "end": 32.6
+    },
+    {
+      "word": "The",
+      "start": 32.937,
+      "end": 33.076
+    },
+    {
+      "word": "industrial",
+      "start": 33.146,
+      "end": 33.692
+    },
+    {
+      "word": "aim",
+      "start": 33.761,
+      "end": 34.005
+    },
+    {
+      "word": "is",
+      "start": 34.098,
+      "end": 34.261
+    },
+    {
+      "word": "ammonia",
+      "start": 34.319,
+      "end": 35.004
+    },
+    {
+      "word": "at",
+      "start": 35.12,
+      "end": 35.317
+    },
+    {
+      "word": "a",
+      "start": 35.375,
+      "end": 35.41
+    },
+    {
+      "word": "useful",
+      "start": 35.503,
+      "end": 35.886
+    },
+    {
+      "word": "rate",
+      "start": 35.979,
+      "end": 36.315
+    },
+    {
+      "word": "and",
+      "start": 36.385,
+      "end": 36.571
+    },
+    {
+      "word": "a",
+      "start": 36.629,
+      "end": 36.652
+    },
+    {
+      "word": "useful",
+      "start": 36.745,
+      "end": 37.14
+    },
+    {
+      "word": "yield,",
+      "start": 37.221,
+      "end": 37.697
+    },
+    {
+      "word": "at",
+      "start": 37.848,
+      "end": 38.045
+    },
+    {
+      "word": "an",
+      "start": 38.115,
+      "end": 38.185
+    },
+    {
+      "word": "economically",
+      "start": 38.266,
+      "end": 39.021
+    },
+    {
+      "word": "acceptable",
+      "start": 39.079,
+      "end": 39.706
+    },
+    {
+      "word": "cost.",
+      "start": 39.764,
+      "end": 40.263
+    },
+    {
+      "word": "Typical",
+      "start": 40.6,
+      "end": 41.076
+    },
+    {
+      "word": "conditions",
+      "start": 41.145,
+      "end": 41.714
+    },
+    {
+      "word": "in",
+      "start": 41.772,
+      "end": 41.853
+    },
+    {
+      "word": "the",
+      "start": 41.9,
+      "end": 41.97
+    },
+    {
+      "word": "lesson",
+      "start": 42.039,
+      "end": 42.387
+    },
+    {
+      "word": "are",
+      "start": 42.446,
+      "end": 42.62
+    },
+    {
+      "word": "about",
+      "start": 42.655,
+      "end": 42.968
+    },
+    {
+      "word": "four",
+      "start": 43.038,
+      "end": 43.258
+    },
+    {
+      "word": "hundred",
+      "start": 43.305,
+      "end": 43.595
+    },
+    {
+      "word": "and",
+      "start": 43.641,
+      "end": 43.711
+    },
+    {
+      "word": "fifty",
+      "start": 43.781,
+      "end": 44.106
+    },
+    {
+      "word": "degrees",
+      "start": 44.175,
+      "end": 44.535
+    },
+    {
+      "word": "Celsius,",
+      "start": 44.593,
+      "end": 45.313
+    },
+    {
+      "word": "about",
+      "start": 45.441,
+      "end": 45.766
+    },
+    {
+      "word": "two",
+      "start": 45.801,
+      "end": 45.975
+    },
+    {
+      "word": "hundred",
+      "start": 46.033,
+      "end": 46.346
+    },
+    {
+      "word": "atmospheres,",
+      "start": 46.416,
+      "end": 47.287
+    },
+    {
+      "word": "and",
+      "start": 47.438,
+      "end": 47.624
+    },
+    {
+      "word": "an",
+      "start": 47.693,
+      "end": 47.774
+    },
+    {
+      "word": "iron",
+      "start": 47.867,
+      "end": 48.204
+    },
+    {
+      "word": "catalyst.",
+      "start": 48.274,
+      "end": 49.028
+    },
+    {
+      "word": "Unreacted",
+      "start": 49.423,
+      "end": 50.155
+    },
+    {
+      "word": "nitrogen",
+      "start": 50.213,
+      "end": 50.816
+    },
+    {
+      "word": "and",
+      "start": 50.898,
+      "end": 51.06
+    },
+    {
+      "word": "hydrogen",
+      "start": 51.141,
+      "end": 51.71
+    },
+    {
+      "word": "can",
+      "start": 51.803,
+      "end": 51.989
+    },
+    {
+      "word": "be",
+      "start": 52.047,
+      "end": 52.128
+    },
+    {
+      "word": "separated",
+      "start": 52.186,
+      "end": 52.778
+    },
+    {
+      "word": "from",
+      "start": 52.836,
+      "end": 53.011
+    },
+    {
+      "word": "ammonia",
+      "start": 53.08,
+      "end": 53.568
+    },
+    {
+      "word": "and",
+      "start": 53.626,
+      "end": 53.788
+    },
+    {
+      "word": "recycled.",
+      "start": 53.87,
+      "end": 54.624
+    },
+    {
+      "word": "Conditions",
+      "start": 55.077,
+      "end": 55.658
+    },
+    {
+      "word": "are",
+      "start": 55.716,
+      "end": 55.867
+    },
+    {
+      "word": "not",
+      "start": 55.913,
+      "end": 56.041
+    },
+    {
+      "word": "chosen",
+      "start": 56.087,
+      "end": 56.505
+    },
+    {
+      "word": "to",
+      "start": 56.563,
+      "end": 56.633
+    },
+    {
+      "word": "maximise",
+      "start": 56.726,
+      "end": 57.353
+    },
+    {
+      "word": "one",
+      "start": 57.422,
+      "end": 57.655
+    },
+    {
+      "word": "factor",
+      "start": 57.701,
+      "end": 58.073
+    },
+    {
+      "word": "alone.",
+      "start": 58.119,
+      "end": 58.607
+    },
+    {
+      "word": "Retrieve",
+      "start": 59.059,
+      "end": 59.57
+    },
+    {
+      "word": "Le",
+      "start": 59.605,
+      "end": 59.675
+    },
+    {
+      "word": "Chatelier.",
+      "start": 59.733,
+      "end": 60.545
+    },
+    {
+      "word": "Lower",
+      "start": 60.882,
+      "end": 61.184
+    },
+    {
+      "word": "temperature",
+      "start": 61.242,
+      "end": 61.811
+    },
+    {
+      "word": "favours",
+      "start": 61.869,
+      "end": 62.275
+    },
+    {
+      "word": "the",
+      "start": 62.322,
+      "end": 62.403
+    },
+    {
+      "word": "exothermic",
+      "start": 62.496,
+      "end": 63.285
+    },
+    {
+      "word": "direction.",
+      "start": 63.343,
+      "end": 64.063
+    },
+    {
+      "word": "Increasing",
+      "start": 64.4,
+      "end": 64.992
+    },
+    {
+      "word": "pressure",
+      "start": 65.061,
+      "end": 65.479
+    },
+    {
+      "word": "favours",
+      "start": 65.537,
+      "end": 65.955
+    },
+    {
+      "word": "fewer",
+      "start": 66.037,
+      "end": 66.338
+    },
+    {
+      "word": "gas",
+      "start": 66.408,
+      "end": 66.675
+    },
+    {
+      "word": "moles.",
+      "start": 66.791,
+      "end": 67.383
+    },
+    {
+      "word": "A",
+      "start": 67.592,
+      "end": 67.674
+    },
+    {
+      "word": "catalyst",
+      "start": 67.766,
+      "end": 68.347
+    },
+    {
+      "word": "lowers",
+      "start": 68.475,
+      "end": 68.835
+    },
+    {
+      "word": "activation",
+      "start": 68.904,
+      "end": 69.531
+    },
+    {
+      "word": "energy",
+      "start": 69.601,
+      "end": 69.996
+    },
+    {
+      "word": "and",
+      "start": 70.065,
+      "end": 70.216
+    },
+    {
+      "word": "increases",
+      "start": 70.286,
+      "end": 70.831
+    },
+    {
+      "word": "rate,",
+      "start": 70.948,
+      "end": 71.377
+    },
+    {
+      "word": "but",
+      "start": 71.551,
+      "end": 71.725
+    },
+    {
+      "word": "does",
+      "start": 71.772,
+      "end": 71.946
+    },
+    {
+      "word": "not",
+      "start": 72.004,
+      "end": 72.143
+    },
+    {
+      "word": "change",
+      "start": 72.201,
+      "end": 72.55
+    },
+    {
+      "word": "the",
+      "start": 72.585,
+      "end": 72.654
+    },
+    {
+      "word": "equilibrium",
+      "start": 72.712,
+      "end": 73.304
+    },
+    {
+      "word": "position.",
+      "start": 73.362,
+      "end": 73.931
+    },
+    {
+      "word": "Count",
+      "start": 74.059,
+      "end": 74.326
+    },
+    {
+      "word": "the",
+      "start": 74.373,
+      "end": 74.442
+    },
+    {
+      "word": "gas",
+      "start": 74.5,
+      "end": 74.709
+    },
+    {
+      "word": "moles.",
+      "start": 74.825,
+      "end": 75.266
+    },
+    {
+      "word": "One",
+      "start": 75.603,
+      "end": 75.847
+    },
+    {
+      "word": "nitrogen",
+      "start": 75.893,
+      "end": 76.416
+    },
+    {
+      "word": "plus",
+      "start": 76.497,
+      "end": 76.729
+    },
+    {
+      "word": "three",
+      "start": 76.787,
+      "end": 77.02
+    },
+    {
+      "word": "hydrogen",
+      "start": 77.066,
+      "end": 77.554
+    },
+    {
+      "word": "is",
+      "start": 77.623,
+      "end": 77.751
+    },
+    {
+      "word": "four",
+      "start": 77.832,
+      "end": 78.064
+    },
+    {
+      "word": "moles",
+      "start": 78.146,
+      "end": 78.436
+    },
+    {
+      "word": "of",
+      "start": 78.494,
+      "end": 78.564
+    },
+    {
+      "word": "gas.",
+      "start": 78.645,
+      "end": 79.144
+    },
+    {
+      "word": "Two",
+      "start": 79.423,
+      "end": 79.609
+    },
+    {
+      "word": "ammonia",
+      "start": 79.702,
+      "end": 80.248
+    },
+    {
+      "word": "is",
+      "start": 80.329,
+      "end": 80.503
+    },
+    {
+      "word": "two",
+      "start": 80.573,
+      "end": 80.747
+    },
+    {
+      "word": "moles",
+      "start": 80.828,
+      "end": 81.107
+    },
+    {
+      "word": "of",
+      "start": 81.165,
+      "end": 81.234
+    },
+    {
+      "word": "gas.",
+      "start": 81.316,
+      "end": 81.792
+    },
+    {
+      "word": "Increasing",
+      "start": 82.001,
+      "end": 82.593
+    },
+    {
+      "word": "pressure",
+      "start": 82.674,
+      "end": 83.069
+    },
+    {
+      "word": "favours",
+      "start": 83.127,
+      "end": 83.545
+    },
+    {
+      "word": "the",
+      "start": 83.58,
+      "end": 83.661
+    },
+    {
+      "word": "side",
+      "start": 83.742,
+      "end": 84.079
+    },
+    {
+      "word": "with",
+      "start": 84.114,
+      "end": 84.265
+    },
+    {
+      "word": "fewer",
+      "start": 84.334,
+      "end": 84.601
+    },
+    {
+      "word": "gas",
+      "start": 84.659,
+      "end": 84.88
+    },
+    {
+      "word": "moles,",
+      "start": 84.961,
+      "end": 85.484
+    },
+    {
+      "word": "so",
+      "start": 85.693,
+      "end": 85.844
+    },
+    {
+      "word": "the",
+      "start": 85.902,
+      "end": 85.971
+    },
+    {
+      "word": "equilibrium",
+      "start": 86.053,
+      "end": 86.738
+    },
+    {
+      "word": "shifts",
+      "start": 86.83,
+      "end": 87.202
+    },
+    {
+      "word": "toward",
+      "start": 87.26,
+      "end": 87.608
+    },
+    {
+      "word": "ammonia",
+      "start": 87.666,
+      "end": 88.177
+    },
+    {
+      "word": "and",
+      "start": 88.351,
+      "end": 88.537
+    },
+    {
+      "word": "the",
+      "start": 88.584,
+      "end": 88.653
+    },
+    {
+      "word": "equilibrium",
+      "start": 88.723,
+      "end": 89.303
+    },
+    {
+      "word": "yield",
+      "start": 89.385,
+      "end": 89.663
+    },
+    {
+      "word": "of",
+      "start": 89.745,
+      "end": 89.861
+    },
+    {
+      "word": "ammonia",
+      "start": 89.93,
+      "end": 90.36
+    },
+    {
+      "word": "increases.",
+      "start": 90.43,
+      "end": 91.254
+    },
+    {
+      "word": "Temperature",
+      "start": 91.591,
+      "end": 92.183
+    },
+    {
+      "word": "is",
+      "start": 92.264,
+      "end": 92.392
+    },
+    {
+      "word": "a",
+      "start": 92.438,
+      "end": 92.461
+    },
+    {
+      "word": "compromise.",
+      "start": 92.519,
+      "end": 93.251
+    },
+    {
+      "word": "Lower",
+      "start": 93.587,
+      "end": 93.913
+    },
+    {
+      "word": "temperature",
+      "start": 93.971,
+      "end": 94.527
+    },
+    {
+      "word": "gives",
+      "start": 94.597,
+      "end": 94.899
+    },
+    {
+      "word": "a",
+      "start": 94.957,
+      "end": 94.992
+    },
+    {
+      "word": "higher",
+      "start": 95.108,
+      "end": 95.445
+    },
+    {
+      "word": "ammonia",
+      "start": 95.514,
+      "end": 95.99
+    },
+    {
+      "word": "equilibrium",
+      "start": 96.06,
+      "end": 96.722
+    },
+    {
+      "word": "yield,",
+      "start": 96.815,
+      "end": 97.383
+    },
+    {
+      "word": "because",
+      "start": 97.534,
+      "end": 97.929
+    },
+    {
+      "word": "it",
+      "start": 97.964,
+      "end": 98.045
+    },
+    {
+      "word": "favours",
+      "start": 98.115,
+      "end": 98.603
+    },
+    {
+      "word": "the",
+      "start": 98.672,
+      "end": 98.765
+    },
+    {
+      "word": "exothermic",
+      "start": 98.858,
+      "end": 99.566
+    },
+    {
+      "word": "forward",
+      "start": 99.636,
+      "end": 100.007
+    },
+    {
+      "word": "reaction,",
+      "start": 100.054,
+      "end": 100.739
+    },
+    {
+      "word": "but",
+      "start": 100.832,
+      "end": 101.041
+    },
+    {
+      "word": "the",
+      "start": 101.087,
+      "end": 101.18
+    },
+    {
+      "word": "rate",
+      "start": 101.261,
+      "end": 101.517
+    },
+    {
+      "word": "is",
+      "start": 101.575,
+      "end": 101.702
+    },
+    {
+      "word": "slower.",
+      "start": 101.749,
+      "end": 102.329
+    },
+    {
+      "word": "Higher",
+      "start": 102.782,
+      "end": 103.154
+    },
+    {
+      "word": "temperature",
+      "start": 103.212,
+      "end": 103.804
+    },
+    {
+      "word": "gives",
+      "start": 103.862,
+      "end": 104.094
+    },
+    {
+      "word": "a",
+      "start": 104.14,
+      "end": 104.175
+    },
+    {
+      "word": "faster",
+      "start": 104.257,
+      "end": 104.64
+    },
+    {
+      "word": "rate,",
+      "start": 104.721,
+      "end": 105.197
+    },
+    {
+      "word": "but",
+      "start": 105.325,
+      "end": 105.522
+    },
+    {
+      "word": "a",
+      "start": 105.58,
+      "end": 105.615
+    },
+    {
+      "word": "lower",
+      "start": 105.708,
+      "end": 106.045
+    },
+    {
+      "word": "equilibrium",
+      "start": 106.126,
+      "end": 106.799
+    },
+    {
+      "word": "yield,",
+      "start": 106.88,
+      "end": 107.391
+    },
+    {
+      "word": "because",
+      "start": 107.635,
+      "end": 107.972
+    },
+    {
+      "word": "it",
+      "start": 108.007,
+      "end": 108.076
+    },
+    {
+      "word": "favours",
+      "start": 108.146,
+      "end": 108.552
+    },
+    {
+      "word": "the",
+      "start": 108.587,
+      "end": 108.668
+    },
+    {
+      "word": "endothermic",
+      "start": 108.761,
+      "end": 109.458
+    },
+    {
+      "word": "reverse.",
+      "start": 109.528,
+      "end": 110.201
+    },
+    {
+      "word": "About",
+      "start": 110.654,
+      "end": 111.049
+    },
+    {
+      "word": "four",
+      "start": 111.13,
+      "end": 111.397
+    },
+    {
+      "word": "hundred",
+      "start": 111.478,
+      "end": 111.815
+    },
+    {
+      "word": "and",
+      "start": 111.861,
+      "end": 111.954
+    },
+    {
+      "word": "fifty",
+      "start": 112.024,
+      "end": 112.349
+    },
+    {
+      "word": "degrees",
+      "start": 112.407,
+      "end": 112.825
+    },
+    {
+      "word": "Celsius",
+      "start": 112.871,
+      "end": 113.382
+    },
+    {
+      "word": "is",
+      "start": 113.475,
+      "end": 113.638
+    },
+    {
+      "word": "fast",
+      "start": 113.719,
+      "end": 114.021
+    },
+    {
+      "word": "enough,",
+      "start": 114.09,
+      "end": 114.532
+    },
+    {
+      "word": "with",
+      "start": 114.613,
+      "end": 114.822
+    },
+    {
+      "word": "a",
+      "start": 114.868,
+      "end": 114.903
+    },
+    {
+      "word": "useful",
+      "start": 114.996,
+      "end": 115.437
+    },
+    {
+      "word": "equilibrium",
+      "start": 115.518,
+      "end": 116.238
+    },
+    {
+      "word": "yield.",
+      "start": 116.354,
+      "end": 116.842
+    },
+    {
+      "word": "That",
+      "start": 117.121,
+      "end": 117.376
+    },
+    {
+      "word": "is",
+      "start": 117.457,
+      "end": 117.631
+    },
+    {
+      "word": "a",
+      "start": 117.689,
+      "end": 117.724
+    },
+    {
+      "word": "compromise",
+      "start": 117.794,
+      "end": 118.479
+    },
+    {
+      "word": "between",
+      "start": 118.525,
+      "end": 118.874
+    },
+    {
+      "word": "rate",
+      "start": 118.99,
+      "end": 119.303
+    },
+    {
+      "word": "and",
+      "start": 119.35,
+      "end": 119.501
+    },
+    {
+      "word": "yield.",
+      "start": 119.594,
+      "end": 120.035
+    },
+    {
+      "word": "Pressure",
+      "start": 120.162,
+      "end": 120.673
+    },
+    {
+      "word": "is",
+      "start": 120.755,
+      "end": 120.917
+    },
+    {
+      "word": "also",
+      "start": 120.975,
+      "end": 121.265
+    },
+    {
+      "word": "a",
+      "start": 121.323,
+      "end": 121.347
+    },
+    {
+      "word": "compromise.",
+      "start": 121.393,
+      "end": 122.206
+    },
+    {
+      "word": "Higher",
+      "start": 122.484,
+      "end": 122.821
+    },
+    {
+      "word": "pressure",
+      "start": 122.879,
+      "end": 123.332
+    },
+    {
+      "word": "increases",
+      "start": 123.39,
+      "end": 123.982
+    },
+    {
+      "word": "ammonia",
+      "start": 124.063,
+      "end": 124.714
+    },
+    {
+      "word": "equilibrium",
+      "start": 124.864,
+      "end": 125.607
+    },
+    {
+      "word": "yield.",
+      "start": 125.724,
+      "end": 126.211
+    },
+    {
+      "word": "Extremely",
+      "start": 126.548,
+      "end": 127.268
+    },
+    {
+      "word": "high",
+      "start": 127.337,
+      "end": 127.57
+    },
+    {
+      "word": "pressure",
+      "start": 127.628,
+      "end": 128.08
+    },
+    {
+      "word": "needs",
+      "start": 128.138,
+      "end": 128.405
+    },
+    {
+      "word": "more",
+      "start": 128.487,
+      "end": 128.789
+    },
+    {
+      "word": "energy",
+      "start": 128.858,
+      "end": 129.311
+    },
+    {
+      "word": "for",
+      "start": 129.381,
+      "end": 129.52
+    },
+    {
+      "word": "compression,",
+      "start": 129.578,
+      "end": 130.344
+    },
+    {
+      "word": "stronger",
+      "start": 130.553,
+      "end": 131.087
+    },
+    {
+      "word": "and",
+      "start": 131.157,
+      "end": 131.261
+    },
+    {
+      "word": "more",
+      "start": 131.331,
+      "end": 131.529
+    },
+    {
+      "word": "expensive",
+      "start": 131.563,
+      "end": 132.214
+    },
+    {
+      "word": "equipment,",
+      "start": 132.248,
+      "end": 132.875
+    },
+    {
+      "word": "and",
+      "start": 133.026,
+      "end": 133.212
+    },
+    {
+      "word": "higher",
+      "start": 133.328,
+      "end": 133.676
+    },
+    {
+      "word": "capital",
+      "start": 133.734,
+      "end": 134.257
+    },
+    {
+      "word": "and",
+      "start": 134.338,
+      "end": 134.466
+    },
+    {
+      "word": "operating",
+      "start": 134.559,
+      "end": 135.116
+    },
+    {
+      "word": "costs.",
+      "start": 135.186,
+      "end": 135.72
+    },
+    {
+      "word": "About",
+      "start": 135.964,
+      "end": 136.312
+    },
+    {
+      "word": "two",
+      "start": 136.347,
+      "end": 136.556
+    },
+    {
+      "word": "hundred",
+      "start": 136.649,
+      "end": 137.02
+    },
+    {
+      "word": "atmospheres",
+      "start": 137.09,
+      "end": 137.751
+    },
+    {
+      "word": "is",
+      "start": 137.821,
+      "end": 137.96
+    },
+    {
+      "word": "high,",
+      "start": 138.042,
+      "end": 138.436
+    },
+    {
+      "word": "but",
+      "start": 138.529,
+      "end": 138.738
+    },
+    {
+      "word": "economically",
+      "start": 138.854,
+      "end": 139.574
+    },
+    {
+      "word": "practical.",
+      "start": 139.632,
+      "end": 140.317
+    },
+    {
+      "word": "Exact",
+      "start": 140.596,
+      "end": 141.118
+    },
+    {
+      "word": "plant",
+      "start": 141.2,
+      "end": 141.548
+    },
+    {
+      "word": "conditions",
+      "start": 141.606,
+      "end": 142.291
+    },
+    {
+      "word": "can",
+      "start": 142.372,
+      "end": 142.581
+    },
+    {
+      "word": "vary.",
+      "start": 142.674,
+      "end": 143.255
+    },
+    {
+      "word": "The",
+      "start": 143.498,
+      "end": 143.626
+    },
+    {
+      "word": "specification",
+      "start": 143.684,
+      "end": 144.625
+    },
+    {
+      "word": "focus",
+      "start": 144.741,
+      "end": 145.298
+    },
+    {
+      "word": "is",
+      "start": 145.414,
+      "end": 145.577
+    },
+    {
+      "word": "the",
+      "start": 145.623,
+      "end": 145.693
+    },
+    {
+      "word": "compromise,",
+      "start": 145.762,
+      "end": 146.622
+    },
+    {
+      "word": "not",
+      "start": 146.738,
+      "end": 146.97
+    },
+    {
+      "word": "one",
+      "start": 147.086,
+      "end": 147.353
+    },
+    {
+      "word": "global",
+      "start": 147.399,
+      "end": 147.852
+    },
+    {
+      "word": "optimum.",
+      "start": 147.933,
+      "end": 148.665
+    },
+    {
+      "word": "The",
+      "start": 149.06,
+      "end": 149.187
+    },
+    {
+      "word": "iron",
+      "start": 149.303,
+      "end": 149.64
+    },
+    {
+      "word": "catalyst",
+      "start": 149.721,
+      "end": 150.244
+    },
+    {
+      "word": "provides",
+      "start": 150.29,
+      "end": 150.859
+    },
+    {
+      "word": "an",
+      "start": 150.917,
+      "end": 151.01
+    },
+    {
+      "word": "alternative",
+      "start": 151.08,
+      "end": 151.742
+    },
+    {
+      "word": "pathway",
+      "start": 151.788,
+      "end": 152.368
+    },
+    {
+      "word": "with",
+      "start": 152.485,
+      "end": 152.694
+    },
+    {
+      "word": "lower",
+      "start": 152.786,
+      "end": 153.065
+    },
+    {
+      "word": "activation",
+      "start": 153.135,
+      "end": 153.82
+    },
+    {
+      "word": "energy.",
+      "start": 153.901,
+      "end": 154.447
+    },
+    {
+      "word": "It",
+      "start": 154.841,
+      "end": 155.004
+    },
+    {
+      "word": "increases",
+      "start": 155.074,
+      "end": 155.643
+    },
+    {
+      "word": "the",
+      "start": 155.712,
+      "end": 155.782
+    },
+    {
+      "word": "rate",
+      "start": 155.863,
+      "end": 156.165
+    },
+    {
+      "word": "of",
+      "start": 156.211,
+      "end": 156.327
+    },
+    {
+      "word": "the",
+      "start": 156.374,
+      "end": 156.444
+    },
+    {
+      "word": "forward",
+      "start": 156.525,
+      "end": 156.989
+    },
+    {
+      "word": "and",
+      "start": 157.059,
+      "end": 157.198
+    },
+    {
+      "word": "reverse",
+      "start": 157.291,
+      "end": 157.767
+    },
+    {
+      "word": "reactions,",
+      "start": 157.825,
+      "end": 158.707
+    },
+    {
+      "word": "so",
+      "start": 158.858,
+      "end": 159.032
+    },
+    {
+      "word": "equilibrium",
+      "start": 159.125,
+      "end": 159.868
+    },
+    {
+      "word": "is",
+      "start": 159.961,
+      "end": 160.124
+    },
+    {
+      "word": "reached",
+      "start": 160.205,
+      "end": 160.483
+    },
+    {
+      "word": "faster.",
+      "start": 160.576,
+      "end": 161.261
+    },
+    {
+      "word": "It",
+      "start": 161.598,
+      "end": 161.761
+    },
+    {
+      "word": "does",
+      "start": 161.819,
+      "end": 162.039
+    },
+    {
+      "word": "not",
+      "start": 162.097,
+      "end": 162.26
+    },
+    {
+      "word": "change",
+      "start": 162.318,
+      "end": 162.713
+    },
+    {
+      "word": "the",
+      "start": 162.747,
+      "end": 162.852
+    },
+    {
+      "word": "equilibrium",
+      "start": 162.922,
+      "end": 163.549
+    },
+    {
+      "word": "position,",
+      "start": 163.607,
+      "end": 164.28
+    },
+    {
+      "word": "the",
+      "start": 164.431,
+      "end": 164.57
+    },
+    {
+      "word": "equilibrium",
+      "start": 164.64,
+      "end": 165.29
+    },
+    {
+      "word": "composition,",
+      "start": 165.371,
+      "end": 166.23
+    },
+    {
+      "word": "or",
+      "start": 166.474,
+      "end": 166.706
+    },
+    {
+      "word": "the",
+      "start": 166.788,
+      "end": 166.881
+    },
+    {
+      "word": "equilibrium",
+      "start": 166.95,
+      "end": 167.589
+    },
+    {
+      "word": "yield",
+      "start": 167.705,
+      "end": 168.1
+    },
+    {
+      "word": "at",
+      "start": 168.251,
+      "end": 168.448
+    },
+    {
+      "word": "fixed",
+      "start": 168.564,
+      "end": 168.889
+    },
+    {
+      "word": "temperature",
+      "start": 168.924,
+      "end": 169.493
+    },
+    {
+      "word": "and",
+      "start": 169.551,
+      "end": 169.725
+    },
+    {
+      "word": "pressure.",
+      "start": 169.806,
+      "end": 170.329
+    },
+    {
+      "word": "It",
+      "start": 170.782,
+      "end": 170.932
+    },
+    {
+      "word": "does",
+      "start": 170.99,
+      "end": 171.199
+    },
+    {
+      "word": "not",
+      "start": 171.269,
+      "end": 171.432
+    },
+    {
+      "word": "change",
+      "start": 171.49,
+      "end": 171.873
+    },
+    {
+      "word": "delta",
+      "start": 171.931,
+      "end": 172.337
+    },
+    {
+      "word": "H.",
+      "start": 172.384,
+      "end": 172.836
+    },
+    {
+      "word": "It",
+      "start": 173.173,
+      "end": 173.347
+    },
+    {
+      "word": "means",
+      "start": 173.429,
+      "end": 173.684
+    },
+    {
+      "word": "the",
+      "start": 173.742,
+      "end": 173.823
+    },
+    {
+      "word": "plant",
+      "start": 173.905,
+      "end": 174.265
+    },
+    {
+      "word": "does",
+      "start": 174.323,
+      "end": 174.52
+    },
+    {
+      "word": "not",
+      "start": 174.59,
+      "end": 174.775
+    },
+    {
+      "word": "have",
+      "start": 174.845,
+      "end": 175.031
+    },
+    {
+      "word": "to",
+      "start": 175.066,
+      "end": 175.135
+    },
+    {
+      "word": "raise",
+      "start": 175.252,
+      "end": 175.519
+    },
+    {
+      "word": "temperature",
+      "start": 175.565,
+      "end": 176.146
+    },
+    {
+      "word": "only",
+      "start": 176.238,
+      "end": 176.61
+    },
+    {
+      "word": "to",
+      "start": 176.668,
+      "end": 176.749
+    },
+    {
+      "word": "get",
+      "start": 176.831,
+      "end": 177.016
+    },
+    {
+      "word": "a",
+      "start": 177.086,
+      "end": 177.132
+    },
+    {
+      "word": "useful",
+      "start": 177.249,
+      "end": 177.725
+    },
+    {
+      "word": "rate,",
+      "start": 177.817,
+      "end": 178.212
+    },
+    {
+      "word": "which",
+      "start": 178.247,
+      "end": 178.468
+    },
+    {
+      "word": "would",
+      "start": 178.526,
+      "end": 178.723
+    },
+    {
+      "word": "lower",
+      "start": 178.781,
+      "end": 179.071
+    },
+    {
+      "word": "the",
+      "start": 179.129,
+      "end": 179.199
+    },
+    {
+      "word": "ammonia",
+      "start": 179.245,
+      "end": 179.652
+    },
+    {
+      "word": "yield.",
+      "start": 179.733,
+      "end": 180.116
+    },
+    {
+      "word": "Compare",
+      "start": 180.232,
+      "end": 180.697
+    },
+    {
+      "word": "the",
+      "start": 180.72,
+      "end": 180.801
+    },
+    {
+      "word": "options.",
+      "start": 180.871,
+      "end": 181.44
+    },
+    {
+      "word": "Three",
+      "start": 181.486,
+      "end": 181.811
+    },
+    {
+      "word": "hundred",
+      "start": 181.869,
+      "end": 182.194
+    },
+    {
+      "word": "degrees",
+      "start": 182.241,
+      "end": 182.589
+    },
+    {
+      "word": "Celsius",
+      "start": 182.636,
+      "end": 183.181
+    },
+    {
+      "word": "at",
+      "start": 183.251,
+      "end": 183.379
+    },
+    {
+      "word": "two",
+      "start": 183.413,
+      "end": 183.576
+    },
+    {
+      "word": "hundred",
+      "start": 183.646,
+      "end": 183.947
+    },
+    {
+      "word": "atmospheres",
+      "start": 184.006,
+      "end": 184.69
+    },
+    {
+      "word": "gives",
+      "start": 184.76,
+      "end": 185.004
+    },
+    {
+      "word": "a",
+      "start": 185.074,
+      "end": 185.12
+    },
+    {
+      "word": "high",
+      "start": 185.236,
+      "end": 185.48
+    },
+    {
+      "word": "yield",
+      "start": 185.55,
+      "end": 185.886
+    },
+    {
+      "word": "but",
+      "start": 185.956,
+      "end": 186.13
+    },
+    {
+      "word": "is",
+      "start": 186.188,
+      "end": 186.293
+    },
+    {
+      "word": "too",
+      "start": 186.374,
+      "end": 186.548
+    },
+    {
+      "word": "slow",
+      "start": 186.606,
+      "end": 186.885
+    },
+    {
+      "word": "for",
+      "start": 186.954,
+      "end": 187.094
+    },
+    {
+      "word": "efficient",
+      "start": 187.152,
+      "end": 187.605
+    },
+    {
+      "word": "production.",
+      "start": 187.651,
+      "end": 188.336
+    },
+    {
+      "word": "Six",
+      "start": 188.452,
+      "end": 188.754
+    },
+    {
+      "word": "hundred",
+      "start": 188.824,
+      "end": 189.137
+    },
+    {
+      "word": "and",
+      "start": 189.184,
+      "end": 189.265
+    },
+    {
+      "word": "fifty",
+      "start": 189.335,
+      "end": 189.636
+    },
+    {
+      "word": "degrees",
+      "start": 189.683,
+      "end": 190.02
+    },
+    {
+      "word": "Celsius",
+      "start": 190.078,
+      "end": 190.635
+    },
+    {
+      "word": "at",
+      "start": 190.705,
+      "end": 190.867
+    },
+    {
+      "word": "two",
+      "start": 190.925,
+      "end": 191.169
+    },
+    {
+      "word": "hundred",
+      "start": 191.262,
+      "end": 191.587
+    },
+    {
+      "word": "atmospheres",
+      "start": 191.657,
+      "end": 192.284
+    },
+    {
+      "word": "is",
+      "start": 192.353,
+      "end": 192.458
+    },
+    {
+      "word": "fast,",
+      "start": 192.539,
+      "end": 193.038
+    },
+    {
+      "word": "but",
+      "start": 193.096,
+      "end": 193.294
+    },
+    {
+      "word": "the",
+      "start": 193.328,
+      "end": 193.41
+    },
+    {
+      "word": "ammonia",
+      "start": 193.468,
+      "end": 193.979
+    },
+    {
+      "word": "equilibrium",
+      "start": 194.071,
+      "end": 194.791
+    },
+    {
+      "word": "yield",
+      "start": 194.884,
+      "end": 195.151
+    },
+    {
+      "word": "is",
+      "start": 195.221,
+      "end": 195.325
+    },
+    {
+      "word": "reduced.",
+      "start": 195.407,
+      "end": 196.022
+    },
+    {
+      "word": "Four",
+      "start": 196.15,
+      "end": 196.428
+    },
+    {
+      "word": "hundred",
+      "start": 196.498,
+      "end": 196.823
+    },
+    {
+      "word": "and",
+      "start": 196.869,
+      "end": 196.951
+    },
+    {
+      "word": "fifty",
+      "start": 197.02,
+      "end": 197.334
+    },
+    {
+      "word": "degrees",
+      "start": 197.38,
+      "end": 197.717
+    },
+    {
+      "word": "Celsius,",
+      "start": 197.763,
+      "end": 198.506
+    },
+    {
+      "word": "two",
+      "start": 198.623,
+      "end": 198.832
+    },
+    {
+      "word": "hundred",
+      "start": 198.901,
+      "end": 199.215
+    },
+    {
+      "word": "atmospheres",
+      "start": 199.284,
+      "end": 199.981
+    },
+    {
+      "word": "and",
+      "start": 200.039,
+      "end": 200.202
+    },
+    {
+      "word": "iron",
+      "start": 200.294,
+      "end": 200.724
+    },
+    {
+      "word": "gives",
+      "start": 201.061,
+      "end": 201.304
+    },
+    {
+      "word": "a",
+      "start": 201.351,
+      "end": 201.386
+    },
+    {
+      "word": "useful",
+      "start": 201.502,
+      "end": 201.897
+    },
+    {
+      "word": "yield",
+      "start": 201.978,
+      "end": 202.338
+    },
+    {
+      "word": "and",
+      "start": 202.547,
+      "end": 202.779
+    },
+    {
+      "word": "a",
+      "start": 202.837,
+      "end": 202.872
+    },
+    {
+      "word": "useful",
+      "start": 202.988,
+      "end": 203.406
+    },
+    {
+      "word": "rate.",
+      "start": 203.499,
+      "end": 203.951
+    },
+    {
+      "word": "Plant",
+      "start": 204.16,
+      "end": 204.578
+    },
+    {
+      "word": "X",
+      "start": 204.636,
+      "end": 204.88
+    },
+    {
+      "word": "is",
+      "start": 205.031,
+      "end": 205.193
+    },
+    {
+      "word": "offered",
+      "start": 205.275,
+      "end": 205.646
+    },
+    {
+      "word": "three",
+      "start": 205.704,
+      "end": 205.971
+    },
+    {
+      "word": "hundred",
+      "start": 206.041,
+      "end": 206.378
+    },
+    {
+      "word": "and",
+      "start": 206.424,
+      "end": 206.529
+    },
+    {
+      "word": "fifty,",
+      "start": 206.621,
+      "end": 207.26
+    },
+    {
+      "word": "four",
+      "start": 207.504,
+      "end": 207.748
+    },
+    {
+      "word": "hundred",
+      "start": 207.806,
+      "end": 208.108
+    },
+    {
+      "word": "and",
+      "start": 208.142,
+      "end": 208.224
+    },
+    {
+      "word": "fifty",
+      "start": 208.305,
+      "end": 208.746
+    },
+    {
+      "word": "or",
+      "start": 208.839,
+      "end": 208.99
+    },
+    {
+      "word": "six",
+      "start": 209.06,
+      "end": 209.303
+    },
+    {
+      "word": "hundred",
+      "start": 209.361,
+      "end": 209.652
+    },
+    {
+      "word": "degrees",
+      "start": 209.698,
+      "end": 210.07
+    },
+    {
+      "word": "Celsius,",
+      "start": 210.116,
+      "end": 210.94
+    },
+    {
+      "word": "and",
+      "start": 211.115,
+      "end": 211.289
+    },
+    {
+      "word": "one",
+      "start": 211.382,
+      "end": 211.579
+    },
+    {
+      "word": "hundred,",
+      "start": 211.637,
+      "end": 212.067
+    },
+    {
+      "word": "two",
+      "start": 212.09,
+      "end": 212.322
+    },
+    {
+      "word": "hundred",
+      "start": 212.438,
+      "end": 212.775
+    },
+    {
+      "word": "or",
+      "start": 212.844,
+      "end": 212.949
+    },
+    {
+      "word": "four",
+      "start": 213.019,
+      "end": 213.251
+    },
+    {
+      "word": "hundred",
+      "start": 213.309,
+      "end": 213.611
+    },
+    {
+      "word": "atmospheres,",
+      "start": 213.669,
+      "end": 214.493
+    },
+    {
+      "word": "with",
+      "start": 214.702,
+      "end": 214.923
+    },
+    {
+      "word": "iron",
+      "start": 215.039,
+      "end": 215.399
+    },
+    {
+      "word": "available.",
+      "start": 215.445,
+      "end": 216.142
+    },
+    {
+      "word": "Three",
+      "start": 216.478,
+      "end": 216.757
+    },
+    {
+      "word": "hundred",
+      "start": 216.803,
+      "end": 217.117
+    },
+    {
+      "word": "and",
+      "start": 217.152,
+      "end": 217.221
+    },
+    {
+      "word": "fifty",
+      "start": 217.291,
+      "end": 217.628
+    },
+    {
+      "word": "degrees",
+      "start": 217.686,
+      "end": 218.092
+    },
+    {
+      "word": "Celsius",
+      "start": 218.15,
+      "end": 218.777
+    },
+    {
+      "word": "has",
+      "start": 218.928,
+      "end": 219.16
+    },
+    {
+      "word": "a",
+      "start": 219.23,
+      "end": 219.265
+    },
+    {
+      "word": "higher",
+      "start": 219.358,
+      "end": 219.683
+    },
+    {
+      "word": "yield",
+      "start": 219.764,
+      "end": 220.147
+    },
+    {
+      "word": "but",
+      "start": 220.356,
+      "end": 220.577
+    },
+    {
+      "word": "is",
+      "start": 220.635,
+      "end": 220.739
+    },
+    {
+      "word": "slower.",
+      "start": 220.809,
+      "end": 221.401
+    },
+    {
+      "word": "Six",
+      "start": 221.854,
+      "end": 222.167
+    },
+    {
+      "word": "hundred",
+      "start": 222.225,
+      "end": 222.574
+    },
+    {
+      "word": "degrees",
+      "start": 222.643,
+      "end": 223.131
+    },
+    {
+      "word": "Celsius",
+      "start": 223.212,
+      "end": 223.909
+    },
+    {
+      "word": "has",
+      "start": 224.083,
+      "end": 224.292
+    },
+    {
+      "word": "a",
+      "start": 224.35,
+      "end": 224.385
+    },
+    {
+      "word": "higher",
+      "start": 224.466,
+      "end": 224.733
+    },
+    {
+      "word": "rate",
+      "start": 224.791,
+      "end": 225.163
+    },
+    {
+      "word": "but",
+      "start": 225.256,
+      "end": 225.453
+    },
+    {
+      "word": "a",
+      "start": 225.511,
+      "end": 225.534
+    },
+    {
+      "word": "lower",
+      "start": 225.615,
+      "end": 225.883
+    },
+    {
+      "word": "yield.",
+      "start": 225.964,
+      "end": 226.451
+    },
+    {
+      "word": "Four",
+      "start": 226.73,
+      "end": 227.032
+    },
+    {
+      "word": "hundred",
+      "start": 227.102,
+      "end": 227.45
+    },
+    {
+      "word": "atmospheres",
+      "start": 227.508,
+      "end": 228.286
+    },
+    {
+      "word": "gives",
+      "start": 228.53,
+      "end": 228.82
+    },
+    {
+      "word": "more",
+      "start": 228.913,
+      "end": 229.133
+    },
+    {
+      "word": "yield",
+      "start": 229.203,
+      "end": 229.563
+    },
+    {
+      "word": "but",
+      "start": 229.737,
+      "end": 229.946
+    },
+    {
+      "word": "more",
+      "start": 230.016,
+      "end": 230.213
+    },
+    {
+      "word": "compression",
+      "start": 230.259,
+      "end": 230.805
+    },
+    {
+      "word": "cost.",
+      "start": 230.886,
+      "end": 231.397
+    },
+    {
+      "word": "One",
+      "start": 231.734,
+      "end": 231.978
+    },
+    {
+      "word": "hundred",
+      "start": 232.036,
+      "end": 232.384
+    },
+    {
+      "word": "atmospheres",
+      "start": 232.442,
+      "end": 233.116
+    },
+    {
+      "word": "costs",
+      "start": 233.197,
+      "end": 233.545
+    },
+    {
+      "word": "less",
+      "start": 233.638,
+      "end": 233.951
+    },
+    {
+      "word": "but",
+      "start": 234.23,
+      "end": 234.427
+    },
+    {
+      "word": "gives",
+      "start": 234.486,
+      "end": 234.718
+    },
+    {
+      "word": "a",
+      "start": 234.787,
+      "end": 234.811
+    },
+    {
+      "word": "lower",
+      "start": 234.927,
+      "end": 235.229
+    },
+    {
+      "word": "yield",
+      "start": 235.31,
+      "end": 235.67
+    },
+    {
+      "word": "than",
+      "start": 235.821,
+      "end": 236.03
+    },
+    {
+      "word": "two",
+      "start": 236.099,
+      "end": 236.285
+    },
+    {
+      "word": "hundred",
+      "start": 236.355,
+      "end": 236.692
+    },
+    {
+      "word": "atmospheres.",
+      "start": 236.75,
+      "end": 237.632
+    },
+    {
+      "word": "The",
+      "start": 238.027,
+      "end": 238.201
+    },
+    {
+      "word": "indicative",
+      "start": 238.271,
+      "end": 238.979
+    },
+    {
+      "word": "industrial",
+      "start": 239.048,
+      "end": 239.641
+    },
+    {
+      "word": "choice",
+      "start": 239.699,
+      "end": 240.082
+    },
+    {
+      "word": "is",
+      "start": 240.128,
+      "end": 240.291
+    },
+    {
+      "word": "about",
+      "start": 240.36,
+      "end": 240.662
+    },
+    {
+      "word": "four",
+      "start": 240.732,
+      "end": 240.952
+    },
+    {
+      "word": "hundred",
+      "start": 240.999,
+      "end": 241.312
+    },
+    {
+      "word": "and",
+      "start": 241.359,
+      "end": 241.44
+    },
+    {
+      "word": "fifty",
+      "start": 241.498,
+      "end": 241.823
+    },
+    {
+      "word": "degrees",
+      "start": 241.881,
+      "end": 242.241
+    },
+    {
+      "word": "Celsius",
+      "start": 242.288,
+      "end": 242.88
+    },
+    {
+      "word": "and",
+      "start": 243.031,
+      "end": 243.379
+    },
+    {
+      "word": "about",
+      "start": 243.495,
+      "end": 243.878
+    },
+    {
+      "word": "two",
+      "start": 243.901,
+      "end": 244.076
+    },
+    {
+      "word": "hundred",
+      "start": 244.157,
+      "end": 244.47
+    },
+    {
+      "word": "atmospheres",
+      "start": 244.528,
+      "end": 245.178
+    },
+    {
+      "word": "with",
+      "start": 245.225,
+      "end": 245.399
+    },
+    {
+      "word": "iron.",
+      "start": 245.469,
+      "end": 245.84
+    },
+    {
+      "word": "Correct",
+      "start": 246.204,
+      "end": 246.576
+    },
+    {
+      "word": "the",
+      "start": 246.599,
+      "end": 246.668
+    },
+    {
+      "word": "misconceptions.",
+      "start": 246.726,
+      "end": 247.76
+    },
+    {
+      "word": "The",
+      "start": 247.934,
+      "end": 248.073
+    },
+    {
+      "word": "lowest",
+      "start": 248.154,
+      "end": 248.526
+    },
+    {
+      "word": "possible",
+      "start": 248.584,
+      "end": 249.048
+    },
+    {
+      "word": "temperature",
+      "start": 249.083,
+      "end": 249.687
+    },
+    {
+      "word": "is",
+      "start": 249.757,
+      "end": 249.919
+    },
+    {
+      "word": "not",
+      "start": 250.0,
+      "end": 250.175
+    },
+    {
+      "word": "chosen,",
+      "start": 250.221,
+      "end": 250.825
+    },
+    {
+      "word": "because",
+      "start": 250.999,
+      "end": 251.417
+    },
+    {
+      "word": "the",
+      "start": 251.452,
+      "end": 251.533
+    },
+    {
+      "word": "rate",
+      "start": 251.626,
+      "end": 251.904
+    },
+    {
+      "word": "would",
+      "start": 251.951,
+      "end": 252.16
+    },
+    {
+      "word": "be",
+      "start": 252.206,
+      "end": 252.334
+    },
+    {
+      "word": "too",
+      "start": 252.381,
+      "end": 252.566
+    },
+    {
+      "word": "slow.",
+      "start": 252.624,
+      "end": 253.042
+    },
+    {
+      "word": "The",
+      "start": 253.379,
+      "end": 253.518
+    },
+    {
+      "word": "highest",
+      "start": 253.634,
+      "end": 254.076
+    },
+    {
+      "word": "possible",
+      "start": 254.145,
+      "end": 254.621
+    },
+    {
+      "word": "pressure",
+      "start": 254.668,
+      "end": 255.155
+    },
+    {
+      "word": "is",
+      "start": 255.225,
+      "end": 255.422
+    },
+    {
+      "word": "not",
+      "start": 255.515,
+      "end": 255.689
+    },
+    {
+      "word": "chosen,",
+      "start": 255.736,
+      "end": 256.247
+    },
+    {
+      "word": "because",
+      "start": 256.293,
+      "end": 256.711
+    },
+    {
+      "word": "of",
+      "start": 256.746,
+      "end": 256.839
+    },
+    {
+      "word": "energy,",
+      "start": 256.955,
+      "end": 257.501
+    },
+    {
+      "word": "equipment",
+      "start": 257.559,
+      "end": 258.221
+    },
+    {
+      "word": "and",
+      "start": 258.29,
+      "end": 258.406
+    },
+    {
+      "word": "cost.",
+      "start": 258.476,
+      "end": 258.964
+    },
+    {
+      "word": "Iron",
+      "start": 259.207,
+      "end": 259.544
+    },
+    {
+      "word": "does",
+      "start": 259.602,
+      "end": 259.776
+    },
+    {
+      "word": "not",
+      "start": 259.858,
+      "end": 260.055
+    },
+    {
+      "word": "increase",
+      "start": 260.136,
+      "end": 260.612
+    },
+    {
+      "word": "equilibrium",
+      "start": 260.728,
+      "end": 261.448
+    },
+    {
+      "word": "yield.",
+      "start": 261.541,
+      "end": 262.075
+    },
+    {
+      "word": "Higher",
+      "start": 262.284,
+      "end": 262.609
+    },
+    {
+      "word": "temperature",
+      "start": 262.667,
+      "end": 263.201
+    },
+    {
+      "word": "does",
+      "start": 263.248,
+      "end": 263.422
+    },
+    {
+      "word": "not",
+      "start": 263.492,
+      "end": 263.689
+    },
+    {
+      "word": "always",
+      "start": 263.759,
+      "end": 264.2
+    },
+    {
+      "word": "improve",
+      "start": 264.269,
+      "end": 264.711
+    },
+    {
+      "word": "production,",
+      "start": 264.757,
+      "end": 265.488
+    },
+    {
+      "word": "because",
+      "start": 265.732,
+      "end": 266.139
+    },
+    {
+      "word": "for",
+      "start": 266.185,
+      "end": 266.301
+    },
+    {
+      "word": "this",
+      "start": 266.348,
+      "end": 266.499
+    },
+    {
+      "word": "reaction",
+      "start": 266.58,
+      "end": 267.195
+    },
+    {
+      "word": "it",
+      "start": 267.439,
+      "end": 267.613
+    },
+    {
+      "word": "decreases",
+      "start": 267.671,
+      "end": 268.298
+    },
+    {
+      "word": "the",
+      "start": 268.379,
+      "end": 268.484
+    },
+    {
+      "word": "ammonia",
+      "start": 268.565,
+      "end": 269.204
+    },
+    {
+      "word": "equilibrium",
+      "start": 269.355,
+      "end": 270.086
+    },
+    {
+      "word": "yield.",
+      "start": 270.179,
+      "end": 270.678
+    },
+    {
+      "word": "Examination-style",
+      "start": 271.293,
+      "end": 272.652
+    },
+    {
+      "word": "question.",
+      "start": 272.698,
+      "end": 273.372
+    },
+    {
+      "word": "Part",
+      "start": 273.708,
+      "end": 274.068
+    },
+    {
+      "word": "a.",
+      "start": 274.161,
+      "end": 274.614
+    },
+    {
+      "word": "State",
+      "start": 275.067,
+      "end": 275.52
+    },
+    {
+      "word": "typical",
+      "start": 275.589,
+      "end": 276.042
+    },
+    {
+      "word": "temperature,",
+      "start": 276.112,
+      "end": 276.832
+    },
+    {
+      "word": "pressure",
+      "start": 277.11,
+      "end": 277.575
+    },
+    {
+      "word": "and",
+      "start": 277.633,
+      "end": 277.749
+    },
+    {
+      "word": "catalyst.",
+      "start": 277.807,
+      "end": 278.561
+    },
+    {
+      "word": "Three",
+      "start": 278.956,
+      "end": 279.235
+    },
+    {
+      "word": "marks.",
+      "start": 279.293,
+      "end": 279.862
+    },
+    {
+      "word": "About",
+      "start": 280.315,
+      "end": 280.674
+    },
+    {
+      "word": "four",
+      "start": 280.744,
+      "end": 280.965
+    },
+    {
+      "word": "hundred",
+      "start": 281.011,
+      "end": 281.313
+    },
+    {
+      "word": "and",
+      "start": 281.359,
+      "end": 281.452
+    },
+    {
+      "word": "fifty",
+      "start": 281.522,
+      "end": 281.812
+    },
+    {
+      "word": "degrees",
+      "start": 281.882,
+      "end": 282.253
+    },
+    {
+      "word": "Celsius,",
+      "start": 282.3,
+      "end": 283.147
+    },
+    {
+      "word": "about",
+      "start": 283.298,
+      "end": 283.647
+    },
+    {
+      "word": "two",
+      "start": 283.681,
+      "end": 283.856
+    },
+    {
+      "word": "hundred",
+      "start": 283.937,
+      "end": 284.285
+    },
+    {
+      "word": "atmospheres,",
+      "start": 284.401,
+      "end": 285.284
+    },
+    {
+      "word": "and",
+      "start": 285.458,
+      "end": 285.667
+    },
+    {
+      "word": "iron.",
+      "start": 285.783,
+      "end": 286.34
+    },
+    {
+      "word": "Part",
+      "start": 287.048,
+      "end": 287.327
+    },
+    {
+      "word": "b.",
+      "start": 287.397,
+      "end": 287.757
+    },
+    {
+      "word": "Why",
+      "start": 288.0,
+      "end": 288.302
+    },
+    {
+      "word": "is",
+      "start": 288.384,
+      "end": 288.546
+    },
+    {
+      "word": "a",
+      "start": 288.604,
+      "end": 288.651
+    },
+    {
+      "word": "lower",
+      "start": 288.767,
+      "end": 289.057
+    },
+    {
+      "word": "temperature",
+      "start": 289.115,
+      "end": 289.707
+    },
+    {
+      "word": "not",
+      "start": 289.823,
+      "end": 290.079
+    },
+    {
+      "word": "used,",
+      "start": 290.195,
+      "end": 290.694
+    },
+    {
+      "word": "even",
+      "start": 290.973,
+      "end": 291.24
+    },
+    {
+      "word": "though",
+      "start": 291.286,
+      "end": 291.518
+    },
+    {
+      "word": "yield",
+      "start": 291.634,
+      "end": 291.959
+    },
+    {
+      "word": "would",
+      "start": 292.006,
+      "end": 292.18
+    },
+    {
+      "word": "be",
+      "start": 292.226,
+      "end": 292.319
+    },
+    {
+      "word": "higher?",
+      "start": 292.389,
+      "end": 292.9
+    },
+    {
+      "word": "Three",
+      "start": 293.515,
+      "end": 293.783
+    },
+    {
+      "word": "marks.",
+      "start": 293.841,
+      "end": 294.351
+    },
+    {
+      "word": "Lower",
+      "start": 294.874,
+      "end": 295.152
+    },
+    {
+      "word": "temperature",
+      "start": 295.211,
+      "end": 295.803
+    },
+    {
+      "word": "favours",
+      "start": 295.872,
+      "end": 296.29
+    },
+    {
+      "word": "the",
+      "start": 296.348,
+      "end": 296.476
+    },
+    {
+      "word": "exothermic",
+      "start": 296.592,
+      "end": 297.37
+    },
+    {
+      "word": "forward",
+      "start": 297.44,
+      "end": 297.974
+    },
+    {
+      "word": "reaction,",
+      "start": 298.09,
+      "end": 298.717
+    },
+    {
+      "word": "so",
+      "start": 298.833,
+      "end": 299.03
+    },
+    {
+      "word": "yield",
+      "start": 299.146,
+      "end": 299.437
+    },
+    {
+      "word": "is",
+      "start": 299.506,
+      "end": 299.611
+    },
+    {
+      "word": "higher,",
+      "start": 299.68,
+      "end": 300.226
+    },
+    {
+      "word": "but",
+      "start": 300.4,
+      "end": 300.574
+    },
+    {
+      "word": "the",
+      "start": 300.609,
+      "end": 300.69
+    },
+    {
+      "word": "rate",
+      "start": 300.772,
+      "end": 301.039
+    },
+    {
+      "word": "is",
+      "start": 301.085,
+      "end": 301.19
+    },
+    {
+      "word": "lower,",
+      "start": 301.271,
+      "end": 301.735
+    },
+    {
+      "word": "so",
+      "start": 301.909,
+      "end": 302.107
+    },
+    {
+      "word": "production",
+      "start": 302.188,
+      "end": 302.803
+    },
+    {
+      "word": "is",
+      "start": 302.873,
+      "end": 303.036
+    },
+    {
+      "word": "too",
+      "start": 303.117,
+      "end": 303.338
+    },
+    {
+      "word": "slow",
+      "start": 303.407,
+      "end": 303.79
+    },
+    {
+      "word": "or",
+      "start": 303.941,
+      "end": 304.139
+    },
+    {
+      "word": "less",
+      "start": 304.255,
+      "end": 304.522
+    },
+    {
+      "word": "economically",
+      "start": 304.615,
+      "end": 305.404
+    },
+    {
+      "word": "efficient.",
+      "start": 305.485,
+      "end": 306.228
+    },
+    {
+      "word": "Part",
+      "start": 306.844,
+      "end": 307.134
+    },
+    {
+      "word": "c.",
+      "start": 307.192,
+      "end": 307.645
+    },
+    {
+      "word": "Why",
+      "start": 308.098,
+      "end": 308.399
+    },
+    {
+      "word": "does",
+      "start": 308.481,
+      "end": 308.725
+    },
+    {
+      "word": "higher",
+      "start": 308.806,
+      "end": 309.096
+    },
+    {
+      "word": "pressure",
+      "start": 309.166,
+      "end": 309.607
+    },
+    {
+      "word": "increase",
+      "start": 309.665,
+      "end": 310.083
+    },
+    {
+      "word": "yield?",
+      "start": 310.141,
+      "end": 310.594
+    },
+    {
+      "word": "Two",
+      "start": 311.418,
+      "end": 311.627
+    },
+    {
+      "word": "marks.",
+      "start": 311.697,
+      "end": 312.161
+    },
+    {
+      "word": "There",
+      "start": 312.278,
+      "end": 312.463
+    },
+    {
+      "word": "are",
+      "start": 312.498,
+      "end": 312.603
+    },
+    {
+      "word": "two",
+      "start": 312.626,
+      "end": 312.777
+    },
+    {
+      "word": "moles",
+      "start": 312.846,
+      "end": 313.172
+    },
+    {
+      "word": "of",
+      "start": 313.253,
+      "end": 313.346
+    },
+    {
+      "word": "gas",
+      "start": 313.439,
+      "end": 313.671
+    },
+    {
+      "word": "against",
+      "start": 313.729,
+      "end": 314.054
+    },
+    {
+      "word": "four,",
+      "start": 314.147,
+      "end": 314.495
+    },
+    {
+      "word": "so",
+      "start": 314.53,
+      "end": 314.704
+    },
+    {
+      "word": "the",
+      "start": 314.774,
+      "end": 314.855
+    },
+    {
+      "word": "equilibrium",
+      "start": 314.936,
+      "end": 315.668
+    },
+    {
+      "word": "shifts",
+      "start": 315.737,
+      "end": 316.074
+    },
+    {
+      "word": "toward",
+      "start": 316.132,
+      "end": 316.527
+    },
+    {
+      "word": "ammonia.",
+      "start": 316.585,
+      "end": 317.351
+    },
+    {
+      "word": "Part",
+      "start": 317.63,
+      "end": 317.955
+    },
+    {
+      "word": "d.",
+      "start": 318.013,
+      "end": 318.361
+    },
+    {
+      "word": "Why",
+      "start": 318.535,
+      "end": 318.802
+    },
+    {
+      "word": "is",
+      "start": 318.919,
+      "end": 319.093
+    },
+    {
+      "word": "industrial",
+      "start": 319.186,
+      "end": 319.743
+    },
+    {
+      "word": "pressure",
+      "start": 319.812,
+      "end": 320.335
+    },
+    {
+      "word": "a",
+      "start": 320.405,
+      "end": 320.451
+    },
+    {
+      "word": "compromise?",
+      "start": 320.532,
+      "end": 321.345
+    },
+    {
+      "word": "Three",
+      "start": 321.624,
+      "end": 321.914
+    },
+    {
+      "word": "marks.",
+      "start": 321.972,
+      "end": 322.506
+    },
+    {
+      "word": "Higher",
+      "start": 322.564,
+      "end": 322.936
+    },
+    {
+      "word": "pressure",
+      "start": 322.994,
+      "end": 323.481
+    },
+    {
+      "word": "increases",
+      "start": 323.574,
+      "end": 324.224
+    },
+    {
+      "word": "yield.",
+      "start": 324.34,
+      "end": 324.874
+    },
+    {
+      "word": "Very",
+      "start": 325.118,
+      "end": 325.455
+    },
+    {
+      "word": "high",
+      "start": 325.525,
+      "end": 325.734
+    },
+    {
+      "word": "pressure",
+      "start": 325.792,
+      "end": 326.326
+    },
+    {
+      "word": "increases",
+      "start": 326.442,
+      "end": 327.057
+    },
+    {
+      "word": "compression,",
+      "start": 327.138,
+      "end": 327.893
+    },
+    {
+      "word": "equipment",
+      "start": 327.986,
+      "end": 328.59
+    },
+    {
+      "word": "and",
+      "start": 328.659,
+      "end": 328.799
+    },
+    {
+      "word": "cost.",
+      "start": 328.88,
+      "end": 329.391
+    },
+    {
+      "word": "Industry",
+      "start": 329.634,
+      "end": 330.192
+    },
+    {
+      "word": "balances",
+      "start": 330.261,
+      "end": 330.784
+    },
+    {
+      "word": "yield",
+      "start": 330.865,
+      "end": 331.237
+    },
+    {
+      "word": "against",
+      "start": 331.33,
+      "end": 331.771
+    },
+    {
+      "word": "economic",
+      "start": 331.864,
+      "end": 332.514
+    },
+    {
+      "word": "and",
+      "start": 332.63,
+      "end": 332.792
+    },
+    {
+      "word": "engineering",
+      "start": 332.885,
+      "end": 333.477
+    },
+    {
+      "word": "cost.",
+      "start": 333.559,
+      "end": 334.116
+    },
+    {
+      "word": "Part",
+      "start": 334.453,
+      "end": 334.813
+    },
+    {
+      "word": "e.",
+      "start": 334.905,
+      "end": 335.323
+    },
+    {
+      "word": "What",
+      "start": 335.66,
+      "end": 335.881
+    },
+    {
+      "word": "does",
+      "start": 335.939,
+      "end": 336.136
+    },
+    {
+      "word": "the",
+      "start": 336.183,
+      "end": 336.287
+    },
+    {
+      "word": "iron",
+      "start": 336.403,
+      "end": 336.74
+    },
+    {
+      "word": "catalyst",
+      "start": 336.821,
+      "end": 337.471
+    },
+    {
+      "word": "do?",
+      "start": 337.587,
+      "end": 338.121
+    },
+    {
+      "word": "Two",
+      "start": 338.33,
+      "end": 338.563
+    },
+    {
+      "word": "marks.",
+      "start": 338.644,
+      "end": 339.155
+    },
+    {
+      "word": "It",
+      "start": 339.491,
+      "end": 339.654
+    },
+    {
+      "word": "provides",
+      "start": 339.724,
+      "end": 340.316
+    },
+    {
+      "word": "a",
+      "start": 340.385,
+      "end": 340.443
+    },
+    {
+      "word": "lower",
+      "start": 340.559,
+      "end": 340.885
+    },
+    {
+      "word": "activation-energy",
+      "start": 340.966,
+      "end": 342.382
+    },
+    {
+      "word": "pathway,",
+      "start": 342.464,
+      "end": 343.195
+    },
+    {
+      "word": "so",
+      "start": 343.404,
+      "end": 343.671
+    },
+    {
+      "word": "rate",
+      "start": 343.787,
+      "end": 344.101
+    },
+    {
+      "word": "increases",
+      "start": 344.182,
+      "end": 344.936
+    },
+    {
+      "word": "and",
+      "start": 345.006,
+      "end": 345.203
+    },
+    {
+      "word": "equilibrium",
+      "start": 345.32,
+      "end": 346.109
+    },
+    {
+      "word": "is",
+      "start": 346.225,
+      "end": 346.411
+    },
+    {
+      "word": "reached",
+      "start": 346.527,
+      "end": 346.84
+    },
+    {
+      "word": "faster,",
+      "start": 346.91,
+      "end": 347.571
+    },
+    {
+      "word": "without",
+      "start": 347.653,
+      "end": 348.047
+    },
+    {
+      "word": "changing",
+      "start": 348.105,
+      "end": 348.581
+    },
+    {
+      "word": "the",
+      "start": 348.663,
+      "end": 348.779
+    },
+    {
+      "word": "equilibrium",
+      "start": 348.872,
+      "end": 349.475
+    },
+    {
+      "word": "position.",
+      "start": 349.534,
+      "end": 350.288
+    },
+    {
+      "word": "Before",
+      "start": 350.683,
+      "end": 351.031
+    },
+    {
+      "word": "we",
+      "start": 351.066,
+      "end": 351.171
+    },
+    {
+      "word": "finish,",
+      "start": 351.252,
+      "end": 351.786
+    },
+    {
+      "word": "complete",
+      "start": 351.902,
+      "end": 352.355
+    },
+    {
+      "word": "the",
+      "start": 352.39,
+      "end": 352.459
+    },
+    {
+      "word": "model.",
+      "start": 352.529,
+      "end": 353.109
+    },
+    {
+      "word": "Haber",
+      "start": 353.562,
+      "end": 353.922
+    },
+    {
+      "word": "ammonia",
+      "start": 353.969,
+      "end": 354.503
+    },
+    {
+      "word": "is",
+      "start": 354.595,
+      "end": 354.793
+    },
+    {
+      "word": "made",
+      "start": 354.886,
+      "end": 355.188
+    },
+    {
+      "word": "at",
+      "start": 355.246,
+      "end": 355.42
+    },
+    {
+      "word": "about",
+      "start": 355.478,
+      "end": 355.826
+    },
+    {
+      "word": "four",
+      "start": 355.919,
+      "end": 356.221
+    },
+    {
+      "word": "hundred",
+      "start": 356.291,
+      "end": 356.65
+    },
+    {
+      "word": "and",
+      "start": 356.697,
+      "end": 356.79
+    },
+    {
+      "word": "fifty",
+      "start": 356.871,
+      "end": 357.219
+    },
+    {
+      "word": "degrees",
+      "start": 357.277,
+      "end": 357.695
+    },
+    {
+      "word": "Celsius",
+      "start": 357.753,
+      "end": 358.415
+    },
+    {
+      "word": "and",
+      "start": 358.566,
+      "end": 358.949
+    },
+    {
+      "word": "about",
+      "start": 359.065,
+      "end": 359.506
+    },
+    {
+      "word": "two",
+      "start": 359.576,
+      "end": 359.797
+    },
+    {
+      "word": "hundred",
+      "start": 359.878,
+      "end": 360.238
+    },
+    {
+      "word": "atmospheres",
+      "start": 360.319,
+      "end": 361.155
+    },
+    {
+      "word": "with",
+      "start": 361.248,
+      "end": 361.445
+    },
+    {
+      "word": "iron.",
+      "start": 361.561,
+      "end": 362.154
+    },
+    {
+      "word": "Temperature",
+      "start": 362.606,
+      "end": 363.198
+    },
+    {
+      "word": "and",
+      "start": 363.268,
+      "end": 363.396
+    },
+    {
+      "word": "pressure",
+      "start": 363.454,
+      "end": 363.93
+    },
+    {
+      "word": "are",
+      "start": 364.0,
+      "end": 364.22
+    },
+    {
+      "word": "compromises",
+      "start": 364.278,
+      "end": 364.998
+    },
+    {
+      "word": "between",
+      "start": 365.068,
+      "end": 365.451
+    },
+    {
+      "word": "yield,",
+      "start": 365.544,
+      "end": 366.031
+    },
+    {
+      "word": "rate",
+      "start": 366.182,
+      "end": 366.496
+    },
+    {
+      "word": "and",
+      "start": 366.542,
+      "end": 366.682
+    },
+    {
+      "word": "cost.",
+      "start": 366.774,
+      "end": 367.332
+    },
+    {
+      "word": "The",
+      "start": 367.483,
+      "end": 367.622
+    },
+    {
+      "word": "catalyst",
+      "start": 367.703,
+      "end": 368.353
+    },
+    {
+      "word": "speeds",
+      "start": 368.528,
+      "end": 369.027
+    },
+    {
+      "word": "both",
+      "start": 369.12,
+      "end": 369.375
+    },
+    {
+      "word": "directions",
+      "start": 369.433,
+      "end": 370.095
+    },
+    {
+      "word": "without",
+      "start": 370.339,
+      "end": 370.757
+    },
+    {
+      "word": "changing",
+      "start": 370.815,
+      "end": 371.268
+    },
+    {
+      "word": "the",
+      "start": 371.349,
+      "end": 371.465
+    },
+    {
+      "word": "equilibrium",
+      "start": 371.546,
+      "end": 372.289
+    },
+    {
+      "word": "yield",
+      "start": 372.382,
+      "end": 372.777
+    },
+    {
+      "word": "at",
+      "start": 373.113,
+      "end": 373.357
+    },
+    {
+      "word": "fixed",
+      "start": 373.45,
+      "end": 373.775
+    },
+    {
+      "word": "conditions.",
+      "start": 373.833,
+      "end": 374.611
+    },
+    {
+      "word": "If",
+      "start": 374.89,
+      "end": 375.052
+    },
+    {
+      "word": "you",
+      "start": 375.11,
+      "end": 375.192
+    },
+    {
+      "word": "found",
+      "start": 375.308,
+      "end": 375.528
+    },
+    {
+      "word": "this",
+      "start": 375.575,
+      "end": 375.749
+    },
+    {
+      "word": "useful,",
+      "start": 375.865,
+      "end": 376.469
+    },
+    {
+      "word": "please",
+      "start": 376.713,
+      "end": 376.991
+    },
+    {
+      "word": "subscribe",
+      "start": 377.014,
+      "end": 377.676
+    },
+    {
+      "word": "to",
+      "start": 377.723,
+      "end": 377.839
+    },
+    {
+      "word": "J",
+      "start": 377.955,
+      "end": 378.164
+    },
+    {
+      "word": "D",
+      "start": 378.233,
+      "end": 378.326
+    },
+    {
+      "word": "Science,",
+      "start": 378.477,
+      "end": 379.104
+    },
+    {
+      "word": "and",
+      "start": 379.348,
+      "end": 379.545
+    },
+    {
+      "word": "visit",
+      "start": 379.615,
+      "end": 379.929
+    },
+    {
+      "word": "j",
+      "start": 380.045,
+      "end": 380.254
+    },
+    {
+      "word": "d",
+      "start": 380.312,
+      "end": 380.463
+    },
+    {
+      "word": "science",
+      "start": 380.532,
+      "end": 381.008
+    },
+    {
+      "word": "dot",
+      "start": 381.124,
+      "end": 381.379
+    },
+    {
+      "word": "co",
+      "start": 381.461,
+      "end": 381.728
+    },
+    {
+      "word": "dot",
+      "start": 381.855,
+      "end": 382.099
+    },
+    {
+      "word": "u",
+      "start": 382.169,
+      "end": 382.285
+    },
+    {
+      "word": "k",
+      "start": 382.355,
+      "end": 382.598
+    },
+    {
+      "word": "for",
+      "start": 382.877,
+      "end": 383.063
+    },
+    {
+      "word": "more",
+      "start": 383.121,
+      "end": 383.33
+    },
+    {
+      "word": "explanations,",
+      "start": 383.376,
+      "end": 384.34
+    },
+    {
+      "word": "worksheets",
+      "start": 384.41,
+      "end": 385.083
+    },
+    {
+      "word": "and",
+      "start": 385.199,
+      "end": 385.35
+    },
+    {
+      "word": "T-Level",
+      "start": 385.42,
+      "end": 385.954
+    },
+    {
+      "word": "Chemistry",
+      "start": 386.035,
+      "end": 386.546
+    },
+    {
+      "word": "lessons.",
+      "start": 386.604,
+      "end": 387.161
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

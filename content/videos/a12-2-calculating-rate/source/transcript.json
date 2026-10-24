@@ -1,0 +1,4231 @@
+{
+  "slug": "a12-2-calculating-rate",
+  "title": "Calculating Rate of Reaction",
+  "audio": "/workspace/content/videos/a12-2-calculating-rate/source/narration_master.mp3",
+  "duration": 364.957,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A twelve point two, Calculating Rate of Reaction.\n\nBy the end of this lesson, you should be able to calculate average rate from tables and graphs, using amount of reactant used or product formed divided by time, and give the correct compound unit.\n\nReaction rate is how quickly reactants are used or products are formed.\n\nAverage rate over a chosen interval is the change in amount divided by the time taken.\n\nAmount may be mass in grams, gas volume in cubic centimetres or cubic decimetres, or amount in moles. Use the units given. Do not convert unless the question requires it or the units are inconsistent.\n\nIf a reactant amount decreases, the amount used is initial minus final. That change must be positive.\n\nRate units are compound units. Grams per second. Cubic centimetres per second. Moles per second. If time is in minutes, the rate is per minute unless you convert.\n\nOne minute equals sixty seconds.\n\nWorked example. Seventy two cubic centimetres of gas form in twenty four seconds. Seventy two divided by twenty four is three point zero cubic centimetres per second.\n\nThe same method gives three point zero cubic centimetres per second for forty five cubic centimetres in fifteen seconds, and for eighty four cubic centimetres in twenty eight seconds.\n\nNow a reactant example. A solid falls from eight point four zero grams to six point nine zero grams in fifty seconds.\n\nThe change is one point five zero grams. One point five zero divided by fifty is zero point zero three zero grams per second.\n\nCheck another. Twelve point five grams to ten point one grams in eighty seconds. The change is two point four grams. Two point four divided by eighty is also zero point zero three zero grams per second.\n\nTime conversion. Two point five minutes is one hundred and fifty seconds.\n\nOne hundred and twenty cubic centimetres in two point zero minutes is sixty cubic centimetres per minute. Two point zero minutes is one hundred and twenty seconds, so the rate is also one point zero cubic centimetre per second.\n\nNow a table. Gas volume is zero at zero seconds, eighteen at twenty seconds, forty two at fifty seconds, and fifty eight at eighty seconds.\n\nFrom twenty to fifty seconds the change is twenty four cubic centimetres in thirty seconds. Twenty four divided by thirty is zero point eight zero cubic centimetres per second.\n\nFrom fifty to eighty seconds the change is sixteen cubic centimetres in thirty seconds, which is zero point five three cubic centimetres per second to two significant figures. The first interval is faster.\n\nOn a product\u2013time graph, average rate is the gradient of the chord between two points: vertical change divided by horizontal change.\n\nFrom eighteen cubic centimetres at twenty seconds to forty two cubic centimetres at fifty seconds, the chord is again twenty four over thirty, zero point eight zero cubic centimetres per second.\n\nAn examination graph uses fifteen cubic centimetres at twenty seconds and thirty nine cubic centimetres at sixty seconds. The change is twenty four cubic centimetres in forty seconds, so the rate is zero point six zero cubic centimetres per second.\n\nCorrect three common errors.\n\nEighty cubic centimetres in twenty seconds is four cubic centimetres per second, not four cubic centimetres. The unit must include time.\n\nIf mass falls from nine point zero grams to seven point five grams in thirty seconds, do not divide seven point five by thirty. The change is one point five grams, so the rate is zero point zero five zero grams per second.\n\nNinety cubic centimetres in one point five minutes is sixty cubic centimetres per minute, or one point zero cubic centimetre per second, not sixty cubic centimetres per second.\n\nCompare rates only when the units are compatible. Convert first if needed.\n\nExamination-style question.\n\nPart a. Ninety six cubic centimetres form in thirty two seconds. Calculate the rate. Two marks.\n\nNinety six divided by thirty two is three point zero cubic centimetres per second.\n\nPart b. Mass falls from six point eight zero grams to five point three zero grams in seventy five seconds. Three marks.\n\nThe change is one point five zero grams. One point five zero divided by seventy five is zero point zero two zero grams per second.\n\nPart c. A graph is read as fifteen cubic centimetres at twenty seconds and thirty nine cubic centimetres at sixty seconds. Three marks.\n\nTwenty four cubic centimetres in forty seconds is zero point six zero cubic centimetres per second.\n\nPart d. Why is the unit essential? One mark.\n\nThe unit identifies the amount measured and the time basis.\n\nBefore we finish, complete the method. Find the start and end values. Calculate the change. Find the time interval. Divide change by time. Write the compound unit and round sensibly.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.046,
+      "end": 0.453
+    },
+    {
+      "word": "and",
+      "start": 0.546,
+      "end": 0.685
+    },
+    {
+      "word": "welcome",
+      "start": 0.755,
+      "end": 1.126
+    },
+    {
+      "word": "back",
+      "start": 1.161,
+      "end": 1.382
+    },
+    {
+      "word": "to",
+      "start": 1.451,
+      "end": 1.556
+    },
+    {
+      "word": "J",
+      "start": 1.672,
+      "end": 1.881
+    },
+    {
+      "word": "D",
+      "start": 1.974,
+      "end": 2.02
+    },
+    {
+      "word": "Science.",
+      "start": 2.171,
+      "end": 2.775
+    },
+    {
+      "word": "In",
+      "start": 2.949,
+      "end": 3.111
+    },
+    {
+      "word": "today's",
+      "start": 3.158,
+      "end": 3.564
+    },
+    {
+      "word": "T-Level",
+      "start": 3.68,
+      "end": 4.203
+    },
+    {
+      "word": "Chemistry",
+      "start": 4.272,
+      "end": 4.841
+    },
+    {
+      "word": "lesson,",
+      "start": 4.934,
+      "end": 5.468
+    },
+    {
+      "word": "we",
+      "start": 5.619,
+      "end": 5.759
+    },
+    {
+      "word": "are",
+      "start": 5.817,
+      "end": 5.921
+    },
+    {
+      "word": "going",
+      "start": 5.968,
+      "end": 6.188
+    },
+    {
+      "word": "to",
+      "start": 6.235,
+      "end": 6.304
+    },
+    {
+      "word": "study",
+      "start": 6.374,
+      "end": 6.803
+    },
+    {
+      "word": "A",
+      "start": 6.873,
+      "end": 6.943
+    },
+    {
+      "word": "twelve",
+      "start": 7.024,
+      "end": 7.396
+    },
+    {
+      "word": "point",
+      "start": 7.442,
+      "end": 7.697
+    },
+    {
+      "word": "two,",
+      "start": 7.744,
+      "end": 8.173
+    },
+    {
+      "word": "Calculating",
+      "start": 8.382,
+      "end": 9.137
+    },
+    {
+      "word": "Rate",
+      "start": 9.218,
+      "end": 9.462
+    },
+    {
+      "word": "of",
+      "start": 9.497,
+      "end": 9.567
+    },
+    {
+      "word": "Reaction.",
+      "start": 9.636,
+      "end": 10.252
+    },
+    {
+      "word": "By",
+      "start": 10.588,
+      "end": 10.751
+    },
+    {
+      "word": "the",
+      "start": 10.809,
+      "end": 10.89
+    },
+    {
+      "word": "end",
+      "start": 10.96,
+      "end": 11.111
+    },
+    {
+      "word": "of",
+      "start": 11.169,
+      "end": 11.238
+    },
+    {
+      "word": "this",
+      "start": 11.297,
+      "end": 11.459
+    },
+    {
+      "word": "lesson,",
+      "start": 11.575,
+      "end": 12.121
+    },
+    {
+      "word": "you",
+      "start": 12.249,
+      "end": 12.365
+    },
+    {
+      "word": "should",
+      "start": 12.423,
+      "end": 12.632
+    },
+    {
+      "word": "be",
+      "start": 12.678,
+      "end": 12.783
+    },
+    {
+      "word": "able",
+      "start": 12.852,
+      "end": 13.131
+    },
+    {
+      "word": "to",
+      "start": 13.177,
+      "end": 13.247
+    },
+    {
+      "word": "calculate",
+      "start": 13.34,
+      "end": 14.013
+    },
+    {
+      "word": "average",
+      "start": 14.071,
+      "end": 14.571
+    },
+    {
+      "word": "rate",
+      "start": 14.64,
+      "end": 14.896
+    },
+    {
+      "word": "from",
+      "start": 14.93,
+      "end": 15.116
+    },
+    {
+      "word": "tables",
+      "start": 15.198,
+      "end": 15.685
+    },
+    {
+      "word": "and",
+      "start": 15.755,
+      "end": 15.918
+    },
+    {
+      "word": "graphs,",
+      "start": 15.999,
+      "end": 16.637
+    },
+    {
+      "word": "using",
+      "start": 16.811,
+      "end": 17.206
+    },
+    {
+      "word": "amount",
+      "start": 17.276,
+      "end": 17.636
+    },
+    {
+      "word": "of",
+      "start": 17.705,
+      "end": 17.775
+    },
+    {
+      "word": "reactant",
+      "start": 17.845,
+      "end": 18.321
+    },
+    {
+      "word": "used",
+      "start": 18.39,
+      "end": 18.692
+    },
+    {
+      "word": "or",
+      "start": 18.774,
+      "end": 18.959
+    },
+    {
+      "word": "product",
+      "start": 19.052,
+      "end": 19.412
+    },
+    {
+      "word": "formed",
+      "start": 19.47,
+      "end": 19.946
+    },
+    {
+      "word": "divided",
+      "start": 20.155,
+      "end": 20.689
+    },
+    {
+      "word": "by",
+      "start": 20.736,
+      "end": 20.887
+    },
+    {
+      "word": "time,",
+      "start": 20.968,
+      "end": 21.479
+    },
+    {
+      "word": "and",
+      "start": 21.815,
+      "end": 21.978
+    },
+    {
+      "word": "give",
+      "start": 22.036,
+      "end": 22.233
+    },
+    {
+      "word": "the",
+      "start": 22.268,
+      "end": 22.338
+    },
+    {
+      "word": "correct",
+      "start": 22.396,
+      "end": 22.756
+    },
+    {
+      "word": "compound",
+      "start": 22.825,
+      "end": 23.313
+    },
+    {
+      "word": "unit.",
+      "start": 23.394,
+      "end": 23.812
+    },
+    {
+      "word": "Reaction",
+      "start": 24.021,
+      "end": 24.532
+    },
+    {
+      "word": "rate",
+      "start": 24.613,
+      "end": 24.857
+    },
+    {
+      "word": "is",
+      "start": 24.88,
+      "end": 24.962
+    },
+    {
+      "word": "how",
+      "start": 25.02,
+      "end": 25.147
+    },
+    {
+      "word": "quickly",
+      "start": 25.217,
+      "end": 25.6
+    },
+    {
+      "word": "reactants",
+      "start": 25.67,
+      "end": 26.181
+    },
+    {
+      "word": "are",
+      "start": 26.227,
+      "end": 26.343
+    },
+    {
+      "word": "used",
+      "start": 26.401,
+      "end": 26.796
+    },
+    {
+      "word": "or",
+      "start": 27.04,
+      "end": 27.226
+    },
+    {
+      "word": "products",
+      "start": 27.284,
+      "end": 27.702
+    },
+    {
+      "word": "are",
+      "start": 27.748,
+      "end": 27.864
+    },
+    {
+      "word": "formed.",
+      "start": 27.911,
+      "end": 28.433
+    },
+    {
+      "word": "Average",
+      "start": 28.677,
+      "end": 29.141
+    },
+    {
+      "word": "rate",
+      "start": 29.199,
+      "end": 29.513
+    },
+    {
+      "word": "over",
+      "start": 29.582,
+      "end": 29.896
+    },
+    {
+      "word": "a",
+      "start": 29.954,
+      "end": 29.989
+    },
+    {
+      "word": "chosen",
+      "start": 30.047,
+      "end": 30.488
+    },
+    {
+      "word": "interval",
+      "start": 30.546,
+      "end": 31.057
+    },
+    {
+      "word": "is",
+      "start": 31.394,
+      "end": 31.591
+    },
+    {
+      "word": "the",
+      "start": 31.661,
+      "end": 31.753
+    },
+    {
+      "word": "change",
+      "start": 31.823,
+      "end": 32.241
+    },
+    {
+      "word": "in",
+      "start": 32.299,
+      "end": 32.415
+    },
+    {
+      "word": "amount",
+      "start": 32.473,
+      "end": 32.856
+    },
+    {
+      "word": "divided",
+      "start": 32.914,
+      "end": 33.402
+    },
+    {
+      "word": "by",
+      "start": 33.46,
+      "end": 33.576
+    },
+    {
+      "word": "the",
+      "start": 33.623,
+      "end": 33.692
+    },
+    {
+      "word": "time",
+      "start": 33.75,
+      "end": 34.029
+    },
+    {
+      "word": "taken.",
+      "start": 34.064,
+      "end": 34.668
+    },
+    {
+      "word": "Amount",
+      "start": 35.004,
+      "end": 35.469
+    },
+    {
+      "word": "may",
+      "start": 35.538,
+      "end": 35.678
+    },
+    {
+      "word": "be",
+      "start": 35.747,
+      "end": 35.875
+    },
+    {
+      "word": "mass",
+      "start": 35.956,
+      "end": 36.27
+    },
+    {
+      "word": "in",
+      "start": 36.339,
+      "end": 36.421
+    },
+    {
+      "word": "grams,",
+      "start": 36.502,
+      "end": 37.152
+    },
+    {
+      "word": "gas",
+      "start": 37.268,
+      "end": 37.558
+    },
+    {
+      "word": "volume",
+      "start": 37.675,
+      "end": 38.081
+    },
+    {
+      "word": "in",
+      "start": 38.139,
+      "end": 38.232
+    },
+    {
+      "word": "cubic",
+      "start": 38.325,
+      "end": 38.696
+    },
+    {
+      "word": "centimetres",
+      "start": 38.754,
+      "end": 39.509
+    },
+    {
+      "word": "or",
+      "start": 39.753,
+      "end": 39.939
+    },
+    {
+      "word": "cubic",
+      "start": 40.008,
+      "end": 40.345
+    },
+    {
+      "word": "decimetres,",
+      "start": 40.415,
+      "end": 41.308
+    },
+    {
+      "word": "or",
+      "start": 41.425,
+      "end": 41.576
+    },
+    {
+      "word": "amount",
+      "start": 41.634,
+      "end": 41.97
+    },
+    {
+      "word": "in",
+      "start": 42.04,
+      "end": 42.144
+    },
+    {
+      "word": "moles.",
+      "start": 42.237,
+      "end": 42.934
+    },
+    {
+      "word": "Use",
+      "start": 43.178,
+      "end": 43.468
+    },
+    {
+      "word": "the",
+      "start": 43.491,
+      "end": 43.561
+    },
+    {
+      "word": "units",
+      "start": 43.677,
+      "end": 43.99
+    },
+    {
+      "word": "given.",
+      "start": 44.072,
+      "end": 44.606
+    },
+    {
+      "word": "Do",
+      "start": 44.85,
+      "end": 45.0
+    },
+    {
+      "word": "not",
+      "start": 45.082,
+      "end": 45.233
+    },
+    {
+      "word": "convert",
+      "start": 45.291,
+      "end": 45.86
+    },
+    {
+      "word": "unless",
+      "start": 46.034,
+      "end": 46.394
+    },
+    {
+      "word": "the",
+      "start": 46.428,
+      "end": 46.498
+    },
+    {
+      "word": "question",
+      "start": 46.568,
+      "end": 47.021
+    },
+    {
+      "word": "requires",
+      "start": 47.102,
+      "end": 47.659
+    },
+    {
+      "word": "it",
+      "start": 47.729,
+      "end": 47.868
+    },
+    {
+      "word": "or",
+      "start": 48.205,
+      "end": 48.425
+    },
+    {
+      "word": "the",
+      "start": 48.495,
+      "end": 48.576
+    },
+    {
+      "word": "units",
+      "start": 48.692,
+      "end": 49.052
+    },
+    {
+      "word": "are",
+      "start": 49.133,
+      "end": 49.354
+    },
+    {
+      "word": "inconsistent.",
+      "start": 49.412,
+      "end": 50.468
+    },
+    {
+      "word": "If",
+      "start": 50.712,
+      "end": 50.91
+    },
+    {
+      "word": "a",
+      "start": 50.979,
+      "end": 51.002
+    },
+    {
+      "word": "reactant",
+      "start": 51.095,
+      "end": 51.629
+    },
+    {
+      "word": "amount",
+      "start": 51.676,
+      "end": 52.047
+    },
+    {
+      "word": "decreases,",
+      "start": 52.117,
+      "end": 52.918
+    },
+    {
+      "word": "the",
+      "start": 53.127,
+      "end": 53.243
+    },
+    {
+      "word": "amount",
+      "start": 53.301,
+      "end": 53.708
+    },
+    {
+      "word": "used",
+      "start": 53.8,
+      "end": 54.079
+    },
+    {
+      "word": "is",
+      "start": 54.149,
+      "end": 54.311
+    },
+    {
+      "word": "initial",
+      "start": 54.381,
+      "end": 54.834
+    },
+    {
+      "word": "minus",
+      "start": 54.915,
+      "end": 55.31
+    },
+    {
+      "word": "final.",
+      "start": 55.379,
+      "end": 55.983
+    },
+    {
+      "word": "That",
+      "start": 56.192,
+      "end": 56.401
+    },
+    {
+      "word": "change",
+      "start": 56.459,
+      "end": 56.819
+    },
+    {
+      "word": "must",
+      "start": 56.866,
+      "end": 57.063
+    },
+    {
+      "word": "be",
+      "start": 57.121,
+      "end": 57.214
+    },
+    {
+      "word": "positive.",
+      "start": 57.272,
+      "end": 57.992
+    },
+    {
+      "word": "Rate",
+      "start": 58.235,
+      "end": 58.514
+    },
+    {
+      "word": "units",
+      "start": 58.584,
+      "end": 58.897
+    },
+    {
+      "word": "are",
+      "start": 58.944,
+      "end": 59.06
+    },
+    {
+      "word": "compound",
+      "start": 59.106,
+      "end": 59.629
+    },
+    {
+      "word": "units.",
+      "start": 59.722,
+      "end": 60.232
+    },
+    {
+      "word": "Grams",
+      "start": 60.383,
+      "end": 60.755
+    },
+    {
+      "word": "per",
+      "start": 60.813,
+      "end": 60.952
+    },
+    {
+      "word": "second.",
+      "start": 61.033,
+      "end": 61.568
+    },
+    {
+      "word": "Cubic",
+      "start": 61.742,
+      "end": 62.136
+    },
+    {
+      "word": "centimetres",
+      "start": 62.194,
+      "end": 62.891
+    },
+    {
+      "word": "per",
+      "start": 62.949,
+      "end": 63.077
+    },
+    {
+      "word": "second.",
+      "start": 63.147,
+      "end": 63.727
+    },
+    {
+      "word": "Moles",
+      "start": 63.901,
+      "end": 64.284
+    },
+    {
+      "word": "per",
+      "start": 64.354,
+      "end": 64.493
+    },
+    {
+      "word": "second.",
+      "start": 64.563,
+      "end": 65.143
+    },
+    {
+      "word": "If",
+      "start": 65.352,
+      "end": 65.539
+    },
+    {
+      "word": "time",
+      "start": 65.608,
+      "end": 65.957
+    },
+    {
+      "word": "is",
+      "start": 66.015,
+      "end": 66.154
+    },
+    {
+      "word": "in",
+      "start": 66.235,
+      "end": 66.328
+    },
+    {
+      "word": "minutes,",
+      "start": 66.409,
+      "end": 66.99
+    },
+    {
+      "word": "the",
+      "start": 67.164,
+      "end": 67.292
+    },
+    {
+      "word": "rate",
+      "start": 67.385,
+      "end": 67.652
+    },
+    {
+      "word": "is",
+      "start": 67.71,
+      "end": 67.826
+    },
+    {
+      "word": "per",
+      "start": 67.895,
+      "end": 68.035
+    },
+    {
+      "word": "minute",
+      "start": 68.093,
+      "end": 68.406
+    },
+    {
+      "word": "unless",
+      "start": 68.476,
+      "end": 68.813
+    },
+    {
+      "word": "you",
+      "start": 68.871,
+      "end": 68.952
+    },
+    {
+      "word": "convert.",
+      "start": 69.022,
+      "end": 69.707
+    },
+    {
+      "word": "One",
+      "start": 70.101,
+      "end": 70.357
+    },
+    {
+      "word": "minute",
+      "start": 70.403,
+      "end": 70.728
+    },
+    {
+      "word": "equals",
+      "start": 70.81,
+      "end": 71.216
+    },
+    {
+      "word": "sixty",
+      "start": 71.251,
+      "end": 71.646
+    },
+    {
+      "word": "seconds.",
+      "start": 71.704,
+      "end": 72.365
+    },
+    {
+      "word": "Worked",
+      "start": 72.609,
+      "end": 72.923
+    },
+    {
+      "word": "example.",
+      "start": 72.981,
+      "end": 73.654
+    },
+    {
+      "word": "Seventy",
+      "start": 74.049,
+      "end": 74.548
+    },
+    {
+      "word": "two",
+      "start": 74.594,
+      "end": 74.792
+    },
+    {
+      "word": "cubic",
+      "start": 74.885,
+      "end": 75.268
+    },
+    {
+      "word": "centimetres",
+      "start": 75.314,
+      "end": 75.895
+    },
+    {
+      "word": "of",
+      "start": 75.964,
+      "end": 76.046
+    },
+    {
+      "word": "gas",
+      "start": 76.139,
+      "end": 76.44
+    },
+    {
+      "word": "form",
+      "start": 76.522,
+      "end": 76.858
+    },
+    {
+      "word": "in",
+      "start": 76.951,
+      "end": 77.067
+    },
+    {
+      "word": "twenty",
+      "start": 77.114,
+      "end": 77.416
+    },
+    {
+      "word": "four",
+      "start": 77.474,
+      "end": 77.659
+    },
+    {
+      "word": "seconds.",
+      "start": 77.718,
+      "end": 78.379
+    },
+    {
+      "word": "Seventy",
+      "start": 78.716,
+      "end": 79.204
+    },
+    {
+      "word": "two",
+      "start": 79.262,
+      "end": 79.459
+    },
+    {
+      "word": "divided",
+      "start": 79.54,
+      "end": 79.993
+    },
+    {
+      "word": "by",
+      "start": 80.051,
+      "end": 80.179
+    },
+    {
+      "word": "twenty",
+      "start": 80.248,
+      "end": 80.562
+    },
+    {
+      "word": "four",
+      "start": 80.643,
+      "end": 80.933
+    },
+    {
+      "word": "is",
+      "start": 81.177,
+      "end": 81.386
+    },
+    {
+      "word": "three",
+      "start": 81.479,
+      "end": 81.735
+    },
+    {
+      "word": "point",
+      "start": 81.804,
+      "end": 82.06
+    },
+    {
+      "word": "zero",
+      "start": 82.118,
+      "end": 82.478
+    },
+    {
+      "word": "cubic",
+      "start": 82.571,
+      "end": 82.954
+    },
+    {
+      "word": "centimetres",
+      "start": 83.024,
+      "end": 83.709
+    },
+    {
+      "word": "per",
+      "start": 83.79,
+      "end": 83.918
+    },
+    {
+      "word": "second.",
+      "start": 83.976,
+      "end": 84.603
+    },
+    {
+      "word": "The",
+      "start": 84.846,
+      "end": 84.974
+    },
+    {
+      "word": "same",
+      "start": 85.032,
+      "end": 85.288
+    },
+    {
+      "word": "method",
+      "start": 85.322,
+      "end": 85.729
+    },
+    {
+      "word": "gives",
+      "start": 85.903,
+      "end": 86.17
+    },
+    {
+      "word": "three",
+      "start": 86.251,
+      "end": 86.507
+    },
+    {
+      "word": "point",
+      "start": 86.576,
+      "end": 86.855
+    },
+    {
+      "word": "zero",
+      "start": 86.901,
+      "end": 87.261
+    },
+    {
+      "word": "cubic",
+      "start": 87.354,
+      "end": 87.714
+    },
+    {
+      "word": "centimetres",
+      "start": 87.772,
+      "end": 88.399
+    },
+    {
+      "word": "per",
+      "start": 88.469,
+      "end": 88.596
+    },
+    {
+      "word": "second",
+      "start": 88.643,
+      "end": 89.038
+    },
+    {
+      "word": "for",
+      "start": 89.281,
+      "end": 89.467
+    },
+    {
+      "word": "forty",
+      "start": 89.525,
+      "end": 89.827
+    },
+    {
+      "word": "five",
+      "start": 89.897,
+      "end": 90.129
+    },
+    {
+      "word": "cubic",
+      "start": 90.175,
+      "end": 90.5
+    },
+    {
+      "word": "centimetres",
+      "start": 90.559,
+      "end": 91.162
+    },
+    {
+      "word": "in",
+      "start": 91.22,
+      "end": 91.29
+    },
+    {
+      "word": "fifteen",
+      "start": 91.36,
+      "end": 91.766
+    },
+    {
+      "word": "seconds,",
+      "start": 91.824,
+      "end": 92.451
+    },
+    {
+      "word": "and",
+      "start": 92.66,
+      "end": 92.811
+    },
+    {
+      "word": "for",
+      "start": 92.869,
+      "end": 92.997
+    },
+    {
+      "word": "eighty",
+      "start": 93.078,
+      "end": 93.391
+    },
+    {
+      "word": "four",
+      "start": 93.449,
+      "end": 93.635
+    },
+    {
+      "word": "cubic",
+      "start": 93.716,
+      "end": 94.041
+    },
+    {
+      "word": "centimetres",
+      "start": 94.088,
+      "end": 94.75
+    },
+    {
+      "word": "in",
+      "start": 94.831,
+      "end": 94.935
+    },
+    {
+      "word": "twenty",
+      "start": 94.994,
+      "end": 95.365
+    },
+    {
+      "word": "eight",
+      "start": 95.446,
+      "end": 95.655
+    },
+    {
+      "word": "seconds.",
+      "start": 95.702,
+      "end": 96.352
+    },
+    {
+      "word": "Now",
+      "start": 96.526,
+      "end": 96.781
+    },
+    {
+      "word": "a",
+      "start": 96.898,
+      "end": 96.967
+    },
+    {
+      "word": "reactant",
+      "start": 97.083,
+      "end": 97.664
+    },
+    {
+      "word": "example.",
+      "start": 97.733,
+      "end": 98.511
+    },
+    {
+      "word": "A",
+      "start": 98.79,
+      "end": 98.871
+    },
+    {
+      "word": "solid",
+      "start": 98.987,
+      "end": 99.393
+    },
+    {
+      "word": "falls",
+      "start": 99.463,
+      "end": 99.811
+    },
+    {
+      "word": "from",
+      "start": 99.869,
+      "end": 100.032
+    },
+    {
+      "word": "eight",
+      "start": 100.113,
+      "end": 100.322
+    },
+    {
+      "word": "point",
+      "start": 100.392,
+      "end": 100.636
+    },
+    {
+      "word": "four",
+      "start": 100.705,
+      "end": 100.938
+    },
+    {
+      "word": "zero",
+      "start": 101.019,
+      "end": 101.309
+    },
+    {
+      "word": "grams",
+      "start": 101.356,
+      "end": 101.808
+    },
+    {
+      "word": "to",
+      "start": 102.052,
+      "end": 102.191
+    },
+    {
+      "word": "six",
+      "start": 102.308,
+      "end": 102.563
+    },
+    {
+      "word": "point",
+      "start": 102.644,
+      "end": 102.923
+    },
+    {
+      "word": "nine",
+      "start": 103.004,
+      "end": 103.26
+    },
+    {
+      "word": "zero",
+      "start": 103.306,
+      "end": 103.608
+    },
+    {
+      "word": "grams",
+      "start": 103.654,
+      "end": 104.026
+    },
+    {
+      "word": "in",
+      "start": 104.119,
+      "end": 104.27
+    },
+    {
+      "word": "fifty",
+      "start": 104.363,
+      "end": 104.711
+    },
+    {
+      "word": "seconds.",
+      "start": 104.781,
+      "end": 105.454
+    },
+    {
+      "word": "The",
+      "start": 105.791,
+      "end": 105.93
+    },
+    {
+      "word": "change",
+      "start": 105.988,
+      "end": 106.371
+    },
+    {
+      "word": "is",
+      "start": 106.429,
+      "end": 106.603
+    },
+    {
+      "word": "one",
+      "start": 106.685,
+      "end": 106.894
+    },
+    {
+      "word": "point",
+      "start": 106.94,
+      "end": 107.172
+    },
+    {
+      "word": "five",
+      "start": 107.23,
+      "end": 107.474
+    },
+    {
+      "word": "zero",
+      "start": 107.52,
+      "end": 107.811
+    },
+    {
+      "word": "grams.",
+      "start": 107.869,
+      "end": 108.449
+    },
+    {
+      "word": "One",
+      "start": 108.693,
+      "end": 108.925
+    },
+    {
+      "word": "point",
+      "start": 108.972,
+      "end": 109.204
+    },
+    {
+      "word": "five",
+      "start": 109.262,
+      "end": 109.529
+    },
+    {
+      "word": "zero",
+      "start": 109.575,
+      "end": 109.889
+    },
+    {
+      "word": "divided",
+      "start": 109.959,
+      "end": 110.411
+    },
+    {
+      "word": "by",
+      "start": 110.469,
+      "end": 110.597
+    },
+    {
+      "word": "fifty",
+      "start": 110.678,
+      "end": 111.178
+    },
+    {
+      "word": "is",
+      "start": 111.421,
+      "end": 111.596
+    },
+    {
+      "word": "zero",
+      "start": 111.642,
+      "end": 111.979
+    },
+    {
+      "word": "point",
+      "start": 112.048,
+      "end": 112.292
+    },
+    {
+      "word": "zero",
+      "start": 112.35,
+      "end": 112.652
+    },
+    {
+      "word": "three",
+      "start": 112.722,
+      "end": 112.966
+    },
+    {
+      "word": "zero",
+      "start": 113.024,
+      "end": 113.302
+    },
+    {
+      "word": "grams",
+      "start": 113.349,
+      "end": 113.685
+    },
+    {
+      "word": "per",
+      "start": 113.755,
+      "end": 113.906
+    },
+    {
+      "word": "second.",
+      "start": 113.975,
+      "end": 114.567
+    },
+    {
+      "word": "Check",
+      "start": 114.846,
+      "end": 115.148
+    },
+    {
+      "word": "another.",
+      "start": 115.206,
+      "end": 115.81
+    },
+    {
+      "word": "Twelve",
+      "start": 116.053,
+      "end": 116.402
+    },
+    {
+      "word": "point",
+      "start": 116.437,
+      "end": 116.646
+    },
+    {
+      "word": "five",
+      "start": 116.692,
+      "end": 116.936
+    },
+    {
+      "word": "grams",
+      "start": 116.982,
+      "end": 117.284
+    },
+    {
+      "word": "to",
+      "start": 117.331,
+      "end": 117.4
+    },
+    {
+      "word": "ten",
+      "start": 117.481,
+      "end": 117.656
+    },
+    {
+      "word": "point",
+      "start": 117.725,
+      "end": 117.957
+    },
+    {
+      "word": "one",
+      "start": 118.039,
+      "end": 118.236
+    },
+    {
+      "word": "grams",
+      "start": 118.294,
+      "end": 118.666
+    },
+    {
+      "word": "in",
+      "start": 118.782,
+      "end": 118.933
+    },
+    {
+      "word": "eighty",
+      "start": 119.084,
+      "end": 119.409
+    },
+    {
+      "word": "seconds.",
+      "start": 119.49,
+      "end": 120.129
+    },
+    {
+      "word": "The",
+      "start": 120.372,
+      "end": 120.523
+    },
+    {
+      "word": "change",
+      "start": 120.593,
+      "end": 120.953
+    },
+    {
+      "word": "is",
+      "start": 121.011,
+      "end": 121.139
+    },
+    {
+      "word": "two",
+      "start": 121.197,
+      "end": 121.348
+    },
+    {
+      "word": "point",
+      "start": 121.429,
+      "end": 121.661
+    },
+    {
+      "word": "four",
+      "start": 121.731,
+      "end": 121.951
+    },
+    {
+      "word": "grams.",
+      "start": 122.021,
+      "end": 122.555
+    },
+    {
+      "word": "Two",
+      "start": 122.799,
+      "end": 122.996
+    },
+    {
+      "word": "point",
+      "start": 123.066,
+      "end": 123.286
+    },
+    {
+      "word": "four",
+      "start": 123.356,
+      "end": 123.565
+    },
+    {
+      "word": "divided",
+      "start": 123.635,
+      "end": 124.111
+    },
+    {
+      "word": "by",
+      "start": 124.169,
+      "end": 124.32
+    },
+    {
+      "word": "eighty",
+      "start": 124.436,
+      "end": 124.854
+    },
+    {
+      "word": "is",
+      "start": 125.005,
+      "end": 125.19
+    },
+    {
+      "word": "also",
+      "start": 125.272,
+      "end": 125.678
+    },
+    {
+      "word": "zero",
+      "start": 125.794,
+      "end": 126.142
+    },
+    {
+      "word": "point",
+      "start": 126.224,
+      "end": 126.491
+    },
+    {
+      "word": "zero",
+      "start": 126.549,
+      "end": 126.886
+    },
+    {
+      "word": "three",
+      "start": 126.967,
+      "end": 127.234
+    },
+    {
+      "word": "zero",
+      "start": 127.28,
+      "end": 127.582
+    },
+    {
+      "word": "grams",
+      "start": 127.652,
+      "end": 128.023
+    },
+    {
+      "word": "per",
+      "start": 128.139,
+      "end": 128.314
+    },
+    {
+      "word": "second.",
+      "start": 128.372,
+      "end": 128.929
+    },
+    {
+      "word": "Time",
+      "start": 129.324,
+      "end": 129.649
+    },
+    {
+      "word": "conversion.",
+      "start": 129.695,
+      "end": 130.485
+    },
+    {
+      "word": "Two",
+      "start": 130.763,
+      "end": 130.972
+    },
+    {
+      "word": "point",
+      "start": 131.054,
+      "end": 131.297
+    },
+    {
+      "word": "five",
+      "start": 131.367,
+      "end": 131.657
+    },
+    {
+      "word": "minutes",
+      "start": 131.727,
+      "end": 132.099
+    },
+    {
+      "word": "is",
+      "start": 132.168,
+      "end": 132.331
+    },
+    {
+      "word": "one",
+      "start": 132.412,
+      "end": 132.598
+    },
+    {
+      "word": "hundred",
+      "start": 132.644,
+      "end": 132.981
+    },
+    {
+      "word": "and",
+      "start": 133.062,
+      "end": 133.167
+    },
+    {
+      "word": "fifty",
+      "start": 133.248,
+      "end": 133.561
+    },
+    {
+      "word": "seconds.",
+      "start": 133.631,
+      "end": 134.258
+    },
+    {
+      "word": "One",
+      "start": 134.409,
+      "end": 134.653
+    },
+    {
+      "word": "hundred",
+      "start": 134.711,
+      "end": 135.047
+    },
+    {
+      "word": "and",
+      "start": 135.094,
+      "end": 135.198
+    },
+    {
+      "word": "twenty",
+      "start": 135.245,
+      "end": 135.558
+    },
+    {
+      "word": "cubic",
+      "start": 135.616,
+      "end": 135.953
+    },
+    {
+      "word": "centimetres",
+      "start": 135.999,
+      "end": 136.673
+    },
+    {
+      "word": "in",
+      "start": 136.754,
+      "end": 136.882
+    },
+    {
+      "word": "two",
+      "start": 136.952,
+      "end": 137.114
+    },
+    {
+      "word": "point",
+      "start": 137.207,
+      "end": 137.451
+    },
+    {
+      "word": "zero",
+      "start": 137.509,
+      "end": 137.834
+    },
+    {
+      "word": "minutes",
+      "start": 137.904,
+      "end": 138.252
+    },
+    {
+      "word": "is",
+      "start": 138.333,
+      "end": 138.484
+    },
+    {
+      "word": "sixty",
+      "start": 138.554,
+      "end": 138.937
+    },
+    {
+      "word": "cubic",
+      "start": 139.006,
+      "end": 139.366
+    },
+    {
+      "word": "centimetres",
+      "start": 139.413,
+      "end": 140.017
+    },
+    {
+      "word": "per",
+      "start": 140.086,
+      "end": 140.237
+    },
+    {
+      "word": "minute.",
+      "start": 140.307,
+      "end": 140.736
+    },
+    {
+      "word": "Two",
+      "start": 140.98,
+      "end": 141.178
+    },
+    {
+      "word": "point",
+      "start": 141.27,
+      "end": 141.503
+    },
+    {
+      "word": "zero",
+      "start": 141.561,
+      "end": 141.886
+    },
+    {
+      "word": "minutes",
+      "start": 141.955,
+      "end": 142.257
+    },
+    {
+      "word": "is",
+      "start": 142.327,
+      "end": 142.489
+    },
+    {
+      "word": "one",
+      "start": 142.571,
+      "end": 142.768
+    },
+    {
+      "word": "hundred",
+      "start": 142.815,
+      "end": 143.151
+    },
+    {
+      "word": "and",
+      "start": 143.221,
+      "end": 143.337
+    },
+    {
+      "word": "twenty",
+      "start": 143.383,
+      "end": 143.696
+    },
+    {
+      "word": "seconds,",
+      "start": 143.766,
+      "end": 144.393
+    },
+    {
+      "word": "so",
+      "start": 144.602,
+      "end": 144.799
+    },
+    {
+      "word": "the",
+      "start": 144.869,
+      "end": 144.962
+    },
+    {
+      "word": "rate",
+      "start": 145.043,
+      "end": 145.31
+    },
+    {
+      "word": "is",
+      "start": 145.368,
+      "end": 145.542
+    },
+    {
+      "word": "also",
+      "start": 145.612,
+      "end": 146.007
+    },
+    {
+      "word": "one",
+      "start": 146.123,
+      "end": 146.32
+    },
+    {
+      "word": "point",
+      "start": 146.367,
+      "end": 146.599
+    },
+    {
+      "word": "zero",
+      "start": 146.645,
+      "end": 146.947
+    },
+    {
+      "word": "cubic",
+      "start": 147.005,
+      "end": 147.342
+    },
+    {
+      "word": "centimetre",
+      "start": 147.412,
+      "end": 147.992
+    },
+    {
+      "word": "per",
+      "start": 148.085,
+      "end": 148.282
+    },
+    {
+      "word": "second.",
+      "start": 148.364,
+      "end": 148.909
+    },
+    {
+      "word": "Now",
+      "start": 149.304,
+      "end": 149.536
+    },
+    {
+      "word": "a",
+      "start": 149.652,
+      "end": 149.71
+    },
+    {
+      "word": "table.",
+      "start": 149.803,
+      "end": 150.326
+    },
+    {
+      "word": "Gas",
+      "start": 150.604,
+      "end": 150.837
+    },
+    {
+      "word": "volume",
+      "start": 150.906,
+      "end": 151.278
+    },
+    {
+      "word": "is",
+      "start": 151.324,
+      "end": 151.405
+    },
+    {
+      "word": "zero",
+      "start": 151.452,
+      "end": 151.789
+    },
+    {
+      "word": "at",
+      "start": 151.858,
+      "end": 151.986
+    },
+    {
+      "word": "zero",
+      "start": 152.044,
+      "end": 152.334
+    },
+    {
+      "word": "seconds,",
+      "start": 152.416,
+      "end": 153.008
+    },
+    {
+      "word": "eighteen",
+      "start": 153.251,
+      "end": 153.704
+    },
+    {
+      "word": "at",
+      "start": 153.762,
+      "end": 153.844
+    },
+    {
+      "word": "twenty",
+      "start": 153.867,
+      "end": 154.169
+    },
+    {
+      "word": "seconds,",
+      "start": 154.227,
+      "end": 154.807
+    },
+    {
+      "word": "forty",
+      "start": 155.051,
+      "end": 155.423
+    },
+    {
+      "word": "two",
+      "start": 155.481,
+      "end": 155.655
+    },
+    {
+      "word": "at",
+      "start": 155.736,
+      "end": 155.852
+    },
+    {
+      "word": "fifty",
+      "start": 155.91,
+      "end": 156.224
+    },
+    {
+      "word": "seconds,",
+      "start": 156.282,
+      "end": 156.839
+    },
+    {
+      "word": "and",
+      "start": 156.99,
+      "end": 157.187
+    },
+    {
+      "word": "fifty",
+      "start": 157.257,
+      "end": 157.617
+    },
+    {
+      "word": "eight",
+      "start": 157.698,
+      "end": 157.93
+    },
+    {
+      "word": "at",
+      "start": 158.0,
+      "end": 158.128
+    },
+    {
+      "word": "eighty",
+      "start": 158.209,
+      "end": 158.511
+    },
+    {
+      "word": "seconds.",
+      "start": 158.58,
+      "end": 159.184
+    },
+    {
+      "word": "From",
+      "start": 159.579,
+      "end": 159.799
+    },
+    {
+      "word": "twenty",
+      "start": 159.858,
+      "end": 160.217
+    },
+    {
+      "word": "to",
+      "start": 160.275,
+      "end": 160.357
+    },
+    {
+      "word": "fifty",
+      "start": 160.45,
+      "end": 160.775
+    },
+    {
+      "word": "seconds",
+      "start": 160.833,
+      "end": 161.321
+    },
+    {
+      "word": "the",
+      "start": 161.564,
+      "end": 161.715
+    },
+    {
+      "word": "change",
+      "start": 161.797,
+      "end": 162.203
+    },
+    {
+      "word": "is",
+      "start": 162.249,
+      "end": 162.389
+    },
+    {
+      "word": "twenty",
+      "start": 162.435,
+      "end": 162.76
+    },
+    {
+      "word": "four",
+      "start": 162.818,
+      "end": 162.992
+    },
+    {
+      "word": "cubic",
+      "start": 163.051,
+      "end": 163.434
+    },
+    {
+      "word": "centimetres",
+      "start": 163.492,
+      "end": 164.2
+    },
+    {
+      "word": "in",
+      "start": 164.27,
+      "end": 164.362
+    },
+    {
+      "word": "thirty",
+      "start": 164.455,
+      "end": 164.838
+    },
+    {
+      "word": "seconds.",
+      "start": 164.92,
+      "end": 165.593
+    },
+    {
+      "word": "Twenty",
+      "start": 166.208,
+      "end": 166.58
+    },
+    {
+      "word": "four",
+      "start": 166.661,
+      "end": 166.859
+    },
+    {
+      "word": "divided",
+      "start": 166.917,
+      "end": 167.416
+    },
+    {
+      "word": "by",
+      "start": 167.474,
+      "end": 167.602
+    },
+    {
+      "word": "thirty",
+      "start": 167.683,
+      "end": 168.147
+    },
+    {
+      "word": "is",
+      "start": 168.263,
+      "end": 168.438
+    },
+    {
+      "word": "zero",
+      "start": 168.507,
+      "end": 168.902
+    },
+    {
+      "word": "point",
+      "start": 168.972,
+      "end": 169.262
+    },
+    {
+      "word": "eight",
+      "start": 169.378,
+      "end": 169.668
+    },
+    {
+      "word": "zero",
+      "start": 169.738,
+      "end": 170.109
+    },
+    {
+      "word": "cubic",
+      "start": 170.191,
+      "end": 170.516
+    },
+    {
+      "word": "centimetres",
+      "start": 170.562,
+      "end": 171.224
+    },
+    {
+      "word": "per",
+      "start": 171.305,
+      "end": 171.456
+    },
+    {
+      "word": "second.",
+      "start": 171.526,
+      "end": 172.071
+    },
+    {
+      "word": "From",
+      "start": 172.524,
+      "end": 172.722
+    },
+    {
+      "word": "fifty",
+      "start": 172.838,
+      "end": 173.244
+    },
+    {
+      "word": "to",
+      "start": 173.314,
+      "end": 173.395
+    },
+    {
+      "word": "eighty",
+      "start": 173.546,
+      "end": 173.871
+    },
+    {
+      "word": "seconds",
+      "start": 173.952,
+      "end": 174.486
+    },
+    {
+      "word": "the",
+      "start": 174.637,
+      "end": 174.777
+    },
+    {
+      "word": "change",
+      "start": 174.846,
+      "end": 175.264
+    },
+    {
+      "word": "is",
+      "start": 175.322,
+      "end": 175.485
+    },
+    {
+      "word": "sixteen",
+      "start": 175.543,
+      "end": 176.077
+    },
+    {
+      "word": "cubic",
+      "start": 176.17,
+      "end": 176.541
+    },
+    {
+      "word": "centimetres",
+      "start": 176.588,
+      "end": 177.284
+    },
+    {
+      "word": "in",
+      "start": 177.366,
+      "end": 177.493
+    },
+    {
+      "word": "thirty",
+      "start": 177.586,
+      "end": 177.993
+    },
+    {
+      "word": "seconds,",
+      "start": 178.062,
+      "end": 178.771
+    },
+    {
+      "word": "which",
+      "start": 179.014,
+      "end": 179.223
+    },
+    {
+      "word": "is",
+      "start": 179.27,
+      "end": 179.351
+    },
+    {
+      "word": "zero",
+      "start": 179.397,
+      "end": 179.757
+    },
+    {
+      "word": "point",
+      "start": 179.839,
+      "end": 180.106
+    },
+    {
+      "word": "five",
+      "start": 180.175,
+      "end": 180.454
+    },
+    {
+      "word": "three",
+      "start": 180.5,
+      "end": 180.756
+    },
+    {
+      "word": "cubic",
+      "start": 180.849,
+      "end": 181.29
+    },
+    {
+      "word": "centimetres",
+      "start": 181.348,
+      "end": 182.045
+    },
+    {
+      "word": "per",
+      "start": 182.126,
+      "end": 182.265
+    },
+    {
+      "word": "second",
+      "start": 182.346,
+      "end": 182.753
+    },
+    {
+      "word": "to",
+      "start": 182.997,
+      "end": 183.148
+    },
+    {
+      "word": "two",
+      "start": 183.264,
+      "end": 183.542
+    },
+    {
+      "word": "significant",
+      "start": 183.612,
+      "end": 184.297
+    },
+    {
+      "word": "figures.",
+      "start": 184.367,
+      "end": 185.005
+    },
+    {
+      "word": "The",
+      "start": 185.342,
+      "end": 185.47
+    },
+    {
+      "word": "first",
+      "start": 185.562,
+      "end": 185.911
+    },
+    {
+      "word": "interval",
+      "start": 185.992,
+      "end": 186.422
+    },
+    {
+      "word": "is",
+      "start": 186.491,
+      "end": 186.596
+    },
+    {
+      "word": "faster.",
+      "start": 186.677,
+      "end": 187.327
+    },
+    {
+      "word": "On",
+      "start": 187.501,
+      "end": 187.675
+    },
+    {
+      "word": "a",
+      "start": 187.733,
+      "end": 187.757
+    },
+    {
+      "word": "product-time",
+      "start": 187.838,
+      "end": 188.546
+    },
+    {
+      "word": "graph,",
+      "start": 188.604,
+      "end": 189.15
+    },
+    {
+      "word": "average",
+      "start": 189.324,
+      "end": 189.8
+    },
+    {
+      "word": "rate",
+      "start": 189.858,
+      "end": 190.241
+    },
+    {
+      "word": "is",
+      "start": 190.357,
+      "end": 190.555
+    },
+    {
+      "word": "the",
+      "start": 190.613,
+      "end": 190.682
+    },
+    {
+      "word": "gradient",
+      "start": 190.764,
+      "end": 191.309
+    },
+    {
+      "word": "of",
+      "start": 191.379,
+      "end": 191.483
+    },
+    {
+      "word": "the",
+      "start": 191.542,
+      "end": 191.611
+    },
+    {
+      "word": "chord",
+      "start": 191.681,
+      "end": 192.064
+    },
+    {
+      "word": "between",
+      "start": 192.308,
+      "end": 192.691
+    },
+    {
+      "word": "two",
+      "start": 192.737,
+      "end": 192.923
+    },
+    {
+      "word": "points:",
+      "start": 193.016,
+      "end": 193.666
+    },
+    {
+      "word": "vertical",
+      "start": 194.002,
+      "end": 194.525
+    },
+    {
+      "word": "change",
+      "start": 194.606,
+      "end": 195.082
+    },
+    {
+      "word": "divided",
+      "start": 195.152,
+      "end": 195.663
+    },
+    {
+      "word": "by",
+      "start": 195.721,
+      "end": 195.86
+    },
+    {
+      "word": "horizontal",
+      "start": 195.93,
+      "end": 196.545
+    },
+    {
+      "word": "change.",
+      "start": 196.603,
+      "end": 197.102
+    },
+    {
+      "word": "From",
+      "start": 197.497,
+      "end": 197.718
+    },
+    {
+      "word": "eighteen",
+      "start": 197.787,
+      "end": 198.217
+    },
+    {
+      "word": "cubic",
+      "start": 198.333,
+      "end": 198.704
+    },
+    {
+      "word": "centimetres",
+      "start": 198.774,
+      "end": 199.564
+    },
+    {
+      "word": "at",
+      "start": 199.633,
+      "end": 199.749
+    },
+    {
+      "word": "twenty",
+      "start": 199.784,
+      "end": 200.132
+    },
+    {
+      "word": "seconds",
+      "start": 200.191,
+      "end": 200.678
+    },
+    {
+      "word": "to",
+      "start": 200.957,
+      "end": 201.096
+    },
+    {
+      "word": "forty",
+      "start": 201.189,
+      "end": 201.526
+    },
+    {
+      "word": "two",
+      "start": 201.595,
+      "end": 201.758
+    },
+    {
+      "word": "cubic",
+      "start": 201.851,
+      "end": 202.211
+    },
+    {
+      "word": "centimetres",
+      "start": 202.28,
+      "end": 202.989
+    },
+    {
+      "word": "at",
+      "start": 203.047,
+      "end": 203.139
+    },
+    {
+      "word": "fifty",
+      "start": 203.197,
+      "end": 203.534
+    },
+    {
+      "word": "seconds,",
+      "start": 203.604,
+      "end": 204.312
+    },
+    {
+      "word": "the",
+      "start": 204.486,
+      "end": 204.602
+    },
+    {
+      "word": "chord",
+      "start": 204.672,
+      "end": 204.951
+    },
+    {
+      "word": "is",
+      "start": 204.997,
+      "end": 205.102
+    },
+    {
+      "word": "again",
+      "start": 205.16,
+      "end": 205.485
+    },
+    {
+      "word": "twenty-four",
+      "start": 205.566,
+      "end": 206.239
+    },
+    {
+      "word": "over",
+      "start": 206.321,
+      "end": 206.576
+    },
+    {
+      "word": "thirty,",
+      "start": 206.657,
+      "end": 207.238
+    },
+    {
+      "word": "zero",
+      "start": 207.516,
+      "end": 207.911
+    },
+    {
+      "word": "point",
+      "start": 208.004,
+      "end": 208.283
+    },
+    {
+      "word": "eight",
+      "start": 208.399,
+      "end": 208.677
+    },
+    {
+      "word": "zero",
+      "start": 208.793,
+      "end": 209.223
+    },
+    {
+      "word": "cubic",
+      "start": 209.293,
+      "end": 209.652
+    },
+    {
+      "word": "centimetres",
+      "start": 209.722,
+      "end": 210.488
+    },
+    {
+      "word": "per",
+      "start": 210.604,
+      "end": 210.779
+    },
+    {
+      "word": "second.",
+      "start": 210.848,
+      "end": 211.429
+    },
+    {
+      "word": "An",
+      "start": 211.882,
+      "end": 212.044
+    },
+    {
+      "word": "examination",
+      "start": 212.102,
+      "end": 212.776
+    },
+    {
+      "word": "graph",
+      "start": 212.834,
+      "end": 213.159
+    },
+    {
+      "word": "uses",
+      "start": 213.228,
+      "end": 213.565
+    },
+    {
+      "word": "fifteen",
+      "start": 213.716,
+      "end": 214.204
+    },
+    {
+      "word": "cubic",
+      "start": 214.273,
+      "end": 214.633
+    },
+    {
+      "word": "centimetres",
+      "start": 214.703,
+      "end": 215.469
+    },
+    {
+      "word": "at",
+      "start": 215.562,
+      "end": 215.748
+    },
+    {
+      "word": "twenty",
+      "start": 215.794,
+      "end": 216.166
+    },
+    {
+      "word": "seconds",
+      "start": 216.224,
+      "end": 216.7
+    },
+    {
+      "word": "and",
+      "start": 217.036,
+      "end": 217.303
+    },
+    {
+      "word": "thirty",
+      "start": 217.361,
+      "end": 217.687
+    },
+    {
+      "word": "nine",
+      "start": 217.745,
+      "end": 217.942
+    },
+    {
+      "word": "cubic",
+      "start": 217.988,
+      "end": 218.337
+    },
+    {
+      "word": "centimetres",
+      "start": 218.395,
+      "end": 219.173
+    },
+    {
+      "word": "at",
+      "start": 219.289,
+      "end": 219.474
+    },
+    {
+      "word": "sixty",
+      "start": 219.533,
+      "end": 219.858
+    },
+    {
+      "word": "seconds.",
+      "start": 219.916,
+      "end": 220.531
+    },
+    {
+      "word": "The",
+      "start": 221.146,
+      "end": 221.286
+    },
+    {
+      "word": "change",
+      "start": 221.355,
+      "end": 221.738
+    },
+    {
+      "word": "is",
+      "start": 221.773,
+      "end": 221.866
+    },
+    {
+      "word": "twenty",
+      "start": 221.913,
+      "end": 222.249
+    },
+    {
+      "word": "four",
+      "start": 222.331,
+      "end": 222.54
+    },
+    {
+      "word": "cubic",
+      "start": 222.609,
+      "end": 222.969
+    },
+    {
+      "word": "centimetres",
+      "start": 223.027,
+      "end": 223.805
+    },
+    {
+      "word": "in",
+      "start": 223.921,
+      "end": 224.049
+    },
+    {
+      "word": "forty",
+      "start": 224.13,
+      "end": 224.444
+    },
+    {
+      "word": "seconds,",
+      "start": 224.502,
+      "end": 225.117
+    },
+    {
+      "word": "so",
+      "start": 225.512,
+      "end": 225.686
+    },
+    {
+      "word": "the",
+      "start": 225.755,
+      "end": 225.848
+    },
+    {
+      "word": "rate",
+      "start": 225.964,
+      "end": 226.266
+    },
+    {
+      "word": "is",
+      "start": 226.324,
+      "end": 226.487
+    },
+    {
+      "word": "zero",
+      "start": 226.557,
+      "end": 226.905
+    },
+    {
+      "word": "point",
+      "start": 226.986,
+      "end": 227.277
+    },
+    {
+      "word": "six",
+      "start": 227.358,
+      "end": 227.671
+    },
+    {
+      "word": "zero",
+      "start": 227.787,
+      "end": 228.252
+    },
+    {
+      "word": "cubic",
+      "start": 228.345,
+      "end": 228.728
+    },
+    {
+      "word": "centimetres",
+      "start": 228.797,
+      "end": 229.506
+    },
+    {
+      "word": "per",
+      "start": 229.575,
+      "end": 229.715
+    },
+    {
+      "word": "second.",
+      "start": 229.773,
+      "end": 230.284
+    },
+    {
+      "word": "Correct",
+      "start": 230.678,
+      "end": 231.073
+    },
+    {
+      "word": "three",
+      "start": 231.108,
+      "end": 231.363
+    },
+    {
+      "word": "common",
+      "start": 231.41,
+      "end": 231.793
+    },
+    {
+      "word": "errors.",
+      "start": 231.886,
+      "end": 232.513
+    },
+    {
+      "word": "Eighty",
+      "start": 232.907,
+      "end": 233.267
+    },
+    {
+      "word": "cubic",
+      "start": 233.325,
+      "end": 233.685
+    },
+    {
+      "word": "centimetres",
+      "start": 233.743,
+      "end": 234.451
+    },
+    {
+      "word": "in",
+      "start": 234.533,
+      "end": 234.637
+    },
+    {
+      "word": "twenty",
+      "start": 234.695,
+      "end": 235.044
+    },
+    {
+      "word": "seconds",
+      "start": 235.102,
+      "end": 235.578
+    },
+    {
+      "word": "is",
+      "start": 235.694,
+      "end": 235.891
+    },
+    {
+      "word": "four",
+      "start": 235.972,
+      "end": 236.263
+    },
+    {
+      "word": "cubic",
+      "start": 236.344,
+      "end": 236.704
+    },
+    {
+      "word": "centimetres",
+      "start": 236.762,
+      "end": 237.366
+    },
+    {
+      "word": "per",
+      "start": 237.435,
+      "end": 237.586
+    },
+    {
+      "word": "second,",
+      "start": 237.633,
+      "end": 238.167
+    },
+    {
+      "word": "not",
+      "start": 238.445,
+      "end": 238.666
+    },
+    {
+      "word": "four",
+      "start": 238.736,
+      "end": 238.956
+    },
+    {
+      "word": "cubic",
+      "start": 239.026,
+      "end": 239.386
+    },
+    {
+      "word": "centimetres.",
+      "start": 239.444,
+      "end": 240.28
+    },
+    {
+      "word": "The",
+      "start": 240.732,
+      "end": 240.872
+    },
+    {
+      "word": "unit",
+      "start": 240.988,
+      "end": 241.313
+    },
+    {
+      "word": "must",
+      "start": 241.383,
+      "end": 241.603
+    },
+    {
+      "word": "include",
+      "start": 241.673,
+      "end": 242.126
+    },
+    {
+      "word": "time.",
+      "start": 242.161,
+      "end": 242.637
+    },
+    {
+      "word": "If",
+      "start": 242.973,
+      "end": 243.182
+    },
+    {
+      "word": "mass",
+      "start": 243.298,
+      "end": 243.612
+    },
+    {
+      "word": "falls",
+      "start": 243.693,
+      "end": 244.064
+    },
+    {
+      "word": "from",
+      "start": 244.122,
+      "end": 244.331
+    },
+    {
+      "word": "nine",
+      "start": 244.447,
+      "end": 244.761
+    },
+    {
+      "word": "point",
+      "start": 244.819,
+      "end": 245.109
+    },
+    {
+      "word": "zero",
+      "start": 245.167,
+      "end": 245.527
+    },
+    {
+      "word": "grams",
+      "start": 245.608,
+      "end": 246.003
+    },
+    {
+      "word": "to",
+      "start": 246.061,
+      "end": 246.165
+    },
+    {
+      "word": "seven",
+      "start": 246.258,
+      "end": 246.537
+    },
+    {
+      "word": "point",
+      "start": 246.607,
+      "end": 246.839
+    },
+    {
+      "word": "five",
+      "start": 246.897,
+      "end": 247.164
+    },
+    {
+      "word": "grams",
+      "start": 247.21,
+      "end": 247.582
+    },
+    {
+      "word": "in",
+      "start": 247.64,
+      "end": 247.733
+    },
+    {
+      "word": "thirty",
+      "start": 247.814,
+      "end": 248.139
+    },
+    {
+      "word": "seconds,",
+      "start": 248.209,
+      "end": 248.847
+    },
+    {
+      "word": "do",
+      "start": 249.126,
+      "end": 249.289
+    },
+    {
+      "word": "not",
+      "start": 249.381,
+      "end": 249.567
+    },
+    {
+      "word": "divide",
+      "start": 249.637,
+      "end": 250.113
+    },
+    {
+      "word": "seven",
+      "start": 250.159,
+      "end": 250.438
+    },
+    {
+      "word": "point",
+      "start": 250.496,
+      "end": 250.717
+    },
+    {
+      "word": "five",
+      "start": 250.763,
+      "end": 251.03
+    },
+    {
+      "word": "by",
+      "start": 251.076,
+      "end": 251.204
+    },
+    {
+      "word": "thirty.",
+      "start": 251.297,
+      "end": 251.878
+    },
+    {
+      "word": "The",
+      "start": 252.214,
+      "end": 252.354
+    },
+    {
+      "word": "change",
+      "start": 252.435,
+      "end": 252.934
+    },
+    {
+      "word": "is",
+      "start": 253.004,
+      "end": 253.189
+    },
+    {
+      "word": "one",
+      "start": 253.306,
+      "end": 253.538
+    },
+    {
+      "word": "point",
+      "start": 253.596,
+      "end": 253.805
+    },
+    {
+      "word": "five",
+      "start": 253.851,
+      "end": 254.083
+    },
+    {
+      "word": "grams,",
+      "start": 254.13,
+      "end": 254.687
+    },
+    {
+      "word": "so",
+      "start": 254.861,
+      "end": 255.059
+    },
+    {
+      "word": "the",
+      "start": 255.117,
+      "end": 255.198
+    },
+    {
+      "word": "rate",
+      "start": 255.268,
+      "end": 255.523
+    },
+    {
+      "word": "is",
+      "start": 255.57,
+      "end": 255.674
+    },
+    {
+      "word": "zero",
+      "start": 255.744,
+      "end": 256.104
+    },
+    {
+      "word": "point",
+      "start": 256.185,
+      "end": 256.417
+    },
+    {
+      "word": "zero",
+      "start": 256.463,
+      "end": 256.754
+    },
+    {
+      "word": "five",
+      "start": 256.835,
+      "end": 257.102
+    },
+    {
+      "word": "zero",
+      "start": 257.148,
+      "end": 257.485
+    },
+    {
+      "word": "grams",
+      "start": 257.543,
+      "end": 257.892
+    },
+    {
+      "word": "per",
+      "start": 257.961,
+      "end": 258.101
+    },
+    {
+      "word": "second.",
+      "start": 258.159,
+      "end": 258.727
+    },
+    {
+      "word": "Ninety",
+      "start": 259.18,
+      "end": 259.691
+    },
+    {
+      "word": "cubic",
+      "start": 259.807,
+      "end": 260.179
+    },
+    {
+      "word": "centimetres",
+      "start": 260.249,
+      "end": 261.119
+    },
+    {
+      "word": "in",
+      "start": 261.328,
+      "end": 261.526
+    },
+    {
+      "word": "one",
+      "start": 261.642,
+      "end": 261.886
+    },
+    {
+      "word": "point",
+      "start": 261.944,
+      "end": 262.199
+    },
+    {
+      "word": "five",
+      "start": 262.269,
+      "end": 262.536
+    },
+    {
+      "word": "minutes",
+      "start": 262.582,
+      "end": 262.907
+    },
+    {
+      "word": "is",
+      "start": 262.977,
+      "end": 263.128
+    },
+    {
+      "word": "sixty",
+      "start": 263.244,
+      "end": 263.708
+    },
+    {
+      "word": "cubic",
+      "start": 263.778,
+      "end": 264.138
+    },
+    {
+      "word": "centimetres",
+      "start": 264.184,
+      "end": 264.893
+    },
+    {
+      "word": "per",
+      "start": 265.009,
+      "end": 265.195
+    },
+    {
+      "word": "minute,",
+      "start": 265.253,
+      "end": 265.705
+    },
+    {
+      "word": "or",
+      "start": 266.042,
+      "end": 266.216
+    },
+    {
+      "word": "one",
+      "start": 266.298,
+      "end": 266.506
+    },
+    {
+      "word": "point",
+      "start": 266.576,
+      "end": 266.82
+    },
+    {
+      "word": "zero",
+      "start": 266.866,
+      "end": 267.215
+    },
+    {
+      "word": "cubic",
+      "start": 267.308,
+      "end": 267.644
+    },
+    {
+      "word": "centimetre",
+      "start": 267.691,
+      "end": 268.306
+    },
+    {
+      "word": "per",
+      "start": 268.364,
+      "end": 268.515
+    },
+    {
+      "word": "second,",
+      "start": 268.573,
+      "end": 269.13
+    },
+    {
+      "word": "not",
+      "start": 269.467,
+      "end": 269.688
+    },
+    {
+      "word": "sixty",
+      "start": 269.757,
+      "end": 270.117
+    },
+    {
+      "word": "cubic",
+      "start": 270.164,
+      "end": 270.465
+    },
+    {
+      "word": "centimetres",
+      "start": 270.5,
+      "end": 271.15
+    },
+    {
+      "word": "per",
+      "start": 271.243,
+      "end": 271.383
+    },
+    {
+      "word": "second.",
+      "start": 271.441,
+      "end": 271.928
+    },
+    {
+      "word": "Compare",
+      "start": 272.457,
+      "end": 272.898
+    },
+    {
+      "word": "rates",
+      "start": 272.945,
+      "end": 273.235
+    },
+    {
+      "word": "only",
+      "start": 273.328,
+      "end": 273.699
+    },
+    {
+      "word": "when",
+      "start": 273.769,
+      "end": 273.943
+    },
+    {
+      "word": "the",
+      "start": 273.99,
+      "end": 274.071
+    },
+    {
+      "word": "units",
+      "start": 274.164,
+      "end": 274.5
+    },
+    {
+      "word": "are",
+      "start": 274.57,
+      "end": 274.767
+    },
+    {
+      "word": "compatible.",
+      "start": 274.814,
+      "end": 275.592
+    },
+    {
+      "word": "Convert",
+      "start": 275.986,
+      "end": 276.474
+    },
+    {
+      "word": "first",
+      "start": 276.555,
+      "end": 276.915
+    },
+    {
+      "word": "if",
+      "start": 277.031,
+      "end": 277.229
+    },
+    {
+      "word": "needed.",
+      "start": 277.322,
+      "end": 277.786
+    },
+    {
+      "word": "Examination-style",
+      "start": 278.065,
+      "end": 279.353
+    },
+    {
+      "word": "question.",
+      "start": 279.4,
+      "end": 279.992
+    },
+    {
+      "word": "Part",
+      "start": 280.143,
+      "end": 280.456
+    },
+    {
+      "word": "a.",
+      "start": 280.514,
+      "end": 280.828
+    },
+    {
+      "word": "Ninety",
+      "start": 281.106,
+      "end": 281.548
+    },
+    {
+      "word": "six",
+      "start": 281.617,
+      "end": 281.908
+    },
+    {
+      "word": "cubic",
+      "start": 281.989,
+      "end": 282.349
+    },
+    {
+      "word": "centimetres",
+      "start": 282.384,
+      "end": 283.069
+    },
+    {
+      "word": "form",
+      "start": 283.15,
+      "end": 283.498
+    },
+    {
+      "word": "in",
+      "start": 283.614,
+      "end": 283.777
+    },
+    {
+      "word": "thirty",
+      "start": 283.858,
+      "end": 284.195
+    },
+    {
+      "word": "two",
+      "start": 284.253,
+      "end": 284.438
+    },
+    {
+      "word": "seconds.",
+      "start": 284.52,
+      "end": 285.123
+    },
+    {
+      "word": "Calculate",
+      "start": 285.332,
+      "end": 285.948
+    },
+    {
+      "word": "the",
+      "start": 285.971,
+      "end": 286.04
+    },
+    {
+      "word": "rate.",
+      "start": 286.11,
+      "end": 286.493
+    },
+    {
+      "word": "Two",
+      "start": 286.702,
+      "end": 286.911
+    },
+    {
+      "word": "marks.",
+      "start": 286.992,
+      "end": 287.538
+    },
+    {
+      "word": "Ninety-six",
+      "start": 287.817,
+      "end": 288.641
+    },
+    {
+      "word": "divided",
+      "start": 288.757,
+      "end": 289.256
+    },
+    {
+      "word": "by",
+      "start": 289.314,
+      "end": 289.442
+    },
+    {
+      "word": "thirty-two",
+      "start": 289.535,
+      "end": 290.173
+    },
+    {
+      "word": "is",
+      "start": 290.568,
+      "end": 290.754
+    },
+    {
+      "word": "three",
+      "start": 290.835,
+      "end": 291.125
+    },
+    {
+      "word": "point",
+      "start": 291.183,
+      "end": 291.462
+    },
+    {
+      "word": "zero",
+      "start": 291.52,
+      "end": 291.868
+    },
+    {
+      "word": "cubic",
+      "start": 291.961,
+      "end": 292.321
+    },
+    {
+      "word": "centimetres",
+      "start": 292.402,
+      "end": 293.111
+    },
+    {
+      "word": "per",
+      "start": 293.227,
+      "end": 293.366
+    },
+    {
+      "word": "second.",
+      "start": 293.424,
+      "end": 293.97
+    },
+    {
+      "word": "Part",
+      "start": 294.353,
+      "end": 294.666
+    },
+    {
+      "word": "b.",
+      "start": 294.736,
+      "end": 295.084
+    },
+    {
+      "word": "Mass",
+      "start": 295.421,
+      "end": 295.874
+    },
+    {
+      "word": "falls",
+      "start": 295.99,
+      "end": 296.373
+    },
+    {
+      "word": "from",
+      "start": 296.431,
+      "end": 296.617
+    },
+    {
+      "word": "six",
+      "start": 296.698,
+      "end": 296.977
+    },
+    {
+      "word": "point",
+      "start": 297.07,
+      "end": 297.325
+    },
+    {
+      "word": "eight",
+      "start": 297.441,
+      "end": 297.708
+    },
+    {
+      "word": "zero",
+      "start": 297.778,
+      "end": 298.161
+    },
+    {
+      "word": "grams",
+      "start": 298.242,
+      "end": 298.672
+    },
+    {
+      "word": "to",
+      "start": 298.951,
+      "end": 299.078
+    },
+    {
+      "word": "five",
+      "start": 299.194,
+      "end": 299.461
+    },
+    {
+      "word": "point",
+      "start": 299.508,
+      "end": 299.752
+    },
+    {
+      "word": "three",
+      "start": 299.81,
+      "end": 300.1
+    },
+    {
+      "word": "zero",
+      "start": 300.158,
+      "end": 300.495
+    },
+    {
+      "word": "grams",
+      "start": 300.564,
+      "end": 300.959
+    },
+    {
+      "word": "in",
+      "start": 301.052,
+      "end": 301.203
+    },
+    {
+      "word": "seventy",
+      "start": 301.284,
+      "end": 301.69
+    },
+    {
+      "word": "five",
+      "start": 301.76,
+      "end": 302.027
+    },
+    {
+      "word": "seconds.",
+      "start": 302.074,
+      "end": 302.724
+    },
+    {
+      "word": "Three",
+      "start": 303.177,
+      "end": 303.467
+    },
+    {
+      "word": "marks.",
+      "start": 303.525,
+      "end": 304.047
+    },
+    {
+      "word": "The",
+      "start": 304.384,
+      "end": 304.5
+    },
+    {
+      "word": "change",
+      "start": 304.57,
+      "end": 304.953
+    },
+    {
+      "word": "is",
+      "start": 304.999,
+      "end": 305.162
+    },
+    {
+      "word": "one",
+      "start": 305.255,
+      "end": 305.487
+    },
+    {
+      "word": "point",
+      "start": 305.545,
+      "end": 305.8
+    },
+    {
+      "word": "five",
+      "start": 305.87,
+      "end": 306.125
+    },
+    {
+      "word": "zero",
+      "start": 306.16,
+      "end": 306.45
+    },
+    {
+      "word": "grams.",
+      "start": 306.52,
+      "end": 306.996
+    },
+    {
+      "word": "One",
+      "start": 307.17,
+      "end": 307.426
+    },
+    {
+      "word": "point",
+      "start": 307.495,
+      "end": 307.739
+    },
+    {
+      "word": "five",
+      "start": 307.797,
+      "end": 308.041
+    },
+    {
+      "word": "zero",
+      "start": 308.087,
+      "end": 308.436
+    },
+    {
+      "word": "divided",
+      "start": 308.517,
+      "end": 309.016
+    },
+    {
+      "word": "by",
+      "start": 309.063,
+      "end": 309.19
+    },
+    {
+      "word": "seventy",
+      "start": 309.26,
+      "end": 309.678
+    },
+    {
+      "word": "five",
+      "start": 309.759,
+      "end": 310.235
+    },
+    {
+      "word": "is",
+      "start": 310.305,
+      "end": 310.491
+    },
+    {
+      "word": "zero",
+      "start": 310.56,
+      "end": 310.885
+    },
+    {
+      "word": "point",
+      "start": 310.955,
+      "end": 311.187
+    },
+    {
+      "word": "zero",
+      "start": 311.245,
+      "end": 311.582
+    },
+    {
+      "word": "two",
+      "start": 311.663,
+      "end": 311.884
+    },
+    {
+      "word": "zero",
+      "start": 311.977,
+      "end": 312.302
+    },
+    {
+      "word": "grams",
+      "start": 312.383,
+      "end": 312.766
+    },
+    {
+      "word": "per",
+      "start": 312.848,
+      "end": 312.999
+    },
+    {
+      "word": "second.",
+      "start": 313.057,
+      "end": 313.602
+    },
+    {
+      "word": "Part",
+      "start": 314.31,
+      "end": 314.624
+    },
+    {
+      "word": "c.",
+      "start": 314.682,
+      "end": 315.193
+    },
+    {
+      "word": "A",
+      "start": 315.529,
+      "end": 315.646
+    },
+    {
+      "word": "graph",
+      "start": 315.738,
+      "end": 316.087
+    },
+    {
+      "word": "is",
+      "start": 316.156,
+      "end": 316.319
+    },
+    {
+      "word": "read",
+      "start": 316.435,
+      "end": 316.644
+    },
+    {
+      "word": "as",
+      "start": 316.714,
+      "end": 316.841
+    },
+    {
+      "word": "fifteen",
+      "start": 316.934,
+      "end": 317.375
+    },
+    {
+      "word": "cubic",
+      "start": 317.445,
+      "end": 317.817
+    },
+    {
+      "word": "centimetres",
+      "start": 317.875,
+      "end": 318.629
+    },
+    {
+      "word": "at",
+      "start": 318.699,
+      "end": 318.815
+    },
+    {
+      "word": "twenty",
+      "start": 318.85,
+      "end": 319.233
+    },
+    {
+      "word": "seconds",
+      "start": 319.303,
+      "end": 319.767
+    },
+    {
+      "word": "and",
+      "start": 319.825,
+      "end": 319.976
+    },
+    {
+      "word": "thirty",
+      "start": 320.046,
+      "end": 320.429
+    },
+    {
+      "word": "nine",
+      "start": 320.51,
+      "end": 320.777
+    },
+    {
+      "word": "cubic",
+      "start": 320.847,
+      "end": 321.206
+    },
+    {
+      "word": "centimetres",
+      "start": 321.264,
+      "end": 321.996
+    },
+    {
+      "word": "at",
+      "start": 322.066,
+      "end": 322.205
+    },
+    {
+      "word": "sixty",
+      "start": 322.298,
+      "end": 322.727
+    },
+    {
+      "word": "seconds.",
+      "start": 322.797,
+      "end": 323.389
+    },
+    {
+      "word": "Three",
+      "start": 323.668,
+      "end": 323.946
+    },
+    {
+      "word": "marks.",
+      "start": 323.993,
+      "end": 324.504
+    },
+    {
+      "word": "Twenty",
+      "start": 324.585,
+      "end": 324.991
+    },
+    {
+      "word": "four",
+      "start": 325.084,
+      "end": 325.328
+    },
+    {
+      "word": "cubic",
+      "start": 325.409,
+      "end": 325.758
+    },
+    {
+      "word": "centimetres",
+      "start": 325.804,
+      "end": 326.431
+    },
+    {
+      "word": "in",
+      "start": 326.489,
+      "end": 326.559
+    },
+    {
+      "word": "forty",
+      "start": 326.675,
+      "end": 327.081
+    },
+    {
+      "word": "seconds",
+      "start": 327.151,
+      "end": 327.592
+    },
+    {
+      "word": "is",
+      "start": 327.662,
+      "end": 327.789
+    },
+    {
+      "word": "zero",
+      "start": 327.882,
+      "end": 328.323
+    },
+    {
+      "word": "point",
+      "start": 328.405,
+      "end": 328.718
+    },
+    {
+      "word": "six",
+      "start": 328.788,
+      "end": 329.078
+    },
+    {
+      "word": "zero",
+      "start": 329.206,
+      "end": 329.728
+    },
+    {
+      "word": "cubic",
+      "start": 329.821,
+      "end": 330.181
+    },
+    {
+      "word": "centimetres",
+      "start": 330.227,
+      "end": 330.947
+    },
+    {
+      "word": "per",
+      "start": 331.04,
+      "end": 331.203
+    },
+    {
+      "word": "second.",
+      "start": 331.272,
+      "end": 331.76
+    },
+    {
+      "word": "Part",
+      "start": 332.213,
+      "end": 332.538
+    },
+    {
+      "word": "d.",
+      "start": 332.573,
+      "end": 332.851
+    },
+    {
+      "word": "Why",
+      "start": 333.188,
+      "end": 333.49
+    },
+    {
+      "word": "is",
+      "start": 333.559,
+      "end": 333.687
+    },
+    {
+      "word": "the",
+      "start": 333.745,
+      "end": 333.826
+    },
+    {
+      "word": "unit",
+      "start": 333.919,
+      "end": 334.221
+    },
+    {
+      "word": "essential?",
+      "start": 334.291,
+      "end": 334.929
+    },
+    {
+      "word": "One",
+      "start": 335.208,
+      "end": 335.44
+    },
+    {
+      "word": "mark.",
+      "start": 335.487,
+      "end": 335.963
+    },
+    {
+      "word": "The",
+      "start": 336.172,
+      "end": 336.299
+    },
+    {
+      "word": "unit",
+      "start": 336.416,
+      "end": 336.717
+    },
+    {
+      "word": "identifies",
+      "start": 336.775,
+      "end": 337.623
+    },
+    {
+      "word": "the",
+      "start": 337.716,
+      "end": 337.855
+    },
+    {
+      "word": "amount",
+      "start": 337.913,
+      "end": 338.296
+    },
+    {
+      "word": "measured",
+      "start": 338.412,
+      "end": 338.877
+    },
+    {
+      "word": "and",
+      "start": 338.947,
+      "end": 339.179
+    },
+    {
+      "word": "the",
+      "start": 339.237,
+      "end": 339.318
+    },
+    {
+      "word": "time",
+      "start": 339.365,
+      "end": 339.667
+    },
+    {
+      "word": "basis.",
+      "start": 339.713,
+      "end": 340.282
+    },
+    {
+      "word": "Before",
+      "start": 340.619,
+      "end": 340.99
+    },
+    {
+      "word": "we",
+      "start": 341.025,
+      "end": 341.118
+    },
+    {
+      "word": "finish,",
+      "start": 341.199,
+      "end": 341.605
+    },
+    {
+      "word": "complete",
+      "start": 341.652,
+      "end": 342.128
+    },
+    {
+      "word": "the",
+      "start": 342.151,
+      "end": 342.232
+    },
+    {
+      "word": "method.",
+      "start": 342.29,
+      "end": 342.813
+    },
+    {
+      "word": "Find",
+      "start": 342.987,
+      "end": 343.312
+    },
+    {
+      "word": "the",
+      "start": 343.359,
+      "end": 343.428
+    },
+    {
+      "word": "start",
+      "start": 343.475,
+      "end": 343.823
+    },
+    {
+      "word": "and",
+      "start": 343.881,
+      "end": 343.997
+    },
+    {
+      "word": "end",
+      "start": 344.078,
+      "end": 344.287
+    },
+    {
+      "word": "values.",
+      "start": 344.357,
+      "end": 344.914
+    },
+    {
+      "word": "Calculate",
+      "start": 345.042,
+      "end": 345.669
+    },
+    {
+      "word": "the",
+      "start": 345.704,
+      "end": 345.773
+    },
+    {
+      "word": "change.",
+      "start": 345.831,
+      "end": 346.424
+    },
+    {
+      "word": "Find",
+      "start": 346.667,
+      "end": 346.946
+    },
+    {
+      "word": "the",
+      "start": 346.992,
+      "end": 347.062
+    },
+    {
+      "word": "time",
+      "start": 347.12,
+      "end": 347.41
+    },
+    {
+      "word": "interval.",
+      "start": 347.468,
+      "end": 348.095
+    },
+    {
+      "word": "Divide",
+      "start": 348.304,
+      "end": 348.711
+    },
+    {
+      "word": "change",
+      "start": 348.757,
+      "end": 349.152
+    },
+    {
+      "word": "by",
+      "start": 349.198,
+      "end": 349.338
+    },
+    {
+      "word": "time.",
+      "start": 349.407,
+      "end": 349.86
+    },
+    {
+      "word": "Write",
+      "start": 350.034,
+      "end": 350.359
+    },
+    {
+      "word": "the",
+      "start": 350.394,
+      "end": 350.464
+    },
+    {
+      "word": "compound",
+      "start": 350.533,
+      "end": 351.009
+    },
+    {
+      "word": "unit",
+      "start": 351.126,
+      "end": 351.381
+    },
+    {
+      "word": "and",
+      "start": 351.451,
+      "end": 351.613
+    },
+    {
+      "word": "round",
+      "start": 351.729,
+      "end": 352.02
+    },
+    {
+      "word": "sensibly.",
+      "start": 352.089,
+      "end": 352.786
+    },
+    {
+      "word": "If",
+      "start": 353.181,
+      "end": 353.331
+    },
+    {
+      "word": "you",
+      "start": 353.39,
+      "end": 353.471
+    },
+    {
+      "word": "found",
+      "start": 353.564,
+      "end": 353.796
+    },
+    {
+      "word": "this",
+      "start": 353.842,
+      "end": 354.005
+    },
+    {
+      "word": "useful,",
+      "start": 354.086,
+      "end": 354.609
+    },
+    {
+      "word": "please",
+      "start": 354.76,
+      "end": 355.085
+    },
+    {
+      "word": "subscribe",
+      "start": 355.108,
+      "end": 355.712
+    },
+    {
+      "word": "to",
+      "start": 355.747,
+      "end": 355.828
+    },
+    {
+      "word": "J",
+      "start": 355.909,
+      "end": 356.083
+    },
+    {
+      "word": "D",
+      "start": 356.153,
+      "end": 356.223
+    },
+    {
+      "word": "Science,",
+      "start": 356.374,
+      "end": 357.001
+    },
+    {
+      "word": "and",
+      "start": 357.175,
+      "end": 357.349
+    },
+    {
+      "word": "visit",
+      "start": 357.407,
+      "end": 357.732
+    },
+    {
+      "word": "j",
+      "start": 357.779,
+      "end": 357.929
+    },
+    {
+      "word": "d",
+      "start": 357.999,
+      "end": 358.15
+    },
+    {
+      "word": "science",
+      "start": 358.266,
+      "end": 358.719
+    },
+    {
+      "word": "dot",
+      "start": 358.765,
+      "end": 358.986
+    },
+    {
+      "word": "co",
+      "start": 359.044,
+      "end": 359.23
+    },
+    {
+      "word": "dot",
+      "start": 359.346,
+      "end": 359.543
+    },
+    {
+      "word": "u",
+      "start": 359.625,
+      "end": 359.741
+    },
+    {
+      "word": "k",
+      "start": 359.81,
+      "end": 360.019
+    },
+    {
+      "word": "for",
+      "start": 360.356,
+      "end": 360.542
+    },
+    {
+      "word": "more",
+      "start": 360.611,
+      "end": 360.867
+    },
+    {
+      "word": "explanations,",
+      "start": 360.936,
+      "end": 361.796
+    },
+    {
+      "word": "worksheets",
+      "start": 361.854,
+      "end": 362.527
+    },
+    {
+      "word": "and",
+      "start": 362.597,
+      "end": 362.771
+    },
+    {
+      "word": "T-Level",
+      "start": 362.84,
+      "end": 363.467
+    },
+    {
+      "word": "Chemistry",
+      "start": 363.549,
+      "end": 364.06
+    },
+    {
+      "word": "lessons.",
+      "start": 364.129,
+      "end": 364.803
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "a12-2-calculating-rate",
+  "duration": 364.957,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.046,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 13.34,
+      "aligned": true,
+      "cue": "calculate average rate from tables and graphs"
+    },
+    {
+      "id": "defn",
+      "t": 24.021,
+      "aligned": true,
+      "cue": "Reaction rate is how quickly"
+    },
+    {
+      "id": "units",
+      "t": 58.235,
+      "aligned": true,
+      "cue": "Rate units are compound units"
+    },
+    {
+      "id": "product",
+      "t": 74.049,
+      "aligned": true,
+      "cue": "Seventy two cubic centimetres of gas"
+    },
+    {
+      "id": "reactant",
+      "t": 98.79,
+      "aligned": true,
+      "cue": "A solid falls from eight point four zero grams"
+    },
+    {
+      "id": "time",
+      "t": 130.763,
+      "aligned": true,
+      "cue": "Two point five minutes is one hundred and fifty seconds"
+    },
+    {
+      "id": "table",
+      "t": 149.304,
+      "aligned": true,
+      "cue": "Now a table. Gas volume is zero"
+    },
+    {
+      "id": "graph",
+      "t": 187.501,
+      "aligned": true,
+      "cue": "On a product\u2013time graph"
+    },
+    {
+      "id": "errors",
+      "t": 230.678,
+      "aligned": true,
+      "cue": "Correct three common errors"
+    },
+    {
+      "id": "exam",
+      "t": 278.065,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 340.619,
+      "aligned": true,
+      "cue": "Before we finish, complete the method"
+    },
+    {
+      "id": "outro",
+      "t": 354.76,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 14.071,
+      "aligned": true,
+      "cue": "average rate from tables and graphs"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 17.845,
+      "aligned": true,
+      "cue": "reactant used or product formed"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 22.396,
+      "aligned": true,
+      "cue": "correct compound unit"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 15.198,
+      "aligned": true,
+      "cue": "tables and graphs"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 290.835,
+      "aligned": true,
+      "cue": "three point zero cubic centimetres per second"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 310.56,
+      "aligned": true,
+      "cue": "zero point zero two zero grams per second"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 327.882,
+      "aligned": true,
+      "cue": "zero point six zero cubic centimetres per second"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 336.172,
+      "aligned": true,
+      "cue": "The unit identifies the amount measured"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 342.987,
+      "aligned": true,
+      "cue": "Find the start and end values"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 348.304,
+      "aligned": true,
+      "cue": "Divide change by time"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 350.034,
+      "aligned": true,
+      "cue": "Write the compound unit"
+    }
+  ]
+}

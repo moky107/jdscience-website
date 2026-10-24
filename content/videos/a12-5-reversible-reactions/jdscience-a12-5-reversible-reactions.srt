@@ -1,0 +1,472 @@
+1
+00:00:00,174 --> 00:00:03,065
+Hello and welcome back to J D Science.
+
+2
+00:00:03,344 --> 00:00:07,036
+In today's T-Level Chemistry lesson, we are going to study
+
+3
+00:00:07,117 --> 00:00:10,019
+A twelve point five, Reversible Reactions.
+
+4
+00:00:10,472 --> 00:00:13,851
+By the end of this lesson, you should be able to define
+
+5
+00:00:13,909 --> 00:00:17,879
+dynamic equilibrium, state the conditions it requires,
+
+6
+00:00:18,088 --> 00:00:22,454
+and use Le Chatelier's principle for concentration, temperature
+
+7
+00:00:22,500 --> 00:00:23,255
+and pressure.
+
+8
+00:00:23,708 --> 00:00:27,632
+The symbol with arrows both ways means the reaction proceeds
+
+9
+00:00:27,690 --> 00:00:28,967
+in both directions.
+
+10
+00:00:29,362 --> 00:00:31,660
+The forward reaction forms products.
+
+11
+00:00:31,869 --> 00:00:35,039
+The reverse reaction reforms reactants.
+
+12
+00:00:35,155 --> 00:00:37,756
+Reversible is not the same as equilibrium.
+
+13
+00:00:37,930 --> 00:00:40,554
+Equilibrium needs specified conditions.
+
+14
+00:00:40,797 --> 00:00:44,524
+Dynamic equilibrium occurs when a reversible reaction in
+
+15
+00:00:44,571 --> 00:00:48,390
+a closed system has equal forward and reverse rates, so
+
+16
+00:00:48,483 --> 00:00:52,407
+macroscopic concentrations or amounts remain constant.
+
+17
+00:00:52,581 --> 00:00:54,300
+The reactions do not stop.
+
+18
+00:00:54,450 --> 00:00:55,437
+Both continue.
+
+19
+00:00:55,588 --> 00:00:58,990
+Constant composition does not mean equal concentrations.
+
+20
+00:00:59,164 --> 00:01:00,348
+Check the conditions.
+
+21
+00:01:00,476 --> 00:01:02,357
+The reaction must be reversible.
+
+22
+00:01:02,508 --> 00:01:04,075
+The system must be closed.
+
+23
+00:01:04,284 --> 00:01:07,024
+Forward and reverse rates must be equal.
+
+24
+00:01:07,198 --> 00:01:09,694
+Forward and reverse reactions continue.
+
+25
+00:01:09,938 --> 00:01:13,676
+Equal reactant and product concentrations are not required.
+
+26
+00:01:14,129 --> 00:01:17,763
+A sealed flask with equal forward and reverse rates can
+
+27
+00:01:17,833 --> 00:01:19,632
+be at dynamic equilibrium.
+
+28
+00:01:20,085 --> 00:01:23,835
+An open vessel that lets a gaseous product escape is not
+
+29
+00:01:23,904 --> 00:01:26,493
+closed, so it is not at equilibrium.
+
+30
+00:01:27,016 --> 00:01:30,975
+A sealed flask where the forward rate is greater than the reverse
+
+31
+00:01:31,021 --> 00:01:33,007
+rate is not at equilibrium yet.
+
+32
+00:01:33,622 --> 00:01:37,256
+Le Chatelier's principle: when a system at equilibrium
+
+33
+00:01:37,337 --> 00:01:41,064
+is subjected to a change in conditions, the equilibrium shifts
+
+34
+00:01:41,134 --> 00:01:44,117
+in the direction that opposes the effect of that change.
+
+35
+00:01:44,454 --> 00:01:45,313
+Use a method.
+
+36
+00:01:45,429 --> 00:01:46,602
+Identify the change.
+
+37
+00:01:46,683 --> 00:01:48,796
+Decide how the system opposes it.
+
+38
+00:01:49,005 --> 00:01:50,897
+Predict a left or right shift.
+
+39
+00:01:51,141 --> 00:01:52,639
+State which side is favoured.
+
+40
+00:01:52,813 --> 00:01:56,401
+Justify using concentration, heat direction, or gas moles.
+
+41
+00:01:56,737 --> 00:02:00,580
+Concentration, for A plus B in equilibrium with C plus D.
+
+42
+00:02:00,789 --> 00:02:03,541
+Add A, shift right to use some added A.
+
+43
+00:02:03,715 --> 00:02:06,431
+Remove A, shift left to form more A.
+
+44
+00:02:06,640 --> 00:02:08,231
+Add C, shift left.
+
+45
+00:02:08,382 --> 00:02:10,843
+Remove D, shift right to form more D.
+
+46
+00:02:11,052 --> 00:02:14,233
+Temperature: treat heat as a product or a reactant.
+
+47
+00:02:14,442 --> 00:02:18,517
+You must identify the exothermic and endothermic directions first.
+
+48
+00:02:18,726 --> 00:02:22,487
+If the forward reaction is exothermic, write heat on the product
+
+49
+00:02:22,534 --> 00:02:22,917
+side.
+
+50
+00:02:23,068 --> 00:02:26,713
+Increasing temperature shifts left, the endothermic reverse.
+
+51
+00:02:26,957 --> 00:02:28,791
+Decreasing temperature shifts right.
+
+52
+00:02:28,942 --> 00:02:32,727
+If the forward reaction is endothermic, write heat on the reactant
+
+53
+00:02:32,774 --> 00:02:33,180
+side.
+
+54
+00:02:33,331 --> 00:02:35,304
+Increasing temperature shifts right.
+
+55
+00:02:35,513 --> 00:02:37,499
+Decreasing temperature shifts left.
+
+56
+00:02:37,615 --> 00:02:40,447
+Increasing temperature does not always shift left.
+
+57
+00:02:40,564 --> 00:02:42,665
+It depends on the enthalpy direction.
+
+58
+00:02:42,816 --> 00:02:46,995
+For an exothermic forward reaction, increasing temperature decreases
+
+59
+00:02:47,065 --> 00:02:47,901
+product yield.
+
+60
+00:02:48,145 --> 00:02:51,047
+Pressure applies to gaseous equilibria.
+
+61
+00:02:51,222 --> 00:02:54,902
+Increasing pressure favours the side with fewer moles of gas.
+
+62
+00:02:55,181 --> 00:02:58,675
+Decreasing pressure favours the side with more moles of gas.
+
+63
+00:02:58,919 --> 00:03:02,530
+If the gas moles are equal, the equilibrium position does not
+
+64
+00:03:02,588 --> 00:03:03,111
+shift.
+
+65
+00:03:03,447 --> 00:03:05,839
+Solids and liquids are not counted.
+
+66
+00:03:06,083 --> 00:03:10,065
+Nitrogen plus three hydrogen in equilibrium with two ammonia.
+
+67
+00:03:10,402 --> 00:03:13,002
+Four moles of gas on the left, two on the right.
+
+68
+00:03:13,246 --> 00:03:15,150
+Increasing pressure shifts right.
+
+69
+00:03:15,394 --> 00:03:19,690
+Hydrogen plus iodine in equilibrium with two hydrogen iodide.
+
+70
+00:03:19,864 --> 00:03:21,861
+Two moles of gas on each side.
+
+71
+00:03:22,035 --> 00:03:24,322
+Increasing pressure causes no shift.
+
+72
+00:03:24,531 --> 00:03:28,490
+Two sulfur dioxide plus oxygen in equilibrium with two sulfur
+
+73
+00:03:28,537 --> 00:03:29,373
+trioxide.
+
+74
+00:03:29,617 --> 00:03:31,254
+Three moles of gas to two.
+
+75
+00:03:31,370 --> 00:03:33,331
+Increasing pressure shifts right.
+
+76
+00:03:33,575 --> 00:03:37,453
+If that forward reaction is exothermic, increasing temperature
+
+77
+00:03:37,488 --> 00:03:38,370
+shifts left.
+
+78
+00:03:38,707 --> 00:03:42,329
+Calcium carbonate solid in equilibrium with calcium oxide
+
+79
+00:03:42,364 --> 00:03:44,500
+solid and carbon dioxide gas.
+
+80
+00:03:44,895 --> 00:03:47,716
+Zero gas moles on the left, one on the right.
+
+81
+00:03:47,925 --> 00:03:50,003
+Increasing pressure shifts left.
+
+82
+00:03:50,398 --> 00:03:52,070
+Correct the misconceptions.
+
+83
+00:03:52,522 --> 00:03:54,961
+Reactions do not stop at equilibrium.
+
+84
+00:03:55,135 --> 00:03:57,782
+Constant does not mean equal concentrations.
+
+85
+00:03:58,177 --> 00:04:01,079
+Not every reversible system is at equilibrium.
+
+86
+00:04:01,416 --> 00:04:04,017
+Increasing pressure does not always shift right.
+
+87
+00:04:04,411 --> 00:04:07,326
+Increasing temperature does not always shift left.
+
+88
+00:04:07,778 --> 00:04:09,264
+Examination-style question.
+
+89
+00:04:09,417 --> 00:04:10,369
+Part a.
+
+90
+00:04:10,520 --> 00:04:14,189
+Define dynamic equilibrium and state one required condition.
+
+91
+00:04:14,224 --> 00:04:15,059
+Three marks.
+
+92
+00:04:15,396 --> 00:04:19,053
+Forward and reverse reactions continue at equal rates in a closed
+
+93
+00:04:19,076 --> 00:04:19,622
+system.
+
+94
+00:04:19,959 --> 00:04:20,563
+Part b.
+
+95
+00:04:20,772 --> 00:04:24,881
+For nitrogen, hydrogen and ammonia, state the effect of increasing
+
+96
+00:04:24,939 --> 00:04:25,438
+pressure.
+
+97
+00:04:25,775 --> 00:04:26,541
+Two marks.
+
+98
+00:04:26,692 --> 00:04:30,442
+The equilibrium shifts right because there are two moles of gas against
+
+99
+00:04:30,512 --> 00:04:30,953
+four.
+
+100
+00:04:31,348 --> 00:04:32,044
+Part c.
+
+101
+00:04:32,172 --> 00:04:34,216
+The forward reaction is exothermic.
+
+102
+00:04:34,494 --> 00:04:37,582
+What happens to product yield if temperature increases?
+
+103
+00:04:37,698 --> 00:04:38,523
+Two marks.
+
+104
+00:04:38,639 --> 00:04:42,435
+The equilibrium shifts in the endothermic reverse direction, so
+
+105
+00:04:42,528 --> 00:04:44,049
+product yield decreases.
+
+106
+00:04:44,571 --> 00:04:45,256
+Part d.
+
+107
+00:04:45,500 --> 00:04:47,880
+What happens if you add a reactant?
+
+108
+00:04:48,159 --> 00:04:48,948
+Two marks.
+
+109
+00:04:49,065 --> 00:04:52,861
+The equilibrium shifts to use some of the added reactant, so
+
+110
+00:04:52,954 --> 00:04:54,057
+products are favoured.
+
+111
+00:04:54,510 --> 00:04:56,844
+Before we finish, complete the model.
+
+112
+00:04:57,018 --> 00:05:00,965
+Dynamic equilibrium is a closed reversible system with equal
+
+113
+00:05:01,035 --> 00:05:03,740
+continuing rates and constant composition.
+
+114
+00:05:03,914 --> 00:05:08,000
+Le Chatelier's principle predicts the opposing shift for concentration,
+
+115
+00:05:08,082 --> 00:05:09,579
+temperature and pressure.
+
+116
+00:05:10,288 --> 00:05:13,863
+If you found this useful, please subscribe to J D Science, and
+
+117
+00:05:13,921 --> 00:05:18,298
+visit j d science dot co dot u k for more explanations,
+
+118
+00:05:18,415 --> 00:05:20,818
+worksheets and T-Level Chemistry lessons.
+

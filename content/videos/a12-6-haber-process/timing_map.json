@@ -1,0 +1,176 @@
+{
+  "slug": "a12-6-haber-process",
+  "duration": 387.344,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 13.212,
+      "aligned": true,
+      "cue": "state typical Haber conditions"
+    },
+    {
+      "id": "eq",
+      "t": 22.152,
+      "aligned": true,
+      "cue": "The equation is nitrogen plus three hydrogen"
+    },
+    {
+      "id": "cond",
+      "t": 40.6,
+      "aligned": true,
+      "cue": "Typical conditions in the lesson"
+    },
+    {
+      "id": "moles",
+      "t": 74.059,
+      "aligned": true,
+      "cue": "Count the gas moles"
+    },
+    {
+      "id": "temp",
+      "t": 91.591,
+      "aligned": true,
+      "cue": "Temperature is a compromise"
+    },
+    {
+      "id": "press",
+      "t": 120.162,
+      "aligned": true,
+      "cue": "Pressure is also a compromise"
+    },
+    {
+      "id": "iron",
+      "t": 149.06,
+      "aligned": true,
+      "cue": "The iron catalyst provides an alternative pathway"
+    },
+    {
+      "id": "options",
+      "t": 180.232,
+      "aligned": true,
+      "cue": "Compare the options. Three hundred degrees"
+    },
+    {
+      "id": "plantx",
+      "t": 204.16,
+      "aligned": true,
+      "cue": "Plant X is offered three hundred and fifty"
+    },
+    {
+      "id": "myths",
+      "t": 246.204,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 271.293,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 350.683,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 376.713,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 13.618,
+      "aligned": true,
+      "cue": "typical Haber conditions"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 16.265,
+      "aligned": true,
+      "cue": "economic effect"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 18.285,
+      "aligned": true,
+      "cue": "compromise between equilibrium yield"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 20.723,
+      "aligned": true,
+      "cue": "reaction rate"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 280.744,
+      "aligned": true,
+      "cue": "four hundred and fifty degrees Celsius, about two hundred atmospheres, and iron"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 300.609,
+      "aligned": true,
+      "cue": "the rate is lower"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 312.626,
+      "aligned": true,
+      "cue": "two moles of gas against four"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 330.261,
+      "aligned": true,
+      "cue": "balances yield against economic"
+    },
+    {
+      "slide": "exam",
+      "item": "e",
+      "t": 340.559,
+      "aligned": true,
+      "cue": "lower activation-energy pathway"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 355.478,
+      "aligned": true,
+      "cue": "about four hundred and fifty degrees Celsius and about two hundred atmospheres"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 364.278,
+      "aligned": true,
+      "cue": "compromises between yield, rate and cost"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 370.339,
+      "aligned": true,
+      "cue": "without changing the equilibrium yield"
+    }
+  ]
+}

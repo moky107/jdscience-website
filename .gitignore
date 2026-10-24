@@ -39,6 +39,16 @@ content/videos/studio/out/
 content/videos/*/source/chunk_*.mp3
 content/videos/*/source/narration_master_parts/
 
+# Private teacher mark schemes — never publish
+content/tlevel-chemistry/private/
+
+# Original teacher answer workbooks — stay private
+content/tlevel-chemistry/sources/*Teacher_Answer_Workbook*
+content/tlevel-chemistry/sources/extracts/*Teacher_Answer*
+
+# Large hosted T-Level MP4s live in Supabase, not Git
+public/resources/t-level/science/videos/*/*.mp4
+
 # Large hosted foundations MP4s live in Supabase, not Git
 public/resources/gcse/chemistry/videos/states-of-matter/*.mp4
 public/resources/gcse/chemistry/videos/changes-of-state/*.mp4

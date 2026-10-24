@@ -1,0 +1,3141 @@
+{
+  "slug": "a12-3-enthalpy-changes",
+  "title": "Enthalpy Changes",
+  "audio": "/workspace/content/videos/a12-3-enthalpy-changes/source/narration_master.mp3",
+  "duration": 277.29,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A twelve point three, Enthalpy Changes.\n\nBy the end of this lesson, you should be able to define H and delta H, describe energy conservation in exothermic and endothermic reactions, read enthalpy diagrams, and explain what a catalyst does and does not change.\n\nEnthalpy, H, is the energy content of a system at constant pressure. It is a state quantity. On a diagram you compare the reactant level with the product level.\n\nThe enthalpy change, delta H, is H of the products minus H of the reactants. It can be positive or negative. It is commonly quoted in kilojoules per mole.\n\nH and delta H are not interchangeable. Delta H is not simply the energy of the products.\n\nEnergy is conserved. It is not created or destroyed. It is transferred between the reacting system and the surroundings.\n\nIn an exothermic change, energy is transferred from the system to the surroundings. Products have lower enthalpy than reactants, so delta H is negative. The surroundings often feel warmer.\n\nWatch the exothermic profile. Reactants sit higher. Products sit lower. The pathway rises to a peak. Activation energy is the energy from the reactant level to that peak, not from zero on the y-axis. Delta H is the downward difference from reactants to products.\n\nIn an endothermic change, energy is transferred from the surroundings into the system. Products have higher enthalpy than reactants, so delta H is positive. The surroundings often feel cooler.\n\nWatch the endothermic profile. Products sit higher. Activation energy is still from the reactant level to the peak. Delta H is the upward difference.\n\nA reaction that transfers forty five kilojoules to the surroundings is exothermic, so delta H is negative.\n\nAn exothermic reaction still needs activation energy. A negative delta H does not mean the reaction starts with no barrier.\n\nA catalyst provides an alternative pathway with a lower activation energy. Watch both pathways on one diagram.\n\nThe catalysed peak is lower. The reactant enthalpy and the product enthalpy stay the same, so delta H is unchanged.\n\nCorrect the misconceptions. Exothermic still needs E a. A catalyst lowers E a, not delta H. Endothermic does not destroy energy. Negative delta H does not mean negative energy. And delta H is not always positive.\n\nIf a diagram shows an exothermic reaction with products above reactants, the levels are the wrong way round. If an endothermic reaction is labelled delta H less than zero, the sign is wrong. If a catalyst is drawn with a lower product enthalpy, only the peak should have changed.\n\nExamination-style question.\n\nPart a. Define delta H. Two marks.\n\nDelta H is the change in enthalpy between products and reactants. Delta H equals H products minus H reactants.\n\nPart b. How does an exothermic enthalpy diagram show the energy change? Two marks.\n\nProducts are lower in enthalpy than reactants. Energy is transferred to the surroundings, so the difference is negative.\n\nPart c. How does an endothermic change appear? Two marks.\n\nDelta H is positive. Energy is transferred from the surroundings into the system.\n\nPart d. Explain the effect of a catalyst on the profile. Three marks.\n\nThe catalyst provides a lower E a pathway. Reactant and product levels are unchanged, so delta H is unchanged.\n\nBefore we finish, complete the model. H is the energy content of a state. Delta H is the change between states. Exothermic, delta H negative. Endothermic, delta H positive. A catalyst changes the pathway peak, not reactant H, product H, or delta H.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.128,
+      "end": 0.557
+    },
+    {
+      "word": "and",
+      "start": 0.836,
+      "end": 1.01
+    },
+    {
+      "word": "welcome",
+      "start": 1.057,
+      "end": 1.463
+    },
+    {
+      "word": "back",
+      "start": 1.509,
+      "end": 1.73
+    },
+    {
+      "word": "to",
+      "start": 1.811,
+      "end": 1.95
+    },
+    {
+      "word": "J",
+      "start": 2.067,
+      "end": 2.241
+    },
+    {
+      "word": "D",
+      "start": 2.31,
+      "end": 2.368
+    },
+    {
+      "word": "Science.",
+      "start": 2.508,
+      "end": 3.123
+    },
+    {
+      "word": "In",
+      "start": 3.46,
+      "end": 3.646
+    },
+    {
+      "word": "today's",
+      "start": 3.704,
+      "end": 4.18
+    },
+    {
+      "word": "T-Level",
+      "start": 4.307,
+      "end": 4.888
+    },
+    {
+      "word": "Chemistry",
+      "start": 4.957,
+      "end": 5.468
+    },
+    {
+      "word": "lesson,",
+      "start": 5.526,
+      "end": 6.014
+    },
+    {
+      "word": "we",
+      "start": 6.188,
+      "end": 6.316
+    },
+    {
+      "word": "are",
+      "start": 6.362,
+      "end": 6.467
+    },
+    {
+      "word": "going",
+      "start": 6.502,
+      "end": 6.687
+    },
+    {
+      "word": "to",
+      "start": 6.745,
+      "end": 6.815
+    },
+    {
+      "word": "study",
+      "start": 6.885,
+      "end": 7.349
+    },
+    {
+      "word": "A",
+      "start": 7.593,
+      "end": 7.709
+    },
+    {
+      "word": "twelve",
+      "start": 7.779,
+      "end": 8.115
+    },
+    {
+      "word": "point",
+      "start": 8.162,
+      "end": 8.464
+    },
+    {
+      "word": "three,",
+      "start": 8.522,
+      "end": 8.986
+    },
+    {
+      "word": "Enthalpy",
+      "start": 9.183,
+      "end": 9.799
+    },
+    {
+      "word": "Changes.",
+      "start": 9.857,
+      "end": 10.519
+    },
+    {
+      "word": "By",
+      "start": 11.041,
+      "end": 11.192
+    },
+    {
+      "word": "the",
+      "start": 11.25,
+      "end": 11.331
+    },
+    {
+      "word": "end",
+      "start": 11.413,
+      "end": 11.575
+    },
+    {
+      "word": "of",
+      "start": 11.645,
+      "end": 11.714
+    },
+    {
+      "word": "this",
+      "start": 11.773,
+      "end": 11.923
+    },
+    {
+      "word": "lesson,",
+      "start": 12.005,
+      "end": 12.527
+    },
+    {
+      "word": "you",
+      "start": 12.736,
+      "end": 12.841
+    },
+    {
+      "word": "should",
+      "start": 12.887,
+      "end": 13.108
+    },
+    {
+      "word": "be",
+      "start": 13.154,
+      "end": 13.235
+    },
+    {
+      "word": "able",
+      "start": 13.282,
+      "end": 13.514
+    },
+    {
+      "word": "to",
+      "start": 13.549,
+      "end": 13.618
+    },
+    {
+      "word": "define",
+      "start": 13.688,
+      "end": 14.28
+    },
+    {
+      "word": "H",
+      "start": 14.362,
+      "end": 14.745
+    },
+    {
+      "word": "and",
+      "start": 14.826,
+      "end": 14.977
+    },
+    {
+      "word": "delta",
+      "start": 15.047,
+      "end": 15.499
+    },
+    {
+      "word": "H,",
+      "start": 15.569,
+      "end": 16.045
+    },
+    {
+      "word": "describe",
+      "start": 16.324,
+      "end": 16.985
+    },
+    {
+      "word": "energy",
+      "start": 17.078,
+      "end": 17.531
+    },
+    {
+      "word": "conservation",
+      "start": 17.589,
+      "end": 18.413
+    },
+    {
+      "word": "in",
+      "start": 18.645,
+      "end": 18.819
+    },
+    {
+      "word": "exothermic",
+      "start": 18.947,
+      "end": 19.864
+    },
+    {
+      "word": "and",
+      "start": 19.957,
+      "end": 20.155
+    },
+    {
+      "word": "endothermic",
+      "start": 20.282,
+      "end": 21.048
+    },
+    {
+      "word": "reactions,",
+      "start": 21.118,
+      "end": 21.85
+    },
+    {
+      "word": "read",
+      "start": 22.059,
+      "end": 22.36
+    },
+    {
+      "word": "enthalpy",
+      "start": 22.511,
+      "end": 23.127
+    },
+    {
+      "word": "diagrams,",
+      "start": 23.173,
+      "end": 23.928
+    },
+    {
+      "word": "and",
+      "start": 24.009,
+      "end": 24.172
+    },
+    {
+      "word": "explain",
+      "start": 24.241,
+      "end": 24.717
+    },
+    {
+      "word": "what",
+      "start": 24.868,
+      "end": 25.112
+    },
+    {
+      "word": "a",
+      "start": 25.182,
+      "end": 25.216
+    },
+    {
+      "word": "catalyst",
+      "start": 25.298,
+      "end": 25.855
+    },
+    {
+      "word": "does",
+      "start": 25.913,
+      "end": 26.308
+    },
+    {
+      "word": "and",
+      "start": 26.482,
+      "end": 26.691
+    },
+    {
+      "word": "does",
+      "start": 26.772,
+      "end": 26.97
+    },
+    {
+      "word": "not",
+      "start": 27.051,
+      "end": 27.213
+    },
+    {
+      "word": "change.",
+      "start": 27.271,
+      "end": 27.817
+    },
+    {
+      "word": "Enthalpy,",
+      "start": 27.991,
+      "end": 28.804
+    },
+    {
+      "word": "H,",
+      "start": 28.827,
+      "end": 29.431
+    },
+    {
+      "word": "is",
+      "start": 29.605,
+      "end": 29.802
+    },
+    {
+      "word": "the",
+      "start": 29.86,
+      "end": 29.953
+    },
+    {
+      "word": "energy",
+      "start": 30.069,
+      "end": 30.511
+    },
+    {
+      "word": "content",
+      "start": 30.58,
+      "end": 31.114
+    },
+    {
+      "word": "of",
+      "start": 31.23,
+      "end": 31.37
+    },
+    {
+      "word": "a",
+      "start": 31.451,
+      "end": 31.474
+    },
+    {
+      "word": "system",
+      "start": 31.556,
+      "end": 32.008
+    },
+    {
+      "word": "at",
+      "start": 32.101,
+      "end": 32.264
+    },
+    {
+      "word": "constant",
+      "start": 32.357,
+      "end": 32.867
+    },
+    {
+      "word": "pressure.",
+      "start": 32.925,
+      "end": 33.436
+    },
+    {
+      "word": "It",
+      "start": 33.61,
+      "end": 33.785
+    },
+    {
+      "word": "is",
+      "start": 33.854,
+      "end": 33.959
+    },
+    {
+      "word": "a",
+      "start": 34.017,
+      "end": 34.04
+    },
+    {
+      "word": "state",
+      "start": 34.11,
+      "end": 34.539
+    },
+    {
+      "word": "quantity.",
+      "start": 34.621,
+      "end": 35.364
+    },
+    {
+      "word": "On",
+      "start": 35.515,
+      "end": 35.689
+    },
+    {
+      "word": "a",
+      "start": 35.735,
+      "end": 35.759
+    },
+    {
+      "word": "diagram",
+      "start": 35.852,
+      "end": 36.49
+    },
+    {
+      "word": "you",
+      "start": 36.664,
+      "end": 36.815
+    },
+    {
+      "word": "compare",
+      "start": 36.908,
+      "end": 37.372
+    },
+    {
+      "word": "the",
+      "start": 37.419,
+      "end": 37.512
+    },
+    {
+      "word": "reactant",
+      "start": 37.593,
+      "end": 38.208
+    },
+    {
+      "word": "level",
+      "start": 38.29,
+      "end": 38.673
+    },
+    {
+      "word": "with",
+      "start": 38.754,
+      "end": 38.951
+    },
+    {
+      "word": "the",
+      "start": 38.986,
+      "end": 39.068
+    },
+    {
+      "word": "product",
+      "start": 39.137,
+      "end": 39.555
+    },
+    {
+      "word": "level.",
+      "start": 39.613,
+      "end": 40.02
+    },
+    {
+      "word": "The",
+      "start": 40.078,
+      "end": 40.205
+    },
+    {
+      "word": "enthalpy",
+      "start": 40.263,
+      "end": 40.786
+    },
+    {
+      "word": "change,",
+      "start": 40.832,
+      "end": 41.25
+    },
+    {
+      "word": "delta",
+      "start": 41.32,
+      "end": 41.761
+    },
+    {
+      "word": "H,",
+      "start": 41.831,
+      "end": 42.295
+    },
+    {
+      "word": "is",
+      "start": 42.411,
+      "end": 42.643
+    },
+    {
+      "word": "H",
+      "start": 42.794,
+      "end": 43.189
+    },
+    {
+      "word": "of",
+      "start": 43.34,
+      "end": 43.491
+    },
+    {
+      "word": "the",
+      "start": 43.549,
+      "end": 43.619
+    },
+    {
+      "word": "products",
+      "start": 43.688,
+      "end": 44.211
+    },
+    {
+      "word": "minus",
+      "start": 44.362,
+      "end": 44.919
+    },
+    {
+      "word": "H",
+      "start": 45.035,
+      "end": 45.314
+    },
+    {
+      "word": "of",
+      "start": 45.465,
+      "end": 45.604
+    },
+    {
+      "word": "the",
+      "start": 45.674,
+      "end": 45.743
+    },
+    {
+      "word": "reactants.",
+      "start": 45.825,
+      "end": 46.544
+    },
+    {
+      "word": "It",
+      "start": 46.568,
+      "end": 46.742
+    },
+    {
+      "word": "can",
+      "start": 46.8,
+      "end": 46.974
+    },
+    {
+      "word": "be",
+      "start": 47.044,
+      "end": 47.16
+    },
+    {
+      "word": "positive",
+      "start": 47.229,
+      "end": 47.787
+    },
+    {
+      "word": "or",
+      "start": 47.856,
+      "end": 48.007
+    },
+    {
+      "word": "negative.",
+      "start": 48.088,
+      "end": 48.704
+    },
+    {
+      "word": "It",
+      "start": 48.773,
+      "end": 48.936
+    },
+    {
+      "word": "is",
+      "start": 48.994,
+      "end": 49.087
+    },
+    {
+      "word": "commonly",
+      "start": 49.157,
+      "end": 49.621
+    },
+    {
+      "word": "quoted",
+      "start": 49.702,
+      "end": 50.167
+    },
+    {
+      "word": "in",
+      "start": 50.236,
+      "end": 50.352
+    },
+    {
+      "word": "kilojoules",
+      "start": 50.445,
+      "end": 51.154
+    },
+    {
+      "word": "per",
+      "start": 51.27,
+      "end": 51.49
+    },
+    {
+      "word": "mole.",
+      "start": 51.571,
+      "end": 52.036
+    },
+    {
+      "word": "H",
+      "start": 52.106,
+      "end": 52.442
+    },
+    {
+      "word": "and",
+      "start": 52.57,
+      "end": 52.767
+    },
+    {
+      "word": "delta",
+      "start": 52.825,
+      "end": 53.22
+    },
+    {
+      "word": "H",
+      "start": 53.301,
+      "end": 53.638
+    },
+    {
+      "word": "are",
+      "start": 53.789,
+      "end": 53.997
+    },
+    {
+      "word": "not",
+      "start": 54.056,
+      "end": 54.265
+    },
+    {
+      "word": "interchangeable.",
+      "start": 54.381,
+      "end": 55.437
+    },
+    {
+      "word": "Delta",
+      "start": 55.553,
+      "end": 55.971
+    },
+    {
+      "word": "H",
+      "start": 56.052,
+      "end": 56.389
+    },
+    {
+      "word": "is",
+      "start": 56.459,
+      "end": 56.587
+    },
+    {
+      "word": "not",
+      "start": 56.668,
+      "end": 56.83
+    },
+    {
+      "word": "simply",
+      "start": 56.877,
+      "end": 57.26
+    },
+    {
+      "word": "the",
+      "start": 57.33,
+      "end": 57.422
+    },
+    {
+      "word": "energy",
+      "start": 57.539,
+      "end": 58.015
+    },
+    {
+      "word": "of",
+      "start": 58.096,
+      "end": 58.189
+    },
+    {
+      "word": "the",
+      "start": 58.247,
+      "end": 58.316
+    },
+    {
+      "word": "products.",
+      "start": 58.374,
+      "end": 58.967
+    },
+    {
+      "word": "Energy",
+      "start": 59.036,
+      "end": 59.57
+    },
+    {
+      "word": "is",
+      "start": 59.686,
+      "end": 59.837
+    },
+    {
+      "word": "conserved.",
+      "start": 59.919,
+      "end": 60.638
+    },
+    {
+      "word": "It",
+      "start": 60.673,
+      "end": 60.824
+    },
+    {
+      "word": "is",
+      "start": 60.882,
+      "end": 60.998
+    },
+    {
+      "word": "not",
+      "start": 61.091,
+      "end": 61.289
+    },
+    {
+      "word": "created",
+      "start": 61.347,
+      "end": 61.985
+    },
+    {
+      "word": "or",
+      "start": 62.066,
+      "end": 62.206
+    },
+    {
+      "word": "destroyed.",
+      "start": 62.275,
+      "end": 62.937
+    },
+    {
+      "word": "It",
+      "start": 62.96,
+      "end": 63.111
+    },
+    {
+      "word": "is",
+      "start": 63.169,
+      "end": 63.262
+    },
+    {
+      "word": "transferred",
+      "start": 63.309,
+      "end": 64.029
+    },
+    {
+      "word": "between",
+      "start": 64.098,
+      "end": 64.47
+    },
+    {
+      "word": "the",
+      "start": 64.505,
+      "end": 64.574
+    },
+    {
+      "word": "reacting",
+      "start": 64.655,
+      "end": 65.143
+    },
+    {
+      "word": "system",
+      "start": 65.213,
+      "end": 65.654
+    },
+    {
+      "word": "and",
+      "start": 65.77,
+      "end": 65.944
+    },
+    {
+      "word": "the",
+      "start": 66.002,
+      "end": 66.083
+    },
+    {
+      "word": "surroundings.",
+      "start": 66.13,
+      "end": 66.954
+    },
+    {
+      "word": "In",
+      "start": 67.024,
+      "end": 67.186
+    },
+    {
+      "word": "an",
+      "start": 67.244,
+      "end": 67.326
+    },
+    {
+      "word": "exothermic",
+      "start": 67.442,
+      "end": 68.301
+    },
+    {
+      "word": "change,",
+      "start": 68.371,
+      "end": 68.858
+    },
+    {
+      "word": "energy",
+      "start": 68.916,
+      "end": 69.427
+    },
+    {
+      "word": "is",
+      "start": 69.497,
+      "end": 69.613
+    },
+    {
+      "word": "transferred",
+      "start": 69.671,
+      "end": 70.356
+    },
+    {
+      "word": "from",
+      "start": 70.391,
+      "end": 70.553
+    },
+    {
+      "word": "the",
+      "start": 70.611,
+      "end": 70.693
+    },
+    {
+      "word": "system",
+      "start": 70.751,
+      "end": 71.157
+    },
+    {
+      "word": "to",
+      "start": 71.227,
+      "end": 71.32
+    },
+    {
+      "word": "the",
+      "start": 71.413,
+      "end": 71.494
+    },
+    {
+      "word": "surroundings.",
+      "start": 71.54,
+      "end": 72.388
+    },
+    {
+      "word": "Products",
+      "start": 72.91,
+      "end": 73.363
+    },
+    {
+      "word": "have",
+      "start": 73.398,
+      "end": 73.537
+    },
+    {
+      "word": "lower",
+      "start": 73.595,
+      "end": 73.874
+    },
+    {
+      "word": "enthalpy",
+      "start": 73.943,
+      "end": 74.489
+    },
+    {
+      "word": "than",
+      "start": 74.547,
+      "end": 74.687
+    },
+    {
+      "word": "reactants,",
+      "start": 74.768,
+      "end": 75.511
+    },
+    {
+      "word": "so",
+      "start": 75.569,
+      "end": 75.778
+    },
+    {
+      "word": "delta",
+      "start": 75.859,
+      "end": 76.277
+    },
+    {
+      "word": "H",
+      "start": 76.358,
+      "end": 76.567
+    },
+    {
+      "word": "is",
+      "start": 76.683,
+      "end": 76.846
+    },
+    {
+      "word": "negative.",
+      "start": 76.962,
+      "end": 77.601
+    },
+    {
+      "word": "The",
+      "start": 77.937,
+      "end": 78.077
+    },
+    {
+      "word": "surroundings",
+      "start": 78.123,
+      "end": 78.727
+    },
+    {
+      "word": "often",
+      "start": 78.82,
+      "end": 79.18
+    },
+    {
+      "word": "feel",
+      "start": 79.249,
+      "end": 79.493
+    },
+    {
+      "word": "warmer.",
+      "start": 79.563,
+      "end": 80.132
+    },
+    {
+      "word": "Watch",
+      "start": 80.468,
+      "end": 80.84
+    },
+    {
+      "word": "the",
+      "start": 80.909,
+      "end": 81.002
+    },
+    {
+      "word": "exothermic",
+      "start": 81.084,
+      "end": 81.792
+    },
+    {
+      "word": "profile.",
+      "start": 81.861,
+      "end": 82.57
+    },
+    {
+      "word": "Reactants",
+      "start": 82.848,
+      "end": 83.498
+    },
+    {
+      "word": "sit",
+      "start": 83.557,
+      "end": 83.777
+    },
+    {
+      "word": "higher.",
+      "start": 83.847,
+      "end": 84.416
+    },
+    {
+      "word": "Products",
+      "start": 84.59,
+      "end": 85.066
+    },
+    {
+      "word": "sit",
+      "start": 85.101,
+      "end": 85.298
+    },
+    {
+      "word": "lower.",
+      "start": 85.368,
+      "end": 85.856
+    },
+    {
+      "word": "The",
+      "start": 86.065,
+      "end": 86.192
+    },
+    {
+      "word": "pathway",
+      "start": 86.262,
+      "end": 86.761
+    },
+    {
+      "word": "rises",
+      "start": 86.831,
+      "end": 87.237
+    },
+    {
+      "word": "to",
+      "start": 87.284,
+      "end": 87.388
+    },
+    {
+      "word": "a",
+      "start": 87.481,
+      "end": 87.516
+    },
+    {
+      "word": "peak.",
+      "start": 87.609,
+      "end": 88.05
+    },
+    {
+      "word": "Activation",
+      "start": 88.294,
+      "end": 88.979
+    },
+    {
+      "word": "energy",
+      "start": 89.06,
+      "end": 89.501
+    },
+    {
+      "word": "is",
+      "start": 89.571,
+      "end": 89.733
+    },
+    {
+      "word": "the",
+      "start": 89.792,
+      "end": 89.884
+    },
+    {
+      "word": "energy",
+      "start": 89.966,
+      "end": 90.395
+    },
+    {
+      "word": "from",
+      "start": 90.453,
+      "end": 90.616
+    },
+    {
+      "word": "the",
+      "start": 90.662,
+      "end": 90.732
+    },
+    {
+      "word": "reactant",
+      "start": 90.813,
+      "end": 91.278
+    },
+    {
+      "word": "level",
+      "start": 91.336,
+      "end": 91.661
+    },
+    {
+      "word": "to",
+      "start": 91.73,
+      "end": 91.835
+    },
+    {
+      "word": "that",
+      "start": 91.928,
+      "end": 92.113
+    },
+    {
+      "word": "peak,",
+      "start": 92.195,
+      "end": 92.613
+    },
+    {
+      "word": "not",
+      "start": 92.787,
+      "end": 93.054
+    },
+    {
+      "word": "from",
+      "start": 93.147,
+      "end": 93.367
+    },
+    {
+      "word": "zero",
+      "start": 93.483,
+      "end": 93.901
+    },
+    {
+      "word": "on",
+      "start": 94.029,
+      "end": 94.203
+    },
+    {
+      "word": "the",
+      "start": 94.238,
+      "end": 94.308
+    },
+    {
+      "word": "y-axis.",
+      "start": 94.401,
+      "end": 95.295
+    },
+    {
+      "word": "Delta",
+      "start": 95.446,
+      "end": 95.875
+    },
+    {
+      "word": "H",
+      "start": 95.945,
+      "end": 96.119
+    },
+    {
+      "word": "is",
+      "start": 96.247,
+      "end": 96.421
+    },
+    {
+      "word": "the",
+      "start": 96.479,
+      "end": 96.56
+    },
+    {
+      "word": "downward",
+      "start": 96.641,
+      "end": 97.106
+    },
+    {
+      "word": "difference",
+      "start": 97.152,
+      "end": 97.605
+    },
+    {
+      "word": "from",
+      "start": 97.64,
+      "end": 97.814
+    },
+    {
+      "word": "reactants",
+      "start": 97.895,
+      "end": 98.429
+    },
+    {
+      "word": "to",
+      "start": 98.487,
+      "end": 98.569
+    },
+    {
+      "word": "products.",
+      "start": 98.65,
+      "end": 99.242
+    },
+    {
+      "word": "In",
+      "start": 99.579,
+      "end": 99.764
+    },
+    {
+      "word": "an",
+      "start": 99.823,
+      "end": 99.904
+    },
+    {
+      "word": "endothermic",
+      "start": 100.02,
+      "end": 100.775
+    },
+    {
+      "word": "change,",
+      "start": 100.833,
+      "end": 101.378
+    },
+    {
+      "word": "energy",
+      "start": 101.494,
+      "end": 101.958
+    },
+    {
+      "word": "is",
+      "start": 102.017,
+      "end": 102.156
+    },
+    {
+      "word": "transferred",
+      "start": 102.214,
+      "end": 102.841
+    },
+    {
+      "word": "from",
+      "start": 102.876,
+      "end": 103.027
+    },
+    {
+      "word": "the",
+      "start": 103.073,
+      "end": 103.143
+    },
+    {
+      "word": "surroundings",
+      "start": 103.201,
+      "end": 103.886
+    },
+    {
+      "word": "into",
+      "start": 104.002,
+      "end": 104.28
+    },
+    {
+      "word": "the",
+      "start": 104.373,
+      "end": 104.443
+    },
+    {
+      "word": "system.",
+      "start": 104.501,
+      "end": 105.151
+    },
+    {
+      "word": "Products",
+      "start": 105.488,
+      "end": 105.918
+    },
+    {
+      "word": "have",
+      "start": 105.976,
+      "end": 106.15
+    },
+    {
+      "word": "higher",
+      "start": 106.219,
+      "end": 106.544
+    },
+    {
+      "word": "enthalpy",
+      "start": 106.626,
+      "end": 107.241
+    },
+    {
+      "word": "than",
+      "start": 107.322,
+      "end": 107.543
+    },
+    {
+      "word": "reactants,",
+      "start": 107.636,
+      "end": 108.46
+    },
+    {
+      "word": "so",
+      "start": 108.588,
+      "end": 108.948
+    },
+    {
+      "word": "delta",
+      "start": 109.122,
+      "end": 109.54
+    },
+    {
+      "word": "H",
+      "start": 109.621,
+      "end": 109.9
+    },
+    {
+      "word": "is",
+      "start": 110.051,
+      "end": 110.26
+    },
+    {
+      "word": "positive.",
+      "start": 110.353,
+      "end": 111.003
+    },
+    {
+      "word": "The",
+      "start": 111.397,
+      "end": 111.525
+    },
+    {
+      "word": "surroundings",
+      "start": 111.572,
+      "end": 112.175
+    },
+    {
+      "word": "often",
+      "start": 112.268,
+      "end": 112.628
+    },
+    {
+      "word": "feel",
+      "start": 112.709,
+      "end": 112.953
+    },
+    {
+      "word": "cooler.",
+      "start": 113.034,
+      "end": 113.627
+    },
+    {
+      "word": "Watch",
+      "start": 114.079,
+      "end": 114.393
+    },
+    {
+      "word": "the",
+      "start": 114.451,
+      "end": 114.555
+    },
+    {
+      "word": "endothermic",
+      "start": 114.648,
+      "end": 115.368
+    },
+    {
+      "word": "profile.",
+      "start": 115.449,
+      "end": 116.099
+    },
+    {
+      "word": "Products",
+      "start": 116.494,
+      "end": 116.959
+    },
+    {
+      "word": "sit",
+      "start": 116.993,
+      "end": 117.214
+    },
+    {
+      "word": "higher.",
+      "start": 117.295,
+      "end": 117.853
+    },
+    {
+      "word": "Activation",
+      "start": 118.375,
+      "end": 119.084
+    },
+    {
+      "word": "energy",
+      "start": 119.176,
+      "end": 119.583
+    },
+    {
+      "word": "is",
+      "start": 119.652,
+      "end": 119.78
+    },
+    {
+      "word": "still",
+      "start": 119.827,
+      "end": 120.221
+    },
+    {
+      "word": "from",
+      "start": 120.303,
+      "end": 120.477
+    },
+    {
+      "word": "the",
+      "start": 120.535,
+      "end": 120.604
+    },
+    {
+      "word": "reactant",
+      "start": 120.674,
+      "end": 121.162
+    },
+    {
+      "word": "level",
+      "start": 121.22,
+      "end": 121.498
+    },
+    {
+      "word": "to",
+      "start": 121.568,
+      "end": 121.626
+    },
+    {
+      "word": "the",
+      "start": 121.696,
+      "end": 121.765
+    },
+    {
+      "word": "peak.",
+      "start": 121.824,
+      "end": 122.23
+    },
+    {
+      "word": "Delta",
+      "start": 122.439,
+      "end": 122.822
+    },
+    {
+      "word": "H",
+      "start": 122.903,
+      "end": 123.112
+    },
+    {
+      "word": "is",
+      "start": 123.205,
+      "end": 123.356
+    },
+    {
+      "word": "the",
+      "start": 123.414,
+      "end": 123.484
+    },
+    {
+      "word": "upward",
+      "start": 123.553,
+      "end": 123.89
+    },
+    {
+      "word": "difference.",
+      "start": 123.925,
+      "end": 124.529
+    },
+    {
+      "word": "A",
+      "start": 124.772,
+      "end": 124.889
+    },
+    {
+      "word": "reaction",
+      "start": 125.005,
+      "end": 125.481
+    },
+    {
+      "word": "that",
+      "start": 125.539,
+      "end": 125.69
+    },
+    {
+      "word": "transfers",
+      "start": 125.713,
+      "end": 126.34
+    },
+    {
+      "word": "forty-five",
+      "start": 126.421,
+      "end": 127.036
+    },
+    {
+      "word": "kilojoules",
+      "start": 127.071,
+      "end": 127.652
+    },
+    {
+      "word": "to",
+      "start": 127.698,
+      "end": 127.779
+    },
+    {
+      "word": "the",
+      "start": 127.861,
+      "end": 127.93
+    },
+    {
+      "word": "surroundings",
+      "start": 127.977,
+      "end": 128.604
+    },
+    {
+      "word": "is",
+      "start": 128.673,
+      "end": 128.824
+    },
+    {
+      "word": "exothermic,",
+      "start": 128.906,
+      "end": 129.8
+    },
+    {
+      "word": "so",
+      "start": 130.043,
+      "end": 130.218
+    },
+    {
+      "word": "delta",
+      "start": 130.287,
+      "end": 130.636
+    },
+    {
+      "word": "H",
+      "start": 130.682,
+      "end": 130.891
+    },
+    {
+      "word": "is",
+      "start": 130.961,
+      "end": 131.088
+    },
+    {
+      "word": "negative.",
+      "start": 131.181,
+      "end": 131.75
+    },
+    {
+      "word": "An",
+      "start": 131.994,
+      "end": 132.156
+    },
+    {
+      "word": "exothermic",
+      "start": 132.226,
+      "end": 132.992
+    },
+    {
+      "word": "reaction",
+      "start": 133.074,
+      "end": 133.526
+    },
+    {
+      "word": "still",
+      "start": 133.584,
+      "end": 133.875
+    },
+    {
+      "word": "needs",
+      "start": 133.956,
+      "end": 134.223
+    },
+    {
+      "word": "activation",
+      "start": 134.293,
+      "end": 135.001
+    },
+    {
+      "word": "energy.",
+      "start": 135.071,
+      "end": 135.639
+    },
+    {
+      "word": "A",
+      "start": 135.976,
+      "end": 136.069
+    },
+    {
+      "word": "negative",
+      "start": 136.185,
+      "end": 136.615
+    },
+    {
+      "word": "delta",
+      "start": 136.661,
+      "end": 137.009
+    },
+    {
+      "word": "H",
+      "start": 137.056,
+      "end": 137.393
+    },
+    {
+      "word": "does",
+      "start": 137.567,
+      "end": 137.787
+    },
+    {
+      "word": "not",
+      "start": 137.869,
+      "end": 138.066
+    },
+    {
+      "word": "mean",
+      "start": 138.182,
+      "end": 138.414
+    },
+    {
+      "word": "the",
+      "start": 138.461,
+      "end": 138.53
+    },
+    {
+      "word": "reaction",
+      "start": 138.588,
+      "end": 139.041
+    },
+    {
+      "word": "starts",
+      "start": 139.111,
+      "end": 139.459
+    },
+    {
+      "word": "with",
+      "start": 139.506,
+      "end": 139.657
+    },
+    {
+      "word": "no",
+      "start": 139.726,
+      "end": 139.877
+    },
+    {
+      "word": "barrier.",
+      "start": 139.947,
+      "end": 140.527
+    },
+    {
+      "word": "A",
+      "start": 140.771,
+      "end": 140.852
+    },
+    {
+      "word": "catalyst",
+      "start": 140.934,
+      "end": 141.595
+    },
+    {
+      "word": "provides",
+      "start": 141.723,
+      "end": 142.234
+    },
+    {
+      "word": "an",
+      "start": 142.292,
+      "end": 142.362
+    },
+    {
+      "word": "alternative",
+      "start": 142.42,
+      "end": 143.0
+    },
+    {
+      "word": "pathway",
+      "start": 143.035,
+      "end": 143.569
+    },
+    {
+      "word": "with",
+      "start": 143.778,
+      "end": 143.975
+    },
+    {
+      "word": "a",
+      "start": 144.022,
+      "end": 144.057
+    },
+    {
+      "word": "lower",
+      "start": 144.126,
+      "end": 144.393
+    },
+    {
+      "word": "activation",
+      "start": 144.451,
+      "end": 145.078
+    },
+    {
+      "word": "energy.",
+      "start": 145.148,
+      "end": 145.717
+    },
+    {
+      "word": "Watch",
+      "start": 146.054,
+      "end": 146.344
+    },
+    {
+      "word": "both",
+      "start": 146.414,
+      "end": 146.657
+    },
+    {
+      "word": "pathways",
+      "start": 146.715,
+      "end": 147.249
+    },
+    {
+      "word": "on",
+      "start": 147.307,
+      "end": 147.412
+    },
+    {
+      "word": "one",
+      "start": 147.505,
+      "end": 147.691
+    },
+    {
+      "word": "diagram.",
+      "start": 147.725,
+      "end": 148.422
+    },
+    {
+      "word": "The",
+      "start": 148.759,
+      "end": 148.886
+    },
+    {
+      "word": "catalysed",
+      "start": 148.944,
+      "end": 149.537
+    },
+    {
+      "word": "peak",
+      "start": 149.583,
+      "end": 149.839
+    },
+    {
+      "word": "is",
+      "start": 149.92,
+      "end": 150.083
+    },
+    {
+      "word": "lower.",
+      "start": 150.176,
+      "end": 150.663
+    },
+    {
+      "word": "The",
+      "start": 151.058,
+      "end": 151.186
+    },
+    {
+      "word": "reactant",
+      "start": 151.255,
+      "end": 151.743
+    },
+    {
+      "word": "enthalpy",
+      "start": 151.789,
+      "end": 152.428
+    },
+    {
+      "word": "and",
+      "start": 152.486,
+      "end": 152.648
+    },
+    {
+      "word": "the",
+      "start": 152.683,
+      "end": 152.753
+    },
+    {
+      "word": "product",
+      "start": 152.811,
+      "end": 153.206
+    },
+    {
+      "word": "enthalpy",
+      "start": 153.252,
+      "end": 153.809
+    },
+    {
+      "word": "stay",
+      "start": 153.879,
+      "end": 154.1
+    },
+    {
+      "word": "the",
+      "start": 154.158,
+      "end": 154.239
+    },
+    {
+      "word": "same,",
+      "start": 154.285,
+      "end": 154.727
+    },
+    {
+      "word": "so",
+      "start": 154.936,
+      "end": 155.098
+    },
+    {
+      "word": "delta",
+      "start": 155.168,
+      "end": 155.505
+    },
+    {
+      "word": "H",
+      "start": 155.574,
+      "end": 155.783
+    },
+    {
+      "word": "is",
+      "start": 155.899,
+      "end": 156.073
+    },
+    {
+      "word": "unchanged.",
+      "start": 156.166,
+      "end": 156.944
+    },
+    {
+      "word": "Correct",
+      "start": 157.188,
+      "end": 157.618
+    },
+    {
+      "word": "the",
+      "start": 157.699,
+      "end": 157.815
+    },
+    {
+      "word": "misconceptions.",
+      "start": 157.861,
+      "end": 158.929
+    },
+    {
+      "word": "Exothermic",
+      "start": 159.104,
+      "end": 159.858
+    },
+    {
+      "word": "still",
+      "start": 159.916,
+      "end": 160.149
+    },
+    {
+      "word": "needs",
+      "start": 160.23,
+      "end": 160.485
+    },
+    {
+      "word": "E",
+      "start": 160.601,
+      "end": 160.81
+    },
+    {
+      "word": "a.",
+      "start": 160.903,
+      "end": 161.24
+    },
+    {
+      "word": "A",
+      "start": 161.449,
+      "end": 161.542
+    },
+    {
+      "word": "catalyst",
+      "start": 161.635,
+      "end": 162.262
+    },
+    {
+      "word": "lowers",
+      "start": 162.378,
+      "end": 162.819
+    },
+    {
+      "word": "E",
+      "start": 162.935,
+      "end": 163.109
+    },
+    {
+      "word": "a,",
+      "start": 163.202,
+      "end": 163.504
+    },
+    {
+      "word": "not",
+      "start": 163.678,
+      "end": 163.887
+    },
+    {
+      "word": "delta",
+      "start": 163.957,
+      "end": 164.282
+    },
+    {
+      "word": "H.",
+      "start": 164.351,
+      "end": 164.734
+    },
+    {
+      "word": "Endothermic",
+      "start": 164.978,
+      "end": 165.71
+    },
+    {
+      "word": "does",
+      "start": 165.779,
+      "end": 165.942
+    },
+    {
+      "word": "not",
+      "start": 166.012,
+      "end": 166.174
+    },
+    {
+      "word": "destroy",
+      "start": 166.244,
+      "end": 166.708
+    },
+    {
+      "word": "energy.",
+      "start": 166.789,
+      "end": 167.369
+    },
+    {
+      "word": "Negative",
+      "start": 167.578,
+      "end": 168.089
+    },
+    {
+      "word": "delta",
+      "start": 168.124,
+      "end": 168.472
+    },
+    {
+      "word": "H",
+      "start": 168.53,
+      "end": 168.739
+    },
+    {
+      "word": "does",
+      "start": 168.809,
+      "end": 168.983
+    },
+    {
+      "word": "not",
+      "start": 169.053,
+      "end": 169.215
+    },
+    {
+      "word": "mean",
+      "start": 169.308,
+      "end": 169.506
+    },
+    {
+      "word": "negative",
+      "start": 169.587,
+      "end": 170.017
+    },
+    {
+      "word": "energy.",
+      "start": 170.051,
+      "end": 170.62
+    },
+    {
+      "word": "And",
+      "start": 170.829,
+      "end": 171.003
+    },
+    {
+      "word": "delta",
+      "start": 171.073,
+      "end": 171.386
+    },
+    {
+      "word": "H",
+      "start": 171.445,
+      "end": 171.654
+    },
+    {
+      "word": "is",
+      "start": 171.712,
+      "end": 171.793
+    },
+    {
+      "word": "not",
+      "start": 171.851,
+      "end": 171.99
+    },
+    {
+      "word": "always",
+      "start": 172.048,
+      "end": 172.327
+    },
+    {
+      "word": "positive.",
+      "start": 172.397,
+      "end": 173.047
+    },
+    {
+      "word": "If",
+      "start": 173.221,
+      "end": 173.418
+    },
+    {
+      "word": "a",
+      "start": 173.488,
+      "end": 173.511
+    },
+    {
+      "word": "diagram",
+      "start": 173.592,
+      "end": 174.126
+    },
+    {
+      "word": "shows",
+      "start": 174.208,
+      "end": 174.602
+    },
+    {
+      "word": "an",
+      "start": 174.695,
+      "end": 174.835
+    },
+    {
+      "word": "exothermic",
+      "start": 174.904,
+      "end": 175.647
+    },
+    {
+      "word": "reaction",
+      "start": 175.717,
+      "end": 176.181
+    },
+    {
+      "word": "with",
+      "start": 176.239,
+      "end": 176.379
+    },
+    {
+      "word": "products",
+      "start": 176.437,
+      "end": 176.855
+    },
+    {
+      "word": "above",
+      "start": 176.913,
+      "end": 177.25
+    },
+    {
+      "word": "reactants,",
+      "start": 177.308,
+      "end": 178.12
+    },
+    {
+      "word": "the",
+      "start": 178.294,
+      "end": 178.411
+    },
+    {
+      "word": "levels",
+      "start": 178.48,
+      "end": 178.863
+    },
+    {
+      "word": "are",
+      "start": 178.933,
+      "end": 179.095
+    },
+    {
+      "word": "the",
+      "start": 179.13,
+      "end": 179.2
+    },
+    {
+      "word": "wrong",
+      "start": 179.246,
+      "end": 179.467
+    },
+    {
+      "word": "way",
+      "start": 179.525,
+      "end": 179.664
+    },
+    {
+      "word": "round.",
+      "start": 179.734,
+      "end": 180.198
+    },
+    {
+      "word": "If",
+      "start": 180.477,
+      "end": 180.663
+    },
+    {
+      "word": "an",
+      "start": 180.733,
+      "end": 180.814
+    },
+    {
+      "word": "endothermic",
+      "start": 180.883,
+      "end": 181.545
+    },
+    {
+      "word": "reaction",
+      "start": 181.615,
+      "end": 182.033
+    },
+    {
+      "word": "is",
+      "start": 182.091,
+      "end": 182.184
+    },
+    {
+      "word": "labelled",
+      "start": 182.253,
+      "end": 182.66
+    },
+    {
+      "word": "delta",
+      "start": 182.706,
+      "end": 183.089
+    },
+    {
+      "word": "H",
+      "start": 183.147,
+      "end": 183.356
+    },
+    {
+      "word": "less",
+      "start": 183.449,
+      "end": 183.67
+    },
+    {
+      "word": "than",
+      "start": 183.705,
+      "end": 183.856
+    },
+    {
+      "word": "zero,",
+      "start": 183.925,
+      "end": 184.471
+    },
+    {
+      "word": "the",
+      "start": 184.587,
+      "end": 184.715
+    },
+    {
+      "word": "sign",
+      "start": 184.784,
+      "end": 185.04
+    },
+    {
+      "word": "is",
+      "start": 185.086,
+      "end": 185.168
+    },
+    {
+      "word": "wrong.",
+      "start": 185.202,
+      "end": 185.609
+    },
+    {
+      "word": "If",
+      "start": 186.224,
+      "end": 186.398
+    },
+    {
+      "word": "a",
+      "start": 186.456,
+      "end": 186.491
+    },
+    {
+      "word": "catalyst",
+      "start": 186.561,
+      "end": 187.06
+    },
+    {
+      "word": "is",
+      "start": 187.106,
+      "end": 187.211
+    },
+    {
+      "word": "drawn",
+      "start": 187.269,
+      "end": 187.571
+    },
+    {
+      "word": "with",
+      "start": 187.606,
+      "end": 187.745
+    },
+    {
+      "word": "a",
+      "start": 187.78,
+      "end": 187.803
+    },
+    {
+      "word": "lower",
+      "start": 187.861,
+      "end": 188.116
+    },
+    {
+      "word": "product",
+      "start": 188.175,
+      "end": 188.546
+    },
+    {
+      "word": "enthalpy,",
+      "start": 188.616,
+      "end": 189.382
+    },
+    {
+      "word": "only",
+      "start": 189.835,
+      "end": 190.183
+    },
+    {
+      "word": "the",
+      "start": 190.241,
+      "end": 190.322
+    },
+    {
+      "word": "peak",
+      "start": 190.404,
+      "end": 190.647
+    },
+    {
+      "word": "should",
+      "start": 190.705,
+      "end": 190.903
+    },
+    {
+      "word": "have",
+      "start": 190.938,
+      "end": 191.054
+    },
+    {
+      "word": "changed.",
+      "start": 191.077,
+      "end": 191.669
+    },
+    {
+      "word": "Examination-style",
+      "start": 192.284,
+      "end": 193.596
+    },
+    {
+      "word": "question.",
+      "start": 193.643,
+      "end": 194.281
+    },
+    {
+      "word": "Part",
+      "start": 194.99,
+      "end": 195.349
+    },
+    {
+      "word": "a.",
+      "start": 195.431,
+      "end": 195.802
+    },
+    {
+      "word": "Define",
+      "start": 196.081,
+      "end": 196.557
+    },
+    {
+      "word": "delta",
+      "start": 196.592,
+      "end": 196.928
+    },
+    {
+      "word": "H.",
+      "start": 196.986,
+      "end": 197.439
+    },
+    {
+      "word": "Two",
+      "start": 197.613,
+      "end": 197.834
+    },
+    {
+      "word": "marks.",
+      "start": 197.904,
+      "end": 198.473
+    },
+    {
+      "word": "Delta",
+      "start": 198.682,
+      "end": 199.099
+    },
+    {
+      "word": "H",
+      "start": 199.158,
+      "end": 199.436
+    },
+    {
+      "word": "is",
+      "start": 199.68,
+      "end": 199.877
+    },
+    {
+      "word": "the",
+      "start": 199.947,
+      "end": 200.028
+    },
+    {
+      "word": "change",
+      "start": 200.098,
+      "end": 200.435
+    },
+    {
+      "word": "in",
+      "start": 200.458,
+      "end": 200.528
+    },
+    {
+      "word": "enthalpy",
+      "start": 200.609,
+      "end": 201.166
+    },
+    {
+      "word": "between",
+      "start": 201.248,
+      "end": 201.608
+    },
+    {
+      "word": "products",
+      "start": 201.677,
+      "end": 202.176
+    },
+    {
+      "word": "and",
+      "start": 202.235,
+      "end": 202.409
+    },
+    {
+      "word": "reactants.",
+      "start": 202.478,
+      "end": 203.221
+    },
+    {
+      "word": "Delta",
+      "start": 203.674,
+      "end": 204.081
+    },
+    {
+      "word": "H",
+      "start": 204.15,
+      "end": 204.487
+    },
+    {
+      "word": "equals",
+      "start": 204.603,
+      "end": 205.044
+    },
+    {
+      "word": "H",
+      "start": 205.195,
+      "end": 205.439
+    },
+    {
+      "word": "products",
+      "start": 205.52,
+      "end": 205.961
+    },
+    {
+      "word": "minus",
+      "start": 206.077,
+      "end": 206.495
+    },
+    {
+      "word": "H",
+      "start": 206.612,
+      "end": 206.855
+    },
+    {
+      "word": "reactants.",
+      "start": 206.937,
+      "end": 207.68
+    },
+    {
+      "word": "Part",
+      "start": 208.121,
+      "end": 208.446
+    },
+    {
+      "word": "b.",
+      "start": 208.527,
+      "end": 208.922
+    },
+    {
+      "word": "How",
+      "start": 209.363,
+      "end": 209.618
+    },
+    {
+      "word": "does",
+      "start": 209.7,
+      "end": 209.886
+    },
+    {
+      "word": "an",
+      "start": 209.932,
+      "end": 210.013
+    },
+    {
+      "word": "exothermic",
+      "start": 210.129,
+      "end": 210.919
+    },
+    {
+      "word": "enthalpy",
+      "start": 211.012,
+      "end": 211.499
+    },
+    {
+      "word": "diagram",
+      "start": 211.557,
+      "end": 212.045
+    },
+    {
+      "word": "show",
+      "start": 212.126,
+      "end": 212.37
+    },
+    {
+      "word": "the",
+      "start": 212.416,
+      "end": 212.498
+    },
+    {
+      "word": "energy",
+      "start": 212.567,
+      "end": 212.927
+    },
+    {
+      "word": "change?",
+      "start": 212.985,
+      "end": 213.496
+    },
+    {
+      "word": "Two",
+      "start": 214.1,
+      "end": 214.309
+    },
+    {
+      "word": "marks.",
+      "start": 214.367,
+      "end": 214.866
+    },
+    {
+      "word": "Products",
+      "start": 215.319,
+      "end": 215.76
+    },
+    {
+      "word": "are",
+      "start": 215.818,
+      "end": 215.969
+    },
+    {
+      "word": "lower",
+      "start": 216.027,
+      "end": 216.341
+    },
+    {
+      "word": "in",
+      "start": 216.422,
+      "end": 216.503
+    },
+    {
+      "word": "enthalpy",
+      "start": 216.573,
+      "end": 217.06
+    },
+    {
+      "word": "than",
+      "start": 217.107,
+      "end": 217.235
+    },
+    {
+      "word": "reactants.",
+      "start": 217.293,
+      "end": 218.105
+    },
+    {
+      "word": "Energy",
+      "start": 218.628,
+      "end": 219.069
+    },
+    {
+      "word": "is",
+      "start": 219.115,
+      "end": 219.208
+    },
+    {
+      "word": "transferred",
+      "start": 219.254,
+      "end": 219.846
+    },
+    {
+      "word": "to",
+      "start": 219.893,
+      "end": 219.997
+    },
+    {
+      "word": "the",
+      "start": 220.079,
+      "end": 220.148
+    },
+    {
+      "word": "surroundings,",
+      "start": 220.195,
+      "end": 220.996
+    },
+    {
+      "word": "so",
+      "start": 221.147,
+      "end": 221.309
+    },
+    {
+      "word": "the",
+      "start": 221.379,
+      "end": 221.46
+    },
+    {
+      "word": "difference",
+      "start": 221.518,
+      "end": 221.971
+    },
+    {
+      "word": "is",
+      "start": 222.029,
+      "end": 222.157
+    },
+    {
+      "word": "negative.",
+      "start": 222.238,
+      "end": 222.853
+    },
+    {
+      "word": "Part",
+      "start": 223.004,
+      "end": 223.306
+    },
+    {
+      "word": "c.",
+      "start": 223.341,
+      "end": 223.759
+    },
+    {
+      "word": "How",
+      "start": 223.933,
+      "end": 224.13
+    },
+    {
+      "word": "does",
+      "start": 224.2,
+      "end": 224.397
+    },
+    {
+      "word": "an",
+      "start": 224.444,
+      "end": 224.514
+    },
+    {
+      "word": "endothermic",
+      "start": 224.595,
+      "end": 225.291
+    },
+    {
+      "word": "change",
+      "start": 225.35,
+      "end": 225.733
+    },
+    {
+      "word": "appear?",
+      "start": 225.767,
+      "end": 226.348
+    },
+    {
+      "word": "Two",
+      "start": 226.627,
+      "end": 226.812
+    },
+    {
+      "word": "marks.",
+      "start": 226.894,
+      "end": 227.428
+    },
+    {
+      "word": "Delta",
+      "start": 227.579,
+      "end": 227.997
+    },
+    {
+      "word": "H",
+      "start": 228.066,
+      "end": 228.345
+    },
+    {
+      "word": "is",
+      "start": 228.426,
+      "end": 228.577
+    },
+    {
+      "word": "positive.",
+      "start": 228.658,
+      "end": 229.285
+    },
+    {
+      "word": "Energy",
+      "start": 229.622,
+      "end": 230.075
+    },
+    {
+      "word": "is",
+      "start": 230.144,
+      "end": 230.249
+    },
+    {
+      "word": "transferred",
+      "start": 230.307,
+      "end": 230.911
+    },
+    {
+      "word": "from",
+      "start": 230.957,
+      "end": 231.12
+    },
+    {
+      "word": "the",
+      "start": 231.178,
+      "end": 231.247
+    },
+    {
+      "word": "surroundings",
+      "start": 231.294,
+      "end": 231.956
+    },
+    {
+      "word": "into",
+      "start": 232.037,
+      "end": 232.315
+    },
+    {
+      "word": "the",
+      "start": 232.385,
+      "end": 232.466
+    },
+    {
+      "word": "system.",
+      "start": 232.513,
+      "end": 233.082
+    },
+    {
+      "word": "Part",
+      "start": 233.418,
+      "end": 233.709
+    },
+    {
+      "word": "d.",
+      "start": 233.767,
+      "end": 234.185
+    },
+    {
+      "word": "Explain",
+      "start": 234.463,
+      "end": 235.067
+    },
+    {
+      "word": "the",
+      "start": 235.125,
+      "end": 235.195
+    },
+    {
+      "word": "effect",
+      "start": 235.242,
+      "end": 235.578
+    },
+    {
+      "word": "of",
+      "start": 235.636,
+      "end": 235.718
+    },
+    {
+      "word": "a",
+      "start": 235.787,
+      "end": 235.811
+    },
+    {
+      "word": "catalyst",
+      "start": 235.869,
+      "end": 236.484
+    },
+    {
+      "word": "on",
+      "start": 236.554,
+      "end": 236.658
+    },
+    {
+      "word": "the",
+      "start": 236.693,
+      "end": 236.763
+    },
+    {
+      "word": "profile.",
+      "start": 236.821,
+      "end": 237.424
+    },
+    {
+      "word": "Three",
+      "start": 237.482,
+      "end": 237.738
+    },
+    {
+      "word": "marks.",
+      "start": 237.784,
+      "end": 238.249
+    },
+    {
+      "word": "The",
+      "start": 238.423,
+      "end": 238.539
+    },
+    {
+      "word": "catalyst",
+      "start": 238.597,
+      "end": 239.131
+    },
+    {
+      "word": "provides",
+      "start": 239.166,
+      "end": 239.561
+    },
+    {
+      "word": "a",
+      "start": 239.607,
+      "end": 239.63
+    },
+    {
+      "word": "lower",
+      "start": 239.688,
+      "end": 239.967
+    },
+    {
+      "word": "E",
+      "start": 240.06,
+      "end": 240.211
+    },
+    {
+      "word": "a",
+      "start": 240.327,
+      "end": 240.362
+    },
+    {
+      "word": "pathway.",
+      "start": 240.443,
+      "end": 241.023
+    },
+    {
+      "word": "Reactant",
+      "start": 241.36,
+      "end": 241.987
+    },
+    {
+      "word": "and",
+      "start": 242.033,
+      "end": 242.126
+    },
+    {
+      "word": "product",
+      "start": 242.184,
+      "end": 242.568
+    },
+    {
+      "word": "levels",
+      "start": 242.614,
+      "end": 243.044
+    },
+    {
+      "word": "are",
+      "start": 243.136,
+      "end": 243.334
+    },
+    {
+      "word": "unchanged,",
+      "start": 243.392,
+      "end": 244.042
+    },
+    {
+      "word": "so",
+      "start": 244.088,
+      "end": 244.286
+    },
+    {
+      "word": "delta",
+      "start": 244.367,
+      "end": 244.704
+    },
+    {
+      "word": "H",
+      "start": 244.785,
+      "end": 244.994
+    },
+    {
+      "word": "is",
+      "start": 245.11,
+      "end": 245.273
+    },
+    {
+      "word": "unchanged.",
+      "start": 245.389,
+      "end": 246.062
+    },
+    {
+      "word": "Before",
+      "start": 246.399,
+      "end": 246.747
+    },
+    {
+      "word": "we",
+      "start": 246.782,
+      "end": 246.875
+    },
+    {
+      "word": "finish,",
+      "start": 246.945,
+      "end": 247.444
+    },
+    {
+      "word": "complete",
+      "start": 247.513,
+      "end": 247.966
+    },
+    {
+      "word": "the",
+      "start": 247.989,
+      "end": 248.059
+    },
+    {
+      "word": "model.",
+      "start": 248.106,
+      "end": 248.535
+    },
+    {
+      "word": "H",
+      "start": 248.872,
+      "end": 249.15
+    },
+    {
+      "word": "is",
+      "start": 249.267,
+      "end": 249.429
+    },
+    {
+      "word": "the",
+      "start": 249.487,
+      "end": 249.557
+    },
+    {
+      "word": "energy",
+      "start": 249.626,
+      "end": 250.01
+    },
+    {
+      "word": "content",
+      "start": 250.079,
+      "end": 250.567
+    },
+    {
+      "word": "of",
+      "start": 250.636,
+      "end": 250.718
+    },
+    {
+      "word": "a",
+      "start": 250.776,
+      "end": 250.799
+    },
+    {
+      "word": "state.",
+      "start": 250.846,
+      "end": 251.333
+    },
+    {
+      "word": "Delta",
+      "start": 251.577,
+      "end": 251.96
+    },
+    {
+      "word": "H",
+      "start": 252.053,
+      "end": 252.332
+    },
+    {
+      "word": "is",
+      "start": 252.506,
+      "end": 252.703
+    },
+    {
+      "word": "the",
+      "start": 252.761,
+      "end": 252.831
+    },
+    {
+      "word": "change",
+      "start": 252.889,
+      "end": 253.295
+    },
+    {
+      "word": "between",
+      "start": 253.342,
+      "end": 253.76
+    },
+    {
+      "word": "states.",
+      "start": 253.818,
+      "end": 254.375
+    },
+    {
+      "word": "Exothermic,",
+      "start": 254.538,
+      "end": 255.455
+    },
+    {
+      "word": "delta",
+      "start": 255.652,
+      "end": 256.035
+    },
+    {
+      "word": "H",
+      "start": 256.105,
+      "end": 256.337
+    },
+    {
+      "word": "negative.",
+      "start": 256.453,
+      "end": 257.011
+    },
+    {
+      "word": "Endothermic,",
+      "start": 257.278,
+      "end": 258.114
+    },
+    {
+      "word": "delta",
+      "start": 258.311,
+      "end": 258.694
+    },
+    {
+      "word": "H",
+      "start": 258.775,
+      "end": 259.042
+    },
+    {
+      "word": "positive.",
+      "start": 259.147,
+      "end": 259.774
+    },
+    {
+      "word": "A",
+      "start": 259.971,
+      "end": 260.041
+    },
+    {
+      "word": "catalyst",
+      "start": 260.157,
+      "end": 260.807
+    },
+    {
+      "word": "changes",
+      "start": 260.97,
+      "end": 261.48
+    },
+    {
+      "word": "the",
+      "start": 261.538,
+      "end": 261.596
+    },
+    {
+      "word": "pathway",
+      "start": 261.666,
+      "end": 262.073
+    },
+    {
+      "word": "peak,",
+      "start": 262.154,
+      "end": 262.514
+    },
+    {
+      "word": "not",
+      "start": 262.769,
+      "end": 263.013
+    },
+    {
+      "word": "reactant",
+      "start": 263.129,
+      "end": 263.721
+    },
+    {
+      "word": "H,",
+      "start": 263.791,
+      "end": 264.162
+    },
+    {
+      "word": "product",
+      "start": 264.325,
+      "end": 264.789
+    },
+    {
+      "word": "H,",
+      "start": 264.894,
+      "end": 265.265
+    },
+    {
+      "word": "or",
+      "start": 265.416,
+      "end": 265.567
+    },
+    {
+      "word": "delta",
+      "start": 265.637,
+      "end": 265.973
+    },
+    {
+      "word": "H.",
+      "start": 266.032,
+      "end": 266.403
+    },
+    {
+      "word": "If",
+      "start": 266.658,
+      "end": 266.798
+    },
+    {
+      "word": "you",
+      "start": 266.844,
+      "end": 266.925
+    },
+    {
+      "word": "found",
+      "start": 267.03,
+      "end": 267.239
+    },
+    {
+      "word": "this",
+      "start": 267.285,
+      "end": 267.436
+    },
+    {
+      "word": "useful,",
+      "start": 267.518,
+      "end": 268.005
+    },
+    {
+      "word": "please",
+      "start": 268.121,
+      "end": 268.423
+    },
+    {
+      "word": "subscribe",
+      "start": 268.458,
+      "end": 269.05
+    },
+    {
+      "word": "to",
+      "start": 269.097,
+      "end": 269.166
+    },
+    {
+      "word": "J",
+      "start": 269.259,
+      "end": 269.421
+    },
+    {
+      "word": "D",
+      "start": 269.526,
+      "end": 269.596
+    },
+    {
+      "word": "Science,",
+      "start": 269.758,
+      "end": 270.315
+    },
+    {
+      "word": "and",
+      "start": 270.513,
+      "end": 270.687
+    },
+    {
+      "word": "visit",
+      "start": 270.757,
+      "end": 271.058
+    },
+    {
+      "word": "j",
+      "start": 271.105,
+      "end": 271.267
+    },
+    {
+      "word": "d",
+      "start": 271.36,
+      "end": 271.442
+    },
+    {
+      "word": "science",
+      "start": 271.581,
+      "end": 272.045
+    },
+    {
+      "word": "dot",
+      "start": 272.08,
+      "end": 272.266
+    },
+    {
+      "word": "co",
+      "start": 272.336,
+      "end": 272.463
+    },
+    {
+      "word": "dot",
+      "start": 272.533,
+      "end": 272.707
+    },
+    {
+      "word": "u",
+      "start": 272.788,
+      "end": 272.881
+    },
+    {
+      "word": "k",
+      "start": 272.928,
+      "end": 273.171
+    },
+    {
+      "word": "for",
+      "start": 273.415,
+      "end": 273.589
+    },
+    {
+      "word": "more",
+      "start": 273.647,
+      "end": 273.845
+    },
+    {
+      "word": "explanations,",
+      "start": 273.903,
+      "end": 274.658
+    },
+    {
+      "word": "worksheets",
+      "start": 274.704,
+      "end": 275.25
+    },
+    {
+      "word": "and",
+      "start": 275.296,
+      "end": 275.424
+    },
+    {
+      "word": "T-Level",
+      "start": 275.493,
+      "end": 276.016
+    },
+    {
+      "word": "Chemistry",
+      "start": 276.074,
+      "end": 276.492
+    },
+    {
+      "word": "lessons.",
+      "start": 276.538,
+      "end": 277.038
+    }
+  ],
+  "chunks": 1,
+  "model": "eleven_multilingual_v2"
+}

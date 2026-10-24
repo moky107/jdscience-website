@@ -1,0 +1,240 @@
+{
+  "slug": "a11-1-collision-theory",
+  "duration": 499.043,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.174,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 12.028,
+      "aligned": true,
+      "cue": "By the end of this lesson"
+    },
+    {
+      "id": "hook",
+      "t": 33.147,
+      "aligned": true,
+      "cue": "Two reactant particles collide"
+    },
+    {
+      "id": "central",
+      "t": 71.726,
+      "aligned": true,
+      "cue": "Here is the central idea"
+    },
+    {
+      "id": "ea_def",
+      "t": 101.506,
+      "aligned": true,
+      "cue": "Activation energy is the minimum energy"
+    },
+    {
+      "id": "low_e",
+      "t": 125.469,
+      "aligned": true,
+      "cue": "Watch this first animation"
+    },
+    {
+      "id": "high_e",
+      "t": 141.839,
+      "aligned": true,
+      "cue": "Now watch a higher-energy collision"
+    },
+    {
+      "id": "two_tests",
+      "t": 166.534,
+      "aligned": true,
+      "cue": "Energy is necessary, but it is not sufficient"
+    },
+    {
+      "id": "rule",
+      "t": 192.122,
+      "aligned": true,
+      "cue": "Use this decision rule"
+    },
+    {
+      "id": "orient_def",
+      "t": 222.378,
+      "aligned": true,
+      "cue": "Now specification point A eleven point one point two"
+    },
+    {
+      "id": "orient_bad",
+      "t": 254.712,
+      "aligned": true,
+      "cue": "Watch an incorrect orientation"
+    },
+    {
+      "id": "orient_good",
+      "t": 264.778,
+      "aligned": true,
+      "cue": "Now watch a correct orientation"
+    },
+    {
+      "id": "combine",
+      "t": 282.099,
+      "aligned": true,
+      "cue": "Put the two tests together"
+    },
+    {
+      "id": "ex_a",
+      "t": 309.475,
+      "aligned": true,
+      "cue": "Collision A has thirty"
+    },
+    {
+      "id": "ex_b",
+      "t": 324.811,
+      "aligned": true,
+      "cue": "Collision B has fifty five"
+    },
+    {
+      "id": "ex_c",
+      "t": 336.491,
+      "aligned": true,
+      "cue": "Collision C has fifty"
+    },
+    {
+      "id": "myths",
+      "t": 359.131,
+      "aligned": true,
+      "cue": "Here are four misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 388.411,
+      "aligned": true,
+      "cue": "Let us finish with an examination-style question"
+    },
+    {
+      "id": "recap",
+      "t": 466.372,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 489.498,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 14.838,
+      "aligned": true,
+      "cue": "explain why reacting particles must collide"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 18.866,
+      "aligned": true,
+      "cue": "define activation energy"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 21.281,
+      "aligned": true,
+      "cue": "distinguish successful and unsuccessful"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 27.934,
+      "aligned": true,
+      "cue": "correct spatial orientation"
+    },
+    {
+      "slide": "hook",
+      "item": "ans",
+      "t": 39.474,
+      "aligned": true,
+      "cue": "The answer is no"
+    },
+    {
+      "slide": "ex_a",
+      "item": "verdict",
+      "t": 315.466,
+      "aligned": true,
+      "cue": "No. Thirty is below"
+    },
+    {
+      "slide": "ex_b",
+      "item": "verdict",
+      "t": 329.757,
+      "aligned": true,
+      "cue": "The energy is sufficient, but"
+    },
+    {
+      "slide": "ex_c",
+      "item": "verdict",
+      "t": 341.065,
+      "aligned": true,
+      "cue": "Energy exceeds activation energy and orientation is correct"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 409.912,
+      "aligned": true,
+      "cue": "Fifty eight is below sixty two"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 426.874,
+      "aligned": true,
+      "cue": "The energy exceeds the activation energy, but"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 443.755,
+      "aligned": true,
+      "cue": "Collision energy must be at least"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 459.243,
+      "aligned": true,
+      "cue": "Many collisions fail one or both"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 468.613,
+      "aligned": true,
+      "cue": "Reactant particles must collide"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 471.805,
+      "aligned": true,
+      "cue": "energy at least equal to the activation energy"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 481.337,
+      "aligned": true,
+      "cue": "correct spatial orientation"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 486.526,
+      "aligned": true,
+      "cue": "successful collisions"
+    }
+  ]
+}

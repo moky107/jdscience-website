@@ -61,6 +61,7 @@ import { applyDocumentMeta, pageFromPathname, pathForPage, shopSlugFromPathname 
 import { parsePapersQuery } from "./papersQuery";
 import { hostedRevisionNotesForCatalog } from "./hostedRevisionNotes";
 import { GCSE_CHEMISTRY_VIDEOS } from "./gcseChemistryVideos";
+import { TLEVEL_CHEMISTRY_VIDEOS } from "./tlevelChemistryVideos";
 import { mergeResourceCatalog, resourceOpenHref } from "./resourceNormalize";
 import BookingForm from "./BookingForm";
 import {
@@ -166,6 +167,7 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 const STATIC_RESOURCE_ITEMS = [
   ...hostedRevisionNotesForCatalog(),
   ...GCSE_CHEMISTRY_VIDEOS,
+  ...TLEVEL_CHEMISTRY_VIDEOS,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...AQA_GCSE_MATHS_RESOURCES,
   ...AQA_ALEVEL_CHEMISTRY_RESOURCES,

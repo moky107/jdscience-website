@@ -1,0 +1,5441 @@
+{
+  "slug": "a11-1-collision-theory",
+  "title": "Principles of Collision Theory",
+  "audio": "/workspace/content/videos/a11-1-collision-theory/source/narration_master.mp3",
+  "duration": 499.043,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A eleven point one, Principles of Collision Theory.\n\nBy the end of this lesson, you should be able to explain why reacting particles must collide, define activation energy, distinguish successful and unsuccessful collisions, and explain why particles must also meet in the correct spatial orientation.\n\nLet us start with a simple question. Two reactant particles collide. Must a reaction always occur?\n\nThe answer is no. Many collisions are unsuccessful.\n\nIn many reactions, existing bonds have to break before atoms can rearrange and new bonds can form. That process needs energy, and it also needs the right parts of the particles to meet.\n\nSo what might prevent a collision from producing products? The collision may have insufficient energy, or it may have an unsuitable spatial orientation.\n\nThose two conditions are the heart of collision theory.\n\nHere is the central idea. For a reaction to occur, reactant particles must collide. A collision alone is not enough.\n\nA successful collision must satisfy the energy requirement and the orientation requirement. If either requirement is not met, the collision is unsuccessful and products do not form.\n\nLet us take the energy requirement first. This is specification point A eleven point one point one.\n\nActivation energy is the minimum energy that colliding particles must have for a successful reaction.\n\nParticles need enough collision energy for the required bonds to break and for atoms to rearrange. New bonds can then form as products are produced.\n\nA collision with energy below the activation energy is unsuccessful.\n\nWatch this first animation. Two reactant particles approach and collide, but the collision energy is less than the activation energy.\n\nThe required bond breaking cannot occur. The particles separate without forming the specified products.\n\nNow watch a higher-energy collision. The particles collide with energy equal to or greater than the activation energy.\n\nThere is now enough energy for the required bond changes. If the orientation is also correct, the collision can be successful, and products can form.\n\nThis next point is easy to miss, and it is worth a mark in an examination question.\n\nEnergy is necessary, but it is not sufficient. A collision can have enough energy and still fail.\n\nThe reacting parts of the particles must also meet in a suitable orientation. Collision theory therefore uses two tests: sufficient energy, and correct spatial orientation.\n\nThat prevents the misconception that every high-energy collision must react.\n\nUse this decision rule. If collision energy is less than activation energy, the collision is unsuccessful because of insufficient energy.\n\nIf collision energy is equal to or greater than activation energy, the energy requirement is satisfied, but you must still check orientation.\n\nA complete explanation refers to sufficient energy for the required bond breaking and rearrangement, and to the formation of new bonds.\n\nNow specification point A eleven point one point two: spatial orientation.\n\nReacting particles have a three-dimensional arrangement. For some collisions, particular atoms or reactive regions must meet one another.\n\nIf the particles approach in an unsuitable orientation, the necessary bond changes cannot occur, even if they touch.\n\nCorrect spatial orientation is therefore a second requirement for a successful collision.\n\nWatch an incorrect orientation. The particles collide, but the required reactive regions do not meet appropriately, so there is no reaction.\n\nNow watch a correct orientation. The relevant parts of the reactants meet. The required bond rearrangement can occur if the collision energy is also sufficient.\n\nOrientation is about how particles meet, not simply whether they touch.\n\nPut the two tests together. Test one: is the collision energy at least the activation energy? Test two: are the particles aligned so the required atoms or regions can interact?\n\nBoth yes: a successful collision is possible. Either no: the collision is unsuccessful.\n\nLet us apply this to numbers taken from the lesson.\n\nReaction X has an activation energy of forty five kilojoules per mole.\n\nCollision A has thirty kilojoules per mole and the correct orientation. Is it successful?\n\nNo. Thirty is below forty five, so the collision is unsuccessful because of insufficient energy, even though the orientation is correct.\n\nCollision B has fifty five kilojoules per mole, but the orientation is incorrect.\n\nThe energy is sufficient, but the spatial orientation is wrong, so the collision is still unsuccessful.\n\nCollision C has fifty kilojoules per mole and the correct orientation.\n\nEnergy exceeds activation energy and orientation is correct, so a successful collision is possible.\n\nNotice the pattern. Correct orientation cannot compensate for low energy, and high energy cannot compensate for the wrong orientation. Both conditions are required.\n\nHere are four misconceptions to avoid.\n\nParticles do not react whenever they collide. Energy and orientation conditions must be satisfied.\n\nActivation energy is not energy released by a reaction. It is the minimum energy required for a successful collision.\n\nEnough energy does not guarantee a reaction, because spatial orientation must also be correct.\n\nAnd correct orientation cannot make up for collision energy below the activation energy.\n\nLet us finish with an examination-style question.\n\nA reaction occurs when particles P and Q collide. The activation energy is sixty two kilojoules per mole.\n\nPart a. Collision one has fifty eight kilojoules per mole and the correct orientation. Explain why it is unsuccessful. That is worth two marks.\n\nFifty eight is below sixty two, so there is insufficient energy for the required bond changes.\n\nPart b. Collision two has seventy kilojoules per mole but incorrect orientation. Explain why it is unsuccessful. Two marks.\n\nThe energy exceeds the activation energy, but the particles are not in the correct spatial orientation for the required interaction.\n\nPart c. State the conditions needed for a collision between P and Q to form products. Two marks.\n\nCollision energy must be at least the activation energy, and the particles must have the correct spatial orientation.\n\nPart d. Explain why collision theory predicts that many collisions do not produce a reaction. Two marks.\n\nMany collisions fail one or both requirements: insufficient energy, or incorrect orientation, or both.\n\nBefore we finish, complete the model.\n\nReactant particles must collide. The collision must have energy at least equal to the activation energy. That energy is needed so bonds can break and new bonds can form. The particles must also have the correct spatial orientation. Only collisions that satisfy both requirements are successful collisions.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.174,
+      "end": 0.627
+    },
+    {
+      "word": "and",
+      "start": 0.801,
+      "end": 1.01
+    },
+    {
+      "word": "welcome",
+      "start": 1.103,
+      "end": 1.544
+    },
+    {
+      "word": "back",
+      "start": 1.591,
+      "end": 1.8
+    },
+    {
+      "word": "to",
+      "start": 1.881,
+      "end": 1.997
+    },
+    {
+      "word": "J",
+      "start": 2.113,
+      "end": 2.287
+    },
+    {
+      "word": "D",
+      "start": 2.403,
+      "end": 2.461
+    },
+    {
+      "word": "Science.",
+      "start": 2.635,
+      "end": 3.355
+    },
+    {
+      "word": "In",
+      "start": 4.063,
+      "end": 4.214
+    },
+    {
+      "word": "today's",
+      "start": 4.261,
+      "end": 4.702
+    },
+    {
+      "word": "T-Level",
+      "start": 4.772,
+      "end": 5.224
+    },
+    {
+      "word": "Chemistry",
+      "start": 5.294,
+      "end": 5.735
+    },
+    {
+      "word": "lesson,",
+      "start": 5.793,
+      "end": 6.258
+    },
+    {
+      "word": "we",
+      "start": 6.327,
+      "end": 6.467
+    },
+    {
+      "word": "are",
+      "start": 6.513,
+      "end": 6.629
+    },
+    {
+      "word": "going",
+      "start": 6.664,
+      "end": 6.85
+    },
+    {
+      "word": "to",
+      "start": 6.908,
+      "end": 6.966
+    },
+    {
+      "word": "study",
+      "start": 7.036,
+      "end": 7.454
+    },
+    {
+      "word": "A",
+      "start": 7.57,
+      "end": 7.639
+    },
+    {
+      "word": "eleven",
+      "start": 7.755,
+      "end": 8.185
+    },
+    {
+      "word": "point",
+      "start": 8.266,
+      "end": 8.545
+    },
+    {
+      "word": "one,",
+      "start": 8.638,
+      "end": 9.009
+    },
+    {
+      "word": "Principles",
+      "start": 9.183,
+      "end": 9.822
+    },
+    {
+      "word": "of",
+      "start": 9.892,
+      "end": 9.985
+    },
+    {
+      "word": "Collision",
+      "start": 10.066,
+      "end": 10.553
+    },
+    {
+      "word": "Theory.",
+      "start": 10.646,
+      "end": 11.204
+    },
+    {
+      "word": "By",
+      "start": 12.028,
+      "end": 12.179
+    },
+    {
+      "word": "the",
+      "start": 12.249,
+      "end": 12.33
+    },
+    {
+      "word": "end",
+      "start": 12.411,
+      "end": 12.585
+    },
+    {
+      "word": "of",
+      "start": 12.655,
+      "end": 12.725
+    },
+    {
+      "word": "this",
+      "start": 12.806,
+      "end": 12.98
+    },
+    {
+      "word": "lesson,",
+      "start": 13.096,
+      "end": 13.653
+    },
+    {
+      "word": "you",
+      "start": 13.827,
+      "end": 13.932
+    },
+    {
+      "word": "should",
+      "start": 13.978,
+      "end": 14.199
+    },
+    {
+      "word": "be",
+      "start": 14.245,
+      "end": 14.338
+    },
+    {
+      "word": "able",
+      "start": 14.396,
+      "end": 14.652
+    },
+    {
+      "word": "to",
+      "start": 14.687,
+      "end": 14.756
+    },
+    {
+      "word": "explain",
+      "start": 14.838,
+      "end": 15.453
+    },
+    {
+      "word": "why",
+      "start": 15.604,
+      "end": 15.999
+    },
+    {
+      "word": "reacting",
+      "start": 16.208,
+      "end": 16.8
+    },
+    {
+      "word": "particles",
+      "start": 16.893,
+      "end": 17.531
+    },
+    {
+      "word": "must",
+      "start": 17.613,
+      "end": 17.845
+    },
+    {
+      "word": "collide,",
+      "start": 17.914,
+      "end": 18.623
+    },
+    {
+      "word": "define",
+      "start": 18.866,
+      "end": 19.435
+    },
+    {
+      "word": "activation",
+      "start": 19.505,
+      "end": 20.271
+    },
+    {
+      "word": "energy,",
+      "start": 20.352,
+      "end": 21.107
+    },
+    {
+      "word": "distinguish",
+      "start": 21.281,
+      "end": 21.873
+    },
+    {
+      "word": "successful",
+      "start": 21.931,
+      "end": 22.593
+    },
+    {
+      "word": "and",
+      "start": 22.663,
+      "end": 22.791
+    },
+    {
+      "word": "unsuccessful",
+      "start": 22.883,
+      "end": 23.673
+    },
+    {
+      "word": "collisions,",
+      "start": 23.743,
+      "end": 24.416
+    },
+    {
+      "word": "and",
+      "start": 24.66,
+      "end": 24.846
+    },
+    {
+      "word": "explain",
+      "start": 24.915,
+      "end": 25.391
+    },
+    {
+      "word": "why",
+      "start": 25.472,
+      "end": 25.658
+    },
+    {
+      "word": "particles",
+      "start": 25.763,
+      "end": 26.332
+    },
+    {
+      "word": "must",
+      "start": 26.401,
+      "end": 26.599
+    },
+    {
+      "word": "also",
+      "start": 26.657,
+      "end": 27.005
+    },
+    {
+      "word": "meet",
+      "start": 27.086,
+      "end": 27.353
+    },
+    {
+      "word": "in",
+      "start": 27.562,
+      "end": 27.736
+    },
+    {
+      "word": "the",
+      "start": 27.783,
+      "end": 27.853
+    },
+    {
+      "word": "correct",
+      "start": 27.934,
+      "end": 28.352
+    },
+    {
+      "word": "spatial",
+      "start": 28.468,
+      "end": 28.99
+    },
+    {
+      "word": "orientation.",
+      "start": 29.06,
+      "end": 30.058
+    },
+    {
+      "word": "Let",
+      "start": 30.453,
+      "end": 30.639
+    },
+    {
+      "word": "us",
+      "start": 30.709,
+      "end": 30.79
+    },
+    {
+      "word": "start",
+      "start": 30.825,
+      "end": 31.161
+    },
+    {
+      "word": "with",
+      "start": 31.219,
+      "end": 31.37
+    },
+    {
+      "word": "a",
+      "start": 31.417,
+      "end": 31.452
+    },
+    {
+      "word": "simple",
+      "start": 31.521,
+      "end": 31.951
+    },
+    {
+      "word": "question.",
+      "start": 31.997,
+      "end": 32.752
+    },
+    {
+      "word": "Two",
+      "start": 33.147,
+      "end": 33.39
+    },
+    {
+      "word": "reactant",
+      "start": 33.507,
+      "end": 34.156
+    },
+    {
+      "word": "particles",
+      "start": 34.226,
+      "end": 34.818
+    },
+    {
+      "word": "collide.",
+      "start": 34.888,
+      "end": 35.584
+    },
+    {
+      "word": "Must",
+      "start": 36.293,
+      "end": 36.595
+    },
+    {
+      "word": "a",
+      "start": 36.676,
+      "end": 36.757
+    },
+    {
+      "word": "reaction",
+      "start": 36.85,
+      "end": 37.454
+    },
+    {
+      "word": "always",
+      "start": 37.57,
+      "end": 38.115
+    },
+    {
+      "word": "occur?",
+      "start": 38.162,
+      "end": 38.789
+    },
+    {
+      "word": "The",
+      "start": 39.474,
+      "end": 39.59
+    },
+    {
+      "word": "answer",
+      "start": 39.671,
+      "end": 40.043
+    },
+    {
+      "word": "is",
+      "start": 40.124,
+      "end": 40.228
+    },
+    {
+      "word": "no.",
+      "start": 40.31,
+      "end": 40.693
+    },
+    {
+      "word": "Many",
+      "start": 41.076,
+      "end": 41.343
+    },
+    {
+      "word": "collisions",
+      "start": 41.401,
+      "end": 41.924
+    },
+    {
+      "word": "are",
+      "start": 41.982,
+      "end": 42.167
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 42.214,
+      "end": 43.096
+    },
+    {
+      "word": "In",
+      "start": 43.526,
+      "end": 43.711
+    },
+    {
+      "word": "many",
+      "start": 43.781,
+      "end": 44.013
+    },
+    {
+      "word": "reactions,",
+      "start": 44.071,
+      "end": 44.884
+    },
+    {
+      "word": "existing",
+      "start": 44.965,
+      "end": 45.534
+    },
+    {
+      "word": "bonds",
+      "start": 45.604,
+      "end": 45.964
+    },
+    {
+      "word": "have",
+      "start": 46.068,
+      "end": 46.289
+    },
+    {
+      "word": "to",
+      "start": 46.312,
+      "end": 46.393
+    },
+    {
+      "word": "break",
+      "start": 46.451,
+      "end": 46.718
+    },
+    {
+      "word": "before",
+      "start": 46.811,
+      "end": 47.148
+    },
+    {
+      "word": "atoms",
+      "start": 47.194,
+      "end": 47.566
+    },
+    {
+      "word": "can",
+      "start": 47.612,
+      "end": 47.752
+    },
+    {
+      "word": "rearrange",
+      "start": 47.821,
+      "end": 48.472
+    },
+    {
+      "word": "and",
+      "start": 48.669,
+      "end": 48.901
+    },
+    {
+      "word": "new",
+      "start": 48.982,
+      "end": 49.145
+    },
+    {
+      "word": "bonds",
+      "start": 49.203,
+      "end": 49.505
+    },
+    {
+      "word": "can",
+      "start": 49.563,
+      "end": 49.714
+    },
+    {
+      "word": "form.",
+      "start": 49.783,
+      "end": 50.283
+    },
+    {
+      "word": "That",
+      "start": 50.956,
+      "end": 51.211
+    },
+    {
+      "word": "process",
+      "start": 51.304,
+      "end": 51.885
+    },
+    {
+      "word": "needs",
+      "start": 52.024,
+      "end": 52.338
+    },
+    {
+      "word": "energy,",
+      "start": 52.431,
+      "end": 53.15
+    },
+    {
+      "word": "and",
+      "start": 53.359,
+      "end": 53.522
+    },
+    {
+      "word": "it",
+      "start": 53.58,
+      "end": 53.661
+    },
+    {
+      "word": "also",
+      "start": 53.708,
+      "end": 53.998
+    },
+    {
+      "word": "needs",
+      "start": 54.068,
+      "end": 54.3
+    },
+    {
+      "word": "the",
+      "start": 54.358,
+      "end": 54.451
+    },
+    {
+      "word": "right",
+      "start": 54.532,
+      "end": 54.764
+    },
+    {
+      "word": "parts",
+      "start": 54.822,
+      "end": 55.112
+    },
+    {
+      "word": "of",
+      "start": 55.182,
+      "end": 55.287
+    },
+    {
+      "word": "the",
+      "start": 55.368,
+      "end": 55.449
+    },
+    {
+      "word": "particles",
+      "start": 55.507,
+      "end": 56.099
+    },
+    {
+      "word": "to",
+      "start": 56.157,
+      "end": 56.239
+    },
+    {
+      "word": "meet.",
+      "start": 56.32,
+      "end": 56.691
+    },
+    {
+      "word": "So",
+      "start": 56.9,
+      "end": 57.098
+    },
+    {
+      "word": "what",
+      "start": 57.156,
+      "end": 57.353
+    },
+    {
+      "word": "might",
+      "start": 57.434,
+      "end": 57.655
+    },
+    {
+      "word": "prevent",
+      "start": 57.713,
+      "end": 58.131
+    },
+    {
+      "word": "a",
+      "start": 58.201,
+      "end": 58.235
+    },
+    {
+      "word": "collision",
+      "start": 58.305,
+      "end": 58.723
+    },
+    {
+      "word": "from",
+      "start": 58.781,
+      "end": 58.932
+    },
+    {
+      "word": "producing",
+      "start": 58.99,
+      "end": 59.466
+    },
+    {
+      "word": "products?",
+      "start": 59.536,
+      "end": 60.14
+    },
+    {
+      "word": "The",
+      "start": 60.418,
+      "end": 60.546
+    },
+    {
+      "word": "collision",
+      "start": 60.604,
+      "end": 61.045
+    },
+    {
+      "word": "may",
+      "start": 61.115,
+      "end": 61.277
+    },
+    {
+      "word": "have",
+      "start": 61.347,
+      "end": 61.568
+    },
+    {
+      "word": "insufficient",
+      "start": 61.649,
+      "end": 62.45
+    },
+    {
+      "word": "energy,",
+      "start": 62.531,
+      "end": 63.112
+    },
+    {
+      "word": "or",
+      "start": 63.263,
+      "end": 63.483
+    },
+    {
+      "word": "it",
+      "start": 63.564,
+      "end": 63.657
+    },
+    {
+      "word": "may",
+      "start": 63.739,
+      "end": 63.924
+    },
+    {
+      "word": "have",
+      "start": 63.994,
+      "end": 64.226
+    },
+    {
+      "word": "an",
+      "start": 64.284,
+      "end": 64.389
+    },
+    {
+      "word": "unsuitable",
+      "start": 64.505,
+      "end": 65.306
+    },
+    {
+      "word": "spatial",
+      "start": 65.352,
+      "end": 65.886
+    },
+    {
+      "word": "orientation.",
+      "start": 66.003,
+      "end": 67.14
+    },
+    {
+      "word": "Those",
+      "start": 67.535,
+      "end": 67.895
+    },
+    {
+      "word": "two",
+      "start": 67.93,
+      "end": 68.092
+    },
+    {
+      "word": "conditions",
+      "start": 68.162,
+      "end": 68.742
+    },
+    {
+      "word": "are",
+      "start": 68.812,
+      "end": 69.009
+    },
+    {
+      "word": "the",
+      "start": 69.056,
+      "end": 69.137
+    },
+    {
+      "word": "heart",
+      "start": 69.23,
+      "end": 69.59
+    },
+    {
+      "word": "of",
+      "start": 69.764,
+      "end": 69.938
+    },
+    {
+      "word": "collision",
+      "start": 70.054,
+      "end": 70.658
+    },
+    {
+      "word": "theory.",
+      "start": 70.902,
+      "end": 71.552
+    },
+    {
+      "word": "Here",
+      "start": 71.726,
+      "end": 72.121
+    },
+    {
+      "word": "is",
+      "start": 72.19,
+      "end": 72.33
+    },
+    {
+      "word": "the",
+      "start": 72.376,
+      "end": 72.457
+    },
+    {
+      "word": "central",
+      "start": 72.515,
+      "end": 72.91
+    },
+    {
+      "word": "idea.",
+      "start": 72.991,
+      "end": 73.537
+    },
+    {
+      "word": "For",
+      "start": 73.746,
+      "end": 73.943
+    },
+    {
+      "word": "a",
+      "start": 73.99,
+      "end": 74.013
+    },
+    {
+      "word": "reaction",
+      "start": 74.083,
+      "end": 74.57
+    },
+    {
+      "word": "to",
+      "start": 74.617,
+      "end": 74.698
+    },
+    {
+      "word": "occur,",
+      "start": 74.768,
+      "end": 75.244
+    },
+    {
+      "word": "reactant",
+      "start": 75.372,
+      "end": 75.906
+    },
+    {
+      "word": "particles",
+      "start": 75.975,
+      "end": 76.625
+    },
+    {
+      "word": "must",
+      "start": 76.776,
+      "end": 77.067
+    },
+    {
+      "word": "collide.",
+      "start": 77.159,
+      "end": 77.763
+    },
+    {
+      "word": "A",
+      "start": 78.007,
+      "end": 78.1
+    },
+    {
+      "word": "collision",
+      "start": 78.181,
+      "end": 78.657
+    },
+    {
+      "word": "alone",
+      "start": 78.738,
+      "end": 79.226
+    },
+    {
+      "word": "is",
+      "start": 79.307,
+      "end": 79.505
+    },
+    {
+      "word": "not",
+      "start": 79.574,
+      "end": 79.737
+    },
+    {
+      "word": "enough.",
+      "start": 79.807,
+      "end": 80.248
+    },
+    {
+      "word": "A",
+      "start": 80.457,
+      "end": 80.55
+    },
+    {
+      "word": "successful",
+      "start": 80.631,
+      "end": 81.235
+    },
+    {
+      "word": "collision",
+      "start": 81.316,
+      "end": 81.815
+    },
+    {
+      "word": "must",
+      "start": 81.931,
+      "end": 82.198
+    },
+    {
+      "word": "satisfy",
+      "start": 82.268,
+      "end": 82.906
+    },
+    {
+      "word": "the",
+      "start": 82.988,
+      "end": 83.092
+    },
+    {
+      "word": "energy",
+      "start": 83.173,
+      "end": 83.557
+    },
+    {
+      "word": "requirement",
+      "start": 83.638,
+      "end": 84.381
+    },
+    {
+      "word": "and",
+      "start": 84.59,
+      "end": 84.904
+    },
+    {
+      "word": "the",
+      "start": 84.973,
+      "end": 85.078
+    },
+    {
+      "word": "orientation",
+      "start": 85.147,
+      "end": 85.821
+    },
+    {
+      "word": "requirement.",
+      "start": 85.891,
+      "end": 86.726
+    },
+    {
+      "word": "If",
+      "start": 86.901,
+      "end": 87.11
+    },
+    {
+      "word": "either",
+      "start": 87.226,
+      "end": 87.702
+    },
+    {
+      "word": "requirement",
+      "start": 88.038,
+      "end": 88.712
+    },
+    {
+      "word": "is",
+      "start": 88.77,
+      "end": 88.886
+    },
+    {
+      "word": "not",
+      "start": 88.956,
+      "end": 89.13
+    },
+    {
+      "word": "met,",
+      "start": 89.211,
+      "end": 89.606
+    },
+    {
+      "word": "the",
+      "start": 89.757,
+      "end": 89.873
+    },
+    {
+      "word": "collision",
+      "start": 89.942,
+      "end": 90.418
+    },
+    {
+      "word": "is",
+      "start": 90.488,
+      "end": 90.593
+    },
+    {
+      "word": "unsuccessful",
+      "start": 90.709,
+      "end": 91.51
+    },
+    {
+      "word": "and",
+      "start": 91.591,
+      "end": 91.707
+    },
+    {
+      "word": "products",
+      "start": 91.777,
+      "end": 92.253
+    },
+    {
+      "word": "do",
+      "start": 92.346,
+      "end": 92.462
+    },
+    {
+      "word": "not",
+      "start": 92.543,
+      "end": 92.694
+    },
+    {
+      "word": "form.",
+      "start": 92.764,
+      "end": 93.298
+    },
+    {
+      "word": "Let",
+      "start": 93.75,
+      "end": 93.936
+    },
+    {
+      "word": "us",
+      "start": 93.994,
+      "end": 94.099
+    },
+    {
+      "word": "take",
+      "start": 94.157,
+      "end": 94.412
+    },
+    {
+      "word": "the",
+      "start": 94.447,
+      "end": 94.54
+    },
+    {
+      "word": "energy",
+      "start": 94.621,
+      "end": 94.993
+    },
+    {
+      "word": "requirement",
+      "start": 95.074,
+      "end": 95.678
+    },
+    {
+      "word": "first.",
+      "start": 95.747,
+      "end": 96.27
+    },
+    {
+      "word": "This",
+      "start": 96.479,
+      "end": 96.711
+    },
+    {
+      "word": "is",
+      "start": 96.781,
+      "end": 96.874
+    },
+    {
+      "word": "specification",
+      "start": 96.932,
+      "end": 97.849
+    },
+    {
+      "word": "point",
+      "start": 97.942,
+      "end": 98.348
+    },
+    {
+      "word": "A",
+      "start": 98.499,
+      "end": 98.673
+    },
+    {
+      "word": "eleven",
+      "start": 98.952,
+      "end": 99.393
+    },
+    {
+      "word": "point",
+      "start": 99.463,
+      "end": 99.776
+    },
+    {
+      "word": "one",
+      "start": 99.869,
+      "end": 100.182
+    },
+    {
+      "word": "point",
+      "start": 100.252,
+      "end": 100.658
+    },
+    {
+      "word": "one.",
+      "start": 100.774,
+      "end": 101.169
+    },
+    {
+      "word": "Activation",
+      "start": 101.506,
+      "end": 102.377
+    },
+    {
+      "word": "energy",
+      "start": 102.458,
+      "end": 102.957
+    },
+    {
+      "word": "is",
+      "start": 103.038,
+      "end": 103.201
+    },
+    {
+      "word": "the",
+      "start": 103.259,
+      "end": 103.34
+    },
+    {
+      "word": "minimum",
+      "start": 103.41,
+      "end": 103.909
+    },
+    {
+      "word": "energy",
+      "start": 104.025,
+      "end": 104.617
+    },
+    {
+      "word": "that",
+      "start": 104.733,
+      "end": 104.908
+    },
+    {
+      "word": "colliding",
+      "start": 104.989,
+      "end": 105.558
+    },
+    {
+      "word": "particles",
+      "start": 105.639,
+      "end": 106.196
+    },
+    {
+      "word": "must",
+      "start": 106.278,
+      "end": 106.498
+    },
+    {
+      "word": "have",
+      "start": 106.568,
+      "end": 106.846
+    },
+    {
+      "word": "for",
+      "start": 106.893,
+      "end": 107.044
+    },
+    {
+      "word": "a",
+      "start": 107.09,
+      "end": 107.125
+    },
+    {
+      "word": "successful",
+      "start": 107.183,
+      "end": 107.764
+    },
+    {
+      "word": "reaction.",
+      "start": 107.822,
+      "end": 108.484
+    },
+    {
+      "word": "Particles",
+      "start": 109.099,
+      "end": 109.737
+    },
+    {
+      "word": "need",
+      "start": 109.819,
+      "end": 110.051
+    },
+    {
+      "word": "enough",
+      "start": 110.121,
+      "end": 110.469
+    },
+    {
+      "word": "collision",
+      "start": 110.538,
+      "end": 111.026
+    },
+    {
+      "word": "energy",
+      "start": 111.119,
+      "end": 111.549
+    },
+    {
+      "word": "for",
+      "start": 111.618,
+      "end": 111.758
+    },
+    {
+      "word": "the",
+      "start": 111.792,
+      "end": 111.862
+    },
+    {
+      "word": "required",
+      "start": 111.932,
+      "end": 112.419
+    },
+    {
+      "word": "bonds",
+      "start": 112.477,
+      "end": 112.791
+    },
+    {
+      "word": "to",
+      "start": 112.849,
+      "end": 112.93
+    },
+    {
+      "word": "break",
+      "start": 113.011,
+      "end": 113.36
+    },
+    {
+      "word": "and",
+      "start": 113.441,
+      "end": 113.615
+    },
+    {
+      "word": "for",
+      "start": 113.685,
+      "end": 113.824
+    },
+    {
+      "word": "atoms",
+      "start": 113.905,
+      "end": 114.358
+    },
+    {
+      "word": "to",
+      "start": 114.416,
+      "end": 114.509
+    },
+    {
+      "word": "rearrange.",
+      "start": 114.602,
+      "end": 115.449
+    },
+    {
+      "word": "New",
+      "start": 116.274,
+      "end": 116.529
+    },
+    {
+      "word": "bonds",
+      "start": 116.622,
+      "end": 117.098
+    },
+    {
+      "word": "can",
+      "start": 117.307,
+      "end": 117.551
+    },
+    {
+      "word": "then",
+      "start": 117.621,
+      "end": 117.806
+    },
+    {
+      "word": "form",
+      "start": 117.922,
+      "end": 118.352
+    },
+    {
+      "word": "as",
+      "start": 118.526,
+      "end": 118.735
+    },
+    {
+      "word": "products",
+      "start": 118.851,
+      "end": 119.281
+    },
+    {
+      "word": "are",
+      "start": 119.316,
+      "end": 119.42
+    },
+    {
+      "word": "produced.",
+      "start": 119.455,
+      "end": 120.163
+    },
+    {
+      "word": "A",
+      "start": 120.871,
+      "end": 120.987
+    },
+    {
+      "word": "collision",
+      "start": 121.103,
+      "end": 121.661
+    },
+    {
+      "word": "with",
+      "start": 121.73,
+      "end": 121.963
+    },
+    {
+      "word": "energy",
+      "start": 122.079,
+      "end": 122.485
+    },
+    {
+      "word": "below",
+      "start": 122.543,
+      "end": 122.81
+    },
+    {
+      "word": "the",
+      "start": 122.868,
+      "end": 122.938
+    },
+    {
+      "word": "activation",
+      "start": 122.996,
+      "end": 123.576
+    },
+    {
+      "word": "energy",
+      "start": 123.658,
+      "end": 124.11
+    },
+    {
+      "word": "is",
+      "start": 124.203,
+      "end": 124.366
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 124.447,
+      "end": 125.353
+    },
+    {
+      "word": "Watch",
+      "start": 125.469,
+      "end": 125.759
+    },
+    {
+      "word": "this",
+      "start": 125.806,
+      "end": 125.968
+    },
+    {
+      "word": "first",
+      "start": 126.038,
+      "end": 126.305
+    },
+    {
+      "word": "animation.",
+      "start": 126.363,
+      "end": 127.152
+    },
+    {
+      "word": "Two",
+      "start": 127.326,
+      "end": 127.582
+    },
+    {
+      "word": "reactant",
+      "start": 127.675,
+      "end": 128.197
+    },
+    {
+      "word": "particles",
+      "start": 128.255,
+      "end": 128.847
+    },
+    {
+      "word": "approach",
+      "start": 128.94,
+      "end": 129.474
+    },
+    {
+      "word": "and",
+      "start": 129.532,
+      "end": 129.66
+    },
+    {
+      "word": "collide,",
+      "start": 129.73,
+      "end": 130.438
+    },
+    {
+      "word": "but",
+      "start": 130.554,
+      "end": 130.74
+    },
+    {
+      "word": "the",
+      "start": 130.786,
+      "end": 130.867
+    },
+    {
+      "word": "collision",
+      "start": 130.926,
+      "end": 131.448
+    },
+    {
+      "word": "energy",
+      "start": 131.564,
+      "end": 132.028
+    },
+    {
+      "word": "is",
+      "start": 132.098,
+      "end": 132.261
+    },
+    {
+      "word": "less",
+      "start": 132.354,
+      "end": 132.609
+    },
+    {
+      "word": "than",
+      "start": 132.644,
+      "end": 132.83
+    },
+    {
+      "word": "the",
+      "start": 132.876,
+      "end": 132.969
+    },
+    {
+      "word": "activation",
+      "start": 133.05,
+      "end": 133.782
+    },
+    {
+      "word": "energy.",
+      "start": 133.863,
+      "end": 134.536
+    },
+    {
+      "word": "The",
+      "start": 134.78,
+      "end": 134.919
+    },
+    {
+      "word": "required",
+      "start": 134.989,
+      "end": 135.5
+    },
+    {
+      "word": "bond",
+      "start": 135.546,
+      "end": 135.79
+    },
+    {
+      "word": "breaking",
+      "start": 135.848,
+      "end": 136.324
+    },
+    {
+      "word": "cannot",
+      "start": 136.475,
+      "end": 136.893
+    },
+    {
+      "word": "occur.",
+      "start": 136.951,
+      "end": 137.531
+    },
+    {
+      "word": "The",
+      "start": 137.647,
+      "end": 137.764
+    },
+    {
+      "word": "particles",
+      "start": 137.856,
+      "end": 138.507
+    },
+    {
+      "word": "separate",
+      "start": 138.576,
+      "end": 139.122
+    },
+    {
+      "word": "without",
+      "start": 139.157,
+      "end": 139.493
+    },
+    {
+      "word": "forming",
+      "start": 139.563,
+      "end": 139.946
+    },
+    {
+      "word": "the",
+      "start": 140.004,
+      "end": 140.086
+    },
+    {
+      "word": "specified",
+      "start": 140.144,
+      "end": 140.771
+    },
+    {
+      "word": "products.",
+      "start": 140.817,
+      "end": 141.444
+    },
+    {
+      "word": "Now",
+      "start": 141.839,
+      "end": 142.048
+    },
+    {
+      "word": "watch",
+      "start": 142.117,
+      "end": 142.442
+    },
+    {
+      "word": "a",
+      "start": 142.558,
+      "end": 142.651
+    },
+    {
+      "word": "higher-energy",
+      "start": 142.767,
+      "end": 143.557
+    },
+    {
+      "word": "collision.",
+      "start": 143.615,
+      "end": 144.23
+    },
+    {
+      "word": "The",
+      "start": 144.509,
+      "end": 144.637
+    },
+    {
+      "word": "particles",
+      "start": 144.706,
+      "end": 145.298
+    },
+    {
+      "word": "collide",
+      "start": 145.38,
+      "end": 145.821
+    },
+    {
+      "word": "with",
+      "start": 145.856,
+      "end": 146.03
+    },
+    {
+      "word": "energy",
+      "start": 146.123,
+      "end": 146.668
+    },
+    {
+      "word": "equal",
+      "start": 146.819,
+      "end": 147.226
+    },
+    {
+      "word": "to",
+      "start": 147.295,
+      "end": 147.528
+    },
+    {
+      "word": "or",
+      "start": 147.702,
+      "end": 147.876
+    },
+    {
+      "word": "greater",
+      "start": 147.957,
+      "end": 148.387
+    },
+    {
+      "word": "than",
+      "start": 148.445,
+      "end": 148.607
+    },
+    {
+      "word": "the",
+      "start": 148.677,
+      "end": 148.793
+    },
+    {
+      "word": "activation",
+      "start": 148.863,
+      "end": 149.699
+    },
+    {
+      "word": "energy.",
+      "start": 149.815,
+      "end": 150.476
+    },
+    {
+      "word": "There",
+      "start": 150.871,
+      "end": 151.104
+    },
+    {
+      "word": "is",
+      "start": 151.139,
+      "end": 151.22
+    },
+    {
+      "word": "now",
+      "start": 151.301,
+      "end": 151.522
+    },
+    {
+      "word": "enough",
+      "start": 151.603,
+      "end": 151.882
+    },
+    {
+      "word": "energy",
+      "start": 151.998,
+      "end": 152.532
+    },
+    {
+      "word": "for",
+      "start": 152.625,
+      "end": 152.857
+    },
+    {
+      "word": "the",
+      "start": 152.927,
+      "end": 153.019
+    },
+    {
+      "word": "required",
+      "start": 153.101,
+      "end": 153.67
+    },
+    {
+      "word": "bond",
+      "start": 153.763,
+      "end": 154.041
+    },
+    {
+      "word": "changes.",
+      "start": 154.111,
+      "end": 154.761
+    },
+    {
+      "word": "If",
+      "start": 154.819,
+      "end": 155.005
+    },
+    {
+      "word": "the",
+      "start": 155.063,
+      "end": 155.156
+    },
+    {
+      "word": "orientation",
+      "start": 155.225,
+      "end": 155.922
+    },
+    {
+      "word": "is",
+      "start": 155.992,
+      "end": 156.108
+    },
+    {
+      "word": "also",
+      "start": 156.177,
+      "end": 156.456
+    },
+    {
+      "word": "correct,",
+      "start": 156.526,
+      "end": 156.967
+    },
+    {
+      "word": "the",
+      "start": 157.002,
+      "end": 157.106
+    },
+    {
+      "word": "collision",
+      "start": 157.176,
+      "end": 157.652
+    },
+    {
+      "word": "can",
+      "start": 157.722,
+      "end": 157.896
+    },
+    {
+      "word": "be",
+      "start": 157.965,
+      "end": 158.058
+    },
+    {
+      "word": "successful,",
+      "start": 158.105,
+      "end": 158.894
+    },
+    {
+      "word": "and",
+      "start": 158.941,
+      "end": 159.115
+    },
+    {
+      "word": "products",
+      "start": 159.208,
+      "end": 159.66
+    },
+    {
+      "word": "can",
+      "start": 159.73,
+      "end": 159.904
+    },
+    {
+      "word": "form.",
+      "start": 159.985,
+      "end": 160.392
+    },
+    {
+      "word": "This",
+      "start": 160.438,
+      "end": 160.636
+    },
+    {
+      "word": "next",
+      "start": 160.717,
+      "end": 160.937
+    },
+    {
+      "word": "point",
+      "start": 161.007,
+      "end": 161.297
+    },
+    {
+      "word": "is",
+      "start": 161.355,
+      "end": 161.46
+    },
+    {
+      "word": "easy",
+      "start": 161.541,
+      "end": 161.797
+    },
+    {
+      "word": "to",
+      "start": 161.855,
+      "end": 161.948
+    },
+    {
+      "word": "miss,",
+      "start": 162.04,
+      "end": 162.482
+    },
+    {
+      "word": "and",
+      "start": 162.528,
+      "end": 162.737
+    },
+    {
+      "word": "it",
+      "start": 162.818,
+      "end": 162.934
+    },
+    {
+      "word": "is",
+      "start": 162.992,
+      "end": 163.085
+    },
+    {
+      "word": "worth",
+      "start": 163.155,
+      "end": 163.422
+    },
+    {
+      "word": "a",
+      "start": 163.468,
+      "end": 163.503
+    },
+    {
+      "word": "mark",
+      "start": 163.596,
+      "end": 163.933
+    },
+    {
+      "word": "in",
+      "start": 164.107,
+      "end": 164.386
+    },
+    {
+      "word": "an",
+      "start": 164.502,
+      "end": 164.676
+    },
+    {
+      "word": "examination",
+      "start": 164.792,
+      "end": 165.698
+    },
+    {
+      "word": "question.",
+      "start": 165.767,
+      "end": 166.418
+    },
+    {
+      "word": "Energy",
+      "start": 166.534,
+      "end": 167.033
+    },
+    {
+      "word": "is",
+      "start": 167.103,
+      "end": 167.219
+    },
+    {
+      "word": "necessary,",
+      "start": 167.3,
+      "end": 168.136
+    },
+    {
+      "word": "but",
+      "start": 168.252,
+      "end": 168.507
+    },
+    {
+      "word": "it",
+      "start": 168.6,
+      "end": 168.774
+    },
+    {
+      "word": "is",
+      "start": 168.844,
+      "end": 168.96
+    },
+    {
+      "word": "not",
+      "start": 169.053,
+      "end": 169.239
+    },
+    {
+      "word": "sufficient.",
+      "start": 169.297,
+      "end": 170.063
+    },
+    {
+      "word": "A",
+      "start": 170.586,
+      "end": 170.702
+    },
+    {
+      "word": "collision",
+      "start": 170.818,
+      "end": 171.352
+    },
+    {
+      "word": "can",
+      "start": 171.422,
+      "end": 171.584
+    },
+    {
+      "word": "have",
+      "start": 171.654,
+      "end": 171.828
+    },
+    {
+      "word": "enough",
+      "start": 171.874,
+      "end": 172.165
+    },
+    {
+      "word": "energy",
+      "start": 172.246,
+      "end": 172.733
+    },
+    {
+      "word": "and",
+      "start": 172.85,
+      "end": 173.035
+    },
+    {
+      "word": "still",
+      "start": 173.105,
+      "end": 173.384
+    },
+    {
+      "word": "fail.",
+      "start": 173.453,
+      "end": 173.883
+    },
+    {
+      "word": "The",
+      "start": 174.22,
+      "end": 174.359
+    },
+    {
+      "word": "reacting",
+      "start": 174.452,
+      "end": 174.963
+    },
+    {
+      "word": "parts",
+      "start": 175.044,
+      "end": 175.357
+    },
+    {
+      "word": "of",
+      "start": 175.404,
+      "end": 175.485
+    },
+    {
+      "word": "the",
+      "start": 175.531,
+      "end": 175.601
+    },
+    {
+      "word": "particles",
+      "start": 175.671,
+      "end": 176.228
+    },
+    {
+      "word": "must",
+      "start": 176.344,
+      "end": 176.576
+    },
+    {
+      "word": "also",
+      "start": 176.658,
+      "end": 177.018
+    },
+    {
+      "word": "meet",
+      "start": 177.11,
+      "end": 177.366
+    },
+    {
+      "word": "in",
+      "start": 177.459,
+      "end": 177.621
+    },
+    {
+      "word": "a",
+      "start": 177.679,
+      "end": 177.714
+    },
+    {
+      "word": "suitable",
+      "start": 177.784,
+      "end": 178.283
+    },
+    {
+      "word": "orientation.",
+      "start": 178.341,
+      "end": 179.282
+    },
+    {
+      "word": "Collision",
+      "start": 179.897,
+      "end": 180.419
+    },
+    {
+      "word": "theory",
+      "start": 180.489,
+      "end": 180.895
+    },
+    {
+      "word": "therefore",
+      "start": 180.965,
+      "end": 181.511
+    },
+    {
+      "word": "uses",
+      "start": 181.592,
+      "end": 182.021
+    },
+    {
+      "word": "two",
+      "start": 182.091,
+      "end": 182.358
+    },
+    {
+      "word": "tests:",
+      "start": 182.451,
+      "end": 183.113
+    },
+    {
+      "word": "sufficient",
+      "start": 183.357,
+      "end": 184.007
+    },
+    {
+      "word": "energy,",
+      "start": 184.077,
+      "end": 184.634
+    },
+    {
+      "word": "and",
+      "start": 184.692,
+      "end": 184.854
+    },
+    {
+      "word": "correct",
+      "start": 184.936,
+      "end": 185.4
+    },
+    {
+      "word": "spatial",
+      "start": 185.516,
+      "end": 186.19
+    },
+    {
+      "word": "orientation.",
+      "start": 186.399,
+      "end": 187.374
+    },
+    {
+      "word": "That",
+      "start": 187.49,
+      "end": 187.722
+    },
+    {
+      "word": "prevents",
+      "start": 187.792,
+      "end": 188.233
+    },
+    {
+      "word": "the",
+      "start": 188.279,
+      "end": 188.349
+    },
+    {
+      "word": "misconception",
+      "start": 188.407,
+      "end": 189.197
+    },
+    {
+      "word": "that",
+      "start": 189.255,
+      "end": 189.406
+    },
+    {
+      "word": "every",
+      "start": 189.498,
+      "end": 189.812
+    },
+    {
+      "word": "high-energy",
+      "start": 189.87,
+      "end": 190.462
+    },
+    {
+      "word": "collision",
+      "start": 190.52,
+      "end": 190.996
+    },
+    {
+      "word": "must",
+      "start": 191.066,
+      "end": 191.298
+    },
+    {
+      "word": "react.",
+      "start": 191.379,
+      "end": 191.948
+    },
+    {
+      "word": "Use",
+      "start": 192.122,
+      "end": 192.413
+    },
+    {
+      "word": "this",
+      "start": 192.459,
+      "end": 192.633
+    },
+    {
+      "word": "decision",
+      "start": 192.691,
+      "end": 193.167
+    },
+    {
+      "word": "rule.",
+      "start": 193.237,
+      "end": 193.574
+    },
+    {
+      "word": "If",
+      "start": 193.69,
+      "end": 193.887
+    },
+    {
+      "word": "collision",
+      "start": 193.957,
+      "end": 194.421
+    },
+    {
+      "word": "energy",
+      "start": 194.491,
+      "end": 194.909
+    },
+    {
+      "word": "is",
+      "start": 194.967,
+      "end": 195.106
+    },
+    {
+      "word": "less",
+      "start": 195.234,
+      "end": 195.512
+    },
+    {
+      "word": "than",
+      "start": 195.559,
+      "end": 195.733
+    },
+    {
+      "word": "activation",
+      "start": 195.803,
+      "end": 196.488
+    },
+    {
+      "word": "energy,",
+      "start": 196.569,
+      "end": 197.126
+    },
+    {
+      "word": "the",
+      "start": 197.277,
+      "end": 197.382
+    },
+    {
+      "word": "collision",
+      "start": 197.463,
+      "end": 198.02
+    },
+    {
+      "word": "is",
+      "start": 198.09,
+      "end": 198.229
+    },
+    {
+      "word": "unsuccessful",
+      "start": 198.346,
+      "end": 199.332
+    },
+    {
+      "word": "because",
+      "start": 199.46,
+      "end": 199.843
+    },
+    {
+      "word": "of",
+      "start": 199.89,
+      "end": 199.971
+    },
+    {
+      "word": "insufficient",
+      "start": 200.087,
+      "end": 200.969
+    },
+    {
+      "word": "energy.",
+      "start": 201.12,
+      "end": 201.736
+    },
+    {
+      "word": "If",
+      "start": 202.351,
+      "end": 202.502
+    },
+    {
+      "word": "collision",
+      "start": 202.583,
+      "end": 203.024
+    },
+    {
+      "word": "energy",
+      "start": 203.106,
+      "end": 203.466
+    },
+    {
+      "word": "is",
+      "start": 203.535,
+      "end": 203.651
+    },
+    {
+      "word": "equal",
+      "start": 203.767,
+      "end": 204.104
+    },
+    {
+      "word": "to",
+      "start": 204.174,
+      "end": 204.301
+    },
+    {
+      "word": "or",
+      "start": 204.429,
+      "end": 204.557
+    },
+    {
+      "word": "greater",
+      "start": 204.638,
+      "end": 205.044
+    },
+    {
+      "word": "than",
+      "start": 205.103,
+      "end": 205.253
+    },
+    {
+      "word": "activation",
+      "start": 205.335,
+      "end": 205.997
+    },
+    {
+      "word": "energy,",
+      "start": 206.089,
+      "end": 206.67
+    },
+    {
+      "word": "the",
+      "start": 206.844,
+      "end": 206.972
+    },
+    {
+      "word": "energy",
+      "start": 207.053,
+      "end": 207.413
+    },
+    {
+      "word": "requirement",
+      "start": 207.471,
+      "end": 208.086
+    },
+    {
+      "word": "is",
+      "start": 208.144,
+      "end": 208.249
+    },
+    {
+      "word": "satisfied,",
+      "start": 208.295,
+      "end": 209.189
+    },
+    {
+      "word": "but",
+      "start": 209.363,
+      "end": 209.538
+    },
+    {
+      "word": "you",
+      "start": 209.596,
+      "end": 209.7
+    },
+    {
+      "word": "must",
+      "start": 209.781,
+      "end": 209.99
+    },
+    {
+      "word": "still",
+      "start": 210.025,
+      "end": 210.327
+    },
+    {
+      "word": "check",
+      "start": 210.408,
+      "end": 210.722
+    },
+    {
+      "word": "orientation.",
+      "start": 210.838,
+      "end": 211.86
+    },
+    {
+      "word": "A",
+      "start": 212.382,
+      "end": 212.498
+    },
+    {
+      "word": "complete",
+      "start": 212.579,
+      "end": 213.055
+    },
+    {
+      "word": "explanation",
+      "start": 213.113,
+      "end": 213.996
+    },
+    {
+      "word": "refers",
+      "start": 214.24,
+      "end": 214.727
+    },
+    {
+      "word": "to",
+      "start": 214.785,
+      "end": 214.866
+    },
+    {
+      "word": "sufficient",
+      "start": 214.959,
+      "end": 215.528
+    },
+    {
+      "word": "energy",
+      "start": 215.598,
+      "end": 215.981
+    },
+    {
+      "word": "for",
+      "start": 216.051,
+      "end": 216.19
+    },
+    {
+      "word": "the",
+      "start": 216.236,
+      "end": 216.306
+    },
+    {
+      "word": "required",
+      "start": 216.387,
+      "end": 217.026
+    },
+    {
+      "word": "bond",
+      "start": 217.2,
+      "end": 217.688
+    },
+    {
+      "word": "breaking",
+      "start": 217.862,
+      "end": 218.326
+    },
+    {
+      "word": "and",
+      "start": 218.419,
+      "end": 218.558
+    },
+    {
+      "word": "rearrangement,",
+      "start": 218.64,
+      "end": 219.476
+    },
+    {
+      "word": "and",
+      "start": 219.65,
+      "end": 219.824
+    },
+    {
+      "word": "to",
+      "start": 219.882,
+      "end": 219.963
+    },
+    {
+      "word": "the",
+      "start": 220.033,
+      "end": 220.103
+    },
+    {
+      "word": "formation",
+      "start": 220.172,
+      "end": 220.776
+    },
+    {
+      "word": "of",
+      "start": 220.857,
+      "end": 220.95
+    },
+    {
+      "word": "new",
+      "start": 221.031,
+      "end": 221.159
+    },
+    {
+      "word": "bonds.",
+      "start": 221.217,
+      "end": 221.763
+    },
+    {
+      "word": "Now",
+      "start": 222.378,
+      "end": 222.645
+    },
+    {
+      "word": "specification",
+      "start": 222.761,
+      "end": 223.632
+    },
+    {
+      "word": "point",
+      "start": 223.713,
+      "end": 224.015
+    },
+    {
+      "word": "A",
+      "start": 224.131,
+      "end": 224.34
+    },
+    {
+      "word": "eleven",
+      "start": 224.491,
+      "end": 224.897
+    },
+    {
+      "word": "point",
+      "start": 224.967,
+      "end": 225.199
+    },
+    {
+      "word": "one",
+      "start": 225.281,
+      "end": 225.443
+    },
+    {
+      "word": "point",
+      "start": 225.49,
+      "end": 225.733
+    },
+    {
+      "word": "two:",
+      "start": 225.768,
+      "end": 226.151
+    },
+    {
+      "word": "spatial",
+      "start": 226.395,
+      "end": 226.976
+    },
+    {
+      "word": "orientation.",
+      "start": 227.045,
+      "end": 227.997
+    },
+    {
+      "word": "Reacting",
+      "start": 228.706,
+      "end": 229.205
+    },
+    {
+      "word": "particles",
+      "start": 229.274,
+      "end": 229.843
+    },
+    {
+      "word": "have",
+      "start": 229.913,
+      "end": 230.099
+    },
+    {
+      "word": "a",
+      "start": 230.145,
+      "end": 230.18
+    },
+    {
+      "word": "three-dimensional",
+      "start": 230.261,
+      "end": 231.294
+    },
+    {
+      "word": "arrangement.",
+      "start": 231.364,
+      "end": 232.142
+    },
+    {
+      "word": "For",
+      "start": 232.537,
+      "end": 232.711
+    },
+    {
+      "word": "some",
+      "start": 232.769,
+      "end": 233.001
+    },
+    {
+      "word": "collisions,",
+      "start": 233.048,
+      "end": 233.837
+    },
+    {
+      "word": "particular",
+      "start": 233.988,
+      "end": 234.603
+    },
+    {
+      "word": "atoms",
+      "start": 234.696,
+      "end": 235.207
+    },
+    {
+      "word": "or",
+      "start": 235.288,
+      "end": 235.416
+    },
+    {
+      "word": "reactive",
+      "start": 235.486,
+      "end": 235.985
+    },
+    {
+      "word": "regions",
+      "start": 236.031,
+      "end": 236.519
+    },
+    {
+      "word": "must",
+      "start": 236.728,
+      "end": 236.96
+    },
+    {
+      "word": "meet",
+      "start": 237.03,
+      "end": 237.239
+    },
+    {
+      "word": "one",
+      "start": 237.308,
+      "end": 237.483
+    },
+    {
+      "word": "another.",
+      "start": 237.517,
+      "end": 237.993
+    },
+    {
+      "word": "If",
+      "start": 238.388,
+      "end": 238.539
+    },
+    {
+      "word": "the",
+      "start": 238.586,
+      "end": 238.667
+    },
+    {
+      "word": "particles",
+      "start": 238.736,
+      "end": 239.305
+    },
+    {
+      "word": "approach",
+      "start": 239.363,
+      "end": 239.874
+    },
+    {
+      "word": "in",
+      "start": 239.955,
+      "end": 240.095
+    },
+    {
+      "word": "an",
+      "start": 240.141,
+      "end": 240.223
+    },
+    {
+      "word": "unsuitable",
+      "start": 240.339,
+      "end": 241.058
+    },
+    {
+      "word": "orientation,",
+      "start": 241.105,
+      "end": 242.034
+    },
+    {
+      "word": "the",
+      "start": 242.37,
+      "end": 242.486
+    },
+    {
+      "word": "necessary",
+      "start": 242.568,
+      "end": 243.113
+    },
+    {
+      "word": "bond",
+      "start": 243.195,
+      "end": 243.45
+    },
+    {
+      "word": "changes",
+      "start": 243.52,
+      "end": 244.054
+    },
+    {
+      "word": "cannot",
+      "start": 244.263,
+      "end": 244.669
+    },
+    {
+      "word": "occur,",
+      "start": 244.727,
+      "end": 245.25
+    },
+    {
+      "word": "even",
+      "start": 245.493,
+      "end": 245.819
+    },
+    {
+      "word": "if",
+      "start": 245.888,
+      "end": 246.004
+    },
+    {
+      "word": "they",
+      "start": 246.062,
+      "end": 246.236
+    },
+    {
+      "word": "touch.",
+      "start": 246.306,
+      "end": 246.875
+    },
+    {
+      "word": "Correct",
+      "start": 247.85,
+      "end": 248.291
+    },
+    {
+      "word": "spatial",
+      "start": 248.349,
+      "end": 248.942
+    },
+    {
+      "word": "orientation",
+      "start": 249.035,
+      "end": 249.836
+    },
+    {
+      "word": "is",
+      "start": 249.906,
+      "end": 250.068
+    },
+    {
+      "word": "therefore",
+      "start": 250.126,
+      "end": 250.742
+    },
+    {
+      "word": "a",
+      "start": 250.951,
+      "end": 251.067
+    },
+    {
+      "word": "second",
+      "start": 251.194,
+      "end": 251.612
+    },
+    {
+      "word": "requirement",
+      "start": 251.694,
+      "end": 252.518
+    },
+    {
+      "word": "for",
+      "start": 252.634,
+      "end": 252.913
+    },
+    {
+      "word": "a",
+      "start": 252.982,
+      "end": 253.017
+    },
+    {
+      "word": "successful",
+      "start": 253.087,
+      "end": 253.714
+    },
+    {
+      "word": "collision.",
+      "start": 253.783,
+      "end": 254.376
+    },
+    {
+      "word": "Watch",
+      "start": 254.712,
+      "end": 255.014
+    },
+    {
+      "word": "an",
+      "start": 255.095,
+      "end": 255.235
+    },
+    {
+      "word": "incorrect",
+      "start": 255.328,
+      "end": 255.85
+    },
+    {
+      "word": "orientation.",
+      "start": 255.908,
+      "end": 256.767
+    },
+    {
+      "word": "The",
+      "start": 257.046,
+      "end": 257.174
+    },
+    {
+      "word": "particles",
+      "start": 257.266,
+      "end": 257.847
+    },
+    {
+      "word": "collide,",
+      "start": 257.905,
+      "end": 258.532
+    },
+    {
+      "word": "but",
+      "start": 258.648,
+      "end": 258.834
+    },
+    {
+      "word": "the",
+      "start": 258.88,
+      "end": 258.961
+    },
+    {
+      "word": "required",
+      "start": 259.043,
+      "end": 259.623
+    },
+    {
+      "word": "reactive",
+      "start": 259.693,
+      "end": 260.204
+    },
+    {
+      "word": "regions",
+      "start": 260.262,
+      "end": 260.68
+    },
+    {
+      "word": "do",
+      "start": 260.749,
+      "end": 260.854
+    },
+    {
+      "word": "not",
+      "start": 260.935,
+      "end": 261.086
+    },
+    {
+      "word": "meet",
+      "start": 261.179,
+      "end": 261.411
+    },
+    {
+      "word": "appropriately,",
+      "start": 261.469,
+      "end": 262.479
+    },
+    {
+      "word": "so",
+      "start": 262.595,
+      "end": 262.804
+    },
+    {
+      "word": "there",
+      "start": 262.874,
+      "end": 263.071
+    },
+    {
+      "word": "is",
+      "start": 263.118,
+      "end": 263.257
+    },
+    {
+      "word": "no",
+      "start": 263.373,
+      "end": 263.524
+    },
+    {
+      "word": "reaction.",
+      "start": 263.64,
+      "end": 264.383
+    },
+    {
+      "word": "Now",
+      "start": 264.778,
+      "end": 264.964
+    },
+    {
+      "word": "watch",
+      "start": 265.045,
+      "end": 265.347
+    },
+    {
+      "word": "a",
+      "start": 265.463,
+      "end": 265.544
+    },
+    {
+      "word": "correct",
+      "start": 265.66,
+      "end": 266.02
+    },
+    {
+      "word": "orientation.",
+      "start": 266.078,
+      "end": 266.972
+    },
+    {
+      "word": "The",
+      "start": 267.425,
+      "end": 267.564
+    },
+    {
+      "word": "relevant",
+      "start": 267.68,
+      "end": 268.145
+    },
+    {
+      "word": "parts",
+      "start": 268.214,
+      "end": 268.667
+    },
+    {
+      "word": "of",
+      "start": 268.818,
+      "end": 268.946
+    },
+    {
+      "word": "the",
+      "start": 269.015,
+      "end": 269.097
+    },
+    {
+      "word": "reactants",
+      "start": 269.213,
+      "end": 269.805
+    },
+    {
+      "word": "meet.",
+      "start": 269.921,
+      "end": 270.351
+    },
+    {
+      "word": "The",
+      "start": 270.745,
+      "end": 270.873
+    },
+    {
+      "word": "required",
+      "start": 270.954,
+      "end": 271.465
+    },
+    {
+      "word": "bond",
+      "start": 271.523,
+      "end": 271.79
+    },
+    {
+      "word": "rearrangement",
+      "start": 271.871,
+      "end": 272.556
+    },
+    {
+      "word": "can",
+      "start": 272.591,
+      "end": 272.742
+    },
+    {
+      "word": "occur",
+      "start": 272.789,
+      "end": 273.183
+    },
+    {
+      "word": "if",
+      "start": 273.52,
+      "end": 273.694
+    },
+    {
+      "word": "the",
+      "start": 273.752,
+      "end": 273.834
+    },
+    {
+      "word": "collision",
+      "start": 273.903,
+      "end": 274.391
+    },
+    {
+      "word": "energy",
+      "start": 274.507,
+      "end": 274.983
+    },
+    {
+      "word": "is",
+      "start": 275.053,
+      "end": 275.227
+    },
+    {
+      "word": "also",
+      "start": 275.296,
+      "end": 275.668
+    },
+    {
+      "word": "sufficient.",
+      "start": 275.738,
+      "end": 276.481
+    },
+    {
+      "word": "Orientation",
+      "start": 277.002,
+      "end": 277.652
+    },
+    {
+      "word": "is",
+      "start": 277.71,
+      "end": 277.803
+    },
+    {
+      "word": "about",
+      "start": 277.85,
+      "end": 278.14
+    },
+    {
+      "word": "how",
+      "start": 278.198,
+      "end": 278.326
+    },
+    {
+      "word": "particles",
+      "start": 278.407,
+      "end": 278.883
+    },
+    {
+      "word": "meet,",
+      "start": 278.999,
+      "end": 279.359
+    },
+    {
+      "word": "not",
+      "start": 279.428,
+      "end": 279.637
+    },
+    {
+      "word": "simply",
+      "start": 279.707,
+      "end": 280.113
+    },
+    {
+      "word": "whether",
+      "start": 280.195,
+      "end": 280.508
+    },
+    {
+      "word": "they",
+      "start": 280.566,
+      "end": 280.682
+    },
+    {
+      "word": "touch.",
+      "start": 280.764,
+      "end": 281.274
+    },
+    {
+      "word": "Put",
+      "start": 282.099,
+      "end": 282.331
+    },
+    {
+      "word": "the",
+      "start": 282.366,
+      "end": 282.447
+    },
+    {
+      "word": "two",
+      "start": 282.505,
+      "end": 282.656
+    },
+    {
+      "word": "tests",
+      "start": 282.726,
+      "end": 283.016
+    },
+    {
+      "word": "together.",
+      "start": 283.051,
+      "end": 283.596
+    },
+    {
+      "word": "Test",
+      "start": 283.771,
+      "end": 284.131
+    },
+    {
+      "word": "one:",
+      "start": 284.223,
+      "end": 284.63
+    },
+    {
+      "word": "is",
+      "start": 284.966,
+      "end": 285.152
+    },
+    {
+      "word": "the",
+      "start": 285.21,
+      "end": 285.28
+    },
+    {
+      "word": "collision",
+      "start": 285.338,
+      "end": 285.768
+    },
+    {
+      "word": "energy",
+      "start": 285.86,
+      "end": 286.302
+    },
+    {
+      "word": "at",
+      "start": 286.383,
+      "end": 286.534
+    },
+    {
+      "word": "least",
+      "start": 286.603,
+      "end": 286.824
+    },
+    {
+      "word": "the",
+      "start": 286.847,
+      "end": 286.917
+    },
+    {
+      "word": "activation",
+      "start": 286.975,
+      "end": 287.567
+    },
+    {
+      "word": "energy?",
+      "start": 287.648,
+      "end": 288.24
+    },
+    {
+      "word": "Test",
+      "start": 288.577,
+      "end": 288.891
+    },
+    {
+      "word": "two:",
+      "start": 288.925,
+      "end": 289.413
+    },
+    {
+      "word": "are",
+      "start": 289.75,
+      "end": 289.901
+    },
+    {
+      "word": "the",
+      "start": 289.936,
+      "end": 290.005
+    },
+    {
+      "word": "particles",
+      "start": 290.075,
+      "end": 290.585
+    },
+    {
+      "word": "aligned",
+      "start": 290.655,
+      "end": 291.166
+    },
+    {
+      "word": "so",
+      "start": 291.317,
+      "end": 291.549
+    },
+    {
+      "word": "the",
+      "start": 291.619,
+      "end": 291.7
+    },
+    {
+      "word": "required",
+      "start": 291.781,
+      "end": 292.257
+    },
+    {
+      "word": "atoms",
+      "start": 292.327,
+      "end": 292.768
+    },
+    {
+      "word": "or",
+      "start": 292.861,
+      "end": 293.0
+    },
+    {
+      "word": "regions",
+      "start": 293.07,
+      "end": 293.488
+    },
+    {
+      "word": "can",
+      "start": 293.534,
+      "end": 293.685
+    },
+    {
+      "word": "interact?",
+      "start": 293.755,
+      "end": 294.452
+    },
+    {
+      "word": "Both",
+      "start": 294.626,
+      "end": 294.87
+    },
+    {
+      "word": "yes:",
+      "start": 294.916,
+      "end": 295.229
+    },
+    {
+      "word": "a",
+      "start": 295.311,
+      "end": 295.38
+    },
+    {
+      "word": "successful",
+      "start": 295.473,
+      "end": 296.019
+    },
+    {
+      "word": "collision",
+      "start": 296.089,
+      "end": 296.541
+    },
+    {
+      "word": "is",
+      "start": 296.611,
+      "end": 296.716
+    },
+    {
+      "word": "possible.",
+      "start": 296.774,
+      "end": 297.319
+    },
+    {
+      "word": "Either",
+      "start": 297.47,
+      "end": 297.76
+    },
+    {
+      "word": "no:",
+      "start": 297.842,
+      "end": 298.178
+    },
+    {
+      "word": "the",
+      "start": 298.26,
+      "end": 298.376
+    },
+    {
+      "word": "collision",
+      "start": 298.434,
+      "end": 298.933
+    },
+    {
+      "word": "is",
+      "start": 299.014,
+      "end": 299.2
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 299.316,
+      "end": 300.187
+    },
+    {
+      "word": "Let",
+      "start": 300.431,
+      "end": 300.617
+    },
+    {
+      "word": "us",
+      "start": 300.686,
+      "end": 300.779
+    },
+    {
+      "word": "apply",
+      "start": 300.825,
+      "end": 301.139
+    },
+    {
+      "word": "this",
+      "start": 301.22,
+      "end": 301.406
+    },
+    {
+      "word": "to",
+      "start": 301.476,
+      "end": 301.592
+    },
+    {
+      "word": "numbers",
+      "start": 301.708,
+      "end": 302.056
+    },
+    {
+      "word": "taken",
+      "start": 302.126,
+      "end": 302.404
+    },
+    {
+      "word": "from",
+      "start": 302.462,
+      "end": 302.613
+    },
+    {
+      "word": "the",
+      "start": 302.671,
+      "end": 302.741
+    },
+    {
+      "word": "lesson.",
+      "start": 302.811,
+      "end": 303.275
+    },
+    {
+      "word": "Reaction",
+      "start": 303.449,
+      "end": 303.995
+    },
+    {
+      "word": "X",
+      "start": 304.065,
+      "end": 304.274
+    },
+    {
+      "word": "has",
+      "start": 304.668,
+      "end": 304.935
+    },
+    {
+      "word": "an",
+      "start": 305.017,
+      "end": 305.098
+    },
+    {
+      "word": "activation",
+      "start": 305.156,
+      "end": 305.818
+    },
+    {
+      "word": "energy",
+      "start": 305.899,
+      "end": 306.363
+    },
+    {
+      "word": "of",
+      "start": 306.572,
+      "end": 306.712
+    },
+    {
+      "word": "forty",
+      "start": 306.828,
+      "end": 307.188
+    },
+    {
+      "word": "five",
+      "start": 307.269,
+      "end": 307.71
+    },
+    {
+      "word": "kilojoules",
+      "start": 307.861,
+      "end": 308.546
+    },
+    {
+      "word": "per",
+      "start": 308.72,
+      "end": 308.918
+    },
+    {
+      "word": "mole.",
+      "start": 308.964,
+      "end": 309.301
+    },
+    {
+      "word": "Collision",
+      "start": 309.475,
+      "end": 309.986
+    },
+    {
+      "word": "A",
+      "start": 310.16,
+      "end": 310.439
+    },
+    {
+      "word": "has",
+      "start": 310.59,
+      "end": 310.764
+    },
+    {
+      "word": "thirty",
+      "start": 310.857,
+      "end": 311.158
+    },
+    {
+      "word": "kilojoules",
+      "start": 311.205,
+      "end": 311.727
+    },
+    {
+      "word": "per",
+      "start": 311.809,
+      "end": 311.948
+    },
+    {
+      "word": "mole",
+      "start": 311.994,
+      "end": 312.308
+    },
+    {
+      "word": "and",
+      "start": 312.459,
+      "end": 312.656
+    },
+    {
+      "word": "the",
+      "start": 312.703,
+      "end": 312.772
+    },
+    {
+      "word": "correct",
+      "start": 312.83,
+      "end": 313.12
+    },
+    {
+      "word": "orientation.",
+      "start": 313.167,
+      "end": 314.003
+    },
+    {
+      "word": "Is",
+      "start": 314.281,
+      "end": 314.444
+    },
+    {
+      "word": "it",
+      "start": 314.502,
+      "end": 314.572
+    },
+    {
+      "word": "successful?",
+      "start": 314.618,
+      "end": 315.292
+    },
+    {
+      "word": "No.",
+      "start": 315.466,
+      "end": 315.895
+    },
+    {
+      "word": "Thirty",
+      "start": 316.139,
+      "end": 316.603
+    },
+    {
+      "word": "is",
+      "start": 316.731,
+      "end": 316.917
+    },
+    {
+      "word": "below",
+      "start": 316.998,
+      "end": 317.277
+    },
+    {
+      "word": "forty",
+      "start": 317.358,
+      "end": 317.637
+    },
+    {
+      "word": "five,",
+      "start": 317.706,
+      "end": 318.171
+    },
+    {
+      "word": "so",
+      "start": 318.322,
+      "end": 318.473
+    },
+    {
+      "word": "the",
+      "start": 318.542,
+      "end": 318.612
+    },
+    {
+      "word": "collision",
+      "start": 318.682,
+      "end": 319.042
+    },
+    {
+      "word": "is",
+      "start": 319.1,
+      "end": 319.193
+    },
+    {
+      "word": "unsuccessful",
+      "start": 319.285,
+      "end": 320.098
+    },
+    {
+      "word": "because",
+      "start": 320.249,
+      "end": 320.586
+    },
+    {
+      "word": "of",
+      "start": 320.621,
+      "end": 320.69
+    },
+    {
+      "word": "insufficient",
+      "start": 320.806,
+      "end": 321.479
+    },
+    {
+      "word": "energy,",
+      "start": 321.549,
+      "end": 322.095
+    },
+    {
+      "word": "even",
+      "start": 322.304,
+      "end": 322.582
+    },
+    {
+      "word": "though",
+      "start": 322.629,
+      "end": 322.873
+    },
+    {
+      "word": "the",
+      "start": 322.919,
+      "end": 323.0
+    },
+    {
+      "word": "orientation",
+      "start": 323.081,
+      "end": 323.801
+    },
+    {
+      "word": "is",
+      "start": 323.859,
+      "end": 323.941
+    },
+    {
+      "word": "correct.",
+      "start": 324.01,
+      "end": 324.475
+    },
+    {
+      "word": "Collision",
+      "start": 324.811,
+      "end": 325.287
+    },
+    {
+      "word": "B",
+      "start": 325.345,
+      "end": 325.415
+    },
+    {
+      "word": "has",
+      "start": 325.543,
+      "end": 325.705
+    },
+    {
+      "word": "fifty",
+      "start": 325.798,
+      "end": 326.158
+    },
+    {
+      "word": "five",
+      "start": 326.228,
+      "end": 326.495
+    },
+    {
+      "word": "kilojoules",
+      "start": 326.541,
+      "end": 327.145
+    },
+    {
+      "word": "per",
+      "start": 327.215,
+      "end": 327.342
+    },
+    {
+      "word": "mole,",
+      "start": 327.4,
+      "end": 327.644
+    },
+    {
+      "word": "but",
+      "start": 327.691,
+      "end": 327.842
+    },
+    {
+      "word": "the",
+      "start": 327.876,
+      "end": 327.958
+    },
+    {
+      "word": "orientation",
+      "start": 328.027,
+      "end": 328.701
+    },
+    {
+      "word": "is",
+      "start": 328.759,
+      "end": 328.852
+    },
+    {
+      "word": "incorrect.",
+      "start": 328.933,
+      "end": 329.548
+    },
+    {
+      "word": "The",
+      "start": 329.757,
+      "end": 329.908
+    },
+    {
+      "word": "energy",
+      "start": 330.001,
+      "end": 330.442
+    },
+    {
+      "word": "is",
+      "start": 330.512,
+      "end": 330.628
+    },
+    {
+      "word": "sufficient,",
+      "start": 330.674,
+      "end": 331.255
+    },
+    {
+      "word": "but",
+      "start": 331.29,
+      "end": 331.464
+    },
+    {
+      "word": "the",
+      "start": 331.499,
+      "end": 331.58
+    },
+    {
+      "word": "spatial",
+      "start": 331.626,
+      "end": 332.137
+    },
+    {
+      "word": "orientation",
+      "start": 332.207,
+      "end": 332.845
+    },
+    {
+      "word": "is",
+      "start": 332.904,
+      "end": 332.996
+    },
+    {
+      "word": "wrong,",
+      "start": 333.066,
+      "end": 333.53
+    },
+    {
+      "word": "so",
+      "start": 333.705,
+      "end": 333.879
+    },
+    {
+      "word": "the",
+      "start": 333.948,
+      "end": 334.018
+    },
+    {
+      "word": "collision",
+      "start": 334.076,
+      "end": 334.564
+    },
+    {
+      "word": "is",
+      "start": 334.645,
+      "end": 334.761
+    },
+    {
+      "word": "still",
+      "start": 334.796,
+      "end": 335.086
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 335.202,
+      "end": 336.154
+    },
+    {
+      "word": "Collision",
+      "start": 336.491,
+      "end": 336.978
+    },
+    {
+      "word": "C",
+      "start": 337.036,
+      "end": 337.118
+    },
+    {
+      "word": "has",
+      "start": 337.292,
+      "end": 337.431
+    },
+    {
+      "word": "fifty",
+      "start": 337.512,
+      "end": 337.861
+    },
+    {
+      "word": "kilojoules",
+      "start": 337.954,
+      "end": 338.522
+    },
+    {
+      "word": "per",
+      "start": 338.581,
+      "end": 338.72
+    },
+    {
+      "word": "mole",
+      "start": 338.778,
+      "end": 339.091
+    },
+    {
+      "word": "and",
+      "start": 339.138,
+      "end": 339.416
+    },
+    {
+      "word": "the",
+      "start": 339.451,
+      "end": 339.521
+    },
+    {
+      "word": "correct",
+      "start": 339.567,
+      "end": 339.869
+    },
+    {
+      "word": "orientation.",
+      "start": 339.927,
+      "end": 340.728
+    },
+    {
+      "word": "Energy",
+      "start": 341.065,
+      "end": 341.611
+    },
+    {
+      "word": "exceeds",
+      "start": 341.692,
+      "end": 342.18
+    },
+    {
+      "word": "activation",
+      "start": 342.226,
+      "end": 342.865
+    },
+    {
+      "word": "energy",
+      "start": 343.039,
+      "end": 343.642
+    },
+    {
+      "word": "and",
+      "start": 343.724,
+      "end": 343.968
+    },
+    {
+      "word": "orientation",
+      "start": 344.049,
+      "end": 344.757
+    },
+    {
+      "word": "is",
+      "start": 344.827,
+      "end": 344.978
+    },
+    {
+      "word": "correct,",
+      "start": 345.047,
+      "end": 345.558
+    },
+    {
+      "word": "so",
+      "start": 345.639,
+      "end": 345.93
+    },
+    {
+      "word": "a",
+      "start": 346.023,
+      "end": 346.057
+    },
+    {
+      "word": "successful",
+      "start": 346.139,
+      "end": 346.684
+    },
+    {
+      "word": "collision",
+      "start": 346.754,
+      "end": 347.242
+    },
+    {
+      "word": "is",
+      "start": 347.334,
+      "end": 347.485
+    },
+    {
+      "word": "possible.",
+      "start": 347.555,
+      "end": 348.101
+    },
+    {
+      "word": "Notice",
+      "start": 348.495,
+      "end": 348.925
+    },
+    {
+      "word": "the",
+      "start": 348.96,
+      "end": 349.041
+    },
+    {
+      "word": "pattern.",
+      "start": 349.111,
+      "end": 349.691
+    },
+    {
+      "word": "Correct",
+      "start": 349.865,
+      "end": 350.202
+    },
+    {
+      "word": "orientation",
+      "start": 350.26,
+      "end": 350.945
+    },
+    {
+      "word": "cannot",
+      "start": 351.015,
+      "end": 351.375
+    },
+    {
+      "word": "compensate",
+      "start": 351.433,
+      "end": 352.06
+    },
+    {
+      "word": "for",
+      "start": 352.106,
+      "end": 352.269
+    },
+    {
+      "word": "low",
+      "start": 352.35,
+      "end": 352.536
+    },
+    {
+      "word": "energy,",
+      "start": 352.629,
+      "end": 353.279
+    },
+    {
+      "word": "and",
+      "start": 353.349,
+      "end": 353.523
+    },
+    {
+      "word": "high",
+      "start": 353.616,
+      "end": 353.813
+    },
+    {
+      "word": "energy",
+      "start": 353.883,
+      "end": 354.278
+    },
+    {
+      "word": "cannot",
+      "start": 354.336,
+      "end": 354.661
+    },
+    {
+      "word": "compensate",
+      "start": 354.719,
+      "end": 355.415
+    },
+    {
+      "word": "for",
+      "start": 355.473,
+      "end": 355.659
+    },
+    {
+      "word": "the",
+      "start": 355.706,
+      "end": 355.798
+    },
+    {
+      "word": "wrong",
+      "start": 355.856,
+      "end": 356.147
+    },
+    {
+      "word": "orientation.",
+      "start": 356.263,
+      "end": 357.122
+    },
+    {
+      "word": "Both",
+      "start": 357.18,
+      "end": 357.459
+    },
+    {
+      "word": "conditions",
+      "start": 357.505,
+      "end": 358.074
+    },
+    {
+      "word": "are",
+      "start": 358.144,
+      "end": 358.329
+    },
+    {
+      "word": "required.",
+      "start": 358.364,
+      "end": 358.98
+    },
+    {
+      "word": "Here",
+      "start": 359.131,
+      "end": 359.432
+    },
+    {
+      "word": "are",
+      "start": 359.49,
+      "end": 359.676
+    },
+    {
+      "word": "four",
+      "start": 359.757,
+      "end": 360.059
+    },
+    {
+      "word": "misconceptions",
+      "start": 360.129,
+      "end": 360.965
+    },
+    {
+      "word": "to",
+      "start": 361.023,
+      "end": 361.093
+    },
+    {
+      "word": "avoid.",
+      "start": 361.174,
+      "end": 361.673
+    },
+    {
+      "word": "Particles",
+      "start": 361.789,
+      "end": 362.37
+    },
+    {
+      "word": "do",
+      "start": 362.428,
+      "end": 362.521
+    },
+    {
+      "word": "not",
+      "start": 362.602,
+      "end": 362.753
+    },
+    {
+      "word": "react",
+      "start": 362.834,
+      "end": 363.229
+    },
+    {
+      "word": "whenever",
+      "start": 363.287,
+      "end": 363.728
+    },
+    {
+      "word": "they",
+      "start": 363.798,
+      "end": 363.925
+    },
+    {
+      "word": "collide.",
+      "start": 363.983,
+      "end": 364.599
+    },
+    {
+      "word": "Energy",
+      "start": 364.68,
+      "end": 365.226
+    },
+    {
+      "word": "and",
+      "start": 365.296,
+      "end": 365.458
+    },
+    {
+      "word": "orientation",
+      "start": 365.551,
+      "end": 366.259
+    },
+    {
+      "word": "conditions",
+      "start": 366.329,
+      "end": 366.991
+    },
+    {
+      "word": "must",
+      "start": 367.142,
+      "end": 367.385
+    },
+    {
+      "word": "be",
+      "start": 367.443,
+      "end": 367.548
+    },
+    {
+      "word": "satisfied.",
+      "start": 367.594,
+      "end": 368.488
+    },
+    {
+      "word": "Activation",
+      "start": 368.883,
+      "end": 369.498
+    },
+    {
+      "word": "energy",
+      "start": 369.568,
+      "end": 369.986
+    },
+    {
+      "word": "is",
+      "start": 370.102,
+      "end": 370.253
+    },
+    {
+      "word": "not",
+      "start": 370.323,
+      "end": 370.474
+    },
+    {
+      "word": "energy",
+      "start": 370.543,
+      "end": 370.892
+    },
+    {
+      "word": "released",
+      "start": 370.961,
+      "end": 371.321
+    },
+    {
+      "word": "by",
+      "start": 371.379,
+      "end": 371.53
+    },
+    {
+      "word": "a",
+      "start": 371.588,
+      "end": 371.611
+    },
+    {
+      "word": "reaction.",
+      "start": 371.669,
+      "end": 372.343
+    },
+    {
+      "word": "It",
+      "start": 372.738,
+      "end": 372.889
+    },
+    {
+      "word": "is",
+      "start": 372.947,
+      "end": 373.028
+    },
+    {
+      "word": "the",
+      "start": 373.063,
+      "end": 373.132
+    },
+    {
+      "word": "minimum",
+      "start": 373.179,
+      "end": 373.643
+    },
+    {
+      "word": "energy",
+      "start": 373.724,
+      "end": 374.084
+    },
+    {
+      "word": "required",
+      "start": 374.142,
+      "end": 374.665
+    },
+    {
+      "word": "for",
+      "start": 374.711,
+      "end": 374.862
+    },
+    {
+      "word": "a",
+      "start": 374.897,
+      "end": 374.92
+    },
+    {
+      "word": "successful",
+      "start": 374.978,
+      "end": 375.605
+    },
+    {
+      "word": "collision.",
+      "start": 375.687,
+      "end": 376.325
+    },
+    {
+      "word": "Enough",
+      "start": 376.778,
+      "end": 377.103
+    },
+    {
+      "word": "energy",
+      "start": 377.184,
+      "end": 377.556
+    },
+    {
+      "word": "does",
+      "start": 377.625,
+      "end": 377.776
+    },
+    {
+      "word": "not",
+      "start": 377.811,
+      "end": 377.927
+    },
+    {
+      "word": "guarantee",
+      "start": 377.974,
+      "end": 378.461
+    },
+    {
+      "word": "a",
+      "start": 378.496,
+      "end": 378.531
+    },
+    {
+      "word": "reaction,",
+      "start": 378.601,
+      "end": 379.309
+    },
+    {
+      "word": "because",
+      "start": 379.553,
+      "end": 379.866
+    },
+    {
+      "word": "spatial",
+      "start": 379.889,
+      "end": 380.33
+    },
+    {
+      "word": "orientation",
+      "start": 380.4,
+      "end": 381.189
+    },
+    {
+      "word": "must",
+      "start": 381.34,
+      "end": 381.595
+    },
+    {
+      "word": "also",
+      "start": 381.654,
+      "end": 381.99
+    },
+    {
+      "word": "be",
+      "start": 382.071,
+      "end": 382.176
+    },
+    {
+      "word": "correct.",
+      "start": 382.234,
+      "end": 382.791
+    },
+    {
+      "word": "And",
+      "start": 382.907,
+      "end": 383.082
+    },
+    {
+      "word": "correct",
+      "start": 383.163,
+      "end": 383.546
+    },
+    {
+      "word": "orientation",
+      "start": 383.604,
+      "end": 384.266
+    },
+    {
+      "word": "cannot",
+      "start": 384.335,
+      "end": 384.649
+    },
+    {
+      "word": "make",
+      "start": 384.719,
+      "end": 384.951
+    },
+    {
+      "word": "up",
+      "start": 384.986,
+      "end": 385.078
+    },
+    {
+      "word": "for",
+      "start": 385.125,
+      "end": 385.241
+    },
+    {
+      "word": "collision",
+      "start": 385.311,
+      "end": 385.775
+    },
+    {
+      "word": "energy",
+      "start": 385.891,
+      "end": 386.309
+    },
+    {
+      "word": "below",
+      "start": 386.379,
+      "end": 386.727
+    },
+    {
+      "word": "the",
+      "start": 386.797,
+      "end": 386.89
+    },
+    {
+      "word": "activation",
+      "start": 386.959,
+      "end": 387.598
+    },
+    {
+      "word": "energy.",
+      "start": 387.691,
+      "end": 388.236
+    },
+    {
+      "word": "Let",
+      "start": 388.411,
+      "end": 388.62
+    },
+    {
+      "word": "us",
+      "start": 388.678,
+      "end": 388.77
+    },
+    {
+      "word": "finish",
+      "start": 388.852,
+      "end": 389.2
+    },
+    {
+      "word": "with",
+      "start": 389.258,
+      "end": 389.432
+    },
+    {
+      "word": "an",
+      "start": 389.479,
+      "end": 389.548
+    },
+    {
+      "word": "examination-style",
+      "start": 389.63,
+      "end": 390.872
+    },
+    {
+      "word": "question.",
+      "start": 390.918,
+      "end": 391.545
+    },
+    {
+      "word": "A",
+      "start": 391.719,
+      "end": 391.812
+    },
+    {
+      "word": "reaction",
+      "start": 391.905,
+      "end": 392.404
+    },
+    {
+      "word": "occurs",
+      "start": 392.462,
+      "end": 392.846
+    },
+    {
+      "word": "when",
+      "start": 392.904,
+      "end": 393.078
+    },
+    {
+      "word": "particles",
+      "start": 393.159,
+      "end": 393.716
+    },
+    {
+      "word": "P",
+      "start": 393.832,
+      "end": 393.948
+    },
+    {
+      "word": "and",
+      "start": 394.227,
+      "end": 394.425
+    },
+    {
+      "word": "Q",
+      "start": 394.494,
+      "end": 394.61
+    },
+    {
+      "word": "collide.",
+      "start": 394.819,
+      "end": 395.458
+    },
+    {
+      "word": "The",
+      "start": 395.609,
+      "end": 395.748
+    },
+    {
+      "word": "activation",
+      "start": 395.818,
+      "end": 396.479
+    },
+    {
+      "word": "energy",
+      "start": 396.561,
+      "end": 397.002
+    },
+    {
+      "word": "is",
+      "start": 397.083,
+      "end": 397.246
+    },
+    {
+      "word": "sixty",
+      "start": 397.315,
+      "end": 397.768
+    },
+    {
+      "word": "two",
+      "start": 397.849,
+      "end": 398.035
+    },
+    {
+      "word": "kilojoules",
+      "start": 398.128,
+      "end": 398.79
+    },
+    {
+      "word": "per",
+      "start": 398.906,
+      "end": 399.08
+    },
+    {
+      "word": "mole.",
+      "start": 399.138,
+      "end": 399.51
+    },
+    {
+      "word": "Part",
+      "start": 399.684,
+      "end": 400.032
+    },
+    {
+      "word": "a.",
+      "start": 400.113,
+      "end": 400.38
+    },
+    {
+      "word": "Collision",
+      "start": 400.473,
+      "end": 401.042
+    },
+    {
+      "word": "one",
+      "start": 401.135,
+      "end": 401.356
+    },
+    {
+      "word": "has",
+      "start": 401.402,
+      "end": 401.576
+    },
+    {
+      "word": "fifty",
+      "start": 401.669,
+      "end": 402.017
+    },
+    {
+      "word": "eight",
+      "start": 402.064,
+      "end": 402.238
+    },
+    {
+      "word": "kilojoules",
+      "start": 402.273,
+      "end": 402.853
+    },
+    {
+      "word": "per",
+      "start": 402.923,
+      "end": 403.086
+    },
+    {
+      "word": "mole",
+      "start": 403.144,
+      "end": 403.457
+    },
+    {
+      "word": "and",
+      "start": 403.573,
+      "end": 403.782
+    },
+    {
+      "word": "the",
+      "start": 403.84,
+      "end": 403.921
+    },
+    {
+      "word": "correct",
+      "start": 404.014,
+      "end": 404.397
+    },
+    {
+      "word": "orientation.",
+      "start": 404.479,
+      "end": 405.396
+    },
+    {
+      "word": "Explain",
+      "start": 405.791,
+      "end": 406.301
+    },
+    {
+      "word": "why",
+      "start": 406.371,
+      "end": 406.638
+    },
+    {
+      "word": "it",
+      "start": 406.708,
+      "end": 406.812
+    },
+    {
+      "word": "is",
+      "start": 406.87,
+      "end": 406.963
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 407.045,
+      "end": 407.904
+    },
+    {
+      "word": "That",
+      "start": 408.113,
+      "end": 408.322
+    },
+    {
+      "word": "is",
+      "start": 408.38,
+      "end": 408.473
+    },
+    {
+      "word": "worth",
+      "start": 408.542,
+      "end": 408.786
+    },
+    {
+      "word": "two",
+      "start": 408.832,
+      "end": 408.995
+    },
+    {
+      "word": "marks.",
+      "start": 409.065,
+      "end": 409.575
+    },
+    {
+      "word": "Fifty",
+      "start": 409.912,
+      "end": 410.33
+    },
+    {
+      "word": "eight",
+      "start": 410.411,
+      "end": 410.644
+    },
+    {
+      "word": "is",
+      "start": 410.725,
+      "end": 410.887
+    },
+    {
+      "word": "below",
+      "start": 410.957,
+      "end": 411.247
+    },
+    {
+      "word": "sixty-two,",
+      "start": 411.34,
+      "end": 412.199
+    },
+    {
+      "word": "so",
+      "start": 412.408,
+      "end": 412.594
+    },
+    {
+      "word": "there",
+      "start": 412.675,
+      "end": 412.884
+    },
+    {
+      "word": "is",
+      "start": 412.93,
+      "end": 413.023
+    },
+    {
+      "word": "insufficient",
+      "start": 413.139,
+      "end": 413.929
+    },
+    {
+      "word": "energy",
+      "start": 414.022,
+      "end": 414.509
+    },
+    {
+      "word": "for",
+      "start": 414.591,
+      "end": 414.73
+    },
+    {
+      "word": "the",
+      "start": 414.776,
+      "end": 414.846
+    },
+    {
+      "word": "required",
+      "start": 414.916,
+      "end": 415.496
+    },
+    {
+      "word": "bond",
+      "start": 415.566,
+      "end": 415.786
+    },
+    {
+      "word": "changes.",
+      "start": 415.844,
+      "end": 416.483
+    },
+    {
+      "word": "Part",
+      "start": 417.098,
+      "end": 417.4
+    },
+    {
+      "word": "b.",
+      "start": 417.458,
+      "end": 417.725
+    },
+    {
+      "word": "Collision",
+      "start": 417.841,
+      "end": 418.375
+    },
+    {
+      "word": "two",
+      "start": 418.445,
+      "end": 418.689
+    },
+    {
+      "word": "has",
+      "start": 418.782,
+      "end": 418.956
+    },
+    {
+      "word": "seventy",
+      "start": 419.026,
+      "end": 419.513
+    },
+    {
+      "word": "kilojoules",
+      "start": 419.583,
+      "end": 420.175
+    },
+    {
+      "word": "per",
+      "start": 420.233,
+      "end": 420.396
+    },
+    {
+      "word": "mole",
+      "start": 420.454,
+      "end": 420.988
+    },
+    {
+      "word": "but",
+      "start": 421.115,
+      "end": 421.348
+    },
+    {
+      "word": "incorrect",
+      "start": 421.417,
+      "end": 421.905
+    },
+    {
+      "word": "orientation.",
+      "start": 421.963,
+      "end": 422.776
+    },
+    {
+      "word": "Explain",
+      "start": 423.17,
+      "end": 423.797
+    },
+    {
+      "word": "why",
+      "start": 423.867,
+      "end": 424.169
+    },
+    {
+      "word": "it",
+      "start": 424.238,
+      "end": 424.331
+    },
+    {
+      "word": "is",
+      "start": 424.389,
+      "end": 424.482
+    },
+    {
+      "word": "unsuccessful.",
+      "start": 424.564,
+      "end": 425.492
+    },
+    {
+      "word": "Two",
+      "start": 425.829,
+      "end": 426.05
+    },
+    {
+      "word": "marks.",
+      "start": 426.119,
+      "end": 426.595
+    },
+    {
+      "word": "The",
+      "start": 426.874,
+      "end": 427.013
+    },
+    {
+      "word": "energy",
+      "start": 427.106,
+      "end": 427.547
+    },
+    {
+      "word": "exceeds",
+      "start": 427.617,
+      "end": 428.221
+    },
+    {
+      "word": "the",
+      "start": 428.279,
+      "end": 428.372
+    },
+    {
+      "word": "activation",
+      "start": 428.441,
+      "end": 429.08
+    },
+    {
+      "word": "energy,",
+      "start": 429.161,
+      "end": 429.788
+    },
+    {
+      "word": "but",
+      "start": 429.939,
+      "end": 430.136
+    },
+    {
+      "word": "the",
+      "start": 430.183,
+      "end": 430.264
+    },
+    {
+      "word": "particles",
+      "start": 430.334,
+      "end": 430.937
+    },
+    {
+      "word": "are",
+      "start": 431.019,
+      "end": 431.216
+    },
+    {
+      "word": "not",
+      "start": 431.274,
+      "end": 431.576
+    },
+    {
+      "word": "in",
+      "start": 431.727,
+      "end": 431.878
+    },
+    {
+      "word": "the",
+      "start": 431.924,
+      "end": 431.994
+    },
+    {
+      "word": "correct",
+      "start": 432.064,
+      "end": 432.47
+    },
+    {
+      "word": "spatial",
+      "start": 432.528,
+      "end": 433.12
+    },
+    {
+      "word": "orientation",
+      "start": 433.201,
+      "end": 433.956
+    },
+    {
+      "word": "for",
+      "start": 434.037,
+      "end": 434.211
+    },
+    {
+      "word": "the",
+      "start": 434.258,
+      "end": 434.328
+    },
+    {
+      "word": "required",
+      "start": 434.409,
+      "end": 434.896
+    },
+    {
+      "word": "interaction.",
+      "start": 434.966,
+      "end": 435.779
+    },
+    {
+      "word": "Part",
+      "start": 436.301,
+      "end": 436.58
+    },
+    {
+      "word": "c.",
+      "start": 436.649,
+      "end": 437.102
+    },
+    {
+      "word": "State",
+      "start": 437.439,
+      "end": 437.834
+    },
+    {
+      "word": "the",
+      "start": 437.869,
+      "end": 437.938
+    },
+    {
+      "word": "conditions",
+      "start": 438.008,
+      "end": 438.6
+    },
+    {
+      "word": "needed",
+      "start": 438.67,
+      "end": 438.971
+    },
+    {
+      "word": "for",
+      "start": 439.03,
+      "end": 439.18
+    },
+    {
+      "word": "a",
+      "start": 439.239,
+      "end": 439.262
+    },
+    {
+      "word": "collision",
+      "start": 439.32,
+      "end": 439.807
+    },
+    {
+      "word": "between",
+      "start": 439.865,
+      "end": 440.225
+    },
+    {
+      "word": "P",
+      "start": 440.295,
+      "end": 440.411
+    },
+    {
+      "word": "and",
+      "start": 440.69,
+      "end": 440.864
+    },
+    {
+      "word": "Q",
+      "start": 440.957,
+      "end": 441.073
+    },
+    {
+      "word": "to",
+      "start": 441.41,
+      "end": 441.526
+    },
+    {
+      "word": "form",
+      "start": 441.619,
+      "end": 441.874
+    },
+    {
+      "word": "products.",
+      "start": 441.932,
+      "end": 442.582
+    },
+    {
+      "word": "Two",
+      "start": 442.756,
+      "end": 442.965
+    },
+    {
+      "word": "marks.",
+      "start": 443.035,
+      "end": 443.476
+    },
+    {
+      "word": "Collision",
+      "start": 443.755,
+      "end": 444.242
+    },
+    {
+      "word": "energy",
+      "start": 444.324,
+      "end": 444.753
+    },
+    {
+      "word": "must",
+      "start": 444.823,
+      "end": 445.043
+    },
+    {
+      "word": "be",
+      "start": 445.102,
+      "end": 445.183
+    },
+    {
+      "word": "at",
+      "start": 445.229,
+      "end": 445.299
+    },
+    {
+      "word": "least",
+      "start": 445.392,
+      "end": 445.682
+    },
+    {
+      "word": "the",
+      "start": 445.728,
+      "end": 445.822
+    },
+    {
+      "word": "activation",
+      "start": 445.891,
+      "end": 446.565
+    },
+    {
+      "word": "energy,",
+      "start": 446.635,
+      "end": 447.18
+    },
+    {
+      "word": "and",
+      "start": 447.354,
+      "end": 447.528
+    },
+    {
+      "word": "the",
+      "start": 447.587,
+      "end": 447.668
+    },
+    {
+      "word": "particles",
+      "start": 447.737,
+      "end": 448.283
+    },
+    {
+      "word": "must",
+      "start": 448.399,
+      "end": 448.643
+    },
+    {
+      "word": "have",
+      "start": 448.724,
+      "end": 448.968
+    },
+    {
+      "word": "the",
+      "start": 449.003,
+      "end": 449.073
+    },
+    {
+      "word": "correct",
+      "start": 449.119,
+      "end": 449.444
+    },
+    {
+      "word": "spatial",
+      "start": 449.467,
+      "end": 449.932
+    },
+    {
+      "word": "orientation.",
+      "start": 449.99,
+      "end": 450.791
+    },
+    {
+      "word": "Part",
+      "start": 451.128,
+      "end": 451.418
+    },
+    {
+      "word": "d.",
+      "start": 451.464,
+      "end": 451.847
+    },
+    {
+      "word": "Explain",
+      "start": 452.242,
+      "end": 452.834
+    },
+    {
+      "word": "why",
+      "start": 452.916,
+      "end": 453.125
+    },
+    {
+      "word": "collision",
+      "start": 453.206,
+      "end": 453.589
+    },
+    {
+      "word": "theory",
+      "start": 453.659,
+      "end": 454.018
+    },
+    {
+      "word": "predicts",
+      "start": 454.135,
+      "end": 454.587
+    },
+    {
+      "word": "that",
+      "start": 454.634,
+      "end": 454.808
+    },
+    {
+      "word": "many",
+      "start": 454.924,
+      "end": 455.191
+    },
+    {
+      "word": "collisions",
+      "start": 455.238,
+      "end": 455.83
+    },
+    {
+      "word": "do",
+      "start": 456.039,
+      "end": 456.19
+    },
+    {
+      "word": "not",
+      "start": 456.282,
+      "end": 456.433
+    },
+    {
+      "word": "produce",
+      "start": 456.491,
+      "end": 456.909
+    },
+    {
+      "word": "a",
+      "start": 456.944,
+      "end": 456.979
+    },
+    {
+      "word": "reaction.",
+      "start": 457.049,
+      "end": 457.71
+    },
+    {
+      "word": "Two",
+      "start": 458.163,
+      "end": 458.349
+    },
+    {
+      "word": "marks.",
+      "start": 458.43,
+      "end": 458.964
+    },
+    {
+      "word": "Many",
+      "start": 459.243,
+      "end": 459.487
+    },
+    {
+      "word": "collisions",
+      "start": 459.533,
+      "end": 460.009
+    },
+    {
+      "word": "fail",
+      "start": 460.09,
+      "end": 460.439
+    },
+    {
+      "word": "one",
+      "start": 460.717,
+      "end": 461.019
+    },
+    {
+      "word": "or",
+      "start": 461.077,
+      "end": 461.228
+    },
+    {
+      "word": "both",
+      "start": 461.298,
+      "end": 461.519
+    },
+    {
+      "word": "requirements:",
+      "start": 461.588,
+      "end": 462.378
+    },
+    {
+      "word": "insufficient",
+      "start": 462.715,
+      "end": 463.411
+    },
+    {
+      "word": "energy,",
+      "start": 463.481,
+      "end": 463.98
+    },
+    {
+      "word": "or",
+      "start": 464.05,
+      "end": 464.224
+    },
+    {
+      "word": "incorrect",
+      "start": 464.305,
+      "end": 464.816
+    },
+    {
+      "word": "orientation,",
+      "start": 464.886,
+      "end": 465.571
+    },
+    {
+      "word": "or",
+      "start": 465.629,
+      "end": 465.791
+    },
+    {
+      "word": "both.",
+      "start": 465.861,
+      "end": 466.256
+    },
+    {
+      "word": "Before",
+      "start": 466.372,
+      "end": 466.72
+    },
+    {
+      "word": "we",
+      "start": 466.755,
+      "end": 466.859
+    },
+    {
+      "word": "finish,",
+      "start": 466.917,
+      "end": 467.44
+    },
+    {
+      "word": "complete",
+      "start": 467.614,
+      "end": 468.055
+    },
+    {
+      "word": "the",
+      "start": 468.09,
+      "end": 468.16
+    },
+    {
+      "word": "model.",
+      "start": 468.206,
+      "end": 468.566
+    },
+    {
+      "word": "Reactant",
+      "start": 468.613,
+      "end": 469.158
+    },
+    {
+      "word": "particles",
+      "start": 469.205,
+      "end": 469.692
+    },
+    {
+      "word": "must",
+      "start": 469.75,
+      "end": 469.936
+    },
+    {
+      "word": "collide.",
+      "start": 469.994,
+      "end": 470.505
+    },
+    {
+      "word": "The",
+      "start": 470.656,
+      "end": 470.784
+    },
+    {
+      "word": "collision",
+      "start": 470.853,
+      "end": 471.294
+    },
+    {
+      "word": "must",
+      "start": 471.364,
+      "end": 471.538
+    },
+    {
+      "word": "have",
+      "start": 471.585,
+      "end": 471.759
+    },
+    {
+      "word": "energy",
+      "start": 471.805,
+      "end": 472.246
+    },
+    {
+      "word": "at",
+      "start": 472.397,
+      "end": 472.572
+    },
+    {
+      "word": "least",
+      "start": 472.641,
+      "end": 472.873
+    },
+    {
+      "word": "equal",
+      "start": 472.943,
+      "end": 473.233
+    },
+    {
+      "word": "to",
+      "start": 473.28,
+      "end": 473.349
+    },
+    {
+      "word": "the",
+      "start": 473.407,
+      "end": 473.489
+    },
+    {
+      "word": "activation",
+      "start": 473.547,
+      "end": 474.174
+    },
+    {
+      "word": "energy.",
+      "start": 474.243,
+      "end": 474.743
+    },
+    {
+      "word": "That",
+      "start": 474.894,
+      "end": 475.126
+    },
+    {
+      "word": "energy",
+      "start": 475.207,
+      "end": 475.637
+    },
+    {
+      "word": "is",
+      "start": 475.706,
+      "end": 475.822
+    },
+    {
+      "word": "needed",
+      "start": 475.903,
+      "end": 476.228
+    },
+    {
+      "word": "so",
+      "start": 476.298,
+      "end": 476.495
+    },
+    {
+      "word": "bonds",
+      "start": 476.576,
+      "end": 476.89
+    },
+    {
+      "word": "can",
+      "start": 476.948,
+      "end": 477.111
+    },
+    {
+      "word": "break",
+      "start": 477.18,
+      "end": 477.505
+    },
+    {
+      "word": "and",
+      "start": 477.749,
+      "end": 477.981
+    },
+    {
+      "word": "new",
+      "start": 478.063,
+      "end": 478.213
+    },
+    {
+      "word": "bonds",
+      "start": 478.283,
+      "end": 478.573
+    },
+    {
+      "word": "can",
+      "start": 478.631,
+      "end": 478.782
+    },
+    {
+      "word": "form.",
+      "start": 478.875,
+      "end": 479.351
+    },
+    {
+      "word": "The",
+      "start": 479.595,
+      "end": 479.7
+    },
+    {
+      "word": "particles",
+      "start": 479.769,
+      "end": 480.303
+    },
+    {
+      "word": "must",
+      "start": 480.396,
+      "end": 480.605
+    },
+    {
+      "word": "also",
+      "start": 480.663,
+      "end": 480.907
+    },
+    {
+      "word": "have",
+      "start": 480.988,
+      "end": 481.151
+    },
+    {
+      "word": "the",
+      "start": 481.197,
+      "end": 481.267
+    },
+    {
+      "word": "correct",
+      "start": 481.337,
+      "end": 481.696
+    },
+    {
+      "word": "spatial",
+      "start": 481.766,
+      "end": 482.219
+    },
+    {
+      "word": "orientation.",
+      "start": 482.289,
+      "end": 483.066
+    },
+    {
+      "word": "Only",
+      "start": 483.241,
+      "end": 483.601
+    },
+    {
+      "word": "collisions",
+      "start": 483.67,
+      "end": 484.216
+    },
+    {
+      "word": "that",
+      "start": 484.262,
+      "end": 484.413
+    },
+    {
+      "word": "satisfy",
+      "start": 484.471,
+      "end": 485.029
+    },
+    {
+      "word": "both",
+      "start": 485.11,
+      "end": 485.354
+    },
+    {
+      "word": "requirements",
+      "start": 485.446,
+      "end": 486.166
+    },
+    {
+      "word": "are",
+      "start": 486.282,
+      "end": 486.48
+    },
+    {
+      "word": "successful",
+      "start": 486.526,
+      "end": 487.165
+    },
+    {
+      "word": "collisions.",
+      "start": 487.246,
+      "end": 487.896
+    },
+    {
+      "word": "If",
+      "start": 488.07,
+      "end": 488.198
+    },
+    {
+      "word": "you",
+      "start": 488.244,
+      "end": 488.326
+    },
+    {
+      "word": "found",
+      "start": 488.419,
+      "end": 488.628
+    },
+    {
+      "word": "this",
+      "start": 488.674,
+      "end": 488.813
+    },
+    {
+      "word": "useful,",
+      "start": 488.895,
+      "end": 489.382
+    },
+    {
+      "word": "please",
+      "start": 489.498,
+      "end": 489.789
+    },
+    {
+      "word": "subscribe",
+      "start": 489.823,
+      "end": 490.416
+    },
+    {
+      "word": "to",
+      "start": 490.451,
+      "end": 490.555
+    },
+    {
+      "word": "J",
+      "start": 490.671,
+      "end": 490.88
+    },
+    {
+      "word": "D",
+      "start": 490.95,
+      "end": 491.043
+    },
+    {
+      "word": "Science,",
+      "start": 491.217,
+      "end": 491.821
+    },
+    {
+      "word": "and",
+      "start": 491.972,
+      "end": 492.146
+    },
+    {
+      "word": "visit",
+      "start": 492.216,
+      "end": 492.61
+    },
+    {
+      "word": "j",
+      "start": 492.854,
+      "end": 493.063
+    },
+    {
+      "word": "d",
+      "start": 493.11,
+      "end": 493.226
+    },
+    {
+      "word": "science",
+      "start": 493.319,
+      "end": 493.725
+    },
+    {
+      "word": "dot",
+      "start": 493.771,
+      "end": 493.98
+    },
+    {
+      "word": "co",
+      "start": 494.073,
+      "end": 494.329
+    },
+    {
+      "word": "dot",
+      "start": 494.48,
+      "end": 494.723
+    },
+    {
+      "word": "u",
+      "start": 494.816,
+      "end": 494.932
+    },
+    {
+      "word": "k",
+      "start": 494.99,
+      "end": 495.141
+    },
+    {
+      "word": "for",
+      "start": 495.257,
+      "end": 495.408
+    },
+    {
+      "word": "more",
+      "start": 495.466,
+      "end": 495.641
+    },
+    {
+      "word": "explanations,",
+      "start": 495.687,
+      "end": 496.453
+    },
+    {
+      "word": "worksheets",
+      "start": 496.5,
+      "end": 497.045
+    },
+    {
+      "word": "and",
+      "start": 497.103,
+      "end": 497.254
+    },
+    {
+      "word": "T-Level",
+      "start": 497.324,
+      "end": 497.777
+    },
+    {
+      "word": "Chemistry",
+      "start": 497.835,
+      "end": 498.23
+    },
+    {
+      "word": "lessons.",
+      "start": 498.299,
+      "end": 498.822
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

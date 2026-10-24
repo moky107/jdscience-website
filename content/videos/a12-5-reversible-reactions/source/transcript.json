@@ -1,0 +1,3721 @@
+{
+  "slug": "a12-5-reversible-reactions",
+  "title": "Reversible Reactions",
+  "audio": "/workspace/content/videos/a12-5-reversible-reactions/source/narration_master.mp3",
+  "duration": 321.019,
+  "full_text": "Hello and welcome back to JD Science.\n\nIn today's T-Level Chemistry lesson, we are going to study A twelve point five, Reversible Reactions.\n\nBy the end of this lesson, you should be able to define dynamic equilibrium, state the conditions it requires, and use Le Chatelier\u2019s principle for concentration, temperature and pressure.\n\nThe symbol with arrows both ways means the reaction proceeds in both directions. The forward reaction forms products. The reverse reaction reforms reactants.\n\nReversible is not the same as equilibrium. Equilibrium needs specified conditions.\n\nDynamic equilibrium occurs when a reversible reaction in a closed system has equal forward and reverse rates, so macroscopic concentrations or amounts remain constant.\n\nThe reactions do not stop. Both continue. Constant composition does not mean equal concentrations.\n\nCheck the conditions. The reaction must be reversible. The system must be closed. Forward and reverse rates must be equal. Forward and reverse reactions continue. Equal reactant and product concentrations are not required.\n\nA sealed flask with equal forward and reverse rates can be at dynamic equilibrium. An open vessel that lets a gaseous product escape is not closed, so it is not at equilibrium. A sealed flask where the forward rate is greater than the reverse rate is not at equilibrium yet.\n\nLe Chatelier\u2019s principle: when a system at equilibrium is subjected to a change in conditions, the equilibrium shifts in the direction that opposes the effect of that change.\n\nUse a method. Identify the change. Decide how the system opposes it. Predict a left or right shift. State which side is favoured. Justify using concentration, heat direction, or gas moles.\n\nConcentration, for A plus B in equilibrium with C plus D. Add A, shift right to use some added A. Remove A, shift left to form more A. Add C, shift left. Remove D, shift right to form more D.\n\nTemperature: treat heat as a product or a reactant. You must identify the exothermic and endothermic directions first.\n\nIf the forward reaction is exothermic, write heat on the product side. Increasing temperature shifts left, the endothermic reverse. Decreasing temperature shifts right.\n\nIf the forward reaction is endothermic, write heat on the reactant side. Increasing temperature shifts right. Decreasing temperature shifts left.\n\nIncreasing temperature does not always shift left. It depends on the enthalpy direction. For an exothermic forward reaction, increasing temperature decreases product yield.\n\nPressure applies to gaseous equilibria. Increasing pressure favours the side with fewer moles of gas. Decreasing pressure favours the side with more moles of gas. If the gas moles are equal, the equilibrium position does not shift. Solids and liquids are not counted.\n\nNitrogen plus three hydrogen in equilibrium with two ammonia. Four moles of gas on the left, two on the right. Increasing pressure shifts right.\n\nHydrogen plus iodine in equilibrium with two hydrogen iodide. Two moles of gas on each side. Increasing pressure causes no shift.\n\nTwo sulfur dioxide plus oxygen in equilibrium with two sulfur trioxide. Three moles of gas to two. Increasing pressure shifts right. If that forward reaction is exothermic, increasing temperature shifts left.\n\nCalcium carbonate solid in equilibrium with calcium oxide solid and carbon dioxide gas. Zero gas moles on the left, one on the right. Increasing pressure shifts left.\n\nCorrect the misconceptions. Reactions do not stop at equilibrium. Constant does not mean equal concentrations. Not every reversible system is at equilibrium. Increasing pressure does not always shift right. Increasing temperature does not always shift left.\n\nExamination-style question.\n\nPart a. Define dynamic equilibrium and state one required condition. Three marks.\n\nForward and reverse reactions continue at equal rates in a closed system.\n\nPart b. For nitrogen, hydrogen and ammonia, state the effect of increasing pressure. Two marks.\n\nThe equilibrium shifts right because there are two moles of gas against four.\n\nPart c. The forward reaction is exothermic. What happens to product yield if temperature increases? Two marks.\n\nThe equilibrium shifts in the endothermic reverse direction, so product yield decreases.\n\nPart d. What happens if you add a reactant? Two marks.\n\nThe equilibrium shifts to use some of the added reactant, so products are favoured.\n\nBefore we finish, complete the model. Dynamic equilibrium is a closed reversible system with equal continuing rates and constant composition. Le Chatelier\u2019s principle predicts the opposing shift for concentration, temperature and pressure.\n\nIf you found this useful, please subscribe to J D Science, and visit j d science dot co dot u k for more explanations, worksheets and T-Level Chemistry lessons.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.174,
+      "end": 0.58
+    },
+    {
+      "word": "and",
+      "start": 0.673,
+      "end": 0.824
+    },
+    {
+      "word": "welcome",
+      "start": 0.894,
+      "end": 1.312
+    },
+    {
+      "word": "back",
+      "start": 1.347,
+      "end": 1.556
+    },
+    {
+      "word": "to",
+      "start": 1.614,
+      "end": 1.707
+    },
+    {
+      "word": "J",
+      "start": 1.823,
+      "end": 1.997
+    },
+    {
+      "word": "D",
+      "start": 2.09,
+      "end": 2.206
+    },
+    {
+      "word": "Science.",
+      "start": 2.357,
+      "end": 3.065
+    },
+    {
+      "word": "In",
+      "start": 3.344,
+      "end": 3.529
+    },
+    {
+      "word": "today's",
+      "start": 3.587,
+      "end": 3.971
+    },
+    {
+      "word": "T-Level",
+      "start": 4.087,
+      "end": 4.586
+    },
+    {
+      "word": "Chemistry",
+      "start": 4.644,
+      "end": 5.074
+    },
+    {
+      "word": "lesson,",
+      "start": 5.143,
+      "end": 5.712
+    },
+    {
+      "word": "we",
+      "start": 5.886,
+      "end": 6.026
+    },
+    {
+      "word": "are",
+      "start": 6.072,
+      "end": 6.2
+    },
+    {
+      "word": "going",
+      "start": 6.246,
+      "end": 6.467
+    },
+    {
+      "word": "to",
+      "start": 6.513,
+      "end": 6.583
+    },
+    {
+      "word": "study",
+      "start": 6.653,
+      "end": 7.036
+    },
+    {
+      "word": "A",
+      "start": 7.117,
+      "end": 7.163
+    },
+    {
+      "word": "twelve",
+      "start": 7.233,
+      "end": 7.558
+    },
+    {
+      "word": "point",
+      "start": 7.605,
+      "end": 7.86
+    },
+    {
+      "word": "five,",
+      "start": 7.93,
+      "end": 8.336
+    },
+    {
+      "word": "Reversible",
+      "start": 8.452,
+      "end": 9.149
+    },
+    {
+      "word": "Reactions.",
+      "start": 9.195,
+      "end": 10.019
+    },
+    {
+      "word": "By",
+      "start": 10.472,
+      "end": 10.635
+    },
+    {
+      "word": "the",
+      "start": 10.704,
+      "end": 10.786
+    },
+    {
+      "word": "end",
+      "start": 10.879,
+      "end": 11.053
+    },
+    {
+      "word": "of",
+      "start": 11.134,
+      "end": 11.204
+    },
+    {
+      "word": "this",
+      "start": 11.273,
+      "end": 11.447
+    },
+    {
+      "word": "lesson,",
+      "start": 11.54,
+      "end": 12.156
+    },
+    {
+      "word": "you",
+      "start": 12.399,
+      "end": 12.516
+    },
+    {
+      "word": "should",
+      "start": 12.574,
+      "end": 12.771
+    },
+    {
+      "word": "be",
+      "start": 12.817,
+      "end": 12.922
+    },
+    {
+      "word": "able",
+      "start": 12.968,
+      "end": 13.247
+    },
+    {
+      "word": "to",
+      "start": 13.282,
+      "end": 13.351
+    },
+    {
+      "word": "define",
+      "start": 13.421,
+      "end": 13.851
+    },
+    {
+      "word": "dynamic",
+      "start": 13.909,
+      "end": 14.466
+    },
+    {
+      "word": "equilibrium,",
+      "start": 14.559,
+      "end": 15.464
+    },
+    {
+      "word": "state",
+      "start": 15.673,
+      "end": 16.022
+    },
+    {
+      "word": "the",
+      "start": 16.057,
+      "end": 16.126
+    },
+    {
+      "word": "conditions",
+      "start": 16.173,
+      "end": 16.776
+    },
+    {
+      "word": "it",
+      "start": 16.858,
+      "end": 16.985
+    },
+    {
+      "word": "requires,",
+      "start": 17.067,
+      "end": 17.879
+    },
+    {
+      "word": "and",
+      "start": 18.088,
+      "end": 18.274
+    },
+    {
+      "word": "use",
+      "start": 18.39,
+      "end": 18.75
+    },
+    {
+      "word": "Le",
+      "start": 18.843,
+      "end": 18.994
+    },
+    {
+      "word": "Chatelier's",
+      "start": 19.052,
+      "end": 19.644
+    },
+    {
+      "word": "principle",
+      "start": 19.714,
+      "end": 20.225
+    },
+    {
+      "word": "for",
+      "start": 20.271,
+      "end": 20.41
+    },
+    {
+      "word": "concentration,",
+      "start": 20.48,
+      "end": 21.571
+    },
+    {
+      "word": "temperature",
+      "start": 21.78,
+      "end": 22.454
+    },
+    {
+      "word": "and",
+      "start": 22.5,
+      "end": 22.651
+    },
+    {
+      "word": "pressure.",
+      "start": 22.732,
+      "end": 23.255
+    },
+    {
+      "word": "The",
+      "start": 23.708,
+      "end": 23.847
+    },
+    {
+      "word": "symbol",
+      "start": 23.928,
+      "end": 24.334
+    },
+    {
+      "word": "with",
+      "start": 24.393,
+      "end": 24.555
+    },
+    {
+      "word": "arrows",
+      "start": 24.636,
+      "end": 25.019
+    },
+    {
+      "word": "both",
+      "start": 25.101,
+      "end": 25.356
+    },
+    {
+      "word": "ways",
+      "start": 25.437,
+      "end": 25.797
+    },
+    {
+      "word": "means",
+      "start": 26.006,
+      "end": 26.297
+    },
+    {
+      "word": "the",
+      "start": 26.355,
+      "end": 26.436
+    },
+    {
+      "word": "reaction",
+      "start": 26.506,
+      "end": 27.016
+    },
+    {
+      "word": "proceeds",
+      "start": 27.086,
+      "end": 27.632
+    },
+    {
+      "word": "in",
+      "start": 27.69,
+      "end": 27.794
+    },
+    {
+      "word": "both",
+      "start": 27.876,
+      "end": 28.131
+    },
+    {
+      "word": "directions.",
+      "start": 28.201,
+      "end": 28.967
+    },
+    {
+      "word": "The",
+      "start": 29.362,
+      "end": 29.489
+    },
+    {
+      "word": "forward",
+      "start": 29.571,
+      "end": 29.942
+    },
+    {
+      "word": "reaction",
+      "start": 30.0,
+      "end": 30.499
+    },
+    {
+      "word": "forms",
+      "start": 30.592,
+      "end": 30.964
+    },
+    {
+      "word": "products.",
+      "start": 31.033,
+      "end": 31.66
+    },
+    {
+      "word": "The",
+      "start": 31.869,
+      "end": 31.997
+    },
+    {
+      "word": "reverse",
+      "start": 32.078,
+      "end": 32.519
+    },
+    {
+      "word": "reaction",
+      "start": 32.577,
+      "end": 33.193
+    },
+    {
+      "word": "reforms",
+      "start": 33.367,
+      "end": 33.959
+    },
+    {
+      "word": "reactants.",
+      "start": 34.075,
+      "end": 35.039
+    },
+    {
+      "word": "Reversible",
+      "start": 35.155,
+      "end": 35.828
+    },
+    {
+      "word": "is",
+      "start": 35.875,
+      "end": 35.968
+    },
+    {
+      "word": "not",
+      "start": 36.049,
+      "end": 36.2
+    },
+    {
+      "word": "the",
+      "start": 36.235,
+      "end": 36.316
+    },
+    {
+      "word": "same",
+      "start": 36.374,
+      "end": 36.641
+    },
+    {
+      "word": "as",
+      "start": 36.676,
+      "end": 36.757
+    },
+    {
+      "word": "equilibrium.",
+      "start": 36.85,
+      "end": 37.756
+    },
+    {
+      "word": "Equilibrium",
+      "start": 37.93,
+      "end": 38.684
+    },
+    {
+      "word": "needs",
+      "start": 38.754,
+      "end": 38.998
+    },
+    {
+      "word": "specified",
+      "start": 39.033,
+      "end": 39.706
+    },
+    {
+      "word": "conditions.",
+      "start": 39.764,
+      "end": 40.554
+    },
+    {
+      "word": "Dynamic",
+      "start": 40.797,
+      "end": 41.424
+    },
+    {
+      "word": "equilibrium",
+      "start": 41.494,
+      "end": 42.156
+    },
+    {
+      "word": "occurs",
+      "start": 42.202,
+      "end": 42.643
+    },
+    {
+      "word": "when",
+      "start": 42.701,
+      "end": 42.899
+    },
+    {
+      "word": "a",
+      "start": 42.957,
+      "end": 42.992
+    },
+    {
+      "word": "reversible",
+      "start": 43.085,
+      "end": 43.723
+    },
+    {
+      "word": "reaction",
+      "start": 43.781,
+      "end": 44.35
+    },
+    {
+      "word": "in",
+      "start": 44.42,
+      "end": 44.524
+    },
+    {
+      "word": "a",
+      "start": 44.571,
+      "end": 44.605
+    },
+    {
+      "word": "closed",
+      "start": 44.663,
+      "end": 45.035
+    },
+    {
+      "word": "system",
+      "start": 45.07,
+      "end": 45.43
+    },
+    {
+      "word": "has",
+      "start": 45.488,
+      "end": 45.639
+    },
+    {
+      "word": "equal",
+      "start": 45.755,
+      "end": 46.103
+    },
+    {
+      "word": "forward",
+      "start": 46.219,
+      "end": 46.742
+    },
+    {
+      "word": "and",
+      "start": 46.788,
+      "end": 46.916
+    },
+    {
+      "word": "reverse",
+      "start": 46.997,
+      "end": 47.403
+    },
+    {
+      "word": "rates,",
+      "start": 47.473,
+      "end": 47.937
+    },
+    {
+      "word": "so",
+      "start": 48.181,
+      "end": 48.39
+    },
+    {
+      "word": "macroscopic",
+      "start": 48.483,
+      "end": 49.354
+    },
+    {
+      "word": "concentrations",
+      "start": 49.412,
+      "end": 50.387
+    },
+    {
+      "word": "or",
+      "start": 50.468,
+      "end": 50.631
+    },
+    {
+      "word": "amounts",
+      "start": 50.712,
+      "end": 51.223
+    },
+    {
+      "word": "remain",
+      "start": 51.339,
+      "end": 51.711
+    },
+    {
+      "word": "constant.",
+      "start": 51.792,
+      "end": 52.407
+    },
+    {
+      "word": "The",
+      "start": 52.581,
+      "end": 52.721
+    },
+    {
+      "word": "reactions",
+      "start": 52.79,
+      "end": 53.359
+    },
+    {
+      "word": "do",
+      "start": 53.452,
+      "end": 53.556
+    },
+    {
+      "word": "not",
+      "start": 53.638,
+      "end": 53.777
+    },
+    {
+      "word": "stop.",
+      "start": 53.835,
+      "end": 54.3
+    },
+    {
+      "word": "Both",
+      "start": 54.45,
+      "end": 54.741
+    },
+    {
+      "word": "continue.",
+      "start": 54.799,
+      "end": 55.437
+    },
+    {
+      "word": "Constant",
+      "start": 55.588,
+      "end": 56.087
+    },
+    {
+      "word": "composition",
+      "start": 56.146,
+      "end": 56.819
+    },
+    {
+      "word": "does",
+      "start": 56.889,
+      "end": 57.051
+    },
+    {
+      "word": "not",
+      "start": 57.121,
+      "end": 57.26
+    },
+    {
+      "word": "mean",
+      "start": 57.33,
+      "end": 57.515
+    },
+    {
+      "word": "equal",
+      "start": 57.608,
+      "end": 57.91
+    },
+    {
+      "word": "concentrations.",
+      "start": 57.98,
+      "end": 58.99
+    },
+    {
+      "word": "Check",
+      "start": 59.164,
+      "end": 59.443
+    },
+    {
+      "word": "the",
+      "start": 59.501,
+      "end": 59.57
+    },
+    {
+      "word": "conditions.",
+      "start": 59.629,
+      "end": 60.348
+    },
+    {
+      "word": "The",
+      "start": 60.476,
+      "end": 60.592
+    },
+    {
+      "word": "reaction",
+      "start": 60.673,
+      "end": 61.126
+    },
+    {
+      "word": "must",
+      "start": 61.184,
+      "end": 61.358
+    },
+    {
+      "word": "be",
+      "start": 61.416,
+      "end": 61.509
+    },
+    {
+      "word": "reversible.",
+      "start": 61.579,
+      "end": 62.357
+    },
+    {
+      "word": "The",
+      "start": 62.508,
+      "end": 62.624
+    },
+    {
+      "word": "system",
+      "start": 62.694,
+      "end": 63.065
+    },
+    {
+      "word": "must",
+      "start": 63.111,
+      "end": 63.297
+    },
+    {
+      "word": "be",
+      "start": 63.343,
+      "end": 63.448
+    },
+    {
+      "word": "closed.",
+      "start": 63.506,
+      "end": 64.075
+    },
+    {
+      "word": "Forward",
+      "start": 64.284,
+      "end": 64.806
+    },
+    {
+      "word": "and",
+      "start": 64.853,
+      "end": 64.946
+    },
+    {
+      "word": "reverse",
+      "start": 65.027,
+      "end": 65.515
+    },
+    {
+      "word": "rates",
+      "start": 65.584,
+      "end": 65.909
+    },
+    {
+      "word": "must",
+      "start": 66.025,
+      "end": 66.258
+    },
+    {
+      "word": "be",
+      "start": 66.316,
+      "end": 66.42
+    },
+    {
+      "word": "equal.",
+      "start": 66.49,
+      "end": 67.024
+    },
+    {
+      "word": "Forward",
+      "start": 67.198,
+      "end": 67.686
+    },
+    {
+      "word": "and",
+      "start": 67.732,
+      "end": 67.813
+    },
+    {
+      "word": "reverse",
+      "start": 67.883,
+      "end": 68.324
+    },
+    {
+      "word": "reactions",
+      "start": 68.394,
+      "end": 68.986
+    },
+    {
+      "word": "continue.",
+      "start": 69.056,
+      "end": 69.694
+    },
+    {
+      "word": "Equal",
+      "start": 69.938,
+      "end": 70.309
+    },
+    {
+      "word": "reactant",
+      "start": 70.391,
+      "end": 70.983
+    },
+    {
+      "word": "and",
+      "start": 71.064,
+      "end": 71.25
+    },
+    {
+      "word": "product",
+      "start": 71.331,
+      "end": 71.691
+    },
+    {
+      "word": "concentrations",
+      "start": 71.737,
+      "end": 72.562
+    },
+    {
+      "word": "are",
+      "start": 72.62,
+      "end": 72.794
+    },
+    {
+      "word": "not",
+      "start": 72.829,
+      "end": 72.968
+    },
+    {
+      "word": "required.",
+      "start": 73.049,
+      "end": 73.676
+    },
+    {
+      "word": "A",
+      "start": 74.129,
+      "end": 74.222
+    },
+    {
+      "word": "sealed",
+      "start": 74.338,
+      "end": 74.675
+    },
+    {
+      "word": "flask",
+      "start": 74.733,
+      "end": 75.186
+    },
+    {
+      "word": "with",
+      "start": 75.302,
+      "end": 75.534
+    },
+    {
+      "word": "equal",
+      "start": 75.627,
+      "end": 75.929
+    },
+    {
+      "word": "forward",
+      "start": 75.998,
+      "end": 76.439
+    },
+    {
+      "word": "and",
+      "start": 76.498,
+      "end": 76.59
+    },
+    {
+      "word": "reverse",
+      "start": 76.66,
+      "end": 77.043
+    },
+    {
+      "word": "rates",
+      "start": 77.113,
+      "end": 77.438
+    },
+    {
+      "word": "can",
+      "start": 77.554,
+      "end": 77.763
+    },
+    {
+      "word": "be",
+      "start": 77.833,
+      "end": 77.96
+    },
+    {
+      "word": "at",
+      "start": 78.007,
+      "end": 78.111
+    },
+    {
+      "word": "dynamic",
+      "start": 78.181,
+      "end": 78.703
+    },
+    {
+      "word": "equilibrium.",
+      "start": 78.773,
+      "end": 79.632
+    },
+    {
+      "word": "An",
+      "start": 80.085,
+      "end": 80.247
+    },
+    {
+      "word": "open",
+      "start": 80.34,
+      "end": 80.7
+    },
+    {
+      "word": "vessel",
+      "start": 80.781,
+      "end": 81.164
+    },
+    {
+      "word": "that",
+      "start": 81.246,
+      "end": 81.455
+    },
+    {
+      "word": "lets",
+      "start": 81.571,
+      "end": 81.873
+    },
+    {
+      "word": "a",
+      "start": 81.931,
+      "end": 81.977
+    },
+    {
+      "word": "gaseous",
+      "start": 82.07,
+      "end": 82.523
+    },
+    {
+      "word": "product",
+      "start": 82.581,
+      "end": 82.941
+    },
+    {
+      "word": "escape",
+      "start": 82.999,
+      "end": 83.428
+    },
+    {
+      "word": "is",
+      "start": 83.475,
+      "end": 83.579
+    },
+    {
+      "word": "not",
+      "start": 83.661,
+      "end": 83.835
+    },
+    {
+      "word": "closed,",
+      "start": 83.904,
+      "end": 84.45
+    },
+    {
+      "word": "so",
+      "start": 84.566,
+      "end": 84.775
+    },
+    {
+      "word": "it",
+      "start": 84.868,
+      "end": 84.972
+    },
+    {
+      "word": "is",
+      "start": 85.03,
+      "end": 85.123
+    },
+    {
+      "word": "not",
+      "start": 85.216,
+      "end": 85.402
+    },
+    {
+      "word": "at",
+      "start": 85.46,
+      "end": 85.565
+    },
+    {
+      "word": "equilibrium.",
+      "start": 85.646,
+      "end": 86.493
+    },
+    {
+      "word": "A",
+      "start": 87.016,
+      "end": 87.097
+    },
+    {
+      "word": "sealed",
+      "start": 87.225,
+      "end": 87.561
+    },
+    {
+      "word": "flask",
+      "start": 87.608,
+      "end": 88.084
+    },
+    {
+      "word": "where",
+      "start": 88.177,
+      "end": 88.374
+    },
+    {
+      "word": "the",
+      "start": 88.397,
+      "end": 88.467
+    },
+    {
+      "word": "forward",
+      "start": 88.537,
+      "end": 88.931
+    },
+    {
+      "word": "rate",
+      "start": 89.001,
+      "end": 89.28
+    },
+    {
+      "word": "is",
+      "start": 89.326,
+      "end": 89.442
+    },
+    {
+      "word": "greater",
+      "start": 89.558,
+      "end": 90.058
+    },
+    {
+      "word": "than",
+      "start": 90.15,
+      "end": 90.348
+    },
+    {
+      "word": "the",
+      "start": 90.383,
+      "end": 90.452
+    },
+    {
+      "word": "reverse",
+      "start": 90.522,
+      "end": 90.975
+    },
+    {
+      "word": "rate",
+      "start": 91.021,
+      "end": 91.253
+    },
+    {
+      "word": "is",
+      "start": 91.3,
+      "end": 91.416
+    },
+    {
+      "word": "not",
+      "start": 91.532,
+      "end": 91.729
+    },
+    {
+      "word": "at",
+      "start": 91.787,
+      "end": 91.869
+    },
+    {
+      "word": "equilibrium",
+      "start": 91.927,
+      "end": 92.519
+    },
+    {
+      "word": "yet.",
+      "start": 92.589,
+      "end": 93.007
+    },
+    {
+      "word": "Le",
+      "start": 93.622,
+      "end": 93.761
+    },
+    {
+      "word": "Chatelier's",
+      "start": 93.808,
+      "end": 94.4
+    },
+    {
+      "word": "principle:",
+      "start": 94.458,
+      "end": 95.201
+    },
+    {
+      "word": "when",
+      "start": 95.445,
+      "end": 95.677
+    },
+    {
+      "word": "a",
+      "start": 95.723,
+      "end": 95.758
+    },
+    {
+      "word": "system",
+      "start": 95.851,
+      "end": 96.327
+    },
+    {
+      "word": "at",
+      "start": 96.408,
+      "end": 96.501
+    },
+    {
+      "word": "equilibrium",
+      "start": 96.571,
+      "end": 97.256
+    },
+    {
+      "word": "is",
+      "start": 97.337,
+      "end": 97.488
+    },
+    {
+      "word": "subjected",
+      "start": 97.535,
+      "end": 98.115
+    },
+    {
+      "word": "to",
+      "start": 98.15,
+      "end": 98.243
+    },
+    {
+      "word": "a",
+      "start": 98.324,
+      "end": 98.359
+    },
+    {
+      "word": "change",
+      "start": 98.428,
+      "end": 98.742
+    },
+    {
+      "word": "in",
+      "start": 98.777,
+      "end": 98.846
+    },
+    {
+      "word": "conditions,",
+      "start": 98.916,
+      "end": 99.706
+    },
+    {
+      "word": "the",
+      "start": 99.88,
+      "end": 99.996
+    },
+    {
+      "word": "equilibrium",
+      "start": 100.065,
+      "end": 100.669
+    },
+    {
+      "word": "shifts",
+      "start": 100.739,
+      "end": 101.064
+    },
+    {
+      "word": "in",
+      "start": 101.134,
+      "end": 101.238
+    },
+    {
+      "word": "the",
+      "start": 101.296,
+      "end": 101.377
+    },
+    {
+      "word": "direction",
+      "start": 101.435,
+      "end": 101.911
+    },
+    {
+      "word": "that",
+      "start": 101.97,
+      "end": 102.097
+    },
+    {
+      "word": "opposes",
+      "start": 102.144,
+      "end": 102.666
+    },
+    {
+      "word": "the",
+      "start": 102.736,
+      "end": 102.817
+    },
+    {
+      "word": "effect",
+      "start": 102.875,
+      "end": 103.189
+    },
+    {
+      "word": "of",
+      "start": 103.247,
+      "end": 103.316
+    },
+    {
+      "word": "that",
+      "start": 103.374,
+      "end": 103.514
+    },
+    {
+      "word": "change.",
+      "start": 103.583,
+      "end": 104.117
+    },
+    {
+      "word": "Use",
+      "start": 104.454,
+      "end": 104.686
+    },
+    {
+      "word": "a",
+      "start": 104.721,
+      "end": 104.756
+    },
+    {
+      "word": "method.",
+      "start": 104.826,
+      "end": 105.313
+    },
+    {
+      "word": "Identify",
+      "start": 105.429,
+      "end": 106.045
+    },
+    {
+      "word": "the",
+      "start": 106.114,
+      "end": 106.184
+    },
+    {
+      "word": "change.",
+      "start": 106.242,
+      "end": 106.602
+    },
+    {
+      "word": "Decide",
+      "start": 106.683,
+      "end": 107.182
+    },
+    {
+      "word": "how",
+      "start": 107.229,
+      "end": 107.368
+    },
+    {
+      "word": "the",
+      "start": 107.438,
+      "end": 107.519
+    },
+    {
+      "word": "system",
+      "start": 107.577,
+      "end": 107.949
+    },
+    {
+      "word": "opposes",
+      "start": 108.018,
+      "end": 108.506
+    },
+    {
+      "word": "it.",
+      "start": 108.576,
+      "end": 108.796
+    },
+    {
+      "word": "Predict",
+      "start": 109.005,
+      "end": 109.458
+    },
+    {
+      "word": "a",
+      "start": 109.516,
+      "end": 109.551
+    },
+    {
+      "word": "left",
+      "start": 109.644,
+      "end": 109.922
+    },
+    {
+      "word": "or",
+      "start": 109.992,
+      "end": 110.108
+    },
+    {
+      "word": "right",
+      "start": 110.166,
+      "end": 110.41
+    },
+    {
+      "word": "shift.",
+      "start": 110.468,
+      "end": 110.897
+    },
+    {
+      "word": "State",
+      "start": 111.141,
+      "end": 111.466
+    },
+    {
+      "word": "which",
+      "start": 111.513,
+      "end": 111.699
+    },
+    {
+      "word": "side",
+      "start": 111.745,
+      "end": 111.989
+    },
+    {
+      "word": "is",
+      "start": 112.012,
+      "end": 112.105
+    },
+    {
+      "word": "favoured.",
+      "start": 112.175,
+      "end": 112.639
+    },
+    {
+      "word": "Justify",
+      "start": 112.813,
+      "end": 113.405
+    },
+    {
+      "word": "using",
+      "start": 113.486,
+      "end": 113.812
+    },
+    {
+      "word": "concentration,",
+      "start": 113.881,
+      "end": 114.694
+    },
+    {
+      "word": "heat",
+      "start": 114.752,
+      "end": 114.949
+    },
+    {
+      "word": "direction,",
+      "start": 114.996,
+      "end": 115.46
+    },
+    {
+      "word": "or",
+      "start": 115.507,
+      "end": 115.623
+    },
+    {
+      "word": "gas",
+      "start": 115.692,
+      "end": 115.913
+    },
+    {
+      "word": "moles.",
+      "start": 115.994,
+      "end": 116.401
+    },
+    {
+      "word": "Concentration,",
+      "start": 116.737,
+      "end": 117.492
+    },
+    {
+      "word": "for",
+      "start": 117.527,
+      "end": 117.654
+    },
+    {
+      "word": "A",
+      "start": 117.724,
+      "end": 117.794
+    },
+    {
+      "word": "plus",
+      "start": 117.91,
+      "end": 118.154
+    },
+    {
+      "word": "B",
+      "start": 118.247,
+      "end": 118.305
+    },
+    {
+      "word": "in",
+      "start": 118.548,
+      "end": 118.653
+    },
+    {
+      "word": "equilibrium",
+      "start": 118.734,
+      "end": 119.419
+    },
+    {
+      "word": "with",
+      "start": 119.466,
+      "end": 119.628
+    },
+    {
+      "word": "C",
+      "start": 119.675,
+      "end": 119.791
+    },
+    {
+      "word": "plus",
+      "start": 119.965,
+      "end": 120.197
+    },
+    {
+      "word": "D.",
+      "start": 120.278,
+      "end": 120.58
+    },
+    {
+      "word": "Add",
+      "start": 120.789,
+      "end": 121.068
+    },
+    {
+      "word": "A,",
+      "start": 121.126,
+      "end": 121.486
+    },
+    {
+      "word": "shift",
+      "start": 121.602,
+      "end": 121.892
+    },
+    {
+      "word": "right",
+      "start": 121.962,
+      "end": 122.148
+    },
+    {
+      "word": "to",
+      "start": 122.182,
+      "end": 122.252
+    },
+    {
+      "word": "use",
+      "start": 122.345,
+      "end": 122.554
+    },
+    {
+      "word": "some",
+      "start": 122.577,
+      "end": 122.763
+    },
+    {
+      "word": "added",
+      "start": 122.809,
+      "end": 123.088
+    },
+    {
+      "word": "A.",
+      "start": 123.158,
+      "end": 123.541
+    },
+    {
+      "word": "Remove",
+      "start": 123.715,
+      "end": 124.121
+    },
+    {
+      "word": "A,",
+      "start": 124.168,
+      "end": 124.562
+    },
+    {
+      "word": "shift",
+      "start": 124.643,
+      "end": 124.945
+    },
+    {
+      "word": "left",
+      "start": 125.015,
+      "end": 125.235
+    },
+    {
+      "word": "to",
+      "start": 125.27,
+      "end": 125.34
+    },
+    {
+      "word": "form",
+      "start": 125.433,
+      "end": 125.676
+    },
+    {
+      "word": "more",
+      "start": 125.723,
+      "end": 125.978
+    },
+    {
+      "word": "A.",
+      "start": 126.036,
+      "end": 126.431
+    },
+    {
+      "word": "Add",
+      "start": 126.64,
+      "end": 126.907
+    },
+    {
+      "word": "C,",
+      "start": 126.965,
+      "end": 127.325
+    },
+    {
+      "word": "shift",
+      "start": 127.441,
+      "end": 127.766
+    },
+    {
+      "word": "left.",
+      "start": 127.836,
+      "end": 128.231
+    },
+    {
+      "word": "Remove",
+      "start": 128.382,
+      "end": 128.788
+    },
+    {
+      "word": "D,",
+      "start": 128.823,
+      "end": 129.09
+    },
+    {
+      "word": "shift",
+      "start": 129.159,
+      "end": 129.473
+    },
+    {
+      "word": "right",
+      "start": 129.519,
+      "end": 129.728
+    },
+    {
+      "word": "to",
+      "start": 129.775,
+      "end": 129.844
+    },
+    {
+      "word": "form",
+      "start": 129.937,
+      "end": 130.204
+    },
+    {
+      "word": "more",
+      "start": 130.251,
+      "end": 130.471
+    },
+    {
+      "word": "D.",
+      "start": 130.506,
+      "end": 130.843
+    },
+    {
+      "word": "Temperature:",
+      "start": 131.052,
+      "end": 131.69
+    },
+    {
+      "word": "treat",
+      "start": 131.749,
+      "end": 132.027
+    },
+    {
+      "word": "heat",
+      "start": 132.12,
+      "end": 132.364
+    },
+    {
+      "word": "as",
+      "start": 132.445,
+      "end": 132.608
+    },
+    {
+      "word": "a",
+      "start": 132.666,
+      "end": 132.701
+    },
+    {
+      "word": "product",
+      "start": 132.77,
+      "end": 133.177
+    },
+    {
+      "word": "or",
+      "start": 133.269,
+      "end": 133.42
+    },
+    {
+      "word": "a",
+      "start": 133.467,
+      "end": 133.502
+    },
+    {
+      "word": "reactant.",
+      "start": 133.594,
+      "end": 134.233
+    },
+    {
+      "word": "You",
+      "start": 134.442,
+      "end": 134.558
+    },
+    {
+      "word": "must",
+      "start": 134.616,
+      "end": 134.814
+    },
+    {
+      "word": "identify",
+      "start": 134.86,
+      "end": 135.51
+    },
+    {
+      "word": "the",
+      "start": 135.591,
+      "end": 135.684
+    },
+    {
+      "word": "exothermic",
+      "start": 135.766,
+      "end": 136.555
+    },
+    {
+      "word": "and",
+      "start": 136.648,
+      "end": 136.81
+    },
+    {
+      "word": "endothermic",
+      "start": 136.88,
+      "end": 137.426
+    },
+    {
+      "word": "directions",
+      "start": 137.484,
+      "end": 137.96
+    },
+    {
+      "word": "first.",
+      "start": 138.029,
+      "end": 138.517
+    },
+    {
+      "word": "If",
+      "start": 138.726,
+      "end": 138.889
+    },
+    {
+      "word": "the",
+      "start": 138.947,
+      "end": 139.028
+    },
+    {
+      "word": "forward",
+      "start": 139.098,
+      "end": 139.446
+    },
+    {
+      "word": "reaction",
+      "start": 139.492,
+      "end": 139.875
+    },
+    {
+      "word": "is",
+      "start": 139.933,
+      "end": 140.014
+    },
+    {
+      "word": "exothermic,",
+      "start": 140.096,
+      "end": 140.932
+    },
+    {
+      "word": "write",
+      "start": 141.106,
+      "end": 141.408
+    },
+    {
+      "word": "heat",
+      "start": 141.466,
+      "end": 141.709
+    },
+    {
+      "word": "on",
+      "start": 141.802,
+      "end": 141.918
+    },
+    {
+      "word": "the",
+      "start": 141.965,
+      "end": 142.034
+    },
+    {
+      "word": "product",
+      "start": 142.104,
+      "end": 142.487
+    },
+    {
+      "word": "side.",
+      "start": 142.534,
+      "end": 142.917
+    },
+    {
+      "word": "Increasing",
+      "start": 143.068,
+      "end": 143.637
+    },
+    {
+      "word": "temperature",
+      "start": 143.695,
+      "end": 144.182
+    },
+    {
+      "word": "shifts",
+      "start": 144.229,
+      "end": 144.6
+    },
+    {
+      "word": "left,",
+      "start": 144.682,
+      "end": 145.111
+    },
+    {
+      "word": "the",
+      "start": 145.262,
+      "end": 145.378
+    },
+    {
+      "word": "endothermic",
+      "start": 145.459,
+      "end": 146.075
+    },
+    {
+      "word": "reverse.",
+      "start": 146.133,
+      "end": 146.713
+    },
+    {
+      "word": "Decreasing",
+      "start": 146.957,
+      "end": 147.526
+    },
+    {
+      "word": "temperature",
+      "start": 147.584,
+      "end": 148.037
+    },
+    {
+      "word": "shifts",
+      "start": 148.072,
+      "end": 148.374
+    },
+    {
+      "word": "right.",
+      "start": 148.432,
+      "end": 148.791
+    },
+    {
+      "word": "If",
+      "start": 148.942,
+      "end": 149.082
+    },
+    {
+      "word": "the",
+      "start": 149.14,
+      "end": 149.209
+    },
+    {
+      "word": "forward",
+      "start": 149.279,
+      "end": 149.651
+    },
+    {
+      "word": "reaction",
+      "start": 149.709,
+      "end": 150.138
+    },
+    {
+      "word": "is",
+      "start": 150.219,
+      "end": 150.347
+    },
+    {
+      "word": "endothermic,",
+      "start": 150.44,
+      "end": 151.206
+    },
+    {
+      "word": "write",
+      "start": 151.38,
+      "end": 151.659
+    },
+    {
+      "word": "heat",
+      "start": 151.706,
+      "end": 151.903
+    },
+    {
+      "word": "on",
+      "start": 151.984,
+      "end": 152.1
+    },
+    {
+      "word": "the",
+      "start": 152.147,
+      "end": 152.216
+    },
+    {
+      "word": "reactant",
+      "start": 152.286,
+      "end": 152.727
+    },
+    {
+      "word": "side.",
+      "start": 152.774,
+      "end": 153.18
+    },
+    {
+      "word": "Increasing",
+      "start": 153.331,
+      "end": 153.876
+    },
+    {
+      "word": "temperature",
+      "start": 153.934,
+      "end": 154.457
+    },
+    {
+      "word": "shifts",
+      "start": 154.503,
+      "end": 154.851
+    },
+    {
+      "word": "right.",
+      "start": 154.921,
+      "end": 155.304
+    },
+    {
+      "word": "Decreasing",
+      "start": 155.513,
+      "end": 156.14
+    },
+    {
+      "word": "temperature",
+      "start": 156.21,
+      "end": 156.732
+    },
+    {
+      "word": "shifts",
+      "start": 156.767,
+      "end": 157.057
+    },
+    {
+      "word": "left.",
+      "start": 157.115,
+      "end": 157.499
+    },
+    {
+      "word": "Increasing",
+      "start": 157.615,
+      "end": 158.207
+    },
+    {
+      "word": "temperature",
+      "start": 158.265,
+      "end": 158.822
+    },
+    {
+      "word": "does",
+      "start": 158.88,
+      "end": 159.077
+    },
+    {
+      "word": "not",
+      "start": 159.136,
+      "end": 159.298
+    },
+    {
+      "word": "always",
+      "start": 159.356,
+      "end": 159.693
+    },
+    {
+      "word": "shift",
+      "start": 159.728,
+      "end": 160.006
+    },
+    {
+      "word": "left.",
+      "start": 160.088,
+      "end": 160.447
+    },
+    {
+      "word": "It",
+      "start": 160.564,
+      "end": 160.714
+    },
+    {
+      "word": "depends",
+      "start": 160.761,
+      "end": 161.191
+    },
+    {
+      "word": "on",
+      "start": 161.237,
+      "end": 161.33
+    },
+    {
+      "word": "the",
+      "start": 161.365,
+      "end": 161.434
+    },
+    {
+      "word": "enthalpy",
+      "start": 161.492,
+      "end": 161.957
+    },
+    {
+      "word": "direction.",
+      "start": 162.015,
+      "end": 162.665
+    },
+    {
+      "word": "For",
+      "start": 162.816,
+      "end": 163.048
+    },
+    {
+      "word": "an",
+      "start": 163.118,
+      "end": 163.199
+    },
+    {
+      "word": "exothermic",
+      "start": 163.28,
+      "end": 164.035
+    },
+    {
+      "word": "forward",
+      "start": 164.116,
+      "end": 164.476
+    },
+    {
+      "word": "reaction,",
+      "start": 164.534,
+      "end": 165.091
+    },
+    {
+      "word": "increasing",
+      "start": 165.15,
+      "end": 165.684
+    },
+    {
+      "word": "temperature",
+      "start": 165.742,
+      "end": 166.334
+    },
+    {
+      "word": "decreases",
+      "start": 166.403,
+      "end": 166.995
+    },
+    {
+      "word": "product",
+      "start": 167.065,
+      "end": 167.46
+    },
+    {
+      "word": "yield.",
+      "start": 167.506,
+      "end": 167.901
+    },
+    {
+      "word": "Pressure",
+      "start": 168.145,
+      "end": 168.621
+    },
+    {
+      "word": "applies",
+      "start": 168.656,
+      "end": 169.155
+    },
+    {
+      "word": "to",
+      "start": 169.213,
+      "end": 169.318
+    },
+    {
+      "word": "gaseous",
+      "start": 169.41,
+      "end": 169.991
+    },
+    {
+      "word": "equilibria.",
+      "start": 170.235,
+      "end": 171.047
+    },
+    {
+      "word": "Increasing",
+      "start": 171.222,
+      "end": 171.791
+    },
+    {
+      "word": "pressure",
+      "start": 171.86,
+      "end": 172.208
+    },
+    {
+      "word": "favours",
+      "start": 172.267,
+      "end": 172.708
+    },
+    {
+      "word": "the",
+      "start": 172.766,
+      "end": 172.847
+    },
+    {
+      "word": "side",
+      "start": 172.917,
+      "end": 173.265
+    },
+    {
+      "word": "with",
+      "start": 173.311,
+      "end": 173.486
+    },
+    {
+      "word": "fewer",
+      "start": 173.544,
+      "end": 173.845
+    },
+    {
+      "word": "moles",
+      "start": 173.904,
+      "end": 174.194
+    },
+    {
+      "word": "of",
+      "start": 174.252,
+      "end": 174.321
+    },
+    {
+      "word": "gas.",
+      "start": 174.403,
+      "end": 174.902
+    },
+    {
+      "word": "Decreasing",
+      "start": 175.181,
+      "end": 175.715
+    },
+    {
+      "word": "pressure",
+      "start": 175.784,
+      "end": 176.133
+    },
+    {
+      "word": "favours",
+      "start": 176.191,
+      "end": 176.597
+    },
+    {
+      "word": "the",
+      "start": 176.643,
+      "end": 176.725
+    },
+    {
+      "word": "side",
+      "start": 176.794,
+      "end": 177.108
+    },
+    {
+      "word": "with",
+      "start": 177.143,
+      "end": 177.305
+    },
+    {
+      "word": "more",
+      "start": 177.375,
+      "end": 177.607
+    },
+    {
+      "word": "moles",
+      "start": 177.654,
+      "end": 177.944
+    },
+    {
+      "word": "of",
+      "start": 178.002,
+      "end": 178.072
+    },
+    {
+      "word": "gas.",
+      "start": 178.153,
+      "end": 178.675
+    },
+    {
+      "word": "If",
+      "start": 178.919,
+      "end": 179.082
+    },
+    {
+      "word": "the",
+      "start": 179.128,
+      "end": 179.198
+    },
+    {
+      "word": "gas",
+      "start": 179.267,
+      "end": 179.5
+    },
+    {
+      "word": "moles",
+      "start": 179.592,
+      "end": 179.859
+    },
+    {
+      "word": "are",
+      "start": 179.906,
+      "end": 179.999
+    },
+    {
+      "word": "equal,",
+      "start": 180.057,
+      "end": 180.556
+    },
+    {
+      "word": "the",
+      "start": 180.684,
+      "end": 180.8
+    },
+    {
+      "word": "equilibrium",
+      "start": 180.893,
+      "end": 181.543
+    },
+    {
+      "word": "position",
+      "start": 181.601,
+      "end": 182.077
+    },
+    {
+      "word": "does",
+      "start": 182.147,
+      "end": 182.333
+    },
+    {
+      "word": "not",
+      "start": 182.379,
+      "end": 182.53
+    },
+    {
+      "word": "shift.",
+      "start": 182.588,
+      "end": 183.111
+    },
+    {
+      "word": "Solids",
+      "start": 183.447,
+      "end": 183.947
+    },
+    {
+      "word": "and",
+      "start": 183.981,
+      "end": 184.086
+    },
+    {
+      "word": "liquids",
+      "start": 184.156,
+      "end": 184.643
+    },
+    {
+      "word": "are",
+      "start": 184.724,
+      "end": 184.922
+    },
+    {
+      "word": "not",
+      "start": 184.98,
+      "end": 185.142
+    },
+    {
+      "word": "counted.",
+      "start": 185.212,
+      "end": 185.839
+    },
+    {
+      "word": "Nitrogen",
+      "start": 186.083,
+      "end": 186.652
+    },
+    {
+      "word": "plus",
+      "start": 186.71,
+      "end": 186.942
+    },
+    {
+      "word": "three",
+      "start": 187.012,
+      "end": 187.255
+    },
+    {
+      "word": "hydrogen",
+      "start": 187.314,
+      "end": 187.906
+    },
+    {
+      "word": "in",
+      "start": 188.022,
+      "end": 188.149
+    },
+    {
+      "word": "equilibrium",
+      "start": 188.231,
+      "end": 188.916
+    },
+    {
+      "word": "with",
+      "start": 188.974,
+      "end": 189.136
+    },
+    {
+      "word": "two",
+      "start": 189.183,
+      "end": 189.357
+    },
+    {
+      "word": "ammonia.",
+      "start": 189.415,
+      "end": 190.065
+    },
+    {
+      "word": "Four",
+      "start": 190.402,
+      "end": 190.646
+    },
+    {
+      "word": "moles",
+      "start": 190.704,
+      "end": 190.936
+    },
+    {
+      "word": "of",
+      "start": 191.005,
+      "end": 191.075
+    },
+    {
+      "word": "gas",
+      "start": 191.145,
+      "end": 191.365
+    },
+    {
+      "word": "on",
+      "start": 191.423,
+      "end": 191.493
+    },
+    {
+      "word": "the",
+      "start": 191.54,
+      "end": 191.609
+    },
+    {
+      "word": "left,",
+      "start": 191.667,
+      "end": 191.981
+    },
+    {
+      "word": "two",
+      "start": 192.027,
+      "end": 192.225
+    },
+    {
+      "word": "on",
+      "start": 192.306,
+      "end": 192.387
+    },
+    {
+      "word": "the",
+      "start": 192.434,
+      "end": 192.503
+    },
+    {
+      "word": "right.",
+      "start": 192.561,
+      "end": 193.002
+    },
+    {
+      "word": "Increasing",
+      "start": 193.246,
+      "end": 193.838
+    },
+    {
+      "word": "pressure",
+      "start": 193.92,
+      "end": 194.303
+    },
+    {
+      "word": "shifts",
+      "start": 194.338,
+      "end": 194.651
+    },
+    {
+      "word": "right.",
+      "start": 194.732,
+      "end": 195.15
+    },
+    {
+      "word": "Hydrogen",
+      "start": 195.394,
+      "end": 195.975
+    },
+    {
+      "word": "plus",
+      "start": 196.044,
+      "end": 196.311
+    },
+    {
+      "word": "iodine",
+      "start": 196.427,
+      "end": 197.008
+    },
+    {
+      "word": "in",
+      "start": 197.043,
+      "end": 197.124
+    },
+    {
+      "word": "equilibrium",
+      "start": 197.205,
+      "end": 197.89
+    },
+    {
+      "word": "with",
+      "start": 197.937,
+      "end": 198.099
+    },
+    {
+      "word": "two",
+      "start": 198.146,
+      "end": 198.32
+    },
+    {
+      "word": "hydrogen",
+      "start": 198.401,
+      "end": 198.935
+    },
+    {
+      "word": "iodide.",
+      "start": 199.017,
+      "end": 199.69
+    },
+    {
+      "word": "Two",
+      "start": 199.864,
+      "end": 200.073
+    },
+    {
+      "word": "moles",
+      "start": 200.143,
+      "end": 200.41
+    },
+    {
+      "word": "of",
+      "start": 200.456,
+      "end": 200.538
+    },
+    {
+      "word": "gas",
+      "start": 200.619,
+      "end": 200.944
+    },
+    {
+      "word": "on",
+      "start": 201.025,
+      "end": 201.153
+    },
+    {
+      "word": "each",
+      "start": 201.211,
+      "end": 201.397
+    },
+    {
+      "word": "side.",
+      "start": 201.443,
+      "end": 201.861
+    },
+    {
+      "word": "Increasing",
+      "start": 202.035,
+      "end": 202.639
+    },
+    {
+      "word": "pressure",
+      "start": 202.72,
+      "end": 203.15
+    },
+    {
+      "word": "causes",
+      "start": 203.208,
+      "end": 203.603
+    },
+    {
+      "word": "no",
+      "start": 203.672,
+      "end": 203.8
+    },
+    {
+      "word": "shift.",
+      "start": 203.881,
+      "end": 204.322
+    },
+    {
+      "word": "Two",
+      "start": 204.531,
+      "end": 204.74
+    },
+    {
+      "word": "sulfur",
+      "start": 204.822,
+      "end": 205.158
+    },
+    {
+      "word": "dioxide",
+      "start": 205.216,
+      "end": 205.878
+    },
+    {
+      "word": "plus",
+      "start": 205.925,
+      "end": 206.18
+    },
+    {
+      "word": "oxygen",
+      "start": 206.261,
+      "end": 206.76
+    },
+    {
+      "word": "in",
+      "start": 206.83,
+      "end": 206.9
+    },
+    {
+      "word": "equilibrium",
+      "start": 206.958,
+      "end": 207.596
+    },
+    {
+      "word": "with",
+      "start": 207.654,
+      "end": 207.817
+    },
+    {
+      "word": "two",
+      "start": 207.852,
+      "end": 208.038
+    },
+    {
+      "word": "sulfur",
+      "start": 208.107,
+      "end": 208.49
+    },
+    {
+      "word": "trioxide.",
+      "start": 208.537,
+      "end": 209.373
+    },
+    {
+      "word": "Three",
+      "start": 209.617,
+      "end": 209.907
+    },
+    {
+      "word": "moles",
+      "start": 209.965,
+      "end": 210.232
+    },
+    {
+      "word": "of",
+      "start": 210.278,
+      "end": 210.348
+    },
+    {
+      "word": "gas",
+      "start": 210.429,
+      "end": 210.685
+    },
+    {
+      "word": "to",
+      "start": 210.754,
+      "end": 210.836
+    },
+    {
+      "word": "two.",
+      "start": 210.905,
+      "end": 211.254
+    },
+    {
+      "word": "Increasing",
+      "start": 211.37,
+      "end": 211.973
+    },
+    {
+      "word": "pressure",
+      "start": 212.055,
+      "end": 212.461
+    },
+    {
+      "word": "shifts",
+      "start": 212.496,
+      "end": 212.879
+    },
+    {
+      "word": "right.",
+      "start": 212.949,
+      "end": 213.331
+    },
+    {
+      "word": "If",
+      "start": 213.575,
+      "end": 213.738
+    },
+    {
+      "word": "that",
+      "start": 213.796,
+      "end": 213.981
+    },
+    {
+      "word": "forward",
+      "start": 214.074,
+      "end": 214.492
+    },
+    {
+      "word": "reaction",
+      "start": 214.562,
+      "end": 215.026
+    },
+    {
+      "word": "is",
+      "start": 215.096,
+      "end": 215.247
+    },
+    {
+      "word": "exothermic,",
+      "start": 215.34,
+      "end": 216.257
+    },
+    {
+      "word": "increasing",
+      "start": 216.303,
+      "end": 216.907
+    },
+    {
+      "word": "temperature",
+      "start": 216.965,
+      "end": 217.453
+    },
+    {
+      "word": "shifts",
+      "start": 217.488,
+      "end": 217.79
+    },
+    {
+      "word": "left.",
+      "start": 217.906,
+      "end": 218.37
+    },
+    {
+      "word": "Calcium",
+      "start": 218.707,
+      "end": 219.218
+    },
+    {
+      "word": "carbonate",
+      "start": 219.299,
+      "end": 219.81
+    },
+    {
+      "word": "solid",
+      "start": 219.856,
+      "end": 220.216
+    },
+    {
+      "word": "in",
+      "start": 220.262,
+      "end": 220.332
+    },
+    {
+      "word": "equilibrium",
+      "start": 220.413,
+      "end": 221.098
+    },
+    {
+      "word": "with",
+      "start": 221.168,
+      "end": 221.331
+    },
+    {
+      "word": "calcium",
+      "start": 221.389,
+      "end": 221.818
+    },
+    {
+      "word": "oxide",
+      "start": 221.888,
+      "end": 222.329
+    },
+    {
+      "word": "solid",
+      "start": 222.364,
+      "end": 222.712
+    },
+    {
+      "word": "and",
+      "start": 222.77,
+      "end": 222.886
+    },
+    {
+      "word": "carbon",
+      "start": 222.968,
+      "end": 223.327
+    },
+    {
+      "word": "dioxide",
+      "start": 223.386,
+      "end": 224.012
+    },
+    {
+      "word": "gas.",
+      "start": 224.07,
+      "end": 224.5
+    },
+    {
+      "word": "Zero",
+      "start": 224.895,
+      "end": 225.359
+    },
+    {
+      "word": "gas",
+      "start": 225.452,
+      "end": 225.742
+    },
+    {
+      "word": "moles",
+      "start": 225.824,
+      "end": 226.102
+    },
+    {
+      "word": "on",
+      "start": 226.172,
+      "end": 226.288
+    },
+    {
+      "word": "the",
+      "start": 226.323,
+      "end": 226.392
+    },
+    {
+      "word": "left,",
+      "start": 226.462,
+      "end": 226.729
+    },
+    {
+      "word": "one",
+      "start": 226.776,
+      "end": 226.961
+    },
+    {
+      "word": "on",
+      "start": 226.996,
+      "end": 227.089
+    },
+    {
+      "word": "the",
+      "start": 227.136,
+      "end": 227.205
+    },
+    {
+      "word": "right.",
+      "start": 227.275,
+      "end": 227.716
+    },
+    {
+      "word": "Increasing",
+      "start": 227.925,
+      "end": 228.54
+    },
+    {
+      "word": "pressure",
+      "start": 228.621,
+      "end": 229.005
+    },
+    {
+      "word": "shifts",
+      "start": 229.051,
+      "end": 229.399
+    },
+    {
+      "word": "left.",
+      "start": 229.515,
+      "end": 230.003
+    },
+    {
+      "word": "Correct",
+      "start": 230.398,
+      "end": 230.781
+    },
+    {
+      "word": "the",
+      "start": 230.827,
+      "end": 230.909
+    },
+    {
+      "word": "misconceptions.",
+      "start": 230.99,
+      "end": 232.07
+    },
+    {
+      "word": "Reactions",
+      "start": 232.522,
+      "end": 233.022
+    },
+    {
+      "word": "do",
+      "start": 233.068,
+      "end": 233.138
+    },
+    {
+      "word": "not",
+      "start": 233.207,
+      "end": 233.335
+    },
+    {
+      "word": "stop",
+      "start": 233.382,
+      "end": 233.707
+    },
+    {
+      "word": "at",
+      "start": 233.881,
+      "end": 234.055
+    },
+    {
+      "word": "equilibrium.",
+      "start": 234.136,
+      "end": 234.961
+    },
+    {
+      "word": "Constant",
+      "start": 235.135,
+      "end": 235.587
+    },
+    {
+      "word": "does",
+      "start": 235.634,
+      "end": 235.785
+    },
+    {
+      "word": "not",
+      "start": 235.843,
+      "end": 235.994
+    },
+    {
+      "word": "mean",
+      "start": 236.075,
+      "end": 236.319
+    },
+    {
+      "word": "equal",
+      "start": 236.435,
+      "end": 236.737
+    },
+    {
+      "word": "concentrations.",
+      "start": 236.807,
+      "end": 237.782
+    },
+    {
+      "word": "Not",
+      "start": 238.177,
+      "end": 238.397
+    },
+    {
+      "word": "every",
+      "start": 238.467,
+      "end": 238.711
+    },
+    {
+      "word": "reversible",
+      "start": 238.769,
+      "end": 239.361
+    },
+    {
+      "word": "system",
+      "start": 239.407,
+      "end": 239.825
+    },
+    {
+      "word": "is",
+      "start": 239.906,
+      "end": 240.034
+    },
+    {
+      "word": "at",
+      "start": 240.092,
+      "end": 240.197
+    },
+    {
+      "word": "equilibrium.",
+      "start": 240.29,
+      "end": 241.079
+    },
+    {
+      "word": "Increasing",
+      "start": 241.416,
+      "end": 241.927
+    },
+    {
+      "word": "pressure",
+      "start": 241.996,
+      "end": 242.356
+    },
+    {
+      "word": "does",
+      "start": 242.403,
+      "end": 242.577
+    },
+    {
+      "word": "not",
+      "start": 242.635,
+      "end": 242.809
+    },
+    {
+      "word": "always",
+      "start": 242.879,
+      "end": 243.227
+    },
+    {
+      "word": "shift",
+      "start": 243.262,
+      "end": 243.54
+    },
+    {
+      "word": "right.",
+      "start": 243.61,
+      "end": 244.017
+    },
+    {
+      "word": "Increasing",
+      "start": 244.411,
+      "end": 244.957
+    },
+    {
+      "word": "temperature",
+      "start": 245.027,
+      "end": 245.584
+    },
+    {
+      "word": "does",
+      "start": 245.642,
+      "end": 245.851
+    },
+    {
+      "word": "not",
+      "start": 245.909,
+      "end": 246.083
+    },
+    {
+      "word": "always",
+      "start": 246.153,
+      "end": 246.478
+    },
+    {
+      "word": "shift",
+      "start": 246.513,
+      "end": 246.791
+    },
+    {
+      "word": "left.",
+      "start": 246.873,
+      "end": 247.326
+    },
+    {
+      "word": "Examination-style",
+      "start": 247.778,
+      "end": 248.742
+    },
+    {
+      "word": "question.",
+      "start": 248.777,
+      "end": 249.264
+    },
+    {
+      "word": "Part",
+      "start": 249.417,
+      "end": 249.8
+    },
+    {
+      "word": "a.",
+      "start": 249.881,
+      "end": 250.369
+    },
+    {
+      "word": "Define",
+      "start": 250.52,
+      "end": 251.008
+    },
+    {
+      "word": "dynamic",
+      "start": 251.042,
+      "end": 251.53
+    },
+    {
+      "word": "equilibrium",
+      "start": 251.588,
+      "end": 252.215
+    },
+    {
+      "word": "and",
+      "start": 252.331,
+      "end": 252.517
+    },
+    {
+      "word": "state",
+      "start": 252.563,
+      "end": 252.888
+    },
+    {
+      "word": "one",
+      "start": 252.958,
+      "end": 253.167
+    },
+    {
+      "word": "required",
+      "start": 253.202,
+      "end": 253.608
+    },
+    {
+      "word": "condition.",
+      "start": 253.655,
+      "end": 254.189
+    },
+    {
+      "word": "Three",
+      "start": 254.224,
+      "end": 254.491
+    },
+    {
+      "word": "marks.",
+      "start": 254.549,
+      "end": 255.059
+    },
+    {
+      "word": "Forward",
+      "start": 255.396,
+      "end": 255.814
+    },
+    {
+      "word": "and",
+      "start": 255.872,
+      "end": 256.011
+    },
+    {
+      "word": "reverse",
+      "start": 256.093,
+      "end": 256.511
+    },
+    {
+      "word": "reactions",
+      "start": 256.569,
+      "end": 257.091
+    },
+    {
+      "word": "continue",
+      "start": 257.149,
+      "end": 257.625
+    },
+    {
+      "word": "at",
+      "start": 257.66,
+      "end": 257.776
+    },
+    {
+      "word": "equal",
+      "start": 257.869,
+      "end": 258.183
+    },
+    {
+      "word": "rates",
+      "start": 258.252,
+      "end": 258.508
+    },
+    {
+      "word": "in",
+      "start": 258.566,
+      "end": 258.647
+    },
+    {
+      "word": "a",
+      "start": 258.693,
+      "end": 258.717
+    },
+    {
+      "word": "closed",
+      "start": 258.763,
+      "end": 259.053
+    },
+    {
+      "word": "system.",
+      "start": 259.076,
+      "end": 259.622
+    },
+    {
+      "word": "Part",
+      "start": 259.959,
+      "end": 260.237
+    },
+    {
+      "word": "b.",
+      "start": 260.284,
+      "end": 260.563
+    },
+    {
+      "word": "For",
+      "start": 260.772,
+      "end": 260.934
+    },
+    {
+      "word": "nitrogen,",
+      "start": 260.992,
+      "end": 261.607
+    },
+    {
+      "word": "hydrogen",
+      "start": 261.665,
+      "end": 262.188
+    },
+    {
+      "word": "and",
+      "start": 262.269,
+      "end": 262.443
+    },
+    {
+      "word": "ammonia,",
+      "start": 262.501,
+      "end": 263.093
+    },
+    {
+      "word": "state",
+      "start": 263.244,
+      "end": 263.581
+    },
+    {
+      "word": "the",
+      "start": 263.616,
+      "end": 263.685
+    },
+    {
+      "word": "effect",
+      "start": 263.732,
+      "end": 264.103
+    },
+    {
+      "word": "of",
+      "start": 264.173,
+      "end": 264.301
+    },
+    {
+      "word": "increasing",
+      "start": 264.382,
+      "end": 264.881
+    },
+    {
+      "word": "pressure.",
+      "start": 264.939,
+      "end": 265.438
+    },
+    {
+      "word": "Two",
+      "start": 265.775,
+      "end": 265.972
+    },
+    {
+      "word": "marks.",
+      "start": 266.042,
+      "end": 266.541
+    },
+    {
+      "word": "The",
+      "start": 266.692,
+      "end": 266.832
+    },
+    {
+      "word": "equilibrium",
+      "start": 266.901,
+      "end": 267.528
+    },
+    {
+      "word": "shifts",
+      "start": 267.598,
+      "end": 267.9
+    },
+    {
+      "word": "right",
+      "start": 267.958,
+      "end": 268.19
+    },
+    {
+      "word": "because",
+      "start": 268.248,
+      "end": 268.561
+    },
+    {
+      "word": "there",
+      "start": 268.585,
+      "end": 268.712
+    },
+    {
+      "word": "are",
+      "start": 268.747,
+      "end": 268.852
+    },
+    {
+      "word": "two",
+      "start": 268.875,
+      "end": 269.049
+    },
+    {
+      "word": "moles",
+      "start": 269.119,
+      "end": 269.397
+    },
+    {
+      "word": "of",
+      "start": 269.455,
+      "end": 269.513
+    },
+    {
+      "word": "gas",
+      "start": 269.595,
+      "end": 269.92
+    },
+    {
+      "word": "against",
+      "start": 270.036,
+      "end": 270.442
+    },
+    {
+      "word": "four.",
+      "start": 270.512,
+      "end": 270.953
+    },
+    {
+      "word": "Part",
+      "start": 271.348,
+      "end": 271.65
+    },
+    {
+      "word": "c.",
+      "start": 271.685,
+      "end": 272.044
+    },
+    {
+      "word": "The",
+      "start": 272.172,
+      "end": 272.288
+    },
+    {
+      "word": "forward",
+      "start": 272.346,
+      "end": 272.706
+    },
+    {
+      "word": "reaction",
+      "start": 272.753,
+      "end": 273.159
+    },
+    {
+      "word": "is",
+      "start": 273.229,
+      "end": 273.333
+    },
+    {
+      "word": "exothermic.",
+      "start": 273.403,
+      "end": 274.216
+    },
+    {
+      "word": "What",
+      "start": 274.494,
+      "end": 274.703
+    },
+    {
+      "word": "happens",
+      "start": 274.761,
+      "end": 275.086
+    },
+    {
+      "word": "to",
+      "start": 275.133,
+      "end": 275.202
+    },
+    {
+      "word": "product",
+      "start": 275.284,
+      "end": 275.62
+    },
+    {
+      "word": "yield",
+      "start": 275.678,
+      "end": 275.992
+    },
+    {
+      "word": "if",
+      "start": 276.073,
+      "end": 276.189
+    },
+    {
+      "word": "temperature",
+      "start": 276.259,
+      "end": 276.781
+    },
+    {
+      "word": "increases?",
+      "start": 276.828,
+      "end": 277.582
+    },
+    {
+      "word": "Two",
+      "start": 277.698,
+      "end": 277.896
+    },
+    {
+      "word": "marks.",
+      "start": 277.977,
+      "end": 278.523
+    },
+    {
+      "word": "The",
+      "start": 278.639,
+      "end": 278.755
+    },
+    {
+      "word": "equilibrium",
+      "start": 278.825,
+      "end": 279.475
+    },
+    {
+      "word": "shifts",
+      "start": 279.556,
+      "end": 280.032
+    },
+    {
+      "word": "in",
+      "start": 280.148,
+      "end": 280.334
+    },
+    {
+      "word": "the",
+      "start": 280.38,
+      "end": 280.462
+    },
+    {
+      "word": "endothermic",
+      "start": 280.531,
+      "end": 281.147
+    },
+    {
+      "word": "reverse",
+      "start": 281.216,
+      "end": 281.588
+    },
+    {
+      "word": "direction,",
+      "start": 281.623,
+      "end": 282.215
+    },
+    {
+      "word": "so",
+      "start": 282.273,
+      "end": 282.435
+    },
+    {
+      "word": "product",
+      "start": 282.528,
+      "end": 282.911
+    },
+    {
+      "word": "yield",
+      "start": 282.969,
+      "end": 283.178
+    },
+    {
+      "word": "decreases.",
+      "start": 283.225,
+      "end": 284.049
+    },
+    {
+      "word": "Part",
+      "start": 284.571,
+      "end": 284.85
+    },
+    {
+      "word": "d.",
+      "start": 284.897,
+      "end": 285.256
+    },
+    {
+      "word": "What",
+      "start": 285.5,
+      "end": 285.709
+    },
+    {
+      "word": "happens",
+      "start": 285.779,
+      "end": 286.278
+    },
+    {
+      "word": "if",
+      "start": 286.348,
+      "end": 286.487
+    },
+    {
+      "word": "you",
+      "start": 286.545,
+      "end": 286.638
+    },
+    {
+      "word": "add",
+      "start": 286.731,
+      "end": 286.986
+    },
+    {
+      "word": "a",
+      "start": 287.056,
+      "end": 287.102
+    },
+    {
+      "word": "reactant?",
+      "start": 287.184,
+      "end": 287.88
+    },
+    {
+      "word": "Two",
+      "start": 288.159,
+      "end": 288.368
+    },
+    {
+      "word": "marks.",
+      "start": 288.438,
+      "end": 288.948
+    },
+    {
+      "word": "The",
+      "start": 289.065,
+      "end": 289.192
+    },
+    {
+      "word": "equilibrium",
+      "start": 289.262,
+      "end": 289.854
+    },
+    {
+      "word": "shifts",
+      "start": 289.924,
+      "end": 290.353
+    },
+    {
+      "word": "to",
+      "start": 290.504,
+      "end": 290.643
+    },
+    {
+      "word": "use",
+      "start": 290.76,
+      "end": 290.957
+    },
+    {
+      "word": "some",
+      "start": 290.98,
+      "end": 291.178
+    },
+    {
+      "word": "of",
+      "start": 291.212,
+      "end": 291.282
+    },
+    {
+      "word": "the",
+      "start": 291.34,
+      "end": 291.421
+    },
+    {
+      "word": "added",
+      "start": 291.491,
+      "end": 291.793
+    },
+    {
+      "word": "reactant,",
+      "start": 291.863,
+      "end": 292.513
+    },
+    {
+      "word": "so",
+      "start": 292.629,
+      "end": 292.861
+    },
+    {
+      "word": "products",
+      "start": 292.954,
+      "end": 293.361
+    },
+    {
+      "word": "are",
+      "start": 293.407,
+      "end": 293.511
+    },
+    {
+      "word": "favoured.",
+      "start": 293.546,
+      "end": 294.057
+    },
+    {
+      "word": "Before",
+      "start": 294.51,
+      "end": 294.916
+    },
+    {
+      "word": "we",
+      "start": 294.963,
+      "end": 295.056
+    },
+    {
+      "word": "finish,",
+      "start": 295.137,
+      "end": 295.648
+    },
+    {
+      "word": "complete",
+      "start": 295.764,
+      "end": 296.228
+    },
+    {
+      "word": "the",
+      "start": 296.263,
+      "end": 296.333
+    },
+    {
+      "word": "model.",
+      "start": 296.391,
+      "end": 296.844
+    },
+    {
+      "word": "Dynamic",
+      "start": 297.018,
+      "end": 297.587
+    },
+    {
+      "word": "equilibrium",
+      "start": 297.645,
+      "end": 298.376
+    },
+    {
+      "word": "is",
+      "start": 298.446,
+      "end": 298.573
+    },
+    {
+      "word": "a",
+      "start": 298.62,
+      "end": 298.655
+    },
+    {
+      "word": "closed",
+      "start": 298.724,
+      "end": 299.119
+    },
+    {
+      "word": "reversible",
+      "start": 299.177,
+      "end": 299.734
+    },
+    {
+      "word": "system",
+      "start": 299.769,
+      "end": 300.21
+    },
+    {
+      "word": "with",
+      "start": 300.338,
+      "end": 300.547
+    },
+    {
+      "word": "equal",
+      "start": 300.628,
+      "end": 300.965
+    },
+    {
+      "word": "continuing",
+      "start": 301.035,
+      "end": 301.638
+    },
+    {
+      "word": "rates",
+      "start": 301.72,
+      "end": 302.091
+    },
+    {
+      "word": "and",
+      "start": 302.207,
+      "end": 302.405
+    },
+    {
+      "word": "constant",
+      "start": 302.486,
+      "end": 302.892
+    },
+    {
+      "word": "composition.",
+      "start": 302.95,
+      "end": 303.74
+    },
+    {
+      "word": "Le",
+      "start": 303.914,
+      "end": 304.042
+    },
+    {
+      "word": "Chatelier's",
+      "start": 304.088,
+      "end": 304.622
+    },
+    {
+      "word": "principle",
+      "start": 304.692,
+      "end": 305.307
+    },
+    {
+      "word": "predicts",
+      "start": 305.365,
+      "end": 305.772
+    },
+    {
+      "word": "the",
+      "start": 305.806,
+      "end": 305.876
+    },
+    {
+      "word": "opposing",
+      "start": 305.923,
+      "end": 306.41
+    },
+    {
+      "word": "shift",
+      "start": 306.479,
+      "end": 306.793
+    },
+    {
+      "word": "for",
+      "start": 306.863,
+      "end": 307.014
+    },
+    {
+      "word": "concentration,",
+      "start": 307.072,
+      "end": 308.0
+    },
+    {
+      "word": "temperature",
+      "start": 308.082,
+      "end": 308.755
+    },
+    {
+      "word": "and",
+      "start": 308.801,
+      "end": 308.999
+    },
+    {
+      "word": "pressure.",
+      "start": 309.069,
+      "end": 309.579
+    },
+    {
+      "word": "If",
+      "start": 310.288,
+      "end": 310.438
+    },
+    {
+      "word": "you",
+      "start": 310.497,
+      "end": 310.578
+    },
+    {
+      "word": "found",
+      "start": 310.694,
+      "end": 310.903
+    },
+    {
+      "word": "this",
+      "start": 310.938,
+      "end": 311.077
+    },
+    {
+      "word": "useful,",
+      "start": 311.158,
+      "end": 311.623
+    },
+    {
+      "word": "please",
+      "start": 311.716,
+      "end": 312.006
+    },
+    {
+      "word": "subscribe",
+      "start": 312.029,
+      "end": 312.575
+    },
+    {
+      "word": "to",
+      "start": 312.61,
+      "end": 312.691
+    },
+    {
+      "word": "J",
+      "start": 312.76,
+      "end": 312.935
+    },
+    {
+      "word": "D",
+      "start": 313.004,
+      "end": 313.062
+    },
+    {
+      "word": "Science,",
+      "start": 313.178,
+      "end": 313.666
+    },
+    {
+      "word": "and",
+      "start": 313.713,
+      "end": 313.863
+    },
+    {
+      "word": "visit",
+      "start": 313.921,
+      "end": 314.235
+    },
+    {
+      "word": "j",
+      "start": 314.316,
+      "end": 314.467
+    },
+    {
+      "word": "d",
+      "start": 314.537,
+      "end": 314.653
+    },
+    {
+      "word": "science",
+      "start": 314.711,
+      "end": 315.117
+    },
+    {
+      "word": "dot",
+      "start": 315.141,
+      "end": 315.35
+    },
+    {
+      "word": "co",
+      "start": 315.431,
+      "end": 315.698
+    },
+    {
+      "word": "dot",
+      "start": 315.826,
+      "end": 316.081
+    },
+    {
+      "word": "u",
+      "start": 316.197,
+      "end": 316.313
+    },
+    {
+      "word": "k",
+      "start": 316.383,
+      "end": 316.592
+    },
+    {
+      "word": "for",
+      "start": 316.87,
+      "end": 317.068
+    },
+    {
+      "word": "more",
+      "start": 317.137,
+      "end": 317.37
+    },
+    {
+      "word": "explanations,",
+      "start": 317.416,
+      "end": 318.298
+    },
+    {
+      "word": "worksheets",
+      "start": 318.415,
+      "end": 319.03
+    },
+    {
+      "word": "and",
+      "start": 319.111,
+      "end": 319.285
+    },
+    {
+      "word": "T-Level",
+      "start": 319.343,
+      "end": 319.761
+    },
+    {
+      "word": "Chemistry",
+      "start": 319.819,
+      "end": 320.249
+    },
+    {
+      "word": "lessons.",
+      "start": 320.307,
+      "end": 320.818
+    }
+  ],
+  "chunks": 2,
+  "model": "eleven_multilingual_v2"
+}

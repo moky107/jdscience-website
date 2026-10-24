@@ -1,0 +1,163 @@
+{
+  "slug": "a12-5-reversible-reactions",
+  "duration": 321.019,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.174,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 13.421,
+      "aligned": true,
+      "cue": "define dynamic equilibrium"
+    },
+    {
+      "id": "rev",
+      "t": 23.708,
+      "aligned": true,
+      "cue": "The symbol with arrows both ways"
+    },
+    {
+      "id": "dyn",
+      "t": 40.797,
+      "aligned": true,
+      "cue": "Dynamic equilibrium occurs when"
+    },
+    {
+      "id": "le",
+      "t": 93.622,
+      "aligned": true,
+      "cue": "Le Chatelier\u2019s principle"
+    },
+    {
+      "id": "conc",
+      "t": 116.737,
+      "aligned": true,
+      "cue": "Concentration, for A plus B"
+    },
+    {
+      "id": "temp",
+      "t": 138.726,
+      "aligned": true,
+      "cue": "If the forward reaction is exothermic"
+    },
+    {
+      "id": "press",
+      "t": 168.145,
+      "aligned": true,
+      "cue": "Pressure applies to gaseous equilibria"
+    },
+    {
+      "id": "examples",
+      "t": 186.083,
+      "aligned": true,
+      "cue": "Nitrogen plus three hydrogen"
+    },
+    {
+      "id": "myths",
+      "t": 230.398,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 247.778,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 294.51,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 311.716,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 13.541,
+      "aligned": true,
+      "cue": "define dynamic equilibrium"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 16.173,
+      "aligned": true,
+      "cue": "conditions it requires"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 20.48,
+      "aligned": true,
+      "cue": "concentration, temperature and pressure"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 18.843,
+      "aligned": true,
+      "cue": "Le Chatelier"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 257.869,
+      "aligned": true,
+      "cue": "equal rates in a closed system"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 268.875,
+      "aligned": true,
+      "cue": "two moles of gas against four"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 282.528,
+      "aligned": true,
+      "cue": "product yield decreases"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 292.954,
+      "aligned": true,
+      "cue": "products are favoured"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 297.018,
+      "aligned": true,
+      "cue": "Dynamic equilibrium is a closed reversible system"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 303.914,
+      "aligned": true,
+      "cue": "Le Chatelier\u2019s principle predicts"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 307.072,
+      "aligned": true,
+      "cue": "concentration, temperature and pressure"
+    }
+  ]
+}

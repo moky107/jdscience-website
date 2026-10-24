@@ -1,0 +1,151 @@
+{
+  "slug": "a12-4-industrial-catalysts",
+  "duration": 270.237,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.058,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 15.615,
+      "aligned": true,
+      "cue": "explain how a catalyst increases industrial rate"
+    },
+    {
+      "id": "defn",
+      "t": 26.041,
+      "aligned": true,
+      "cue": "A catalyst increases reaction rate without being permanently"
+    },
+    {
+      "id": "chain",
+      "t": 52.21,
+      "aligned": true,
+      "cue": "The industrial chain is"
+    },
+    {
+      "id": "hours",
+      "t": 83.731,
+      "aligned": true,
+      "cue": "Without a catalyst the reaction stage takes eight point zero hours"
+    },
+    {
+      "id": "processx",
+      "t": 114.427,
+      "aligned": true,
+      "cue": "Process X runs twelve batches"
+    },
+    {
+      "id": "profile",
+      "t": 139.702,
+      "aligned": true,
+      "cue": "Watch the energy profile"
+    },
+    {
+      "id": "myths",
+      "t": 169.353,
+      "aligned": true,
+      "cue": "Correct the misconceptions"
+    },
+    {
+      "id": "exam",
+      "t": 182.159,
+      "aligned": true,
+      "cue": "Examination-style question."
+    },
+    {
+      "id": "recap",
+      "t": 238.514,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 259.226,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 17.45,
+      "aligned": true,
+      "cue": "increases industrial rate"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 19.992,
+      "aligned": true,
+      "cue": "shortens turnaround time"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 22.024,
+      "aligned": true,
+      "cue": "reduce costs"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 23.522,
+      "aligned": true,
+      "cue": "why delta H does not change"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 190.936,
+      "aligned": true,
+      "cue": "Rate increases. The stage completes sooner"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 207.515,
+      "aligned": true,
+      "cue": "It provides an alternative pathway"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 224.64,
+      "aligned": true,
+      "cue": "Six hours"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 230.631,
+      "aligned": true,
+      "cue": "Reactant enthalpy is unchanged"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 240.906,
+      "aligned": true,
+      "cue": "A catalyst lowers E a and increases rate"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 244.447,
+      "aligned": true,
+      "cue": "Faster rate shortens the reaction stage"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 251.169,
+      "aligned": true,
+      "cue": "Delta H stays the same"
+    }
+  ]
+}
