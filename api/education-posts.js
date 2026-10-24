@@ -3,6 +3,7 @@ import { hasAwardingBodyUrl, looksLikeOfficialPaper, tidyDownloadFilename } from
 import { handleShopPublicRequest, wantsShopPublicRequest } from './_lib/shopHandlers.js';
 import { handleAnalyticsEventRequest, wantsAnalyticsEventRequest } from './_lib/analyticsHandlers.js';
 import { handlePasswordRecoveryRequest, wantsPasswordRecoveryRequest } from './_lib/passwordRecovery.js';
+import { handleTeacherMarkingSchemeRequest, wantsTeacherMarkingSchemeRequest } from './_lib/teacherMarkingScheme.js';
 
 function resourceSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -85,6 +86,7 @@ async function sendResourceFile(req, res) {
 export default async function handler(req, res) {
   if (wantsAnalyticsEventRequest(req)) return handleAnalyticsEventRequest(req, res);
   if (wantsPasswordRecoveryRequest(req)) return handlePasswordRecoveryRequest(req, res);
+  if (wantsTeacherMarkingSchemeRequest(req)) return handleTeacherMarkingSchemeRequest(req, res);
   if (wantsShopPublicRequest(req)) return handleShopPublicRequest(req, res);
   if (wantsResourceFile(req)) return sendResourceFile(req, res);
 
