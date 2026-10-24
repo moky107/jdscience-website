@@ -42,6 +42,9 @@ content/videos/*/source/narration_master_parts/
 # Private teacher mark schemes — never publish
 content/tlevel-chemistry/private/
 
+# Original teacher answer workbooks — stay private
+content/tlevel-chemistry/sources/*Teacher_Answer_Workbook*
+
 # Large hosted T-Level MP4s live in Supabase, not Git
 public/resources/t-level/science/videos/*/*.mp4
 

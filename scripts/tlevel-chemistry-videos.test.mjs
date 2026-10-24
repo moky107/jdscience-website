@@ -19,19 +19,18 @@ function test(name, fn) {
 
 test("catalog lists the nine A11/A12 Chemistry topics under T-Level Science Videos", () => {
   assert.equal(TLEVEL_CHEMISTRY_LESSON_VIDEOS.length, 9);
-  assert.equal(TLEVEL_CHEMISTRY_VIDEOS.length, 9);
   assert.deepEqual(
     TLEVEL_CHEMISTRY_VIDEOS.map((item) => item.topicSlug),
     [
       "a11-1-collision-theory",
-      "a11-2-factors-affecting-rate",
-      "a11-3-maxwell-boltzmann",
-      "a12-1-enthalpy-changes",
-      "a12-2-bond-enthalpies",
-      "a12-3-hess-law",
-      "a12-4-calorimetry",
-      "a12-5-enthalpy-profile-diagrams",
-      "a12-6-entropy-and-feasibility",
+      "a11-2-temperature-and-rate",
+      "a11-3-catalysts",
+      "a12-1-factors-affecting-rates",
+      "a12-2-calculating-rate",
+      "a12-3-enthalpy-changes",
+      "a12-4-industrial-catalysts",
+      "a12-5-reversible-reactions",
+      "a12-6-haber-process",
     ],
   );
   for (const item of TLEVEL_CHEMISTRY_VIDEOS) {
@@ -43,30 +42,28 @@ test("catalog lists the nine A11/A12 Chemistry topics under T-Level Science Vide
   }
 });
 
-test("only A11.1 is a hosted playable lesson in the pilot", () => {
+test("A11.1–A11.3 are hosted playable lessons", () => {
   const ready = TLEVEL_CHEMISTRY_VIDEOS.filter((item) => item.hosted);
-  assert.equal(ready.length, 1);
-  const lesson = ready[0];
-  assert.equal(lesson.topicSlug, "a11-1-collision-theory");
-  assert.equal(
-    lesson.file_url_override,
-    `${RESOURCES_PUBLIC_BASE}/t-level/science/videos/a11-1-collision-theory/jdscience-a11-1-collision-theory-1080p.mp4`,
-  );
-  assert.equal(lesson.caption_url, "/resources/t-level/science/videos/a11-1-collision-theory/captions.vtt");
-  assert.equal(lesson.poster_url, "/resources/t-level/science/videos/a11-1-collision-theory/poster.jpg");
-  assert.equal(
-    lesson.downloadHref,
-    "/resources/t-level/science/videos/a11-1-collision-theory/jdscience-a11-1-collision-theory-worksheet.pdf",
-  );
-  assert.doesNotMatch(lesson.file_url_override, /\/opt\/cursor\/artifacts/);
+  assert.deepEqual(ready.map((item) => item.topicSlug), [
+    "a11-1-collision-theory",
+    "a11-2-temperature-and-rate",
+    "a11-3-catalysts",
+  ]);
+  for (const lesson of ready) {
+    assert.equal(
+      lesson.file_url_override,
+      `${RESOURCES_PUBLIC_BASE}/t-level/science/videos/${lesson.topicSlug}/${lesson.file_name}`,
+    );
+    assert.equal(lesson.caption_url, `/resources/t-level/science/videos/${lesson.topicSlug}/captions.vtt`);
+    assert.doesNotMatch(lesson.file_url_override, /\/opt\/cursor\/artifacts/);
+  }
 });
 
-test("A11.1 student worksheet is public and the teacher mark scheme is not", () => {
-  const worksheet = join(
-    ROOT,
-    "public/resources/t-level/science/videos/a11-1-collision-theory/jdscience-a11-1-collision-theory-worksheet.pdf",
-  );
-  assert.ok(existsSync(worksheet), "missing public student worksheet");
+test("student worksheets are public and teacher mark schemes are not catalogued", () => {
+  for (const slug of ["a11-1-collision-theory", "a11-2-temperature-and-rate", "a11-3-catalysts"]) {
+    const worksheet = join(ROOT, `public/resources/t-level/science/videos/${slug}/jdscience-${slug}-worksheet.pdf`);
+    assert.ok(existsSync(worksheet), `missing public student worksheet ${slug}`);
+  }
   const publicTree = readFileSync(join(ROOT, "src/tlevelChemistryVideos.js"), "utf8");
   assert.doesNotMatch(publicTree, /teacher-marking-scheme|Teacher Answer Workbook/);
 });

@@ -1,0 +1,605 @@
+WEBVTT
+
+1
+00:00:00.116 --> 00:00:02.984
+Hello and welcome back to J D Science.
+
+2
+00:00:03.320 --> 00:00:07.175
+In today's T-Level Chemistry lesson, we are going to study
+
+3
+00:00:07.384 --> 00:00:11.622
+A eleven point two, Temperature and Rate of Reaction.
+
+4
+00:00:12.016 --> 00:00:15.406
+By the end of this lesson, you should be able to explain
+
+5
+00:00:15.488 --> 00:00:19.470
+why increasing temperature increases particle kinetic
+
+6
+00:00:19.563 --> 00:00:23.243
+energy and speed, how that changes collision frequency
+
+7
+00:00:23.417 --> 00:00:27.074
+and the proportion of successful collisions, what happens when
+
+8
+00:00:27.132 --> 00:00:31.451
+temperature falls, and how to read that change on a Maxwell-Boltzmann
+
+9
+00:00:31.532 --> 00:00:32.403
+distribution.
+
+10
+00:00:32.682 --> 00:00:34.911
+First, retrieve collision theory.
+
+11
+00:00:35.062 --> 00:00:38.603
+What two conditions are required for a successful collision?
+
+12
+00:00:38.777 --> 00:00:43.119
+Sufficient collision energy, and the correct spatial orientation.
+
+13
+00:00:43.270 --> 00:00:47.334
+Activation energy is the minimum collision energy required
+
+14
+00:00:47.403 --> 00:00:49.215
+for a successful reaction.
+
+15
+00:00:49.458 --> 00:00:52.999
+If particles move faster, they collide more frequently.
+
+16
+00:00:53.174 --> 00:00:56.970
+If they have more kinetic energy, a greater proportion can
+
+17
+00:00:57.051 --> 00:01:01.208
+have energy equal to or greater than the activation energy.
+
+18
+00:01:01.544 --> 00:01:05.317
+Specification point A eleven point two point
+
+19
+00:01:05.410 --> 00:01:05.828
+one.
+
+20
+00:01:06.165 --> 00:01:09.996
+Temperature is linked to the kinetic energy of particles.
+
+21
+00:01:10.333 --> 00:01:14.176
+When temperature increases, particles have greater average
+
+22
+00:01:14.222 --> 00:01:17.043
+kinetic energy, so they move faster.
+
+23
+00:01:17.380 --> 00:01:18.947
+Watch the particle model.
+
+24
+00:01:19.284 --> 00:01:23.185
+At higher temperature the particles travel more quickly through
+
+25
+00:01:23.220 --> 00:01:23.916
+the mixture.
+
+26
+00:01:24.439 --> 00:01:26.970
+That faster movement has two effects.
+
+27
+00:01:27.214 --> 00:01:29.129
+First: collision frequency.
+
+28
+00:01:29.408 --> 00:01:33.100
+Faster particles encounter other reactant particles more
+
+29
+00:01:33.146 --> 00:01:36.757
+often, so there are more collisions per unit time,
+
+30
+00:01:36.907 --> 00:01:40.274
+and more opportunities for successful collisions.
+
+31
+00:01:40.727 --> 00:01:44.164
+Second: the proportion of successful collisions.
+
+32
+00:01:44.500 --> 00:01:47.124
+The particle-energy distribution changes.
+
+33
+00:01:47.461 --> 00:01:51.141
+A greater proportion of particles have energy equal to or
+
+34
+00:01:51.199 --> 00:01:55.135
+greater than the activation energy, so a greater proportion
+
+35
+00:01:55.205 --> 00:01:58.421
+of collisions can satisfy the energy requirement.
+
+36
+00:01:59.036 --> 00:02:01.579
+Correct orientation is still required.
+
+37
+00:02:01.916 --> 00:02:05.097
+Increased temperature does not remove that condition.
+
+38
+00:02:05.549 --> 00:02:06.873
+Put the chain together.
+
+39
+00:02:07.082 --> 00:02:11.065
+Higher temperature means greater average kinetic energy.
+
+40
+00:02:11.239 --> 00:02:15.221
+Particles move faster, so collisions occur more frequently.
+
+41
+00:02:15.349 --> 00:02:19.180
+A greater proportion of particles have energy at least equal
+
+42
+00:02:19.250 --> 00:02:20.863
+to activation energy.
+
+43
+00:02:21.142 --> 00:02:25.066
+Successful collisions therefore occur more frequently, and the rate
+
+44
+00:02:25.101 --> 00:02:26.540
+of reaction increases.
+
+45
+00:02:26.749 --> 00:02:30.662
+Now specification point A eleven point two point two:
+
+46
+00:02:30.871 --> 00:02:33.123
+what happens when temperature decreases?
+
+47
+00:02:33.402 --> 00:02:36.769
+Lower temperature means lower average kinetic energy.
+
+48
+00:02:36.943 --> 00:02:38.638
+Particles move more slowly.
+
+49
+00:02:38.847 --> 00:02:40.786
+Collision frequency decreases.
+
+50
+00:02:40.960 --> 00:02:44.850
+A smaller proportion of particles have energy equal to or
+
+51
+00:02:44.943 --> 00:02:46.858
+greater than activation energy.
+
+52
+00:02:47.195 --> 00:02:51.015
+Successful collisions occur less frequently, so reaction
+
+53
+00:02:51.107 --> 00:02:52.234
+rate decreases.
+
+54
+00:02:52.350 --> 00:02:53.905
+Avoid a common shortcut.
+
+55
+00:02:54.149 --> 00:02:57.945
+It is incomplete to say only that particles collide
+
+56
+00:02:58.027 --> 00:02:58.479
+less.
+
+57
+00:02:58.688 --> 00:03:02.485
+A full explanation includes fewer collisions per unit
+
+58
+00:03:02.531 --> 00:03:06.246
+time and a smaller proportion of collisions with sufficient
+
+59
+00:03:06.316 --> 00:03:06.978
+energy.
+
+60
+00:03:07.129 --> 00:03:10.763
+The activation energy of the same reaction has not changed
+
+61
+00:03:10.937 --> 00:03:13.247
+simply because temperature changed.
+
+62
+00:03:13.421 --> 00:03:17.044
+Orientation remains a requirement at all temperatures.
+
+63
+00:03:17.438 --> 00:03:21.328
+Specification point A eleven point two point three.
+
+64
+00:03:21.781 --> 00:03:25.473
+The Maxwell-Boltzmann distribution shows how particle energies
+
+65
+00:03:25.554 --> 00:03:29.025
+are distributed in a sample at a particular temperature.
+
+66
+00:03:29.118 --> 00:03:31.951
+The horizontal axis is particle energy.
+
+67
+00:03:32.067 --> 00:03:35.689
+The vertical axis is the number, or fraction, of
+
+68
+00:03:35.782 --> 00:03:37.744
+particles with a given energy.
+
+69
+00:03:37.988 --> 00:03:41.820
+Activation energy can be shown as a vertical threshold, E
+
+70
+00:03:41.971 --> 00:03:42.331
+a.
+
+71
+00:03:42.783 --> 00:03:44.711
+Now compare two temperatures.
+
+72
+00:03:45.105 --> 00:03:48.728
+The higher-temperature curve is broader, has a lower peak,
+
+73
+00:03:48.902 --> 00:03:51.410
+and is shifted toward higher energies.
+
+74
+00:03:51.688 --> 00:03:55.601
+The total number of particles is unchanged, so the total
+
+75
+00:03:55.694 --> 00:03:59.826
+area under each distribution is the same for the same sample.
+
+76
+00:04:00.279 --> 00:04:03.785
+The key rate comparison is the area to the right of E
+
+77
+00:04:03.855 --> 00:04:04.192
+a.
+
+78
+00:04:04.645 --> 00:04:08.441
+Particles to the right of the activation-energy line have
+
+79
+00:04:08.511 --> 00:04:11.158
+energy greater than or equal to E a.
+
+80
+00:04:11.773 --> 00:04:15.767
+At higher temperature, that area is larger, so a greater
+
+81
+00:04:15.825 --> 00:04:19.644
+proportion of particles have sufficient energy for a successful
+
+82
+00:04:19.737 --> 00:04:20.364
+collision.
+
+83
+00:04:20.759 --> 00:04:23.766
+That helps explain the increased reaction rate.
+
+84
+00:04:23.993 --> 00:04:25.723
+What changes with temperature?
+
+85
+00:04:25.932 --> 00:04:29.949
+The shape of the energy distribution, the average kinetic energy,
+
+86
+00:04:30.100 --> 00:04:32.863
+and the proportion with energy at least E a.
+
+87
+00:04:33.200 --> 00:04:36.811
+What does not change for the same uncatalysed reaction?
+
+88
+00:04:37.147 --> 00:04:39.632
+The activation-energy threshold itself.
+
+89
+00:04:39.969 --> 00:04:43.115
+The graph supports the energy part of collision theory.
+
+90
+00:04:43.394 --> 00:04:47.097
+Successful collisions still also require correct orientation.
+
+91
+00:04:47.434 --> 00:04:48.862
+Guided interpretation.
+
+92
+00:04:49.106 --> 00:04:51.276
+Curve A is taller and narrower.
+
+93
+00:04:51.520 --> 00:04:53.564
+Curve B is lower and broader.
+
+94
+00:04:53.900 --> 00:04:56.257
+The activation-energy line is fixed.
+
+95
+00:04:56.466 --> 00:04:58.370
+Which curve is the higher temperature?
+
+96
+00:04:58.707 --> 00:04:59.438
+Curve B.
+
+97
+00:04:59.612 --> 00:05:03.293
+It is broader and shifted toward higher energies, with a lower
+
+98
+00:05:03.362 --> 00:05:03.792
+peak.
+
+99
+00:05:04.129 --> 00:05:07.669
+Curve B has the larger area to the right of E a,
+
+100
+00:05:07.878 --> 00:05:11.338
+so a greater proportion of particles have sufficient energy.
+
+101
+00:05:11.675 --> 00:05:15.738
+Together with increased collision frequency, that gives a greater reaction
+
+102
+00:05:15.819 --> 00:05:16.203
+rate.
+
+103
+00:05:16.446 --> 00:05:19.163
+Correct four errors before the examination.
+
+104
+00:05:19.558 --> 00:05:23.366
+Heating does not lower activation energy for the same reaction.
+
+105
+00:05:23.575 --> 00:05:26.071
+It changes the particle-energy distribution.
+
+106
+00:05:26.407 --> 00:05:29.380
+The peak does not get higher when temperature increases.
+
+107
+00:05:29.658 --> 00:05:33.118
+The distribution becomes broader and the peak becomes lower.
+
+108
+00:05:33.571 --> 00:05:36.229
+Collision frequency is not the only change.
+
+109
+00:05:36.508 --> 00:05:40.339
+The proportion of particles with energy at least E a also
+
+110
+00:05:40.421 --> 00:05:41.233
+increases.
+
+111
+00:05:41.477 --> 00:05:45.366
+And every collision above E a is not automatically successful.
+
+112
+00:05:45.610 --> 00:05:48.118
+Correct spatial orientation is still required.
+
+113
+00:05:48.571 --> 00:05:50.568
+Examination-style question.
+
+114
+00:05:51.021 --> 00:05:54.666
+A reaction mixture is heated from two hundred and ninety eight kelvin
+
+115
+00:05:54.748 --> 00:05:56.802
+to three hundred and eighteen kelvin.
+
+116
+00:05:57.046 --> 00:05:57.696
+Part a.
+
+117
+00:05:57.871 --> 00:06:01.690
+Explain how the increase in temperature affects particle kinetic energy
+
+118
+00:06:01.760 --> 00:06:03.153
+and collision frequency.
+
+119
+00:06:03.281 --> 00:06:04.082
+Two marks.
+
+120
+00:06:04.163 --> 00:06:06.381
+Average kinetic energy increases.
+
+121
+00:06:06.590 --> 00:06:09.608
+Particles move faster and collide more frequently.
+
+122
+00:06:09.852 --> 00:06:10.468
+Part b.
+
+123
+00:06:10.746 --> 00:06:14.485
+Explain why the proportion of successful collisions increases.
+
+124
+00:06:14.694 --> 00:06:15.448
+Two marks.
+
+125
+00:06:15.727 --> 00:06:19.651
+A greater proportion of particles have energy equal to or greater
+
+126
+00:06:19.709 --> 00:06:23.726
+than E a, so more collisions satisfy the energy requirement.
+
+127
+00:06:24.063 --> 00:06:24.806
+Part c.
+
+128
+00:06:24.980 --> 00:06:28.359
+Describe how the Maxwell-Boltzmann distribution changes.
+
+129
+00:06:28.603 --> 00:06:29.438
+Three marks.
+
+130
+00:06:29.647 --> 00:06:33.409
+The distribution becomes broader, its peak becomes lower, and
+
+131
+00:06:33.479 --> 00:06:37.170
+a greater area lies at higher energies, to the right of E
+
+132
+00:06:37.252 --> 00:06:37.612
+a.
+
+133
+00:06:37.890 --> 00:06:38.459
+Part d.
+
+134
+00:06:38.796 --> 00:06:42.639
+Explain why the reaction rate increases, using collision theory.
+
+135
+00:06:42.848 --> 00:06:43.672
+Three marks.
+
+136
+00:06:43.881 --> 00:06:47.619
+Collision frequency increases and a greater proportion of collisions have
+
+137
+00:06:47.666 --> 00:06:51.555
+sufficient energy, so successful collisions occur more frequently
+
+138
+00:06:51.625 --> 00:06:52.879
+and rate increases.
+
+139
+00:06:53.053 --> 00:06:55.363
+Correct orientation is still required.
+
+140
+00:06:55.607 --> 00:06:57.604
+Before we finish, complete the model.
+
+141
+00:06:57.883 --> 00:07:01.981
+Higher temperature increases average kinetic energy and particle speed.
+
+142
+00:07:02.155 --> 00:07:04.071
+Collision frequency increases.
+
+143
+00:07:04.245 --> 00:07:08.123
+The Maxwell-Boltzmann curve becomes broader and lower, with a larger
+
+144
+00:07:08.193 --> 00:07:09.609
+area beyond E a.
+
+145
+00:07:09.783 --> 00:07:13.522
+Successful collisions occur more frequently, so rate increases.
+
+146
+00:07:13.858 --> 00:07:15.600
+Lower temperature does the reverse.
+
+147
+00:07:15.844 --> 00:07:20.185
+Temperature does not, by itself, change E a for the same uncatalysed
+
+148
+00:07:20.232 --> 00:07:20.847
+reaction.
+
+149
+00:07:20.975 --> 00:07:24.481
+If you found this useful, please subscribe to J D Science, and
+
+150
+00:07:24.539 --> 00:07:28.545
+visit j d science dot co dot u k for more explanations,
+
+151
+00:07:28.603 --> 00:07:31.006
+worksheets and T-Level Chemistry lessons.

@@ -102,7 +102,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         "mp4": str(dest) if dest.exists() else None,
         "srt": str(srt_art),
     }
-    (artifacts / "a11-1-production-report.json").write_text(json.dumps(report, indent=2))
+    (artifacts / f"{slug}-production-report.json").write_text(json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
     if report["aligned_slides"] < report["total_slides"]:
         print("WARNING: some slides did not align to audio cues")

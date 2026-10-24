@@ -1,0 +1,241 @@
+{
+  "slug": "a11-2-temperature-and-rate",
+  "duration": 451.213,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 14.954,
+      "aligned": true,
+      "cue": "explain why increasing temperature increases particle kinetic energy"
+    },
+    {
+      "id": "hook",
+      "t": 32.682,
+      "aligned": true,
+      "cue": "First, retrieve collision theory"
+    },
+    {
+      "id": "ke",
+      "t": 66.165,
+      "aligned": true,
+      "cue": "Temperature is linked to the kinetic energy"
+    },
+    {
+      "id": "watch",
+      "t": 77.38,
+      "aligned": true,
+      "cue": "Watch the particle model"
+    },
+    {
+      "id": "freq",
+      "t": 84.439,
+      "aligned": true,
+      "cue": "That faster movement has two effects"
+    },
+    {
+      "id": "success",
+      "t": 100.727,
+      "aligned": true,
+      "cue": "Second: the proportion of successful collisions"
+    },
+    {
+      "id": "chain",
+      "t": 125.549,
+      "aligned": true,
+      "cue": "Put the chain together"
+    },
+    {
+      "id": "low",
+      "t": 150.871,
+      "aligned": true,
+      "cue": "what happens when temperature decreases"
+    },
+    {
+      "id": "shortcut",
+      "t": 172.35,
+      "aligned": true,
+      "cue": "Avoid a common shortcut"
+    },
+    {
+      "id": "mb_axes",
+      "t": 201.781,
+      "aligned": true,
+      "cue": "The Maxwell\u2013Boltzmann distribution shows how particle energies"
+    },
+    {
+      "id": "mb_two",
+      "t": 222.783,
+      "aligned": true,
+      "cue": "Now compare two temperatures"
+    },
+    {
+      "id": "mb_area",
+      "t": 240.279,
+      "aligned": true,
+      "cue": "The key rate comparison"
+    },
+    {
+      "id": "changes",
+      "t": 263.993,
+      "aligned": true,
+      "cue": "What changes with temperature"
+    },
+    {
+      "id": "guided",
+      "t": 287.434,
+      "aligned": true,
+      "cue": "Guided interpretation"
+    },
+    {
+      "id": "myths",
+      "t": 316.446,
+      "aligned": true,
+      "cue": "Correct four errors"
+    },
+    {
+      "id": "exam",
+      "t": 351.021,
+      "aligned": true,
+      "cue": "A reaction mixture is heated from two hundred"
+    },
+    {
+      "id": "recap",
+      "t": 415.607,
+      "aligned": true,
+      "cue": "Before we finish, complete the model"
+    },
+    {
+      "id": "outro",
+      "t": 442.287,
+      "aligned": true,
+      "cue": "please subscribe to J D Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 18.309,
+      "aligned": true,
+      "cue": "particle kinetic energy and speed"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 22.035,
+      "aligned": true,
+      "cue": "collision frequency and the proportion"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 26.192,
+      "aligned": true,
+      "cue": "what happens when temperature falls"
+    },
+    {
+      "slide": "aims",
+      "item": "a4",
+      "t": 30.383,
+      "aligned": true,
+      "cue": "Maxwell\u2013Boltzmann distribution"
+    },
+    {
+      "slide": "hook",
+      "item": "ans",
+      "t": 38.777,
+      "aligned": true,
+      "cue": "Sufficient collision energy, and the correct spatial orientation"
+    },
+    {
+      "slide": "chain",
+      "item": "c1",
+      "t": 128.812,
+      "aligned": true,
+      "cue": "greater average kinetic energy"
+    },
+    {
+      "slide": "chain",
+      "item": "c2",
+      "t": 133.294,
+      "aligned": true,
+      "cue": "collisions occur more frequently"
+    },
+    {
+      "slide": "chain",
+      "item": "c3",
+      "t": 137.496,
+      "aligned": true,
+      "cue": "energy at least equal to activation energy"
+    },
+    {
+      "slide": "chain",
+      "item": "c4",
+      "t": 144.671,
+      "aligned": true,
+      "cue": "the rate of reaction increases"
+    },
+    {
+      "slide": "guided",
+      "item": "ans",
+      "t": 298.707,
+      "aligned": true,
+      "cue": "Curve B. It is broader"
+    },
+    {
+      "slide": "exam",
+      "item": "a",
+      "t": 364.163,
+      "aligned": true,
+      "cue": "Average kinetic energy increases. Particles move faster"
+    },
+    {
+      "slide": "exam",
+      "item": "b",
+      "t": 375.727,
+      "aligned": true,
+      "cue": "A greater proportion of particles have energy equal to or greater than E a, so more collisions"
+    },
+    {
+      "slide": "exam",
+      "item": "c",
+      "t": 389.647,
+      "aligned": true,
+      "cue": "The distribution becomes broader, its peak becomes lower"
+    },
+    {
+      "slide": "exam",
+      "item": "d",
+      "t": 403.881,
+      "aligned": true,
+      "cue": "Collision frequency increases and a greater proportion of collisions have sufficient energy, so successful"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 417.883,
+      "aligned": true,
+      "cue": "Higher temperature increases average kinetic energy"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 424.245,
+      "aligned": true,
+      "cue": "The Maxwell\u2013Boltzmann curve becomes broader"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 435.844,
+      "aligned": true,
+      "cue": "Temperature does not, by itself, change E a"
+    }
+  ]
+}

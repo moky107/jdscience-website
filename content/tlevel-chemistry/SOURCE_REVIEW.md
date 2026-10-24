@@ -53,6 +53,21 @@ The video teaches the teacher PowerPoint A/B/C set. The student worksheet includ
 
 `pdfinfo` reports 6 pages for the A11.1 student workbook. `file` reported 30 pages for the same binary. The extracted text and rendered pages are a 6-page letter document. Treat 6 as the working page count.
 
+## Title reconciliation (24 October 2026, Europe/London)
+
+Original PDFs confirm:
+
+- A11.2 **Temperature and Rate of Reaction** (matches the approved production list)
+- A11.3 **Catalysts and Reaction Rate** (matches the approved production list)
+- A12.5 **Reversible Reactions** (original teacher PowerPoint)
+- A12.6 **The Haber Process** (original student and teacher workbooks)
+
+The earlier catalog titles for A11.2/A11.3 (factors affecting rate / Maxwell–Boltzmann as standalone topics) were incorrect and have been replaced.
+
+## Missing original PDFs for later topics
+
+A12.1–A12.4 exist only as Markdown extracts in the upload folder, not as PDF binaries. A12.1 still has the 95 s / 48 s versus 96 s / 51 s / 29 s timing split. Those four topics are listed as coming soon and are **not** produced in this batch.
+
 ## Privacy
 
-Teacher answer workbooks and the derived A11.1 marking scheme stay out of the public website catalog.
+Teacher answer workbooks and marking schemes stay out of the public website catalog.
