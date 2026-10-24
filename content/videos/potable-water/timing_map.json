@@ -1,0 +1,265 @@
+{
+  "slug": "potable-water",
+  "duration": 558.759,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.128,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 8.011,
+      "aligned": true,
+      "cue": "explore potable water, water treatment"
+    },
+    {
+      "id": "tap",
+      "t": 28.514,
+      "aligned": true,
+      "cue": "Is the water that comes out of your tap"
+    },
+    {
+      "id": "potable",
+      "t": 45.093,
+      "aligned": true,
+      "cue": "term potable water"
+    },
+    {
+      "id": "sources",
+      "t": 78.483,
+      "aligned": true,
+      "cue": "where our drinking water comes from"
+    },
+    {
+      "id": "treat",
+      "t": 104.79,
+      "aligned": true,
+      "cue": "The first stage often involves screening"
+    },
+    {
+      "id": "disinfect",
+      "t": 169.284,
+      "aligned": true,
+      "cue": "the water must also be disinfected"
+    },
+    {
+      "id": "sewage",
+      "t": 199.144,
+      "aligned": true,
+      "cue": "Now, let us consider waste water"
+    },
+    {
+      "id": "sewage_steps",
+      "t": 223.559,
+      "aligned": true,
+      "cue": "Let us examine the main stages of sewage treatment"
+    },
+    {
+      "id": "desal",
+      "t": 293.561,
+      "aligned": true,
+      "cue": "another important source of water: seawater"
+    },
+    {
+      "id": "cost",
+      "t": 356.893,
+      "aligned": true,
+      "cue": "desalination is often more expensive"
+    },
+    {
+      "id": "example",
+      "t": 389.006,
+      "aligned": true,
+      "cue": "water is collected from a river"
+    },
+    {
+      "id": "quiz",
+      "t": 427.98,
+      "aligned": true,
+      "cue": "What is potable water?"
+    },
+    {
+      "id": "exam",
+      "t": 459.861,
+      "aligned": true,
+      "cue": "Explain why desalination is often more expensive"
+    },
+    {
+      "id": "recap",
+      "t": 515.183,
+      "aligned": true,
+      "cue": "Potable water is safe to drink but is not necessarily"
+    },
+    {
+      "id": "outro",
+      "t": 542.362,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 12.968,
+      "aligned": true,
+      "cue": "make water safe for human consumption"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 17.937,
+      "aligned": true,
+      "cue": "how waste water is treated"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 21.304,
+      "aligned": true,
+      "cue": "drinking water from seawater"
+    },
+    {
+      "slide": "treat",
+      "item": "screen",
+      "t": 106.218,
+      "aligned": true,
+      "cue": "involves screening"
+    },
+    {
+      "slide": "treat",
+      "item": "sed",
+      "t": 118.223,
+      "aligned": true,
+      "cue": "removed by sedimentation"
+    },
+    {
+      "slide": "treat",
+      "item": "floc",
+      "t": 142.987,
+      "aligned": true,
+      "cue": "coagulation and flocculation"
+    },
+    {
+      "slide": "treat",
+      "item": "filter",
+      "t": 147.225,
+      "aligned": true,
+      "cue": "pass through filters"
+    },
+    {
+      "slide": "sewage_steps",
+      "item": "s1",
+      "t": 228.076,
+      "aligned": true,
+      "cue": "large objects are removed by screening"
+    },
+    {
+      "slide": "sewage_steps",
+      "item": "s2",
+      "t": 233.73,
+      "aligned": true,
+      "cue": "solids can settle"
+    },
+    {
+      "slide": "sewage_steps",
+      "item": "s3",
+      "t": 246.454,
+      "aligned": true,
+      "cue": "anaerobic digestion"
+    },
+    {
+      "slide": "sewage_steps",
+      "item": "s4",
+      "t": 266.272,
+      "aligned": true,
+      "cue": "In aerobic treatment"
+    },
+    {
+      "slide": "quiz",
+      "item": "q1",
+      "t": 428.1,
+      "aligned": true,
+      "cue": "What is potable water"
+    },
+    {
+      "slide": "quiz",
+      "item": "a1",
+      "t": 430.035,
+      "aligned": true,
+      "cue": "Water that is safe to drink"
+    },
+    {
+      "slide": "quiz",
+      "item": "q2",
+      "t": 433.471,
+      "aligned": true,
+      "cue": "have to be chemically pure"
+    },
+    {
+      "slide": "quiz",
+      "item": "a2",
+      "t": 435.329,
+      "aligned": true,
+      "cue": "No. It may contain small amounts"
+    },
+    {
+      "slide": "quiz",
+      "item": "q3",
+      "t": 441.54,
+      "aligned": true,
+      "cue": "uses chlorine"
+    },
+    {
+      "slide": "quiz",
+      "item": "a3",
+      "t": 446.196,
+      "aligned": true,
+      "cue": "Chlorination."
+    },
+    {
+      "slide": "quiz",
+      "item": "q4",
+      "t": 450.329,
+      "aligned": true,
+      "cue": "remove dissolved salts from seawater"
+    },
+    {
+      "slide": "quiz",
+      "item": "a4",
+      "t": 453.684,
+      "aligned": true,
+      "cue": "Desalination."
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 471.146,
+      "aligned": true,
+      "cue": "Seawater contains high concentrations of dissolved salts"
+    },
+    {
+      "slide": "example",
+      "item": "s1",
+      "t": 399.837,
+      "aligned": true,
+      "cue": "screening removes large debris"
+    },
+    {
+      "slide": "example",
+      "item": "s2",
+      "t": 403.053,
+      "aligned": true,
+      "cue": "sedimentation and filtration remove"
+    },
+    {
+      "slide": "example",
+      "item": "s3",
+      "t": 408.487,
+      "aligned": true,
+      "cue": "disinfection reduces harmful"
+    }
+  ]
+}

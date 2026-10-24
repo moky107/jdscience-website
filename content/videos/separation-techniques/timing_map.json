@@ -1,0 +1,199 @@
+{
+  "slug": "separation-techniques",
+  "duration": 426.214,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 5.433,
+      "aligned": true,
+      "cue": "four important separation techniques"
+    },
+    {
+      "id": "principle",
+      "t": 29.606,
+      "aligned": true,
+      "cue": "Mixtures contain two or more substances that are not chemically bonded"
+    },
+    {
+      "id": "filter",
+      "t": 49.179,
+      "aligned": true,
+      "cue": "Let us begin with filtration"
+    },
+    {
+      "id": "filter_limit",
+      "t": 93.75,
+      "aligned": true,
+      "cue": "Filtration cannot be used to remove dissolved salt"
+    },
+    {
+      "id": "crystals",
+      "t": 108.784,
+      "aligned": true,
+      "cue": "This brings us to crystallisation"
+    },
+    {
+      "id": "simple",
+      "t": 152.264,
+      "aligned": true,
+      "cue": "Now, let us consider simple distillation"
+    },
+    {
+      "id": "fraction",
+      "t": 213.042,
+      "aligned": true,
+      "cue": "Now, let us examine fractional distillation"
+    },
+    {
+      "id": "practical",
+      "t": 278.456,
+      "aligned": true,
+      "cue": "a student is given a mixture of salt and sand"
+    },
+    {
+      "id": "quiz",
+      "t": 328.796,
+      "aligned": true,
+      "cue": "Which method would you use to separate sand from water"
+    },
+    {
+      "id": "exam",
+      "t": 352.329,
+      "aligned": true,
+      "cue": "Describe how a student could obtain pure, dry salt"
+    },
+    {
+      "id": "outro",
+      "t": 410.449,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 11.204,
+      "aligned": true,
+      "cue": "filtration, crystallisation"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 20.655,
+      "aligned": true,
+      "cue": "when it should be used"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 23.545,
+      "aligned": true,
+      "cue": "practical examination questions"
+    },
+    {
+      "slide": "filter",
+      "item": "residue",
+      "t": 81.188,
+      "aligned": true,
+      "cue": "called the residue"
+    },
+    {
+      "slide": "filter",
+      "item": "filtrate",
+      "t": 84.625,
+      "aligned": true,
+      "cue": "called the filtrate"
+    },
+    {
+      "slide": "practical",
+      "item": "s1",
+      "t": 287.512,
+      "aligned": true,
+      "cue": "First, add water to the mixture and stir thoroughly"
+    },
+    {
+      "slide": "practical",
+      "item": "s2",
+      "t": 295.418,
+      "aligned": true,
+      "cue": "Next, filter the mixture"
+    },
+    {
+      "slide": "practical",
+      "item": "s3",
+      "t": 303.603,
+      "aligned": true,
+      "cue": "Collect the filtrate in an evaporating basin"
+    },
+    {
+      "slide": "practical",
+      "item": "s4",
+      "t": 310.069,
+      "aligned": true,
+      "cue": "Allow the concentrated solution to cool"
+    },
+    {
+      "slide": "practical",
+      "item": "s5",
+      "t": 315.422,
+      "aligned": true,
+      "cue": "separate the crystals from the remaining solution"
+    },
+    {
+      "slide": "quiz",
+      "item": "q1",
+      "t": 330.27,
+      "aligned": true,
+      "cue": "separate sand from water"
+    },
+    {
+      "slide": "quiz",
+      "item": "a1",
+      "t": 332.256,
+      "aligned": true,
+      "cue": "Filtration."
+    },
+    {
+      "slide": "quiz",
+      "item": "q2",
+      "t": 334.705,
+      "aligned": true,
+      "cue": "obtain pure water from seawater"
+    },
+    {
+      "slide": "quiz",
+      "item": "a2",
+      "t": 337.039,
+      "aligned": true,
+      "cue": "Simple distillation."
+    },
+    {
+      "slide": "quiz",
+      "item": "q3",
+      "t": 344.121,
+      "aligned": true,
+      "cue": "fractions in crude oil"
+    },
+    {
+      "slide": "quiz",
+      "item": "a3",
+      "t": 346.025,
+      "aligned": true,
+      "cue": "Fractional distillation."
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 359.69,
+      "aligned": true,
+      "cue": "First, add water to the mixture and stir to dissolve"
+    }
+  ]
+}

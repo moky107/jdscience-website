@@ -1,0 +1,496 @@
+1
+00:00:00,116 --> 00:00:02,426
+Hello and welcome back to J D Science.
+
+2
+00:00:02,543 --> 00:00:06,258
+In today's G C S E Chemistry lesson, we are going to
+
+3
+00:00:06,339 --> 00:00:09,985
+explore chromatography, an important separation technique used to
+
+4
+00:00:10,066 --> 00:00:13,421
+identify and separate substances within mixtures.
+
+5
+00:00:13,816 --> 00:00:17,508
+We will examine how paper chromatography works, explain why
+
+6
+00:00:17,566 --> 00:00:21,176
+different substances separate, and learn how to calculate
+
+7
+00:00:21,211 --> 00:00:22,407
+R F values.
+
+8
+00:00:22,744 --> 00:00:24,880
+Let us begin with a familiar example.
+
+9
+00:00:25,158 --> 00:00:29,303
+Imagine writing on a piece of paper using a black felt-tip pen.
+
+10
+00:00:29,640 --> 00:00:33,286
+Although the ink appears black, it may contain several different
+
+11
+00:00:33,332 --> 00:00:34,238
+coloured dyes.
+
+12
+00:00:34,691 --> 00:00:37,872
+How can we find out whether the ink contains one dye or
+
+13
+00:00:37,918 --> 00:00:39,010
+a mixture of dyes?
+
+14
+00:00:39,532 --> 00:00:41,958
+One method is paper chromatography.
+
+15
+00:00:42,353 --> 00:00:46,452
+Chromatography separates substances according to how they distribute
+
+16
+00:00:46,487 --> 00:00:48,391
+themselves between two phases.
+
+17
+00:00:48,843 --> 00:00:52,210
+These are called the stationary phase and the mobile phase.
+
+18
+00:00:52,547 --> 00:00:56,355
+In G C S E paper chromatography, the stationary
+
+19
+00:00:56,413 --> 00:01:00,326
+phase is commonly described as the chromatography paper, while
+
+20
+00:01:00,349 --> 00:01:03,344
+the mobile phase is the solvent moving through the paper.
+
+21
+00:01:03,797 --> 00:01:08,139
+More precisely, separation often depends on how substances
+
+22
+00:01:08,220 --> 00:01:12,214
+interact with the paper and the water associated with its cellulose
+
+23
+00:01:12,260 --> 00:01:14,954
+fibres, as well as the moving solvent.
+
+24
+00:01:15,476 --> 00:01:18,356
+Let us examine how the experiment works.
+
+25
+00:01:18,693 --> 00:01:22,315
+First, draw a pencil line near the bottom of a strip of
+
+26
+00:01:22,408 --> 00:01:23,778
+chromatography paper.
+
+27
+00:01:23,952 --> 00:01:25,531
+This is called the baseline.
+
+28
+00:01:25,705 --> 00:01:29,490
+We use pencil rather than ink because graphite does not
+
+29
+00:01:29,560 --> 00:01:33,774
+normally dissolve in the solvent and interfere with the results.
+
+30
+00:01:34,053 --> 00:01:37,954
+Next, place a small spot of the ink sample on the baseline.
+
+31
+00:01:38,198 --> 00:01:39,637
+Allow the spot to dry.
+
+32
+00:01:39,846 --> 00:01:43,666
+Then place the paper inside a container containing a small amount
+
+33
+00:01:43,736 --> 00:01:45,094
+of suitable solvent.
+
+34
+00:01:45,431 --> 00:01:48,727
+The solvent level must remain below the baseline.
+
+35
+00:01:49,064 --> 00:01:50,399
+Why is this important?
+
+36
+00:01:50,794 --> 00:01:54,649
+If the ink spot is submerged in the solvent, the sample
+
+37
+00:01:54,695 --> 00:01:58,666
+may dissolve directly into the liquid rather than travelling up the paper.
+
+38
+00:01:59,060 --> 00:02:02,973
+The solvent gradually moves up the paper by capillary action.
+
+39
+00:02:03,182 --> 00:02:06,654
+As it moves, it carries the dissolved dyes with it.
+
+40
+00:02:06,897 --> 00:02:10,752
+Different dyes travel different distances because they have different
+
+41
+00:02:10,798 --> 00:02:14,165
+affinities for the mobile and stationary phases.
+
+42
+00:02:14,444 --> 00:02:18,461
+A dye that is more strongly attracted to the mobile phase relative
+
+43
+00:02:18,508 --> 00:02:21,898
+to the stationary phase generally travels farther.
+
+44
+00:02:22,235 --> 00:02:26,112
+A dye that is more strongly retained by the stationary phase travels
+
+45
+00:02:26,159 --> 00:02:27,355
+a shorter distance.
+
+46
+00:02:27,877 --> 00:02:31,581
+As a result, the different dyes separate into individual
+
+47
+00:02:31,650 --> 00:02:32,347
+spots.
+
+48
+00:02:32,742 --> 00:02:36,387
+When the solvent has travelled an appropriate distance, remove
+
+49
+00:02:36,422 --> 00:02:40,149
+the paper and immediately mark the position of the solvent front
+
+50
+00:02:40,300 --> 00:02:41,182
+with a pencil.
+
+51
+00:02:41,298 --> 00:02:42,901
+Allow the paper to dry.
+
+52
+00:02:43,423 --> 00:02:47,127
+The resulting pattern of spots is called a chromatogram.
+
+53
+00:02:47,951 --> 00:02:51,643
+Now, let us consider how chromatography can help identify
+
+54
+00:02:51,712 --> 00:02:52,583
+substances.
+
+55
+00:02:52,792 --> 00:02:56,484
+If a sample produces one spot under a particular set of
+
+56
+00:02:56,542 --> 00:03:00,536
+conditions, this suggests that it may contain only one component
+
+57
+00:03:00,594 --> 00:03:02,243
+detectable by that method.
+
+58
+00:03:02,486 --> 00:03:06,480
+If it produces several spots, it contains several components.
+
+59
+00:03:06,817 --> 00:03:10,497
+However, one spot does not conclusively prove that
+
+60
+00:03:10,544 --> 00:03:14,224
+a substance is pure because different substances can sometimes
+
+61
+00:03:14,282 --> 00:03:15,954
+travel the same distance.
+
+62
+00:03:16,198 --> 00:03:19,193
+Now, let us examine R F values.
+
+63
+00:03:19,646 --> 00:03:22,200
+R F stands for retention factor.
+
+64
+00:03:22,375 --> 00:03:26,322
+The R F value is calculated using the following formula:
+
+65
+00:03:26,659 --> 00:03:30,467
+R F equals the distance travelled by the substance divided
+
+66
+00:03:30,525 --> 00:03:33,207
+by the distance travelled by the solvent front.
+
+67
+00:03:33,543 --> 00:03:36,771
+Both distances must be measured from the baseline.
+
+68
+00:03:37,049 --> 00:03:40,764
+The distance travelled by a substance is measured to the centre of
+
+69
+00:03:40,834 --> 00:03:41,542
+its spot.
+
+70
+00:03:41,879 --> 00:03:43,504
+Let us work through an example.
+
+71
+00:03:43,713 --> 00:03:46,233
+A student carries out paper chromatography.
+
+72
+00:03:46,511 --> 00:03:49,646
+One dye travels six centimetres from the baseline.
+
+73
+00:03:49,890 --> 00:03:53,617
+The solvent front travels eight centimetres from the same baseline.
+
+74
+00:03:53,896 --> 00:03:55,893
+Calculate the R F value.
+
+75
+00:03:56,171 --> 00:03:57,669
+We begin with the formula.
+
+76
+00:03:57,843 --> 00:04:01,825
+R F equals distance travelled by the substance divided by distance
+
+77
+00:04:01,860 --> 00:04:03,497
+travelled by the solvent front.
+
+78
+00:04:03,892 --> 00:04:07,166
+Substituting the values gives six divided by eight.
+
+79
+00:04:07,341 --> 00:04:11,218
+Six divided by eight equals zero point seven five.
+
+80
+00:04:11,507 --> 00:04:15,547
+Therefore, the R F value is zero point seven five.
+
+81
+00:04:15,826 --> 00:04:19,506
+Notice that R F values have no units because we are
+
+82
+00:04:19,541 --> 00:04:23,187
+dividing one distance by another distance measured in the same
+
+83
+00:04:23,256 --> 00:04:23,825
+units.
+
+84
+00:04:24,162 --> 00:04:27,819
+For ordinary paper chromatography, R F values
+
+85
+00:04:28,028 --> 00:04:30,768
+normally lie between zero and one.
+
+86
+00:04:31,163 --> 00:04:33,648
+Now, let us try another example.
+
+87
+00:04:33,891 --> 00:04:37,897
+A dye travels three point five centimetres, while the solvent
+
+88
+00:04:37,967 --> 00:04:40,509
+front travels seven centimetres.
+
+89
+00:04:40,718 --> 00:04:42,622
+What is the R F value?
+
+90
+00:04:42,831 --> 00:04:45,420
+Pause for a moment and calculate your answer.
+
+91
+00:04:45,594 --> 00:04:48,137
+The correct answer is zero point five.
+
+92
+00:04:48,381 --> 00:04:51,956
+We obtain this by dividing three point five by seven.
+
+93
+00:04:52,200 --> 00:04:54,069
+Well done if you got that correct.
+
+94
+00:04:54,464 --> 00:04:58,168
+An important point for your G C S E examination
+
+95
+00:04:58,319 --> 00:05:02,812
+is that R F values should only be compared meaningfully
+
+96
+00:05:03,149 --> 00:05:06,144
+when the chromatography conditions are the same.
+
+97
+00:05:06,597 --> 00:05:10,417
+Changing the solvent, paper or experimental conditions
+
+98
+00:05:10,568 --> 00:05:12,901
+can change the R F value.
+
+99
+00:05:13,354 --> 00:05:17,603
+Now, let us tackle a G C S E examination question.
+
+100
+00:05:18,056 --> 00:05:22,747
+Explain why two dyes in a mixture separate during paper chromatography.
+
+101
+00:05:23,199 --> 00:05:25,475
+This question is worth three marks.
+
+102
+00:05:25,719 --> 00:05:30,061
+A model answer would be: The two dyes have different solubilities
+
+103
+00:05:30,189 --> 00:05:34,322
+in the mobile phase and different attractions to the stationary phase.
+
+104
+00:05:34,566 --> 00:05:38,351
+As the solvent moves through the paper, the dyes are carried
+
+105
+00:05:38,409 --> 00:05:39,605
+at different rates.
+
+106
+00:05:39,814 --> 00:05:43,796
+Consequently, they travel different distances and separate
+
+107
+00:05:43,970 --> 00:05:45,700
+into individual spots.
+
+108
+00:05:45,909 --> 00:05:49,601
+Notice that this answer explains the separation in terms
+
+109
+00:05:49,659 --> 00:05:53,421
+of both phases, rather than simply saying that one dye
+
+110
+00:05:53,502 --> 00:05:55,185
+moves faster than the other.
+
+111
+00:05:55,394 --> 00:05:59,411
+That is the level of scientific explanation required for a strong
+
+112
+00:05:59,527 --> 00:06:01,397
+G C S E answer.
+
+113
+00:06:01,548 --> 00:06:05,669
+Before we finish, remember that chromatography is used to separate
+
+114
+00:06:05,728 --> 00:06:08,758
+and help identify substances in mixtures.
+
+115
+00:06:09,094 --> 00:06:12,763
+The mobile phase moves through the stationary phase, carrying
+
+116
+00:06:12,844 --> 00:06:14,853
+substances at different rates.
+
+117
+00:06:15,097 --> 00:06:18,742
+The R F value is calculated by dividing the distance
+
+118
+00:06:18,777 --> 00:06:22,771
+travelled by a substance by the distance travelled by the solvent front.
+
+119
+00:06:22,945 --> 00:06:26,707
+If you found this explanation helpful, please subscribe to J D
+
+120
+00:06:26,858 --> 00:06:30,480
+Science and visit j d science dot co dot u k
+
+121
+00:06:30,933 --> 00:06:34,811
+for more G C S E Chemistry lessons, calculations
+
+122
+00:06:34,869 --> 00:06:36,459
+and examination practice.
+
+123
+00:06:36,738 --> 00:06:39,605
+Thank you for watching, and I will see you in the next
+
+124
+00:06:39,675 --> 00:06:40,128
+lesson.
+

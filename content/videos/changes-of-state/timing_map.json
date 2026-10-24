@@ -1,0 +1,195 @@
+{
+  "slug": "changes-of-state",
+  "duration": 396.957,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.081,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 16.928,
+      "aligned": true,
+      "cue": "We will explain melting, freezing"
+    },
+    {
+      "id": "saucepan",
+      "t": 27.864,
+      "aligned": true,
+      "cue": "Imagine taking an ice cube"
+    },
+    {
+      "id": "melting",
+      "t": 44.431,
+      "aligned": true,
+      "cue": "At the melting point, the ice begins"
+    },
+    {
+      "id": "melt_energy",
+      "t": 79.759,
+      "aligned": true,
+      "cue": "temperature of a pure substance remains constant until the entire solid"
+    },
+    {
+      "id": "boiling",
+      "t": 106.312,
+      "aligned": true,
+      "cue": "Eventually, the water reaches its boiling point"
+    },
+    {
+      "id": "evap",
+      "t": 138.402,
+      "aligned": true,
+      "cue": "what is the difference between boiling and evaporation"
+    },
+    {
+      "id": "condense",
+      "t": 182.73,
+      "aligned": true,
+      "cue": "This process is called condensation"
+    },
+    {
+      "id": "freeze",
+      "t": 208.678,
+      "aligned": true,
+      "cue": "pure water begins to freeze"
+    },
+    {
+      "id": "sublime",
+      "t": 226.069,
+      "aligned": true,
+      "cue": "another change of state called sublimation"
+    },
+    {
+      "id": "physical",
+      "t": 255.173,
+      "aligned": true,
+      "cue": "Changes of state are physical changes"
+    },
+    {
+      "id": "curve",
+      "t": 276.291,
+      "aligned": true,
+      "cue": "A student heats a sample of ice from minus ten"
+    },
+    {
+      "id": "quiz",
+      "t": 316.856,
+      "aligned": true,
+      "cue": "Which change of state occurs when a gas becomes a liquid"
+    },
+    {
+      "id": "exam",
+      "t": 335.815,
+      "aligned": true,
+      "cue": "Explain why energy must be supplied when water boils"
+    },
+    {
+      "id": "bonds",
+      "t": 368.172,
+      "aligned": true,
+      "cue": "chemical bonds within the water molecules are not broken"
+    },
+    {
+      "id": "outro",
+      "t": 379.27,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 17.926,
+      "aligned": true,
+      "cue": "melting, freezing, boiling"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 22.93,
+      "aligned": true,
+      "cue": "role of energy"
+    },
+    {
+      "slide": "quiz",
+      "item": "q1",
+      "t": 318.423,
+      "aligned": true,
+      "cue": "when a gas becomes a liquid"
+    },
+    {
+      "slide": "quiz",
+      "item": "a1",
+      "t": 320.223,
+      "aligned": true,
+      "cue": "Condensation."
+    },
+    {
+      "slide": "quiz",
+      "item": "q2",
+      "t": 322.847,
+      "aligned": true,
+      "cue": "liquid changes into a solid"
+    },
+    {
+      "slide": "quiz",
+      "item": "a2",
+      "t": 325.25,
+      "aligned": true,
+      "cue": "Freezing."
+    },
+    {
+      "slide": "quiz",
+      "item": "q3",
+      "t": 327.572,
+      "aligned": true,
+      "cue": "wet clothes to dry"
+    },
+    {
+      "slide": "quiz",
+      "item": "a3",
+      "t": 330.904,
+      "aligned": true,
+      "cue": "Evaporation."
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 343.628,
+      "aligned": true,
+      "cue": "Water molecules are held close together"
+    },
+    {
+      "slide": "curve",
+      "item": "rise1",
+      "t": 285.997,
+      "aligned": true,
+      "cue": "temperature of the ice rises"
+    },
+    {
+      "slide": "curve",
+      "item": "melt",
+      "t": 292.696,
+      "aligned": true,
+      "cue": "temperature remains constant while the ice melts"
+    },
+    {
+      "slide": "curve",
+      "item": "rise2",
+      "t": 298.536,
+      "aligned": true,
+      "cue": "temperature of the liquid water rises"
+    },
+    {
+      "slide": "curve",
+      "item": "boil",
+      "t": 303.702,
+      "aligned": true,
+      "cue": "temperature remains constant again while the water boils"
+    }
+  ]
+}

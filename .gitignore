@@ -34,3 +34,15 @@ content/videos/*/source/reference.mp4
 content/videos/*/build/
 content/videos/*/qa/
 content/videos/studio/out/
+
+# Foundations working audio chunks
+content/videos/*/source/chunk_*.mp3
+content/videos/*/source/narration_master_parts/
+
+# Large hosted foundations MP4s live in Supabase, not Git
+public/resources/gcse/chemistry/videos/states-of-matter/*.mp4
+public/resources/gcse/chemistry/videos/changes-of-state/*.mp4
+public/resources/gcse/chemistry/videos/pure-substances-and-mixtures/*.mp4
+public/resources/gcse/chemistry/videos/separation-techniques/*.mp4
+public/resources/gcse/chemistry/videos/chromatography/*.mp4
+public/resources/gcse/chemistry/videos/potable-water/*.mp4

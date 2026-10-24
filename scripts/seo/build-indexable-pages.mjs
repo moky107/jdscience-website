@@ -69,6 +69,12 @@ function isDirectVideoHref(href) {
   return /\.mp4(?:$|[?#])/i.test(String(href || ""));
 }
 
+function absoluteUrl(href) {
+  const raw = String(href || "");
+  if (/^https?:\/\//i.test(raw)) return raw;
+  return `${SITE_ORIGIN}${raw.startsWith("/") ? raw : `/${raw}`}`;
+}
+
 function videoPlayerHtml(items, topicTitle) {
   const videos = items.filter((item) => isDirectVideoHref(item.href));
   if (!videos.length) return "";
@@ -80,8 +86,9 @@ function videoPlayerHtml(items, topicTitle) {
               .lesson-video figcaption .download { margin: 0; }
             </style>
             ${videos.map((item) => `<figure class="lesson-video">
-              <video controls playsinline preload="metadata" title="${escapeHtml(item.label || topicTitle)}">
+              <video controls playsinline preload="metadata"${item.poster_url ? ` poster="${escapeHtml(item.poster_url)}"` : ""} title="${escapeHtml(item.label || topicTitle)}"${item.caption_url ? " crossorigin=\"anonymous\"" : ""}>
                 <source src="${escapeHtml(item.href)}" type="video/mp4" />
+                ${item.caption_url ? `<track kind="captions" src="${escapeHtml(item.caption_url)}" srclang="en" label="English" default />` : ""}
               </video>
               <figcaption><a class="download" href="${escapeHtml(item.href)}" download>Download ${escapeHtml(item.label || topicTitle)} (MP4)</a></figcaption>
             </figure>`).join("")}`;
@@ -90,7 +97,7 @@ function videoPlayerHtml(items, topicTitle) {
 function publishHostedVideoFiles() {
   let copied = 0;
   for (const item of GCSE_CHEMISTRY_VIDEOS) {
-    if (!item.source_path || !item.file_url_override) continue;
+    if (item.hosted || !item.source_path || !item.file_url_override) continue;
     const src = path.join(root, item.source_path);
     const dest = path.join(publicDir, item.file_url_override.replace(/^\//, ""));
     if (!fs.existsSync(src)) {
@@ -109,8 +116,8 @@ function writePage(relPath, html) {
   fs.writeFileSync(full, html);
 }
 
-function card(href, title, text) {
-  return `<a class="card" href="${escapeHtml(href)}"><strong>${escapeHtml(title)}</strong><span class="meta">${escapeHtml(text)}</span></a>`;
+function card(href, title, text, image) {
+  return `<a class="card" href="${escapeHtml(href)}">${image ? `<img class="card-thumb" src="${escapeHtml(image)}" alt="" />` : ""}<strong>${escapeHtml(title)}</strong><span class="meta">${escapeHtml(text)}</span></a>`;
 }
 
 function writeAboutPage() {
@@ -239,7 +246,11 @@ function collectTopics() {
       board: item.exam_board,
       href,
       label: item.title,
+      caption_url: item.caption_url || null,
+      poster_url: item.poster_url || null,
     });
+    if (item.description && !topics.get(slug).description) topics.get(slug).description = item.description;
+    if (item.poster_url && !topics.get(slug).poster_url) topics.get(slug).poster_url = item.poster_url;
     if (item.notesHtml && !topics.get(slug).notesHtml) topics.get(slug).notesHtml = item.notesHtml;
     if (item.downloadHref && !topics.get(slug).downloadHref) {
       topics.get(slug).downloadHref = item.downloadHref;
@@ -355,7 +366,15 @@ function writeResourcePages(subjects) {
           name: `${levelLabel(subject.level)} ${subject.subject} ${category}`,
           url: `${SITE_ORIGIN}${categoryPath}`,
         },
-        bodyHtml: `<div class="cards">${topicList.map((topic) => card(`${categoryPath}${topic.slug}/`, topic.title, `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category}`)).join("")}</div>`,
+        bodyHtml: `${category === "Videos" ? `<style>
+              .card .meta { color: #64748b; font-size: 14px; line-height: 1.5; }
+              .card-thumb { display: block; width: calc(100% + 32px); margin: -16px -16px 12px; aspect-ratio: 16 / 9; object-fit: cover; background: #0f172a; border-radius: 14px 14px 0 0; }
+            </style>` : ""}<div class="cards">${topicList.map((topic) => card(
+          `${categoryPath}${topic.slug}/`,
+          topic.title,
+          topic.description || `${topic.title} ${levelLabel(subject.level)} ${subject.subject} ${category}`,
+          topic.poster_url,
+        )).join("")}</div>`,
       }));
 
       for (const topic of topicList) {
@@ -394,7 +413,7 @@ function writeResourcePages(subjects) {
               ? {
                 encoding: topic.items.filter((item) => isDirectVideoHref(item.href)).map((item) => ({
                   "@type": "MediaObject",
-                  contentUrl: `${SITE_ORIGIN}${item.href}`,
+                  contentUrl: absoluteUrl(item.href),
                   encodingFormat: "video/mp4",
                 })),
               }

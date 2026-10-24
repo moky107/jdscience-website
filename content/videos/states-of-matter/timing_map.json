@@ -1,0 +1,220 @@
+{
+  "slug": "states-of-matter",
+  "duration": 415.765,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aims",
+      "t": 20.713,
+      "aligned": true,
+      "cue": "By the end of this lesson"
+    },
+    {
+      "id": "hook",
+      "t": 41.588,
+      "aligned": true,
+      "cue": "Why does a piece of ice"
+    },
+    {
+      "id": "model",
+      "t": 54.08,
+      "aligned": true,
+      "cue": "Everything around us is made of particles"
+    },
+    {
+      "id": "solids",
+      "t": 72.365,
+      "aligned": true,
+      "cue": "Let us begin with solids"
+    },
+    {
+      "id": "solid_props",
+      "t": 92.043,
+      "aligned": true,
+      "cue": "Because the particles cannot move freely"
+    },
+    {
+      "id": "ice",
+      "t": 110.805,
+      "aligned": true,
+      "cue": "Think about an ice cube"
+    },
+    {
+      "id": "liquids",
+      "t": 122.288,
+      "aligned": true,
+      "cue": "Now, let us consider liquids"
+    },
+    {
+      "id": "pour",
+      "t": 147.922,
+      "aligned": true,
+      "cue": "when you pour water into a glass"
+    },
+    {
+      "id": "liquid_props",
+      "t": 162.458,
+      "aligned": true,
+      "cue": "Liquids have a fixed volume but no fixed shape"
+    },
+    {
+      "id": "gases",
+      "t": 173.778,
+      "aligned": true,
+      "cue": "Now, let us examine gases"
+    },
+    {
+      "id": "perfume",
+      "t": 203.626,
+      "aligned": true,
+      "cue": "when perfume is sprayed"
+    },
+    {
+      "id": "compress",
+      "t": 214.006,
+      "aligned": true,
+      "cue": "Gases can also be compressed easily"
+    },
+    {
+      "id": "compare",
+      "t": 232.779,
+      "aligned": true,
+      "cue": "Now, let us compare ice"
+    },
+    {
+      "id": "exam_point",
+      "t": 270.059,
+      "aligned": true,
+      "cue": "When a substance changes state"
+    },
+    {
+      "id": "quiz",
+      "t": 282.984,
+      "aligned": true,
+      "cue": "Imagine three containers"
+    },
+    {
+      "id": "exam",
+      "t": 317.535,
+      "aligned": true,
+      "cue": "Explain why gases can be compressed easily"
+    },
+    {
+      "id": "recap",
+      "t": 368.805,
+      "aligned": true,
+      "cue": "remember these three key ideas"
+    },
+    {
+      "id": "outro",
+      "t": 397.597,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 23.661,
+      "aligned": true,
+      "cue": "describe the arrangement"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 29.606,
+      "aligned": true,
+      "cue": "explain their properties"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 33.774,
+      "aligned": true,
+      "cue": "answer GCSE examination questions"
+    },
+    {
+      "slide": "solids",
+      "item": "vibe",
+      "t": 89.129,
+      "aligned": true,
+      "cue": "They vibrate about their fixed positions"
+    },
+    {
+      "slide": "quiz",
+      "item": "q1",
+      "t": 292.794,
+      "aligned": true,
+      "cue": "Which substance has particles vibrating"
+    },
+    {
+      "slide": "quiz",
+      "item": "a1",
+      "t": 297.38,
+      "aligned": true,
+      "cue": "That is correct"
+    },
+    {
+      "slide": "quiz",
+      "item": "q2",
+      "t": 299.435,
+      "aligned": true,
+      "cue": "Which has particles that move past"
+    },
+    {
+      "slide": "quiz",
+      "item": "a2",
+      "t": 288.568,
+      "aligned": true,
+      "cue": "Liquid water."
+    },
+    {
+      "slide": "quiz",
+      "item": "q3",
+      "t": 307.492,
+      "aligned": true,
+      "cue": "widely separated and move rapidly"
+    },
+    {
+      "slide": "quiz",
+      "item": "a3",
+      "t": 291.332,
+      "aligned": true,
+      "cue": "Water vapour."
+    },
+    {
+      "slide": "exam",
+      "item": "answer",
+      "t": 328.251,
+      "aligned": true,
+      "cue": "In a gas, particles are far apart"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 371.858,
+      "aligned": true,
+      "cue": "Solids have a fixed shape"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 379.997,
+      "aligned": true,
+      "cue": "Liquids have a fixed volume but take"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 387.38,
+      "aligned": true,
+      "cue": "Gases have no fixed shape"
+    }
+  ]
+}
