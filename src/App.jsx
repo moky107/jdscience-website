@@ -236,20 +236,25 @@ function directVideoSrc(url, fileType) {
   return null;
 }
 
-function ResourceVideoPlayer({ title, src, direct = false }) {
+function ResourceVideoPlayer({ title, src, poster, captions, description, direct = false }) {
   return (
     <div style={{ background: "#fff", borderRadius: 12, overflow: "hidden", boxShadow: "0 4px 14px rgba(0,0,0,.06)", padding: 16 }}>
       <h3 style={{ margin: "0 0 12px", fontSize: 18, color: "#0f172a", lineHeight: 1.35 }}>{title}</h3>
+      {description ? <p style={{ margin: "-4px 0 12px", color: "#64748b", fontSize: 14, lineHeight: 1.5 }}>{description}</p> : null}
       <div className="resource-video-embed" style={{ position: "relative", overflow: "hidden", aspectRatio: "1920 / 1080", borderRadius: 10, background: "#000" }}>
         {direct ? (
           <video
-            src={src}
             controls
             playsInline
             preload="metadata"
+            poster={poster || undefined}
             title={title}
+            crossOrigin={captions ? "anonymous" : undefined}
             style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, objectFit: "contain", background: "#000" }}
-          />
+          >
+            <source src={src} type="video/mp4" />
+            {captions ? <track kind="captions" src={captions} srcLang="en" label="English" default /> : null}
+          </video>
         ) : (
         <iframe
           src={src}
@@ -342,8 +347,10 @@ function buildStaticResourceItems() {
     skill_area: resource.skill_area || null,
     description: resource.description || null,
     section: resource.section || null,
-    topic_slug: resource.topic_slug || null,
+    topic_slug: resource.topic_slug || resource.topicSlug || null,
     source_attribution: resource.source_attribution || null,
+    caption_url: resource.caption_url || null,
+    poster_url: resource.poster_url || null,
   }));
 }
 
@@ -1515,7 +1522,17 @@ function PastPapers({ subject, level, resType, board, isAdmin, resources, reload
               }
               const fileSrc = directVideoSrc(video.file_url, video.file_type);
               if (fileSrc) {
-                return <ResourceVideoPlayer key={video.id} title={video.title} src={fileSrc} direct />;
+                return (
+                  <ResourceVideoPlayer
+                    key={video.id}
+                    title={video.title}
+                    src={fileSrc}
+                    poster={video.poster_url}
+                    captions={video.caption_url}
+                    description={video.description}
+                    direct
+                  />
+                );
               }
               return (
                 <a key={video.id} href={video.file_url} target="_blank" rel="noreferrer" className="folder-file"
