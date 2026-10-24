@@ -110,6 +110,7 @@
   ],
   "rewrites": [
     { "source": "/api/analytics-event", "destination": "/api/education-posts?kind=analytics-event" },
+    { "source": "/api/teacher-marking-scheme", "destination": "/api/education-posts?kind=teacher-marking-scheme" },
     { "source": "/api/password-recovery", "destination": "/api/education-posts?kind=password-recovery" },
     { "source": "/api/admin-analytics", "destination": "/api/admin-education-posts?scope=analytics" },
     { "source": "/api/resource-file", "destination": "/api/education-posts?kind=file" },

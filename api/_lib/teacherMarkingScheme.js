@@ -30,7 +30,15 @@ function json(res, status, body) {
   res.end(JSON.stringify(body));
 }
 
-export default async function handler(req, res) {
+export function wantsTeacherMarkingSchemeRequest(req) {
+  const kind = String(req.query?.kind || "");
+  const url = String(req.url || "");
+  return kind === "teacher-marking-scheme"
+    || url.includes("/api/teacher-marking-scheme")
+    || url.includes("kind=teacher-marking-scheme");
+}
+
+export async function handleTeacherMarkingSchemeRequest(req, res) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
     return json(res, 405, { error: "Method not allowed" });

@@ -75,3 +75,13 @@ test("each topic page has captions, worksheet, teacher button and sibling naviga
     assert.doesNotMatch(page, /teacher-resources\/t-level\/science\/marking-schemes/);
   }
 });
+
+test("teacher marking schemes stay on the existing education-posts function", () => {
+  assert.equal(existsSync(join(ROOT, "api/teacher-marking-scheme.js")), false);
+  const vercel = readFileSync(join(ROOT, "vercel.json"), "utf8");
+  assert.match(vercel, /"\/api\/teacher-marking-scheme"/);
+  assert.match(vercel, /kind=teacher-marking-scheme/);
+  const posts = readFileSync(join(ROOT, "api/education-posts.js"), "utf8");
+  assert.match(posts, /wantsTeacherMarkingSchemeRequest/);
+  assert.match(posts, /handleTeacherMarkingSchemeRequest/);
+});
