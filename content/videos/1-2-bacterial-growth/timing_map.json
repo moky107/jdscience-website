@@ -1,0 +1,103 @@
+{
+  "slug": "1-2-bacterial-growth",
+  "duration": 118.047,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "fission",
+      "t": 6.153,
+      "aligned": true,
+      "cue": "Bacteria reproduce by binary fission"
+    },
+    {
+      "id": "double",
+      "t": 10.681,
+      "aligned": true,
+      "cue": "If they doubled every 20 minutes"
+    },
+    {
+      "id": "culture",
+      "t": 22.547,
+      "aligned": true,
+      "cue": "In the lab, we grow bacteria on agar"
+    },
+    {
+      "id": "temp",
+      "t": 37.767,
+      "aligned": true,
+      "cue": "we do not culture pathogens at 37"
+    },
+    {
+      "id": "calc",
+      "t": 45.441,
+      "aligned": true,
+      "cue": "To calculate growth, use the number of generations"
+    },
+    {
+      "id": "revise",
+      "t": 74.617,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 85.287,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 96.989,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 107.868,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 76.417,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 80.747,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 82.117,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 85.542,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 97.109,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

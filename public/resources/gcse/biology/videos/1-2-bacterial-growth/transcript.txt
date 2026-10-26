@@ -1,0 +1,27 @@
+Hello and welcome back to JD Science.
+
+Today, we are exploring how bacteria grow.
+
+Bacteria reproduce by binary fission, an asexual process.
+
+If they doubled every 20 minutes, one bacterium would become two after 20 minutes, four after 40, eight after 60, and so on.
+
+Growth is fastest with the right temperature and nutrients.
+
+In the lab, we grow bacteria on agar in a petri dish. We sterilise the loop and dish to stop unwanted microbes, and we tape the lid loosely and store the dish upside down so condensation does not drip onto the agar.
+
+In school labs we do not culture pathogens at 37°C, because that is the temperature that suits human pathogens best.
+
+To calculate growth, use the number of generations. Divide the total time by the doubling time, then multiply the starting number of bacteria by two to the power of that number.
+
+For example, over two hours with a twenty-minute doubling time, there are six generations. One bacterium could therefore become sixty-four, provided conditions remain suitable.
+
+School microbiology work must follow the laboratory’s risk assessment and approved incubation procedures.
+
+As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens, and how the structures involved help the process work.
+
+Now, pause the video and try this exam-style question. Explain why the lid of a petri dish should be taped loosely and the dish stored upside down. [2 marks]
+
+Here is a model answer. To stop unwanted microbes getting in while allowing air in. Upside down prevents condensation dripping onto the agar.
+
+If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.

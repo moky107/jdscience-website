@@ -1,0 +1,157 @@
+{
+  "slug": "1-1-cell-division",
+  "duration": 127.713,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.116,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "chromosomes",
+      "t": 5.909,
+      "aligned": true,
+      "cue": "Every nucleus contains chromosomes"
+    },
+    {
+      "id": "mitosis",
+      "t": 13.27,
+      "aligned": true,
+      "cue": "In mitosis, the cell first copies"
+    },
+    {
+      "id": "uses",
+      "t": 25.519,
+      "aligned": true,
+      "cue": "It is used for growth, repair"
+    },
+    {
+      "id": "stem",
+      "t": 30.186,
+      "aligned": true,
+      "cue": "Stem cells have not yet specialised"
+    },
+    {
+      "id": "ethics",
+      "t": 38.777,
+      "aligned": true,
+      "cue": "Therapeutic cloning could produce"
+    },
+    {
+      "id": "cycle",
+      "t": 50.887,
+      "aligned": true,
+      "cue": "Before a cell divides, its DNA is replicated"
+    },
+    {
+      "id": "number",
+      "t": 69.787,
+      "aligned": true,
+      "cue": "mitosis maintains chromosome number"
+    },
+    {
+      "id": "revise",
+      "t": 82.93,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 94.645,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 104.989,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 116.692,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 85.264,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 89.989,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 91.417,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 94.935,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 105.109,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "chromosomes",
+      "item": "b1",
+      "t": 7.442,
+      "aligned": true,
+      "cue": "chromosomes made of DNA"
+    },
+    {
+      "slide": "chromosomes",
+      "item": "b2",
+      "t": 10.461,
+      "aligned": true,
+      "cue": "each chromosome carries many genes"
+    },
+    {
+      "slide": "chromosomes",
+      "item": "b3",
+      "t": 15.453,
+      "aligned": true,
+      "cue": "copies its DNA"
+    },
+    {
+      "slide": "uses",
+      "item": "b1",
+      "t": 26.494,
+      "aligned": true,
+      "cue": "growth, repair"
+    },
+    {
+      "slide": "uses",
+      "item": "b2",
+      "t": 26.494,
+      "aligned": true,
+      "cue": "growth, repair"
+    },
+    {
+      "slide": "uses",
+      "item": "b3",
+      "t": 28.166,
+      "aligned": true,
+      "cue": "asexual reproduction"
+    }
+  ]
+}

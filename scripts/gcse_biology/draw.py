@@ -59,6 +59,9 @@ def render_slide(lesson: dict, slide_id: str, revealed: Iterable[str], t: float)
         d.text((88, 290), lesson.get("subtitle") or "", font=font("regular", 26), fill=MUTED)
         d.text((88, 350), tier, font=font("semibold", 22), fill=GOLD)
         d.text((88, 860), STRAPLINE, font=font("medium", 22), fill=GOLD)
+        diagram = next((s.get("diagram") for s in lesson["slides"] if s.get("diagram")), None)
+        if diagram and diagram in DIAGRAMS:
+            DIAGRAMS[diagram](d, (980, 250, 1830, 820), t)
         return img
 
     if kind == "bullets":
