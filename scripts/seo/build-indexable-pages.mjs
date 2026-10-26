@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
 import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
 import { GCSE_CHEMISTRY_VIDEOS } from "../../src/gcseChemistryVideos.js";
+import { GCSE_BIOLOGY_VIDEOS } from "../../src/gcseBiologyVideos.js";
 import { TLEVEL_CHEMISTRY_VIDEOS } from "../../src/tlevelChemistryVideos.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
@@ -21,6 +22,7 @@ const EXTRA_HOSTED_RESOURCES = [
   ...ELEVEN_PLUS_RESOURCES,
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...GCSE_CHEMISTRY_VIDEOS,
+  ...GCSE_BIOLOGY_VIDEOS,
   ...TLEVEL_CHEMISTRY_VIDEOS,
 ];
 
@@ -393,6 +395,14 @@ function writeResourcePages(subjects) {
         const siblingNav = (subject.levelSlug === "t-level" && subject.subjectSlug === "science" && category === "Videos")
           ? `<p><a class="download" href="https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/t-level/science/downloads/${topic.slug}/${topic.slug}-transcript.txt">Read the full transcript</a></p>
             <h2>More T-Level Chemistry topics</h2><div class="cards">${topicList.filter((item) => item.slug !== topic.slug).map((item) => card(
+            `${categoryPath}${item.slug}/`,
+            item.title,
+            item.description || item.title,
+            item.poster_url,
+          )).join("")}</div>`
+          : (subject.levelSlug === "gcse" && subject.subjectSlug === "biology" && category === "Videos")
+          ? `<p><a class="download" href="/resources/gcse/biology/videos/${topic.slug}/transcript.txt">Read the full transcript</a></p>
+            <h2>More GCSE Biology topics</h2><div class="cards">${topicList.filter((item) => item.slug !== topic.slug).map((item) => card(
             `${categoryPath}${item.slug}/`,
             item.title,
             item.description || item.title,
