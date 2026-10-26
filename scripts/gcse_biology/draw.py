@@ -61,7 +61,11 @@ def render_slide(lesson: dict, slide_id: str, revealed: Iterable[str], t: float)
         d.text((88, 860), STRAPLINE, font=font("medium", 22), fill=GOLD)
         diagram = next((s.get("diagram") for s in lesson["slides"] if s.get("diagram")), None)
         if diagram and diagram in DIAGRAMS:
-            DIAGRAMS[diagram](d, (980, 250, 1830, 820), t)
+            panel = (1020, 250, 1840, 820)
+            pw, ph = panel[2] - panel[0], panel[3] - panel[1]
+            work = Image.new("RGB", (1600, 700), NAVY_CARD)
+            DIAGRAMS[diagram](ImageDraw.Draw(work), (8, 8, 1592, 692), t)
+            img.paste(work.resize((pw, ph), Image.Resampling.LANCZOS), (panel[0], panel[1]))
         return img
 
     if kind == "bullets":

@@ -99,6 +99,36 @@ test("papers catalog can merge biology videos without dropping chemistry titles"
   }
 });
 
+test("remaining 23 lessons stay unpublished until cloned-voice MP4s exist", () => {
+  assert.deepEqual(GCSE_BIOLOGY_HOSTED_SLUGS, ["1-1-cell-division", "1-2-bacterial-growth"]);
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
+  assert.equal(remaining.length, 23);
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const item of remaining) {
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${item.slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(item.slug));
+  }
+  const boards = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/storyboards.json"), "utf8"));
+  assert.equal(boards.remaining_without_narration.length, 23);
+  assert.equal(boards.lessons.length, 23);
+  assert.equal(boards.lessons[0].slug, "1-3-transport-in-cells");
+  assert.equal(boards.lessons.at(-1).slug, "7-5-food-production");
+  for (const lesson of boards.lessons) {
+    assert.equal(lesson.narration, "missing");
+    assert.equal(lesson.mp4, "not_rendered");
+    assert.equal(lesson.publication, "not_live");
+    assert.equal(lesson.opening, true);
+    assert.equal(lesson.close_jdscience_co_uk, true);
+    assert.equal(lesson.youtube_privacy, "unlisted");
+    assert.ok(lesson.exam.question);
+    assert.ok(lesson.model_answer);
+    assert.ok(lesson.slide_count >= 8);
+  }
+  const status = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/production-status.json"), "utf8"));
+  assert.equal(status.cloned_voice_can_generate_without_extra_credits, false);
+  assert.deepEqual(status.hosted_live, GCSE_BIOLOGY_HOSTED_SLUGS);
+});
+
 test("Vercel Hobby still has exactly 12 top-level API files", () => {
   const apiFiles = readdirSync(join(ROOT, "api")).filter((name) => name.endsWith(".js"));
   assert.equal(apiFiles.length, 12, "Vercel Hobby must keep exactly 12 top-level API functions");
