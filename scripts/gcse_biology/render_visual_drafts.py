@@ -27,13 +27,12 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
-import gcse_foundations.render as foundations_render
 from gcse_biology import align as bio_align
 from gcse_biology import draw as bio_draw
 from gcse_biology.lessons import LESSONS
 from gcse_biology.narration import BY_SLUG, LESSONS as SCRIPTS
-from gcse_foundations.render import encode_lesson
-from jdscience_video.theme import FPS, H, W, WHITE, font
+from gcse_foundations.render import build_segments, navy
+from jdscience_video.theme import FPS, H, TRANSITION, W, WHITE, font
 
 HOSTED = ("1-1-cell-division", "1-2-bacterial-growth")
 ARTIFACTS = Path("/opt/cursor/artifacts")
@@ -88,19 +87,64 @@ def lesson_from_timing(slug: str) -> dict:
     return lesson, timing
 
 
-def silent_audio(duration: float, dest: Path) -> Path:
+def encode_visual_draft(lesson: dict, dest: Path, work: Path) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
+    work.mkdir(parents=True, exist_ok=True)
+    segs = build_segments(lesson)
+    fade_path = work / "navy.png"
+    navy().save(fade_path)
+    entries: list[tuple[Path, float]] = []
+    for i, seg in enumerate(segs):
+        t0, t1 = seg["t0"], seg["t1"]
+        duration = t1 - t0
+        sid = seg["slide"]
+        prev = segs[i - 1]["slide"] if i else sid
+        if i and prev != sid and duration > TRANSITION:
+            entries.append((fade_path, TRANSITION))
+            duration -= TRANSITION
+        if seg["animated"]:
+            n = max(2, int(round(duration * 6)))
+            for frame in range(n):
+                local = t0 + frame * duration / n
+                img = render_slide_draft(lesson, sid, seg["revealed"], local)
+                path = work / f"anim_{i:03d}_{frame:04d}.jpg"
+                img.convert("RGB").save(path, quality=88)
+                entries.append((path, duration / n))
+            continue
+        img = render_slide_draft(lesson, sid, seg["revealed"], t0)
+        path = work / f"still_{i:03d}.jpg"
+        img.convert("RGB").save(path, quality=88)
+        entries.append((path, duration))
+    covered = sum(dur for _, dur in entries)
+    if entries and covered < lesson["duration"]:
+        path, dur = entries[-1]
+        entries[-1] = (path, dur + (lesson["duration"] - covered))
+    concat = work / "concat.txt"
+    lines = []
+    for path, dur in entries:
+        lines.append(f"file '{path}'")
+        lines.append(f"duration {dur:.4f}")
+    lines.append(f"file '{entries[-1][0]}'")
+    concat.write_text("\n".join(lines) + "\n")
     cmd = [
         "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
-        "-f", "lavfi", "-i", "anullsrc=channel_layout=mono:sample_rate=44100",
-        "-t", f"{duration:.3f}",
+        "-f", "concat", "-safe", "0", "-i", str(concat),
+        "-f", "lavfi", "-t", f"{lesson['duration']:.3f}",
+        "-i", "anullsrc=channel_layout=mono:sample_rate=44100",
+        "-vf", f"fps={FPS},format=yuv420p",
+        "-c:v", "libx264", "-preset", "fast", "-crf", "17",
+        "-r", str(FPS),
         "-c:a", "aac", "-b:a", "64k",
+        "-t", f"{lesson['duration']:.3f}",
+        "-movflags", "+faststart",
         str(dest),
     ]
+    print("encoding", dest, "segments", len(segs), "duration", f"{lesson['duration']:.2f}s")
     proc = subprocess.run(cmd, capture_output=True, text=True)
     if proc.returncode != 0:
-        raise SystemExit(f"silent audio failed: {proc.stderr[-1000:]}")
-    return dest
+        print(proc.stderr[-4000:])
+        raise SystemExit(f"ffmpeg failed for {dest.name}")
+    print("wrote", dest)
 
 
 def md5_file(path: Path) -> str:
@@ -115,7 +159,7 @@ def probe(path: Path) -> dict:
     cmd = [
         "ffprobe", "-v", "error",
         "-select_streams", "v:0",
-        "-show_entries", "stream=width,height,avg_frame_rate,codec_name",
+        "-show_entries", "stream=width,height,avg_frame_rate,codec_name,nb_frames",
         "-show_entries", "format=duration,size",
         "-of", "json",
         str(path),
@@ -135,6 +179,7 @@ def probe(path: Path) -> dict:
         "fps": round(fps, 3),
         "duration": float(data["format"]["duration"]),
         "size": int(data["format"]["size"]),
+        "nb_frames": int(stream.get("nb_frames") or 0),
     }
 
 
@@ -147,8 +192,8 @@ def extract_frame(src: Path, dest: Path, seconds: float) -> Path:
         str(dest),
     ]
     proc = subprocess.run(cmd, capture_output=True, text=True)
-    if proc.returncode != 0:
-        raise RuntimeError(proc.stderr[-1000:])
+    if proc.returncode != 0 or not dest.exists():
+        raise RuntimeError(proc.stderr[-1000:] or f"no frame at {seconds:.3f}s")
     return dest
 
 
@@ -164,11 +209,19 @@ def qa_mp4(path: Path, expected: float, qa_dir: Path) -> dict:
     checks.append(("codec", info["codec"] == "h264", info["codec"]))
     checks.append(("fps", abs(info["fps"] - FPS) < 0.05, str(info["fps"])))
     checks.append(("duration", abs(info["duration"] - expected) < 0.6, f"{info['duration']:.3f}s vs {expected:.3f}s"))
+    if info["nb_frames"]:
+        expected_frames = int(round(expected * FPS))
+        checks.append((
+            "frame_count",
+            abs(info["nb_frames"] - expected_frames) <= 8,
+            f"{info['nb_frames']} vs {expected_frames}",
+        ))
+    video_end = max(0.2, min(expected, info["duration"]) - 0.35)
     samples = {
-        "start": 0.4,
-        "early": min(8.0, max(1.0, expected * 0.12)),
-        "mid": expected * 0.45,
-        "late": max(1.0, expected - 2.5),
+        "start": min(0.4, video_end),
+        "early": min(8.0, max(0.6, expected * 0.12), video_end),
+        "mid": min(expected * 0.45, video_end),
+        "late": video_end,
     }
     luma = {}
     for name, t in samples.items():
@@ -273,15 +326,12 @@ def render_one(slug: str, artifacts: Path) -> dict:
     if work.exists():
         shutil.rmtree(work)
     work.mkdir(parents=True, exist_ok=True)
-    audio = silent_audio(lesson["duration"], work / "silent.m4a")
     (dest_dir / "timing.json").write_text(json.dumps(timing, indent=2) + "\n")
 
     bio_align.install()
-    foundations_render.render_slide = render_slide_draft
     try:
-        encode_lesson(lesson, audio, dest, work / "frames")
+        encode_visual_draft(lesson, dest, work)
     finally:
-        foundations_render.render_slide = bio_draw.render_slide
         shutil.rmtree(work, ignore_errors=True)
 
     if dest.resolve() != art.resolve():
