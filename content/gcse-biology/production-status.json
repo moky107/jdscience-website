@@ -36,10 +36,18 @@
   "youtube_metadata": "/workspace/content/gcse-biology/youtube-metadata.json",
   "register": "/workspace/content/gcse-biology/PRODUCTION_REGISTER.md",
   "previs_stills": 214,
+  "previs_dir": "content/gcse-biology/previs",
+  "contact_dir": "content/gcse-biology/contact",
   "youtube_covers": 23,
   "mp4s_rendered_this_run": [],
   "preserved_mp3": [
     "content/videos/1-1-cell-division/source/narration_master.mp3",
     "content/videos/1-2-bacterial-growth/source/narration_master.mp3"
-  ]
+  ],
+  "preserved_mp4": [
+    "content/videos/1-1-cell-division/jdscience-1-1-cell-division-1080p.mp4",
+    "content/videos/1-2-bacterial-growth/jdscience-1-2-bacterial-growth-1080p.mp4"
+  ],
+  "resume_from": "1-3-transport-in-cells",
+  "youtube_privacy": "unlisted"
 }

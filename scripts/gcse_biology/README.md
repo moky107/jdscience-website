@@ -11,4 +11,6 @@ python3 scripts/gcse_biology/prepare.py
 
 `prepare.py` builds timestamp-ready storyboards, 1080p stills, unlisted YouTube covers and `content/gcse-biology/youtube-metadata.json` for lessons that still lack cloned-voice MP3s. It uses the production cue aligner against the teaching-edition script. It does not call ElevenLabs and does not encode silent MP4s.
 
+Prepared stills live in `content/gcse-biology/previs/` (214 frames) and contact sheets in `content/gcse-biology/contact/`. Completed 1.1 and 1.2 MP3/MP4 masters stay in `content/videos/` and must not be altered. Resume narration from `1-3-transport-in-cells` with the existing cloned voice only. Keep YouTube Unlisted until approved for Public.
+
 Requires `ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID` for TTS. Do not print secret values.

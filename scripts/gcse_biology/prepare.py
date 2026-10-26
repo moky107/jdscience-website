@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -219,11 +220,14 @@ def write_register(boards: list[dict], still_count: int) -> Path:
         )
     lines += [
         "",
-        f"Prepared stills: {still_count} at 1920×1080. Transition: {TRANSITION:.2f}s. Frame rate: {FPS} fps.",
+        f"Prepared stills: {still_count} at 1920×1080 in `content/gcse-biology/previs/`. Transition: {TRANSITION:.2f}s. Frame rate: {FPS} fps.",
+        "Contact sheets: `content/gcse-biology/contact/`. YouTube covers: `content/gcse-biology/covers/`.",
+        "Do not alter completed 1.1 Cell Division or 1.2 Bacterial Growth masters.",
         "Do not publish unfinished videos. Keep YouTube Unlisted until approved for Public.",
-        "Resume order after credits: start at `1-3-transport-in-cells`.",
+        "Resume order after credits: start at `1-3-transport-in-cells` using only the existing cloned voice.",
         "",
         "YouTube titles stay under 100 characters. Tags and chapter lists are in `content/gcse-biology/youtube-metadata.json`.",
+        "Complete preserved-file inventory: `content/gcse-biology/PRESERVED_ASSETS.md`.",
     ]
     path = ROOT / "content/gcse-biology/PRODUCTION_REGISTER.md"
     path.write_text("\n".join(lines) + "\n")
@@ -259,9 +263,17 @@ def main(argv: list[str] | None = None) -> None:
             "reveals": [{"slide": e["slide"], "item": e["item"], "t": e["t"], "cue": e.get("cue")} for e in aligned["reveals"]],
         }, indent=2) + "\n")
         if not args.skip_stills:
-            stills = render_stills(script, args.artifacts / "biology-previs" / script.slug)
+            repo_dir = ROOT / "content/gcse-biology/previs" / script.slug
+            stills = render_stills(script, repo_dir)
             still_count += len(stills)
-            contact_sheet(stills, args.artifacts / "biology-contact" / f"{script.slug}.jpg")
+            artifact_dir = args.artifacts / "biology-previs" / script.slug
+            artifact_dir.mkdir(parents=True, exist_ok=True)
+            for still in stills:
+                shutil.copy2(still, artifact_dir / Path(still).name)
+            contact_path = ROOT / "content/gcse-biology/contact" / f"{script.slug}.jpg"
+            contact_sheet(stills, contact_path)
+            (args.artifacts / "biology-contact").mkdir(parents=True, exist_ok=True)
+            shutil.copy2(contact_path, args.artifacts / "biology-contact" / f"{script.slug}.jpg")
             write_cover(
                 script,
                 [
@@ -291,12 +303,20 @@ def main(argv: list[str] | None = None) -> None:
         "youtube_metadata": str(ROOT / "content/gcse-biology/youtube-metadata.json"),
         "register": str(register),
         "previs_stills": still_count,
+        "previs_dir": "content/gcse-biology/previs",
+        "contact_dir": "content/gcse-biology/contact",
         "youtube_covers": 0 if args.skip_stills else len(remaining),
         "mp4s_rendered_this_run": [],
         "preserved_mp3": [
             "content/videos/1-1-cell-division/source/narration_master.mp3",
             "content/videos/1-2-bacterial-growth/source/narration_master.mp3",
         ],
+        "preserved_mp4": [
+            "content/videos/1-1-cell-division/jdscience-1-1-cell-division-1080p.mp4",
+            "content/videos/1-2-bacterial-growth/jdscience-1-2-bacterial-growth-1080p.mp4",
+        ],
+        "resume_from": "1-3-transport-in-cells",
+        "youtube_privacy": "unlisted",
     }
     (ROOT / "content/gcse-biology/production-status.json").write_text(json.dumps(status, indent=2) + "\n")
     (args.artifacts / "gcse-biology-remaining-status.json").write_text(json.dumps(status, indent=2) + "\n")

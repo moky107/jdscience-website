@@ -30,8 +30,11 @@ Remaining lessons are **ready for cloned-voice narration**. They are not complet
 | 7.4 | Trophic Levels in an Ecosystem | 8 | ready | waiting for credits | not rendered | unlisted pack | unpublished | ready for narration |
 | 7.5 | Food Production | 9 | ready | waiting for credits | not rendered | unlisted pack | unpublished | ready for narration |
 
-Prepared stills: 214 at 1920×1080. Transition: 0.40s. Frame rate: 30 fps.
+Prepared stills: 214 at 1920×1080 in `content/gcse-biology/previs/`. Transition: 0.40s. Frame rate: 30 fps.
+Contact sheets: `content/gcse-biology/contact/`. YouTube covers: `content/gcse-biology/covers/`.
+Do not alter completed 1.1 Cell Division or 1.2 Bacterial Growth masters.
 Do not publish unfinished videos. Keep YouTube Unlisted until approved for Public.
-Resume order after credits: start at `1-3-transport-in-cells`.
+Resume order after credits: start at `1-3-transport-in-cells` using only the existing cloned voice.
 
 YouTube titles stay under 100 characters. Tags and chapter lists are in `content/gcse-biology/youtube-metadata.json`.
+Complete preserved-file inventory: `content/gcse-biology/PRESERVED_ASSETS.md`.

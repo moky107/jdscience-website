@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LESSONS as BIOLOGY_SCRIPTS } from "../src/gcseBiologyLessonMeta.js";
@@ -143,6 +144,48 @@ test("remaining 23 lessons stay unpublished until cloned-voice MP4s exist", () =
     assert.ok(existsSync(join(ROOT, row.thumbnail)), row.thumbnail);
   }
   assert.ok(existsSync(join(ROOT, "content/gcse-biology/PRODUCTION_REGISTER.md")));
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/PRESERVED_ASSETS.md")));
+});
+
+function md5File(path) {
+  return createHash("md5").update(readFileSync(path)).digest("hex");
+}
+
+function listJpgs(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return listJpgs(path);
+    return entry.name.endsWith(".jpg") ? [path] : [];
+  });
+}
+
+test("214 visual frames and 23 contact sheets are stored in the repo", () => {
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
+  assert.equal(remaining.length, 23);
+  const frames = listJpgs(join(ROOT, "content/gcse-biology/previs"));
+  assert.equal(frames.length, 214);
+  for (const frame of frames) {
+    assert.ok(statSync(frame).size > 1000, frame);
+  }
+  const contacts = listJpgs(join(ROOT, "content/gcse-biology/contact"));
+  assert.equal(contacts.length, 23);
+  for (const item of remaining) {
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/previs", item.slug)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/contact", `${item.slug}.jpg`)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/timing", `${item.slug}.json`)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/covers", `${item.slug}-youtube.jpg`)));
+  }
+});
+
+test("completed 1.1 and 1.2 audio and video masters are unchanged", () => {
+  const cellDivisionMp3 = join(ROOT, "content/videos/1-1-cell-division/source/narration_master.mp3");
+  const bacterialMp3 = join(ROOT, "content/videos/1-2-bacterial-growth/source/narration_master.mp3");
+  const cellDivisionMp4 = join(ROOT, "content/videos/1-1-cell-division/jdscience-1-1-cell-division-1080p.mp4");
+  const bacterialMp4 = join(ROOT, "content/videos/1-2-bacterial-growth/jdscience-1-2-bacterial-growth-1080p.mp4");
+  assert.equal(md5File(cellDivisionMp3), "f64a9f591ce9f2464e97b912b71905e7");
+  assert.equal(md5File(bacterialMp3), "29495f2d9e6280caf91cb2c72e1e97f0");
+  assert.equal(md5File(cellDivisionMp4), "5aef24eec1dcebb431e4d0a4de1ed41f");
+  assert.equal(md5File(bacterialMp4), "99ad97c922011c5cb33c88f1d88f94e8");
 });
 
 test("Vercel Hobby still has exactly 12 top-level API files", () => {
