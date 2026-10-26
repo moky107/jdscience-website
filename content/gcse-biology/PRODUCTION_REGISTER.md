@@ -1,6 +1,6 @@
 # GCSE Biology production register
 
-Remaining lessons have **silent visual-draft MP4s**. They are not complete teaching videos until a 1080p MP4 is encoded against the cloned-voice MP3.
+Remaining lessons have **silent visual production masters**. They are not complete teaching videos until a 1080p MP4 is encoded against cloned-voice word timestamps.
 
 | Spec | Lesson | Slides | Cue sync | Narration | MP4 | YouTube | Site | Status |
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
@@ -33,9 +33,11 @@ Remaining lessons have **silent visual-draft MP4s**. They are not complete teach
 Prepared stills: 214 at 1920×1080 in `content/gcse-biology/previs/`. Transition: 0.40s. Frame rate: 30 fps.
 Contact sheets: `content/gcse-biology/contact/`. YouTube covers: `content/gcse-biology/covers/`.
 Do not alter completed 1.1 Cell Division or 1.2 Bacterial Growth masters.
-Silent visual-draft MP4s and download URLs: `content/gcse-biology/VISUAL_DRAFT_REGISTER.md`.
-Do not publish visual drafts. Keep YouTube Unlisted until approved for Public.
-Resume order after credits: start at `1-3-transport-in-cells` using only the existing cloned voice. Do not stretch narration to the estimated draft clock.
+Silent visual production masters and download URLs: `content/gcse-biology/VISUAL_DRAFT_REGISTER.md`.
+Script review before narration: `content/gcse-biology/SCRIPT_REVIEW.md`.
+Do not publish visual masters as completed lessons. Keep YouTube Unlisted until approved for Public.
+Resume order after credits: start at `1-3-transport-in-cells` using only the existing cloned voice.
+Re-encode against cloned-voice timestamps. Do not add audio to the silent masters or stretch narration to the estimated clock.
 
 YouTube titles stay under 100 characters. Tags and chapter lists are in `content/gcse-biology/youtube-metadata.json`.
 Complete preserved-file inventory: `content/gcse-biology/PRESERVED_ASSETS.md`.

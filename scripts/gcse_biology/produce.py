@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Produce one GCSE Biology cloned-voice 1080p lesson."""
+"""Produce one GCSE Biology cloned-voice 1080p lesson.
+
+Aligns slides, highlights and transitions to cloned-voice word times.
+Does not mux silent visual masters. Does not stamp a visual-draft banner.
+Does not re-encode 1.1 Cell Division or 1.2 Bacterial Growth.
+"""
 
 from __future__ import annotations
 
@@ -21,8 +26,29 @@ from gcse_biology.lessons import LESSONS
 from gcse_biology.narration import BY_SLUG
 from gcse_foundations.render import align, encode_lesson, write_srt
 
+# Final narrated videos use the unmarked slide renderer, never the visual-draft stamp.
 foundations_render.render_slide = bio_draw.render_slide
 bio_align.install()
+
+HOSTED = ("1-1-cell-division", "1-2-bacterial-growth")
+
+
+def cloned_audio_path(transcript: dict, source_dir: Path) -> Path:
+    audio = Path(transcript.get("audio") or "")
+    if not audio.exists():
+        for name in ("narration_master.mp3", "narration_master.m4a"):
+            candidate = source_dir / name
+            if candidate.exists():
+                audio = candidate
+                break
+    text = str(audio).lower()
+    if not audio.exists():
+        raise SystemExit("cloned-voice MP3/M4A not found; refusing to encode a silent or placeholder track")
+    if "silent" in text or "visual-draft" in text or "anullsrc" in text:
+        raise SystemExit("refusing to mux a silent visual master as narration")
+    if transcript.get("audio") in {"pending-cloned-mp3", "silent-visual-draft"}:
+        raise SystemExit("refusing estimated draft clock; wait for cloned-voice timestamps")
+    return audio
 
 
 def srt_to_vtt(srt_text: str) -> str:
@@ -31,6 +57,8 @@ def srt_to_vtt(srt_text: str) -> str:
 
 
 def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = True) -> dict:
+    if slug in HOSTED:
+        raise SystemExit(f"refusing to re-encode hosted lesson {slug}")
     script = BY_SLUG[slug]
     lesson = LESSONS[slug]
     source_dir = ROOT / "content/videos" / slug / "source"
@@ -72,9 +100,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
     dest = artifacts / script.filename
     yt = artifacts / script.youtube_filename
     if video:
-        audio = Path(transcript["audio"])
-        if not audio.exists():
-            audio = source_dir / "narration_master.m4a"
+        audio = cloned_audio_path(transcript, source_dir)
         work = Path("/tmp/jdscience_biology") / slug
         encode_lesson(aligned, audio, dest, work)
         if dest.exists() and dest.resolve() != yt.resolve():
@@ -104,7 +130,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--slug", choices=sorted(LESSONS), default="1-1-cell-division")
+    parser.add_argument("--slug", choices=sorted(LESSONS), default="1-3-transport-in-cells")
     parser.add_argument("--out", type=Path, default=Path("/opt/cursor/artifacts"))
     parser.add_argument("--skip-tts", action="store_true")
     parser.add_argument("--no-video", action="store_true")

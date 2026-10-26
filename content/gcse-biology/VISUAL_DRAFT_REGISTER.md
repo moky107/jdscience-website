@@ -1,11 +1,12 @@
-# GCSE Biology visual-draft register
+# GCSE Biology visual production masters
 
-These MP4s are **silent visual-only drafts**. They are not completed teaching videos.
+These MP4s are **silent visual production masters**. They are not completed teaching videos.
+Keep them for scene order, diagrams and branding. Do not publish them as finished lessons.
 Cloned-voice narration is still blocked on ElevenLabs quota (`52` credits remaining vs `825` required per request).
-Do not publish these drafts to jdscience.co.uk or YouTube.
+When cloned-voice MP3s exist, re-encode from word timestamps. Do not mux audio onto these fixed-duration files.
 Do not alter completed 1.1 Cell Division or 1.2 Bacterial Growth.
-When cloned-voice MP3s exist, re-encode from `1-3-transport-in-cells` using the existing cloned voice only.
 Keep future YouTube uploads Unlisted until approved for Public.
+Script review: `content/gcse-biology/SCRIPT_REVIEW.md`.
 
 | Spec | Lesson | Filename | Duration | Narration | QA | Download |
 | --- | --- | --- | ---: | --- | --- | --- |

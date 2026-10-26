@@ -41,7 +41,11 @@
   "youtube_covers": 23,
   "mp4s_rendered_this_run": [],
   "visual_drafts": 23,
+  "visual_production_masters": true,
+  "published_as_completed_lessons": false,
+  "script_review": "content/gcse-biology/SCRIPT_REVIEW.md",
   "visual_draft_register": "content/gcse-biology/VISUAL_DRAFT_REGISTER.md",
+  "final_encode": "produce.py aligns to cloned-voice timestamps; never mux silent masters",
   "preserved_mp3": [
     "content/videos/1-1-cell-division/source/narration_master.mp3",
     "content/videos/1-2-bacterial-growth/source/narration_master.mp3"

@@ -208,6 +208,26 @@ test("23 silent visual drafts are labelled drafts with persistent URLs and stay 
   }
 });
 
+test("script review exists and remaining lessons keep exam questions plus model answers", () => {
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/SCRIPT_REVIEW.md")));
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
+  assert.equal(remaining.length, 23);
+  const boards = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/storyboards.json"), "utf8"));
+  for (const lesson of boards.lessons) {
+    assert.ok(lesson.exam.question.length > 20, lesson.slug);
+    assert.ok(lesson.model_answer.length > 20, lesson.slug);
+    assert.match(lesson.exam.question, /[.?]/);
+  }
+});
+
+test("final producer refuses hosted 1.1/1.2 and silent visual masters", () => {
+  const produce = readFileSync(join(ROOT, "scripts/gcse_biology/produce.py"), "utf8");
+  assert.match(produce, /refusing to re-encode hosted lesson/);
+  assert.match(produce, /refusing to mux a silent visual master/);
+  assert.match(produce, /1-3-transport-in-cells/);
+  assert.doesNotMatch(produce, /stamp_visual_draft/);
+});
+
 test("visual drafts stay unpublished and must not replace 1.1 or 1.2", () => {
   const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
   const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
