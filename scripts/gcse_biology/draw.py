@@ -55,9 +55,26 @@ def render_slide(lesson: dict, slide_id: str, revealed: Iterable[str], t: float)
 
     if kind == "intro":
         d.text((88, 160), "GCSE Biology", font=font("medium", 24), fill=TEAL_BAR)
-        d.text((88, 210), f"{lesson['spec']}  {lesson['title']}", font=font("bold", 52), fill=WHITE)
-        d.text((88, 290), lesson.get("subtitle") or "", font=font("regular", 26), fill=MUTED)
-        d.text((88, 350), tier, font=font("semibold", 22), fill=GOLD)
+        d.text((88, 210), lesson["spec"], font=font("bold", 40), fill=GOLD)
+        title = lesson["title"]
+        width = 22 if len(title) > 28 else 40
+        words, lines, current = title.split(), [], ""
+        for word in words:
+            trial = f"{current} {word}".strip()
+            if len(trial) <= width or not current:
+                current = trial
+            else:
+                lines.append(current)
+                current = word
+        if current:
+            lines.append(current)
+        size = 52 if len(lines) == 1 else 40 if len(lines) == 2 else 34
+        y = 270
+        for row in lines[:4]:
+            d.text((88, y), row, font=font("bold", size), fill=WHITE)
+            y += size + 6
+        d.text((88, min(y + 12, 520)), lesson.get("subtitle") or "", font=font("regular", 26), fill=MUTED)
+        d.text((88, min(y + 56, 560)), tier, font=font("semibold", 22), fill=GOLD)
         d.text((88, 860), STRAPLINE, font=font("medium", 22), fill=GOLD)
         diagram = next((s.get("diagram") for s in lesson["slides"] if s.get("diagram")), None)
         if diagram and diagram in DIAGRAMS:

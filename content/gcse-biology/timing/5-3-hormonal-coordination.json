@@ -1,0 +1,104 @@
+{
+  "slug": "5-3-hormonal-coordination",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 136.463,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.012,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "glands",
+      "t": 5.012,
+      "t_end": 29.631,
+      "cue": "Hormones are chemical messengers",
+      "animate": true
+    },
+    {
+      "id": "diabetes",
+      "t": 29.631,
+      "t_end": 42.469,
+      "cue": "In type 1 diabetes, the pancreas does not make enough insulin",
+      "animate": false
+    },
+    {
+      "id": "cycle",
+      "t": 42.469,
+      "t_end": 53.635,
+      "cue": "The menstrual cycle involves FSH",
+      "animate": false
+    },
+    {
+      "id": "adh",
+      "t": 53.635,
+      "t_end": 95.577,
+      "cue": "When water is low, ADH is released",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 95.577,
+      "t_end": 107.359,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 107.359,
+      "t_end": 117.207,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 117.207,
+      "t_end": 125.208,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 125.208,
+      "t_end": 136.463,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 97.775,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 102.347,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 103.666,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 107.623,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 117.327,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

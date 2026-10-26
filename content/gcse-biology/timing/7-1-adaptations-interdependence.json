@@ -1,0 +1,104 @@
+{
+  "slug": "7-1-adaptations-interdependence",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 121.158,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.206,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "eco",
+      "t": 5.206,
+      "t_end": 14.384,
+      "cue": "An ecosystem is all the living things in an area",
+      "animate": false
+    },
+    {
+      "id": "adapt",
+      "t": 14.384,
+      "t_end": 29.12,
+      "cue": "Organisms are adapted to their habitats",
+      "animate": false
+    },
+    {
+      "id": "factors",
+      "t": 29.12,
+      "t_end": 41.739,
+      "cue": "Abiotic factors include temperature",
+      "animate": false
+    },
+    {
+      "id": "extreme",
+      "t": 41.739,
+      "t_end": 76.86,
+      "cue": "Organisms in extreme places are called extremophiles",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 76.86,
+      "t_end": 88.684,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 88.684,
+      "t_end": 99.538,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 99.538,
+      "t_end": 109.863,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 109.863,
+      "t_end": 121.158,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 79.066,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 83.654,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 84.978,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 88.949,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 99.658,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

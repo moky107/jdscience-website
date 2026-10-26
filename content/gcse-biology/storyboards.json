@@ -4,7 +4,7 @@
     "1-1-cell-division",
     "1-2-bacterial-growth"
   ],
-  "remaining_without_narration": [
+  "remaining_ready_for_cloned_voice": [
     "1-3-transport-in-cells",
     "2-1-principles-of-organisation",
     "2-2-animal-tissues-organs-systems",
@@ -43,6 +43,12 @@
       "description": "How substances move by diffusion, osmosis and active transport, including root hair cells.",
       "chars": 1875,
       "estimated_duration_s": 133.5,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 11,
       "slides": [
         {
@@ -52,7 +58,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 7.099,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -62,7 +73,12 @@
           "cue": "In diffusion, particles move from high concentration",
           "heading": "Diffusion",
           "diagram": "diffusion",
-          "estimated_t": 7.47,
+          "t": 7.099,
+          "t_end": 14.986,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -72,7 +88,28 @@
           "cue": "It is faster when the temperature is higher",
           "heading": "What speeds diffusion",
           "diagram": null,
-          "estimated_t": 15.09,
+          "t": 14.986,
+          "t_end": 23.136,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "temperature is higher",
+              "t": 16.476
+            },
+            {
+              "id": "b2",
+              "cue": "concentration gradient is steeper",
+              "t": 18.404
+            },
+            {
+              "id": "b3",
+              "cue": "surface area is larger",
+              "t": 21.471
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -98,7 +135,12 @@
           "cue": "Oxygen diffuses into the blood in the lungs",
           "heading": "Gas exchange in the lungs",
           "diagram": "alveoli",
-          "estimated_t": 23.35,
+          "t": 23.136,
+          "t_end": 34.705,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -108,7 +150,12 @@
           "cue": "Osmosis is the diffusion of water",
           "heading": "Osmosis",
           "diagram": "osmosis",
-          "estimated_t": 35.24,
+          "t": 34.705,
+          "t_end": 40.051,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -118,7 +165,12 @@
           "cue": "Active transport moves substances against",
           "heading": "Active transport",
           "diagram": "active_transport",
-          "estimated_t": 40.5,
+          "t": 40.051,
+          "t_end": 51.882,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -128,7 +180,12 @@
           "cue": "Diffusion and osmosis are passive processes",
           "heading": "Compare the three processes",
           "diagram": "transport_compare",
-          "estimated_t": 51.97,
+          "t": 51.882,
+          "t_end": 83.256,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -138,7 +195,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 82.58,
+          "t": 83.256,
+          "t_end": 95.0,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 85.447
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 90.004
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 91.319
+            }
+          ],
           "items": []
         },
         {
@@ -148,7 +226,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 94.75,
+          "t": 95.0,
+          "t_end": 104.552,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 95.263
+            }
+          ],
           "items": []
         },
         {
@@ -158,7 +247,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 104.64,
+          "t": 104.552,
+          "t_end": 122.255,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 104.672
+            }
+          ],
           "items": []
         },
         {
@@ -168,7 +268,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 122.44,
+          "t": 122.255,
+          "t_end": 133.473,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -179,9 +284,11 @@
       "model_answer": "Mineral ions are often at a lower concentration in the soil than in the root cell, so active transport is needed to move them against the concentration gradient, using energy from respiration.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "2-1-principles-of-organisation",
@@ -196,6 +303,12 @@
       "description": "The hierarchy from cells to organism, with cardiac muscle as the worked example.",
       "chars": 1366,
       "estimated_duration_s": 97.2,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 8,
       "slides": [
         {
@@ -205,7 +318,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.792,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -215,7 +333,12 @@
           "cue": "All living things are built from cells",
           "heading": "Levels of organisation",
           "diagram": "hierarchy",
-          "estimated_t": 6.83,
+          "t": 6.792,
+          "t_end": 32.264,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -225,7 +348,12 @@
           "cue": "cardiac muscle cells contract together",
           "heading": "Specialisation in the heart",
           "diagram": "heart_org",
-          "estimated_t": 32.39,
+          "t": 32.264,
+          "t_end": 50.139,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -235,7 +363,12 @@
           "cue": "This hierarchy helps us explain",
           "heading": "Why the hierarchy matters",
           "diagram": null,
-          "estimated_t": 49.83,
+          "t": 50.139,
+          "t_end": 56.217,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -245,7 +378,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 55.67,
+          "t": 56.217,
+          "t_end": 68.193,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 58.451
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 63.098
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 64.439
+            }
+          ],
           "items": []
         },
         {
@@ -255,7 +409,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 67.84,
+          "t": 68.193,
+          "t_end": 78.828,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 68.461
+            }
+          ],
           "items": []
         },
         {
@@ -265,7 +430,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 78.94,
+          "t": 78.828,
+          "t_end": 85.8,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 78.948
+            }
+          ],
           "items": []
         },
         {
@@ -275,7 +451,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 86.21,
+          "t": 85.8,
+          "t_end": 97.239,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -286,9 +467,11 @@
       "model_answer": "Cell, tissue, organ, organ system, organism.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "2-2-animal-tissues-organs-systems",
@@ -303,6 +486,12 @@
       "description": "Digestive enzymes, bile and the circulatory system, with a precise starch-digestion exam question.",
       "chars": 1898,
       "estimated_duration_s": 135.1,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 11,
       "slides": [
         {
@@ -312,7 +501,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 11.737,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -322,7 +516,12 @@
           "cue": "Amylase breaks starch into maltose",
           "heading": "Digestive enzymes",
           "diagram": "enzymes",
-          "estimated_t": 11.89,
+          "t": 11.737,
+          "t_end": 23.033,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -332,7 +531,12 @@
           "cue": "Bile is made in the liver",
           "heading": "Bile is not an enzyme",
           "diagram": "bile",
-          "estimated_t": 22.92,
+          "t": 23.033,
+          "t_end": 34.064,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -342,7 +546,12 @@
           "cue": "Enzymes have an active site",
           "heading": "Active site and denaturing",
           "diagram": "active_site",
-          "estimated_t": 33.96,
+          "t": 34.064,
+          "t_end": 40.507,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -352,7 +561,12 @@
           "cue": "The circulatory system pumps blood",
           "heading": "Arteries, veins and capillaries",
           "diagram": "vessels",
-          "estimated_t": 40.5,
+          "t": 40.507,
+          "t_end": 55.597,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -362,7 +576,28 @@
           "cue": "Red blood cells carry oxygen",
           "heading": "Blood components",
           "diagram": null,
-          "estimated_t": 55.45,
+          "t": 55.597,
+          "t_end": 62.481,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Red blood cells carry oxygen",
+              "t": 55.717
+            },
+            {
+              "id": "b2",
+              "cue": "platelets help clot blood",
+              "t": 57.715
+            },
+            {
+              "id": "b3",
+              "cue": "white blood cells fight infection",
+              "t": 59.922
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -388,7 +623,12 @@
           "cue": "Be precise about digestion",
           "heading": "Exam precision",
           "diagram": null,
-          "estimated_t": 62.36,
+          "t": 62.481,
+          "t_end": 93.103,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -398,7 +638,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 92.11,
+          "t": 93.103,
+          "t_end": 104.929,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 95.31
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 99.899
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 101.222
+            }
+          ],
           "items": []
         },
         {
@@ -408,7 +669,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 104.29,
+          "t": 104.929,
+          "t_end": 115.607,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 105.194
+            }
+          ],
           "items": []
         },
         {
@@ -418,7 +690,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 115.32,
+          "t": 115.607,
+          "t_end": 123.814,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 115.727
+            }
+          ],
           "items": []
         },
         {
@@ -428,7 +711,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 124.08,
+          "t": 123.814,
+          "t_end": 135.11,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -439,9 +727,11 @@
       "model_answer": "Amylase. It breaks starch into maltose or smaller sugars.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "2-3-plant-tissues-organs-systems",
@@ -456,6 +746,12 @@
       "description": "Leaf tissues, transpiration and the roles of xylem and phloem.",
       "chars": 1653,
       "estimated_duration_s": 117.7,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 10,
       "slides": [
         {
@@ -465,7 +761,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.193,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -475,7 +776,12 @@
           "cue": "A leaf has several tissues",
           "heading": "Tissues in a leaf",
           "diagram": "leaf",
-          "estimated_t": 6.41,
+          "t": 6.193,
+          "t_end": 21.941,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -485,7 +791,12 @@
           "cue": "Guard cells control the stomata",
           "heading": "Stomata and guard cells",
           "diagram": "stomata",
-          "estimated_t": 21.93,
+          "t": 21.941,
+          "t_end": 27.427,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -495,7 +806,12 @@
           "cue": "Water evaporates through the stomata",
           "heading": "Transpiration",
           "diagram": "transpiration",
-          "estimated_t": 27.41,
+          "t": 27.427,
+          "t_end": 39.548,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -505,7 +821,12 @@
           "cue": "Xylem carries water and mineral ions upwards",
           "heading": "Xylem and phloem",
           "diagram": "xylem_phloem",
-          "estimated_t": 39.51,
+          "t": 39.548,
+          "t_end": 62.993,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -515,7 +836,12 @@
           "cue": "Phloem transports dissolved sugars from sources",
           "heading": "Sources and sinks",
           "diagram": null,
-          "estimated_t": 62.71,
+          "t": 62.993,
+          "t_end": 76.618,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -525,7 +851,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 76.1,
+          "t": 76.618,
+          "t_end": 88.473,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 78.83
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 83.43
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 84.758
+            }
+          ],
           "items": []
         },
         {
@@ -535,7 +882,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 88.27,
+          "t": 88.473,
+          "t_end": 99.09,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 88.739
+            }
+          ],
           "items": []
         },
         {
@@ -545,7 +903,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 99.09,
+          "t": 99.09,
+          "t_end": 106.345,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 99.21
+            }
+          ],
           "items": []
         },
         {
@@ -555,7 +924,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 106.64,
+          "t": 106.345,
+          "t_end": 117.67,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -566,9 +940,11 @@
       "model_answer": "Phloem. It carries sugars up and down the plant.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "3-1-communicable-diseases",
@@ -583,6 +959,12 @@
       "description": "How pathogens spread, how the body defends itself, and why antibiotics do not treat viruses.",
       "chars": 1872,
       "estimated_duration_s": 133.3,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 10,
       "slides": [
         {
@@ -592,7 +974,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.069,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -602,7 +989,12 @@
           "cue": "Pathogens are microbes that cause disease",
           "heading": "Four types of pathogen",
           "diagram": "pathogens",
-          "estimated_t": 6.19,
+          "t": 6.069,
+          "t_end": 24.805,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -612,7 +1004,28 @@
           "cue": "HIV is spread through body fluids",
           "heading": "Named diseases",
           "diagram": null,
-          "estimated_t": 25.13,
+          "t": 24.805,
+          "t_end": 37.911,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "HIV is spread",
+              "t": 24.925
+            },
+            {
+              "id": "b2",
+              "cue": "Measles causes fever",
+              "t": 29.467
+            },
+            {
+              "id": "b3",
+              "cue": "Malaria is caused",
+              "t": 33.865
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -638,7 +1051,12 @@
           "cue": "Our defences include hairs and mucus",
           "heading": "Barriers and white blood cells",
           "diagram": "defences",
-          "estimated_t": 38.37,
+          "t": 37.911,
+          "t_end": 48.29,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -648,7 +1066,12 @@
           "cue": "Vaccines contain dead or inactive pathogens",
           "heading": "Vaccines and memory cells",
           "diagram": "vaccine",
-          "estimated_t": 48.9,
+          "t": 48.29,
+          "t_end": 76.877,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -658,7 +1081,12 @@
           "cue": "Antibiotics act on bacterial structures",
           "heading": "Antibiotics are not antivirals",
           "diagram": null,
-          "estimated_t": 76.95,
+          "t": 76.877,
+          "t_end": 87.96,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -668,7 +1096,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 87.7,
+          "t": 87.96,
+          "t_end": 99.747,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 90.159
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 94.733
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 96.052
+            }
+          ],
           "items": []
         },
         {
@@ -678,7 +1127,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 99.87,
+          "t": 99.747,
+          "t_end": 108.894,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 100.01
+            }
+          ],
           "items": []
         },
         {
@@ -688,7 +1148,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 109.34,
+          "t": 108.894,
+          "t_end": 122.0,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 109.014
+            }
+          ],
           "items": []
         },
         {
@@ -698,7 +1169,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 122.23,
+          "t": 122.0,
+          "t_end": 133.259,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -709,9 +1185,11 @@
       "model_answer": "Antibiotics kill bacteria, but viruses reproduce inside cells and have different structures that antibiotics do not target.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "3-1-discovering-and-testing-new-drugs",
@@ -726,6 +1204,12 @@
       "description": "How medicines are discovered and tested, including blinding, placebos and ethical comparisons.",
       "chars": 1726,
       "estimated_duration_s": 122.9,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -735,7 +1219,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.792,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -745,7 +1234,28 @@
           "cue": "Penicillin was discovered by Alexander Fleming",
           "heading": "Where drugs come from",
           "diagram": null,
-          "estimated_t": 7.12,
+          "t": 6.792,
+          "t_end": 21.962,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Penicillin was discovered",
+              "t": 6.912
+            },
+            {
+              "id": "b2",
+              "cue": "Digitalis comes from foxgloves",
+              "t": 17.376
+            },
+            {
+              "id": "b3",
+              "cue": "aspirin comes from willow",
+              "t": 20.022
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -771,7 +1281,12 @@
           "cue": "New drugs go through preclinical testing",
           "heading": "Preclinical then clinical",
           "diagram": "trials",
-          "estimated_t": 22.14,
+          "t": 21.962,
+          "t_end": 33.958,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -781,7 +1296,12 @@
           "cue": "In a single-blind trial",
           "heading": "Blinding reduces bias",
           "diagram": "blinding",
-          "estimated_t": 34.1,
+          "t": 33.958,
+          "t_end": 65.976,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -791,7 +1311,12 @@
           "cue": "Not every trial uses a placebo",
           "heading": "Placebos are not always used",
           "diagram": null,
-          "estimated_t": 65.56,
+          "t": 65.976,
+          "t_end": 75.942,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -801,7 +1326,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 75.39,
+          "t": 75.942,
+          "t_end": 87.762,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 78.148
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 82.734
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 84.057
+            }
+          ],
           "items": []
         },
         {
@@ -811,7 +1357,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 87.56,
+          "t": 87.762,
+          "t_end": 97.376,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 88.026
+            }
+          ],
           "items": []
         },
         {
@@ -821,7 +1378,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 97.45,
+          "t": 97.376,
+          "t_end": 111.576,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 97.496
+            }
+          ],
           "items": []
         },
         {
@@ -831,7 +1399,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 111.83,
+          "t": 111.576,
+          "t_end": 122.866,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -842,9 +1415,11 @@
       "model_answer": "In a single-blind trial the patients don't know which treatment they receive. In a double-blind trial neither the patients nor the doctors know.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "3-2-monoclonal-antibodies",
@@ -859,6 +1434,12 @@
       "description": "How hybridoma cells are made and how monoclonal antibodies are used in tests and cancer treatment.",
       "chars": 1821,
       "estimated_duration_s": 129.6,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 8,
       "slides": [
         {
@@ -868,7 +1449,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 10.605,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -878,7 +1464,12 @@
           "cue": "A mouse is injected with an antigen",
           "heading": "Making a hybridoma",
           "diagram": "hybridoma",
-          "estimated_t": 10.75,
+          "t": 10.605,
+          "t_end": 27.959,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -888,7 +1479,28 @@
           "cue": "They can be used to locate molecules",
           "heading": "Uses",
           "diagram": null,
-          "estimated_t": 27.9,
+          "t": 27.959,
+          "t_end": 74.499,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "pregnancy tests",
+              "t": 31.465
+            },
+            {
+              "id": "b2",
+              "cue": "locate molecules in cells",
+              "t": 29.274
+            },
+            {
+              "id": "b3",
+              "cue": "bind to cancer cells",
+              "t": 36.811
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -914,7 +1526,12 @@
           "cue": "They are not automatically free from side effects",
           "heading": "Targeted, not risk-free",
           "diagram": null,
-          "estimated_t": 73.89,
+          "t": 74.499,
+          "t_end": 82.65,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -924,7 +1541,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 81.93,
+          "t": 82.65,
+          "t_end": 94.395,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 84.842
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 89.399
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 90.714
+            }
+          ],
           "items": []
         },
         {
@@ -934,7 +1572,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 94.11,
+          "t": 94.395,
+          "t_end": 101.757,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 94.658
+            }
+          ],
           "items": []
         },
         {
@@ -944,7 +1593,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 101.87,
+          "t": 101.757,
+          "t_end": 118.41,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 101.877
+            }
+          ],
           "items": []
         },
         {
@@ -954,7 +1614,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 118.6,
+          "t": 118.41,
+          "t_end": 129.629,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -965,9 +1630,11 @@
       "model_answer": "A B-lymphocyte from the mouse, which makes the antibody, is fused with a tumour cell. The resulting hybridoma divides rapidly and produces large amounts of identical antibodies.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "3-3-plant-disease",
@@ -982,6 +1649,12 @@
       "description": "Plant disease symptoms, tobacco mosaic virus, rose black spot, and magnesium versus nitrate deficiency.",
       "chars": 1827,
       "estimated_duration_s": 130.1,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 10,
       "slides": [
         {
@@ -991,7 +1664,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.332,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1001,7 +1679,12 @@
           "cue": "Signs of disease include stunted growth",
           "heading": "Signs of plant disease",
           "diagram": "plant_signs",
-          "estimated_t": 5.62,
+          "t": 5.332,
+          "t_end": 14.247,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1011,7 +1694,23 @@
           "cue": "Rose black spot is a fungal disease",
           "heading": "Named infections",
           "diagram": null,
-          "estimated_t": 14.74,
+          "t": 14.247,
+          "t_end": 29.63,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Rose black spot",
+              "t": 14.367
+            },
+            {
+              "id": "b2",
+              "cue": "Tobacco mosaic virus",
+              "t": 23.511
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -1032,7 +1731,12 @@
           "cue": "Nitrate deficiency causes stunted growth",
           "heading": "Mineral deficiencies",
           "diagram": "minerals",
-          "estimated_t": 30.25,
+          "t": 29.63,
+          "t_end": 42.303,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1042,7 +1746,23 @@
           "cue": "Plants defend themselves with physical barriers",
           "heading": "Plant defences",
           "diagram": null,
-          "estimated_t": 42.5,
+          "t": 42.303,
+          "t_end": 58.997,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "waxy cuticles and thorns",
+              "t": 46.324
+            },
+            {
+              "id": "b2",
+              "cue": "antibacterial chemicals",
+              "t": 50.344
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -1063,7 +1783,12 @@
           "cue": "Magnesium deficiency commonly causes interveinal chlorosis",
           "heading": "Pattern of symptoms",
           "diagram": null,
-          "estimated_t": 58.66,
+          "t": 58.997,
+          "t_end": 85.131,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1073,7 +1798,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 84.07,
+          "t": 85.131,
+          "t_end": 96.843,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 87.316
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 91.861
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 93.172
+            }
+          ],
           "items": []
         },
         {
@@ -1083,7 +1829,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 96.24,
+          "t": 96.843,
+          "t_end": 108.642,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 97.105
+            }
+          ],
           "items": []
         },
         {
@@ -1093,7 +1850,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 108.49,
+          "t": 108.642,
+          "t_end": 118.868,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 108.762
+            }
+          ],
           "items": []
         },
         {
@@ -1103,7 +1871,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 119.02,
+          "t": 118.868,
+          "t_end": 130.056,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1114,9 +1887,11 @@
       "model_answer": "Magnesium. It is needed to make chlorophyll, so a deficiency causes chlorosis (yellowing).",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "4-1-photosynthesis",
@@ -1131,6 +1906,12 @@
       "description": "The photosynthesis equation, uses of glucose, limiting factors and the inverse-square law.",
       "chars": 2032,
       "estimated_duration_s": 144.6,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 10,
       "slides": [
         {
@@ -1140,7 +1921,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.543,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1150,7 +1936,12 @@
           "cue": "Plants use carbon dioxide and water",
           "heading": "Photosynthesis",
           "diagram": "photo_eq",
-          "estimated_t": 5.69,
+          "t": 5.543,
+          "t_end": 24.548,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1160,7 +1951,12 @@
           "cue": "Glucose can be used for respiration",
           "heading": "Uses of glucose",
           "diagram": "glucose_uses",
-          "estimated_t": 24.77,
+          "t": 24.548,
+          "t_end": 38.01,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1170,7 +1966,12 @@
           "cue": "The rate of photosynthesis depends on temperature",
           "heading": "Limiting factors",
           "diagram": "limiting",
-          "estimated_t": 38.23,
+          "t": 38.01,
+          "t_end": 49.36,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1180,7 +1981,12 @@
           "cue": "Light intensity falls off with distance",
           "heading": "Inverse-square law",
           "diagram": "inverse_square",
-          "estimated_t": 49.19,
+          "t": 49.36,
+          "t_end": 83.851,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1190,7 +1996,12 @@
           "cue": "The inverse-square approximation for a lamp",
           "heading": "Treat the lamp as a point source",
           "diagram": null,
-          "estimated_t": 83.0,
+          "t": 83.851,
+          "t_end": 93.881,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1200,7 +2011,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 92.97,
+          "t": 93.881,
+          "t_end": 105.671,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 96.081
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 100.656
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 101.976
+            }
+          ],
           "items": []
         },
         {
@@ -1210,7 +2042,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 105.14,
+          "t": 105.671,
+          "t_end": 119.661,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 105.935
+            }
+          ],
           "items": []
         },
         {
@@ -1220,7 +2063,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 119.81,
+          "t": 119.661,
+          "t_end": 133.387,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 119.781
+            }
+          ],
           "items": []
         },
         {
@@ -1230,7 +2084,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 133.62,
+          "t": 133.387,
+          "t_end": 144.649,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1241,9 +2100,11 @@
       "model_answer": "Doubling the distance reduces the light intensity to a quarter, so the rate of photosynthesis falls, because light is limiting the rate.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "4-2-respiration",
@@ -1258,6 +2119,12 @@
       "description": "Aerobic and anaerobic respiration, fermentation, and the difference between respiration and breathing.",
       "chars": 1821,
       "estimated_duration_s": 129.6,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 10,
       "slides": [
         {
@@ -1267,7 +2134,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.255,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1277,7 +2149,12 @@
           "cue": "Respiration releases energy from glucose",
           "heading": "Aerobic respiration",
           "diagram": "aerobic",
-          "estimated_t": 5.48,
+          "t": 5.255,
+          "t_end": 15.941,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1287,7 +2164,12 @@
           "cue": "When oxygen is in short supply",
           "heading": "Anaerobic respiration",
           "diagram": "anaerobic",
-          "estimated_t": 15.95,
+          "t": 15.941,
+          "t_end": 35.648,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1297,7 +2179,12 @@
           "cue": "In yeast and plants, anaerobic respiration produces ethanol",
           "heading": "Fermentation",
           "diagram": null,
-          "estimated_t": 35.52,
+          "t": 35.648,
+          "t_end": 51.238,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1307,7 +2194,12 @@
           "cue": "Respiration is a chemical process in cells",
           "heading": "Respiration is not breathing",
           "diagram": "breathe_vs_resp",
-          "estimated_t": 51.11,
+          "t": 51.238,
+          "t_end": 70.508,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1317,7 +2209,12 @@
           "cue": "anaerobic respiration in muscle cells produces lactate",
           "heading": "Lactate and recovery",
           "diagram": null,
-          "estimated_t": 70.26,
+          "t": 70.508,
+          "t_end": 85.835,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1327,7 +2224,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 85.28,
+          "t": 85.835,
+          "t_end": 97.572,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 88.025
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 92.58
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 93.893
+            }
+          ],
           "items": []
         },
         {
@@ -1337,7 +2255,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 97.45,
+          "t": 97.572,
+          "t_end": 106.769,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 97.835
+            }
+          ],
           "items": []
         },
         {
@@ -1347,7 +2276,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 106.85,
+          "t": 106.769,
+          "t_end": 118.418,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 106.889
+            }
+          ],
           "items": []
         },
         {
@@ -1357,7 +2297,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 118.6,
+          "t": 118.418,
+          "t_end": 129.629,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1368,9 +2313,11 @@
       "model_answer": "Oxygen supply cannot keep up with demand, so the muscles respire anaerobically, which produces lactic acid.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "5-1-homeostasis",
@@ -1385,6 +2332,12 @@
       "description": "Keeping internal conditions stable, with receptors, coordinators, effectors and blood glucose control.",
       "chars": 1751,
       "estimated_duration_s": 124.6,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -1394,7 +2347,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.282,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1404,7 +2362,28 @@
           "cue": "Homeostasis means keeping conditions inside the body",
           "heading": "What is kept in range",
           "diagram": null,
-          "estimated_t": 5.48,
+          "t": 5.282,
+          "t_end": 16.285,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Temperature, ion content",
+              "t": 10.651
+            },
+            {
+              "id": "b2",
+              "cue": "water content",
+              "t": 12.5
+            },
+            {
+              "id": "b3",
+              "cue": "blood glucose",
+              "t": 13.82
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -1430,7 +2409,12 @@
           "cue": "Control systems have three parts",
           "heading": "Receptor, coordinator, effector",
           "diagram": "control_loop",
-          "estimated_t": 16.37,
+          "t": 16.285,
+          "t_end": 35.651,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1440,7 +2424,12 @@
           "cue": "when blood glucose rises, insulin is released",
           "heading": "Negative feedback",
           "diagram": "glucose_fb",
-          "estimated_t": 35.52,
+          "t": 35.651,
+          "t_end": 66.636,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1450,7 +2439,12 @@
           "cue": "The nervous and endocrine systems both contribute",
           "heading": "Two coordinating systems",
           "diagram": null,
-          "estimated_t": 66.34,
+          "t": 66.636,
+          "t_end": 73.854,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1460,7 +2454,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 73.25,
+          "t": 73.854,
+          "t_end": 85.65,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 76.055
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 80.633
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 81.953
+            }
+          ],
           "items": []
         },
         {
@@ -1470,7 +2485,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 85.42,
+          "t": 85.65,
+          "t_end": 95.773,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 85.914
+            }
+          ],
           "items": []
         },
         {
@@ -1480,7 +2506,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 95.89,
+          "t": 95.773,
+          "t_end": 113.378,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 95.893
+            }
+          ],
           "items": []
         },
         {
@@ -1490,7 +2527,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 113.61,
+          "t": 113.378,
+          "t_end": 124.646,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1501,9 +2543,11 @@
       "model_answer": "Receptors detect a change in the internal or external environment. The coordinator, such as the brain, processes the information. Effectors, such as muscles or glands, bring about a response.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "5-2-the-nervous-system",
@@ -1518,6 +2562,12 @@
       "description": "The pathway of a reflex arc, synapses and how the eye controls light.",
       "chars": 1915,
       "estimated_duration_s": 136.3,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -1527,7 +2577,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 12.691,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1537,7 +2592,12 @@
           "cue": "In a conscious action, a stimulus is detected",
           "heading": "A conscious action",
           "diagram": "conscious",
-          "estimated_t": 13.1,
+          "t": 12.691,
+          "t_end": 27.779,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1547,7 +2607,12 @@
           "cue": "In many spinal reflexes",
           "heading": "A reflex arc",
           "diagram": "reflex",
-          "estimated_t": 28.26,
+          "t": 27.779,
+          "t_end": 46.416,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1557,7 +2622,12 @@
           "cue": "Neurones don't touch at synapses",
           "heading": "Chemical synapses",
           "diagram": "synapse",
-          "estimated_t": 46.77,
+          "t": 46.416,
+          "t_end": 52.629,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1567,7 +2637,12 @@
           "cue": "Eyes focus light using the lens and cornea",
           "heading": "Focusing light",
           "diagram": "eye",
-          "estimated_t": 52.75,
+          "t": 52.629,
+          "t_end": 95.406,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1577,7 +2652,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 94.82,
+          "t": 95.406,
+          "t_end": 107.299,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 97.625
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 102.24
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 103.572
+            }
+          ],
           "items": []
         },
         {
@@ -1587,7 +2683,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 106.99,
+          "t": 107.299,
+          "t_end": 114.932,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 107.565
+            }
+          ],
           "items": []
         },
         {
@@ -1597,7 +2704,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 115.11,
+          "t": 114.932,
+          "t_end": 124.96,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 115.052
+            }
+          ],
           "items": []
         },
         {
@@ -1607,7 +2725,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 125.29,
+          "t": 124.96,
+          "t_end": 136.32,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1618,9 +2741,11 @@
       "model_answer": "Receptor, sensory neurone, relay neurone in the spinal cord, motor neurone, effector.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "5-3-hormonal-coordination",
@@ -1635,6 +2760,12 @@
       "description": "Hormone action, type 1 and type 2 diabetes, the menstrual cycle and ADH.",
       "chars": 1917,
       "estimated_duration_s": 136.5,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -1644,7 +2775,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.012,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1654,7 +2790,12 @@
           "cue": "Hormones are chemical messengers",
           "heading": "Endocrine glands",
           "diagram": "glands",
-          "estimated_t": 5.27,
+          "t": 5.012,
+          "t_end": 29.631,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1664,7 +2805,12 @@
           "cue": "In type 1 diabetes, the pancreas does not make enough insulin",
           "heading": "Type 1 and type 2 diabetes",
           "diagram": "diabetes",
-          "estimated_t": 29.61,
+          "t": 29.631,
+          "t_end": 42.469,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1674,7 +2820,12 @@
           "cue": "The menstrual cycle involves FSH",
           "heading": "The menstrual cycle",
           "diagram": "menstrual",
-          "estimated_t": 42.92,
+          "t": 42.469,
+          "t_end": 53.635,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1684,7 +2835,12 @@
           "cue": "When water is low, ADH is released",
           "heading": "ADH and water balance",
           "diagram": null,
-          "estimated_t": 54.1,
+          "t": 53.635,
+          "t_end": 95.577,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1694,7 +2850,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 94.89,
+          "t": 95.577,
+          "t_end": 107.359,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 97.775
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 102.347
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 103.666
+            }
+          ],
           "items": []
         },
         {
@@ -1704,7 +2881,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 107.06,
+          "t": 107.359,
+          "t_end": 117.207,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 107.623
+            }
+          ],
           "items": []
         },
         {
@@ -1714,7 +2902,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 117.17,
+          "t": 117.207,
+          "t_end": 125.208,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 117.327
+            }
+          ],
           "items": []
         },
         {
@@ -1724,7 +2923,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 125.43,
+          "t": 125.208,
+          "t_end": 136.463,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1735,9 +2939,11 @@
       "model_answer": "LH (luteinising hormone), produced by the pituitary gland.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "5-4-plant-hormones",
@@ -1752,6 +2958,12 @@
       "description": "Phototropism and geotropism, with auxin redistribution rather than simple destruction by light.",
       "chars": 1655,
       "estimated_duration_s": 117.8,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -1761,7 +2973,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.517,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1771,27 +2988,43 @@
           "cue": "Plants respond to light and gravity by growth",
           "heading": "Phototropism and geotropism",
           "diagram": "tropisms",
-          "estimated_t": 5.69,
-          "items": []
-        },
-        {
-          "id": "auxin",
-          "page": 3,
-          "kind": "diagram",
-          "cue": "auxin is redistributed so that more accumulates",
-          "heading": "Auxin is redistributed",
-          "diagram": "auxin",
-          "estimated_t": 45.27,
+          "t": 5.517,
+          "t_end": 28.296,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
           "id": "uses",
-          "page": 4,
+          "page": 3,
           "kind": "bullets",
           "cue": "Ethene helps fruit ripen",
           "heading": "Uses of plant hormones",
           "diagram": null,
-          "estimated_t": 28.4,
+          "t": 28.296,
+          "t_end": 45.47,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Ethene helps fruit ripen",
+              "t": 28.416
+            },
+            {
+              "id": "b2",
+              "cue": "Gibberellins help seeds germinate",
+              "t": 30.165
+            },
+            {
+              "id": "b3",
+              "cue": "Auxins are used as weedkillers",
+              "t": 32.834
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -1811,13 +3044,33 @@
           ]
         },
         {
+          "id": "auxin",
+          "page": 4,
+          "kind": "diagram",
+          "cue": "auxin is redistributed so that more accumulates",
+          "heading": "Auxin is redistributed",
+          "diagram": "auxin",
+          "t": 45.47,
+          "t_end": 65.046,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
+          "items": []
+        },
+        {
           "id": "roots",
           "page": 5,
           "kind": "note",
           "cue": "In roots, higher auxin concentrations can inhibit",
           "heading": "Roots respond differently",
           "diagram": null,
-          "estimated_t": 64.71,
+          "t": 65.046,
+          "t_end": 73.855,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1827,7 +3080,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 73.11,
+          "t": 73.855,
+          "t_end": 85.779,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 76.08
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 80.707
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 82.041
+            }
+          ],
           "items": []
         },
         {
@@ -1837,7 +3111,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 85.28,
+          "t": 85.779,
+          "t_end": 93.698,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 86.046
+            }
+          ],
           "items": []
         },
         {
@@ -1847,7 +3132,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 93.54,
+          "t": 93.698,
+          "t_end": 106.422,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 93.818
+            }
+          ],
           "items": []
         },
         {
@@ -1857,7 +3153,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 106.78,
+          "t": 106.422,
+          "t_end": 117.812,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -1868,9 +3169,11 @@
       "model_answer": "Auxin accumulates on the shaded side, promoting greater cell elongation there, so the shoot bends towards the light.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "6-1-reproduction",
@@ -1885,6 +3188,12 @@
       "description": "Sexual and asexual reproduction, DNA, dominance, and a cystic fibrosis Punnett square.",
       "chars": 2081,
       "estimated_duration_s": 148.1,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -1894,7 +3203,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.408,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -1904,7 +3218,12 @@
           "cue": "Human egg and sperm cells each have 23 chromosomes",
           "heading": "Meiosis and fertilisation",
           "diagram": "meiosis",
-          "estimated_t": 5.55,
+          "t": 5.408,
+          "t_end": 33.51,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1914,7 +3233,12 @@
           "cue": "Genes are sections of DNA on chromosomes",
           "heading": "DNA and base pairing",
           "diagram": "dna",
-          "estimated_t": 33.1,
+          "t": 33.51,
+          "t_end": 48.758,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1924,7 +3248,28 @@
           "cue": "Dominant alleles show up even when only one copy",
           "heading": "Alleles",
           "diagram": null,
-          "estimated_t": 48.98,
+          "t": 48.758,
+          "t_end": 81.294,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Cystic fibrosis is recessive",
+              "t": 57.269
+            },
+            {
+              "id": "b2",
+              "cue": "X and Y chromosomes",
+              "t": 63.12
+            },
+            {
+              "id": "b3",
+              "cue": "not mean it is necessarily more common",
+              "t": 90.779
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -1950,7 +3295,12 @@
           "cue": "always define the allele symbols before completing a Punnett square",
           "heading": "Punnett square",
           "diagram": "punnett",
-          "estimated_t": 80.15,
+          "t": 81.294,
+          "t_end": 94.946,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -1960,7 +3310,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 93.54,
+          "t": 94.946,
+          "t_end": 106.825,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 97.162
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 101.772
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 103.102
+            }
+          ],
           "items": []
         },
         {
@@ -1970,7 +3341,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 105.71,
+          "t": 106.825,
+          "t_end": 125.797,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 107.091
+            }
+          ],
           "items": []
         },
         {
@@ -1980,7 +3362,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 125.36,
+          "t": 125.797,
+          "t_end": 136.79,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 125.917
+            }
+          ],
           "items": []
         },
         {
@@ -1990,7 +3383,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 137.1,
+          "t": 136.79,
+          "t_end": 148.137,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2001,9 +3399,11 @@
       "model_answer": "Parents FF \u00d7 Ff gives offspring FF, Ff, FF, Ff. The child has cystic fibrosis only if ff. Probability = 0%.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "6-2-variation-and-evolution",
@@ -2018,6 +3418,12 @@
       "description": "Sources of variation, natural selection, selective breeding and producing insulin in bacteria.",
       "chars": 1998,
       "estimated_duration_s": 142.2,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2027,7 +3433,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.115,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2037,7 +3448,12 @@
           "cue": "Variation is the difference between individuals",
           "heading": "Where variation comes from",
           "diagram": "variation",
-          "estimated_t": 6.34,
+          "t": 6.115,
+          "t_end": 26.035,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2047,7 +3463,12 @@
           "cue": "Natural selection drives evolution",
           "heading": "Natural selection",
           "diagram": "selection",
-          "estimated_t": 26.27,
+          "t": 26.035,
+          "t_end": 37.392,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2057,7 +3478,12 @@
           "cue": "Selective breeding chooses parents with desired traits",
           "heading": "Selective breeding",
           "diagram": null,
-          "estimated_t": 37.51,
+          "t": 37.392,
+          "t_end": 45.866,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2067,7 +3493,12 @@
           "cue": "Genetic engineering moves a gene from one organism",
           "heading": "Genetic engineering for insulin",
           "diagram": "ge_insulin",
-          "estimated_t": 45.84,
+          "t": 45.866,
+          "t_end": 95.576,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2077,7 +3508,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 94.61,
+          "t": 95.576,
+          "t_end": 107.283,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 97.76
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 102.303
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 103.614
+            }
+          ],
           "items": []
         },
         {
@@ -2087,7 +3539,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 106.78,
+          "t": 107.283,
+          "t_end": 117.417,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 107.545
+            }
+          ],
           "items": []
         },
         {
@@ -2097,7 +3560,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 117.17,
+          "t": 117.417,
+          "t_end": 131.046,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 117.537
+            }
+          ],
           "items": []
         },
         {
@@ -2107,7 +3581,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 131.19,
+          "t": 131.046,
+          "t_end": 142.229,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2118,9 +3597,11 @@
       "model_answer": "Identify and cut out the human insulin gene. Insert it into a plasmid. Put the plasmid into bacteria, which then clone and produce insulin.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "6-3-genetics-and-evolution",
@@ -2135,7 +3616,13 @@
       "description": "How ideas about evolution developed, including antibiotic resistance as natural selection.",
       "chars": 1955,
       "estimated_duration_s": 139.2,
-      "slide_count": 9,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
+      "slide_count": 10,
       "slides": [
         {
           "id": "intro",
@@ -2144,7 +3631,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 7.635,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2154,18 +3646,60 @@
           "cue": "Charles Darwin and Alfred Wallace proposed natural selection",
           "heading": "Changing ideas",
           "diagram": "ideas",
-          "estimated_t": 7.83,
+          "t": 7.635,
+          "t_end": 18.914,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
-          "id": "resist",
+          "id": "history",
           "page": 3,
-          "kind": "diagram",
-          "cue": "Antibiotics do not create purposeful resistance",
-          "heading": "Antibiotic resistance is selection",
-          "diagram": "resistance",
-          "estimated_t": 63.78,
-          "items": []
+          "kind": "bullets",
+          "cue": "Lamarck proposed that characteristics acquired",
+          "heading": "Lamarck and Mendel",
+          "diagram": null,
+          "t": 18.914,
+          "t_end": 48.414,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "Lamarck proposed",
+              "t": 19.034
+            },
+            {
+              "id": "b2",
+              "cue": "Mendel's pea plant experiments",
+              "t": 26.723
+            },
+            {
+              "id": "b3",
+              "cue": "Chromosomes were later found",
+              "t": 33.664
+            }
+          ],
+          "items": [
+            {
+              "id": "b1",
+              "title": "Lamarck",
+              "body": "Acquired characteristics during life are not inherited"
+            },
+            {
+              "id": "b2",
+              "title": "Mendel",
+              "body": "Traits are inherited as units, which we now call genes"
+            },
+            {
+              "id": "b3",
+              "title": "Chromosomes",
+              "body": "Later found to carry those genes"
+            }
+          ]
         },
         {
           "id": "spec",
@@ -2174,57 +3708,130 @@
           "cue": "Speciation occurs when populations become geographically isolated",
           "heading": "Speciation and extinction",
           "diagram": "speciation",
-          "estimated_t": 48.41,
+          "t": 48.414,
+          "t_end": 63.771,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
+          "items": []
+        },
+        {
+          "id": "resist",
+          "page": 5,
+          "kind": "diagram",
+          "cue": "Antibiotics do not create purposeful resistance",
+          "heading": "Antibiotic resistance is selection",
+          "diagram": "resistance",
+          "t": 63.771,
+          "t_end": 84.073,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
           "id": "evidence",
-          "page": 5,
+          "page": 6,
           "kind": "note",
           "cue": "Fossils, comparative anatomy and DNA sequences",
           "heading": "Lines of evidence",
           "diagram": null,
-          "estimated_t": 83.36,
+          "t": 84.073,
+          "t_end": 91.275,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
           "id": "revise",
-          "page": 6,
+          "page": 7,
           "kind": "revise",
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 90.41,
+          "t": 91.275,
+          "t_end": 102.901,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 93.444
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 97.955
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 99.257
+            }
+          ],
           "items": []
         },
         {
           "id": "exam",
-          "page": 7,
+          "page": 8,
           "kind": "exam",
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 102.58,
+          "t": 102.901,
+          "t_end": 110.883,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 103.161
+            }
+          ],
           "items": []
         },
         {
           "id": "answer",
-          "page": 8,
+          "page": 9,
           "kind": "answer",
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 110.84,
+          "t": 110.883,
+          "t_end": 128.062,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 111.003
+            }
+          ],
           "items": []
         },
         {
           "id": "outro",
-          "page": 9,
+          "page": 10,
           "kind": "outro",
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 128.13,
+          "t": 128.062,
+          "t_end": 139.168,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2235,9 +3842,11 @@
       "model_answer": "A random mutation gives some bacteria resistance. When antibiotics are used, the non-resistant bacteria die and the resistant ones survive and reproduce, passing on the resistance gene.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "6-4-classification",
@@ -2252,6 +3861,12 @@
       "description": "The classification hierarchy, three-domain system, and how the domestic dog is named.",
       "chars": 1662,
       "estimated_duration_s": 118.3,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2261,7 +3876,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 9.149,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2271,7 +3891,12 @@
           "cue": "Organisms are placed into groups from kingdom down to species",
           "heading": "The classification hierarchy",
           "diagram": "ranks",
-          "estimated_t": 9.11,
+          "t": 9.149,
+          "t_end": 19.097,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2281,7 +3906,12 @@
           "cue": "A dog is Animalia, Chordata, Mammalia",
           "heading": "Naming the domestic dog",
           "diagram": null,
-          "estimated_t": 19.29,
+          "t": 19.097,
+          "t_end": 30.377,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2291,7 +3921,12 @@
           "cue": "Carl Woese later proposed three domains",
           "heading": "Three domains",
           "diagram": "domains",
-          "estimated_t": 30.89,
+          "t": 30.377,
+          "t_end": 40.059,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2301,7 +3936,12 @@
           "cue": "Evolutionary trees use classification and fossil data",
           "heading": "Evolutionary trees",
           "diagram": "tree",
-          "estimated_t": 40.43,
+          "t": 40.059,
+          "t_end": 77.186,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2311,7 +3951,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 76.67,
+          "t": 77.186,
+          "t_end": 89.088,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 79.407
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 84.025
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 85.358
+            }
+          ],
           "items": []
         },
         {
@@ -2321,7 +3982,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 88.84,
+          "t": 89.088,
+          "t_end": 100.813,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 89.355
+            }
+          ],
           "items": []
         },
         {
@@ -2331,7 +4003,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 100.87,
+          "t": 100.813,
+          "t_end": 106.941,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 100.933
+            }
+          ],
           "items": []
         },
         {
@@ -2341,7 +4024,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 107.28,
+          "t": 106.941,
+          "t_end": 118.31,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2352,9 +4040,11 @@
       "model_answer": "Kingdom, phylum, genus, species.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "7-1-adaptations-interdependence",
@@ -2369,6 +4059,12 @@
       "description": "How organisms compete and adapt, including abiotic and biotic factors.",
       "chars": 1702,
       "estimated_duration_s": 121.2,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2378,7 +4074,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.206,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2388,17 +4089,27 @@
           "cue": "An ecosystem is all the living things in an area",
           "heading": "Ecosystems",
           "diagram": "ecosystem",
-          "estimated_t": 5.41,
+          "t": 5.206,
+          "t_end": 14.384,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
           "id": "adapt",
           "page": 3,
           "kind": "diagram",
-          "cue": "A structural adaptation is a physical feature",
+          "cue": "Organisms are adapted to their habitats",
           "heading": "Three kinds of adaptation",
           "diagram": "adapt_types",
-          "estimated_t": 49.12,
+          "t": 14.384,
+          "t_end": 29.12,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2408,7 +4119,12 @@
           "cue": "Abiotic factors include temperature",
           "heading": "Abiotic and biotic factors",
           "diagram": "factors",
-          "estimated_t": 29.4,
+          "t": 29.12,
+          "t_end": 41.739,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2418,7 +4134,12 @@
           "cue": "Organisms in extreme places are called extremophiles",
           "heading": "Extremophiles",
           "diagram": null,
-          "estimated_t": 42.0,
+          "t": 41.739,
+          "t_end": 76.86,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2428,7 +4149,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 76.31,
+          "t": 76.86,
+          "t_end": 88.684,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 79.066
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 83.654
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 84.978
+            }
+          ],
           "items": []
         },
         {
@@ -2438,7 +4180,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 88.48,
+          "t": 88.684,
+          "t_end": 99.538,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 88.949
+            }
+          ],
           "items": []
         },
         {
@@ -2448,7 +4201,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 99.59,
+          "t": 99.538,
+          "t_end": 109.863,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 99.658
+            }
+          ],
           "items": []
         },
         {
@@ -2458,7 +4222,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 110.12,
+          "t": 109.863,
+          "t_end": 121.158,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2469,9 +4238,11 @@
       "model_answer": "Abiotic: for example, light intensity. Biotic: for example, competition from other plants.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "7-2-organisation-of-an-ecosystem",
@@ -2486,6 +4257,12 @@
       "description": "Energy flow in food chains and how carbon and water cycle through ecosystems.",
       "chars": 1795,
       "estimated_duration_s": 127.8,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2495,7 +4272,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 7.97,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2505,7 +4287,12 @@
           "cue": "A food chain shows what eats what",
           "heading": "Food chains",
           "diagram": "food_chain",
-          "estimated_t": 8.12,
+          "t": 7.97,
+          "t_end": 28.201,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2515,7 +4302,12 @@
           "cue": "Carbon moves between air, plants, animals",
           "heading": "The carbon cycle",
           "diagram": "carbon",
-          "estimated_t": 28.33,
+          "t": 28.201,
+          "t_end": 35.207,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2525,7 +4317,12 @@
           "cue": "Water moves through evaporation, condensation",
           "heading": "The water cycle",
           "diagram": "water",
-          "estimated_t": 35.31,
+          "t": 35.207,
+          "t_end": 40.462,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2535,7 +4332,12 @@
           "cue": "Decomposers break down dead matter",
           "heading": "Decay",
           "diagram": null,
-          "estimated_t": 40.43,
+          "t": 40.462,
+          "t_end": 82.675,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2545,7 +4347,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 82.08,
+          "t": 82.675,
+          "t_end": 94.41,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 84.864
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 89.418
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 90.732
+            }
+          ],
           "items": []
         },
         {
@@ -2555,7 +4378,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 94.25,
+          "t": 94.41,
+          "t_end": 103.869,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 94.673
+            }
+          ],
           "items": []
         },
         {
@@ -2565,7 +4399,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 104.07,
+          "t": 103.869,
+          "t_end": 116.568,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 103.989
+            }
+          ],
           "items": []
         },
         {
@@ -2575,7 +4420,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 116.74,
+          "t": 116.568,
+          "t_end": 127.778,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2586,9 +4436,11 @@
       "model_answer": "Respiration by plants and animals releases carbon dioxide. Decomposers also release it when they break down dead matter.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "7-3-biodiversity",
@@ -2603,6 +4455,12 @@
       "description": "How human activity reduces biodiversity and how deforestation contributes to global warming.",
       "chars": 1908,
       "estimated_duration_s": 135.8,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2612,7 +4470,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 6.526,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2622,7 +4485,12 @@
           "cue": "Biodiversity is the variety of life",
           "heading": "Biodiversity",
           "diagram": "biodiversity",
-          "estimated_t": 6.76,
+          "t": 6.526,
+          "t_end": 14.705,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2632,7 +4500,28 @@
           "cue": "Growing population creates pollution",
           "heading": "Human impact",
           "diagram": null,
-          "estimated_t": 14.88,
+          "t": 14.705,
+          "t_end": 30.888,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "b1",
+              "cue": "pollution in water, land, and air",
+              "t": 16.793
+            },
+            {
+              "id": "b2",
+              "cue": "Land is lost to quarrying",
+              "t": 19.055
+            },
+            {
+              "id": "b3",
+              "cue": "Deforestation for cattle",
+              "t": 22.623
+            }
+          ],
           "items": [
             {
               "id": "b1",
@@ -2658,7 +4547,12 @@
           "cue": "Burning fossil fuels adds carbon dioxide",
           "heading": "Deforestation and global warming",
           "diagram": "greenhouse",
-          "estimated_t": 31.39,
+          "t": 30.888,
+          "t_end": 69.521,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2668,7 +4562,12 @@
           "cue": "Conservation measures include habitat protection",
           "heading": "What we can do",
           "diagram": null,
-          "estimated_t": 69.62,
+          "t": 69.521,
+          "t_end": 85.269,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2678,7 +4577,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 84.78,
+          "t": 85.269,
+          "t_end": 96.929,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 87.445
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 91.969
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 93.274
+            }
+          ],
           "items": []
         },
         {
@@ -2688,7 +4608,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 96.95,
+          "t": 96.929,
+          "t_end": 105.63,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 97.19
+            }
+          ],
           "items": []
         },
         {
@@ -2698,7 +4629,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 105.92,
+          "t": 105.63,
+          "t_end": 124.685,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 105.75
+            }
+          ],
           "items": []
         },
         {
@@ -2708,7 +4650,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 124.79,
+          "t": 124.685,
+          "t_end": 135.822,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2719,9 +4666,11 @@
       "model_answer": "Deforestation removes trees that absorb carbon dioxide. Burning or decay of the wood adds carbon dioxide to the atmosphere. Increased carbon dioxide strengthens the greenhouse effect, causing global warming.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "7-4-trophic-levels",
@@ -2736,6 +4685,12 @@
       "description": "Trophic levels and percentage biomass transfer using the cabbage\u2013rabbit\u2013stoat\u2013fox example.",
       "chars": 1733,
       "estimated_duration_s": 123.4,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 8,
       "slides": [
         {
@@ -2745,7 +4700,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 5.603,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2755,7 +4715,12 @@
           "cue": "Level 1 is producers",
           "heading": "Trophic levels",
           "diagram": "trophic",
-          "estimated_t": 5.69,
+          "t": 5.603,
+          "t_end": 15.545,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2765,7 +4730,12 @@
           "cue": "Biomass decreases at each level",
           "heading": "A biomass pyramid",
           "diagram": "pyramid",
-          "estimated_t": 15.52,
+          "t": 15.545,
+          "t_end": 30.909,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2775,7 +4745,12 @@
           "cue": "Efficiency equals biomass transferred divided by biomass available",
           "heading": "Percentage biomass transfer",
           "diagram": "biomass_calc",
-          "estimated_t": 30.89,
+          "t": 30.909,
+          "t_end": 74.832,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2785,7 +4760,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 74.53,
+          "t": 74.832,
+          "t_end": 86.943,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 77.092
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 81.791
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 83.147
+            }
+          ],
           "items": []
         },
         {
@@ -2795,7 +4791,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 86.7,
+          "t": 86.943,
+          "t_end": 104.205,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 87.214
+            }
+          ],
           "items": []
         },
         {
@@ -2805,7 +4812,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 104.14,
+          "t": 104.205,
+          "t_end": 111.796,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 104.325
+            }
+          ],
           "items": []
         },
         {
@@ -2815,7 +4833,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 112.33,
+          "t": 111.796,
+          "t_end": 123.365,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2826,9 +4849,11 @@
       "model_answer": "Percentage biomass transfer = (0.45 \u00f7 3.2) \u00d7 100 = 14.1%.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     },
     {
       "slug": "7-5-food-production",
@@ -2843,6 +4868,12 @@
       "description": "Food security, efficient food chains, mycoprotein from Fusarium, and fishing quotas.",
       "chars": 1809,
       "estimated_duration_s": 128.8,
+      "fps": 30,
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "transition_s": 0.4,
       "slide_count": 9,
       "slides": [
         {
@@ -2852,7 +4883,12 @@
           "cue": "Hello and welcome back to JD Science",
           "heading": "intro",
           "diagram": null,
-          "estimated_t": 0.0,
+          "t": 0.0,
+          "t_end": 9.098,
+          "aligned": true,
+          "animate": true,
+          "transition_in_s": 0.0,
+          "highlights": [],
           "items": []
         },
         {
@@ -2862,7 +4898,12 @@
           "cue": "Food security means having enough food for everyone",
           "heading": "Food security",
           "diagram": null,
-          "estimated_t": 9.33,
+          "t": 9.098,
+          "t_end": 12.947,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2872,27 +4913,42 @@
           "cue": "Food chains are inefficient",
           "heading": "Making food chains more efficient",
           "diagram": "food_eff",
-          "estimated_t": 13.17,
-          "items": []
-        },
-        {
-          "id": "myco",
-          "page": 4,
-          "kind": "diagram",
-          "cue": "Mycoprotein comes from the fungus Fusarium",
-          "heading": "Mycoprotein",
-          "diagram": "mycoprotein",
-          "estimated_t": 33.88,
+          "t": 12.947,
+          "t_end": 23.533,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
           "id": "fish",
-          "page": 5,
+          "page": 4,
           "kind": "note",
-          "cue": "Sustainable fishing requires monitoring stocks",
+          "cue": "Sustainable development means not using resources",
           "heading": "Sustainable fishing",
           "diagram": null,
-          "estimated_t": 76.88,
+          "t": 23.533,
+          "t_end": 33.768,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
+          "items": []
+        },
+        {
+          "id": "myco",
+          "page": 5,
+          "kind": "diagram",
+          "cue": "Mycoprotein comes from the fungus Fusarium",
+          "heading": "Mycoprotein",
+          "diagram": "mycoprotein",
+          "t": 33.768,
+          "t_end": 85.471,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         },
         {
@@ -2902,7 +4958,28 @@
           "cue": "As you revise this topic",
           "heading": "revise",
           "diagram": null,
-          "estimated_t": 84.71,
+          "t": 85.471,
+          "t_end": 97.193,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "r1",
+              "cue": "explain the key process",
+              "t": 87.658
+            },
+            {
+              "id": "r2",
+              "cue": "why it happens",
+              "t": 92.207
+            },
+            {
+              "id": "r3",
+              "cue": "how the structures involved",
+              "t": 93.519
+            }
+          ],
           "items": []
         },
         {
@@ -2912,7 +4989,18 @@
           "cue": "Now, pause the video",
           "heading": "exam",
           "diagram": null,
-          "estimated_t": 96.88,
+          "t": 97.193,
+          "t_end": 107.079,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "pause",
+              "cue": "pause the video",
+              "t": 97.456
+            }
+          ],
           "items": []
         },
         {
@@ -2922,7 +5010,18 @@
           "cue": "Here is a model answer",
           "heading": "answer",
           "diagram": null,
-          "estimated_t": 106.92,
+          "t": 107.079,
+          "t_end": 117.577,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [
+            {
+              "id": "model",
+              "cue": "Here is a model answer",
+              "t": 107.199
+            }
+          ],
           "items": []
         },
         {
@@ -2932,7 +5031,12 @@
           "cue": "please subscribe to JD Science",
           "heading": "outro",
           "diagram": null,
-          "estimated_t": 117.74,
+          "t": 117.577,
+          "t_end": 128.775,
+          "aligned": true,
+          "animate": false,
+          "transition_in_s": 0.4,
+          "highlights": [],
           "items": []
         }
       ],
@@ -2943,9 +5047,11 @@
       "model_answer": "They stop fish being caught faster than they can breed and be replaced, so stocks can recover.",
       "opening": true,
       "close_jdscience_co_uk": true,
-      "narration": "missing",
+      "gcse_spoken_as": "G C S E",
+      "narration": "ready_for_cloned_voice",
       "mp4": "not_rendered",
-      "publication": "not_live"
+      "publication": "not_live",
+      "sync": "cues match teaching-edition script via production aligner; swap fake clock for cloned-voice word times after TTS"
     }
   ]
 }

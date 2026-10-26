@@ -109,12 +109,12 @@ test("remaining 23 lessons stay unpublished until cloned-voice MP4s exist", () =
     assert.doesNotMatch(indexHtml, new RegExp(item.slug));
   }
   const boards = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/storyboards.json"), "utf8"));
-  assert.equal(boards.remaining_without_narration.length, 23);
+  assert.equal(boards.remaining_ready_for_cloned_voice.length, 23);
   assert.equal(boards.lessons.length, 23);
   assert.equal(boards.lessons[0].slug, "1-3-transport-in-cells");
   assert.equal(boards.lessons.at(-1).slug, "7-5-food-production");
   for (const lesson of boards.lessons) {
-    assert.equal(lesson.narration, "missing");
+    assert.equal(lesson.narration, "ready_for_cloned_voice");
     assert.equal(lesson.mp4, "not_rendered");
     assert.equal(lesson.publication, "not_live");
     assert.equal(lesson.opening, true);
@@ -123,10 +123,26 @@ test("remaining 23 lessons stay unpublished until cloned-voice MP4s exist", () =
     assert.ok(lesson.exam.question);
     assert.ok(lesson.model_answer);
     assert.ok(lesson.slide_count >= 8);
+    assert.ok(lesson.slides.every((slide) => slide.aligned === true));
+    assert.equal(lesson.transition_s, 0.4);
+    assert.deepEqual(lesson.frame_size, [1920, 1080]);
   }
   const status = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/production-status.json"), "utf8"));
   assert.equal(status.cloned_voice_can_generate_without_extra_credits, false);
+  assert.equal(status.elevenlabs_calls_this_run, 0);
   assert.deepEqual(status.hosted_live, GCSE_BIOLOGY_HOSTED_SLUGS);
+  const youtube = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/youtube-metadata.json"), "utf8"));
+  assert.equal(youtube.length, 23);
+  for (const row of youtube) {
+    assert.ok(row.youtube_title.length <= 100, row.youtube_title);
+    assert.equal(row.privacy, "unlisted");
+    assert.match(row.description, /jdscience\.co\.uk/);
+    assert.match(row.description, /Unlisted/);
+    assert.ok(row.tags.includes("GCSE Biology"));
+    assert.ok(row.tags.includes("JD Science"));
+    assert.ok(existsSync(join(ROOT, row.thumbnail)), row.thumbnail);
+  }
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/PRODUCTION_REGISTER.md")));
 });
 
 test("Vercel Hobby still has exactly 12 top-level API files", () => {

@@ -1,0 +1,111 @@
+{
+  "slug": "4-1-photosynthesis",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 144.649,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.543,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "eq",
+      "t": 5.543,
+      "t_end": 24.548,
+      "cue": "Plants use carbon dioxide and water",
+      "animate": false
+    },
+    {
+      "id": "glucose",
+      "t": 24.548,
+      "t_end": 38.01,
+      "cue": "Glucose can be used for respiration",
+      "animate": false
+    },
+    {
+      "id": "limit",
+      "t": 38.01,
+      "t_end": 49.36,
+      "cue": "The rate of photosynthesis depends on temperature",
+      "animate": false
+    },
+    {
+      "id": "inv",
+      "t": 49.36,
+      "t_end": 83.851,
+      "cue": "Light intensity falls off with distance",
+      "animate": false
+    },
+    {
+      "id": "caveat",
+      "t": 83.851,
+      "t_end": 93.881,
+      "cue": "The inverse-square approximation for a lamp",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 93.881,
+      "t_end": 105.671,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 105.671,
+      "t_end": 119.661,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 119.661,
+      "t_end": 133.387,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 133.387,
+      "t_end": 144.649,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 96.081,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 100.656,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 101.976,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 105.935,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 119.781,
+      "cue": "Here is a model answer"
+    }
+  ]
+}
