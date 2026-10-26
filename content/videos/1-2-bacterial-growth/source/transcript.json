@@ -1,0 +1,1531 @@
+{
+  "slug": "1-2-bacterial-growth",
+  "title": "Bacterial Growth",
+  "audio": "/workspace/content/videos/1-2-bacterial-growth/source/narration_master.mp3",
+  "duration": 118.047,
+  "full_text": "Hello and welcome back to JD Science.\n\nToday, we are exploring how bacteria grow.\n\nBacteria reproduce by binary fission, an asexual process.\n\nIf they doubled every 20 minutes, one bacterium would become two after 20 minutes, four after 40, eight after 60, and so on.\n\nGrowth is fastest with the right temperature and nutrients.\n\nIn the lab, we grow bacteria on agar in a petri dish. We sterilise the loop and dish to stop unwanted microbes, and we tape the lid loosely and store the dish upside down so condensation does not drip onto the agar.\n\nIn school labs we do not culture pathogens at 37\u00b0C, because that is the temperature that suits human pathogens best.\n\nTo calculate growth, use the number of generations. Divide the total time by the doubling time, then multiply the starting number of bacteria by two to the power of that number.\n\nFor example, over two hours with a twenty-minute doubling time, there are six generations. One bacterium could therefore become sixty-four, provided conditions remain suitable.\n\nSchool microbiology work must follow the laboratory\u2019s risk assessment and approved incubation procedures.\n\nAs you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens, and how the structures involved help the process work.\n\nNow, pause the video and try this exam-style question. Explain why the lid of a petri dish should be taped loosely and the dish stored upside down. [2 marks]\n\nHere is a model answer. To stop unwanted microbes getting in while allowing air in. Upside down prevents condensation dripping onto the agar.\n\nIf this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.511
+    },
+    {
+      "word": "and",
+      "start": 0.627,
+      "end": 0.824
+    },
+    {
+      "word": "welcome",
+      "start": 0.906,
+      "end": 1.324
+    },
+    {
+      "word": "back",
+      "start": 1.358,
+      "end": 1.567
+    },
+    {
+      "word": "to",
+      "start": 1.625,
+      "end": 1.741
+    },
+    {
+      "word": "J",
+      "start": 1.834,
+      "end": 2.043
+    },
+    {
+      "word": "D",
+      "start": 2.113,
+      "end": 2.171
+    },
+    {
+      "word": "Science.",
+      "start": 2.322,
+      "end": 2.868
+    },
+    {
+      "word": "Today,",
+      "start": 3.042,
+      "end": 3.622
+    },
+    {
+      "word": "we",
+      "start": 3.738,
+      "end": 3.866
+    },
+    {
+      "word": "are",
+      "start": 3.913,
+      "end": 4.052
+    },
+    {
+      "word": "exploring",
+      "start": 4.087,
+      "end": 4.621
+    },
+    {
+      "word": "how",
+      "start": 4.69,
+      "end": 4.83
+    },
+    {
+      "word": "bacteria",
+      "start": 4.911,
+      "end": 5.468
+    },
+    {
+      "word": "grow.",
+      "start": 5.538,
+      "end": 5.944
+    },
+    {
+      "word": "Bacteria",
+      "start": 6.153,
+      "end": 6.745
+    },
+    {
+      "word": "reproduce",
+      "start": 6.827,
+      "end": 7.419
+    },
+    {
+      "word": "by",
+      "start": 7.465,
+      "end": 7.628
+    },
+    {
+      "word": "binary",
+      "start": 7.744,
+      "end": 8.185
+    },
+    {
+      "word": "fission,",
+      "start": 8.255,
+      "end": 8.824
+    },
+    {
+      "word": "an",
+      "start": 8.975,
+      "end": 9.149
+    },
+    {
+      "word": "asexual",
+      "start": 9.242,
+      "end": 9.857
+    },
+    {
+      "word": "process.",
+      "start": 9.915,
+      "end": 10.472
+    },
+    {
+      "word": "If",
+      "start": 10.681,
+      "end": 10.867
+    },
+    {
+      "word": "they",
+      "start": 10.937,
+      "end": 11.076
+    },
+    {
+      "word": "doubled",
+      "start": 11.146,
+      "end": 11.494
+    },
+    {
+      "word": "every",
+      "start": 11.552,
+      "end": 11.796
+    },
+    {
+      "word": "twenty",
+      "start": 11.854,
+      "end": 12.19
+    },
+    {
+      "word": "minutes,",
+      "start": 12.249,
+      "end": 12.655
+    },
+    {
+      "word": "one",
+      "start": 12.725,
+      "end": 12.934
+    },
+    {
+      "word": "bacterium",
+      "start": 12.968,
+      "end": 13.514
+    },
+    {
+      "word": "would",
+      "start": 13.549,
+      "end": 13.723
+    },
+    {
+      "word": "become",
+      "start": 13.769,
+      "end": 14.153
+    },
+    {
+      "word": "two",
+      "start": 14.187,
+      "end": 14.408
+    },
+    {
+      "word": "after",
+      "start": 14.524,
+      "end": 14.826
+    },
+    {
+      "word": "twenty",
+      "start": 14.896,
+      "end": 15.197
+    },
+    {
+      "word": "minutes,",
+      "start": 15.244,
+      "end": 15.639
+    },
+    {
+      "word": "four",
+      "start": 15.697,
+      "end": 15.917
+    },
+    {
+      "word": "after",
+      "start": 15.975,
+      "end": 16.242
+    },
+    {
+      "word": "forty,",
+      "start": 16.312,
+      "end": 16.823
+    },
+    {
+      "word": "eight",
+      "start": 16.997,
+      "end": 17.218
+    },
+    {
+      "word": "after",
+      "start": 17.264,
+      "end": 17.519
+    },
+    {
+      "word": "sixty,",
+      "start": 17.577,
+      "end": 18.112
+    },
+    {
+      "word": "and",
+      "start": 18.158,
+      "end": 18.309
+    },
+    {
+      "word": "so",
+      "start": 18.379,
+      "end": 18.553
+    },
+    {
+      "word": "on.",
+      "start": 18.634,
+      "end": 18.843
+    },
+    {
+      "word": "Growth",
+      "start": 19.052,
+      "end": 19.412
+    },
+    {
+      "word": "is",
+      "start": 19.47,
+      "end": 19.609
+    },
+    {
+      "word": "fastest",
+      "start": 19.702,
+      "end": 20.236
+    },
+    {
+      "word": "with",
+      "start": 20.294,
+      "end": 20.434
+    },
+    {
+      "word": "the",
+      "start": 20.468,
+      "end": 20.538
+    },
+    {
+      "word": "right",
+      "start": 20.608,
+      "end": 20.84
+    },
+    {
+      "word": "temperature",
+      "start": 20.886,
+      "end": 21.444
+    },
+    {
+      "word": "and",
+      "start": 21.502,
+      "end": 21.629
+    },
+    {
+      "word": "nutrients.",
+      "start": 21.699,
+      "end": 22.338
+    },
+    {
+      "word": "In",
+      "start": 22.547,
+      "end": 22.697
+    },
+    {
+      "word": "the",
+      "start": 22.744,
+      "end": 22.814
+    },
+    {
+      "word": "lab,",
+      "start": 22.872,
+      "end": 23.232
+    },
+    {
+      "word": "we",
+      "start": 23.301,
+      "end": 23.429
+    },
+    {
+      "word": "grow",
+      "start": 23.487,
+      "end": 23.649
+    },
+    {
+      "word": "bacteria",
+      "start": 23.719,
+      "end": 24.253
+    },
+    {
+      "word": "on",
+      "start": 24.311,
+      "end": 24.439
+    },
+    {
+      "word": "agar",
+      "start": 24.52,
+      "end": 24.88
+    },
+    {
+      "word": "in",
+      "start": 24.95,
+      "end": 25.031
+    },
+    {
+      "word": "a",
+      "start": 25.078,
+      "end": 25.101
+    },
+    {
+      "word": "petri",
+      "start": 25.17,
+      "end": 25.507
+    },
+    {
+      "word": "dish.",
+      "start": 25.565,
+      "end": 25.89
+    },
+    {
+      "word": "We",
+      "start": 26.134,
+      "end": 26.285
+    },
+    {
+      "word": "sterilise",
+      "start": 26.343,
+      "end": 26.912
+    },
+    {
+      "word": "the",
+      "start": 26.958,
+      "end": 27.028
+    },
+    {
+      "word": "loop",
+      "start": 27.086,
+      "end": 27.283
+    },
+    {
+      "word": "and",
+      "start": 27.353,
+      "end": 27.434
+    },
+    {
+      "word": "dish",
+      "start": 27.492,
+      "end": 27.725
+    },
+    {
+      "word": "to",
+      "start": 27.817,
+      "end": 27.945
+    },
+    {
+      "word": "stop",
+      "start": 28.003,
+      "end": 28.259
+    },
+    {
+      "word": "unwanted",
+      "start": 28.34,
+      "end": 28.816
+    },
+    {
+      "word": "microbes,",
+      "start": 28.862,
+      "end": 29.501
+    },
+    {
+      "word": "and",
+      "start": 29.594,
+      "end": 29.733
+    },
+    {
+      "word": "we",
+      "start": 29.779,
+      "end": 29.872
+    },
+    {
+      "word": "tape",
+      "start": 29.93,
+      "end": 30.197
+    },
+    {
+      "word": "the",
+      "start": 30.244,
+      "end": 30.313
+    },
+    {
+      "word": "lid",
+      "start": 30.371,
+      "end": 30.546
+    },
+    {
+      "word": "loosely",
+      "start": 30.604,
+      "end": 31.045
+    },
+    {
+      "word": "and",
+      "start": 31.126,
+      "end": 31.265
+    },
+    {
+      "word": "store",
+      "start": 31.335,
+      "end": 31.602
+    },
+    {
+      "word": "the",
+      "start": 31.637,
+      "end": 31.707
+    },
+    {
+      "word": "dish",
+      "start": 31.765,
+      "end": 32.008
+    },
+    {
+      "word": "upside",
+      "start": 32.066,
+      "end": 32.45
+    },
+    {
+      "word": "down",
+      "start": 32.484,
+      "end": 32.705
+    },
+    {
+      "word": "so",
+      "start": 32.786,
+      "end": 32.949
+    },
+    {
+      "word": "condensation",
+      "start": 33.03,
+      "end": 33.854
+    },
+    {
+      "word": "does",
+      "start": 33.924,
+      "end": 34.11
+    },
+    {
+      "word": "not",
+      "start": 34.179,
+      "end": 34.354
+    },
+    {
+      "word": "drip",
+      "start": 34.423,
+      "end": 34.714
+    },
+    {
+      "word": "onto",
+      "start": 34.83,
+      "end": 35.155
+    },
+    {
+      "word": "the",
+      "start": 35.236,
+      "end": 35.317
+    },
+    {
+      "word": "agar.",
+      "start": 35.399,
+      "end": 35.944
+    },
+    {
+      "word": "In",
+      "start": 36.769,
+      "end": 36.919
+    },
+    {
+      "word": "school",
+      "start": 36.977,
+      "end": 37.245
+    },
+    {
+      "word": "labs",
+      "start": 37.303,
+      "end": 37.651
+    },
+    {
+      "word": "we",
+      "start": 37.767,
+      "end": 37.906
+    },
+    {
+      "word": "do",
+      "start": 37.964,
+      "end": 38.034
+    },
+    {
+      "word": "not",
+      "start": 38.104,
+      "end": 38.243
+    },
+    {
+      "word": "culture",
+      "start": 38.313,
+      "end": 38.661
+    },
+    {
+      "word": "pathogens",
+      "start": 38.719,
+      "end": 39.323
+    },
+    {
+      "word": "at",
+      "start": 39.381,
+      "end": 39.474
+    },
+    {
+      "word": "thirty-seven",
+      "start": 39.532,
+      "end": 40.135
+    },
+    {
+      "word": "degrees",
+      "start": 40.193,
+      "end": 40.542
+    },
+    {
+      "word": "Celsius,",
+      "start": 40.588,
+      "end": 41.343
+    },
+    {
+      "word": "because",
+      "start": 41.412,
+      "end": 41.807
+    },
+    {
+      "word": "that",
+      "start": 41.842,
+      "end": 42.028
+    },
+    {
+      "word": "is",
+      "start": 42.086,
+      "end": 42.179
+    },
+    {
+      "word": "the",
+      "start": 42.225,
+      "end": 42.295
+    },
+    {
+      "word": "temperature",
+      "start": 42.353,
+      "end": 42.922
+    },
+    {
+      "word": "that",
+      "start": 42.957,
+      "end": 43.108
+    },
+    {
+      "word": "suits",
+      "start": 43.166,
+      "end": 43.456
+    },
+    {
+      "word": "human",
+      "start": 43.526,
+      "end": 43.839
+    },
+    {
+      "word": "pathogens",
+      "start": 43.909,
+      "end": 44.454
+    },
+    {
+      "word": "best.",
+      "start": 44.512,
+      "end": 44.988
+    },
+    {
+      "word": "To",
+      "start": 45.441,
+      "end": 45.569
+    },
+    {
+      "word": "calculate",
+      "start": 45.662,
+      "end": 46.184
+    },
+    {
+      "word": "growth,",
+      "start": 46.219,
+      "end": 46.637
+    },
+    {
+      "word": "use",
+      "start": 46.753,
+      "end": 47.055
+    },
+    {
+      "word": "the",
+      "start": 47.09,
+      "end": 47.171
+    },
+    {
+      "word": "number",
+      "start": 47.241,
+      "end": 47.519
+    },
+    {
+      "word": "of",
+      "start": 47.577,
+      "end": 47.635
+    },
+    {
+      "word": "generations.",
+      "start": 47.705,
+      "end": 48.587
+    },
+    {
+      "word": "Divide",
+      "start": 48.982,
+      "end": 49.435
+    },
+    {
+      "word": "the",
+      "start": 49.458,
+      "end": 49.528
+    },
+    {
+      "word": "total",
+      "start": 49.598,
+      "end": 49.957
+    },
+    {
+      "word": "time",
+      "start": 50.027,
+      "end": 50.317
+    },
+    {
+      "word": "by",
+      "start": 50.364,
+      "end": 50.503
+    },
+    {
+      "word": "the",
+      "start": 50.561,
+      "end": 50.631
+    },
+    {
+      "word": "doubling",
+      "start": 50.689,
+      "end": 51.072
+    },
+    {
+      "word": "time,",
+      "start": 51.13,
+      "end": 51.56
+    },
+    {
+      "word": "then",
+      "start": 51.711,
+      "end": 51.966
+    },
+    {
+      "word": "multiply",
+      "start": 52.047,
+      "end": 52.558
+    },
+    {
+      "word": "the",
+      "start": 52.639,
+      "end": 52.709
+    },
+    {
+      "word": "starting",
+      "start": 52.767,
+      "end": 53.127
+    },
+    {
+      "word": "number",
+      "start": 53.185,
+      "end": 53.475
+    },
+    {
+      "word": "of",
+      "start": 53.533,
+      "end": 53.603
+    },
+    {
+      "word": "bacteria",
+      "start": 53.673,
+      "end": 54.16
+    },
+    {
+      "word": "by",
+      "start": 54.23,
+      "end": 54.369
+    },
+    {
+      "word": "two",
+      "start": 54.451,
+      "end": 54.718
+    },
+    {
+      "word": "to",
+      "start": 54.834,
+      "end": 54.95
+    },
+    {
+      "word": "the",
+      "start": 55.043,
+      "end": 55.124
+    },
+    {
+      "word": "power",
+      "start": 55.194,
+      "end": 55.519
+    },
+    {
+      "word": "of",
+      "start": 55.565,
+      "end": 55.623
+    },
+    {
+      "word": "that",
+      "start": 55.67,
+      "end": 55.82
+    },
+    {
+      "word": "number.",
+      "start": 55.902,
+      "end": 56.378
+    },
+    {
+      "word": "For",
+      "start": 56.656,
+      "end": 56.831
+    },
+    {
+      "word": "example,",
+      "start": 56.9,
+      "end": 57.55
+    },
+    {
+      "word": "over",
+      "start": 57.701,
+      "end": 57.945
+    },
+    {
+      "word": "two",
+      "start": 58.003,
+      "end": 58.177
+    },
+    {
+      "word": "hours",
+      "start": 58.259,
+      "end": 58.595
+    },
+    {
+      "word": "with",
+      "start": 58.642,
+      "end": 58.793
+    },
+    {
+      "word": "a",
+      "start": 58.839,
+      "end": 58.874
+    },
+    {
+      "word": "twenty-minute",
+      "start": 58.92,
+      "end": 59.489
+    },
+    {
+      "word": "doubling",
+      "start": 59.512,
+      "end": 59.849
+    },
+    {
+      "word": "time,",
+      "start": 59.907,
+      "end": 60.372
+    },
+    {
+      "word": "there",
+      "start": 60.499,
+      "end": 60.708
+    },
+    {
+      "word": "are",
+      "start": 60.743,
+      "end": 60.871
+    },
+    {
+      "word": "six",
+      "start": 60.917,
+      "end": 61.173
+    },
+    {
+      "word": "generations.",
+      "start": 61.242,
+      "end": 62.032
+    },
+    {
+      "word": "One",
+      "start": 62.183,
+      "end": 62.415
+    },
+    {
+      "word": "bacterium",
+      "start": 62.45,
+      "end": 63.03
+    },
+    {
+      "word": "could",
+      "start": 63.123,
+      "end": 63.32
+    },
+    {
+      "word": "therefore",
+      "start": 63.355,
+      "end": 63.796
+    },
+    {
+      "word": "become",
+      "start": 63.855,
+      "end": 64.226
+    },
+    {
+      "word": "sixty-four,",
+      "start": 64.272,
+      "end": 65.132
+    },
+    {
+      "word": "provided",
+      "start": 65.306,
+      "end": 65.793
+    },
+    {
+      "word": "conditions",
+      "start": 65.851,
+      "end": 66.409
+    },
+    {
+      "word": "remain",
+      "start": 66.478,
+      "end": 66.792
+    },
+    {
+      "word": "suitable.",
+      "start": 66.861,
+      "end": 67.442
+    },
+    {
+      "word": "School",
+      "start": 67.779,
+      "end": 68.162
+    },
+    {
+      "word": "microbiology",
+      "start": 68.231,
+      "end": 69.056
+    },
+    {
+      "word": "work",
+      "start": 69.125,
+      "end": 69.427
+    },
+    {
+      "word": "must",
+      "start": 69.578,
+      "end": 69.868
+    },
+    {
+      "word": "follow",
+      "start": 69.938,
+      "end": 70.228
+    },
+    {
+      "word": "the",
+      "start": 70.286,
+      "end": 70.356
+    },
+    {
+      "word": "laboratory's",
+      "start": 70.414,
+      "end": 71.029
+    },
+    {
+      "word": "risk",
+      "start": 71.099,
+      "end": 71.343
+    },
+    {
+      "word": "assessment",
+      "start": 71.413,
+      "end": 72.005
+    },
+    {
+      "word": "and",
+      "start": 72.063,
+      "end": 72.237
+    },
+    {
+      "word": "approved",
+      "start": 72.295,
+      "end": 72.725
+    },
+    {
+      "word": "incubation",
+      "start": 72.795,
+      "end": 73.364
+    },
+    {
+      "word": "procedures.",
+      "start": 73.422,
+      "end": 74.095
+    },
+    {
+      "word": "As",
+      "start": 74.617,
+      "end": 74.78
+    },
+    {
+      "word": "you",
+      "start": 74.838,
+      "end": 74.919
+    },
+    {
+      "word": "revise",
+      "start": 75.001,
+      "end": 75.384
+    },
+    {
+      "word": "this",
+      "start": 75.419,
+      "end": 75.558
+    },
+    {
+      "word": "topic,",
+      "start": 75.616,
+      "end": 75.987
+    },
+    {
+      "word": "try",
+      "start": 76.011,
+      "end": 76.231
+    },
+    {
+      "word": "to",
+      "start": 76.289,
+      "end": 76.359
+    },
+    {
+      "word": "explain",
+      "start": 76.417,
+      "end": 76.858
+    },
+    {
+      "word": "the",
+      "start": 76.905,
+      "end": 76.974
+    },
+    {
+      "word": "key",
+      "start": 77.032,
+      "end": 77.218
+    },
+    {
+      "word": "process",
+      "start": 77.288,
+      "end": 77.752
+    },
+    {
+      "word": "in",
+      "start": 77.822,
+      "end": 77.938
+    },
+    {
+      "word": "your",
+      "start": 78.008,
+      "end": 78.147
+    },
+    {
+      "word": "own",
+      "start": 78.217,
+      "end": 78.414
+    },
+    {
+      "word": "words.",
+      "start": 78.472,
+      "end": 78.936
+    },
+    {
+      "word": "Focus",
+      "start": 79.215,
+      "end": 79.656
+    },
+    {
+      "word": "on",
+      "start": 79.737,
+      "end": 79.854
+    },
+    {
+      "word": "what",
+      "start": 79.9,
+      "end": 80.051
+    },
+    {
+      "word": "happens,",
+      "start": 80.109,
+      "end": 80.631
+    },
+    {
+      "word": "why",
+      "start": 80.747,
+      "end": 80.968
+    },
+    {
+      "word": "it",
+      "start": 81.038,
+      "end": 81.119
+    },
+    {
+      "word": "happens,",
+      "start": 81.177,
+      "end": 81.688
+    },
+    {
+      "word": "and",
+      "start": 81.862,
+      "end": 82.036
+    },
+    {
+      "word": "how",
+      "start": 82.117,
+      "end": 82.292
+    },
+    {
+      "word": "the",
+      "start": 82.35,
+      "end": 82.419
+    },
+    {
+      "word": "structures",
+      "start": 82.477,
+      "end": 82.942
+    },
+    {
+      "word": "involved",
+      "start": 83.023,
+      "end": 83.534
+    },
+    {
+      "word": "help",
+      "start": 83.592,
+      "end": 83.824
+    },
+    {
+      "word": "the",
+      "start": 83.882,
+      "end": 83.963
+    },
+    {
+      "word": "process",
+      "start": 84.01,
+      "end": 84.405
+    },
+    {
+      "word": "work.",
+      "start": 84.451,
+      "end": 84.834
+    },
+    {
+      "word": "Now,",
+      "start": 85.287,
+      "end": 85.496
+    },
+    {
+      "word": "pause",
+      "start": 85.542,
+      "end": 85.856
+    },
+    {
+      "word": "the",
+      "start": 85.891,
+      "end": 85.96
+    },
+    {
+      "word": "video",
+      "start": 86.007,
+      "end": 86.32
+    },
+    {
+      "word": "and",
+      "start": 86.413,
+      "end": 86.564
+    },
+    {
+      "word": "try",
+      "start": 86.622,
+      "end": 86.878
+    },
+    {
+      "word": "this",
+      "start": 86.947,
+      "end": 87.121
+    },
+    {
+      "word": "exam-style",
+      "start": 87.249,
+      "end": 88.015
+    },
+    {
+      "word": "question.",
+      "start": 88.061,
+      "end": 88.549
+    },
+    {
+      "word": "Explain",
+      "start": 89.002,
+      "end": 89.466
+    },
+    {
+      "word": "why",
+      "start": 89.524,
+      "end": 89.71
+    },
+    {
+      "word": "the",
+      "start": 89.78,
+      "end": 89.849
+    },
+    {
+      "word": "lid",
+      "start": 89.919,
+      "end": 90.128
+    },
+    {
+      "word": "of",
+      "start": 90.198,
+      "end": 90.302
+    },
+    {
+      "word": "a",
+      "start": 90.383,
+      "end": 90.407
+    },
+    {
+      "word": "petri",
+      "start": 90.476,
+      "end": 90.767
+    },
+    {
+      "word": "dish",
+      "start": 90.825,
+      "end": 91.08
+    },
+    {
+      "word": "should",
+      "start": 91.138,
+      "end": 91.393
+    },
+    {
+      "word": "be",
+      "start": 91.428,
+      "end": 91.521
+    },
+    {
+      "word": "taped",
+      "start": 91.579,
+      "end": 91.869
+    },
+    {
+      "word": "loosely",
+      "start": 91.916,
+      "end": 92.369
+    },
+    {
+      "word": "and",
+      "start": 92.613,
+      "end": 92.845
+    },
+    {
+      "word": "the",
+      "start": 92.903,
+      "end": 92.984
+    },
+    {
+      "word": "dish",
+      "start": 93.054,
+      "end": 93.321
+    },
+    {
+      "word": "stored",
+      "start": 93.437,
+      "end": 93.808
+    },
+    {
+      "word": "upside",
+      "start": 93.843,
+      "end": 94.203
+    },
+    {
+      "word": "down.",
+      "start": 94.226,
+      "end": 94.586
+    },
+    {
+      "word": "[two",
+      "start": 95.294,
+      "end": 95.736
+    },
+    {
+      "word": "marks]",
+      "start": 95.805,
+      "end": 96.281
+    },
+    {
+      "word": "Here",
+      "start": 96.989,
+      "end": 97.222
+    },
+    {
+      "word": "is",
+      "start": 97.257,
+      "end": 97.338
+    },
+    {
+      "word": "a",
+      "start": 97.373,
+      "end": 97.396
+    },
+    {
+      "word": "model",
+      "start": 97.454,
+      "end": 97.744
+    },
+    {
+      "word": "answer.",
+      "start": 97.814,
+      "end": 98.29
+    },
+    {
+      "word": "To",
+      "start": 98.499,
+      "end": 98.626
+    },
+    {
+      "word": "stop",
+      "start": 98.685,
+      "end": 98.928
+    },
+    {
+      "word": "unwanted",
+      "start": 99.021,
+      "end": 99.544
+    },
+    {
+      "word": "microbes",
+      "start": 99.602,
+      "end": 100.113
+    },
+    {
+      "word": "getting",
+      "start": 100.159,
+      "end": 100.438
+    },
+    {
+      "word": "in",
+      "start": 100.519,
+      "end": 100.716
+    },
+    {
+      "word": "while",
+      "start": 100.89,
+      "end": 101.157
+    },
+    {
+      "word": "allowing",
+      "start": 101.192,
+      "end": 101.587
+    },
+    {
+      "word": "air",
+      "start": 101.68,
+      "end": 101.935
+    },
+    {
+      "word": "in.",
+      "start": 102.017,
+      "end": 102.284
+    },
+    {
+      "word": "Upside",
+      "start": 102.62,
+      "end": 103.061
+    },
+    {
+      "word": "down",
+      "start": 103.096,
+      "end": 103.317
+    },
+    {
+      "word": "prevents",
+      "start": 103.375,
+      "end": 103.781
+    },
+    {
+      "word": "condensation",
+      "start": 103.828,
+      "end": 104.501
+    },
+    {
+      "word": "dripping",
+      "start": 104.559,
+      "end": 104.896
+    },
+    {
+      "word": "onto",
+      "start": 104.954,
+      "end": 105.151
+    },
+    {
+      "word": "the",
+      "start": 105.221,
+      "end": 105.291
+    },
+    {
+      "word": "agar.",
+      "start": 105.372,
+      "end": 105.871
+    },
+    {
+      "word": "If",
+      "start": 106.208,
+      "end": 106.336
+    },
+    {
+      "word": "this",
+      "start": 106.382,
+      "end": 106.51
+    },
+    {
+      "word": "explanation",
+      "start": 106.579,
+      "end": 107.137
+    },
+    {
+      "word": "has",
+      "start": 107.183,
+      "end": 107.311
+    },
+    {
+      "word": "helped,",
+      "start": 107.392,
+      "end": 107.752
+    },
+    {
+      "word": "please",
+      "start": 107.868,
+      "end": 108.193
+    },
+    {
+      "word": "subscribe",
+      "start": 108.228,
+      "end": 108.797
+    },
+    {
+      "word": "to",
+      "start": 108.843,
+      "end": 108.913
+    },
+    {
+      "word": "J",
+      "start": 109.006,
+      "end": 109.157
+    },
+    {
+      "word": "D",
+      "start": 109.227,
+      "end": 109.261
+    },
+    {
+      "word": "Science",
+      "start": 109.412,
+      "end": 109.842
+    },
+    {
+      "word": "for",
+      "start": 109.877,
+      "end": 109.993
+    },
+    {
+      "word": "more",
+      "start": 110.062,
+      "end": 110.248
+    },
+    {
+      "word": "lessons.",
+      "start": 110.295,
+      "end": 110.898
+    },
+    {
+      "word": "You",
+      "start": 111.142,
+      "end": 111.258
+    },
+    {
+      "word": "can",
+      "start": 111.305,
+      "end": 111.409
+    },
+    {
+      "word": "find",
+      "start": 111.467,
+      "end": 111.688
+    },
+    {
+      "word": "further",
+      "start": 111.758,
+      "end": 112.094
+    },
+    {
+      "word": "learning",
+      "start": 112.141,
+      "end": 112.408
+    },
+    {
+      "word": "resources",
+      "start": 112.466,
+      "end": 113.058
+    },
+    {
+      "word": "and",
+      "start": 113.127,
+      "end": 113.232
+    },
+    {
+      "word": "practice",
+      "start": 113.29,
+      "end": 113.685
+    },
+    {
+      "word": "questions",
+      "start": 113.72,
+      "end": 114.184
+    },
+    {
+      "word": "at",
+      "start": 114.242,
+      "end": 114.323
+    },
+    {
+      "word": "JDscience",
+      "start": 114.381,
+      "end": 115.275
+    },
+    {
+      "word": "dot",
+      "start": 115.368,
+      "end": 115.589
+    },
+    {
+      "word": "co",
+      "start": 115.647,
+      "end": 115.844
+    },
+    {
+      "word": "dot",
+      "start": 115.925,
+      "end": 116.1
+    },
+    {
+      "word": "U",
+      "start": 116.216,
+      "end": 116.297
+    },
+    {
+      "word": "K.",
+      "start": 116.367,
+      "end": 116.703
+    },
+    {
+      "word": "Thank",
+      "start": 116.796,
+      "end": 117.052
+    },
+    {
+      "word": "you",
+      "start": 117.098,
+      "end": 117.191
+    },
+    {
+      "word": "for",
+      "start": 117.249,
+      "end": 117.354
+    },
+    {
+      "word": "watching.",
+      "start": 117.4,
+      "end": 117.841
+    }
+  ],
+  "chunks": 1,
+  "model": "eleven_multilingual_v2"
+}

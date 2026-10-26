@@ -1,0 +1,1461 @@
+{
+  "slug": "1-1-cell-division",
+  "title": "Cell Division",
+  "audio": "/workspace/content/videos/1-1-cell-division/source/narration_master.mp3",
+  "duration": 127.713,
+  "full_text": "Hello and welcome back to JD Science.\n\nToday, we are exploring cell division.\n\nEvery nucleus contains chromosomes made of DNA, and each chromosome carries many genes.\n\nIn mitosis, the cell first copies its DNA and then divides it into two. Each daughter cell has the same chromosomes as the parent, so mitosis produces clones.\n\nIt is used for growth, repair, and asexual reproduction.\n\nStem cells have not yet specialised. They are found in embryos and bone marrow, and in plants they are found in meristems.\n\nTherapeutic cloning could produce an embryo with the patient's own genes, which may reduce the risk of rejection. The use of stem cells raises ethical debates.\n\nBefore a cell divides, its DNA is replicated during interphase.\n\nDuring mitosis, the duplicated chromosomes are separated so that each new nucleus receives an equivalent set. The cytoplasm then divides in cytokinesis.\n\nRemember that mitosis maintains chromosome number; it does not halve it. In humans, most body cells have 46 chromosomes, and each daughter cell normally has 46 too.\n\nAs you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens, and how the structures involved help the process work.\n\nNow, pause the video and try this exam-style question. Describe what happens to the DNA in a cell before mitosis begins. [2 marks]\n\nHere is a model answer. The DNA is copied (replicated), so each chromosome has two identical copies before the cell divides.\n\nIf this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.116,
+      "end": 0.511
+    },
+    {
+      "word": "and",
+      "start": 0.604,
+      "end": 0.743
+    },
+    {
+      "word": "welcome",
+      "start": 0.801,
+      "end": 1.173
+    },
+    {
+      "word": "back",
+      "start": 1.207,
+      "end": 1.405
+    },
+    {
+      "word": "to",
+      "start": 1.463,
+      "end": 1.544
+    },
+    {
+      "word": "J",
+      "start": 1.625,
+      "end": 1.8
+    },
+    {
+      "word": "D",
+      "start": 1.858,
+      "end": 1.927
+    },
+    {
+      "word": "Science.",
+      "start": 2.078,
+      "end": 2.763
+    },
+    {
+      "word": "Today,",
+      "start": 2.914,
+      "end": 3.495
+    },
+    {
+      "word": "we",
+      "start": 3.541,
+      "end": 3.68
+    },
+    {
+      "word": "are",
+      "start": 3.738,
+      "end": 3.901
+    },
+    {
+      "word": "exploring",
+      "start": 3.959,
+      "end": 4.551
+    },
+    {
+      "word": "cell",
+      "start": 4.621,
+      "end": 4.841
+    },
+    {
+      "word": "division.",
+      "start": 4.911,
+      "end": 5.573
+    },
+    {
+      "word": "Every",
+      "start": 5.909,
+      "end": 6.269
+    },
+    {
+      "word": "nucleus",
+      "start": 6.327,
+      "end": 6.745
+    },
+    {
+      "word": "contains",
+      "start": 6.827,
+      "end": 7.361
+    },
+    {
+      "word": "chromosomes",
+      "start": 7.442,
+      "end": 8.255
+    },
+    {
+      "word": "made",
+      "start": 8.429,
+      "end": 8.754
+    },
+    {
+      "word": "of",
+      "start": 8.824,
+      "end": 8.975
+    },
+    {
+      "word": "D",
+      "start": 9.067,
+      "end": 9.137
+    },
+    {
+      "word": "N",
+      "start": 9.346,
+      "end": 9.52
+    },
+    {
+      "word": "A,",
+      "start": 9.671,
+      "end": 9.996
+    },
+    {
+      "word": "and",
+      "start": 10.147,
+      "end": 10.368
+    },
+    {
+      "word": "each",
+      "start": 10.461,
+      "end": 10.704
+    },
+    {
+      "word": "chromosome",
+      "start": 10.786,
+      "end": 11.436
+    },
+    {
+      "word": "carries",
+      "start": 11.482,
+      "end": 11.981
+    },
+    {
+      "word": "many",
+      "start": 12.156,
+      "end": 12.458
+    },
+    {
+      "word": "genes.",
+      "start": 12.516,
+      "end": 13.061
+    },
+    {
+      "word": "In",
+      "start": 13.27,
+      "end": 13.444
+    },
+    {
+      "word": "mitosis,",
+      "start": 13.526,
+      "end": 14.338
+    },
+    {
+      "word": "the",
+      "start": 14.431,
+      "end": 14.571
+    },
+    {
+      "word": "cell",
+      "start": 14.629,
+      "end": 14.942
+    },
+    {
+      "word": "first",
+      "start": 15.07,
+      "end": 15.372
+    },
+    {
+      "word": "copies",
+      "start": 15.453,
+      "end": 15.859
+    },
+    {
+      "word": "its",
+      "start": 15.94,
+      "end": 16.115
+    },
+    {
+      "word": "D",
+      "start": 16.173,
+      "end": 16.231
+    },
+    {
+      "word": "N",
+      "start": 16.405,
+      "end": 16.579
+    },
+    {
+      "word": "A",
+      "start": 16.695,
+      "end": 16.846
+    },
+    {
+      "word": "and",
+      "start": 17.02,
+      "end": 17.229
+    },
+    {
+      "word": "then",
+      "start": 17.276,
+      "end": 17.438
+    },
+    {
+      "word": "divides",
+      "start": 17.508,
+      "end": 17.961
+    },
+    {
+      "word": "it",
+      "start": 18.03,
+      "end": 18.123
+    },
+    {
+      "word": "into",
+      "start": 18.205,
+      "end": 18.483
+    },
+    {
+      "word": "two.",
+      "start": 18.565,
+      "end": 18.913
+    },
+    {
+      "word": "Each",
+      "start": 19.191,
+      "end": 19.47
+    },
+    {
+      "word": "daughter",
+      "start": 19.551,
+      "end": 19.923
+    },
+    {
+      "word": "cell",
+      "start": 19.981,
+      "end": 20.283
+    },
+    {
+      "word": "has",
+      "start": 20.364,
+      "end": 20.596
+    },
+    {
+      "word": "the",
+      "start": 20.666,
+      "end": 20.747
+    },
+    {
+      "word": "same",
+      "start": 20.817,
+      "end": 21.096
+    },
+    {
+      "word": "chromosomes",
+      "start": 21.154,
+      "end": 21.897
+    },
+    {
+      "word": "as",
+      "start": 21.955,
+      "end": 22.094
+    },
+    {
+      "word": "the",
+      "start": 22.152,
+      "end": 22.222
+    },
+    {
+      "word": "parent,",
+      "start": 22.28,
+      "end": 22.825
+    },
+    {
+      "word": "so",
+      "start": 22.907,
+      "end": 23.104
+    },
+    {
+      "word": "mitosis",
+      "start": 23.197,
+      "end": 23.928
+    },
+    {
+      "word": "produces",
+      "start": 24.021,
+      "end": 24.567
+    },
+    {
+      "word": "clones.",
+      "start": 24.648,
+      "end": 25.31
+    },
+    {
+      "word": "It",
+      "start": 25.519,
+      "end": 25.67
+    },
+    {
+      "word": "is",
+      "start": 25.728,
+      "end": 25.832
+    },
+    {
+      "word": "used",
+      "start": 25.925,
+      "end": 26.181
+    },
+    {
+      "word": "for",
+      "start": 26.239,
+      "end": 26.401
+    },
+    {
+      "word": "growth,",
+      "start": 26.494,
+      "end": 26.97
+    },
+    {
+      "word": "repair,",
+      "start": 27.086,
+      "end": 27.725
+    },
+    {
+      "word": "and",
+      "start": 27.818,
+      "end": 28.05
+    },
+    {
+      "word": "asexual",
+      "start": 28.166,
+      "end": 28.897
+    },
+    {
+      "word": "reproduction.",
+      "start": 28.99,
+      "end": 29.907
+    },
+    {
+      "word": "Stem",
+      "start": 30.186,
+      "end": 30.488
+    },
+    {
+      "word": "cells",
+      "start": 30.569,
+      "end": 30.86
+    },
+    {
+      "word": "have",
+      "start": 30.918,
+      "end": 31.08
+    },
+    {
+      "word": "not",
+      "start": 31.127,
+      "end": 31.301
+    },
+    {
+      "word": "yet",
+      "start": 31.37,
+      "end": 31.533
+    },
+    {
+      "word": "specialised.",
+      "start": 31.579,
+      "end": 32.438
+    },
+    {
+      "word": "They",
+      "start": 32.613,
+      "end": 32.798
+    },
+    {
+      "word": "are",
+      "start": 32.833,
+      "end": 32.949
+    },
+    {
+      "word": "found",
+      "start": 33.007,
+      "end": 33.298
+    },
+    {
+      "word": "in",
+      "start": 33.367,
+      "end": 33.449
+    },
+    {
+      "word": "embryos",
+      "start": 33.541,
+      "end": 34.168
+    },
+    {
+      "word": "and",
+      "start": 34.261,
+      "end": 34.447
+    },
+    {
+      "word": "bone",
+      "start": 34.54,
+      "end": 34.83
+    },
+    {
+      "word": "marrow,",
+      "start": 34.876,
+      "end": 35.364
+    },
+    {
+      "word": "and",
+      "start": 35.41,
+      "end": 35.585
+    },
+    {
+      "word": "in",
+      "start": 35.654,
+      "end": 35.724
+    },
+    {
+      "word": "plants",
+      "start": 35.805,
+      "end": 36.304
+    },
+    {
+      "word": "they",
+      "start": 36.479,
+      "end": 36.641
+    },
+    {
+      "word": "are",
+      "start": 36.676,
+      "end": 36.792
+    },
+    {
+      "word": "found",
+      "start": 36.85,
+      "end": 37.175
+    },
+    {
+      "word": "in",
+      "start": 37.268,
+      "end": 37.361
+    },
+    {
+      "word": "meristems.",
+      "start": 37.431,
+      "end": 38.325
+    },
+    {
+      "word": "Therapeutic",
+      "start": 38.777,
+      "end": 39.474
+    },
+    {
+      "word": "cloning",
+      "start": 39.497,
+      "end": 40.008
+    },
+    {
+      "word": "could",
+      "start": 40.124,
+      "end": 40.333
+    },
+    {
+      "word": "produce",
+      "start": 40.38,
+      "end": 40.879
+    },
+    {
+      "word": "an",
+      "start": 40.925,
+      "end": 41.03
+    },
+    {
+      "word": "embryo",
+      "start": 41.099,
+      "end": 41.599
+    },
+    {
+      "word": "with",
+      "start": 41.726,
+      "end": 41.935
+    },
+    {
+      "word": "the",
+      "start": 41.97,
+      "end": 42.04
+    },
+    {
+      "word": "patient's",
+      "start": 42.098,
+      "end": 42.62
+    },
+    {
+      "word": "own",
+      "start": 42.702,
+      "end": 42.945
+    },
+    {
+      "word": "genes,",
+      "start": 43.015,
+      "end": 43.607
+    },
+    {
+      "word": "which",
+      "start": 43.851,
+      "end": 44.106
+    },
+    {
+      "word": "may",
+      "start": 44.188,
+      "end": 44.478
+    },
+    {
+      "word": "reduce",
+      "start": 44.652,
+      "end": 45.128
+    },
+    {
+      "word": "the",
+      "start": 45.163,
+      "end": 45.244
+    },
+    {
+      "word": "risk",
+      "start": 45.314,
+      "end": 45.592
+    },
+    {
+      "word": "of",
+      "start": 45.685,
+      "end": 45.836
+    },
+    {
+      "word": "rejection.",
+      "start": 45.929,
+      "end": 46.614
+    },
+    {
+      "word": "The",
+      "start": 47.229,
+      "end": 47.346
+    },
+    {
+      "word": "use",
+      "start": 47.427,
+      "end": 47.647
+    },
+    {
+      "word": "of",
+      "start": 47.682,
+      "end": 47.764
+    },
+    {
+      "word": "stem",
+      "start": 47.833,
+      "end": 48.123
+    },
+    {
+      "word": "cells",
+      "start": 48.193,
+      "end": 48.576
+    },
+    {
+      "word": "raises",
+      "start": 48.75,
+      "end": 49.226
+    },
+    {
+      "word": "ethical",
+      "start": 49.342,
+      "end": 49.807
+    },
+    {
+      "word": "debates.",
+      "start": 49.877,
+      "end": 50.492
+    },
+    {
+      "word": "Before",
+      "start": 50.887,
+      "end": 51.316
+    },
+    {
+      "word": "a",
+      "start": 51.363,
+      "end": 51.397
+    },
+    {
+      "word": "cell",
+      "start": 51.479,
+      "end": 51.745
+    },
+    {
+      "word": "divides,",
+      "start": 51.815,
+      "end": 52.535
+    },
+    {
+      "word": "its",
+      "start": 52.709,
+      "end": 52.941
+    },
+    {
+      "word": "D",
+      "start": 53.023,
+      "end": 53.139
+    },
+    {
+      "word": "N",
+      "start": 53.29,
+      "end": 53.417
+    },
+    {
+      "word": "A",
+      "start": 53.533,
+      "end": 53.708
+    },
+    {
+      "word": "is",
+      "start": 53.882,
+      "end": 54.067
+    },
+    {
+      "word": "replicated",
+      "start": 54.184,
+      "end": 54.95
+    },
+    {
+      "word": "during",
+      "start": 55.124,
+      "end": 55.461
+    },
+    {
+      "word": "interphase.",
+      "start": 55.542,
+      "end": 56.355
+    },
+    {
+      "word": "During",
+      "start": 56.773,
+      "end": 57.109
+    },
+    {
+      "word": "mitosis,",
+      "start": 57.179,
+      "end": 58.015
+    },
+    {
+      "word": "the",
+      "start": 58.154,
+      "end": 58.27
+    },
+    {
+      "word": "duplicated",
+      "start": 58.328,
+      "end": 58.99
+    },
+    {
+      "word": "chromosomes",
+      "start": 59.06,
+      "end": 59.64
+    },
+    {
+      "word": "are",
+      "start": 59.71,
+      "end": 59.896
+    },
+    {
+      "word": "separated",
+      "start": 59.942,
+      "end": 60.674
+    },
+    {
+      "word": "so",
+      "start": 60.906,
+      "end": 61.08
+    },
+    {
+      "word": "that",
+      "start": 61.15,
+      "end": 61.358
+    },
+    {
+      "word": "each",
+      "start": 61.463,
+      "end": 61.718
+    },
+    {
+      "word": "new",
+      "start": 61.8,
+      "end": 61.962
+    },
+    {
+      "word": "nucleus",
+      "start": 62.02,
+      "end": 62.601
+    },
+    {
+      "word": "receives",
+      "start": 62.914,
+      "end": 63.495
+    },
+    {
+      "word": "an",
+      "start": 63.564,
+      "end": 63.692
+    },
+    {
+      "word": "equivalent",
+      "start": 63.75,
+      "end": 64.354
+    },
+    {
+      "word": "set.",
+      "start": 64.47,
+      "end": 64.9
+    },
+    {
+      "word": "The",
+      "start": 65.213,
+      "end": 65.352
+    },
+    {
+      "word": "cytoplasm",
+      "start": 65.399,
+      "end": 66.153
+    },
+    {
+      "word": "then",
+      "start": 66.235,
+      "end": 66.432
+    },
+    {
+      "word": "divides",
+      "start": 66.502,
+      "end": 67.036
+    },
+    {
+      "word": "in",
+      "start": 67.222,
+      "end": 67.384
+    },
+    {
+      "word": "cytokinesis.",
+      "start": 67.454,
+      "end": 68.487
+    },
+    {
+      "word": "Remember",
+      "start": 68.905,
+      "end": 69.393
+    },
+    {
+      "word": "that",
+      "start": 69.555,
+      "end": 69.729
+    },
+    {
+      "word": "mitosis",
+      "start": 69.787,
+      "end": 70.414
+    },
+    {
+      "word": "maintains",
+      "start": 70.496,
+      "end": 71.041
+    },
+    {
+      "word": "chromosome",
+      "start": 71.111,
+      "end": 71.61
+    },
+    {
+      "word": "number;",
+      "start": 71.633,
+      "end": 72.075
+    },
+    {
+      "word": "it",
+      "start": 72.33,
+      "end": 72.469
+    },
+    {
+      "word": "does",
+      "start": 72.516,
+      "end": 72.678
+    },
+    {
+      "word": "not",
+      "start": 72.736,
+      "end": 72.876
+    },
+    {
+      "word": "halve",
+      "start": 72.945,
+      "end": 73.201
+    },
+    {
+      "word": "it.",
+      "start": 73.236,
+      "end": 73.503
+    },
+    {
+      "word": "In",
+      "start": 73.897,
+      "end": 74.083
+    },
+    {
+      "word": "humans,",
+      "start": 74.164,
+      "end": 74.849
+    },
+    {
+      "word": "most",
+      "start": 75.128,
+      "end": 75.407
+    },
+    {
+      "word": "body",
+      "start": 75.488,
+      "end": 75.767
+    },
+    {
+      "word": "cells",
+      "start": 75.813,
+      "end": 76.243
+    },
+    {
+      "word": "have",
+      "start": 76.521,
+      "end": 76.73
+    },
+    {
+      "word": "forty-six",
+      "start": 76.788,
+      "end": 77.346
+    },
+    {
+      "word": "chromosomes,",
+      "start": 77.415,
+      "end": 78.274
+    },
+    {
+      "word": "and",
+      "start": 78.483,
+      "end": 78.669
+    },
+    {
+      "word": "each",
+      "start": 78.762,
+      "end": 79.006
+    },
+    {
+      "word": "daughter",
+      "start": 79.122,
+      "end": 79.493
+    },
+    {
+      "word": "cell",
+      "start": 79.551,
+      "end": 79.865
+    },
+    {
+      "word": "normally",
+      "start": 80.26,
+      "end": 80.875
+    },
+    {
+      "word": "has",
+      "start": 81.119,
+      "end": 81.305
+    },
+    {
+      "word": "forty-six",
+      "start": 81.386,
+      "end": 81.955
+    },
+    {
+      "word": "too.",
+      "start": 82.036,
+      "end": 82.477
+    },
+    {
+      "word": "As",
+      "start": 82.93,
+      "end": 83.104
+    },
+    {
+      "word": "you",
+      "start": 83.162,
+      "end": 83.243
+    },
+    {
+      "word": "revise",
+      "start": 83.325,
+      "end": 83.731
+    },
+    {
+      "word": "this",
+      "start": 83.778,
+      "end": 83.928
+    },
+    {
+      "word": "topic,",
+      "start": 83.998,
+      "end": 84.625
+    },
+    {
+      "word": "try",
+      "start": 84.776,
+      "end": 85.02
+    },
+    {
+      "word": "to",
+      "start": 85.101,
+      "end": 85.182
+    },
+    {
+      "word": "explain",
+      "start": 85.264,
+      "end": 85.728
+    },
+    {
+      "word": "the",
+      "start": 85.798,
+      "end": 85.867
+    },
+    {
+      "word": "key",
+      "start": 85.949,
+      "end": 86.134
+    },
+    {
+      "word": "process",
+      "start": 86.204,
+      "end": 86.692
+    },
+    {
+      "word": "in",
+      "start": 86.761,
+      "end": 86.854
+    },
+    {
+      "word": "your",
+      "start": 86.924,
+      "end": 87.075
+    },
+    {
+      "word": "own",
+      "start": 87.144,
+      "end": 87.319
+    },
+    {
+      "word": "words.",
+      "start": 87.377,
+      "end": 87.923
+    },
+    {
+      "word": "Focus",
+      "start": 88.318,
+      "end": 88.759
+    },
+    {
+      "word": "on",
+      "start": 88.817,
+      "end": 88.886
+    },
+    {
+      "word": "what",
+      "start": 88.933,
+      "end": 89.095
+    },
+    {
+      "word": "happens,",
+      "start": 89.165,
+      "end": 89.78
+    },
+    {
+      "word": "why",
+      "start": 89.989,
+      "end": 90.233
+    },
+    {
+      "word": "it",
+      "start": 90.291,
+      "end": 90.384
+    },
+    {
+      "word": "happens,",
+      "start": 90.442,
+      "end": 91.034
+    },
+    {
+      "word": "and",
+      "start": 91.15,
+      "end": 91.324
+    },
+    {
+      "word": "how",
+      "start": 91.417,
+      "end": 91.615
+    },
+    {
+      "word": "the",
+      "start": 91.696,
+      "end": 91.766
+    },
+    {
+      "word": "structures",
+      "start": 91.812,
+      "end": 92.311
+    },
+    {
+      "word": "involved",
+      "start": 92.381,
+      "end": 92.811
+    },
+    {
+      "word": "help",
+      "start": 92.903,
+      "end": 93.159
+    },
+    {
+      "word": "the",
+      "start": 93.229,
+      "end": 93.298
+    },
+    {
+      "word": "process",
+      "start": 93.356,
+      "end": 93.739
+    },
+    {
+      "word": "work.",
+      "start": 93.797,
+      "end": 94.192
+    },
+    {
+      "word": "Now,",
+      "start": 94.645,
+      "end": 94.889
+    },
+    {
+      "word": "pause",
+      "start": 94.935,
+      "end": 95.249
+    },
+    {
+      "word": "the",
+      "start": 95.283,
+      "end": 95.353
+    },
+    {
+      "word": "video",
+      "start": 95.411,
+      "end": 95.771
+    },
+    {
+      "word": "and",
+      "start": 95.841,
+      "end": 95.98
+    },
+    {
+      "word": "try",
+      "start": 96.027,
+      "end": 96.27
+    },
+    {
+      "word": "this",
+      "start": 96.352,
+      "end": 96.537
+    },
+    {
+      "word": "exam-style",
+      "start": 96.653,
+      "end": 97.478
+    },
+    {
+      "word": "question.",
+      "start": 97.524,
+      "end": 98.198
+    },
+    {
+      "word": "Describe",
+      "start": 98.65,
+      "end": 99.126
+    },
+    {
+      "word": "what",
+      "start": 99.161,
+      "end": 99.289
+    },
+    {
+      "word": "happens",
+      "start": 99.347,
+      "end": 99.73
+    },
+    {
+      "word": "to",
+      "start": 99.777,
+      "end": 99.869
+    },
+    {
+      "word": "the",
+      "start": 99.939,
+      "end": 100.009
+    },
+    {
+      "word": "D",
+      "start": 100.078,
+      "end": 100.171
+    },
+    {
+      "word": "N",
+      "start": 100.38,
+      "end": 100.554
+    },
+    {
+      "word": "A",
+      "start": 100.705,
+      "end": 100.821
+    },
+    {
+      "word": "in",
+      "start": 100.903,
+      "end": 101.007
+    },
+    {
+      "word": "a",
+      "start": 101.065,
+      "end": 101.1
+    },
+    {
+      "word": "cell",
+      "start": 101.158,
+      "end": 101.437
+    },
+    {
+      "word": "before",
+      "start": 101.506,
+      "end": 101.797
+    },
+    {
+      "word": "mitosis",
+      "start": 101.832,
+      "end": 102.354
+    },
+    {
+      "word": "begins.",
+      "start": 102.412,
+      "end": 103.051
+    },
+    {
+      "word": "[two",
+      "start": 103.759,
+      "end": 104.107
+    },
+    {
+      "word": "marks]",
+      "start": 104.188,
+      "end": 104.78
+    },
+    {
+      "word": "Here",
+      "start": 104.989,
+      "end": 105.175
+    },
+    {
+      "word": "is",
+      "start": 105.21,
+      "end": 105.291
+    },
+    {
+      "word": "a",
+      "start": 105.338,
+      "end": 105.361
+    },
+    {
+      "word": "model",
+      "start": 105.419,
+      "end": 105.709
+    },
+    {
+      "word": "answer.",
+      "start": 105.767,
+      "end": 106.208
+    },
+    {
+      "word": "The",
+      "start": 106.359,
+      "end": 106.499
+    },
+    {
+      "word": "D",
+      "start": 106.568,
+      "end": 106.684
+    },
+    {
+      "word": "N",
+      "start": 106.859,
+      "end": 106.975
+    },
+    {
+      "word": "A",
+      "start": 107.068,
+      "end": 107.184
+    },
+    {
+      "word": "is",
+      "start": 107.3,
+      "end": 107.451
+    },
+    {
+      "word": "copied",
+      "start": 107.532,
+      "end": 107.962
+    },
+    {
+      "word": "(replicated),",
+      "start": 108.078,
+      "end": 109.076
+    },
+    {
+      "word": "so",
+      "start": 109.227,
+      "end": 109.424
+    },
+    {
+      "word": "each",
+      "start": 109.541,
+      "end": 109.749
+    },
+    {
+      "word": "chromosome",
+      "start": 109.808,
+      "end": 110.481
+    },
+    {
+      "word": "has",
+      "start": 110.539,
+      "end": 110.736
+    },
+    {
+      "word": "two",
+      "start": 110.806,
+      "end": 110.957
+    },
+    {
+      "word": "identical",
+      "start": 111.05,
+      "end": 111.642
+    },
+    {
+      "word": "copies",
+      "start": 111.712,
+      "end": 112.176
+    },
+    {
+      "word": "before",
+      "start": 112.35,
+      "end": 112.78
+    },
+    {
+      "word": "the",
+      "start": 112.826,
+      "end": 112.919
+    },
+    {
+      "word": "cell",
+      "start": 112.965,
+      "end": 113.186
+    },
+    {
+      "word": "divides.",
+      "start": 113.267,
+      "end": 113.952
+    },
+    {
+      "word": "If",
+      "start": 114.475,
+      "end": 114.684
+    },
+    {
+      "word": "this",
+      "start": 114.742,
+      "end": 114.928
+    },
+    {
+      "word": "explanation",
+      "start": 114.997,
+      "end": 115.752
+    },
+    {
+      "word": "has",
+      "start": 115.833,
+      "end": 116.042
+    },
+    {
+      "word": "helped,",
+      "start": 116.112,
+      "end": 116.541
+    },
+    {
+      "word": "please",
+      "start": 116.692,
+      "end": 116.983
+    },
+    {
+      "word": "subscribe",
+      "start": 117.006,
+      "end": 117.609
+    },
+    {
+      "word": "to",
+      "start": 117.656,
+      "end": 117.76
+    },
+    {
+      "word": "J",
+      "start": 117.876,
+      "end": 118.085
+    },
+    {
+      "word": "D",
+      "start": 118.178,
+      "end": 118.294
+    },
+    {
+      "word": "Science",
+      "start": 118.445,
+      "end": 118.933
+    },
+    {
+      "word": "for",
+      "start": 118.979,
+      "end": 119.142
+    },
+    {
+      "word": "more",
+      "start": 119.223,
+      "end": 119.386
+    },
+    {
+      "word": "lessons.",
+      "start": 119.432,
+      "end": 120.024
+    },
+    {
+      "word": "You",
+      "start": 120.198,
+      "end": 120.326
+    },
+    {
+      "word": "can",
+      "start": 120.396,
+      "end": 120.535
+    },
+    {
+      "word": "find",
+      "start": 120.628,
+      "end": 120.907
+    },
+    {
+      "word": "further",
+      "start": 121.023,
+      "end": 121.383
+    },
+    {
+      "word": "learning",
+      "start": 121.441,
+      "end": 121.708
+    },
+    {
+      "word": "resources",
+      "start": 121.766,
+      "end": 122.323
+    },
+    {
+      "word": "and",
+      "start": 122.393,
+      "end": 122.544
+    },
+    {
+      "word": "practice",
+      "start": 122.613,
+      "end": 123.031
+    },
+    {
+      "word": "questions",
+      "start": 123.066,
+      "end": 123.542
+    },
+    {
+      "word": "at",
+      "start": 123.624,
+      "end": 123.774
+    },
+    {
+      "word": "JDscience",
+      "start": 123.856,
+      "end": 124.599
+    },
+    {
+      "word": "dot",
+      "start": 124.634,
+      "end": 124.819
+    },
+    {
+      "word": "co",
+      "start": 124.889,
+      "end": 125.11
+    },
+    {
+      "word": "dot",
+      "start": 125.226,
+      "end": 125.423
+    },
+    {
+      "word": "U",
+      "start": 125.539,
+      "end": 125.69
+    },
+    {
+      "word": "K.",
+      "start": 125.806,
+      "end": 126.166
+    },
+    {
+      "word": "Thank",
+      "start": 126.375,
+      "end": 126.619
+    },
+    {
+      "word": "you",
+      "start": 126.665,
+      "end": 126.747
+    },
+    {
+      "word": "for",
+      "start": 126.805,
+      "end": 126.909
+    },
+    {
+      "word": "watching.",
+      "start": 126.967,
+      "end": 127.455
+    }
+  ],
+  "chunks": 1,
+  "model": "eleven_multilingual_v2"
+}

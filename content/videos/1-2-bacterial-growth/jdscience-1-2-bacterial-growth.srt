@@ -1,0 +1,156 @@
+1
+00:00:00,116 --> 00:00:02,868
+Hello and welcome back to J D Science.
+
+2
+00:00:03,042 --> 00:00:05,944
+Today, we are exploring how bacteria grow.
+
+3
+00:00:06,153 --> 00:00:09,857
+Bacteria reproduce by binary fission, an asexual
+
+4
+00:00:09,915 --> 00:00:10,472
+process.
+
+5
+00:00:10,681 --> 00:00:14,408
+If they doubled every twenty minutes, one bacterium would become two
+
+6
+00:00:14,524 --> 00:00:18,309
+after twenty minutes, four after forty, eight after sixty, and
+
+7
+00:00:18,379 --> 00:00:18,843
+so on.
+
+8
+00:00:19,052 --> 00:00:22,338
+Growth is fastest with the right temperature and nutrients.
+
+9
+00:00:22,547 --> 00:00:25,890
+In the lab, we grow bacteria on agar in a petri dish.
+
+10
+00:00:26,134 --> 00:00:29,872
+We sterilise the loop and dish to stop unwanted microbes, and we
+
+11
+00:00:29,930 --> 00:00:33,854
+tape the lid loosely and store the dish upside down so condensation
+
+12
+00:00:33,924 --> 00:00:35,944
+does not drip onto the agar.
+
+13
+00:00:36,769 --> 00:00:40,542
+In school labs we do not culture pathogens at thirty-seven degrees
+
+14
+00:00:40,588 --> 00:00:44,454
+Celsius, because that is the temperature that suits human pathogens
+
+15
+00:00:44,512 --> 00:00:44,988
+best.
+
+16
+00:00:45,441 --> 00:00:48,587
+To calculate growth, use the number of generations.
+
+17
+00:00:48,982 --> 00:00:52,709
+Divide the total time by the doubling time, then multiply the
+
+18
+00:00:52,767 --> 00:00:56,378
+starting number of bacteria by two to the power of that number.
+
+19
+00:00:56,656 --> 00:01:00,372
+For example, over two hours with a twenty-minute doubling time,
+
+20
+00:01:00,499 --> 00:01:02,032
+there are six generations.
+
+21
+00:01:02,183 --> 00:01:05,793
+One bacterium could therefore become sixty-four, provided
+
+22
+00:01:05,851 --> 00:01:07,442
+conditions remain suitable.
+
+23
+00:01:07,779 --> 00:01:12,005
+School microbiology work must follow the laboratory's risk assessment
+
+24
+00:01:12,063 --> 00:01:14,095
+and approved incubation procedures.
+
+25
+00:01:14,617 --> 00:01:17,938
+As you revise this topic, try to explain the key process in
+
+26
+00:01:18,008 --> 00:01:18,936
+your own words.
+
+27
+00:01:19,215 --> 00:01:22,942
+Focus on what happens, why it happens, and how the structures
+
+28
+00:01:23,023 --> 00:01:24,834
+involved help the process work.
+
+29
+00:01:25,287 --> 00:01:28,549
+Now, pause the video and try this exam-style question.
+
+30
+00:01:29,002 --> 00:01:32,369
+Explain why the lid of a petri dish should be taped loosely
+
+31
+00:01:32,613 --> 00:01:34,586
+and the dish stored upside down.
+
+32
+00:01:35,294 --> 00:01:38,290
+[two marks] Here is a model answer.
+
+33
+00:01:38,499 --> 00:01:42,284
+To stop unwanted microbes getting in while allowing air in.
+
+34
+00:01:42,620 --> 00:01:45,871
+Upside down prevents condensation dripping onto the agar.
+
+35
+00:01:46,208 --> 00:01:49,842
+If this explanation has helped, please subscribe to J D Science
+
+36
+00:01:49,877 --> 00:01:50,898
+for more lessons.
+
+37
+00:01:51,142 --> 00:01:55,275
+You can find further learning resources and practice questions at JDscience
+
+38
+00:01:55,368 --> 00:01:56,703
+dot co dot U K.
+
+39
+00:01:56,796 --> 00:01:57,841
+Thank you for watching.
+
