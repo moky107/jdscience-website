@@ -188,6 +188,19 @@ test("completed 1.1 and 1.2 audio and video masters are unchanged", () => {
   assert.equal(md5File(bacterialMp4), "99ad97c922011c5cb33c88f1d88f94e8");
 });
 
+test("visual drafts stay unpublished and must not replace 1.1 or 1.2", () => {
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const item of remaining) {
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${item.slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(item.slug));
+    const draftName = item.filename.replace("-1080p.mp4", "-visual-draft-1080p.mp4");
+    assert.match(draftName, /visual-draft-1080p\.mp4$/);
+    assert.doesNotMatch(draftName, /1-1-cell-division|1-2-bacterial-growth/);
+  }
+  assert.equal(GCSE_BIOLOGY_VIDEOS.length, 2);
+});
+
 test("Vercel Hobby still has exactly 12 top-level API files", () => {
   const apiFiles = readdirSync(join(ROOT, "api")).filter((name) => name.endsWith(".js"));
   assert.equal(apiFiles.length, 12, "Vercel Hobby must keep exactly 12 top-level API functions");
