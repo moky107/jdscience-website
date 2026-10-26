@@ -1,0 +1,106 @@
+{
+  "slug": "2-3-plant-tissues-organs-systems",
+  "spec": "2.3",
+  "title": "Plant Tissues, Organs and Systems",
+  "filename": "jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 117.67,
+  "bytes": 1552792,
+  "md5": "6579a9309c14ce8dc8b5b6c360a5de8f",
+  "local_path": "content/gcse-biology/visual-drafts/2-3-plant-tissues-organs-systems/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/2-3-plant-tissues-organs-systems/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 117.67,
+      "size": 1552792,
+      "nb_frames": 3530
+    },
+    "luma": {
+      "start": 42.8,
+      "early": 47.3,
+      "mid": 45.2,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "117.670s vs 117.670s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3530 vs 3530"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=42.8"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=47.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=45.2"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/2-3-plant-tissues-organs-systems.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

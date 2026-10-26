@@ -1,0 +1,106 @@
+{
+  "slug": "5-4-plant-hormones",
+  "spec": "5.4",
+  "title": "Plant Hormones",
+  "filename": "jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 117.812,
+  "bytes": 1501330,
+  "md5": "e400fceda184b20d71ac9ff85594feb1",
+  "local_path": "content/gcse-biology/visual-drafts/5-4-plant-hormones/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-4-plant-hormones/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 117.811995,
+      "size": 1501330,
+      "nb_frames": 3534
+    },
+    "luma": {
+      "start": 41.5,
+      "early": 45.3,
+      "mid": 47.2,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "117.812s vs 117.812s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3534 vs 3534"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.5"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=45.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=47.2"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/5-4-plant-hormones.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

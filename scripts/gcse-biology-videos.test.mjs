@@ -188,6 +188,26 @@ test("completed 1.1 and 1.2 audio and video masters are unchanged", () => {
   assert.equal(md5File(bacterialMp4), "99ad97c922011c5cb33c88f1d88f94e8");
 });
 
+test("23 silent visual drafts are labelled drafts with persistent URLs and stay unpublished", () => {
+  const rows = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/visual-draft-register.json"), "utf8"));
+  assert.equal(rows.length, 23);
+  assert.equal(rows[0].slug, "1-3-transport-in-cells");
+  assert.equal(rows.at(-1).slug, "7-5-food-production");
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const row of rows) {
+    assert.equal(row.kind, "visual_only_draft");
+    assert.equal(row.narration, "pending_cloned_voice");
+    assert.equal(row.site, "not_published");
+    assert.equal(row.youtube, "not_uploaded");
+    assert.equal(row.qa_pass, true);
+    assert.match(row.filename, /visual-draft-1080p\.mp4$/);
+    assert.match(row.download_url, /\/biology\/visual-drafts\//);
+    assert.doesNotMatch(row.download_url, /\/biology\/videos\//);
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${row.slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(row.slug));
+  }
+});
+
 test("visual drafts stay unpublished and must not replace 1.1 or 1.2", () => {
   const remaining = BIOLOGY_SCRIPTS.filter((item) => !GCSE_BIOLOGY_HOSTED_SLUGS.includes(item.slug));
   const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");

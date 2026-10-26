@@ -1,0 +1,106 @@
+{
+  "slug": "6-3-genetics-and-evolution",
+  "spec": "6.3",
+  "title": "The Development of Understanding of Genetics and Evolution",
+  "filename": "jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 139.168,
+  "bytes": 1935125,
+  "md5": "11f13b22c9e0b432a7b2fb1bb943a7d8",
+  "local_path": "content/gcse-biology/visual-drafts/6-3-genetics-and-evolution/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-3-genetics-and-evolution/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 139.168005,
+      "size": 1935125,
+      "nb_frames": 4175
+    },
+    "luma": {
+      "start": 42.3,
+      "early": 42.3,
+      "mid": 45.4,
+      "late": 39.6
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "139.168s vs 139.168s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "4175 vs 4175"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=42.3"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=42.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=45.4"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.6"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/6-3-genetics-and-evolution.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

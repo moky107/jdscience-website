@@ -1,0 +1,106 @@
+{
+  "slug": "6-4-classification",
+  "spec": "6.4",
+  "title": "Classification of New Organisms",
+  "filename": "jdscience-6-4-classification-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 118.31,
+  "bytes": 1483008,
+  "md5": "00c089b97201d506d10f66fc20a9f776",
+  "local_path": "content/gcse-biology/visual-drafts/6-4-classification/jdscience-6-4-classification-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-6-4-classification-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-4-classification/jdscience-6-4-classification-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 118.31,
+      "size": 1483008,
+      "nb_frames": 3549
+    },
+    "luma": {
+      "start": 46.5,
+      "early": 46.5,
+      "mid": 44.7,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "118.310s vs 118.310s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3549 vs 3549"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=46.5"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=46.5"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=44.7"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/6-4-classification.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

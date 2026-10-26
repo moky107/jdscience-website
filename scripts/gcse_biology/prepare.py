@@ -216,14 +216,15 @@ def write_register(boards: list[dict], still_count: int) -> Path:
     for item in boards:
         lines.append(
             f"| {item['spec']} | {item['title']} | {item['slide_count']} | ready "
-            f"| waiting for credits | not rendered | unlisted pack | unpublished | ready for narration |"
+            f"| waiting for credits | visual-draft silent | unlisted pack | unpublished | visual draft |"
         )
     lines += [
         "",
         f"Prepared stills: {still_count} at 1920×1080 in `content/gcse-biology/previs/`. Transition: {TRANSITION:.2f}s. Frame rate: {FPS} fps.",
         "Contact sheets: `content/gcse-biology/contact/`. YouTube covers: `content/gcse-biology/covers/`.",
         "Do not alter completed 1.1 Cell Division or 1.2 Bacterial Growth masters.",
-        "Do not publish unfinished videos. Keep YouTube Unlisted until approved for Public.",
+        "Silent visual-draft MP4s and download URLs: `content/gcse-biology/VISUAL_DRAFT_REGISTER.md`.",
+        "Do not publish visual drafts. Keep YouTube Unlisted until approved for Public.",
         "Resume order after credits: start at `1-3-transport-in-cells` using only the existing cloned voice.",
         "",
         "YouTube titles stay under 100 characters. Tags and chapter lists are in `content/gcse-biology/youtube-metadata.json`.",

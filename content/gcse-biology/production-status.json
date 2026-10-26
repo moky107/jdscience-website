@@ -40,6 +40,8 @@
   "contact_dir": "content/gcse-biology/contact",
   "youtube_covers": 23,
   "mp4s_rendered_this_run": [],
+  "visual_drafts": 23,
+  "visual_draft_register": "content/gcse-biology/VISUAL_DRAFT_REGISTER.md",
   "preserved_mp3": [
     "content/videos/1-1-cell-division/source/narration_master.mp3",
     "content/videos/1-2-bacterial-growth/source/narration_master.mp3"
