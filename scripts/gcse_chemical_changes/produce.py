@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Produce six-stage GCSE Chemistry chemical-changes lessons.
 
-Cloned-voice audio is the master clock. A short pause is inserted before the
-model answer. Videos are 1920×1080, 30 fps, H.264/AAC. Silent drafts are never
-published as completed lessons.
+Temporary British English narration (en-GB-RyanNeural) is the master clock.
+A short pause is inserted before the model answer. Videos are 1920×1080,
+30 fps, H.264/AAC. Silent drafts are never published as completed lessons.
+Keep narration_master.m4a and transcript.json so a cloned voice can replace
+this track later without rebuilding slide cues.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -20,10 +23,13 @@ if str(ROOT / "scripts") not in sys.path:
 
 import gcse_foundations.render as foundations_render
 from gcse_chemical_changes import draw as chem_draw
+from gcse_chemical_changes.covers import youtube as write_cover
+from gcse_chemical_changes.cursor import cursor_from_aligned
+from gcse_chemical_changes.encode import encode_narrated
 from gcse_chemical_changes.lessons import LESSONS
 from gcse_chemical_changes.narration import BY_SLUG
 from gcse_chemical_changes.spec import outcomes_for
-from gcse_foundations import tts as foundations_tts
+from gcse_chemical_changes.tts_temp import generate_lesson as generate_tts
 from gcse_foundations.render import align, write_srt
 from jdscience_video.six_stage import evaluate_lesson, report_to_dict
 
@@ -72,7 +78,6 @@ def insert_pause(audio: Path, transcript: dict, pause_at: float, seconds: float 
     wav = audio.parent / "narration_paused.wav"
     out_m4a = audio.parent / "narration_master.m4a"
     out_mp3 = audio.parent / "narration_master.mp3"
-    # split, insert silence, concat
     before = audio.parent / "_before.wav"
     after = audio.parent / "_after.wav"
     silence = audio.parent / "_silence.wav"
@@ -116,13 +121,25 @@ def insert_pause(audio: Path, transcript: dict, pause_at: float, seconds: float 
     return out_m4a, updated
 
 
-def generate_tts(slug: str, dest: Path) -> dict:
-    original = foundations_tts.BY_SLUG
-    try:
-        foundations_tts.BY_SLUG = BY_SLUG
-        return foundations_tts.generate_lesson(slug, dest)
-    finally:
-        foundations_tts.BY_SLUG = original
+def srt_to_vtt(srt_text: str) -> str:
+    body = re.sub(r"(\d{2}:\d{2}:\d{2}),(\d{3})", r"\1.\2", srt_text.replace("\r\n", "\n"))
+    return f"WEBVTT\n\n{body.strip()}\n"
+
+
+def narration_path(transcript: dict, source: Path) -> Path:
+    audio = Path(transcript.get("audio") or "")
+    if not audio.exists():
+        for name in ("narration_master.m4a", "narration_master.mp3"):
+            candidate = source / name
+            if candidate.exists():
+                audio = candidate
+                break
+    text = str(audio).lower()
+    if not audio.exists():
+        raise SystemExit("narration master not found; refusing to encode a silent track")
+    if "silent" in text or "visual-draft" in text or "anullsrc" in text:
+        raise SystemExit("refusing to mux a silent visual master as narration")
+    return audio
 
 
 def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = True) -> dict:
@@ -139,31 +156,54 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
 
     aligned = align(lesson, transcript)
     model_t = next((s["t"] for s in aligned["slides"] if s["id"] == "model"), None)
-    audio = Path(transcript.get("audio") or (source / "narration_master.m4a"))
-    if not audio.exists():
-        audio = source / "narration_master.mp3"
+    audio = narration_path(transcript, source)
     if model_t is not None and not transcript.get("pause_inserted_s"):
         audio, transcript = insert_pause(audio, transcript, model_t, PAUSE_SECONDS)
         transcript_path.write_text(json.dumps(transcript, indent=2))
         aligned = align(lesson, transcript)
+        audio = narration_path(transcript, source)
 
+    aligned["cursor"] = cursor_from_aligned(aligned)
     out_dir = ROOT / "content/videos" / slug
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "timing_map.json").write_text(json.dumps({
         "slug": slug,
         "duration": aligned["duration"],
+        "voice": transcript.get("voice"),
+        "temporary_voice": True,
         "slides": [{k: s[k] for k in ("id", "t", "aligned", "cue", "kind") if k in s} for s in aligned["slides"]],
         "reveals": [{k: e[k] for k in ("slide", "item", "t", "aligned", "cue") if k in e} for e in aligned["reveals"]],
+        "cursor": [{k: e[k] for k in ("t", "aligned", "cue", "target", "slide") if k in e} for e in aligned["cursor"]],
     }, indent=2))
     srt = artifacts / f"jdscience-{slug}.srt"
     artifacts.mkdir(parents=True, exist_ok=True)
     write_srt(aligned["words"], srt)
     write_srt(aligned["words"], out_dir / f"jdscience-{slug}.srt")
+    vtt = srt_to_vtt((out_dir / f"jdscience-{slug}.srt").read_text())
+    (out_dir / "captions.vtt").write_text(vtt)
+    (artifacts / f"jdscience-{slug}.vtt").write_text(vtt)
+
+    qa = out_dir / "qa"
+    qa.mkdir(exist_ok=True)
+    for slide in aligned["slides"]:
+        img = chem_draw.render_slide(aligned, slide["id"], ["*"], slide["t"])
+        img.save(qa / f"{slide['id']}.png")
+
+    write_cover(
+        artifacts / f"{slug}-youtube-cover.jpg",
+        script.spec_label,
+        script.title,
+        script.subtitle,
+        script.tier,
+    )
 
     dest = artifacts / script.filename
+    yt = artifacts / script.youtube_filename
     if video:
         work = Path("/tmp/jdscience_chemical_changes") / slug
-        foundations_render.encode_lesson(aligned, audio, dest, work)
+        encode_narrated(aligned, audio, dest, work)
+        if dest.exists() and dest.resolve() != yt.resolve():
+            yt.write_bytes(dest.read_bytes())
         info = probe(dest)
     else:
         info = {}
@@ -186,8 +226,12 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         "aligned_total": len(aligned["slides"]),
         "aligned_reveals": sum(1 for e in aligned["reveals"] if e.get("aligned")),
         "reveals_total": len(aligned["reveals"]),
+        "aligned_cursor": sum(1 for e in aligned["cursor"] if e.get("aligned")),
+        "cursor_total": len(aligned["cursor"]),
         "filename": script.filename,
         "tier": script.tier,
+        "voice": transcript.get("voice"),
+        "temporary_voice": True,
     }
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "qa").mkdir(exist_ok=True)
@@ -202,6 +246,8 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         "complete": report.complete,
     }, indent=2))
     print(json.dumps({"slug": slug, "complete": report.complete, "duration": aligned["duration"], "failures": report.failures}, indent=2))
+    if not report.complete:
+        raise SystemExit(f"{slug} failed QA: {report.failures}")
     return payload
 
 

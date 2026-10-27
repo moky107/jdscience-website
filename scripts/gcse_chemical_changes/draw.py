@@ -6,9 +6,11 @@ from typing import Iterable
 
 from PIL import Image, ImageDraw
 
+from gcse_chemical_changes.cursor import spots_for_slide
 from gcse_chemical_changes.diagrams import DIAGRAMS
 from gcse_foundations.diagrams import bullet_card, card, recap_cards, text_block
 from gcse_foundations.draw import outro as foundations_outro
+from jdscience_video.render import cursor_xy, draw_cursor, draw_highlight
 from jdscience_video.theme import GOLD, INK, LINE, MUTED, TEAL, TEAL_BAR, W, WHITE, chem, font, heading, new_canvas, draw_chrome
 
 
@@ -167,6 +169,15 @@ def outro(lesson, revealed, t, page):
     return foundations_outro(lesson, revealed, t, page)
 
 
+def _with_pointer(lesson: dict, slide: dict, img: Image.Image, t: float) -> Image.Image:
+    if not lesson.get("cursor"):
+        return img
+    spots = spots_for_slide(slide)
+    x, y, opacity, target = cursor_xy(lesson, t, spots)
+    img = draw_highlight(img, spots, target, opacity)
+    return draw_cursor(img, x, y, opacity)
+
+
 KIND = {
     "intro": lambda lesson, slide, revealed, t, page: intro(lesson, revealed, t, page),
     "aims": aims,
@@ -186,4 +197,5 @@ def render_slide(lesson: dict, slide_id: str, revealed: Iterable[str], t: float 
     slide = next(s for s in lesson["slides"] if s["id"] == slide_id)
     kind = slide["kind"]
     page = slide.get("page", 1)
-    return KIND[kind](lesson, slide, list(revealed), t, page)
+    img = KIND[kind](lesson, slide, list(revealed), t, page)
+    return _with_pointer(lesson, slide, img, t)

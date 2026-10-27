@@ -430,7 +430,7 @@ SALTS = _lesson(
         {"slide": "recap", "item": "r3", "cue": "excess solid, then filter, evaporate"},
         {"slide": "recap", "item": "r4", "cue": "Titration is used when both"},
     ],
-    {"intro"},
+    {"intro", "soluble", "insoluble"},
 )
 
 TITR = _lesson(
@@ -498,7 +498,7 @@ TITR = _lesson(
         {"slide": "recap", "item": "r3", "cue": "Convert cubic centimetres"},
         {"slide": "recap", "item": "r4", "cue": "Use the mole ratio"},
     ],
-    {"intro"},
+    {"intro", "kit"},
 )
 
 IONS = _lesson(
@@ -691,7 +691,7 @@ AQUEOUS = _lesson(
         {"slide": "recap", "item": "r3", "cue": "halogen from a concentrated halide"},
         {"slide": "recap", "item": "r4", "cue": "Brine gives hydrogen, chlorine"},
     ],
-    {"intro", "brine"},
+    {"intro", "brine", "cuso4"},
 )
 
 COPPER = _lesson(

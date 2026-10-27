@@ -269,6 +269,8 @@ def titration(d, box, t=0.0):
     d.rectangle((x0 + 160, y0 + 50, x0 + 190, y0 + 280), outline=(200, 220, 235), width=3)
     d.polygon([(x0 + 160, y0 + 280), (x0 + 190, y0 + 280), (x0 + 175, y0 + 310)], outline=(200, 220, 235), width=3)
     d.text((x0 + 175, y0 + 40), "burette", font=font("medium", 16), fill=MUTED, anchor="mm")
+    drop_y = y0 + 318 + (18 * (0.5 + 0.5 * math.sin(t * 3)))
+    d.ellipse((x0 + 168, drop_y, x0 + 182, drop_y + 16), fill=(180, 80, 140))
     # flask
     d.polygon([(x0 + 110, y0 + 340), (x0 + 240, y0 + 340), (x0 + 210, y0 + 470), (x0 + 140, y0 + 470)], outline=(200, 220, 235), width=3)
     d.polygon([(x0 + 140, y0 + 400), (x0 + 210, y0 + 400), (x0 + 200, y0 + 460), (x0 + 150, y0 + 460)], fill=(180, 80, 140))
@@ -299,10 +301,16 @@ def cell_base(d, box, title, electrolyte_label, t=0.0, ions=None, anode="+", cat
     electrode(d, tank[0] + 90, tank[1] + 20, tank[3] - 20, "cathode", cathode, TEAL_BAR)
     electrode(d, tank[2] - 90, tank[1] + 20, tank[3] - 20, "anode", anode, GOLD)
     ions = ions or []
+    left = tank[0] + 130
+    right = tank[2] - 130
+    span = max(80, right - left)
     for i, (lab, col, side) in enumerate(ions):
-        drift = 8 * math.sin(t * 2 + i)
-        x = tank[0] + 160 + i * 70 + (20 if side == "c" else 160) + drift
-        y = tank[1] + 80 + (i % 3) * 50
+        cycle = (t * 0.22 + i * 0.17) % 1.0
+        if side == "c":
+            x = right - 36 - cycle * (span - 72)
+        else:
+            x = left + 36 + cycle * (span - 72)
+        y = tank[1] + 90 + (i % 3) * 52 + 6 * math.sin(t * 1.4 + i)
         ion(d, (x, y), lab, col, 15)
     return tank
 
@@ -351,7 +359,10 @@ def aq_rules(d, box, t=0.0):
 
 
 def brine(d, box, t=0.0):
-    tank = cell_base(d, box, "Concentrated sodium chloride (brine)", "Na+(aq)  Cl-(aq)  H+(aq)  OH-(aq)", t)
+    tank = cell_base(
+        d, box, "Concentrated sodium chloride (brine)", "Na+(aq)  Cl-(aq)  H+(aq)  OH-(aq)", t,
+        [("H+", HPLUS, "c"), ("Na+", GOLD, "c"), ("Cl-", PINK, "a"), ("OH-", OHMINUS, "a")],
+    )
     d.text((tank[0] + 90, tank[1] + 36), "H2", font=font("bold", 18), fill=WHITE, anchor="mm")
     d.text((tank[2] - 90, tank[1] + 36), "Cl2", font=font("bold", 18), fill=GOLD, anchor="mm")
     d.text(((tank[0] + tank[2]) / 2, tank[3] - 30), "NaOH left in solution", font=font("semibold", 18), fill=GREEN, anchor="mm")
