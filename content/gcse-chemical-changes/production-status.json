@@ -17,11 +17,7 @@
     "acid-alkali-titration",
     "acids-bases-alkalis",
     "acids-metals-redox",
-    "chemical-changes-exam-practice",
-    "copper-purification",
-    "electrolysis-aqueous-solutions",
     "electrolysis-ions-electrodes",
-    "electrolysis-molten-ionic",
     "indicators-and-ph",
     "neutralisation-and-gas-tests",
     "soluble-and-insoluble-salts",
@@ -106,10 +102,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 400.966667,
-        "size": 13125574
+        "size": 12576432
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "copper-purification",
@@ -124,10 +120,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 345.511995,
-        "size": 10882310
+        "size": 10651756
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "electrolysis-aqueous-solutions",
@@ -142,10 +138,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 363.9,
-        "size": 12341744
+        "size": 11833407
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "electrolysis-ions-electrodes",
@@ -178,10 +174,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 356.48,
-        "size": 11498244
+        "size": 11120078
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "indicators-and-ph",
