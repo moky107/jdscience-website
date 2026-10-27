@@ -5,6 +5,7 @@ import {
   TUTOR_STORAGE_BUCKET,
   attachTutorAssetUrls,
   attachTutorAssetUrlsToMany,
+  isFounderTutorSlug,
   mimeTypeForTutorPath,
   normalizeTutorStoragePath,
   toPublicTutor,
@@ -23,6 +24,11 @@ async function serveTutorPhoto(req, res, supabase, slug) {
   if (!slug) {
     noStore(res);
     return res.status(400).json({ error: 'Missing tutor slug.' });
+  }
+
+  if (isFounderTutorSlug(slug)) {
+    noStore(res);
+    return res.status(404).json({ error: 'Tutor photo not found.' });
   }
 
   const { data, error } = await supabase
