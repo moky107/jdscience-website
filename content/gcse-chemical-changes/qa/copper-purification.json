@@ -61,7 +61,7 @@
     "acodec": "aac",
     "fps": 30.0,
     "duration": 345.511995,
-    "size": 10882310
+    "size": 10651756
   },
   "aligned_slides": 11,
   "aligned_total": 11,
@@ -71,6 +71,6 @@
   "cursor_total": 30,
   "filename": "jdscience-copper-purification-1080p.mp4",
   "tier": "Foundation and Higher",
-  "voice": "en-GB-RyanNeural",
-  "temporary_voice": true
+  "voice": "vgs3TWRK9YKYDkZcjIHB",
+  "temporary_voice": false
 }
