@@ -1,0 +1,37 @@
+{
+  "slug": "acids-bases-alkalis",
+  "title": "Acids, Bases and Alkalis",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2.1",
+      "statement": "Define acid, base and alkali in terms of ions in aqueous solution.",
+      "covered": true,
+      "evidence": "hydrogen ions, hydroxide, not every base",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.1",
+      "statement": "Recall that acids produce hydrogen ions in water.",
+      "covered": true,
+      "evidence": "hydrogen ions",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.2",
+      "statement": "Recall that alkalis are soluble bases that produce hydroxide ions.",
+      "covered": true,
+      "evidence": "soluble base",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.2a",
+      "statement": "Write the ionic equation H+ + OH- \u2192 H2O for neutralisation.",
+      "covered": true,
+      "evidence": "h plus plus o h minus",
+      "tier": "both"
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "neutralisation-and-gas-tests",
+  "title": "Neutralisation and Gas Tests",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2.2",
+      "statement": "Describe acid + alkali and acid + oxide reactions as salt + water.",
+      "covered": true,
+      "evidence": "salt and water",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.3",
+      "statement": "Describe acid + carbonate as salt + water + carbon dioxide.",
+      "covered": true,
+      "evidence": "carbon dioxide",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.6",
+      "statement": "Recall gas tests for hydrogen, oxygen and carbon dioxide.",
+      "covered": true,
+      "evidence": "limewater",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.2b",
+      "statement": "Write the ionic equation for acid-alkali neutralisation.",
+      "covered": true,
+      "evidence": "h plus plus o h minus",
+      "tier": "both"
+    }
+  ],
+  "complete": true
+}

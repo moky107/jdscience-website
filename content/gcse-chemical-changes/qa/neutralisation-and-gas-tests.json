@@ -1,0 +1,83 @@
+{
+  "slug": "neutralisation-and-gas-tests",
+  "title": "Neutralisation and Gas Tests",
+  "subject": "Chemistry",
+  "complete": true,
+  "duration_s": 390.1,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.2",
+      "statement": "Describe acid + alkali and acid + oxide reactions as salt + water.",
+      "covered": true,
+      "evidence": "salt and water",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.3",
+      "statement": "Describe acid + carbonate as salt + water + carbon dioxide.",
+      "covered": true,
+      "evidence": "carbon dioxide",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.6",
+      "statement": "Recall gas tests for hydrogen, oxygen and carbon dioxide.",
+      "covered": true,
+      "evidence": "limewater",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.2b",
+      "statement": "Write the ionic equation for acid-alkali neutralisation.",
+      "covered": true,
+      "evidence": "h plus plus o h minus",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": true,
+    "preferred_band": true,
+    "1080p": true
+  },
+  "failures": [],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  },
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "vcodec": "h264",
+    "acodec": "aac",
+    "fps": 30.0,
+    "duration": 390.103991,
+    "size": 12117935
+  },
+  "aligned_slides": 11,
+  "aligned_total": 11,
+  "aligned_reveals": 13,
+  "reveals_total": 13,
+  "aligned_cursor": 27,
+  "cursor_total": 27,
+  "filename": "jdscience-neutralisation-and-gas-tests-1080p.mp4",
+  "tier": "Foundation and Higher",
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true
+}

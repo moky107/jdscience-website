@@ -1,0 +1,76 @@
+{
+  "slug": "acid-alkali-titration",
+  "title": "Acid-Alkali Titration",
+  "subject": "Chemistry",
+  "complete": true,
+  "duration_s": 414.61,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.4t",
+      "statement": "Describe the titration method, including concordant titres.",
+      "covered": true,
+      "evidence": "concordant",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.16",
+      "statement": "Name pipette, burette, conical flask and indicator.",
+      "covered": true,
+      "evidence": "burette, pipette",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.17",
+      "statement": "Calculate unknown concentration using moles = concentration \u00d7 volume.",
+      "covered": true,
+      "evidence": "moles equals concentration",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": true,
+    "preferred_band": true,
+    "1080p": true
+  },
+  "failures": [],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  },
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "vcodec": "h264",
+    "acodec": "aac",
+    "fps": 30.0,
+    "duration": 414.608005,
+    "size": 12827875
+  },
+  "aligned_slides": 10,
+  "aligned_total": 10,
+  "aligned_reveals": 16,
+  "reveals_total": 16,
+  "aligned_cursor": 29,
+  "cursor_total": 29,
+  "filename": "jdscience-acid-alkali-titration-1080p.mp4",
+  "tier": "Foundation and Higher",
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true
+}

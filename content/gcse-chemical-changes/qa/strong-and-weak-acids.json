@@ -1,0 +1,76 @@
+{
+  "slug": "strong-and-weak-acids",
+  "title": "Strong and Weak Acids",
+  "subject": "Chemistry",
+  "complete": true,
+  "duration_s": 404.24,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.5",
+      "statement": "Explain strong and weak acids in terms of ionisation.",
+      "covered": true,
+      "evidence": "fully ionised, partially ionised",
+      "tier": "higher"
+    },
+    {
+      "code": "Edx3.8HT",
+      "statement": "Distinguish strength from concentration.",
+      "covered": true,
+      "evidence": "strength, concentration",
+      "tier": "higher"
+    },
+    {
+      "code": "C4.4.2.5b",
+      "statement": "Compare pH of strong and weak acids at the same concentration.",
+      "covered": true,
+      "evidence": "same concentration",
+      "tier": "higher"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": true,
+    "preferred_band": true,
+    "1080p": true
+  },
+  "failures": [],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  },
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "vcodec": "h264",
+    "acodec": "aac",
+    "fps": 30.0,
+    "duration": 404.24,
+    "size": 12499386
+  },
+  "aligned_slides": 11,
+  "aligned_total": 11,
+  "aligned_reveals": 11,
+  "reveals_total": 13,
+  "aligned_cursor": 25,
+  "cursor_total": 27,
+  "filename": "jdscience-strong-and-weak-acids-1080p.mp4",
+  "tier": "Higher Tier",
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true
+}

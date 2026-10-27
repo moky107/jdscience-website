@@ -1,0 +1,37 @@
+{
+  "slug": "electrolysis-aqueous-solutions",
+  "title": "Electrolysis of Aqueous Solutions",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.3.4",
+      "statement": "Apply the cathode rule for aqueous solutions.",
+      "covered": true,
+      "evidence": "more reactive than hydrogen",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.3.5",
+      "statement": "Apply the anode rule for aqueous solutions, including concentrated halides.",
+      "covered": true,
+      "evidence": "halide",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.24",
+      "statement": "Predict products for brine and copper sulfate with inert electrodes.",
+      "covered": true,
+      "evidence": "brine",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.25",
+      "statement": "Recall half-equations for hydrogen, oxygen and chlorine.",
+      "covered": true,
+      "evidence": "four o h minus",
+      "tier": "higher"
+    }
+  ],
+  "complete": true
+}

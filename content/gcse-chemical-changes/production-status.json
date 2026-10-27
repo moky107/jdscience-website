@@ -1,0 +1,259 @@
+{
+  "complete_videos": [
+    "acid-alkali-titration",
+    "acids-bases-alkalis",
+    "acids-metals-redox",
+    "chemical-changes-exam-practice",
+    "copper-purification",
+    "electrolysis-aqueous-solutions",
+    "electrolysis-ions-electrodes",
+    "electrolysis-molten-ionic",
+    "indicators-and-ph",
+    "neutralisation-and-gas-tests",
+    "soluble-and-insoluble-salts",
+    "strong-and-weak-acids"
+  ],
+  "awaiting_cloned_voice_replacement": [
+    "acid-alkali-titration",
+    "acids-bases-alkalis",
+    "acids-metals-redox",
+    "chemical-changes-exam-practice",
+    "copper-purification",
+    "electrolysis-aqueous-solutions",
+    "electrolysis-ions-electrodes",
+    "electrolysis-molten-ionic",
+    "indicators-and-ph",
+    "neutralisation-and-gas-tests",
+    "soluble-and-insoluble-salts",
+    "strong-and-weak-acids"
+  ],
+  "temporary_voice": {
+    "engine": "edge-tts",
+    "voice": "en-GB-RyanNeural",
+    "rate": "-20%"
+  },
+  "elevenlabs": {
+    "status": "quota_exceeded",
+    "not_used": true
+  },
+  "do_not_publish_silent_or_padded": true,
+  "min_duration_s": 240,
+  "lessons": [
+    {
+      "slug": "acid-alkali-titration",
+      "title": "Acid-Alkali Titration",
+      "complete": true,
+      "duration_s": 414.61,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 414.608005,
+        "size": 12827875
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "acids-bases-alkalis",
+      "title": "Acids, Bases and Alkalis",
+      "complete": true,
+      "duration_s": 429.8,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 429.8,
+        "size": 13516228
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "acids-metals-redox",
+      "title": "Acids Reacting with Metals",
+      "complete": true,
+      "duration_s": 402.08,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 402.08,
+        "size": 12725976
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "chemical-changes-exam-practice",
+      "title": "Chemical Changes: Exam Practice",
+      "complete": true,
+      "duration_s": 400.95,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 400.966667,
+        "size": 13125574
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "copper-purification",
+      "title": "Copper Purification by Electrolysis",
+      "complete": true,
+      "duration_s": 345.51,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 345.511995,
+        "size": 10882310
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "electrolysis-aqueous-solutions",
+      "title": "Electrolysis of Aqueous Solutions",
+      "complete": true,
+      "duration_s": 363.9,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 363.9,
+        "size": 12341744
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "electrolysis-ions-electrodes",
+      "title": "Electrolysis: Ions and Electrodes",
+      "complete": true,
+      "duration_s": 372.63,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 372.633333,
+        "size": 11908211
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "electrolysis-molten-ionic",
+      "title": "Electrolysis of Molten Ionic Compounds",
+      "complete": true,
+      "duration_s": 356.48,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 356.48,
+        "size": 11498244
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "indicators-and-ph",
+      "title": "Indicators and the pH Scale",
+      "complete": true,
+      "duration_s": 419.55,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 419.566667,
+        "size": 12832457
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "neutralisation-and-gas-tests",
+      "title": "Neutralisation and Gas Tests",
+      "complete": true,
+      "duration_s": 390.1,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 390.103991,
+        "size": 12117935
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "soluble-and-insoluble-salts",
+      "title": "Making Soluble and Insoluble Salts",
+      "complete": true,
+      "duration_s": 387.44,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 387.44,
+        "size": 12274961
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    },
+    {
+      "slug": "strong-and-weak-acids",
+      "title": "Strong and Weak Acids",
+      "complete": true,
+      "duration_s": 404.24,
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "vcodec": "h264",
+        "acodec": "aac",
+        "fps": 30.0,
+        "duration": 404.24,
+        "size": 12499386
+      },
+      "voice": "en-GB-RyanNeural",
+      "temporary_voice": true
+    }
+  ]
+}

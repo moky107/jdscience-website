@@ -1,0 +1,37 @@
+{
+  "slug": "soluble-and-insoluble-salts",
+  "title": "Making Soluble and Insoluble Salts",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2.3m",
+      "statement": "Describe making a soluble salt from an insoluble base.",
+      "covered": true,
+      "evidence": "excess",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.6",
+      "statement": "Describe making an insoluble salt by precipitation.",
+      "covered": true,
+      "evidence": "precipitation",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.14",
+      "statement": "Recall solubility rules for common salts.",
+      "covered": true,
+      "evidence": "all nitrates",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.15",
+      "statement": "Describe filtration, washing, crystallisation and drying.",
+      "covered": true,
+      "evidence": "crystallise",
+      "tier": "both"
+    }
+  ],
+  "complete": true
+}

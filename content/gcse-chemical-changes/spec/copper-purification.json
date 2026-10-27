@@ -1,0 +1,30 @@
+{
+  "slug": "copper-purification",
+  "title": "Copper Purification by Electrolysis",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.3.3",
+      "statement": "Describe the purification of copper by electrolysis.",
+      "covered": true,
+      "evidence": "impure copper",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.26",
+      "statement": "Write electrode half-equations and explain anode sludge.",
+      "covered": true,
+      "evidence": "sludge",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.3.3b",
+      "statement": "Explain why the electrolyte stays blue during purification.",
+      "covered": true,
+      "evidence": "stays blue",
+      "tier": "both"
+    }
+  ],
+  "complete": true
+}

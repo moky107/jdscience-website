@@ -1,0 +1,492 @@
+{
+  "slug": "acids-bases-alkalis",
+  "duration": 429.8,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 17.941,
+      "aligned": true,
+      "cue": "By the end of this lesson",
+      "kind": "aims"
+    },
+    {
+      "id": "acid",
+      "t": 31.191,
+      "aligned": true,
+      "cue": "Let us begin with acids",
+      "kind": "diagram"
+    },
+    {
+      "id": "examples",
+      "t": 63.644,
+      "aligned": true,
+      "cue": "Common laboratory acids include",
+      "kind": "bullets"
+    },
+    {
+      "id": "base",
+      "t": 106.3,
+      "aligned": true,
+      "cue": "A base is a substance that can neutralise",
+      "kind": "bullets"
+    },
+    {
+      "id": "alkali",
+      "t": 129.159,
+      "aligned": true,
+      "cue": "An alkali is a soluble base",
+      "kind": "diagram"
+    },
+    {
+      "id": "not_alkali",
+      "t": 159.144,
+      "aligned": true,
+      "cue": "Every alkali is a base, but not every base",
+      "kind": "note"
+    },
+    {
+      "id": "ionic",
+      "t": 200.925,
+      "aligned": true,
+      "cue": "hydrogen ions and hydroxide ions join to make water",
+      "kind": "equation"
+    },
+    {
+      "id": "worked",
+      "t": 237.46,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 288.144,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 317.254,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 386.691,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 414.832,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 20.456,
+      "aligned": true,
+      "cue": "define an acid, a base and an alkali"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 24.363,
+      "aligned": true,
+      "cue": "what happens when they dissolve"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 28.066,
+      "aligned": true,
+      "cue": "not every base is an alkali"
+    },
+    {
+      "slide": "examples",
+      "item": "b1",
+      "t": 65.847,
+      "aligned": true,
+      "cue": "hydrochloric acid"
+    },
+    {
+      "slide": "examples",
+      "item": "b2",
+      "t": 68.769,
+      "aligned": true,
+      "cue": "sulfuric acid"
+    },
+    {
+      "slide": "examples",
+      "item": "b3",
+      "t": 72.737,
+      "aligned": true,
+      "cue": "nitric acid"
+    },
+    {
+      "slide": "examples",
+      "item": "b4",
+      "t": 87.691,
+      "aligned": true,
+      "cue": "ethanoic acid"
+    },
+    {
+      "slide": "base",
+      "item": "b1",
+      "t": 111.706,
+      "aligned": true,
+      "cue": "metal oxides"
+    },
+    {
+      "slide": "base",
+      "item": "b2",
+      "t": 112.941,
+      "aligned": true,
+      "cue": "metal hydroxides"
+    },
+    {
+      "slide": "base",
+      "item": "b3",
+      "t": 144.191,
+      "aligned": true,
+      "cue": "aqueous ammonia"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 256.629,
+      "aligned": true,
+      "cue": "Sodium hydroxide dissolves"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 266.473,
+      "aligned": true,
+      "cue": "Copper oxide will neutralise"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 274.41,
+      "aligned": true,
+      "cue": "Sodium chloride is a salt"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 320.113,
+      "aligned": true,
+      "cue": "A base is a substance"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 324.457,
+      "aligned": true,
+      "cue": "An alkali is a soluble base"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 330.629,
+      "aligned": true,
+      "cue": "Copper oxide is a base"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 391.191,
+      "aligned": true,
+      "cue": "Acids produce hydrogen ions"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 395.238,
+      "aligned": true,
+      "cue": "Bases neutralise acids"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 398.441,
+      "aligned": true,
+      "cue": "Alkalis are soluble bases"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 409.519,
+      "aligned": true,
+      "cue": "Not every base is an alkali"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 17.941,
+      "aligned": true,
+      "cue": "By the end of this lesson",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 20.456,
+      "aligned": true,
+      "cue": "define an acid, a base and an alkali",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 24.363,
+      "aligned": true,
+      "cue": "what happens when they dissolve",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 28.066,
+      "aligned": true,
+      "cue": "not every base is an alkali",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 31.191,
+      "aligned": true,
+      "cue": "Let us begin with acids",
+      "target": "diagram",
+      "slide": "acid"
+    },
+    {
+      "t": 63.644,
+      "aligned": true,
+      "cue": "Common laboratory acids include",
+      "target": "heading",
+      "slide": "examples"
+    },
+    {
+      "t": 65.847,
+      "aligned": true,
+      "cue": "hydrochloric acid",
+      "target": "b1",
+      "slide": "examples"
+    },
+    {
+      "t": 68.769,
+      "aligned": true,
+      "cue": "sulfuric acid",
+      "target": "b2",
+      "slide": "examples"
+    },
+    {
+      "t": 72.737,
+      "aligned": true,
+      "cue": "nitric acid",
+      "target": "b3",
+      "slide": "examples"
+    },
+    {
+      "t": 87.691,
+      "aligned": true,
+      "cue": "ethanoic acid",
+      "target": "b4",
+      "slide": "examples"
+    },
+    {
+      "t": 106.3,
+      "aligned": true,
+      "cue": "A base is a substance that can neutralise",
+      "target": "heading",
+      "slide": "base"
+    },
+    {
+      "t": 111.706,
+      "aligned": true,
+      "cue": "metal oxides",
+      "target": "b1",
+      "slide": "base"
+    },
+    {
+      "t": 112.941,
+      "aligned": true,
+      "cue": "metal hydroxides",
+      "target": "b2",
+      "slide": "base"
+    },
+    {
+      "t": 129.159,
+      "aligned": true,
+      "cue": "An alkali is a soluble base",
+      "target": "diagram",
+      "slide": "alkali"
+    },
+    {
+      "t": 144.191,
+      "aligned": true,
+      "cue": "aqueous ammonia",
+      "target": "b3",
+      "slide": "base"
+    },
+    {
+      "t": 159.144,
+      "aligned": true,
+      "cue": "Every alkali is a base, but not every base",
+      "target": "heading",
+      "slide": "not_alkali"
+    },
+    {
+      "t": 200.925,
+      "aligned": true,
+      "cue": "hydrogen ions and hydroxide ions join to make water",
+      "target": "equation",
+      "slide": "ionic"
+    },
+    {
+      "t": 237.46,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 256.629,
+      "aligned": true,
+      "cue": "Sodium hydroxide dissolves",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 266.473,
+      "aligned": true,
+      "cue": "Copper oxide will neutralise",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 274.41,
+      "aligned": true,
+      "cue": "Sodium chloride is a salt",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 288.144,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 307.254,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 317.254,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 320.113,
+      "aligned": true,
+      "cue": "A base is a substance",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 324.457,
+      "aligned": true,
+      "cue": "An alkali is a soluble base",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 330.629,
+      "aligned": true,
+      "cue": "Copper oxide is a base",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 386.691,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 391.191,
+      "aligned": true,
+      "cue": "Acids produce hydrogen ions",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 395.238,
+      "aligned": true,
+      "cue": "Bases neutralise acids",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 398.441,
+      "aligned": true,
+      "cue": "Alkalis are soluble bases",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 409.519,
+      "aligned": true,
+      "cue": "Not every base is an alkali",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 414.832,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 415.129,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 415.894,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

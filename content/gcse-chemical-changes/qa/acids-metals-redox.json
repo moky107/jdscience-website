@@ -1,0 +1,83 @@
+{
+  "slug": "acids-metals-redox",
+  "title": "Acids Reacting with Metals",
+  "subject": "Chemistry",
+  "complete": true,
+  "duration_s": 402.08,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.1.2",
+      "statement": "Describe reactions of acids with metals to form a salt and hydrogen.",
+      "covered": true,
+      "evidence": "salt plus hydrogen",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.1.3",
+      "statement": "Explain these reactions as redox, including half-equations on Higher Tier.",
+      "covered": true,
+      "evidence": "oxidation is loss",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.5",
+      "statement": "Recall the lighted-splint test for hydrogen.",
+      "covered": true,
+      "evidence": "squeaky pop",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.1.2b",
+      "statement": "Recall that copper does not react with dilute hydrochloric or sulfuric acid.",
+      "covered": true,
+      "evidence": "copper does not react",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": true,
+    "preferred_band": true,
+    "1080p": true
+  },
+  "failures": [],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  },
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "vcodec": "h264",
+    "acodec": "aac",
+    "fps": 30.0,
+    "duration": 402.08,
+    "size": 12725976
+  },
+  "aligned_slides": 11,
+  "aligned_total": 11,
+  "aligned_reveals": 13,
+  "reveals_total": 13,
+  "aligned_cursor": 27,
+  "cursor_total": 27,
+  "filename": "jdscience-acids-metals-redox-1080p.mp4",
+  "tier": "Foundation and Higher",
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true
+}

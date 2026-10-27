@@ -1,0 +1,30 @@
+{
+  "slug": "electrolysis-molten-ionic",
+  "title": "Electrolysis of Molten Ionic Compounds",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.3.2",
+      "statement": "Predict products of molten binary ionic compounds.",
+      "covered": true,
+      "evidence": "metal forms at the cathode",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.23",
+      "statement": "Write half-equations for molten electrolysis.",
+      "covered": true,
+      "evidence": "two electrons",
+      "tier": "higher"
+    },
+    {
+      "code": "C4.4.3.2b",
+      "statement": "Explain why aluminium is extracted by electrolysis.",
+      "covered": true,
+      "evidence": "more reactive than carbon",
+      "tier": "both"
+    }
+  ],
+  "complete": true
+}

@@ -1,0 +1,366 @@
+{
+  "slug": "strong-and-weak-acids",
+  "duration": 404.24,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 17.191,
+      "aligned": true,
+      "cue": "By the end you should be able to explain ionisation",
+      "kind": "aims"
+    },
+    {
+      "id": "strong",
+      "t": 27.894,
+      "aligned": true,
+      "cue": "A strong acid is fully ionised",
+      "kind": "diagram"
+    },
+    {
+      "id": "weak",
+      "t": 57.144,
+      "aligned": true,
+      "cue": "A weak acid is only partially ionised",
+      "kind": "diagram"
+    },
+    {
+      "id": "compare",
+      "t": 90.675,
+      "aligned": true,
+      "cue": "Look at two beakers with the same concentration",
+      "kind": "diagram"
+    },
+    {
+      "id": "conc",
+      "t": 121.987,
+      "aligned": true,
+      "cue": "Strength is about how completely the acid ionises",
+      "kind": "note"
+    },
+    {
+      "id": "worked",
+      "t": 196.722,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 246.83,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 281.236,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 358.252,
+      "aligned": true,
+      "cue": "Before we finish, remember these Higher Tier ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 389.252,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 18.391,
+      "aligned": false,
+      "cue": "strong acids from weak acids"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 18.391,
+      "aligned": false,
+      "cue": "strength from the idea of concentration"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 24.238,
+      "aligned": true,
+      "cue": "avoid the usual examination traps"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 220.708,
+      "aligned": true,
+      "cue": "Acid A has the lower pH"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 231.127,
+      "aligned": true,
+      "cue": "more fully ionised"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 239.096,
+      "aligned": true,
+      "cue": "it is weak"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 285.345,
+      "aligned": true,
+      "cue": "fully ionised in aqueous"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 290.111,
+      "aligned": true,
+      "cue": "only partially ionised"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 296.924,
+      "aligned": true,
+      "cue": "higher concentration of hydrogen"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 363.142,
+      "aligned": true,
+      "cue": "Strong acids are fully ionised"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 366.861,
+      "aligned": true,
+      "cue": "Weak acids are partially"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 370.58,
+      "aligned": true,
+      "cue": "Strength is not concentration"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 377.158,
+      "aligned": true,
+      "cue": "more H plus and a lower pH"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 17.191,
+      "aligned": true,
+      "cue": "By the end you should be able to explain ionisation",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 18.391,
+      "aligned": false,
+      "cue": "strong acids from weak acids",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 18.391,
+      "aligned": false,
+      "cue": "strength from the idea of concentration",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 24.238,
+      "aligned": true,
+      "cue": "avoid the usual examination traps",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 27.894,
+      "aligned": true,
+      "cue": "A strong acid is fully ionised",
+      "target": "diagram",
+      "slide": "strong"
+    },
+    {
+      "t": 57.144,
+      "aligned": true,
+      "cue": "A weak acid is only partially ionised",
+      "target": "diagram",
+      "slide": "weak"
+    },
+    {
+      "t": 90.675,
+      "aligned": true,
+      "cue": "Look at two beakers with the same concentration",
+      "target": "diagram",
+      "slide": "compare"
+    },
+    {
+      "t": 121.987,
+      "aligned": true,
+      "cue": "Strength is about how completely the acid ionises",
+      "target": "heading",
+      "slide": "conc"
+    },
+    {
+      "t": 196.722,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 220.708,
+      "aligned": true,
+      "cue": "Acid A has the lower pH",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 231.127,
+      "aligned": true,
+      "cue": "more fully ionised",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 239.096,
+      "aligned": true,
+      "cue": "it is weak",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 246.83,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 271.236,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 281.236,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 285.345,
+      "aligned": true,
+      "cue": "fully ionised in aqueous",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 290.111,
+      "aligned": true,
+      "cue": "only partially ionised",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 296.924,
+      "aligned": true,
+      "cue": "higher concentration of hydrogen",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 358.252,
+      "aligned": true,
+      "cue": "Before we finish, remember these Higher Tier ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 363.142,
+      "aligned": true,
+      "cue": "Strong acids are fully ionised",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 366.861,
+      "aligned": true,
+      "cue": "Weak acids are partially",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 370.58,
+      "aligned": true,
+      "cue": "Strength is not concentration",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 377.158,
+      "aligned": true,
+      "cue": "more H plus and a lower pH",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 389.252,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 389.549,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 390.314,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}
