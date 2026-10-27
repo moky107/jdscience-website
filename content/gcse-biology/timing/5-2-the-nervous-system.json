@@ -1,0 +1,104 @@
+{
+  "slug": "5-2-the-nervous-system",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 136.32,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 12.691,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "conscious",
+      "t": 12.691,
+      "t_end": 27.779,
+      "cue": "In a conscious action, a stimulus is detected",
+      "animate": false
+    },
+    {
+      "id": "reflex",
+      "t": 27.779,
+      "t_end": 46.416,
+      "cue": "In many spinal reflexes",
+      "animate": true
+    },
+    {
+      "id": "synapse",
+      "t": 46.416,
+      "t_end": 52.629,
+      "cue": "Neurones don't touch at synapses",
+      "animate": true
+    },
+    {
+      "id": "eye",
+      "t": 52.629,
+      "t_end": 95.406,
+      "cue": "Eyes focus light using the lens and cornea",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 95.406,
+      "t_end": 107.299,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 107.299,
+      "t_end": 114.932,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 114.932,
+      "t_end": 124.96,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 124.96,
+      "t_end": 136.32,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 97.625,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 102.24,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 103.572,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 107.565,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 115.052,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

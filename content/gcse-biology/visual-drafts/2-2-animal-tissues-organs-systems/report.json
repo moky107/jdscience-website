@@ -1,0 +1,106 @@
+{
+  "slug": "2-2-animal-tissues-organs-systems",
+  "spec": "2.2",
+  "title": "Animal Tissues, Organs and Organ Systems",
+  "filename": "jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 135.11,
+  "bytes": 1883688,
+  "md5": "77317c7be1caf69805e70448fdec21d6",
+  "local_path": "content/gcse-biology/visual-drafts/2-2-animal-tissues-organs-systems/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/2-2-animal-tissues-organs-systems/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 135.11,
+      "size": 1883688,
+      "nb_frames": 4053
+    },
+    "luma": {
+      "start": 41.3,
+      "early": 41.3,
+      "mid": 43.1,
+      "late": 39.6
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "135.110s vs 135.110s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "4053 vs 4053"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.3"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=41.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=43.1"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.6"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/2-2-animal-tissues-organs-systems.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

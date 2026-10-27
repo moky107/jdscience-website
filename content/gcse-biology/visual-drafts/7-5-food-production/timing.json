@@ -1,0 +1,104 @@
+{
+  "slug": "7-5-food-production",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 128.775,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 9.098,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "secure",
+      "t": 9.098,
+      "t_end": 12.947,
+      "cue": "Food security means having enough food for everyone",
+      "animate": false
+    },
+    {
+      "id": "efficient",
+      "t": 12.947,
+      "t_end": 23.533,
+      "cue": "Food chains are inefficient",
+      "animate": false
+    },
+    {
+      "id": "fish",
+      "t": 23.533,
+      "t_end": 33.768,
+      "cue": "Sustainable development means not using resources",
+      "animate": false
+    },
+    {
+      "id": "myco",
+      "t": 33.768,
+      "t_end": 85.471,
+      "cue": "Mycoprotein comes from the fungus Fusarium",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 85.471,
+      "t_end": 97.193,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 97.193,
+      "t_end": 107.079,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 107.079,
+      "t_end": 117.577,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 117.577,
+      "t_end": 128.775,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 87.658,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 92.207,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 93.519,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 97.456,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 107.199,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "slug": "7-3-biodiversity",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 135.822,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.526,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "biod",
+      "t": 6.526,
+      "t_end": 14.705,
+      "cue": "Biodiversity is the variety of life",
+      "animate": false
+    },
+    {
+      "id": "human",
+      "t": 14.705,
+      "t_end": 30.888,
+      "cue": "Growing population creates pollution",
+      "animate": false
+    },
+    {
+      "id": "warm",
+      "t": 30.888,
+      "t_end": 69.521,
+      "cue": "Burning fossil fuels adds carbon dioxide",
+      "animate": false
+    },
+    {
+      "id": "help",
+      "t": 69.521,
+      "t_end": 85.269,
+      "cue": "Conservation measures include habitat protection",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 85.269,
+      "t_end": 96.929,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 96.929,
+      "t_end": 105.63,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 105.63,
+      "t_end": 124.685,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 124.685,
+      "t_end": 135.822,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 87.445,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 91.969,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 93.274,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 97.19,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 105.75,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "human",
+      "item": "b1",
+      "t": 16.793,
+      "cue": "pollution in water, land, and air"
+    },
+    {
+      "slide": "human",
+      "item": "b2",
+      "t": 19.055,
+      "cue": "Land is lost to quarrying"
+    },
+    {
+      "slide": "human",
+      "item": "b3",
+      "t": 22.623,
+      "cue": "Deforestation for cattle"
+    }
+  ]
+}

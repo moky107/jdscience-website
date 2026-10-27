@@ -1,0 +1,104 @@
+{
+  "slug": "6-4-classification",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 118.31,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 9.149,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "ranks",
+      "t": 9.149,
+      "t_end": 19.097,
+      "cue": "Organisms are placed into groups from kingdom down to species",
+      "animate": true
+    },
+    {
+      "id": "dog",
+      "t": 19.097,
+      "t_end": 30.377,
+      "cue": "A dog is Animalia, Chordata, Mammalia",
+      "animate": false
+    },
+    {
+      "id": "domains",
+      "t": 30.377,
+      "t_end": 40.059,
+      "cue": "Carl Woese later proposed three domains",
+      "animate": false
+    },
+    {
+      "id": "trees",
+      "t": 40.059,
+      "t_end": 77.186,
+      "cue": "Evolutionary trees use classification and fossil data",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 77.186,
+      "t_end": 89.088,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 89.088,
+      "t_end": 100.813,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 100.813,
+      "t_end": 106.941,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 106.941,
+      "t_end": 118.31,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 79.407,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 84.025,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 85.358,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 89.355,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 100.933,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

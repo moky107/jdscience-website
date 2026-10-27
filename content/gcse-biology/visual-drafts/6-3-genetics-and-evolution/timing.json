@@ -1,0 +1,129 @@
+{
+  "slug": "6-3-genetics-and-evolution",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 139.168,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 7.635,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "ideas",
+      "t": 7.635,
+      "t_end": 18.914,
+      "cue": "Charles Darwin and Alfred Wallace proposed natural selection",
+      "animate": false
+    },
+    {
+      "id": "history",
+      "t": 18.914,
+      "t_end": 48.414,
+      "cue": "Lamarck proposed that characteristics acquired",
+      "animate": false
+    },
+    {
+      "id": "spec",
+      "t": 48.414,
+      "t_end": 63.771,
+      "cue": "Speciation occurs when populations become geographically isolated",
+      "animate": false
+    },
+    {
+      "id": "resist",
+      "t": 63.771,
+      "t_end": 84.073,
+      "cue": "Antibiotics do not create purposeful resistance",
+      "animate": false
+    },
+    {
+      "id": "evidence",
+      "t": 84.073,
+      "t_end": 91.275,
+      "cue": "Fossils, comparative anatomy and DNA sequences",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 91.275,
+      "t_end": 102.901,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 102.901,
+      "t_end": 110.883,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 110.883,
+      "t_end": 128.062,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 128.062,
+      "t_end": 139.168,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 93.444,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 97.955,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 99.257,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 103.161,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 111.003,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "history",
+      "item": "b1",
+      "t": 19.034,
+      "cue": "Lamarck proposed"
+    },
+    {
+      "slide": "history",
+      "item": "b2",
+      "t": 26.723,
+      "cue": "Mendel's pea plant experiments"
+    },
+    {
+      "slide": "history",
+      "item": "b3",
+      "t": 33.664,
+      "cue": "Chromosomes were later found"
+    }
+  ]
+}

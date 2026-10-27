@@ -1,0 +1,106 @@
+{
+  "slug": "3-1-communicable-diseases",
+  "spec": "3.1",
+  "title": "Communicable Diseases",
+  "filename": "jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 133.259,
+  "bytes": 1763572,
+  "md5": "98341b493cde15ceb1d0568449fff84e",
+  "local_path": "content/gcse-biology/visual-drafts/3-1-communicable-diseases/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-1-communicable-diseases/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 133.266667,
+      "size": 1763572,
+      "nb_frames": 3998
+    },
+    "luma": {
+      "start": 42.2,
+      "early": 45.5,
+      "mid": 45.7,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "133.267s vs 133.259s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3998 vs 3998"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=42.2"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=45.5"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=45.7"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/3-1-communicable-diseases.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

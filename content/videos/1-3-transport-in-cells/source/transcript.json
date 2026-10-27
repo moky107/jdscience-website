@@ -1,0 +1,1785 @@
+{
+  "audio": "content/videos/1-3-transport-in-cells/source/narration_master.m4a",
+  "duration": 130.87,
+  "full_text": "Hello and welcome back to JD science. Today we are exploring how substances move in and out of cells. In diffusion particles move from high concentration to low concentration along a concentration gradient. It is faster when the temperature is higher, the concentration gradient is steeper or the surface area is larger. Oxygen diffuses into the blood in the lungs and carbon dioxide diffuses out. Alveoli have a large surface area, a thin lining, a good blood supply and ventilation. Osmosis is the diffusion of water across a partially permeable membrane. Active transport moves substances against a concentration gradient using energy from respiration. Root hair cells use active transport to absorb mineral ions. Diffusion and osmosis are passive processes. They do not require the cell to supply metabolic energy. Active transport is different because carrier proteins move substances against their concentration gradient using energy, often supplied by ATP. A useful comparison is oxygen entering cells by diffusion, water crossing a partially permeable membrane by osmosis and mineral ions entering root hair cells by active transport. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. Explain why a root hair cell uses active transport to absorb mineral ions? Here is a model answer. Mineral ions are often at a lower concentration in the soil than in the root cell, so active transport is needed to move them against the concentration gradient using energy from respiration. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.3,
+      "prob": 0.867
+    },
+    {
+      "word": "and",
+      "start": 0.3,
+      "end": 0.88,
+      "prob": 0.905
+    },
+    {
+      "word": "welcome",
+      "start": 0.88,
+      "end": 1.28,
+      "prob": 0.96
+    },
+    {
+      "word": "back",
+      "start": 1.28,
+      "end": 1.68,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 1.68,
+      "end": 1.92,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.92,
+      "end": 2.26,
+      "prob": 0.885
+    },
+    {
+      "word": "science.",
+      "start": 2.26,
+      "end": 2.62,
+      "prob": 0.464
+    },
+    {
+      "word": "Today",
+      "start": 3.46,
+      "end": 3.76,
+      "prob": 0.99
+    },
+    {
+      "word": "we",
+      "start": 3.76,
+      "end": 4.2,
+      "prob": 0.841
+    },
+    {
+      "word": "are",
+      "start": 4.2,
+      "end": 4.34,
+      "prob": 0.983
+    },
+    {
+      "word": "exploring",
+      "start": 4.34,
+      "end": 4.86,
+      "prob": 0.994
+    },
+    {
+      "word": "how",
+      "start": 4.86,
+      "end": 5.2,
+      "prob": 0.995
+    },
+    {
+      "word": "substances",
+      "start": 5.2,
+      "end": 5.68,
+      "prob": 0.961
+    },
+    {
+      "word": "move",
+      "start": 5.68,
+      "end": 6.24,
+      "prob": 0.993
+    },
+    {
+      "word": "in",
+      "start": 6.24,
+      "end": 6.66,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 6.66,
+      "end": 6.98,
+      "prob": 0.994
+    },
+    {
+      "word": "out",
+      "start": 6.98,
+      "end": 7.3,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 7.3,
+      "end": 7.54,
+      "prob": 0.998
+    },
+    {
+      "word": "cells.",
+      "start": 7.54,
+      "end": 7.86,
+      "prob": 0.987
+    },
+    {
+      "word": "In",
+      "start": 8.6,
+      "end": 8.72,
+      "prob": 0.98
+    },
+    {
+      "word": "diffusion",
+      "start": 8.72,
+      "end": 9.3,
+      "prob": 0.993
+    },
+    {
+      "word": "particles",
+      "start": 9.3,
+      "end": 9.94,
+      "prob": 0.607
+    },
+    {
+      "word": "move",
+      "start": 9.94,
+      "end": 10.5,
+      "prob": 0.983
+    },
+    {
+      "word": "from",
+      "start": 10.5,
+      "end": 10.78,
+      "prob": 0.997
+    },
+    {
+      "word": "high",
+      "start": 10.78,
+      "end": 11.12,
+      "prob": 0.988
+    },
+    {
+      "word": "concentration",
+      "start": 11.12,
+      "end": 11.68,
+      "prob": 0.966
+    },
+    {
+      "word": "to",
+      "start": 11.68,
+      "end": 12.14,
+      "prob": 0.991
+    },
+    {
+      "word": "low",
+      "start": 12.14,
+      "end": 12.44,
+      "prob": 0.995
+    },
+    {
+      "word": "concentration",
+      "start": 12.44,
+      "end": 13.2,
+      "prob": 0.996
+    },
+    {
+      "word": "along",
+      "start": 13.2,
+      "end": 13.86,
+      "prob": 0.924
+    },
+    {
+      "word": "a",
+      "start": 13.86,
+      "end": 14.14,
+      "prob": 0.987
+    },
+    {
+      "word": "concentration",
+      "start": 14.14,
+      "end": 14.68,
+      "prob": 0.999
+    },
+    {
+      "word": "gradient.",
+      "start": 14.68,
+      "end": 15.34,
+      "prob": 0.997
+    },
+    {
+      "word": "It",
+      "start": 15.92,
+      "end": 16.12,
+      "prob": 0.986
+    },
+    {
+      "word": "is",
+      "start": 16.12,
+      "end": 16.28,
+      "prob": 0.997
+    },
+    {
+      "word": "faster",
+      "start": 16.28,
+      "end": 16.64,
+      "prob": 0.998
+    },
+    {
+      "word": "when",
+      "start": 16.64,
+      "end": 17.02,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 17.02,
+      "end": 17.2,
+      "prob": 0.991
+    },
+    {
+      "word": "temperature",
+      "start": 17.2,
+      "end": 17.52,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 17.52,
+      "end": 17.84,
+      "prob": 0.998
+    },
+    {
+      "word": "higher,",
+      "start": 17.84,
+      "end": 18.26,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 18.7,
+      "end": 18.82,
+      "prob": 0.992
+    },
+    {
+      "word": "concentration",
+      "start": 18.82,
+      "end": 19.34,
+      "prob": 0.999
+    },
+    {
+      "word": "gradient",
+      "start": 19.34,
+      "end": 19.78,
+      "prob": 0.994
+    },
+    {
+      "word": "is",
+      "start": 19.78,
+      "end": 20.1,
+      "prob": 0.998
+    },
+    {
+      "word": "steeper",
+      "start": 20.1,
+      "end": 20.58,
+      "prob": 0.997
+    },
+    {
+      "word": "or",
+      "start": 20.58,
+      "end": 21.28,
+      "prob": 0.796
+    },
+    {
+      "word": "the",
+      "start": 21.28,
+      "end": 21.54,
+      "prob": 0.98
+    },
+    {
+      "word": "surface",
+      "start": 21.54,
+      "end": 21.84,
+      "prob": 0.999
+    },
+    {
+      "word": "area",
+      "start": 21.84,
+      "end": 22.2,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 22.2,
+      "end": 22.48,
+      "prob": 0.997
+    },
+    {
+      "word": "larger.",
+      "start": 22.48,
+      "end": 22.96,
+      "prob": 0.996
+    },
+    {
+      "word": "Oxygen",
+      "start": 23.64,
+      "end": 24.12,
+      "prob": 0.979
+    },
+    {
+      "word": "diffuses",
+      "start": 24.12,
+      "end": 24.68,
+      "prob": 0.967
+    },
+    {
+      "word": "into",
+      "start": 24.68,
+      "end": 25.1,
+      "prob": 0.981
+    },
+    {
+      "word": "the",
+      "start": 25.1,
+      "end": 25.28,
+      "prob": 0.988
+    },
+    {
+      "word": "blood",
+      "start": 25.28,
+      "end": 25.5,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 25.5,
+      "end": 25.74,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 25.74,
+      "end": 25.88,
+      "prob": 0.349
+    },
+    {
+      "word": "lungs",
+      "start": 25.88,
+      "end": 26.18,
+      "prob": 0.944
+    },
+    {
+      "word": "and",
+      "start": 26.18,
+      "end": 26.78,
+      "prob": 0.704
+    },
+    {
+      "word": "carbon",
+      "start": 26.78,
+      "end": 27.08,
+      "prob": 0.959
+    },
+    {
+      "word": "dioxide",
+      "start": 27.08,
+      "end": 27.68,
+      "prob": 0.992
+    },
+    {
+      "word": "diffuses",
+      "start": 27.68,
+      "end": 28.26,
+      "prob": 0.933
+    },
+    {
+      "word": "out.",
+      "start": 28.26,
+      "end": 28.72,
+      "prob": 0.996
+    },
+    {
+      "word": "Alveoli",
+      "start": 29.5,
+      "end": 29.92,
+      "prob": 0.971
+    },
+    {
+      "word": "have",
+      "start": 29.92,
+      "end": 30.32,
+      "prob": 0.989
+    },
+    {
+      "word": "a",
+      "start": 30.32,
+      "end": 30.52,
+      "prob": 0.991
+    },
+    {
+      "word": "large",
+      "start": 30.52,
+      "end": 30.78,
+      "prob": 0.993
+    },
+    {
+      "word": "surface",
+      "start": 30.78,
+      "end": 31.22,
+      "prob": 0.998
+    },
+    {
+      "word": "area,",
+      "start": 31.22,
+      "end": 31.68,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 32.02,
+      "end": 32.12,
+      "prob": 0.975
+    },
+    {
+      "word": "thin",
+      "start": 32.12,
+      "end": 32.36,
+      "prob": 0.998
+    },
+    {
+      "word": "lining,",
+      "start": 32.36,
+      "end": 32.76,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 33.22,
+      "end": 33.28,
+      "prob": 0.976
+    },
+    {
+      "word": "good",
+      "start": 33.28,
+      "end": 33.56,
+      "prob": 0.997
+    },
+    {
+      "word": "blood",
+      "start": 33.56,
+      "end": 33.78,
+      "prob": 0.997
+    },
+    {
+      "word": "supply",
+      "start": 33.78,
+      "end": 34.22,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 34.22,
+      "end": 34.68,
+      "prob": 0.847
+    },
+    {
+      "word": "ventilation.",
+      "start": 34.68,
+      "end": 35.22,
+      "prob": 0.991
+    },
+    {
+      "word": "Osmosis",
+      "start": 36.2,
+      "end": 36.72,
+      "prob": 0.989
+    },
+    {
+      "word": "is",
+      "start": 36.72,
+      "end": 37.02,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 37.02,
+      "end": 37.2,
+      "prob": 0.99
+    },
+    {
+      "word": "diffusion",
+      "start": 37.2,
+      "end": 37.6,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 37.6,
+      "end": 37.88,
+      "prob": 0.998
+    },
+    {
+      "word": "water",
+      "start": 37.88,
+      "end": 38.16,
+      "prob": 0.997
+    },
+    {
+      "word": "across",
+      "start": 38.16,
+      "end": 38.62,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 38.62,
+      "end": 38.84,
+      "prob": 0.996
+    },
+    {
+      "word": "partially",
+      "start": 38.84,
+      "end": 39.3,
+      "prob": 0.992
+    },
+    {
+      "word": "permeable",
+      "start": 39.3,
+      "end": 39.98,
+      "prob": 0.997
+    },
+    {
+      "word": "membrane.",
+      "start": 39.98,
+      "end": 40.46,
+      "prob": 0.999
+    },
+    {
+      "word": "Active",
+      "start": 41.24,
+      "end": 41.54,
+      "prob": 0.987
+    },
+    {
+      "word": "transport",
+      "start": 41.54,
+      "end": 42.08,
+      "prob": 0.984
+    },
+    {
+      "word": "moves",
+      "start": 42.08,
+      "end": 42.54,
+      "prob": 0.898
+    },
+    {
+      "word": "substances",
+      "start": 42.54,
+      "end": 43.1,
+      "prob": 0.989
+    },
+    {
+      "word": "against",
+      "start": 43.1,
+      "end": 43.72,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 43.72,
+      "end": 44.0,
+      "prob": 0.844
+    },
+    {
+      "word": "concentration",
+      "start": 44.0,
+      "end": 44.54,
+      "prob": 0.998
+    },
+    {
+      "word": "gradient",
+      "start": 44.54,
+      "end": 45.12,
+      "prob": 0.997
+    },
+    {
+      "word": "using",
+      "start": 45.12,
+      "end": 45.68,
+      "prob": 0.495
+    },
+    {
+      "word": "energy",
+      "start": 45.68,
+      "end": 46.18,
+      "prob": 0.998
+    },
+    {
+      "word": "from",
+      "start": 46.18,
+      "end": 46.5,
+      "prob": 0.998
+    },
+    {
+      "word": "respiration.",
+      "start": 46.5,
+      "end": 47.2,
+      "prob": 0.998
+    },
+    {
+      "word": "Root",
+      "start": 48.0,
+      "end": 48.06,
+      "prob": 0.989
+    },
+    {
+      "word": "hair",
+      "start": 48.06,
+      "end": 48.3,
+      "prob": 0.911
+    },
+    {
+      "word": "cells",
+      "start": 48.3,
+      "end": 48.7,
+      "prob": 0.997
+    },
+    {
+      "word": "use",
+      "start": 48.7,
+      "end": 48.96,
+      "prob": 0.994
+    },
+    {
+      "word": "active",
+      "start": 48.96,
+      "end": 49.42,
+      "prob": 0.98
+    },
+    {
+      "word": "transport",
+      "start": 49.42,
+      "end": 49.98,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 49.98,
+      "end": 50.28,
+      "prob": 0.998
+    },
+    {
+      "word": "absorb",
+      "start": 50.28,
+      "end": 50.66,
+      "prob": 0.998
+    },
+    {
+      "word": "mineral",
+      "start": 50.66,
+      "end": 51.08,
+      "prob": 0.994
+    },
+    {
+      "word": "ions.",
+      "start": 51.08,
+      "end": 51.54,
+      "prob": 0.996
+    },
+    {
+      "word": "Diffusion",
+      "start": 51.54,
+      "end": 52.84,
+      "prob": 0.48
+    },
+    {
+      "word": "and",
+      "start": 52.84,
+      "end": 53.1,
+      "prob": 0.986
+    },
+    {
+      "word": "osmosis",
+      "start": 53.1,
+      "end": 53.66,
+      "prob": 0.973
+    },
+    {
+      "word": "are",
+      "start": 53.66,
+      "end": 53.98,
+      "prob": 0.996
+    },
+    {
+      "word": "passive",
+      "start": 53.98,
+      "end": 54.38,
+      "prob": 0.995
+    },
+    {
+      "word": "processes.",
+      "start": 54.38,
+      "end": 54.98,
+      "prob": 0.998
+    },
+    {
+      "word": "They",
+      "start": 55.54,
+      "end": 55.68,
+      "prob": 0.991
+    },
+    {
+      "word": "do",
+      "start": 55.68,
+      "end": 55.84,
+      "prob": 0.993
+    },
+    {
+      "word": "not",
+      "start": 55.84,
+      "end": 56.08,
+      "prob": 0.998
+    },
+    {
+      "word": "require",
+      "start": 56.08,
+      "end": 56.48,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 56.48,
+      "end": 56.7,
+      "prob": 0.997
+    },
+    {
+      "word": "cell",
+      "start": 56.7,
+      "end": 56.92,
+      "prob": 0.986
+    },
+    {
+      "word": "to",
+      "start": 56.92,
+      "end": 57.12,
+      "prob": 0.998
+    },
+    {
+      "word": "supply",
+      "start": 57.12,
+      "end": 57.56,
+      "prob": 0.998
+    },
+    {
+      "word": "metabolic",
+      "start": 57.56,
+      "end": 58.02,
+      "prob": 0.998
+    },
+    {
+      "word": "energy.",
+      "start": 58.02,
+      "end": 58.66,
+      "prob": 0.999
+    },
+    {
+      "word": "Active",
+      "start": 59.34,
+      "end": 59.58,
+      "prob": 0.983
+    },
+    {
+      "word": "transport",
+      "start": 59.58,
+      "end": 59.9,
+      "prob": 0.987
+    },
+    {
+      "word": "is",
+      "start": 59.9,
+      "end": 60.34,
+      "prob": 0.999
+    },
+    {
+      "word": "different",
+      "start": 60.34,
+      "end": 60.8,
+      "prob": 0.998
+    },
+    {
+      "word": "because",
+      "start": 60.8,
+      "end": 61.4,
+      "prob": 0.857
+    },
+    {
+      "word": "carrier",
+      "start": 61.4,
+      "end": 61.84,
+      "prob": 0.996
+    },
+    {
+      "word": "proteins",
+      "start": 61.84,
+      "end": 62.4,
+      "prob": 0.993
+    },
+    {
+      "word": "move",
+      "start": 62.4,
+      "end": 62.82,
+      "prob": 0.992
+    },
+    {
+      "word": "substances",
+      "start": 62.82,
+      "end": 63.36,
+      "prob": 0.995
+    },
+    {
+      "word": "against",
+      "start": 63.36,
+      "end": 63.98,
+      "prob": 0.999
+    },
+    {
+      "word": "their",
+      "start": 63.98,
+      "end": 64.3,
+      "prob": 0.989
+    },
+    {
+      "word": "concentration",
+      "start": 64.3,
+      "end": 64.82,
+      "prob": 0.999
+    },
+    {
+      "word": "gradient",
+      "start": 64.82,
+      "end": 65.38,
+      "prob": 0.994
+    },
+    {
+      "word": "using",
+      "start": 65.38,
+      "end": 65.92,
+      "prob": 0.961
+    },
+    {
+      "word": "energy,",
+      "start": 65.92,
+      "end": 66.5,
+      "prob": 0.998
+    },
+    {
+      "word": "often",
+      "start": 66.8,
+      "end": 67.16,
+      "prob": 0.999
+    },
+    {
+      "word": "supplied",
+      "start": 67.16,
+      "end": 67.64,
+      "prob": 0.999
+    },
+    {
+      "word": "by",
+      "start": 67.64,
+      "end": 67.92,
+      "prob": 0.999
+    },
+    {
+      "word": "ATP.",
+      "start": 67.92,
+      "end": 68.4,
+      "prob": 0.997
+    },
+    {
+      "word": "A",
+      "start": 69.22,
+      "end": 69.38,
+      "prob": 0.996
+    },
+    {
+      "word": "useful",
+      "start": 69.38,
+      "end": 69.68,
+      "prob": 0.999
+    },
+    {
+      "word": "comparison",
+      "start": 69.68,
+      "end": 70.24,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 70.24,
+      "end": 70.74,
+      "prob": 0.998
+    },
+    {
+      "word": "oxygen",
+      "start": 70.74,
+      "end": 71.28,
+      "prob": 0.988
+    },
+    {
+      "word": "entering",
+      "start": 71.28,
+      "end": 71.7,
+      "prob": 0.95
+    },
+    {
+      "word": "cells",
+      "start": 71.7,
+      "end": 72.08,
+      "prob": 0.997
+    },
+    {
+      "word": "by",
+      "start": 72.08,
+      "end": 72.36,
+      "prob": 0.999
+    },
+    {
+      "word": "diffusion,",
+      "start": 72.36,
+      "end": 72.86,
+      "prob": 0.998
+    },
+    {
+      "word": "water",
+      "start": 73.58,
+      "end": 73.82,
+      "prob": 1.0
+    },
+    {
+      "word": "crossing",
+      "start": 73.82,
+      "end": 74.24,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 74.24,
+      "end": 74.48,
+      "prob": 0.997
+    },
+    {
+      "word": "partially",
+      "start": 74.48,
+      "end": 74.88,
+      "prob": 0.996
+    },
+    {
+      "word": "permeable",
+      "start": 74.88,
+      "end": 75.52,
+      "prob": 0.983
+    },
+    {
+      "word": "membrane",
+      "start": 75.52,
+      "end": 75.9,
+      "prob": 0.999
+    },
+    {
+      "word": "by",
+      "start": 75.9,
+      "end": 76.24,
+      "prob": 0.999
+    },
+    {
+      "word": "osmosis",
+      "start": 76.24,
+      "end": 76.9,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 76.9,
+      "end": 77.56,
+      "prob": 0.486
+    },
+    {
+      "word": "mineral",
+      "start": 77.56,
+      "end": 77.96,
+      "prob": 0.847
+    },
+    {
+      "word": "ions",
+      "start": 77.96,
+      "end": 78.4,
+      "prob": 0.975
+    },
+    {
+      "word": "entering",
+      "start": 78.4,
+      "end": 78.9,
+      "prob": 0.992
+    },
+    {
+      "word": "root",
+      "start": 78.9,
+      "end": 79.2,
+      "prob": 0.937
+    },
+    {
+      "word": "hair",
+      "start": 79.2,
+      "end": 79.46,
+      "prob": 0.946
+    },
+    {
+      "word": "cells",
+      "start": 79.46,
+      "end": 79.82,
+      "prob": 0.996
+    },
+    {
+      "word": "by",
+      "start": 79.82,
+      "end": 80.1,
+      "prob": 0.995
+    },
+    {
+      "word": "active",
+      "start": 80.1,
+      "end": 80.5,
+      "prob": 0.989
+    },
+    {
+      "word": "transport.",
+      "start": 80.5,
+      "end": 81.06,
+      "prob": 0.999
+    },
+    {
+      "word": "As",
+      "start": 81.78,
+      "end": 81.98,
+      "prob": 0.99
+    },
+    {
+      "word": "you",
+      "start": 81.98,
+      "end": 82.12,
+      "prob": 0.998
+    },
+    {
+      "word": "revise",
+      "start": 82.12,
+      "end": 82.44,
+      "prob": 0.997
+    },
+    {
+      "word": "this",
+      "start": 82.44,
+      "end": 82.74,
+      "prob": 0.989
+    },
+    {
+      "word": "topic,",
+      "start": 82.74,
+      "end": 83.12,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 83.5,
+      "end": 83.7,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 83.7,
+      "end": 83.86,
+      "prob": 0.998
+    },
+    {
+      "word": "explain",
+      "start": 83.86,
+      "end": 84.28,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 84.28,
+      "end": 84.48,
+      "prob": 0.996
+    },
+    {
+      "word": "key",
+      "start": 84.48,
+      "end": 84.76,
+      "prob": 0.971
+    },
+    {
+      "word": "process",
+      "start": 84.76,
+      "end": 85.2,
+      "prob": 0.995
+    },
+    {
+      "word": "in",
+      "start": 85.2,
+      "end": 85.48,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 85.48,
+      "end": 85.66,
+      "prob": 0.999
+    },
+    {
+      "word": "own",
+      "start": 85.66,
+      "end": 85.9,
+      "prob": 0.994
+    },
+    {
+      "word": "words.",
+      "start": 85.9,
+      "end": 86.4,
+      "prob": 0.999
+    },
+    {
+      "word": "Focus",
+      "start": 87.06,
+      "end": 87.2,
+      "prob": 0.992
+    },
+    {
+      "word": "on",
+      "start": 87.2,
+      "end": 87.6,
+      "prob": 0.998
+    },
+    {
+      "word": "what",
+      "start": 87.6,
+      "end": 87.86,
+      "prob": 0.993
+    },
+    {
+      "word": "happens,",
+      "start": 87.86,
+      "end": 88.36,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 88.72,
+      "end": 88.96,
+      "prob": 0.998
+    },
+    {
+      "word": "it",
+      "start": 88.96,
+      "end": 89.14,
+      "prob": 0.998
+    },
+    {
+      "word": "happens",
+      "start": 89.14,
+      "end": 89.56,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 89.56,
+      "end": 90.0,
+      "prob": 0.636
+    },
+    {
+      "word": "how",
+      "start": 90.0,
+      "end": 90.28,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 90.28,
+      "end": 90.46,
+      "prob": 0.993
+    },
+    {
+      "word": "structures",
+      "start": 90.46,
+      "end": 90.76,
+      "prob": 0.997
+    },
+    {
+      "word": "involved",
+      "start": 90.76,
+      "end": 91.32,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 91.32,
+      "end": 91.7,
+      "prob": 0.972
+    },
+    {
+      "word": "the",
+      "start": 91.7,
+      "end": 91.92,
+      "prob": 0.995
+    },
+    {
+      "word": "process",
+      "start": 91.92,
+      "end": 92.26,
+      "prob": 0.999
+    },
+    {
+      "word": "work.",
+      "start": 92.26,
+      "end": 92.7,
+      "prob": 0.996
+    },
+    {
+      "word": "Now",
+      "start": 93.42,
+      "end": 93.68,
+      "prob": 0.987
+    },
+    {
+      "word": "pause",
+      "start": 93.68,
+      "end": 94.3,
+      "prob": 0.537
+    },
+    {
+      "word": "the",
+      "start": 94.3,
+      "end": 94.48,
+      "prob": 0.994
+    },
+    {
+      "word": "video",
+      "start": 94.48,
+      "end": 94.78,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 94.78,
+      "end": 95.18,
+      "prob": 0.979
+    },
+    {
+      "word": "try",
+      "start": 95.18,
+      "end": 95.48,
+      "prob": 0.998
+    },
+    {
+      "word": "this",
+      "start": 95.48,
+      "end": 95.7,
+      "prob": 0.99
+    },
+    {
+      "word": "exam",
+      "start": 95.7,
+      "end": 96.12,
+      "prob": 0.993
+    },
+    {
+      "word": "style",
+      "start": 96.12,
+      "end": 96.44,
+      "prob": 0.667
+    },
+    {
+      "word": "question.",
+      "start": 96.44,
+      "end": 96.96,
+      "prob": 0.992
+    },
+    {
+      "word": "Explain",
+      "start": 97.94,
+      "end": 98.02,
+      "prob": 0.705
+    },
+    {
+      "word": "why",
+      "start": 98.02,
+      "end": 98.46,
+      "prob": 0.975
+    },
+    {
+      "word": "a",
+      "start": 98.46,
+      "end": 98.56,
+      "prob": 0.0
+    },
+    {
+      "word": "root",
+      "start": 98.56,
+      "end": 98.82,
+      "prob": 0.884
+    },
+    {
+      "word": "hair",
+      "start": 98.82,
+      "end": 99.1,
+      "prob": 0.909
+    },
+    {
+      "word": "cell",
+      "start": 99.1,
+      "end": 99.4,
+      "prob": 0.756
+    },
+    {
+      "word": "uses",
+      "start": 99.4,
+      "end": 99.76,
+      "prob": 0.911
+    },
+    {
+      "word": "active",
+      "start": 99.76,
+      "end": 100.24,
+      "prob": 0.923
+    },
+    {
+      "word": "transport",
+      "start": 100.24,
+      "end": 100.78,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 100.78,
+      "end": 101.08,
+      "prob": 0.991
+    },
+    {
+      "word": "absorb",
+      "start": 101.08,
+      "end": 101.48,
+      "prob": 0.994
+    },
+    {
+      "word": "mineral",
+      "start": 101.48,
+      "end": 101.9,
+      "prob": 0.954
+    },
+    {
+      "word": "ions?",
+      "start": 101.9,
+      "end": 102.38,
+      "prob": 0.991
+    },
+    {
+      "word": "Here",
+      "start": 103.86,
+      "end": 104.2,
+      "prob": 0.943
+    },
+    {
+      "word": "is",
+      "start": 104.2,
+      "end": 104.44,
+      "prob": 0.987
+    },
+    {
+      "word": "a",
+      "start": 104.44,
+      "end": 104.6,
+      "prob": 0.985
+    },
+    {
+      "word": "model",
+      "start": 104.6,
+      "end": 104.82,
+      "prob": 0.991
+    },
+    {
+      "word": "answer.",
+      "start": 104.82,
+      "end": 105.36,
+      "prob": 0.997
+    },
+    {
+      "word": "Mineral",
+      "start": 106.18,
+      "end": 106.34,
+      "prob": 0.911
+    },
+    {
+      "word": "ions",
+      "start": 106.34,
+      "end": 106.78,
+      "prob": 0.996
+    },
+    {
+      "word": "are",
+      "start": 106.78,
+      "end": 107.1,
+      "prob": 0.997
+    },
+    {
+      "word": "often",
+      "start": 107.1,
+      "end": 107.4,
+      "prob": 0.996
+    },
+    {
+      "word": "at",
+      "start": 107.4,
+      "end": 107.64,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 107.64,
+      "end": 107.84,
+      "prob": 0.984
+    },
+    {
+      "word": "lower",
+      "start": 107.84,
+      "end": 108.04,
+      "prob": 0.998
+    },
+    {
+      "word": "concentration",
+      "start": 108.04,
+      "end": 108.54,
+      "prob": 0.999
+    },
+    {
+      "word": "in",
+      "start": 108.54,
+      "end": 108.98,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 108.98,
+      "end": 109.12,
+      "prob": 0.993
+    },
+    {
+      "word": "soil",
+      "start": 109.12,
+      "end": 109.44,
+      "prob": 0.999
+    },
+    {
+      "word": "than",
+      "start": 109.44,
+      "end": 109.74,
+      "prob": 0.982
+    },
+    {
+      "word": "in",
+      "start": 109.74,
+      "end": 109.9,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 109.9,
+      "end": 110.02,
+      "prob": 0.989
+    },
+    {
+      "word": "root",
+      "start": 110.02,
+      "end": 110.22,
+      "prob": 0.995
+    },
+    {
+      "word": "cell,",
+      "start": 110.22,
+      "end": 110.56,
+      "prob": 0.995
+    },
+    {
+      "word": "so",
+      "start": 110.84,
+      "end": 111.18,
+      "prob": 0.997
+    },
+    {
+      "word": "active",
+      "start": 111.18,
+      "end": 111.46,
+      "prob": 0.056
+    },
+    {
+      "word": "transport",
+      "start": 111.46,
+      "end": 111.98,
+      "prob": 0.98
+    },
+    {
+      "word": "is",
+      "start": 111.98,
+      "end": 112.4,
+      "prob": 0.986
+    },
+    {
+      "word": "needed",
+      "start": 112.4,
+      "end": 112.76,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 112.76,
+      "end": 113.02,
+      "prob": 0.997
+    },
+    {
+      "word": "move",
+      "start": 113.02,
+      "end": 113.28,
+      "prob": 0.995
+    },
+    {
+      "word": "them",
+      "start": 113.28,
+      "end": 113.54,
+      "prob": 0.995
+    },
+    {
+      "word": "against",
+      "start": 113.54,
+      "end": 113.96,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 113.96,
+      "end": 114.26,
+      "prob": 0.989
+    },
+    {
+      "word": "concentration",
+      "start": 114.26,
+      "end": 114.78,
+      "prob": 0.999
+    },
+    {
+      "word": "gradient",
+      "start": 114.78,
+      "end": 115.36,
+      "prob": 0.997
+    },
+    {
+      "word": "using",
+      "start": 115.36,
+      "end": 115.92,
+      "prob": 0.399
+    },
+    {
+      "word": "energy",
+      "start": 115.92,
+      "end": 116.4,
+      "prob": 0.997
+    },
+    {
+      "word": "from",
+      "start": 116.4,
+      "end": 116.74,
+      "prob": 0.998
+    },
+    {
+      "word": "respiration.",
+      "start": 116.74,
+      "end": 117.38,
+      "prob": 0.998
+    },
+    {
+      "word": "If",
+      "start": 118.16,
+      "end": 118.26,
+      "prob": 0.986
+    },
+    {
+      "word": "this",
+      "start": 118.26,
+      "end": 118.5,
+      "prob": 0.998
+    },
+    {
+      "word": "explanation",
+      "start": 118.5,
+      "end": 118.92,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 118.92,
+      "end": 119.36,
+      "prob": 0.99
+    },
+    {
+      "word": "helped,",
+      "start": 119.36,
+      "end": 119.78,
+      "prob": 0.994
+    },
+    {
+      "word": "please",
+      "start": 120.12,
+      "end": 120.32,
+      "prob": 0.992
+    },
+    {
+      "word": "subscribe",
+      "start": 120.32,
+      "end": 120.82,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 120.82,
+      "end": 121.12,
+      "prob": 0.996
+    },
+    {
+      "word": "JD",
+      "start": 121.12,
+      "end": 121.42,
+      "prob": 0.765
+    },
+    {
+      "word": "Science",
+      "start": 121.42,
+      "end": 121.82,
+      "prob": 0.512
+    },
+    {
+      "word": "for",
+      "start": 121.82,
+      "end": 122.12,
+      "prob": 0.997
+    },
+    {
+      "word": "more",
+      "start": 122.12,
+      "end": 122.38,
+      "prob": 0.998
+    },
+    {
+      "word": "lessons.",
+      "start": 122.38,
+      "end": 122.8,
+      "prob": 0.997
+    },
+    {
+      "word": "You",
+      "start": 123.44,
+      "end": 123.54,
+      "prob": 0.992
+    },
+    {
+      "word": "can",
+      "start": 123.54,
+      "end": 123.7,
+      "prob": 0.999
+    },
+    {
+      "word": "find",
+      "start": 123.7,
+      "end": 123.96,
+      "prob": 0.995
+    },
+    {
+      "word": "further",
+      "start": 123.96,
+      "end": 124.28,
+      "prob": 0.998
+    },
+    {
+      "word": "learning",
+      "start": 124.28,
+      "end": 124.68,
+      "prob": 0.995
+    },
+    {
+      "word": "resources",
+      "start": 124.68,
+      "end": 125.06,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 125.06,
+      "end": 125.52,
+      "prob": 0.993
+    },
+    {
+      "word": "practice",
+      "start": 125.52,
+      "end": 125.86,
+      "prob": 0.903
+    },
+    {
+      "word": "questions",
+      "start": 125.86,
+      "end": 126.36,
+      "prob": 0.996
+    },
+    {
+      "word": "at",
+      "start": 126.36,
+      "end": 126.88,
+      "prob": 0.996
+    },
+    {
+      "word": "jdscience",
+      "start": 126.88,
+      "end": 127.64,
+      "prob": 0.678
+    },
+    {
+      "word": ".co",
+      "start": 127.64,
+      "end": 128.3,
+      "prob": 0.997
+    },
+    {
+      "word": ".uk.",
+      "start": 128.3,
+      "end": 129.06,
+      "prob": 0.998
+    },
+    {
+      "word": "Thank",
+      "start": 129.7,
+      "end": 129.86,
+      "prob": 0.953
+    },
+    {
+      "word": "you",
+      "start": 129.86,
+      "end": 130.02,
+      "prob": 0.991
+    },
+    {
+      "word": "for",
+      "start": 130.02,
+      "end": 130.22,
+      "prob": 0.997
+    },
+    {
+      "word": "watching.",
+      "start": 130.22,
+      "end": 130.54,
+      "prob": 0.998
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

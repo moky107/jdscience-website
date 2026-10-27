@@ -1,0 +1,122 @@
+{
+  "slug": "6-1-reproduction",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 148.137,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.408,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "meiosis",
+      "t": 5.408,
+      "t_end": 33.51,
+      "cue": "Human egg and sperm cells each have 23 chromosomes",
+      "animate": false
+    },
+    {
+      "id": "dna",
+      "t": 33.51,
+      "t_end": 48.758,
+      "cue": "Genes are sections of DNA on chromosomes",
+      "animate": false
+    },
+    {
+      "id": "alleles",
+      "t": 48.758,
+      "t_end": 81.294,
+      "cue": "Dominant alleles show up even when only one copy",
+      "animate": false
+    },
+    {
+      "id": "punnett",
+      "t": 81.294,
+      "t_end": 94.946,
+      "cue": "always define the allele symbols before completing a Punnett square",
+      "animate": true
+    },
+    {
+      "id": "revise",
+      "t": 94.946,
+      "t_end": 106.825,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 106.825,
+      "t_end": 125.797,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 125.797,
+      "t_end": 136.79,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 136.79,
+      "t_end": 148.137,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 97.162,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 101.772,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 103.102,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 107.091,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 125.917,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "alleles",
+      "item": "b1",
+      "t": 57.269,
+      "cue": "Cystic fibrosis is recessive"
+    },
+    {
+      "slide": "alleles",
+      "item": "b2",
+      "t": 63.12,
+      "cue": "X and Y chromosomes"
+    },
+    {
+      "slide": "alleles",
+      "item": "b3",
+      "t": 90.779,
+      "cue": "not mean it is necessarily more common"
+    }
+  ]
+}

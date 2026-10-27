@@ -1,0 +1,1845 @@
+{
+  "audio": "content/videos/4-1-photosynthesis/source/narration_master.m4a",
+  "duration": 140.02,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring photosynthesis. Plants use carbon dioxide and water with energy from sunlight and chlorophyll to make glucose and oxygen. Carbon dioxide enters through the stomata. Water travels up from the roots. The equation is 6 carbon dioxide plus 6 water gives glucose plus 6 oxygen. Glucose can be respiration converted into starch for storage made into cellulose for cell walls combined with nitrates to make amino acids or converted into lipids for seeds. The rate of photosynthesis depends on temperature, intensity and carbon dioxide concentration. Enzymes can become denatured at high temperatures. Light intensity falls off with distance by the inverse square law. Doubling the distance cuts the intensity to a quarter. The balanced symbol equation is 6 carbon dioxide molecules plus 6 water molecules producing 1 molecule and 6 oxygen molecules using light energy. A limiting factor is the condition in shortest supply relative to the plant's needs. Increasing light will not keep increasing the rate if carbon dioxide or temperature can be treated as a point source and other conditions are controlled. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. A plant is moved from 20 cm to 40 cm from a lamp. Explain how the light intensity changes and what this does to the rate of photosynthesis. Here is a model answer. Doubling the distance reduces the light intensity to a quarter so the rate of photosynthesis falls because light is limiting the rate. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscince.co.uk.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.32,
+      "prob": 0.954
+    },
+    {
+      "word": "and",
+      "start": 0.32,
+      "end": 0.7,
+      "prob": 0.774
+    },
+    {
+      "word": "welcome",
+      "start": 0.7,
+      "end": 0.94,
+      "prob": 0.986
+    },
+    {
+      "word": "back",
+      "start": 0.94,
+      "end": 1.3,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 1.3,
+      "end": 1.54,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.54,
+      "end": 1.88,
+      "prob": 0.932
+    },
+    {
+      "word": "Science.",
+      "start": 1.88,
+      "end": 2.34,
+      "prob": 0.686
+    },
+    {
+      "word": "Today",
+      "start": 2.94,
+      "end": 3.26,
+      "prob": 0.997
+    },
+    {
+      "word": "we",
+      "start": 3.26,
+      "end": 3.82,
+      "prob": 0.625
+    },
+    {
+      "word": "are",
+      "start": 3.82,
+      "end": 3.96,
+      "prob": 0.987
+    },
+    {
+      "word": "exploring",
+      "start": 3.96,
+      "end": 4.58,
+      "prob": 0.998
+    },
+    {
+      "word": "photosynthesis.",
+      "start": 4.58,
+      "end": 5.64,
+      "prob": 0.93
+    },
+    {
+      "word": "Plants",
+      "start": 6.46,
+      "end": 6.5,
+      "prob": 0.973
+    },
+    {
+      "word": "use",
+      "start": 6.5,
+      "end": 6.96,
+      "prob": 0.997
+    },
+    {
+      "word": "carbon",
+      "start": 6.96,
+      "end": 7.38,
+      "prob": 0.945
+    },
+    {
+      "word": "dioxide",
+      "start": 7.38,
+      "end": 7.86,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 7.86,
+      "end": 8.24,
+      "prob": 0.993
+    },
+    {
+      "word": "water",
+      "start": 8.24,
+      "end": 8.62,
+      "prob": 1.0
+    },
+    {
+      "word": "with",
+      "start": 8.62,
+      "end": 9.12,
+      "prob": 0.605
+    },
+    {
+      "word": "energy",
+      "start": 9.12,
+      "end": 9.46,
+      "prob": 0.998
+    },
+    {
+      "word": "from",
+      "start": 9.46,
+      "end": 9.8,
+      "prob": 0.999
+    },
+    {
+      "word": "sunlight",
+      "start": 9.8,
+      "end": 10.34,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 10.34,
+      "end": 10.62,
+      "prob": 0.996
+    },
+    {
+      "word": "chlorophyll",
+      "start": 10.62,
+      "end": 11.28,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 11.28,
+      "end": 11.68,
+      "prob": 0.961
+    },
+    {
+      "word": "make",
+      "start": 11.68,
+      "end": 11.88,
+      "prob": 0.999
+    },
+    {
+      "word": "glucose",
+      "start": 11.88,
+      "end": 12.4,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 12.4,
+      "end": 12.72,
+      "prob": 0.988
+    },
+    {
+      "word": "oxygen.",
+      "start": 12.72,
+      "end": 13.22,
+      "prob": 0.998
+    },
+    {
+      "word": "Carbon",
+      "start": 13.78,
+      "end": 13.94,
+      "prob": 0.995
+    },
+    {
+      "word": "dioxide",
+      "start": 13.94,
+      "end": 14.54,
+      "prob": 0.994
+    },
+    {
+      "word": "enters",
+      "start": 14.54,
+      "end": 14.96,
+      "prob": 0.998
+    },
+    {
+      "word": "through",
+      "start": 14.96,
+      "end": 15.38,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 15.38,
+      "end": 15.56,
+      "prob": 0.996
+    },
+    {
+      "word": "stomata.",
+      "start": 15.56,
+      "end": 16.06,
+      "prob": 0.986
+    },
+    {
+      "word": "Water",
+      "start": 16.72,
+      "end": 16.92,
+      "prob": 0.998
+    },
+    {
+      "word": "travels",
+      "start": 16.92,
+      "end": 17.4,
+      "prob": 1.0
+    },
+    {
+      "word": "up",
+      "start": 17.4,
+      "end": 17.8,
+      "prob": 0.999
+    },
+    {
+      "word": "from",
+      "start": 17.8,
+      "end": 18.04,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 18.04,
+      "end": 18.22,
+      "prob": 0.999
+    },
+    {
+      "word": "roots.",
+      "start": 18.22,
+      "end": 18.5,
+      "prob": 0.99
+    },
+    {
+      "word": "The",
+      "start": 19.08,
+      "end": 19.16,
+      "prob": 0.997
+    },
+    {
+      "word": "equation",
+      "start": 19.16,
+      "end": 19.66,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 19.66,
+      "end": 20.0,
+      "prob": 0.994
+    },
+    {
+      "word": "6",
+      "start": 20.0,
+      "end": 20.38,
+      "prob": 0.839
+    },
+    {
+      "word": "carbon",
+      "start": 20.38,
+      "end": 20.74,
+      "prob": 0.63
+    },
+    {
+      "word": "dioxide",
+      "start": 20.74,
+      "end": 21.38,
+      "prob": 0.997
+    },
+    {
+      "word": "plus",
+      "start": 21.38,
+      "end": 21.76,
+      "prob": 0.803
+    },
+    {
+      "word": "6",
+      "start": 21.76,
+      "end": 22.1,
+      "prob": 0.962
+    },
+    {
+      "word": "water",
+      "start": 22.1,
+      "end": 22.58,
+      "prob": 0.995
+    },
+    {
+      "word": "gives",
+      "start": 22.58,
+      "end": 23.08,
+      "prob": 0.971
+    },
+    {
+      "word": "glucose",
+      "start": 23.08,
+      "end": 23.66,
+      "prob": 0.996
+    },
+    {
+      "word": "plus",
+      "start": 23.66,
+      "end": 24.12,
+      "prob": 0.992
+    },
+    {
+      "word": "6",
+      "start": 24.12,
+      "end": 24.52,
+      "prob": 0.964
+    },
+    {
+      "word": "oxygen.",
+      "start": 24.52,
+      "end": 25.08,
+      "prob": 0.986
+    },
+    {
+      "word": "Glucose",
+      "start": 25.08,
+      "end": 26.02,
+      "prob": 0.816
+    },
+    {
+      "word": "can",
+      "start": 26.02,
+      "end": 26.2,
+      "prob": 0.983
+    },
+    {
+      "word": "be",
+      "start": 26.2,
+      "end": 26.32,
+      "prob": 0.995
+    },
+    {
+      "word": "respiration",
+      "start": 26.32,
+      "end": 27.48,
+      "prob": 0.555
+    },
+    {
+      "word": "converted",
+      "start": 27.48,
+      "end": 28.22,
+      "prob": 0.244
+    },
+    {
+      "word": "into",
+      "start": 28.22,
+      "end": 28.66,
+      "prob": 0.933
+    },
+    {
+      "word": "starch",
+      "start": 28.66,
+      "end": 29.08,
+      "prob": 0.962
+    },
+    {
+      "word": "for",
+      "start": 29.08,
+      "end": 29.34,
+      "prob": 0.932
+    },
+    {
+      "word": "storage",
+      "start": 29.34,
+      "end": 29.96,
+      "prob": 0.965
+    },
+    {
+      "word": "made",
+      "start": 29.96,
+      "end": 30.58,
+      "prob": 0.3
+    },
+    {
+      "word": "into",
+      "start": 30.58,
+      "end": 30.9,
+      "prob": 0.964
+    },
+    {
+      "word": "cellulose",
+      "start": 30.9,
+      "end": 31.54,
+      "prob": 0.983
+    },
+    {
+      "word": "for",
+      "start": 31.54,
+      "end": 31.76,
+      "prob": 0.928
+    },
+    {
+      "word": "cell",
+      "start": 31.76,
+      "end": 32.04,
+      "prob": 0.976
+    },
+    {
+      "word": "walls",
+      "start": 32.04,
+      "end": 32.54,
+      "prob": 0.976
+    },
+    {
+      "word": "combined",
+      "start": 32.54,
+      "end": 33.26,
+      "prob": 0.855
+    },
+    {
+      "word": "with",
+      "start": 33.26,
+      "end": 33.52,
+      "prob": 0.974
+    },
+    {
+      "word": "nitrates",
+      "start": 33.52,
+      "end": 34.14,
+      "prob": 0.988
+    },
+    {
+      "word": "to",
+      "start": 34.14,
+      "end": 34.34,
+      "prob": 0.972
+    },
+    {
+      "word": "make",
+      "start": 34.34,
+      "end": 34.52,
+      "prob": 0.991
+    },
+    {
+      "word": "amino",
+      "start": 34.52,
+      "end": 34.88,
+      "prob": 0.994
+    },
+    {
+      "word": "acids",
+      "start": 34.88,
+      "end": 35.38,
+      "prob": 0.986
+    },
+    {
+      "word": "or",
+      "start": 35.38,
+      "end": 36.0,
+      "prob": 0.796
+    },
+    {
+      "word": "converted",
+      "start": 36.0,
+      "end": 36.44,
+      "prob": 0.983
+    },
+    {
+      "word": "into",
+      "start": 36.44,
+      "end": 36.82,
+      "prob": 0.993
+    },
+    {
+      "word": "lipids",
+      "start": 36.82,
+      "end": 37.34,
+      "prob": 0.975
+    },
+    {
+      "word": "for",
+      "start": 37.34,
+      "end": 37.56,
+      "prob": 0.976
+    },
+    {
+      "word": "seeds.",
+      "start": 37.56,
+      "end": 38.0,
+      "prob": 0.975
+    },
+    {
+      "word": "The",
+      "start": 38.66,
+      "end": 38.66,
+      "prob": 0.972
+    },
+    {
+      "word": "rate",
+      "start": 38.66,
+      "end": 38.86,
+      "prob": 0.991
+    },
+    {
+      "word": "of",
+      "start": 38.86,
+      "end": 39.06,
+      "prob": 0.989
+    },
+    {
+      "word": "photosynthesis",
+      "start": 39.06,
+      "end": 39.88,
+      "prob": 0.995
+    },
+    {
+      "word": "depends",
+      "start": 39.88,
+      "end": 40.36,
+      "prob": 0.986
+    },
+    {
+      "word": "on",
+      "start": 40.36,
+      "end": 40.68,
+      "prob": 0.994
+    },
+    {
+      "word": "temperature,",
+      "start": 40.68,
+      "end": 41.1,
+      "prob": 0.979
+    },
+    {
+      "word": "intensity",
+      "start": 41.72,
+      "end": 42.14,
+      "prob": 0.093
+    },
+    {
+      "word": "and",
+      "start": 42.14,
+      "end": 43.02,
+      "prob": 0.763
+    },
+    {
+      "word": "carbon",
+      "start": 43.02,
+      "end": 43.42,
+      "prob": 0.961
+    },
+    {
+      "word": "dioxide",
+      "start": 43.42,
+      "end": 44.0,
+      "prob": 0.976
+    },
+    {
+      "word": "concentration.",
+      "start": 44.0,
+      "end": 44.86,
+      "prob": 0.966
+    },
+    {
+      "word": "Enzymes",
+      "start": 45.4,
+      "end": 45.96,
+      "prob": 0.969
+    },
+    {
+      "word": "can",
+      "start": 45.96,
+      "end": 46.14,
+      "prob": 0.97
+    },
+    {
+      "word": "become",
+      "start": 46.14,
+      "end": 46.48,
+      "prob": 0.94
+    },
+    {
+      "word": "denatured",
+      "start": 46.48,
+      "end": 47.22,
+      "prob": 0.957
+    },
+    {
+      "word": "at",
+      "start": 47.22,
+      "end": 47.38,
+      "prob": 0.969
+    },
+    {
+      "word": "high",
+      "start": 47.38,
+      "end": 47.64,
+      "prob": 0.966
+    },
+    {
+      "word": "temperatures.",
+      "start": 47.64,
+      "end": 48.16,
+      "prob": 0.937
+    },
+    {
+      "word": "Light",
+      "start": 48.74,
+      "end": 48.88,
+      "prob": 0.929
+    },
+    {
+      "word": "intensity",
+      "start": 48.88,
+      "end": 49.46,
+      "prob": 0.914
+    },
+    {
+      "word": "falls",
+      "start": 49.46,
+      "end": 49.96,
+      "prob": 0.98
+    },
+    {
+      "word": "off",
+      "start": 49.96,
+      "end": 50.26,
+      "prob": 0.973
+    },
+    {
+      "word": "with",
+      "start": 50.26,
+      "end": 50.46,
+      "prob": 0.943
+    },
+    {
+      "word": "distance",
+      "start": 50.46,
+      "end": 50.92,
+      "prob": 0.981
+    },
+    {
+      "word": "by",
+      "start": 50.92,
+      "end": 51.24,
+      "prob": 0.976
+    },
+    {
+      "word": "the",
+      "start": 51.24,
+      "end": 51.4,
+      "prob": 0.966
+    },
+    {
+      "word": "inverse",
+      "start": 51.4,
+      "end": 51.84,
+      "prob": 0.964
+    },
+    {
+      "word": "square",
+      "start": 51.84,
+      "end": 52.24,
+      "prob": 0.931
+    },
+    {
+      "word": "law.",
+      "start": 52.24,
+      "end": 52.6,
+      "prob": 0.991
+    },
+    {
+      "word": "Doubling",
+      "start": 52.6,
+      "end": 53.38,
+      "prob": 0.514
+    },
+    {
+      "word": "the",
+      "start": 53.38,
+      "end": 53.58,
+      "prob": 0.987
+    },
+    {
+      "word": "distance",
+      "start": 53.58,
+      "end": 54.04,
+      "prob": 0.998
+    },
+    {
+      "word": "cuts",
+      "start": 54.04,
+      "end": 54.36,
+      "prob": 0.943
+    },
+    {
+      "word": "the",
+      "start": 54.36,
+      "end": 54.64,
+      "prob": 0.988
+    },
+    {
+      "word": "intensity",
+      "start": 54.64,
+      "end": 55.1,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 55.1,
+      "end": 55.46,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 55.46,
+      "end": 55.58,
+      "prob": 0.907
+    },
+    {
+      "word": "quarter.",
+      "start": 55.58,
+      "end": 55.9,
+      "prob": 0.987
+    },
+    {
+      "word": "The",
+      "start": 56.52,
+      "end": 56.54,
+      "prob": 0.972
+    },
+    {
+      "word": "balanced",
+      "start": 56.54,
+      "end": 56.92,
+      "prob": 0.633
+    },
+    {
+      "word": "symbol",
+      "start": 56.92,
+      "end": 57.28,
+      "prob": 0.94
+    },
+    {
+      "word": "equation",
+      "start": 57.28,
+      "end": 57.86,
+      "prob": 0.996
+    },
+    {
+      "word": "is",
+      "start": 57.86,
+      "end": 58.24,
+      "prob": 0.989
+    },
+    {
+      "word": "6",
+      "start": 58.24,
+      "end": 58.58,
+      "prob": 0.677
+    },
+    {
+      "word": "carbon",
+      "start": 58.58,
+      "end": 59.02,
+      "prob": 0.878
+    },
+    {
+      "word": "dioxide",
+      "start": 59.02,
+      "end": 59.54,
+      "prob": 0.978
+    },
+    {
+      "word": "molecules",
+      "start": 59.54,
+      "end": 60.28,
+      "prob": 0.995
+    },
+    {
+      "word": "plus",
+      "start": 60.28,
+      "end": 60.58,
+      "prob": 0.839
+    },
+    {
+      "word": "6",
+      "start": 60.58,
+      "end": 60.96,
+      "prob": 0.953
+    },
+    {
+      "word": "water",
+      "start": 60.96,
+      "end": 61.38,
+      "prob": 0.999
+    },
+    {
+      "word": "molecules",
+      "start": 61.38,
+      "end": 61.96,
+      "prob": 0.999
+    },
+    {
+      "word": "producing",
+      "start": 61.96,
+      "end": 62.44,
+      "prob": 0.789
+    },
+    {
+      "word": "1",
+      "start": 62.44,
+      "end": 62.82,
+      "prob": 0.652
+    },
+    {
+      "word": "molecule",
+      "start": 62.82,
+      "end": 63.82,
+      "prob": 0.672
+    },
+    {
+      "word": "and",
+      "start": 63.82,
+      "end": 64.26,
+      "prob": 0.98
+    },
+    {
+      "word": "6",
+      "start": 64.26,
+      "end": 64.64,
+      "prob": 0.989
+    },
+    {
+      "word": "oxygen",
+      "start": 64.64,
+      "end": 65.1,
+      "prob": 0.995
+    },
+    {
+      "word": "molecules",
+      "start": 65.1,
+      "end": 65.78,
+      "prob": 0.999
+    },
+    {
+      "word": "using",
+      "start": 65.78,
+      "end": 66.34,
+      "prob": 0.775
+    },
+    {
+      "word": "light",
+      "start": 66.34,
+      "end": 66.68,
+      "prob": 0.995
+    },
+    {
+      "word": "energy.",
+      "start": 66.68,
+      "end": 67.14,
+      "prob": 0.997
+    },
+    {
+      "word": "A",
+      "start": 67.64,
+      "end": 67.66,
+      "prob": 0.935
+    },
+    {
+      "word": "limiting",
+      "start": 67.66,
+      "end": 67.92,
+      "prob": 0.993
+    },
+    {
+      "word": "factor",
+      "start": 67.92,
+      "end": 68.4,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 68.4,
+      "end": 68.76,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 68.76,
+      "end": 68.94,
+      "prob": 0.994
+    },
+    {
+      "word": "condition",
+      "start": 68.94,
+      "end": 69.32,
+      "prob": 0.996
+    },
+    {
+      "word": "in",
+      "start": 69.32,
+      "end": 69.64,
+      "prob": 0.996
+    },
+    {
+      "word": "shortest",
+      "start": 69.64,
+      "end": 70.1,
+      "prob": 0.84
+    },
+    {
+      "word": "supply",
+      "start": 70.1,
+      "end": 70.7,
+      "prob": 0.999
+    },
+    {
+      "word": "relative",
+      "start": 70.7,
+      "end": 71.12,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 71.12,
+      "end": 71.48,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 71.48,
+      "end": 71.56,
+      "prob": 0.983
+    },
+    {
+      "word": "plant's",
+      "start": 71.56,
+      "end": 72.02,
+      "prob": 0.859
+    },
+    {
+      "word": "needs.",
+      "start": 72.02,
+      "end": 72.34,
+      "prob": 0.993
+    },
+    {
+      "word": "Increasing",
+      "start": 72.88,
+      "end": 73.24,
+      "prob": 0.988
+    },
+    {
+      "word": "light",
+      "start": 73.24,
+      "end": 73.74,
+      "prob": 0.997
+    },
+    {
+      "word": "will",
+      "start": 73.74,
+      "end": 74.0,
+      "prob": 0.997
+    },
+    {
+      "word": "not",
+      "start": 74.0,
+      "end": 74.28,
+      "prob": 0.997
+    },
+    {
+      "word": "keep",
+      "start": 74.28,
+      "end": 74.56,
+      "prob": 0.994
+    },
+    {
+      "word": "increasing",
+      "start": 74.56,
+      "end": 75.08,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 75.08,
+      "end": 75.32,
+      "prob": 0.998
+    },
+    {
+      "word": "rate",
+      "start": 75.32,
+      "end": 75.58,
+      "prob": 0.999
+    },
+    {
+      "word": "if",
+      "start": 75.58,
+      "end": 75.84,
+      "prob": 0.981
+    },
+    {
+      "word": "carbon",
+      "start": 75.84,
+      "end": 76.22,
+      "prob": 0.991
+    },
+    {
+      "word": "dioxide",
+      "start": 76.22,
+      "end": 76.76,
+      "prob": 0.998
+    },
+    {
+      "word": "or",
+      "start": 76.76,
+      "end": 77.28,
+      "prob": 0.959
+    },
+    {
+      "word": "temperature",
+      "start": 77.28,
+      "end": 77.68,
+      "prob": 0.997
+    },
+    {
+      "word": "can",
+      "start": 82.6,
+      "end": 83.1,
+      "prob": 0.003
+    },
+    {
+      "word": "be",
+      "start": 83.1,
+      "end": 83.5,
+      "prob": 0.975
+    },
+    {
+      "word": "treated",
+      "start": 83.5,
+      "end": 83.82,
+      "prob": 0.994
+    },
+    {
+      "word": "as",
+      "start": 83.82,
+      "end": 84.06,
+      "prob": 0.993
+    },
+    {
+      "word": "a",
+      "start": 84.06,
+      "end": 84.22,
+      "prob": 0.986
+    },
+    {
+      "word": "point",
+      "start": 84.22,
+      "end": 84.44,
+      "prob": 0.989
+    },
+    {
+      "word": "source",
+      "start": 84.44,
+      "end": 84.86,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 84.86,
+      "end": 85.2,
+      "prob": 0.902
+    },
+    {
+      "word": "other",
+      "start": 85.2,
+      "end": 85.52,
+      "prob": 0.991
+    },
+    {
+      "word": "conditions",
+      "start": 85.52,
+      "end": 85.98,
+      "prob": 0.997
+    },
+    {
+      "word": "are",
+      "start": 85.98,
+      "end": 86.22,
+      "prob": 0.993
+    },
+    {
+      "word": "controlled.",
+      "start": 86.22,
+      "end": 86.68,
+      "prob": 0.997
+    },
+    {
+      "word": "As",
+      "start": 87.14,
+      "end": 87.3,
+      "prob": 0.988
+    },
+    {
+      "word": "you",
+      "start": 87.3,
+      "end": 87.44,
+      "prob": 0.998
+    },
+    {
+      "word": "revise",
+      "start": 87.44,
+      "end": 87.78,
+      "prob": 0.978
+    },
+    {
+      "word": "this",
+      "start": 87.78,
+      "end": 88.08,
+      "prob": 0.991
+    },
+    {
+      "word": "topic,",
+      "start": 88.08,
+      "end": 88.48,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 88.8,
+      "end": 89.02,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 89.02,
+      "end": 89.2,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 89.2,
+      "end": 89.58,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 89.58,
+      "end": 89.8,
+      "prob": 0.996
+    },
+    {
+      "word": "key",
+      "start": 89.8,
+      "end": 90.1,
+      "prob": 0.944
+    },
+    {
+      "word": "process",
+      "start": 90.1,
+      "end": 90.6,
+      "prob": 0.995
+    },
+    {
+      "word": "in",
+      "start": 90.6,
+      "end": 90.94,
+      "prob": 0.992
+    },
+    {
+      "word": "your",
+      "start": 90.94,
+      "end": 91.1,
+      "prob": 0.998
+    },
+    {
+      "word": "own",
+      "start": 91.1,
+      "end": 91.32,
+      "prob": 0.992
+    },
+    {
+      "word": "words.",
+      "start": 91.32,
+      "end": 91.84,
+      "prob": 0.999
+    },
+    {
+      "word": "Focus",
+      "start": 92.26,
+      "end": 92.38,
+      "prob": 0.976
+    },
+    {
+      "word": "on",
+      "start": 92.38,
+      "end": 92.7,
+      "prob": 0.999
+    },
+    {
+      "word": "what",
+      "start": 92.7,
+      "end": 93.0,
+      "prob": 0.985
+    },
+    {
+      "word": "happens,",
+      "start": 93.0,
+      "end": 93.58,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 94.02,
+      "end": 94.26,
+      "prob": 0.994
+    },
+    {
+      "word": "it",
+      "start": 94.26,
+      "end": 94.4,
+      "prob": 0.996
+    },
+    {
+      "word": "happens",
+      "start": 94.4,
+      "end": 94.94,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 94.94,
+      "end": 95.38,
+      "prob": 0.495
+    },
+    {
+      "word": "how",
+      "start": 95.38,
+      "end": 95.62,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 95.62,
+      "end": 95.8,
+      "prob": 0.993
+    },
+    {
+      "word": "structures",
+      "start": 95.8,
+      "end": 96.12,
+      "prob": 0.993
+    },
+    {
+      "word": "involved",
+      "start": 96.12,
+      "end": 96.7,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 96.7,
+      "end": 97.08,
+      "prob": 0.961
+    },
+    {
+      "word": "the",
+      "start": 97.08,
+      "end": 97.28,
+      "prob": 0.996
+    },
+    {
+      "word": "process",
+      "start": 97.28,
+      "end": 97.66,
+      "prob": 0.999
+    },
+    {
+      "word": "work.",
+      "start": 97.66,
+      "end": 98.16,
+      "prob": 0.996
+    },
+    {
+      "word": "Now",
+      "start": 98.7,
+      "end": 98.9,
+      "prob": 0.988
+    },
+    {
+      "word": "pause",
+      "start": 98.9,
+      "end": 99.6,
+      "prob": 0.594
+    },
+    {
+      "word": "the",
+      "start": 99.6,
+      "end": 99.84,
+      "prob": 0.998
+    },
+    {
+      "word": "video",
+      "start": 99.84,
+      "end": 100.16,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 100.16,
+      "end": 100.46,
+      "prob": 0.99
+    },
+    {
+      "word": "try",
+      "start": 100.46,
+      "end": 100.7,
+      "prob": 0.998
+    },
+    {
+      "word": "this",
+      "start": 100.7,
+      "end": 101.08,
+      "prob": 0.988
+    },
+    {
+      "word": "exam",
+      "start": 101.08,
+      "end": 101.54,
+      "prob": 0.984
+    },
+    {
+      "word": "style",
+      "start": 101.54,
+      "end": 101.88,
+      "prob": 0.762
+    },
+    {
+      "word": "question.",
+      "start": 101.88,
+      "end": 102.4,
+      "prob": 0.995
+    },
+    {
+      "word": "A",
+      "start": 102.96,
+      "end": 102.98,
+      "prob": 0.745
+    },
+    {
+      "word": "plant",
+      "start": 102.98,
+      "end": 103.28,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 103.28,
+      "end": 103.52,
+      "prob": 0.994
+    },
+    {
+      "word": "moved",
+      "start": 103.52,
+      "end": 103.84,
+      "prob": 0.998
+    },
+    {
+      "word": "from",
+      "start": 103.84,
+      "end": 104.12,
+      "prob": 0.998
+    },
+    {
+      "word": "20",
+      "start": 104.12,
+      "end": 104.62,
+      "prob": 0.983
+    },
+    {
+      "word": "cm",
+      "start": 104.62,
+      "end": 104.88,
+      "prob": 0.412
+    },
+    {
+      "word": "to",
+      "start": 104.88,
+      "end": 105.58,
+      "prob": 0.984
+    },
+    {
+      "word": "40",
+      "start": 105.58,
+      "end": 106.06,
+      "prob": 0.997
+    },
+    {
+      "word": "cm",
+      "start": 106.06,
+      "end": 106.48,
+      "prob": 0.981
+    },
+    {
+      "word": "from",
+      "start": 106.48,
+      "end": 106.94,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 106.94,
+      "end": 107.1,
+      "prob": 0.993
+    },
+    {
+      "word": "lamp.",
+      "start": 107.1,
+      "end": 107.36,
+      "prob": 0.99
+    },
+    {
+      "word": "Explain",
+      "start": 107.36,
+      "end": 108.0,
+      "prob": 0.159
+    },
+    {
+      "word": "how",
+      "start": 108.0,
+      "end": 108.56,
+      "prob": 0.987
+    },
+    {
+      "word": "the",
+      "start": 108.56,
+      "end": 108.76,
+      "prob": 0.987
+    },
+    {
+      "word": "light",
+      "start": 108.76,
+      "end": 109.04,
+      "prob": 0.987
+    },
+    {
+      "word": "intensity",
+      "start": 109.04,
+      "end": 109.68,
+      "prob": 0.995
+    },
+    {
+      "word": "changes",
+      "start": 109.68,
+      "end": 110.26,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 110.26,
+      "end": 110.8,
+      "prob": 0.887
+    },
+    {
+      "word": "what",
+      "start": 110.8,
+      "end": 111.0,
+      "prob": 0.997
+    },
+    {
+      "word": "this",
+      "start": 111.0,
+      "end": 111.24,
+      "prob": 0.978
+    },
+    {
+      "word": "does",
+      "start": 111.24,
+      "end": 111.52,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 111.52,
+      "end": 111.78,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 111.78,
+      "end": 111.92,
+      "prob": 0.995
+    },
+    {
+      "word": "rate",
+      "start": 111.92,
+      "end": 112.12,
+      "prob": 0.987
+    },
+    {
+      "word": "of",
+      "start": 112.12,
+      "end": 112.34,
+      "prob": 0.996
+    },
+    {
+      "word": "photosynthesis.",
+      "start": 112.34,
+      "end": 113.08,
+      "prob": 0.997
+    },
+    {
+      "word": "Here",
+      "start": 113.8,
+      "end": 114.06,
+      "prob": 0.99
+    },
+    {
+      "word": "is",
+      "start": 114.06,
+      "end": 114.28,
+      "prob": 0.988
+    },
+    {
+      "word": "a",
+      "start": 114.28,
+      "end": 114.42,
+      "prob": 0.991
+    },
+    {
+      "word": "model",
+      "start": 114.42,
+      "end": 114.64,
+      "prob": 0.995
+    },
+    {
+      "word": "answer.",
+      "start": 114.64,
+      "end": 115.2,
+      "prob": 0.996
+    },
+    {
+      "word": "Doubling",
+      "start": 115.58,
+      "end": 115.86,
+      "prob": 0.844
+    },
+    {
+      "word": "the",
+      "start": 115.86,
+      "end": 116.1,
+      "prob": 0.997
+    },
+    {
+      "word": "distance",
+      "start": 116.1,
+      "end": 116.5,
+      "prob": 0.999
+    },
+    {
+      "word": "reduces",
+      "start": 116.5,
+      "end": 117.0,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 117.0,
+      "end": 117.36,
+      "prob": 0.994
+    },
+    {
+      "word": "light",
+      "start": 117.36,
+      "end": 117.6,
+      "prob": 0.997
+    },
+    {
+      "word": "intensity",
+      "start": 117.6,
+      "end": 118.1,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 118.1,
+      "end": 118.48,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 118.48,
+      "end": 118.66,
+      "prob": 0.89
+    },
+    {
+      "word": "quarter",
+      "start": 118.66,
+      "end": 118.92,
+      "prob": 0.986
+    },
+    {
+      "word": "so",
+      "start": 118.92,
+      "end": 119.56,
+      "prob": 0.474
+    },
+    {
+      "word": "the",
+      "start": 119.56,
+      "end": 119.74,
+      "prob": 0.988
+    },
+    {
+      "word": "rate",
+      "start": 119.74,
+      "end": 119.96,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 119.96,
+      "end": 120.14,
+      "prob": 0.992
+    },
+    {
+      "word": "photosynthesis",
+      "start": 120.14,
+      "end": 120.96,
+      "prob": 0.999
+    },
+    {
+      "word": "falls",
+      "start": 120.96,
+      "end": 121.4,
+      "prob": 0.995
+    },
+    {
+      "word": "because",
+      "start": 121.4,
+      "end": 122.1,
+      "prob": 0.852
+    },
+    {
+      "word": "light",
+      "start": 122.1,
+      "end": 122.5,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 122.5,
+      "end": 122.7,
+      "prob": 0.998
+    },
+    {
+      "word": "limiting",
+      "start": 122.7,
+      "end": 123.04,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 123.04,
+      "end": 123.34,
+      "prob": 0.999
+    },
+    {
+      "word": "rate.",
+      "start": 123.34,
+      "end": 123.64,
+      "prob": 0.998
+    },
+    {
+      "word": "If",
+      "start": 124.12,
+      "end": 124.28,
+      "prob": 0.989
+    },
+    {
+      "word": "this",
+      "start": 124.28,
+      "end": 124.46,
+      "prob": 0.998
+    },
+    {
+      "word": "explanation",
+      "start": 124.46,
+      "end": 124.92,
+      "prob": 0.999
+    },
+    {
+      "word": "has",
+      "start": 124.92,
+      "end": 125.32,
+      "prob": 0.991
+    },
+    {
+      "word": "helped,",
+      "start": 125.32,
+      "end": 125.68,
+      "prob": 0.997
+    },
+    {
+      "word": "please",
+      "start": 126.06,
+      "end": 126.22,
+      "prob": 0.993
+    },
+    {
+      "word": "subscribe",
+      "start": 126.22,
+      "end": 126.72,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 126.72,
+      "end": 126.98,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 126.98,
+      "end": 127.34,
+      "prob": 0.829
+    },
+    {
+      "word": "Science",
+      "start": 127.34,
+      "end": 127.7,
+      "prob": 0.48
+    },
+    {
+      "word": "for",
+      "start": 127.7,
+      "end": 128.04,
+      "prob": 0.997
+    },
+    {
+      "word": "more",
+      "start": 128.04,
+      "end": 128.24,
+      "prob": 0.999
+    },
+    {
+      "word": "lessons.",
+      "start": 128.24,
+      "end": 128.72,
+      "prob": 0.997
+    },
+    {
+      "word": "You",
+      "start": 128.72,
+      "end": 129.3,
+      "prob": 0.624
+    },
+    {
+      "word": "can",
+      "start": 129.3,
+      "end": 129.46,
+      "prob": 0.998
+    },
+    {
+      "word": "find",
+      "start": 129.46,
+      "end": 129.72,
+      "prob": 0.997
+    },
+    {
+      "word": "further",
+      "start": 129.72,
+      "end": 130.06,
+      "prob": 0.998
+    },
+    {
+      "word": "learning",
+      "start": 130.06,
+      "end": 130.52,
+      "prob": 0.996
+    },
+    {
+      "word": "resources",
+      "start": 130.52,
+      "end": 131.02,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 131.02,
+      "end": 131.5,
+      "prob": 0.991
+    },
+    {
+      "word": "practice",
+      "start": 131.5,
+      "end": 131.92,
+      "prob": 0.889
+    },
+    {
+      "word": "questions",
+      "start": 131.92,
+      "end": 132.5,
+      "prob": 0.998
+    },
+    {
+      "word": "at",
+      "start": 132.5,
+      "end": 133.1,
+      "prob": 0.99
+    },
+    {
+      "word": "jdscince",
+      "start": 133.1,
+      "end": 136.48,
+      "prob": 0.643
+    },
+    {
+      "word": ".co",
+      "start": 136.48,
+      "end": 137.64,
+      "prob": 0.998
+    },
+    {
+      "word": ".uk.",
+      "start": 137.64,
+      "end": 138.36,
+      "prob": 0.99
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

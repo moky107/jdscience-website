@@ -1,0 +1,2007 @@
+{
+  "audio": "content/videos/6-1-reproduction/source/narration_master.m4a",
+  "duration": 157.45,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring reproduction. Human egg and sperm cells each have 23 chromosomes. When they fuse, the zygote has 46 chromosomes, which are 23 pairs. Mitosis makes identical cells for growth and repair. Myosis makes gametes with half the chromosomes and each gamete is genetically different. Sexual reproduction needs two parents and produces variation. Asexual reproduction needs one parent and produces clones. Genes are sections of DNA on chromosomes and each gene codes for a protein. DNA is a double helix made of nucleotides and bases pair as C with G and A with T. For genetics, each parent passes on one allele of each gene. Dominant alleles show up even when only one copy is present. Recessive alleles only show when two copies are present. Cystic fibrosis is recessive. Polydactyly is dominant. Sex is determined by the X and Y chromosomes. Myosis reduces chromosome number and generates genetic variation through processes including recombination and independent assortment. Fertilization restores the diploid chromosome number. In inheritance questions, always define the allele symbols before completing a Punnett square. A dominant allele is expressed in a heterozygote. This does not mean it is necessarily more common in the population. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens, and how the structures involved help the process work. Now pause the video and try this exam style question. A woman is heterozygous for cystic fibrosis, F, and a man does not carry the allele FF. Using a Punnett square, work out the probability that their child has cystic fibrosis. Use F for the recessive allele. Here is a model answer. ParentsFFF gives offspring FFFFFF. The child has cystic fibrosis only if FF. Probability equals sign 0%. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.38,
+      "prob": 0.841
+    },
+    {
+      "word": "and",
+      "start": 0.38,
+      "end": 0.7,
+      "prob": 0.83
+    },
+    {
+      "word": "welcome",
+      "start": 0.7,
+      "end": 0.94,
+      "prob": 0.978
+    },
+    {
+      "word": "back",
+      "start": 0.94,
+      "end": 1.32,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.32,
+      "end": 1.56,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.56,
+      "end": 1.92,
+      "prob": 0.917
+    },
+    {
+      "word": "Science.",
+      "start": 1.92,
+      "end": 2.4,
+      "prob": 0.567
+    },
+    {
+      "word": "Today",
+      "start": 3.04,
+      "end": 3.38,
+      "prob": 0.996
+    },
+    {
+      "word": "we",
+      "start": 3.38,
+      "end": 3.88,
+      "prob": 0.701
+    },
+    {
+      "word": "are",
+      "start": 3.88,
+      "end": 4.0,
+      "prob": 0.964
+    },
+    {
+      "word": "exploring",
+      "start": 4.0,
+      "end": 4.64,
+      "prob": 0.996
+    },
+    {
+      "word": "reproduction.",
+      "start": 4.64,
+      "end": 5.28,
+      "prob": 0.962
+    },
+    {
+      "word": "Human",
+      "start": 6.08,
+      "end": 6.42,
+      "prob": 0.938
+    },
+    {
+      "word": "egg",
+      "start": 6.42,
+      "end": 6.74,
+      "prob": 0.953
+    },
+    {
+      "word": "and",
+      "start": 6.74,
+      "end": 6.96,
+      "prob": 0.995
+    },
+    {
+      "word": "sperm",
+      "start": 6.96,
+      "end": 7.26,
+      "prob": 0.998
+    },
+    {
+      "word": "cells",
+      "start": 7.26,
+      "end": 7.74,
+      "prob": 0.997
+    },
+    {
+      "word": "each",
+      "start": 7.74,
+      "end": 8.1,
+      "prob": 0.983
+    },
+    {
+      "word": "have",
+      "start": 8.1,
+      "end": 8.36,
+      "prob": 0.996
+    },
+    {
+      "word": "23",
+      "start": 8.36,
+      "end": 9.12,
+      "prob": 0.991
+    },
+    {
+      "word": "chromosomes.",
+      "start": 9.12,
+      "end": 9.74,
+      "prob": 0.994
+    },
+    {
+      "word": "When",
+      "start": 10.3,
+      "end": 10.54,
+      "prob": 0.995
+    },
+    {
+      "word": "they",
+      "start": 10.54,
+      "end": 10.76,
+      "prob": 0.998
+    },
+    {
+      "word": "fuse,",
+      "start": 10.76,
+      "end": 11.18,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 11.72,
+      "end": 11.76,
+      "prob": 0.992
+    },
+    {
+      "word": "zygote",
+      "start": 11.76,
+      "end": 12.34,
+      "prob": 0.985
+    },
+    {
+      "word": "has",
+      "start": 12.34,
+      "end": 12.58,
+      "prob": 0.994
+    },
+    {
+      "word": "46",
+      "start": 12.58,
+      "end": 13.26,
+      "prob": 0.993
+    },
+    {
+      "word": "chromosomes,",
+      "start": 13.26,
+      "end": 13.9,
+      "prob": 0.997
+    },
+    {
+      "word": "which",
+      "start": 14.46,
+      "end": 14.56,
+      "prob": 0.998
+    },
+    {
+      "word": "are",
+      "start": 14.56,
+      "end": 14.72,
+      "prob": 0.989
+    },
+    {
+      "word": "23",
+      "start": 14.72,
+      "end": 15.32,
+      "prob": 0.997
+    },
+    {
+      "word": "pairs.",
+      "start": 15.32,
+      "end": 15.86,
+      "prob": 0.998
+    },
+    {
+      "word": "Mitosis",
+      "start": 16.5,
+      "end": 16.92,
+      "prob": 0.656
+    },
+    {
+      "word": "makes",
+      "start": 16.92,
+      "end": 17.32,
+      "prob": 0.996
+    },
+    {
+      "word": "identical",
+      "start": 17.32,
+      "end": 17.9,
+      "prob": 0.998
+    },
+    {
+      "word": "cells",
+      "start": 17.9,
+      "end": 18.4,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 18.4,
+      "end": 18.72,
+      "prob": 0.999
+    },
+    {
+      "word": "growth",
+      "start": 18.72,
+      "end": 19.04,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 19.04,
+      "end": 19.28,
+      "prob": 0.998
+    },
+    {
+      "word": "repair.",
+      "start": 19.28,
+      "end": 19.7,
+      "prob": 0.998
+    },
+    {
+      "word": "Myosis",
+      "start": 20.3,
+      "end": 20.68,
+      "prob": 0.655
+    },
+    {
+      "word": "makes",
+      "start": 20.68,
+      "end": 21.06,
+      "prob": 0.995
+    },
+    {
+      "word": "gametes",
+      "start": 21.06,
+      "end": 21.68,
+      "prob": 0.976
+    },
+    {
+      "word": "with",
+      "start": 21.68,
+      "end": 21.84,
+      "prob": 0.996
+    },
+    {
+      "word": "half",
+      "start": 21.84,
+      "end": 22.16,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 22.16,
+      "end": 22.38,
+      "prob": 0.976
+    },
+    {
+      "word": "chromosomes",
+      "start": 22.38,
+      "end": 22.84,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 22.84,
+      "end": 23.52,
+      "prob": 0.486
+    },
+    {
+      "word": "each",
+      "start": 23.52,
+      "end": 23.82,
+      "prob": 0.999
+    },
+    {
+      "word": "gamete",
+      "start": 23.82,
+      "end": 24.34,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 24.34,
+      "end": 24.54,
+      "prob": 0.998
+    },
+    {
+      "word": "genetically",
+      "start": 24.54,
+      "end": 25.02,
+      "prob": 0.996
+    },
+    {
+      "word": "different.",
+      "start": 25.02,
+      "end": 25.58,
+      "prob": 0.999
+    },
+    {
+      "word": "Sexual",
+      "start": 26.12,
+      "end": 26.52,
+      "prob": 0.315
+    },
+    {
+      "word": "reproduction",
+      "start": 26.52,
+      "end": 27.32,
+      "prob": 0.987
+    },
+    {
+      "word": "needs",
+      "start": 27.32,
+      "end": 27.72,
+      "prob": 0.973
+    },
+    {
+      "word": "two",
+      "start": 27.72,
+      "end": 28.12,
+      "prob": 0.834
+    },
+    {
+      "word": "parents",
+      "start": 28.12,
+      "end": 28.58,
+      "prob": 0.99
+    },
+    {
+      "word": "and",
+      "start": 28.58,
+      "end": 28.96,
+      "prob": 0.9
+    },
+    {
+      "word": "produces",
+      "start": 28.96,
+      "end": 29.42,
+      "prob": 0.996
+    },
+    {
+      "word": "variation.",
+      "start": 29.42,
+      "end": 30.22,
+      "prob": 0.95
+    },
+    {
+      "word": "Asexual",
+      "start": 30.76,
+      "end": 31.1,
+      "prob": 0.953
+    },
+    {
+      "word": "reproduction",
+      "start": 31.1,
+      "end": 31.8,
+      "prob": 0.998
+    },
+    {
+      "word": "needs",
+      "start": 31.8,
+      "end": 32.32,
+      "prob": 0.991
+    },
+    {
+      "word": "one",
+      "start": 32.32,
+      "end": 32.72,
+      "prob": 0.995
+    },
+    {
+      "word": "parent",
+      "start": 32.72,
+      "end": 33.18,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 33.18,
+      "end": 33.52,
+      "prob": 0.989
+    },
+    {
+      "word": "produces",
+      "start": 33.52,
+      "end": 33.98,
+      "prob": 0.999
+    },
+    {
+      "word": "clones.",
+      "start": 33.98,
+      "end": 34.5,
+      "prob": 0.998
+    },
+    {
+      "word": "Genes",
+      "start": 35.42,
+      "end": 35.8,
+      "prob": 0.967
+    },
+    {
+      "word": "are",
+      "start": 35.8,
+      "end": 36.0,
+      "prob": 0.997
+    },
+    {
+      "word": "sections",
+      "start": 36.0,
+      "end": 36.42,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 36.42,
+      "end": 36.7,
+      "prob": 0.998
+    },
+    {
+      "word": "DNA",
+      "start": 36.7,
+      "end": 37.04,
+      "prob": 0.997
+    },
+    {
+      "word": "on",
+      "start": 37.04,
+      "end": 37.48,
+      "prob": 0.992
+    },
+    {
+      "word": "chromosomes",
+      "start": 37.48,
+      "end": 38.02,
+      "prob": 0.993
+    },
+    {
+      "word": "and",
+      "start": 38.02,
+      "end": 38.66,
+      "prob": 0.705
+    },
+    {
+      "word": "each",
+      "start": 38.66,
+      "end": 38.94,
+      "prob": 0.999
+    },
+    {
+      "word": "gene",
+      "start": 38.94,
+      "end": 39.36,
+      "prob": 0.995
+    },
+    {
+      "word": "codes",
+      "start": 39.36,
+      "end": 39.74,
+      "prob": 0.998
+    },
+    {
+      "word": "for",
+      "start": 39.74,
+      "end": 40.04,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 40.04,
+      "end": 40.2,
+      "prob": 0.986
+    },
+    {
+      "word": "protein.",
+      "start": 40.2,
+      "end": 40.68,
+      "prob": 0.999
+    },
+    {
+      "word": "DNA",
+      "start": 41.22,
+      "end": 41.52,
+      "prob": 0.995
+    },
+    {
+      "word": "is",
+      "start": 41.52,
+      "end": 41.9,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 41.9,
+      "end": 42.1,
+      "prob": 0.983
+    },
+    {
+      "word": "double",
+      "start": 42.1,
+      "end": 42.4,
+      "prob": 0.995
+    },
+    {
+      "word": "helix",
+      "start": 42.4,
+      "end": 42.92,
+      "prob": 0.995
+    },
+    {
+      "word": "made",
+      "start": 42.92,
+      "end": 43.16,
+      "prob": 0.993
+    },
+    {
+      "word": "of",
+      "start": 43.16,
+      "end": 43.34,
+      "prob": 0.998
+    },
+    {
+      "word": "nucleotides",
+      "start": 43.34,
+      "end": 44.2,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 44.2,
+      "end": 44.66,
+      "prob": 0.696
+    },
+    {
+      "word": "bases",
+      "start": 44.66,
+      "end": 45.12,
+      "prob": 0.993
+    },
+    {
+      "word": "pair",
+      "start": 45.12,
+      "end": 45.54,
+      "prob": 0.993
+    },
+    {
+      "word": "as",
+      "start": 45.54,
+      "end": 45.82,
+      "prob": 0.976
+    },
+    {
+      "word": "C",
+      "start": 45.82,
+      "end": 46.22,
+      "prob": 0.905
+    },
+    {
+      "word": "with",
+      "start": 46.22,
+      "end": 46.52,
+      "prob": 0.931
+    },
+    {
+      "word": "G",
+      "start": 46.52,
+      "end": 46.9,
+      "prob": 0.985
+    },
+    {
+      "word": "and",
+      "start": 46.9,
+      "end": 47.3,
+      "prob": 0.967
+    },
+    {
+      "word": "A",
+      "start": 47.3,
+      "end": 47.6,
+      "prob": 0.988
+    },
+    {
+      "word": "with",
+      "start": 47.6,
+      "end": 47.84,
+      "prob": 0.997
+    },
+    {
+      "word": "T.",
+      "start": 47.84,
+      "end": 48.2,
+      "prob": 0.989
+    },
+    {
+      "word": "For",
+      "start": 48.66,
+      "end": 48.82,
+      "prob": 0.994
+    },
+    {
+      "word": "genetics,",
+      "start": 48.82,
+      "end": 49.3,
+      "prob": 0.997
+    },
+    {
+      "word": "each",
+      "start": 49.72,
+      "end": 50.02,
+      "prob": 0.999
+    },
+    {
+      "word": "parent",
+      "start": 50.02,
+      "end": 50.42,
+      "prob": 0.998
+    },
+    {
+      "word": "passes",
+      "start": 50.42,
+      "end": 50.86,
+      "prob": 0.998
+    },
+    {
+      "word": "on",
+      "start": 50.86,
+      "end": 51.12,
+      "prob": 0.988
+    },
+    {
+      "word": "one",
+      "start": 51.12,
+      "end": 51.52,
+      "prob": 0.983
+    },
+    {
+      "word": "allele",
+      "start": 51.52,
+      "end": 51.88,
+      "prob": 0.998
+    },
+    {
+      "word": "of",
+      "start": 51.88,
+      "end": 52.2,
+      "prob": 0.997
+    },
+    {
+      "word": "each",
+      "start": 52.2,
+      "end": 52.38,
+      "prob": 0.999
+    },
+    {
+      "word": "gene.",
+      "start": 52.38,
+      "end": 52.88,
+      "prob": 0.999
+    },
+    {
+      "word": "Dominant",
+      "start": 52.88,
+      "end": 53.92,
+      "prob": 0.499
+    },
+    {
+      "word": "alleles",
+      "start": 53.92,
+      "end": 54.42,
+      "prob": 0.992
+    },
+    {
+      "word": "show",
+      "start": 54.42,
+      "end": 54.66,
+      "prob": 0.967
+    },
+    {
+      "word": "up",
+      "start": 54.66,
+      "end": 54.9,
+      "prob": 0.996
+    },
+    {
+      "word": "even",
+      "start": 54.9,
+      "end": 55.24,
+      "prob": 0.969
+    },
+    {
+      "word": "when",
+      "start": 55.24,
+      "end": 55.48,
+      "prob": 0.995
+    },
+    {
+      "word": "only",
+      "start": 55.48,
+      "end": 55.82,
+      "prob": 0.995
+    },
+    {
+      "word": "one",
+      "start": 55.82,
+      "end": 56.16,
+      "prob": 0.951
+    },
+    {
+      "word": "copy",
+      "start": 56.16,
+      "end": 56.48,
+      "prob": 0.993
+    },
+    {
+      "word": "is",
+      "start": 56.48,
+      "end": 56.74,
+      "prob": 0.998
+    },
+    {
+      "word": "present.",
+      "start": 56.74,
+      "end": 57.18,
+      "prob": 0.999
+    },
+    {
+      "word": "Recessive",
+      "start": 57.74,
+      "end": 58.2,
+      "prob": 0.97
+    },
+    {
+      "word": "alleles",
+      "start": 58.2,
+      "end": 58.66,
+      "prob": 0.999
+    },
+    {
+      "word": "only",
+      "start": 58.66,
+      "end": 58.94,
+      "prob": 0.994
+    },
+    {
+      "word": "show",
+      "start": 58.94,
+      "end": 59.22,
+      "prob": 0.995
+    },
+    {
+      "word": "when",
+      "start": 59.22,
+      "end": 59.48,
+      "prob": 0.993
+    },
+    {
+      "word": "two",
+      "start": 59.48,
+      "end": 59.78,
+      "prob": 0.967
+    },
+    {
+      "word": "copies",
+      "start": 59.78,
+      "end": 60.14,
+      "prob": 0.999
+    },
+    {
+      "word": "are",
+      "start": 60.14,
+      "end": 60.32,
+      "prob": 0.997
+    },
+    {
+      "word": "present.",
+      "start": 60.32,
+      "end": 60.76,
+      "prob": 0.999
+    },
+    {
+      "word": "Cystic",
+      "start": 61.22,
+      "end": 61.5,
+      "prob": 0.955
+    },
+    {
+      "word": "fibrosis",
+      "start": 61.5,
+      "end": 62.14,
+      "prob": 0.906
+    },
+    {
+      "word": "is",
+      "start": 62.14,
+      "end": 62.48,
+      "prob": 0.998
+    },
+    {
+      "word": "recessive.",
+      "start": 62.48,
+      "end": 63.26,
+      "prob": 0.999
+    },
+    {
+      "word": "Polydactyly",
+      "start": 63.7,
+      "end": 64.42,
+      "prob": 0.941
+    },
+    {
+      "word": "is",
+      "start": 64.42,
+      "end": 64.7,
+      "prob": 0.996
+    },
+    {
+      "word": "dominant.",
+      "start": 64.7,
+      "end": 65.16,
+      "prob": 0.997
+    },
+    {
+      "word": "Sex",
+      "start": 66.0,
+      "end": 66.04,
+      "prob": 0.969
+    },
+    {
+      "word": "is",
+      "start": 66.04,
+      "end": 66.4,
+      "prob": 0.998
+    },
+    {
+      "word": "determined",
+      "start": 66.4,
+      "end": 66.84,
+      "prob": 0.998
+    },
+    {
+      "word": "by",
+      "start": 66.84,
+      "end": 67.22,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 67.22,
+      "end": 67.38,
+      "prob": 0.984
+    },
+    {
+      "word": "X",
+      "start": 67.38,
+      "end": 67.66,
+      "prob": 0.827
+    },
+    {
+      "word": "and",
+      "start": 67.66,
+      "end": 67.86,
+      "prob": 0.929
+    },
+    {
+      "word": "Y",
+      "start": 67.86,
+      "end": 68.16,
+      "prob": 0.996
+    },
+    {
+      "word": "chromosomes.",
+      "start": 68.16,
+      "end": 68.7,
+      "prob": 0.993
+    },
+    {
+      "word": "Myosis",
+      "start": 69.36,
+      "end": 69.76,
+      "prob": 0.659
+    },
+    {
+      "word": "reduces",
+      "start": 69.76,
+      "end": 70.38,
+      "prob": 0.995
+    },
+    {
+      "word": "chromosome",
+      "start": 70.38,
+      "end": 70.96,
+      "prob": 0.997
+    },
+    {
+      "word": "number",
+      "start": 70.96,
+      "end": 71.4,
+      "prob": 0.992
+    },
+    {
+      "word": "and",
+      "start": 71.4,
+      "end": 71.7,
+      "prob": 0.949
+    },
+    {
+      "word": "generates",
+      "start": 71.7,
+      "end": 72.14,
+      "prob": 0.993
+    },
+    {
+      "word": "genetic",
+      "start": 72.14,
+      "end": 72.64,
+      "prob": 0.998
+    },
+    {
+      "word": "variation",
+      "start": 72.64,
+      "end": 73.36,
+      "prob": 0.992
+    },
+    {
+      "word": "through",
+      "start": 73.36,
+      "end": 73.76,
+      "prob": 0.994
+    },
+    {
+      "word": "processes",
+      "start": 73.76,
+      "end": 74.3,
+      "prob": 0.996
+    },
+    {
+      "word": "including",
+      "start": 74.3,
+      "end": 75.0,
+      "prob": 0.905
+    },
+    {
+      "word": "recombination",
+      "start": 75.0,
+      "end": 76.02,
+      "prob": 0.994
+    },
+    {
+      "word": "and",
+      "start": 76.02,
+      "end": 76.44,
+      "prob": 0.99
+    },
+    {
+      "word": "independent",
+      "start": 76.44,
+      "end": 77.06,
+      "prob": 0.996
+    },
+    {
+      "word": "assortment.",
+      "start": 77.06,
+      "end": 77.62,
+      "prob": 0.979
+    },
+    {
+      "word": "Fertilization",
+      "start": 78.42,
+      "end": 79.02,
+      "prob": 0.897
+    },
+    {
+      "word": "restores",
+      "start": 79.02,
+      "end": 79.62,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 79.62,
+      "end": 79.94,
+      "prob": 0.998
+    },
+    {
+      "word": "diploid",
+      "start": 79.94,
+      "end": 80.42,
+      "prob": 0.847
+    },
+    {
+      "word": "chromosome",
+      "start": 80.42,
+      "end": 80.9,
+      "prob": 0.996
+    },
+    {
+      "word": "number.",
+      "start": 80.9,
+      "end": 81.36,
+      "prob": 0.997
+    },
+    {
+      "word": "In",
+      "start": 81.36,
+      "end": 82.0,
+      "prob": 0.928
+    },
+    {
+      "word": "inheritance",
+      "start": 82.0,
+      "end": 82.48,
+      "prob": 0.941
+    },
+    {
+      "word": "questions,",
+      "start": 82.48,
+      "end": 83.12,
+      "prob": 0.994
+    },
+    {
+      "word": "always",
+      "start": 83.64,
+      "end": 84.02,
+      "prob": 0.995
+    },
+    {
+      "word": "define",
+      "start": 84.02,
+      "end": 84.52,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 84.52,
+      "end": 84.78,
+      "prob": 0.998
+    },
+    {
+      "word": "allele",
+      "start": 84.78,
+      "end": 85.14,
+      "prob": 0.964
+    },
+    {
+      "word": "symbols",
+      "start": 85.14,
+      "end": 85.64,
+      "prob": 0.987
+    },
+    {
+      "word": "before",
+      "start": 85.64,
+      "end": 86.14,
+      "prob": 0.99
+    },
+    {
+      "word": "completing",
+      "start": 86.14,
+      "end": 86.76,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 86.76,
+      "end": 87.12,
+      "prob": 0.996
+    },
+    {
+      "word": "Punnett",
+      "start": 87.12,
+      "end": 87.36,
+      "prob": 0.809
+    },
+    {
+      "word": "square.",
+      "start": 87.36,
+      "end": 87.78,
+      "prob": 0.805
+    },
+    {
+      "word": "A",
+      "start": 88.24,
+      "end": 88.42,
+      "prob": 0.99
+    },
+    {
+      "word": "dominant",
+      "start": 88.42,
+      "end": 88.8,
+      "prob": 0.993
+    },
+    {
+      "word": "allele",
+      "start": 88.8,
+      "end": 89.28,
+      "prob": 0.998
+    },
+    {
+      "word": "is",
+      "start": 89.28,
+      "end": 89.6,
+      "prob": 0.995
+    },
+    {
+      "word": "expressed",
+      "start": 89.6,
+      "end": 90.06,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 90.06,
+      "end": 90.4,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 90.4,
+      "end": 90.54,
+      "prob": 0.988
+    },
+    {
+      "word": "heterozygote.",
+      "start": 90.54,
+      "end": 91.48,
+      "prob": 0.951
+    },
+    {
+      "word": "This",
+      "start": 91.92,
+      "end": 92.12,
+      "prob": 0.995
+    },
+    {
+      "word": "does",
+      "start": 92.12,
+      "end": 92.3,
+      "prob": 0.995
+    },
+    {
+      "word": "not",
+      "start": 92.3,
+      "end": 92.54,
+      "prob": 0.999
+    },
+    {
+      "word": "mean",
+      "start": 92.54,
+      "end": 92.82,
+      "prob": 0.996
+    },
+    {
+      "word": "it",
+      "start": 92.82,
+      "end": 93.04,
+      "prob": 0.975
+    },
+    {
+      "word": "is",
+      "start": 93.04,
+      "end": 93.2,
+      "prob": 0.994
+    },
+    {
+      "word": "necessarily",
+      "start": 93.2,
+      "end": 93.76,
+      "prob": 0.99
+    },
+    {
+      "word": "more",
+      "start": 93.76,
+      "end": 94.2,
+      "prob": 0.996
+    },
+    {
+      "word": "common",
+      "start": 94.2,
+      "end": 94.52,
+      "prob": 1.0
+    },
+    {
+      "word": "in",
+      "start": 94.52,
+      "end": 94.74,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 94.74,
+      "end": 94.84,
+      "prob": 0.998
+    },
+    {
+      "word": "population.",
+      "start": 94.84,
+      "end": 95.34,
+      "prob": 0.999
+    },
+    {
+      "word": "As",
+      "start": 96.0,
+      "end": 96.22,
+      "prob": 0.998
+    },
+    {
+      "word": "you",
+      "start": 96.22,
+      "end": 96.34,
+      "prob": 0.999
+    },
+    {
+      "word": "revise",
+      "start": 96.34,
+      "end": 96.7,
+      "prob": 0.995
+    },
+    {
+      "word": "this",
+      "start": 96.7,
+      "end": 96.98,
+      "prob": 0.988
+    },
+    {
+      "word": "topic,",
+      "start": 96.98,
+      "end": 97.38,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 97.7,
+      "end": 97.98,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 97.98,
+      "end": 98.14,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 98.14,
+      "end": 98.52,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 98.52,
+      "end": 98.76,
+      "prob": 0.997
+    },
+    {
+      "word": "key",
+      "start": 98.76,
+      "end": 99.06,
+      "prob": 0.831
+    },
+    {
+      "word": "process",
+      "start": 99.06,
+      "end": 99.56,
+      "prob": 0.997
+    },
+    {
+      "word": "in",
+      "start": 99.56,
+      "end": 99.88,
+      "prob": 0.994
+    },
+    {
+      "word": "your",
+      "start": 99.88,
+      "end": 100.04,
+      "prob": 0.998
+    },
+    {
+      "word": "own",
+      "start": 100.04,
+      "end": 100.28,
+      "prob": 0.995
+    },
+    {
+      "word": "words.",
+      "start": 100.28,
+      "end": 100.82,
+      "prob": 1.0
+    },
+    {
+      "word": "Focus",
+      "start": 101.32,
+      "end": 101.5,
+      "prob": 0.993
+    },
+    {
+      "word": "on",
+      "start": 101.5,
+      "end": 101.78,
+      "prob": 0.999
+    },
+    {
+      "word": "what",
+      "start": 101.78,
+      "end": 101.96,
+      "prob": 0.998
+    },
+    {
+      "word": "happens,",
+      "start": 101.96,
+      "end": 102.4,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 102.88,
+      "end": 103.18,
+      "prob": 0.997
+    },
+    {
+      "word": "it",
+      "start": 103.18,
+      "end": 103.32,
+      "prob": 0.996
+    },
+    {
+      "word": "happens,",
+      "start": 103.32,
+      "end": 103.88,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 103.98,
+      "end": 104.34,
+      "prob": 0.99
+    },
+    {
+      "word": "how",
+      "start": 104.34,
+      "end": 104.6,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 104.6,
+      "end": 104.76,
+      "prob": 0.993
+    },
+    {
+      "word": "structures",
+      "start": 104.76,
+      "end": 105.08,
+      "prob": 0.997
+    },
+    {
+      "word": "involved",
+      "start": 105.08,
+      "end": 105.6,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 105.6,
+      "end": 105.96,
+      "prob": 0.983
+    },
+    {
+      "word": "the",
+      "start": 105.96,
+      "end": 106.16,
+      "prob": 0.998
+    },
+    {
+      "word": "process",
+      "start": 106.16,
+      "end": 106.52,
+      "prob": 0.999
+    },
+    {
+      "word": "work.",
+      "start": 106.52,
+      "end": 106.96,
+      "prob": 0.998
+    },
+    {
+      "word": "Now",
+      "start": 106.96,
+      "end": 107.76,
+      "prob": 0.918
+    },
+    {
+      "word": "pause",
+      "start": 107.76,
+      "end": 108.48,
+      "prob": 0.586
+    },
+    {
+      "word": "the",
+      "start": 108.48,
+      "end": 108.7,
+      "prob": 0.996
+    },
+    {
+      "word": "video",
+      "start": 108.7,
+      "end": 109.0,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 109.0,
+      "end": 109.42,
+      "prob": 0.975
+    },
+    {
+      "word": "try",
+      "start": 109.42,
+      "end": 109.7,
+      "prob": 0.998
+    },
+    {
+      "word": "this",
+      "start": 109.7,
+      "end": 109.94,
+      "prob": 0.994
+    },
+    {
+      "word": "exam",
+      "start": 109.94,
+      "end": 110.36,
+      "prob": 0.996
+    },
+    {
+      "word": "style",
+      "start": 110.36,
+      "end": 110.68,
+      "prob": 0.604
+    },
+    {
+      "word": "question.",
+      "start": 110.68,
+      "end": 111.22,
+      "prob": 0.994
+    },
+    {
+      "word": "A",
+      "start": 111.68,
+      "end": 111.68,
+      "prob": 0.532
+    },
+    {
+      "word": "woman",
+      "start": 111.68,
+      "end": 111.88,
+      "prob": 0.982
+    },
+    {
+      "word": "is",
+      "start": 111.88,
+      "end": 112.14,
+      "prob": 0.994
+    },
+    {
+      "word": "heterozygous",
+      "start": 112.14,
+      "end": 113.08,
+      "prob": 0.996
+    },
+    {
+      "word": "for",
+      "start": 113.08,
+      "end": 113.28,
+      "prob": 0.991
+    },
+    {
+      "word": "cystic",
+      "start": 113.28,
+      "end": 113.64,
+      "prob": 0.973
+    },
+    {
+      "word": "fibrosis,",
+      "start": 113.64,
+      "end": 114.32,
+      "prob": 0.998
+    },
+    {
+      "word": "F,",
+      "start": 114.66,
+      "end": 114.72,
+      "prob": 0.728
+    },
+    {
+      "word": "and",
+      "start": 115.0,
+      "end": 115.24,
+      "prob": 0.989
+    },
+    {
+      "word": "a",
+      "start": 115.24,
+      "end": 115.38,
+      "prob": 0.994
+    },
+    {
+      "word": "man",
+      "start": 115.38,
+      "end": 115.64,
+      "prob": 0.999
+    },
+    {
+      "word": "does",
+      "start": 115.64,
+      "end": 115.88,
+      "prob": 0.998
+    },
+    {
+      "word": "not",
+      "start": 115.88,
+      "end": 116.2,
+      "prob": 0.994
+    },
+    {
+      "word": "carry",
+      "start": 116.2,
+      "end": 116.54,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 116.54,
+      "end": 116.72,
+      "prob": 0.998
+    },
+    {
+      "word": "allele",
+      "start": 116.72,
+      "end": 117.04,
+      "prob": 0.992
+    },
+    {
+      "word": "FF.",
+      "start": 117.04,
+      "end": 117.5,
+      "prob": 0.635
+    },
+    {
+      "word": "Using",
+      "start": 118.08,
+      "end": 118.34,
+      "prob": 0.993
+    },
+    {
+      "word": "a",
+      "start": 118.34,
+      "end": 118.52,
+      "prob": 0.996
+    },
+    {
+      "word": "Punnett",
+      "start": 118.52,
+      "end": 118.82,
+      "prob": 0.795
+    },
+    {
+      "word": "square,",
+      "start": 118.82,
+      "end": 119.24,
+      "prob": 0.697
+    },
+    {
+      "word": "work",
+      "start": 119.82,
+      "end": 119.96,
+      "prob": 0.983
+    },
+    {
+      "word": "out",
+      "start": 119.96,
+      "end": 120.14,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 120.14,
+      "end": 120.32,
+      "prob": 0.998
+    },
+    {
+      "word": "probability",
+      "start": 120.32,
+      "end": 120.74,
+      "prob": 0.998
+    },
+    {
+      "word": "that",
+      "start": 120.74,
+      "end": 121.2,
+      "prob": 0.997
+    },
+    {
+      "word": "their",
+      "start": 121.2,
+      "end": 121.4,
+      "prob": 0.993
+    },
+    {
+      "word": "child",
+      "start": 121.4,
+      "end": 121.72,
+      "prob": 0.999
+    },
+    {
+      "word": "has",
+      "start": 121.72,
+      "end": 122.02,
+      "prob": 0.998
+    },
+    {
+      "word": "cystic",
+      "start": 122.02,
+      "end": 122.44,
+      "prob": 0.996
+    },
+    {
+      "word": "fibrosis.",
+      "start": 122.44,
+      "end": 123.1,
+      "prob": 0.999
+    },
+    {
+      "word": "Use",
+      "start": 123.48,
+      "end": 123.88,
+      "prob": 0.991
+    },
+    {
+      "word": "F",
+      "start": 123.88,
+      "end": 124.26,
+      "prob": 0.918
+    },
+    {
+      "word": "for",
+      "start": 124.26,
+      "end": 124.66,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 124.66,
+      "end": 124.78,
+      "prob": 0.981
+    },
+    {
+      "word": "recessive",
+      "start": 124.78,
+      "end": 125.3,
+      "prob": 0.998
+    },
+    {
+      "word": "allele.",
+      "start": 125.3,
+      "end": 125.58,
+      "prob": 0.999
+    },
+    {
+      "word": "Here",
+      "start": 126.12,
+      "end": 126.4,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 126.4,
+      "end": 126.52,
+      "prob": 0.787
+    },
+    {
+      "word": "a",
+      "start": 126.52,
+      "end": 126.64,
+      "prob": 0.99
+    },
+    {
+      "word": "model",
+      "start": 126.64,
+      "end": 126.84,
+      "prob": 0.996
+    },
+    {
+      "word": "answer.",
+      "start": 126.84,
+      "end": 127.34,
+      "prob": 0.998
+    },
+    {
+      "word": "ParentsFFF",
+      "start": 128.38,
+      "end": 129.26,
+      "prob": 0.538
+    },
+    {
+      "word": "gives",
+      "start": 129.26,
+      "end": 129.66,
+      "prob": 0.962
+    },
+    {
+      "word": "offspring",
+      "start": 129.66,
+      "end": 130.3,
+      "prob": 0.986
+    },
+    {
+      "word": "FFFFFF.",
+      "start": 130.3,
+      "end": 132.9,
+      "prob": 0.796
+    },
+    {
+      "word": "The",
+      "start": 133.24,
+      "end": 133.46,
+      "prob": 0.956
+    },
+    {
+      "word": "child",
+      "start": 133.46,
+      "end": 133.76,
+      "prob": 0.995
+    },
+    {
+      "word": "has",
+      "start": 133.76,
+      "end": 134.04,
+      "prob": 0.998
+    },
+    {
+      "word": "cystic",
+      "start": 134.04,
+      "end": 134.42,
+      "prob": 0.881
+    },
+    {
+      "word": "fibrosis",
+      "start": 134.42,
+      "end": 135.06,
+      "prob": 0.998
+    },
+    {
+      "word": "only",
+      "start": 135.06,
+      "end": 135.62,
+      "prob": 0.947
+    },
+    {
+      "word": "if",
+      "start": 135.62,
+      "end": 136.12,
+      "prob": 0.899
+    },
+    {
+      "word": "FF.",
+      "start": 136.12,
+      "end": 136.64,
+      "prob": 0.623
+    },
+    {
+      "word": "Probability",
+      "start": 137.28,
+      "end": 137.94,
+      "prob": 0.939
+    },
+    {
+      "word": "equals",
+      "start": 137.94,
+      "end": 138.38,
+      "prob": 0.484
+    },
+    {
+      "word": "sign",
+      "start": 138.38,
+      "end": 138.86,
+      "prob": 0.649
+    },
+    {
+      "word": "0%.",
+      "start": 138.86,
+      "end": 140.0,
+      "prob": 0.822
+    },
+    {
+      "word": "If",
+      "start": 140.0,
+      "end": 140.42,
+      "prob": 0.979
+    },
+    {
+      "word": "this",
+      "start": 140.42,
+      "end": 140.64,
+      "prob": 0.998
+    },
+    {
+      "word": "explanation",
+      "start": 140.64,
+      "end": 141.1,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 141.1,
+      "end": 141.5,
+      "prob": 0.995
+    },
+    {
+      "word": "helped,",
+      "start": 141.5,
+      "end": 141.92,
+      "prob": 0.997
+    },
+    {
+      "word": "please",
+      "start": 142.36,
+      "end": 142.56,
+      "prob": 0.991
+    },
+    {
+      "word": "subscribe",
+      "start": 142.56,
+      "end": 143.1,
+      "prob": 0.99
+    },
+    {
+      "word": "to",
+      "start": 143.1,
+      "end": 143.46,
+      "prob": 0.995
+    },
+    {
+      "word": "JD",
+      "start": 143.46,
+      "end": 143.9,
+      "prob": 0.865
+    },
+    {
+      "word": "Science",
+      "start": 143.9,
+      "end": 144.32,
+      "prob": 0.569
+    },
+    {
+      "word": "for",
+      "start": 144.32,
+      "end": 144.72,
+      "prob": 0.997
+    },
+    {
+      "word": "more",
+      "start": 144.72,
+      "end": 144.96,
+      "prob": 0.999
+    },
+    {
+      "word": "lessons.",
+      "start": 144.96,
+      "end": 145.4,
+      "prob": 0.998
+    },
+    {
+      "word": "You",
+      "start": 145.92,
+      "end": 146.02,
+      "prob": 0.992
+    },
+    {
+      "word": "can",
+      "start": 146.02,
+      "end": 146.2,
+      "prob": 0.999
+    },
+    {
+      "word": "find",
+      "start": 146.2,
+      "end": 146.46,
+      "prob": 0.996
+    },
+    {
+      "word": "further",
+      "start": 146.46,
+      "end": 146.82,
+      "prob": 0.998
+    },
+    {
+      "word": "learning",
+      "start": 146.82,
+      "end": 147.28,
+      "prob": 0.997
+    },
+    {
+      "word": "resources",
+      "start": 147.28,
+      "end": 147.74,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 147.74,
+      "end": 148.22,
+      "prob": 0.992
+    },
+    {
+      "word": "practice",
+      "start": 148.22,
+      "end": 148.6,
+      "prob": 0.927
+    },
+    {
+      "word": "questions",
+      "start": 148.6,
+      "end": 149.14,
+      "prob": 0.998
+    },
+    {
+      "word": "at",
+      "start": 149.14,
+      "end": 149.62,
+      "prob": 0.99
+    },
+    {
+      "word": "jdscience",
+      "start": 149.62,
+      "end": 152.94,
+      "prob": 0.708
+    },
+    {
+      "word": ".co",
+      "start": 152.94,
+      "end": 154.04,
+      "prob": 0.996
+    },
+    {
+      "word": ".uk.",
+      "start": 154.04,
+      "end": 154.78,
+      "prob": 0.989
+    },
+    {
+      "word": "Thank",
+      "start": 154.78,
+      "end": 155.68,
+      "prob": 0.621
+    },
+    {
+      "word": "you",
+      "start": 155.68,
+      "end": 155.86,
+      "prob": 0.985
+    },
+    {
+      "word": "for",
+      "start": 155.86,
+      "end": 156.02,
+      "prob": 0.993
+    },
+    {
+      "word": "watching.",
+      "start": 156.02,
+      "end": 156.42,
+      "prob": 0.997
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

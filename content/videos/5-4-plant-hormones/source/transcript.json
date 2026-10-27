@@ -1,0 +1,1485 @@
+{
+  "audio": "content/videos/5-4-plant-hormones/source/narration_master.m4a",
+  "duration": 116.89,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring plant hormones. We respond to light and gravity by growth. Shoots grow towards light, which is positive phototropism and against gravity, which is negative geotropism. Roots grow away from light and towards gravity. In shoots, auxin is destroyed by light, so the shaded side grows faster and the shoot bends towards the light. Etheen helps fruit ripen. Giborelens helps seeds germinate. Auxins are used as weed killers and rooting powders. Giborelens can end seed dormancy, promote flowering, and increase fruit size. In a shoot exposed to light from one side, auxin is redistributed so that more accumulates on the shaded side. Auxin promotes cell elongation in shoots, causing that side to grow faster and the shoot to bend towards the light. It is misleading to say that light simply destroys all auxin on the illuminated side. In roots, higher auxin concentrations can inhibit elongation, helping explain different growth responses to gravity. As you revise this topic, try to explain the key process in your own words. What happens, why it happens, and how the structures involved help the process work. Now, pause the video and try this exam style question. Explain why a shoot bends towards a light source. Here is a model answer. Auxin accumulates on the shaded side, promoting greater cell elongation there, so the shoot bends towards the light. If this explanation has helped, please subscribe to JD Science for more research.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.38,
+      "prob": 0.879
+    },
+    {
+      "word": "and",
+      "start": 0.38,
+      "end": 0.78,
+      "prob": 0.819
+    },
+    {
+      "word": "welcome",
+      "start": 0.78,
+      "end": 1.04,
+      "prob": 0.965
+    },
+    {
+      "word": "back",
+      "start": 1.04,
+      "end": 1.42,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.42,
+      "end": 1.66,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.66,
+      "end": 2.04,
+      "prob": 0.913
+    },
+    {
+      "word": "Science.",
+      "start": 2.04,
+      "end": 2.52,
+      "prob": 0.532
+    },
+    {
+      "word": "Today",
+      "start": 3.14,
+      "end": 3.46,
+      "prob": 0.995
+    },
+    {
+      "word": "we",
+      "start": 3.46,
+      "end": 4.0,
+      "prob": 0.761
+    },
+    {
+      "word": "are",
+      "start": 4.0,
+      "end": 4.16,
+      "prob": 0.983
+    },
+    {
+      "word": "exploring",
+      "start": 4.16,
+      "end": 4.8,
+      "prob": 0.996
+    },
+    {
+      "word": "plant",
+      "start": 4.8,
+      "end": 5.24,
+      "prob": 0.945
+    },
+    {
+      "word": "hormones.",
+      "start": 5.24,
+      "end": 5.8,
+      "prob": 0.991
+    },
+    {
+      "word": "We",
+      "start": 6.38,
+      "end": 6.8,
+      "prob": 0.034
+    },
+    {
+      "word": "respond",
+      "start": 6.8,
+      "end": 7.3,
+      "prob": 0.056
+    },
+    {
+      "word": "to",
+      "start": 7.3,
+      "end": 7.68,
+      "prob": 0.987
+    },
+    {
+      "word": "light",
+      "start": 7.68,
+      "end": 7.94,
+      "prob": 0.881
+    },
+    {
+      "word": "and",
+      "start": 7.94,
+      "end": 8.28,
+      "prob": 0.989
+    },
+    {
+      "word": "gravity",
+      "start": 8.28,
+      "end": 8.76,
+      "prob": 0.996
+    },
+    {
+      "word": "by",
+      "start": 8.76,
+      "end": 9.06,
+      "prob": 0.988
+    },
+    {
+      "word": "growth.",
+      "start": 9.06,
+      "end": 9.62,
+      "prob": 0.993
+    },
+    {
+      "word": "Shoots",
+      "start": 10.3,
+      "end": 10.46,
+      "prob": 0.945
+    },
+    {
+      "word": "grow",
+      "start": 10.46,
+      "end": 10.78,
+      "prob": 0.975
+    },
+    {
+      "word": "towards",
+      "start": 10.78,
+      "end": 11.28,
+      "prob": 0.952
+    },
+    {
+      "word": "light,",
+      "start": 11.28,
+      "end": 11.74,
+      "prob": 0.989
+    },
+    {
+      "word": "which",
+      "start": 12.14,
+      "end": 12.24,
+      "prob": 0.989
+    },
+    {
+      "word": "is",
+      "start": 12.24,
+      "end": 12.44,
+      "prob": 0.996
+    },
+    {
+      "word": "positive",
+      "start": 12.44,
+      "end": 12.9,
+      "prob": 0.986
+    },
+    {
+      "word": "phototropism",
+      "start": 12.9,
+      "end": 13.84,
+      "prob": 0.949
+    },
+    {
+      "word": "and",
+      "start": 13.84,
+      "end": 14.38,
+      "prob": 0.294
+    },
+    {
+      "word": "against",
+      "start": 14.38,
+      "end": 14.78,
+      "prob": 0.99
+    },
+    {
+      "word": "gravity,",
+      "start": 14.78,
+      "end": 15.36,
+      "prob": 0.995
+    },
+    {
+      "word": "which",
+      "start": 15.64,
+      "end": 15.84,
+      "prob": 0.993
+    },
+    {
+      "word": "is",
+      "start": 15.84,
+      "end": 16.06,
+      "prob": 0.998
+    },
+    {
+      "word": "negative",
+      "start": 16.06,
+      "end": 16.52,
+      "prob": 0.996
+    },
+    {
+      "word": "geotropism.",
+      "start": 16.52,
+      "end": 17.58,
+      "prob": 0.957
+    },
+    {
+      "word": "Roots",
+      "start": 18.22,
+      "end": 18.4,
+      "prob": 0.943
+    },
+    {
+      "word": "grow",
+      "start": 18.4,
+      "end": 18.76,
+      "prob": 0.98
+    },
+    {
+      "word": "away",
+      "start": 18.76,
+      "end": 19.1,
+      "prob": 0.986
+    },
+    {
+      "word": "from",
+      "start": 19.1,
+      "end": 19.36,
+      "prob": 0.998
+    },
+    {
+      "word": "light",
+      "start": 19.36,
+      "end": 19.68,
+      "prob": 0.989
+    },
+    {
+      "word": "and",
+      "start": 19.68,
+      "end": 20.02,
+      "prob": 0.987
+    },
+    {
+      "word": "towards",
+      "start": 20.02,
+      "end": 20.46,
+      "prob": 0.984
+    },
+    {
+      "word": "gravity.",
+      "start": 20.46,
+      "end": 21.06,
+      "prob": 0.998
+    },
+    {
+      "word": "In",
+      "start": 21.68,
+      "end": 21.82,
+      "prob": 0.989
+    },
+    {
+      "word": "shoots,",
+      "start": 21.82,
+      "end": 22.3,
+      "prob": 0.921
+    },
+    {
+      "word": "auxin",
+      "start": 22.76,
+      "end": 23.14,
+      "prob": 0.94
+    },
+    {
+      "word": "is",
+      "start": 23.14,
+      "end": 23.32,
+      "prob": 0.996
+    },
+    {
+      "word": "destroyed",
+      "start": 23.32,
+      "end": 23.84,
+      "prob": 0.998
+    },
+    {
+      "word": "by",
+      "start": 23.84,
+      "end": 24.16,
+      "prob": 0.998
+    },
+    {
+      "word": "light,",
+      "start": 24.16,
+      "end": 24.52,
+      "prob": 0.994
+    },
+    {
+      "word": "so",
+      "start": 24.82,
+      "end": 25.0,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 25.0,
+      "end": 25.2,
+      "prob": 0.991
+    },
+    {
+      "word": "shaded",
+      "start": 25.2,
+      "end": 25.56,
+      "prob": 0.993
+    },
+    {
+      "word": "side",
+      "start": 25.56,
+      "end": 25.94,
+      "prob": 0.996
+    },
+    {
+      "word": "grows",
+      "start": 25.94,
+      "end": 26.26,
+      "prob": 0.857
+    },
+    {
+      "word": "faster",
+      "start": 26.26,
+      "end": 26.94,
+      "prob": 0.992
+    },
+    {
+      "word": "and",
+      "start": 26.94,
+      "end": 27.42,
+      "prob": 0.868
+    },
+    {
+      "word": "the",
+      "start": 27.42,
+      "end": 27.58,
+      "prob": 0.988
+    },
+    {
+      "word": "shoot",
+      "start": 27.58,
+      "end": 27.86,
+      "prob": 0.895
+    },
+    {
+      "word": "bends",
+      "start": 27.86,
+      "end": 28.34,
+      "prob": 0.993
+    },
+    {
+      "word": "towards",
+      "start": 28.34,
+      "end": 28.84,
+      "prob": 0.933
+    },
+    {
+      "word": "the",
+      "start": 28.84,
+      "end": 29.12,
+      "prob": 0.986
+    },
+    {
+      "word": "light.",
+      "start": 29.12,
+      "end": 29.42,
+      "prob": 0.996
+    },
+    {
+      "word": "Etheen",
+      "start": 30.02,
+      "end": 30.42,
+      "prob": 0.554
+    },
+    {
+      "word": "helps",
+      "start": 30.42,
+      "end": 30.7,
+      "prob": 0.963
+    },
+    {
+      "word": "fruit",
+      "start": 30.7,
+      "end": 31.04,
+      "prob": 0.971
+    },
+    {
+      "word": "ripen.",
+      "start": 31.04,
+      "end": 31.68,
+      "prob": 0.997
+    },
+    {
+      "word": "Giborelens",
+      "start": 32.1,
+      "end": 32.7,
+      "prob": 0.221
+    },
+    {
+      "word": "helps",
+      "start": 32.7,
+      "end": 32.98,
+      "prob": 0.175
+    },
+    {
+      "word": "seeds",
+      "start": 32.98,
+      "end": 33.38,
+      "prob": 0.969
+    },
+    {
+      "word": "germinate.",
+      "start": 33.38,
+      "end": 34.1,
+      "prob": 0.993
+    },
+    {
+      "word": "Auxins",
+      "start": 34.88,
+      "end": 35.14,
+      "prob": 0.635
+    },
+    {
+      "word": "are",
+      "start": 35.14,
+      "end": 35.36,
+      "prob": 0.993
+    },
+    {
+      "word": "used",
+      "start": 35.36,
+      "end": 35.62,
+      "prob": 0.998
+    },
+    {
+      "word": "as",
+      "start": 35.62,
+      "end": 35.84,
+      "prob": 0.995
+    },
+    {
+      "word": "weed",
+      "start": 35.84,
+      "end": 36.12,
+      "prob": 0.998
+    },
+    {
+      "word": "killers",
+      "start": 36.12,
+      "end": 36.44,
+      "prob": 0.877
+    },
+    {
+      "word": "and",
+      "start": 36.44,
+      "end": 36.74,
+      "prob": 0.988
+    },
+    {
+      "word": "rooting",
+      "start": 36.74,
+      "end": 37.08,
+      "prob": 0.972
+    },
+    {
+      "word": "powders.",
+      "start": 37.08,
+      "end": 37.7,
+      "prob": 0.996
+    },
+    {
+      "word": "Giborelens",
+      "start": 38.18,
+      "end": 38.8,
+      "prob": 0.98
+    },
+    {
+      "word": "can",
+      "start": 38.8,
+      "end": 38.98,
+      "prob": 0.994
+    },
+    {
+      "word": "end",
+      "start": 38.98,
+      "end": 39.38,
+      "prob": 0.973
+    },
+    {
+      "word": "seed",
+      "start": 39.38,
+      "end": 39.72,
+      "prob": 0.952
+    },
+    {
+      "word": "dormancy,",
+      "start": 39.72,
+      "end": 40.4,
+      "prob": 0.998
+    },
+    {
+      "word": "promote",
+      "start": 40.82,
+      "end": 41.02,
+      "prob": 0.999
+    },
+    {
+      "word": "flowering,",
+      "start": 41.02,
+      "end": 41.56,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 42.1,
+      "end": 42.18,
+      "prob": 0.985
+    },
+    {
+      "word": "increase",
+      "start": 42.18,
+      "end": 42.56,
+      "prob": 0.994
+    },
+    {
+      "word": "fruit",
+      "start": 42.56,
+      "end": 42.94,
+      "prob": 0.996
+    },
+    {
+      "word": "size.",
+      "start": 42.94,
+      "end": 43.34,
+      "prob": 0.994
+    },
+    {
+      "word": "In",
+      "start": 44.0,
+      "end": 44.12,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 44.12,
+      "end": 44.28,
+      "prob": 0.998
+    },
+    {
+      "word": "shoot",
+      "start": 44.28,
+      "end": 44.48,
+      "prob": 0.997
+    },
+    {
+      "word": "exposed",
+      "start": 44.48,
+      "end": 44.94,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 44.94,
+      "end": 45.22,
+      "prob": 0.999
+    },
+    {
+      "word": "light",
+      "start": 45.22,
+      "end": 45.44,
+      "prob": 0.973
+    },
+    {
+      "word": "from",
+      "start": 45.44,
+      "end": 45.68,
+      "prob": 0.994
+    },
+    {
+      "word": "one",
+      "start": 45.68,
+      "end": 45.94,
+      "prob": 0.995
+    },
+    {
+      "word": "side,",
+      "start": 45.94,
+      "end": 46.4,
+      "prob": 0.998
+    },
+    {
+      "word": "auxin",
+      "start": 46.94,
+      "end": 47.28,
+      "prob": 0.959
+    },
+    {
+      "word": "is",
+      "start": 47.28,
+      "end": 47.48,
+      "prob": 0.997
+    },
+    {
+      "word": "redistributed",
+      "start": 47.48,
+      "end": 48.14,
+      "prob": 0.982
+    },
+    {
+      "word": "so",
+      "start": 48.14,
+      "end": 48.7,
+      "prob": 0.984
+    },
+    {
+      "word": "that",
+      "start": 48.7,
+      "end": 48.84,
+      "prob": 0.976
+    },
+    {
+      "word": "more",
+      "start": 48.84,
+      "end": 49.18,
+      "prob": 0.996
+    },
+    {
+      "word": "accumulates",
+      "start": 49.18,
+      "end": 49.84,
+      "prob": 0.996
+    },
+    {
+      "word": "on",
+      "start": 49.84,
+      "end": 50.08,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 50.08,
+      "end": 50.22,
+      "prob": 0.991
+    },
+    {
+      "word": "shaded",
+      "start": 50.22,
+      "end": 50.52,
+      "prob": 0.998
+    },
+    {
+      "word": "side.",
+      "start": 50.52,
+      "end": 50.98,
+      "prob": 0.998
+    },
+    {
+      "word": "Auxin",
+      "start": 50.98,
+      "end": 51.76,
+      "prob": 0.475
+    },
+    {
+      "word": "promotes",
+      "start": 51.76,
+      "end": 52.12,
+      "prob": 0.951
+    },
+    {
+      "word": "cell",
+      "start": 52.12,
+      "end": 52.54,
+      "prob": 0.995
+    },
+    {
+      "word": "elongation",
+      "start": 52.54,
+      "end": 53.26,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 53.26,
+      "end": 53.48,
+      "prob": 0.993
+    },
+    {
+      "word": "shoots,",
+      "start": 53.48,
+      "end": 53.84,
+      "prob": 0.812
+    },
+    {
+      "word": "causing",
+      "start": 54.34,
+      "end": 54.52,
+      "prob": 0.993
+    },
+    {
+      "word": "that",
+      "start": 54.52,
+      "end": 54.84,
+      "prob": 0.959
+    },
+    {
+      "word": "side",
+      "start": 54.84,
+      "end": 55.12,
+      "prob": 0.981
+    },
+    {
+      "word": "to",
+      "start": 55.12,
+      "end": 55.34,
+      "prob": 0.996
+    },
+    {
+      "word": "grow",
+      "start": 55.34,
+      "end": 55.54,
+      "prob": 0.994
+    },
+    {
+      "word": "faster",
+      "start": 55.54,
+      "end": 56.1,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 56.1,
+      "end": 56.46,
+      "prob": 0.941
+    },
+    {
+      "word": "the",
+      "start": 56.46,
+      "end": 56.62,
+      "prob": 0.958
+    },
+    {
+      "word": "shoot",
+      "start": 56.62,
+      "end": 56.86,
+      "prob": 0.924
+    },
+    {
+      "word": "to",
+      "start": 56.86,
+      "end": 57.1,
+      "prob": 0.995
+    },
+    {
+      "word": "bend",
+      "start": 57.1,
+      "end": 57.36,
+      "prob": 0.997
+    },
+    {
+      "word": "towards",
+      "start": 57.36,
+      "end": 57.8,
+      "prob": 0.915
+    },
+    {
+      "word": "the",
+      "start": 57.8,
+      "end": 58.06,
+      "prob": 0.979
+    },
+    {
+      "word": "light.",
+      "start": 58.06,
+      "end": 58.32,
+      "prob": 0.997
+    },
+    {
+      "word": "It",
+      "start": 58.74,
+      "end": 58.88,
+      "prob": 0.986
+    },
+    {
+      "word": "is",
+      "start": 58.88,
+      "end": 59.02,
+      "prob": 0.989
+    },
+    {
+      "word": "misleading",
+      "start": 59.02,
+      "end": 59.42,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 59.42,
+      "end": 59.74,
+      "prob": 0.997
+    },
+    {
+      "word": "say",
+      "start": 59.74,
+      "end": 59.96,
+      "prob": 0.998
+    },
+    {
+      "word": "that",
+      "start": 59.96,
+      "end": 60.14,
+      "prob": 0.986
+    },
+    {
+      "word": "light",
+      "start": 60.14,
+      "end": 60.44,
+      "prob": 0.954
+    },
+    {
+      "word": "simply",
+      "start": 60.44,
+      "end": 60.9,
+      "prob": 0.994
+    },
+    {
+      "word": "destroys",
+      "start": 60.9,
+      "end": 61.4,
+      "prob": 0.983
+    },
+    {
+      "word": "all",
+      "start": 61.4,
+      "end": 61.78,
+      "prob": 0.994
+    },
+    {
+      "word": "auxin",
+      "start": 61.78,
+      "end": 62.32,
+      "prob": 0.978
+    },
+    {
+      "word": "on",
+      "start": 62.32,
+      "end": 62.54,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 62.54,
+      "end": 62.68,
+      "prob": 0.997
+    },
+    {
+      "word": "illuminated",
+      "start": 62.68,
+      "end": 63.16,
+      "prob": 0.987
+    },
+    {
+      "word": "side.",
+      "start": 63.16,
+      "end": 63.66,
+      "prob": 0.997
+    },
+    {
+      "word": "In",
+      "start": 63.66,
+      "end": 63.76,
+      "prob": 0.009
+    },
+    {
+      "word": "roots,",
+      "start": 63.76,
+      "end": 64.62,
+      "prob": 0.02
+    },
+    {
+      "word": "higher",
+      "start": 64.94,
+      "end": 65.36,
+      "prob": 0.957
+    },
+    {
+      "word": "auxin",
+      "start": 65.36,
+      "end": 65.82,
+      "prob": 0.997
+    },
+    {
+      "word": "concentrations",
+      "start": 65.82,
+      "end": 66.52,
+      "prob": 0.987
+    },
+    {
+      "word": "can",
+      "start": 66.52,
+      "end": 66.9,
+      "prob": 0.971
+    },
+    {
+      "word": "inhibit",
+      "start": 66.9,
+      "end": 67.3,
+      "prob": 0.995
+    },
+    {
+      "word": "elongation,",
+      "start": 67.3,
+      "end": 68.14,
+      "prob": 0.997
+    },
+    {
+      "word": "helping",
+      "start": 68.44,
+      "end": 68.72,
+      "prob": 0.989
+    },
+    {
+      "word": "explain",
+      "start": 68.72,
+      "end": 69.18,
+      "prob": 0.967
+    },
+    {
+      "word": "different",
+      "start": 69.18,
+      "end": 69.66,
+      "prob": 0.983
+    },
+    {
+      "word": "growth",
+      "start": 69.66,
+      "end": 70.02,
+      "prob": 0.995
+    },
+    {
+      "word": "responses",
+      "start": 70.02,
+      "end": 70.56,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 70.56,
+      "end": 70.84,
+      "prob": 0.995
+    },
+    {
+      "word": "gravity.",
+      "start": 70.84,
+      "end": 71.28,
+      "prob": 0.995
+    },
+    {
+      "word": "As",
+      "start": 71.64,
+      "end": 71.88,
+      "prob": 0.973
+    },
+    {
+      "word": "you",
+      "start": 71.88,
+      "end": 72.02,
+      "prob": 0.997
+    },
+    {
+      "word": "revise",
+      "start": 72.02,
+      "end": 72.36,
+      "prob": 0.985
+    },
+    {
+      "word": "this",
+      "start": 72.36,
+      "end": 72.62,
+      "prob": 0.963
+    },
+    {
+      "word": "topic,",
+      "start": 72.62,
+      "end": 73.02,
+      "prob": 0.998
+    },
+    {
+      "word": "try",
+      "start": 73.44,
+      "end": 73.54,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 73.54,
+      "end": 73.72,
+      "prob": 0.997
+    },
+    {
+      "word": "explain",
+      "start": 73.72,
+      "end": 74.06,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 74.06,
+      "end": 74.28,
+      "prob": 0.994
+    },
+    {
+      "word": "key",
+      "start": 74.28,
+      "end": 74.56,
+      "prob": 0.99
+    },
+    {
+      "word": "process",
+      "start": 74.56,
+      "end": 75.04,
+      "prob": 0.992
+    },
+    {
+      "word": "in",
+      "start": 75.04,
+      "end": 75.3,
+      "prob": 0.993
+    },
+    {
+      "word": "your",
+      "start": 75.3,
+      "end": 75.44,
+      "prob": 0.997
+    },
+    {
+      "word": "own",
+      "start": 75.44,
+      "end": 75.66,
+      "prob": 0.963
+    },
+    {
+      "word": "words.",
+      "start": 75.66,
+      "end": 76.14,
+      "prob": 0.998
+    },
+    {
+      "word": "What",
+      "start": 76.82,
+      "end": 77.5,
+      "prob": 0.84
+    },
+    {
+      "word": "happens,",
+      "start": 77.5,
+      "end": 78.0,
+      "prob": 0.985
+    },
+    {
+      "word": "why",
+      "start": 78.44,
+      "end": 78.82,
+      "prob": 0.973
+    },
+    {
+      "word": "it",
+      "start": 78.82,
+      "end": 78.98,
+      "prob": 0.974
+    },
+    {
+      "word": "happens,",
+      "start": 78.98,
+      "end": 79.46,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 79.76,
+      "end": 79.98,
+      "prob": 0.967
+    },
+    {
+      "word": "how",
+      "start": 79.98,
+      "end": 80.18,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 80.18,
+      "end": 80.36,
+      "prob": 0.95
+    },
+    {
+      "word": "structures",
+      "start": 80.36,
+      "end": 80.74,
+      "prob": 0.651
+    },
+    {
+      "word": "involved",
+      "start": 80.74,
+      "end": 81.22,
+      "prob": 0.992
+    },
+    {
+      "word": "help",
+      "start": 81.22,
+      "end": 81.62,
+      "prob": 0.943
+    },
+    {
+      "word": "the",
+      "start": 81.62,
+      "end": 81.84,
+      "prob": 0.993
+    },
+    {
+      "word": "process",
+      "start": 81.84,
+      "end": 82.2,
+      "prob": 0.997
+    },
+    {
+      "word": "work.",
+      "start": 82.2,
+      "end": 82.66,
+      "prob": 0.995
+    },
+    {
+      "word": "Now,",
+      "start": 83.24,
+      "end": 83.44,
+      "prob": 0.979
+    },
+    {
+      "word": "pause",
+      "start": 83.82,
+      "end": 84.18,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 84.18,
+      "end": 84.4,
+      "prob": 0.994
+    },
+    {
+      "word": "video",
+      "start": 84.4,
+      "end": 84.7,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 84.7,
+      "end": 85.08,
+      "prob": 0.966
+    },
+    {
+      "word": "try",
+      "start": 85.08,
+      "end": 85.32,
+      "prob": 0.997
+    },
+    {
+      "word": "this",
+      "start": 85.32,
+      "end": 85.72,
+      "prob": 0.984
+    },
+    {
+      "word": "exam",
+      "start": 85.72,
+      "end": 86.16,
+      "prob": 0.987
+    },
+    {
+      "word": "style",
+      "start": 86.16,
+      "end": 86.5,
+      "prob": 0.496
+    },
+    {
+      "word": "question.",
+      "start": 86.5,
+      "end": 87.06,
+      "prob": 0.99
+    },
+    {
+      "word": "Explain",
+      "start": 87.5,
+      "end": 87.9,
+      "prob": 0.324
+    },
+    {
+      "word": "why",
+      "start": 87.9,
+      "end": 88.42,
+      "prob": 0.98
+    },
+    {
+      "word": "a",
+      "start": 88.42,
+      "end": 88.8,
+      "prob": 0.997
+    },
+    {
+      "word": "shoot",
+      "start": 88.8,
+      "end": 89.04,
+      "prob": 0.782
+    },
+    {
+      "word": "bends",
+      "start": 89.04,
+      "end": 89.5,
+      "prob": 0.996
+    },
+    {
+      "word": "towards",
+      "start": 89.5,
+      "end": 89.96,
+      "prob": 0.953
+    },
+    {
+      "word": "a",
+      "start": 89.96,
+      "end": 90.18,
+      "prob": 0.978
+    },
+    {
+      "word": "light",
+      "start": 90.18,
+      "end": 90.38,
+      "prob": 0.997
+    },
+    {
+      "word": "source.",
+      "start": 90.38,
+      "end": 90.8,
+      "prob": 0.999
+    },
+    {
+      "word": "Here",
+      "start": 91.18,
+      "end": 91.46,
+      "prob": 0.987
+    },
+    {
+      "word": "is",
+      "start": 91.46,
+      "end": 91.6,
+      "prob": 0.969
+    },
+    {
+      "word": "a",
+      "start": 91.6,
+      "end": 91.72,
+      "prob": 0.992
+    },
+    {
+      "word": "model",
+      "start": 91.72,
+      "end": 91.92,
+      "prob": 0.996
+    },
+    {
+      "word": "answer.",
+      "start": 91.92,
+      "end": 92.4,
+      "prob": 0.995
+    },
+    {
+      "word": "Auxin",
+      "start": 93.06,
+      "end": 93.34,
+      "prob": 0.476
+    },
+    {
+      "word": "accumulates",
+      "start": 93.34,
+      "end": 94.02,
+      "prob": 0.995
+    },
+    {
+      "word": "on",
+      "start": 94.02,
+      "end": 94.24,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 94.24,
+      "end": 94.38,
+      "prob": 0.994
+    },
+    {
+      "word": "shaded",
+      "start": 94.38,
+      "end": 94.76,
+      "prob": 0.996
+    },
+    {
+      "word": "side,",
+      "start": 94.76,
+      "end": 95.26,
+      "prob": 0.999
+    },
+    {
+      "word": "promoting",
+      "start": 95.58,
+      "end": 95.92,
+      "prob": 0.997
+    },
+    {
+      "word": "greater",
+      "start": 95.92,
+      "end": 96.44,
+      "prob": 0.991
+    },
+    {
+      "word": "cell",
+      "start": 96.44,
+      "end": 96.86,
+      "prob": 0.994
+    },
+    {
+      "word": "elongation",
+      "start": 96.86,
+      "end": 97.6,
+      "prob": 0.999
+    },
+    {
+      "word": "there,",
+      "start": 97.6,
+      "end": 97.98,
+      "prob": 0.99
+    },
+    {
+      "word": "so",
+      "start": 98.2,
+      "end": 98.42,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 98.42,
+      "end": 98.58,
+      "prob": 0.994
+    },
+    {
+      "word": "shoot",
+      "start": 98.58,
+      "end": 98.88,
+      "prob": 0.992
+    },
+    {
+      "word": "bends",
+      "start": 98.88,
+      "end": 99.32,
+      "prob": 0.998
+    },
+    {
+      "word": "towards",
+      "start": 99.32,
+      "end": 99.68,
+      "prob": 0.974
+    },
+    {
+      "word": "the",
+      "start": 99.68,
+      "end": 99.94,
+      "prob": 0.997
+    },
+    {
+      "word": "light.",
+      "start": 99.94,
+      "end": 100.24,
+      "prob": 0.999
+    },
+    {
+      "word": "If",
+      "start": 100.56,
+      "end": 100.76,
+      "prob": 0.98
+    },
+    {
+      "word": "this",
+      "start": 100.76,
+      "end": 101.0,
+      "prob": 0.998
+    },
+    {
+      "word": "explanation",
+      "start": 101.0,
+      "end": 101.46,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 101.46,
+      "end": 101.84,
+      "prob": 0.995
+    },
+    {
+      "word": "helped,",
+      "start": 101.84,
+      "end": 102.24,
+      "prob": 0.996
+    },
+    {
+      "word": "please",
+      "start": 102.6,
+      "end": 102.8,
+      "prob": 0.996
+    },
+    {
+      "word": "subscribe",
+      "start": 102.8,
+      "end": 103.32,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 103.32,
+      "end": 103.7,
+      "prob": 0.996
+    },
+    {
+      "word": "JD",
+      "start": 103.7,
+      "end": 104.06,
+      "prob": 0.898
+    },
+    {
+      "word": "Science",
+      "start": 104.06,
+      "end": 104.46,
+      "prob": 0.557
+    },
+    {
+      "word": "for",
+      "start": 104.46,
+      "end": 110.18,
+      "prob": 0.996
+    },
+    {
+      "word": "more",
+      "start": 110.18,
+      "end": 110.2,
+      "prob": 0.998
+    },
+    {
+      "word": "research.",
+      "start": 110.36,
+      "end": 110.48,
+      "prob": 0.0
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

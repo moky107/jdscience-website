@@ -1,0 +1,97 @@
+{
+  "slug": "2-1-principles-of-organisation",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 97.239,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.792,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "hierarchy",
+      "t": 6.792,
+      "t_end": 32.264,
+      "cue": "All living things are built from cells",
+      "animate": true
+    },
+    {
+      "id": "heart",
+      "t": 32.264,
+      "t_end": 50.139,
+      "cue": "cardiac muscle cells contract together",
+      "animate": false
+    },
+    {
+      "id": "why",
+      "t": 50.139,
+      "t_end": 56.217,
+      "cue": "This hierarchy helps us explain",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 56.217,
+      "t_end": 68.193,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 68.193,
+      "t_end": 78.828,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 78.828,
+      "t_end": 85.8,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 85.8,
+      "t_end": 97.239,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 58.451,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 63.098,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 64.439,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 68.461,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 78.948,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

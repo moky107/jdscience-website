@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Produce one GCSE Biology cloned-voice 1080p lesson."""
+"""Produce one GCSE Biology cloned-voice 1080p lesson.
+
+Aligns slides, highlights and transitions to cloned-voice word times.
+Does not mux silent visual masters. Does not stamp a visual-draft banner.
+Does not re-encode 1.1 Cell Division or 1.2 Bacterial Growth.
+"""
 
 from __future__ import annotations
 
@@ -17,12 +22,99 @@ import gcse_foundations.render as foundations_render
 from gcse_biology import align as bio_align
 from gcse_biology import draw as bio_draw
 from gcse_biology import tts as bio_tts
+from gcse_biology.cursor import ALT_CUES, CURSOR_EVENTS
+from gcse_biology.encode import encode_narrated
 from gcse_biology.lessons import LESSONS
 from gcse_biology.narration import BY_SLUG
-from gcse_foundations.render import align, encode_lesson, write_srt
+from gcse_foundations.render import align, find_cue, write_srt
 
+# Final narrated videos use the unmarked slide renderer, never the visual-draft stamp.
 foundations_render.render_slide = bio_draw.render_slide
 bio_align.install()
+
+HOSTED = ("1-1-cell-division", "1-2-bacterial-growth")
+
+
+def _apply_alt_cues(aligned: dict, transcript: dict) -> None:
+    words = transcript.get("words") or []
+    alts = ALT_CUES.get(aligned.get("slug"), {})
+    last_t = 0.0
+    for slide in aligned["slides"]:
+        extras = list(alts.get(slide["id"], []))
+        heading = slide.get("heading") or ""
+        if heading:
+            extras.append(heading)
+        cue = slide.get("cue") or ""
+        parts = cue.split()
+        if len(parts) >= 4:
+            extras.append(" ".join(parts[-4:]))
+        if slide.get("aligned"):
+            last_t = slide["t"]
+            continue
+        for cue in extras:
+            t = find_cue(words, cue, after=max(0.0, last_t - 0.2))
+            if t is None:
+                continue
+            slide["t"] = round(t, 3)
+            slide["aligned"] = True
+            slide["cue"] = cue
+            last_t = t
+            break
+    aligned["slides"] = sorted(aligned["slides"], key=lambda s: s["t"])
+    for ev in aligned["reveals"]:
+        if ev.get("aligned"):
+            continue
+        slide_t = next(s["t"] for s in aligned["slides"] if s["id"] == ev["slide"])
+        extras = []
+        cue = ev.get("cue") or ""
+        parts = cue.split()
+        if len(parts) >= 2:
+            extras.append(" ".join(parts[-3:]))
+            extras.append(" ".join(parts[:3]))
+        if "ethene" in cue.lower() or "fruit" in cue.lower():
+            extras.append("fruit ripen")
+        if "gibberellin" in cue.lower():
+            extras.extend(["germinate", "dormancy"])
+        if "auxin" in cue.lower() and "weed" in cue.lower():
+            extras.append("weed killers")
+        for cue in extras:
+            t = find_cue(words, cue, after=slide_t)
+            if t is None:
+                continue
+            ev["t"] = round(max(t, slide_t + 0.12), 3)
+            ev["aligned"] = True
+            ev["cue"] = cue
+            break
+
+
+def _align_cursor(events: list[dict], words: list[dict]) -> list[dict]:
+    out = []
+    last_t = 0.0
+    for ev in events:
+        t = find_cue(words, ev.get("cue"), after=max(0.0, last_t - 0.35))
+        if t is None:
+            continue
+        last_t = t
+        out.append({**ev, "t": round(t, 3), "aligned": True})
+    return out
+
+
+def cloned_audio_path(transcript: dict, source_dir: Path) -> Path:
+    audio = Path(transcript.get("audio") or "")
+    if not audio.exists():
+        for name in ("narration_master.mp3", "narration_master.m4a"):
+            candidate = source_dir / name
+            if candidate.exists():
+                audio = candidate
+                break
+    text = str(audio).lower()
+    if not audio.exists():
+        raise SystemExit("cloned-voice MP3/M4A not found; refusing to encode a silent or placeholder track")
+    if "silent" in text or "visual-draft" in text or "anullsrc" in text:
+        raise SystemExit("refusing to mux a silent visual master as narration")
+    if transcript.get("audio") in {"pending-cloned-mp3", "silent-visual-draft"}:
+        raise SystemExit("refusing estimated draft clock; wait for cloned-voice timestamps")
+    return audio
 
 
 def srt_to_vtt(srt_text: str) -> str:
@@ -31,6 +123,8 @@ def srt_to_vtt(srt_text: str) -> str:
 
 
 def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = True) -> dict:
+    if slug in HOSTED:
+        raise SystemExit(f"refusing to re-encode hosted lesson {slug}")
     script = BY_SLUG[slug]
     lesson = LESSONS[slug]
     source_dir = ROOT / "content/videos" / slug / "source"
@@ -45,11 +139,14 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         transcript = bio_tts.generate_lesson(slug, source_dir)
 
     aligned = align(lesson, transcript)
+    _apply_alt_cues(aligned, transcript)
+    aligned["cursor"] = _align_cursor(CURSOR_EVENTS.get(slug, []), transcript.get("words") or [])
     (out_dir / "timing_map.json").write_text(json.dumps({
         "slug": slug,
         "duration": aligned["duration"],
         "slides": [{k: s[k] for k in ("id", "t", "aligned", "cue") if k in s} for s in aligned["slides"]],
         "reveals": [{k: e[k] for k in ("slide", "item", "t", "aligned", "cue") if k in e} for e in aligned["reveals"]],
+        "cursor": [{k: e[k] for k in ("t", "aligned", "cue", "target") if k in e} for e in aligned.get("cursor") or []],
     }, indent=2))
 
     srt_name = script.filename.replace("-1080p.mp4", ".srt")
@@ -60,8 +157,9 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
     vtt = srt_to_vtt(srt_repo.read_text())
     (out_dir / "captions.vtt").write_text(vtt)
     (artifacts / srt_name.replace(".srt", ".vtt")).write_text(vtt)
-    (out_dir / "transcript.txt").write_text(script.spoken + "\n")
-    (artifacts / f"{slug}-transcript.txt").write_text(script.spoken + "\n")
+    spoken = (transcript.get("full_text") or script.spoken).strip() + "\n"
+    (out_dir / "transcript.txt").write_text(spoken)
+    (artifacts / f"{slug}-transcript.txt").write_text(spoken)
 
     qa = out_dir / "qa"
     qa.mkdir(exist_ok=True)
@@ -72,11 +170,9 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
     dest = artifacts / script.filename
     yt = artifacts / script.youtube_filename
     if video:
-        audio = Path(transcript["audio"])
-        if not audio.exists():
-            audio = source_dir / "narration_master.m4a"
+        audio = cloned_audio_path(transcript, source_dir)
         work = Path("/tmp/jdscience_biology") / slug
-        encode_lesson(aligned, audio, dest, work)
+        encode_narrated(aligned, audio, dest, work)
         if dest.exists() and dest.resolve() != yt.resolve():
             yt.write_bytes(dest.read_bytes())
 
@@ -104,7 +200,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
 
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--slug", choices=sorted(LESSONS), default="1-1-cell-division")
+    parser.add_argument("--slug", choices=sorted(LESSONS), default="1-3-transport-in-cells")
     parser.add_argument("--out", type=Path, default=Path("/opt/cursor/artifacts"))
     parser.add_argument("--skip-tts", action="store_true")
     parser.add_argument("--no-video", action="store_true")

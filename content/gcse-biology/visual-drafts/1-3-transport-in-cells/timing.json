@@ -1,0 +1,136 @@
+{
+  "slug": "1-3-transport-in-cells",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 133.473,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 7.099,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "diff",
+      "t": 7.099,
+      "t_end": 14.986,
+      "cue": "In diffusion, particles move from high concentration",
+      "animate": true
+    },
+    {
+      "id": "faster",
+      "t": 14.986,
+      "t_end": 23.136,
+      "cue": "It is faster when the temperature is higher",
+      "animate": false
+    },
+    {
+      "id": "lungs",
+      "t": 23.136,
+      "t_end": 34.705,
+      "cue": "Oxygen diffuses into the blood in the lungs",
+      "animate": false
+    },
+    {
+      "id": "osmosis",
+      "t": 34.705,
+      "t_end": 40.051,
+      "cue": "Osmosis is the diffusion of water",
+      "animate": true
+    },
+    {
+      "id": "active",
+      "t": 40.051,
+      "t_end": 51.882,
+      "cue": "Active transport moves substances against",
+      "animate": true
+    },
+    {
+      "id": "compare",
+      "t": 51.882,
+      "t_end": 83.256,
+      "cue": "Diffusion and osmosis are passive processes",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 83.256,
+      "t_end": 95.0,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 95.0,
+      "t_end": 104.552,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 104.552,
+      "t_end": 122.255,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 122.255,
+      "t_end": 133.473,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 85.447,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 90.004,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 91.319,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 95.263,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 104.672,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "faster",
+      "item": "b1",
+      "t": 16.476,
+      "cue": "temperature is higher"
+    },
+    {
+      "slide": "faster",
+      "item": "b2",
+      "t": 18.404,
+      "cue": "concentration gradient is steeper"
+    },
+    {
+      "slide": "faster",
+      "item": "b3",
+      "t": 21.471,
+      "cue": "surface area is larger"
+    }
+  ]
+}

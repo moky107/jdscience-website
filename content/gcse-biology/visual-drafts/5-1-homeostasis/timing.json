@@ -1,0 +1,122 @@
+{
+  "slug": "5-1-homeostasis",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 124.646,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.282,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "keep",
+      "t": 5.282,
+      "t_end": 16.285,
+      "cue": "Homeostasis means keeping conditions inside the body",
+      "animate": false
+    },
+    {
+      "id": "parts",
+      "t": 16.285,
+      "t_end": 35.651,
+      "cue": "Control systems have three parts",
+      "animate": false
+    },
+    {
+      "id": "glucose",
+      "t": 35.651,
+      "t_end": 66.636,
+      "cue": "when blood glucose rises, insulin is released",
+      "animate": false
+    },
+    {
+      "id": "both",
+      "t": 66.636,
+      "t_end": 73.854,
+      "cue": "The nervous and endocrine systems both contribute",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 73.854,
+      "t_end": 85.65,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 85.65,
+      "t_end": 95.773,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 95.773,
+      "t_end": 113.378,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 113.378,
+      "t_end": 124.646,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 76.055,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 80.633,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 81.953,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 85.914,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 95.893,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "keep",
+      "item": "b1",
+      "t": 10.651,
+      "cue": "Temperature, ion content"
+    },
+    {
+      "slide": "keep",
+      "item": "b2",
+      "t": 12.5,
+      "cue": "water content"
+    },
+    {
+      "slide": "keep",
+      "item": "b3",
+      "t": 13.82,
+      "cue": "blood glucose"
+    }
+  ]
+}

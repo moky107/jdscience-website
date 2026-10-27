@@ -1,0 +1,106 @@
+{
+  "slug": "5-2-the-nervous-system",
+  "spec": "5.2",
+  "title": "The Nervous System",
+  "filename": "jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 136.32,
+  "bytes": 1587872,
+  "md5": "d80b3f1f959888fcfbf8165bb599d7ec",
+  "local_path": "content/gcse-biology/visual-drafts/5-2-the-nervous-system/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-2-the-nervous-system/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 136.333333,
+      "size": 1587872,
+      "nb_frames": 4090
+    },
+    "luma": {
+      "start": 41.7,
+      "early": 41.7,
+      "mid": 44.9,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "136.333s vs 136.320s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "4090 vs 4090"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.7"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=41.7"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=44.9"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/5-2-the-nervous-system.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

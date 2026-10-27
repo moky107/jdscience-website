@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { LESSONS as BIOLOGY_SCRIPTS } from "../src/gcseBiologyLessonMeta.js";
 import {
+  GCSE_BIOLOGY_AWAITING_AUDIO,
   GCSE_BIOLOGY_HOSTED_SLUGS,
   GCSE_BIOLOGY_LESSON_VIDEOS,
   GCSE_BIOLOGY_VIDEOS,
@@ -97,6 +99,149 @@ test("papers catalog can merge biology videos without dropping chemistry titles"
     assert.ok(found, `missing biology ${item.title}`);
     assert.equal(found.subject, "Biology");
   }
+});
+
+test("lessons without original narration stay unpublished", () => {
+  assert.deepEqual(GCSE_BIOLOGY_HOSTED_SLUGS.slice(0, 2), ["1-1-cell-division", "1-2-bacterial-growth"]);
+  assert.equal(GCSE_BIOLOGY_HOSTED_SLUGS.includes("1-3-transport-in-cells"), true);
+  assert.equal(GCSE_BIOLOGY_AWAITING_AUDIO.length, 12);
+  assert.equal(GCSE_BIOLOGY_AWAITING_AUDIO.includes("2-1-principles-of-organisation"), true);
+  assert.equal(GCSE_BIOLOGY_AWAITING_AUDIO.includes("2-2-animal-tissues-organs-systems"), true);
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const slug of GCSE_BIOLOGY_AWAITING_AUDIO) {
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(slug));
+  }
+  const boards = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/storyboards.json"), "utf8"));
+  assert.equal(boards.lessons.length, 23);
+  assert.equal(boards.lessons[0].slug, "1-3-transport-in-cells");
+  assert.equal(boards.lessons.at(-1).slug, "7-5-food-production");
+  assert.deepEqual(boards.awaiting_original_narration, GCSE_BIOLOGY_AWAITING_AUDIO);
+  for (const lesson of boards.lessons) {
+    assert.equal(lesson.opening, true);
+    assert.equal(lesson.close_jdscience_co_uk, true);
+    assert.equal(lesson.youtube_privacy, "unlisted");
+    assert.ok(lesson.exam.question);
+    assert.ok(lesson.model_answer);
+    assert.ok(lesson.slide_count >= 8);
+    assert.equal(lesson.transition_s, 0.4);
+    assert.deepEqual(lesson.frame_size, [1920, 1080]);
+  }
+  const status = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/production-status.json"), "utf8"));
+  assert.equal(status.elevenlabs_calls_this_run, 0);
+  assert.deepEqual(status.hosted_live, GCSE_BIOLOGY_HOSTED_SLUGS);
+  const youtube = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/youtube-metadata.json"), "utf8"));
+  assert.equal(youtube.length, 23);
+  for (const row of youtube) {
+    assert.ok(row.youtube_title.length <= 100, row.youtube_title);
+    assert.equal(row.privacy, "unlisted");
+    assert.match(row.description, /jdscience\.co\.uk/);
+    assert.match(row.description, /Unlisted/);
+    assert.ok(row.tags.includes("GCSE Biology"));
+    assert.ok(row.tags.includes("JD Science"));
+    assert.ok(existsSync(join(ROOT, row.thumbnail)), row.thumbnail);
+  }
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/PRODUCTION_REGISTER.md")));
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/PRESERVED_ASSETS.md")));
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/narration-identify.json")));
+});
+
+function md5File(path) {
+  return createHash("md5").update(readFileSync(path)).digest("hex");
+}
+
+function listJpgs(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return listJpgs(path);
+    return entry.name.endsWith(".jpg") ? [path] : [];
+  });
+}
+
+test("214 visual frames and 23 contact sheets are stored in the repo", () => {
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !["1-1-cell-division", "1-2-bacterial-growth"].includes(item.slug));
+  assert.equal(remaining.length, 23);
+  const frames = listJpgs(join(ROOT, "content/gcse-biology/previs"));
+  assert.equal(frames.length, 214);
+  for (const frame of frames) {
+    assert.ok(statSync(frame).size > 1000, frame);
+  }
+  const contacts = listJpgs(join(ROOT, "content/gcse-biology/contact"));
+  assert.equal(contacts.length, 23);
+  for (const item of remaining) {
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/previs", item.slug)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/contact", `${item.slug}.jpg`)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/timing", `${item.slug}.json`)));
+    assert.ok(existsSync(join(ROOT, "content/gcse-biology/covers", `${item.slug}-youtube.jpg`)));
+  }
+});
+
+test("completed 1.1 and 1.2 audio and video masters are unchanged", () => {
+  const cellDivisionMp3 = join(ROOT, "content/videos/1-1-cell-division/source/narration_master.mp3");
+  const bacterialMp3 = join(ROOT, "content/videos/1-2-bacterial-growth/source/narration_master.mp3");
+  const cellDivisionMp4 = join(ROOT, "content/videos/1-1-cell-division/jdscience-1-1-cell-division-1080p.mp4");
+  const bacterialMp4 = join(ROOT, "content/videos/1-2-bacterial-growth/jdscience-1-2-bacterial-growth-1080p.mp4");
+  assert.equal(md5File(cellDivisionMp3), "f64a9f591ce9f2464e97b912b71905e7");
+  assert.equal(md5File(bacterialMp3), "29495f2d9e6280caf91cb2c72e1e97f0");
+  assert.equal(md5File(cellDivisionMp4), "5aef24eec1dcebb431e4d0a4de1ed41f");
+  assert.equal(md5File(bacterialMp4), "99ad97c922011c5cb33c88f1d88f94e8");
+});
+
+test("23 silent visual drafts are labelled drafts with persistent URLs and stay unpublished", () => {
+  const rows = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/visual-draft-register.json"), "utf8"));
+  assert.equal(rows.length, 23);
+  assert.equal(rows[0].slug, "1-3-transport-in-cells");
+  assert.equal(rows.at(-1).slug, "7-5-food-production");
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const row of rows) {
+    assert.equal(row.kind, "visual_only_draft");
+    assert.equal(row.narration, "pending_cloned_voice");
+    assert.equal(row.site, "not_published");
+    assert.equal(row.youtube, "not_uploaded");
+    assert.equal(row.qa_pass, true);
+    assert.match(row.filename, /visual-draft-1080p\.mp4$/);
+    assert.match(row.download_url, /\/biology\/visual-drafts\//);
+    assert.doesNotMatch(row.download_url, /\/biology\/videos\//);
+    if (GCSE_BIOLOGY_HOSTED_SLUGS.includes(row.slug)) continue;
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${row.slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(row.slug));
+  }
+});
+
+test("script review exists and remaining lessons keep exam questions plus model answers", () => {
+  assert.ok(existsSync(join(ROOT, "content/gcse-biology/SCRIPT_REVIEW.md")));
+  const remaining = BIOLOGY_SCRIPTS.filter((item) => !["1-1-cell-division", "1-2-bacterial-growth"].includes(item.slug));
+  assert.equal(remaining.length, 23);
+  const boards = JSON.parse(readFileSync(join(ROOT, "content/gcse-biology/storyboards.json"), "utf8"));
+  for (const lesson of boards.lessons) {
+    assert.ok(lesson.exam.question.length > 20, lesson.slug);
+    assert.ok(lesson.model_answer.length > 20, lesson.slug);
+    assert.match(lesson.exam.question, /[.?]/);
+  }
+});
+
+test("final producer refuses hosted 1.1/1.2 and silent visual masters", () => {
+  const produce = readFileSync(join(ROOT, "scripts/gcse_biology/produce.py"), "utf8");
+  assert.match(produce, /refusing to re-encode hosted lesson/);
+  assert.match(produce, /refusing to mux a silent visual master/);
+  assert.match(produce, /1-3-transport-in-cells/);
+  assert.doesNotMatch(produce, /stamp_visual_draft/);
+});
+
+test("visual drafts stay unpublished and must not replace 1.1 or 1.2", () => {
+  const indexHtml = readFileSync(join(ROOT, "public/resources/gcse/biology/videos/index.html"), "utf8");
+  for (const slug of GCSE_BIOLOGY_AWAITING_AUDIO) {
+    assert.equal(existsSync(join(ROOT, `public/resources/gcse/biology/videos/${slug}/index.html`)), false);
+    assert.doesNotMatch(indexHtml, new RegExp(slug));
+  }
+  for (const item of BIOLOGY_SCRIPTS.filter((row) => !["1-1-cell-division", "1-2-bacterial-growth"].includes(row.slug))) {
+    const draftName = item.filename.replace("-1080p.mp4", "-visual-draft-1080p.mp4");
+    assert.match(draftName, /visual-draft-1080p\.mp4$/);
+    assert.doesNotMatch(draftName, /1-1-cell-division|1-2-bacterial-growth/);
+  }
+  assert.equal(GCSE_BIOLOGY_VIDEOS.length, GCSE_BIOLOGY_HOSTED_SLUGS.length);
+  assert.equal(GCSE_BIOLOGY_HOSTED_SLUGS.includes("1-1-cell-division"), true);
+  assert.equal(GCSE_BIOLOGY_HOSTED_SLUGS.includes("1-2-bacterial-growth"), true);
 });
 
 test("Vercel Hobby still has exactly 12 top-level API files", () => {

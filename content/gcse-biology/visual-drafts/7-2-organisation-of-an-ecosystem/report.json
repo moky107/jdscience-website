@@ -1,0 +1,106 @@
+{
+  "slug": "7-2-organisation-of-an-ecosystem",
+  "spec": "7.2",
+  "title": "Organisation of an Ecosystem",
+  "filename": "jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 127.778,
+  "bytes": 1603438,
+  "md5": "16b13ae1c947a6660afffda12ec9e23d",
+  "local_path": "content/gcse-biology/visual-drafts/7-2-organisation-of-an-ecosystem/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-2-organisation-of-an-ecosystem/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 127.778005,
+      "size": 1603438,
+      "nb_frames": 3833
+    },
+    "luma": {
+      "start": 41.6,
+      "early": 41.6,
+      "mid": 44.4,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "127.778s vs 127.778s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3833 vs 3833"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.6"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=41.6"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=44.4"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/7-2-organisation-of-an-ecosystem.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

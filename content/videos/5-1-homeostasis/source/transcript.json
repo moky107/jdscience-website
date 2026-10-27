@@ -1,0 +1,1635 @@
+{
+  "audio": "content/videos/5-1-homeostasis/source/narration_master.m4a",
+  "duration": 125.29,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring homeostasis. Homeostasis means keeping conditions inside the body at the right level. Temperature, ion content, water content and blood glucose are all controlled. Control systems have three parts. Receptors detect a. A change, a coordinator such as the brain processes the information and effectors such as muscles and glands produce the response. Negative feedback means the output of a process controls its own level. For example, when blood glucose rises, insulin is released to lower it. When glucose falls, glucagon is released higher tier. Negative feedback opposes a change from a normal operating range. For example, after a meal, rising blood glucose stimulates pancreatic beta cells to release insulin, promoting glucose uptake and storage. When blood glucose falls, pancreatic alpha cells release glucagon, stimulating the liver to release glucose. The nervous and endocrine systems both contribute to maintaining a stable internal environment. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. Describe the role of receptors, coordinators and effectors in a control system. Here is a model answer. Receptors detect a change in the internal or external environment. The coordinator, such as the brain, processes the information. Effectors, such as muscles or glands, bring about a response. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching, Ick.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.38,
+      "prob": 0.919
+    },
+    {
+      "word": "and",
+      "start": 0.38,
+      "end": 0.74,
+      "prob": 0.813
+    },
+    {
+      "word": "welcome",
+      "start": 0.74,
+      "end": 1.02,
+      "prob": 0.982
+    },
+    {
+      "word": "back",
+      "start": 1.02,
+      "end": 1.38,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 1.38,
+      "end": 1.58,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.58,
+      "end": 1.92,
+      "prob": 0.922
+    },
+    {
+      "word": "Science.",
+      "start": 1.92,
+      "end": 2.4,
+      "prob": 0.617
+    },
+    {
+      "word": "Today",
+      "start": 3.02,
+      "end": 3.34,
+      "prob": 0.997
+    },
+    {
+      "word": "we",
+      "start": 3.34,
+      "end": 3.9,
+      "prob": 0.643
+    },
+    {
+      "word": "are",
+      "start": 3.9,
+      "end": 4.02,
+      "prob": 0.974
+    },
+    {
+      "word": "exploring",
+      "start": 4.02,
+      "end": 4.64,
+      "prob": 0.997
+    },
+    {
+      "word": "homeostasis.",
+      "start": 4.64,
+      "end": 5.66,
+      "prob": 0.984
+    },
+    {
+      "word": "Homeostasis",
+      "start": 6.38,
+      "end": 7.06,
+      "prob": 0.996
+    },
+    {
+      "word": "means",
+      "start": 7.06,
+      "end": 7.44,
+      "prob": 0.996
+    },
+    {
+      "word": "keeping",
+      "start": 7.44,
+      "end": 7.98,
+      "prob": 0.993
+    },
+    {
+      "word": "conditions",
+      "start": 7.98,
+      "end": 8.56,
+      "prob": 0.974
+    },
+    {
+      "word": "inside",
+      "start": 8.56,
+      "end": 9.24,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 9.24,
+      "end": 9.48,
+      "prob": 0.997
+    },
+    {
+      "word": "body",
+      "start": 9.48,
+      "end": 9.76,
+      "prob": 0.999
+    },
+    {
+      "word": "at",
+      "start": 9.76,
+      "end": 10.04,
+      "prob": 0.989
+    },
+    {
+      "word": "the",
+      "start": 10.04,
+      "end": 10.2,
+      "prob": 0.999
+    },
+    {
+      "word": "right",
+      "start": 10.2,
+      "end": 10.48,
+      "prob": 0.998
+    },
+    {
+      "word": "level.",
+      "start": 10.48,
+      "end": 10.9,
+      "prob": 0.998
+    },
+    {
+      "word": "Temperature,",
+      "start": 11.48,
+      "end": 11.86,
+      "prob": 0.98
+    },
+    {
+      "word": "ion",
+      "start": 12.38,
+      "end": 12.52,
+      "prob": 0.696
+    },
+    {
+      "word": "content,",
+      "start": 12.52,
+      "end": 13.16,
+      "prob": 0.995
+    },
+    {
+      "word": "water",
+      "start": 13.68,
+      "end": 13.86,
+      "prob": 0.999
+    },
+    {
+      "word": "content",
+      "start": 13.86,
+      "end": 14.48,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 14.48,
+      "end": 15.0,
+      "prob": 0.673
+    },
+    {
+      "word": "blood",
+      "start": 15.0,
+      "end": 15.28,
+      "prob": 0.998
+    },
+    {
+      "word": "glucose",
+      "start": 15.28,
+      "end": 15.78,
+      "prob": 0.999
+    },
+    {
+      "word": "are",
+      "start": 15.78,
+      "end": 16.16,
+      "prob": 0.994
+    },
+    {
+      "word": "all",
+      "start": 16.16,
+      "end": 16.46,
+      "prob": 0.982
+    },
+    {
+      "word": "controlled.",
+      "start": 16.46,
+      "end": 16.96,
+      "prob": 0.998
+    },
+    {
+      "word": "Control",
+      "start": 17.58,
+      "end": 17.82,
+      "prob": 0.982
+    },
+    {
+      "word": "systems",
+      "start": 17.82,
+      "end": 18.1,
+      "prob": 0.995
+    },
+    {
+      "word": "have",
+      "start": 18.1,
+      "end": 18.56,
+      "prob": 0.998
+    },
+    {
+      "word": "three",
+      "start": 18.56,
+      "end": 18.94,
+      "prob": 0.887
+    },
+    {
+      "word": "parts.",
+      "start": 18.94,
+      "end": 19.48,
+      "prob": 0.996
+    },
+    {
+      "word": "Receptors",
+      "start": 19.92,
+      "end": 20.42,
+      "prob": 0.954
+    },
+    {
+      "word": "detect",
+      "start": 20.42,
+      "end": 20.78,
+      "prob": 0.994
+    },
+    {
+      "word": "a.",
+      "start": 20.78,
+      "end": 21.02,
+      "prob": 0.99
+    },
+    {
+      "word": "A",
+      "start": 21.16,
+      "end": 21.54,
+      "prob": 0.044
+    },
+    {
+      "word": "change,",
+      "start": 21.54,
+      "end": 21.54,
+      "prob": 0.006
+    },
+    {
+      "word": "a",
+      "start": 21.88,
+      "end": 21.98,
+      "prob": 0.98
+    },
+    {
+      "word": "coordinator",
+      "start": 21.98,
+      "end": 22.6,
+      "prob": 0.768
+    },
+    {
+      "word": "such",
+      "start": 22.6,
+      "end": 23.08,
+      "prob": 0.788
+    },
+    {
+      "word": "as",
+      "start": 23.08,
+      "end": 23.3,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 23.3,
+      "end": 23.44,
+      "prob": 0.98
+    },
+    {
+      "word": "brain",
+      "start": 23.44,
+      "end": 23.74,
+      "prob": 0.986
+    },
+    {
+      "word": "processes",
+      "start": 23.74,
+      "end": 24.3,
+      "prob": 0.954
+    },
+    {
+      "word": "the",
+      "start": 24.3,
+      "end": 24.58,
+      "prob": 0.931
+    },
+    {
+      "word": "information",
+      "start": 24.58,
+      "end": 25.16,
+      "prob": 0.989
+    },
+    {
+      "word": "and",
+      "start": 25.16,
+      "end": 25.86,
+      "prob": 0.642
+    },
+    {
+      "word": "effectors",
+      "start": 25.86,
+      "end": 26.54,
+      "prob": 0.863
+    },
+    {
+      "word": "such",
+      "start": 26.54,
+      "end": 26.76,
+      "prob": 0.95
+    },
+    {
+      "word": "as",
+      "start": 26.76,
+      "end": 26.98,
+      "prob": 0.996
+    },
+    {
+      "word": "muscles",
+      "start": 26.98,
+      "end": 27.36,
+      "prob": 0.953
+    },
+    {
+      "word": "and",
+      "start": 27.36,
+      "end": 27.72,
+      "prob": 0.99
+    },
+    {
+      "word": "glands",
+      "start": 27.72,
+      "end": 28.12,
+      "prob": 0.994
+    },
+    {
+      "word": "produce",
+      "start": 28.12,
+      "end": 28.66,
+      "prob": 0.973
+    },
+    {
+      "word": "the",
+      "start": 28.66,
+      "end": 28.92,
+      "prob": 0.991
+    },
+    {
+      "word": "response.",
+      "start": 28.92,
+      "end": 29.38,
+      "prob": 0.996
+    },
+    {
+      "word": "Negative",
+      "start": 29.38,
+      "end": 30.26,
+      "prob": 0.472
+    },
+    {
+      "word": "feedback",
+      "start": 30.26,
+      "end": 30.8,
+      "prob": 0.979
+    },
+    {
+      "word": "means",
+      "start": 30.8,
+      "end": 31.16,
+      "prob": 0.975
+    },
+    {
+      "word": "the",
+      "start": 31.16,
+      "end": 31.42,
+      "prob": 0.963
+    },
+    {
+      "word": "output",
+      "start": 31.42,
+      "end": 31.78,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 31.78,
+      "end": 32.02,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 32.02,
+      "end": 32.16,
+      "prob": 0.981
+    },
+    {
+      "word": "process",
+      "start": 32.16,
+      "end": 32.56,
+      "prob": 0.997
+    },
+    {
+      "word": "controls",
+      "start": 32.56,
+      "end": 33.08,
+      "prob": 0.991
+    },
+    {
+      "word": "its",
+      "start": 33.08,
+      "end": 33.38,
+      "prob": 0.966
+    },
+    {
+      "word": "own",
+      "start": 33.38,
+      "end": 33.72,
+      "prob": 0.995
+    },
+    {
+      "word": "level.",
+      "start": 33.72,
+      "end": 34.14,
+      "prob": 0.997
+    },
+    {
+      "word": "For",
+      "start": 34.56,
+      "end": 34.66,
+      "prob": 0.914
+    },
+    {
+      "word": "example,",
+      "start": 34.66,
+      "end": 35.02,
+      "prob": 0.997
+    },
+    {
+      "word": "when",
+      "start": 35.7,
+      "end": 35.7,
+      "prob": 0.966
+    },
+    {
+      "word": "blood",
+      "start": 35.7,
+      "end": 36.0,
+      "prob": 0.992
+    },
+    {
+      "word": "glucose",
+      "start": 36.0,
+      "end": 36.48,
+      "prob": 0.999
+    },
+    {
+      "word": "rises,",
+      "start": 36.48,
+      "end": 37.1,
+      "prob": 0.998
+    },
+    {
+      "word": "insulin",
+      "start": 37.64,
+      "end": 37.92,
+      "prob": 0.987
+    },
+    {
+      "word": "is",
+      "start": 37.92,
+      "end": 38.26,
+      "prob": 0.998
+    },
+    {
+      "word": "released",
+      "start": 38.26,
+      "end": 38.58,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 38.58,
+      "end": 38.88,
+      "prob": 0.998
+    },
+    {
+      "word": "lower",
+      "start": 38.88,
+      "end": 39.06,
+      "prob": 0.999
+    },
+    {
+      "word": "it.",
+      "start": 39.06,
+      "end": 39.4,
+      "prob": 0.997
+    },
+    {
+      "word": "When",
+      "start": 39.78,
+      "end": 39.98,
+      "prob": 0.994
+    },
+    {
+      "word": "glucose",
+      "start": 39.98,
+      "end": 40.4,
+      "prob": 0.993
+    },
+    {
+      "word": "falls,",
+      "start": 40.4,
+      "end": 40.98,
+      "prob": 0.996
+    },
+    {
+      "word": "glucagon",
+      "start": 41.54,
+      "end": 41.86,
+      "prob": 0.99
+    },
+    {
+      "word": "is",
+      "start": 41.86,
+      "end": 42.14,
+      "prob": 0.998
+    },
+    {
+      "word": "released",
+      "start": 42.14,
+      "end": 42.5,
+      "prob": 0.995
+    },
+    {
+      "word": "higher",
+      "start": 42.5,
+      "end": 42.94,
+      "prob": 0.977
+    },
+    {
+      "word": "tier.",
+      "start": 42.94,
+      "end": 43.3,
+      "prob": 0.885
+    },
+    {
+      "word": "Negative",
+      "start": 43.7,
+      "end": 44.06,
+      "prob": 0.961
+    },
+    {
+      "word": "feedback",
+      "start": 44.06,
+      "end": 44.72,
+      "prob": 0.998
+    },
+    {
+      "word": "opposes",
+      "start": 44.72,
+      "end": 45.34,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 45.34,
+      "end": 45.6,
+      "prob": 0.992
+    },
+    {
+      "word": "change",
+      "start": 45.6,
+      "end": 46.0,
+      "prob": 0.999
+    },
+    {
+      "word": "from",
+      "start": 46.0,
+      "end": 46.34,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 46.34,
+      "end": 46.52,
+      "prob": 0.986
+    },
+    {
+      "word": "normal",
+      "start": 46.52,
+      "end": 46.88,
+      "prob": 0.998
+    },
+    {
+      "word": "operating",
+      "start": 46.88,
+      "end": 47.42,
+      "prob": 0.995
+    },
+    {
+      "word": "range.",
+      "start": 47.42,
+      "end": 48.06,
+      "prob": 0.998
+    },
+    {
+      "word": "For",
+      "start": 48.42,
+      "end": 48.6,
+      "prob": 0.987
+    },
+    {
+      "word": "example,",
+      "start": 48.6,
+      "end": 48.94,
+      "prob": 0.999
+    },
+    {
+      "word": "after",
+      "start": 49.48,
+      "end": 49.74,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 49.74,
+      "end": 49.96,
+      "prob": 0.995
+    },
+    {
+      "word": "meal,",
+      "start": 49.96,
+      "end": 50.26,
+      "prob": 0.999
+    },
+    {
+      "word": "rising",
+      "start": 50.86,
+      "end": 51.12,
+      "prob": 0.993
+    },
+    {
+      "word": "blood",
+      "start": 51.12,
+      "end": 51.48,
+      "prob": 0.998
+    },
+    {
+      "word": "glucose",
+      "start": 51.48,
+      "end": 52.06,
+      "prob": 0.999
+    },
+    {
+      "word": "stimulates",
+      "start": 52.06,
+      "end": 52.68,
+      "prob": 0.977
+    },
+    {
+      "word": "pancreatic",
+      "start": 52.68,
+      "end": 53.6,
+      "prob": 0.997
+    },
+    {
+      "word": "beta",
+      "start": 53.6,
+      "end": 53.76,
+      "prob": 0.987
+    },
+    {
+      "word": "cells",
+      "start": 53.76,
+      "end": 54.24,
+      "prob": 0.919
+    },
+    {
+      "word": "to",
+      "start": 54.24,
+      "end": 54.5,
+      "prob": 0.997
+    },
+    {
+      "word": "release",
+      "start": 54.5,
+      "end": 54.8,
+      "prob": 0.999
+    },
+    {
+      "word": "insulin,",
+      "start": 54.8,
+      "end": 55.3,
+      "prob": 0.716
+    },
+    {
+      "word": "promoting",
+      "start": 55.72,
+      "end": 56.2,
+      "prob": 0.986
+    },
+    {
+      "word": "glucose",
+      "start": 56.2,
+      "end": 56.66,
+      "prob": 0.993
+    },
+    {
+      "word": "uptake",
+      "start": 56.66,
+      "end": 57.28,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 57.28,
+      "end": 57.6,
+      "prob": 0.957
+    },
+    {
+      "word": "storage.",
+      "start": 57.6,
+      "end": 57.98,
+      "prob": 0.884
+    },
+    {
+      "word": "When",
+      "start": 58.72,
+      "end": 59.0,
+      "prob": 0.993
+    },
+    {
+      "word": "blood",
+      "start": 59.0,
+      "end": 59.24,
+      "prob": 0.992
+    },
+    {
+      "word": "glucose",
+      "start": 59.24,
+      "end": 59.7,
+      "prob": 0.998
+    },
+    {
+      "word": "falls,",
+      "start": 59.7,
+      "end": 60.24,
+      "prob": 0.991
+    },
+    {
+      "word": "pancreatic",
+      "start": 60.84,
+      "end": 61.44,
+      "prob": 0.996
+    },
+    {
+      "word": "alpha",
+      "start": 61.44,
+      "end": 61.76,
+      "prob": 0.987
+    },
+    {
+      "word": "cells",
+      "start": 61.76,
+      "end": 62.26,
+      "prob": 0.814
+    },
+    {
+      "word": "release",
+      "start": 62.26,
+      "end": 62.64,
+      "prob": 0.998
+    },
+    {
+      "word": "glucagon,",
+      "start": 62.64,
+      "end": 63.28,
+      "prob": 0.972
+    },
+    {
+      "word": "stimulating",
+      "start": 63.7,
+      "end": 64.24,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 64.24,
+      "end": 64.58,
+      "prob": 0.997
+    },
+    {
+      "word": "liver",
+      "start": 64.58,
+      "end": 64.84,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 64.84,
+      "end": 65.18,
+      "prob": 0.992
+    },
+    {
+      "word": "release",
+      "start": 65.18,
+      "end": 65.48,
+      "prob": 0.999
+    },
+    {
+      "word": "glucose.",
+      "start": 65.48,
+      "end": 66.0,
+      "prob": 0.996
+    },
+    {
+      "word": "The",
+      "start": 66.5,
+      "end": 66.68,
+      "prob": 0.972
+    },
+    {
+      "word": "nervous",
+      "start": 66.68,
+      "end": 67.04,
+      "prob": 0.951
+    },
+    {
+      "word": "and",
+      "start": 67.04,
+      "end": 67.28,
+      "prob": 0.99
+    },
+    {
+      "word": "endocrine",
+      "start": 67.28,
+      "end": 67.74,
+      "prob": 0.994
+    },
+    {
+      "word": "systems",
+      "start": 67.74,
+      "end": 68.32,
+      "prob": 0.991
+    },
+    {
+      "word": "both",
+      "start": 68.32,
+      "end": 68.66,
+      "prob": 0.964
+    },
+    {
+      "word": "contribute",
+      "start": 68.66,
+      "end": 69.1,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 69.1,
+      "end": 69.5,
+      "prob": 0.999
+    },
+    {
+      "word": "maintaining",
+      "start": 69.5,
+      "end": 69.96,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 69.96,
+      "end": 70.24,
+      "prob": 0.996
+    },
+    {
+      "word": "stable",
+      "start": 70.24,
+      "end": 70.74,
+      "prob": 0.999
+    },
+    {
+      "word": "internal",
+      "start": 70.74,
+      "end": 71.26,
+      "prob": 0.935
+    },
+    {
+      "word": "environment.",
+      "start": 71.26,
+      "end": 71.94,
+      "prob": 0.998
+    },
+    {
+      "word": "As",
+      "start": 72.38,
+      "end": 72.58,
+      "prob": 0.988
+    },
+    {
+      "word": "you",
+      "start": 72.58,
+      "end": 72.72,
+      "prob": 0.998
+    },
+    {
+      "word": "revise",
+      "start": 72.72,
+      "end": 73.04,
+      "prob": 0.984
+    },
+    {
+      "word": "this",
+      "start": 73.04,
+      "end": 73.3,
+      "prob": 0.977
+    },
+    {
+      "word": "topic,",
+      "start": 73.3,
+      "end": 73.68,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 74.18,
+      "end": 74.28,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 74.28,
+      "end": 74.46,
+      "prob": 0.997
+    },
+    {
+      "word": "explain",
+      "start": 74.46,
+      "end": 74.84,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 74.84,
+      "end": 75.08,
+      "prob": 0.994
+    },
+    {
+      "word": "key",
+      "start": 75.08,
+      "end": 75.34,
+      "prob": 0.957
+    },
+    {
+      "word": "process",
+      "start": 75.34,
+      "end": 75.82,
+      "prob": 0.993
+    },
+    {
+      "word": "in",
+      "start": 75.82,
+      "end": 76.08,
+      "prob": 0.992
+    },
+    {
+      "word": "your",
+      "start": 76.08,
+      "end": 76.22,
+      "prob": 0.998
+    },
+    {
+      "word": "own",
+      "start": 76.22,
+      "end": 76.44,
+      "prob": 0.975
+    },
+    {
+      "word": "words.",
+      "start": 76.44,
+      "end": 76.92,
+      "prob": 0.999
+    },
+    {
+      "word": "Focus",
+      "start": 77.46,
+      "end": 77.6,
+      "prob": 0.993
+    },
+    {
+      "word": "on",
+      "start": 77.6,
+      "end": 77.9,
+      "prob": 0.998
+    },
+    {
+      "word": "what",
+      "start": 77.9,
+      "end": 78.1,
+      "prob": 0.997
+    },
+    {
+      "word": "happens,",
+      "start": 78.1,
+      "end": 78.66,
+      "prob": 0.998
+    },
+    {
+      "word": "why",
+      "start": 79.02,
+      "end": 79.4,
+      "prob": 0.996
+    },
+    {
+      "word": "it",
+      "start": 79.4,
+      "end": 79.54,
+      "prob": 0.992
+    },
+    {
+      "word": "happens",
+      "start": 79.54,
+      "end": 80.0,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 80.0,
+      "end": 80.5,
+      "prob": 0.445
+    },
+    {
+      "word": "how",
+      "start": 80.5,
+      "end": 80.72,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 80.72,
+      "end": 80.86,
+      "prob": 0.987
+    },
+    {
+      "word": "structures",
+      "start": 80.86,
+      "end": 81.16,
+      "prob": 0.994
+    },
+    {
+      "word": "involved",
+      "start": 81.16,
+      "end": 81.7,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 81.7,
+      "end": 82.04,
+      "prob": 0.967
+    },
+    {
+      "word": "the",
+      "start": 82.04,
+      "end": 82.24,
+      "prob": 0.993
+    },
+    {
+      "word": "process",
+      "start": 82.24,
+      "end": 82.6,
+      "prob": 0.998
+    },
+    {
+      "word": "work.",
+      "start": 82.6,
+      "end": 83.0,
+      "prob": 0.99
+    },
+    {
+      "word": "Now",
+      "start": 83.0,
+      "end": 83.78,
+      "prob": 0.263
+    },
+    {
+      "word": "pause",
+      "start": 83.78,
+      "end": 84.48,
+      "prob": 0.419
+    },
+    {
+      "word": "the",
+      "start": 84.48,
+      "end": 84.7,
+      "prob": 0.991
+    },
+    {
+      "word": "video",
+      "start": 84.7,
+      "end": 85.0,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 85.0,
+      "end": 85.34,
+      "prob": 0.972
+    },
+    {
+      "word": "try",
+      "start": 85.34,
+      "end": 85.58,
+      "prob": 0.996
+    },
+    {
+      "word": "this",
+      "start": 85.58,
+      "end": 85.82,
+      "prob": 0.986
+    },
+    {
+      "word": "exam",
+      "start": 85.82,
+      "end": 86.2,
+      "prob": 0.99
+    },
+    {
+      "word": "style",
+      "start": 86.2,
+      "end": 86.5,
+      "prob": 0.639
+    },
+    {
+      "word": "question.",
+      "start": 86.5,
+      "end": 87.02,
+      "prob": 0.99
+    },
+    {
+      "word": "Describe",
+      "start": 87.38,
+      "end": 87.74,
+      "prob": 0.929
+    },
+    {
+      "word": "the",
+      "start": 87.74,
+      "end": 87.94,
+      "prob": 0.998
+    },
+    {
+      "word": "role",
+      "start": 87.94,
+      "end": 88.2,
+      "prob": 0.992
+    },
+    {
+      "word": "of",
+      "start": 88.2,
+      "end": 88.46,
+      "prob": 0.998
+    },
+    {
+      "word": "receptors,",
+      "start": 88.46,
+      "end": 88.94,
+      "prob": 0.963
+    },
+    {
+      "word": "coordinators",
+      "start": 89.52,
+      "end": 90.26,
+      "prob": 0.995
+    },
+    {
+      "word": "and",
+      "start": 90.26,
+      "end": 90.64,
+      "prob": 0.743
+    },
+    {
+      "word": "effectors",
+      "start": 90.64,
+      "end": 91.32,
+      "prob": 0.974
+    },
+    {
+      "word": "in",
+      "start": 91.32,
+      "end": 91.5,
+      "prob": 0.992
+    },
+    {
+      "word": "a",
+      "start": 91.5,
+      "end": 91.64,
+      "prob": 0.99
+    },
+    {
+      "word": "control",
+      "start": 91.64,
+      "end": 91.96,
+      "prob": 0.997
+    },
+    {
+      "word": "system.",
+      "start": 91.96,
+      "end": 92.48,
+      "prob": 0.998
+    },
+    {
+      "word": "Here",
+      "start": 93.16,
+      "end": 93.38,
+      "prob": 0.988
+    },
+    {
+      "word": "is",
+      "start": 93.38,
+      "end": 93.54,
+      "prob": 0.979
+    },
+    {
+      "word": "a",
+      "start": 93.54,
+      "end": 93.68,
+      "prob": 0.988
+    },
+    {
+      "word": "model",
+      "start": 93.68,
+      "end": 93.88,
+      "prob": 0.996
+    },
+    {
+      "word": "answer.",
+      "start": 93.88,
+      "end": 94.42,
+      "prob": 0.994
+    },
+    {
+      "word": "Receptors",
+      "start": 95.1,
+      "end": 95.64,
+      "prob": 0.834
+    },
+    {
+      "word": "detect",
+      "start": 95.64,
+      "end": 96.0,
+      "prob": 0.992
+    },
+    {
+      "word": "a",
+      "start": 96.0,
+      "end": 96.22,
+      "prob": 0.987
+    },
+    {
+      "word": "change",
+      "start": 96.22,
+      "end": 96.58,
+      "prob": 0.999
+    },
+    {
+      "word": "in",
+      "start": 96.58,
+      "end": 96.9,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 96.9,
+      "end": 97.04,
+      "prob": 0.997
+    },
+    {
+      "word": "internal",
+      "start": 97.04,
+      "end": 97.6,
+      "prob": 0.999
+    },
+    {
+      "word": "or",
+      "start": 97.6,
+      "end": 97.98,
+      "prob": 0.994
+    },
+    {
+      "word": "external",
+      "start": 97.98,
+      "end": 98.54,
+      "prob": 0.998
+    },
+    {
+      "word": "environment.",
+      "start": 98.54,
+      "end": 99.22,
+      "prob": 0.999
+    },
+    {
+      "word": "The",
+      "start": 99.76,
+      "end": 99.94,
+      "prob": 0.996
+    },
+    {
+      "word": "coordinator,",
+      "start": 99.94,
+      "end": 100.52,
+      "prob": 0.933
+    },
+    {
+      "word": "such",
+      "start": 100.92,
+      "end": 101.16,
+      "prob": 0.998
+    },
+    {
+      "word": "as",
+      "start": 101.16,
+      "end": 101.34,
+      "prob": 0.999
+    },
+    {
+      "word": "the",
+      "start": 101.34,
+      "end": 101.48,
+      "prob": 0.996
+    },
+    {
+      "word": "brain,",
+      "start": 101.48,
+      "end": 101.86,
+      "prob": 0.997
+    },
+    {
+      "word": "processes",
+      "start": 102.32,
+      "end": 102.72,
+      "prob": 0.992
+    },
+    {
+      "word": "the",
+      "start": 102.72,
+      "end": 103.1,
+      "prob": 0.997
+    },
+    {
+      "word": "information.",
+      "start": 103.1,
+      "end": 103.72,
+      "prob": 0.997
+    },
+    {
+      "word": "Effectors,",
+      "start": 104.6,
+      "end": 104.98,
+      "prob": 0.966
+    },
+    {
+      "word": "such",
+      "start": 105.28,
+      "end": 105.5,
+      "prob": 0.998
+    },
+    {
+      "word": "as",
+      "start": 105.5,
+      "end": 105.72,
+      "prob": 0.999
+    },
+    {
+      "word": "muscles",
+      "start": 105.72,
+      "end": 106.08,
+      "prob": 0.976
+    },
+    {
+      "word": "or",
+      "start": 106.08,
+      "end": 106.52,
+      "prob": 0.984
+    },
+    {
+      "word": "glands,",
+      "start": 106.52,
+      "end": 106.92,
+      "prob": 0.994
+    },
+    {
+      "word": "bring",
+      "start": 107.38,
+      "end": 107.58,
+      "prob": 0.991
+    },
+    {
+      "word": "about",
+      "start": 107.58,
+      "end": 107.88,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 107.88,
+      "end": 108.04,
+      "prob": 0.993
+    },
+    {
+      "word": "response.",
+      "start": 108.04,
+      "end": 108.4,
+      "prob": 0.999
+    },
+    {
+      "word": "If",
+      "start": 108.8,
+      "end": 109.2,
+      "prob": 0.634
+    },
+    {
+      "word": "this",
+      "start": 109.2,
+      "end": 109.42,
+      "prob": 0.995
+    },
+    {
+      "word": "explanation",
+      "start": 109.42,
+      "end": 109.86,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 109.86,
+      "end": 110.24,
+      "prob": 0.992
+    },
+    {
+      "word": "helped,",
+      "start": 110.24,
+      "end": 110.66,
+      "prob": 0.996
+    },
+    {
+      "word": "please",
+      "start": 111.12,
+      "end": 111.24,
+      "prob": 0.993
+    },
+    {
+      "word": "subscribe",
+      "start": 111.24,
+      "end": 111.74,
+      "prob": 0.992
+    },
+    {
+      "word": "to",
+      "start": 111.74,
+      "end": 112.02,
+      "prob": 0.996
+    },
+    {
+      "word": "JD",
+      "start": 112.02,
+      "end": 112.38,
+      "prob": 0.875
+    },
+    {
+      "word": "Science",
+      "start": 112.38,
+      "end": 112.84,
+      "prob": 0.497
+    },
+    {
+      "word": "for",
+      "start": 112.84,
+      "end": 113.18,
+      "prob": 0.997
+    },
+    {
+      "word": "more",
+      "start": 113.18,
+      "end": 113.4,
+      "prob": 0.998
+    },
+    {
+      "word": "lessons.",
+      "start": 113.4,
+      "end": 113.78,
+      "prob": 0.997
+    },
+    {
+      "word": "You",
+      "start": 114.4,
+      "end": 114.4,
+      "prob": 0.978
+    },
+    {
+      "word": "can",
+      "start": 114.4,
+      "end": 114.56,
+      "prob": 0.999
+    },
+    {
+      "word": "find",
+      "start": 114.56,
+      "end": 114.8,
+      "prob": 0.995
+    },
+    {
+      "word": "further",
+      "start": 114.8,
+      "end": 115.1,
+      "prob": 0.998
+    },
+    {
+      "word": "learning",
+      "start": 115.1,
+      "end": 115.52,
+      "prob": 0.996
+    },
+    {
+      "word": "resources",
+      "start": 115.52,
+      "end": 116.02,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 116.02,
+      "end": 116.44,
+      "prob": 0.994
+    },
+    {
+      "word": "practice",
+      "start": 116.44,
+      "end": 116.82,
+      "prob": 0.926
+    },
+    {
+      "word": "questions",
+      "start": 116.82,
+      "end": 117.38,
+      "prob": 0.998
+    },
+    {
+      "word": "at",
+      "start": 117.38,
+      "end": 117.86,
+      "prob": 0.992
+    },
+    {
+      "word": "jdscience",
+      "start": 117.86,
+      "end": 121.1,
+      "prob": 0.637
+    },
+    {
+      "word": ".co",
+      "start": 121.1,
+      "end": 122.1,
+      "prob": 0.997
+    },
+    {
+      "word": ".uk.",
+      "start": 122.1,
+      "end": 122.84,
+      "prob": 0.995
+    },
+    {
+      "word": "Thank",
+      "start": 123.66,
+      "end": 123.72,
+      "prob": 0.977
+    },
+    {
+      "word": "you",
+      "start": 123.72,
+      "end": 123.88,
+      "prob": 0.996
+    },
+    {
+      "word": "for",
+      "start": 123.88,
+      "end": 124.04,
+      "prob": 0.998
+    },
+    {
+      "word": "watching,",
+      "start": 124.04,
+      "end": 124.44,
+      "prob": 0.998
+    },
+    {
+      "word": "Ick.",
+      "start": 124.98,
+      "end": 125.1,
+      "prob": 0.416
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

@@ -62,6 +62,10 @@ The teaching edition speaks the draft and then the correction. On-screen diagram
 
 ## Production status (26 October 2026, Europe/London)
 
-Cloned-voice TTS for **1.1 Cell Division** and **1.2 Bacterial Growth** completed with `eleven_multilingual_v2` and the JD Science cloned voice.
+Cloned-voice TTS for **1.1 Cell Division** and **1.2 Bacterial Growth** completed with `eleven_multilingual_v2` and the JD Science cloned voice. Those two lessons are live on `/resources/gcse/biology/videos/` and the papers Videos catalog.
 
-Lesson **1.3** and the remaining 22 lessons are blocked by the ElevenLabs character/credit quota (`quota_exceeded`; 52 credits remaining, hundreds required per lesson). No generic fallback voice is used. Resume with `python3 scripts/gcse_biology/tts.py` once credits are available; existing transcripts are skipped.
+A fresh cloned-voice request for **1.3 Transport in Cells** (1875 characters, one chunk) still returns `quota_exceeded`: 52 credits remaining, 825 required for that request. The cloned voice is already configured (`ELEVENLABS_VOICE_ID` present). TTS still consumes character credits; there is no credit-free path that uses this voice. Existing MP3s for 1.1 and 1.2 are reused and not regenerated. No generic fallback voice is used.
+
+The remaining 23 lessons therefore have **no cloned-voice MP3** and are **not reported complete**. Silent 1080p files exist only as **visual production masters** (red `VISUAL DRAFT` banner). They are unpublished. Cue order on 5.4, 6.3, 7.1 and 7.5 was corrected so the production aligner matches the teaching-edition script. Script review: `content/gcse-biology/SCRIPT_REVIEW.md`.
+
+Resume cloned-voice production with `python3 scripts/gcse_biology/tts.py` (skips existing 1.1 and 1.2 transcripts) once credits cover a full lesson chunk, starting at **1.3 Transport in Cells**, then `python3 scripts/gcse_biology/produce.py --slug <slug> --skip-tts`. That path aligns highlights and transitions to cloned-voice word times, omits the draft banner, and refuses to mux silent masters. Do not publish unfinished lessons. Keep YouTube Unlisted until approved for Public. See `content/gcse-biology/PRODUCTION_REGISTER.md`.

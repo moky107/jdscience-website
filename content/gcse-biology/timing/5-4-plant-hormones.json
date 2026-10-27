@@ -1,0 +1,122 @@
+{
+  "slug": "5-4-plant-hormones",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 117.812,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.517,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "tropism",
+      "t": 5.517,
+      "t_end": 28.296,
+      "cue": "Plants respond to light and gravity by growth",
+      "animate": false
+    },
+    {
+      "id": "uses",
+      "t": 28.296,
+      "t_end": 45.47,
+      "cue": "Ethene helps fruit ripen",
+      "animate": false
+    },
+    {
+      "id": "auxin",
+      "t": 45.47,
+      "t_end": 65.046,
+      "cue": "auxin is redistributed so that more accumulates",
+      "animate": true
+    },
+    {
+      "id": "roots",
+      "t": 65.046,
+      "t_end": 73.855,
+      "cue": "In roots, higher auxin concentrations can inhibit",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 73.855,
+      "t_end": 85.779,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 85.779,
+      "t_end": 93.698,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 93.698,
+      "t_end": 106.422,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 106.422,
+      "t_end": 117.812,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 76.08,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 80.707,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 82.041,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 86.046,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 93.818,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "uses",
+      "item": "b1",
+      "t": 28.416,
+      "cue": "Ethene helps fruit ripen"
+    },
+    {
+      "slide": "uses",
+      "item": "b2",
+      "t": 30.165,
+      "cue": "Gibberellins help seeds germinate"
+    },
+    {
+      "slide": "uses",
+      "item": "b3",
+      "t": 32.834,
+      "cue": "Auxins are used as weedkillers"
+    }
+  ]
+}

@@ -1,0 +1,1725 @@
+{
+  "audio": "content/videos/3-2-monoclonal-antibodies/source/narration_master.m4a",
+  "duration": 126.41,
+  "full_text": "Hello and welcome back to JD Science. Today, we are exploring monoclonal antibodies. These are identical antibodies made from a single parent cell. A mouse is injected with an antigen and its B lymphocytes produce antibodies against it. These lymphocytes are fused with tumor cells to make a hybridoma. The hybridoma divides rapidly and produces large amounts of identical antibodies. They can be used to locate molecules in cells, for pregnancy tests, and for testing hormone levels. In cancer treatment, they bind to cancer cells and tag them for attack by white blood cells. Compared with chemotherapy and radiotherapy, they target cells more precisely and have fewer side effects. A monoclonal antibody recognises a particular antigen or part of an antigen. In traditional hybridoma production, an antibody producing B lymphocyte is fused with a tumor cell to combine specificity with the ability to divide repeatedly. Monoclonal antibodies can be used in pregnancy tests, diagnostics and some targeted cancer treatments. They are not automatically free from side effects. Their benefits and risks depend on the particular treatment. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. Describe how a hybridoma cell is produced. Here is a model answer. A B lymphocyte from the mouse, which makes the antibody, is fused with a tumor cell. The resulting hybrid provides rapidly and produces large amounts of identical antibodies. If this explanation has helped, please subscribe to JDScience for more lessons. You can find further learning resources and practice questions at jdsciense.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.4,
+      "prob": 0.896
+    },
+    {
+      "word": "and",
+      "start": 0.4,
+      "end": 0.8,
+      "prob": 0.734
+    },
+    {
+      "word": "welcome",
+      "start": 0.8,
+      "end": 1.06,
+      "prob": 0.976
+    },
+    {
+      "word": "back",
+      "start": 1.06,
+      "end": 1.46,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.46,
+      "end": 1.68,
+      "prob": 0.998
+    },
+    {
+      "word": "JD",
+      "start": 1.68,
+      "end": 2.08,
+      "prob": 0.856
+    },
+    {
+      "word": "Science.",
+      "start": 2.08,
+      "end": 2.56,
+      "prob": 0.543
+    },
+    {
+      "word": "Today,",
+      "start": 3.24,
+      "end": 3.58,
+      "prob": 0.995
+    },
+    {
+      "word": "we",
+      "start": 3.96,
+      "end": 4.22,
+      "prob": 0.992
+    },
+    {
+      "word": "are",
+      "start": 4.22,
+      "end": 4.36,
+      "prob": 0.973
+    },
+    {
+      "word": "exploring",
+      "start": 4.36,
+      "end": 4.98,
+      "prob": 0.998
+    },
+    {
+      "word": "monoclonal",
+      "start": 4.98,
+      "end": 5.88,
+      "prob": 0.986
+    },
+    {
+      "word": "antibodies.",
+      "start": 5.88,
+      "end": 6.52,
+      "prob": 0.996
+    },
+    {
+      "word": "These",
+      "start": 7.16,
+      "end": 7.42,
+      "prob": 0.995
+    },
+    {
+      "word": "are",
+      "start": 7.42,
+      "end": 7.62,
+      "prob": 0.998
+    },
+    {
+      "word": "identical",
+      "start": 7.62,
+      "end": 8.24,
+      "prob": 0.996
+    },
+    {
+      "word": "antibodies",
+      "start": 8.24,
+      "end": 8.94,
+      "prob": 0.999
+    },
+    {
+      "word": "made",
+      "start": 8.94,
+      "end": 9.36,
+      "prob": 0.982
+    },
+    {
+      "word": "from",
+      "start": 9.36,
+      "end": 9.64,
+      "prob": 0.997
+    },
+    {
+      "word": "a",
+      "start": 9.64,
+      "end": 9.78,
+      "prob": 0.997
+    },
+    {
+      "word": "single",
+      "start": 9.78,
+      "end": 10.14,
+      "prob": 0.998
+    },
+    {
+      "word": "parent",
+      "start": 10.14,
+      "end": 10.46,
+      "prob": 0.965
+    },
+    {
+      "word": "cell.",
+      "start": 10.46,
+      "end": 10.94,
+      "prob": 0.973
+    },
+    {
+      "word": "A",
+      "start": 11.54,
+      "end": 11.72,
+      "prob": 0.989
+    },
+    {
+      "word": "mouse",
+      "start": 11.72,
+      "end": 12.02,
+      "prob": 0.991
+    },
+    {
+      "word": "is",
+      "start": 12.02,
+      "end": 12.24,
+      "prob": 0.998
+    },
+    {
+      "word": "injected",
+      "start": 12.24,
+      "end": 12.66,
+      "prob": 0.999
+    },
+    {
+      "word": "with",
+      "start": 12.66,
+      "end": 12.94,
+      "prob": 0.998
+    },
+    {
+      "word": "an",
+      "start": 12.94,
+      "end": 13.08,
+      "prob": 0.99
+    },
+    {
+      "word": "antigen",
+      "start": 13.08,
+      "end": 13.56,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 13.56,
+      "end": 14.12,
+      "prob": 0.675
+    },
+    {
+      "word": "its",
+      "start": 14.12,
+      "end": 14.3,
+      "prob": 0.892
+    },
+    {
+      "word": "B",
+      "start": 14.3,
+      "end": 14.6,
+      "prob": 0.91
+    },
+    {
+      "word": "lymphocytes",
+      "start": 14.6,
+      "end": 15.22,
+      "prob": 0.964
+    },
+    {
+      "word": "produce",
+      "start": 15.22,
+      "end": 15.7,
+      "prob": 0.992
+    },
+    {
+      "word": "antibodies",
+      "start": 15.7,
+      "end": 16.38,
+      "prob": 0.998
+    },
+    {
+      "word": "against",
+      "start": 16.38,
+      "end": 16.76,
+      "prob": 0.999
+    },
+    {
+      "word": "it.",
+      "start": 16.76,
+      "end": 17.26,
+      "prob": 0.997
+    },
+    {
+      "word": "These",
+      "start": 17.62,
+      "end": 17.84,
+      "prob": 0.992
+    },
+    {
+      "word": "lymphocytes",
+      "start": 17.84,
+      "end": 18.44,
+      "prob": 0.999
+    },
+    {
+      "word": "are",
+      "start": 18.44,
+      "end": 18.72,
+      "prob": 0.999
+    },
+    {
+      "word": "fused",
+      "start": 18.72,
+      "end": 19.16,
+      "prob": 0.993
+    },
+    {
+      "word": "with",
+      "start": 19.16,
+      "end": 19.48,
+      "prob": 0.999
+    },
+    {
+      "word": "tumor",
+      "start": 19.48,
+      "end": 19.82,
+      "prob": 0.712
+    },
+    {
+      "word": "cells",
+      "start": 19.82,
+      "end": 20.2,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 20.2,
+      "end": 20.5,
+      "prob": 0.997
+    },
+    {
+      "word": "make",
+      "start": 20.5,
+      "end": 20.7,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 20.7,
+      "end": 20.84,
+      "prob": 0.997
+    },
+    {
+      "word": "hybridoma.",
+      "start": 20.84,
+      "end": 21.46,
+      "prob": 0.957
+    },
+    {
+      "word": "The",
+      "start": 22.0,
+      "end": 22.2,
+      "prob": 0.993
+    },
+    {
+      "word": "hybridoma",
+      "start": 22.2,
+      "end": 22.9,
+      "prob": 0.998
+    },
+    {
+      "word": "divides",
+      "start": 22.9,
+      "end": 23.28,
+      "prob": 0.997
+    },
+    {
+      "word": "rapidly",
+      "start": 23.28,
+      "end": 24.0,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 24.0,
+      "end": 24.56,
+      "prob": 0.98
+    },
+    {
+      "word": "produces",
+      "start": 24.56,
+      "end": 25.0,
+      "prob": 0.998
+    },
+    {
+      "word": "large",
+      "start": 25.0,
+      "end": 25.5,
+      "prob": 0.981
+    },
+    {
+      "word": "amounts",
+      "start": 25.5,
+      "end": 25.9,
+      "prob": 0.999
+    },
+    {
+      "word": "of",
+      "start": 25.9,
+      "end": 26.16,
+      "prob": 0.999
+    },
+    {
+      "word": "identical",
+      "start": 26.16,
+      "end": 26.66,
+      "prob": 0.999
+    },
+    {
+      "word": "antibodies.",
+      "start": 26.66,
+      "end": 27.38,
+      "prob": 0.999
+    },
+    {
+      "word": "They",
+      "start": 27.38,
+      "end": 27.92,
+      "prob": 0.675
+    },
+    {
+      "word": "can",
+      "start": 27.92,
+      "end": 28.1,
+      "prob": 0.996
+    },
+    {
+      "word": "be",
+      "start": 28.1,
+      "end": 28.24,
+      "prob": 0.994
+    },
+    {
+      "word": "used",
+      "start": 28.24,
+      "end": 28.52,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 28.52,
+      "end": 28.76,
+      "prob": 0.997
+    },
+    {
+      "word": "locate",
+      "start": 28.76,
+      "end": 29.18,
+      "prob": 0.992
+    },
+    {
+      "word": "molecules",
+      "start": 29.18,
+      "end": 29.7,
+      "prob": 0.99
+    },
+    {
+      "word": "in",
+      "start": 29.7,
+      "end": 30.08,
+      "prob": 0.996
+    },
+    {
+      "word": "cells,",
+      "start": 30.08,
+      "end": 30.52,
+      "prob": 0.991
+    },
+    {
+      "word": "for",
+      "start": 30.9,
+      "end": 31.06,
+      "prob": 0.986
+    },
+    {
+      "word": "pregnancy",
+      "start": 31.06,
+      "end": 31.46,
+      "prob": 0.998
+    },
+    {
+      "word": "tests,",
+      "start": 31.46,
+      "end": 32.0,
+      "prob": 0.99
+    },
+    {
+      "word": "and",
+      "start": 32.32,
+      "end": 32.54,
+      "prob": 0.992
+    },
+    {
+      "word": "for",
+      "start": 32.54,
+      "end": 32.72,
+      "prob": 0.987
+    },
+    {
+      "word": "testing",
+      "start": 32.72,
+      "end": 33.1,
+      "prob": 0.997
+    },
+    {
+      "word": "hormone",
+      "start": 33.1,
+      "end": 33.5,
+      "prob": 0.998
+    },
+    {
+      "word": "levels.",
+      "start": 33.5,
+      "end": 33.98,
+      "prob": 0.999
+    },
+    {
+      "word": "In",
+      "start": 33.98,
+      "end": 34.68,
+      "prob": 0.816
+    },
+    {
+      "word": "cancer",
+      "start": 34.68,
+      "end": 35.1,
+      "prob": 0.995
+    },
+    {
+      "word": "treatment,",
+      "start": 35.1,
+      "end": 35.6,
+      "prob": 0.995
+    },
+    {
+      "word": "they",
+      "start": 36.04,
+      "end": 36.1,
+      "prob": 0.995
+    },
+    {
+      "word": "bind",
+      "start": 36.1,
+      "end": 36.44,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 36.44,
+      "end": 36.7,
+      "prob": 0.995
+    },
+    {
+      "word": "cancer",
+      "start": 36.7,
+      "end": 37.0,
+      "prob": 0.996
+    },
+    {
+      "word": "cells",
+      "start": 37.0,
+      "end": 37.5,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 37.5,
+      "end": 37.78,
+      "prob": 0.976
+    },
+    {
+      "word": "tag",
+      "start": 37.78,
+      "end": 38.12,
+      "prob": 0.989
+    },
+    {
+      "word": "them",
+      "start": 38.12,
+      "end": 38.36,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 38.36,
+      "end": 38.6,
+      "prob": 0.998
+    },
+    {
+      "word": "attack",
+      "start": 38.6,
+      "end": 38.92,
+      "prob": 0.983
+    },
+    {
+      "word": "by",
+      "start": 38.92,
+      "end": 39.22,
+      "prob": 0.998
+    },
+    {
+      "word": "white",
+      "start": 39.22,
+      "end": 39.56,
+      "prob": 0.986
+    },
+    {
+      "word": "blood",
+      "start": 39.56,
+      "end": 39.78,
+      "prob": 0.999
+    },
+    {
+      "word": "cells.",
+      "start": 39.78,
+      "end": 40.26,
+      "prob": 0.998
+    },
+    {
+      "word": "Compared",
+      "start": 40.78,
+      "end": 41.04,
+      "prob": 0.992
+    },
+    {
+      "word": "with",
+      "start": 41.04,
+      "end": 41.34,
+      "prob": 0.991
+    },
+    {
+      "word": "chemotherapy",
+      "start": 41.34,
+      "end": 41.9,
+      "prob": 0.987
+    },
+    {
+      "word": "and",
+      "start": 41.9,
+      "end": 42.44,
+      "prob": 0.994
+    },
+    {
+      "word": "radiotherapy,",
+      "start": 42.44,
+      "end": 43.2,
+      "prob": 0.988
+    },
+    {
+      "word": "they",
+      "start": 43.74,
+      "end": 43.92,
+      "prob": 0.995
+    },
+    {
+      "word": "target",
+      "start": 43.92,
+      "end": 44.28,
+      "prob": 0.997
+    },
+    {
+      "word": "cells",
+      "start": 44.28,
+      "end": 44.7,
+      "prob": 0.994
+    },
+    {
+      "word": "more",
+      "start": 44.7,
+      "end": 44.98,
+      "prob": 0.994
+    },
+    {
+      "word": "precisely",
+      "start": 44.98,
+      "end": 45.54,
+      "prob": 0.995
+    },
+    {
+      "word": "and",
+      "start": 45.54,
+      "end": 46.18,
+      "prob": 0.952
+    },
+    {
+      "word": "have",
+      "start": 46.18,
+      "end": 46.32,
+      "prob": 0.997
+    },
+    {
+      "word": "fewer",
+      "start": 46.32,
+      "end": 46.68,
+      "prob": 0.998
+    },
+    {
+      "word": "side",
+      "start": 46.68,
+      "end": 46.96,
+      "prob": 0.998
+    },
+    {
+      "word": "effects.",
+      "start": 46.96,
+      "end": 47.38,
+      "prob": 0.922
+    },
+    {
+      "word": "A",
+      "start": 47.9,
+      "end": 48.0,
+      "prob": 0.988
+    },
+    {
+      "word": "monoclonal",
+      "start": 48.0,
+      "end": 48.64,
+      "prob": 0.995
+    },
+    {
+      "word": "antibody",
+      "start": 48.64,
+      "end": 49.18,
+      "prob": 0.991
+    },
+    {
+      "word": "recognises",
+      "start": 49.18,
+      "end": 50.02,
+      "prob": 0.8
+    },
+    {
+      "word": "a",
+      "start": 50.02,
+      "end": 50.22,
+      "prob": 0.997
+    },
+    {
+      "word": "particular",
+      "start": 50.22,
+      "end": 50.68,
+      "prob": 0.998
+    },
+    {
+      "word": "antigen",
+      "start": 50.68,
+      "end": 51.3,
+      "prob": 0.997
+    },
+    {
+      "word": "or",
+      "start": 51.3,
+      "end": 51.62,
+      "prob": 0.913
+    },
+    {
+      "word": "part",
+      "start": 51.62,
+      "end": 51.96,
+      "prob": 0.987
+    },
+    {
+      "word": "of",
+      "start": 51.96,
+      "end": 52.16,
+      "prob": 0.999
+    },
+    {
+      "word": "an",
+      "start": 52.16,
+      "end": 52.26,
+      "prob": 0.981
+    },
+    {
+      "word": "antigen.",
+      "start": 52.26,
+      "end": 52.72,
+      "prob": 0.999
+    },
+    {
+      "word": "In",
+      "start": 53.2,
+      "end": 53.34,
+      "prob": 0.995
+    },
+    {
+      "word": "traditional",
+      "start": 53.34,
+      "end": 53.84,
+      "prob": 0.995
+    },
+    {
+      "word": "hybridoma",
+      "start": 53.84,
+      "end": 54.46,
+      "prob": 0.949
+    },
+    {
+      "word": "production,",
+      "start": 54.46,
+      "end": 55.04,
+      "prob": 0.993
+    },
+    {
+      "word": "an",
+      "start": 55.56,
+      "end": 55.64,
+      "prob": 0.994
+    },
+    {
+      "word": "antibody",
+      "start": 55.64,
+      "end": 56.12,
+      "prob": 0.996
+    },
+    {
+      "word": "producing",
+      "start": 56.12,
+      "end": 56.68,
+      "prob": 0.535
+    },
+    {
+      "word": "B",
+      "start": 56.68,
+      "end": 57.1,
+      "prob": 0.898
+    },
+    {
+      "word": "lymphocyte",
+      "start": 57.1,
+      "end": 57.78,
+      "prob": 0.984
+    },
+    {
+      "word": "is",
+      "start": 57.78,
+      "end": 58.06,
+      "prob": 0.996
+    },
+    {
+      "word": "fused",
+      "start": 58.06,
+      "end": 58.54,
+      "prob": 0.995
+    },
+    {
+      "word": "with",
+      "start": 58.54,
+      "end": 58.86,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 58.86,
+      "end": 59.04,
+      "prob": 0.978
+    },
+    {
+      "word": "tumor",
+      "start": 59.04,
+      "end": 59.32,
+      "prob": 0.632
+    },
+    {
+      "word": "cell",
+      "start": 59.32,
+      "end": 59.68,
+      "prob": 0.992
+    },
+    {
+      "word": "to",
+      "start": 59.68,
+      "end": 59.92,
+      "prob": 0.89
+    },
+    {
+      "word": "combine",
+      "start": 59.92,
+      "end": 60.3,
+      "prob": 0.987
+    },
+    {
+      "word": "specificity",
+      "start": 60.3,
+      "end": 60.96,
+      "prob": 0.983
+    },
+    {
+      "word": "with",
+      "start": 60.96,
+      "end": 61.52,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 61.52,
+      "end": 61.66,
+      "prob": 0.996
+    },
+    {
+      "word": "ability",
+      "start": 61.66,
+      "end": 61.94,
+      "prob": 0.998
+    },
+    {
+      "word": "to",
+      "start": 61.94,
+      "end": 62.4,
+      "prob": 0.998
+    },
+    {
+      "word": "divide",
+      "start": 62.4,
+      "end": 62.76,
+      "prob": 0.997
+    },
+    {
+      "word": "repeatedly.",
+      "start": 62.76,
+      "end": 63.5,
+      "prob": 0.994
+    },
+    {
+      "word": "Monoclonal",
+      "start": 64.06,
+      "end": 64.52,
+      "prob": 0.971
+    },
+    {
+      "word": "antibodies",
+      "start": 64.52,
+      "end": 65.04,
+      "prob": 0.991
+    },
+    {
+      "word": "can",
+      "start": 65.04,
+      "end": 65.4,
+      "prob": 0.997
+    },
+    {
+      "word": "be",
+      "start": 65.4,
+      "end": 65.54,
+      "prob": 0.996
+    },
+    {
+      "word": "used",
+      "start": 65.54,
+      "end": 65.82,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 65.82,
+      "end": 66.06,
+      "prob": 0.997
+    },
+    {
+      "word": "pregnancy",
+      "start": 66.06,
+      "end": 66.44,
+      "prob": 0.996
+    },
+    {
+      "word": "tests,",
+      "start": 66.44,
+      "end": 67.02,
+      "prob": 0.991
+    },
+    {
+      "word": "diagnostics",
+      "start": 67.48,
+      "end": 68.1,
+      "prob": 0.99
+    },
+    {
+      "word": "and",
+      "start": 68.1,
+      "end": 68.5,
+      "prob": 0.711
+    },
+    {
+      "word": "some",
+      "start": 68.5,
+      "end": 68.74,
+      "prob": 0.993
+    },
+    {
+      "word": "targeted",
+      "start": 68.74,
+      "end": 69.24,
+      "prob": 0.997
+    },
+    {
+      "word": "cancer",
+      "start": 69.24,
+      "end": 69.68,
+      "prob": 0.998
+    },
+    {
+      "word": "treatments.",
+      "start": 69.68,
+      "end": 70.22,
+      "prob": 0.994
+    },
+    {
+      "word": "They",
+      "start": 70.62,
+      "end": 70.8,
+      "prob": 0.988
+    },
+    {
+      "word": "are",
+      "start": 70.8,
+      "end": 70.9,
+      "prob": 0.991
+    },
+    {
+      "word": "not",
+      "start": 70.9,
+      "end": 71.18,
+      "prob": 0.986
+    },
+    {
+      "word": "automatically",
+      "start": 71.18,
+      "end": 71.82,
+      "prob": 0.992
+    },
+    {
+      "word": "free",
+      "start": 71.82,
+      "end": 72.22,
+      "prob": 0.992
+    },
+    {
+      "word": "from",
+      "start": 72.22,
+      "end": 72.48,
+      "prob": 0.994
+    },
+    {
+      "word": "side",
+      "start": 72.48,
+      "end": 72.72,
+      "prob": 0.996
+    },
+    {
+      "word": "effects.",
+      "start": 72.72,
+      "end": 73.12,
+      "prob": 0.925
+    },
+    {
+      "word": "Their",
+      "start": 73.54,
+      "end": 73.74,
+      "prob": 0.981
+    },
+    {
+      "word": "benefits",
+      "start": 73.74,
+      "end": 74.22,
+      "prob": 0.993
+    },
+    {
+      "word": "and",
+      "start": 74.22,
+      "end": 74.56,
+      "prob": 0.995
+    },
+    {
+      "word": "risks",
+      "start": 74.56,
+      "end": 74.9,
+      "prob": 0.979
+    },
+    {
+      "word": "depend",
+      "start": 74.9,
+      "end": 75.4,
+      "prob": 0.986
+    },
+    {
+      "word": "on",
+      "start": 75.4,
+      "end": 75.72,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 75.72,
+      "end": 75.84,
+      "prob": 0.981
+    },
+    {
+      "word": "particular",
+      "start": 75.84,
+      "end": 76.3,
+      "prob": 0.995
+    },
+    {
+      "word": "treatment.",
+      "start": 76.3,
+      "end": 76.74,
+      "prob": 0.996
+    },
+    {
+      "word": "As",
+      "start": 77.02,
+      "end": 77.16,
+      "prob": 0.987
+    },
+    {
+      "word": "you",
+      "start": 77.16,
+      "end": 77.32,
+      "prob": 0.999
+    },
+    {
+      "word": "revise",
+      "start": 77.32,
+      "end": 77.74,
+      "prob": 0.993
+    },
+    {
+      "word": "this",
+      "start": 77.74,
+      "end": 78.04,
+      "prob": 0.988
+    },
+    {
+      "word": "topic,",
+      "start": 78.04,
+      "end": 78.48,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 78.8,
+      "end": 79.04,
+      "prob": 0.997
+    },
+    {
+      "word": "to",
+      "start": 79.04,
+      "end": 79.2,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 79.2,
+      "end": 79.6,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 79.6,
+      "end": 79.88,
+      "prob": 0.996
+    },
+    {
+      "word": "key",
+      "start": 79.88,
+      "end": 80.2,
+      "prob": 0.964
+    },
+    {
+      "word": "process",
+      "start": 80.2,
+      "end": 80.72,
+      "prob": 0.994
+    },
+    {
+      "word": "in",
+      "start": 80.72,
+      "end": 81.02,
+      "prob": 0.996
+    },
+    {
+      "word": "your",
+      "start": 81.02,
+      "end": 81.16,
+      "prob": 0.998
+    },
+    {
+      "word": "own",
+      "start": 81.16,
+      "end": 81.42,
+      "prob": 0.992
+    },
+    {
+      "word": "words.",
+      "start": 81.42,
+      "end": 82.0,
+      "prob": 0.999
+    },
+    {
+      "word": "Focus",
+      "start": 82.56,
+      "end": 82.72,
+      "prob": 0.92
+    },
+    {
+      "word": "on",
+      "start": 82.72,
+      "end": 83.04,
+      "prob": 0.997
+    },
+    {
+      "word": "what",
+      "start": 83.04,
+      "end": 83.28,
+      "prob": 0.992
+    },
+    {
+      "word": "happens,",
+      "start": 83.28,
+      "end": 83.86,
+      "prob": 0.998
+    },
+    {
+      "word": "why",
+      "start": 84.22,
+      "end": 84.56,
+      "prob": 0.996
+    },
+    {
+      "word": "it",
+      "start": 84.56,
+      "end": 84.72,
+      "prob": 0.997
+    },
+    {
+      "word": "happens",
+      "start": 84.72,
+      "end": 85.26,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 85.26,
+      "end": 85.68,
+      "prob": 0.689
+    },
+    {
+      "word": "how",
+      "start": 85.68,
+      "end": 85.98,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 85.98,
+      "end": 86.16,
+      "prob": 0.992
+    },
+    {
+      "word": "structures",
+      "start": 86.16,
+      "end": 86.5,
+      "prob": 0.996
+    },
+    {
+      "word": "involved",
+      "start": 86.5,
+      "end": 87.08,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 87.08,
+      "end": 87.48,
+      "prob": 0.978
+    },
+    {
+      "word": "the",
+      "start": 87.48,
+      "end": 87.7,
+      "prob": 0.996
+    },
+    {
+      "word": "process",
+      "start": 87.7,
+      "end": 88.06,
+      "prob": 0.998
+    },
+    {
+      "word": "work.",
+      "start": 88.06,
+      "end": 88.52,
+      "prob": 0.996
+    },
+    {
+      "word": "Now",
+      "start": 89.02,
+      "end": 89.4,
+      "prob": 0.656
+    },
+    {
+      "word": "pause",
+      "start": 89.4,
+      "end": 90.1,
+      "prob": 0.46
+    },
+    {
+      "word": "the",
+      "start": 90.1,
+      "end": 90.34,
+      "prob": 0.995
+    },
+    {
+      "word": "video",
+      "start": 90.34,
+      "end": 90.66,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 90.66,
+      "end": 91.04,
+      "prob": 0.971
+    },
+    {
+      "word": "try",
+      "start": 91.04,
+      "end": 91.3,
+      "prob": 0.997
+    },
+    {
+      "word": "this",
+      "start": 91.3,
+      "end": 91.78,
+      "prob": 0.971
+    },
+    {
+      "word": "exam",
+      "start": 91.78,
+      "end": 92.26,
+      "prob": 0.989
+    },
+    {
+      "word": "style",
+      "start": 92.26,
+      "end": 92.62,
+      "prob": 0.554
+    },
+    {
+      "word": "question.",
+      "start": 92.62,
+      "end": 93.18,
+      "prob": 0.993
+    },
+    {
+      "word": "Describe",
+      "start": 93.74,
+      "end": 94.2,
+      "prob": 0.911
+    },
+    {
+      "word": "how",
+      "start": 94.2,
+      "end": 94.48,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 94.48,
+      "end": 94.72,
+      "prob": 0.994
+    },
+    {
+      "word": "hybridoma",
+      "start": 94.72,
+      "end": 95.28,
+      "prob": 0.932
+    },
+    {
+      "word": "cell",
+      "start": 95.28,
+      "end": 95.6,
+      "prob": 0.996
+    },
+    {
+      "word": "is",
+      "start": 95.6,
+      "end": 95.82,
+      "prob": 0.998
+    },
+    {
+      "word": "produced.",
+      "start": 95.82,
+      "end": 96.28,
+      "prob": 0.998
+    },
+    {
+      "word": "Here",
+      "start": 96.74,
+      "end": 96.9,
+      "prob": 0.986
+    },
+    {
+      "word": "is",
+      "start": 96.9,
+      "end": 97.04,
+      "prob": 0.982
+    },
+    {
+      "word": "a",
+      "start": 97.04,
+      "end": 97.18,
+      "prob": 0.99
+    },
+    {
+      "word": "model",
+      "start": 97.18,
+      "end": 97.36,
+      "prob": 0.994
+    },
+    {
+      "word": "answer.",
+      "start": 97.36,
+      "end": 97.88,
+      "prob": 0.994
+    },
+    {
+      "word": "A",
+      "start": 98.46,
+      "end": 98.46,
+      "prob": 0.878
+    },
+    {
+      "word": "B",
+      "start": 98.46,
+      "end": 98.76,
+      "prob": 0.577
+    },
+    {
+      "word": "lymphocyte",
+      "start": 98.76,
+      "end": 99.34,
+      "prob": 0.975
+    },
+    {
+      "word": "from",
+      "start": 99.34,
+      "end": 99.62,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 99.62,
+      "end": 99.76,
+      "prob": 0.996
+    },
+    {
+      "word": "mouse,",
+      "start": 99.76,
+      "end": 100.08,
+      "prob": 0.991
+    },
+    {
+      "word": "which",
+      "start": 100.44,
+      "end": 100.56,
+      "prob": 0.998
+    },
+    {
+      "word": "makes",
+      "start": 100.56,
+      "end": 100.82,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 100.82,
+      "end": 100.98,
+      "prob": 0.998
+    },
+    {
+      "word": "antibody,",
+      "start": 100.98,
+      "end": 101.46,
+      "prob": 0.988
+    },
+    {
+      "word": "is",
+      "start": 101.82,
+      "end": 102.1,
+      "prob": 0.998
+    },
+    {
+      "word": "fused",
+      "start": 102.1,
+      "end": 102.6,
+      "prob": 0.992
+    },
+    {
+      "word": "with",
+      "start": 102.6,
+      "end": 102.9,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 102.9,
+      "end": 103.02,
+      "prob": 0.946
+    },
+    {
+      "word": "tumor",
+      "start": 103.02,
+      "end": 103.28,
+      "prob": 0.724
+    },
+    {
+      "word": "cell.",
+      "start": 103.28,
+      "end": 103.7,
+      "prob": 0.997
+    },
+    {
+      "word": "The",
+      "start": 104.14,
+      "end": 104.24,
+      "prob": 0.993
+    },
+    {
+      "word": "resulting",
+      "start": 104.24,
+      "end": 104.66,
+      "prob": 0.998
+    },
+    {
+      "word": "hybrid",
+      "start": 104.66,
+      "end": 105.04,
+      "prob": 0.98
+    },
+    {
+      "word": "provides",
+      "start": 105.04,
+      "end": 105.98,
+      "prob": 0.108
+    },
+    {
+      "word": "rapidly",
+      "start": 105.98,
+      "end": 106.52,
+      "prob": 0.978
+    },
+    {
+      "word": "and",
+      "start": 106.52,
+      "end": 106.94,
+      "prob": 0.962
+    },
+    {
+      "word": "produces",
+      "start": 106.94,
+      "end": 107.42,
+      "prob": 0.957
+    },
+    {
+      "word": "large",
+      "start": 107.42,
+      "end": 107.9,
+      "prob": 0.978
+    },
+    {
+      "word": "amounts",
+      "start": 107.9,
+      "end": 108.26,
+      "prob": 0.997
+    },
+    {
+      "word": "of",
+      "start": 108.26,
+      "end": 108.56,
+      "prob": 0.998
+    },
+    {
+      "word": "identical",
+      "start": 108.56,
+      "end": 109.06,
+      "prob": 0.992
+    },
+    {
+      "word": "antibodies.",
+      "start": 109.06,
+      "end": 109.78,
+      "prob": 0.996
+    },
+    {
+      "word": "If",
+      "start": 110.3,
+      "end": 110.56,
+      "prob": 0.973
+    },
+    {
+      "word": "this",
+      "start": 110.56,
+      "end": 110.76,
+      "prob": 0.997
+    },
+    {
+      "word": "explanation",
+      "start": 110.76,
+      "end": 111.22,
+      "prob": 0.996
+    },
+    {
+      "word": "has",
+      "start": 111.22,
+      "end": 111.6,
+      "prob": 0.99
+    },
+    {
+      "word": "helped,",
+      "start": 111.6,
+      "end": 112.0,
+      "prob": 0.993
+    },
+    {
+      "word": "please",
+      "start": 112.46,
+      "end": 112.62,
+      "prob": 0.989
+    },
+    {
+      "word": "subscribe",
+      "start": 112.62,
+      "end": 113.16,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 113.16,
+      "end": 113.42,
+      "prob": 0.94
+    },
+    {
+      "word": "JDScience",
+      "start": 113.42,
+      "end": 114.24,
+      "prob": 0.389
+    },
+    {
+      "word": "for",
+      "start": 114.24,
+      "end": 114.52,
+      "prob": 0.989
+    },
+    {
+      "word": "more",
+      "start": 114.52,
+      "end": 114.72,
+      "prob": 0.996
+    },
+    {
+      "word": "lessons.",
+      "start": 114.72,
+      "end": 115.1,
+      "prob": 0.998
+    },
+    {
+      "word": "You",
+      "start": 115.82,
+      "end": 115.84,
+      "prob": 0.987
+    },
+    {
+      "word": "can",
+      "start": 115.84,
+      "end": 116.0,
+      "prob": 0.999
+    },
+    {
+      "word": "find",
+      "start": 116.0,
+      "end": 116.28,
+      "prob": 0.997
+    },
+    {
+      "word": "further",
+      "start": 116.28,
+      "end": 116.62,
+      "prob": 0.999
+    },
+    {
+      "word": "learning",
+      "start": 116.62,
+      "end": 117.04,
+      "prob": 0.994
+    },
+    {
+      "word": "resources",
+      "start": 117.04,
+      "end": 117.5,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 117.5,
+      "end": 117.96,
+      "prob": 0.992
+    },
+    {
+      "word": "practice",
+      "start": 117.96,
+      "end": 118.34,
+      "prob": 0.952
+    },
+    {
+      "word": "questions",
+      "start": 118.34,
+      "end": 118.9,
+      "prob": 0.998
+    },
+    {
+      "word": "at",
+      "start": 118.9,
+      "end": 119.5,
+      "prob": 0.993
+    },
+    {
+      "word": "jdsciense",
+      "start": 119.5,
+      "end": 122.6,
+      "prob": 0.519
+    },
+    {
+      "word": ".co",
+      "start": 122.6,
+      "end": 124.02,
+      "prob": 0.951
+    },
+    {
+      "word": ".uk.",
+      "start": 124.02,
+      "end": 124.74,
+      "prob": 0.992
+    },
+    {
+      "word": "Thank",
+      "start": 125.2,
+      "end": 125.58,
+      "prob": 0.979
+    },
+    {
+      "word": "you",
+      "start": 125.58,
+      "end": 125.72,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 125.72,
+      "end": 125.88,
+      "prob": 0.998
+    },
+    {
+      "word": "watching.",
+      "start": 125.88,
+      "end": 126.16,
+      "prob": 0.999
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

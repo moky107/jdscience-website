@@ -1,0 +1,1665 @@
+{
+  "audio": "content/videos/3-3-plant-disease/source/narration_master.m4a",
+  "duration": 127.69,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring plant disease. Signs of disease include stunted growth, spots on leaves, areas of decay, growths, pests and discoloured or misshapen leaves. Rose black spot is a fungal disease that causes black spots on leaves which turn yellow and fall early. It spreads by wind and rain. Tobacco mosaic virus causes mosaic patterns on leaves and reduces photosynthesis. Nitrate deficiency causes stunted growth because nitrates are needed for protein. Magnesium deficiency causes chlorosis because magnesium is needed, to make chlorophyll. Plants defend themselves with physical barriers like waxy cuticles and thorns and chemical defences such as antibacterial chemicals. Mineral deficiencies can resemble infectious diseases, so the pattern of symptoms matters. Magnesium deficiency commonly causes intervenal chlorosis, particularly in older species because magnesium is a mobile nutrient and is required for chlorophyll. Nitrate deficiency can cause poor growth because nitrogen is needed to make amino acids and proteins. A plant's appearance is evidence, but careful diagnosis may require further investigation. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. A plant has yellow leaves with green veins. Suggest which mineral ion is missing and explain your answer. Here is a model answer. Magnesium. It is needed to make chlorophyll, so a deficiency causes chlorosis yellowing. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdsciense.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.32,
+      "prob": 0.891
+    },
+    {
+      "word": "and",
+      "start": 0.32,
+      "end": 0.56,
+      "prob": 0.913
+    },
+    {
+      "word": "welcome",
+      "start": 0.56,
+      "end": 0.8,
+      "prob": 0.978
+    },
+    {
+      "word": "back",
+      "start": 0.8,
+      "end": 1.16,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.16,
+      "end": 1.38,
+      "prob": 0.998
+    },
+    {
+      "word": "JD",
+      "start": 1.38,
+      "end": 1.72,
+      "prob": 0.826
+    },
+    {
+      "word": "Science.",
+      "start": 1.72,
+      "end": 2.16,
+      "prob": 0.653
+    },
+    {
+      "word": "Today",
+      "start": 2.72,
+      "end": 3.1,
+      "prob": 0.996
+    },
+    {
+      "word": "we",
+      "start": 3.1,
+      "end": 3.6,
+      "prob": 0.599
+    },
+    {
+      "word": "are",
+      "start": 3.6,
+      "end": 3.74,
+      "prob": 0.953
+    },
+    {
+      "word": "exploring",
+      "start": 3.74,
+      "end": 4.36,
+      "prob": 0.998
+    },
+    {
+      "word": "plant",
+      "start": 4.36,
+      "end": 4.76,
+      "prob": 0.921
+    },
+    {
+      "word": "disease.",
+      "start": 4.76,
+      "end": 5.34,
+      "prob": 0.995
+    },
+    {
+      "word": "Signs",
+      "start": 6.06,
+      "end": 6.06,
+      "prob": 0.989
+    },
+    {
+      "word": "of",
+      "start": 6.06,
+      "end": 6.3,
+      "prob": 0.999
+    },
+    {
+      "word": "disease",
+      "start": 6.3,
+      "end": 6.66,
+      "prob": 0.977
+    },
+    {
+      "word": "include",
+      "start": 6.66,
+      "end": 7.22,
+      "prob": 0.905
+    },
+    {
+      "word": "stunted",
+      "start": 7.22,
+      "end": 7.86,
+      "prob": 0.99
+    },
+    {
+      "word": "growth,",
+      "start": 7.86,
+      "end": 8.24,
+      "prob": 0.998
+    },
+    {
+      "word": "spots",
+      "start": 8.7,
+      "end": 8.9,
+      "prob": 0.995
+    },
+    {
+      "word": "on",
+      "start": 8.9,
+      "end": 9.18,
+      "prob": 0.998
+    },
+    {
+      "word": "leaves,",
+      "start": 9.18,
+      "end": 9.56,
+      "prob": 0.996
+    },
+    {
+      "word": "areas",
+      "start": 10.1,
+      "end": 10.38,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 10.38,
+      "end": 10.6,
+      "prob": 0.999
+    },
+    {
+      "word": "decay,",
+      "start": 10.6,
+      "end": 11.04,
+      "prob": 0.999
+    },
+    {
+      "word": "growths,",
+      "start": 11.7,
+      "end": 12.28,
+      "prob": 0.954
+    },
+    {
+      "word": "pests",
+      "start": 12.4,
+      "end": 12.76,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 12.76,
+      "end": 13.42,
+      "prob": 0.543
+    },
+    {
+      "word": "discoloured",
+      "start": 13.42,
+      "end": 14.12,
+      "prob": 0.843
+    },
+    {
+      "word": "or",
+      "start": 14.12,
+      "end": 14.36,
+      "prob": 0.967
+    },
+    {
+      "word": "misshapen",
+      "start": 14.36,
+      "end": 14.96,
+      "prob": 0.991
+    },
+    {
+      "word": "leaves.",
+      "start": 14.96,
+      "end": 15.42,
+      "prob": 0.997
+    },
+    {
+      "word": "Rose",
+      "start": 16.08,
+      "end": 16.16,
+      "prob": 0.961
+    },
+    {
+      "word": "black",
+      "start": 16.16,
+      "end": 16.48,
+      "prob": 0.744
+    },
+    {
+      "word": "spot",
+      "start": 16.48,
+      "end": 16.84,
+      "prob": 0.828
+    },
+    {
+      "word": "is",
+      "start": 16.84,
+      "end": 17.12,
+      "prob": 0.994
+    },
+    {
+      "word": "a",
+      "start": 17.12,
+      "end": 17.28,
+      "prob": 0.995
+    },
+    {
+      "word": "fungal",
+      "start": 17.28,
+      "end": 17.68,
+      "prob": 0.998
+    },
+    {
+      "word": "disease",
+      "start": 17.68,
+      "end": 18.02,
+      "prob": 0.993
+    },
+    {
+      "word": "that",
+      "start": 18.02,
+      "end": 18.38,
+      "prob": 0.989
+    },
+    {
+      "word": "causes",
+      "start": 18.38,
+      "end": 18.72,
+      "prob": 0.996
+    },
+    {
+      "word": "black",
+      "start": 18.72,
+      "end": 19.14,
+      "prob": 0.997
+    },
+    {
+      "word": "spots",
+      "start": 19.14,
+      "end": 19.48,
+      "prob": 0.998
+    },
+    {
+      "word": "on",
+      "start": 19.48,
+      "end": 19.78,
+      "prob": 0.998
+    },
+    {
+      "word": "leaves",
+      "start": 19.78,
+      "end": 20.2,
+      "prob": 0.998
+    },
+    {
+      "word": "which",
+      "start": 20.2,
+      "end": 20.72,
+      "prob": 0.608
+    },
+    {
+      "word": "turn",
+      "start": 20.72,
+      "end": 21.06,
+      "prob": 0.993
+    },
+    {
+      "word": "yellow",
+      "start": 21.06,
+      "end": 21.4,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 21.4,
+      "end": 21.82,
+      "prob": 0.993
+    },
+    {
+      "word": "fall",
+      "start": 21.82,
+      "end": 22.14,
+      "prob": 0.999
+    },
+    {
+      "word": "early.",
+      "start": 22.14,
+      "end": 22.62,
+      "prob": 0.997
+    },
+    {
+      "word": "It",
+      "start": 23.06,
+      "end": 23.24,
+      "prob": 0.993
+    },
+    {
+      "word": "spreads",
+      "start": 23.24,
+      "end": 23.56,
+      "prob": 0.997
+    },
+    {
+      "word": "by",
+      "start": 23.56,
+      "end": 23.9,
+      "prob": 0.999
+    },
+    {
+      "word": "wind",
+      "start": 23.9,
+      "end": 24.32,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 24.32,
+      "end": 24.66,
+      "prob": 0.998
+    },
+    {
+      "word": "rain.",
+      "start": 24.66,
+      "end": 24.98,
+      "prob": 0.999
+    },
+    {
+      "word": "Tobacco",
+      "start": 24.98,
+      "end": 25.74,
+      "prob": 0.177
+    },
+    {
+      "word": "mosaic",
+      "start": 25.74,
+      "end": 26.2,
+      "prob": 0.591
+    },
+    {
+      "word": "virus",
+      "start": 26.2,
+      "end": 26.78,
+      "prob": 0.755
+    },
+    {
+      "word": "causes",
+      "start": 26.78,
+      "end": 27.24,
+      "prob": 0.894
+    },
+    {
+      "word": "mosaic",
+      "start": 27.24,
+      "end": 27.76,
+      "prob": 0.658
+    },
+    {
+      "word": "patterns",
+      "start": 27.76,
+      "end": 28.34,
+      "prob": 0.97
+    },
+    {
+      "word": "on",
+      "start": 28.34,
+      "end": 28.6,
+      "prob": 0.948
+    },
+    {
+      "word": "leaves",
+      "start": 28.6,
+      "end": 29.02,
+      "prob": 0.945
+    },
+    {
+      "word": "and",
+      "start": 29.02,
+      "end": 29.36,
+      "prob": 0.889
+    },
+    {
+      "word": "reduces",
+      "start": 29.36,
+      "end": 29.82,
+      "prob": 0.942
+    },
+    {
+      "word": "photosynthesis.",
+      "start": 29.82,
+      "end": 30.82,
+      "prob": 0.974
+    },
+    {
+      "word": "Nitrate",
+      "start": 31.58,
+      "end": 31.9,
+      "prob": 0.974
+    },
+    {
+      "word": "deficiency",
+      "start": 31.9,
+      "end": 32.52,
+      "prob": 0.771
+    },
+    {
+      "word": "causes",
+      "start": 32.52,
+      "end": 32.94,
+      "prob": 0.952
+    },
+    {
+      "word": "stunted",
+      "start": 32.94,
+      "end": 33.58,
+      "prob": 0.611
+    },
+    {
+      "word": "growth",
+      "start": 33.58,
+      "end": 33.9,
+      "prob": 0.992
+    },
+    {
+      "word": "because",
+      "start": 33.9,
+      "end": 34.56,
+      "prob": 0.765
+    },
+    {
+      "word": "nitrates",
+      "start": 34.56,
+      "end": 35.24,
+      "prob": 0.899
+    },
+    {
+      "word": "are",
+      "start": 35.24,
+      "end": 35.4,
+      "prob": 0.951
+    },
+    {
+      "word": "needed",
+      "start": 35.4,
+      "end": 35.6,
+      "prob": 0.993
+    },
+    {
+      "word": "for",
+      "start": 35.6,
+      "end": 35.9,
+      "prob": 0.96
+    },
+    {
+      "word": "protein.",
+      "start": 35.9,
+      "end": 36.44,
+      "prob": 0.934
+    },
+    {
+      "word": "Magnesium",
+      "start": 37.08,
+      "end": 37.58,
+      "prob": 0.87
+    },
+    {
+      "word": "deficiency",
+      "start": 37.58,
+      "end": 38.2,
+      "prob": 0.963
+    },
+    {
+      "word": "causes",
+      "start": 38.2,
+      "end": 38.6,
+      "prob": 0.866
+    },
+    {
+      "word": "chlorosis",
+      "start": 38.6,
+      "end": 39.42,
+      "prob": 0.704
+    },
+    {
+      "word": "because",
+      "start": 39.42,
+      "end": 39.94,
+      "prob": 0.613
+    },
+    {
+      "word": "magnesium",
+      "start": 39.94,
+      "end": 40.6,
+      "prob": 0.94
+    },
+    {
+      "word": "is",
+      "start": 40.6,
+      "end": 40.86,
+      "prob": 0.977
+    },
+    {
+      "word": "needed,",
+      "start": 40.86,
+      "end": 41.16,
+      "prob": 0.993
+    },
+    {
+      "word": "to",
+      "start": 41.36,
+      "end": 41.36,
+      "prob": 0.257
+    },
+    {
+      "word": "make",
+      "start": 41.36,
+      "end": 41.56,
+      "prob": 0.967
+    },
+    {
+      "word": "chlorophyll.",
+      "start": 41.56,
+      "end": 42.32,
+      "prob": 0.994
+    },
+    {
+      "word": "Plants",
+      "start": 43.14,
+      "end": 43.14,
+      "prob": 0.928
+    },
+    {
+      "word": "defend",
+      "start": 43.14,
+      "end": 43.52,
+      "prob": 0.943
+    },
+    {
+      "word": "themselves",
+      "start": 43.52,
+      "end": 44.0,
+      "prob": 0.985
+    },
+    {
+      "word": "with",
+      "start": 44.0,
+      "end": 44.32,
+      "prob": 0.972
+    },
+    {
+      "word": "physical",
+      "start": 44.32,
+      "end": 44.72,
+      "prob": 0.985
+    },
+    {
+      "word": "barriers",
+      "start": 44.72,
+      "end": 45.3,
+      "prob": 0.979
+    },
+    {
+      "word": "like",
+      "start": 45.3,
+      "end": 45.58,
+      "prob": 0.817
+    },
+    {
+      "word": "waxy",
+      "start": 45.58,
+      "end": 46.04,
+      "prob": 0.751
+    },
+    {
+      "word": "cuticles",
+      "start": 46.04,
+      "end": 46.72,
+      "prob": 0.977
+    },
+    {
+      "word": "and",
+      "start": 46.72,
+      "end": 47.0,
+      "prob": 0.888
+    },
+    {
+      "word": "thorns",
+      "start": 47.0,
+      "end": 47.54,
+      "prob": 0.99
+    },
+    {
+      "word": "and",
+      "start": 47.54,
+      "end": 48.1,
+      "prob": 0.441
+    },
+    {
+      "word": "chemical",
+      "start": 48.1,
+      "end": 48.46,
+      "prob": 0.979
+    },
+    {
+      "word": "defences",
+      "start": 48.46,
+      "end": 49.06,
+      "prob": 0.055
+    },
+    {
+      "word": "such",
+      "start": 49.06,
+      "end": 49.4,
+      "prob": 0.816
+    },
+    {
+      "word": "as",
+      "start": 49.4,
+      "end": 49.6,
+      "prob": 0.925
+    },
+    {
+      "word": "antibacterial",
+      "start": 49.6,
+      "end": 50.48,
+      "prob": 0.951
+    },
+    {
+      "word": "chemicals.",
+      "start": 50.48,
+      "end": 51.08,
+      "prob": 0.537
+    },
+    {
+      "word": "Mineral",
+      "start": 51.82,
+      "end": 51.82,
+      "prob": 0.893
+    },
+    {
+      "word": "deficiencies",
+      "start": 51.82,
+      "end": 52.4,
+      "prob": 0.993
+    },
+    {
+      "word": "can",
+      "start": 52.4,
+      "end": 52.84,
+      "prob": 0.997
+    },
+    {
+      "word": "resemble",
+      "start": 52.84,
+      "end": 53.3,
+      "prob": 0.992
+    },
+    {
+      "word": "infectious",
+      "start": 53.3,
+      "end": 53.9,
+      "prob": 0.998
+    },
+    {
+      "word": "diseases,",
+      "start": 53.9,
+      "end": 54.5,
+      "prob": 0.994
+    },
+    {
+      "word": "so",
+      "start": 54.8,
+      "end": 55.1,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 55.1,
+      "end": 55.22,
+      "prob": 0.997
+    },
+    {
+      "word": "pattern",
+      "start": 55.22,
+      "end": 55.56,
+      "prob": 0.986
+    },
+    {
+      "word": "of",
+      "start": 55.56,
+      "end": 55.76,
+      "prob": 0.999
+    },
+    {
+      "word": "symptoms",
+      "start": 55.76,
+      "end": 56.16,
+      "prob": 0.997
+    },
+    {
+      "word": "matters.",
+      "start": 56.16,
+      "end": 56.66,
+      "prob": 0.986
+    },
+    {
+      "word": "Magnesium",
+      "start": 57.26,
+      "end": 57.78,
+      "prob": 0.985
+    },
+    {
+      "word": "deficiency",
+      "start": 57.78,
+      "end": 58.38,
+      "prob": 0.999
+    },
+    {
+      "word": "commonly",
+      "start": 58.38,
+      "end": 58.96,
+      "prob": 0.981
+    },
+    {
+      "word": "causes",
+      "start": 58.96,
+      "end": 59.56,
+      "prob": 0.994
+    },
+    {
+      "word": "intervenal",
+      "start": 59.56,
+      "end": 60.32,
+      "prob": 0.822
+    },
+    {
+      "word": "chlorosis,",
+      "start": 60.32,
+      "end": 60.96,
+      "prob": 0.901
+    },
+    {
+      "word": "particularly",
+      "start": 61.4,
+      "end": 61.94,
+      "prob": 0.998
+    },
+    {
+      "word": "in",
+      "start": 61.94,
+      "end": 62.32,
+      "prob": 0.997
+    },
+    {
+      "word": "older",
+      "start": 62.32,
+      "end": 62.6,
+      "prob": 0.98
+    },
+    {
+      "word": "species",
+      "start": 62.6,
+      "end": 63.1,
+      "prob": 0.189
+    },
+    {
+      "word": "because",
+      "start": 63.1,
+      "end": 63.64,
+      "prob": 0.364
+    },
+    {
+      "word": "magnesium",
+      "start": 63.64,
+      "end": 64.28,
+      "prob": 0.953
+    },
+    {
+      "word": "is",
+      "start": 64.28,
+      "end": 64.68,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 64.68,
+      "end": 64.82,
+      "prob": 0.995
+    },
+    {
+      "word": "mobile",
+      "start": 64.82,
+      "end": 65.2,
+      "prob": 0.943
+    },
+    {
+      "word": "nutrient",
+      "start": 65.2,
+      "end": 65.82,
+      "prob": 0.998
+    },
+    {
+      "word": "and",
+      "start": 65.82,
+      "end": 66.28,
+      "prob": 0.966
+    },
+    {
+      "word": "is",
+      "start": 66.28,
+      "end": 66.4,
+      "prob": 0.978
+    },
+    {
+      "word": "required",
+      "start": 66.4,
+      "end": 66.82,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 66.82,
+      "end": 67.08,
+      "prob": 0.996
+    },
+    {
+      "word": "chlorophyll.",
+      "start": 67.08,
+      "end": 67.68,
+      "prob": 0.996
+    },
+    {
+      "word": "Nitrate",
+      "start": 68.3,
+      "end": 68.58,
+      "prob": 0.991
+    },
+    {
+      "word": "deficiency",
+      "start": 68.58,
+      "end": 69.06,
+      "prob": 0.998
+    },
+    {
+      "word": "can",
+      "start": 69.06,
+      "end": 69.46,
+      "prob": 0.995
+    },
+    {
+      "word": "cause",
+      "start": 69.46,
+      "end": 69.78,
+      "prob": 0.997
+    },
+    {
+      "word": "poor",
+      "start": 69.78,
+      "end": 70.14,
+      "prob": 0.721
+    },
+    {
+      "word": "growth",
+      "start": 70.14,
+      "end": 70.54,
+      "prob": 1.0
+    },
+    {
+      "word": "because",
+      "start": 70.54,
+      "end": 70.9,
+      "prob": 0.974
+    },
+    {
+      "word": "nitrogen",
+      "start": 70.9,
+      "end": 71.36,
+      "prob": 0.99
+    },
+    {
+      "word": "is",
+      "start": 71.36,
+      "end": 71.76,
+      "prob": 0.997
+    },
+    {
+      "word": "needed",
+      "start": 71.76,
+      "end": 72.08,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 72.08,
+      "end": 72.34,
+      "prob": 0.998
+    },
+    {
+      "word": "make",
+      "start": 72.34,
+      "end": 72.54,
+      "prob": 0.996
+    },
+    {
+      "word": "amino",
+      "start": 72.54,
+      "end": 73.0,
+      "prob": 0.993
+    },
+    {
+      "word": "acids",
+      "start": 73.0,
+      "end": 73.44,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 73.44,
+      "end": 73.78,
+      "prob": 0.995
+    },
+    {
+      "word": "proteins.",
+      "start": 73.78,
+      "end": 74.26,
+      "prob": 0.997
+    },
+    {
+      "word": "A",
+      "start": 74.26,
+      "end": 74.88,
+      "prob": 0.192
+    },
+    {
+      "word": "plant's",
+      "start": 74.88,
+      "end": 75.36,
+      "prob": 0.973
+    },
+    {
+      "word": "appearance",
+      "start": 75.36,
+      "end": 75.64,
+      "prob": 0.983
+    },
+    {
+      "word": "is",
+      "start": 75.64,
+      "end": 75.94,
+      "prob": 0.997
+    },
+    {
+      "word": "evidence,",
+      "start": 75.94,
+      "end": 76.38,
+      "prob": 0.988
+    },
+    {
+      "word": "but",
+      "start": 76.8,
+      "end": 77.02,
+      "prob": 0.996
+    },
+    {
+      "word": "careful",
+      "start": 77.02,
+      "end": 77.52,
+      "prob": 0.996
+    },
+    {
+      "word": "diagnosis",
+      "start": 77.52,
+      "end": 78.22,
+      "prob": 0.99
+    },
+    {
+      "word": "may",
+      "start": 78.22,
+      "end": 78.52,
+      "prob": 0.987
+    },
+    {
+      "word": "require",
+      "start": 78.52,
+      "end": 79.02,
+      "prob": 0.998
+    },
+    {
+      "word": "further",
+      "start": 79.02,
+      "end": 79.42,
+      "prob": 0.999
+    },
+    {
+      "word": "investigation.",
+      "start": 79.42,
+      "end": 80.16,
+      "prob": 0.998
+    },
+    {
+      "word": "As",
+      "start": 80.82,
+      "end": 80.96,
+      "prob": 0.992
+    },
+    {
+      "word": "you",
+      "start": 80.96,
+      "end": 81.1,
+      "prob": 0.999
+    },
+    {
+      "word": "revise",
+      "start": 81.1,
+      "end": 81.46,
+      "prob": 0.991
+    },
+    {
+      "word": "this",
+      "start": 81.46,
+      "end": 81.76,
+      "prob": 0.982
+    },
+    {
+      "word": "topic,",
+      "start": 81.76,
+      "end": 82.16,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 82.66,
+      "end": 82.76,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 82.76,
+      "end": 82.94,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 82.94,
+      "end": 83.32,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 83.32,
+      "end": 83.58,
+      "prob": 0.997
+    },
+    {
+      "word": "key",
+      "start": 83.58,
+      "end": 83.88,
+      "prob": 0.885
+    },
+    {
+      "word": "process",
+      "start": 83.88,
+      "end": 84.42,
+      "prob": 0.997
+    },
+    {
+      "word": "in",
+      "start": 84.42,
+      "end": 84.74,
+      "prob": 0.994
+    },
+    {
+      "word": "your",
+      "start": 84.74,
+      "end": 84.9,
+      "prob": 0.998
+    },
+    {
+      "word": "own",
+      "start": 84.9,
+      "end": 85.16,
+      "prob": 0.992
+    },
+    {
+      "word": "words.",
+      "start": 85.16,
+      "end": 85.68,
+      "prob": 0.999
+    },
+    {
+      "word": "Focus",
+      "start": 86.1,
+      "end": 86.26,
+      "prob": 0.989
+    },
+    {
+      "word": "on",
+      "start": 86.26,
+      "end": 86.56,
+      "prob": 0.999
+    },
+    {
+      "word": "what",
+      "start": 86.56,
+      "end": 86.78,
+      "prob": 0.998
+    },
+    {
+      "word": "happens,",
+      "start": 86.78,
+      "end": 87.36,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 87.68,
+      "end": 88.0,
+      "prob": 0.997
+    },
+    {
+      "word": "it",
+      "start": 88.0,
+      "end": 88.14,
+      "prob": 0.997
+    },
+    {
+      "word": "happens",
+      "start": 88.14,
+      "end": 88.64,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 88.64,
+      "end": 89.1,
+      "prob": 0.389
+    },
+    {
+      "word": "how",
+      "start": 89.1,
+      "end": 89.36,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 89.36,
+      "end": 89.54,
+      "prob": 0.992
+    },
+    {
+      "word": "structures",
+      "start": 89.54,
+      "end": 89.9,
+      "prob": 0.997
+    },
+    {
+      "word": "involved",
+      "start": 89.9,
+      "end": 90.42,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 90.42,
+      "end": 90.78,
+      "prob": 0.98
+    },
+    {
+      "word": "the",
+      "start": 90.78,
+      "end": 91.0,
+      "prob": 0.996
+    },
+    {
+      "word": "process",
+      "start": 91.0,
+      "end": 91.36,
+      "prob": 0.999
+    },
+    {
+      "word": "work.",
+      "start": 91.36,
+      "end": 91.8,
+      "prob": 0.996
+    },
+    {
+      "word": "Now",
+      "start": 92.28,
+      "end": 92.56,
+      "prob": 0.988
+    },
+    {
+      "word": "pause",
+      "start": 92.56,
+      "end": 93.24,
+      "prob": 0.716
+    },
+    {
+      "word": "the",
+      "start": 93.24,
+      "end": 93.48,
+      "prob": 0.997
+    },
+    {
+      "word": "video",
+      "start": 93.48,
+      "end": 93.78,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 93.78,
+      "end": 94.16,
+      "prob": 0.982
+    },
+    {
+      "word": "try",
+      "start": 94.16,
+      "end": 94.4,
+      "prob": 0.998
+    },
+    {
+      "word": "this",
+      "start": 94.4,
+      "end": 94.62,
+      "prob": 0.988
+    },
+    {
+      "word": "exam",
+      "start": 94.62,
+      "end": 95.08,
+      "prob": 0.993
+    },
+    {
+      "word": "style",
+      "start": 95.08,
+      "end": 95.4,
+      "prob": 0.543
+    },
+    {
+      "word": "question.",
+      "start": 95.4,
+      "end": 95.92,
+      "prob": 0.995
+    },
+    {
+      "word": "A",
+      "start": 96.44,
+      "end": 96.52,
+      "prob": 0.771
+    },
+    {
+      "word": "plant",
+      "start": 96.52,
+      "end": 96.84,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 96.84,
+      "end": 97.14,
+      "prob": 0.998
+    },
+    {
+      "word": "yellow",
+      "start": 97.14,
+      "end": 97.5,
+      "prob": 0.992
+    },
+    {
+      "word": "leaves",
+      "start": 97.5,
+      "end": 98.04,
+      "prob": 0.998
+    },
+    {
+      "word": "with",
+      "start": 98.04,
+      "end": 98.32,
+      "prob": 0.993
+    },
+    {
+      "word": "green",
+      "start": 98.32,
+      "end": 98.74,
+      "prob": 0.998
+    },
+    {
+      "word": "veins.",
+      "start": 98.74,
+      "end": 99.22,
+      "prob": 0.99
+    },
+    {
+      "word": "Suggest",
+      "start": 99.86,
+      "end": 100.22,
+      "prob": 0.971
+    },
+    {
+      "word": "which",
+      "start": 100.22,
+      "end": 100.68,
+      "prob": 0.995
+    },
+    {
+      "word": "mineral",
+      "start": 100.68,
+      "end": 101.1,
+      "prob": 0.991
+    },
+    {
+      "word": "ion",
+      "start": 101.1,
+      "end": 101.46,
+      "prob": 0.77
+    },
+    {
+      "word": "is",
+      "start": 101.46,
+      "end": 101.7,
+      "prob": 0.999
+    },
+    {
+      "word": "missing",
+      "start": 101.7,
+      "end": 102.08,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 102.08,
+      "end": 102.4,
+      "prob": 0.976
+    },
+    {
+      "word": "explain",
+      "start": 102.4,
+      "end": 102.78,
+      "prob": 0.998
+    },
+    {
+      "word": "your",
+      "start": 102.78,
+      "end": 103.02,
+      "prob": 0.997
+    },
+    {
+      "word": "answer.",
+      "start": 103.02,
+      "end": 103.38,
+      "prob": 0.999
+    },
+    {
+      "word": "Here",
+      "start": 103.84,
+      "end": 104.02,
+      "prob": 0.973
+    },
+    {
+      "word": "is",
+      "start": 104.02,
+      "end": 104.16,
+      "prob": 0.924
+    },
+    {
+      "word": "a",
+      "start": 104.16,
+      "end": 104.26,
+      "prob": 0.436
+    },
+    {
+      "word": "model",
+      "start": 104.26,
+      "end": 104.52,
+      "prob": 0.976
+    },
+    {
+      "word": "answer.",
+      "start": 104.52,
+      "end": 105.02,
+      "prob": 0.991
+    },
+    {
+      "word": "Magnesium.",
+      "start": 105.52,
+      "end": 106.14,
+      "prob": 0.974
+    },
+    {
+      "word": "It",
+      "start": 106.78,
+      "end": 106.8,
+      "prob": 0.983
+    },
+    {
+      "word": "is",
+      "start": 106.8,
+      "end": 106.92,
+      "prob": 0.996
+    },
+    {
+      "word": "needed",
+      "start": 106.92,
+      "end": 107.2,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 107.2,
+      "end": 107.4,
+      "prob": 0.999
+    },
+    {
+      "word": "make",
+      "start": 107.4,
+      "end": 107.58,
+      "prob": 0.998
+    },
+    {
+      "word": "chlorophyll,",
+      "start": 107.58,
+      "end": 108.38,
+      "prob": 0.993
+    },
+    {
+      "word": "so",
+      "start": 108.68,
+      "end": 108.76,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 108.76,
+      "end": 108.9,
+      "prob": 0.978
+    },
+    {
+      "word": "deficiency",
+      "start": 108.9,
+      "end": 109.36,
+      "prob": 0.999
+    },
+    {
+      "word": "causes",
+      "start": 109.36,
+      "end": 110.04,
+      "prob": 0.996
+    },
+    {
+      "word": "chlorosis",
+      "start": 110.04,
+      "end": 110.74,
+      "prob": 0.972
+    },
+    {
+      "word": "yellowing.",
+      "start": 110.74,
+      "end": 111.38,
+      "prob": 0.97
+    },
+    {
+      "word": "If",
+      "start": 111.76,
+      "end": 111.86,
+      "prob": 0.987
+    },
+    {
+      "word": "this",
+      "start": 111.86,
+      "end": 112.06,
+      "prob": 0.998
+    },
+    {
+      "word": "explanation",
+      "start": 112.06,
+      "end": 112.48,
+      "prob": 0.998
+    },
+    {
+      "word": "has",
+      "start": 112.48,
+      "end": 112.88,
+      "prob": 0.992
+    },
+    {
+      "word": "helped,",
+      "start": 112.88,
+      "end": 113.26,
+      "prob": 0.996
+    },
+    {
+      "word": "please",
+      "start": 113.64,
+      "end": 113.84,
+      "prob": 0.995
+    },
+    {
+      "word": "subscribe",
+      "start": 113.84,
+      "end": 114.36,
+      "prob": 0.994
+    },
+    {
+      "word": "to",
+      "start": 114.36,
+      "end": 114.66,
+      "prob": 0.996
+    },
+    {
+      "word": "JD",
+      "start": 114.66,
+      "end": 115.04,
+      "prob": 0.84
+    },
+    {
+      "word": "Science",
+      "start": 115.04,
+      "end": 115.44,
+      "prob": 0.611
+    },
+    {
+      "word": "for",
+      "start": 115.44,
+      "end": 115.84,
+      "prob": 0.998
+    },
+    {
+      "word": "more",
+      "start": 115.84,
+      "end": 116.08,
+      "prob": 0.999
+    },
+    {
+      "word": "lessons.",
+      "start": 116.08,
+      "end": 116.46,
+      "prob": 0.998
+    },
+    {
+      "word": "You",
+      "start": 117.1,
+      "end": 117.18,
+      "prob": 0.994
+    },
+    {
+      "word": "can",
+      "start": 117.18,
+      "end": 117.34,
+      "prob": 0.999
+    },
+    {
+      "word": "find",
+      "start": 117.34,
+      "end": 117.62,
+      "prob": 0.995
+    },
+    {
+      "word": "further",
+      "start": 117.62,
+      "end": 117.96,
+      "prob": 0.998
+    },
+    {
+      "word": "learning",
+      "start": 117.96,
+      "end": 118.4,
+      "prob": 0.997
+    },
+    {
+      "word": "resources",
+      "start": 118.4,
+      "end": 118.88,
+      "prob": 0.996
+    },
+    {
+      "word": "and",
+      "start": 118.88,
+      "end": 119.26,
+      "prob": 0.992
+    },
+    {
+      "word": "practice",
+      "start": 119.26,
+      "end": 119.6,
+      "prob": 0.897
+    },
+    {
+      "word": "questions",
+      "start": 119.6,
+      "end": 120.16,
+      "prob": 0.998
+    },
+    {
+      "word": "at",
+      "start": 120.16,
+      "end": 120.8,
+      "prob": 0.993
+    },
+    {
+      "word": "jdsciense",
+      "start": 120.8,
+      "end": 123.66,
+      "prob": 0.64
+    },
+    {
+      "word": ".co",
+      "start": 123.66,
+      "end": 125.18,
+      "prob": 0.919
+    },
+    {
+      "word": ".uk.",
+      "start": 125.18,
+      "end": 125.92,
+      "prob": 0.99
+    },
+    {
+      "word": "Thank",
+      "start": 126.48,
+      "end": 126.72,
+      "prob": 0.969
+    },
+    {
+      "word": "you",
+      "start": 126.72,
+      "end": 126.88,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 126.88,
+      "end": 127.04,
+      "prob": 0.997
+    },
+    {
+      "word": "watching.",
+      "start": 127.04,
+      "end": 127.36,
+      "prob": 0.999
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}
