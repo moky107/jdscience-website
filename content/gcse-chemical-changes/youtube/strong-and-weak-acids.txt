@@ -1,7 +1,9 @@
 TITLE: GCSE Chemistry | Strong and Weak Acids (Higher Tier) | JD Science
 PRIVACY: Unlisted
 
-Higher Tier: strong and weak acids, ionisation, and why strength is not the same as concentration. Higher Tier.
+Higher Tier: strong and weak acids, ionisation, and why strength is not the same as concentration.
+
+This lesson is labelled Higher Tier.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +16,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/strong-and-weak-acids/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/strong-and-weak-acids/jdscience-strong-and-weak-acids-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Strong and Weak Acids, acids, salts, electrolysis, JD Science
 

@@ -1,7 +1,7 @@
-TITLE: GCSE Chemistry | Chemical Changes: Exam Practice (Higher Tier) | JD Science
+TITLE: GCSE Chemistry | Chemical Changes: Exam Practice | JD Science
 PRIVACY: Unlisted
 
-Synoptic GCSE practice covering acids, salt-making, titration ideas and electrolysis rules. Higher Tier.
+Synoptic GCSE practice covering acids, salt-making, titration ideas and electrolysis rules.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +14,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/chemical-changes-exam-practice/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/chemical-changes-exam-practice/jdscience-chemical-changes-exam-practice-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Chemical Changes: Exam Practice, acids, salts, electrolysis, JD Science
 

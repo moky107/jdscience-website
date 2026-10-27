@@ -1,7 +1,7 @@
-TITLE: GCSE Chemistry | Electrolysis of Molten Ionic Compounds (Higher Tier) | JD Science
+TITLE: GCSE Chemistry | Electrolysis of Molten Ionic Compounds | JD Science
 PRIVACY: Unlisted
 
-Electrolysis of molten ionic compounds, including lead bromide and aluminium extraction ideas. Higher Tier.
+Electrolysis of molten ionic compounds, including lead bromide and aluminium extraction ideas.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +14,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/electrolysis-molten-ionic/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-molten-ionic/jdscience-electrolysis-molten-ionic-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Electrolysis of Molten Ionic Compounds, acids, salts, electrolysis, JD Science
 

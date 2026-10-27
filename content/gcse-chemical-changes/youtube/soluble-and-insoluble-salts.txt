@@ -1,7 +1,7 @@
-TITLE: GCSE Chemistry | Making Soluble and Insoluble Salts (Higher Tier) | JD Science
+TITLE: GCSE Chemistry | Making Soluble and Insoluble Salts | JD Science
 PRIVACY: Unlisted
 
-How to make soluble salts by crystallisation and insoluble salts by precipitation, with solubility rules. Higher Tier.
+How to make soluble salts by crystallisation and insoluble salts by precipitation, with solubility rules.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +14,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/soluble-and-insoluble-salts/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/soluble-and-insoluble-salts/jdscience-soluble-and-insoluble-salts-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Making Soluble and Insoluble Salts, acids, salts, electrolysis, JD Science
 

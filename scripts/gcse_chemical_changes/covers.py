@@ -30,7 +30,7 @@ def youtube(dest: Path, spec: str, title: str, line: str, tier: str) -> None:
     size = 44 if len(title) > 32 else 54
     d.text((48, 240), title, font=font("bold", size), fill=WHITE)
     d.text((48, 360), line, font=font("regular", 22), fill=MUTED)
-    if "Higher" in (tier or ""):
+    if (tier or "") == "Higher Tier":
         d.rounded_rectangle((48, 430, 280, 478), 10, outline=GOLD, width=2)
         d.text((164, 454), "HIGHER TIER", font=font("bold", 16), fill=GOLD, anchor="mm")
     d.text((48, 640), "jdscience.co.uk", font=font("semibold", 22), fill=TEAL_BAR)

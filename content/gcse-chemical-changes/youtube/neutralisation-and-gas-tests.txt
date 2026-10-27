@@ -1,7 +1,7 @@
-TITLE: GCSE Chemistry | Neutralisation and Gas Tests (Higher Tier) | JD Science
+TITLE: GCSE Chemistry | Neutralisation and Gas Tests | JD Science
 PRIVACY: Unlisted
 
-Neutralisation reactions, carbonate and oxide reactions, and the hydrogen, oxygen and carbon dioxide tests. Higher Tier.
+Neutralisation reactions, carbonate and oxide reactions, and the hydrogen, oxygen and carbon dioxide tests.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +14,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/neutralisation-and-gas-tests/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/neutralisation-and-gas-tests/jdscience-neutralisation-and-gas-tests-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Neutralisation and Gas Tests, acids, salts, electrolysis, JD Science
 

@@ -1,7 +1,7 @@
-TITLE: GCSE Chemistry | Acids, Bases and Alkalis (Higher Tier) | JD Science
+TITLE: GCSE Chemistry | Acids, Bases and Alkalis | JD Science
 PRIVACY: Unlisted
 
-Acids, bases and alkalis, including hydrogen ions, hydroxide ions and why not every base is an alkali. Higher Tier.
+Acids, bases and alkalis, including hydrogen ions, hydroxide ions and why not every base is an alkali.
 
 This GCSE Chemistry lesson follows the JD Science six-stage format: introduction, detailed explanation, worked example, your turn, model answer and recap.
 
@@ -14,7 +14,9 @@ In this lesson you will:
 - Pause and attempt a practice question
 - Check the model answer and marking points
 
-Visit https://jdscience.co.uk for more GCSE Chemistry lessons, worksheets and revision resources.
+Watch on the JD Science website: https://www.jdscience.co.uk/resources/gcse/chemistry/videos/acids-bases-alkalis/
+Download the MP4: https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acids-bases-alkalis/jdscience-acids-bases-alkalis-1080p.mp4
+More lessons: https://jdscience.co.uk
 
 Keywords: GCSE Chemistry, Chemical Changes, AQA Chemistry, Edexcel Chemistry, Acids, Bases and Alkalis, acids, salts, electrolysis, JD Science
 
