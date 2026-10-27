@@ -1,0 +1,246 @@
+{
+  "completed": 11,
+  "awaiting": [
+    "2-1-principles-of-organisation",
+    "2-2-animal-tissues-organs-systems",
+    "3-1-communicable-diseases",
+    "3-1-discovering-and-testing-new-drugs",
+    "6-2-variation-and-evolution",
+    "6-3-genetics-and-evolution",
+    "6-4-classification",
+    "7-1-adaptations-interdependence",
+    "7-2-organisation-of-an-ecosystem",
+    "7-3-biodiversity",
+    "7-4-trophic-levels",
+    "7-5-food-production"
+  ],
+  "youtube": "YouTube Data API OAuth is not configured (no YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET or YOUTUBE_REFRESH_TOKEN). Uploads were not attempted. Videos stay Unlisted only after a successful authenticated upload.",
+  "zip": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/JDScience_GCSE_Biology_narrated_1080p.zip",
+  "zip_head": {
+    "ok": true,
+    "status": 200,
+    "type": "application/zip"
+  },
+  "lessons": [
+    {
+      "slug": "1-3-transport-in-cells",
+      "spec": "1.3",
+      "title": "Transport in Cells",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/1-3-transport-in-cells/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/1-3-transport-in-cells/JDScience_GCSE_Biology_1_3_Transport_in_Cells_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/1-3-transport-in-cells/jdscience-1-3-transport-in-cells-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "2-3-plant-tissues-organs-systems",
+      "spec": "2.3",
+      "title": "Plant Tissues, Organs and Systems",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/2-3-plant-tissues-organs-systems/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/2-3-plant-tissues-organs-systems/JDScience_GCSE_Biology_2_3_Plant_Tissues_Organs_Systems_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/2-3-plant-tissues-organs-systems/jdscience-2-3-plant-tissues-organs-systems-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "3-2-monoclonal-antibodies",
+      "spec": "3.2",
+      "title": "Monoclonal Antibodies",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/3-2-monoclonal-antibodies/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/3-2-monoclonal-antibodies/JDScience_GCSE_Biology_3_2_Monoclonal_Antibodies_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/3-2-monoclonal-antibodies/jdscience-3-2-monoclonal-antibodies-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "3-3-plant-disease",
+      "spec": "3.3",
+      "title": "Plant Disease",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/3-3-plant-disease/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/3-3-plant-disease/JDScience_GCSE_Biology_3_3_Plant_Disease_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/3-3-plant-disease/jdscience-3-3-plant-disease-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "4-1-photosynthesis",
+      "spec": "4.1",
+      "title": "Photosynthesis",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/4-1-photosynthesis/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/4-1-photosynthesis/JDScience_GCSE_Biology_4_1_Photosynthesis_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/4-1-photosynthesis/jdscience-4-1-photosynthesis-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "4-2-respiration",
+      "spec": "4.2",
+      "title": "Respiration",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/4-2-respiration/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/4-2-respiration/JDScience_GCSE_Biology_4_2_Respiration_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/4-2-respiration/jdscience-4-2-respiration-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "5-1-homeostasis",
+      "spec": "5.1",
+      "title": "Homeostasis",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/5-1-homeostasis/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-1-homeostasis/JDScience_GCSE_Biology_5_1_Homeostasis_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-1-homeostasis/jdscience-5-1-homeostasis-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "5-2-the-nervous-system",
+      "spec": "5.2",
+      "title": "The Nervous System",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/5-2-the-nervous-system/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-2-the-nervous-system/JDScience_GCSE_Biology_5_2_The_Nervous_System_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-2-the-nervous-system/jdscience-5-2-the-nervous-system-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "5-3-hormonal-coordination",
+      "spec": "5.3",
+      "title": "Hormonal Coordination in Humans",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/5-3-hormonal-coordination/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-3-hormonal-coordination/JDScience_GCSE_Biology_5_3_Hormonal_Coordination_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-3-hormonal-coordination/jdscience-5-3-hormonal-coordination-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "5-4-plant-hormones",
+      "spec": "5.4",
+      "title": "Plant Hormones",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/5-4-plant-hormones/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-4-plant-hormones/JDScience_GCSE_Biology_5_4_Plant_Hormones_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/5-4-plant-hormones/jdscience-5-4-plant-hormones-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    },
+    {
+      "slug": "6-1-reproduction",
+      "spec": "6.1",
+      "title": "Reproduction",
+      "site": "https://www.jdscience.co.uk/resources/gcse/biology/videos/6-1-reproduction/",
+      "download": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/6-1-reproduction/JDScience_GCSE_Biology_6_1_Reproduction_1080p.mp4",
+      "website_mp4": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/videos/6-1-reproduction/jdscience-6-1-reproduction-1080p.mp4",
+      "youtube": "not_uploaded_missing_auth",
+      "qa_pass": true,
+      "head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      },
+      "site_mp4_head": {
+        "ok": true,
+        "status": 200,
+        "type": "video/mp4"
+      }
+    }
+  ]
+}

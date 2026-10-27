@@ -1,0 +1,180 @@
+{
+  "slug": "5-1-homeostasis",
+  "duration": 125.29,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "keep",
+      "t": 6.38,
+      "aligned": true,
+      "cue": "Homeostasis means keeping conditions inside the body"
+    },
+    {
+      "id": "parts",
+      "t": 17.58,
+      "aligned": true,
+      "cue": "Control systems have three parts"
+    },
+    {
+      "id": "glucose",
+      "t": 35.7,
+      "aligned": true,
+      "cue": "when blood glucose rises, insulin is released"
+    },
+    {
+      "id": "both",
+      "t": 66.5,
+      "aligned": true,
+      "cue": "The nervous and endocrine systems both contribute"
+    },
+    {
+      "id": "revise",
+      "t": 72.38,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 83.0,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 93.16,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 111.12,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 74.46,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 79.02,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 80.5,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 83.78,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 93.28,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "keep",
+      "item": "b1",
+      "t": 11.48,
+      "aligned": true,
+      "cue": "Temperature, ion content"
+    },
+    {
+      "slide": "keep",
+      "item": "b2",
+      "t": 13.68,
+      "aligned": true,
+      "cue": "water content"
+    },
+    {
+      "slide": "keep",
+      "item": "b3",
+      "t": 15.0,
+      "aligned": true,
+      "cue": "blood glucose"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.74,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 11.48,
+      "aligned": true,
+      "cue": "temperature",
+      "target": "b1"
+    },
+    {
+      "t": 13.68,
+      "aligned": true,
+      "cue": "water content",
+      "target": "b2"
+    },
+    {
+      "t": 15.0,
+      "aligned": true,
+      "cue": "blood glucose",
+      "target": "b3"
+    },
+    {
+      "t": 18.56,
+      "aligned": true,
+      "cue": "three parts",
+      "target": "heading"
+    },
+    {
+      "t": 37.64,
+      "aligned": true,
+      "cue": "insulin",
+      "target": "heading"
+    },
+    {
+      "t": 72.72,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 83.78,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 93.68,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 111.24,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

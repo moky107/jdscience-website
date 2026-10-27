@@ -1,0 +1,160 @@
+1
+00:00:00,000 --> 00:00:02,620
+Hello and welcome back to JD science.
+
+2
+00:00:03,460 --> 00:00:07,300
+Today we are exploring how substances move in and out
+
+3
+00:00:07,300 --> 00:00:07,860
+of cells.
+
+4
+00:00:08,600 --> 00:00:12,440
+In diffusion particles move from high concentration to low
+
+5
+00:00:12,440 --> 00:00:15,340
+concentration along a concentration gradient.
+
+6
+00:00:15,920 --> 00:00:19,780
+It is faster when the temperature is higher, the concentration gradient
+
+7
+00:00:19,780 --> 00:00:22,960
+is steeper or the surface area is larger.
+
+8
+00:00:23,640 --> 00:00:27,680
+Oxygen diffuses into the blood in the lungs and carbon dioxide
+
+9
+00:00:27,680 --> 00:00:28,720
+diffuses out.
+
+10
+00:00:29,500 --> 00:00:33,280
+Alveoli have a large surface area, a thin lining, a
+
+11
+00:00:33,280 --> 00:00:35,220
+good blood supply and ventilation.
+
+12
+00:00:36,200 --> 00:00:39,980
+Osmosis is the diffusion of water across a partially permeable
+
+13
+00:00:39,980 --> 00:00:40,460
+membrane.
+
+14
+00:00:41,240 --> 00:00:45,120
+Active transport moves substances against a concentration gradient
+
+15
+00:00:45,120 --> 00:00:47,200
+using energy from respiration.
+
+16
+00:00:48,000 --> 00:00:51,540
+Root hair cells use active transport to absorb mineral ions.
+
+17
+00:00:51,540 --> 00:00:54,980
+Diffusion and osmosis are passive processes.
+
+18
+00:00:55,540 --> 00:00:58,660
+They do not require the cell to supply metabolic energy.
+
+19
+00:00:59,340 --> 00:01:03,360
+Active transport is different because carrier proteins move substances
+
+20
+00:01:03,360 --> 00:01:07,160
+against their concentration gradient using energy, often
+
+21
+00:01:07,160 --> 00:01:08,400
+supplied by ATP.
+
+22
+00:01:09,220 --> 00:01:12,860
+A useful comparison is oxygen entering cells by diffusion,
+
+23
+00:01:13,580 --> 00:01:17,560
+water crossing a partially permeable membrane by osmosis and
+
+24
+00:01:17,560 --> 00:01:21,060
+mineral ions entering root hair cells by active transport.
+
+25
+00:01:21,780 --> 00:01:25,480
+As you revise this topic, try to explain the key process in
+
+26
+00:01:25,480 --> 00:01:26,400
+your own words.
+
+27
+00:01:27,060 --> 00:01:30,760
+Focus on what happens, why it happens and how the structures
+
+28
+00:01:30,760 --> 00:01:32,700
+involved help the process work.
+
+29
+00:01:33,420 --> 00:01:36,960
+Now pause the video and try this exam style question.
+
+30
+00:01:37,940 --> 00:01:41,900
+Explain why a root hair cell uses active transport to absorb mineral
+
+31
+00:01:41,900 --> 00:01:42,380
+ions?
+
+32
+00:01:43,860 --> 00:01:45,360
+Here is a model answer.
+
+33
+00:01:46,180 --> 00:01:49,740
+Mineral ions are often at a lower concentration in the soil than
+
+34
+00:01:49,740 --> 00:01:53,540
+in the root cell, so active transport is needed to move them
+
+35
+00:01:53,540 --> 00:01:57,380
+against the concentration gradient using energy from respiration.
+
+36
+00:01:58,160 --> 00:02:01,820
+If this explanation has helped, please subscribe to JD Science
+
+37
+00:02:01,820 --> 00:02:02,800
+for more lessons.
+
+38
+00:02:03,440 --> 00:02:07,640
+You can find further learning resources and practice questions at jdscience
+
+39
+00:02:07,640 --> 00:02:09,060
+.co .uk.
+
+40
+00:02:09,700 --> 00:02:10,540
+Thank you for watching.
+

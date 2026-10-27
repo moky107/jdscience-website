@@ -1,0 +1,141 @@
+{
+  "slug": "5-2-the-nervous-system",
+  "duration": 129.52,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "conscious",
+      "t": 13.82,
+      "aligned": true,
+      "cue": "In a conscious action, a stimulus is detected"
+    },
+    {
+      "id": "reflex",
+      "t": 27.7,
+      "aligned": true,
+      "cue": "In many spinal reflexes"
+    },
+    {
+      "id": "synapse",
+      "t": 44.84,
+      "aligned": true,
+      "cue": "don't touch"
+    },
+    {
+      "id": "eye",
+      "t": 50.12,
+      "aligned": true,
+      "cue": "Eyes focus light using the lens and cornea"
+    },
+    {
+      "id": "revise",
+      "t": 86.64,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 98.2,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 105.62,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 109.62,
+      "aligned": false,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 88.84,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 93.48,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 94.98,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 98.44,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 105.74,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.78,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 15.52,
+      "aligned": true,
+      "cue": "stimulus",
+      "target": "heading"
+    },
+    {
+      "t": 55.64,
+      "aligned": true,
+      "cue": "reflex",
+      "target": "heading"
+    },
+    {
+      "t": 80.0,
+      "aligned": true,
+      "cue": "synapse",
+      "target": "heading"
+    },
+    {
+      "t": 86.98,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 98.44,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 106.04,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    }
+  ]
+}

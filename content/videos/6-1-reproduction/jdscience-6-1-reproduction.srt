@@ -1,0 +1,204 @@
+1
+00:00:00,000 --> 00:00:02,400
+Hello and welcome back to JD Science.
+
+2
+00:00:03,040 --> 00:00:05,280
+Today we are exploring reproduction.
+
+3
+00:00:06,080 --> 00:00:09,740
+Human egg and sperm cells each have 23 chromosomes.
+
+4
+00:00:10,300 --> 00:00:14,560
+When they fuse, the zygote has 46 chromosomes, which
+
+5
+00:00:14,560 --> 00:00:15,860
+are 23 pairs.
+
+6
+00:00:16,500 --> 00:00:19,700
+Mitosis makes identical cells for growth and repair.
+
+7
+00:00:20,300 --> 00:00:24,340
+Myosis makes gametes with half the chromosomes and each gamete
+
+8
+00:00:24,340 --> 00:00:25,580
+is genetically different.
+
+9
+00:00:26,120 --> 00:00:30,220
+Sexual reproduction needs two parents and produces variation.
+
+10
+00:00:30,760 --> 00:00:34,500
+Asexual reproduction needs one parent and produces clones.
+
+11
+00:00:35,420 --> 00:00:39,360
+Genes are sections of DNA on chromosomes and each gene
+
+12
+00:00:39,360 --> 00:00:40,680
+codes for a protein.
+
+13
+00:00:41,220 --> 00:00:45,120
+DNA is a double helix made of nucleotides and bases
+
+14
+00:00:45,120 --> 00:00:48,200
+pair as C with G and A with T.
+
+15
+00:00:48,660 --> 00:00:52,380
+For genetics, each parent passes on one allele of each
+
+16
+00:00:52,380 --> 00:00:52,880
+gene.
+
+17
+00:00:52,880 --> 00:00:56,740
+Dominant alleles show up even when only one copy is
+
+18
+00:00:56,740 --> 00:00:57,180
+present.
+
+19
+00:00:57,740 --> 00:01:00,760
+Recessive alleles only show when two copies are present.
+
+20
+00:01:01,220 --> 00:01:03,260
+Cystic fibrosis is recessive.
+
+21
+00:01:03,700 --> 00:01:05,160
+Polydactyly is dominant.
+
+22
+00:01:06,000 --> 00:01:08,700
+Sex is determined by the X and Y chromosomes.
+
+23
+00:01:09,360 --> 00:01:13,360
+Myosis reduces chromosome number and generates genetic variation
+
+24
+00:01:13,360 --> 00:01:17,060
+through processes including recombination and independent
+
+25
+00:01:17,060 --> 00:01:17,620
+assortment.
+
+26
+00:01:18,420 --> 00:01:21,360
+Fertilization restores the diploid chromosome number.
+
+27
+00:01:21,360 --> 00:01:25,140
+In inheritance questions, always define the allele
+
+28
+00:01:25,140 --> 00:01:27,780
+symbols before completing a Punnett square.
+
+29
+00:01:28,240 --> 00:01:31,480
+A dominant allele is expressed in a heterozygote.
+
+30
+00:01:31,920 --> 00:01:35,340
+This does not mean it is necessarily more common in the population.
+
+31
+00:01:36,000 --> 00:01:39,880
+As you revise this topic, try to explain the key process in
+
+32
+00:01:39,880 --> 00:01:40,820
+your own words.
+
+33
+00:01:41,320 --> 00:01:45,080
+Focus on what happens, why it happens, and how the structures
+
+34
+00:01:45,080 --> 00:01:46,960
+involved help the process work.
+
+35
+00:01:46,960 --> 00:01:50,680
+Now pause the video and try this exam style
+
+36
+00:01:50,680 --> 00:01:51,220
+question.
+
+37
+00:01:51,680 --> 00:01:55,380
+A woman is heterozygous for cystic fibrosis, F, and a
+
+38
+00:01:55,380 --> 00:01:57,500
+man does not carry the allele FF.
+
+39
+00:01:58,080 --> 00:02:01,720
+Using a Punnett square, work out the probability that their child
+
+40
+00:02:01,720 --> 00:02:03,100
+has cystic fibrosis.
+
+41
+00:02:03,480 --> 00:02:05,580
+Use F for the recessive allele.
+
+42
+00:02:06,120 --> 00:02:07,340
+Here is a model answer.
+
+43
+00:02:08,380 --> 00:02:12,900
+ParentsFFF gives offspring FFFFFF.
+
+44
+00:02:13,240 --> 00:02:16,640
+The child has cystic fibrosis only if FF.
+
+45
+00:02:17,280 --> 00:02:20,000
+Probability equals sign 0%.
+
+46
+00:02:20,000 --> 00:02:23,900
+If this explanation has helped, please subscribe to JD
+
+47
+00:02:23,900 --> 00:02:25,400
+Science for more lessons.
+
+48
+00:02:25,920 --> 00:02:29,620
+You can find further learning resources and practice questions at
+
+49
+00:02:29,620 --> 00:02:34,040
+jdscience .co
+
+50
+00:02:34,040 --> 00:02:34,780
+.uk.
+
+51
+00:02:34,780 --> 00:02:36,420
+Thank you for watching.
+

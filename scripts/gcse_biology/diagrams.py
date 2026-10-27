@@ -127,15 +127,17 @@ def diffusion(d, box, t=0.0):
     x0, y0, x1, y1 = box
     d.text((x0 + 200, y0 + 40), "High concentration", font=font("bold", 20), fill=GOLD, anchor="mm")
     d.text((x1 - 220, y0 + 40), "Low concentration", font=font("bold", 20), fill=GOLD, anchor="mm")
+    drift = (t % 6.0) / 6.0
     for i in range(18):
-        px = x0 + 80 + (i % 6) * 40
+        px = x0 + 80 + (i % 6) * 40 + drift * 18
         py = y0 + 90 + (i // 6) * 50
         d.ellipse((px, py, px + 18, py + 18), fill=TEAL_BAR)
     for i in range(5):
-        px = x1 - 280 + (i % 3) * 40
+        px = x1 - 280 + (i % 3) * 40 + drift * 10
         py = y0 + 120 + (i // 3) * 50
         d.ellipse((px, py, px + 18, py + 18), fill=TEAL_BAR)
-    d.polygon([(x0 + 420, (y0 + y1) / 2), (x0 + 520, (y0 + y1) / 2 - 20), (x0 + 520, (y0 + y1) / 2 + 20)], fill=GOLD)
+    mid_y = (y0 + y1) / 2
+    d.polygon([(x0 + 420, mid_y), (x0 + 520, mid_y - 20), (x0 + 520, mid_y + 20)], fill=GOLD)
     d.text(((x0 + x1) / 2, y1 - 40), "Down the concentration gradient  ·  passive", font=font("regular", 20), fill=MUTED, anchor="mm")
 
 
@@ -159,7 +161,19 @@ def osmosis(d, box, t=0.0):
     d.text((x0 + 500, y0 + 50), "partially permeable membrane", font=font("semibold", 18), fill=GOLD, anchor="mm")
     d.text((x0 + 280, y0 + 110), "More water", font=font("bold", 22), fill=WHITE, anchor="mm")
     d.text((x0 + 720, y0 + 110), "Less water", font=font("bold", 22), fill=WHITE, anchor="mm")
-    d.polygon([(x0 + 430, (y0 + y1) / 2), (x0 + 560, (y0 + y1) / 2 - 16), (x0 + 560, (y0 + y1) / 2 + 16)], fill=TEAL_BAR)
+    mid_y = (y0 + y1) / 2
+    drift = (t % 5.0) / 5.0
+    for i in range(8):
+        px = x0 + 120 + (i % 4) * 70
+        py = y0 + 180 + (i // 4) * 90
+        d.ellipse((px, py, px + 14, py + 14), fill=TEAL_BAR)
+    for i in range(4):
+        px = x0 + 560 + (i % 2) * 80
+        py = y0 + 200 + (i // 2) * 100
+        d.ellipse((px, py, px + 14, py + 14), fill=TEAL_BAR)
+    crossing = x0 + 360 + drift * 220
+    d.ellipse((crossing, mid_y - 8, crossing + 16, mid_y + 8), fill=GOLD)
+    d.polygon([(x0 + 430, mid_y), (x0 + 560, mid_y - 16), (x0 + 560, mid_y + 16)], fill=TEAL_BAR)
     d.text((x0 + 500, y1 - 40), "Water moves by osmosis  ·  passive", font=font("regular", 20), fill=MUTED, anchor="mm")
 
 
@@ -171,7 +185,11 @@ def active_transport(d, box, t=0.0):
     d.rounded_rectangle((x0 + 420, y0 + 140, x0 + 700, y1 - 140), 40, fill=PURPLE)
     d.text((x0 + 560, (y0 + y1) / 2 - 20), "carrier", font=font("bold", 22), fill=WHITE, anchor="mm")
     d.text((x0 + 560, (y0 + y1) / 2 + 20), "protein", font=font("bold", 22), fill=WHITE, anchor="mm")
-    d.polygon([(x0 + 280, (y0 + y1) / 2), (x0 + 380, (y0 + y1) / 2 - 20), (x0 + 380, (y0 + y1) / 2 + 20)], fill=GOLD)
+    mid_y = (y0 + y1) / 2
+    phase = (t % 4.0) / 4.0
+    ion_x = x0 + 220 + phase * 620
+    d.ellipse((ion_x, mid_y - 14, ion_x + 28, mid_y + 14), fill=GOLD)
+    d.polygon([(x0 + 280, mid_y), (x0 + 380, mid_y - 20), (x0 + 380, mid_y + 20)], fill=GOLD)
     d.text(((x0 + x1) / 2, y1 - 50), "Against the gradient  ·  energy from respiration (ATP)", font=font("semibold", 22), fill=GOLD, anchor="mm")
 
 
