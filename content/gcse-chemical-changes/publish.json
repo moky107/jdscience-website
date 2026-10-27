@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "acids-bases-alkalis",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acids-bases-alkalis/jdscience-acids-bases-alkalis-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acids-bases-alkalis/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "indicators-and-ph",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/indicators-and-ph/jdscience-indicators-and-ph-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/indicators-and-ph/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "strong-and-weak-acids",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/strong-and-weak-acids/jdscience-strong-and-weak-acids-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/strong-and-weak-acids/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "acids-metals-redox",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acids-metals-redox/jdscience-acids-metals-redox-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acids-metals-redox/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "neutralisation-and-gas-tests",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/neutralisation-and-gas-tests/jdscience-neutralisation-and-gas-tests-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/neutralisation-and-gas-tests/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "soluble-and-insoluble-salts",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/soluble-and-insoluble-salts/jdscience-soluble-and-insoluble-salts-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/soluble-and-insoluble-salts/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "acid-alkali-titration",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acid-alkali-titration/jdscience-acid-alkali-titration-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/acid-alkali-titration/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "electrolysis-ions-electrodes",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-ions-electrodes/jdscience-electrolysis-ions-electrodes-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-ions-electrodes/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "electrolysis-molten-ionic",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-molten-ionic/jdscience-electrolysis-molten-ionic-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-molten-ionic/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "electrolysis-aqueous-solutions",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-aqueous-solutions/jdscience-electrolysis-aqueous-solutions-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/electrolysis-aqueous-solutions/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "copper-purification",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/copper-purification/jdscience-copper-purification-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/copper-purification/source/narration_master.m4a",
+    "narration_status": 200
+  },
+  {
+    "slug": "chemical-changes-exam-practice",
+    "url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/chemical-changes-exam-practice/jdscience-chemical-changes-exam-practice-1080p.mp4",
+    "status": 200,
+    "ftyp": true,
+    "narration_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/chemistry/videos/chemical-changes-exam-practice/source/narration_master.m4a",
+    "narration_status": 200
+  }
+]

@@ -6,7 +6,7 @@ This audit does **not** mark short original-narration Biology lessons complete. 
 
 ## Chemistry — chemical changes (this branch)
 
-Twelve new acids / salts / electrolysis lessons replace the uploaded 720p ~2-minute drafts. Each is authored to the six-stage format with cloned-voice narration. Completeness is recorded per slug in `qa/` and `spec/` after encode.
+Twelve acids / salts / electrolysis lessons replace the uploaded 720p ~2-minute drafts. Each is encoded 1080p30 with a temporary British English male voice (`en-GB-RyanNeural`) and passes the six-stage QA gate. Completeness is recorded per slug in `qa/` and `spec/`. Audio masters are stored separately so the cloned voice can replace this track later.
 
 | Upload | Topic | Draft duration | Action |
 | --- | --- | --- | --- |

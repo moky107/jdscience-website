@@ -17,12 +17,14 @@ function test(name, fn) {
   }
 }
 
-test("twelve chemical-changes lessons are authored but not hosted until narration exists", () => {
+test("twelve chemical-changes lessons are hosted on public Supabase URLs", () => {
   assert.equal(GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.length, 12);
   for (const item of GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS) {
-    assert.equal(item.hosted, false);
-    assert.equal(item.awaiting_narration, true);
+    assert.equal(item.hosted, true);
+    assert.notEqual(item.awaiting_narration, true);
     assert.match(item.file_name, /^jdscience-.+-1080p\.mp4$/);
+    assert.match(item.file_url_override, /^https:\/\/xugsznxfvpbifpzpuoek\.supabase\.co\/storage\/v1\/object\/public\/resources\//);
+    assert.doesNotMatch(item.file_url_override, /\/opt\/cursor\/artifacts/);
   }
 });
 

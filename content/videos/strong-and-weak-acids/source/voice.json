@@ -1,0 +1,7 @@
+{
+  "engine": "edge-tts",
+  "voice": "en-GB-RyanNeural",
+  "rate": "-20%",
+  "temporary": true,
+  "notes": "Authorised temporary British English male voice. Replace with the JD Science clone without rebuilding slide cues."
+}

@@ -38,6 +38,13 @@ content/videos/studio/out/
 # Foundations working audio chunks
 content/videos/*/source/chunk_*.mp3
 content/videos/*/source/narration_master_parts/
+content/videos/*/source/narration_master.m4a
+content/videos/*/source/narration_master.mp3
+content/videos/*/source/_before.wav
+content/videos/*/source/_after.wav
+content/videos/*/source/_silence.wav
+content/videos/*/source/_pause.txt
+content/videos/*/source/narration_paused.wav
 
 # Private teacher mark schemes — never publish
 content/tlevel-chemistry/private/

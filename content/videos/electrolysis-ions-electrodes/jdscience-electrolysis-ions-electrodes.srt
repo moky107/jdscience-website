@@ -1,0 +1,360 @@
+1
+00:00:00,100 --> 00:00:04,597
+Hello and welcome back to J D Science Today
+
+2
+00:00:04,612 --> 00:00:08,284
+we begin electrolysis By the end of
+
+3
+00:00:08,300 --> 00:00:12,081
+this lesson you should be able to define an electrolyte name
+
+4
+00:00:12,097 --> 00:00:15,800
+the electrodes describe the movement of ions and
+
+5
+00:00:15,816 --> 00:00:19,456
+explain that electrolysis is a redox process driven
+
+6
+00:00:19,472 --> 00:00:23,175
+by electricity Ionic compounds can
+
+7
+00:00:23,191 --> 00:00:26,941
+only be electrolysed when their ions are free to move
+
+8
+00:00:28,019 --> 00:00:32,034
+In a solid ionic lattice the ions are locked in place so
+
+9
+00:00:32,050 --> 00:00:36,362
+solid sodium chloride does not conduct When
+
+10
+00:00:36,378 --> 00:00:40,394
+the compound is molten or dissolved in water the ions
+
+11
+00:00:40,409 --> 00:00:44,097
+can move A liquid or solution that
+
+12
+00:00:44,112 --> 00:00:48,503
+contains free ions and therefore conducts is called an electrolyte
+
+13
+00:00:49,581 --> 00:00:53,300
+Two electrodes are dipped into the electrolyte and connected to
+
+14
+00:00:53,316 --> 00:00:56,972
+a direct current supply The anode is
+
+15
+00:00:56,987 --> 00:01:00,612
+the positive electrode The cathode is
+
+16
+00:01:00,628 --> 00:01:04,378
+the negative electrode A simple memory
+
+17
+00:01:04,394 --> 00:01:08,378
+aid is that anode and acid both begin with a and acids
+
+18
+00:01:08,394 --> 00:01:12,081
+are associated with positive hydrogen ions but it is
+
+19
+00:01:12,097 --> 00:01:16,222
+safer just to learn anode positive cathode negative
+
+20
+00:01:17,300 --> 00:01:20,987
+Cations are positive ions They
+
+21
+00:01:21,003 --> 00:01:25,081
+are attracted to the negative cathode Anions
+
+22
+00:01:25,097 --> 00:01:28,737
+are negative ions They are attracted
+
+23
+00:01:28,753 --> 00:01:33,019
+to the positive anode Opposite charges attract
+
+24
+00:01:34,097 --> 00:01:38,659
+In the electrolyte ions carry the charge In
+
+25
+00:01:38,675 --> 00:01:43,112
+the wires electrons carry the charge At
+
+26
+00:01:43,128 --> 00:01:47,941
+the cathode positive ions gain electrons Gaining
+
+27
+00:01:47,956 --> 00:01:51,628
+electrons is reduction At the anode
+
+28
+00:01:51,894 --> 00:01:55,987
+negative ions lose electrons Losing
+
+29
+00:01:56,003 --> 00:01:59,862
+electrons is oxidation Electrolysis
+
+30
+00:01:59,878 --> 00:02:03,566
+forces non-spontaneous redox reactions to happen
+
+31
+00:02:03,581 --> 00:02:07,675
+by supplying electrical energy The electrodes
+
+32
+00:02:07,691 --> 00:02:11,519
+are often graphite which is inert meaning it does not
+
+33
+00:02:11,534 --> 00:02:15,409
+usually take part in the reaction In copper
+
+34
+00:02:15,425 --> 00:02:19,113
+purification which we will meet later the electrodes
+
+35
+00:02:19,128 --> 00:02:22,816
+are copper and they do take part Never
+
+36
+00:02:22,831 --> 00:02:26,769
+say that the electrolyte is the metal wire the electrolyte
+
+37
+00:02:26,784 --> 00:02:30,581
+is the molten compound or the solution If
+
+38
+00:02:30,597 --> 00:02:34,222
+you electrolyse molten lead bromide brown bromine
+
+39
+00:02:34,238 --> 00:02:37,831
+gas forms at the anode and a bead of silvery lead forms
+
+40
+00:02:37,847 --> 00:02:41,738
+at the cathode That classic experiment shows
+
+41
+00:02:41,753 --> 00:02:45,722
+that the ionic compound has been broken down into its elements
+
+42
+00:02:46,800 --> 00:02:50,847
+Learn the labels until they are automatic The
+
+43
+00:02:50,863 --> 00:02:54,519
+cathode is negative so positive ions are reduced
+
+44
+00:02:54,534 --> 00:02:58,394
+there The anode is positive so negative
+
+45
+00:02:58,409 --> 00:03:02,113
+ions are oxidised there Graphite is
+
+46
+00:03:02,128 --> 00:03:05,925
+used because it conducts and in many school cells it
+
+47
+00:03:05,941 --> 00:03:09,894
+is inert If the question shows a diagram
+
+48
+00:03:10,128 --> 00:03:13,941
+you should be able to mark the battery the electrolyte and both
+
+49
+00:03:13,956 --> 00:03:18,706
+electrodes Let us work through an examination-style
+
+50
+00:03:18,722 --> 00:03:22,863
+example Why does solid potassium chloride
+
+51
+00:03:22,878 --> 00:03:26,691
+not conduct electricity but molten potassium chloride
+
+52
+00:03:26,706 --> 00:03:30,697
+does Where would potassium ions move during
+
+53
+00:03:30,713 --> 00:03:34,316
+electrolysis In the solid ions
+
+54
+00:03:34,331 --> 00:03:38,034
+cannot move When molten ions
+
+55
+00:03:38,050 --> 00:03:43,050
+are free to move so the liquid conducts Potassium
+
+56
+00:03:43,066 --> 00:03:47,003
+ions are positive so they move to the cathode the negative
+
+57
+00:03:47,019 --> 00:03:51,034
+electrode where they gain electrons to form potassium metal
+
+58
+00:03:52,252 --> 00:03:55,858
+Now it is your turn This question is
+
+59
+00:03:55,874 --> 00:03:59,546
+worth four marks Explain in
+
+60
+00:03:59,561 --> 00:04:03,265
+terms of ions and electrons what happens when a direct
+
+61
+00:04:03,280 --> 00:04:07,765
+current is passed through an ionic electrolyte using inert electrodes
+
+62
+00:04:08,843 --> 00:04:13,530
+In your answer name the anode and the cathode Pause
+
+63
+00:04:13,546 --> 00:04:17,499
+the video and try this question yourself I
+
+64
+00:04:17,515 --> 00:04:23,546
+will go through the model answer in a moment Here
+
+65
+00:04:23,561 --> 00:04:27,530
+is the model answer The anode is the positive
+
+66
+00:04:27,546 --> 00:04:32,546
+electrode and the cathode is the negative electrode Positive
+
+67
+00:04:32,561 --> 00:04:36,999
+ions move to the cathode and gain electrons so they are reduced
+
+68
+00:04:38,077 --> 00:04:41,999
+Negative ions move to the anode and lose electrons so
+
+69
+00:04:42,014 --> 00:04:45,624
+they are oxidised Electrons flow in
+
+70
+00:04:45,639 --> 00:04:50,155
+the external circuit from anode to cathode Marking
+
+71
+00:04:50,171 --> 00:04:53,921
+points electrode polarity cation movement
+
+72
+00:04:54,030 --> 00:04:59,202
+and reduction anion movement and oxidation Essential
+
+73
+00:04:59,218 --> 00:05:03,093
+vocabulary is electrolyte anode cathode
+
+74
+00:05:03,389 --> 00:05:07,343
+cation anion oxidation and reduction
+
+75
+00:05:08,421 --> 00:05:12,155
+A common misconception is to say electrons flow through the
+
+76
+00:05:12,171 --> 00:05:16,093
+electrolyte Ions flow in the electrolyte
+
+77
+00:05:16,358 --> 00:05:20,468
+electrons flow in the metal wires Another
+
+78
+00:05:20,483 --> 00:05:24,124
+is to reverse anode and cathode If
+
+79
+00:05:24,139 --> 00:05:28,264
+you mix them up every half-equation that follows will be wrong
+
+80
+00:05:29,343 --> 00:05:34,311
+Before we finish remember these key ideas Ions
+
+81
+00:05:34,327 --> 00:05:37,999
+must be free to move so the electrolyte is molten or
+
+82
+00:05:38,014 --> 00:05:42,124
+dissolved Anode is positive cathode
+
+83
+00:05:42,139 --> 00:05:45,843
+is negative Cations are reduced
+
+84
+00:05:45,858 --> 00:05:49,530
+at the cathode Anions are oxidised
+
+85
+00:05:49,546 --> 00:05:53,218
+at the anode Solid ionic compounds
+
+86
+00:05:53,233 --> 00:05:56,999
+do not conduct If this explanation has
+
+87
+00:05:57,014 --> 00:06:00,764
+helped please subscribe to J D Science and visit j
+
+88
+00:06:00,780 --> 00:06:04,671
+d science dot co dot u k for further explanations
+
+89
+00:06:04,686 --> 00:06:08,483
+and revision resources Thank you for watching
+
+90
+00:06:08,765 --> 00:06:11,530
+and I look forward to seeing you in the next lesson
+

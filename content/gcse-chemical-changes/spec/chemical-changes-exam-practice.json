@@ -26,6 +26,5 @@
       "tier": "both"
     }
   ],
-  "complete": false,
-  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+  "complete": true
 }

@@ -44,6 +44,7 @@ function foundationLesson({ title, topicSlug, file_name, description }) {
 }
 
 function chemicalChangesLesson({ title, topicSlug, file_name, description }) {
+  const storageFolder = `gcse-igcse/chemistry/videos/${topicSlug}`;
   return {
     level: "GCSE/IGCSE",
     subject: "Chemistry",
@@ -54,12 +55,12 @@ function chemicalChangesLesson({ title, topicSlug, file_name, description }) {
     topicSlug,
     file_name,
     source_path: null,
-    hosted: false,
-    awaiting_narration: true,
+    hosted: true,
     description,
+    file_url_override: `${RESOURCES_PUBLIC_BASE}/${storageFolder}/${file_name}`,
+    caption_url: `/resources/gcse/chemistry/videos/${topicSlug}/captions.vtt`,
     poster_url: `/resources/gcse/chemistry/videos/${topicSlug}/poster.jpg`,
-    file_url_override: `/resources/gcse/chemistry/videos/${topicSlug}/${file_name}`,
-    notesHtml: `<div class="callout">Six-stage script is ready. Cloned-voice narration is queued until ElevenLabs credits are available, so this lesson is not published as a completed video.</div><p>${description}</p>`,
+    notesHtml: `<div class="callout">Original JD Science GCSE Chemistry lesson. Captions are available in the player.</div><p>${description}</p>`,
   };
 }
 
@@ -227,12 +228,11 @@ export const GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS = [
 
 export const GCSE_CHEMISTRY_LESSON_VIDEOS = [
   ...GCSE_CHEMISTRY_FOUNDATION_VIDEOS,
+  ...GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS,
   ...GCSE_CHEMISTRY_CALCULATION_VIDEOS,
 ];
 
-// Authored six-stage scripts are ready. They stay off the public hosted
-// catalog until cloned-voice narration can be generated and QA-gated.
-export const GCSE_CHEMISTRY_CHEMICAL_CHANGES_AWAITING_NARRATION = true;
+export const GCSE_CHEMISTRY_CHEMICAL_CHANGES_AWAITING_NARRATION = false;
 
 export const GCSE_CHEMISTRY_VIDEOS = [
   ...GCSE_CHEMISTRY_LESSON_VIDEOS,

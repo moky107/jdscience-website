@@ -1,0 +1,366 @@
+{
+  "slug": "acids-metals-redox",
+  "duration": 402.08,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 12.144,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to write",
+      "kind": "aims"
+    },
+    {
+      "id": "general",
+      "t": 25.847,
+      "aligned": true,
+      "cue": "The general reaction is acid plus metal",
+      "kind": "equation"
+    },
+    {
+      "id": "series",
+      "t": 44.972,
+      "aligned": true,
+      "cue": "Not every metal reacts",
+      "kind": "diagram"
+    },
+    {
+      "id": "test",
+      "t": 81.941,
+      "aligned": true,
+      "cue": "Hydrogen burns with a squeaky pop",
+      "kind": "diagram"
+    },
+    {
+      "id": "redox",
+      "t": 132.784,
+      "aligned": true,
+      "cue": "Losing electrons is oxidation",
+      "kind": "diagram"
+    },
+    {
+      "id": "worked",
+      "t": 215.3,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 253.775,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 289.087,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 356.118,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 387.103,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 15.097,
+      "aligned": true,
+      "cue": "word and symbol equations"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 17.159,
+      "aligned": true,
+      "cue": "test for hydrogen"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 21.206,
+      "aligned": true,
+      "cue": "oxidation and reduction"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 229.012,
+      "aligned": true,
+      "cue": "Zinc plus H two S O four"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 235.165,
+      "aligned": true,
+      "cue": "The salt is zinc sulfate"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 241.165,
+      "aligned": true,
+      "cue": "burns with a squeaky pop"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 291.946,
+      "aligned": true,
+      "cue": "Bubbles of gas"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 297.712,
+      "aligned": true,
+      "cue": "magnesium chloride and hydrogen"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 301.337,
+      "aligned": true,
+      "cue": "Magnesium atoms lose electrons"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 363.634,
+      "aligned": true,
+      "cue": "salt and hydrogen"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 366.118,
+      "aligned": true,
+      "cue": "Hydrochloric acid gives chlorides"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 372.384,
+      "aligned": true,
+      "cue": "Hydrogen pops with a lighted"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 376.025,
+      "aligned": true,
+      "cue": "The metal is oxidised"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 12.144,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to write",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 15.097,
+      "aligned": true,
+      "cue": "word and symbol equations",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 17.159,
+      "aligned": true,
+      "cue": "test for hydrogen",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 21.206,
+      "aligned": true,
+      "cue": "oxidation and reduction",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 25.847,
+      "aligned": true,
+      "cue": "The general reaction is acid plus metal",
+      "target": "equation",
+      "slide": "general"
+    },
+    {
+      "t": 44.972,
+      "aligned": true,
+      "cue": "Not every metal reacts",
+      "target": "diagram",
+      "slide": "series"
+    },
+    {
+      "t": 81.941,
+      "aligned": true,
+      "cue": "Hydrogen burns with a squeaky pop",
+      "target": "diagram",
+      "slide": "test"
+    },
+    {
+      "t": 132.784,
+      "aligned": true,
+      "cue": "Losing electrons is oxidation",
+      "target": "diagram",
+      "slide": "redox"
+    },
+    {
+      "t": 215.3,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 229.012,
+      "aligned": true,
+      "cue": "Zinc plus H two S O four",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 235.165,
+      "aligned": true,
+      "cue": "The salt is zinc sulfate",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 241.165,
+      "aligned": true,
+      "cue": "burns with a squeaky pop",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 253.775,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 279.087,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 289.087,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 291.946,
+      "aligned": true,
+      "cue": "Bubbles of gas",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 297.712,
+      "aligned": true,
+      "cue": "magnesium chloride and hydrogen",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 301.337,
+      "aligned": true,
+      "cue": "Magnesium atoms lose electrons",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 356.118,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 363.634,
+      "aligned": true,
+      "cue": "salt and hydrogen",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 366.118,
+      "aligned": true,
+      "cue": "Hydrochloric acid gives chlorides",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 372.384,
+      "aligned": true,
+      "cue": "Hydrogen pops with a lighted",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 376.025,
+      "aligned": true,
+      "cue": "The metal is oxidised",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 387.103,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 387.4,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 388.165,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

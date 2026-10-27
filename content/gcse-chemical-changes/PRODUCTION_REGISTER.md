@@ -1,18 +1,20 @@
 # Chemical-changes production register
 
-| Lesson | Six-stage script | Spec checklist | 1080p encode | Hosted | Complete |
-| --- | --- | --- | --- | --- | --- |
-| Acids, Bases and Alkalis | yes | yes | blocked — ElevenLabs quota | no | no |
-| Indicators and the pH Scale | yes | yes | blocked | no | no |
-| Strong and Weak Acids (HT) | yes | yes | blocked | no | no |
-| Acids Reacting with Metals | yes | yes | blocked | no | no |
-| Neutralisation and Gas Tests | yes | yes | blocked | no | no |
-| Making Soluble and Insoluble Salts | yes | yes | blocked | no | no |
-| Acid-Alkali Titration | yes | yes | blocked | no | no |
-| Electrolysis: Ions and Electrodes | yes | yes | blocked | no | no |
-| Electrolysis of Molten Ionic Compounds | yes | yes | blocked | no | no |
-| Electrolysis of Aqueous Solutions | yes | yes | blocked | no | no |
-| Copper Purification by Electrolysis | yes | yes | blocked | no | no |
-| Chemical Changes: Exam Practice | yes | yes | blocked | no | no |
+Temporary British English narration: Microsoft `en-GB-RyanNeural` (authorised). Audio masters stay in `content/videos/<slug>/source/` and on Supabase so the cloned voice can replace the track later.
 
-Resume: `python3 scripts/gcse_chemical_changes/produce.py` then `node scripts/publish-gcse-chemical-changes.mjs` once cloned-voice credits exist. Do not pad the 2-minute original uploads. Do not publish silent drafts.
+| Lesson | Six-stage | Spec | 1080p encode | Hosted | Complete |
+| --- | --- | --- | --- | --- | --- |
+| Acids, Bases and Alkalis | yes | yes | 429.8 s | yes | yes |
+| Indicators and the pH Scale | yes | yes | 419.6 s | yes | yes |
+| Strong and Weak Acids (HT) | yes | yes | 404.2 s | yes | yes |
+| Acids Reacting with Metals | yes | yes | 402.1 s | yes | yes |
+| Neutralisation and Gas Tests | yes | yes | 390.1 s | yes | yes |
+| Making Soluble and Insoluble Salts | yes | yes | 387.4 s | yes | yes |
+| Acid-Alkali Titration | yes | yes | 414.6 s | yes | yes |
+| Electrolysis: Ions and Electrodes | yes | yes | 372.6 s | yes | yes |
+| Electrolysis of Molten Ionic Compounds | yes | yes | 356.5 s | yes | yes |
+| Electrolysis of Aqueous Solutions | yes | yes | 363.9 s | yes | yes |
+| Copper Purification by Electrolysis | yes | yes | 345.5 s | yes | yes |
+| Chemical Changes: Exam Practice | yes | yes | 401.0 s | yes | yes |
+
+All twelve are 1920×1080, 30 fps, H.264/AAC. Resume: `node scripts/publish-gcse-chemical-changes.mjs` then `node scripts/seo/write-gcse-chemistry-video-pages.mjs`.

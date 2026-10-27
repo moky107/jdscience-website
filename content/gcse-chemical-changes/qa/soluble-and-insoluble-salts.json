@@ -2,8 +2,8 @@
   "slug": "soluble-and-insoluble-salts",
   "title": "Making Soluble and Insoluble Salts",
   "subject": "Chemistry",
-  "complete": false,
-  "duration_s": 0,
+  "complete": true,
+  "duration_s": 387.44,
   "stages": {
     "introduction": true,
     "explanation": true,
@@ -47,15 +47,11 @@
     "pause": true,
     "subscribe": true,
     "website": true,
-    "duration_ok": false,
-    "preferred_band": false,
+    "duration_ok": true,
+    "preferred_band": true,
     "1080p": true
   },
-  "failures": [
-    "cloned_voice_quota_exceeded",
-    "duration_below_4_min:0.0s",
-    "not_encoded"
-  ],
+  "failures": [],
   "gates": {
     "min_seconds": 240.0,
     "preferred_seconds": [
@@ -63,5 +59,25 @@
       480.0
     ],
     "opening": "Hello and welcome back to JD Science."
-  }
+  },
+  "probe": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "vcodec": "h264",
+    "acodec": "aac",
+    "fps": 30.0,
+    "duration": 387.44,
+    "size": 12274961
+  },
+  "aligned_slides": 11,
+  "aligned_total": 11,
+  "aligned_reveals": 13,
+  "reveals_total": 13,
+  "aligned_cursor": 27,
+  "cursor_total": 27,
+  "filename": "jdscience-soluble-and-insoluble-salts-1080p.mp4",
+  "tier": "Foundation and Higher",
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true
 }

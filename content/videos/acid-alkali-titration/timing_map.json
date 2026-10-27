@@ -1,0 +1,394 @@
+{
+  "slug": "acid-alkali-titration",
+  "duration": 414.608,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 10.394,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to name the apparatus",
+      "kind": "aims"
+    },
+    {
+      "id": "kit",
+      "t": 38.706,
+      "aligned": true,
+      "cue": "The apparatus is specific",
+      "kind": "diagram"
+    },
+    {
+      "id": "method",
+      "t": 72.816,
+      "aligned": true,
+      "cue": "Rinse the pipette with the solution",
+      "kind": "bullets"
+    },
+    {
+      "id": "moles",
+      "t": 151.113,
+      "aligned": true,
+      "cue": "The calculation uses moles equals concentration times volume",
+      "kind": "equation"
+    },
+    {
+      "id": "worked",
+      "t": 173.691,
+      "aligned": true,
+      "cue": "Let us work through a worked example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 250.134,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 299.477,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 368.79,
+      "aligned": true,
+      "cue": "Before we finish, remember these examination techniques",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 399.634,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 12.941,
+      "aligned": true,
+      "cue": "name the apparatus"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 16.956,
+      "aligned": true,
+      "cue": "concordant titres"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 18.675,
+      "aligned": true,
+      "cue": "calculate an unknown concentration"
+    },
+    {
+      "slide": "method",
+      "item": "b1",
+      "t": 72.936,
+      "aligned": true,
+      "cue": "Rinse the pipette"
+    },
+    {
+      "slide": "method",
+      "item": "b2",
+      "t": 98.956,
+      "aligned": true,
+      "cue": "Near the end point, add drop"
+    },
+    {
+      "slide": "method",
+      "item": "b3",
+      "t": 115.081,
+      "aligned": true,
+      "cue": "concordant titres"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 206.668,
+      "aligned": true,
+      "cue": "Moles of H Cl equals"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 220.681,
+      "aligned": true,
+      "cue": "The ratio is one to one"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 242.274,
+      "aligned": true,
+      "cue": "zero point zero nine zero moles"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 302.337,
+      "aligned": true,
+      "cue": "Moles of sodium hydroxide equals"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 317.352,
+      "aligned": true,
+      "cue": "one sulfuric acid to two"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 336.055,
+      "aligned": true,
+      "cue": "zero point one one two moles"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 373.977,
+      "aligned": true,
+      "cue": "Name pipette and burette"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 381.712,
+      "aligned": true,
+      "cue": "Use concordant titres"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 384.743,
+      "aligned": true,
+      "cue": "Convert cubic centimetres"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 389.446,
+      "aligned": true,
+      "cue": "Use the mole ratio"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 10.394,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to name the apparatus",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 12.941,
+      "aligned": true,
+      "cue": "name the apparatus",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 16.956,
+      "aligned": true,
+      "cue": "concordant titres",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 18.675,
+      "aligned": true,
+      "cue": "calculate an unknown concentration",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 38.706,
+      "aligned": true,
+      "cue": "The apparatus is specific",
+      "target": "burette",
+      "slide": "kit"
+    },
+    {
+      "t": 72.816,
+      "aligned": true,
+      "cue": "Rinse the pipette with the solution",
+      "target": "heading",
+      "slide": "method"
+    },
+    {
+      "t": 72.936,
+      "aligned": true,
+      "cue": "Rinse the pipette",
+      "target": "b1",
+      "slide": "method"
+    },
+    {
+      "t": 98.956,
+      "aligned": true,
+      "cue": "Near the end point, add drop",
+      "target": "b2",
+      "slide": "method"
+    },
+    {
+      "t": 115.081,
+      "aligned": true,
+      "cue": "concordant titres",
+      "target": "b3",
+      "slide": "method"
+    },
+    {
+      "t": 151.113,
+      "aligned": true,
+      "cue": "The calculation uses moles equals concentration times volume",
+      "target": "equation",
+      "slide": "moles"
+    },
+    {
+      "t": 173.691,
+      "aligned": true,
+      "cue": "Let us work through a worked example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 206.668,
+      "aligned": true,
+      "cue": "Moles of H Cl equals",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 220.681,
+      "aligned": true,
+      "cue": "The ratio is one to one",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 242.274,
+      "aligned": true,
+      "cue": "zero point zero nine zero moles",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 250.134,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 289.477,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 299.477,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 302.337,
+      "aligned": true,
+      "cue": "Moles of sodium hydroxide equals",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 317.352,
+      "aligned": true,
+      "cue": "one sulfuric acid to two",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 336.055,
+      "aligned": true,
+      "cue": "zero point one one two moles",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 368.79,
+      "aligned": true,
+      "cue": "Before we finish, remember these examination techniques",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 373.977,
+      "aligned": true,
+      "cue": "Name pipette and burette",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 381.712,
+      "aligned": true,
+      "cue": "Use concordant titres",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 384.743,
+      "aligned": true,
+      "cue": "Convert cubic centimetres",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 389.446,
+      "aligned": true,
+      "cue": "Use the mole ratio",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 399.634,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 399.931,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 400.696,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

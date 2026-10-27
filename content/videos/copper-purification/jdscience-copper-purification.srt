@@ -1,0 +1,336 @@
+1
+00:00:00,100 --> 00:00:04,581
+Hello and welcome back to J D Science Today
+
+2
+00:00:04,597 --> 00:00:08,300
+we are looking at the purification of copper by electrolysis
+
+3
+00:00:09,378 --> 00:00:12,300
+By the end of this lesson you should be able to label
+
+4
+00:00:12,316 --> 00:00:16,034
+the cell write the electrode reactions and explain
+
+5
+00:00:16,050 --> 00:00:19,863
+what happens to impurities Copper used
+
+6
+00:00:19,878 --> 00:00:23,831
+for electrical wiring must be very pure because impurities
+
+7
+00:00:23,847 --> 00:00:27,566
+increase electrical resistance Blister
+
+8
+00:00:27,581 --> 00:00:31,191
+copper from the blast furnace or converter is purified by
+
+9
+00:00:31,206 --> 00:00:34,831
+electrolysis High-purity copper is
+
+10
+00:00:34,847 --> 00:00:38,769
+also used in electronic circuits where even a small
+
+11
+00:00:38,784 --> 00:00:43,128
+increase in resistance wastes energy as heat The
+
+12
+00:00:43,144 --> 00:00:47,175
+electrolyte is aqueous copper sulfate The
+
+13
+00:00:47,191 --> 00:00:51,066
+anode is a large plate of impure copper The
+
+14
+00:00:51,081 --> 00:00:55,019
+cathode is a thin sheet of pure copper This
+
+15
+00:00:55,034 --> 00:00:58,987
+is different from the inert graphite electrodes in the last lesson
+
+16
+00:01:00,066 --> 00:01:03,706
+Here the electrodes take part At the
+
+17
+00:01:03,722 --> 00:01:07,347
+impure copper anode copper atoms lose electrons and
+
+18
+00:01:07,362 --> 00:01:11,987
+go into solution as copper two plus ions The
+
+19
+00:01:12,003 --> 00:01:15,878
+half-equation is C u goes to C u two plus plus
+
+20
+00:01:15,894 --> 00:01:19,581
+two electrons The anode dissolves and
+
+21
+00:01:19,597 --> 00:01:23,441
+gets smaller At the pure copper cathode
+
+22
+00:01:23,659 --> 00:01:27,300
+copper two plus ions from the solution gain electrons and are
+
+23
+00:01:27,316 --> 00:01:31,019
+deposited as copper metal C u
+
+24
+00:01:31,034 --> 00:01:35,519
+two plus plus two electrons goes to C u The
+
+25
+00:01:35,534 --> 00:01:40,441
+cathode gets thicker with a coating of pure copper Impurities
+
+26
+00:01:40,456 --> 00:01:43,581
+in the anode either fall to the bottom as an anode sludge
+
+27
+00:01:43,909 --> 00:01:48,347
+or stay in solution if they are more reactive than copper The
+
+28
+00:01:48,362 --> 00:01:52,206
+sludge can contain valuable metals such as silver and gold
+
+29
+00:01:52,378 --> 00:01:56,612
+which helps to pay for the process The concentration
+
+30
+00:01:56,628 --> 00:02:00,394
+of copper ions in the electrolyte stays approximately constant
+
+31
+00:02:00,581 --> 00:02:04,394
+because for every copper ion deposited at the cathode another
+
+32
+00:02:04,409 --> 00:02:08,159
+copper ion enters from the anode That is
+
+33
+00:02:08,175 --> 00:02:12,113
+why the blue colour does not fade in purification whereas
+
+34
+00:02:12,128 --> 00:02:16,066
+it does fade when inert electrodes are used with copper sulfate
+
+35
+00:02:17,144 --> 00:02:20,894
+This is still redox Oxidation
+
+36
+00:02:20,909 --> 00:02:24,566
+is at the anode where copper atoms lose electrons
+
+37
+00:02:25,644 --> 00:02:30,097
+Reduction is at the cathode where copper ions gain electrons
+
+38
+00:02:31,175 --> 00:02:35,003
+The same element is oxidised at one electrode and reduced
+
+39
+00:02:35,019 --> 00:02:39,003
+at the other If you are shown a diagram label
+
+40
+00:02:39,019 --> 00:02:42,753
+the impure copper as the anode connected to the positive terminal
+
+41
+00:02:43,019 --> 00:02:46,691
+the pure copper as the cathode connected to the negative terminal
+
+42
+00:02:47,034 --> 00:02:51,238
+and copper sulfate solution as the electrolyte A
+
+43
+00:02:51,253 --> 00:02:54,972
+mass increase at the cathode and a mass decrease at the anode
+
+44
+00:02:54,988 --> 00:02:59,238
+is the quantitative signature of this process Let
+
+45
+00:02:59,253 --> 00:03:03,784
+us work through an examination-style example Why
+
+46
+00:03:03,800 --> 00:03:07,613
+does the impure anode lose mass why does the pure cathode
+
+47
+00:03:07,628 --> 00:03:12,425
+gain mass and why does the blue colour remain Copper
+
+48
+00:03:12,441 --> 00:03:16,738
+atoms leave the anode as ions so the anode mass falls
+
+49
+00:03:17,816 --> 00:03:21,831
+Those ions together with ions already in the electrolyte
+
+50
+00:03:22,113 --> 00:03:25,894
+are deposited as metal on the cathode so the cathode mass
+
+51
+00:03:25,909 --> 00:03:29,566
+rises Copper ions are replaced
+
+52
+00:03:29,581 --> 00:03:33,566
+at the same rate they are removed so the solution stays blue
+
+53
+00:03:34,644 --> 00:03:38,613
+Now it is your turn This question is worth
+
+54
+00:03:38,628 --> 00:03:42,327
+four marks Describe how copper is
+
+55
+00:03:42,343 --> 00:03:46,074
+purified by electrolysis Include
+
+56
+00:03:46,089 --> 00:03:50,589
+the names of the electrodes and the electrolyte and write the half-equation
+
+57
+00:03:50,605 --> 00:03:54,605
+for the reaction at the cathode Pause the video
+
+58
+00:03:54,621 --> 00:03:58,386
+and try this question yourself I will go
+
+59
+00:03:58,402 --> 00:04:03,980
+through the model answer in a moment Here
+
+60
+00:04:03,996 --> 00:04:07,980
+is the model answer The electrolyte is copper
+
+61
+00:04:07,996 --> 00:04:11,730
+sulfate solution The anode is impure
+
+62
+00:04:11,746 --> 00:04:15,746
+copper and the cathode is pure copper Copper
+
+63
+00:04:15,761 --> 00:04:19,433
+ions are reduced at the cathode C u two plus
+
+64
+00:04:19,449 --> 00:04:23,167
+plus two electrons goes to C u Impurities fall
+
+65
+00:04:23,183 --> 00:04:26,871
+away from the anode as sludge Marking
+
+66
+00:04:26,886 --> 00:04:31,277
+points electrolyte electrode materials cathode
+
+67
+00:04:31,292 --> 00:04:36,277
+half-equation impurities as sludge Essential
+
+68
+00:04:36,292 --> 00:04:40,011
+vocabulary is anode cathode electrolyte
+
+69
+00:04:40,324 --> 00:04:44,605
+oxidised and reduced A common misconception
+
+70
+00:04:44,621 --> 00:04:48,652
+is to use graphite electrodes in the purification diagram
+
+71
+00:04:49,730 --> 00:04:54,089
+Another is to say the blue colour fades that is the inert-electrode
+
+72
+00:04:54,105 --> 00:04:58,042
+experiment not purification Before
+
+73
+00:04:58,058 --> 00:05:02,714
+we finish remember these key ideas Impure
+
+74
+00:05:02,730 --> 00:05:06,480
+copper is the anode pure copper is the cathode and
+
+75
+00:05:06,496 --> 00:05:10,449
+copper sulfate is the electrolyte The anode
+
+76
+00:05:10,464 --> 00:05:14,636
+dissolves Pure copper plates onto the cathode
+
+77
+00:05:15,714 --> 00:05:19,621
+Impurities form a sludge The blue colour
+
+78
+00:05:19,636 --> 00:05:23,824
+stays because copper ions are replaced Inert
+
+79
+00:05:23,839 --> 00:05:28,683
+electrodes with copper sulfate are a different experiment If
+
+80
+00:05:28,699 --> 00:05:32,777
+this explanation has helped please subscribe to J D Science
+
+81
+00:05:32,792 --> 00:05:36,589
+and visit j d science dot co dot u k for further
+
+82
+00:05:36,605 --> 00:05:40,480
+explanations and revision resources Thank
+
+83
+00:05:40,496 --> 00:05:43,480
+you for watching and I look forward to seeing you in the
+
+84
+00:05:43,496 --> 00:05:44,417
+next lesson
+

@@ -1,0 +1,384 @@
+1
+00:00:00,100 --> 00:00:04,753
+Hello and welcome back to J D Science Today's
+
+2
+00:00:04,769 --> 00:00:08,941
+lesson is Higher Tier We are going to distinguish
+
+3
+00:00:08,956 --> 00:00:12,628
+strong acids from weak acids and we are going to separate
+
+4
+00:00:12,644 --> 00:00:17,456
+the idea of strength from the idea of concentration By
+
+5
+00:00:17,472 --> 00:00:21,425
+the end you should be able to explain ionisation compare
+
+6
+00:00:21,441 --> 00:00:25,238
+pH at the same concentration and avoid the usual
+
+7
+00:00:25,253 --> 00:00:28,941
+examination traps A strong acid
+
+8
+00:00:28,956 --> 00:00:33,128
+is fully ionised in aqueous solution That
+
+9
+00:00:33,144 --> 00:00:37,081
+means virtually every acid molecule or unit has donated
+
+10
+00:00:37,097 --> 00:00:41,066
+its hydrogen ion Hydrochloric acid
+
+11
+00:00:41,331 --> 00:00:45,222
+sulfuric acid and nitric acid are strong acids
+
+12
+00:00:46,300 --> 00:00:49,941
+In hydrochloric acid H Cl molecules do
+
+13
+00:00:49,956 --> 00:00:53,737
+not remain The solution contains H
+
+14
+00:00:53,753 --> 00:00:57,675
+plus and Cl minus ions A weak
+
+15
+00:00:57,691 --> 00:01:01,378
+acid is only partially ionised in aqueous solution
+
+16
+00:01:02,456 --> 00:01:06,112
+Only a small fraction of the acid molecules have donated
+
+17
+00:01:06,128 --> 00:01:10,191
+a hydrogen ion at any moment Ethanoic
+
+18
+00:01:10,206 --> 00:01:15,128
+acid the acid in vinegar is a weak acid Most
+
+19
+00:01:15,144 --> 00:01:19,972
+ethanoic acid molecules remain as molecules Only
+
+20
+00:01:19,987 --> 00:01:24,691
+some have ionised to H plus and ethanoate ions The
+
+21
+00:01:24,706 --> 00:01:29,050
+ionisation is reversible which is why we write an equilibrium
+
+22
+00:01:29,066 --> 00:01:33,487
+arrow Look at two beakers with the same concentration
+
+23
+00:01:33,503 --> 00:01:37,300
+of acid In the strong acid almost
+
+24
+00:01:37,316 --> 00:01:41,019
+all of the particles that can produce H plus have done so
+
+25
+00:01:41,316 --> 00:01:44,925
+so the hydrogen ion concentration is high and the pH
+
+26
+00:01:44,941 --> 00:01:49,394
+is low In the weak acid many un-ionised
+
+27
+00:01:49,409 --> 00:01:53,159
+molecules remain so the hydrogen ion concentration
+
+28
+00:01:53,175 --> 00:01:56,972
+is lower and the pH is higher Same
+
+29
+00:01:56,987 --> 00:02:00,909
+concentration different strength different pH
+
+30
+00:02:01,987 --> 00:02:05,612
+Strength is about how completely the acid ionises
+
+31
+00:02:06,691 --> 00:02:10,644
+Concentration is about how much acid is dissolved per cubic
+
+32
+00:02:10,659 --> 00:02:14,597
+decimetre of solution You can have a dilute
+
+33
+00:02:14,613 --> 00:02:18,597
+strong acid such as dilute hydrochloric acid and
+
+34
+00:02:18,613 --> 00:02:22,675
+a concentrated weak acid such as concentrated ethanoic
+
+35
+00:02:22,691 --> 00:02:26,894
+acid Concentrated does not mean strong
+
+36
+00:02:27,972 --> 00:02:33,175
+This is the misconception that costs marks every year Students
+
+37
+00:02:33,191 --> 00:02:36,972
+write that a strong acid is concentrated or that a weak
+
+38
+00:02:36,988 --> 00:02:41,144
+acid is dilute Strength and concentration
+
+39
+00:02:41,159 --> 00:02:44,941
+are different ideas Always say fully
+
+40
+00:02:44,956 --> 00:02:48,613
+ionised or partially ionised when you define strong
+
+41
+00:02:48,628 --> 00:02:52,722
+and weak Because pH depends on hydrogen
+
+42
+00:02:52,738 --> 00:02:56,425
+ion concentration a strong acid of concentration
+
+43
+00:02:56,441 --> 00:03:00,050
+zero point one moles per cubic decimetre has a much
+
+44
+00:03:00,066 --> 00:03:03,816
+lower pH than a weak acid of the same concentration
+
+45
+00:03:04,894 --> 00:03:08,566
+If you dilute a strong acid its pH rises because
+
+46
+00:03:08,581 --> 00:03:12,238
+you have lowered the H plus concentration but it is still a
+
+47
+00:03:12,253 --> 00:03:17,034
+strong acid because it remains fully ionised Let
+
+48
+00:03:17,050 --> 00:03:21,659
+us work through an examination-style example Two
+
+49
+00:03:21,675 --> 00:03:25,441
+acids A and B both have concentration zero
+
+50
+00:03:25,456 --> 00:03:30,191
+point one zero moles per cubic decimetre Acid
+
+51
+00:03:30,206 --> 00:03:33,816
+A has pH one Acid B has
+
+52
+00:03:33,831 --> 00:03:37,753
+pH three Which is strong which
+
+53
+00:03:37,769 --> 00:03:41,536
+is weak and why Acid A has
+
+54
+00:03:41,552 --> 00:03:45,177
+the lower pH so it has the higher hydrogen ion
+
+55
+00:03:45,192 --> 00:03:49,752
+concentration At the same overall concentration
+
+56
+00:03:50,111 --> 00:03:53,721
+that means A is more fully ionised so A is the
+
+57
+00:03:53,736 --> 00:03:57,861
+strong acid Acid B is only partially
+
+58
+00:03:57,877 --> 00:04:01,814
+ionised so it is weak We have used
+
+59
+00:04:01,830 --> 00:04:05,752
+pH as evidence of ionisation not as a vague label
+
+60
+00:04:06,830 --> 00:04:11,002
+Now it is your turn This Higher Tier question
+
+61
+00:04:11,017 --> 00:04:14,970
+is worth four marks Hydrochloric acid
+
+62
+00:04:14,986 --> 00:04:18,720
+and ethanoic acid are both acids They
+
+63
+00:04:18,736 --> 00:04:22,845
+are prepared at the same concentration Explain
+
+64
+00:04:22,861 --> 00:04:26,970
+the difference between a strong acid and a weak acid and explain
+
+65
+00:04:26,986 --> 00:04:31,627
+why the hydrochloric acid has a lower pH Pause
+
+66
+00:04:31,642 --> 00:04:35,595
+the video and try this question yourself I
+
+67
+00:04:35,611 --> 00:04:41,642
+will go through the model answer in a moment Here
+
+68
+00:04:41,658 --> 00:04:45,330
+is the model answer A strong acid is
+
+69
+00:04:45,345 --> 00:04:49,158
+fully ionised in aqueous solution A
+
+70
+00:04:49,174 --> 00:04:54,049
+weak acid is only partially ionised Hydrochloric
+
+71
+00:04:54,064 --> 00:04:58,252
+acid is a strong acid so it produces a higher concentration
+
+72
+00:04:58,267 --> 00:05:02,486
+of hydrogen ions than ethanoic acid at the same concentration
+
+73
+00:05:03,564 --> 00:05:07,424
+Higher H plus concentration means a lower pH
+
+74
+00:05:08,502 --> 00:05:12,689
+Marking points fully ionised partially ionised
+
+75
+00:05:12,939 --> 00:05:16,861
+same concentration but different H plus and pH linked
+
+76
+00:05:16,877 --> 00:05:21,174
+correctly Essential vocabulary is ionised
+
+77
+00:05:21,439 --> 00:05:25,080
+strong weak concentration and pH
+
+78
+00:05:26,158 --> 00:05:30,267
+Do not write dissociated unless you also make the ionisation
+
+79
+00:05:30,283 --> 00:05:34,392
+idea clear and never replace strong with concentrated
+
+80
+00:05:35,470 --> 00:05:39,470
+A common misconception is that weak acids cannot be dangerous
+
+81
+00:05:39,767 --> 00:05:44,502
+or that they do not react with metals or carbonates They
+
+82
+00:05:44,517 --> 00:05:48,314
+do react just more slowly or to a smaller extent
+
+83
+00:05:48,330 --> 00:05:51,939
+at the same concentration Another is to
+
+84
+00:05:51,955 --> 00:05:55,627
+draw both acids with the same number of H plus ions in
+
+85
+00:05:55,642 --> 00:05:59,346
+a particle diagram Before we finish
+
+86
+00:05:59,611 --> 00:06:03,705
+remember these Higher Tier ideas Strong
+
+87
+00:06:03,721 --> 00:06:07,721
+acids are fully ionised Weak acids
+
+88
+00:06:07,736 --> 00:06:11,471
+are partially ionised Strength is
+
+89
+00:06:11,486 --> 00:06:15,658
+not concentration At the same concentration
+
+90
+00:06:15,861 --> 00:06:19,705
+the strong acid has more H plus and a lower pH
+
+91
+00:06:20,783 --> 00:06:24,471
+One pH unit is a factor of ten in hydrogen
+
+92
+00:06:24,486 --> 00:06:28,408
+ion concentration If this explanation
+
+93
+00:06:28,424 --> 00:06:32,033
+has helped please subscribe to J D Science and visit
+
+94
+00:06:32,049 --> 00:06:36,267
+j d science dot co dot u k for further explanations
+
+95
+00:06:36,283 --> 00:06:40,080
+and revision resources Thank you for watching
+
+96
+00:06:40,361 --> 00:06:43,127
+and I look forward to seeing you in the next lesson
+

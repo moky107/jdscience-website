@@ -85,13 +85,41 @@ async function main() {
     await extractPoster(mp4, path.join(publicDir, "poster.jpg"));
     const storageMp4 = `gcse-igcse/chemistry/videos/${item.topicSlug}/${item.file_name}`;
     await upload(client, storageMp4, mp4, "video/mp4");
+    const narrationCandidates = [
+      path.join(ROOT, "content/videos", item.topicSlug, "source", "narration_master.m4a"),
+      path.join(ROOT, "content/videos", item.topicSlug, "source", "narration_master.mp3"),
+    ];
+    let narrationUrl = null;
+    for (const candidate of narrationCandidates) {
+      try {
+        await access(candidate);
+        const storageAudio = `gcse-igcse/chemistry/videos/${item.topicSlug}/source/${path.basename(candidate)}`;
+        const contentType = candidate.endsWith(".m4a") ? "audio/mp4" : "audio/mpeg";
+        await upload(client, storageAudio, candidate, contentType);
+        narrationUrl = `${item.file_url_override.replace(/\/[^/]+$/, "")}/source/${path.basename(candidate)}`;
+        break;
+      } catch {
+        /* next */
+      }
+    }
     const check = await publicOk(item.file_url_override);
     if (!check.ok) throw new Error(`Public read failed for ${item.title}: HTTP ${check.status}`);
     const bytes = await fetch(item.file_url_override, { headers: { Range: "bytes=0-11" } });
     const head = Buffer.from(await bytes.arrayBuffer());
     const looksMp4 = head.subarray(4, 8).toString("ascii") === "ftyp";
-    console.log(`uploaded ${item.topicSlug} public=${check.status} ftyp=${looksMp4}`);
-    results.push({ slug: item.topicSlug, url: item.file_url_override, status: check.status, ftyp: looksMp4 });
+    let audioOk = null;
+    if (narrationUrl) {
+      audioOk = await publicOk(narrationUrl);
+    }
+    console.log(`uploaded ${item.topicSlug} public=${check.status} ftyp=${looksMp4} narration=${audioOk?.status || "none"}`);
+    results.push({
+      slug: item.topicSlug,
+      url: item.file_url_override,
+      status: check.status,
+      ftyp: looksMp4,
+      narration_url: narrationUrl,
+      narration_status: audioOk?.status || null,
+    });
   }
   await writeFile(path.join(ROOT, "content/gcse-chemical-changes/publish.json"), `${JSON.stringify(results, null, 2)}\n`);
 }
