@@ -1,0 +1,31 @@
+{
+  "slug": "strong-and-weak-acids",
+  "title": "Strong and Weak Acids",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Higher Tier",
+  "outcomes": [
+    {
+      "code": "C4.4.2.5",
+      "statement": "Explain strong and weak acids in terms of ionisation.",
+      "covered": true,
+      "evidence": "fully ionised, partially ionised",
+      "tier": "higher"
+    },
+    {
+      "code": "Edx3.8HT",
+      "statement": "Distinguish strength from concentration.",
+      "covered": true,
+      "evidence": "strength, concentration",
+      "tier": "higher"
+    },
+    {
+      "code": "C4.4.2.5b",
+      "statement": "Compare pH of strong and weak acids at the same concentration.",
+      "covered": true,
+      "evidence": "same concentration",
+      "tier": "higher"
+    }
+  ],
+  "complete": false,
+  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+}

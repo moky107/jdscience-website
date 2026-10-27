@@ -17,13 +17,12 @@ function test(name, fn) {
   }
 }
 
-test("twelve chemical-changes lessons are hosted 1080p catalog entries", () => {
+test("twelve chemical-changes lessons are authored but not hosted until narration exists", () => {
   assert.equal(GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.length, 12);
   for (const item of GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS) {
-    assert.equal(item.hosted, true);
+    assert.equal(item.hosted, false);
+    assert.equal(item.awaiting_narration, true);
     assert.match(item.file_name, /^jdscience-.+-1080p\.mp4$/);
-    assert.match(item.file_url_override, /xugsznxfvpbifpzpuoek\.supabase\.co\/storage\/v1\/object\/public\/resources\/gcse-igcse\/chemistry\/videos\//);
-    assert.equal(item.caption_url, `/resources/gcse/chemistry/videos/${item.topicSlug}/captions.vtt`);
   }
 });
 

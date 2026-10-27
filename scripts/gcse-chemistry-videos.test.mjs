@@ -56,12 +56,13 @@ const CHEMICAL_CHANGES_SLUGS = [
   "chemical-changes-exam-practice",
 ];
 
-test("catalog publishes six foundations lessons plus five calculation lessons, twelve chemical-changes lessons and Key Concepts", () => {
+test("catalog publishes six foundations lessons plus five calculation lessons and Key Concepts", () => {
   assert.equal(GCSE_CHEMISTRY_FOUNDATION_VIDEOS.length, 6);
   assert.deepEqual(GCSE_CHEMISTRY_FOUNDATION_VIDEOS.map((item) => item.title), FOUNDATION_TITLES);
   assert.deepEqual(GCSE_CHEMISTRY_CALCULATION_VIDEOS.map((item) => item.topicSlug), CALC_SLUGS);
   assert.deepEqual(GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.map((item) => item.topicSlug), CHEMICAL_CHANGES_SLUGS);
-  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 23);
+  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 11);
+  assert.equal(GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.every((item) => item.awaiting_narration && !item.hosted), true);
   assert.equal(GCSE_CHEMISTRY_VIDEOS.at(-1).title, GCSE_CHEMISTRY_KEY_CONCEPTS_VIDEO.title);
   for (const item of GCSE_CHEMISTRY_LESSON_VIDEOS) {
     assert.equal(item.level, "GCSE/IGCSE");

@@ -1,0 +1,38 @@
+{
+  "slug": "indicators-and-ph",
+  "title": "Indicators and the pH Scale",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2.4",
+      "statement": "Describe the use of universal indicator and the pH scale.",
+      "covered": true,
+      "evidence": "universal indicator",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.3",
+      "statement": "Relate pH to acidic, neutral and alkaline solutions.",
+      "covered": true,
+      "evidence": "ph seven",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.4",
+      "statement": "Describe colour changes of common indicators.",
+      "covered": true,
+      "evidence": "litmus",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.5pH",
+      "statement": "Link pH to hydrogen ion concentration, including the factor of ten on Higher Tier.",
+      "covered": true,
+      "evidence": "factor of ten",
+      "tier": "higher"
+    }
+  ],
+  "complete": false,
+  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+}

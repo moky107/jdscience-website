@@ -1,0 +1,99 @@
+{
+  "complete_videos": [],
+  "awaiting_cloned_voice": [
+    "acids-bases-alkalis",
+    "indicators-and-ph",
+    "strong-and-weak-acids",
+    "acids-metals-redox",
+    "neutralisation-and-gas-tests",
+    "soluble-and-insoluble-salts",
+    "acid-alkali-titration",
+    "electrolysis-ions-electrodes",
+    "electrolysis-molten-ionic",
+    "electrolysis-aqueous-solutions",
+    "copper-purification",
+    "chemical-changes-exam-practice"
+  ],
+  "elevenlabs": {
+    "status": "quota_exceeded",
+    "remaining_credits": 36,
+    "credits_required_per_chunk": 1549
+  },
+  "do_not_publish_silent_or_padded": true,
+  "original_uploads_duration_s": "117-143",
+  "min_duration_s": 240,
+  "lessons": [
+    {
+      "slug": "acids-bases-alkalis",
+      "title": "Acids, Bases and Alkalis",
+      "complete": false,
+      "words": 853
+    },
+    {
+      "slug": "indicators-and-ph",
+      "title": "Indicators and the pH Scale",
+      "complete": false,
+      "words": 817
+    },
+    {
+      "slug": "strong-and-weak-acids",
+      "title": "Strong and Weak Acids",
+      "complete": false,
+      "words": 791
+    },
+    {
+      "slug": "acids-metals-redox",
+      "title": "Acids Reacting with Metals",
+      "complete": false,
+      "words": 761
+    },
+    {
+      "slug": "neutralisation-and-gas-tests",
+      "title": "Neutralisation and Gas Tests",
+      "complete": false,
+      "words": 741
+    },
+    {
+      "slug": "soluble-and-insoluble-salts",
+      "title": "Making Soluble and Insoluble Salts",
+      "complete": false,
+      "words": 746
+    },
+    {
+      "slug": "acid-alkali-titration",
+      "title": "Acid-Alkali Titration",
+      "complete": false,
+      "words": 838
+    },
+    {
+      "slug": "electrolysis-ions-electrodes",
+      "title": "Electrolysis: Ions and Electrodes",
+      "complete": false,
+      "words": 712
+    },
+    {
+      "slug": "electrolysis-molten-ionic",
+      "title": "Electrolysis of Molten Ionic Compounds",
+      "complete": false,
+      "words": 709
+    },
+    {
+      "slug": "electrolysis-aqueous-solutions",
+      "title": "Electrolysis of Aqueous Solutions",
+      "complete": false,
+      "words": 714
+    },
+    {
+      "slug": "copper-purification",
+      "title": "Copper Purification by Electrolysis",
+      "complete": false,
+      "words": 713
+    },
+    {
+      "slug": "chemical-changes-exam-practice",
+      "title": "Chemical Changes: Exam Practice",
+      "complete": false,
+      "words": 748
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "strong-and-weak-acids",
+  "title": "Strong and Weak Acids",
+  "subject": "Chemistry",
+  "complete": false,
+  "duration_s": 0,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.5",
+      "statement": "Explain strong and weak acids in terms of ionisation.",
+      "covered": true,
+      "evidence": "fully ionised, partially ionised",
+      "tier": "higher"
+    },
+    {
+      "code": "Edx3.8HT",
+      "statement": "Distinguish strength from concentration.",
+      "covered": true,
+      "evidence": "strength, concentration",
+      "tier": "higher"
+    },
+    {
+      "code": "C4.4.2.5b",
+      "statement": "Compare pH of strong and weak acids at the same concentration.",
+      "covered": true,
+      "evidence": "same concentration",
+      "tier": "higher"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": false,
+    "preferred_band": false,
+    "1080p": true
+  },
+  "failures": [
+    "cloned_voice_quota_exceeded",
+    "duration_below_4_min:0.0s",
+    "not_encoded"
+  ],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  }
+}

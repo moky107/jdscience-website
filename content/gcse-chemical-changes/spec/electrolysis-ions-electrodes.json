@@ -1,0 +1,31 @@
+{
+  "slug": "electrolysis-ions-electrodes",
+  "title": "Electrolysis: Ions and Electrodes",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.3.1",
+      "statement": "Explain why ionic compounds conduct when molten or dissolved.",
+      "covered": true,
+      "evidence": "free to move",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.21",
+      "statement": "Identify anode and cathode.",
+      "covered": true,
+      "evidence": "anode is the positive",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.22",
+      "statement": "Describe movement of cations and anions and redox at the electrodes.",
+      "covered": true,
+      "evidence": "gain electrons",
+      "tier": "both"
+    }
+  ],
+  "complete": false,
+  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+}

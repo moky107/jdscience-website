@@ -1,0 +1,60 @@
+{
+  "slug": "electrolysis-ions-electrodes",
+  "title": "Electrolysis: Ions and Electrodes",
+  "subject": "Chemistry",
+  "complete": false,
+  "duration_s": 0,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.3.1",
+      "statement": "Explain why ionic compounds conduct when molten or dissolved.",
+      "covered": true,
+      "evidence": "free to move",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.21",
+      "statement": "Identify anode and cathode.",
+      "covered": true,
+      "evidence": "anode is the positive",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.22",
+      "statement": "Describe movement of cations and anions and redox at the electrodes.",
+      "covered": true,
+      "evidence": "gain electrons",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": false,
+    "preferred_band": false,
+    "1080p": true
+  },
+  "failures": [
+    "cloned_voice_quota_exceeded",
+    "duration_below_4_min:0.0s",
+    "not_encoded"
+  ],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  }
+}

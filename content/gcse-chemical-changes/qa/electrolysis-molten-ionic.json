@@ -1,0 +1,60 @@
+{
+  "slug": "electrolysis-molten-ionic",
+  "title": "Electrolysis of Molten Ionic Compounds",
+  "subject": "Chemistry",
+  "complete": false,
+  "duration_s": 0,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.3.2",
+      "statement": "Predict products of molten binary ionic compounds.",
+      "covered": true,
+      "evidence": "metal forms at the cathode",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.23",
+      "statement": "Write half-equations for molten electrolysis.",
+      "covered": true,
+      "evidence": "two electrons",
+      "tier": "higher"
+    },
+    {
+      "code": "C4.4.3.2b",
+      "statement": "Explain why aluminium is extracted by electrolysis.",
+      "covered": true,
+      "evidence": "more reactive than carbon",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": false,
+    "preferred_band": false,
+    "1080p": true
+  },
+  "failures": [
+    "cloned_voice_quota_exceeded",
+    "duration_below_4_min:0.0s",
+    "not_encoded"
+  ],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  }
+}

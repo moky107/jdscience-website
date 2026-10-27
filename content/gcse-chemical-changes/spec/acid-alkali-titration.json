@@ -1,0 +1,31 @@
+{
+  "slug": "acid-alkali-titration",
+  "title": "Acid-Alkali Titration",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2.4t",
+      "statement": "Describe the titration method, including concordant titres.",
+      "covered": true,
+      "evidence": "concordant",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.16",
+      "statement": "Name pipette, burette, conical flask and indicator.",
+      "covered": true,
+      "evidence": "burette, pipette",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.17",
+      "statement": "Calculate unknown concentration using moles = concentration \u00d7 volume.",
+      "covered": true,
+      "evidence": "moles equals concentration",
+      "tier": "both"
+    }
+  ],
+  "complete": false,
+  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+}

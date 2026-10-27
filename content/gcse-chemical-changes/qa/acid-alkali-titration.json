@@ -1,0 +1,60 @@
+{
+  "slug": "acid-alkali-titration",
+  "title": "Acid-Alkali Titration",
+  "subject": "Chemistry",
+  "complete": false,
+  "duration_s": 0,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.4t",
+      "statement": "Describe the titration method, including concordant titres.",
+      "covered": true,
+      "evidence": "concordant",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.16",
+      "statement": "Name pipette, burette, conical flask and indicator.",
+      "covered": true,
+      "evidence": "burette, pipette",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.17",
+      "statement": "Calculate unknown concentration using moles = concentration \u00d7 volume.",
+      "covered": true,
+      "evidence": "moles equals concentration",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": false,
+    "preferred_band": false,
+    "1080p": true
+  },
+  "failures": [
+    "cloned_voice_quota_exceeded",
+    "duration_below_4_min:0.0s",
+    "not_encoded"
+  ],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  }
+}

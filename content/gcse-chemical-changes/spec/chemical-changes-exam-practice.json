@@ -1,0 +1,31 @@
+{
+  "slug": "chemical-changes-exam-practice",
+  "title": "Chemical Changes: Exam Practice",
+  "spec_label": "AQA 4.4 / Edexcel Topic 3",
+  "tier": "Foundation and Higher",
+  "outcomes": [
+    {
+      "code": "C4.4.2",
+      "statement": "Apply acid reaction patterns in mixed questions.",
+      "covered": true,
+      "evidence": "acid plus metal",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.3",
+      "statement": "Choose the correct electrolysis rule for molten, aqueous and purification cells.",
+      "covered": true,
+      "evidence": "molten, aqueous or purification",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3",
+      "statement": "Use gas tests, salt-making methods and electrode polarity in one problem.",
+      "covered": true,
+      "evidence": "gas test",
+      "tier": "both"
+    }
+  ],
+  "complete": false,
+  "blocked": "ElevenLabs quota_exceeded \u2014 36 credits remaining, ~1549 required per chunk"
+}

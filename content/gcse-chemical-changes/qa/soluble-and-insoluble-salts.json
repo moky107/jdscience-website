@@ -1,0 +1,67 @@
+{
+  "slug": "soluble-and-insoluble-salts",
+  "title": "Making Soluble and Insoluble Salts",
+  "subject": "Chemistry",
+  "complete": false,
+  "duration_s": 0,
+  "stages": {
+    "introduction": true,
+    "explanation": true,
+    "worked_example": true,
+    "your_turn": true,
+    "model_answer": true,
+    "recap": true
+  },
+  "spec": [
+    {
+      "code": "C4.4.2.3m",
+      "statement": "Describe making a soluble salt from an insoluble base.",
+      "covered": true,
+      "evidence": "excess",
+      "tier": "both"
+    },
+    {
+      "code": "C4.4.2.6",
+      "statement": "Describe making an insoluble salt by precipitation.",
+      "covered": true,
+      "evidence": "precipitation",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.14",
+      "statement": "Recall solubility rules for common salts.",
+      "covered": true,
+      "evidence": "all nitrates",
+      "tier": "both"
+    },
+    {
+      "code": "Edx3.15",
+      "statement": "Describe filtration, washing, crystallisation and drying.",
+      "covered": true,
+      "evidence": "crystallise",
+      "tier": "both"
+    }
+  ],
+  "checks": {
+    "opening": true,
+    "pause": true,
+    "subscribe": true,
+    "website": true,
+    "duration_ok": false,
+    "preferred_band": false,
+    "1080p": true
+  },
+  "failures": [
+    "cloned_voice_quota_exceeded",
+    "duration_below_4_min:0.0s",
+    "not_encoded"
+  ],
+  "gates": {
+    "min_seconds": 240.0,
+    "preferred_seconds": [
+      300.0,
+      480.0
+    ],
+    "opening": "Hello and welcome back to JD Science."
+  }
+}
