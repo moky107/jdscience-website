@@ -130,9 +130,85 @@ export const GCSE_CHEMISTRY_CALCULATION_VIDEOS = [
   }),
 ];
 
+export const GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS = [
+  foundationLesson({
+    title: "Acids, Bases and Alkalis",
+    topicSlug: "acids-bases-alkalis",
+    file_name: "jdscience-acids-bases-alkalis-1080p.mp4",
+    description: "Acids, bases and alkalis, including hydrogen ions, hydroxide ions and why not every base is an alkali.",
+  }),
+  foundationLesson({
+    title: "Indicators and the pH Scale",
+    topicSlug: "indicators-and-ph",
+    file_name: "jdscience-indicators-and-ph-1080p.mp4",
+    description: "Litmus, universal indicator and the pH scale, including how pH links to hydrogen ion concentration.",
+  }),
+  foundationLesson({
+    title: "Strong and Weak Acids",
+    topicSlug: "strong-and-weak-acids",
+    file_name: "jdscience-strong-and-weak-acids-1080p.mp4",
+    description: "Higher Tier: strong and weak acids, ionisation, and why strength is not the same as concentration.",
+  }),
+  foundationLesson({
+    title: "Acids Reacting with Metals",
+    topicSlug: "acids-metals-redox",
+    file_name: "jdscience-acids-metals-redox-1080p.mp4",
+    description: "Metal-acid reactions, the hydrogen test, reactivity, and Higher Tier redox half-equations.",
+  }),
+  foundationLesson({
+    title: "Neutralisation and Gas Tests",
+    topicSlug: "neutralisation-and-gas-tests",
+    file_name: "jdscience-neutralisation-and-gas-tests-1080p.mp4",
+    description: "Neutralisation reactions, carbonate and oxide reactions, and the hydrogen, oxygen and carbon dioxide tests.",
+  }),
+  foundationLesson({
+    title: "Making Soluble and Insoluble Salts",
+    topicSlug: "soluble-and-insoluble-salts",
+    file_name: "jdscience-soluble-and-insoluble-salts-1080p.mp4",
+    description: "How to make soluble salts by crystallisation and insoluble salts by precipitation, with solubility rules.",
+  }),
+  foundationLesson({
+    title: "Acid-Alkali Titration",
+    topicSlug: "acid-alkali-titration",
+    file_name: "jdscience-acid-alkali-titration-1080p.mp4",
+    description: "Titration apparatus and method, concordant titres, and calculating unknown concentration.",
+  }),
+  foundationLesson({
+    title: "Electrolysis: Ions and Electrodes",
+    topicSlug: "electrolysis-ions-electrodes",
+    file_name: "jdscience-electrolysis-ions-electrodes-1080p.mp4",
+    description: "What an electrolyte is, how ions move, and what happens at the anode and cathode.",
+  }),
+  foundationLesson({
+    title: "Electrolysis of Molten Ionic Compounds",
+    topicSlug: "electrolysis-molten-ionic",
+    file_name: "jdscience-electrolysis-molten-ionic-1080p.mp4",
+    description: "Electrolysis of molten ionic compounds, including lead bromide and aluminium extraction ideas.",
+  }),
+  foundationLesson({
+    title: "Electrolysis of Aqueous Solutions",
+    topicSlug: "electrolysis-aqueous-solutions",
+    file_name: "jdscience-electrolysis-aqueous-solutions-1080p.mp4",
+    description: "Rules for aqueous electrolysis, including hydrogen versus metal at the cathode and halide versus oxygen at the anode.",
+  }),
+  foundationLesson({
+    title: "Copper Purification by Electrolysis",
+    topicSlug: "copper-purification",
+    file_name: "jdscience-copper-purification-1080p.mp4",
+    description: "Purifying copper by electrolysis, including electrode reactions, sludge and why the electrolyte stays blue.",
+  }),
+  foundationLesson({
+    title: "Chemical Changes: Exam Practice",
+    topicSlug: "chemical-changes-exam-practice",
+    file_name: "jdscience-chemical-changes-exam-practice-1080p.mp4",
+    description: "Synoptic GCSE practice covering acids, salt-making, titration ideas and electrolysis rules.",
+  }),
+];
+
 export const GCSE_CHEMISTRY_LESSON_VIDEOS = [
   ...GCSE_CHEMISTRY_FOUNDATION_VIDEOS,
   ...GCSE_CHEMISTRY_CALCULATION_VIDEOS,
+  ...GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS,
 ];
 
 export const GCSE_CHEMISTRY_VIDEOS = [

@@ -4,6 +4,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   GCSE_CHEMISTRY_CALCULATION_VIDEOS,
+  GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS,
   GCSE_CHEMISTRY_FOUNDATION_VIDEOS,
   GCSE_CHEMISTRY_KEY_CONCEPTS_VIDEO,
   GCSE_CHEMISTRY_LESSON_VIDEOS,
@@ -40,11 +41,27 @@ function test(name, fn) {
   }
 }
 
-test("catalog publishes six foundations lessons plus five calculation lessons and Key Concepts", () => {
+const CHEMICAL_CHANGES_SLUGS = [
+  "acids-bases-alkalis",
+  "indicators-and-ph",
+  "strong-and-weak-acids",
+  "acids-metals-redox",
+  "neutralisation-and-gas-tests",
+  "soluble-and-insoluble-salts",
+  "acid-alkali-titration",
+  "electrolysis-ions-electrodes",
+  "electrolysis-molten-ionic",
+  "electrolysis-aqueous-solutions",
+  "copper-purification",
+  "chemical-changes-exam-practice",
+];
+
+test("catalog publishes six foundations lessons plus five calculation lessons, twelve chemical-changes lessons and Key Concepts", () => {
   assert.equal(GCSE_CHEMISTRY_FOUNDATION_VIDEOS.length, 6);
   assert.deepEqual(GCSE_CHEMISTRY_FOUNDATION_VIDEOS.map((item) => item.title), FOUNDATION_TITLES);
   assert.deepEqual(GCSE_CHEMISTRY_CALCULATION_VIDEOS.map((item) => item.topicSlug), CALC_SLUGS);
-  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 11);
+  assert.deepEqual(GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.map((item) => item.topicSlug), CHEMICAL_CHANGES_SLUGS);
+  assert.equal(GCSE_CHEMISTRY_LESSON_VIDEOS.length, 23);
   assert.equal(GCSE_CHEMISTRY_VIDEOS.at(-1).title, GCSE_CHEMISTRY_KEY_CONCEPTS_VIDEO.title);
   for (const item of GCSE_CHEMISTRY_LESSON_VIDEOS) {
     assert.equal(item.level, "GCSE/IGCSE");
