@@ -34,7 +34,13 @@
   },
   "elevenlabs": {
     "status": "quota_exceeded",
-    "not_used": true
+    "not_used": false,
+    "cloned_voice_reachable": true,
+    "test_clip_ok": true,
+    "remaining_credits": 36,
+    "credits_required_first_chunk": 1549,
+    "spoken_characters_all_lessons": 54037,
+    "blocked_at": "acids-bases-alkalis"
   },
   "do_not_publish_silent_or_padded": true,
   "min_duration_s": 240,
