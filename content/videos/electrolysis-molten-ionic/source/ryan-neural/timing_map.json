@@ -1,0 +1,366 @@
+{
+  "slug": "electrolysis-molten-ionic",
+  "duration": 356.48,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 9.738,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to predict the products",
+      "kind": "aims"
+    },
+    {
+      "id": "predict",
+      "t": 21.316,
+      "aligned": true,
+      "cue": "When a binary ionic compound is molten",
+      "kind": "note"
+    },
+    {
+      "id": "pbbr",
+      "t": 39.394,
+      "aligned": true,
+      "cue": "The classic school example is molten lead bromide",
+      "kind": "diagram"
+    },
+    {
+      "id": "half",
+      "t": 60.05,
+      "aligned": true,
+      "cue": "The Higher Tier half-equations are as follows",
+      "kind": "equation"
+    },
+    {
+      "id": "al",
+      "t": 111.972,
+      "aligned": true,
+      "cue": "Why not reduce aluminium oxide with carbon",
+      "kind": "note"
+    },
+    {
+      "id": "worked",
+      "t": 190.019,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 223.394,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 252.724,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 313.131,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 341.506,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 12.222,
+      "aligned": true,
+      "cue": "predict the products"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 13.706,
+      "aligned": true,
+      "cue": "write half-equations"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 18.753,
+      "aligned": true,
+      "cue": "extract some metals"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 202.909,
+      "aligned": true,
+      "cue": "Zinc forms at the cathode"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 208.581,
+      "aligned": true,
+      "cue": "Chlorine forms at the anode"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 216.863,
+      "aligned": true,
+      "cue": "a metal and a halogen"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 256.553,
+      "aligned": true,
+      "cue": "more reactive than carbon"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 268.74,
+      "aligned": true,
+      "cue": "silvery bead of lead"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 273.052,
+      "aligned": true,
+      "cue": "brown bromine gas"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 320.365,
+      "aligned": true,
+      "cue": "metal at the cathode and the non-metal"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 324.474,
+      "aligned": true,
+      "cue": "Write half-equations with electrons"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 328.099,
+      "aligned": true,
+      "cue": "Reactive metals are extracted"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 334.927,
+      "aligned": true,
+      "cue": "Solid ionic compounds cannot"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 9.738,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to predict the products",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 12.222,
+      "aligned": true,
+      "cue": "predict the products",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 13.706,
+      "aligned": true,
+      "cue": "write half-equations",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 18.753,
+      "aligned": true,
+      "cue": "extract some metals",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 21.316,
+      "aligned": true,
+      "cue": "When a binary ionic compound is molten",
+      "target": "heading",
+      "slide": "predict"
+    },
+    {
+      "t": 39.394,
+      "aligned": true,
+      "cue": "The classic school example is molten lead bromide",
+      "target": "cathode",
+      "slide": "pbbr"
+    },
+    {
+      "t": 60.05,
+      "aligned": true,
+      "cue": "The Higher Tier half-equations are as follows",
+      "target": "equation",
+      "slide": "half"
+    },
+    {
+      "t": 111.972,
+      "aligned": true,
+      "cue": "Why not reduce aluminium oxide with carbon",
+      "target": "heading",
+      "slide": "al"
+    },
+    {
+      "t": 190.019,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 202.909,
+      "aligned": true,
+      "cue": "Zinc forms at the cathode",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 208.581,
+      "aligned": true,
+      "cue": "Chlorine forms at the anode",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 216.863,
+      "aligned": true,
+      "cue": "a metal and a halogen",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 223.394,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 242.724,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 252.724,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 256.553,
+      "aligned": true,
+      "cue": "more reactive than carbon",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 268.74,
+      "aligned": true,
+      "cue": "silvery bead of lead",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 273.052,
+      "aligned": true,
+      "cue": "brown bromine gas",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 313.131,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 320.365,
+      "aligned": true,
+      "cue": "metal at the cathode and the non-metal",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 324.474,
+      "aligned": true,
+      "cue": "Write half-equations with electrons",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 328.099,
+      "aligned": true,
+      "cue": "Reactive metals are extracted",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 334.927,
+      "aligned": true,
+      "cue": "Solid ionic compounds cannot",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 341.506,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 341.802,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 342.568,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

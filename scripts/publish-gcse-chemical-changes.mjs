@@ -85,6 +85,22 @@ async function main() {
     await extractPoster(mp4, path.join(publicDir, "poster.jpg"));
     const storageMp4 = `gcse-igcse/chemistry/videos/${item.topicSlug}/${item.file_name}`;
     await upload(client, storageMp4, mp4, "video/mp4");
+    const ryanDir = path.join(ROOT, "content/videos", item.topicSlug, "source", "ryan-neural");
+    for (const name of ["narration_master.m4a", "narration_master.mp3", "transcript.json", "voice.json"]) {
+      const candidate = path.join(ryanDir, name);
+      try {
+        await access(candidate);
+        const storageAudio = `gcse-igcse/chemistry/videos/${item.topicSlug}/source/ryan-neural/${name}`;
+        const contentType = name.endsWith(".m4a")
+          ? "audio/mp4"
+          : name.endsWith(".mp3")
+            ? "audio/mpeg"
+            : "application/json";
+        await upload(client, storageAudio, candidate, contentType);
+      } catch {
+        /* optional archive */
+      }
+    }
     const narrationCandidates = [
       path.join(ROOT, "content/videos", item.topicSlug, "source", "narration_master.m4a"),
       path.join(ROOT, "content/videos", item.topicSlug, "source", "narration_master.mp3"),

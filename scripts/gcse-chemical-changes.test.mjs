@@ -77,4 +77,17 @@ test("QA and spec folders are reserved for completed encodes", () => {
   assert.ok(existsSync(join(ROOT, "content/gcse-chemical-changes")));
 });
 
+test("cloned-voice producer is wired and Ryan Neural masters are archived", () => {
+  const produce = readFileSync(join(ROOT, "scripts/gcse_chemical_changes/produce.py"), "utf8");
+  assert.match(produce, /from gcse_chemical_changes.tts import generate_lesson/);
+  assert.doesNotMatch(produce, /tts_temp import generate_lesson/);
+  assert.ok(existsSync(join(ROOT, "scripts/gcse_chemical_changes/tts.py")));
+  for (const slug of GCSE_CHEMISTRY_CHEMICAL_CHANGES_VIDEOS.map((item) => item.topicSlug)) {
+    const archive = join(ROOT, "content/videos", slug, "source", "ryan-neural", "transcript.json");
+    assert.ok(existsSync(archive), archive);
+    const voice = JSON.parse(readFileSync(archive, "utf8"));
+    assert.equal(voice.voice, "en-GB-RyanNeural");
+  }
+});
+
 console.log("All GCSE chemical-changes script checks passed.");
