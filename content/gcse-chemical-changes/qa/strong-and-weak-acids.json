@@ -61,7 +61,7 @@
     "acodec": "aac",
     "fps": 30.0,
     "duration": 404.24,
-    "size": 12499386
+    "size": 12117444
   },
   "aligned_slides": 11,
   "aligned_total": 11,
@@ -71,6 +71,6 @@
   "cursor_total": 27,
   "filename": "jdscience-strong-and-weak-acids-1080p.mp4",
   "tier": "Higher Tier",
-  "voice": "en-GB-RyanNeural",
-  "temporary_voice": true
+  "voice": "vgs3TWRK9YKYDkZcjIHB",
+  "temporary_voice": false
 }

@@ -13,16 +13,7 @@
     "soluble-and-insoluble-salts",
     "strong-and-weak-acids"
   ],
-  "awaiting_cloned_voice_replacement": [
-    "acid-alkali-titration",
-    "acids-bases-alkalis",
-    "acids-metals-redox",
-    "electrolysis-ions-electrodes",
-    "indicators-and-ph",
-    "neutralisation-and-gas-tests",
-    "soluble-and-insoluble-salts",
-    "strong-and-weak-acids"
-  ],
+  "awaiting_cloned_voice_replacement": [],
   "temporary_voice": {
     "engine": "edge-tts",
     "voice": "en-GB-RyanNeural",
@@ -48,10 +39,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 414.608005,
-        "size": 12827875
+        "size": 12483361
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "acids-bases-alkalis",
@@ -66,10 +57,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 429.8,
-        "size": 13516228
+        "size": 13044030
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "acids-metals-redox",
@@ -84,10 +75,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 402.08,
-        "size": 12725976
+        "size": 12352352
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "chemical-changes-exam-practice",
@@ -156,10 +147,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 372.633333,
-        "size": 11908211
+        "size": 11790223
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "electrolysis-molten-ionic",
@@ -192,10 +183,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 419.566667,
-        "size": 12832457
+        "size": 12472923
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "neutralisation-and-gas-tests",
@@ -210,10 +201,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 390.103991,
-        "size": 12117935
+        "size": 11761399
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "soluble-and-insoluble-salts",
@@ -228,10 +219,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 387.44,
-        "size": 12274961
+        "size": 12005916
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     },
     {
       "slug": "strong-and-weak-acids",
@@ -246,10 +237,10 @@
         "acodec": "aac",
         "fps": 30.0,
         "duration": 404.24,
-        "size": 12499386
+        "size": 12117444
       },
-      "voice": "en-GB-RyanNeural",
-      "temporary_voice": true
+      "voice": "vgs3TWRK9YKYDkZcjIHB",
+      "temporary_voice": false
     }
   ]
 }
