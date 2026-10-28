@@ -68,7 +68,7 @@
     "acodec": "aac",
     "fps": 30.0,
     "duration": 402.08,
-    "size": 12725976
+    "size": 12352352
   },
   "aligned_slides": 11,
   "aligned_total": 11,
@@ -78,6 +78,6 @@
   "cursor_total": 27,
   "filename": "jdscience-acids-metals-redox-1080p.mp4",
   "tier": "Foundation and Higher",
-  "voice": "en-GB-RyanNeural",
-  "temporary_voice": true
+  "voice": "vgs3TWRK9YKYDkZcjIHB",
+  "temporary_voice": false
 }

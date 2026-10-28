@@ -68,7 +68,7 @@
     "acodec": "aac",
     "fps": 30.0,
     "duration": 390.103991,
-    "size": 12117935
+    "size": 11761399
   },
   "aligned_slides": 11,
   "aligned_total": 11,
@@ -78,6 +78,6 @@
   "cursor_total": 27,
   "filename": "jdscience-neutralisation-and-gas-tests-1080p.mp4",
   "tier": "Foundation and Higher",
-  "voice": "en-GB-RyanNeural",
-  "temporary_voice": true
+  "voice": "vgs3TWRK9YKYDkZcjIHB",
+  "temporary_voice": false
 }

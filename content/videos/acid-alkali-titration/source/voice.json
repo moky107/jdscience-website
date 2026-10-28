@@ -1,7 +1,6 @@
 {
-  "engine": "edge-tts",
-  "voice": "en-GB-RyanNeural",
-  "rate": "-20%",
-  "temporary": true,
-  "notes": "Authorised temporary British English male voice. Replace with the JD Science clone without rebuilding slide cues."
+  "engine": "elevenlabs-cloned",
+  "voice_id": "vgs3TWRK9YKYDkZcjIHB",
+  "temporary": false,
+  "notes": "Narrated with the JD Science cloned voice."
 }
