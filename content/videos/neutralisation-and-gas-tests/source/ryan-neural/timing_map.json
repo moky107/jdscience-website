@@ -1,0 +1,366 @@
+{
+  "slug": "neutralisation-and-gas-tests",
+  "duration": 390.104,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 11.144,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to write the three",
+      "kind": "aims"
+    },
+    {
+      "id": "alkali",
+      "t": 25.941,
+      "aligned": true,
+      "cue": "When an acid reacts with an alkali",
+      "kind": "equation"
+    },
+    {
+      "id": "oxide",
+      "t": 53.8,
+      "aligned": true,
+      "cue": "When an acid reacts with a metal oxide",
+      "kind": "diagram"
+    },
+    {
+      "id": "carbonate",
+      "t": 76.003,
+      "aligned": true,
+      "cue": "When an acid reacts with a metal carbonate",
+      "kind": "equation"
+    },
+    {
+      "id": "tests",
+      "t": 121.378,
+      "aligned": true,
+      "cue": "Now the gas tests",
+      "kind": "diagram"
+    },
+    {
+      "id": "worked",
+      "t": 198.941,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 237.706,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 268.653,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 340.763,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 375.138,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 14.159,
+      "aligned": true,
+      "cue": "three key acid reaction patterns"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 17.206,
+      "aligned": true,
+      "cue": "ionic equation for neutralisation"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 20.644,
+      "aligned": true,
+      "cue": "tests for hydrogen, oxygen and carbon dioxide"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 214.706,
+      "aligned": true,
+      "cue": "C a C O three plus two H Cl"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 224.472,
+      "aligned": true,
+      "cue": "Bubble the gas through limewater"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 226.769,
+      "aligned": true,
+      "cue": "it turns milky"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 273.122,
+      "aligned": true,
+      "cue": "black solid disappears"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 281.7,
+      "aligned": true,
+      "cue": "With sodium carbonate, fizzing"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 288.45,
+      "aligned": true,
+      "cue": "turns limewater milky"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 349.419,
+      "aligned": true,
+      "cue": "salt plus water"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 353.638,
+      "aligned": true,
+      "cue": "salt, water and carbon dioxide"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 361.294,
+      "aligned": true,
+      "cue": "H plus plus O H minus"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 364.95,
+      "aligned": true,
+      "cue": "Hydrogen pops, oxygen relights"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 11.144,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to write the three",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 14.159,
+      "aligned": true,
+      "cue": "three key acid reaction patterns",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 17.206,
+      "aligned": true,
+      "cue": "ionic equation for neutralisation",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 20.644,
+      "aligned": true,
+      "cue": "tests for hydrogen, oxygen and carbon dioxide",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 25.941,
+      "aligned": true,
+      "cue": "When an acid reacts with an alkali",
+      "target": "equation",
+      "slide": "alkali"
+    },
+    {
+      "t": 53.8,
+      "aligned": true,
+      "cue": "When an acid reacts with a metal oxide",
+      "target": "diagram",
+      "slide": "oxide"
+    },
+    {
+      "t": 76.003,
+      "aligned": true,
+      "cue": "When an acid reacts with a metal carbonate",
+      "target": "equation",
+      "slide": "carbonate"
+    },
+    {
+      "t": 121.378,
+      "aligned": true,
+      "cue": "Now the gas tests",
+      "target": "diagram",
+      "slide": "tests"
+    },
+    {
+      "t": 198.941,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 214.706,
+      "aligned": true,
+      "cue": "C a C O three plus two H Cl",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 224.472,
+      "aligned": true,
+      "cue": "Bubble the gas through limewater",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 226.769,
+      "aligned": true,
+      "cue": "it turns milky",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 237.706,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 258.653,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 268.653,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 273.122,
+      "aligned": true,
+      "cue": "black solid disappears",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 281.7,
+      "aligned": true,
+      "cue": "With sodium carbonate, fizzing",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 288.45,
+      "aligned": true,
+      "cue": "turns limewater milky",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 340.763,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 349.419,
+      "aligned": true,
+      "cue": "salt plus water",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 353.638,
+      "aligned": true,
+      "cue": "salt, water and carbon dioxide",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 361.294,
+      "aligned": true,
+      "cue": "H plus plus O H minus",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 364.95,
+      "aligned": true,
+      "cue": "Hydrogen pops, oxygen relights",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 375.138,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 375.435,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 376.2,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "slug": "copper-purification",
+  "duration": 345.512,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 9.378,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to label the cell",
+      "kind": "aims"
+    },
+    {
+      "id": "why",
+      "t": 19.081,
+      "aligned": true,
+      "cue": "Copper used for electrical wiring must be very pure",
+      "kind": "note"
+    },
+    {
+      "id": "cell",
+      "t": 42.878,
+      "aligned": true,
+      "cue": "The electrolyte is aqueous copper sulfate",
+      "kind": "diagram"
+    },
+    {
+      "id": "half",
+      "t": 63.331,
+      "aligned": true,
+      "cue": "At the impure copper anode, copper atoms lose electrons",
+      "kind": "equation"
+    },
+    {
+      "id": "sludge",
+      "t": 99.644,
+      "aligned": true,
+      "cue": "Impurities in the anode either fall to the bottom",
+      "kind": "bullets"
+    },
+    {
+      "id": "worked",
+      "t": 178.925,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 214.644,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 243.574,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 297.636,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 330.542,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 11.941,
+      "aligned": true,
+      "cue": "label the cell"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 13.144,
+      "aligned": true,
+      "cue": "write the electrode reactions"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 16.05,
+      "aligned": true,
+      "cue": "what happens to impurities"
+    },
+    {
+      "slide": "sludge",
+      "item": "b1",
+      "t": 102.706,
+      "aligned": true,
+      "cue": "anode sludge"
+    },
+    {
+      "slide": "sludge",
+      "item": "b2",
+      "t": 115.706,
+      "aligned": true,
+      "cue": "concentration of copper ions"
+    },
+    {
+      "slide": "sludge",
+      "item": "b3",
+      "t": 128.613,
+      "aligned": true,
+      "cue": "blue colour does not fade"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 195.222,
+      "aligned": true,
+      "cue": "anode mass falls"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 204.941,
+      "aligned": true,
+      "cue": "cathode mass rises"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 211.863,
+      "aligned": true,
+      "cue": "the solution stays blue"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 246.668,
+      "aligned": true,
+      "cue": "electrolyte is copper sulfate"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 250.652,
+      "aligned": true,
+      "cue": "anode is impure copper"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 258.152,
+      "aligned": true,
+      "cue": "C u two plus plus two electrons"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 302.136,
+      "aligned": true,
+      "cue": "Impure copper is the anode"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 309.761,
+      "aligned": true,
+      "cue": "The anode dissolves"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 318.714,
+      "aligned": true,
+      "cue": "The blue colour stays"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 323.355,
+      "aligned": true,
+      "cue": "Inert electrodes with copper sulfate"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 9.378,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to label the cell",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 11.941,
+      "aligned": true,
+      "cue": "label the cell",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 13.144,
+      "aligned": true,
+      "cue": "write the electrode reactions",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 16.05,
+      "aligned": true,
+      "cue": "what happens to impurities",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 19.081,
+      "aligned": true,
+      "cue": "Copper used for electrical wiring must be very pure",
+      "target": "heading",
+      "slide": "why"
+    },
+    {
+      "t": 42.878,
+      "aligned": true,
+      "cue": "The electrolyte is aqueous copper sulfate",
+      "target": "cathode",
+      "slide": "cell"
+    },
+    {
+      "t": 63.331,
+      "aligned": true,
+      "cue": "At the impure copper anode, copper atoms lose electrons",
+      "target": "equation",
+      "slide": "half"
+    },
+    {
+      "t": 99.644,
+      "aligned": true,
+      "cue": "Impurities in the anode either fall to the bottom",
+      "target": "heading",
+      "slide": "sludge"
+    },
+    {
+      "t": 102.706,
+      "aligned": true,
+      "cue": "anode sludge",
+      "target": "b1",
+      "slide": "sludge"
+    },
+    {
+      "t": 115.706,
+      "aligned": true,
+      "cue": "concentration of copper ions",
+      "target": "b2",
+      "slide": "sludge"
+    },
+    {
+      "t": 128.613,
+      "aligned": true,
+      "cue": "blue colour does not fade",
+      "target": "b3",
+      "slide": "sludge"
+    },
+    {
+      "t": 178.925,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 195.222,
+      "aligned": true,
+      "cue": "anode mass falls",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 204.941,
+      "aligned": true,
+      "cue": "cathode mass rises",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 211.863,
+      "aligned": true,
+      "cue": "the solution stays blue",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 214.644,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 233.574,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 243.574,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 246.668,
+      "aligned": true,
+      "cue": "electrolyte is copper sulfate",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 250.652,
+      "aligned": true,
+      "cue": "anode is impure copper",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 258.152,
+      "aligned": true,
+      "cue": "C u two plus plus two electrons",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 297.636,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 302.136,
+      "aligned": true,
+      "cue": "Impure copper is the anode",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 309.761,
+      "aligned": true,
+      "cue": "The anode dissolves",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 318.714,
+      "aligned": true,
+      "cue": "The blue colour stays",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 323.355,
+      "aligned": true,
+      "cue": "Inert electrodes with copper sulfate",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 330.542,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 330.839,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 331.605,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

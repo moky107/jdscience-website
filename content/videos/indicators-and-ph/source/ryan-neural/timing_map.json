@@ -1,0 +1,422 @@
+{
+  "slug": "indicators-and-ph",
+  "duration": 419.552,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 9.066,
+      "aligned": true,
+      "cue": "By the end of this lesson",
+      "kind": "aims"
+    },
+    {
+      "id": "litmus",
+      "t": 28.831,
+      "aligned": true,
+      "cue": "Litmus is a simple indicator",
+      "kind": "diagram"
+    },
+    {
+      "id": "universal",
+      "t": 70.878,
+      "aligned": true,
+      "cue": "Universal indicator is a mixture of dyes",
+      "kind": "diagram"
+    },
+    {
+      "id": "meaning",
+      "t": 87.347,
+      "aligned": true,
+      "cue": "pH seven is neutral",
+      "kind": "bullets"
+    },
+    {
+      "id": "conc",
+      "t": 131.034,
+      "aligned": true,
+      "cue": "pH is a measure of hydrogen ion concentration",
+      "kind": "note"
+    },
+    {
+      "id": "examples",
+      "t": 181.956,
+      "aligned": true,
+      "cue": "Lemon juice is acidic",
+      "kind": "diagram"
+    },
+    {
+      "id": "worked",
+      "t": 211.503,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 256.503,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 298.05,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 371.894,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 404.582,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 12.253,
+      "aligned": true,
+      "cue": "how indicators are used"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 14.675,
+      "aligned": true,
+      "cue": "colours of universal indicator"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 17.878,
+      "aligned": true,
+      "cue": "what pH tells you"
+    },
+    {
+      "slide": "meaning",
+      "item": "b1",
+      "t": 99.378,
+      "aligned": true,
+      "cue": "Values below seven"
+    },
+    {
+      "slide": "meaning",
+      "item": "b2",
+      "t": 87.467,
+      "aligned": true,
+      "cue": "pH seven is neutral"
+    },
+    {
+      "slide": "meaning",
+      "item": "b3",
+      "t": 102.878,
+      "aligned": true,
+      "cue": "Values above seven"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 232.444,
+      "aligned": true,
+      "cue": "Solution A is a strong acid"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 237.394,
+      "aligned": true,
+      "cue": "Solution B is neutral"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 242.378,
+      "aligned": true,
+      "cue": "Solution C is a strong alkali"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 302.488,
+      "aligned": true,
+      "cue": "would be red"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 309.816,
+      "aligned": true,
+      "cue": "higher hydrogen ion"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 322.55,
+      "aligned": true,
+      "cue": "factor of one thousand"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 376.394,
+      "aligned": true,
+      "cue": "Indicators change colour"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 380.3,
+      "aligned": true,
+      "cue": "Universal indicator estimates"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 392.253,
+      "aligned": true,
+      "cue": "Lower pH means higher"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 398.628,
+      "aligned": true,
+      "cue": "one pH unit is a factor"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 9.066,
+      "aligned": true,
+      "cue": "By the end of this lesson",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 12.253,
+      "aligned": true,
+      "cue": "how indicators are used",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 14.675,
+      "aligned": true,
+      "cue": "colours of universal indicator",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 17.878,
+      "aligned": true,
+      "cue": "what pH tells you",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 28.831,
+      "aligned": true,
+      "cue": "Litmus is a simple indicator",
+      "target": "diagram",
+      "slide": "litmus"
+    },
+    {
+      "t": 70.878,
+      "aligned": true,
+      "cue": "Universal indicator is a mixture of dyes",
+      "target": "diagram",
+      "slide": "universal"
+    },
+    {
+      "t": 87.347,
+      "aligned": true,
+      "cue": "pH seven is neutral",
+      "target": "heading",
+      "slide": "meaning"
+    },
+    {
+      "t": 87.467,
+      "aligned": true,
+      "cue": "pH seven is neutral",
+      "target": "b2",
+      "slide": "meaning"
+    },
+    {
+      "t": 99.378,
+      "aligned": true,
+      "cue": "Values below seven",
+      "target": "b1",
+      "slide": "meaning"
+    },
+    {
+      "t": 102.878,
+      "aligned": true,
+      "cue": "Values above seven",
+      "target": "b3",
+      "slide": "meaning"
+    },
+    {
+      "t": 131.034,
+      "aligned": true,
+      "cue": "pH is a measure of hydrogen ion concentration",
+      "target": "heading",
+      "slide": "conc"
+    },
+    {
+      "t": 181.956,
+      "aligned": true,
+      "cue": "Lemon juice is acidic",
+      "target": "diagram",
+      "slide": "examples"
+    },
+    {
+      "t": 211.503,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 232.444,
+      "aligned": true,
+      "cue": "Solution A is a strong acid",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 237.394,
+      "aligned": true,
+      "cue": "Solution B is neutral",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 242.378,
+      "aligned": true,
+      "cue": "Solution C is a strong alkali",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 256.503,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 288.05,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 298.05,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 302.488,
+      "aligned": true,
+      "cue": "would be red",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 309.816,
+      "aligned": true,
+      "cue": "higher hydrogen ion",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 322.55,
+      "aligned": true,
+      "cue": "factor of one thousand",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 371.894,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 376.394,
+      "aligned": true,
+      "cue": "Indicators change colour",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 380.3,
+      "aligned": true,
+      "cue": "Universal indicator estimates",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 392.253,
+      "aligned": true,
+      "cue": "Lower pH means higher",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 398.628,
+      "aligned": true,
+      "cue": "one pH unit is a factor",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 404.582,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 404.878,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 405.644,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

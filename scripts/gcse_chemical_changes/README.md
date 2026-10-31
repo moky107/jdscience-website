@@ -2,10 +2,9 @@
 
 Twelve six-stage 1080p30 lessons covering AQA 4.4 / Edexcel Topic 3 (acids, salts, electrolysis).
 
-Temporary British English narration uses Microsoft `en-GB-RyanNeural` until the JD Science cloned voice is restored. Keep `content/videos/<slug>/source/narration_master.m4a` and `transcript.json` so the clone can replace the track without rebuilding cues.
+Narration uses the JD Science cloned ElevenLabs voice (`ELEVENLABS_API_KEY` and `ELEVENLABS_VOICE_ID`). Ryan Neural masters stay in `content/videos/<slug>/source/ryan-neural/`. Production pauses if the API reports `quota_exceeded`; live Ryan Neural MP4s are left in place.
 
 ```bash
-python3 scripts/gcse_chemical_changes/tts_temp.py --test
 python3 scripts/gcse_chemical_changes/produce.py --slug acids-bases-alkalis
 python3 scripts/gcse_chemical_changes/produce.py
 node scripts/publish-gcse-chemical-changes.mjs

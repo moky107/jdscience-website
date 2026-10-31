@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Produce six-stage GCSE Chemistry chemical-changes lessons.
 
-Temporary British English narration (en-GB-RyanNeural) is the master clock.
-A short pause is inserted before the model answer. Videos are 1920×1080,
-30 fps, H.264/AAC. Silent drafts are never published as completed lessons.
-Keep narration_master.m4a and transcript.json so a cloned voice can replace
-this track later without rebuilding slide cues.
+The JD Science cloned ElevenLabs voice is the master clock. A short pause
+is inserted before the model answer. Videos are 1920×1080, 30 fps, H.264/AAC.
+Silent drafts are never published as completed lessons. Ryan Neural masters
+stay under content/videos/<slug>/source/ryan-neural/.
 """
 
 from __future__ import annotations
@@ -29,7 +28,7 @@ from gcse_chemical_changes.encode import encode_narrated
 from gcse_chemical_changes.lessons import LESSONS
 from gcse_chemical_changes.narration import BY_SLUG
 from gcse_chemical_changes.spec import outcomes_for
-from gcse_chemical_changes.tts_temp import generate_lesson as generate_tts
+from gcse_chemical_changes.tts import generate_lesson as generate_tts
 from gcse_foundations.render import align, write_srt
 from jdscience_video.six_stage import evaluate_lesson, report_to_dict
 
@@ -170,7 +169,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         "slug": slug,
         "duration": aligned["duration"],
         "voice": transcript.get("voice"),
-        "temporary_voice": True,
+        "temporary_voice": bool(transcript.get("temporary_voice")),
         "slides": [{k: s[k] for k in ("id", "t", "aligned", "cue", "kind") if k in s} for s in aligned["slides"]],
         "reveals": [{k: e[k] for k in ("slide", "item", "t", "aligned", "cue") if k in e} for e in aligned["reveals"]],
         "cursor": [{k: e[k] for k in ("t", "aligned", "cue", "target", "slide") if k in e} for e in aligned["cursor"]],
@@ -231,7 +230,7 @@ def produce(slug: str, artifacts: Path, skip_tts: bool = False, video: bool = Tr
         "filename": script.filename,
         "tier": script.tier,
         "voice": transcript.get("voice"),
-        "temporary_voice": True,
+        "temporary_voice": bool(transcript.get("temporary_voice")),
     }
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "qa").mkdir(exist_ok=True)

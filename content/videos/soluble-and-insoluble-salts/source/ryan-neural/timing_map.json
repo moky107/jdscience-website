@@ -1,0 +1,366 @@
+{
+  "slug": "soluble-and-insoluble-salts",
+  "duration": 387.44,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 7.331,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to choose",
+      "kind": "aims"
+    },
+    {
+      "id": "rules",
+      "t": 23.566,
+      "aligned": true,
+      "cue": "First, solubility rules",
+      "kind": "diagram"
+    },
+    {
+      "id": "soluble",
+      "t": 60.331,
+      "aligned": true,
+      "cue": "If the salt you want is soluble",
+      "kind": "diagram"
+    },
+    {
+      "id": "titration_note",
+      "t": 117.05,
+      "aligned": true,
+      "cue": "If both the acid and the alkali are soluble",
+      "kind": "note"
+    },
+    {
+      "id": "insoluble",
+      "t": 136.191,
+      "aligned": true,
+      "cue": "If the salt you want is insoluble, use precipitation",
+      "kind": "diagram"
+    },
+    {
+      "id": "worked",
+      "t": 188.722,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 230.836,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 263.036,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 339.661,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 372.458,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 15.222,
+      "aligned": true,
+      "cue": "key solubility rules"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 11.659,
+      "aligned": true,
+      "cue": "soluble salt and for an insoluble salt"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 18.019,
+      "aligned": true,
+      "cue": "filtration, evaporation and crystallisation"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 204.191,
+      "aligned": true,
+      "cue": "until some black solid remains"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 207.55,
+      "aligned": true,
+      "cue": "Filter to remove excess"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 215.784,
+      "aligned": true,
+      "cue": "Leave to cool so crystals"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 268.958,
+      "aligned": true,
+      "cue": "made by precipitation"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 277.255,
+      "aligned": true,
+      "cue": "A white precipitate"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 284.067,
+      "aligned": true,
+      "cue": "Wash the residue"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 346.255,
+      "aligned": true,
+      "cue": "ammonium and nitrate salts are soluble"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 352.27,
+      "aligned": true,
+      "cue": "precipitation, then filter, wash"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 360.364,
+      "aligned": true,
+      "cue": "excess solid, then filter, evaporate"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 365.614,
+      "aligned": true,
+      "cue": "Titration is used when both"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 7.331,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to choose",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 11.659,
+      "aligned": true,
+      "cue": "soluble salt and for an insoluble salt",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 15.222,
+      "aligned": true,
+      "cue": "key solubility rules",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 18.019,
+      "aligned": true,
+      "cue": "filtration, evaporation and crystallisation",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 23.566,
+      "aligned": true,
+      "cue": "First, solubility rules",
+      "target": "diagram",
+      "slide": "rules"
+    },
+    {
+      "t": 60.331,
+      "aligned": true,
+      "cue": "If the salt you want is soluble",
+      "target": "diagram",
+      "slide": "soluble"
+    },
+    {
+      "t": 117.05,
+      "aligned": true,
+      "cue": "If both the acid and the alkali are soluble",
+      "target": "heading",
+      "slide": "titration_note"
+    },
+    {
+      "t": 136.191,
+      "aligned": true,
+      "cue": "If the salt you want is insoluble, use precipitation",
+      "target": "diagram",
+      "slide": "insoluble"
+    },
+    {
+      "t": 188.722,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 204.191,
+      "aligned": true,
+      "cue": "until some black solid remains",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 207.55,
+      "aligned": true,
+      "cue": "Filter to remove excess",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 215.784,
+      "aligned": true,
+      "cue": "Leave to cool so crystals",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 230.836,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 253.036,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 263.036,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 268.958,
+      "aligned": true,
+      "cue": "made by precipitation",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 277.255,
+      "aligned": true,
+      "cue": "A white precipitate",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 284.067,
+      "aligned": true,
+      "cue": "Wash the residue",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 339.661,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 346.255,
+      "aligned": true,
+      "cue": "ammonium and nitrate salts are soluble",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 352.27,
+      "aligned": true,
+      "cue": "precipitation, then filter, wash",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 360.364,
+      "aligned": true,
+      "cue": "excess solid, then filter, evaporate",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 365.614,
+      "aligned": true,
+      "cue": "Titration is used when both",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 372.458,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 372.755,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 373.52,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

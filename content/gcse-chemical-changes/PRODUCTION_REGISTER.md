@@ -1,6 +1,6 @@
 # Chemical-changes production register
 
-Temporary British English narration: Microsoft `en-GB-RyanNeural` (authorised). Audio masters stay in `content/videos/<slug>/source/` and on Supabase so the cloned voice can replace the track later.
+Live videos still use the authorised temporary British English track (`en-GB-RyanNeural`). Cloned-voice replacement is wired and waiting on ElevenLabs credits (36 remaining; first chunk needs 1549). Ryan Neural masters are archived under `content/videos/<slug>/source/ryan-neural/`.
 
 | Lesson | Six-stage | Spec | 1080p encode | Hosted | Complete |
 | --- | --- | --- | --- | --- | --- |

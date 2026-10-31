@@ -1,0 +1,394 @@
+{
+  "slug": "electrolysis-ions-electrodes",
+  "duration": 372.632,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 7.519,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to define an electrolyte",
+      "kind": "aims"
+    },
+    {
+      "id": "electrolyte",
+      "t": 21.769,
+      "aligned": true,
+      "cue": "Ionic compounds can only be electrolysed when their ions are free to move",
+      "kind": "diagram"
+    },
+    {
+      "id": "cell",
+      "t": 56.05,
+      "aligned": true,
+      "cue": "The anode is the positive electrode",
+      "kind": "diagram"
+    },
+    {
+      "id": "redox",
+      "t": 102.878,
+      "aligned": true,
+      "cue": "At the cathode, positive ions gain electrons",
+      "kind": "bullets"
+    },
+    {
+      "id": "worked",
+      "t": 196.034,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 232.252,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 263.14,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 329.343,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 357.655,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 10.066,
+      "aligned": true,
+      "cue": "define an electrolyte"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 11.738,
+      "aligned": true,
+      "cue": "name the electrodes"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 14.034,
+      "aligned": true,
+      "cue": "movement of ions"
+    },
+    {
+      "slide": "redox",
+      "item": "b1",
+      "t": 104.081,
+      "aligned": true,
+      "cue": "positive ions gain electrons"
+    },
+    {
+      "slide": "redox",
+      "item": "b2",
+      "t": 111.894,
+      "aligned": true,
+      "cue": "negative ions lose electrons"
+    },
+    {
+      "slide": "redox",
+      "item": "b3",
+      "t": 104.078,
+      "aligned": false,
+      "cue": "ions carry the charge"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 213.972,
+      "aligned": true,
+      "cue": "ions cannot move"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 217.644,
+      "aligned": true,
+      "cue": "ions are free to move"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 224.706,
+      "aligned": true,
+      "cue": "they move to the cathode"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 266.264,
+      "aligned": true,
+      "cue": "anode is the positive"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 271.983,
+      "aligned": true,
+      "cue": "Positive ions move to the cathode"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 278.077,
+      "aligned": true,
+      "cue": "Negative ions move to the anode"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 337.343,
+      "aligned": true,
+      "cue": "molten or dissolved"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 339.874,
+      "aligned": true,
+      "cue": "Anode is positive, cathode is negative"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 344.233,
+      "aligned": true,
+      "cue": "Cations are reduced"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 351.53,
+      "aligned": true,
+      "cue": "Solid ionic compounds do not conduct"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 7.519,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to define an electrolyte",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 10.066,
+      "aligned": true,
+      "cue": "define an electrolyte",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 11.738,
+      "aligned": true,
+      "cue": "name the electrodes",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 14.034,
+      "aligned": true,
+      "cue": "movement of ions",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 21.769,
+      "aligned": true,
+      "cue": "Ionic compounds can only be electrolysed when their ions are free to move",
+      "target": "diagram",
+      "slide": "electrolyte"
+    },
+    {
+      "t": 56.05,
+      "aligned": true,
+      "cue": "The anode is the positive electrode",
+      "target": "cathode",
+      "slide": "cell"
+    },
+    {
+      "t": 102.878,
+      "aligned": true,
+      "cue": "At the cathode, positive ions gain electrons",
+      "target": "heading",
+      "slide": "redox"
+    },
+    {
+      "t": 104.078,
+      "aligned": false,
+      "cue": "ions carry the charge",
+      "target": "b3",
+      "slide": "redox"
+    },
+    {
+      "t": 104.081,
+      "aligned": true,
+      "cue": "positive ions gain electrons",
+      "target": "b1",
+      "slide": "redox"
+    },
+    {
+      "t": 111.894,
+      "aligned": true,
+      "cue": "negative ions lose electrons",
+      "target": "b2",
+      "slide": "redox"
+    },
+    {
+      "t": 196.034,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 213.972,
+      "aligned": true,
+      "cue": "ions cannot move",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 217.644,
+      "aligned": true,
+      "cue": "ions are free to move",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 224.706,
+      "aligned": true,
+      "cue": "they move to the cathode",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 232.252,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 253.14,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 263.14,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 266.264,
+      "aligned": true,
+      "cue": "anode is the positive",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 271.983,
+      "aligned": true,
+      "cue": "Positive ions move to the cathode",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 278.077,
+      "aligned": true,
+      "cue": "Negative ions move to the anode",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 329.343,
+      "aligned": true,
+      "cue": "Before we finish, remember these key ideas",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 337.343,
+      "aligned": true,
+      "cue": "molten or dissolved",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 339.874,
+      "aligned": true,
+      "cue": "Anode is positive, cathode is negative",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 344.233,
+      "aligned": true,
+      "cue": "Cations are reduced",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 351.53,
+      "aligned": true,
+      "cue": "Solid ionic compounds do not conduct",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 357.655,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 357.952,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 358.718,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

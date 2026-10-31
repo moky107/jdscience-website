@@ -1,0 +1,366 @@
+{
+  "slug": "electrolysis-aqueous-solutions",
+  "duration": 363.896,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 15.566,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to apply the cathode rule",
+      "kind": "aims"
+    },
+    {
+      "id": "water",
+      "t": 24.659,
+      "aligned": true,
+      "cue": "In water, there is a tiny amount of H plus and O H minus",
+      "kind": "note"
+    },
+    {
+      "id": "rules",
+      "t": 45.706,
+      "aligned": true,
+      "cue": "At the cathode, hydrogen is produced unless",
+      "kind": "diagram"
+    },
+    {
+      "id": "brine",
+      "t": 105.55,
+      "aligned": true,
+      "cue": "Take sodium chloride solution, brine",
+      "kind": "diagram"
+    },
+    {
+      "id": "cuso4",
+      "t": 142.706,
+      "aligned": true,
+      "cue": "Take copper sulfate solution with inert graphite electrodes",
+      "kind": "diagram"
+    },
+    {
+      "id": "worked",
+      "t": 190.488,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 222.659,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 256.987,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 316.159,
+      "aligned": true,
+      "cue": "Before we finish, remember these rules",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 348.925,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 18.159,
+      "aligned": true,
+      "cue": "apply the cathode rule"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 19.706,
+      "aligned": true,
+      "cue": "the anode rule"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 21.034,
+      "aligned": true,
+      "cue": "predict products for common solutions"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 208.488,
+      "aligned": true,
+      "cue": "hydrogen forms at the cathode"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 213.941,
+      "aligned": true,
+      "cue": "iodine forms at the anode"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 217.628,
+      "aligned": true,
+      "cue": "applied both rules"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 261.643,
+      "aligned": true,
+      "cue": "hydrogen at the cathode and chlorine"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 267.393,
+      "aligned": true,
+      "cue": "copper at the cathode and oxygen"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 271.409,
+      "aligned": true,
+      "cue": "Sodium is more reactive than hydrogen"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 322.065,
+      "aligned": true,
+      "cue": "ions from water"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 325.315,
+      "aligned": true,
+      "cue": "hydrogen unless the metal is less reactive"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 330.925,
+      "aligned": true,
+      "cue": "halogen from a concentrated halide"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 336.159,
+      "aligned": true,
+      "cue": "Brine gives hydrogen, chlorine"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 15.566,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to apply the cathode rule",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 18.159,
+      "aligned": true,
+      "cue": "apply the cathode rule",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 19.706,
+      "aligned": true,
+      "cue": "the anode rule",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 21.034,
+      "aligned": true,
+      "cue": "predict products for common solutions",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 24.659,
+      "aligned": true,
+      "cue": "In water, there is a tiny amount of H plus and O H minus",
+      "target": "heading",
+      "slide": "water"
+    },
+    {
+      "t": 45.706,
+      "aligned": true,
+      "cue": "At the cathode, hydrogen is produced unless",
+      "target": "diagram",
+      "slide": "rules"
+    },
+    {
+      "t": 105.55,
+      "aligned": true,
+      "cue": "Take sodium chloride solution, brine",
+      "target": "cathode",
+      "slide": "brine"
+    },
+    {
+      "t": 142.706,
+      "aligned": true,
+      "cue": "Take copper sulfate solution with inert graphite electrodes",
+      "target": "cathode",
+      "slide": "cuso4"
+    },
+    {
+      "t": 190.488,
+      "aligned": true,
+      "cue": "Let us work through an examination-style example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 208.488,
+      "aligned": true,
+      "cue": "hydrogen forms at the cathode",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 213.941,
+      "aligned": true,
+      "cue": "iodine forms at the anode",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 217.628,
+      "aligned": true,
+      "cue": "applied both rules",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 222.659,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 246.987,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 256.987,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 261.643,
+      "aligned": true,
+      "cue": "hydrogen at the cathode and chlorine",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 267.393,
+      "aligned": true,
+      "cue": "copper at the cathode and oxygen",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 271.409,
+      "aligned": true,
+      "cue": "Sodium is more reactive than hydrogen",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 316.159,
+      "aligned": true,
+      "cue": "Before we finish, remember these rules",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 322.065,
+      "aligned": true,
+      "cue": "ions from water",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 325.315,
+      "aligned": true,
+      "cue": "hydrogen unless the metal is less reactive",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 330.925,
+      "aligned": true,
+      "cue": "halogen from a concentrated halide",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 336.159,
+      "aligned": true,
+      "cue": "Brine gives hydrogen, chlorine",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 348.925,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 349.221,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 349.987,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "slug": "chemical-changes-exam-practice",
+  "duration": 400.952,
+  "voice": "en-GB-RyanNeural",
+  "temporary_voice": true,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "kind": "intro"
+    },
+    {
+      "id": "aims",
+      "t": 13.238,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to choose the right reaction pattern",
+      "kind": "aims"
+    },
+    {
+      "id": "map",
+      "t": 24.8,
+      "aligned": true,
+      "cue": "Keep this map in your head",
+      "kind": "diagram"
+    },
+    {
+      "id": "methods",
+      "t": 60.441,
+      "aligned": true,
+      "cue": "Soluble salts from an insoluble base",
+      "kind": "bullets"
+    },
+    {
+      "id": "worked",
+      "t": 149.909,
+      "aligned": true,
+      "cue": "Let us work through a synoptic worked example",
+      "kind": "worked"
+    },
+    {
+      "id": "your_turn",
+      "t": 220.034,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "kind": "your_turn"
+    },
+    {
+      "id": "model",
+      "t": 264.305,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "kind": "model"
+    },
+    {
+      "id": "recap",
+      "t": 349.196,
+      "aligned": true,
+      "cue": "Before we finish, remember the examination technique",
+      "kind": "recap"
+    },
+    {
+      "id": "outro",
+      "t": 385.977,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "kind": "outro"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 16.378,
+      "aligned": true,
+      "cue": "right reaction pattern"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 20.347,
+      "aligned": true,
+      "cue": "right electrolysis products"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 22.347,
+      "aligned": true,
+      "cue": "one mixed problem"
+    },
+    {
+      "slide": "methods",
+      "item": "b1",
+      "t": 63.425,
+      "aligned": true,
+      "cue": "excess solid, filter, crystallise"
+    },
+    {
+      "slide": "methods",
+      "item": "b2",
+      "t": 87.362,
+      "aligned": true,
+      "cue": "molten or dissolved"
+    },
+    {
+      "slide": "methods",
+      "item": "b3",
+      "t": 116.659,
+      "aligned": true,
+      "cue": "factor of ten per pH"
+    },
+    {
+      "slide": "worked",
+      "item": "s1",
+      "t": 183.534,
+      "aligned": true,
+      "cue": "magnesium sulfate, plus hydrogen"
+    },
+    {
+      "slide": "worked",
+      "item": "s2",
+      "t": 196.409,
+      "aligned": true,
+      "cue": "Limewater turns milky"
+    },
+    {
+      "slide": "worked",
+      "item": "s3",
+      "t": 200.863,
+      "aligned": true,
+      "cue": "copper at the cathode, oxygen"
+    },
+    {
+      "slide": "model",
+      "item": "p1",
+      "t": 275.665,
+      "aligned": true,
+      "cue": "pure copper forms at the cathode"
+    },
+    {
+      "slide": "model",
+      "item": "p2",
+      "t": 292.508,
+      "aligned": true,
+      "cue": "bromine at the positive electrode and lead"
+    },
+    {
+      "slide": "model",
+      "item": "p3",
+      "t": 306.274,
+      "aligned": true,
+      "cue": "blue colour remains"
+    },
+    {
+      "slide": "recap",
+      "item": "r1",
+      "t": 354.008,
+      "aligned": true,
+      "cue": "Identify the type of reaction first"
+    },
+    {
+      "slide": "recap",
+      "item": "r2",
+      "t": 361.68,
+      "aligned": true,
+      "cue": "Quote the correct gas test"
+    },
+    {
+      "slide": "recap",
+      "item": "r3",
+      "t": 367.509,
+      "aligned": true,
+      "cue": "molten, aqueous or purification"
+    },
+    {
+      "slide": "recap",
+      "item": "r4",
+      "t": 379.196,
+      "aligned": true,
+      "cue": "always include units"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science",
+      "target": "title",
+      "slide": "intro"
+    },
+    {
+      "t": 13.238,
+      "aligned": true,
+      "cue": "By the end of this lesson you should be able to choose the right reaction pattern",
+      "target": "heading",
+      "slide": "aims"
+    },
+    {
+      "t": 16.378,
+      "aligned": true,
+      "cue": "right reaction pattern",
+      "target": "a1",
+      "slide": "aims"
+    },
+    {
+      "t": 20.347,
+      "aligned": true,
+      "cue": "right electrolysis products",
+      "target": "a2",
+      "slide": "aims"
+    },
+    {
+      "t": 22.347,
+      "aligned": true,
+      "cue": "one mixed problem",
+      "target": "a3",
+      "slide": "aims"
+    },
+    {
+      "t": 24.8,
+      "aligned": true,
+      "cue": "Keep this map in your head",
+      "target": "diagram",
+      "slide": "map"
+    },
+    {
+      "t": 60.441,
+      "aligned": true,
+      "cue": "Soluble salts from an insoluble base",
+      "target": "heading",
+      "slide": "methods"
+    },
+    {
+      "t": 63.425,
+      "aligned": true,
+      "cue": "excess solid, filter, crystallise",
+      "target": "b1",
+      "slide": "methods"
+    },
+    {
+      "t": 87.362,
+      "aligned": true,
+      "cue": "molten or dissolved",
+      "target": "b2",
+      "slide": "methods"
+    },
+    {
+      "t": 116.659,
+      "aligned": true,
+      "cue": "factor of ten per pH",
+      "target": "b3",
+      "slide": "methods"
+    },
+    {
+      "t": 149.909,
+      "aligned": true,
+      "cue": "Let us work through a synoptic worked example",
+      "target": "question",
+      "slide": "worked"
+    },
+    {
+      "t": 183.534,
+      "aligned": true,
+      "cue": "magnesium sulfate, plus hydrogen",
+      "target": "s1",
+      "slide": "worked"
+    },
+    {
+      "t": 196.409,
+      "aligned": true,
+      "cue": "Limewater turns milky",
+      "target": "s2",
+      "slide": "worked"
+    },
+    {
+      "t": 200.863,
+      "aligned": true,
+      "cue": "copper at the cathode, oxygen",
+      "target": "s3",
+      "slide": "worked"
+    },
+    {
+      "t": 220.034,
+      "aligned": true,
+      "cue": "Now it is your turn",
+      "target": "question",
+      "slide": "your_turn"
+    },
+    {
+      "t": 254.305,
+      "aligned": true,
+      "cue": "Pause the video",
+      "target": "pause"
+    },
+    {
+      "t": 264.305,
+      "aligned": true,
+      "cue": "Here is the model answer",
+      "target": "answer",
+      "slide": "model"
+    },
+    {
+      "t": 275.665,
+      "aligned": true,
+      "cue": "pure copper forms at the cathode",
+      "target": "p1",
+      "slide": "model"
+    },
+    {
+      "t": 292.508,
+      "aligned": true,
+      "cue": "bromine at the positive electrode and lead",
+      "target": "p2",
+      "slide": "model"
+    },
+    {
+      "t": 306.274,
+      "aligned": true,
+      "cue": "blue colour remains",
+      "target": "p3",
+      "slide": "model"
+    },
+    {
+      "t": 349.196,
+      "aligned": true,
+      "cue": "Before we finish, remember the examination technique",
+      "target": "heading",
+      "slide": "recap"
+    },
+    {
+      "t": 354.008,
+      "aligned": true,
+      "cue": "Identify the type of reaction first",
+      "target": "r1",
+      "slide": "recap"
+    },
+    {
+      "t": 361.68,
+      "aligned": true,
+      "cue": "Quote the correct gas test",
+      "target": "r2",
+      "slide": "recap"
+    },
+    {
+      "t": 367.509,
+      "aligned": true,
+      "cue": "molten, aqueous or purification",
+      "target": "r3",
+      "slide": "recap"
+    },
+    {
+      "t": 379.196,
+      "aligned": true,
+      "cue": "always include units",
+      "target": "r4",
+      "slide": "recap"
+    },
+    {
+      "t": 385.977,
+      "aligned": true,
+      "cue": "please subscribe to JD Science",
+      "target": "subscribe",
+      "slide": "outro"
+    },
+    {
+      "t": 386.274,
+      "aligned": true,
+      "cue": "subscribe to JD Science",
+      "target": "subscribe"
+    },
+    {
+      "t": 387.04,
+      "aligned": true,
+      "cue": "j d science",
+      "target": "website"
+    }
+  ]
+}
