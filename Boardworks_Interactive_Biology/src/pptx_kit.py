@@ -273,38 +273,53 @@ class Deck:
         self._pending_links = []  # (shape, target_name)
         self._nav_shapes = {}  # name -> (prev_shape, next_shape)
         self._num_boxes = {}  # name -> footer number textbox
+        self.prefix = ""
+        self.home_target = None  # e.g. "home" for a combined course menu
+
+    def _key(self, name: str) -> str:
+        if name in self.slides:
+            return name
+        if self.home_target and name == self.home_target:
+            return name
+        if self.prefix and not name.startswith(self.prefix):
+            return self.prefix + name
+        return name
 
     def add(self, name: str, title: str, hidden=False, kind="content"):
+        key = self._key(name)
         slide = blank_slide(self.prs)
-        self.slides[name] = {
+        self.slides[key] = {
             "slide": slide,
             "title": title,
             "kind": kind,
             "hidden": hidden,
         }
-        self.order.append(name)
+        self.order.append(key)
         if hidden:
             hide_slide(slide)
-            self._hidden.add(name)
+            self._hidden.add(key)
         return slide
 
     def s(self, name: str):
-        return self.slides[name]["slide"]
+        return self.slides[self._key(name)]["slide"]
 
     def chrome(self, name: str, show_nav=True, activity=False):
-        slide = self.s(name)
-        title = self.slides[name]["title"]
+        key = self._key(name)
+        slide = self.s(key)
+        title = self.slides[key]["title"]
         # Header bar
         add_rect(slide, Inches(0), Inches(0), SLIDE_W, Inches(0.72), WHITE)
         add_rect(slide, Inches(0), Inches(0.70), SLIDE_W, Inches(0.06), GREY)
+        title_w = Inches(6.15) if self.home_target else Inches(8.2)
+        title_size = 22 if self.home_target else 26
         add_textbox(
             slide,
             Inches(0.28),
             Inches(0.10),
-            Inches(8.2),
+            title_w,
             Inches(0.55),
             title,
-            size=26,
+            size=title_size,
             bold=True,
             color=GREEN,
         )
@@ -335,7 +350,7 @@ class Deck:
             size=10,
             color=PURPLE,
         )
-        self._num_boxes[name] = num_box
+        self._num_boxes[key] = num_box
         add_textbox(
             slide,
             Inches(1.7),
@@ -348,7 +363,8 @@ class Deck:
             align=PP_ALIGN.CENTER,
         )
         if show_nav:
-            self._nav_buttons(name)
+            self._nav_buttons(key)
+        self._maybe_home(key, slide)
         if activity:
             bar = add_rect(
                 slide,
@@ -372,6 +388,25 @@ class Deck:
         )
         set_shape_text(nxt, "▶", size=14, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
         self._nav_shapes[name] = (prev, nxt)
+
+    def _maybe_home(self, key: str, slide, left=None, top=None) -> None:
+        if not self.home_target or key == self.home_target:
+            return
+        # Default: header, left of the A2 Biology badge, so Home stays clear of
+        # activity bars, info boxes and sequential arrows.
+        btn = add_rect(
+            slide,
+            left if left is not None else Inches(6.52),
+            top if top is not None else Inches(0.16),
+            Inches(1.48),
+            Inches(0.40),
+            PURPLE,
+            line=PURPLE,
+            line_pt=1.0,
+            rounded=True,
+        )
+        set_shape_text(btn, "Home", size=12, bold=True, color=WHITE, align=PP_ALIGN.CENTER)
+        self.link(btn, self.home_target)
 
     def button(
         self,
@@ -398,10 +433,11 @@ class Deck:
         if not isinstance(target, str):
             hyperlink_to_slide(shape, target)
             return
-        if target in self.slides:
-            hyperlink_to_slide(shape, self.s(target))
+        key = self._key(target)
+        if key in self.slides:
+            hyperlink_to_slide(shape, self.slides[key]["slide"])
         else:
-            self._pending_links.append((shape, target))
+            self._pending_links.append((shape, key))
 
     def finalize(self):
         missing = []
@@ -655,5 +691,7 @@ def title_slide(deck: Deck, name: str, main: str, part: str, subtitle: str):
         slide, Inches(0.16), Inches(6.45), Inches(0.42), Inches(0.42), WHITE, line=PURPLE, line_pt=1.75
     )
     set_shape_text(prev, "◀", size=14, bold=True, color=PURPLE, align=PP_ALIGN.CENTER)
-    deck._nav_shapes[name] = (prev, nxt)
+    key = deck._key(name)
+    deck._nav_shapes[key] = (prev, nxt)
+    deck._maybe_home(key, slide, left=Inches(0.22), top=Inches(0.28))
     return slide

@@ -46,11 +46,12 @@ def P(name):
     return os.path.join(DIAG, name)
 
 
-def build(out_path=None):
-    if not os.path.exists(P("neurone_structure.png")):
+def build(out_path=None, deck=None):
+    own = deck is None
+    if own and not os.path.exists(P("neurone_structure.png")):
         generate_all()
 
-    d = Deck("Organisation")
+    d = deck or Deck("Organisation")
     title_slide(
         d,
         "title",
@@ -555,9 +556,11 @@ def build(out_path=None):
                 size=16, color=NAVY, align=PP_ALIGN.CENTER)
     d.button(s, Inches(3.3), Inches(5.0), Inches(3.4), Inches(0.5), "Back to contents", fill=GREEN, target="contents")
 
-    out_path = out_path or os.path.join(ROOT, "01_Organisation_of_the_Nervous_System.pptx")
-    d.save(out_path)
-    return out_path, d
+    if own:
+        out_path = out_path or os.path.join(ROOT, "01_Organisation_of_the_Nervous_System.pptx")
+        d.save(out_path)
+        return out_path, d
+    return None, d
 
 
 if __name__ == "__main__":

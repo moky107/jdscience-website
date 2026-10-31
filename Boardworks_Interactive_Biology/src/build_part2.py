@@ -43,11 +43,12 @@ def P(name):
     return os.path.join(DIAG, name)
 
 
-def build(out_path=None):
-    if not os.path.exists(P("ap_graph.png")):
+def build(out_path=None, deck=None):
+    own = deck is None
+    if own and not os.path.exists(P("ap_graph.png")):
         generate_all()
 
-    d = Deck("The nerve impulse")
+    d = deck or Deck("The nerve impulse")
     title_slide(
         d, "title", "The Nervous System", "Part 2: The nerve impulse",
         "Interactive reconstruction  ·  Flash-free  ·  Original course © Boardworks Ltd 2009",
@@ -437,9 +438,11 @@ def build(out_path=None):
                 "Next: Part 3 – Sensory receptors", size=26, bold=True, color=GREEN, align=PP_ALIGN.CENTER)
     d.button(s, Inches(3.3), Inches(4.0), Inches(3.4), Inches(0.5), "Back to contents", fill=GREEN, target="contents")
 
-    out_path = out_path or os.path.join(ROOT, "02_The_Nerve_Impulse.pptx")
-    d.save(out_path)
-    return out_path, d
+    if own:
+        out_path = out_path or os.path.join(ROOT, "02_The_Nerve_Impulse.pptx")
+        d.save(out_path)
+        return out_path, d
+    return None, d
 
 
 if __name__ == "__main__":

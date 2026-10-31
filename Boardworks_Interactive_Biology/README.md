@@ -10,12 +10,15 @@ Original course © Boardworks Ltd 2009. These files are reconstructed teaching r
 
 | File | Lesson |
 |---|---|
-| `01_Organisation_of_the_Nervous_System.pptx` | Part 1 – Organisation |
-| `02_The_Nerve_Impulse.pptx` | Part 2 – The nerve impulse |
-| `03_Sensory_Receptors.pptx` | Part 3 – Sensory receptors |
-| `04_The_Synapse.pptx` | Part 4 – The synapse |
+| **`JD_Science_Complete_Interactive_Nervous_System_Course.pptx`** | **All four modules in one deck**, with a course menu and Home |
+| `01_Organisation_of_the_Nervous_System.pptx` | Part 1 – Organisation (standalone) |
+| `02_The_Nerve_Impulse.pptx` | Part 2 – The nerve impulse (standalone) |
+| `03_Sensory_Receptors.pptx` | Part 3 – Sensory receptors (standalone) |
+| `04_The_Synapse.pptx` | Part 4 – The synapse (standalone) |
 
-Reports are in `reports/`. Rebuild scripts are in `src/`.
+The combined file is rebuilt from the four module builders with remapped hyperlinks. It does not overwrite the four standalone presentations.
+
+Reports are in `reports/` (including `05_combined_course_testing_report.md`). Rebuild scripts are in `src/`.
 
 ## How to use
 
@@ -23,11 +26,13 @@ Reports are in `reports/`. Rebuild scripts are in `src/`.
 2. Start the slide show (**F5** or Slide Show → From Beginning).
 3. Buttons only jump while the show is running.
 4. Hidden activity slides (answers, feedback) are skipped if you only press Space — use the on-slide buttons.
+5. In the combined course, the opening menu jumps to each module. **Home** on later slides returns to that menu.
 
 ## Rebuild
 
 ```bash
-python3 src/build_all.py
+python3 src/build_all.py          # four standalone files
+python3 src/build_combined.py     # master course (does not overwrite the four)
 ```
 
 Requires `python-pptx`, `lxml`, `matplotlib`, `pillow` and `numpy`.

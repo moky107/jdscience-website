@@ -66,11 +66,12 @@ SHUFFLED = [
 ]
 
 
-def build(out_path=None):
-    if not os.path.exists(P("synapse_0.png")):
+def build(out_path=None, deck=None):
+    own = deck is None
+    if own and not os.path.exists(P("synapse_0.png")):
         generate_all()
 
-    d = Deck("The synapse")
+    d = deck or Deck("The synapse")
     title_slide(
         d, "title", "The Nervous System", "Part 4: The synapse",
         "Interactive reconstruction  ·  Flash-free  ·  Original course © Boardworks Ltd 2009",
@@ -293,9 +294,11 @@ def build(out_path=None):
                 size=16, color=NAVY, align=PP_ALIGN.CENTER)
     d.button(s, Inches(3.3), Inches(4.6), Inches(3.4), Inches(0.5), "Back to contents", fill=GREEN, target="contents")
 
-    out_path = out_path or os.path.join(ROOT, "04_The_Synapse.pptx")
-    d.save(out_path)
-    return out_path, d
+    if own:
+        out_path = out_path or os.path.join(ROOT, "04_The_Synapse.pptx")
+        d.save(out_path)
+        return out_path, d
+    return None, d
 
 
 if __name__ == "__main__":
