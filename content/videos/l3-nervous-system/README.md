@@ -17,9 +17,12 @@ python3 scripts/l3_nervous/produce.py --skip-tts --out /opt/cursor/artifacts
 ```
 
 ElevenLabs cloned-voice generation is preferred (`scripts/l3_nervous/tts.py`)
-when quota is available. This build used `en-GB-RyanNeural` after an
-ElevenLabs `quota_exceeded` response. Keep `narration_master.m4a` and
-`transcript.json` so the clone can replace the track without rebuilding cues.
+when quota and `voices_write` are available. This build mapped the uploaded
+JD Science teaching sample onto the British narration with OpenVoice v2
+(`scripts/l3_nervous/apply_uploaded_voice.py`) after ElevenLabs returned
+`quota_exceeded` and denied `voices_write`. Keep `narration_master.m4a` and
+`transcript.json` so a later ElevenLabs clone can replace the track without
+rebuilding cues.
 
 Interactive activities:
 

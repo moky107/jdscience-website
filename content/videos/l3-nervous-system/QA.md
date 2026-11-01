@@ -10,4 +10,4 @@
 
 Opening line present on every script. jdscience.co.uk and subscribe present. Pump is not described as causing rapid repolarisation. Acetylcholinesterase hydrolyses ACh to acetate and choline; choline is recycled.
 
-Audio: configured ElevenLabs voice accepted a greeting, then `quota_exceeded` (4 credits remaining, 1545 required). Documented clone id returned `voice_not_found`. Fallback `en-GB-RyanNeural` at −18%.
+Audio: the uploaded 59 s JD Science teaching sample was applied as the target voice. ElevenLabs still cannot clone (`voices_write` denied) or synthesise (`quota_exceeded`, 4 credits remaining). OpenVoice v2 converted the British teaching track onto that sample; durations match the original cue clock. Remuxed files are 1920×1080 H.264 + AAC at about −16 LUFS.
