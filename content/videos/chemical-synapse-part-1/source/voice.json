@@ -3,5 +3,7 @@
   "speaker": "uploaded joes_voice teaching sample",
   "language": "en",
   "temporary": false,
-  "notes": "Zero-shot clone of the uploaded JD Science sample. Not a British stock voice and not OpenVoice conversion of RyanNeural."
+  "notes": "Zero-shot clone of the uploaded JD Science sample. Not a British stock voice and not OpenVoice conversion of RyanNeural.",
+  "clarity_eq": "highpass=f=110,equalizer=f=200:t=q:w=0.9:g=-8,equalizer=f=700:t=q:w=1.0:g=4,equalizer=f=2500:t=q:w=0.9:g=6,equalizer=f=4500:t=q:w=1.1:g=4,acompressor=threshold=-18dB:ratio=2.8:attack=4:release=70:makeup=2.5,loudnorm=I=-16:TP=-1.5:LRA=11",
+  "clarity_notes": "Post-process on the XTTS/OpenVoice clone: cut sub-300 Hz mud and lift 2.5\u20134.5 kHz presence so narration is intelligible."
 }
