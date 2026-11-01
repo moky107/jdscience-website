@@ -1,70 +1,70 @@
 {
   "slug": "chemical-synapse-part-2",
-  "duration": 307.896,
+  "duration": 309.951,
   "slides": [
     {
       "id": "intro",
-      "t": 0.1,
+      "t": 0.0,
       "aligned": true,
       "cue": "Hello and welcome back to JD Science"
     },
     {
       "id": "need",
-      "t": 17.047,
+      "t": 18.52,
       "aligned": true,
-      "cue": "If that acetylcholine stayed bound"
+      "cue": "stayed bound"
     },
     {
       "id": "ache",
-      "t": 29.029,
+      "t": 27.64,
       "aligned": true,
       "cue": "At a cholinergic synapse, removal is not mainly"
     },
     {
       "id": "recycle",
-      "t": 59.913,
+      "t": 59.74,
       "aligned": true,
       "cue": "Choline is then recycled"
     },
     {
       "id": "oneway",
-      "t": 90.492,
+      "t": 89.88,
       "aligned": true,
-      "cue": "This clean-up has two consequences"
+      "cue": "this cleanup has two consequences"
     },
     {
       "id": "distinct",
-      "t": 151.605,
+      "t": 155.5,
       "aligned": true,
       "cue": "Keep the two modes of transmission distinct"
     },
     {
       "id": "worked",
-      "t": 190.294,
+      "t": 197.4,
       "aligned": true,
-      "cue": "Here is a worked examination-style example"
+      "cue": "worked examination style example"
     },
     {
       "id": "worked_ans",
-      "t": 205.132,
+      "t": 216.44,
       "aligned": true,
-      "cue": "Acetylcholinesterase splits acetylcholine so the receptors are freed"
+      "cue": "so the receptors are freed"
     },
     {
       "id": "your_turn",
-      "t": 228.573,
+      "t": 235.0,
       "aligned": true,
       "cue": "Now pause the video and try this misconception question"
     },
     {
       "id": "model",
-      "t": 245.722,
+      "t": 251.4,
       "aligned": true,
       "cue": "Here is a model answer"
     },
     {
       "id": "outro",
-      "t": 273.131,
+      "t": 279.48,
       "aligned": true,
       "cue": "You now have the full sequence"
     }
@@ -73,35 +73,35 @@
     {
       "slide": "distinct",
       "item": "b1",
-      "t": 155.355,
+      "t": 159.12,
       "aligned": true,
       "cue": "Electrical propagation along the axon"
     },
     {
       "slide": "distinct",
       "item": "b2",
-      "t": 163.541,
+      "t": 168.62,
       "aligned": true,
       "cue": "Chemical transmission across the cleft"
     },
     {
       "slide": "distinct",
       "item": "b3",
-      "t": 174.044,
+      "t": 179.9,
       "aligned": true,
       "cue": "Students sometimes write that the impulse jumps"
     },
     {
       "slide": "your_turn",
       "item": "pause",
-      "t": 228.693,
+      "t": 235.12,
       "aligned": true,
       "cue": "Now pause the video"
     },
     {
       "slide": "model",
       "item": "model",
-      "t": 245.842,
+      "t": 251.52,
       "aligned": true,
       "cue": "Here is a model answer"
     }

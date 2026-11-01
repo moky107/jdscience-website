@@ -1,76 +1,76 @@
 {
   "slug": "nerve-impulse-part-3",
-  "duration": 331.824,
+  "duration": 326.612,
   "slides": [
     {
       "id": "intro",
-      "t": 0.1,
+      "t": 0.0,
       "aligned": true,
       "cue": "Hello and welcome back to JD Science"
     },
     {
       "id": "local",
-      "t": 21.788,
+      "t": 25.36,
       "aligned": true,
       "cue": "When sodium ions enter during depolarisation"
     },
     {
       "id": "absref",
-      "t": 58.648,
+      "t": 62.46,
       "aligned": true,
       "cue": "Why does the impulse not also travel backwards"
     },
     {
       "id": "jobs",
-      "t": 105.614,
+      "t": 107.3,
       "aligned": true,
       "cue": "Together, these refractory stages do two important jobs"
     },
     {
       "id": "unmyel",
-      "t": 127.763,
+      "t": 130.96,
       "aligned": true,
-      "cue": "In an unmyelinated axon, every neighbouring patch"
+      "cue": "every neighboring patch"
     },
     {
       "id": "salt",
-      "t": 137.733,
+      "t": 139.18,
       "aligned": true,
-      "cue": "In a myelinated axon the picture changes"
+      "cue": "the picture changes"
     },
     {
       "id": "whyfast",
-      "t": 167.962,
+      "t": 167.48,
       "aligned": true,
-      "cue": "Saltatory conduction is faster and more energy-efficient"
+      "cue": "faster and more energy"
     },
     {
       "id": "worked",
-      "t": 197.84,
+      "t": 195.42,
       "aligned": true,
-      "cue": "Here is a worked examination-style example"
+      "cue": "worked examination style example"
     },
     {
       "id": "worked_ans",
-      "t": 212.86,
+      "t": 209.12,
       "aligned": true,
       "cue": "Behind the active region, sodium channels are inactivated"
     },
     {
       "id": "your_turn",
-      "t": 236.987,
+      "t": 229.98,
       "aligned": true,
       "cue": "Now pause the video and try this matching activity"
     },
     {
       "id": "model",
-      "t": 271.042,
+      "t": 265.16,
       "aligned": true,
       "cue": "Here is a model answer"
     },
     {
       "id": "outro",
-      "t": 297.261,
+      "t": 292.04,
       "aligned": true,
       "cue": "That completes transmission of a nerve impulse"
     }
@@ -79,35 +79,35 @@
     {
       "slide": "jobs",
       "item": "b1",
-      "t": 110.873,
+      "t": 112.46,
       "aligned": true,
       "cue": "They force one-way propagation"
     },
     {
       "slide": "jobs",
       "item": "b2",
-      "t": 120.096,
+      "t": 121.96,
       "aligned": true,
       "cue": "maximum firing frequency"
     },
     {
       "slide": "jobs",
       "item": "b3",
-      "t": 113.343,
+      "t": 114.36,
       "aligned": true,
       "cue": "towards resting membrane ahead"
     },
     {
       "slide": "your_turn",
       "item": "pause",
-      "t": 237.107,
+      "t": 230.1,
       "aligned": true,
       "cue": "Now pause the video"
     },
     {
       "slide": "model",
       "item": "model",
-      "t": 271.162,
+      "t": 265.28,
       "aligned": true,
       "cue": "Here is a model answer"
     }

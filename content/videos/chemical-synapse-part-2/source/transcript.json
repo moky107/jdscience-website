@@ -2,2941 +2,3119 @@
   "slug": "chemical-synapse-part-2",
   "title": "Transmission at a Chemical Synapse",
   "audio": "/workspace/content/videos/chemical-synapse-part-2/source/narration_master.m4a",
-  "duration": 307.897,
+  "duration": 309.951,
   "full_text": "Hello and welcome back to JD Science.\n\nThis is part two of our Level 3 lesson on transmission at a chemical synapse. In part one, acetylcholine crossed the cleft and opened ligand-gated sodium channels. If that acetylcholine stayed bound, the postsynaptic membrane would keep depolarising and control would be lost. The transmitter must be removed.\n\nAt a cholinergic synapse, removal is not mainly by reuptake of the intact molecule. The enzyme acetylcholinesterase is found in the cleft and on the postsynaptic membrane. It hydrolyses acetylcholine into acetate and choline. Hydrolysis means water is used to split the molecule. Once split, acetylcholine can no longer bind its receptor, so the ligand-gated channels close.\n\nCholine is then recycled. A transporter in the presynaptic membrane takes choline back into the knob. Inside the knob, choline is combined with acetyl-coenzyme A to remake acetylcholine, and the new transmitter is packaged into vesicles, ready for the next impulse. Acetate does not have to follow the same path. The important exam point is that choline is reused.\n\nThis clean-up has two consequences. First, each action potential produces a brief pulse of transmitter rather than a continuous flood, so the postsynaptic cell can respond again. Second, it supports one-way transmission. Vesicles and the machinery for release sit in the presynaptic knob. Receptors and, in this example, acetylcholinesterase sit across the cleft. There is no store of acetylcholine waiting in the postsynaptic cell to be released backwards.\n\nThat is why a typical chemical synapse is one-way, while an axon can carry an action potential in either direction if you stimulate it in the middle. In the body, the refractory period keeps axonal travel one-way. At the synapse, the one-way rule is structural: release machinery on one side, receptors on the other.\n\nKeep the two modes of transmission distinct. Electrical propagation along the axon uses local currents and voltage-gated sodium and potassium channels. Chemical transmission across the cleft uses calcium entry, vesicle fusion, a neurotransmitter, diffusion, and ligand-gated channels. Students sometimes write that the impulse jumps the gap electrically. In a typical chemical synapse it does not. The electrical signal stops, a chemical crosses, and a new electrical signal may start.\n\nHere is a worked examination-style example. Explain how acetylcholinesterase and choline recycling allow a synapse to transmit repeated impulses, and why transmission is one-way.\n\nAcetylcholinesterase splits acetylcholine so the receptors are freed and the channels close. Choline returns to the knob and is used to remake acetylcholine for the next vesicles. Transmission is one-way because neurotransmitter is released only from the presynaptic side and receptors are only on the postsynaptic side.\n\nNow pause the video and try this misconception question. A student writes, after release, acetylcholine is pumped straight back into the vesicle, and that is why the synapse is one-way. Correct the two errors.\n\nHere is a model answer. Acetylcholine is first broken down by acetylcholinesterase to acetate and choline. Choline, not intact acetylcholine, is taken back into the presynaptic knob and reused. The synapse is one-way because vesicles and receptors are on opposite sides, not because a pump returns the whole transmitter to the vesicle.\n\nYou now have the full sequence, from a polarised axon, through an action potential and saltatory conduction, to chemical transmission and clean-up at a synapse. Use the interactive activity to sequence the stages and to check the channel functions. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "tts_text": "Hello and welcome back to JD Science.\n\nThis is part two of our Level 3 lesson on transmission at a chemical synapse. In part one, acetylcholine crossed the cleft and opened ligand-gated sodium channels. If that acetylcholine stayed bound, the postsynaptic membrane would keep depolarising and control would be lost. The transmitter must be removed.\n\nAt a cholinergic synapse, removal is not mainly by reuptake of the intact molecule. The enzyme acetylcholinesterase is found in the cleft and on the postsynaptic membrane. It hydrolyses acetylcholine into acetate and choline. Hydrolysis means water is used to split the molecule. Once split, acetylcholine can no longer bind its receptor, so the ligand-gated channels close.\n\nCholine is then recycled. A transporter in the presynaptic membrane takes choline back into the knob. Inside the knob, choline is combined with acetyl-coenzyme A to remake acetylcholine, and the new transmitter is packaged into vesicles, ready for the next impulse. Acetate does not have to follow the same path. The important exam point is that choline is reused.\n\nThis clean-up has two consequences. First, each action potential produces a brief pulse of transmitter rather than a continuous flood, so the postsynaptic cell can respond again. Second, it supports one-way transmission. Vesicles and the machinery for release sit in the presynaptic knob. Receptors and, in this example, acetylcholinesterase sit across the cleft. There is no store of acetylcholine waiting in the postsynaptic cell to be released backwards.\n\nThat is why a typical chemical synapse is one-way, while an axon can carry an action potential in either direction if you stimulate it in the middle. In the body, the refractory period keeps axonal travel one-way. At the synapse, the one-way rule is structural: release machinery on one side, receptors on the other.\n\nKeep the two modes of transmission distinct. Electrical propagation along the axon uses local currents and voltage-gated sodium and potassium channels. Chemical transmission across the cleft uses calcium entry, vesicle fusion, a neurotransmitter, diffusion, and ligand-gated channels. Students sometimes write that the impulse jumps the gap electrically. In a typical chemical synapse it does not. The electrical signal stops, a chemical crosses, and a new electrical signal may start.\n\nHere is a worked examination-style example. Explain how acetylcholinesterase and choline recycling allow a synapse to transmit repeated impulses, and why transmission is one-way.\n\nAcetylcholinesterase splits acetylcholine so the receptors are freed and the channels close. Choline returns to the knob and is used to remake acetylcholine for the next vesicles. Transmission is one-way because neurotransmitter is released only from the presynaptic side and receptors are only on the postsynaptic side.\n\nNow pause the video and try this misconception question. A student writes, after release, acetylcholine is pumped straight back into the vesicle, and that is why the synapse is one-way. Correct the two errors.\n\nHere is a model answer. Acetylcholine is first broken down by acetylcholinesterase to acetate and choline. Choline, not intact acetylcholine, is taken back into the presynaptic knob and reused. The synapse is one-way because vesicles and receptors are on opposite sides, not because a pump returns the whole transmitter to the vesicle.\n\nYou now have the full sequence, from a polarised axon, through an action potential and saltatory conduction, to chemical transmission and clean-up at a synapse. Use the interactive activity to sequence the stages and to check the channel functions. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "words": [
     {
-      "word": "Hello",
-      "start": 0.1,
-      "end": 0.603
+      "word": "Hello,",
+      "start": 0.0,
+      "end": 0.26
     },
     {
       "word": "and",
-      "start": 0.618,
-      "end": 0.771
+      "start": 0.68,
+      "end": 1.46
     },
     {
       "word": "welcome",
-      "start": 0.786,
-      "end": 1.243
+      "start": 1.46,
+      "end": 1.76
     },
     {
       "word": "back",
-      "start": 1.259,
-      "end": 1.502
+      "start": 1.76,
+      "end": 2.24
     },
     {
       "word": "to",
-      "start": 1.518,
-      "end": 1.64
+      "start": 2.24,
+      "end": 2.68
     },
     {
       "word": "JD",
-      "start": 1.655,
-      "end": 2.158
+      "start": 2.68,
+      "end": 2.94
     },
     {
-      "word": "Science",
-      "start": 2.173,
-      "end": 2.905
+      "word": "Science.",
+      "start": 2.94,
+      "end": 3.42
     },
     {
       "word": "This",
-      "start": 3.968,
-      "end": 4.257
+      "start": 4.18,
+      "end": 4.56
     },
     {
       "word": "is",
-      "start": 4.273,
-      "end": 4.394
+      "start": 4.56,
+      "end": 4.72
     },
     {
       "word": "part",
-      "start": 4.41,
-      "end": 4.776
+      "start": 4.72,
+      "end": 4.94
     },
     {
       "word": "two",
-      "start": 4.791,
-      "end": 5.05
+      "start": 4.94,
+      "end": 5.26
     },
     {
       "word": "of",
-      "start": 5.065,
-      "end": 5.218
+      "start": 5.26,
+      "end": 5.46
     },
     {
       "word": "our",
-      "start": 5.233,
-      "end": 5.446
+      "start": 5.46,
+      "end": 5.58
     },
     {
-      "word": "Level 3",
-      "start": 5.462,
-      "end": 6.239
+      "word": "level",
+      "start": 5.58,
+      "end": 5.82
+    },
+    {
+      "word": "three",
+      "start": 5.82,
+      "end": 6.1
     },
     {
       "word": "lesson",
-      "start": 6.254,
-      "end": 6.696
+      "start": 6.1,
+      "end": 6.52
     },
     {
       "word": "on",
-      "start": 6.712,
-      "end": 6.864
+      "start": 6.52,
+      "end": 7.26
     },
     {
       "word": "transmission",
-      "start": 6.879,
-      "end": 7.611
+      "start": 7.26,
+      "end": 7.84
     },
     {
       "word": "at",
-      "start": 7.626,
-      "end": 7.794
+      "start": 7.84,
+      "end": 8.5
     },
     {
       "word": "a",
-      "start": 7.809,
-      "end": 7.885
+      "start": 8.5,
+      "end": 8.58
     },
     {
       "word": "chemical",
-      "start": 7.901,
-      "end": 8.449
+      "start": 8.58,
+      "end": 8.94
     },
     {
-      "word": "synapse",
-      "start": 8.465,
-      "end": 9.196
+      "word": "synapse.",
+      "start": 8.94,
+      "end": 9.54
     },
     {
       "word": "In",
-      "start": 10.248,
-      "end": 10.477
+      "start": 10.24,
+      "end": 10.32
     },
     {
       "word": "part",
-      "start": 10.492,
-      "end": 10.827
+      "start": 10.32,
+      "end": 10.54
     },
     {
-      "word": "one",
-      "start": 10.843,
-      "end": 11.193
+      "word": "one,",
+      "start": 10.54,
+      "end": 10.82
     },
     {
-      "word": "acetylcholine",
-      "start": 11.376,
-      "end": 12.321
+      "word": "a",
+      "start": 11.12,
+      "end": 11.84
+    },
+    {
+      "word": "satylcholine",
+      "start": 11.84,
+      "end": 12.56
     },
     {
       "word": "crossed",
-      "start": 12.337,
-      "end": 12.763
+      "start": 12.56,
+      "end": 13.32
     },
     {
       "word": "the",
-      "start": 12.779,
-      "end": 12.87
+      "start": 13.32,
+      "end": 13.6
     },
     {
       "word": "cleft",
-      "start": 12.885,
-      "end": 13.327
+      "start": 13.6,
+      "end": 14.04
     },
     {
       "word": "and",
-      "start": 13.343,
-      "end": 13.465
+      "start": 14.04,
+      "end": 14.34
     },
     {
       "word": "opened",
-      "start": 13.48,
-      "end": 13.846
+      "start": 14.34,
+      "end": 14.68
     },
     {
-      "word": "ligand-gated",
-      "start": 13.861,
-      "end": 14.669
+      "word": "like",
+      "start": 14.68,
+      "end": 15.0
+    },
+    {
+      "word": "engaged",
+      "start": 15.0,
+      "end": 15.5
     },
     {
       "word": "sodium",
-      "start": 14.684,
-      "end": 15.294
+      "start": 15.5,
+      "end": 16.0
     },
     {
-      "word": "channels",
-      "start": 15.309,
-      "end": 15.995
+      "word": "channels.",
+      "start": 16.0,
+      "end": 16.58
     },
     {
       "word": "If",
-      "start": 17.047,
-      "end": 17.306
+      "start": 17.3,
+      "end": 17.64
     },
     {
       "word": "that",
-      "start": 17.321,
-      "end": 17.519
+      "start": 17.64,
+      "end": 17.8
     },
     {
-      "word": "acetylcholine",
-      "start": 17.535,
-      "end": 18.449
+      "word": "a",
+      "start": 17.8,
+      "end": 17.94
+    },
+    {
+      "word": "cedalcholine",
+      "start": 17.94,
+      "end": 18.52
     },
     {
       "word": "stayed",
-      "start": 18.465,
-      "end": 18.861
+      "start": 18.52,
+      "end": 18.94
     },
     {
-      "word": "bound",
-      "start": 18.876,
-      "end": 19.364
+      "word": "bound,",
+      "start": 18.94,
+      "end": 19.28
     },
     {
       "word": "the",
-      "start": 19.577,
-      "end": 19.699
+      "start": 20.14,
+      "end": 20.26
     },
     {
-      "word": "postsynaptic",
-      "start": 19.715,
-      "end": 20.645
+      "word": "post",
+      "start": 20.26,
+      "end": 20.52
+    },
+    {
+      "word": "-synaptic",
+      "start": 20.52,
+      "end": 20.96
     },
     {
       "word": "membrane",
-      "start": 20.66,
-      "end": 21.239
+      "start": 20.96,
+      "end": 21.32
     },
     {
       "word": "would",
-      "start": 21.254,
-      "end": 21.437
+      "start": 21.32,
+      "end": 21.62
     },
     {
       "word": "keep",
-      "start": 21.452,
-      "end": 21.773
+      "start": 21.62,
+      "end": 21.82
     },
     {
-      "word": "depolarising",
-      "start": 21.788,
-      "end": 22.809
+      "word": "depolarizing",
+      "start": 21.82,
+      "end": 22.64
     },
     {
       "word": "and",
-      "start": 22.824,
-      "end": 22.962
+      "start": 22.64,
+      "end": 23.28
     },
     {
       "word": "control",
-      "start": 22.977,
-      "end": 23.617
+      "start": 23.28,
+      "end": 23.74
     },
     {
       "word": "would",
-      "start": 23.632,
-      "end": 23.785
+      "start": 23.74,
+      "end": 24.04
     },
     {
       "word": "be",
-      "start": 23.8,
-      "end": 23.922
+      "start": 24.04,
+      "end": 24.18
     },
     {
-      "word": "lost",
-      "start": 23.937,
-      "end": 24.623
+      "word": "lost.",
+      "start": 24.18,
+      "end": 24.48
     },
     {
       "word": "The",
-      "start": 25.675,
-      "end": 25.843
+      "start": 25.22,
+      "end": 25.34
     },
     {
       "word": "transmitter",
-      "start": 25.858,
-      "end": 26.513
+      "start": 25.34,
+      "end": 25.92
     },
     {
       "word": "must",
-      "start": 26.529,
-      "end": 26.849
+      "start": 25.92,
+      "end": 26.26
     },
     {
       "word": "be",
-      "start": 26.864,
-      "end": 26.971
+      "start": 26.26,
+      "end": 26.56
     },
     {
-      "word": "removed",
-      "start": 26.986,
-      "end": 27.977
+      "word": "removed.",
+      "start": 26.56,
+      "end": 27.14
     },
     {
       "word": "At",
-      "start": 29.029,
-      "end": 29.257
+      "start": 27.64,
+      "end": 28.16
     },
     {
       "word": "a",
-      "start": 29.273,
-      "end": 29.333
+      "start": 28.16,
+      "end": 28.28
     },
     {
       "word": "cholinergic",
-      "start": 29.349,
-      "end": 30.111
+      "start": 28.28,
+      "end": 28.96
     },
     {
       "word": "synapse",
-      "start": 30.126,
-      "end": 30.812
+      "start": 28.96,
+      "end": 29.48
     },
     {
       "word": "removal",
-      "start": 30.965,
-      "end": 31.559
+      "start": 29.48,
+      "end": 30.46
     },
     {
       "word": "is",
-      "start": 31.574,
-      "end": 31.696
+      "start": 30.46,
+      "end": 31.26
     },
     {
       "word": "not",
-      "start": 31.712,
-      "end": 31.94
+      "start": 31.26,
+      "end": 31.48
     },
     {
       "word": "mainly",
-      "start": 31.956,
-      "end": 32.428
+      "start": 31.48,
+      "end": 31.96
     },
     {
       "word": "by",
-      "start": 32.443,
-      "end": 32.657
+      "start": 31.96,
+      "end": 32.16
     },
     {
-      "word": "reuptake",
-      "start": 32.672,
-      "end": 33.449
+      "word": "reoptake",
+      "start": 32.16,
+      "end": 32.74
     },
     {
       "word": "of",
-      "start": 33.465,
-      "end": 33.571
+      "start": 32.74,
+      "end": 33.04
     },
     {
       "word": "the",
-      "start": 33.587,
-      "end": 33.709
+      "start": 33.04,
+      "end": 33.16
     },
     {
       "word": "intact",
-      "start": 33.724,
-      "end": 34.273
+      "start": 33.16,
+      "end": 33.56
     },
     {
-      "word": "molecule",
-      "start": 34.288,
-      "end": 35.05
+      "word": "molecule.",
+      "start": 33.56,
+      "end": 34.18
     },
     {
       "word": "The",
-      "start": 36.102,
-      "end": 36.315
+      "start": 34.8,
+      "end": 35.02
     },
     {
       "word": "enzyme",
-      "start": 36.331,
-      "end": 36.849
+      "start": 35.02,
+      "end": 35.5
     },
     {
-      "word": "acetylcholinesterase",
-      "start": 36.864,
-      "end": 38.175
+      "word": "acetylcholineisterase",
+      "start": 35.5,
+      "end": 37.44
     },
     {
       "word": "is",
-      "start": 38.19,
-      "end": 38.358
+      "start": 37.44,
+      "end": 38.18
     },
     {
       "word": "found",
-      "start": 38.373,
-      "end": 38.754
+      "start": 38.18,
+      "end": 38.44
     },
     {
       "word": "in",
-      "start": 38.77,
-      "end": 38.846
+      "start": 38.44,
+      "end": 38.68
     },
     {
       "word": "the",
-      "start": 38.861,
-      "end": 38.937
+      "start": 38.68,
+      "end": 38.82
     },
     {
       "word": "cleft",
-      "start": 38.952,
-      "end": 39.394
+      "start": 38.82,
+      "end": 39.32
     },
     {
       "word": "and",
-      "start": 39.41,
-      "end": 39.516
+      "start": 39.32,
+      "end": 39.86
     },
     {
       "word": "on",
-      "start": 39.532,
-      "end": 39.654
+      "start": 39.86,
+      "end": 39.98
     },
     {
       "word": "the",
-      "start": 39.669,
-      "end": 39.76
+      "start": 39.98,
+      "end": 40.12
     },
     {
-      "word": "postsynaptic",
-      "start": 39.776,
-      "end": 40.706
+      "word": "post",
+      "start": 40.12,
+      "end": 40.4
     },
     {
-      "word": "membrane",
-      "start": 40.721,
-      "end": 41.422
+      "word": "-synaptic",
+      "start": 40.4,
+      "end": 40.96
     },
     {
-      "word": "It",
-      "start": 42.474,
-      "end": 42.702
-    },
-    {
-      "word": "hydrolyses",
-      "start": 42.718,
-      "end": 43.51
-    },
-    {
-      "word": "acetylcholine",
-      "start": 43.526,
-      "end": 44.501
-    },
-    {
-      "word": "into",
-      "start": 44.516,
-      "end": 44.821
-    },
-    {
-      "word": "acetate",
-      "start": 44.837,
-      "end": 45.538
-    },
-    {
-      "word": "and",
-      "start": 45.553,
-      "end": 45.644
-    },
-    {
-      "word": "choline",
-      "start": 45.66,
-      "end": 46.437
+      "word": "membrane.",
+      "start": 40.96,
+      "end": 41.48
     },
     {
       "word": "Hydrolysis",
-      "start": 47.489,
-      "end": 48.434
-    },
-    {
-      "word": "means",
-      "start": 48.449,
-      "end": 48.846
-    },
-    {
-      "word": "water",
-      "start": 48.861,
-      "end": 49.273
-    },
-    {
-      "word": "is",
-      "start": 49.288,
-      "end": 49.532
-    },
-    {
-      "word": "used",
-      "start": 49.547,
-      "end": 49.806
-    },
-    {
-      "word": "to",
-      "start": 49.821,
-      "end": 49.898
-    },
-    {
-      "word": "split",
-      "start": 49.913,
-      "end": 50.324
-    },
-    {
-      "word": "the",
-      "start": 50.34,
-      "end": 50.416
-    },
-    {
-      "word": "molecule",
-      "start": 50.431,
-      "end": 51.269
-    },
-    {
-      "word": "Once",
-      "start": 52.321,
-      "end": 52.718
-    },
-    {
-      "word": "split",
-      "start": 52.733,
-      "end": 53.16
+      "start": 42.32,
+      "end": 43.18
     },
     {
       "word": "acetylcholine",
-      "start": 53.373,
-      "end": 54.334
-    },
-    {
-      "word": "can",
-      "start": 54.349,
-      "end": 54.547
-    },
-    {
-      "word": "no",
-      "start": 54.562,
-      "end": 54.776
-    },
-    {
-      "word": "longer",
-      "start": 54.791,
-      "end": 55.233
-    },
-    {
-      "word": "bind",
-      "start": 55.248,
-      "end": 55.553
-    },
-    {
-      "word": "its",
-      "start": 55.568,
-      "end": 55.721
-    },
-    {
-      "word": "receptor",
-      "start": 55.736,
-      "end": 56.361
-    },
-    {
-      "word": "so",
-      "start": 56.574,
-      "end": 56.681
-    },
-    {
-      "word": "the",
-      "start": 56.696,
-      "end": 56.818
-    },
-    {
-      "word": "ligand-gated",
-      "start": 56.834,
-      "end": 57.657
-    },
-    {
-      "word": "channels",
-      "start": 57.672,
-      "end": 58.129
-    },
-    {
-      "word": "close",
-      "start": 58.145,
-      "end": 58.861
-    },
-    {
-      "word": "Choline",
-      "start": 59.913,
-      "end": 60.553
-    },
-    {
-      "word": "is",
-      "start": 60.568,
-      "end": 60.766
-    },
-    {
-      "word": "then",
-      "start": 60.782,
-      "end": 61.026
-    },
-    {
-      "word": "recycled",
-      "start": 61.041,
-      "end": 62.047
-    },
-    {
-      "word": "A",
-      "start": 63.099,
-      "end": 63.282
-    },
-    {
-      "word": "transporter",
-      "start": 63.297,
-      "end": 64.044
-    },
-    {
-      "word": "in",
-      "start": 64.059,
-      "end": 64.181
-    },
-    {
-      "word": "the",
-      "start": 64.196,
-      "end": 64.288
-    },
-    {
-      "word": "presynaptic",
-      "start": 64.303,
-      "end": 65.126
-    },
-    {
-      "word": "membrane",
-      "start": 65.141,
-      "end": 65.705
-    },
-    {
-      "word": "takes",
-      "start": 65.721,
-      "end": 66.071
-    },
-    {
-      "word": "choline",
-      "start": 66.087,
-      "end": 66.681
-    },
-    {
-      "word": "back",
-      "start": 66.696,
-      "end": 67.001
+      "start": 43.18,
+      "end": 44.6
     },
     {
       "word": "into",
-      "start": 67.016,
-      "end": 67.291
-    },
-    {
-      "word": "the",
-      "start": 67.306,
-      "end": 67.413
-    },
-    {
-      "word": "knob",
-      "start": 67.428,
-      "end": 67.916
-    },
-    {
-      "word": "Inside",
-      "start": 68.968,
-      "end": 69.562
-    },
-    {
-      "word": "the",
-      "start": 69.577,
-      "end": 69.669
-    },
-    {
-      "word": "knob",
-      "start": 69.684,
-      "end": 70.08
-    },
-    {
-      "word": "choline",
-      "start": 70.263,
-      "end": 70.812
-    },
-    {
-      "word": "is",
-      "start": 70.827,
-      "end": 70.98
-    },
-    {
-      "word": "combined",
-      "start": 70.995,
-      "end": 71.559
-    },
-    {
-      "word": "with",
-      "start": 71.574,
-      "end": 71.727
-    },
-    {
-      "word": "acetyl-coenzyme",
-      "start": 71.742,
-      "end": 73.038
-    },
-    {
-      "word": "A",
-      "start": 73.053,
-      "end": 73.236
-    },
-    {
-      "word": "to",
-      "start": 73.251,
-      "end": 73.419
-    },
-    {
-      "word": "remake",
-      "start": 73.434,
-      "end": 73.968
-    },
-    {
-      "word": "acetylcholine",
-      "start": 73.983,
-      "end": 75.035
-    },
-    {
-      "word": "and",
-      "start": 75.401,
-      "end": 75.538
-    },
-    {
-      "word": "the",
-      "start": 75.553,
-      "end": 75.644
-    },
-    {
-      "word": "new",
-      "start": 75.66,
-      "end": 75.949
-    },
-    {
-      "word": "transmitter",
-      "start": 75.965,
-      "end": 76.62
-    },
-    {
-      "word": "is",
-      "start": 76.635,
-      "end": 76.879
-    },
-    {
-      "word": "packaged",
-      "start": 76.894,
-      "end": 77.443
-    },
-    {
-      "word": "into",
-      "start": 77.459,
-      "end": 77.763
-    },
-    {
-      "word": "vesicles",
-      "start": 77.779,
-      "end": 78.526
-    },
-    {
-      "word": "ready",
-      "start": 78.785,
-      "end": 79.09
-    },
-    {
-      "word": "for",
-      "start": 79.105,
-      "end": 79.227
-    },
-    {
-      "word": "the",
-      "start": 79.242,
-      "end": 79.349
-    },
-    {
-      "word": "next",
-      "start": 79.364,
-      "end": 79.715
-    },
-    {
-      "word": "impulse",
-      "start": 79.73,
-      "end": 80.477
-    },
-    {
-      "word": "Acetate",
-      "start": 81.529,
-      "end": 82.184
-    },
-    {
-      "word": "does",
-      "start": 82.199,
-      "end": 82.428
-    },
-    {
-      "word": "not",
-      "start": 82.443,
-      "end": 82.657
-    },
-    {
-      "word": "have",
-      "start": 82.672,
-      "end": 82.901
-    },
-    {
-      "word": "to",
-      "start": 82.916,
-      "end": 83.007
-    },
-    {
-      "word": "follow",
-      "start": 83.023,
-      "end": 83.388
-    },
-    {
-      "word": "the",
-      "start": 83.404,
-      "end": 83.51
-    },
-    {
-      "word": "same",
-      "start": 83.526,
-      "end": 83.861
-    },
-    {
-      "word": "path",
-      "start": 83.876,
-      "end": 84.501
-    },
-    {
-      "word": "The",
-      "start": 85.553,
-      "end": 85.766
-    },
-    {
-      "word": "important",
-      "start": 85.782,
-      "end": 86.33
-    },
-    {
-      "word": "exam",
-      "start": 86.346,
-      "end": 86.803
-    },
-    {
-      "word": "point",
-      "start": 86.818,
-      "end": 87.199
-    },
-    {
-      "word": "is",
-      "start": 87.215,
-      "end": 87.352
-    },
-    {
-      "word": "that",
-      "start": 87.367,
-      "end": 87.565
-    },
-    {
-      "word": "choline",
-      "start": 87.581,
-      "end": 88.19
-    },
-    {
-      "word": "is",
-      "start": 88.206,
-      "end": 88.419
-    },
-    {
-      "word": "reused",
-      "start": 88.434,
-      "end": 89.44
-    },
-    {
-      "word": "This",
-      "start": 90.492,
-      "end": 90.812
-    },
-    {
-      "word": "clean-up",
-      "start": 90.827,
-      "end": 91.285
-    },
-    {
-      "word": "has",
-      "start": 91.3,
-      "end": 91.513
-    },
-    {
-      "word": "two",
-      "start": 91.529,
-      "end": 91.818
-    },
-    {
-      "word": "consequences",
-      "start": 91.834,
-      "end": 93.038
-    },
-    {
-      "word": "First",
-      "start": 94.09,
-      "end": 94.745
-    },
-    {
-      "word": "each",
-      "start": 95.004,
-      "end": 95.263
-    },
-    {
-      "word": "action",
-      "start": 95.279,
-      "end": 95.675
-    },
-    {
-      "word": "potential",
-      "start": 95.69,
-      "end": 96.285
-    },
-    {
-      "word": "produces",
-      "start": 96.3,
-      "end": 96.834
-    },
-    {
-      "word": "a",
-      "start": 96.849,
-      "end": 96.94
-    },
-    {
-      "word": "brief",
-      "start": 96.956,
-      "end": 97.352
-    },
-    {
-      "word": "pulse",
-      "start": 97.367,
-      "end": 97.718
-    },
-    {
-      "word": "of",
-      "start": 97.733,
-      "end": 97.84
-    },
-    {
-      "word": "transmitter",
-      "start": 97.855,
-      "end": 98.541
-    },
-    {
-      "word": "rather",
-      "start": 98.556,
-      "end": 98.968
-    },
-    {
-      "word": "than",
-      "start": 98.983,
-      "end": 99.12
-    },
-    {
-      "word": "a",
-      "start": 99.135,
-      "end": 99.181
-    },
-    {
-      "word": "continuous",
-      "start": 99.196,
-      "end": 99.882
-    },
-    {
-      "word": "flood",
-      "start": 99.898,
-      "end": 100.355
-    },
-    {
-      "word": "so",
-      "start": 100.629,
-      "end": 100.736
-    },
-    {
-      "word": "the",
-      "start": 100.751,
-      "end": 100.873
-    },
-    {
-      "word": "postsynaptic",
-      "start": 100.888,
-      "end": 101.864
-    },
-    {
-      "word": "cell",
-      "start": 101.879,
-      "end": 102.26
-    },
-    {
-      "word": "can",
-      "start": 102.276,
-      "end": 102.428
-    },
-    {
-      "word": "respond",
-      "start": 102.443,
-      "end": 102.977
-    },
-    {
-      "word": "again",
-      "start": 102.992,
-      "end": 103.48
-    },
-    {
-      "word": "Second",
-      "start": 104.532,
-      "end": 105.218
-    },
-    {
-      "word": "it",
-      "start": 105.477,
-      "end": 105.584
-    },
-    {
-      "word": "supports",
-      "start": 105.599,
-      "end": 106.178
-    },
-    {
-      "word": "one-way",
-      "start": 106.193,
-      "end": 106.742
-    },
-    {
-      "word": "transmission",
-      "start": 106.757,
-      "end": 107.718
-    },
-    {
-      "word": "Vesicles",
-      "start": 108.769,
-      "end": 109.608
-    },
-    {
-      "word": "and",
-      "start": 109.623,
-      "end": 109.776
-    },
-    {
-      "word": "the",
-      "start": 109.791,
-      "end": 109.867
-    },
-    {
-      "word": "machinery",
-      "start": 109.882,
-      "end": 110.523
-    },
-    {
-      "word": "for",
-      "start": 110.538,
-      "end": 110.675
-    },
-    {
-      "word": "release",
-      "start": 110.69,
-      "end": 111.132
-    },
-    {
-      "word": "sit",
-      "start": 111.148,
-      "end": 111.407
-    },
-    {
-      "word": "in",
-      "start": 111.422,
-      "end": 111.513
-    },
-    {
-      "word": "the",
-      "start": 111.529,
-      "end": 111.62
-    },
-    {
-      "word": "presynaptic",
-      "start": 111.635,
-      "end": 112.489
-    },
-    {
-      "word": "knob",
-      "start": 112.504,
-      "end": 112.977
-    },
-    {
-      "word": "Receptors",
-      "start": 114.029,
-      "end": 114.837
-    },
-    {
-      "word": "and",
-      "start": 114.852,
-      "end": 115.08
-    },
-    {
-      "word": "in",
-      "start": 115.324,
-      "end": 115.462
-    },
-    {
-      "word": "this",
-      "start": 115.477,
-      "end": 115.69
-    },
-    {
-      "word": "example",
-      "start": 115.706,
-      "end": 116.376
-    },
-    {
-      "word": "acetylcholinesterase",
-      "start": 116.62,
-      "end": 118.007
-    },
-    {
-      "word": "sit",
-      "start": 118.023,
-      "end": 118.236
-    },
-    {
-      "word": "across",
-      "start": 118.251,
-      "end": 118.648
-    },
-    {
-      "word": "the",
-      "start": 118.663,
-      "end": 118.769
-    },
-    {
-      "word": "cleft",
-      "start": 118.785,
-      "end": 119.395
-    },
-    {
-      "word": "There",
-      "start": 120.446,
-      "end": 120.705
-    },
-    {
-      "word": "is",
-      "start": 120.721,
-      "end": 120.904
-    },
-    {
-      "word": "no",
-      "start": 120.919,
-      "end": 121.193
-    },
-    {
-      "word": "store",
-      "start": 121.209,
-      "end": 121.605
-    },
-    {
-      "word": "of",
-      "start": 121.62,
-      "end": 121.712
-    },
-    {
-      "word": "acetylcholine",
-      "start": 121.727,
-      "end": 122.687
-    },
-    {
-      "word": "waiting",
-      "start": 122.702,
-      "end": 123.129
-    },
-    {
-      "word": "in",
-      "start": 123.144,
-      "end": 123.221
-    },
-    {
-      "word": "the",
-      "start": 123.236,
-      "end": 123.327
-    },
-    {
-      "word": "postsynaptic",
-      "start": 123.343,
-      "end": 124.303
-    },
-    {
-      "word": "cell",
-      "start": 124.318,
-      "end": 124.715
-    },
-    {
-      "word": "to",
-      "start": 124.73,
-      "end": 124.837
-    },
-    {
-      "word": "be",
-      "start": 124.852,
-      "end": 124.974
-    },
-    {
-      "word": "released",
-      "start": 124.989,
-      "end": 125.568
-    },
-    {
-      "word": "backwards",
-      "start": 125.584,
-      "end": 126.346
-    },
-    {
-      "word": "That",
-      "start": 127.398,
-      "end": 127.733
-    },
-    {
-      "word": "is",
-      "start": 127.748,
-      "end": 127.901
-    },
-    {
-      "word": "why",
-      "start": 127.916,
-      "end": 128.205
-    },
-    {
-      "word": "a",
-      "start": 128.221,
-      "end": 128.327
-    },
-    {
-      "word": "typical",
-      "start": 128.343,
-      "end": 128.846
-    },
-    {
-      "word": "chemical",
-      "start": 128.861,
-      "end": 129.379
-    },
-    {
-      "word": "synapse",
-      "start": 129.394,
-      "end": 129.913
-    },
-    {
-      "word": "is",
-      "start": 129.928,
-      "end": 130.096
-    },
-    {
-      "word": "one-way",
-      "start": 130.111,
-      "end": 130.751
-    },
-    {
-      "word": "while",
-      "start": 131.087,
-      "end": 131.376
-    },
-    {
-      "word": "an",
-      "start": 131.391,
-      "end": 131.483
-    },
-    {
-      "word": "axon",
-      "start": 131.498,
-      "end": 131.971
-    },
-    {
-      "word": "can",
-      "start": 131.986,
-      "end": 132.154
-    },
-    {
-      "word": "carry",
-      "start": 132.169,
-      "end": 132.55
-    },
-    {
-      "word": "an",
-      "start": 132.565,
-      "end": 132.657
-    },
-    {
-      "word": "action",
-      "start": 132.672,
-      "end": 133.007
-    },
-    {
-      "word": "potential",
-      "start": 133.023,
-      "end": 133.632
-    },
-    {
-      "word": "in",
-      "start": 133.648,
-      "end": 133.769
-    },
-    {
-      "word": "either",
-      "start": 133.785,
-      "end": 134.09
-    },
-    {
-      "word": "direction",
-      "start": 134.105,
-      "end": 134.684
-    },
-    {
-      "word": "if",
-      "start": 134.699,
-      "end": 134.806
-    },
-    {
-      "word": "you",
-      "start": 134.821,
-      "end": 134.928
-    },
-    {
-      "word": "stimulate",
-      "start": 134.943,
-      "end": 135.584
-    },
-    {
-      "word": "it",
-      "start": 135.599,
-      "end": 135.736
-    },
-    {
-      "word": "in",
-      "start": 135.751,
-      "end": 135.858
-    },
-    {
-      "word": "the",
-      "start": 135.873,
-      "end": 135.949
-    },
-    {
-      "word": "middle",
-      "start": 135.965,
-      "end": 136.391
-    },
-    {
-      "word": "In",
-      "start": 137.443,
-      "end": 137.641
-    },
-    {
-      "word": "the",
-      "start": 137.657,
-      "end": 137.748
-    },
-    {
-      "word": "body",
-      "start": 137.763,
-      "end": 138.16
-    },
-    {
-      "word": "the",
-      "start": 138.388,
-      "end": 138.495
-    },
-    {
-      "word": "refractory",
-      "start": 138.51,
-      "end": 139.318
-    },
-    {
-      "word": "period",
-      "start": 139.334,
-      "end": 139.867
-    },
-    {
-      "word": "keeps",
-      "start": 139.882,
-      "end": 140.248
-    },
-    {
-      "word": "axonal",
-      "start": 140.263,
-      "end": 140.797
-    },
-    {
-      "word": "travel",
-      "start": 140.812,
-      "end": 141.3
-    },
-    {
-      "word": "one-way",
-      "start": 141.315,
-      "end": 142.077
-    },
-    {
-      "word": "At",
-      "start": 143.129,
-      "end": 143.358
-    },
-    {
-      "word": "the",
-      "start": 143.373,
-      "end": 143.48
-    },
-    {
-      "word": "synapse",
-      "start": 143.495,
-      "end": 144.242
-    },
-    {
-      "word": "the",
-      "start": 144.471,
-      "end": 144.593
-    },
-    {
-      "word": "one-way",
-      "start": 144.608,
-      "end": 145.187
-    },
-    {
-      "word": "rule",
-      "start": 145.202,
-      "end": 145.644
-    },
-    {
-      "word": "is",
-      "start": 145.66,
-      "end": 145.782
-    },
-    {
-      "word": "structural",
-      "start": 145.797,
-      "end": 146.559
-    },
-    {
-      "word": "release",
-      "start": 146.803,
-      "end": 147.184
-    },
-    {
-      "word": "machinery",
-      "start": 147.199,
-      "end": 147.855
-    },
-    {
-      "word": "on",
-      "start": 147.87,
-      "end": 148.084
-    },
-    {
-      "word": "one",
-      "start": 148.099,
-      "end": 148.434
-    },
-    {
-      "word": "side",
-      "start": 148.449,
-      "end": 148.952
-    },
-    {
-      "word": "receptors",
-      "start": 149.166,
-      "end": 149.821
-    },
-    {
-      "word": "on",
-      "start": 149.837,
-      "end": 149.974
-    },
-    {
-      "word": "the",
-      "start": 149.989,
-      "end": 150.096
-    },
-    {
-      "word": "other",
-      "start": 150.111,
-      "end": 150.553
-    },
-    {
-      "word": "Keep",
-      "start": 151.605,
-      "end": 151.91
-    },
-    {
-      "word": "the",
-      "start": 151.925,
-      "end": 152.032
-    },
-    {
-      "word": "two",
-      "start": 152.047,
-      "end": 152.321
-    },
-    {
-      "word": "modes",
-      "start": 152.337,
-      "end": 152.702
-    },
-    {
-      "word": "of",
-      "start": 152.718,
-      "end": 152.824
-    },
-    {
-      "word": "transmission",
-      "start": 152.84,
-      "end": 153.587
-    },
-    {
-      "word": "distinct",
-      "start": 153.602,
-      "end": 154.303
-    },
-    {
-      "word": "Electrical",
-      "start": 155.355,
-      "end": 156.102
-    },
-    {
-      "word": "propagation",
-      "start": 156.117,
-      "end": 156.849
-    },
-    {
-      "word": "along",
-      "start": 156.864,
-      "end": 157.184
-    },
-    {
-      "word": "the",
-      "start": 157.199,
-      "end": 157.337
-    },
-    {
-      "word": "axon",
-      "start": 157.352,
-      "end": 157.84
-    },
-    {
-      "word": "uses",
-      "start": 157.855,
-      "end": 158.312
-    },
-    {
-      "word": "local",
-      "start": 158.327,
-      "end": 158.708
-    },
-    {
-      "word": "currents",
-      "start": 158.724,
-      "end": 159.166
-    },
-    {
-      "word": "and",
-      "start": 159.181,
-      "end": 159.318
-    },
-    {
-      "word": "voltage-gated",
-      "start": 159.334,
-      "end": 160.294
-    },
-    {
-      "word": "sodium",
-      "start": 160.309,
-      "end": 160.904
-    },
-    {
-      "word": "and",
-      "start": 160.919,
-      "end": 161.056
-    },
-    {
-      "word": "potassium",
-      "start": 161.071,
-      "end": 161.818
-    },
-    {
-      "word": "channels",
-      "start": 161.834,
-      "end": 162.489
-    },
-    {
-      "word": "Chemical",
-      "start": 163.541,
-      "end": 164.09
-    },
-    {
-      "word": "transmission",
-      "start": 164.105,
-      "end": 164.806
-    },
-    {
-      "word": "across",
-      "start": 164.821,
-      "end": 165.248
-    },
-    {
-      "word": "the",
-      "start": 165.263,
-      "end": 165.385
-    },
-    {
-      "word": "cleft",
-      "start": 165.401,
-      "end": 165.812
-    },
-    {
-      "word": "uses",
-      "start": 165.827,
-      "end": 166.193
-    },
-    {
-      "word": "calcium",
-      "start": 166.209,
-      "end": 166.834
-    },
-    {
-      "word": "entry",
-      "start": 166.849,
-      "end": 167.306
-    },
-    {
-      "word": "vesicle",
-      "start": 167.58,
-      "end": 168.053
-    },
-    {
-      "word": "fusion",
-      "start": 168.068,
-      "end": 168.632
-    },
-    {
-      "word": "a",
-      "start": 168.846,
-      "end": 168.891
-    },
-    {
-      "word": "neurotransmitter",
-      "start": 168.907,
-      "end": 170.096
-    },
-    {
-      "word": "diffusion",
-      "start": 170.34,
-      "end": 171.041
-    },
-    {
-      "word": "and",
-      "start": 171.254,
-      "end": 171.391
-    },
-    {
-      "word": "ligand-gated",
-      "start": 171.407,
-      "end": 172.245
-    },
-    {
-      "word": "channels",
-      "start": 172.26,
-      "end": 172.992
-    },
-    {
-      "word": "Students",
-      "start": 174.044,
-      "end": 174.699
-    },
-    {
-      "word": "sometimes",
-      "start": 174.715,
-      "end": 175.34
-    },
-    {
-      "word": "write",
-      "start": 175.355,
-      "end": 175.69
-    },
-    {
-      "word": "that",
-      "start": 175.705,
-      "end": 175.843
-    },
-    {
-      "word": "the",
-      "start": 175.858,
-      "end": 175.98
-    },
-    {
-      "word": "impulse",
-      "start": 175.995,
-      "end": 176.483
-    },
-    {
-      "word": "jumps",
-      "start": 176.498,
-      "end": 176.91
-    },
-    {
-      "word": "the",
-      "start": 176.925,
-      "end": 177.047
-    },
-    {
-      "word": "gap",
-      "start": 177.062,
-      "end": 177.367
-    },
-    {
-      "word": "electrically",
-      "start": 177.382,
-      "end": 178.144
-    },
-    {
-      "word": "In",
-      "start": 179.196,
-      "end": 179.41
-    },
-    {
-      "word": "a",
-      "start": 179.425,
-      "end": 179.501
-    },
-    {
-      "word": "typical",
-      "start": 179.516,
-      "end": 180.05
-    },
-    {
-      "word": "chemical",
-      "start": 180.065,
-      "end": 180.553
-    },
-    {
-      "word": "synapse",
-      "start": 180.568,
-      "end": 181.102
-    },
-    {
-      "word": "it",
-      "start": 181.117,
-      "end": 181.254
-    },
-    {
-      "word": "does",
-      "start": 181.269,
-      "end": 181.529
-    },
-    {
-      "word": "not",
-      "start": 181.544,
-      "end": 182.001
-    },
-    {
-      "word": "The",
-      "start": 183.053,
-      "end": 183.251
-    },
-    {
-      "word": "electrical",
-      "start": 183.266,
-      "end": 183.937
-    },
-    {
-      "word": "signal",
-      "start": 183.952,
-      "end": 184.379
-    },
-    {
-      "word": "stops",
-      "start": 184.394,
-      "end": 184.943
-    },
-    {
-      "word": "a",
-      "start": 185.187,
-      "end": 185.263
-    },
-    {
-      "word": "chemical",
-      "start": 185.279,
-      "end": 185.797
-    },
-    {
-      "word": "crosses",
-      "start": 185.812,
-      "end": 186.391
-    },
-    {
-      "word": "and",
-      "start": 186.635,
-      "end": 186.788
-    },
-    {
-      "word": "a",
-      "start": 186.803,
-      "end": 186.864
-    },
-    {
-      "word": "new",
-      "start": 186.879,
-      "end": 187.184
-    },
-    {
-      "word": "electrical",
-      "start": 187.199,
-      "end": 187.855
-    },
-    {
-      "word": "signal",
-      "start": 187.87,
-      "end": 188.297
-    },
-    {
-      "word": "may",
-      "start": 188.312,
-      "end": 188.541
-    },
-    {
-      "word": "start",
-      "start": 188.556,
-      "end": 189.242
-    },
-    {
-      "word": "Here",
-      "start": 190.294,
-      "end": 190.69
-    },
-    {
-      "word": "is",
-      "start": 190.705,
-      "end": 190.858
-    },
-    {
-      "word": "a",
-      "start": 190.873,
-      "end": 190.934
-    },
-    {
-      "word": "worked",
-      "start": 190.949,
-      "end": 191.361
-    },
-    {
-      "word": "examination-style",
-      "start": 191.376,
-      "end": 192.657
-    },
-    {
-      "word": "example",
-      "start": 192.672,
-      "end": 193.404
-    },
-    {
-      "word": "Explain",
-      "start": 194.455,
-      "end": 195.126
-    },
-    {
-      "word": "how",
-      "start": 195.141,
-      "end": 195.37
-    },
-    {
-      "word": "acetylcholinesterase",
-      "start": 195.385,
-      "end": 196.757
-    },
-    {
-      "word": "and",
-      "start": 196.773,
-      "end": 196.894
-    },
-    {
-      "word": "choline",
-      "start": 196.91,
-      "end": 197.413
-    },
-    {
-      "word": "recycling",
-      "start": 197.428,
-      "end": 198.236
-    },
-    {
-      "word": "allow",
-      "start": 198.251,
-      "end": 198.556
-    },
-    {
-      "word": "a",
-      "start": 198.571,
-      "end": 198.648
-    },
-    {
-      "word": "synapse",
-      "start": 198.663,
-      "end": 199.257
-    },
-    {
-      "word": "to",
-      "start": 199.273,
-      "end": 199.394
-    },
-    {
-      "word": "transmit",
-      "start": 199.41,
-      "end": 200.05
-    },
-    {
-      "word": "repeated",
-      "start": 200.065,
-      "end": 200.553
-    },
-    {
-      "word": "impulses",
-      "start": 200.568,
-      "end": 201.3
-    },
-    {
-      "word": "and",
-      "start": 201.559,
-      "end": 201.727
-    },
-    {
-      "word": "why",
-      "start": 201.742,
-      "end": 202.047
-    },
-    {
-      "word": "transmission",
-      "start": 202.062,
-      "end": 202.901
-    },
-    {
-      "word": "is",
-      "start": 202.916,
-      "end": 203.114
-    },
-    {
-      "word": "one-way",
-      "start": 203.129,
-      "end": 203.937
-    },
-    {
-      "word": "Acetylcholinesterase",
-      "start": 205.132,
-      "end": 206.58
-    },
-    {
-      "word": "splits",
-      "start": 206.595,
-      "end": 206.961
-    },
-    {
-      "word": "acetylcholine",
-      "start": 206.976,
-      "end": 207.967
-    },
-    {
-      "word": "so",
-      "start": 207.983,
-      "end": 208.135
-    },
-    {
-      "word": "the",
-      "start": 208.15,
-      "end": 208.257
-    },
-    {
-      "word": "receptors",
-      "start": 208.272,
-      "end": 208.943
-    },
-    {
-      "word": "are",
-      "start": 208.958,
-      "end": 209.111
-    },
-    {
-      "word": "freed",
-      "start": 209.126,
-      "end": 209.644
-    },
-    {
-      "word": "and",
-      "start": 209.659,
-      "end": 209.781
-    },
-    {
-      "word": "the",
-      "start": 209.797,
-      "end": 209.888
-    },
-    {
-      "word": "channels",
-      "start": 209.903,
-      "end": 210.345
-    },
-    {
-      "word": "close",
-      "start": 210.361,
-      "end": 211.016
-    },
-    {
-      "word": "Choline",
-      "start": 212.079,
-      "end": 212.628
-    },
-    {
-      "word": "returns",
-      "start": 212.643,
-      "end": 213.146
-    },
-    {
-      "word": "to",
-      "start": 213.161,
-      "end": 213.268
-    },
-    {
-      "word": "the",
-      "start": 213.283,
-      "end": 213.39
-    },
-    {
-      "word": "knob",
-      "start": 213.405,
-      "end": 213.71
-    },
-    {
-      "word": "and",
-      "start": 213.725,
-      "end": 213.847
-    },
-    {
-      "word": "is",
-      "start": 213.863,
-      "end": 214.0
-    },
-    {
-      "word": "used",
-      "start": 214.015,
-      "end": 214.244
-    },
-    {
-      "word": "to",
-      "start": 214.259,
-      "end": 214.35
-    },
-    {
-      "word": "remake",
-      "start": 214.366,
-      "end": 214.899
-    },
-    {
-      "word": "acetylcholine",
-      "start": 214.914,
-      "end": 215.875
-    },
-    {
-      "word": "for",
-      "start": 215.89,
-      "end": 216.012
-    },
-    {
-      "word": "the",
-      "start": 216.027,
-      "end": 216.134
-    },
-    {
-      "word": "next",
-      "start": 216.149,
-      "end": 216.484
-    },
-    {
-      "word": "vesicles",
-      "start": 216.5,
-      "end": 217.323
-    },
-    {
-      "word": "Transmission",
-      "start": 218.375,
-      "end": 219.228
-    },
-    {
-      "word": "is",
-      "start": 219.244,
-      "end": 219.411
-    },
-    {
-      "word": "one-way",
-      "start": 219.427,
-      "end": 220.006
-    },
-    {
-      "word": "because",
-      "start": 220.021,
-      "end": 220.372
-    },
-    {
-      "word": "neurotransmitter",
-      "start": 220.387,
-      "end": 221.454
-    },
-    {
-      "word": "is",
-      "start": 221.469,
-      "end": 221.698
-    },
-    {
-      "word": "released",
-      "start": 221.713,
-      "end": 222.186
-    },
-    {
-      "word": "only",
-      "start": 222.201,
-      "end": 222.506
-    },
-    {
-      "word": "from",
-      "start": 222.521,
-      "end": 222.75
-    },
-    {
-      "word": "the",
-      "start": 222.765,
-      "end": 222.856
-    },
-    {
-      "word": "presynaptic",
-      "start": 222.872,
-      "end": 223.71
-    },
-    {
-      "word": "side",
-      "start": 223.725,
-      "end": 224.152
-    },
-    {
-      "word": "and",
-      "start": 224.167,
-      "end": 224.32
-    },
-    {
-      "word": "receptors",
-      "start": 224.335,
-      "end": 225.021
-    },
-    {
-      "word": "are",
-      "start": 225.036,
-      "end": 225.295
-    },
-    {
-      "word": "only",
-      "start": 225.311,
-      "end": 225.676
-    },
-    {
-      "word": "on",
-      "start": 225.692,
-      "end": 225.814
-    },
-    {
-      "word": "the",
-      "start": 225.829,
-      "end": 225.92
-    },
-    {
-      "word": "postsynaptic",
-      "start": 225.936,
-      "end": 226.911
-    },
-    {
-      "word": "side",
-      "start": 226.927,
-      "end": 227.521
-    },
-    {
-      "word": "Now",
-      "start": 228.573,
-      "end": 228.923
-    },
-    {
-      "word": "pause",
-      "start": 228.939,
-      "end": 229.305
-    },
-    {
-      "word": "the",
-      "start": 229.32,
-      "end": 229.426
-    },
-    {
-      "word": "video",
-      "start": 229.442,
-      "end": 229.914
-    },
-    {
-      "word": "and",
-      "start": 229.93,
-      "end": 230.051
-    },
-    {
-      "word": "try",
-      "start": 230.067,
-      "end": 230.356
-    },
-    {
-      "word": "this",
-      "start": 230.372,
-      "end": 230.631
-    },
-    {
-      "word": "misconception",
-      "start": 230.646,
-      "end": 231.576
-    },
-    {
-      "word": "question",
-      "start": 231.591,
-      "end": 232.247
-    },
-    {
-      "word": "A",
-      "start": 233.298,
-      "end": 233.466
-    },
-    {
-      "word": "student",
-      "start": 233.481,
-      "end": 234.015
-    },
-    {
-      "word": "writes",
-      "start": 234.03,
-      "end": 234.518
-    },
-    {
-      "word": "after",
-      "start": 234.731,
-      "end": 235.021
-    },
-    {
-      "word": "release",
-      "start": 235.036,
-      "end": 235.646
-    },
-    {
-      "word": "acetylcholine",
-      "start": 235.905,
-      "end": 236.881
-    },
-    {
-      "word": "is",
-      "start": 236.896,
-      "end": 237.079
-    },
-    {
-      "word": "pumped",
-      "start": 237.094,
-      "end": 237.475
-    },
-    {
-      "word": "straight",
-      "start": 237.491,
-      "end": 237.917
-    },
-    {
-      "word": "back",
-      "start": 237.933,
-      "end": 238.222
-    },
-    {
-      "word": "into",
-      "start": 238.238,
-      "end": 238.497
-    },
-    {
-      "word": "the",
-      "start": 238.512,
-      "end": 238.619
-    },
-    {
-      "word": "vesicle",
-      "start": 238.634,
-      "end": 239.244
-    },
-    {
-      "word": "and",
-      "start": 239.533,
-      "end": 239.625
-    },
-    {
-      "word": "that",
-      "start": 239.64,
-      "end": 239.899
-    },
-    {
-      "word": "is",
-      "start": 239.914,
-      "end": 240.052
-    },
-    {
-      "word": "why",
-      "start": 240.067,
-      "end": 240.326
-    },
-    {
-      "word": "the",
-      "start": 240.341,
-      "end": 240.463
-    },
-    {
-      "word": "synapse",
-      "start": 240.478,
-      "end": 241.042
-    },
-    {
-      "word": "is",
-      "start": 241.058,
-      "end": 241.241
-    },
-    {
-      "word": "one-way",
-      "start": 241.256,
-      "end": 242.079
-    },
-    {
-      "word": "Correct",
-      "start": 243.131,
-      "end": 243.603
-    },
-    {
-      "word": "the",
-      "start": 243.619,
-      "end": 243.725
-    },
-    {
-      "word": "two",
-      "start": 243.741,
-      "end": 244.076
-    },
-    {
-      "word": "errors",
-      "start": 244.091,
-      "end": 244.67
-    },
-    {
-      "word": "Here",
-      "start": 245.722,
-      "end": 246.088
-    },
-    {
-      "word": "is",
-      "start": 246.103,
-      "end": 246.271
-    },
-    {
-      "word": "a",
-      "start": 246.286,
-      "end": 246.347
-    },
-    {
-      "word": "model",
-      "start": 246.363,
-      "end": 246.759
-    },
-    {
-      "word": "answer",
-      "start": 246.774,
-      "end": 247.353
-    },
-    {
-      "word": "Acetylcholine",
-      "start": 248.405,
-      "end": 249.472
-    },
-    {
-      "word": "is",
-      "start": 249.488,
-      "end": 249.67
-    },
-    {
-      "word": "first",
-      "start": 249.686,
-      "end": 250.143
-    },
-    {
-      "word": "broken",
-      "start": 250.158,
-      "end": 250.585
-    },
-    {
-      "word": "down",
-      "start": 250.6,
-      "end": 250.966
-    },
-    {
-      "word": "by",
-      "start": 250.981,
-      "end": 251.195
-    },
-    {
-      "word": "acetylcholinesterase",
-      "start": 251.21,
-      "end": 252.628
-    },
-    {
-      "word": "to",
-      "start": 252.643,
-      "end": 252.75
+      "start": 44.6,
+      "end": 45.56
     },
     {
       "word": "acetate",
-      "start": 252.765,
-      "end": 253.42
+      "start": 45.56,
+      "end": 46.26
     },
     {
       "word": "and",
-      "start": 253.436,
-      "end": 253.558
+      "start": 46.26,
+      "end": 46.78
     },
     {
-      "word": "choline",
-      "start": 253.573,
-      "end": 254.335
+      "word": "cholinene.",
+      "start": 46.78,
+      "end": 47.4
     },
     {
-      "word": "Choline",
-      "start": 255.387,
-      "end": 256.103
+      "word": "Pyrolysis",
+      "start": 48.06,
+      "end": 48.56
     },
     {
-      "word": "not",
-      "start": 256.408,
-      "end": 256.667
+      "word": "means",
+      "start": 48.56,
+      "end": 48.9
     },
     {
-      "word": "intact",
-      "start": 256.683,
-      "end": 257.186
+      "word": "water",
+      "start": 48.9,
+      "end": 49.46
+    },
+    {
+      "word": "is",
+      "start": 49.46,
+      "end": 50.1
+    },
+    {
+      "word": "used",
+      "start": 50.1,
+      "end": 50.26
+    },
+    {
+      "word": "to",
+      "start": 50.26,
+      "end": 50.48
+    },
+    {
+      "word": "split",
+      "start": 50.48,
+      "end": 50.7
+    },
+    {
+      "word": "the",
+      "start": 50.7,
+      "end": 50.88
+    },
+    {
+      "word": "molecule.",
+      "start": 50.88,
+      "end": 51.34
+    },
+    {
+      "word": "At",
+      "start": 51.92,
+      "end": 52.32
+    },
+    {
+      "word": "one",
+      "start": 52.32,
+      "end": 52.98
+    },
+    {
+      "word": "split,",
+      "start": 52.98,
+      "end": 53.48
     },
     {
       "word": "acetylcholine",
-      "start": 257.201,
-      "end": 258.268
+      "start": 54.16,
+      "end": 54.82
+    },
+    {
+      "word": "no",
+      "start": 54.82,
+      "end": 55.02
+    },
+    {
+      "word": "longer",
+      "start": 55.02,
+      "end": 55.36
+    },
+    {
+      "word": "bind",
+      "start": 55.36,
+      "end": 55.64
+    },
+    {
+      "word": "its",
+      "start": 55.64,
+      "end": 55.92
+    },
+    {
+      "word": "receptor,",
+      "start": 55.92,
+      "end": 56.4
+    },
+    {
+      "word": "so",
+      "start": 56.94,
+      "end": 57.18
+    },
+    {
+      "word": "the",
+      "start": 57.18,
+      "end": 57.34
+    },
+    {
+      "word": "ligand",
+      "start": 57.34,
+      "end": 57.78
+    },
+    {
+      "word": "dated",
+      "start": 57.78,
+      "end": 58.1
+    },
+    {
+      "word": "channels",
+      "start": 58.1,
+      "end": 58.56
+    },
+    {
+      "word": "close.",
+      "start": 58.56,
+      "end": 58.98
+    },
+    {
+      "word": "Choline",
+      "start": 59.74,
+      "end": 60.12
     },
     {
       "word": "is",
-      "start": 258.573,
-      "end": 258.725
+      "start": 60.12,
+      "end": 60.48
     },
     {
-      "word": "taken",
-      "start": 258.741,
-      "end": 259.183
+      "word": "then",
+      "start": 60.48,
+      "end": 60.64
+    },
+    {
+      "word": "recycled.",
+      "start": 60.64,
+      "end": 61.2
+    },
+    {
+      "word": "A",
+      "start": 61.84,
+      "end": 62.08
+    },
+    {
+      "word": "transporter",
+      "start": 62.08,
+      "end": 62.78
+    },
+    {
+      "word": "in",
+      "start": 62.78,
+      "end": 63.62
+    },
+    {
+      "word": "the",
+      "start": 63.62,
+      "end": 63.74
+    },
+    {
+      "word": "synaptic",
+      "start": 63.74,
+      "end": 64.4
+    },
+    {
+      "word": "membrane",
+      "start": 64.4,
+      "end": 64.8
+    },
+    {
+      "word": "takes",
+      "start": 64.8,
+      "end": 65.26
+    },
+    {
+      "word": "Choline",
+      "start": 65.26,
+      "end": 65.66
     },
     {
       "word": "back",
-      "start": 259.198,
-      "end": 259.487
+      "start": 65.66,
+      "end": 65.98
     },
     {
       "word": "into",
-      "start": 259.503,
-      "end": 259.777
+      "start": 65.98,
+      "end": 66.32
     },
     {
       "word": "the",
-      "start": 259.792,
-      "end": 259.914
+      "start": 66.32,
+      "end": 66.5
     },
     {
-      "word": "presynaptic",
-      "start": 259.93,
-      "end": 260.829
+      "word": "knob.",
+      "start": 66.5,
+      "end": 66.68
     },
     {
-      "word": "knob",
-      "start": 260.844,
-      "end": 261.149
+      "word": "Inside",
+      "start": 67.42,
+      "end": 67.86
     },
     {
-      "word": "and",
-      "start": 261.164,
-      "end": 261.286
+      "word": "the",
+      "start": 67.86,
+      "end": 68.12
     },
     {
-      "word": "reused",
-      "start": 261.302,
-      "end": 262.292
+      "word": "knob,",
+      "start": 68.12,
+      "end": 68.46
     },
     {
-      "word": "The",
-      "start": 263.344,
-      "end": 263.542
-    },
-    {
-      "word": "synapse",
-      "start": 263.558,
-      "end": 264.106
+      "word": "Choline",
+      "start": 69.16,
+      "end": 69.46
     },
     {
       "word": "is",
-      "start": 264.122,
-      "end": 264.289
+      "start": 69.46,
+      "end": 69.66
     },
     {
-      "word": "one-way",
-      "start": 264.305,
-      "end": 264.869
+      "word": "combined",
+      "start": 69.66,
+      "end": 70.04
     },
     {
-      "word": "because",
-      "start": 264.884,
-      "end": 265.234
+      "word": "with",
+      "start": 70.04,
+      "end": 70.44
     },
     {
-      "word": "vesicles",
-      "start": 265.25,
-      "end": 265.966
+      "word": "acetylcholine",
+      "start": 70.44,
+      "end": 71.48
     },
     {
-      "word": "and",
-      "start": 265.981,
-      "end": 266.103
+      "word": "sim",
+      "start": 71.48,
+      "end": 71.84
     },
     {
-      "word": "receptors",
-      "start": 266.119,
-      "end": 266.789
+      "word": "A",
+      "start": 71.84,
+      "end": 72.14
     },
     {
-      "word": "are",
-      "start": 266.805,
-      "end": 266.896
+      "word": "to",
+      "start": 72.14,
+      "end": 72.6
     },
     {
-      "word": "on",
-      "start": 266.911,
-      "end": 267.079
+      "word": "remake",
+      "start": 72.6,
+      "end": 72.98
     },
     {
-      "word": "opposite",
-      "start": 267.094,
-      "end": 267.582
+      "word": "acetylcholine.",
+      "start": 72.98,
+      "end": 73.9
     },
     {
-      "word": "sides",
-      "start": 267.597,
-      "end": 268.192
-    },
-    {
-      "word": "not",
-      "start": 268.497,
-      "end": 268.725
-    },
-    {
-      "word": "because",
-      "start": 268.741,
-      "end": 269.03
-    },
-    {
-      "word": "a",
-      "start": 269.045,
-      "end": 269.122
-    },
-    {
-      "word": "pump",
-      "start": 269.137,
-      "end": 269.488
-    },
-    {
-      "word": "returns",
-      "start": 269.503,
-      "end": 270.036
+      "word": "And",
+      "start": 74.54,
+      "end": 74.92
     },
     {
       "word": "the",
-      "start": 270.051,
-      "end": 270.143
+      "start": 74.92,
+      "end": 75.02
     },
     {
-      "word": "whole",
-      "start": 270.158,
-      "end": 270.478
+      "word": "new",
+      "start": 75.02,
+      "end": 75.14
     },
     {
       "word": "transmitter",
-      "start": 270.494,
-      "end": 271.164
+      "start": 75.14,
+      "end": 75.68
     },
     {
-      "word": "to",
-      "start": 271.18,
-      "end": 271.286
+      "word": "is",
+      "start": 75.68,
+      "end": 76.42
+    },
+    {
+      "word": "packaged",
+      "start": 76.42,
+      "end": 76.82
+    },
+    {
+      "word": "into",
+      "start": 76.82,
+      "end": 77.18
+    },
+    {
+      "word": "vesicles,",
+      "start": 77.18,
+      "end": 77.68
+    },
+    {
+      "word": "ready",
+      "start": 78.24,
+      "end": 78.52
+    },
+    {
+      "word": "for",
+      "start": 78.52,
+      "end": 78.94
     },
     {
       "word": "the",
-      "start": 271.301,
-      "end": 271.393
+      "start": 78.94,
+      "end": 79.04
     },
     {
-      "word": "vesicle",
-      "start": 271.408,
-      "end": 272.079
+      "word": "next",
+      "start": 79.04,
+      "end": 79.28
     },
     {
-      "word": "You",
-      "start": 273.131,
-      "end": 273.344
+      "word": "impulse.",
+      "start": 79.28,
+      "end": 79.6
     },
     {
-      "word": "now",
-      "start": 273.359,
-      "end": 273.695
+      "word": "Acetylcholine",
+      "start": 80.44,
+      "end": 81.28
+    },
+    {
+      "word": "does",
+      "start": 81.28,
+      "end": 81.38
+    },
+    {
+      "word": "not",
+      "start": 81.38,
+      "end": 81.56
     },
     {
       "word": "have",
-      "start": 273.71,
-      "end": 273.939
-    },
-    {
-      "word": "the",
-      "start": 273.954,
-      "end": 274.03
-    },
-    {
-      "word": "full",
-      "start": 274.045,
-      "end": 274.335
-    },
-    {
-      "word": "sequence",
-      "start": 274.35,
-      "end": 275.051
-    },
-    {
-      "word": "from",
-      "start": 275.28,
-      "end": 275.463
-    },
-    {
-      "word": "a",
-      "start": 275.478,
-      "end": 275.539
-    },
-    {
-      "word": "polarised",
-      "start": 275.555,
-      "end": 276.301
-    },
-    {
-      "word": "axon",
-      "start": 276.317,
-      "end": 276.942
-    },
-    {
-      "word": "through",
-      "start": 277.155,
-      "end": 277.475
-    },
-    {
-      "word": "an",
-      "start": 277.491,
-      "end": 277.582
-    },
-    {
-      "word": "action",
-      "start": 277.597,
-      "end": 277.963
-    },
-    {
-      "word": "potential",
-      "start": 277.978,
-      "end": 278.619
-    },
-    {
-      "word": "and",
-      "start": 278.634,
-      "end": 278.771
-    },
-    {
-      "word": "saltatory",
-      "start": 278.786,
-      "end": 279.472
-    },
-    {
-      "word": "conduction",
-      "start": 279.488,
-      "end": 280.28
+      "start": 81.56,
+      "end": 81.78
     },
     {
       "word": "to",
-      "start": 280.555,
-      "end": 280.661
+      "start": 81.78,
+      "end": 81.98
     },
     {
-      "word": "chemical",
-      "start": 280.676,
-      "end": 281.21
-    },
-    {
-      "word": "transmission",
-      "start": 281.225,
-      "end": 282.003
-    },
-    {
-      "word": "and",
-      "start": 282.018,
-      "end": 282.201
-    },
-    {
-      "word": "clean-up",
-      "start": 282.216,
-      "end": 282.765
-    },
-    {
-      "word": "at",
-      "start": 282.78,
-      "end": 282.902
-    },
-    {
-      "word": "a",
-      "start": 282.917,
-      "end": 282.994
-    },
-    {
-      "word": "synapse",
-      "start": 283.009,
-      "end": 283.801
-    },
-    {
-      "word": "Use",
-      "start": 284.853,
-      "end": 285.25
+      "word": "follow",
+      "start": 81.98,
+      "end": 82.34
     },
     {
       "word": "the",
-      "start": 285.265,
-      "end": 285.402
+      "start": 82.34,
+      "end": 82.54
     },
     {
-      "word": "interactive",
-      "start": 285.417,
-      "end": 286.134
+      "word": "same",
+      "start": 82.54,
+      "end": 82.86
     },
     {
-      "word": "activity",
-      "start": 286.149,
-      "end": 286.728
+      "word": "path.",
+      "start": 82.86,
+      "end": 83.42
     },
     {
-      "word": "to",
-      "start": 286.744,
-      "end": 286.866
+      "word": "The",
+      "start": 84.22,
+      "end": 84.5
     },
     {
-      "word": "sequence",
-      "start": 286.881,
-      "end": 287.46
+      "word": "important",
+      "start": 84.5,
+      "end": 85.92
     },
     {
-      "word": "the",
-      "start": 287.475,
-      "end": 287.582
+      "word": "exam",
+      "start": 85.92,
+      "end": 86.36
     },
     {
-      "word": "stages",
-      "start": 287.597,
-      "end": 288.146
+      "word": "point",
+      "start": 86.36,
+      "end": 86.8
     },
     {
-      "word": "and",
-      "start": 288.161,
-      "end": 288.268
+      "word": "is",
+      "start": 86.8,
+      "end": 87.52
     },
     {
-      "word": "to",
-      "start": 288.283,
-      "end": 288.405
+      "word": "that",
+      "start": 87.52,
+      "end": 87.7
     },
     {
-      "word": "check",
-      "start": 288.42,
-      "end": 288.756
+      "word": "Choline",
+      "start": 87.7,
+      "end": 88.1
     },
     {
-      "word": "the",
-      "start": 288.771,
-      "end": 288.862
+      "word": "is",
+      "start": 88.1,
+      "end": 88.76
     },
     {
-      "word": "channel",
-      "start": 288.878,
-      "end": 289.259
+      "word": "reused.",
+      "start": 88.76,
+      "end": 89.3
     },
     {
-      "word": "functions",
-      "start": 289.274,
-      "end": 290.158
+      "word": "This",
+      "start": 89.88,
+      "end": 90.18
     },
     {
-      "word": "If",
-      "start": 291.21,
-      "end": 291.439
-    },
-    {
-      "word": "this",
-      "start": 291.454,
-      "end": 291.667
-    },
-    {
-      "word": "explanation",
-      "start": 291.683,
-      "end": 292.414
+      "word": "cleanup",
+      "start": 90.18,
+      "end": 90.6
     },
     {
       "word": "has",
-      "start": 292.43,
-      "end": 292.612
+      "start": 90.6,
+      "end": 91.16
     },
     {
-      "word": "helped",
-      "start": 292.628,
-      "end": 293.115
+      "word": "two",
+      "start": 91.16,
+      "end": 91.46
     },
     {
-      "word": "please",
-      "start": 293.314,
-      "end": 293.603
+      "word": "consequences.",
+      "start": 91.46,
+      "end": 92.08
     },
     {
-      "word": "subscribe",
-      "start": 293.619,
-      "end": 294.259
+      "word": "First,",
+      "start": 92.84,
+      "end": 93.1
     },
     {
-      "word": "to",
-      "start": 294.274,
-      "end": 294.396
+      "word": "each",
+      "start": 93.68,
+      "end": 93.96
     },
     {
-      "word": "JD",
-      "start": 294.411,
-      "end": 294.914
+      "word": "action",
+      "start": 93.96,
+      "end": 94.32
     },
     {
-      "word": "Science",
-      "start": 294.93,
-      "end": 295.417
+      "word": "potential",
+      "start": 94.32,
+      "end": 94.98
     },
     {
-      "word": "for",
-      "start": 295.433,
-      "end": 295.555
+      "word": "produces",
+      "start": 94.98,
+      "end": 95.64
     },
     {
-      "word": "more",
-      "start": 295.57,
-      "end": 295.814
+      "word": "a",
+      "start": 95.64,
+      "end": 95.88
     },
     {
-      "word": "lessons",
-      "start": 295.829,
-      "end": 296.637
+      "word": "brief",
+      "start": 95.88,
+      "end": 96.12
     },
     {
-      "word": "You",
-      "start": 297.689,
-      "end": 297.902
+      "word": "pulse",
+      "start": 96.12,
+      "end": 96.52
+    },
+    {
+      "word": "of",
+      "start": 96.52,
+      "end": 96.74
+    },
+    {
+      "word": "transmitter",
+      "start": 96.74,
+      "end": 97.26
+    },
+    {
+      "word": "rather",
+      "start": 97.26,
+      "end": 98.1
+    },
+    {
+      "word": "than",
+      "start": 98.1,
+      "end": 98.32
+    },
+    {
+      "word": "a",
+      "start": 98.32,
+      "end": 98.4
+    },
+    {
+      "word": "continuous",
+      "start": 98.4,
+      "end": 98.96
+    },
+    {
+      "word": "flood",
+      "start": 98.96,
+      "end": 99.4
+    },
+    {
+      "word": "so",
+      "start": 99.4,
+      "end": 100.0
+    },
+    {
+      "word": "the",
+      "start": 100.0,
+      "end": 100.14
+    },
+    {
+      "word": "post",
+      "start": 100.14,
+      "end": 100.42
+    },
+    {
+      "word": "-synaptic",
+      "start": 100.42,
+      "end": 100.98
+    },
+    {
+      "word": "cell",
+      "start": 100.98,
+      "end": 101.26
     },
     {
       "word": "can",
-      "start": 297.917,
-      "end": 298.116
+      "start": 101.26,
+      "end": 101.48
     },
     {
-      "word": "find",
-      "start": 298.131,
-      "end": 298.542
+      "word": "respond",
+      "start": 101.48,
+      "end": 101.76
     },
     {
-      "word": "further",
-      "start": 298.558,
-      "end": 298.923
+      "word": "again.",
+      "start": 101.76,
+      "end": 102.2
     },
     {
-      "word": "learning",
-      "start": 298.939,
-      "end": 299.381
+      "word": "Second,",
+      "start": 102.88,
+      "end": 103.1
     },
     {
-      "word": "resources",
-      "start": 299.396,
-      "end": 300.036
+      "word": "it",
+      "start": 104.28,
+      "end": 104.38
+    },
+    {
+      "word": "supports",
+      "start": 104.38,
+      "end": 104.82
+    },
+    {
+      "word": "one",
+      "start": 104.82,
+      "end": 105.58
+    },
+    {
+      "word": "-way",
+      "start": 105.58,
+      "end": 105.78
+    },
+    {
+      "word": "transmission.",
+      "start": 105.78,
+      "end": 106.52
+    },
+    {
+      "word": "Besicles",
+      "start": 107.32,
+      "end": 107.88
     },
     {
       "word": "and",
-      "start": 300.051,
-      "end": 300.158
+      "start": 107.88,
+      "end": 108.34
     },
     {
-      "word": "practice",
-      "start": 300.173,
-      "end": 300.631
+      "word": "the",
+      "start": 108.34,
+      "end": 108.46
     },
     {
-      "word": "questions",
-      "start": 300.646,
-      "end": 301.241
-    },
-    {
-      "word": "at",
-      "start": 301.256,
-      "end": 301.393
-    },
-    {
-      "word": "jdscience.co.uk",
-      "start": 301.408,
-      "end": 304.442
-    },
-    {
-      "word": "Thank",
-      "start": 305.494,
-      "end": 305.859
-    },
-    {
-      "word": "you",
-      "start": 305.875,
-      "end": 305.966
+      "word": "machinery",
+      "start": 108.46,
+      "end": 109.0
     },
     {
       "word": "for",
-      "start": 305.981,
-      "end": 306.119
+      "start": 109.0,
+      "end": 110.08
     },
     {
-      "word": "watching",
-      "start": 306.134,
-      "end": 306.82
+      "word": "release",
+      "start": 110.08,
+      "end": 110.52
+    },
+    {
+      "word": "sit",
+      "start": 110.52,
+      "end": 111.54
+    },
+    {
+      "word": "in",
+      "start": 111.54,
+      "end": 111.78
+    },
+    {
+      "word": "the",
+      "start": 111.78,
+      "end": 111.9
+    },
+    {
+      "word": "presynaptic",
+      "start": 111.9,
+      "end": 112.64
+    },
+    {
+      "word": "knob.",
+      "start": 112.64,
+      "end": 113.0
+    },
+    {
+      "word": "Receptors",
+      "start": 114.36,
+      "end": 115.16
+    },
+    {
+      "word": "and",
+      "start": 115.16,
+      "end": 115.56
+    },
+    {
+      "word": "in",
+      "start": 115.56,
+      "end": 116.1
+    },
+    {
+      "word": "this",
+      "start": 116.1,
+      "end": 116.3
+    },
+    {
+      "word": "example",
+      "start": 116.3,
+      "end": 116.86
+    },
+    {
+      "word": "acetylcholine",
+      "start": 116.86,
+      "end": 118.22
+    },
+    {
+      "word": "is",
+      "start": 118.22,
+      "end": 118.46
+    },
+    {
+      "word": "to",
+      "start": 118.46,
+      "end": 118.6
+    },
+    {
+      "word": "us",
+      "start": 118.6,
+      "end": 118.96
+    },
+    {
+      "word": "sit",
+      "start": 118.96,
+      "end": 119.52
+    },
+    {
+      "word": "across",
+      "start": 119.52,
+      "end": 119.88
+    },
+    {
+      "word": "the",
+      "start": 119.88,
+      "end": 120.16
+    },
+    {
+      "word": "cleft,",
+      "start": 120.16,
+      "end": 120.64
+    },
+    {
+      "word": "orange.",
+      "start": 120.98,
+      "end": 121.16
+    },
+    {
+      "word": "There",
+      "start": 122.04,
+      "end": 122.32
+    },
+    {
+      "word": "is",
+      "start": 122.32,
+      "end": 122.5
+    },
+    {
+      "word": "no",
+      "start": 122.5,
+      "end": 122.7
+    },
+    {
+      "word": "store",
+      "start": 122.7,
+      "end": 123.16
+    },
+    {
+      "word": "of",
+      "start": 123.16,
+      "end": 123.46
+    },
+    {
+      "word": "acetylcholine",
+      "start": 123.46,
+      "end": 124.26
+    },
+    {
+      "word": "waiting",
+      "start": 124.26,
+      "end": 125.08
+    },
+    {
+      "word": "in",
+      "start": 125.08,
+      "end": 125.3
+    },
+    {
+      "word": "the",
+      "start": 125.3,
+      "end": 125.4
+    },
+    {
+      "word": "post",
+      "start": 125.4,
+      "end": 125.7
+    },
+    {
+      "word": "-synaptic",
+      "start": 125.7,
+      "end": 126.24
+    },
+    {
+      "word": "cell",
+      "start": 126.24,
+      "end": 126.48
+    },
+    {
+      "word": "to",
+      "start": 126.48,
+      "end": 126.7
+    },
+    {
+      "word": "be",
+      "start": 126.7,
+      "end": 126.84
+    },
+    {
+      "word": "released",
+      "start": 126.84,
+      "end": 127.16
+    },
+    {
+      "word": "backward.",
+      "start": 127.16,
+      "end": 127.68
+    },
+    {
+      "word": "That",
+      "start": 128.34,
+      "end": 128.6
+    },
+    {
+      "word": "is",
+      "start": 128.6,
+      "end": 128.92
+    },
+    {
+      "word": "why",
+      "start": 128.92,
+      "end": 129.42
+    },
+    {
+      "word": "a",
+      "start": 129.42,
+      "end": 129.92
+    },
+    {
+      "word": "typical",
+      "start": 129.92,
+      "end": 130.32
+    },
+    {
+      "word": "chemical",
+      "start": 130.32,
+      "end": 130.78
+    },
+    {
+      "word": "synapse",
+      "start": 130.78,
+      "end": 131.52
+    },
+    {
+      "word": "is",
+      "start": 131.52,
+      "end": 132.16
+    },
+    {
+      "word": "one",
+      "start": 132.16,
+      "end": 132.44
+    },
+    {
+      "word": "way,",
+      "start": 132.44,
+      "end": 132.76
+    },
+    {
+      "word": "while",
+      "start": 133.12,
+      "end": 133.5
+    },
+    {
+      "word": "an",
+      "start": 133.5,
+      "end": 133.72
+    },
+    {
+      "word": "axon",
+      "start": 133.72,
+      "end": 134.28
+    },
+    {
+      "word": "can",
+      "start": 134.28,
+      "end": 134.76
+    },
+    {
+      "word": "carry",
+      "start": 134.76,
+      "end": 135.16
+    },
+    {
+      "word": "an",
+      "start": 135.16,
+      "end": 135.36
+    },
+    {
+      "word": "action",
+      "start": 135.36,
+      "end": 135.84
+    },
+    {
+      "word": "potential",
+      "start": 135.84,
+      "end": 136.58
+    },
+    {
+      "word": "in",
+      "start": 136.58,
+      "end": 137.2
+    },
+    {
+      "word": "either",
+      "start": 137.2,
+      "end": 137.58
+    },
+    {
+      "word": "direction",
+      "start": 137.58,
+      "end": 138.16
+    },
+    {
+      "word": "if",
+      "start": 138.16,
+      "end": 138.78
+    },
+    {
+      "word": "you",
+      "start": 138.78,
+      "end": 138.92
+    },
+    {
+      "word": "stimulate",
+      "start": 138.92,
+      "end": 139.44
+    },
+    {
+      "word": "it",
+      "start": 139.44,
+      "end": 139.72
+    },
+    {
+      "word": "in",
+      "start": 139.72,
+      "end": 140.12
+    },
+    {
+      "word": "the",
+      "start": 140.12,
+      "end": 140.26
+    },
+    {
+      "word": "middle.",
+      "start": 140.26,
+      "end": 140.54
+    },
+    {
+      "word": "In",
+      "start": 141.12,
+      "end": 141.26
+    },
+    {
+      "word": "the",
+      "start": 141.26,
+      "end": 141.42
+    },
+    {
+      "word": "body,",
+      "start": 141.42,
+      "end": 141.72
+    },
+    {
+      "word": "the",
+      "start": 142.18,
+      "end": 142.26
+    },
+    {
+      "word": "refractory",
+      "start": 142.26,
+      "end": 142.94
+    },
+    {
+      "word": "period",
+      "start": 142.94,
+      "end": 143.52
+    },
+    {
+      "word": "keeps",
+      "start": 143.52,
+      "end": 144.16
+    },
+    {
+      "word": "axonal",
+      "start": 144.16,
+      "end": 144.82
+    },
+    {
+      "word": "travel",
+      "start": 144.82,
+      "end": 145.24
+    },
+    {
+      "word": "one",
+      "start": 145.24,
+      "end": 145.74
+    },
+    {
+      "word": "way.",
+      "start": 145.74,
+      "end": 146.1
+    },
+    {
+      "word": "At",
+      "start": 146.82,
+      "end": 147.08
+    },
+    {
+      "word": "the",
+      "start": 147.08,
+      "end": 147.24
+    },
+    {
+      "word": "synapse,",
+      "start": 147.24,
+      "end": 147.72
+    },
+    {
+      "word": "the",
+      "start": 148.58,
+      "end": 148.66
+    },
+    {
+      "word": "one",
+      "start": 148.66,
+      "end": 148.9
+    },
+    {
+      "word": "-way",
+      "start": 148.9,
+      "end": 149.1
+    },
+    {
+      "word": "rule",
+      "start": 149.1,
+      "end": 149.38
+    },
+    {
+      "word": "is",
+      "start": 149.38,
+      "end": 149.66
+    },
+    {
+      "word": "structural.",
+      "start": 149.66,
+      "end": 150.2
+    },
+    {
+      "word": "Release",
+      "start": 151.3,
+      "end": 151.58
+    },
+    {
+      "word": "machinery",
+      "start": 151.58,
+      "end": 152.16
+    },
+    {
+      "word": "on",
+      "start": 152.16,
+      "end": 152.36
+    },
+    {
+      "word": "one",
+      "start": 152.36,
+      "end": 152.56
+    },
+    {
+      "word": "side,",
+      "start": 152.56,
+      "end": 153.06
+    },
+    {
+      "word": "receptors",
+      "start": 153.54,
+      "end": 153.94
+    },
+    {
+      "word": "on",
+      "start": 153.94,
+      "end": 154.32
+    },
+    {
+      "word": "the",
+      "start": 154.32,
+      "end": 154.46
+    },
+    {
+      "word": "other.",
+      "start": 154.46,
+      "end": 154.72
+    },
+    {
+      "word": "Keep",
+      "start": 155.5,
+      "end": 155.66
+    },
+    {
+      "word": "the",
+      "start": 155.66,
+      "end": 156.18
+    },
+    {
+      "word": "two",
+      "start": 156.18,
+      "end": 156.4
+    },
+    {
+      "word": "modes",
+      "start": 156.4,
+      "end": 156.72
+    },
+    {
+      "word": "of",
+      "start": 156.72,
+      "end": 157.02
+    },
+    {
+      "word": "transmission",
+      "start": 157.02,
+      "end": 157.62
+    },
+    {
+      "word": "distinct.",
+      "start": 157.62,
+      "end": 158.56
+    },
+    {
+      "word": "Electrical",
+      "start": 159.12,
+      "end": 159.84
+    },
+    {
+      "word": "propagation",
+      "start": 159.84,
+      "end": 160.58
+    },
+    {
+      "word": "along",
+      "start": 160.58,
+      "end": 161.6
+    },
+    {
+      "word": "the",
+      "start": 161.6,
+      "end": 161.9
+    },
+    {
+      "word": "axon",
+      "start": 161.9,
+      "end": 162.34
+    },
+    {
+      "word": "uses",
+      "start": 162.34,
+      "end": 163.12
+    },
+    {
+      "word": "local",
+      "start": 163.12,
+      "end": 163.56
+    },
+    {
+      "word": "currents",
+      "start": 163.56,
+      "end": 164.04
+    },
+    {
+      "word": "and",
+      "start": 164.04,
+      "end": 164.66
+    },
+    {
+      "word": "voltage",
+      "start": 164.66,
+      "end": 165.02
+    },
+    {
+      "word": "-gated",
+      "start": 165.02,
+      "end": 165.48
+    },
+    {
+      "word": "sodium",
+      "start": 165.48,
+      "end": 166.0
+    },
+    {
+      "word": "and",
+      "start": 166.32,
+      "end": 166.82
+    },
+    {
+      "word": "potassium",
+      "start": 166.82,
+      "end": 167.28
+    },
+    {
+      "word": "channels.",
+      "start": 167.28,
+      "end": 167.96
+    },
+    {
+      "word": "Chemical",
+      "start": 168.62,
+      "end": 169.0
+    },
+    {
+      "word": "transmission",
+      "start": 169.0,
+      "end": 169.68
+    },
+    {
+      "word": "across",
+      "start": 169.68,
+      "end": 170.44
+    },
+    {
+      "word": "the",
+      "start": 170.44,
+      "end": 170.7
+    },
+    {
+      "word": "cleft",
+      "start": 170.7,
+      "end": 171.14
+    },
+    {
+      "word": "uses",
+      "start": 171.14,
+      "end": 171.76
+    },
+    {
+      "word": "calcium",
+      "start": 171.76,
+      "end": 172.24
+    },
+    {
+      "word": "entry,",
+      "start": 172.24,
+      "end": 172.74
+    },
+    {
+      "word": "vesicle",
+      "start": 173.42,
+      "end": 173.88
+    },
+    {
+      "word": "fusion,",
+      "start": 173.88,
+      "end": 174.38
+    },
+    {
+      "word": "a",
+      "start": 175.14,
+      "end": 175.14
+    },
+    {
+      "word": "neurotransmitter,",
+      "start": 175.14,
+      "end": 176.2
+    },
+    {
+      "word": "diffusion,",
+      "start": 176.66,
+      "end": 177.12
+    },
+    {
+      "word": "and",
+      "start": 177.84,
+      "end": 177.92
+    },
+    {
+      "word": "ligandated",
+      "start": 177.92,
+      "end": 178.7
+    },
+    {
+      "word": "channels.",
+      "start": 178.7,
+      "end": 179.18
+    },
+    {
+      "word": "Students",
+      "start": 179.9,
+      "end": 180.16
+    },
+    {
+      "word": "sometimes",
+      "start": 180.16,
+      "end": 180.7
+    },
+    {
+      "word": "write",
+      "start": 180.7,
+      "end": 181.08
+    },
+    {
+      "word": "that",
+      "start": 181.08,
+      "end": 182.2
+    },
+    {
+      "word": "the",
+      "start": 182.2,
+      "end": 183.0
+    },
+    {
+      "word": "impulse",
+      "start": 183.0,
+      "end": 183.34
+    },
+    {
+      "word": "jumps",
+      "start": 183.34,
+      "end": 183.84
+    },
+    {
+      "word": "the",
+      "start": 183.84,
+      "end": 184.04
+    },
+    {
+      "word": "gap",
+      "start": 184.04,
+      "end": 184.22
+    },
+    {
+      "word": "electrically.",
+      "start": 184.22,
+      "end": 185.0
+    },
+    {
+      "word": "In",
+      "start": 185.44,
+      "end": 185.9
+    },
+    {
+      "word": "a",
+      "start": 185.9,
+      "end": 186.02
+    },
+    {
+      "word": "typical",
+      "start": 186.02,
+      "end": 186.42
+    },
+    {
+      "word": "chemical",
+      "start": 186.42,
+      "end": 186.86
+    },
+    {
+      "word": "synapse,",
+      "start": 186.86,
+      "end": 187.48
+    },
+    {
+      "word": "it",
+      "start": 188.1,
+      "end": 188.16
+    },
+    {
+      "word": "does",
+      "start": 188.16,
+      "end": 188.42
+    },
+    {
+      "word": "not.",
+      "start": 188.42,
+      "end": 188.7
+    },
+    {
+      "word": "The",
+      "start": 189.48,
+      "end": 189.56
+    },
+    {
+      "word": "electrical",
+      "start": 189.56,
+      "end": 189.92
+    },
+    {
+      "word": "signal",
+      "start": 189.92,
+      "end": 190.42
+    },
+    {
+      "word": "stops.",
+      "start": 190.42,
+      "end": 190.86
+    },
+    {
+      "word": "A",
+      "start": 191.54,
+      "end": 191.7
+    },
+    {
+      "word": "chemical",
+      "start": 191.7,
+      "end": 192.04
+    },
+    {
+      "word": "crosses",
+      "start": 192.04,
+      "end": 192.54
+    },
+    {
+      "word": "and",
+      "start": 192.54,
+      "end": 193.34
+    },
+    {
+      "word": "a",
+      "start": 193.34,
+      "end": 193.48
+    },
+    {
+      "word": "new",
+      "start": 193.48,
+      "end": 193.66
+    },
+    {
+      "word": "electrical",
+      "start": 193.66,
+      "end": 194.14
+    },
+    {
+      "word": "signal",
+      "start": 194.14,
+      "end": 194.66
+    },
+    {
+      "word": "may",
+      "start": 194.66,
+      "end": 194.96
+    },
+    {
+      "word": "start.",
+      "start": 194.96,
+      "end": 195.42
+    },
+    {
+      "word": "Here",
+      "start": 196.16,
+      "end": 196.54
+    },
+    {
+      "word": "is",
+      "start": 196.54,
+      "end": 197.24
+    },
+    {
+      "word": "a",
+      "start": 197.24,
+      "end": 197.4
+    },
+    {
+      "word": "worked",
+      "start": 197.4,
+      "end": 197.76
+    },
+    {
+      "word": "examination",
+      "start": 197.76,
+      "end": 198.54
+    },
+    {
+      "word": "style",
+      "start": 198.54,
+      "end": 199.36
+    },
+    {
+      "word": "example.",
+      "start": 199.36,
+      "end": 200.3
+    },
+    {
+      "word": "Explain",
+      "start": 200.88,
+      "end": 201.18
+    },
+    {
+      "word": "how",
+      "start": 201.18,
+      "end": 201.54
+    },
+    {
+      "word": "acetylcholine",
+      "start": 201.54,
+      "end": 202.58
+    },
+    {
+      "word": "nesteras",
+      "start": 202.58,
+      "end": 203.38
+    },
+    {
+      "word": "and",
+      "start": 203.38,
+      "end": 204.42
+    },
+    {
+      "word": "colline",
+      "start": 204.42,
+      "end": 204.88
+    },
+    {
+      "word": "recycling",
+      "start": 204.88,
+      "end": 205.26
+    },
+    {
+      "word": "allow",
+      "start": 205.26,
+      "end": 205.84
+    },
+    {
+      "word": "us",
+      "start": 205.84,
+      "end": 206.1
+    },
+    {
+      "word": "synapse",
+      "start": 206.1,
+      "end": 206.46
+    },
+    {
+      "word": "to",
+      "start": 206.46,
+      "end": 206.68
+    },
+    {
+      "word": "transmit",
+      "start": 206.68,
+      "end": 207.22
+    },
+    {
+      "word": "repeated",
+      "start": 207.22,
+      "end": 208.3
+    },
+    {
+      "word": "impulses.",
+      "start": 208.3,
+      "end": 208.98
+    },
+    {
+      "word": "And",
+      "start": 209.7,
+      "end": 209.8
+    },
+    {
+      "word": "y",
+      "start": 209.8,
+      "end": 209.94
+    },
+    {
+      "word": "transmission",
+      "start": 209.94,
+      "end": 210.4
+    },
+    {
+      "word": "is",
+      "start": 210.4,
+      "end": 210.82
+    },
+    {
+      "word": "one",
+      "start": 210.82,
+      "end": 211.02
+    },
+    {
+      "word": "way.",
+      "start": 211.02,
+      "end": 211.28
+    },
+    {
+      "word": "Acetylcholine",
+      "start": 212.1,
+      "end": 213.02
+    },
+    {
+      "word": "nesterasa",
+      "start": 213.02,
+      "end": 213.82
+    },
+    {
+      "word": "splits",
+      "start": 213.82,
+      "end": 214.76
+    },
+    {
+      "word": "acetylcholine",
+      "start": 214.76,
+      "end": 215.66
+    },
+    {
+      "word": "nesteras.",
+      "start": 215.66,
+      "end": 215.99
+    },
+    {
+      "word": "So",
+      "start": 216.44,
+      "end": 216.66
+    },
+    {
+      "word": "the",
+      "start": 216.66,
+      "end": 216.82
+    },
+    {
+      "word": "receptors",
+      "start": 216.82,
+      "end": 217.34
+    },
+    {
+      "word": "are",
+      "start": 217.34,
+      "end": 217.54
+    },
+    {
+      "word": "freed",
+      "start": 217.54,
+      "end": 217.88
+    },
+    {
+      "word": "and",
+      "start": 217.88,
+      "end": 218.46
+    },
+    {
+      "word": "the",
+      "start": 218.46,
+      "end": 218.58
+    },
+    {
+      "word": "channels",
+      "start": 218.58,
+      "end": 218.9
+    },
+    {
+      "word": "close.",
+      "start": 218.9,
+      "end": 219.32
+    },
+    {
+      "word": "Colline",
+      "start": 220.08,
+      "end": 220.44
+    },
+    {
+      "word": "nesteras",
+      "start": 220.44,
+      "end": 221.32
+    },
+    {
+      "word": "returns",
+      "start": 221.32,
+      "end": 221.44
+    },
+    {
+      "word": "to",
+      "start": 221.44,
+      "end": 221.74
+    },
+    {
+      "word": "the",
+      "start": 221.74,
+      "end": 221.86
+    },
+    {
+      "word": "knob",
+      "start": 221.86,
+      "end": 222.06
+    },
+    {
+      "word": "and",
+      "start": 222.06,
+      "end": 222.5
+    },
+    {
+      "word": "is",
+      "start": 222.5,
+      "end": 222.64
+    },
+    {
+      "word": "used",
+      "start": 222.64,
+      "end": 222.78
+    },
+    {
+      "word": "to",
+      "start": 222.78,
+      "end": 222.98
+    },
+    {
+      "word": "remake",
+      "start": 222.98,
+      "end": 223.26
+    },
+    {
+      "word": "acetylcholine",
+      "start": 223.26,
+      "end": 224.12
+    },
+    {
+      "word": "for",
+      "start": 224.12,
+      "end": 224.38
+    },
+    {
+      "word": "the",
+      "start": 224.38,
+      "end": 224.48
+    },
+    {
+      "word": "next",
+      "start": 224.48,
+      "end": 224.68
+    },
+    {
+      "word": "vesicles.",
+      "start": 224.68,
+      "end": 225.2
+    },
+    {
+      "word": "Transmission",
+      "start": 225.84,
+      "end": 226.5
+    },
+    {
+      "word": "is",
+      "start": 226.5,
+      "end": 226.7
+    },
+    {
+      "word": "one",
+      "start": 226.7,
+      "end": 226.88
+    },
+    {
+      "word": "way",
+      "start": 226.88,
+      "end": 227.16
+    },
+    {
+      "word": "because",
+      "start": 227.16,
+      "end": 227.96
+    },
+    {
+      "word": "neurotransmitter",
+      "start": 227.96,
+      "end": 228.9
+    },
+    {
+      "word": "is",
+      "start": 228.9,
+      "end": 229.04
+    },
+    {
+      "word": "released",
+      "start": 229.04,
+      "end": 229.28
+    },
+    {
+      "word": "only",
+      "start": 229.28,
+      "end": 229.72
+    },
+    {
+      "word": "from",
+      "start": 229.72,
+      "end": 229.96
+    },
+    {
+      "word": "the",
+      "start": 229.96,
+      "end": 230.1
+    },
+    {
+      "word": "press",
+      "start": 230.1,
+      "end": 230.32
+    },
+    {
+      "word": "and",
+      "start": 230.32,
+      "end": 230.5
+    },
+    {
+      "word": "optic",
+      "start": 230.5,
+      "end": 230.74
+    },
+    {
+      "word": "side,",
+      "start": 230.74,
+      "end": 231.16
+    },
+    {
+      "word": "and",
+      "start": 231.64,
+      "end": 231.84
+    },
+    {
+      "word": "receptors",
+      "start": 231.84,
+      "end": 232.32
+    },
+    {
+      "word": "are",
+      "start": 232.32,
+      "end": 232.56
+    },
+    {
+      "word": "only",
+      "start": 232.56,
+      "end": 232.96
+    },
+    {
+      "word": "on",
+      "start": 232.96,
+      "end": 233.1
+    },
+    {
+      "word": "the",
+      "start": 233.1,
+      "end": 233.22
+    },
+    {
+      "word": "posts",
+      "start": 233.22,
+      "end": 233.5
+    },
+    {
+      "word": "synaptic",
+      "start": 233.5,
+      "end": 234.0
+    },
+    {
+      "word": "side.",
+      "start": 234.0,
+      "end": 234.36
+    },
+    {
+      "word": "Now",
+      "start": 235.0,
+      "end": 235.34
+    },
+    {
+      "word": "pause",
+      "start": 235.34,
+      "end": 235.68
+    },
+    {
+      "word": "the",
+      "start": 235.68,
+      "end": 235.96
+    },
+    {
+      "word": "video",
+      "start": 235.96,
+      "end": 236.32
+    },
+    {
+      "word": "and",
+      "start": 236.32,
+      "end": 237.02
+    },
+    {
+      "word": "try",
+      "start": 237.02,
+      "end": 237.28
+    },
+    {
+      "word": "this",
+      "start": 237.28,
+      "end": 237.64
+    },
+    {
+      "word": "misconception",
+      "start": 237.64,
+      "end": 238.18
+    },
+    {
+      "word": "question.",
+      "start": 238.18,
+      "end": 239.0
+    },
+    {
+      "word": "A",
+      "start": 239.0,
+      "end": 239.74
+    },
+    {
+      "word": "student",
+      "start": 239.74,
+      "end": 240.1
+    },
+    {
+      "word": "writes,",
+      "start": 240.1,
+      "end": 240.42
+    },
+    {
+      "word": "after",
+      "start": 240.86,
+      "end": 241.2
+    },
+    {
+      "word": "release,",
+      "start": 241.2,
+      "end": 241.56
+    },
+    {
+      "word": "acetylcholine",
+      "start": 242.18,
+      "end": 242.96
+    },
+    {
+      "word": "is",
+      "start": 242.96,
+      "end": 243.24
+    },
+    {
+      "word": "pumped",
+      "start": 243.24,
+      "end": 243.46
+    },
+    {
+      "word": "straight",
+      "start": 243.46,
+      "end": 243.88
+    },
+    {
+      "word": "back",
+      "start": 243.88,
+      "end": 244.24
+    },
+    {
+      "word": "into",
+      "start": 244.24,
+      "end": 244.52
+    },
+    {
+      "word": "the",
+      "start": 244.52,
+      "end": 244.66
+    },
+    {
+      "word": "vesicle,",
+      "start": 244.66,
+      "end": 245.06
+    },
+    {
+      "word": "and",
+      "start": 245.5,
+      "end": 245.74
+    },
+    {
+      "word": "that",
+      "start": 245.74,
+      "end": 245.92
+    },
+    {
+      "word": "is",
+      "start": 245.92,
+      "end": 246.06
+    },
+    {
+      "word": "why",
+      "start": 246.06,
+      "end": 246.28
+    },
+    {
+      "word": "the",
+      "start": 246.28,
+      "end": 246.42
+    },
+    {
+      "word": "synapse",
+      "start": 246.42,
+      "end": 246.8
+    },
+    {
+      "word": "is",
+      "start": 246.8,
+      "end": 247.0
+    },
+    {
+      "word": "one",
+      "start": 247.0,
+      "end": 247.24
+    },
+    {
+      "word": "way.",
+      "start": 247.24,
+      "end": 247.52
+    },
+    {
+      "word": "Correct?",
+      "start": 248.04,
+      "end": 248.42
+    },
+    {
+      "word": "The",
+      "start": 249.26,
+      "end": 249.46
+    },
+    {
+      "word": "two",
+      "start": 249.46,
+      "end": 249.86
+    },
+    {
+      "word": "errors.",
+      "start": 249.86,
+      "end": 250.48
+    },
+    {
+      "word": "Here",
+      "start": 251.4,
+      "end": 251.74
+    },
+    {
+      "word": "is",
+      "start": 251.74,
+      "end": 251.96
+    },
+    {
+      "word": "a",
+      "start": 251.96,
+      "end": 252.04
+    },
+    {
+      "word": "model",
+      "start": 252.04,
+      "end": 252.28
+    },
+    {
+      "word": "answer.",
+      "start": 252.28,
+      "end": 252.72
+    },
+    {
+      "word": "Acetylcholine",
+      "start": 254.04,
+      "end": 254.76
+    },
+    {
+      "word": "is",
+      "start": 254.76,
+      "end": 255.46
+    },
+    {
+      "word": "first",
+      "start": 255.46,
+      "end": 255.8
+    },
+    {
+      "word": "broken",
+      "start": 255.8,
+      "end": 256.3
+    },
+    {
+      "word": "down",
+      "start": 256.3,
+      "end": 256.64
+    },
+    {
+      "word": "by",
+      "start": 256.64,
+      "end": 257.28
+    },
+    {
+      "word": "acetylcholine",
+      "start": 257.28,
+      "end": 258.18
+    },
+    {
+      "word": "nesteras",
+      "start": 258.18,
+      "end": 258.94
+    },
+    {
+      "word": "to",
+      "start": 258.94,
+      "end": 259.58
+    },
+    {
+      "word": "acetate",
+      "start": 259.58,
+      "end": 260.22
+    },
+    {
+      "word": "and",
+      "start": 260.22,
+      "end": 260.9
+    },
+    {
+      "word": "colline.",
+      "start": 260.9,
+      "end": 261.48
+    },
+    {
+      "word": "Colline",
+      "start": 262.14,
+      "end": 262.44
+    },
+    {
+      "word": "in",
+      "start": 262.44,
+      "end": 262.66
+    },
+    {
+      "word": "not",
+      "start": 262.66,
+      "end": 262.74
+    },
+    {
+      "word": "intact",
+      "start": 262.74,
+      "end": 263.18
+    },
+    {
+      "word": "acetylcholine",
+      "start": 263.18,
+      "end": 264.22
+    },
+    {
+      "word": "is",
+      "start": 264.22,
+      "end": 264.92
+    },
+    {
+      "word": "taken",
+      "start": 264.92,
+      "end": 265.18
+    },
+    {
+      "word": "back",
+      "start": 265.18,
+      "end": 265.48
+    },
+    {
+      "word": "into",
+      "start": 265.48,
+      "end": 265.82
+    },
+    {
+      "word": "the",
+      "start": 265.82,
+      "end": 266.0
+    },
+    {
+      "word": "present",
+      "start": 266.0,
+      "end": 266.32
+    },
+    {
+      "word": "optic",
+      "start": 266.32,
+      "end": 266.82
+    },
+    {
+      "word": "knob",
+      "start": 266.82,
+      "end": 267.18
+    },
+    {
+      "word": "and",
+      "start": 267.66,
+      "end": 268.02
+    },
+    {
+      "word": "reused.",
+      "start": 268.02,
+      "end": 268.72
+    },
+    {
+      "word": "The",
+      "start": 269.44,
+      "end": 269.72
+    },
+    {
+      "word": "synapse",
+      "start": 269.72,
+      "end": 270.04
+    },
+    {
+      "word": "is",
+      "start": 270.04,
+      "end": 270.28
+    },
+    {
+      "word": "one",
+      "start": 270.28,
+      "end": 270.48
+    },
+    {
+      "word": "way",
+      "start": 270.48,
+      "end": 270.76
+    },
+    {
+      "word": "because",
+      "start": 270.76,
+      "end": 271.26
+    },
+    {
+      "word": "vesicles",
+      "start": 271.26,
+      "end": 271.8
+    },
+    {
+      "word": "and",
+      "start": 271.8,
+      "end": 272.1
+    },
+    {
+      "word": "receptors",
+      "start": 272.1,
+      "end": 272.58
+    },
+    {
+      "word": "are",
+      "start": 272.58,
+      "end": 273.14
+    },
+    {
+      "word": "on",
+      "start": 273.14,
+      "end": 273.32
+    },
+    {
+      "word": "opposite",
+      "start": 273.32,
+      "end": 273.72
+    },
+    {
+      "word": "sides.",
+      "start": 273.72,
+      "end": 274.36
+    },
+    {
+      "word": "Not",
+      "start": 275.1,
+      "end": 275.3
+    },
+    {
+      "word": "because",
+      "start": 275.3,
+      "end": 275.68
+    },
+    {
+      "word": "a",
+      "start": 275.68,
+      "end": 275.9
+    },
+    {
+      "word": "pump",
+      "start": 275.9,
+      "end": 276.04
+    },
+    {
+      "word": "returns",
+      "start": 276.04,
+      "end": 276.62
+    },
+    {
+      "word": "the",
+      "start": 276.62,
+      "end": 276.94
+    },
+    {
+      "word": "whole",
+      "start": 276.94,
+      "end": 277.12
+    },
+    {
+      "word": "transmitter",
+      "start": 277.12,
+      "end": 277.78
+    },
+    {
+      "word": "to",
+      "start": 277.78,
+      "end": 278.3
+    },
+    {
+      "word": "the",
+      "start": 278.3,
+      "end": 278.4
+    },
+    {
+      "word": "vesicle.",
+      "start": 278.4,
+      "end": 278.82
+    },
+    {
+      "word": "You",
+      "start": 279.48,
+      "end": 279.76
+    },
+    {
+      "word": "now",
+      "start": 279.76,
+      "end": 280.08
+    },
+    {
+      "word": "have",
+      "start": 280.08,
+      "end": 280.44
+    },
+    {
+      "word": "the",
+      "start": 280.44,
+      "end": 280.68
+    },
+    {
+      "word": "full",
+      "start": 280.68,
+      "end": 280.88
+    },
+    {
+      "word": "sequence",
+      "start": 280.88,
+      "end": 281.36
+    },
+    {
+      "word": "from",
+      "start": 281.36,
+      "end": 281.72
+    },
+    {
+      "word": "a",
+      "start": 281.72,
+      "end": 281.88
+    },
+    {
+      "word": "polarized",
+      "start": 281.88,
+      "end": 282.36
+    },
+    {
+      "word": "axon",
+      "start": 282.36,
+      "end": 283.0
+    },
+    {
+      "word": "through",
+      "start": 283.0,
+      "end": 283.64
+    },
+    {
+      "word": "an",
+      "start": 283.64,
+      "end": 283.84
+    },
+    {
+      "word": "action",
+      "start": 283.84,
+      "end": 284.1
+    },
+    {
+      "word": "potential",
+      "start": 284.1,
+      "end": 284.78
+    },
+    {
+      "word": "and",
+      "start": 284.78,
+      "end": 284.98
+    },
+    {
+      "word": "solitory",
+      "start": 284.98,
+      "end": 285.6
+    },
+    {
+      "word": "conduction",
+      "start": 285.6,
+      "end": 286.16
+    },
+    {
+      "word": "to",
+      "start": 286.16,
+      "end": 286.84
+    },
+    {
+      "word": "chemical",
+      "start": 286.84,
+      "end": 287.16
+    },
+    {
+      "word": "transmission",
+      "start": 287.16,
+      "end": 287.84
+    },
+    {
+      "word": "and",
+      "start": 287.84,
+      "end": 288.54
+    },
+    {
+      "word": "clean",
+      "start": 288.54,
+      "end": 288.78
+    },
+    {
+      "word": "up",
+      "start": 288.78,
+      "end": 289.06
+    },
+    {
+      "word": "other",
+      "start": 289.06,
+      "end": 289.4
+    },
+    {
+      "word": "synapse.",
+      "start": 289.4,
+      "end": 289.78
+    },
+    {
+      "word": "Use",
+      "start": 290.48,
+      "end": 290.72
+    },
+    {
+      "word": "the",
+      "start": 290.72,
+      "end": 290.94
+    },
+    {
+      "word": "interactive",
+      "start": 290.94,
+      "end": 291.36
+    },
+    {
+      "word": "activity",
+      "start": 291.36,
+      "end": 292.02
+    },
+    {
+      "word": "to",
+      "start": 292.02,
+      "end": 292.2
+    },
+    {
+      "word": "sequence",
+      "start": 292.2,
+      "end": 292.58
+    },
+    {
+      "word": "the",
+      "start": 292.58,
+      "end": 292.86
+    },
+    {
+      "word": "stages",
+      "start": 292.86,
+      "end": 293.26
+    },
+    {
+      "word": "and",
+      "start": 293.26,
+      "end": 293.54
+    },
+    {
+      "word": "to",
+      "start": 293.54,
+      "end": 293.68
+    },
+    {
+      "word": "check",
+      "start": 293.68,
+      "end": 293.88
+    },
+    {
+      "word": "the",
+      "start": 293.88,
+      "end": 294.1
+    },
+    {
+      "word": "channel",
+      "start": 294.1,
+      "end": 294.38
+    },
+    {
+      "word": "functions.",
+      "start": 294.38,
+      "end": 294.84
+    },
+    {
+      "word": "If",
+      "start": 294.84,
+      "end": 295.28
+    },
+    {
+      "word": "this",
+      "start": 295.28,
+      "end": 295.98
+    },
+    {
+      "word": "explanation",
+      "start": 295.98,
+      "end": 296.58
+    },
+    {
+      "word": "has",
+      "start": 296.58,
+      "end": 296.94
+    },
+    {
+      "word": "helped,",
+      "start": 296.94,
+      "end": 297.28
+    },
+    {
+      "word": "please",
+      "start": 297.9,
+      "end": 298.16
+    },
+    {
+      "word": "subscribe",
+      "start": 298.16,
+      "end": 298.78
+    },
+    {
+      "word": "to",
+      "start": 298.78,
+      "end": 299.1
+    },
+    {
+      "word": "JD",
+      "start": 299.1,
+      "end": 299.36
+    },
+    {
+      "word": "Science",
+      "start": 299.36,
+      "end": 299.76
+    },
+    {
+      "word": "for",
+      "start": 299.76,
+      "end": 300.08
+    },
+    {
+      "word": "more",
+      "start": 300.08,
+      "end": 300.28
+    },
+    {
+      "word": "lessons.",
+      "start": 300.28,
+      "end": 300.64
+    },
+    {
+      "word": "You",
+      "start": 301.58,
+      "end": 301.8
+    },
+    {
+      "word": "can",
+      "start": 301.8,
+      "end": 301.94
+    },
+    {
+      "word": "find",
+      "start": 301.94,
+      "end": 302.18
+    },
+    {
+      "word": "further",
+      "start": 302.18,
+      "end": 302.5
+    },
+    {
+      "word": "learning",
+      "start": 302.5,
+      "end": 302.84
+    },
+    {
+      "word": "resources",
+      "start": 302.84,
+      "end": 303.36
+    },
+    {
+      "word": "and",
+      "start": 303.36,
+      "end": 303.66
+    },
+    {
+      "word": "practice",
+      "start": 303.66,
+      "end": 304.0
+    },
+    {
+      "word": "questions",
+      "start": 304.0,
+      "end": 304.62
+    },
+    {
+      "word": "at",
+      "start": 304.62,
+      "end": 305.16
+    },
+    {
+      "word": "JD",
+      "start": 305.16,
+      "end": 305.44
+    },
+    {
+      "word": "Science",
+      "start": 305.44,
+      "end": 305.92
+    },
+    {
+      "word": "Company",
+      "start": 305.92,
+      "end": 306.26
+    },
+    {
+      "word": "Acutot.",
+      "start": 306.26,
+      "end": 306.74
+    },
+    {
+      "word": "Thank",
+      "start": 307.28,
+      "end": 307.6
+    },
+    {
+      "word": "you",
+      "start": 307.6,
+      "end": 307.94
+    },
+    {
+      "word": "for",
+      "start": 307.94,
+      "end": 308.8
+    },
+    {
+      "word": "watching.",
+      "start": 308.8,
+      "end": 309.22
     }
   ],
-  "chunks": 2,
-  "model": "openvoice_v2",
-  "voice": "uploaded-joes-voice-openvoice-v2",
-  "rate": "-18%",
+  "chunks": 25,
+  "model": "xtts_v2",
+  "voice": "uploaded-joes-voice-xtts",
   "temporary_voice": false,
-  "replace_with": "cloned-voice",
-  "elevenlabs_blocker": "ElevenLabs could not clone (voices_write denied) or synthesise (quota_exceeded, 4 credits remaining). The uploaded 59 s JD Science teaching sample was used as the OpenVoice v2 target speaker."
+  "elevenlabs_blocker": "ElevenLabs quota_exceeded (4 credits remaining) and voices_write denied. Narration synthesised from the uploaded speaker sample with XTTS v2 so accent and timbre come from that recording."
 }

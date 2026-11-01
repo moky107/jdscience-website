@@ -1,88 +1,88 @@
 {
   "slug": "chemical-synapse-part-1",
-  "duration": 361.056,
+  "duration": 398.856,
   "slides": [
     {
       "id": "intro",
-      "t": 0.1,
+      "t": 0.0,
       "aligned": true,
       "cue": "Hello and welcome back to JD Science"
     },
     {
       "id": "why",
-      "t": 29.806,
+      "t": 34.12,
       "aligned": true,
       "cue": "A synapse is the specialised junction"
     },
     {
       "id": "micro",
-      "t": 39.288,
+      "t": 46.42,
       "aligned": true,
       "cue": "Look first at a real electron micrograph"
     },
     {
       "id": "parts",
-      "t": 57.779,
+      "t": 67.6,
       "aligned": true,
       "cue": "The neurone that arrives is the presynaptic neurone"
     },
     {
       "id": "arrive",
-      "t": 108.419,
+      "t": 120.74,
       "aligned": true,
       "cue": "An action potential arrives at the presynaptic terminal"
     },
     {
       "id": "exo",
-      "t": 130.294,
+      "t": 143.64,
       "aligned": true,
-      "cue": "The rise in calcium inside the knob"
+      "cue": "rising calcium inside the knob"
     },
     {
       "id": "bind",
-      "t": 154.73,
+      "t": 173.7,
       "aligned": true,
-      "cue": "Acetylcholine molecules then diffuse"
+      "cue": "diffuse across the synaptic cleft"
     },
     {
       "id": "psp",
-      "t": 188.769,
-      "aligned": true,
+      "t": 177.7,
+      "aligned": false,
       "cue": "Sodium entry produces a postsynaptic potential"
     },
     {
       "id": "contrast",
-      "t": 214.972,
+      "t": 242.11,
       "aligned": true,
       "cue": "Notice the contrast"
     },
     {
       "id": "worked",
-      "t": 242.132,
+      "t": 271.97,
       "aligned": true,
-      "cue": "Here is a worked examination-style example"
+      "cue": "worked examination style example"
     },
     {
       "id": "worked_ans",
-      "t": 276.02,
+      "t": 314.71,
       "aligned": true,
       "cue": "The order is exactly that sequence"
     },
     {
       "id": "your_turn",
-      "t": 293.626,
+      "t": 332.31,
       "aligned": true,
       "cue": "Now pause the video and try this"
     },
     {
       "id": "model",
-      "t": 309.907,
+      "t": 349.59,
       "aligned": true,
       "cue": "Here is a model answer"
     },
     {
       "id": "outro",
-      "t": 332.559,
+      "t": 373.59,
       "aligned": true,
       "cue": "In part two we will see how acetylcholine is removed"
     }
@@ -91,35 +91,35 @@
     {
       "slide": "contrast",
       "item": "b1",
-      "t": 217.666,
+      "t": 248.01,
       "aligned": true,
       "cue": "Along the axon, charged ions move"
     },
     {
       "slide": "contrast",
       "item": "b2",
-      "t": 225.105,
+      "t": 254.95,
       "aligned": true,
       "cue": "Across the cleft, the message is a chemical"
     },
     {
       "slide": "contrast",
       "item": "b3",
-      "t": 238.52,
+      "t": 269.11,
       "aligned": true,
       "cue": "modified by drugs or enzymes"
     },
     {
       "slide": "your_turn",
       "item": "pause",
-      "t": 293.746,
+      "t": 332.43,
       "aligned": true,
       "cue": "Now pause the video"
     },
     {
       "slide": "model",
       "item": "model",
-      "t": 310.027,
+      "t": 349.71,
       "aligned": true,
       "cue": "Here is a model answer"
     }

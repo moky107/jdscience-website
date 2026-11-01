@@ -15,6 +15,37 @@ if str(ROOT / "scripts") not in sys.path:
 
 import gcse_foundations.render as foundations_render
 from gcse_foundations.render import align, encode_lesson, write_srt
+
+_SPELL = {
+    "neurone": "neuron",
+    "neurones": "neurons",
+    "polarised": "polarized",
+    "depolarised": "depolarized",
+    "depolarisation": "depolarization",
+    "repolarisation": "repolarization",
+    "hyperpolarisation": "hyperpolarization",
+    "specialised": "specialized",
+    "neighbouring": "neighboring",
+    "fibre": "fiber",
+    "fibres": "fibers",
+    "labelled": "labeled",
+    "ranvier": "ranveer",
+    "ron": "ron",
+    "endrites": "dendrites",
+    "solitory": "saltatory",
+    "malinated": "myelinated",
+    "citricoline": "acetylcholine",
+    "nanometres": "nanometers",
+    "metres": "meters",
+}
+_orig_pieces = foundations_render._pieces
+
+
+def _pieces_l3(text: str):
+    return [_SPELL.get(part, part) for part in _orig_pieces(text)]
+
+
+foundations_render._pieces = _pieces_l3
 from l3_nervous import draw as l3_draw
 from l3_nervous import tts_fallback
 from l3_nervous.lessons import LESSONS

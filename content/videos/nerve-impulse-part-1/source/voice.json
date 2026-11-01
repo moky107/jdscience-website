@@ -1,7 +1,7 @@
 {
-  "engine": "openvoice_v2",
-  "source_track": "en-GB-RyanNeural British teaching narration",
-  "target": "uploaded joes_voice sample",
+  "engine": "xtts_v2",
+  "speaker": "uploaded joes_voice teaching sample",
+  "language": "en",
   "temporary": false,
-  "notes": "ElevenLabs could not clone (voices_write denied) or synthesise (quota_exceeded, 4 credits remaining). The uploaded 59 s JD Science teaching sample was used as the OpenVoice v2 target speaker."
+  "notes": "Zero-shot clone of the uploaded JD Science sample. Accent comes from that recording, not from a British stock voice."
 }

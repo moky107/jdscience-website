@@ -3,7 +3,7 @@
 Five 1080p30 JD Science lessons. Scripts, captions, interactive HTML and
 editable Python sources sit with the videos.
 
-| Part | Slug | Intended length |
+| Part | Slug | Focus |
 | --- | --- | --- |
 | Nerve impulse 1 | `nerve-impulse-part-1` | Neurone structure and resting potential |
 | Nerve impulse 2 | `nerve-impulse-part-2` | Action potential and graph |
@@ -12,17 +12,16 @@ editable Python sources sit with the videos.
 | Synapse 2 | `chemical-synapse-part-2` | AChE, recycling and one-way travel |
 
 ```bash
-python3 scripts/l3_nervous/tts_fallback.py
+COQUI_TOS_AGREED=1 python3 scripts/l3_nervous/tts_xtts_clone.py
 python3 scripts/l3_nervous/produce.py --skip-tts --out /opt/cursor/artifacts
 ```
 
-ElevenLabs cloned-voice generation is preferred (`scripts/l3_nervous/tts.py`)
-when quota and `voices_write` are available. This build mapped the uploaded
-JD Science teaching sample onto the British narration with OpenVoice v2
-(`scripts/l3_nervous/apply_uploaded_voice.py`) after ElevenLabs returned
-`quota_exceeded` and denied `voices_write`. Keep `narration_master.m4a` and
-`transcript.json` so a later ElevenLabs clone can replace the track without
-rebuilding cues.
+Narration is a zero-shot clone of the uploaded JD Science teaching sample
+(`scripts/l3_nervous/tts_xtts_clone.py`). Accent and timbre come from that
+recording, not from `en-GB-RyanNeural`. ElevenLabs still cannot clone
+(`voices_write` denied) or synthesise (`quota_exceeded`). Keep
+`narration_master.m4a` and `transcript.json` so a later ElevenLabs clone can
+replace the track without rebuilding slide art.
 
 Interactive activities:
 

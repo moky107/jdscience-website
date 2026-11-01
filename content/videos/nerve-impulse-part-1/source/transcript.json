@@ -2,3881 +2,3909 @@
   "slug": "nerve-impulse-part-1",
   "title": "Transmission of a Nerve Impulse",
   "audio": "/workspace/content/videos/nerve-impulse-part-1/source/narration_master.m4a",
-  "duration": 388.354,
+  "duration": 391.658,
   "full_text": "Hello and welcome back to JD Science.\n\nThis is part one of our Level 3 lesson on the transmission of a nerve impulse. A nerve impulse is a brief electrical signal that travels along a neurone. A neurone is a specialised nerve cell that carries information from one place in the body to another.\n\nLook first at a real stained motor neurone from the spinal cord. The large purple cell bodies and the surrounding fibres are genuine tissue. A light micrograph can show the cell body and processes, but it cannot show the ions that create the impulse, so we now switch to a labelled scientific diagram.\n\nThe cell body contains the nucleus and most of the cytoplasm. Short, branched dendrites receive incoming signals and pass them towards the cell body. The axon is a long process that carries the impulse away from the cell body towards another cell.\n\nThe axon is bounded by a plasma membrane, which is a phospholipid bilayer with proteins in it. In many neurones, a myelin sheath wraps around the axon. Myelin is made by Schwann cells in the peripheral nervous system and acts as an electrical insulator. The gaps between adjacent Schwann cells are the nodes of Ranvier. At each node the membrane is exposed to the extracellular fluid. Those nodes will matter when we look at how the impulse travels quickly.\n\nA nerve impulse is an action potential travelling along the axon. An action potential is a rapid, temporary reversal of the electrical charge across the membrane. Before that reversal can happen, we must understand the resting state.\n\nAt rest, the inside of the axon is negative compared with the outside. That potential difference is the resting potential, about minus seventy millivolts. The unit is the millivolt, one thousandth of a volt. Because opposite charges are separated across the membrane, we say the membrane is polarised.\n\nThe ions are not evenly shared. Sodium ions, shown in amber, are far more concentrated outside the axon. Potassium ions, shown in teal, are far more concentrated inside. Large negative organic ions, such as proteins, remain inside because they cannot cross the membrane.\n\nThe sodium\u2013potassium pump maintains those concentration gradients. It is a membrane protein that uses ATP, the cell's energy currency. For each cycle, three sodium ions are moved out and two potassium ions are moved in. That is active transport, against their concentration gradients. Because three positive ions leave for every two that enter, the pump also makes the inside a little more negative.\n\nThe membrane is selectively permeable, which means it does not treat every ion the same way. At rest it is much more permeable to potassium than to sodium. Potassium leak channels stay open, so some potassium ions diffuse out down their concentration gradient. As those positive ions leave, the inside becomes more negative. Sodium channels are mostly closed at rest, so sodium cannot easily flood back in.\n\nPut those ideas together. The pump keeps sodium high outside and potassium high inside. Potassium leak channels let some potassium leave. Impermeant negative ions stay inside. The result is a polarised membrane at about minus seventy millivolts. That is the resting potential. The pump does not fire the impulse. It quietly maintains the gradients that make an impulse possible.\n\nHere is a worked examination-style example. A student writes, the sodium\u2013potassium pump creates the resting potential by pumping sodium in and potassium out. Identify two scientific errors and correct them.\n\nThe first error is the direction. The pump moves three sodium ions out, not in, and two potassium ions in, not out. The second error is the claim that the pump alone creates the resting potential. The pump maintains the gradients. Potassium leak channels and the trapped negative ions are also essential.\n\nNow pause the video and try this sequencing question. Place these four statements in the order that establishes a resting potential. A: the sodium\u2013potassium pump uses ATP. B: sodium stays high outside and potassium stays high inside. C: potassium leaks out through open leak channels. D: the membrane is polarised at about minus seventy millivolts.\n\nHere is a model answer. First A, the pump uses ATP. That produces B, the unequal ion distribution. Then C, potassium leaks out. That produces D, a polarised membrane at about minus seventy millivolts.\n\nIn part two we will see how a stimulus changes this polarised membrane into an action potential, and we will build the graph as each phase happens. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "tts_text": "Hello and welcome back to JD Science.\n\nThis is part one of our Level 3 lesson on the transmission of a nerve impulse. A nerve impulse is a brief electrical signal that travels along a neurone. A neurone is a specialised nerve cell that carries information from one place in the body to another.\n\nLook first at a real stained motor neurone from the spinal cord. The large purple cell bodies and the surrounding fibres are genuine tissue. A light micrograph can show the cell body and processes, but it cannot show the ions that create the impulse, so we now switch to a labelled scientific diagram.\n\nThe cell body contains the nucleus and most of the cytoplasm. Short, branched dendrites receive incoming signals and pass them towards the cell body. The axon is a long process that carries the impulse away from the cell body towards another cell.\n\nThe axon is bounded by a plasma membrane, which is a phospholipid bilayer with proteins in it. In many neurones, a myelin sheath wraps around the axon. Myelin is made by Schwann cells in the peripheral nervous system and acts as an electrical insulator. The gaps between adjacent Schwann cells are the nodes of Ranvier. At each node the membrane is exposed to the extracellular fluid. Those nodes will matter when we look at how the impulse travels quickly.\n\nA nerve impulse is an action potential travelling along the axon. An action potential is a rapid, temporary reversal of the electrical charge across the membrane. Before that reversal can happen, we must understand the resting state.\n\nAt rest, the inside of the axon is negative compared with the outside. That potential difference is the resting potential, about minus seventy millivolts. The unit is the millivolt, one thousandth of a volt. Because opposite charges are separated across the membrane, we say the membrane is polarised.\n\nThe ions are not evenly shared. Sodium ions, shown in amber, are far more concentrated outside the axon. Potassium ions, shown in teal, are far more concentrated inside. Large negative organic ions, such as proteins, remain inside because they cannot cross the membrane.\n\nThe sodium\u2013potassium pump maintains those concentration gradients. It is a membrane protein that uses ATP, the cell's energy currency. For each cycle, three sodium ions are moved out and two potassium ions are moved in. That is active transport, against their concentration gradients. Because three positive ions leave for every two that enter, the pump also makes the inside a little more negative.\n\nThe membrane is selectively permeable, which means it does not treat every ion the same way. At rest it is much more permeable to potassium than to sodium. Potassium leak channels stay open, so some potassium ions diffuse out down their concentration gradient. As those positive ions leave, the inside becomes more negative. Sodium channels are mostly closed at rest, so sodium cannot easily flood back in.\n\nPut those ideas together. The pump keeps sodium high outside and potassium high inside. Potassium leak channels let some potassium leave. Impermeant negative ions stay inside. The result is a polarised membrane at about minus seventy millivolts. That is the resting potential. The pump does not fire the impulse. It quietly maintains the gradients that make an impulse possible.\n\nHere is a worked examination-style example. A student writes, the sodium\u2013potassium pump creates the resting potential by pumping sodium in and potassium out. Identify two scientific errors and correct them.\n\nThe first error is the direction. The pump moves three sodium ions out, not in, and two potassium ions in, not out. The second error is the claim that the pump alone creates the resting potential. The pump maintains the gradients. Potassium leak channels and the trapped negative ions are also essential.\n\nNow pause the video and try this sequencing question. Place these four statements in the order that establishes a resting potential. A: the sodium\u2013potassium pump uses ATP. B: sodium stays high outside and potassium stays high inside. C: potassium leaks out through open leak channels. D: the membrane is polarised at about minus seventy millivolts.\n\nHere is a model answer. First A, the pump uses ATP. That produces B, the unequal ion distribution. Then C, potassium leaks out. That produces D, a polarised membrane at about minus seventy millivolts.\n\nIn part two we will see how a stimulus changes this polarised membrane into an action potential, and we will build the graph as each phase happens. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "words": [
     {
       "word": "Hello",
-      "start": 0.1,
-      "end": 0.603
+      "start": 0.0,
+      "end": 0.26
     },
     {
       "word": "and",
-      "start": 0.618,
-      "end": 0.771
+      "start": 0.26,
+      "end": 1.32
     },
     {
       "word": "welcome",
-      "start": 0.786,
-      "end": 1.243
+      "start": 1.32,
+      "end": 1.62
     },
     {
       "word": "back",
-      "start": 1.259,
-      "end": 1.502
+      "start": 1.62,
+      "end": 1.94
     },
     {
       "word": "to",
-      "start": 1.518,
-      "end": 1.64
+      "start": 1.94,
+      "end": 2.26
     },
     {
       "word": "JD",
-      "start": 1.655,
-      "end": 2.158
+      "start": 2.26,
+      "end": 2.52
     },
     {
-      "word": "Science",
-      "start": 2.173,
-      "end": 2.905
+      "word": "Science.",
+      "start": 2.52,
+      "end": 3.16
     },
     {
       "word": "This",
-      "start": 3.968,
-      "end": 4.273
+      "start": 3.7,
+      "end": 4.24
     },
     {
       "word": "is",
-      "start": 4.288,
-      "end": 4.425
+      "start": 4.24,
+      "end": 4.98
     },
     {
       "word": "part",
-      "start": 4.44,
-      "end": 4.76
+      "start": 4.98,
+      "end": 5.26
     },
     {
       "word": "one",
-      "start": 4.776,
-      "end": 5.02
+      "start": 5.26,
+      "end": 5.7
     },
     {
       "word": "of",
-      "start": 5.035,
-      "end": 5.157
+      "start": 5.7,
+      "end": 6.48
     },
     {
       "word": "our",
-      "start": 5.172,
-      "end": 5.401
+      "start": 6.48,
+      "end": 6.62
     },
     {
-      "word": "Level 3",
-      "start": 5.416,
-      "end": 6.148
+      "word": "level",
+      "start": 6.62,
+      "end": 6.9
+    },
+    {
+      "word": "3",
+      "start": 6.9,
+      "end": 7.26
     },
     {
       "word": "lesson",
-      "start": 6.163,
-      "end": 6.574
+      "start": 7.26,
+      "end": 7.68
     },
     {
       "word": "on",
-      "start": 6.59,
-      "end": 6.712
+      "start": 7.68,
+      "end": 8.36
     },
     {
       "word": "the",
-      "start": 6.727,
-      "end": 6.803
+      "start": 8.36,
+      "end": 8.48
     },
     {
       "word": "transmission",
-      "start": 6.818,
-      "end": 7.55
+      "start": 8.48,
+      "end": 9.02
     },
     {
       "word": "of",
-      "start": 7.565,
-      "end": 7.657
+      "start": 9.02,
+      "end": 9.8
     },
     {
       "word": "a",
-      "start": 7.672,
-      "end": 7.718
+      "start": 9.8,
+      "end": 9.88
     },
     {
       "word": "nerve",
-      "start": 7.733,
-      "end": 8.16
+      "start": 9.88,
+      "end": 10.12
     },
     {
-      "word": "impulse",
-      "start": 8.175,
-      "end": 8.861
+      "word": "impulse.",
+      "start": 10.12,
+      "end": 10.84
     },
     {
       "word": "A",
-      "start": 9.913,
-      "end": 10.08
+      "start": 11.48,
+      "end": 11.76
     },
     {
       "word": "nerve",
-      "start": 10.096,
-      "end": 10.553
+      "start": 11.76,
+      "end": 11.96
     },
     {
       "word": "impulse",
-      "start": 10.568,
-      "end": 11.026
+      "start": 11.96,
+      "end": 12.4
     },
     {
       "word": "is",
-      "start": 11.041,
-      "end": 11.193
+      "start": 12.4,
+      "end": 12.94
     },
     {
       "word": "a",
-      "start": 11.209,
-      "end": 11.3
+      "start": 12.94,
+      "end": 13.06
     },
     {
       "word": "brief",
-      "start": 11.315,
-      "end": 11.712
+      "start": 13.06,
+      "end": 13.3
     },
     {
       "word": "electrical",
-      "start": 11.727,
-      "end": 12.382
+      "start": 13.3,
+      "end": 13.84
     },
     {
       "word": "signal",
-      "start": 12.398,
-      "end": 12.779
+      "start": 13.84,
+      "end": 14.36
     },
     {
       "word": "that",
-      "start": 12.794,
-      "end": 12.977
+      "start": 14.36,
+      "end": 15.06
     },
     {
       "word": "travels",
-      "start": 12.992,
-      "end": 13.48
+      "start": 15.06,
+      "end": 15.48
     },
     {
       "word": "along",
-      "start": 13.495,
-      "end": 13.831
+      "start": 15.48,
+      "end": 15.98
     },
     {
       "word": "a",
-      "start": 13.846,
-      "end": 13.892
+      "start": 15.98,
+      "end": 16.16
     },
     {
-      "word": "neurone",
-      "start": 13.907,
-      "end": 14.547
+      "word": "neuron.",
+      "start": 16.16,
+      "end": 16.44
     },
     {
       "word": "A",
-      "start": 15.599,
-      "end": 15.751
+      "start": 17.14,
+      "end": 17.42
     },
     {
-      "word": "neurone",
-      "start": 15.766,
-      "end": 16.3
+      "word": "neuron",
+      "start": 17.42,
+      "end": 17.74
     },
     {
       "word": "is",
-      "start": 16.315,
-      "end": 16.437
+      "start": 17.74,
+      "end": 18.66
     },
     {
       "word": "a",
-      "start": 16.452,
-      "end": 16.529
+      "start": 18.66,
+      "end": 18.78
     },
     {
-      "word": "specialised",
-      "start": 16.544,
-      "end": 17.306
+      "word": "specialized",
+      "start": 18.78,
+      "end": 19.32
     },
     {
       "word": "nerve",
-      "start": 17.321,
-      "end": 17.672
+      "start": 19.32,
+      "end": 19.74
     },
     {
       "word": "cell",
-      "start": 17.687,
-      "end": 17.962
+      "start": 19.74,
+      "end": 20.12
     },
     {
       "word": "that",
-      "start": 17.977,
-      "end": 18.144
+      "start": 20.12,
+      "end": 20.78
     },
     {
       "word": "carries",
-      "start": 18.16,
-      "end": 18.556
+      "start": 20.78,
+      "end": 21.1
     },
     {
       "word": "information",
-      "start": 18.571,
-      "end": 19.257
+      "start": 21.1,
+      "end": 21.82
     },
     {
       "word": "from",
-      "start": 19.273,
-      "end": 19.486
+      "start": 21.82,
+      "end": 22.14
     },
     {
       "word": "one",
-      "start": 19.501,
-      "end": 19.806
+      "start": 22.14,
+      "end": 22.34
     },
     {
       "word": "place",
-      "start": 19.821,
-      "end": 20.187
+      "start": 22.34,
+      "end": 22.76
     },
     {
       "word": "in",
-      "start": 20.202,
-      "end": 20.279
+      "start": 22.76,
+      "end": 23.96
     },
     {
       "word": "the",
-      "start": 20.294,
-      "end": 20.401
+      "start": 23.96,
+      "end": 24.06
     },
     {
       "word": "body",
-      "start": 20.416,
-      "end": 20.766
+      "start": 24.06,
+      "end": 24.36
     },
     {
       "word": "to",
-      "start": 20.782,
-      "end": 20.919
+      "start": 24.36,
+      "end": 24.62
     },
     {
-      "word": "another",
-      "start": 20.934,
-      "end": 21.437
+      "word": "another.",
+      "start": 24.62,
+      "end": 25.04
     },
     {
       "word": "Look",
-      "start": 22.489,
-      "end": 22.763
+      "start": 25.54,
+      "end": 25.88
     },
     {
       "word": "first",
-      "start": 22.779,
-      "end": 23.236
+      "start": 25.88,
+      "end": 26.18
     },
     {
       "word": "at",
-      "start": 23.251,
-      "end": 23.358
+      "start": 26.18,
+      "end": 26.5
     },
     {
       "word": "a",
-      "start": 23.373,
-      "end": 23.449
+      "start": 26.5,
+      "end": 26.68
     },
     {
       "word": "real",
-      "start": 23.465,
-      "end": 23.876
+      "start": 26.68,
+      "end": 26.9
     },
     {
       "word": "stained",
-      "start": 23.891,
-      "end": 24.303
+      "start": 26.9,
+      "end": 27.2
     },
     {
       "word": "motor",
-      "start": 24.318,
-      "end": 24.669
+      "start": 27.2,
+      "end": 27.82
     },
     {
-      "word": "neurone",
-      "start": 24.684,
-      "end": 25.202
+      "word": "neuron",
+      "start": 27.82,
+      "end": 28.76
     },
     {
       "word": "from",
-      "start": 25.218,
-      "end": 25.401
+      "start": 28.76,
+      "end": 29.38
     },
     {
       "word": "the",
-      "start": 25.416,
-      "end": 25.523
+      "start": 29.38,
+      "end": 29.56
     },
     {
       "word": "spinal",
-      "start": 25.538,
-      "end": 26.071
+      "start": 29.56,
+      "end": 29.96
     },
     {
-      "word": "cord",
-      "start": 26.087,
-      "end": 26.681
+      "word": "cord.",
+      "start": 29.96,
+      "end": 30.46
     },
     {
       "word": "The",
-      "start": 27.733,
-      "end": 27.931
+      "start": 30.86,
+      "end": 31.14
     },
     {
       "word": "large",
-      "start": 27.946,
-      "end": 28.388
+      "start": 31.14,
+      "end": 31.5
     },
     {
       "word": "purple",
-      "start": 28.404,
-      "end": 28.83
+      "start": 31.5,
+      "end": 31.94
     },
     {
       "word": "cell",
-      "start": 28.846,
-      "end": 29.166
+      "start": 31.94,
+      "end": 32.18
     },
     {
       "word": "bodies",
-      "start": 29.181,
-      "end": 29.669
+      "start": 32.18,
+      "end": 32.58
     },
     {
       "word": "and",
-      "start": 29.684,
-      "end": 29.791
+      "start": 32.58,
+      "end": 33.42
     },
     {
       "word": "the",
-      "start": 29.806,
-      "end": 29.898
+      "start": 33.42,
+      "end": 33.56
     },
     {
       "word": "surrounding",
-      "start": 29.913,
-      "end": 30.538
+      "start": 33.56,
+      "end": 34.06
     },
     {
-      "word": "fibres",
-      "start": 30.553,
-      "end": 31.071
+      "word": "fibers",
+      "start": 34.06,
+      "end": 34.56
     },
     {
       "word": "are",
-      "start": 31.087,
-      "end": 31.178
+      "start": 34.56,
+      "end": 35.22
     },
     {
       "word": "genuine",
-      "start": 31.193,
-      "end": 31.742
+      "start": 35.22,
+      "end": 35.72
     },
     {
-      "word": "tissue",
-      "start": 31.757,
-      "end": 32.321
+      "word": "tissue.",
+      "start": 35.72,
+      "end": 36.22
     },
     {
       "word": "A",
-      "start": 33.373,
-      "end": 33.541
+      "start": 36.98,
+      "end": 37.18
     },
     {
       "word": "light",
-      "start": 33.556,
-      "end": 33.937
+      "start": 37.18,
+      "end": 37.46
     },
     {
       "word": "micrograph",
-      "start": 33.952,
-      "end": 34.852
+      "start": 37.46,
+      "end": 38.24
     },
     {
       "word": "can",
-      "start": 34.867,
-      "end": 35.05
+      "start": 38.24,
+      "end": 38.48
     },
     {
       "word": "show",
-      "start": 35.065,
-      "end": 35.309
+      "start": 38.48,
+      "end": 38.7
     },
     {
       "word": "the",
-      "start": 35.324,
-      "end": 35.431
+      "start": 38.7,
+      "end": 38.9
     },
     {
       "word": "cell",
-      "start": 35.446,
-      "end": 35.782
+      "start": 38.9,
+      "end": 39.14
     },
     {
       "word": "body",
-      "start": 35.797,
-      "end": 36.148
+      "start": 39.14,
+      "end": 39.54
     },
     {
-      "word": "and",
-      "start": 36.163,
-      "end": 36.315
+      "word": "in",
+      "start": 39.54,
+      "end": 39.7
     },
     {
-      "word": "processes",
-      "start": 36.331,
-      "end": 37.169
+      "word": "processes,",
+      "start": 39.7,
+      "end": 40.34
     },
     {
       "word": "but",
-      "start": 37.428,
-      "end": 37.565
+      "start": 40.9,
+      "end": 41.14
     },
     {
       "word": "it",
-      "start": 37.581,
-      "end": 37.687
+      "start": 41.14,
+      "end": 41.28
     },
     {
       "word": "cannot",
-      "start": 37.702,
-      "end": 38.099
+      "start": 41.28,
+      "end": 41.6
     },
     {
       "word": "show",
-      "start": 38.114,
-      "end": 38.373
+      "start": 41.6,
+      "end": 41.88
     },
     {
       "word": "the",
-      "start": 38.388,
-      "end": 38.556
+      "start": 41.88,
+      "end": 42.14
     },
     {
       "word": "ions",
-      "start": 38.571,
-      "end": 39.074
+      "start": 42.14,
+      "end": 42.48
     },
     {
       "word": "that",
-      "start": 39.09,
-      "end": 39.242
+      "start": 42.48,
+      "end": 42.8
     },
     {
       "word": "create",
-      "start": 39.257,
-      "end": 39.684
+      "start": 42.8,
+      "end": 43.1
     },
     {
       "word": "the",
-      "start": 39.699,
-      "end": 39.821
+      "start": 43.1,
+      "end": 43.3
     },
     {
-      "word": "impulse",
-      "start": 39.837,
-      "end": 40.462
+      "word": "impulse.",
+      "start": 43.3,
+      "end": 43.66
     },
     {
-      "word": "so",
-      "start": 40.721,
-      "end": 40.858
+      "word": "So",
+      "start": 44.36,
+      "end": 44.64
     },
     {
       "word": "we",
-      "start": 40.873,
-      "end": 41.041
+      "start": 44.64,
+      "end": 44.8
     },
     {
       "word": "now",
-      "start": 41.056,
-      "end": 41.315
+      "start": 44.8,
+      "end": 45.04
     },
     {
       "word": "switch",
-      "start": 41.331,
-      "end": 41.727
+      "start": 45.04,
+      "end": 45.4
     },
     {
       "word": "to",
-      "start": 41.742,
-      "end": 41.895
+      "start": 45.4,
+      "end": 45.78
     },
     {
       "word": "a",
-      "start": 41.91,
-      "end": 41.956
+      "start": 45.78,
+      "end": 45.88
     },
     {
-      "word": "labelled",
-      "start": 41.971,
-      "end": 42.443
+      "word": "labeled",
+      "start": 45.88,
+      "end": 46.22
     },
     {
       "word": "scientific",
-      "start": 42.459,
-      "end": 43.266
+      "start": 46.22,
+      "end": 47.1
     },
     {
-      "word": "diagram",
-      "start": 43.282,
-      "end": 44.09
+      "word": "diagram.",
+      "start": 47.1,
+      "end": 47.82
     },
     {
       "word": "The",
-      "start": 45.141,
-      "end": 45.34
+      "start": 48.46,
+      "end": 48.86
     },
     {
       "word": "cell",
-      "start": 45.355,
-      "end": 45.706
+      "start": 48.86,
+      "end": 49.12
     },
     {
       "word": "body",
-      "start": 45.721,
-      "end": 45.98
+      "start": 49.12,
+      "end": 49.54
     },
     {
       "word": "contains",
-      "start": 45.995,
-      "end": 46.59
+      "start": 49.54,
+      "end": 50.3
     },
     {
       "word": "the",
-      "start": 46.605,
-      "end": 46.712
+      "start": 50.3,
+      "end": 50.62
     },
     {
       "word": "nucleus",
-      "start": 46.727,
-      "end": 47.367
+      "start": 50.62,
+      "end": 51.1
     },
     {
       "word": "and",
-      "start": 47.382,
-      "end": 47.535
+      "start": 51.1,
+      "end": 52.06
     },
     {
       "word": "most",
-      "start": 47.55,
-      "end": 47.901
+      "start": 52.06,
+      "end": 52.42
     },
     {
       "word": "of",
-      "start": 47.916,
-      "end": 47.992
+      "start": 52.42,
+      "end": 52.56
     },
     {
       "word": "the",
-      "start": 48.007,
-      "end": 48.099
+      "start": 52.56,
+      "end": 52.72
     },
     {
-      "word": "cytoplasm",
-      "start": 48.114,
-      "end": 49.044
+      "word": "cytoplasm.",
+      "start": 52.72,
+      "end": 53.5
     },
     {
-      "word": "Short",
-      "start": 50.096,
-      "end": 50.644
+      "word": "Short,",
+      "start": 54.16,
+      "end": 54.38
     },
     {
       "word": "branched",
-      "start": 50.797,
-      "end": 51.254
+      "start": 54.84,
+      "end": 55.36
     },
     {
-      "word": "dendrites",
-      "start": 51.27,
-      "end": 51.895
+      "word": "endrites",
+      "start": 55.36,
+      "end": 55.76
     },
     {
       "word": "receive",
-      "start": 51.91,
-      "end": 52.413
+      "start": 55.76,
+      "end": 56.62
     },
     {
       "word": "incoming",
-      "start": 52.428,
-      "end": 52.977
+      "start": 56.62,
+      "end": 57.08
     },
     {
       "word": "signals",
-      "start": 52.992,
-      "end": 53.602
+      "start": 57.08,
+      "end": 57.64
     },
     {
       "word": "and",
-      "start": 53.617,
-      "end": 53.754
+      "start": 57.64,
+      "end": 58.32
     },
     {
       "word": "pass",
-      "start": 53.77,
-      "end": 54.196
+      "start": 58.32,
+      "end": 58.62
     },
     {
       "word": "them",
-      "start": 54.212,
-      "end": 54.425
+      "start": 58.62,
+      "end": 58.88
     },
     {
       "word": "towards",
-      "start": 54.44,
-      "end": 54.974
+      "start": 58.88,
+      "end": 59.26
     },
     {
       "word": "the",
-      "start": 54.989,
-      "end": 55.096
+      "start": 59.26,
+      "end": 59.52
     },
     {
       "word": "cell",
-      "start": 55.111,
-      "end": 55.462
+      "start": 59.52,
+      "end": 59.78
     },
     {
-      "word": "body",
-      "start": 55.477,
-      "end": 55.873
+      "word": "body.",
+      "start": 59.78,
+      "end": 60.22
     },
     {
       "word": "The",
-      "start": 56.925,
-      "end": 57.169
+      "start": 60.94,
+      "end": 61.18
     },
     {
       "word": "axon",
-      "start": 57.184,
-      "end": 57.702
+      "start": 61.18,
+      "end": 61.68
     },
     {
       "word": "is",
-      "start": 57.718,
-      "end": 57.855
+      "start": 61.68,
+      "end": 62.34
     },
     {
       "word": "a",
-      "start": 57.87,
-      "end": 57.946
+      "start": 62.34,
+      "end": 62.46
     },
     {
       "word": "long",
-      "start": 57.962,
-      "end": 58.312
+      "start": 62.46,
+      "end": 62.66
     },
     {
       "word": "process",
-      "start": 58.327,
-      "end": 58.846
+      "start": 62.66,
+      "end": 63.22
     },
     {
       "word": "that",
-      "start": 58.861,
-      "end": 59.029
+      "start": 63.22,
+      "end": 63.92
     },
     {
       "word": "carries",
-      "start": 59.044,
-      "end": 59.471
+      "start": 63.92,
+      "end": 64.24
     },
     {
       "word": "the",
-      "start": 59.486,
-      "end": 59.608
+      "start": 64.24,
+      "end": 64.48
     },
     {
       "word": "impulse",
-      "start": 59.623,
-      "end": 60.126
+      "start": 64.48,
+      "end": 64.88
     },
     {
       "word": "away",
-      "start": 60.141,
-      "end": 60.462
+      "start": 64.88,
+      "end": 65.58
     },
     {
       "word": "from",
-      "start": 60.477,
-      "end": 60.69
+      "start": 65.58,
+      "end": 65.82
     },
     {
       "word": "the",
-      "start": 60.706,
-      "end": 60.782
+      "start": 65.82,
+      "end": 65.96
     },
     {
       "word": "cell",
-      "start": 60.797,
-      "end": 61.163
+      "start": 65.96,
+      "end": 66.18
     },
     {
       "word": "body",
-      "start": 61.178,
-      "end": 61.483
+      "start": 66.18,
+      "end": 66.58
     },
     {
       "word": "towards",
-      "start": 61.498,
-      "end": 62.016
+      "start": 66.58,
+      "end": 67.22
     },
     {
       "word": "another",
-      "start": 62.032,
-      "end": 62.382
+      "start": 67.22,
+      "end": 67.58
     },
     {
-      "word": "cell",
-      "start": 62.398,
-      "end": 62.901
+      "word": "cell.",
+      "start": 67.58,
+      "end": 68.04
     },
     {
       "word": "The",
-      "start": 63.952,
-      "end": 64.196
+      "start": 68.72,
+      "end": 68.94
     },
     {
       "word": "axon",
-      "start": 64.212,
-      "end": 64.76
+      "start": 68.94,
+      "end": 69.44
     },
     {
       "word": "is",
-      "start": 64.776,
-      "end": 64.928
+      "start": 69.44,
+      "end": 70.1
     },
     {
       "word": "bounded",
-      "start": 64.943,
-      "end": 65.446
+      "start": 70.1,
+      "end": 70.5
     },
     {
       "word": "by",
-      "start": 65.462,
-      "end": 65.675
+      "start": 70.5,
+      "end": 70.76
     },
     {
       "word": "a",
-      "start": 65.69,
-      "end": 65.782
+      "start": 70.76,
+      "end": 70.9
     },
     {
       "word": "plasma",
-      "start": 65.797,
-      "end": 66.33
+      "start": 70.9,
+      "end": 71.3
     },
     {
-      "word": "membrane",
-      "start": 66.346,
-      "end": 67.001
+      "word": "membrane,",
+      "start": 71.3,
+      "end": 71.82
     },
     {
       "word": "which",
-      "start": 67.199,
-      "end": 67.382
+      "start": 72.38,
+      "end": 72.74
     },
     {
       "word": "is",
-      "start": 67.398,
-      "end": 67.504
+      "start": 72.74,
+      "end": 72.88
     },
     {
       "word": "a",
-      "start": 67.519,
-      "end": 67.596
+      "start": 72.88,
+      "end": 73.0
     },
     {
       "word": "phospholipid",
-      "start": 67.611,
-      "end": 68.495
+      "start": 73.0,
+      "end": 73.78
     },
     {
       "word": "bilayer",
-      "start": 68.51,
-      "end": 69.09
+      "start": 73.78,
+      "end": 74.24
     },
     {
       "word": "with",
-      "start": 69.105,
-      "end": 69.288
+      "start": 74.24,
+      "end": 74.6
     },
     {
       "word": "proteins",
-      "start": 69.303,
-      "end": 70.019
+      "start": 74.6,
+      "end": 75.08
     },
     {
       "word": "in",
-      "start": 70.035,
-      "end": 70.172
+      "start": 75.08,
+      "end": 75.42
     },
     {
-      "word": "it",
-      "start": 70.187,
-      "end": 70.477
+      "word": "it.",
+      "start": 75.42,
+      "end": 75.64
     },
     {
       "word": "In",
-      "start": 71.529,
-      "end": 71.803
+      "start": 75.64,
+      "end": 76.36
     },
     {
       "word": "many",
-      "start": 71.818,
-      "end": 72.093
+      "start": 76.36,
+      "end": 76.64
     },
     {
-      "word": "neurones",
-      "start": 72.108,
-      "end": 72.809
+      "word": "neurons,",
+      "start": 76.64,
+      "end": 77.04
     },
     {
       "word": "a",
-      "start": 73.038,
-      "end": 73.084
+      "start": 78.02,
+      "end": 78.12
     },
     {
       "word": "myelin",
-      "start": 73.099,
-      "end": 73.648
+      "start": 78.12,
+      "end": 78.46
     },
     {
       "word": "sheath",
-      "start": 73.663,
-      "end": 74.074
+      "start": 78.46,
+      "end": 78.98
     },
     {
       "word": "wraps",
-      "start": 74.09,
-      "end": 74.501
+      "start": 78.98,
+      "end": 79.18
     },
     {
       "word": "around",
-      "start": 74.516,
-      "end": 74.959
+      "start": 79.18,
+      "end": 79.56
     },
     {
       "word": "the",
-      "start": 74.974,
-      "end": 75.096
+      "start": 79.56,
+      "end": 79.78
     },
     {
-      "word": "axon",
-      "start": 75.111,
-      "end": 75.843
+      "word": "axon.",
+      "start": 79.78,
+      "end": 80.24
     },
     {
       "word": "Myelin",
-      "start": 76.894,
-      "end": 77.489
+      "start": 81.18,
+      "end": 81.52
     },
     {
       "word": "is",
-      "start": 77.504,
-      "end": 77.672
+      "start": 81.52,
+      "end": 82.2
     },
     {
       "word": "made",
-      "start": 77.687,
-      "end": 78.007
+      "start": 82.2,
+      "end": 82.4
     },
     {
       "word": "by",
-      "start": 78.023,
-      "end": 78.221
+      "start": 82.4,
+      "end": 82.64
     },
     {
       "word": "Schwann",
-      "start": 78.236,
-      "end": 78.648
+      "start": 82.64,
+      "end": 82.98
     },
     {
       "word": "cells",
-      "start": 78.663,
-      "end": 79.105
+      "start": 82.98,
+      "end": 83.42
     },
     {
       "word": "in",
-      "start": 79.12,
-      "end": 79.212
+      "start": 83.42,
+      "end": 84.1
     },
     {
       "word": "the",
-      "start": 79.227,
-      "end": 79.318
+      "start": 84.1,
+      "end": 84.22
     },
     {
       "word": "peripheral",
-      "start": 79.334,
-      "end": 79.913
+      "start": 84.22,
+      "end": 84.62
     },
     {
       "word": "nervous",
-      "start": 79.928,
-      "end": 80.385
+      "start": 84.62,
+      "end": 85.02
     },
     {
       "word": "system",
-      "start": 80.401,
-      "end": 80.827
+      "start": 85.02,
+      "end": 85.6
     },
     {
       "word": "and",
-      "start": 80.843,
-      "end": 80.965
+      "start": 85.6,
+      "end": 86.28
     },
     {
       "word": "acts",
-      "start": 80.98,
-      "end": 81.315
+      "start": 86.28,
+      "end": 86.72
     },
     {
       "word": "as",
-      "start": 81.331,
-      "end": 81.452
+      "start": 86.72,
+      "end": 86.98
     },
     {
       "word": "an",
-      "start": 81.468,
-      "end": 81.559
+      "start": 86.98,
+      "end": 87.12
     },
     {
       "word": "electrical",
-      "start": 81.574,
-      "end": 82.215
+      "start": 87.12,
+      "end": 87.56
     },
     {
-      "word": "insulator",
-      "start": 82.23,
-      "end": 83.068
+      "word": "insulator.",
+      "start": 87.56,
+      "end": 88.4
     },
     {
       "word": "The",
-      "start": 84.12,
-      "end": 84.303
+      "start": 88.9,
+      "end": 89.16
     },
     {
       "word": "gaps",
-      "start": 84.318,
-      "end": 84.669
+      "start": 89.16,
+      "end": 89.38
     },
     {
       "word": "between",
-      "start": 84.684,
-      "end": 85.111
+      "start": 89.38,
+      "end": 90.14
     },
     {
       "word": "adjacent",
-      "start": 85.126,
-      "end": 85.675
+      "start": 90.14,
+      "end": 90.54
     },
     {
       "word": "Schwann",
-      "start": 85.69,
-      "end": 86.071
+      "start": 90.54,
+      "end": 91.12
     },
     {
       "word": "cells",
-      "start": 86.087,
-      "end": 86.574
+      "start": 91.12,
+      "end": 91.64
     },
     {
       "word": "are",
-      "start": 86.59,
-      "end": 86.666
+      "start": 91.64,
+      "end": 92.34
     },
     {
       "word": "the",
-      "start": 86.681,
-      "end": 86.803
+      "start": 92.34,
+      "end": 92.52
     },
     {
       "word": "nodes",
-      "start": 86.818,
-      "end": 87.26
+      "start": 92.52,
+      "end": 92.8
     },
     {
       "word": "of",
-      "start": 87.276,
-      "end": 87.382
+      "start": 92.8,
+      "end": 93.2
     },
     {
-      "word": "Ranvier",
-      "start": 87.398,
-      "end": 88.099
+      "word": "Ranveer.",
+      "start": 93.2,
+      "end": 93.68
     },
     {
       "word": "At",
-      "start": 89.151,
-      "end": 89.41
+      "start": 95.42,
+      "end": 95.82
     },
     {
       "word": "each",
-      "start": 89.425,
-      "end": 89.669
+      "start": 95.82,
+      "end": 96.06
     },
     {
-      "word": "node",
-      "start": 89.684,
-      "end": 89.989
+      "word": "node,",
+      "start": 96.06,
+      "end": 96.44
     },
     {
       "word": "the",
-      "start": 90.004,
-      "end": 90.065
+      "start": 96.88,
+      "end": 96.94
     },
     {
       "word": "membrane",
-      "start": 90.081,
-      "end": 90.66
+      "start": 96.94,
+      "end": 97.34
     },
     {
       "word": "is",
-      "start": 90.675,
-      "end": 90.812
+      "start": 97.34,
+      "end": 97.9
     },
     {
       "word": "exposed",
-      "start": 90.827,
-      "end": 91.391
+      "start": 97.9,
+      "end": 98.34
     },
     {
       "word": "to",
-      "start": 91.407,
-      "end": 91.483
+      "start": 98.34,
+      "end": 98.94
     },
     {
       "word": "the",
-      "start": 91.498,
-      "end": 91.681
+      "start": 98.94,
+      "end": 99.12
     },
     {
       "word": "extracellular",
-      "start": 91.696,
-      "end": 92.596
+      "start": 99.12,
+      "end": 99.98
     },
     {
-      "word": "fluid",
-      "start": 92.611,
-      "end": 93.175
+      "word": "fluid.",
+      "start": 99.98,
+      "end": 100.46
     },
     {
       "word": "Those",
-      "start": 94.227,
-      "end": 94.593
+      "start": 101.14,
+      "end": 101.34
     },
     {
       "word": "nodes",
-      "start": 94.608,
-      "end": 95.019
+      "start": 101.34,
+      "end": 101.68
     },
     {
       "word": "will",
-      "start": 95.035,
-      "end": 95.202
+      "start": 101.68,
+      "end": 101.9
     },
     {
       "word": "matter",
-      "start": 95.218,
-      "end": 95.568
+      "start": 101.9,
+      "end": 102.3
     },
     {
       "word": "when",
-      "start": 95.584,
-      "end": 95.858
+      "start": 102.3,
+      "end": 102.94
     },
     {
       "word": "we",
-      "start": 95.873,
-      "end": 95.98
+      "start": 102.94,
+      "end": 103.08
     },
     {
       "word": "look",
-      "start": 95.995,
-      "end": 96.285
+      "start": 103.08,
+      "end": 103.28
     },
     {
       "word": "at",
-      "start": 96.3,
-      "end": 96.391
+      "start": 103.28,
+      "end": 103.56
     },
     {
       "word": "how",
-      "start": 96.407,
-      "end": 96.62
+      "start": 103.56,
+      "end": 103.96
     },
     {
       "word": "the",
-      "start": 96.635,
-      "end": 96.788
+      "start": 103.96,
+      "end": 104.16
     },
     {
       "word": "impulse",
-      "start": 96.803,
-      "end": 97.245
+      "start": 104.16,
+      "end": 104.44
     },
     {
       "word": "travels",
-      "start": 97.26,
-      "end": 97.794
+      "start": 104.44,
+      "end": 104.92
     },
     {
-      "word": "quickly",
-      "start": 97.809,
-      "end": 98.343
+      "word": "quickly.",
+      "start": 104.92,
+      "end": 105.48
     },
     {
       "word": "A",
-      "start": 99.394,
-      "end": 99.562
+      "start": 106.16,
+      "end": 106.36
     },
     {
       "word": "nerve",
-      "start": 99.577,
-      "end": 100.004
+      "start": 106.36,
+      "end": 106.56
     },
     {
       "word": "impulse",
-      "start": 100.019,
-      "end": 100.492
+      "start": 106.56,
+      "end": 106.98
     },
     {
       "word": "is",
-      "start": 100.507,
-      "end": 100.675
+      "start": 106.98,
+      "end": 107.22
     },
     {
       "word": "an",
-      "start": 100.69,
-      "end": 100.812
+      "start": 107.22,
+      "end": 107.38
     },
     {
       "word": "action",
-      "start": 100.827,
-      "end": 101.193
+      "start": 107.38,
+      "end": 107.7
     },
     {
       "word": "potential",
-      "start": 101.209,
-      "end": 101.803
+      "start": 107.7,
+      "end": 108.3
     },
     {
-      "word": "travelling",
-      "start": 101.818,
-      "end": 102.321
+      "word": "traveling",
+      "start": 108.3,
+      "end": 109.14
     },
     {
       "word": "along",
-      "start": 102.337,
-      "end": 102.626
+      "start": 109.14,
+      "end": 109.52
     },
     {
       "word": "the",
-      "start": 102.641,
-      "end": 102.794
+      "start": 109.52,
+      "end": 109.76
     },
     {
-      "word": "axon",
-      "start": 102.809,
-      "end": 103.48
+      "word": "axon.",
+      "start": 109.76,
+      "end": 110.18
     },
     {
       "word": "An",
-      "start": 104.532,
-      "end": 104.76
+      "start": 110.7,
+      "end": 110.96
     },
     {
       "word": "action",
-      "start": 104.776,
-      "end": 105.111
+      "start": 110.96,
+      "end": 111.24
     },
     {
       "word": "potential",
-      "start": 105.126,
-      "end": 105.751
+      "start": 111.24,
+      "end": 111.82
     },
     {
       "word": "is",
-      "start": 105.766,
-      "end": 105.873
+      "start": 111.82,
+      "end": 112.36
     },
     {
       "word": "a",
-      "start": 105.888,
-      "end": 105.965
+      "start": 112.36,
+      "end": 112.48
     },
     {
-      "word": "rapid",
-      "start": 105.98,
-      "end": 106.498
+      "word": "rapid,",
+      "start": 112.48,
+      "end": 112.86
     },
     {
       "word": "temporary",
-      "start": 106.757,
-      "end": 107.199
+      "start": 113.18,
+      "end": 113.6
     },
     {
       "word": "reversal",
-      "start": 107.215,
-      "end": 107.885
+      "start": 113.6,
+      "end": 114.12
     },
     {
       "word": "of",
-      "start": 107.901,
-      "end": 107.977
+      "start": 114.12,
+      "end": 114.86
     },
     {
       "word": "the",
-      "start": 107.992,
-      "end": 108.129
+      "start": 114.86,
+      "end": 115.0
     },
     {
       "word": "electrical",
-      "start": 108.144,
-      "end": 108.8
+      "start": 115.0,
+      "end": 115.4
     },
     {
       "word": "charge",
-      "start": 108.815,
-      "end": 109.257
+      "start": 115.4,
+      "end": 116.0
     },
     {
       "word": "across",
-      "start": 109.273,
-      "end": 109.699
+      "start": 116.0,
+      "end": 116.68
     },
     {
       "word": "the",
-      "start": 109.715,
-      "end": 109.806
+      "start": 116.68,
+      "end": 116.96
     },
     {
-      "word": "membrane",
-      "start": 109.821,
-      "end": 110.584
+      "word": "membrane.",
+      "start": 116.96,
+      "end": 117.28
     },
     {
       "word": "Before",
-      "start": 111.635,
-      "end": 112.016
+      "start": 118.0,
+      "end": 118.5
     },
     {
       "word": "that",
-      "start": 112.032,
-      "end": 112.26
+      "start": 118.5,
+      "end": 118.78
     },
     {
       "word": "reversal",
-      "start": 112.276,
-      "end": 112.855
+      "start": 118.78,
+      "end": 119.28
     },
     {
       "word": "can",
-      "start": 112.87,
-      "end": 113.038
+      "start": 119.28,
+      "end": 119.54
     },
     {
-      "word": "happen",
-      "start": 113.053,
-      "end": 113.48
+      "word": "happen,",
+      "start": 119.54,
+      "end": 119.96
     },
     {
       "word": "we",
-      "start": 113.693,
-      "end": 113.815
+      "start": 120.54,
+      "end": 120.66
     },
     {
       "word": "must",
-      "start": 113.831,
-      "end": 114.227
+      "start": 120.66,
+      "end": 120.92
     },
     {
       "word": "understand",
-      "start": 114.242,
-      "end": 114.882
+      "start": 120.92,
+      "end": 121.46
     },
     {
       "word": "the",
-      "start": 114.898,
-      "end": 114.974
+      "start": 121.46,
+      "end": 121.7
     },
     {
       "word": "resting",
-      "start": 114.989,
-      "end": 115.462
+      "start": 121.7,
+      "end": 122.04
     },
     {
-      "word": "state",
-      "start": 115.477,
-      "end": 116.056
+      "word": "state.",
+      "start": 122.04,
+      "end": 122.44
     },
     {
       "word": "At",
-      "start": 117.108,
-      "end": 117.398
+      "start": 123.12,
+      "end": 123.4
     },
     {
-      "word": "rest",
-      "start": 117.413,
-      "end": 117.87
+      "word": "rest,",
+      "start": 123.4,
+      "end": 123.8
     },
     {
       "word": "the",
-      "start": 118.038,
-      "end": 118.16
+      "start": 124.26,
+      "end": 124.42
     },
     {
       "word": "inside",
-      "start": 118.175,
-      "end": 118.785
+      "start": 124.42,
+      "end": 124.76
     },
     {
       "word": "of",
-      "start": 118.8,
-      "end": 118.876
+      "start": 124.76,
+      "end": 125.02
     },
     {
       "word": "the",
-      "start": 118.891,
-      "end": 119.029
+      "start": 125.02,
+      "end": 125.16
     },
     {
       "word": "axon",
-      "start": 119.044,
-      "end": 119.547
+      "start": 125.16,
+      "end": 125.66
     },
     {
       "word": "is",
-      "start": 119.562,
-      "end": 119.745
+      "start": 125.66,
+      "end": 126.22
     },
     {
       "word": "negative",
-      "start": 119.76,
-      "end": 120.309
+      "start": 126.22,
+      "end": 126.7
     },
     {
       "word": "compared",
-      "start": 120.324,
-      "end": 120.934
+      "start": 126.7,
+      "end": 127.42
     },
     {
       "word": "with",
-      "start": 120.949,
-      "end": 121.087
+      "start": 127.42,
+      "end": 127.92
     },
     {
       "word": "the",
-      "start": 121.102,
-      "end": 121.239
+      "start": 127.92,
+      "end": 128.06
     },
     {
-      "word": "outside",
-      "start": 121.254,
-      "end": 122.108
+      "word": "outside.",
+      "start": 128.06,
+      "end": 128.56
     },
     {
       "word": "That",
-      "start": 123.16,
-      "end": 123.48
+      "start": 129.16,
+      "end": 129.42
     },
     {
       "word": "potential",
-      "start": 123.495,
-      "end": 124.044
+      "start": 129.42,
+      "end": 129.96
     },
     {
       "word": "difference",
-      "start": 124.059,
-      "end": 124.516
+      "start": 129.96,
+      "end": 130.44
     },
     {
       "word": "is",
-      "start": 124.532,
-      "end": 124.669
+      "start": 130.44,
+      "end": 131.0
     },
     {
       "word": "the",
-      "start": 124.684,
-      "end": 124.791
+      "start": 131.0,
+      "end": 131.16
     },
     {
       "word": "resting",
-      "start": 124.806,
-      "end": 125.263
+      "start": 131.16,
+      "end": 131.48
     },
     {
-      "word": "potential",
-      "start": 125.279,
-      "end": 125.949
+      "word": "potential,",
+      "start": 131.48,
+      "end": 132.06
     },
     {
       "word": "about",
-      "start": 126.224,
-      "end": 126.559
+      "start": 132.6,
+      "end": 132.82
     },
     {
       "word": "minus",
-      "start": 126.574,
-      "end": 126.986
+      "start": 132.82,
+      "end": 133.24
     },
     {
-      "word": "seventy",
-      "start": 127.001,
-      "end": 127.489
+      "word": "70",
+      "start": 133.24,
+      "end": 133.68
     },
     {
-      "word": "millivolts",
-      "start": 127.504,
-      "end": 128.388
+      "word": "millivolts.",
+      "start": 133.68,
+      "end": 134.36
     },
     {
       "word": "The",
-      "start": 129.44,
-      "end": 129.608
+      "start": 134.92,
+      "end": 135.24
     },
     {
       "word": "unit",
-      "start": 129.623,
-      "end": 130.065
+      "start": 135.24,
+      "end": 135.6
     },
     {
       "word": "is",
-      "start": 130.081,
-      "end": 130.218
+      "start": 135.6,
+      "end": 136.3
     },
     {
       "word": "the",
-      "start": 130.233,
-      "end": 130.34
+      "start": 136.3,
+      "end": 136.46
     },
     {
-      "word": "millivolt",
-      "start": 130.355,
-      "end": 131.071
+      "word": "millivolts,",
+      "start": 136.46,
+      "end": 137.14
     },
     {
-      "word": "one",
-      "start": 131.269,
-      "end": 131.559
+      "word": "1",
+      "start": 137.78,
+      "end": 138.06
     },
     {
-      "word": "thousandth",
-      "start": 131.574,
-      "end": 132.215
+      "word": ",000th",
+      "start": 138.06,
+      "end": 138.9
     },
     {
       "word": "of",
-      "start": 132.23,
-      "end": 132.321
+      "start": 138.9,
+      "end": 139.16
     },
     {
       "word": "a",
-      "start": 132.337,
-      "end": 132.398
+      "start": 139.16,
+      "end": 139.28
     },
     {
-      "word": "volt",
-      "start": 132.413,
-      "end": 132.977
+      "word": "volt.",
+      "start": 139.28,
+      "end": 139.66
     },
     {
       "word": "Because",
-      "start": 134.029,
-      "end": 134.41
+      "start": 140.14,
+      "end": 140.52
     },
     {
       "word": "opposite",
-      "start": 134.425,
-      "end": 134.928
+      "start": 140.52,
+      "end": 140.96
     },
     {
       "word": "charges",
-      "start": 134.943,
-      "end": 135.431
+      "start": 140.96,
+      "end": 141.44
     },
     {
       "word": "are",
-      "start": 135.446,
-      "end": 135.492
+      "start": 141.44,
+      "end": 141.64
     },
     {
       "word": "separated",
-      "start": 135.507,
-      "end": 136.163
+      "start": 141.64,
+      "end": 142.18
     },
     {
       "word": "across",
-      "start": 136.178,
-      "end": 136.605
+      "start": 142.18,
+      "end": 142.52
     },
     {
       "word": "the",
-      "start": 136.62,
-      "end": 136.712
+      "start": 142.52,
+      "end": 142.72
     },
     {
-      "word": "membrane",
-      "start": 136.727,
-      "end": 137.367
+      "word": "membrane,",
+      "start": 142.72,
+      "end": 143.0
     },
     {
       "word": "we",
-      "start": 137.565,
-      "end": 137.687
+      "start": 143.78,
+      "end": 143.98
     },
     {
       "word": "say",
-      "start": 137.702,
-      "end": 137.977
+      "start": 143.98,
+      "end": 144.2
     },
     {
       "word": "the",
-      "start": 137.992,
-      "end": 138.114
+      "start": 144.2,
+      "end": 144.42
     },
     {
       "word": "membrane",
-      "start": 138.129,
-      "end": 138.724
+      "start": 144.42,
+      "end": 144.84
     },
     {
       "word": "is",
-      "start": 138.739,
-      "end": 138.937
+      "start": 144.84,
+      "end": 145.14
     },
     {
-      "word": "polarised",
-      "start": 138.952,
-      "end": 140.019
+      "word": "polarized.",
+      "start": 145.14,
+      "end": 145.58
     },
     {
       "word": "The",
-      "start": 141.071,
-      "end": 141.3
+      "start": 146.44,
+      "end": 146.66
     },
     {
       "word": "ions",
-      "start": 141.315,
-      "end": 141.834
+      "start": 146.66,
+      "end": 146.9
     },
     {
       "word": "are",
-      "start": 141.849,
-      "end": 141.94
+      "start": 146.9,
+      "end": 147.16
     },
     {
       "word": "not",
-      "start": 141.955,
-      "end": 142.26
+      "start": 147.16,
+      "end": 147.3
     },
     {
       "word": "evenly",
-      "start": 142.276,
-      "end": 142.779
+      "start": 147.3,
+      "end": 147.78
     },
     {
-      "word": "shared",
-      "start": 142.794,
-      "end": 143.419
+      "word": "shared.",
+      "start": 147.78,
+      "end": 148.18
     },
     {
-      "word": "Sodium",
-      "start": 144.471,
-      "end": 145.096
+      "word": "Sodium,",
+      "start": 148.92,
+      "end": 149.32
     },
     {
-      "word": "ions",
-      "start": 145.111,
-      "end": 145.736
+      "word": "ions,",
+      "start": 149.48,
+      "end": 149.68
     },
     {
       "word": "shown",
-      "start": 145.995,
-      "end": 146.315
+      "start": 150.56,
+      "end": 150.7
     },
     {
       "word": "in",
-      "start": 146.33,
-      "end": 146.422
+      "start": 150.7,
+      "end": 150.94
     },
     {
       "word": "amber",
-      "start": 146.437,
-      "end": 146.864
+      "start": 150.94,
+      "end": 151.26
     },
     {
       "word": "are",
-      "start": 147.138,
-      "end": 147.245
+      "start": 151.26,
+      "end": 152.08
     },
     {
       "word": "far",
-      "start": 147.26,
-      "end": 147.581
+      "start": 152.08,
+      "end": 152.36
     },
     {
       "word": "more",
-      "start": 147.596,
-      "end": 147.84
+      "start": 152.36,
+      "end": 152.58
     },
     {
       "word": "concentrated",
-      "start": 147.855,
-      "end": 148.754
+      "start": 152.58,
+      "end": 153.2
     },
     {
       "word": "outside",
-      "start": 148.769,
-      "end": 149.394
+      "start": 153.2,
+      "end": 153.84
     },
     {
       "word": "the",
-      "start": 149.41,
-      "end": 149.547
+      "start": 153.84,
+      "end": 154.1
     },
     {
-      "word": "axon",
-      "start": 149.562,
-      "end": 150.309
+      "word": "axon.",
+      "start": 154.1,
+      "end": 154.5
     },
     {
       "word": "Potassium",
-      "start": 151.361,
-      "end": 152.138
+      "start": 155.24,
+      "end": 155.66
     },
     {
-      "word": "ions",
-      "start": 152.154,
-      "end": 152.748
+      "word": "ions,",
+      "start": 155.66,
+      "end": 156.52
     },
     {
       "word": "shown",
-      "start": 153.023,
-      "end": 153.343
+      "start": 157.26,
+      "end": 157.56
     },
     {
       "word": "in",
-      "start": 153.358,
-      "end": 153.51
+      "start": 157.56,
+      "end": 157.86
     },
     {
-      "word": "teal",
-      "start": 153.526,
-      "end": 153.952
+      "word": "Tio",
+      "start": 157.86,
+      "end": 158.22
     },
     {
       "word": "are",
-      "start": 154.242,
-      "end": 154.318
+      "start": 158.22,
+      "end": 158.68
     },
     {
       "word": "far",
-      "start": 154.334,
-      "end": 154.654
+      "start": 158.68,
+      "end": 159.0
     },
     {
       "word": "more",
-      "start": 154.669,
-      "end": 154.913
+      "start": 159.0,
+      "end": 159.26
     },
     {
       "word": "concentrated",
-      "start": 154.928,
-      "end": 155.843
+      "start": 159.26,
+      "end": 159.98
     },
     {
-      "word": "inside",
-      "start": 155.858,
-      "end": 156.681
+      "word": "inside.",
+      "start": 159.98,
+      "end": 160.64
     },
     {
       "word": "Large",
-      "start": 157.733,
-      "end": 158.221
+      "start": 161.54,
+      "end": 161.9
     },
     {
       "word": "negative",
-      "start": 158.236,
-      "end": 158.769
+      "start": 161.9,
+      "end": 162.28
     },
     {
       "word": "organic",
-      "start": 158.785,
-      "end": 159.288
+      "start": 162.28,
+      "end": 162.8
     },
     {
-      "word": "ions",
-      "start": 159.303,
-      "end": 159.974
+      "word": "ions,",
+      "start": 162.8,
+      "end": 163.22
     },
     {
       "word": "such",
-      "start": 160.202,
-      "end": 160.477
+      "start": 163.78,
+      "end": 164.04
     },
     {
       "word": "as",
-      "start": 160.492,
-      "end": 160.614
+      "start": 164.04,
+      "end": 164.16
     },
     {
-      "word": "proteins",
-      "start": 160.629,
-      "end": 161.452
+      "word": "proteins,",
+      "start": 164.16,
+      "end": 164.62
     },
     {
       "word": "remain",
-      "start": 161.727,
-      "end": 162.123
+      "start": 165.32,
+      "end": 165.52
     },
     {
-      "word": "inside",
-      "start": 162.138,
-      "end": 162.718
+      "word": "inside,",
+      "start": 165.52,
+      "end": 166.14
     },
     {
       "word": "because",
-      "start": 162.733,
-      "end": 163.053
+      "start": 166.64,
+      "end": 166.9
     },
     {
       "word": "they",
-      "start": 163.068,
-      "end": 163.19
+      "start": 166.9,
+      "end": 167.16
     },
     {
       "word": "cannot",
-      "start": 163.205,
-      "end": 163.663
+      "start": 167.16,
+      "end": 167.46
     },
     {
       "word": "cross",
-      "start": 163.678,
-      "end": 164.059
+      "start": 167.46,
+      "end": 167.78
     },
     {
       "word": "the",
-      "start": 164.074,
-      "end": 164.181
+      "start": 167.78,
+      "end": 168.08
     },
     {
-      "word": "membrane",
-      "start": 164.196,
-      "end": 164.959
+      "word": "membrane.",
+      "start": 168.08,
+      "end": 168.46
     },
     {
       "word": "The",
-      "start": 166.01,
-      "end": 166.224
+      "start": 169.36,
+      "end": 169.54
     },
     {
-      "word": "sodium",
-      "start": 166.239,
-      "end": 166.818
+      "word": "sodium,",
+      "start": 169.54,
+      "end": 169.98
     },
     {
       "word": "potassium",
-      "start": 166.894,
-      "end": 167.657
+      "start": 170.78,
+      "end": 171.3
     },
     {
-      "word": "pump",
-      "start": 167.672,
-      "end": 167.992
+      "word": "pump,",
+      "start": 171.3,
+      "end": 171.7
     },
     {
       "word": "maintains",
-      "start": 168.007,
-      "end": 168.739
+      "start": 172.3,
+      "end": 172.7
     },
     {
       "word": "those",
-      "start": 168.754,
-      "end": 169.029
+      "start": 172.7,
+      "end": 173.1
     },
     {
       "word": "concentration",
-      "start": 169.044,
-      "end": 169.943
+      "start": 173.1,
+      "end": 173.98
     },
     {
-      "word": "gradients",
-      "start": 169.959,
-      "end": 170.858
+      "word": "gradients.",
+      "start": 173.98,
+      "end": 175.08
     },
     {
       "word": "It",
-      "start": 171.91,
-      "end": 172.154
+      "start": 175.64,
+      "end": 175.82
     },
     {
       "word": "is",
-      "start": 172.169,
-      "end": 172.276
+      "start": 175.82,
+      "end": 175.98
     },
     {
       "word": "a",
-      "start": 172.291,
-      "end": 172.352
+      "start": 175.98,
+      "end": 176.08
     },
     {
       "word": "membrane",
-      "start": 172.367,
-      "end": 172.962
+      "start": 176.08,
+      "end": 176.4
     },
     {
       "word": "protein",
-      "start": 172.977,
-      "end": 173.571
+      "start": 176.4,
+      "end": 177.02
     },
     {
       "word": "that",
-      "start": 173.587,
-      "end": 173.785
+      "start": 177.02,
+      "end": 177.3
     },
     {
       "word": "uses",
-      "start": 173.8,
-      "end": 174.227
+      "start": 177.3,
+      "end": 177.6
     },
     {
-      "word": "ATP",
-      "start": 174.242,
-      "end": 174.989
+      "word": "ATP,",
+      "start": 177.6,
+      "end": 178.3
     },
     {
       "word": "the",
-      "start": 175.263,
-      "end": 175.385
+      "start": 179.0,
+      "end": 179.2
     },
     {
       "word": "cell's",
-      "start": 175.401,
-      "end": 175.904
+      "start": 179.2,
+      "end": 179.66
     },
     {
       "word": "energy",
-      "start": 175.919,
-      "end": 176.285
+      "start": 179.66,
+      "end": 180.0
     },
     {
-      "word": "currency",
-      "start": 176.3,
-      "end": 177.032
+      "word": "currency.",
+      "start": 180.0,
+      "end": 180.58
     },
     {
       "word": "For",
-      "start": 178.084,
-      "end": 178.327
+      "start": 181.3,
+      "end": 181.58
     },
     {
       "word": "each",
-      "start": 178.343,
-      "end": 178.648
+      "start": 181.58,
+      "end": 181.76
     },
     {
-      "word": "cycle",
-      "start": 178.663,
-      "end": 179.242
+      "word": "cycle,",
+      "start": 181.76,
+      "end": 182.2
     },
     {
       "word": "three",
-      "start": 179.486,
-      "end": 179.837
+      "start": 182.8,
+      "end": 183.12
     },
     {
       "word": "sodium",
-      "start": 179.852,
-      "end": 180.385
+      "start": 183.12,
+      "end": 183.66
     },
     {
       "word": "ions",
-      "start": 180.401,
-      "end": 180.873
+      "start": 183.66,
+      "end": 184.04
     },
     {
       "word": "are",
-      "start": 180.888,
-      "end": 180.995
+      "start": 184.04,
+      "end": 184.28
     },
     {
       "word": "moved",
-      "start": 181.01,
-      "end": 181.498
+      "start": 184.28,
+      "end": 184.5
     },
     {
-      "word": "out",
-      "start": 181.513,
-      "end": 181.834
+      "word": "out,",
+      "start": 184.5,
+      "end": 184.88
     },
     {
       "word": "and",
-      "start": 181.849,
-      "end": 181.971
+      "start": 185.48,
+      "end": 185.54
     },
     {
       "word": "two",
-      "start": 181.986,
-      "end": 182.215
+      "start": 185.54,
+      "end": 185.76
     },
     {
       "word": "potassium",
-      "start": 182.23,
-      "end": 182.946
+      "start": 185.76,
+      "end": 186.22
     },
     {
       "word": "ions",
-      "start": 182.962,
-      "end": 183.434
+      "start": 186.22,
+      "end": 186.68
     },
     {
       "word": "are",
-      "start": 183.449,
-      "end": 183.571
+      "start": 186.68,
+      "end": 186.94
     },
     {
       "word": "moved",
-      "start": 183.587,
-      "end": 184.105
+      "start": 186.94,
+      "end": 187.26
     },
     {
-      "word": "in",
-      "start": 184.12,
-      "end": 184.44
+      "word": "in.",
+      "start": 187.26,
+      "end": 187.5
     },
     {
       "word": "That",
-      "start": 185.492,
-      "end": 185.782
+      "start": 188.08,
+      "end": 188.3
     },
     {
       "word": "is",
-      "start": 185.797,
-      "end": 185.949
+      "start": 188.3,
+      "end": 189.06
     },
     {
       "word": "active",
-      "start": 185.965,
-      "end": 186.361
+      "start": 189.06,
+      "end": 189.52
     },
     {
       "word": "transport",
-      "start": 186.376,
-      "end": 187.154
+      "start": 189.52,
+      "end": 190.12
     },
     {
       "word": "against",
-      "start": 187.398,
-      "end": 187.809
+      "start": 190.66,
+      "end": 190.98
     },
     {
       "word": "their",
-      "start": 187.824,
-      "end": 187.992
+      "start": 190.98,
+      "end": 191.26
     },
     {
       "word": "concentration",
-      "start": 188.007,
-      "end": 188.952
+      "start": 191.26,
+      "end": 192.0
     },
     {
-      "word": "gradients",
-      "start": 188.968,
-      "end": 189.867
+      "word": "gradient.",
+      "start": 192.0,
+      "end": 192.74
     },
     {
       "word": "Because",
-      "start": 190.919,
-      "end": 191.3
+      "start": 193.48,
+      "end": 193.86
     },
     {
       "word": "three",
-      "start": 191.315,
-      "end": 191.59
+      "start": 193.86,
+      "end": 194.2
     },
     {
       "word": "positive",
-      "start": 191.605,
-      "end": 192.108
+      "start": 194.2,
+      "end": 194.68
     },
     {
       "word": "ions",
-      "start": 192.123,
-      "end": 192.611
+      "start": 194.68,
+      "end": 195.08
     },
     {
       "word": "leave",
-      "start": 192.626,
-      "end": 192.901
+      "start": 195.08,
+      "end": 195.46
     },
     {
       "word": "for",
-      "start": 192.916,
-      "end": 193.083
+      "start": 195.46,
+      "end": 195.74
     },
     {
       "word": "every",
-      "start": 193.099,
-      "end": 193.404
+      "start": 195.74,
+      "end": 196.06
     },
     {
       "word": "two",
-      "start": 193.419,
-      "end": 193.709
+      "start": 196.06,
+      "end": 196.32
     },
     {
       "word": "that",
-      "start": 193.724,
-      "end": 193.968
+      "start": 196.32,
+      "end": 196.5
     },
     {
-      "word": "enter",
-      "start": 193.983,
-      "end": 194.334
+      "word": "enter,",
+      "start": 196.5,
+      "end": 196.9
     },
     {
       "word": "the",
-      "start": 194.593,
-      "end": 194.699
+      "start": 197.58,
+      "end": 197.66
     },
     {
       "word": "pump",
-      "start": 194.715,
-      "end": 195.02
+      "start": 197.66,
+      "end": 197.9
     },
     {
       "word": "also",
-      "start": 195.035,
-      "end": 195.385
+      "start": 197.9,
+      "end": 198.4
     },
     {
       "word": "makes",
-      "start": 195.401,
-      "end": 195.705
+      "start": 198.4,
+      "end": 198.68
     },
     {
       "word": "the",
-      "start": 195.721,
-      "end": 195.812
+      "start": 198.68,
+      "end": 198.94
     },
     {
       "word": "inside",
-      "start": 195.827,
-      "end": 196.376
+      "start": 198.94,
+      "end": 199.42
     },
     {
       "word": "a",
-      "start": 196.391,
-      "end": 196.452
+      "start": 199.42,
+      "end": 199.98
     },
     {
       "word": "little",
-      "start": 196.468,
-      "end": 196.833
+      "start": 199.98,
+      "end": 200.18
     },
     {
       "word": "more",
-      "start": 196.849,
-      "end": 197.093
+      "start": 200.18,
+      "end": 200.42
     },
     {
-      "word": "negative",
-      "start": 197.108,
-      "end": 197.87
+      "word": "negative.",
+      "start": 200.42,
+      "end": 200.78
     },
     {
       "word": "The",
-      "start": 199.06,
-      "end": 199.228
+      "start": 201.56,
+      "end": 201.76
     },
     {
       "word": "membrane",
-      "start": 199.243,
-      "end": 199.837
+      "start": 201.76,
+      "end": 202.06
     },
     {
       "word": "is",
-      "start": 199.853,
-      "end": 200.02
+      "start": 202.06,
+      "end": 202.36
     },
     {
       "word": "selectively",
-      "start": 200.036,
-      "end": 200.737
+      "start": 202.36,
+      "end": 202.9
     },
     {
-      "word": "permeable",
-      "start": 200.752,
-      "end": 201.484
+      "word": "permeable,",
+      "start": 202.9,
+      "end": 203.48
     },
     {
       "word": "which",
-      "start": 201.697,
-      "end": 201.88
+      "start": 203.94,
+      "end": 204.12
     },
     {
       "word": "means",
-      "start": 201.895,
-      "end": 202.231
+      "start": 204.12,
+      "end": 204.32
     },
     {
       "word": "it",
-      "start": 202.246,
-      "end": 202.383
+      "start": 204.32,
+      "end": 204.5
     },
     {
       "word": "does",
-      "start": 202.398,
-      "end": 202.612
+      "start": 204.5,
+      "end": 204.66
     },
     {
       "word": "not",
-      "start": 202.627,
-      "end": 202.871
+      "start": 204.66,
+      "end": 204.82
     },
     {
       "word": "treat",
-      "start": 202.886,
-      "end": 203.283
+      "start": 204.82,
+      "end": 205.06
     },
     {
       "word": "every",
-      "start": 203.298,
-      "end": 203.633
+      "start": 205.06,
+      "end": 205.42
     },
     {
       "word": "ion",
-      "start": 203.648,
-      "end": 204.106
+      "start": 205.42,
+      "end": 205.72
     },
     {
       "word": "the",
-      "start": 204.121,
-      "end": 204.228
+      "start": 205.72,
+      "end": 205.92
     },
     {
       "word": "same",
-      "start": 204.243,
-      "end": 204.594
+      "start": 205.92,
+      "end": 206.14
     },
     {
-      "word": "way",
-      "start": 204.609,
-      "end": 205.097
+      "word": "way.",
+      "start": 206.14,
+      "end": 206.44
     },
     {
       "word": "At",
-      "start": 206.159,
-      "end": 206.449
+      "start": 207.08,
+      "end": 207.24
     },
     {
-      "word": "rest",
-      "start": 206.464,
-      "end": 206.784
+      "word": "rest,",
+      "start": 207.24,
+      "end": 207.66
     },
     {
       "word": "it",
-      "start": 206.8,
-      "end": 206.922
+      "start": 207.94,
+      "end": 208.36
     },
     {
       "word": "is",
-      "start": 206.937,
-      "end": 207.074
+      "start": 208.36,
+      "end": 208.5
     },
     {
       "word": "much",
-      "start": 207.089,
-      "end": 207.409
+      "start": 208.5,
+      "end": 208.74
     },
     {
       "word": "more",
-      "start": 207.425,
-      "end": 207.623
+      "start": 208.74,
+      "end": 209.1
     },
     {
       "word": "permeable",
-      "start": 207.638,
-      "end": 208.263
+      "start": 209.1,
+      "end": 209.74
     },
     {
       "word": "to",
-      "start": 208.278,
-      "end": 208.37
+      "start": 209.74,
+      "end": 209.98
     },
     {
       "word": "potassium",
-      "start": 208.385,
-      "end": 209.071
+      "start": 209.98,
+      "end": 210.54
     },
     {
       "word": "than",
-      "start": 209.086,
-      "end": 209.223
+      "start": 210.54,
+      "end": 211.28
     },
     {
       "word": "to",
-      "start": 209.239,
-      "end": 209.345
+      "start": 211.28,
+      "end": 211.6
     },
     {
-      "word": "sodium",
-      "start": 209.361,
-      "end": 210.077
+      "word": "sodium.",
+      "start": 211.6,
+      "end": 212.06
     },
     {
       "word": "Potassium",
-      "start": 211.129,
-      "end": 211.891
+      "start": 212.92,
+      "end": 213.5
     },
     {
       "word": "leak",
-      "start": 211.906,
-      "end": 212.211
+      "start": 213.5,
+      "end": 213.76
     },
     {
       "word": "channels",
-      "start": 212.226,
-      "end": 212.684
+      "start": 213.76,
+      "end": 214.1
     },
     {
       "word": "stay",
-      "start": 212.699,
-      "end": 213.05
+      "start": 214.1,
+      "end": 214.44
     },
     {
-      "word": "open",
-      "start": 213.065,
-      "end": 213.537
+      "word": "open,",
+      "start": 214.44,
+      "end": 214.84
     },
     {
       "word": "so",
-      "start": 213.72,
-      "end": 213.888
+      "start": 215.42,
+      "end": 215.68
     },
     {
       "word": "some",
-      "start": 213.903,
-      "end": 214.162
+      "start": 215.68,
+      "end": 215.94
     },
     {
       "word": "potassium",
-      "start": 214.178,
-      "end": 214.864
+      "start": 215.94,
+      "end": 216.44
     },
     {
       "word": "ions",
-      "start": 214.879,
-      "end": 215.351
+      "start": 216.44,
+      "end": 216.9
     },
     {
       "word": "diffuse",
-      "start": 215.367,
-      "end": 215.9
+      "start": 216.9,
+      "end": 217.44
     },
     {
       "word": "out",
-      "start": 215.916,
-      "end": 216.159
+      "start": 217.44,
+      "end": 217.78
     },
     {
       "word": "down",
-      "start": 216.175,
-      "end": 216.495
+      "start": 217.78,
+      "end": 218.0
     },
     {
       "word": "their",
-      "start": 216.51,
-      "end": 216.662
+      "start": 218.0,
+      "end": 218.18
     },
     {
       "word": "concentration",
-      "start": 216.678,
-      "end": 217.638
+      "start": 218.18,
+      "end": 218.9
     },
     {
-      "word": "gradient",
-      "start": 217.653,
-      "end": 218.446
+      "word": "gradient.",
+      "start": 218.9,
+      "end": 219.4
     },
     {
       "word": "As",
-      "start": 219.498,
-      "end": 219.757
+      "start": 219.98,
+      "end": 220.22
     },
     {
       "word": "those",
-      "start": 219.772,
-      "end": 220.047
+      "start": 220.22,
+      "end": 220.42
     },
     {
       "word": "positive",
-      "start": 220.062,
-      "end": 220.534
+      "start": 220.42,
+      "end": 221.02
     },
     {
       "word": "ions",
-      "start": 220.55,
-      "end": 221.022
+      "start": 221.02,
+      "end": 221.42
     },
     {
-      "word": "leave",
-      "start": 221.037,
-      "end": 221.54
+      "word": "leave,",
+      "start": 221.42,
+      "end": 221.84
     },
     {
       "word": "the",
-      "start": 221.693,
-      "end": 221.815
+      "start": 222.66,
+      "end": 222.78
     },
     {
       "word": "inside",
-      "start": 221.83,
-      "end": 222.44
+      "start": 222.78,
+      "end": 223.24
     },
     {
       "word": "becomes",
-      "start": 222.455,
-      "end": 222.928
+      "start": 223.24,
+      "end": 223.88
     },
     {
       "word": "more",
-      "start": 222.943,
-      "end": 223.172
+      "start": 223.88,
+      "end": 224.3
     },
     {
-      "word": "negative",
-      "start": 223.187,
-      "end": 223.995
+      "word": "negative.",
+      "start": 224.3,
+      "end": 224.8
     },
     {
       "word": "Sodium",
-      "start": 225.047,
-      "end": 225.717
+      "start": 225.7,
+      "end": 226.02
     },
     {
       "word": "channels",
-      "start": 225.733,
-      "end": 226.205
+      "start": 226.02,
+      "end": 226.42
     },
     {
       "word": "are",
-      "start": 226.22,
-      "end": 226.312
+      "start": 226.42,
+      "end": 226.62
     },
     {
       "word": "mostly",
-      "start": 226.327,
-      "end": 226.861
+      "start": 226.62,
+      "end": 226.98
     },
     {
       "word": "closed",
-      "start": 226.876,
-      "end": 227.394
+      "start": 226.98,
+      "end": 227.28
     },
     {
       "word": "at",
-      "start": 227.409,
-      "end": 227.592
+      "start": 227.28,
+      "end": 227.48
     },
     {
-      "word": "rest",
-      "start": 227.608,
-      "end": 228.034
+      "word": "rest,",
+      "start": 227.48,
+      "end": 227.8
     },
     {
       "word": "so",
-      "start": 228.278,
-      "end": 228.446
+      "start": 228.26,
+      "end": 228.44
     },
     {
       "word": "sodium",
-      "start": 228.461,
-      "end": 229.04
+      "start": 228.44,
+      "end": 228.82
     },
     {
       "word": "cannot",
-      "start": 229.056,
-      "end": 229.498
+      "start": 228.82,
+      "end": 229.06
     },
     {
       "word": "easily",
-      "start": 229.513,
-      "end": 229.955
+      "start": 229.06,
+      "end": 229.6
     },
     {
       "word": "flood",
-      "start": 229.97,
-      "end": 230.306
+      "start": 229.6,
+      "end": 229.9
     },
     {
       "word": "back",
-      "start": 230.321,
-      "end": 230.641
+      "start": 229.9,
+      "end": 230.2
     },
     {
-      "word": "in",
-      "start": 230.656,
-      "end": 230.961
+      "word": "in.",
+      "start": 230.2,
+      "end": 230.34
     },
     {
       "word": "Put",
-      "start": 232.013,
-      "end": 232.287
+      "start": 231.06,
+      "end": 231.32
     },
     {
       "word": "those",
-      "start": 232.303,
-      "end": 232.592
+      "start": 231.32,
+      "end": 231.68
     },
     {
       "word": "ideas",
-      "start": 232.608,
-      "end": 233.095
+      "start": 231.68,
+      "end": 232.12
     },
     {
-      "word": "together",
-      "start": 233.111,
-      "end": 233.736
+      "word": "together.",
+      "start": 232.12,
+      "end": 232.78
     },
     {
       "word": "The",
-      "start": 234.787,
-      "end": 234.986
+      "start": 234.0,
+      "end": 234.6
     },
     {
       "word": "pump",
-      "start": 235.001,
-      "end": 235.321
+      "start": 234.6,
+      "end": 234.78
     },
     {
       "word": "keeps",
-      "start": 235.336,
-      "end": 235.672
+      "start": 234.78,
+      "end": 235.2
     },
     {
       "word": "sodium",
-      "start": 235.687,
-      "end": 236.159
+      "start": 235.2,
+      "end": 235.58
     },
     {
       "word": "high",
-      "start": 236.175,
-      "end": 236.48
+      "start": 235.58,
+      "end": 235.94
     },
     {
       "word": "outside",
-      "start": 236.495,
-      "end": 237.135
+      "start": 235.94,
+      "end": 236.42
     },
     {
       "word": "and",
-      "start": 237.15,
-      "end": 237.272
+      "start": 236.42,
+      "end": 237.42
     },
     {
       "word": "potassium",
-      "start": 237.287,
-      "end": 237.973
+      "start": 237.42,
+      "end": 237.9
     },
     {
       "word": "high",
-      "start": 237.989,
-      "end": 238.263
+      "start": 237.9,
+      "end": 238.32
     },
     {
-      "word": "inside",
-      "start": 238.278,
-      "end": 239.101
+      "word": "inside.",
+      "start": 238.32,
+      "end": 238.86
     },
     {
       "word": "Potassium",
-      "start": 240.153,
-      "end": 240.946
+      "start": 241.2,
+      "end": 242.16
     },
     {
       "word": "leak",
-      "start": 240.961,
-      "end": 241.236
+      "start": 242.16,
+      "end": 242.42
     },
     {
       "word": "channels",
-      "start": 241.251,
-      "end": 241.754
+      "start": 242.42,
+      "end": 242.86
     },
     {
       "word": "let",
-      "start": 241.769,
-      "end": 241.998
+      "start": 242.86,
+      "end": 243.48
     },
     {
       "word": "some",
-      "start": 242.013,
-      "end": 242.226
+      "start": 243.48,
+      "end": 243.74
     },
     {
       "word": "potassium",
-      "start": 242.242,
-      "end": 242.989
+      "start": 243.74,
+      "end": 244.28
     },
     {
-      "word": "leave",
-      "start": 243.004,
-      "end": 243.598
+      "word": "leave.",
+      "start": 244.28,
+      "end": 244.7
     },
     {
-      "word": "Impermeant",
-      "start": 244.65,
-      "end": 245.397
+      "word": "And",
+      "start": 245.72,
+      "end": 245.82
+    },
+    {
+      "word": "in",
+      "start": 245.82,
+      "end": 246.76
+    },
+    {
+      "word": "permanent",
+      "start": 246.76,
+      "end": 247.14
     },
     {
       "word": "negative",
-      "start": 245.412,
-      "end": 245.854
+      "start": 247.14,
+      "end": 247.62
     },
     {
       "word": "ions",
-      "start": 245.87,
-      "end": 246.266
+      "start": 247.62,
+      "end": 248.0
     },
     {
       "word": "stay",
-      "start": 246.281,
-      "end": 246.525
+      "start": 248.0,
+      "end": 248.94
     },
     {
-      "word": "inside",
-      "start": 246.541,
-      "end": 247.364
+      "word": "inside.",
+      "start": 248.94,
+      "end": 249.56
     },
     {
       "word": "The",
-      "start": 248.416,
-      "end": 248.598
+      "start": 250.22,
+      "end": 250.36
     },
     {
       "word": "result",
-      "start": 248.614,
-      "end": 249.056
+      "start": 250.36,
+      "end": 250.72
     },
     {
       "word": "is",
-      "start": 249.071,
-      "end": 249.223
+      "start": 250.72,
+      "end": 250.98
     },
     {
       "word": "a",
-      "start": 249.239,
-      "end": 249.315
+      "start": 250.98,
+      "end": 251.06
     },
     {
-      "word": "polarised",
-      "start": 249.33,
-      "end": 250.108
+      "word": "polarized",
+      "start": 251.06,
+      "end": 251.58
     },
     {
       "word": "membrane",
-      "start": 250.123,
-      "end": 250.717
+      "start": 251.58,
+      "end": 252.18
     },
     {
       "word": "at",
-      "start": 250.733,
-      "end": 250.87
+      "start": 252.18,
+      "end": 252.86
     },
     {
       "word": "about",
-      "start": 250.885,
-      "end": 251.205
+      "start": 252.86,
+      "end": 253.14
     },
     {
       "word": "minus",
-      "start": 251.22,
-      "end": 251.617
+      "start": 253.14,
+      "end": 253.52
     },
     {
-      "word": "seventy",
-      "start": 251.632,
-      "end": 252.089
+      "word": "70",
+      "start": 253.52,
+      "end": 254.02
     },
     {
-      "word": "millivolts",
-      "start": 252.105,
-      "end": 252.943
+      "word": "millivolts.",
+      "start": 254.02,
+      "end": 254.76
     },
     {
       "word": "That",
-      "start": 253.995,
-      "end": 254.3
+      "start": 255.24,
+      "end": 255.54
     },
     {
       "word": "is",
-      "start": 254.315,
-      "end": 254.467
+      "start": 255.54,
+      "end": 256.28
     },
     {
       "word": "the",
-      "start": 254.483,
-      "end": 254.604
+      "start": 256.28,
+      "end": 256.46
     },
     {
       "word": "resting",
-      "start": 254.62,
-      "end": 255.108
+      "start": 256.46,
+      "end": 256.88
     },
     {
-      "word": "potential",
-      "start": 255.123,
-      "end": 255.854
+      "word": "potential.",
+      "start": 256.88,
+      "end": 257.56
     },
     {
       "word": "The",
-      "start": 256.906,
-      "end": 257.089
+      "start": 258.32,
+      "end": 258.52
     },
     {
       "word": "pump",
-      "start": 257.105,
-      "end": 257.409
+      "start": 258.52,
+      "end": 258.9
     },
     {
       "word": "does",
-      "start": 257.425,
-      "end": 257.623
+      "start": 258.9,
+      "end": 259.74
     },
     {
       "word": "not",
-      "start": 257.638,
-      "end": 257.867
+      "start": 259.74,
+      "end": 260.0
     },
     {
       "word": "fire",
-      "start": 257.882,
-      "end": 258.248
+      "start": 260.0,
+      "end": 260.48
     },
     {
       "word": "the",
-      "start": 258.263,
-      "end": 258.4
+      "start": 260.48,
+      "end": 260.98
     },
     {
-      "word": "impulse",
-      "start": 258.416,
-      "end": 259.193
+      "word": "impulse.",
+      "start": 260.98,
+      "end": 261.3
     },
     {
       "word": "It",
-      "start": 260.245,
-      "end": 260.489
+      "start": 262.1,
+      "end": 263.04
     },
     {
       "word": "quietly",
-      "start": 260.504,
-      "end": 261.083
+      "start": 263.04,
+      "end": 263.62
     },
     {
       "word": "maintains",
-      "start": 261.098,
-      "end": 261.784
+      "start": 263.62,
+      "end": 264.22
     },
     {
       "word": "the",
-      "start": 261.8,
-      "end": 261.891
+      "start": 264.22,
+      "end": 264.44
     },
     {
       "word": "gradients",
-      "start": 261.906,
-      "end": 262.608
+      "start": 264.44,
+      "end": 265.14
     },
     {
       "word": "that",
-      "start": 262.623,
-      "end": 262.775
+      "start": 265.14,
+      "end": 265.7
     },
     {
       "word": "make",
-      "start": 262.791,
-      "end": 263.05
+      "start": 265.7,
+      "end": 265.94
     },
     {
       "word": "an",
-      "start": 263.065,
-      "end": 263.187
+      "start": 265.94,
+      "end": 266.12
     },
     {
       "word": "impulse",
-      "start": 263.202,
-      "end": 263.675
+      "start": 266.12,
+      "end": 266.6
     },
     {
-      "word": "possible",
-      "start": 263.69,
-      "end": 264.376
+      "word": "possible.",
+      "start": 266.6,
+      "end": 267.28
     },
     {
       "word": "Here",
-      "start": 265.428,
-      "end": 265.824
+      "start": 268.06,
+      "end": 268.36
     },
     {
       "word": "is",
-      "start": 265.839,
-      "end": 265.992
+      "start": 268.36,
+      "end": 268.54
     },
     {
       "word": "a",
-      "start": 266.007,
-      "end": 266.068
+      "start": 268.54,
+      "end": 268.64
     },
     {
       "word": "worked",
-      "start": 266.083,
-      "end": 266.495
+      "start": 268.64,
+      "end": 268.92
     },
     {
-      "word": "examination-style",
-      "start": 266.51,
-      "end": 267.791
+      "word": "examination",
+      "start": 268.92,
+      "end": 269.36
     },
     {
-      "word": "example",
-      "start": 267.806,
-      "end": 268.537
+      "word": "style",
+      "start": 269.36,
+      "end": 270.0
+    },
+    {
+      "word": "example.",
+      "start": 270.0,
+      "end": 270.64
     },
     {
       "word": "A",
-      "start": 269.589,
-      "end": 269.757
+      "start": 271.3,
+      "end": 271.36
     },
     {
       "word": "student",
-      "start": 269.772,
-      "end": 270.23
+      "start": 271.36,
+      "end": 271.76
     },
     {
       "word": "writes",
-      "start": 270.245,
-      "end": 270.733
+      "start": 271.76,
+      "end": 272.1
     },
     {
       "word": "the",
-      "start": 270.87,
-      "end": 270.992
+      "start": 272.1,
+      "end": 272.78
     },
     {
       "word": "sodium",
-      "start": 271.007,
-      "end": 271.571
+      "start": 272.78,
+      "end": 273.22
     },
     {
       "word": "potassium",
-      "start": 271.662,
-      "end": 272.364
+      "start": 273.22,
+      "end": 273.76
     },
     {
       "word": "pump",
-      "start": 272.379,
-      "end": 272.699
+      "start": 273.76,
+      "end": 274.16
     },
     {
       "word": "creates",
-      "start": 272.714,
-      "end": 273.187
+      "start": 274.16,
+      "end": 275.02
     },
     {
       "word": "the",
-      "start": 273.202,
-      "end": 273.309
+      "start": 275.02,
+      "end": 275.38
     },
     {
       "word": "resting",
-      "start": 273.324,
-      "end": 273.766
+      "start": 275.38,
+      "end": 275.68
     },
     {
       "word": "potential",
-      "start": 273.781,
-      "end": 274.361
+      "start": 275.68,
+      "end": 276.28
     },
     {
       "word": "by",
-      "start": 274.376,
-      "end": 274.543
+      "start": 276.28,
+      "end": 276.8
     },
     {
       "word": "pumping",
-      "start": 274.559,
-      "end": 275.092
+      "start": 276.8,
+      "end": 277.16
     },
     {
       "word": "sodium",
-      "start": 275.108,
-      "end": 275.717
+      "start": 277.16,
+      "end": 277.66
     },
     {
       "word": "in",
-      "start": 275.733,
-      "end": 275.854
+      "start": 277.66,
+      "end": 278.12
     },
     {
       "word": "and",
-      "start": 275.87,
-      "end": 276.007
+      "start": 278.12,
+      "end": 278.62
     },
     {
       "word": "potassium",
-      "start": 276.022,
-      "end": 276.647
+      "start": 278.62,
+      "end": 279.12
     },
     {
-      "word": "out",
-      "start": 276.662,
-      "end": 277.089
+      "word": "out.",
+      "start": 279.12,
+      "end": 279.4
     },
     {
       "word": "Identify",
-      "start": 278.141,
-      "end": 278.964
+      "start": 280.02,
+      "end": 280.62
     },
     {
       "word": "two",
-      "start": 278.979,
-      "end": 279.284
+      "start": 280.62,
+      "end": 280.98
     },
     {
       "word": "scientific",
-      "start": 279.3,
-      "end": 280.153
+      "start": 280.98,
+      "end": 281.52
     },
     {
       "word": "errors",
-      "start": 280.169,
-      "end": 280.565
+      "start": 281.52,
+      "end": 282.02
     },
     {
       "word": "and",
-      "start": 280.58,
-      "end": 280.702
+      "start": 282.02,
+      "end": 282.7
     },
     {
       "word": "correct",
-      "start": 280.717,
-      "end": 281.159
+      "start": 282.7,
+      "end": 283.06
     },
     {
-      "word": "them",
-      "start": 281.175,
-      "end": 281.51
+      "word": "them.",
+      "start": 283.06,
+      "end": 283.36
     },
     {
       "word": "The",
-      "start": 282.562,
-      "end": 282.745
+      "start": 284.06,
+      "end": 284.26
     },
     {
       "word": "first",
-      "start": 282.76,
-      "end": 283.202
+      "start": 284.26,
+      "end": 284.64
     },
     {
       "word": "error",
-      "start": 283.217,
-      "end": 283.537
+      "start": 284.64,
+      "end": 284.98
     },
     {
       "word": "is",
-      "start": 283.553,
-      "end": 283.736
+      "start": 284.98,
+      "end": 285.46
     },
     {
       "word": "the",
-      "start": 283.751,
-      "end": 283.873
+      "start": 285.46,
+      "end": 285.62
     },
     {
-      "word": "direction",
-      "start": 283.888,
-      "end": 284.681
+      "word": "direction.",
+      "start": 285.62,
+      "end": 286.12
     },
     {
       "word": "The",
-      "start": 285.733,
-      "end": 285.915
+      "start": 286.88,
+      "end": 287.0
     },
     {
       "word": "pump",
-      "start": 285.931,
-      "end": 286.22
+      "start": 287.0,
+      "end": 287.2
     },
     {
       "word": "moves",
-      "start": 286.236,
-      "end": 286.632
+      "start": 287.2,
+      "end": 287.56
     },
     {
       "word": "three",
-      "start": 286.647,
-      "end": 286.952
+      "start": 287.56,
+      "end": 287.9
     },
     {
       "word": "sodium",
-      "start": 286.967,
-      "end": 287.516
+      "start": 287.9,
+      "end": 288.3
     },
     {
       "word": "ions",
-      "start": 287.531,
-      "end": 288.004
+      "start": 288.3,
+      "end": 288.56
     },
     {
-      "word": "out",
-      "start": 288.019,
-      "end": 288.385
+      "word": "out,",
+      "start": 288.56,
+      "end": 288.94
     },
     {
       "word": "not",
-      "start": 288.629,
-      "end": 288.964
+      "start": 289.52,
+      "end": 289.72
     },
     {
       "word": "in",
-      "start": 288.979,
-      "end": 289.3
+      "start": 289.72,
+      "end": 290.02
     },
     {
       "word": "and",
-      "start": 289.544,
-      "end": 289.696
+      "start": 290.02,
+      "end": 290.64
     },
     {
       "word": "two",
-      "start": 289.711,
-      "end": 289.94
+      "start": 290.64,
+      "end": 290.88
     },
     {
       "word": "potassium",
-      "start": 289.955,
-      "end": 290.641
+      "start": 290.88,
+      "end": 291.32
     },
     {
       "word": "ions",
-      "start": 290.656,
-      "end": 291.129
+      "start": 291.32,
+      "end": 291.74
     },
     {
-      "word": "in",
-      "start": 291.144,
-      "end": 291.388
+      "word": "in,",
+      "start": 291.74,
+      "end": 291.98
     },
     {
       "word": "not",
-      "start": 291.556,
-      "end": 291.861
+      "start": 292.5,
+      "end": 292.66
     },
     {
-      "word": "out",
-      "start": 291.876,
-      "end": 292.333
+      "word": "out.",
+      "start": 292.66,
+      "end": 292.98
     },
     {
       "word": "The",
-      "start": 293.385,
-      "end": 293.598
+      "start": 293.72,
+      "end": 293.9
     },
     {
       "word": "second",
-      "start": 293.614,
-      "end": 294.04
+      "start": 293.9,
+      "end": 294.2
     },
     {
       "word": "error",
-      "start": 294.056,
-      "end": 294.376
+      "start": 294.2,
+      "end": 294.6
     },
     {
       "word": "is",
-      "start": 294.391,
-      "end": 294.589
+      "start": 294.6,
+      "end": 295.18
     },
     {
       "word": "the",
-      "start": 294.604,
-      "end": 294.711
+      "start": 295.18,
+      "end": 295.38
     },
     {
       "word": "claim",
-      "start": 294.726,
-      "end": 295.123
+      "start": 295.38,
+      "end": 295.68
     },
     {
       "word": "that",
-      "start": 295.138,
-      "end": 295.275
+      "start": 295.68,
+      "end": 295.9
     },
     {
       "word": "the",
-      "start": 295.291,
-      "end": 295.397
+      "start": 295.9,
+      "end": 296.02
     },
     {
       "word": "pump",
-      "start": 295.412,
-      "end": 295.687
+      "start": 296.02,
+      "end": 296.2
     },
     {
       "word": "alone",
-      "start": 295.702,
-      "end": 296.083
+      "start": 296.2,
+      "end": 296.58
     },
     {
       "word": "creates",
-      "start": 296.098,
-      "end": 296.586
+      "start": 296.58,
+      "end": 297.06
     },
     {
       "word": "the",
-      "start": 296.601,
-      "end": 296.693
+      "start": 297.06,
+      "end": 297.36
     },
     {
       "word": "resting",
-      "start": 296.708,
-      "end": 297.15
+      "start": 297.36,
+      "end": 297.7
     },
     {
-      "word": "potential",
-      "start": 297.166,
-      "end": 297.897
+      "word": "potential.",
+      "start": 297.7,
+      "end": 298.3
     },
     {
       "word": "The",
-      "start": 298.949,
-      "end": 299.147
+      "start": 299.56,
+      "end": 300.26
     },
     {
       "word": "pump",
-      "start": 299.162,
-      "end": 299.452
+      "start": 300.26,
+      "end": 300.6
     },
     {
       "word": "maintains",
-      "start": 299.467,
-      "end": 300.184
+      "start": 300.6,
+      "end": 301.56
     },
     {
       "word": "the",
-      "start": 300.199,
-      "end": 300.306
+      "start": 301.56,
+      "end": 301.86
     },
     {
-      "word": "gradients",
-      "start": 300.321,
-      "end": 301.236
+      "word": "gradients.",
+      "start": 301.86,
+      "end": 302.56
     },
     {
       "word": "Potassium",
-      "start": 302.287,
-      "end": 303.08
+      "start": 303.26,
+      "end": 303.86
     },
     {
       "word": "leak",
-      "start": 303.095,
-      "end": 303.355
+      "start": 303.86,
+      "end": 304.12
     },
     {
       "word": "channels",
-      "start": 303.37,
-      "end": 303.873
+      "start": 304.12,
+      "end": 304.52
     },
     {
       "word": "and",
-      "start": 303.888,
-      "end": 303.995
+      "start": 304.52,
+      "end": 305.22
     },
     {
       "word": "the",
-      "start": 304.01,
-      "end": 304.101
+      "start": 305.22,
+      "end": 305.36
     },
     {
       "word": "trapped",
-      "start": 304.117,
-      "end": 304.528
+      "start": 305.36,
+      "end": 305.66
     },
     {
       "word": "negative",
-      "start": 304.544,
-      "end": 305.077
+      "start": 305.66,
+      "end": 306.12
     },
     {
       "word": "ions",
-      "start": 305.092,
-      "end": 305.565
+      "start": 306.12,
+      "end": 306.52
     },
     {
       "word": "are",
-      "start": 305.58,
-      "end": 305.733
+      "start": 306.52,
+      "end": 307.16
     },
     {
       "word": "also",
-      "start": 305.748,
-      "end": 306.205
+      "start": 307.16,
+      "end": 307.62
     },
     {
-      "word": "essential",
-      "start": 306.22,
-      "end": 306.937
+      "word": "essential.",
+      "start": 307.62,
+      "end": 308.36
     },
     {
       "word": "Now",
-      "start": 307.989,
-      "end": 308.339
+      "start": 309.12,
+      "end": 309.42
     },
     {
       "word": "pause",
-      "start": 308.354,
-      "end": 308.751
+      "start": 309.42,
+      "end": 309.76
     },
     {
       "word": "the",
-      "start": 308.766,
-      "end": 308.873
+      "start": 309.76,
+      "end": 310.04
     },
     {
       "word": "video",
-      "start": 308.888,
-      "end": 309.391
+      "start": 310.04,
+      "end": 310.42
     },
     {
       "word": "and",
-      "start": 309.406,
-      "end": 309.544
+      "start": 310.42,
+      "end": 311.26
     },
     {
       "word": "try",
-      "start": 309.559,
-      "end": 309.848
+      "start": 311.26,
+      "end": 311.64
     },
     {
-      "word": "this",
-      "start": 309.864,
-      "end": 310.153
+      "word": "the",
+      "start": 311.64,
+      "end": 312.12
     },
     {
       "word": "sequencing",
-      "start": 310.169,
-      "end": 310.809
+      "start": 312.12,
+      "end": 312.66
     },
     {
-      "word": "question",
-      "start": 310.824,
-      "end": 311.48
+      "word": "question.",
+      "start": 312.66,
+      "end": 313.42
     },
     {
       "word": "Place",
-      "start": 312.531,
-      "end": 312.973
+      "start": 313.92,
+      "end": 314.1
     },
     {
       "word": "these",
-      "start": 312.989,
-      "end": 313.278
+      "start": 314.1,
+      "end": 314.4
     },
     {
       "word": "four",
-      "start": 313.294,
-      "end": 313.4
+      "start": 314.4,
+      "end": 314.64
     },
     {
       "word": "statements",
-      "start": 313.416,
-      "end": 314.01
+      "start": 314.64,
+      "end": 315.08
     },
     {
       "word": "in",
-      "start": 314.025,
-      "end": 314.117
+      "start": 315.08,
+      "end": 315.78
     },
     {
       "word": "the",
-      "start": 314.132,
-      "end": 314.254
+      "start": 315.78,
+      "end": 315.94
     },
     {
       "word": "order",
-      "start": 314.269,
-      "end": 314.604
+      "start": 315.94,
+      "end": 316.26
     },
     {
       "word": "that",
-      "start": 314.62,
-      "end": 314.833
+      "start": 316.26,
+      "end": 316.82
     },
     {
       "word": "establishes",
-      "start": 314.848,
-      "end": 315.534
+      "start": 316.82,
+      "end": 317.6
     },
     {
       "word": "a",
-      "start": 315.55,
-      "end": 315.611
+      "start": 317.6,
+      "end": 317.78
     },
     {
       "word": "resting",
-      "start": 315.626,
-      "end": 316.083
+      "start": 317.78,
+      "end": 318.14
     },
     {
-      "word": "potential",
-      "start": 316.098,
-      "end": 316.83
+      "word": "potential.",
+      "start": 318.14,
+      "end": 318.8
     },
     {
-      "word": "A",
-      "start": 317.882,
-      "end": 318.202
+      "word": "A,",
+      "start": 319.7,
+      "end": 319.94
     },
     {
       "word": "the",
-      "start": 318.416,
-      "end": 318.537
+      "start": 320.86,
+      "end": 320.98
     },
     {
       "word": "sodium",
-      "start": 318.553,
-      "end": 319.117
+      "start": 320.98,
+      "end": 321.48
     },
     {
       "word": "potassium",
-      "start": 319.208,
-      "end": 319.955
+      "start": 321.48,
+      "end": 322.1
     },
     {
       "word": "pump",
-      "start": 319.97,
-      "end": 320.291
+      "start": 322.1,
+      "end": 322.6
     },
     {
       "word": "uses",
-      "start": 320.306,
-      "end": 320.717
+      "start": 322.6,
+      "end": 323.7
     },
     {
-      "word": "ATP",
-      "start": 320.733,
-      "end": 321.617
+      "word": "ATPP",
+      "start": 323.7,
+      "end": 324.62
     },
     {
-      "word": "B",
-      "start": 322.669,
-      "end": 323.034
+      "word": "B.",
+      "start": 324.62,
+      "end": 325.44
     },
     {
-      "word": "sodium",
-      "start": 323.309,
-      "end": 323.797
+      "word": "Sodium",
+      "start": 326.28,
+      "end": 326.74
     },
     {
       "word": "stays",
-      "start": 323.812,
-      "end": 324.223
+      "start": 326.74,
+      "end": 327.12
     },
     {
       "word": "high",
-      "start": 324.239,
-      "end": 324.544
+      "start": 327.12,
+      "end": 327.46
     },
     {
       "word": "outside",
-      "start": 324.559,
-      "end": 325.245
+      "start": 327.46,
+      "end": 328.02
     },
     {
       "word": "and",
-      "start": 325.26,
-      "end": 325.382
+      "start": 328.02,
+      "end": 328.68
     },
     {
       "word": "potassium",
-      "start": 325.397,
-      "end": 326.144
+      "start": 328.68,
+      "end": 329.06
     },
     {
       "word": "stays",
-      "start": 326.159,
-      "end": 326.586
+      "start": 329.06,
+      "end": 329.58
     },
     {
       "word": "high",
-      "start": 326.601,
-      "end": 326.891
+      "start": 329.58,
+      "end": 329.92
     },
     {
-      "word": "inside",
-      "start": 326.906,
-      "end": 327.745
+      "word": "inside.",
+      "start": 329.92,
+      "end": 330.28
     },
     {
-      "word": "C",
-      "start": 328.797,
-      "end": 329.269
+      "word": "C,",
+      "start": 331.16,
+      "end": 331.3
     },
     {
       "word": "potassium",
-      "start": 329.483,
-      "end": 330.214
+      "start": 331.96,
+      "end": 332.84
     },
     {
       "word": "leaks",
-      "start": 330.229,
-      "end": 330.55
+      "start": 332.84,
+      "end": 333.68
     },
     {
       "word": "out",
-      "start": 330.565,
-      "end": 330.763
+      "start": 333.68,
+      "end": 334.24
     },
     {
       "word": "through",
-      "start": 330.778,
-      "end": 331.114
+      "start": 334.24,
+      "end": 334.78
     },
     {
       "word": "open",
-      "start": 331.129,
-      "end": 331.556
+      "start": 334.78,
+      "end": 335.26
     },
     {
       "word": "leak",
-      "start": 331.571,
-      "end": 331.861
+      "start": 335.26,
+      "end": 335.5
     },
     {
-      "word": "channels",
-      "start": 331.876,
-      "end": 332.577
+      "word": "channels.",
+      "start": 335.5,
+      "end": 336.1
     },
     {
-      "word": "D",
-      "start": 333.629,
-      "end": 333.98
+      "word": "Day,",
+      "start": 336.88,
+      "end": 337.32
     },
     {
       "word": "the",
-      "start": 334.239,
-      "end": 334.33
+      "start": 338.0,
+      "end": 338.18
     },
     {
       "word": "membrane",
-      "start": 334.345,
-      "end": 334.94
+      "start": 338.18,
+      "end": 338.52
     },
     {
       "word": "is",
-      "start": 334.955,
-      "end": 335.138
+      "start": 338.52,
+      "end": 338.78
     },
     {
-      "word": "polarised",
-      "start": 335.153,
-      "end": 335.9
+      "word": "polarized",
+      "start": 338.78,
+      "end": 339.26
     },
     {
       "word": "at",
-      "start": 335.915,
-      "end": 336.037
+      "start": 339.26,
+      "end": 339.86
     },
     {
       "word": "about",
-      "start": 336.053,
-      "end": 336.373
+      "start": 339.86,
+      "end": 340.16
     },
     {
       "word": "minus",
-      "start": 336.388,
-      "end": 336.8
+      "start": 340.16,
+      "end": 340.6
     },
     {
-      "word": "seventy",
-      "start": 336.815,
-      "end": 337.272
+      "word": "70",
+      "start": 340.6,
+      "end": 341.16
     },
     {
-      "word": "millivolts",
-      "start": 337.287,
-      "end": 338.172
+      "word": "millivolts.",
+      "start": 341.16,
+      "end": 341.84
     },
     {
       "word": "Here",
-      "start": 339.223,
-      "end": 339.589
+      "start": 342.54,
+      "end": 342.86
     },
     {
       "word": "is",
-      "start": 339.604,
-      "end": 339.772
+      "start": 342.86,
+      "end": 343.66
     },
     {
       "word": "a",
-      "start": 339.787,
-      "end": 339.848
+      "start": 343.66,
+      "end": 343.8
     },
     {
       "word": "model",
-      "start": 339.864,
-      "end": 340.26
+      "start": 343.8,
+      "end": 344.08
     },
     {
-      "word": "answer",
-      "start": 340.275,
-      "end": 340.854
+      "word": "answer.",
+      "start": 344.08,
+      "end": 344.76
     },
     {
       "word": "First",
-      "start": 341.906,
-      "end": 342.486
+      "start": 345.48,
+      "end": 345.72
     },
     {
-      "word": "A",
-      "start": 342.501,
-      "end": 342.76
+      "word": "day,",
+      "start": 345.72,
+      "end": 346.0
     },
     {
       "word": "the",
-      "start": 343.05,
-      "end": 343.187
+      "start": 346.62,
+      "end": 346.9
     },
     {
       "word": "pump",
-      "start": 343.202,
-      "end": 343.553
+      "start": 346.9,
+      "end": 347.12
     },
     {
       "word": "uses",
-      "start": 343.568,
-      "end": 344.01
+      "start": 347.12,
+      "end": 347.62
     },
     {
-      "word": "ATP",
-      "start": 344.025,
-      "end": 344.986
+      "word": "ATPP.",
+      "start": 347.62,
+      "end": 348.94
     },
     {
       "word": "That",
-      "start": 346.037,
-      "end": 346.358
+      "start": 349.48,
+      "end": 349.74
     },
     {
       "word": "produces",
-      "start": 346.373,
-      "end": 346.967
+      "start": 349.74,
+      "end": 350.34
     },
     {
-      "word": "B",
-      "start": 346.983,
-      "end": 347.318
+      "word": "B,",
+      "start": 350.34,
+      "end": 350.8
     },
     {
       "word": "the",
-      "start": 347.592,
-      "end": 347.745
+      "start": 351.62,
+      "end": 351.7
     },
     {
       "word": "unequal",
-      "start": 347.76,
-      "end": 348.37
+      "start": 351.7,
+      "end": 352.28
     },
     {
       "word": "ion",
-      "start": 348.385,
-      "end": 348.766
+      "start": 352.28,
+      "end": 352.68
     },
     {
-      "word": "distribution",
-      "start": 348.781,
-      "end": 349.833
+      "word": "distribution.",
+      "start": 352.68,
+      "end": 353.8
     },
     {
       "word": "Then",
-      "start": 350.885,
-      "end": 351.22
+      "start": 354.34,
+      "end": 354.78
     },
     {
-      "word": "C",
-      "start": 351.236,
-      "end": 351.693
+      "word": "C,",
+      "start": 354.78,
+      "end": 355.64
     },
     {
       "word": "potassium",
-      "start": 351.906,
-      "end": 352.684
+      "start": 356.2,
+      "end": 356.58
     },
     {
       "word": "leaks",
-      "start": 352.699,
-      "end": 353.095
+      "start": 357.14,
+      "end": 357.52
     },
     {
-      "word": "out",
-      "start": 353.111,
-      "end": 353.568
+      "word": "out.",
+      "start": 357.52,
+      "end": 358.06
     },
     {
       "word": "That",
-      "start": 354.62,
-      "end": 354.94
+      "start": 358.52,
+      "end": 359.02
     },
     {
       "word": "produces",
-      "start": 354.955,
-      "end": 355.534
+      "start": 359.02,
+      "end": 359.58
     },
     {
-      "word": "D",
-      "start": 355.55,
-      "end": 355.946
+      "word": "D,",
+      "start": 359.58,
+      "end": 360.08
     },
     {
       "word": "a",
-      "start": 356.22,
-      "end": 356.297
+      "start": 360.64,
+      "end": 360.72
     },
     {
-      "word": "polarised",
-      "start": 356.312,
-      "end": 357.104
+      "word": "polarized",
+      "start": 360.72,
+      "end": 361.2
     },
     {
       "word": "membrane",
-      "start": 357.12,
-      "end": 357.714
+      "start": 361.2,
+      "end": 361.9
     },
     {
       "word": "at",
-      "start": 357.729,
-      "end": 357.882
+      "start": 361.9,
+      "end": 362.54
     },
     {
       "word": "about",
-      "start": 357.897,
-      "end": 358.248
+      "start": 362.54,
+      "end": 362.86
     },
     {
       "word": "minus",
-      "start": 358.263,
-      "end": 358.675
+      "start": 362.86,
+      "end": 363.24
     },
     {
-      "word": "seventy",
-      "start": 358.69,
-      "end": 359.162
+      "word": "70",
+      "start": 363.24,
+      "end": 363.78
     },
     {
-      "word": "millivolts",
-      "start": 359.178,
-      "end": 360.047
+      "word": "millivolts.",
+      "start": 363.78,
+      "end": 364.54
     },
     {
       "word": "In",
-      "start": 361.098,
-      "end": 361.358
+      "start": 365.14,
+      "end": 365.42
     },
     {
       "word": "part",
-      "start": 361.373,
-      "end": 361.708
+      "start": 365.42,
+      "end": 365.62
     },
     {
-      "word": "two",
-      "start": 361.723,
-      "end": 361.906
+      "word": "two,",
+      "start": 365.62,
+      "end": 366.0
     },
     {
       "word": "we",
-      "start": 361.922,
-      "end": 362.089
+      "start": 366.52,
+      "end": 366.68
     },
     {
       "word": "will",
-      "start": 362.104,
-      "end": 362.287
+      "start": 366.68,
+      "end": 366.8
     },
     {
       "word": "see",
-      "start": 362.303,
-      "end": 362.608
+      "start": 366.8,
+      "end": 367.06
     },
     {
       "word": "how",
-      "start": 362.623,
-      "end": 362.836
+      "start": 367.06,
+      "end": 367.28
     },
     {
       "word": "a",
-      "start": 362.851,
-      "end": 362.928
+      "start": 367.28,
+      "end": 367.4
     },
     {
       "word": "stimulus",
-      "start": 362.943,
-      "end": 363.537
+      "start": 367.4,
+      "end": 367.82
     },
     {
       "word": "changes",
-      "start": 363.553,
-      "end": 364.117
+      "start": 367.82,
+      "end": 368.34
     },
     {
       "word": "this",
-      "start": 364.132,
-      "end": 364.361
+      "start": 368.34,
+      "end": 368.6
     },
     {
-      "word": "polarised",
-      "start": 364.376,
-      "end": 365.168
+      "word": "polarized",
+      "start": 368.6,
+      "end": 369.06
     },
     {
       "word": "membrane",
-      "start": 365.184,
-      "end": 365.778
+      "start": 369.06,
+      "end": 369.68
     },
     {
       "word": "into",
-      "start": 365.794,
-      "end": 366.159
+      "start": 369.68,
+      "end": 370.42
     },
     {
       "word": "an",
-      "start": 366.175,
-      "end": 366.266
+      "start": 370.42,
+      "end": 370.62
     },
     {
       "word": "action",
-      "start": 366.281,
-      "end": 366.632
+      "start": 370.62,
+      "end": 370.92
     },
     {
-      "word": "potential",
-      "start": 366.647,
-      "end": 367.348
+      "word": "potential.",
+      "start": 370.92,
+      "end": 371.52
     },
     {
-      "word": "and",
-      "start": 367.653,
-      "end": 367.745
+      "word": "And",
+      "start": 372.18,
+      "end": 372.42
     },
     {
       "word": "we",
-      "start": 367.76,
-      "end": 367.897
+      "start": 372.42,
+      "end": 372.58
     },
     {
       "word": "will",
-      "start": 367.912,
-      "end": 368.111
+      "start": 372.58,
+      "end": 372.7
     },
     {
       "word": "build",
-      "start": 368.126,
-      "end": 368.431
+      "start": 372.7,
+      "end": 372.96
     },
     {
       "word": "the",
-      "start": 368.446,
-      "end": 368.537
+      "start": 372.96,
+      "end": 373.12
     },
     {
       "word": "graph",
-      "start": 368.553,
-      "end": 369.01
+      "start": 373.12,
+      "end": 373.36
     },
     {
       "word": "as",
-      "start": 369.025,
-      "end": 369.178
+      "start": 373.36,
+      "end": 373.94
     },
     {
       "word": "each",
-      "start": 369.193,
-      "end": 369.452
+      "start": 373.94,
+      "end": 374.26
     },
     {
       "word": "phase",
-      "start": 369.467,
-      "end": 369.818
+      "start": 374.26,
+      "end": 374.5
     },
     {
-      "word": "happens",
-      "start": 369.833,
-      "end": 370.58
+      "word": "happens.",
+      "start": 374.5,
+      "end": 375.02
     },
     {
       "word": "If",
-      "start": 371.632,
-      "end": 371.861
+      "start": 375.94,
+      "end": 376.02
     },
     {
       "word": "this",
-      "start": 371.876,
-      "end": 372.089
+      "start": 376.02,
+      "end": 376.22
     },
     {
       "word": "explanation",
-      "start": 372.104,
-      "end": 372.836
+      "start": 376.22,
+      "end": 376.78
     },
     {
       "word": "has",
-      "start": 372.851,
-      "end": 373.034
+      "start": 376.78,
+      "end": 377.2
     },
     {
-      "word": "helped",
-      "start": 373.05,
-      "end": 373.537
+      "word": "helped,",
+      "start": 377.2,
+      "end": 377.48
     },
     {
       "word": "please",
-      "start": 373.736,
-      "end": 374.025
+      "start": 378.16,
+      "end": 378.4
     },
     {
       "word": "subscribe",
-      "start": 374.04,
-      "end": 374.681
+      "start": 378.4,
+      "end": 379.0
     },
     {
       "word": "to",
-      "start": 374.696,
-      "end": 374.818
+      "start": 379.0,
+      "end": 379.32
     },
     {
       "word": "JD",
-      "start": 374.833,
-      "end": 375.336
+      "start": 379.32,
+      "end": 379.56
     },
     {
       "word": "Science",
-      "start": 375.351,
-      "end": 375.839
+      "start": 379.56,
+      "end": 380.0
     },
     {
       "word": "for",
-      "start": 375.854,
-      "end": 375.976
+      "start": 380.0,
+      "end": 380.36
     },
     {
       "word": "more",
-      "start": 375.992,
-      "end": 376.236
-    },
-    {
-      "word": "lessons",
-      "start": 376.251,
-      "end": 377.059
-    },
-    {
-      "word": "You",
-      "start": 378.111,
-      "end": 378.324
-    },
-    {
-      "word": "can",
-      "start": 378.339,
-      "end": 378.537
-    },
-    {
-      "word": "find",
-      "start": 378.553,
-      "end": 378.964
-    },
-    {
-      "word": "further",
-      "start": 378.979,
-      "end": 379.345
-    },
-    {
-      "word": "learning",
-      "start": 379.361,
-      "end": 379.803
-    },
-    {
-      "word": "resources",
-      "start": 379.818,
-      "end": 380.458
-    },
-    {
-      "word": "and",
-      "start": 380.473,
+      "start": 380.36,
       "end": 380.58
     },
     {
+      "word": "lessons.",
+      "start": 380.58,
+      "end": 380.94
+    },
+    {
+      "word": "You",
+      "start": 381.64,
+      "end": 381.84
+    },
+    {
+      "word": "can",
+      "start": 381.84,
+      "end": 382.0
+    },
+    {
+      "word": "find",
+      "start": 382.0,
+      "end": 382.28
+    },
+    {
+      "word": "further",
+      "start": 382.28,
+      "end": 382.68
+    },
+    {
+      "word": "learning",
+      "start": 382.68,
+      "end": 383.04
+    },
+    {
+      "word": "resources",
+      "start": 383.04,
+      "end": 383.52
+    },
+    {
+      "word": "and",
+      "start": 383.52,
+      "end": 383.92
+    },
+    {
       "word": "practice",
-      "start": 380.595,
-      "end": 381.053
+      "start": 383.92,
+      "end": 384.3
     },
     {
       "word": "questions",
-      "start": 381.068,
-      "end": 381.662
+      "start": 384.3,
+      "end": 384.9
     },
     {
       "word": "at",
-      "start": 381.678,
-      "end": 381.815
+      "start": 384.9,
+      "end": 385.14
     },
     {
-      "word": "jdscience.co.uk",
-      "start": 381.83,
-      "end": 384.864
+      "word": "JDScience",
+      "start": 385.14,
+      "end": 385.9
+    },
+    {
+      "word": ".co",
+      "start": 385.9,
+      "end": 387.02
+    },
+    {
+      "word": ".uk.",
+      "start": 387.02,
+      "end": 387.96
     },
     {
       "word": "Thank",
-      "start": 385.915,
-      "end": 386.281
+      "start": 388.96,
+      "end": 389.06
     },
     {
       "word": "you",
-      "start": 386.297,
-      "end": 386.388
+      "start": 389.06,
+      "end": 389.28
     },
     {
       "word": "for",
-      "start": 386.403,
-      "end": 386.54
+      "start": 389.28,
+      "end": 389.48
     },
     {
-      "word": "watching",
-      "start": 386.556,
-      "end": 387.242
+      "word": "watching.",
+      "start": 389.48,
+      "end": 389.92
     }
   ],
-  "chunks": 2,
-  "model": "openvoice_v2",
-  "voice": "uploaded-joes-voice-openvoice-v2",
-  "rate": "-18%",
+  "chunks": 35,
+  "model": "xtts_v2",
+  "voice": "uploaded-joes-voice-xtts",
   "temporary_voice": false,
-  "replace_with": "cloned-voice",
-  "elevenlabs_blocker": "ElevenLabs could not clone (voices_write denied) or synthesise (quota_exceeded, 4 credits remaining). The uploaded 59 s JD Science teaching sample was used as the OpenVoice v2 target speaker."
+  "elevenlabs_blocker": "ElevenLabs quota_exceeded (4 credits remaining) and voices_write denied. Narration synthesised from the uploaded speaker sample with XTTS v2 so accent and timbre come from that recording."
 }

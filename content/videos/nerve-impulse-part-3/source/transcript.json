@@ -2,3156 +2,3264 @@
   "slug": "nerve-impulse-part-3",
   "title": "Transmission of a Nerve Impulse",
   "audio": "/workspace/content/videos/nerve-impulse-part-3/source/narration_master.m4a",
-  "duration": 331.836,
+  "duration": 326.612,
   "full_text": "Hello and welcome back to JD Science.\n\nThis is part three of our Level 3 lesson on the transmission of a nerve impulse. We now have a full action potential in one patch of membrane. The remaining question is how that event travels, and why it does not bounce backwards.\n\nWhen sodium ions enter during depolarisation, the inside of that region becomes positive. Those positive charges spread sideways as local currents. Just ahead of the active region, the local current depolarises the neighbouring membrane towards threshold. Voltage-gated sodium channels there open, and a new action potential is born. The impulse is not a single particle racing down the axon. It is a chain of action potentials, each triggering the next.\n\nWhy does the impulse not also travel backwards into membrane that has just fired? The answer is the refractory period. Immediately after an action potential, voltage-gated sodium channels are inactivated. For a short time, no new action potential can start in that patch, however strong the stimulus. That is the absolute refractory period.\n\nAs the sodium channels recover from inactivation, a stronger-than-normal stimulus can start another action potential. That interval is the relative refractory period, and it overlaps with hyperpolarisation, when the membrane is even further from threshold. Together, these refractory stages do two important jobs. They force one-way propagation, towards resting membrane ahead and away from inactivated membrane behind. They also set a maximum firing frequency, because a second spike cannot start until the sodium channels have recovered.\n\nIn an unmyelinated axon, every neighbouring patch must depolarise in turn. The impulse creeps along the membrane. In a myelinated axon the picture changes. Myelin is an insulator. Ion flow across the membrane is largely restricted to the nodes of Ranvier, where voltage-gated channels are concentrated. Local currents travel quickly under the myelin to the next node. The action potential appears to jump from node to node. That is saltatory conduction, from the Latin for leaping.\n\nSaltatory conduction is faster and more energy-efficient. Fewer ions need to be pumped back, because fewer stretches of membrane exchange ions. Increasing axon diameter also speeds conduction, because local currents travel more easily inside a wider axon. Those two adaptations, myelin and diameter, explain why some fibres carry urgent signals so quickly.\n\nHere is a worked examination-style example. Explain how the refractory period produces one-way transmission along an axon, and how it limits the number of impulses that can be sent each second.\n\nBehind the active region, sodium channels are inactivated, so local currents cannot restart an action potential there. Ahead, the membrane is still at rest, so it can reach threshold. Because each patch must recover before it can fire again, there is a minimum time between spikes, and that limits firing frequency.\n\nNow pause the video and try this matching activity. Match each structure or event to its function. One: myelin sheath. Two: node of Ranvier. Three: local currents. Four: absolute refractory period. Choose from: prevents immediate re-firing; jumps the impulse to the next exposed membrane; insulates the axon; depolarises the neighbouring region to threshold.\n\nHere is a model answer. The myelin sheath insulates the axon. The node of Ranvier is where the impulse is regenerated, so the signal jumps from node to node. Local currents depolarise the neighbouring region to threshold. The absolute refractory period prevents immediate re-firing and so keeps propagation one-way.\n\nThat completes transmission of a nerve impulse. The electrical signal has travelled along the axon. In the next topic we will see what happens when it reaches a chemical synapse, where the message must cross a gap using a neurotransmitter. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "tts_text": "Hello and welcome back to JD Science.\n\nThis is part three of our Level 3 lesson on the transmission of a nerve impulse. We now have a full action potential in one patch of membrane. The remaining question is how that event travels, and why it does not bounce backwards.\n\nWhen sodium ions enter during depolarisation, the inside of that region becomes positive. Those positive charges spread sideways as local currents. Just ahead of the active region, the local current depolarises the neighbouring membrane towards threshold. Voltage-gated sodium channels there open, and a new action potential is born. The impulse is not a single particle racing down the axon. It is a chain of action potentials, each triggering the next.\n\nWhy does the impulse not also travel backwards into membrane that has just fired? The answer is the refractory period. Immediately after an action potential, voltage-gated sodium channels are inactivated. For a short time, no new action potential can start in that patch, however strong the stimulus. That is the absolute refractory period.\n\nAs the sodium channels recover from inactivation, a stronger-than-normal stimulus can start another action potential. That interval is the relative refractory period, and it overlaps with hyperpolarisation, when the membrane is even further from threshold. Together, these refractory stages do two important jobs. They force one-way propagation, towards resting membrane ahead and away from inactivated membrane behind. They also set a maximum firing frequency, because a second spike cannot start until the sodium channels have recovered.\n\nIn an unmyelinated axon, every neighbouring patch must depolarise in turn. The impulse creeps along the membrane. In a myelinated axon the picture changes. Myelin is an insulator. Ion flow across the membrane is largely restricted to the nodes of Ranvier, where voltage-gated channels are concentrated. Local currents travel quickly under the myelin to the next node. The action potential appears to jump from node to node. That is saltatory conduction, from the Latin for leaping.\n\nSaltatory conduction is faster and more energy-efficient. Fewer ions need to be pumped back, because fewer stretches of membrane exchange ions. Increasing axon diameter also speeds conduction, because local currents travel more easily inside a wider axon. Those two adaptations, myelin and diameter, explain why some fibres carry urgent signals so quickly.\n\nHere is a worked examination-style example. Explain how the refractory period produces one-way transmission along an axon, and how it limits the number of impulses that can be sent each second.\n\nBehind the active region, sodium channels are inactivated, so local currents cannot restart an action potential there. Ahead, the membrane is still at rest, so it can reach threshold. Because each patch must recover before it can fire again, there is a minimum time between spikes, and that limits firing frequency.\n\nNow pause the video and try this matching activity. Match each structure or event to its function. One: myelin sheath. Two: node of Ranvier. Three: local currents. Four: absolute refractory period. Choose from: prevents immediate re-firing; jumps the impulse to the next exposed membrane; insulates the axon; depolarises the neighbouring region to threshold.\n\nHere is a model answer. The myelin sheath insulates the axon. The node of Ranvier is where the impulse is regenerated, so the signal jumps from node to node. Local currents depolarise the neighbouring region to threshold. The absolute refractory period prevents immediate re-firing and so keeps propagation one-way.\n\nThat completes transmission of a nerve impulse. The electrical signal has travelled along the axon. In the next topic we will see what happens when it reaches a chemical synapse, where the message must cross a gap using a neurotransmitter. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
   "words": [
     {
-      "word": "Hello",
-      "start": 0.1,
-      "end": 0.603
+      "word": "Hello,",
+      "start": 0.0,
+      "end": 0.24
     },
     {
       "word": "and",
-      "start": 0.618,
-      "end": 0.771
+      "start": 0.62,
+      "end": 1.38
     },
     {
       "word": "welcome",
-      "start": 0.786,
-      "end": 1.243
+      "start": 1.38,
+      "end": 1.66
     },
     {
       "word": "back",
-      "start": 1.259,
-      "end": 1.502
+      "start": 1.66,
+      "end": 2.02
     },
     {
       "word": "to",
-      "start": 1.518,
-      "end": 1.64
+      "start": 2.02,
+      "end": 2.58
     },
     {
       "word": "JD",
-      "start": 1.655,
-      "end": 2.158
+      "start": 2.58,
+      "end": 2.84
     },
     {
-      "word": "Science",
-      "start": 2.173,
-      "end": 2.905
+      "word": "Science.",
+      "start": 2.84,
+      "end": 3.38
     },
     {
       "word": "This",
-      "start": 3.968,
-      "end": 4.273
+      "start": 4.16,
+      "end": 4.46
     },
     {
       "word": "is",
-      "start": 4.288,
-      "end": 4.425
+      "start": 4.46,
+      "end": 4.68
     },
     {
       "word": "part",
-      "start": 4.44,
-      "end": 4.791
+      "start": 4.68,
+      "end": 4.9
     },
     {
       "word": "three",
-      "start": 4.806,
-      "end": 5.141
+      "start": 4.9,
+      "end": 5.34
     },
     {
       "word": "of",
-      "start": 5.157,
-      "end": 5.294
+      "start": 5.34,
+      "end": 5.9
     },
     {
       "word": "our",
-      "start": 5.309,
-      "end": 5.523
+      "start": 5.9,
+      "end": 6.04
     },
     {
-      "word": "Level 3",
-      "start": 5.538,
-      "end": 6.269
+      "word": "level",
+      "start": 6.04,
+      "end": 6.36
+    },
+    {
+      "word": "three",
+      "start": 6.36,
+      "end": 7.14
     },
     {
       "word": "lesson",
-      "start": 6.285,
-      "end": 6.696
+      "start": 7.14,
+      "end": 7.58
     },
     {
       "word": "on",
-      "start": 6.712,
-      "end": 6.834
+      "start": 7.58,
+      "end": 8.44
     },
     {
       "word": "the",
-      "start": 6.849,
-      "end": 6.925
+      "start": 8.44,
+      "end": 8.58
     },
     {
       "word": "transmission",
-      "start": 6.94,
-      "end": 7.687
+      "start": 8.58,
+      "end": 9.08
     },
     {
       "word": "of",
-      "start": 7.702,
-      "end": 7.794
+      "start": 9.08,
+      "end": 9.44
     },
     {
       "word": "a",
-      "start": 7.809,
-      "end": 7.855
+      "start": 9.44,
+      "end": 9.54
     },
     {
       "word": "nerve",
-      "start": 7.87,
-      "end": 8.297
+      "start": 9.54,
+      "end": 9.82
     },
     {
-      "word": "impulse",
-      "start": 8.312,
-      "end": 8.983
+      "word": "impulse.",
+      "start": 9.82,
+      "end": 10.48
     },
     {
       "word": "We",
-      "start": 10.035,
-      "end": 10.294
+      "start": 12.72,
+      "end": 13.56
     },
     {
       "word": "now",
-      "start": 10.309,
-      "end": 10.645
+      "start": 13.56,
+      "end": 13.78
     },
     {
       "word": "have",
-      "start": 10.66,
-      "end": 10.873
+      "start": 13.78,
+      "end": 14.24
     },
     {
       "word": "a",
-      "start": 10.888,
-      "end": 10.949
+      "start": 14.24,
+      "end": 14.36
     },
     {
       "word": "full",
-      "start": 10.965,
-      "end": 11.224
+      "start": 14.36,
+      "end": 14.54
     },
     {
       "word": "action",
-      "start": 11.239,
-      "end": 11.59
+      "start": 14.54,
+      "end": 15.0
     },
     {
       "word": "potential",
-      "start": 11.605,
-      "end": 12.245
+      "start": 15.0,
+      "end": 15.7
     },
     {
       "word": "in",
-      "start": 12.26,
-      "end": 12.398
+      "start": 15.7,
+      "end": 16.34
     },
     {
       "word": "one",
-      "start": 12.413,
-      "end": 12.748
+      "start": 16.34,
+      "end": 16.62
     },
     {
       "word": "patch",
-      "start": 12.763,
-      "end": 13.099
+      "start": 16.62,
+      "end": 17.08
     },
     {
       "word": "of",
-      "start": 13.114,
-      "end": 13.221
+      "start": 17.08,
+      "end": 17.5
     },
     {
-      "word": "membrane",
-      "start": 13.236,
-      "end": 13.998
+      "word": "membrane.",
+      "start": 17.5,
+      "end": 17.86
     },
     {
       "word": "The",
-      "start": 15.05,
-      "end": 15.233
+      "start": 18.6,
+      "end": 19.04
     },
     {
       "word": "remaining",
-      "start": 15.248,
-      "end": 15.797
+      "start": 19.04,
+      "end": 19.42
     },
     {
       "word": "question",
-      "start": 15.812,
-      "end": 16.33
+      "start": 19.42,
+      "end": 20.04
     },
     {
       "word": "is",
-      "start": 16.346,
-      "end": 16.498
+      "start": 20.04,
+      "end": 20.26
     },
     {
       "word": "how",
-      "start": 16.513,
-      "end": 16.727
+      "start": 20.26,
+      "end": 20.42
     },
     {
       "word": "that",
-      "start": 16.742,
-      "end": 16.971
+      "start": 20.42,
+      "end": 20.68
     },
     {
       "word": "event",
-      "start": 16.986,
-      "end": 17.306
+      "start": 20.68,
+      "end": 20.98
     },
     {
-      "word": "travels",
-      "start": 17.321,
-      "end": 17.977
+      "word": "travels,",
+      "start": 20.98,
+      "end": 21.54
     },
     {
       "word": "and",
-      "start": 18.206,
-      "end": 18.358
+      "start": 22.2,
+      "end": 22.66
     },
     {
       "word": "why",
-      "start": 18.373,
-      "end": 18.724
+      "start": 22.66,
+      "end": 22.98
     },
     {
       "word": "it",
-      "start": 18.739,
-      "end": 18.907
+      "start": 22.98,
+      "end": 23.58
     },
     {
       "word": "does",
-      "start": 18.922,
-      "end": 19.151
+      "start": 23.58,
+      "end": 23.76
     },
     {
       "word": "not",
-      "start": 19.166,
-      "end": 19.516
+      "start": 23.76,
+      "end": 23.92
     },
     {
       "word": "bounce",
-      "start": 19.532,
-      "end": 19.943
+      "start": 23.92,
+      "end": 24.28
     },
     {
-      "word": "backwards",
-      "start": 19.959,
-      "end": 20.736
+      "word": "backwards,",
+      "start": 24.28,
+      "end": 24.78
     },
     {
-      "word": "When",
-      "start": 21.788,
-      "end": 22.138
+      "word": "when",
+      "start": 25.36,
+      "end": 25.78
     },
     {
       "word": "sodium",
-      "start": 22.154,
-      "end": 22.702
+      "start": 25.78,
+      "end": 26.14
     },
     {
       "word": "ions",
-      "start": 22.718,
-      "end": 23.144
+      "start": 26.14,
+      "end": 26.58
     },
     {
       "word": "enter",
-      "start": 23.16,
-      "end": 23.495
+      "start": 26.58,
+      "end": 27.08
     },
     {
       "word": "during",
-      "start": 23.51,
-      "end": 23.891
+      "start": 27.08,
+      "end": 27.96
     },
     {
-      "word": "depolarisation",
-      "start": 23.907,
-      "end": 25.172
+      "word": "depolarization,",
+      "start": 27.96,
+      "end": 29.32
     },
     {
       "word": "the",
-      "start": 25.492,
-      "end": 25.614
+      "start": 29.8,
+      "end": 29.88
     },
     {
       "word": "inside",
-      "start": 25.629,
-      "end": 26.254
+      "start": 29.88,
+      "end": 30.44
     },
     {
       "word": "of",
-      "start": 26.27,
-      "end": 26.346
+      "start": 30.44,
+      "end": 30.94
     },
     {
       "word": "that",
-      "start": 26.361,
-      "end": 26.59
+      "start": 30.94,
+      "end": 31.14
     },
     {
       "word": "region",
-      "start": 26.605,
-      "end": 27.047
+      "start": 31.14,
+      "end": 31.58
     },
     {
       "word": "becomes",
-      "start": 27.062,
-      "end": 27.565
+      "start": 31.58,
+      "end": 32.34
     },
     {
-      "word": "positive",
-      "start": 27.581,
-      "end": 28.327
+      "word": "positive.",
+      "start": 32.34,
+      "end": 33.1
     },
     {
       "word": "Those",
-      "start": 29.379,
-      "end": 29.73
+      "start": 33.46,
+      "end": 33.74
     },
     {
       "word": "positive",
-      "start": 29.745,
-      "end": 30.248
+      "start": 33.74,
+      "end": 34.26
     },
     {
       "word": "charges",
-      "start": 30.263,
-      "end": 30.797
+      "start": 34.26,
+      "end": 34.78
     },
     {
       "word": "spread",
-      "start": 30.812,
-      "end": 31.193
+      "start": 34.78,
+      "end": 35.5
     },
     {
       "word": "sideways",
-      "start": 31.209,
-      "end": 31.971
+      "start": 35.5,
+      "end": 36.16
     },
     {
       "word": "as",
-      "start": 31.986,
-      "end": 32.138
+      "start": 36.16,
+      "end": 36.82
     },
     {
       "word": "local",
-      "start": 32.154,
-      "end": 32.565
+      "start": 36.82,
+      "end": 37.14
     },
     {
-      "word": "currents",
-      "start": 32.581,
-      "end": 33.297
+      "word": "currents.",
+      "start": 37.14,
+      "end": 37.62
     },
     {
       "word": "Just",
-      "start": 34.349,
-      "end": 34.684
+      "start": 38.38,
+      "end": 38.68
     },
     {
       "word": "ahead",
-      "start": 34.699,
-      "end": 34.959
+      "start": 38.68,
+      "end": 39.0
     },
     {
       "word": "of",
-      "start": 34.974,
-      "end": 35.05
+      "start": 39.0,
+      "end": 39.18
     },
     {
       "word": "the",
-      "start": 35.065,
-      "end": 35.202
+      "start": 39.18,
+      "end": 39.3
     },
     {
       "word": "active",
-      "start": 35.218,
-      "end": 35.629
+      "start": 39.3,
+      "end": 39.6
     },
     {
-      "word": "region",
-      "start": 35.645,
-      "end": 36.148
+      "word": "region,",
+      "start": 39.6,
+      "end": 40.18
     },
     {
       "word": "the",
-      "start": 36.331,
-      "end": 36.437
+      "start": 40.9,
+      "end": 41.18
     },
     {
       "word": "local",
-      "start": 36.452,
-      "end": 36.894
+      "start": 41.18,
+      "end": 41.44
     },
     {
       "word": "current",
-      "start": 36.91,
-      "end": 37.306
+      "start": 41.44,
+      "end": 41.98
     },
     {
-      "word": "depolarises",
-      "start": 37.321,
-      "end": 38.297
+      "word": "depolarizes",
+      "start": 41.98,
+      "end": 43.22
     },
     {
       "word": "the",
-      "start": 38.312,
-      "end": 38.419
+      "start": 43.22,
+      "end": 43.5
     },
     {
-      "word": "neighbouring",
-      "start": 38.434,
-      "end": 38.998
+      "word": "neighboring",
+      "start": 43.5,
+      "end": 43.86
     },
     {
       "word": "membrane",
-      "start": 39.013,
-      "end": 39.562
+      "start": 43.86,
+      "end": 44.44
     },
     {
       "word": "towards",
-      "start": 39.577,
-      "end": 40.111
+      "start": 44.76,
+      "end": 45.24
     },
     {
-      "word": "threshold",
-      "start": 40.126,
-      "end": 40.934
+      "word": "threshold.",
+      "start": 45.24,
+      "end": 45.92
     },
     {
-      "word": "Voltage-gated",
-      "start": 41.986,
-      "end": 42.946
+      "word": "Voltage",
+      "start": 46.66,
+      "end": 47.2
+    },
+    {
+      "word": "-gated",
+      "start": 47.2,
+      "end": 47.58
     },
     {
       "word": "sodium",
-      "start": 42.962,
-      "end": 43.526
+      "start": 47.58,
+      "end": 47.96
     },
     {
       "word": "channels",
-      "start": 43.541,
-      "end": 44.013
+      "start": 47.96,
+      "end": 48.5
     },
     {
-      "word": "there",
-      "start": 44.029,
-      "end": 44.166
+      "word": "are",
+      "start": 48.5,
+      "end": 48.78
     },
     {
-      "word": "open",
-      "start": 44.181,
-      "end": 44.654
+      "word": "open,",
+      "start": 48.78,
+      "end": 49.2
     },
     {
       "word": "and",
-      "start": 44.943,
-      "end": 45.111
+      "start": 49.98,
+      "end": 50.14
     },
     {
       "word": "a",
-      "start": 45.126,
-      "end": 45.187
+      "start": 50.14,
+      "end": 50.24
     },
     {
       "word": "new",
-      "start": 45.202,
-      "end": 45.523
+      "start": 50.24,
+      "end": 50.42
     },
     {
       "word": "action",
-      "start": 45.538,
-      "end": 45.949
+      "start": 50.42,
+      "end": 50.84
     },
     {
       "word": "potential",
-      "start": 45.965,
-      "end": 46.635
+      "start": 50.84,
+      "end": 51.44
     },
     {
       "word": "is",
-      "start": 46.651,
-      "end": 46.788
+      "start": 51.44,
+      "end": 51.68
     },
     {
-      "word": "born",
-      "start": 46.803,
-      "end": 47.382
+      "word": "born.",
+      "start": 51.68,
+      "end": 51.98
     },
     {
       "word": "The",
-      "start": 48.434,
-      "end": 48.648
+      "start": 52.52,
+      "end": 52.92
     },
     {
       "word": "impulse",
-      "start": 48.663,
-      "end": 49.196
+      "start": 52.92,
+      "end": 53.26
     },
     {
       "word": "is",
-      "start": 49.212,
-      "end": 49.425
+      "start": 53.26,
+      "end": 53.52
     },
     {
       "word": "not",
-      "start": 49.44,
-      "end": 49.73
+      "start": 53.52,
+      "end": 53.7
     },
     {
       "word": "a",
-      "start": 49.745,
-      "end": 49.821
+      "start": 53.7,
+      "end": 53.88
     },
     {
       "word": "single",
-      "start": 49.837,
-      "end": 50.294
+      "start": 53.88,
+      "end": 54.24
     },
     {
       "word": "particle",
-      "start": 50.309,
-      "end": 50.934
+      "start": 54.24,
+      "end": 54.76
     },
     {
       "word": "racing",
-      "start": 50.949,
-      "end": 51.422
+      "start": 54.76,
+      "end": 55.5
     },
     {
       "word": "down",
-      "start": 51.437,
-      "end": 51.742
+      "start": 55.5,
+      "end": 55.78
     },
     {
       "word": "the",
-      "start": 51.757,
-      "end": 51.879
+      "start": 55.78,
+      "end": 55.98
     },
     {
-      "word": "axon",
-      "start": 51.895,
-      "end": 52.611
+      "word": "axon.",
+      "start": 55.98,
+      "end": 56.52
     },
     {
-      "word": "It",
-      "start": 53.663,
-      "end": 53.891
-    },
-    {
-      "word": "is",
-      "start": 53.907,
-      "end": 54.013
+      "word": "Is",
+      "start": 57.7,
+      "end": 58.1
     },
     {
       "word": "a",
-      "start": 54.029,
-      "end": 54.105
+      "start": 58.1,
+      "end": 58.24
     },
     {
       "word": "chain",
-      "start": 54.12,
-      "end": 54.456
+      "start": 58.24,
+      "end": 58.52
     },
     {
       "word": "of",
-      "start": 54.471,
-      "end": 54.562
+      "start": 58.52,
+      "end": 58.76
     },
     {
       "word": "action",
-      "start": 54.577,
-      "end": 54.974
+      "start": 58.76,
+      "end": 59.1
     },
     {
       "word": "potentials",
-      "start": 54.989,
-      "end": 55.812
+      "start": 59.1,
+      "end": 60.26
     },
     {
       "word": "each",
-      "start": 56.102,
-      "end": 56.361
+      "start": 60.26,
+      "end": 60.7
     },
     {
       "word": "triggering",
-      "start": 56.376,
-      "end": 56.91
+      "start": 60.7,
+      "end": 61.16
     },
     {
       "word": "the",
-      "start": 56.925,
-      "end": 57.016
+      "start": 61.16,
+      "end": 61.5
     },
     {
-      "word": "next",
-      "start": 57.032,
-      "end": 57.596
+      "word": "nerve?",
+      "start": 61.5,
+      "end": 61.7
     },
     {
       "word": "Why",
-      "start": 58.648,
-      "end": 58.968
+      "start": 62.46,
+      "end": 62.64
     },
     {
       "word": "does",
-      "start": 58.983,
-      "end": 59.196
+      "start": 62.64,
+      "end": 62.8
     },
     {
       "word": "the",
-      "start": 59.212,
-      "end": 59.349
+      "start": 62.8,
+      "end": 63.0
     },
     {
       "word": "impulse",
-      "start": 59.364,
-      "end": 59.852
+      "start": 63.0,
+      "end": 63.48
     },
     {
       "word": "not",
-      "start": 59.867,
-      "end": 60.172
+      "start": 63.48,
+      "end": 64.0
     },
     {
       "word": "also",
-      "start": 60.187,
-      "end": 60.538
+      "start": 64.0,
+      "end": 64.42
     },
     {
       "word": "travel",
-      "start": 60.553,
-      "end": 60.965
+      "start": 64.42,
+      "end": 64.8
     },
     {
       "word": "backwards",
-      "start": 60.98,
-      "end": 61.483
+      "start": 64.8,
+      "end": 65.3
     },
     {
       "word": "into",
-      "start": 61.498,
-      "end": 61.773
+      "start": 65.3,
+      "end": 65.68
     },
     {
       "word": "membrane",
-      "start": 61.788,
-      "end": 62.352
+      "start": 65.68,
+      "end": 66.08
     },
     {
       "word": "that",
-      "start": 62.367,
-      "end": 62.535
+      "start": 66.08,
+      "end": 67.12
     },
     {
-      "word": "has",
-      "start": 62.55,
-      "end": 62.748
+      "word": "is",
+      "start": 67.12,
+      "end": 67.28
     },
     {
       "word": "just",
-      "start": 62.763,
-      "end": 63.099
+      "start": 67.28,
+      "end": 67.54
     },
     {
-      "word": "fired",
-      "start": 63.114,
-      "end": 63.754
+      "word": "fired?",
+      "start": 67.54,
+      "end": 67.94
     },
     {
       "word": "The",
-      "start": 64.806,
-      "end": 65.035
+      "start": 68.6,
+      "end": 68.7
     },
     {
       "word": "answer",
-      "start": 65.05,
-      "end": 65.584
+      "start": 68.7,
+      "end": 69.1
     },
     {
       "word": "is",
-      "start": 65.599,
-      "end": 65.843
+      "start": 69.1,
+      "end": 69.88
     },
     {
       "word": "the",
-      "start": 65.858,
-      "end": 65.965
+      "start": 69.88,
+      "end": 70.02
     },
     {
       "word": "refractory",
-      "start": 65.98,
-      "end": 66.803
+      "start": 70.02,
+      "end": 70.7
     },
     {
-      "word": "period",
-      "start": 66.818,
-      "end": 67.504
+      "word": "period.",
+      "start": 70.7,
+      "end": 71.32
     },
     {
       "word": "Immediately",
-      "start": 68.556,
-      "end": 69.41
+      "start": 71.88,
+      "end": 72.26
     },
     {
       "word": "after",
-      "start": 69.425,
-      "end": 69.776
+      "start": 72.26,
+      "end": 72.86
     },
     {
       "word": "an",
-      "start": 69.791,
-      "end": 69.928
+      "start": 72.86,
+      "end": 73.02
     },
     {
       "word": "action",
-      "start": 69.943,
-      "end": 70.294
+      "start": 73.02,
+      "end": 73.26
     },
     {
-      "word": "potential",
-      "start": 70.309,
-      "end": 71.01
+      "word": "potential,",
+      "start": 73.26,
+      "end": 74.02
     },
     {
-      "word": "voltage-gated",
-      "start": 71.209,
-      "end": 72.093
+      "word": "voltage",
+      "start": 74.62,
+      "end": 74.94
+    },
+    {
+      "word": "-gated",
+      "start": 74.94,
+      "end": 75.42
     },
     {
       "word": "sodium",
-      "start": 72.108,
-      "end": 72.641
+      "start": 75.42,
+      "end": 75.82
     },
     {
       "word": "channels",
-      "start": 72.657,
-      "end": 73.144
+      "start": 75.82,
+      "end": 76.44
     },
     {
       "word": "are",
-      "start": 73.16,
-      "end": 73.282
+      "start": 76.44,
+      "end": 76.84
     },
     {
-      "word": "inactivated",
-      "start": 73.297,
-      "end": 74.349
+      "word": "inactivated.",
+      "start": 76.84,
+      "end": 77.92
     },
     {
       "word": "For",
-      "start": 75.401,
-      "end": 75.629
+      "start": 78.41,
+      "end": 78.82
     },
     {
       "word": "a",
-      "start": 75.644,
-      "end": 75.705
+      "start": 78.82,
+      "end": 78.94
     },
     {
       "word": "short",
-      "start": 75.721,
-      "end": 76.132
+      "start": 78.94,
+      "end": 79.18
     },
     {
-      "word": "time",
-      "start": 76.148,
-      "end": 76.59
+      "word": "time,",
+      "start": 79.18,
+      "end": 79.74
     },
     {
       "word": "no",
-      "start": 76.727,
-      "end": 76.986
+      "start": 80.3,
+      "end": 80.46
     },
     {
       "word": "new",
-      "start": 77.001,
-      "end": 77.337
+      "start": 80.46,
+      "end": 80.68
     },
     {
       "word": "action",
-      "start": 77.352,
-      "end": 77.718
+      "start": 80.68,
+      "end": 81.0
     },
     {
       "word": "potential",
-      "start": 77.733,
-      "end": 78.312
+      "start": 81.0,
+      "end": 81.56
     },
     {
       "word": "can",
-      "start": 78.327,
-      "end": 78.495
+      "start": 81.56,
+      "end": 81.76
     },
     {
       "word": "start",
-      "start": 78.51,
-      "end": 78.968
+      "start": 81.76,
+      "end": 82.04
     },
     {
       "word": "in",
-      "start": 78.983,
-      "end": 79.09
+      "start": 82.04,
+      "end": 82.26
     },
     {
       "word": "that",
-      "start": 79.105,
-      "end": 79.349
+      "start": 82.26,
+      "end": 82.4
     },
     {
-      "word": "patch",
-      "start": 79.364,
-      "end": 79.806
+      "word": "patch,",
+      "start": 82.4,
+      "end": 82.88
     },
     {
       "word": "however",
-      "start": 80.081,
-      "end": 80.507
+      "start": 83.48,
+      "end": 83.68
     },
     {
       "word": "strong",
-      "start": 80.523,
-      "end": 80.949
+      "start": 83.68,
+      "end": 84.16
     },
     {
       "word": "the",
-      "start": 80.965,
-      "end": 81.071
+      "start": 84.16,
+      "end": 84.42
     },
     {
-      "word": "stimulus",
-      "start": 81.087,
-      "end": 81.894
+      "word": "stimulus.",
+      "start": 84.42,
+      "end": 84.84
     },
     {
       "word": "That",
-      "start": 82.946,
-      "end": 83.266
+      "start": 85.5,
+      "end": 85.76
     },
     {
       "word": "is",
-      "start": 83.282,
-      "end": 83.404
+      "start": 85.76,
+      "end": 86.42
     },
     {
       "word": "the",
-      "start": 83.419,
-      "end": 83.571
+      "start": 86.42,
+      "end": 86.58
     },
     {
       "word": "absolute",
-      "start": 83.587,
-      "end": 84.288
+      "start": 86.58,
+      "end": 87.2
     },
     {
       "word": "refractory",
-      "start": 84.303,
-      "end": 85.08
+      "start": 87.2,
+      "end": 88.24
     },
     {
-      "word": "period",
-      "start": 85.096,
-      "end": 85.797
+      "word": "period.",
+      "start": 88.24,
+      "end": 88.72
     },
     {
       "word": "As",
-      "start": 86.849,
-      "end": 87.108
+      "start": 89.4,
+      "end": 89.78
     },
     {
       "word": "the",
-      "start": 87.123,
-      "end": 87.245
+      "start": 89.78,
+      "end": 89.92
     },
     {
       "word": "sodium",
-      "start": 87.26,
-      "end": 87.824
+      "start": 89.92,
+      "end": 90.26
     },
     {
       "word": "channels",
-      "start": 87.84,
-      "end": 88.327
+      "start": 90.26,
+      "end": 90.7
     },
     {
       "word": "recover",
-      "start": 88.343,
-      "end": 88.83
+      "start": 90.7,
+      "end": 91.08
     },
     {
       "word": "from",
-      "start": 88.846,
-      "end": 89.059
+      "start": 91.08,
+      "end": 91.42
     },
     {
-      "word": "inactivation",
-      "start": 89.074,
-      "end": 89.989
+      "word": "inactivation,",
+      "start": 91.42,
+      "end": 92.36
     },
     {
       "word": "a",
-      "start": 90.202,
-      "end": 90.248
+      "start": 93.04,
+      "end": 93.16
     },
     {
-      "word": "stronger-than-normal",
-      "start": 90.263,
-      "end": 91.391
+      "word": "stronger",
+      "start": 93.16,
+      "end": 93.56
+    },
+    {
+      "word": "than",
+      "start": 93.56,
+      "end": 93.78
+    },
+    {
+      "word": "normal",
+      "start": 93.78,
+      "end": 94.12
     },
     {
       "word": "stimulus",
-      "start": 91.407,
-      "end": 92.016
+      "start": 94.12,
+      "end": 94.72
     },
     {
       "word": "can",
-      "start": 92.032,
-      "end": 92.23
+      "start": 94.72,
+      "end": 95.28
     },
     {
       "word": "start",
-      "start": 92.245,
-      "end": 92.672
+      "start": 95.28,
+      "end": 95.52
     },
     {
       "word": "another",
-      "start": 92.687,
-      "end": 93.099
+      "start": 95.52,
+      "end": 95.8
     },
     {
       "word": "action",
-      "start": 93.114,
-      "end": 93.48
+      "start": 95.8,
+      "end": 96.24
     },
     {
-      "word": "potential",
-      "start": 93.495,
-      "end": 94.257
+      "word": "potential.",
+      "start": 96.24,
+      "end": 96.78
     },
     {
       "word": "That",
-      "start": 95.309,
-      "end": 95.66
+      "start": 97.32,
+      "end": 97.68
     },
     {
       "word": "interval",
-      "start": 95.675,
-      "end": 96.224
+      "start": 97.68,
+      "end": 98.12
     },
     {
       "word": "is",
-      "start": 96.239,
-      "end": 96.361
+      "start": 98.12,
+      "end": 98.66
     },
     {
       "word": "the",
-      "start": 96.376,
-      "end": 96.483
+      "start": 98.66,
+      "end": 98.84
     },
     {
       "word": "relative",
-      "start": 96.498,
-      "end": 97.016
+      "start": 98.84,
+      "end": 99.2
     },
     {
       "word": "refractory",
-      "start": 97.032,
-      "end": 97.763
+      "start": 99.2,
+      "end": 99.88
     },
     {
-      "word": "period",
-      "start": 97.779,
-      "end": 98.358
+      "word": "period,",
+      "start": 99.88,
+      "end": 100.42
     },
     {
       "word": "and",
-      "start": 98.617,
-      "end": 98.754
+      "start": 101.16,
+      "end": 101.36
     },
     {
       "word": "it",
-      "start": 98.769,
-      "end": 98.907
+      "start": 101.36,
+      "end": 101.46
     },
     {
       "word": "overlaps",
-      "start": 98.922,
-      "end": 99.593
+      "start": 101.46,
+      "end": 101.98
     },
     {
       "word": "with",
-      "start": 99.608,
-      "end": 99.76
+      "start": 101.98,
+      "end": 102.24
     },
     {
-      "word": "hyperpolarisation",
-      "start": 99.776,
-      "end": 101.254
+      "word": "hyperpolarization.",
+      "start": 102.24,
+      "end": 103.44
     },
     {
-      "word": "when",
-      "start": 101.452,
-      "end": 101.62
+      "word": "When",
+      "start": 104.06,
+      "end": 104.46
     },
     {
       "word": "the",
-      "start": 101.635,
-      "end": 101.712
+      "start": 104.46,
+      "end": 104.62
     },
     {
       "word": "membrane",
-      "start": 101.727,
-      "end": 102.337
+      "start": 104.62,
+      "end": 104.98
     },
     {
       "word": "is",
-      "start": 102.352,
-      "end": 102.55
+      "start": 104.98,
+      "end": 105.4
     },
     {
       "word": "even",
-      "start": 102.565,
-      "end": 102.901
+      "start": 105.4,
+      "end": 105.64
     },
     {
       "word": "further",
-      "start": 102.916,
-      "end": 103.404
+      "start": 105.64,
+      "end": 106.06
     },
     {
       "word": "from",
-      "start": 103.419,
-      "end": 103.663
+      "start": 106.06,
+      "end": 106.34
     },
     {
-      "word": "threshold",
-      "start": 103.678,
-      "end": 104.562
+      "word": "threshold,",
+      "start": 106.34,
+      "end": 106.78
     },
     {
-      "word": "Together",
-      "start": 105.614,
-      "end": 106.209
+      "word": "together",
+      "start": 107.3,
+      "end": 107.84
     },
     {
       "word": "these",
-      "start": 106.361,
-      "end": 106.62
+      "start": 107.84,
+      "end": 108.56
     },
     {
       "word": "refractory",
-      "start": 106.635,
-      "end": 107.337
+      "start": 108.56,
+      "end": 109.34
     },
     {
       "word": "stages",
-      "start": 107.352,
-      "end": 107.901
+      "start": 109.34,
+      "end": 109.86
     },
     {
       "word": "do",
-      "start": 107.916,
-      "end": 108.114
+      "start": 109.86,
+      "end": 110.18
     },
     {
       "word": "two",
-      "start": 108.129,
-      "end": 108.419
+      "start": 110.18,
+      "end": 110.56
     },
     {
       "word": "important",
-      "start": 108.434,
-      "end": 109.09
+      "start": 110.56,
+      "end": 111.32
     },
     {
-      "word": "jobs",
-      "start": 109.105,
-      "end": 109.821
+      "word": "jobs.",
+      "start": 111.32,
+      "end": 111.7
     },
     {
       "word": "They",
-      "start": 110.873,
-      "end": 111.117
+      "start": 112.46,
+      "end": 112.76
     },
     {
       "word": "force",
-      "start": 111.132,
-      "end": 111.544
+      "start": 112.76,
+      "end": 113.06
     },
     {
-      "word": "one-way",
-      "start": 111.559,
-      "end": 112.138
+      "word": "one",
+      "start": 113.06,
+      "end": 113.46
+    },
+    {
+      "word": "-way",
+      "start": 113.46,
+      "end": 113.7
     },
     {
       "word": "propagation",
-      "start": 112.154,
-      "end": 113.084
+      "start": 113.7,
+      "end": 114.36
     },
     {
       "word": "towards",
-      "start": 113.343,
-      "end": 113.83
+      "start": 114.36,
+      "end": 115.4
     },
     {
       "word": "resting",
-      "start": 113.846,
-      "end": 114.303
+      "start": 115.4,
+      "end": 115.94
     },
     {
       "word": "membrane",
-      "start": 114.318,
-      "end": 114.806
+      "start": 115.94,
+      "end": 116.44
     },
     {
-      "word": "ahead",
-      "start": 114.821,
-      "end": 115.141
+      "word": "ahead,",
+      "start": 116.44,
+      "end": 116.92
     },
     {
       "word": "and",
-      "start": 115.157,
-      "end": 115.309
+      "start": 117.54,
+      "end": 117.66
     },
     {
       "word": "away",
-      "start": 115.324,
-      "end": 115.645
+      "start": 117.66,
+      "end": 117.94
     },
     {
       "word": "from",
-      "start": 115.66,
-      "end": 115.858
+      "start": 117.94,
+      "end": 118.24
     },
     {
       "word": "inactivated",
-      "start": 115.873,
-      "end": 116.681
+      "start": 118.24,
+      "end": 119.28
     },
     {
       "word": "membrane",
-      "start": 116.696,
-      "end": 117.245
+      "start": 119.28,
+      "end": 119.64
     },
     {
-      "word": "behind",
-      "start": 117.26,
-      "end": 118.038
+      "word": "behind.",
+      "start": 119.64,
+      "end": 120.22
     },
     {
       "word": "They",
-      "start": 119.09,
-      "end": 119.318
+      "start": 120.9,
+      "end": 121.28
     },
     {
       "word": "also",
-      "start": 119.334,
-      "end": 119.73
+      "start": 121.28,
+      "end": 121.58
     },
     {
       "word": "set",
-      "start": 119.745,
-      "end": 120.004
+      "start": 121.58,
+      "end": 121.82
     },
     {
       "word": "a",
-      "start": 120.019,
-      "end": 120.08
+      "start": 121.82,
+      "end": 121.96
     },
     {
       "word": "maximum",
-      "start": 120.096,
-      "end": 120.721
+      "start": 121.96,
+      "end": 122.32
     },
     {
       "word": "firing",
-      "start": 120.736,
-      "end": 121.315
+      "start": 122.32,
+      "end": 122.76
     },
     {
-      "word": "frequency",
-      "start": 121.331,
-      "end": 122.108
+      "word": "frequency,",
+      "start": 122.76,
+      "end": 123.46
     },
     {
       "word": "because",
-      "start": 122.291,
-      "end": 122.565
+      "start": 123.92,
+      "end": 124.22
     },
     {
-      "word": "a",
-      "start": 122.581,
-      "end": 122.657
+      "word": "the",
+      "start": 124.22,
+      "end": 124.38
     },
     {
       "word": "second",
-      "start": 122.672,
-      "end": 123.114
+      "start": 124.38,
+      "end": 124.64
     },
     {
       "word": "spike",
-      "start": 123.129,
-      "end": 123.495
+      "start": 124.64,
+      "end": 124.92
     },
     {
       "word": "cannot",
-      "start": 123.51,
-      "end": 123.907
+      "start": 124.92,
+      "end": 125.3
     },
     {
       "word": "start",
-      "start": 123.922,
-      "end": 124.41
+      "start": 125.3,
+      "end": 125.76
     },
     {
       "word": "until",
-      "start": 124.425,
-      "end": 124.715
+      "start": 125.76,
+      "end": 126.3
     },
     {
       "word": "the",
-      "start": 124.73,
-      "end": 124.837
+      "start": 126.3,
+      "end": 126.48
     },
     {
       "word": "sodium",
-      "start": 124.852,
-      "end": 125.431
+      "start": 126.48,
+      "end": 126.78
     },
     {
       "word": "channels",
-      "start": 125.446,
-      "end": 125.873
+      "start": 126.78,
+      "end": 127.22
     },
     {
       "word": "have",
-      "start": 125.888,
-      "end": 126.056
+      "start": 127.22,
+      "end": 127.4
     },
     {
-      "word": "recovered",
-      "start": 126.071,
-      "end": 126.712
+      "word": "recovered.",
+      "start": 127.4,
+      "end": 127.8
     },
     {
       "word": "In",
-      "start": 127.763,
-      "end": 127.977
+      "start": 128.4,
+      "end": 128.76
     },
     {
       "word": "an",
-      "start": 127.992,
-      "end": 128.114
+      "start": 128.76,
+      "end": 128.88
     },
     {
-      "word": "unmyelinated",
-      "start": 128.129,
-      "end": 129.105
+      "word": "un",
+      "start": 128.88,
+      "end": 129.16
     },
     {
-      "word": "axon",
-      "start": 129.12,
-      "end": 129.73
+      "word": "-milded",
+      "start": 129.16,
+      "end": 129.7
+    },
+    {
+      "word": "axon,",
+      "start": 129.7,
+      "end": 130.4
     },
     {
       "word": "every",
-      "start": 129.989,
-      "end": 130.248
+      "start": 130.96,
+      "end": 131.18
     },
     {
-      "word": "neighbouring",
-      "start": 130.263,
-      "end": 130.827
+      "word": "neighboring",
+      "start": 131.18,
+      "end": 131.56
     },
     {
       "word": "patch",
-      "start": 130.843,
-      "end": 131.193
+      "start": 131.56,
+      "end": 132.1
     },
     {
       "word": "must",
-      "start": 131.209,
-      "end": 131.513
+      "start": 132.1,
+      "end": 132.44
     },
     {
-      "word": "depolarise",
-      "start": 131.529,
-      "end": 132.398
+      "word": "depolarize",
+      "start": 132.44,
+      "end": 133.34
     },
     {
       "word": "in",
-      "start": 132.413,
-      "end": 132.55
+      "start": 133.34,
+      "end": 133.62
     },
     {
-      "word": "turn",
-      "start": 132.565,
-      "end": 133.099
+      "word": "turn.",
+      "start": 133.62,
+      "end": 133.92
     },
     {
       "word": "The",
-      "start": 134.151,
-      "end": 134.379
+      "start": 134.58,
+      "end": 134.7
     },
     {
       "word": "impulse",
-      "start": 134.394,
-      "end": 134.913
+      "start": 134.7,
+      "end": 135.0
     },
     {
       "word": "creeps",
-      "start": 134.928,
-      "end": 135.37
+      "start": 135.0,
+      "end": 135.56
     },
     {
       "word": "along",
-      "start": 135.385,
-      "end": 135.782
+      "start": 135.56,
+      "end": 135.76
     },
     {
       "word": "the",
-      "start": 135.797,
-      "end": 135.888
+      "start": 135.76,
+      "end": 135.96
     },
     {
-      "word": "membrane",
-      "start": 135.904,
-      "end": 136.681
+      "word": "membrane.",
+      "start": 135.96,
+      "end": 136.32
     },
     {
       "word": "In",
-      "start": 137.733,
-      "end": 137.962
+      "start": 136.98,
+      "end": 137.14
     },
     {
       "word": "a",
-      "start": 137.977,
-      "end": 138.023
+      "start": 137.14,
+      "end": 137.22
     },
     {
-      "word": "myelinated",
-      "start": 138.038,
-      "end": 138.83
+      "word": "malinated",
+      "start": 137.22,
+      "end": 137.7
     },
     {
-      "word": "axon",
-      "start": 138.846,
-      "end": 139.364
+      "word": "axon,",
+      "start": 137.7,
+      "end": 138.54
     },
     {
       "word": "the",
-      "start": 139.379,
-      "end": 139.471
+      "start": 139.18,
+      "end": 139.26
     },
     {
       "word": "picture",
-      "start": 139.486,
-      "end": 139.928
+      "start": 139.26,
+      "end": 139.62
     },
     {
-      "word": "changes",
-      "start": 139.943,
-      "end": 140.736
+      "word": "changes.",
+      "start": 139.62,
+      "end": 140.16
     },
     {
-      "word": "Myelin",
-      "start": 141.788,
-      "end": 142.382
+      "word": "My",
+      "start": 141.62,
+      "end": 141.84
+    },
+    {
+      "word": "lean",
+      "start": 141.84,
+      "end": 142.08
     },
     {
       "word": "is",
-      "start": 142.398,
-      "end": 142.55
+      "start": 142.08,
+      "end": 142.6
     },
     {
       "word": "an",
-      "start": 142.565,
-      "end": 142.672
+      "start": 142.6,
+      "end": 142.76
     },
     {
-      "word": "insulator",
-      "start": 142.687,
-      "end": 143.587
+      "word": "insulator.",
+      "start": 142.76,
+      "end": 143.3
     },
     {
       "word": "Ion",
-      "start": 144.638,
-      "end": 145.126
+      "start": 144.3,
+      "end": 144.56
     },
     {
       "word": "flow",
-      "start": 145.141,
-      "end": 145.507
+      "start": 144.56,
+      "end": 144.84
     },
     {
       "word": "across",
-      "start": 145.523,
-      "end": 145.934
+      "start": 144.84,
+      "end": 145.14
     },
     {
       "word": "the",
-      "start": 145.949,
-      "end": 146.056
+      "start": 145.14,
+      "end": 145.32
     },
     {
       "word": "membrane",
-      "start": 146.071,
-      "end": 146.666
+      "start": 145.32,
+      "end": 145.7
     },
     {
       "word": "is",
-      "start": 146.681,
-      "end": 146.864
+      "start": 145.7,
+      "end": 146.2
     },
     {
       "word": "largely",
-      "start": 146.879,
-      "end": 147.413
+      "start": 146.2,
+      "end": 146.54
     },
     {
       "word": "restricted",
-      "start": 147.428,
-      "end": 148.114
+      "start": 146.54,
+      "end": 147.08
     },
     {
       "word": "to",
-      "start": 148.129,
-      "end": 148.205
+      "start": 147.08,
+      "end": 147.3
     },
     {
       "word": "the",
-      "start": 148.221,
-      "end": 148.327
+      "start": 147.3,
+      "end": 147.42
     },
     {
       "word": "nodes",
-      "start": 148.343,
-      "end": 148.785
+      "start": 147.42,
+      "end": 147.62
     },
     {
       "word": "of",
-      "start": 148.8,
-      "end": 148.922
+      "start": 147.62,
+      "end": 147.86
     },
     {
-      "word": "Ranvier",
-      "start": 148.937,
-      "end": 149.608
+      "word": "Ranveer,",
+      "start": 147.86,
+      "end": 148.26
     },
     {
       "word": "where",
-      "start": 149.821,
-      "end": 149.989
+      "start": 148.86,
+      "end": 149.12
     },
     {
-      "word": "voltage-gated",
-      "start": 150.004,
-      "end": 150.965
+      "word": "voltage",
+      "start": 149.12,
+      "end": 149.48
+    },
+    {
+      "word": "-gated",
+      "start": 149.48,
+      "end": 149.84
     },
     {
       "word": "channels",
-      "start": 150.98,
-      "end": 151.468
+      "start": 149.84,
+      "end": 150.24
     },
     {
       "word": "are",
-      "start": 151.483,
-      "end": 151.544
+      "start": 150.24,
+      "end": 150.46
     },
     {
-      "word": "concentrated",
-      "start": 151.559,
-      "end": 152.702
+      "word": "concentrated.",
+      "start": 150.46,
+      "end": 151.06
     },
     {
       "word": "Local",
-      "start": 153.754,
-      "end": 154.227
+      "start": 151.72,
+      "end": 151.92
     },
     {
       "word": "currents",
-      "start": 154.242,
-      "end": 154.684
+      "start": 151.92,
+      "end": 152.34
     },
     {
       "word": "travel",
-      "start": 154.699,
-      "end": 155.126
+      "start": 152.34,
+      "end": 152.66
     },
     {
       "word": "quickly",
-      "start": 155.141,
-      "end": 155.507
+      "start": 152.66,
+      "end": 153.02
     },
     {
       "word": "under",
-      "start": 155.523,
-      "end": 155.797
+      "start": 153.02,
+      "end": 153.38
     },
     {
       "word": "the",
-      "start": 155.812,
-      "end": 155.904
+      "start": 153.38,
+      "end": 153.52
     },
     {
-      "word": "myelin",
-      "start": 155.919,
-      "end": 156.468
+      "word": "myelane",
+      "start": 153.52,
+      "end": 153.96
     },
     {
       "word": "to",
-      "start": 156.483,
-      "end": 156.59
+      "start": 153.96,
+      "end": 154.4
     },
     {
       "word": "the",
-      "start": 156.605,
-      "end": 156.696
+      "start": 154.4,
+      "end": 154.54
     },
     {
       "word": "next",
-      "start": 156.712,
-      "end": 157.047
+      "start": 154.54,
+      "end": 154.76
     },
     {
-      "word": "node",
-      "start": 157.062,
-      "end": 157.611
+      "word": "node.",
+      "start": 154.76,
+      "end": 155.14
     },
     {
       "word": "The",
-      "start": 158.663,
-      "end": 158.861
+      "start": 155.58,
+      "end": 156.04
     },
     {
       "word": "action",
-      "start": 158.876,
-      "end": 159.273
+      "start": 156.04,
+      "end": 156.4
     },
     {
       "word": "potential",
-      "start": 159.288,
-      "end": 159.898
+      "start": 156.4,
+      "end": 157.16
     },
     {
       "word": "appears",
-      "start": 159.913,
-      "end": 160.309
+      "start": 157.16,
+      "end": 157.94
     },
     {
       "word": "to",
-      "start": 160.324,
-      "end": 160.446
+      "start": 157.94,
+      "end": 158.2
     },
     {
       "word": "jump",
-      "start": 160.462,
-      "end": 160.812
+      "start": 158.2,
+      "end": 158.52
     },
     {
       "word": "from",
-      "start": 160.827,
-      "end": 161.041
+      "start": 158.52,
+      "end": 158.94
     },
     {
       "word": "node",
-      "start": 161.056,
-      "end": 161.391
+      "start": 158.94,
+      "end": 159.22
     },
     {
       "word": "to",
-      "start": 161.407,
-      "end": 161.529
+      "start": 159.22,
+      "end": 159.7
     },
     {
-      "word": "node",
-      "start": 161.544,
-      "end": 162.123
+      "word": "node,",
+      "start": 159.7,
+      "end": 160.16
     },
     {
-      "word": "That",
-      "start": 163.175,
-      "end": 163.495
+      "word": "that",
+      "start": 160.6,
+      "end": 160.88
     },
     {
-      "word": "is",
-      "start": 163.51,
-      "end": 163.693
+      "word": "is,",
+      "start": 160.88,
+      "end": 161.12
     },
     {
-      "word": "saltatory",
-      "start": 163.709,
-      "end": 164.334
+      "word": "solitory",
+      "start": 161.52,
+      "end": 162.08
     },
     {
-      "word": "conduction",
-      "start": 164.349,
-      "end": 165.096
+      "word": "conduction.",
+      "start": 162.08,
+      "end": 162.64
     },
     {
-      "word": "from",
-      "start": 165.324,
-      "end": 165.492
+      "word": "From",
+      "start": 163.38,
+      "end": 163.62
     },
     {
       "word": "the",
-      "start": 165.507,
-      "end": 165.599
+      "start": 163.62,
+      "end": 163.8
     },
     {
       "word": "Latin",
-      "start": 165.614,
-      "end": 166.071
+      "start": 163.8,
+      "end": 164.12
     },
     {
       "word": "for",
-      "start": 166.087,
-      "end": 166.239
+      "start": 164.12,
+      "end": 164.66
     },
     {
-      "word": "leaping",
-      "start": 166.254,
-      "end": 166.91
+      "word": "leaping,",
+      "start": 164.66,
+      "end": 165.26
     },
     {
-      "word": "Saltatory",
-      "start": 167.962,
-      "end": 168.678
+      "word": "solitory",
+      "start": 165.98,
+      "end": 166.48
     },
     {
       "word": "conduction",
-      "start": 168.693,
-      "end": 169.349
+      "start": 166.48,
+      "end": 166.94
     },
     {
       "word": "is",
-      "start": 169.364,
-      "end": 169.562
+      "start": 166.94,
+      "end": 167.48
     },
     {
       "word": "faster",
-      "start": 169.577,
-      "end": 170.096
+      "start": 167.48,
+      "end": 168.0
     },
     {
       "word": "and",
-      "start": 170.111,
-      "end": 170.401
+      "start": 168.0,
+      "end": 168.84
     },
     {
       "word": "more",
-      "start": 170.416,
-      "end": 170.721
+      "start": 168.84,
+      "end": 169.04
     },
     {
-      "word": "energy-efficient",
-      "start": 170.736,
-      "end": 171.833
+      "word": "energy",
+      "start": 169.04,
+      "end": 169.48
+    },
+    {
+      "word": "efficient.",
+      "start": 169.48,
+      "end": 170.06
     },
     {
       "word": "Fewer",
-      "start": 172.885,
-      "end": 173.373
+      "start": 171.08,
+      "end": 171.56
     },
     {
       "word": "ions",
-      "start": 173.388,
-      "end": 173.891
+      "start": 171.56,
+      "end": 171.78
     },
     {
       "word": "need",
-      "start": 173.907,
-      "end": 174.166
+      "start": 171.78,
+      "end": 172.14
     },
     {
       "word": "to",
-      "start": 174.181,
-      "end": 174.242
+      "start": 172.14,
+      "end": 172.3
     },
     {
       "word": "be",
-      "start": 174.257,
-      "end": 174.394
+      "start": 172.3,
+      "end": 172.42
     },
     {
       "word": "pumped",
-      "start": 174.41,
-      "end": 174.791
+      "start": 172.42,
+      "end": 172.7
     },
     {
-      "word": "back",
-      "start": 174.806,
-      "end": 175.172
+      "word": "back,",
+      "start": 172.7,
+      "end": 173.22
     },
     {
       "word": "because",
-      "start": 175.385,
-      "end": 175.675
+      "start": 173.74,
+      "end": 174.0
     },
     {
       "word": "fewer",
-      "start": 175.69,
-      "end": 176.071
+      "start": 174.0,
+      "end": 174.44
     },
     {
       "word": "stretches",
-      "start": 176.087,
-      "end": 176.62
+      "start": 174.44,
+      "end": 174.92
     },
     {
       "word": "of",
-      "start": 176.635,
-      "end": 176.742
+      "start": 174.92,
+      "end": 175.2
     },
     {
       "word": "membrane",
-      "start": 176.757,
-      "end": 177.337
+      "start": 175.2,
+      "end": 175.54
     },
     {
       "word": "exchange",
-      "start": 177.352,
-      "end": 177.992
+      "start": 175.54,
+      "end": 176.4
     },
     {
-      "word": "ions",
-      "start": 178.007,
-      "end": 178.724
+      "word": "ions.",
+      "start": 176.4,
+      "end": 176.84
     },
     {
       "word": "Increasing",
-      "start": 179.776,
-      "end": 180.553
+      "start": 177.6,
+      "end": 178.26
     },
     {
       "word": "axon",
-      "start": 180.568,
-      "end": 181.071
+      "start": 178.26,
+      "end": 178.76
     },
     {
       "word": "diameter",
-      "start": 181.087,
-      "end": 181.635
+      "start": 178.76,
+      "end": 179.28
     },
     {
       "word": "also",
-      "start": 181.651,
-      "end": 182.108
+      "start": 179.28,
+      "end": 180.12
     },
     {
       "word": "speeds",
-      "start": 182.123,
-      "end": 182.55
+      "start": 180.12,
+      "end": 180.48
     },
     {
-      "word": "conduction",
-      "start": 182.565,
-      "end": 183.312
+      "word": "conduction,",
+      "start": 180.48,
+      "end": 181.22
     },
     {
       "word": "because",
-      "start": 183.526,
-      "end": 183.83
+      "start": 181.7,
+      "end": 182.06
     },
     {
       "word": "local",
-      "start": 183.846,
-      "end": 184.257
+      "start": 182.06,
+      "end": 182.46
     },
     {
       "word": "currents",
-      "start": 184.273,
-      "end": 184.73
+      "start": 182.46,
+      "end": 182.94
     },
     {
       "word": "travel",
-      "start": 184.745,
-      "end": 185.202
+      "start": 182.94,
+      "end": 183.34
     },
     {
       "word": "more",
-      "start": 185.218,
-      "end": 185.477
+      "start": 183.34,
+      "end": 183.58
     },
     {
       "word": "easily",
-      "start": 185.492,
-      "end": 185.98
+      "start": 183.58,
+      "end": 184.06
     },
     {
       "word": "inside",
-      "start": 185.995,
-      "end": 186.559
+      "start": 184.06,
+      "end": 184.7
     },
     {
       "word": "a",
-      "start": 186.574,
-      "end": 186.635
+      "start": 184.7,
+      "end": 184.92
     },
     {
       "word": "wider",
-      "start": 186.651,
-      "end": 187.169
+      "start": 184.92,
+      "end": 185.22
     },
     {
-      "word": "axon",
-      "start": 187.184,
-      "end": 187.916
+      "word": "axon.",
+      "start": 185.22,
+      "end": 185.76
     },
     {
       "word": "Those",
-      "start": 188.968,
-      "end": 189.379
+      "start": 186.36,
+      "end": 186.46
     },
     {
       "word": "two",
-      "start": 189.394,
-      "end": 189.684
+      "start": 186.46,
+      "end": 186.74
     },
     {
-      "word": "adaptations",
-      "start": 189.699,
-      "end": 190.721
+      "word": "adaptations,",
+      "start": 186.74,
+      "end": 187.38
     },
     {
       "word": "myelin",
-      "start": 190.949,
-      "end": 191.529
+      "start": 188.06,
+      "end": 188.7
     },
     {
       "word": "and",
-      "start": 191.62,
-      "end": 191.757
+      "start": 188.7,
+      "end": 189.0
     },
     {
-      "word": "diameter",
-      "start": 191.773,
-      "end": 192.474
+      "word": "diameter,",
+      "start": 189.0,
+      "end": 189.46
     },
     {
       "word": "explain",
-      "start": 192.763,
-      "end": 193.343
+      "start": 190.22,
+      "end": 190.56
     },
     {
       "word": "why",
-      "start": 193.358,
-      "end": 193.663
+      "start": 190.56,
+      "end": 190.84
     },
     {
       "word": "some",
-      "start": 193.678,
-      "end": 194.013
+      "start": 190.84,
+      "end": 191.1
     },
     {
-      "word": "fibres",
-      "start": 194.029,
-      "end": 194.562
+      "word": "fibers,",
+      "start": 191.1,
+      "end": 191.56
     },
     {
       "word": "carry",
-      "start": 194.577,
-      "end": 194.989
+      "start": 192.18,
+      "end": 192.5
     },
     {
       "word": "urgent",
-      "start": 195.004,
-      "end": 195.431
+      "start": 192.5,
+      "end": 192.86
     },
     {
       "word": "signals",
-      "start": 195.446,
-      "end": 195.949
+      "start": 192.86,
+      "end": 193.36
     },
     {
       "word": "so",
-      "start": 195.965,
-      "end": 196.163
+      "start": 193.36,
+      "end": 193.68
     },
     {
-      "word": "quickly",
-      "start": 196.178,
-      "end": 196.788
+      "word": "quickly.",
+      "start": 193.68,
+      "end": 194.08
     },
     {
       "word": "Here",
-      "start": 197.84,
-      "end": 198.236
+      "start": 194.84,
+      "end": 195.12
     },
     {
       "word": "is",
-      "start": 198.251,
-      "end": 198.404
+      "start": 195.12,
+      "end": 195.32
     },
     {
       "word": "a",
-      "start": 198.419,
-      "end": 198.48
+      "start": 195.32,
+      "end": 195.42
     },
     {
       "word": "worked",
-      "start": 198.495,
-      "end": 198.907
+      "start": 195.42,
+      "end": 195.72
     },
     {
-      "word": "examination-style",
-      "start": 198.922,
-      "end": 200.202
+      "word": "examination",
+      "start": 195.72,
+      "end": 196.04
     },
     {
-      "word": "example",
-      "start": 200.218,
-      "end": 200.949
+      "word": "style",
+      "start": 196.04,
+      "end": 196.76
+    },
+    {
+      "word": "example.",
+      "start": 196.76,
+      "end": 197.3
     },
     {
       "word": "Explain",
-      "start": 202.001,
-      "end": 202.718
+      "start": 197.94,
+      "end": 198.38
     },
     {
       "word": "how",
-      "start": 202.733,
-      "end": 202.931
+      "start": 198.38,
+      "end": 199.18
     },
     {
       "word": "the",
-      "start": 202.946,
-      "end": 203.084
+      "start": 199.18,
+      "end": 199.42
     },
     {
       "word": "refractory",
-      "start": 203.099,
-      "end": 203.846
+      "start": 199.42,
+      "end": 200.1
     },
     {
       "word": "period",
-      "start": 203.861,
-      "end": 204.379
+      "start": 200.1,
+      "end": 200.62
     },
     {
       "word": "produces",
-      "start": 204.394,
-      "end": 204.959
+      "start": 200.62,
+      "end": 201.14
     },
     {
-      "word": "one-way",
-      "start": 204.974,
-      "end": 205.538
+      "word": "one",
+      "start": 201.14,
+      "end": 201.52
+    },
+    {
+      "word": "-way",
+      "start": 201.52,
+      "end": 201.76
     },
     {
       "word": "transmission",
-      "start": 205.553,
-      "end": 206.315
+      "start": 201.76,
+      "end": 202.48
     },
     {
       "word": "along",
-      "start": 206.33,
-      "end": 206.651
+      "start": 202.48,
+      "end": 203.28
     },
     {
       "word": "an",
-      "start": 206.666,
-      "end": 206.757
+      "start": 203.28,
+      "end": 203.46
     },
     {
-      "word": "axon",
-      "start": 206.773,
-      "end": 207.337
+      "word": "axon,",
+      "start": 203.46,
+      "end": 203.94
     },
     {
       "word": "and",
-      "start": 207.641,
-      "end": 207.779
+      "start": 204.44,
+      "end": 204.74
     },
     {
       "word": "how",
-      "start": 207.794,
-      "end": 208.053
+      "start": 204.74,
+      "end": 204.94
     },
     {
       "word": "it",
-      "start": 208.068,
-      "end": 208.205
+      "start": 204.94,
+      "end": 205.14
     },
     {
       "word": "limits",
-      "start": 208.221,
-      "end": 208.617
+      "start": 205.14,
+      "end": 205.4
     },
     {
       "word": "the",
-      "start": 208.632,
-      "end": 208.739
+      "start": 205.4,
+      "end": 205.66
     },
     {
       "word": "number",
-      "start": 208.754,
-      "end": 209.12
+      "start": 205.66,
+      "end": 205.88
     },
     {
       "word": "of",
-      "start": 209.135,
-      "end": 209.242
+      "start": 205.88,
+      "end": 206.1
     },
     {
       "word": "impulses",
-      "start": 209.257,
-      "end": 209.882
+      "start": 206.1,
+      "end": 206.58
     },
     {
       "word": "that",
-      "start": 209.898,
-      "end": 210.035
+      "start": 206.58,
+      "end": 206.84
     },
     {
       "word": "can",
-      "start": 210.05,
-      "end": 210.202
+      "start": 206.84,
+      "end": 206.98
     },
     {
       "word": "be",
-      "start": 210.218,
-      "end": 210.37
+      "start": 206.98,
+      "end": 207.14
     },
     {
       "word": "sent",
-      "start": 210.385,
-      "end": 210.751
+      "start": 207.14,
+      "end": 207.42
     },
     {
       "word": "each",
-      "start": 210.766,
-      "end": 211.01
+      "start": 207.42,
+      "end": 208.02
     },
     {
-      "word": "second",
-      "start": 211.026,
-      "end": 211.666
+      "word": "second.",
+      "start": 208.02,
+      "end": 208.48
     },
     {
       "word": "Behind",
-      "start": 212.86,
-      "end": 213.363
+      "start": 209.12,
+      "end": 209.52
     },
     {
       "word": "the",
-      "start": 213.378,
-      "end": 213.515
+      "start": 209.52,
+      "end": 209.72
     },
     {
       "word": "active",
-      "start": 213.531,
-      "end": 213.942
+      "start": 209.72,
+      "end": 210.04
     },
     {
-      "word": "region",
-      "start": 213.958,
-      "end": 214.476
+      "word": "region,",
+      "start": 210.04,
+      "end": 210.5
     },
     {
       "word": "sodium",
-      "start": 214.628,
-      "end": 215.147
+      "start": 210.9,
+      "end": 211.16
     },
     {
       "word": "channels",
-      "start": 215.162,
-      "end": 215.634
+      "start": 211.16,
+      "end": 211.6
     },
     {
       "word": "are",
-      "start": 215.65,
-      "end": 215.772
+      "start": 211.6,
+      "end": 211.8
     },
     {
-      "word": "inactivated",
-      "start": 215.787,
-      "end": 216.671
+      "word": "inactivated,",
+      "start": 211.8,
+      "end": 212.52
     },
     {
       "word": "so",
-      "start": 216.945,
-      "end": 217.083
+      "start": 212.52,
+      "end": 213.16
     },
     {
       "word": "local",
-      "start": 217.098,
-      "end": 217.54
+      "start": 213.16,
+      "end": 213.44
     },
     {
       "word": "currents",
-      "start": 217.555,
-      "end": 218.012
+      "start": 213.44,
+      "end": 213.84
     },
     {
       "word": "cannot",
-      "start": 218.028,
-      "end": 218.5
+      "start": 213.84,
+      "end": 214.12
     },
     {
       "word": "restart",
-      "start": 218.515,
-      "end": 219.14
+      "start": 214.12,
+      "end": 214.52
     },
     {
       "word": "an",
-      "start": 219.156,
-      "end": 219.262
+      "start": 214.52,
+      "end": 214.78
     },
     {
       "word": "action",
-      "start": 219.278,
-      "end": 219.643
+      "start": 214.78,
+      "end": 215.04
     },
     {
       "word": "potential",
-      "start": 219.659,
-      "end": 220.269
+      "start": 215.04,
+      "end": 215.64
     },
     {
-      "word": "there",
-      "start": 220.284,
-      "end": 220.604
+      "word": "there.",
+      "start": 215.64,
+      "end": 215.92
     },
     {
-      "word": "Ahead",
-      "start": 221.667,
-      "end": 222.215
+      "word": "Ahead,",
+      "start": 216.52,
+      "end": 216.94
     },
     {
       "word": "the",
-      "start": 222.49,
-      "end": 222.581
+      "start": 217.36,
+      "end": 217.46
     },
     {
       "word": "membrane",
-      "start": 222.597,
-      "end": 223.222
+      "start": 217.46,
+      "end": 217.8
     },
     {
       "word": "is",
-      "start": 223.237,
-      "end": 223.404
+      "start": 217.8,
+      "end": 218.06
     },
     {
       "word": "still",
-      "start": 223.42,
-      "end": 223.725
+      "start": 218.06,
+      "end": 218.26
     },
     {
       "word": "at",
-      "start": 223.74,
-      "end": 223.892
+      "start": 218.26,
+      "end": 218.38
     },
     {
-      "word": "rest",
-      "start": 223.908,
-      "end": 224.35
+      "word": "rest,",
+      "start": 218.38,
+      "end": 218.8
     },
     {
       "word": "so",
-      "start": 224.609,
-      "end": 224.776
+      "start": 219.28,
+      "end": 219.56
     },
     {
       "word": "it",
-      "start": 224.792,
-      "end": 224.883
+      "start": 219.56,
+      "end": 219.7
     },
     {
       "word": "can",
-      "start": 224.898,
-      "end": 225.081
+      "start": 219.7,
+      "end": 219.82
     },
     {
       "word": "reach",
-      "start": 225.097,
-      "end": 225.401
+      "start": 219.82,
+      "end": 220.0
     },
     {
-      "word": "threshold",
-      "start": 225.417,
-      "end": 226.286
+      "word": "threshold.",
+      "start": 220.0,
+      "end": 220.54
     },
     {
       "word": "Because",
-      "start": 227.337,
-      "end": 227.734
+      "start": 221.36,
+      "end": 221.78
     },
     {
       "word": "each",
-      "start": 227.749,
-      "end": 228.039
+      "start": 221.78,
+      "end": 222.18
     },
     {
       "word": "patch",
-      "start": 228.054,
-      "end": 228.374
+      "start": 222.18,
+      "end": 222.48
     },
     {
       "word": "must",
-      "start": 228.389,
-      "end": 228.709
+      "start": 222.48,
+      "end": 222.86
     },
     {
       "word": "recover",
-      "start": 228.725,
-      "end": 229.182
+      "start": 222.86,
+      "end": 223.3
     },
     {
       "word": "before",
-      "start": 229.197,
-      "end": 229.548
+      "start": 223.3,
+      "end": 223.66
     },
     {
       "word": "it",
-      "start": 229.563,
-      "end": 229.685
+      "start": 223.66,
+      "end": 223.88
     },
     {
       "word": "can",
-      "start": 229.7,
-      "end": 229.883
+      "start": 223.88,
+      "end": 223.98
     },
     {
       "word": "fire",
-      "start": 229.898,
-      "end": 230.356
+      "start": 223.98,
+      "end": 224.24
     },
     {
-      "word": "again",
-      "start": 230.371,
-      "end": 230.843
+      "word": "again,",
+      "start": 224.24,
+      "end": 224.64
     },
     {
       "word": "there",
-      "start": 231.118,
-      "end": 231.27
+      "start": 225.08,
+      "end": 225.2
     },
     {
       "word": "is",
-      "start": 231.286,
-      "end": 231.438
+      "start": 225.2,
+      "end": 225.36
     },
     {
       "word": "a",
-      "start": 231.453,
-      "end": 231.514
+      "start": 225.36,
+      "end": 225.44
     },
     {
       "word": "minimum",
-      "start": 231.53,
-      "end": 232.002
+      "start": 225.44,
+      "end": 225.68
     },
     {
       "word": "time",
-      "start": 232.017,
-      "end": 232.368
+      "start": 225.68,
+      "end": 226.08
     },
     {
       "word": "between",
-      "start": 232.383,
-      "end": 232.825
+      "start": 226.08,
+      "end": 226.44
     },
     {
-      "word": "spikes",
-      "start": 232.841,
-      "end": 233.466
+      "word": "spikes,",
+      "start": 226.44,
+      "end": 227.0
     },
     {
       "word": "and",
-      "start": 233.709,
-      "end": 233.831
+      "start": 227.58,
+      "end": 227.7
     },
     {
       "word": "that",
-      "start": 233.847,
-      "end": 234.06
+      "start": 227.7,
+      "end": 227.86
     },
     {
       "word": "limits",
-      "start": 234.075,
-      "end": 234.456
+      "start": 227.86,
+      "end": 228.12
     },
     {
       "word": "firing",
-      "start": 234.472,
-      "end": 235.066
+      "start": 228.12,
+      "end": 228.6
     },
     {
-      "word": "frequency",
-      "start": 235.081,
-      "end": 235.935
+      "word": "frequency.",
+      "start": 228.6,
+      "end": 229.22
     },
     {
       "word": "Now",
-      "start": 236.987,
-      "end": 237.368
+      "start": 229.98,
+      "end": 230.26
     },
     {
       "word": "pause",
-      "start": 237.383,
-      "end": 237.749
+      "start": 230.26,
+      "end": 230.56
     },
     {
       "word": "the",
-      "start": 237.764,
-      "end": 237.871
+      "start": 230.56,
+      "end": 230.74
     },
     {
       "word": "video",
-      "start": 237.886,
-      "end": 238.359
+      "start": 230.74,
+      "end": 231.08
     },
     {
       "word": "and",
-      "start": 238.374,
-      "end": 238.511
+      "start": 231.08,
+      "end": 231.62
     },
     {
       "word": "try",
-      "start": 238.526,
-      "end": 238.816
+      "start": 231.62,
+      "end": 231.86
     },
     {
       "word": "this",
-      "start": 238.831,
-      "end": 239.121
+      "start": 231.86,
+      "end": 232.12
     },
     {
       "word": "matching",
-      "start": 239.136,
-      "end": 239.624
+      "start": 232.12,
+      "end": 232.44
     },
     {
-      "word": "activity",
-      "start": 239.639,
-      "end": 240.356
+      "word": "activity.",
+      "start": 232.44,
+      "end": 233.02
     },
     {
       "word": "Match",
-      "start": 241.408,
-      "end": 241.911
+      "start": 233.74,
+      "end": 234.02
     },
     {
       "word": "each",
-      "start": 241.926,
-      "end": 242.246
+      "start": 234.02,
+      "end": 234.38
     },
     {
       "word": "structure",
-      "start": 242.261,
-      "end": 242.886
+      "start": 234.38,
+      "end": 234.9
     },
     {
       "word": "or",
-      "start": 242.901,
-      "end": 243.084
+      "start": 234.9,
+      "end": 235.18
     },
     {
       "word": "event",
-      "start": 243.1,
-      "end": 243.465
+      "start": 235.18,
+      "end": 235.5
     },
     {
       "word": "to",
-      "start": 243.481,
-      "end": 243.633
+      "start": 235.5,
+      "end": 235.84
     },
     {
       "word": "its",
-      "start": 243.648,
-      "end": 243.831
+      "start": 235.84,
+      "end": 236.02
     },
     {
-      "word": "function",
-      "start": 243.847,
-      "end": 244.502
+      "word": "function.",
+      "start": 236.02,
+      "end": 236.52
     },
     {
-      "word": "One",
-      "start": 245.554,
-      "end": 246.011
+      "word": "1.",
+      "start": 237.14,
+      "end": 237.32
     },
     {
-      "word": "myelin",
-      "start": 246.225,
-      "end": 246.773
+      "word": "Nightingeeth.",
+      "start": 238.2,
+      "end": 238.88
     },
     {
-      "word": "sheath",
-      "start": 246.789,
-      "end": 247.429
+      "word": "2.",
+      "start": 238.88,
+      "end": 240.4
     },
     {
-      "word": "Two",
-      "start": 248.481,
-      "end": 248.908
-    },
-    {
-      "word": "node",
-      "start": 249.289,
-      "end": 249.594
+      "word": "Node",
+      "start": 241.2,
+      "end": 241.52
     },
     {
       "word": "of",
-      "start": 249.609,
-      "end": 249.715
+      "start": 241.52,
+      "end": 241.74
     },
     {
-      "word": "Ranvier",
-      "start": 249.731,
-      "end": 250.493
+      "word": "round",
+      "start": 241.74,
+      "end": 242.0
     },
     {
-      "word": "Three",
-      "start": 251.545,
-      "end": 252.109
+      "word": "-the",
+      "start": 242.0,
+      "end": 242.16
     },
     {
-      "word": "local",
-      "start": 252.383,
-      "end": 252.795
+      "word": "-air",
+      "start": 242.16,
+      "end": 242.4
     },
     {
-      "word": "currents",
-      "start": 252.81,
-      "end": 253.587
+      "word": "change.",
+      "start": 242.4,
+      "end": 242.94
     },
     {
-      "word": "Four",
-      "start": 254.639,
-      "end": 255.02
+      "word": "Can",
+      "start": 243.66,
+      "end": 244.22
     },
     {
-      "word": "absolute",
-      "start": 255.264,
-      "end": 255.92
+      "word": "an",
+      "start": 244.22,
+      "end": 244.76
     },
     {
-      "word": "refractory",
-      "start": 255.935,
-      "end": 256.728
+      "word": "else?",
+      "start": 244.76,
+      "end": 245.04
     },
     {
-      "word": "period",
-      "start": 256.743,
-      "end": 257.444
-    },
-    {
-      "word": "Choose",
-      "start": 258.496,
-      "end": 258.953
-    },
-    {
-      "word": "from",
-      "start": 258.969,
-      "end": 259.212
-    },
-    {
-      "word": "prevents",
-      "start": 259.441,
-      "end": 259.898
-    },
-    {
-      "word": "immediate",
-      "start": 259.914,
-      "end": 260.523
-    },
-    {
-      "word": "re-firing",
-      "start": 260.539,
-      "end": 261.423
-    },
-    {
-      "word": "jumps",
-      "start": 261.728,
-      "end": 262.124
-    },
-    {
-      "word": "the",
-      "start": 262.139,
-      "end": 262.261
-    },
-    {
-      "word": "impulse",
-      "start": 262.276,
-      "end": 262.779
-    },
-    {
-      "word": "to",
-      "start": 262.795,
-      "end": 262.901
-    },
-    {
-      "word": "the",
-      "start": 262.917,
-      "end": 263.023
-    },
-    {
-      "word": "next",
-      "start": 263.039,
-      "end": 263.435
-    },
-    {
-      "word": "exposed",
-      "start": 263.45,
-      "end": 264.106
-    },
-    {
-      "word": "membrane",
-      "start": 264.121,
-      "end": 264.776
-    },
-    {
-      "word": "insulates",
-      "start": 265.036,
-      "end": 265.722
-    },
-    {
-      "word": "the",
-      "start": 265.737,
-      "end": 265.874
-    },
-    {
-      "word": "axon",
-      "start": 265.889,
-      "end": 266.469
-    },
-    {
-      "word": "depolarises",
-      "start": 266.697,
-      "end": 267.764
-    },
-    {
-      "word": "the",
-      "start": 267.78,
-      "end": 267.886
-    },
-    {
-      "word": "neighbouring",
-      "start": 267.901,
-      "end": 268.496
-    },
-    {
-      "word": "region",
-      "start": 268.511,
-      "end": 268.953
-    },
-    {
-      "word": "to",
-      "start": 268.969,
-      "end": 269.09
-    },
-    {
-      "word": "threshold",
-      "start": 269.106,
-      "end": 269.99
-    },
-    {
-      "word": "Here",
-      "start": 271.042,
-      "end": 271.408
-    },
-    {
-      "word": "is",
-      "start": 271.423,
-      "end": 271.59
-    },
-    {
-      "word": "a",
-      "start": 271.606,
-      "end": 271.667
-    },
-    {
-      "word": "model",
-      "start": 271.682,
-      "end": 272.078
-    },
-    {
-      "word": "answer",
-      "start": 272.094,
-      "end": 272.673
-    },
-    {
-      "word": "The",
-      "start": 273.725,
-      "end": 273.908
-    },
-    {
-      "word": "myelin",
-      "start": 273.923,
-      "end": 274.426
-    },
-    {
-      "word": "sheath",
-      "start": 274.441,
-      "end": 274.776
-    },
-    {
-      "word": "insulates",
-      "start": 274.792,
-      "end": 275.478
-    },
-    {
-      "word": "the",
-      "start": 275.493,
-      "end": 275.63
-    },
-    {
-      "word": "axon",
-      "start": 275.645,
-      "end": 276.362
-    },
-    {
-      "word": "The",
-      "start": 277.414,
-      "end": 277.597
-    },
-    {
-      "word": "node",
-      "start": 277.612,
-      "end": 277.932
-    },
-    {
-      "word": "of",
-      "start": 277.947,
-      "end": 278.084
-    },
-    {
-      "word": "Ranvier",
-      "start": 278.1,
-      "end": 278.664
-    },
-    {
-      "word": "is",
-      "start": 278.679,
-      "end": 278.847
-    },
-    {
-      "word": "where",
-      "start": 278.862,
-      "end": 279.045
-    },
-    {
-      "word": "the",
-      "start": 279.06,
-      "end": 279.212
-    },
-    {
-      "word": "impulse",
-      "start": 279.228,
-      "end": 279.746
-    },
-    {
-      "word": "is",
-      "start": 279.761,
-      "end": 279.929
-    },
-    {
-      "word": "regenerated",
-      "start": 279.944,
-      "end": 280.798
-    },
-    {
-      "word": "so",
-      "start": 281.057,
-      "end": 281.164
-    },
-    {
-      "word": "the",
-      "start": 281.179,
-      "end": 281.301
-    },
-    {
-      "word": "signal",
-      "start": 281.316,
-      "end": 281.789
-    },
-    {
-      "word": "jumps",
-      "start": 281.804,
-      "end": 282.185
-    },
-    {
-      "word": "from",
-      "start": 282.2,
-      "end": 282.398
-    },
-    {
-      "word": "node",
-      "start": 282.414,
-      "end": 282.719
-    },
-    {
-      "word": "to",
-      "start": 282.734,
-      "end": 282.84
-    },
-    {
-      "word": "node",
-      "start": 282.856,
-      "end": 283.42
+      "word": "3.",
+      "start": 246.2,
+      "end": 246.58
     },
     {
       "word": "Local",
-      "start": 284.472,
-      "end": 284.975
+      "start": 247.64,
+      "end": 247.94
     },
     {
-      "word": "currents",
-      "start": 284.99,
-      "end": 285.447
+      "word": "currents.",
+      "start": 247.94,
+      "end": 248.48
     },
     {
-      "word": "depolarise",
-      "start": 285.462,
-      "end": 286.362
+      "word": "4.",
+      "start": 249.22,
+      "end": 249.64
     },
     {
-      "word": "the",
-      "start": 286.377,
-      "end": 286.484
-    },
-    {
-      "word": "neighbouring",
-      "start": 286.499,
-      "end": 287.078
-    },
-    {
-      "word": "region",
-      "start": 287.094,
-      "end": 287.536
-    },
-    {
-      "word": "to",
-      "start": 287.551,
-      "end": 287.658
-    },
-    {
-      "word": "threshold",
-      "start": 287.673,
-      "end": 288.542
-    },
-    {
-      "word": "The",
-      "start": 289.594,
-      "end": 289.868
-    },
-    {
-      "word": "absolute",
-      "start": 289.883,
-      "end": 290.523
+      "word": "Absolute",
+      "start": 250.72,
+      "end": 251.4
     },
     {
       "word": "refractory",
-      "start": 290.539,
-      "end": 291.24
+      "start": 251.4,
+      "end": 252.1
     },
     {
-      "word": "period",
-      "start": 291.255,
-      "end": 291.758
+      "word": "period.",
+      "start": 252.1,
+      "end": 252.62
     },
     {
-      "word": "prevents",
-      "start": 291.773,
-      "end": 292.215
+      "word": "Choose",
+      "start": 253.28,
+      "end": 253.66
+    },
+    {
+      "word": "from.",
+      "start": 253.66,
+      "end": 253.94
+    },
+    {
+      "word": "Prevents",
+      "start": 254.66,
+      "end": 255.24
     },
     {
       "word": "immediate",
-      "start": 292.231,
-      "end": 292.825
+      "start": 255.24,
+      "end": 255.96
     },
     {
-      "word": "re-firing",
-      "start": 292.841,
-      "end": 293.725
+      "word": "refiring.",
+      "start": 255.96,
+      "end": 256.58
     },
     {
-      "word": "and",
-      "start": 293.74,
-      "end": 293.892
+      "word": "Jumps",
+      "start": 257.4,
+      "end": 257.62
     },
     {
-      "word": "so",
-      "start": 293.908,
-      "end": 294.182
-    },
-    {
-      "word": "keeps",
-      "start": 294.197,
-      "end": 294.655
-    },
-    {
-      "word": "propagation",
-      "start": 294.67,
-      "end": 295.417
-    },
-    {
-      "word": "one-way",
-      "start": 295.432,
-      "end": 296.209
-    },
-    {
-      "word": "That",
-      "start": 297.261,
-      "end": 297.551
-    },
-    {
-      "word": "completes",
-      "start": 297.566,
-      "end": 298.115
-    },
-    {
-      "word": "transmission",
-      "start": 298.13,
-      "end": 298.877
-    },
-    {
-      "word": "of",
-      "start": 298.892,
-      "end": 298.984
-    },
-    {
-      "word": "a",
-      "start": 298.999,
-      "end": 299.045
-    },
-    {
-      "word": "nerve",
-      "start": 299.06,
-      "end": 299.517
+      "word": "the",
+      "start": 257.62,
+      "end": 257.84
     },
     {
       "word": "impulse",
-      "start": 299.533,
-      "end": 300.234
-    },
-    {
-      "word": "The",
-      "start": 301.286,
-      "end": 301.499
-    },
-    {
-      "word": "electrical",
-      "start": 301.514,
-      "end": 302.154
-    },
-    {
-      "word": "signal",
-      "start": 302.17,
-      "end": 302.627
-    },
-    {
-      "word": "has",
-      "start": 302.642,
-      "end": 302.825
-    },
-    {
-      "word": "travelled",
-      "start": 302.841,
-      "end": 303.374
-    },
-    {
-      "word": "along",
-      "start": 303.389,
-      "end": 303.725
-    },
-    {
-      "word": "the",
-      "start": 303.74,
-      "end": 303.892
-    },
-    {
-      "word": "axon",
-      "start": 303.908,
-      "end": 304.593
-    },
-    {
-      "word": "In",
-      "start": 305.645,
-      "end": 305.844
-    },
-    {
-      "word": "the",
-      "start": 305.859,
-      "end": 305.95
-    },
-    {
-      "word": "next",
-      "start": 305.966,
-      "end": 306.316
-    },
-    {
-      "word": "topic",
-      "start": 306.331,
-      "end": 306.682
-    },
-    {
-      "word": "we",
-      "start": 306.697,
-      "end": 306.834
-    },
-    {
-      "word": "will",
-      "start": 306.85,
-      "end": 307.033
-    },
-    {
-      "word": "see",
-      "start": 307.048,
-      "end": 307.307
-    },
-    {
-      "word": "what",
-      "start": 307.322,
-      "end": 307.566
-    },
-    {
-      "word": "happens",
-      "start": 307.581,
-      "end": 308.1
-    },
-    {
-      "word": "when",
-      "start": 308.115,
-      "end": 308.283
-    },
-    {
-      "word": "it",
-      "start": 308.298,
-      "end": 308.435
-    },
-    {
-      "word": "reaches",
-      "start": 308.45,
-      "end": 308.816
-    },
-    {
-      "word": "a",
-      "start": 308.831,
-      "end": 308.892
-    },
-    {
-      "word": "chemical",
-      "start": 308.908,
-      "end": 309.411
-    },
-    {
-      "word": "synapse",
-      "start": 309.426,
-      "end": 310.142
-    },
-    {
-      "word": "where",
-      "start": 310.386,
-      "end": 310.584
-    },
-    {
-      "word": "the",
-      "start": 310.6,
-      "end": 310.722
-    },
-    {
-      "word": "message",
-      "start": 310.737,
-      "end": 311.194
-    },
-    {
-      "word": "must",
-      "start": 311.209,
-      "end": 311.514
-    },
-    {
-      "word": "cross",
-      "start": 311.529,
-      "end": 311.865
-    },
-    {
-      "word": "a",
-      "start": 311.88,
-      "end": 311.956
-    },
-    {
-      "word": "gap",
-      "start": 311.972,
-      "end": 312.322
-    },
-    {
-      "word": "using",
-      "start": 312.337,
-      "end": 312.718
-    },
-    {
-      "word": "a",
-      "start": 312.734,
-      "end": 312.78
-    },
-    {
-      "word": "neurotransmitter",
-      "start": 312.795,
-      "end": 314.075
-    },
-    {
-      "word": "If",
-      "start": 315.127,
-      "end": 315.356
-    },
-    {
-      "word": "this",
-      "start": 315.371,
-      "end": 315.584
-    },
-    {
-      "word": "explanation",
-      "start": 315.6,
-      "end": 316.331
-    },
-    {
-      "word": "has",
-      "start": 316.347,
-      "end": 316.529
-    },
-    {
-      "word": "helped",
-      "start": 316.545,
-      "end": 317.033
-    },
-    {
-      "word": "please",
-      "start": 317.231,
-      "end": 317.52
-    },
-    {
-      "word": "subscribe",
-      "start": 317.536,
-      "end": 318.176
+      "start": 257.84,
+      "end": 258.14
     },
     {
       "word": "to",
-      "start": 318.191,
-      "end": 318.313
+      "start": 258.14,
+      "end": 258.42
     },
     {
-      "word": "JD",
-      "start": 318.328,
-      "end": 318.831
+      "word": "the",
+      "start": 258.42,
+      "end": 258.54
     },
     {
-      "word": "Science",
-      "start": 318.847,
-      "end": 319.334
+      "word": "next",
+      "start": 258.54,
+      "end": 258.7
     },
     {
-      "word": "for",
-      "start": 319.35,
-      "end": 319.472
+      "word": "exposed",
+      "start": 258.7,
+      "end": 259.22
     },
     {
-      "word": "more",
-      "start": 319.487,
-      "end": 319.731
+      "word": "membrane,",
+      "start": 259.22,
+      "end": 259.72
     },
     {
-      "word": "lessons",
-      "start": 319.746,
-      "end": 320.554
+      "word": "insulates",
+      "start": 260.44,
+      "end": 260.84
     },
     {
-      "word": "You",
-      "start": 321.606,
-      "end": 321.819
+      "word": "the",
+      "start": 260.84,
+      "end": 261.16
     },
     {
-      "word": "can",
-      "start": 321.834,
-      "end": 322.033
+      "word": "axon",
+      "start": 261.16,
+      "end": 261.6
     },
     {
-      "word": "find",
-      "start": 322.048,
-      "end": 322.459
+      "word": "that",
+      "start": 261.6,
+      "end": 262.12
     },
     {
-      "word": "further",
-      "start": 322.475,
-      "end": 322.84
+      "word": "polarizes",
+      "start": 262.12,
+      "end": 262.8
     },
     {
-      "word": "learning",
-      "start": 322.856,
-      "end": 323.298
+      "word": "the",
+      "start": 262.8,
+      "end": 263.04
     },
     {
-      "word": "resources",
-      "start": 323.313,
-      "end": 323.953
+      "word": "neighboring",
+      "start": 263.04,
+      "end": 263.36
+    },
+    {
+      "word": "region",
+      "start": 263.36,
+      "end": 263.78
+    },
+    {
+      "word": "to",
+      "start": 263.78,
+      "end": 264.02
+    },
+    {
+      "word": "threshold.",
+      "start": 264.02,
+      "end": 264.42
+    },
+    {
+      "word": "Here",
+      "start": 265.16,
+      "end": 265.56
+    },
+    {
+      "word": "is",
+      "start": 265.56,
+      "end": 266.44
+    },
+    {
+      "word": "a",
+      "start": 266.44,
+      "end": 266.56
+    },
+    {
+      "word": "model",
+      "start": 266.56,
+      "end": 266.9
+    },
+    {
+      "word": "answer.",
+      "start": 266.9,
+      "end": 267.46
+    },
+    {
+      "word": "The",
+      "start": 268.16,
+      "end": 268.24
+    },
+    {
+      "word": "medallion",
+      "start": 268.24,
+      "end": 268.78
+    },
+    {
+      "word": "sheath",
+      "start": 268.78,
+      "end": 269.44
+    },
+    {
+      "word": "insulates",
+      "start": 269.44,
+      "end": 270.4
+    },
+    {
+      "word": "the",
+      "start": 270.4,
+      "end": 270.72
+    },
+    {
+      "word": "axon.",
+      "start": 270.72,
+      "end": 271.1
+    },
+    {
+      "word": "The",
+      "start": 271.84,
+      "end": 271.94
+    },
+    {
+      "word": "node",
+      "start": 271.94,
+      "end": 272.28
+    },
+    {
+      "word": "of",
+      "start": 272.28,
+      "end": 272.8
+    },
+    {
+      "word": "round",
+      "start": 272.8,
+      "end": 273.08
+    },
+    {
+      "word": "-the",
+      "start": 273.08,
+      "end": 273.26
+    },
+    {
+      "word": "-air",
+      "start": 273.26,
+      "end": 273.52
+    },
+    {
+      "word": "is",
+      "start": 273.52,
+      "end": 273.96
+    },
+    {
+      "word": "where",
+      "start": 273.96,
+      "end": 274.14
+    },
+    {
+      "word": "the",
+      "start": 274.14,
+      "end": 274.32
+    },
+    {
+      "word": "impulse",
+      "start": 274.32,
+      "end": 274.68
+    },
+    {
+      "word": "is",
+      "start": 274.68,
+      "end": 274.9
+    },
+    {
+      "word": "regenerated,",
+      "start": 274.9,
+      "end": 275.7
+    },
+    {
+      "word": "so",
+      "start": 276.12,
+      "end": 276.4
+    },
+    {
+      "word": "the",
+      "start": 276.4,
+      "end": 276.54
+    },
+    {
+      "word": "signal",
+      "start": 276.54,
+      "end": 276.84
+    },
+    {
+      "word": "jumps",
+      "start": 276.84,
+      "end": 277.24
+    },
+    {
+      "word": "from",
+      "start": 277.24,
+      "end": 277.48
+    },
+    {
+      "word": "node",
+      "start": 277.48,
+      "end": 277.74
+    },
+    {
+      "word": "to",
+      "start": 277.74,
+      "end": 277.96
+    },
+    {
+      "word": "node.",
+      "start": 277.96,
+      "end": 278.32
+    },
+    {
+      "word": "Local",
+      "start": 279.0,
+      "end": 279.4
+    },
+    {
+      "word": "currents",
+      "start": 279.4,
+      "end": 279.88
+    },
+    {
+      "word": "depolarize",
+      "start": 279.88,
+      "end": 281.14
+    },
+    {
+      "word": "the",
+      "start": 281.14,
+      "end": 281.36
+    },
+    {
+      "word": "neighboring",
+      "start": 281.36,
+      "end": 281.74
+    },
+    {
+      "word": "region",
+      "start": 281.74,
+      "end": 282.22
+    },
+    {
+      "word": "to",
+      "start": 282.22,
+      "end": 282.82
+    },
+    {
+      "word": "threshold.",
+      "start": 282.82,
+      "end": 283.24
+    },
+    {
+      "word": "The",
+      "start": 283.98,
+      "end": 284.16
+    },
+    {
+      "word": "absolute",
+      "start": 284.16,
+      "end": 284.68
+    },
+    {
+      "word": "refractory",
+      "start": 284.68,
+      "end": 285.5
+    },
+    {
+      "word": "period",
+      "start": 285.5,
+      "end": 286.06
+    },
+    {
+      "word": "prevents",
+      "start": 286.06,
+      "end": 286.84
+    },
+    {
+      "word": "immediate",
+      "start": 286.84,
+      "end": 287.58
+    },
+    {
+      "word": "refiring,",
+      "start": 287.58,
+      "end": 288.36
     },
     {
       "word": "and",
-      "start": 323.969,
-      "end": 324.075
+      "start": 289.0,
+      "end": 289.08
     },
     {
-      "word": "practice",
-      "start": 324.091,
-      "end": 324.548
+      "word": "so",
+      "start": 289.08,
+      "end": 289.26
     },
     {
-      "word": "questions",
-      "start": 324.563,
-      "end": 325.158
+      "word": "keeps",
+      "start": 289.26,
+      "end": 289.54
     },
     {
-      "word": "at",
-      "start": 325.173,
-      "end": 325.31
+      "word": "propagation",
+      "start": 289.54,
+      "end": 290.16
     },
     {
-      "word": "jdscience.co.uk",
-      "start": 325.325,
-      "end": 328.359
+      "word": "one",
+      "start": 290.16,
+      "end": 291.16
     },
     {
-      "word": "Thank",
-      "start": 329.411,
-      "end": 329.776
+      "word": "-way.",
+      "start": 291.16,
+      "end": 291.48
     },
     {
-      "word": "you",
-      "start": 329.792,
-      "end": 329.883
+      "word": "That",
+      "start": 292.04,
+      "end": 292.4
+    },
+    {
+      "word": "completes",
+      "start": 292.4,
+      "end": 292.88
+    },
+    {
+      "word": "transmission",
+      "start": 292.88,
+      "end": 293.66
+    },
+    {
+      "word": "of",
+      "start": 293.66,
+      "end": 294.34
+    },
+    {
+      "word": "a",
+      "start": 294.34,
+      "end": 294.46
+    },
+    {
+      "word": "nerve",
+      "start": 294.46,
+      "end": 294.7
+    },
+    {
+      "word": "impulse.",
+      "start": 294.7,
+      "end": 295.36
+    },
+    {
+      "word": "The",
+      "start": 296.22,
+      "end": 296.32
+    },
+    {
+      "word": "electrical",
+      "start": 296.32,
+      "end": 296.72
+    },
+    {
+      "word": "signal",
+      "start": 296.72,
+      "end": 297.22
+    },
+    {
+      "word": "has",
+      "start": 297.22,
+      "end": 297.48
+    },
+    {
+      "word": "travelled",
+      "start": 297.48,
+      "end": 297.84
+    },
+    {
+      "word": "along",
+      "start": 297.84,
+      "end": 298.58
+    },
+    {
+      "word": "the",
+      "start": 298.58,
+      "end": 298.8
+    },
+    {
+      "word": "axon.",
+      "start": 298.8,
+      "end": 299.34
+    },
+    {
+      "word": "In",
+      "start": 301.9,
+      "end": 302.54
+    },
+    {
+      "word": "the",
+      "start": 302.54,
+      "end": 302.68
+    },
+    {
+      "word": "next",
+      "start": 302.68,
+      "end": 302.9
+    },
+    {
+      "word": "topic",
+      "start": 302.9,
+      "end": 303.3
+    },
+    {
+      "word": "we",
+      "start": 303.3,
+      "end": 303.8
+    },
+    {
+      "word": "will",
+      "start": 303.8,
+      "end": 303.92
+    },
+    {
+      "word": "see",
+      "start": 303.92,
+      "end": 304.16
+    },
+    {
+      "word": "what",
+      "start": 304.16,
+      "end": 304.32
+    },
+    {
+      "word": "happens",
+      "start": 304.32,
+      "end": 304.72
+    },
+    {
+      "word": "when",
+      "start": 304.72,
+      "end": 305.06
+    },
+    {
+      "word": "it",
+      "start": 305.06,
+      "end": 305.18
+    },
+    {
+      "word": "reaches",
+      "start": 305.18,
+      "end": 305.46
+    },
+    {
+      "word": "a",
+      "start": 305.46,
+      "end": 305.62
+    },
+    {
+      "word": "chemical",
+      "start": 305.62,
+      "end": 305.9
+    },
+    {
+      "word": "synapse,",
+      "start": 305.9,
+      "end": 306.58
+    },
+    {
+      "word": "where",
+      "start": 307.22,
+      "end": 307.38
+    },
+    {
+      "word": "the",
+      "start": 307.38,
+      "end": 307.48
+    },
+    {
+      "word": "message",
+      "start": 307.48,
+      "end": 307.78
+    },
+    {
+      "word": "must",
+      "start": 307.78,
+      "end": 308.06
+    },
+    {
+      "word": "cross",
+      "start": 308.06,
+      "end": 308.36
+    },
+    {
+      "word": "a",
+      "start": 308.36,
+      "end": 308.58
+    },
+    {
+      "word": "gap",
+      "start": 308.58,
+      "end": 308.76
+    },
+    {
+      "word": "using",
+      "start": 308.76,
+      "end": 309.4
+    },
+    {
+      "word": "a",
+      "start": 309.4,
+      "end": 309.58
+    },
+    {
+      "word": "neurotransmitter.",
+      "start": 309.58,
+      "end": 310.64
+    },
+    {
+      "word": "If",
+      "start": 311.06,
+      "end": 311.34
+    },
+    {
+      "word": "this",
+      "start": 311.34,
+      "end": 311.5
+    },
+    {
+      "word": "explanation",
+      "start": 311.5,
+      "end": 312.14
+    },
+    {
+      "word": "has",
+      "start": 312.14,
+      "end": 312.54
+    },
+    {
+      "word": "helped,",
+      "start": 312.54,
+      "end": 312.92
+    },
+    {
+      "word": "please",
+      "start": 313.72,
+      "end": 314.04
+    },
+    {
+      "word": "subscribe",
+      "start": 314.04,
+      "end": 314.7
+    },
+    {
+      "word": "to",
+      "start": 314.7,
+      "end": 315.06
+    },
+    {
+      "word": "JD",
+      "start": 315.06,
+      "end": 315.36
+    },
+    {
+      "word": "Science",
+      "start": 315.36,
+      "end": 315.96
     },
     {
       "word": "for",
-      "start": 329.898,
-      "end": 330.036
+      "start": 315.96,
+      "end": 316.28
     },
     {
-      "word": "watching",
-      "start": 330.051,
-      "end": 330.737
+      "word": "more",
+      "start": 316.28,
+      "end": 316.48
+    },
+    {
+      "word": "lessons.",
+      "start": 316.48,
+      "end": 316.84
+    },
+    {
+      "word": "You",
+      "start": 317.24,
+      "end": 317.74
+    },
+    {
+      "word": "can",
+      "start": 317.74,
+      "end": 317.88
+    },
+    {
+      "word": "find",
+      "start": 317.88,
+      "end": 318.28
+    },
+    {
+      "word": "further",
+      "start": 318.28,
+      "end": 318.86
+    },
+    {
+      "word": "learning",
+      "start": 318.86,
+      "end": 319.24
+    },
+    {
+      "word": "resources",
+      "start": 319.24,
+      "end": 320.0
+    },
+    {
+      "word": "and",
+      "start": 320.0,
+      "end": 320.76
+    },
+    {
+      "word": "practice",
+      "start": 320.76,
+      "end": 321.18
+    },
+    {
+      "word": "questions",
+      "start": 321.18,
+      "end": 321.98
+    },
+    {
+      "word": "at",
+      "start": 321.98,
+      "end": 322.6
+    },
+    {
+      "word": "JD",
+      "start": 322.6,
+      "end": 322.88
+    },
+    {
+      "word": "Science",
+      "start": 322.88,
+      "end": 323.38
+    },
+    {
+      "word": "Tumpanyuk.",
+      "start": 323.38,
+      "end": 324.22
+    },
+    {
+      "word": "Thank",
+      "start": 324.84,
+      "end": 325.02
+    },
+    {
+      "word": "you",
+      "start": 325.02,
+      "end": 325.26
+    },
+    {
+      "word": "for",
+      "start": 325.26,
+      "end": 325.44
+    },
+    {
+      "word": "watching.",
+      "start": 325.44,
+      "end": 325.84
     }
   ],
-  "chunks": 2,
-  "model": "openvoice_v2",
-  "voice": "uploaded-joes-voice-openvoice-v2",
-  "rate": "-18%",
+  "chunks": 27,
+  "model": "xtts_v2",
+  "voice": "uploaded-joes-voice-xtts",
   "temporary_voice": false,
-  "replace_with": "cloned-voice",
-  "elevenlabs_blocker": "ElevenLabs could not clone (voices_write denied) or synthesise (quota_exceeded, 4 credits remaining). The uploaded 59 s JD Science teaching sample was used as the OpenVoice v2 target speaker."
+  "elevenlabs_blocker": "ElevenLabs quota_exceeded (4 credits remaining) and voices_write denied. Narration synthesised from the uploaded speaker sample with XTTS v2 so accent and timbre come from that recording."
 }
