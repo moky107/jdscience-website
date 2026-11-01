@@ -1,0 +1,115 @@
+{
+  "slug": "nerve-impulse-part-3",
+  "duration": 331.824,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "local",
+      "t": 21.788,
+      "aligned": true,
+      "cue": "When sodium ions enter during depolarisation"
+    },
+    {
+      "id": "absref",
+      "t": 58.648,
+      "aligned": true,
+      "cue": "Why does the impulse not also travel backwards"
+    },
+    {
+      "id": "jobs",
+      "t": 105.614,
+      "aligned": true,
+      "cue": "Together, these refractory stages do two important jobs"
+    },
+    {
+      "id": "unmyel",
+      "t": 127.763,
+      "aligned": true,
+      "cue": "In an unmyelinated axon, every neighbouring patch"
+    },
+    {
+      "id": "salt",
+      "t": 137.733,
+      "aligned": true,
+      "cue": "In a myelinated axon the picture changes"
+    },
+    {
+      "id": "whyfast",
+      "t": 167.962,
+      "aligned": true,
+      "cue": "Saltatory conduction is faster and more energy-efficient"
+    },
+    {
+      "id": "worked",
+      "t": 197.84,
+      "aligned": true,
+      "cue": "Here is a worked examination-style example"
+    },
+    {
+      "id": "worked_ans",
+      "t": 212.86,
+      "aligned": true,
+      "cue": "Behind the active region, sodium channels are inactivated"
+    },
+    {
+      "id": "your_turn",
+      "t": 236.987,
+      "aligned": true,
+      "cue": "Now pause the video and try this matching activity"
+    },
+    {
+      "id": "model",
+      "t": 271.042,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 297.261,
+      "aligned": true,
+      "cue": "That completes transmission of a nerve impulse"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "jobs",
+      "item": "b1",
+      "t": 110.873,
+      "aligned": true,
+      "cue": "They force one-way propagation"
+    },
+    {
+      "slide": "jobs",
+      "item": "b2",
+      "t": 120.096,
+      "aligned": true,
+      "cue": "maximum firing frequency"
+    },
+    {
+      "slide": "jobs",
+      "item": "b3",
+      "t": 113.343,
+      "aligned": true,
+      "cue": "towards resting membrane ahead"
+    },
+    {
+      "slide": "your_turn",
+      "item": "pause",
+      "t": 237.107,
+      "aligned": true,
+      "cue": "Now pause the video"
+    },
+    {
+      "slide": "model",
+      "item": "model",
+      "t": 271.162,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

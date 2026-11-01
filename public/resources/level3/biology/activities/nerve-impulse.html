@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JD Science · Nerve impulse activity</title>
+  <style>
+    :root { --navy:#0a1731; --card:#122a48; --line:#2a5c80; --teal:#2ec4ce; --gold:#e8c247; --ink:#f4f7fb; --muted:#9bb4c9; --rose:#e86070; --ok:#5ed6a5; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, "Segoe UI", sans-serif; background:var(--navy); color:var(--ink); }
+    header { padding:1.2rem 1.4rem 0.6rem; border-bottom:3px solid var(--teal); }
+    header strong { color:var(--teal); }
+    h1 { margin:0.2rem 0 0; font-size:1.6rem; }
+    p.lead { color:var(--muted); max-width:70ch; }
+    main { padding:1.2rem 1.4rem 3rem; display:grid; gap:1.4rem; }
+    section { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:1.1rem 1.2rem 1.3rem; }
+    h2 { margin:0 0 0.6rem; color:var(--gold); font-size:1.2rem; }
+    .row { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    button { cursor:pointer; border:1px solid var(--line); background:#163656; color:var(--ink); border-radius:999px; padding:0.55rem 0.9rem; font:inherit; }
+    button:hover { border-color:var(--teal); }
+    button.picked { background:var(--teal); color:#082028; font-weight:700; }
+    button.correct { background:var(--ok); color:#082028; font-weight:700; }
+    button.wrong { background:var(--rose); color:#fff; }
+    .bank, .slots { display:flex; flex-wrap:wrap; gap:0.5rem; min-height:3rem; }
+    .slot { min-width:12rem; min-height:2.6rem; border:1px dashed var(--line); border-radius:12px; padding:0.4rem 0.6rem; display:flex; align-items:center; gap:0.4rem; }
+    .slot b { color:var(--teal); }
+    .feedback { margin-top:0.8rem; padding:0.7rem 0.8rem; border-radius:12px; background:#0d2138; color:var(--muted); }
+    .feedback.ok { color:var(--ok); }
+    .feedback.bad { color:#ffc1c8; }
+    .key { display:flex; gap:1rem; flex-wrap:wrap; margin:0.4rem 0 0.8rem; color:var(--muted); font-size:0.95rem; }
+    .dot { width:0.9rem; height:0.9rem; border-radius:50%; display:inline-block; margin-right:0.3rem; vertical-align:middle; }
+    footer { padding:1rem 1.4rem 2rem; color:var(--muted); }
+    a { color:var(--teal); }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>JD</strong> SCIENCE · Level 3</div>
+    <h1>Transmission of a nerve impulse</h1>
+    <p class="lead">Click the statements in order, match each channel to its job, then correct the misconception. This page is the interactive version of the pause-and-try activities in the videos.</p>
+    <div class="key">
+      <span><i class="dot" style="background:#e89a2a"></i>Na⁺ sodium</span>
+      <span><i class="dot" style="background:#38c4b0"></i>K⁺ potassium</span>
+      <span><i class="dot" style="background:#e86070"></i>A⁻ organic anion</span>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>1. Sequence the resting potential</h2>
+      <p>Click the four statements in the order that establishes a resting potential.</p>
+      <div class="bank" id="seq-bank"></div>
+      <div class="slots" id="seq-slots"></div>
+      <p>
+        <button type="button" id="seq-check">Check order</button>
+        <button type="button" id="seq-reset">Reset</button>
+      </p>
+      <div class="feedback" id="seq-fb">Choose all four statements, then check.</div>
+    </section>
+    <section>
+      <h2>2. Match the channel to its function</h2>
+      <p>Select a channel, then select the matching function.</p>
+      <div class="row" id="match-left"></div>
+      <div class="row" id="match-right"></div>
+      <p><button type="button" id="match-reset">Reset matches</button></p>
+      <div class="feedback" id="match-fb">Four pairs to match.</div>
+    </section>
+    <section>
+      <h2>3. Correct the misconception</h2>
+      <p>Which sentence is scientifically correct?</p>
+      <div class="row" id="mcq"></div>
+      <div class="feedback" id="mcq-fb">Choose one answer.</div>
+    </section>
+  </main>
+  <footer>
+    Interactive companion to the JD Science Level 3 nerve-impulse videos.
+    Visit <a href="https://jdscience.co.uk">jdscience.co.uk</a>.
+  </footer>
+  <script>
+    const seq = [
+      { id: "A", text: "A  The sodium–potassium pump uses ATP." },
+      { id: "B", text: "B  Sodium stays high outside and potassium stays high inside." },
+      { id: "C", text: "C  Potassium leaks out through open leak channels." },
+      { id: "D", text: "D  The membrane is polarised at about −70 mV." },
+    ];
+    const order = ["A", "B", "C", "D"];
+    const chosen = [];
+    const bank = document.getElementById("seq-bank");
+    const slots = document.getElementById("seq-slots");
+    function renderSeq() {
+      bank.innerHTML = "";
+      slots.innerHTML = "";
+      seq.forEach((item, i) => {
+        const b = document.createElement("button");
+        b.textContent = item.text;
+        b.disabled = chosen.includes(item.id);
+        b.onclick = () => { chosen.push(item.id); renderSeq(); };
+        bank.appendChild(b);
+      });
+      for (let i = 0; i < 4; i++) {
+        const slot = document.createElement("div");
+        slot.className = "slot";
+        const id = chosen[i];
+        slot.innerHTML = `<b>${i + 1}.</b> ${id ? seq.find(s => s.id === id).text : ""}`;
+        slots.appendChild(slot);
+      }
+    }
+    document.getElementById("seq-check").onclick = () => {
+      const fb = document.getElementById("seq-fb");
+      if (chosen.join("") === order.join("")) {
+        fb.className = "feedback ok";
+        fb.textContent = "Correct. The pump sets the gradients, potassium then leaks out, and the membrane is polarised at about −70 mV.";
+      } else {
+        fb.className = "feedback bad";
+        fb.textContent = "Not yet. Start with the pump and the ion gradients, then the leak, then the polarised membrane.";
+      }
+    };
+    document.getElementById("seq-reset").onclick = () => { chosen.length = 0; document.getElementById("seq-fb").className = "feedback"; document.getElementById("seq-fb").textContent = "Choose all four statements, then check."; renderSeq(); };
+    renderSeq();
+
+    const left = [
+      { id: "myelin", text: "Myelin sheath" },
+      { id: "node", text: "Node of Ranvier" },
+      { id: "local", text: "Local currents" },
+      { id: "ref", text: "Absolute refractory period" },
+    ];
+    const right = [
+      { id: "myelin", text: "Insulates the axon" },
+      { id: "node", text: "Regenerates the impulse at the next exposed membrane" },
+      { id: "local", text: "Depolarises the neighbouring region to threshold" },
+      { id: "ref", text: "Prevents immediate re-firing" },
+    ].sort(() => Math.random() - 0.5);
+    let pick = null;
+    const done = new Set();
+    function renderMatch() {
+      const L = document.getElementById("match-left");
+      const R = document.getElementById("match-right");
+      L.innerHTML = ""; R.innerHTML = "";
+      left.forEach(item => {
+        const b = document.createElement("button");
+        b.textContent = item.text;
+        if (done.has(item.id)) b.className = "correct";
+        else if (pick === item.id) b.className = "picked";
+        b.onclick = () => { if (!done.has(item.id)) { pick = item.id; renderMatch(); } };
+        L.appendChild(b);
+      });
+      right.forEach(item => {
+        const b = document.createElement("button");
+        b.textContent = item.text;
+        if (done.has(item.id)) b.className = "correct";
+        b.onclick = () => {
+          if (done.has(item.id) || !pick) return;
+          if (pick === item.id) {
+            done.add(item.id);
+            document.getElementById("match-fb").className = "feedback ok";
+            document.getElementById("match-fb").textContent = done.size === 4 ? "All four matched. Myelin insulates; nodes regenerate; local currents start the next patch; the refractory period stops re-firing." : "Yes. Keep going.";
+          } else {
+            document.getElementById("match-fb").className = "feedback bad";
+            document.getElementById("match-fb").textContent = "That pair does not match. Try another function.";
+          }
+          pick = null;
+          renderMatch();
+        };
+        R.appendChild(b);
+      });
+    }
+    document.getElementById("match-reset").onclick = () => { done.clear(); pick = null; document.getElementById("match-fb").className = "feedback"; document.getElementById("match-fb").textContent = "Four pairs to match."; renderMatch(); };
+    renderMatch();
+
+    const options = [
+      { ok: false, text: "The sodium–potassium pump causes the falling phase by pumping sodium out." },
+      { ok: true, text: "Repolarisation is caused by potassium leaving through voltage-gated K⁺ channels after Na⁺ channels inactivate." },
+      { ok: false, text: "A stronger stimulus makes a taller action potential." },
+    ];
+    const mcq = document.getElementById("mcq");
+    options.forEach(opt => {
+      const b = document.createElement("button");
+      b.textContent = opt.text;
+      b.onclick = () => {
+        [...mcq.children].forEach(x => x.className = "");
+        b.className = opt.ok ? "correct" : "wrong";
+        const fb = document.getElementById("mcq-fb");
+        fb.className = opt.ok ? "feedback ok" : "feedback bad";
+        fb.textContent = opt.ok
+          ? "Correct. The pump restores gradients later. It is too slow to produce the millisecond downstroke."
+          : "That is the misconception. The rapid fall is potassium efflux after sodium inactivation, not the pump.";
+      };
+      mcq.appendChild(b);
+    });
+  </script>
+</body>
+</html>

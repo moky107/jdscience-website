@@ -1,0 +1,7 @@
+{
+  "engine": "edge-tts",
+  "voice": "en-GB-RyanNeural",
+  "rate": "-18%",
+  "temporary": true,
+  "notes": "Authorised temporary British English male voice after ElevenLabs quota_exceeded. Replace with the JD Science clone without rebuilding cues."
+}

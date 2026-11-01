@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JD Science · Chemical synapse activity</title>
+  <style>
+    :root { --navy:#0a1731; --card:#122a48; --line:#2a5c80; --teal:#2ec4ce; --gold:#e8c247; --ink:#f4f7fb; --muted:#9bb4c9; --rose:#e86070; --ok:#5ed6a5; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, "Segoe UI", sans-serif; background:var(--navy); color:var(--ink); }
+    header { padding:1.2rem 1.4rem 0.6rem; border-bottom:3px solid var(--teal); }
+    header strong { color:var(--teal); }
+    h1 { margin:0.2rem 0 0; font-size:1.6rem; }
+    p.lead { color:var(--muted); max-width:70ch; }
+    main { padding:1.2rem 1.4rem 3rem; display:grid; gap:1.4rem; }
+    section { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:1.1rem 1.2rem 1.3rem; }
+    h2 { margin:0 0 0.6rem; color:var(--gold); font-size:1.2rem; }
+    button { cursor:pointer; border:1px solid var(--line); background:#163656; color:var(--ink); border-radius:999px; padding:0.55rem 0.9rem; font:inherit; }
+    button:hover { border-color:var(--teal); }
+    button.picked { background:var(--teal); color:#082028; font-weight:700; }
+    button.correct { background:var(--ok); color:#082028; font-weight:700; }
+    button.wrong { background:var(--rose); color:#fff; }
+    .diagram { position:relative; width:min(920px,100%); aspect-ratio: 16/9; background:#c48a58; border-radius:16px; overflow:hidden; margin:0.6rem 0 1rem; }
+    .cleft { position:absolute; left:0; right:0; top:48%; height:12%; background:#28608a; }
+    .hot { position:absolute; width:18%; min-width:7rem; text-align:center; font-size:0.85rem; padding:0.35rem 0.4rem; border-radius:10px; border:1px dashed #fff8; background:#0005; color:#fff; cursor:pointer; }
+    .hot.on { background:var(--teal); color:#082028; font-weight:700; border-style:solid; }
+    .hot.ok { background:var(--ok); color:#082028; font-weight:700; }
+    .choices { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .feedback { margin-top:0.8rem; padding:0.7rem 0.8rem; border-radius:12px; background:#0d2138; color:var(--muted); }
+    .feedback.ok { color:var(--ok); }
+    .feedback.bad { color:#ffc1c8; }
+    .row { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .key { display:flex; gap:1rem; flex-wrap:wrap; margin:0.4rem 0 0.8rem; color:var(--muted); }
+    .dot { width:0.9rem; height:0.9rem; border-radius:50%; display:inline-block; margin-right:0.3rem; vertical-align:middle; }
+    footer { padding:1rem 1.4rem 2rem; color:var(--muted); }
+    a { color:var(--teal); }
+    ol.seq { display:grid; gap:0.45rem; padding-left:1.2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>JD</strong> SCIENCE · Level 3</div>
+    <h1>Transmission at a chemical synapse</h1>
+    <p class="lead">Label the junction, sequence acetylcholine transmission, then correct a common error about acetylcholinesterase. This is the clickable companion to the videos, not a substitute for them.</p>
+    <div class="key">
+      <span><i class="dot" style="background:#b07ae8"></i>Ca²⁺ calcium</span>
+      <span><i class="dot" style="background:#e89a2a"></i>Na⁺ sodium</span>
+      <span><i class="dot" style="background:#e8c247"></i>ACh acetylcholine</span>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>1. Label the synapse</h2>
+      <p>Select a hotspot, then choose its name.</p>
+      <div class="diagram" id="diag">
+        <div class="cleft"></div>
+        <div class="hot" data-id="vesicle" style="left:38%; top:18%">1</div>
+        <div class="hot" data-id="ca" style="left:12%; top:40%">2</div>
+        <div class="hot" data-id="cleft" style="left:55%; top:49%">3</div>
+        <div class="hot" data-id="receptor" style="left:40%; top:72%">4</div>
+        <div class="hot" data-id="pre" style="left:6%; top:12%">5</div>
+      </div>
+      <div class="choices" id="label-choices"></div>
+      <p><button type="button" id="label-reset">Reset labels</button></p>
+      <div class="feedback" id="label-fb">Five structures to name.</div>
+    </section>
+    <section>
+      <h2>2. Sequence chemical transmission</h2>
+      <p>Click the events in order, starting from arrival of the action potential.</p>
+      <div class="row" id="seq-bank"></div>
+      <ol class="seq" id="seq-out"></ol>
+      <p>
+        <button type="button" id="seq-check">Check order</button>
+        <button type="button" id="seq-reset">Reset</button>
+      </p>
+      <div class="feedback" id="seq-fb">Build the sequence, then check.</div>
+    </section>
+    <section>
+      <h2>3. Correct the misconception</h2>
+      <p>After acetylcholine is released, what happens next in this example?</p>
+      <div class="row" id="mcq"></div>
+      <div class="feedback" id="mcq-fb">Choose one answer.</div>
+    </section>
+  </main>
+  <footer>
+    Interactive companion to the JD Science Level 3 synapse videos.
+    Visit <a href="https://jdscience.co.uk">jdscience.co.uk</a>.
+  </footer>
+  <script>
+    const names = {
+      vesicle: "synaptic vesicle",
+      ca: "voltage-gated Ca²⁺ channel",
+      cleft: "synaptic cleft",
+      receptor: "ACh receptor",
+      pre: "presynaptic knob",
+    };
+    const labels = Object.values(names).sort(() => Math.random() - 0.5);
+    let hot = null;
+    const done = {};
+    const choiceBox = document.getElementById("label-choices");
+    function renderLabels() {
+      document.querySelectorAll(".hot").forEach(el => {
+        const id = el.dataset.id;
+        el.className = "hot" + (done[id] ? " ok" : (hot === el ? " on" : ""));
+        el.textContent = done[id] || el.dataset.n || el.textContent.match(/^\d/) ? (done[id] || el.textContent.split(" ")[0]) : el.textContent;
+        if (done[id]) el.textContent = done[id];
+      });
+      choiceBox.innerHTML = "";
+      labels.forEach(name => {
+        const used = Object.values(done).includes(name);
+        const b = document.createElement("button");
+        b.textContent = name;
+        if (used) b.className = "correct";
+        b.onclick = () => {
+          if (!hot || used) return;
+          const id = hot.dataset.id;
+          if (names[id] === name) {
+            done[id] = name;
+            document.getElementById("label-fb").className = "feedback ok";
+            document.getElementById("label-fb").textContent = Object.keys(done).length === 5
+              ? "All labelled. Vesicles and Ca²⁺ channels are presynaptic; receptors sit across the cleft."
+              : "Yes.";
+          } else {
+            document.getElementById("label-fb").className = "feedback bad";
+            document.getElementById("label-fb").textContent = "Not that structure. Look at which side of the cleft you clicked.";
+          }
+          hot = null;
+          renderLabels();
+        };
+        choiceBox.appendChild(b);
+      });
+    }
+    document.querySelectorAll(".hot").forEach((el, i) => {
+      if (!el.dataset.n) el.dataset.n = String(i + 1);
+      el.onclick = () => { if (!done[el.dataset.id]) { hot = el; renderLabels(); } };
+    });
+    document.getElementById("label-reset").onclick = () => {
+      Object.keys(done).forEach(k => delete done[k]);
+      hot = null;
+      document.getElementById("label-fb").className = "feedback";
+      document.getElementById("label-fb").textContent = "Five structures to name.";
+      document.querySelectorAll(".hot").forEach((el, i) => { el.textContent = String(i + 1); });
+      renderLabels();
+    };
+    renderLabels();
+
+    const events = [
+      "Action potential arrives at the knob",
+      "Voltage-gated Ca²⁺ channels open and Ca²⁺ enters",
+      "Vesicles fuse and ACh is released by exocytosis",
+      "ACh diffuses and binds postsynaptic receptors",
+      "Ligand-gated Na⁺ channels open and a postsynaptic potential forms",
+    ];
+    const shuffled = [...events].sort(() => Math.random() - 0.5);
+    const picked = [];
+    const bank = document.getElementById("seq-bank");
+    const out = document.getElementById("seq-out");
+    function renderSeq() {
+      bank.innerHTML = "";
+      shuffled.forEach(text => {
+        const b = document.createElement("button");
+        b.textContent = text;
+        b.disabled = picked.includes(text);
+        b.onclick = () => { picked.push(text); renderSeq(); };
+        bank.appendChild(b);
+      });
+      out.innerHTML = picked.map(t => `<li>${t}</li>`).join("");
+    }
+    document.getElementById("seq-check").onclick = () => {
+      const fb = document.getElementById("seq-fb");
+      if (picked.join("|") === events.join("|")) {
+        fb.className = "feedback ok";
+        fb.textContent = "Correct. Electrical arrival, calcium, exocytosis, diffusion, then a ligand-gated postsynaptic potential.";
+      } else {
+        fb.className = "feedback bad";
+        fb.textContent = "Check the order. Calcium entry must come before vesicle fusion.";
+      }
+    };
+    document.getElementById("seq-reset").onclick = () => { picked.length = 0; document.getElementById("seq-fb").className = "feedback"; document.getElementById("seq-fb").textContent = "Build the sequence, then check."; renderSeq(); };
+    renderSeq();
+
+    const options = [
+      { ok: false, text: "Intact acetylcholine is pumped straight back into the vesicle, and that is why the synapse is one-way." },
+      { ok: true, text: "Acetylcholinesterase hydrolyses ACh to acetate and choline. Choline is taken back into the knob and reused. The synapse is one-way because vesicles and receptors are on opposite sides." },
+      { ok: false, text: "The electrical impulse jumps the cleft, so no chemical is needed." },
+    ];
+    const mcq = document.getElementById("mcq");
+    options.forEach(opt => {
+      const b = document.createElement("button");
+      b.textContent = opt.text;
+      b.onclick = () => {
+        [...mcq.children].forEach(x => x.className = "");
+        b.className = opt.ok ? "correct" : "wrong";
+        const fb = document.getElementById("mcq-fb");
+        fb.className = opt.ok ? "feedback ok" : "feedback bad";
+        fb.textContent = opt.ok
+          ? "Correct. Choline is recycled, not the intact transmitter. One-way travel is a structural feature of a typical chemical synapse."
+          : "That is not accurate for this acetylcholine example.";
+      };
+      mcq.appendChild(b);
+    });
+  </script>
+</body>
+</html>

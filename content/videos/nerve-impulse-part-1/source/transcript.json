@@ -1,0 +1,3882 @@
+{
+  "slug": "nerve-impulse-part-1",
+  "title": "Transmission of a Nerve Impulse",
+  "audio": "/workspace/content/videos/nerve-impulse-part-1/source/narration_master.m4a",
+  "duration": 388.344,
+  "full_text": "Hello and welcome back to JD Science.\n\nThis is part one of our Level 3 lesson on the transmission of a nerve impulse. A nerve impulse is a brief electrical signal that travels along a neurone. A neurone is a specialised nerve cell that carries information from one place in the body to another.\n\nLook first at a real stained motor neurone from the spinal cord. The large purple cell bodies and the surrounding fibres are genuine tissue. A light micrograph can show the cell body and processes, but it cannot show the ions that create the impulse, so we now switch to a labelled scientific diagram.\n\nThe cell body contains the nucleus and most of the cytoplasm. Short, branched dendrites receive incoming signals and pass them towards the cell body. The axon is a long process that carries the impulse away from the cell body towards another cell.\n\nThe axon is bounded by a plasma membrane, which is a phospholipid bilayer with proteins in it. In many neurones, a myelin sheath wraps around the axon. Myelin is made by Schwann cells in the peripheral nervous system and acts as an electrical insulator. The gaps between adjacent Schwann cells are the nodes of Ranvier. At each node the membrane is exposed to the extracellular fluid. Those nodes will matter when we look at how the impulse travels quickly.\n\nA nerve impulse is an action potential travelling along the axon. An action potential is a rapid, temporary reversal of the electrical charge across the membrane. Before that reversal can happen, we must understand the resting state.\n\nAt rest, the inside of the axon is negative compared with the outside. That potential difference is the resting potential, about minus seventy millivolts. The unit is the millivolt, one thousandth of a volt. Because opposite charges are separated across the membrane, we say the membrane is polarised.\n\nThe ions are not evenly shared. Sodium ions, shown in amber, are far more concentrated outside the axon. Potassium ions, shown in teal, are far more concentrated inside. Large negative organic ions, such as proteins, remain inside because they cannot cross the membrane.\n\nThe sodium\u2013potassium pump maintains those concentration gradients. It is a membrane protein that uses ATP, the cell's energy currency. For each cycle, three sodium ions are moved out and two potassium ions are moved in. That is active transport, against their concentration gradients. Because three positive ions leave for every two that enter, the pump also makes the inside a little more negative.\n\nThe membrane is selectively permeable, which means it does not treat every ion the same way. At rest it is much more permeable to potassium than to sodium. Potassium leak channels stay open, so some potassium ions diffuse out down their concentration gradient. As those positive ions leave, the inside becomes more negative. Sodium channels are mostly closed at rest, so sodium cannot easily flood back in.\n\nPut those ideas together. The pump keeps sodium high outside and potassium high inside. Potassium leak channels let some potassium leave. Impermeant negative ions stay inside. The result is a polarised membrane at about minus seventy millivolts. That is the resting potential. The pump does not fire the impulse. It quietly maintains the gradients that make an impulse possible.\n\nHere is a worked examination-style example. A student writes, the sodium\u2013potassium pump creates the resting potential by pumping sodium in and potassium out. Identify two scientific errors and correct them.\n\nThe first error is the direction. The pump moves three sodium ions out, not in, and two potassium ions in, not out. The second error is the claim that the pump alone creates the resting potential. The pump maintains the gradients. Potassium leak channels and the trapped negative ions are also essential.\n\nNow pause the video and try this sequencing question. Place these four statements in the order that establishes a resting potential. A: the sodium\u2013potassium pump uses ATP. B: sodium stays high outside and potassium stays high inside. C: potassium leaks out through open leak channels. D: the membrane is polarised at about minus seventy millivolts.\n\nHere is a model answer. First A, the pump uses ATP. That produces B, the unequal ion distribution. Then C, potassium leaks out. That produces D, a polarised membrane at about minus seventy millivolts.\n\nIn part two we will see how a stimulus changes this polarised membrane into an action potential, and we will build the graph as each phase happens. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "tts_text": "Hello and welcome back to JD Science.\n\nThis is part one of our Level 3 lesson on the transmission of a nerve impulse. A nerve impulse is a brief electrical signal that travels along a neurone. A neurone is a specialised nerve cell that carries information from one place in the body to another.\n\nLook first at a real stained motor neurone from the spinal cord. The large purple cell bodies and the surrounding fibres are genuine tissue. A light micrograph can show the cell body and processes, but it cannot show the ions that create the impulse, so we now switch to a labelled scientific diagram.\n\nThe cell body contains the nucleus and most of the cytoplasm. Short, branched dendrites receive incoming signals and pass them towards the cell body. The axon is a long process that carries the impulse away from the cell body towards another cell.\n\nThe axon is bounded by a plasma membrane, which is a phospholipid bilayer with proteins in it. In many neurones, a myelin sheath wraps around the axon. Myelin is made by Schwann cells in the peripheral nervous system and acts as an electrical insulator. The gaps between adjacent Schwann cells are the nodes of Ranvier. At each node the membrane is exposed to the extracellular fluid. Those nodes will matter when we look at how the impulse travels quickly.\n\nA nerve impulse is an action potential travelling along the axon. An action potential is a rapid, temporary reversal of the electrical charge across the membrane. Before that reversal can happen, we must understand the resting state.\n\nAt rest, the inside of the axon is negative compared with the outside. That potential difference is the resting potential, about minus seventy millivolts. The unit is the millivolt, one thousandth of a volt. Because opposite charges are separated across the membrane, we say the membrane is polarised.\n\nThe ions are not evenly shared. Sodium ions, shown in amber, are far more concentrated outside the axon. Potassium ions, shown in teal, are far more concentrated inside. Large negative organic ions, such as proteins, remain inside because they cannot cross the membrane.\n\nThe sodium\u2013potassium pump maintains those concentration gradients. It is a membrane protein that uses ATP, the cell's energy currency. For each cycle, three sodium ions are moved out and two potassium ions are moved in. That is active transport, against their concentration gradients. Because three positive ions leave for every two that enter, the pump also makes the inside a little more negative.\n\nThe membrane is selectively permeable, which means it does not treat every ion the same way. At rest it is much more permeable to potassium than to sodium. Potassium leak channels stay open, so some potassium ions diffuse out down their concentration gradient. As those positive ions leave, the inside becomes more negative. Sodium channels are mostly closed at rest, so sodium cannot easily flood back in.\n\nPut those ideas together. The pump keeps sodium high outside and potassium high inside. Potassium leak channels let some potassium leave. Impermeant negative ions stay inside. The result is a polarised membrane at about minus seventy millivolts. That is the resting potential. The pump does not fire the impulse. It quietly maintains the gradients that make an impulse possible.\n\nHere is a worked examination-style example. A student writes, the sodium\u2013potassium pump creates the resting potential by pumping sodium in and potassium out. Identify two scientific errors and correct them.\n\nThe first error is the direction. The pump moves three sodium ions out, not in, and two potassium ions in, not out. The second error is the claim that the pump alone creates the resting potential. The pump maintains the gradients. Potassium leak channels and the trapped negative ions are also essential.\n\nNow pause the video and try this sequencing question. Place these four statements in the order that establishes a resting potential. A: the sodium\u2013potassium pump uses ATP. B: sodium stays high outside and potassium stays high inside. C: potassium leaks out through open leak channels. D: the membrane is polarised at about minus seventy millivolts.\n\nHere is a model answer. First A, the pump uses ATP. That produces B, the unequal ion distribution. Then C, potassium leaks out. That produces D, a polarised membrane at about minus seventy millivolts.\n\nIn part two we will see how a stimulus changes this polarised membrane into an action potential, and we will build the graph as each phase happens. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.1,
+      "end": 0.603
+    },
+    {
+      "word": "and",
+      "start": 0.618,
+      "end": 0.771
+    },
+    {
+      "word": "welcome",
+      "start": 0.786,
+      "end": 1.243
+    },
+    {
+      "word": "back",
+      "start": 1.259,
+      "end": 1.502
+    },
+    {
+      "word": "to",
+      "start": 1.518,
+      "end": 1.64
+    },
+    {
+      "word": "JD",
+      "start": 1.655,
+      "end": 2.158
+    },
+    {
+      "word": "Science",
+      "start": 2.173,
+      "end": 2.905
+    },
+    {
+      "word": "This",
+      "start": 3.968,
+      "end": 4.273
+    },
+    {
+      "word": "is",
+      "start": 4.288,
+      "end": 4.425
+    },
+    {
+      "word": "part",
+      "start": 4.44,
+      "end": 4.76
+    },
+    {
+      "word": "one",
+      "start": 4.776,
+      "end": 5.02
+    },
+    {
+      "word": "of",
+      "start": 5.035,
+      "end": 5.157
+    },
+    {
+      "word": "our",
+      "start": 5.172,
+      "end": 5.401
+    },
+    {
+      "word": "Level 3",
+      "start": 5.416,
+      "end": 6.148
+    },
+    {
+      "word": "lesson",
+      "start": 6.163,
+      "end": 6.574
+    },
+    {
+      "word": "on",
+      "start": 6.59,
+      "end": 6.712
+    },
+    {
+      "word": "the",
+      "start": 6.727,
+      "end": 6.803
+    },
+    {
+      "word": "transmission",
+      "start": 6.818,
+      "end": 7.55
+    },
+    {
+      "word": "of",
+      "start": 7.565,
+      "end": 7.657
+    },
+    {
+      "word": "a",
+      "start": 7.672,
+      "end": 7.718
+    },
+    {
+      "word": "nerve",
+      "start": 7.733,
+      "end": 8.16
+    },
+    {
+      "word": "impulse",
+      "start": 8.175,
+      "end": 8.861
+    },
+    {
+      "word": "A",
+      "start": 9.913,
+      "end": 10.08
+    },
+    {
+      "word": "nerve",
+      "start": 10.096,
+      "end": 10.553
+    },
+    {
+      "word": "impulse",
+      "start": 10.568,
+      "end": 11.026
+    },
+    {
+      "word": "is",
+      "start": 11.041,
+      "end": 11.193
+    },
+    {
+      "word": "a",
+      "start": 11.209,
+      "end": 11.3
+    },
+    {
+      "word": "brief",
+      "start": 11.315,
+      "end": 11.712
+    },
+    {
+      "word": "electrical",
+      "start": 11.727,
+      "end": 12.382
+    },
+    {
+      "word": "signal",
+      "start": 12.398,
+      "end": 12.779
+    },
+    {
+      "word": "that",
+      "start": 12.794,
+      "end": 12.977
+    },
+    {
+      "word": "travels",
+      "start": 12.992,
+      "end": 13.48
+    },
+    {
+      "word": "along",
+      "start": 13.495,
+      "end": 13.831
+    },
+    {
+      "word": "a",
+      "start": 13.846,
+      "end": 13.892
+    },
+    {
+      "word": "neurone",
+      "start": 13.907,
+      "end": 14.547
+    },
+    {
+      "word": "A",
+      "start": 15.599,
+      "end": 15.751
+    },
+    {
+      "word": "neurone",
+      "start": 15.766,
+      "end": 16.3
+    },
+    {
+      "word": "is",
+      "start": 16.315,
+      "end": 16.437
+    },
+    {
+      "word": "a",
+      "start": 16.452,
+      "end": 16.529
+    },
+    {
+      "word": "specialised",
+      "start": 16.544,
+      "end": 17.306
+    },
+    {
+      "word": "nerve",
+      "start": 17.321,
+      "end": 17.672
+    },
+    {
+      "word": "cell",
+      "start": 17.687,
+      "end": 17.962
+    },
+    {
+      "word": "that",
+      "start": 17.977,
+      "end": 18.144
+    },
+    {
+      "word": "carries",
+      "start": 18.16,
+      "end": 18.556
+    },
+    {
+      "word": "information",
+      "start": 18.571,
+      "end": 19.257
+    },
+    {
+      "word": "from",
+      "start": 19.273,
+      "end": 19.486
+    },
+    {
+      "word": "one",
+      "start": 19.501,
+      "end": 19.806
+    },
+    {
+      "word": "place",
+      "start": 19.821,
+      "end": 20.187
+    },
+    {
+      "word": "in",
+      "start": 20.202,
+      "end": 20.279
+    },
+    {
+      "word": "the",
+      "start": 20.294,
+      "end": 20.401
+    },
+    {
+      "word": "body",
+      "start": 20.416,
+      "end": 20.766
+    },
+    {
+      "word": "to",
+      "start": 20.782,
+      "end": 20.919
+    },
+    {
+      "word": "another",
+      "start": 20.934,
+      "end": 21.437
+    },
+    {
+      "word": "Look",
+      "start": 22.489,
+      "end": 22.763
+    },
+    {
+      "word": "first",
+      "start": 22.779,
+      "end": 23.236
+    },
+    {
+      "word": "at",
+      "start": 23.251,
+      "end": 23.358
+    },
+    {
+      "word": "a",
+      "start": 23.373,
+      "end": 23.449
+    },
+    {
+      "word": "real",
+      "start": 23.465,
+      "end": 23.876
+    },
+    {
+      "word": "stained",
+      "start": 23.891,
+      "end": 24.303
+    },
+    {
+      "word": "motor",
+      "start": 24.318,
+      "end": 24.669
+    },
+    {
+      "word": "neurone",
+      "start": 24.684,
+      "end": 25.202
+    },
+    {
+      "word": "from",
+      "start": 25.218,
+      "end": 25.401
+    },
+    {
+      "word": "the",
+      "start": 25.416,
+      "end": 25.523
+    },
+    {
+      "word": "spinal",
+      "start": 25.538,
+      "end": 26.071
+    },
+    {
+      "word": "cord",
+      "start": 26.087,
+      "end": 26.681
+    },
+    {
+      "word": "The",
+      "start": 27.733,
+      "end": 27.931
+    },
+    {
+      "word": "large",
+      "start": 27.946,
+      "end": 28.388
+    },
+    {
+      "word": "purple",
+      "start": 28.404,
+      "end": 28.83
+    },
+    {
+      "word": "cell",
+      "start": 28.846,
+      "end": 29.166
+    },
+    {
+      "word": "bodies",
+      "start": 29.181,
+      "end": 29.669
+    },
+    {
+      "word": "and",
+      "start": 29.684,
+      "end": 29.791
+    },
+    {
+      "word": "the",
+      "start": 29.806,
+      "end": 29.898
+    },
+    {
+      "word": "surrounding",
+      "start": 29.913,
+      "end": 30.538
+    },
+    {
+      "word": "fibres",
+      "start": 30.553,
+      "end": 31.071
+    },
+    {
+      "word": "are",
+      "start": 31.087,
+      "end": 31.178
+    },
+    {
+      "word": "genuine",
+      "start": 31.193,
+      "end": 31.742
+    },
+    {
+      "word": "tissue",
+      "start": 31.757,
+      "end": 32.321
+    },
+    {
+      "word": "A",
+      "start": 33.373,
+      "end": 33.541
+    },
+    {
+      "word": "light",
+      "start": 33.556,
+      "end": 33.937
+    },
+    {
+      "word": "micrograph",
+      "start": 33.952,
+      "end": 34.852
+    },
+    {
+      "word": "can",
+      "start": 34.867,
+      "end": 35.05
+    },
+    {
+      "word": "show",
+      "start": 35.065,
+      "end": 35.309
+    },
+    {
+      "word": "the",
+      "start": 35.324,
+      "end": 35.431
+    },
+    {
+      "word": "cell",
+      "start": 35.446,
+      "end": 35.782
+    },
+    {
+      "word": "body",
+      "start": 35.797,
+      "end": 36.148
+    },
+    {
+      "word": "and",
+      "start": 36.163,
+      "end": 36.315
+    },
+    {
+      "word": "processes",
+      "start": 36.331,
+      "end": 37.169
+    },
+    {
+      "word": "but",
+      "start": 37.428,
+      "end": 37.565
+    },
+    {
+      "word": "it",
+      "start": 37.581,
+      "end": 37.687
+    },
+    {
+      "word": "cannot",
+      "start": 37.702,
+      "end": 38.099
+    },
+    {
+      "word": "show",
+      "start": 38.114,
+      "end": 38.373
+    },
+    {
+      "word": "the",
+      "start": 38.388,
+      "end": 38.556
+    },
+    {
+      "word": "ions",
+      "start": 38.571,
+      "end": 39.074
+    },
+    {
+      "word": "that",
+      "start": 39.09,
+      "end": 39.242
+    },
+    {
+      "word": "create",
+      "start": 39.257,
+      "end": 39.684
+    },
+    {
+      "word": "the",
+      "start": 39.699,
+      "end": 39.821
+    },
+    {
+      "word": "impulse",
+      "start": 39.837,
+      "end": 40.462
+    },
+    {
+      "word": "so",
+      "start": 40.721,
+      "end": 40.858
+    },
+    {
+      "word": "we",
+      "start": 40.873,
+      "end": 41.041
+    },
+    {
+      "word": "now",
+      "start": 41.056,
+      "end": 41.315
+    },
+    {
+      "word": "switch",
+      "start": 41.331,
+      "end": 41.727
+    },
+    {
+      "word": "to",
+      "start": 41.742,
+      "end": 41.895
+    },
+    {
+      "word": "a",
+      "start": 41.91,
+      "end": 41.956
+    },
+    {
+      "word": "labelled",
+      "start": 41.971,
+      "end": 42.443
+    },
+    {
+      "word": "scientific",
+      "start": 42.459,
+      "end": 43.266
+    },
+    {
+      "word": "diagram",
+      "start": 43.282,
+      "end": 44.09
+    },
+    {
+      "word": "The",
+      "start": 45.141,
+      "end": 45.34
+    },
+    {
+      "word": "cell",
+      "start": 45.355,
+      "end": 45.706
+    },
+    {
+      "word": "body",
+      "start": 45.721,
+      "end": 45.98
+    },
+    {
+      "word": "contains",
+      "start": 45.995,
+      "end": 46.59
+    },
+    {
+      "word": "the",
+      "start": 46.605,
+      "end": 46.712
+    },
+    {
+      "word": "nucleus",
+      "start": 46.727,
+      "end": 47.367
+    },
+    {
+      "word": "and",
+      "start": 47.382,
+      "end": 47.535
+    },
+    {
+      "word": "most",
+      "start": 47.55,
+      "end": 47.901
+    },
+    {
+      "word": "of",
+      "start": 47.916,
+      "end": 47.992
+    },
+    {
+      "word": "the",
+      "start": 48.007,
+      "end": 48.099
+    },
+    {
+      "word": "cytoplasm",
+      "start": 48.114,
+      "end": 49.044
+    },
+    {
+      "word": "Short",
+      "start": 50.096,
+      "end": 50.644
+    },
+    {
+      "word": "branched",
+      "start": 50.797,
+      "end": 51.254
+    },
+    {
+      "word": "dendrites",
+      "start": 51.27,
+      "end": 51.895
+    },
+    {
+      "word": "receive",
+      "start": 51.91,
+      "end": 52.413
+    },
+    {
+      "word": "incoming",
+      "start": 52.428,
+      "end": 52.977
+    },
+    {
+      "word": "signals",
+      "start": 52.992,
+      "end": 53.602
+    },
+    {
+      "word": "and",
+      "start": 53.617,
+      "end": 53.754
+    },
+    {
+      "word": "pass",
+      "start": 53.77,
+      "end": 54.196
+    },
+    {
+      "word": "them",
+      "start": 54.212,
+      "end": 54.425
+    },
+    {
+      "word": "towards",
+      "start": 54.44,
+      "end": 54.974
+    },
+    {
+      "word": "the",
+      "start": 54.989,
+      "end": 55.096
+    },
+    {
+      "word": "cell",
+      "start": 55.111,
+      "end": 55.462
+    },
+    {
+      "word": "body",
+      "start": 55.477,
+      "end": 55.873
+    },
+    {
+      "word": "The",
+      "start": 56.925,
+      "end": 57.169
+    },
+    {
+      "word": "axon",
+      "start": 57.184,
+      "end": 57.702
+    },
+    {
+      "word": "is",
+      "start": 57.718,
+      "end": 57.855
+    },
+    {
+      "word": "a",
+      "start": 57.87,
+      "end": 57.946
+    },
+    {
+      "word": "long",
+      "start": 57.962,
+      "end": 58.312
+    },
+    {
+      "word": "process",
+      "start": 58.327,
+      "end": 58.846
+    },
+    {
+      "word": "that",
+      "start": 58.861,
+      "end": 59.029
+    },
+    {
+      "word": "carries",
+      "start": 59.044,
+      "end": 59.471
+    },
+    {
+      "word": "the",
+      "start": 59.486,
+      "end": 59.608
+    },
+    {
+      "word": "impulse",
+      "start": 59.623,
+      "end": 60.126
+    },
+    {
+      "word": "away",
+      "start": 60.141,
+      "end": 60.462
+    },
+    {
+      "word": "from",
+      "start": 60.477,
+      "end": 60.69
+    },
+    {
+      "word": "the",
+      "start": 60.706,
+      "end": 60.782
+    },
+    {
+      "word": "cell",
+      "start": 60.797,
+      "end": 61.163
+    },
+    {
+      "word": "body",
+      "start": 61.178,
+      "end": 61.483
+    },
+    {
+      "word": "towards",
+      "start": 61.498,
+      "end": 62.016
+    },
+    {
+      "word": "another",
+      "start": 62.032,
+      "end": 62.382
+    },
+    {
+      "word": "cell",
+      "start": 62.398,
+      "end": 62.901
+    },
+    {
+      "word": "The",
+      "start": 63.952,
+      "end": 64.196
+    },
+    {
+      "word": "axon",
+      "start": 64.212,
+      "end": 64.76
+    },
+    {
+      "word": "is",
+      "start": 64.776,
+      "end": 64.928
+    },
+    {
+      "word": "bounded",
+      "start": 64.943,
+      "end": 65.446
+    },
+    {
+      "word": "by",
+      "start": 65.462,
+      "end": 65.675
+    },
+    {
+      "word": "a",
+      "start": 65.69,
+      "end": 65.782
+    },
+    {
+      "word": "plasma",
+      "start": 65.797,
+      "end": 66.33
+    },
+    {
+      "word": "membrane",
+      "start": 66.346,
+      "end": 67.001
+    },
+    {
+      "word": "which",
+      "start": 67.199,
+      "end": 67.382
+    },
+    {
+      "word": "is",
+      "start": 67.398,
+      "end": 67.504
+    },
+    {
+      "word": "a",
+      "start": 67.519,
+      "end": 67.596
+    },
+    {
+      "word": "phospholipid",
+      "start": 67.611,
+      "end": 68.495
+    },
+    {
+      "word": "bilayer",
+      "start": 68.51,
+      "end": 69.09
+    },
+    {
+      "word": "with",
+      "start": 69.105,
+      "end": 69.288
+    },
+    {
+      "word": "proteins",
+      "start": 69.303,
+      "end": 70.019
+    },
+    {
+      "word": "in",
+      "start": 70.035,
+      "end": 70.172
+    },
+    {
+      "word": "it",
+      "start": 70.187,
+      "end": 70.477
+    },
+    {
+      "word": "In",
+      "start": 71.529,
+      "end": 71.803
+    },
+    {
+      "word": "many",
+      "start": 71.818,
+      "end": 72.093
+    },
+    {
+      "word": "neurones",
+      "start": 72.108,
+      "end": 72.809
+    },
+    {
+      "word": "a",
+      "start": 73.038,
+      "end": 73.084
+    },
+    {
+      "word": "myelin",
+      "start": 73.099,
+      "end": 73.648
+    },
+    {
+      "word": "sheath",
+      "start": 73.663,
+      "end": 74.074
+    },
+    {
+      "word": "wraps",
+      "start": 74.09,
+      "end": 74.501
+    },
+    {
+      "word": "around",
+      "start": 74.516,
+      "end": 74.959
+    },
+    {
+      "word": "the",
+      "start": 74.974,
+      "end": 75.096
+    },
+    {
+      "word": "axon",
+      "start": 75.111,
+      "end": 75.843
+    },
+    {
+      "word": "Myelin",
+      "start": 76.894,
+      "end": 77.489
+    },
+    {
+      "word": "is",
+      "start": 77.504,
+      "end": 77.672
+    },
+    {
+      "word": "made",
+      "start": 77.687,
+      "end": 78.007
+    },
+    {
+      "word": "by",
+      "start": 78.023,
+      "end": 78.221
+    },
+    {
+      "word": "Schwann",
+      "start": 78.236,
+      "end": 78.648
+    },
+    {
+      "word": "cells",
+      "start": 78.663,
+      "end": 79.105
+    },
+    {
+      "word": "in",
+      "start": 79.12,
+      "end": 79.212
+    },
+    {
+      "word": "the",
+      "start": 79.227,
+      "end": 79.318
+    },
+    {
+      "word": "peripheral",
+      "start": 79.334,
+      "end": 79.913
+    },
+    {
+      "word": "nervous",
+      "start": 79.928,
+      "end": 80.385
+    },
+    {
+      "word": "system",
+      "start": 80.401,
+      "end": 80.827
+    },
+    {
+      "word": "and",
+      "start": 80.843,
+      "end": 80.965
+    },
+    {
+      "word": "acts",
+      "start": 80.98,
+      "end": 81.315
+    },
+    {
+      "word": "as",
+      "start": 81.331,
+      "end": 81.452
+    },
+    {
+      "word": "an",
+      "start": 81.468,
+      "end": 81.559
+    },
+    {
+      "word": "electrical",
+      "start": 81.574,
+      "end": 82.215
+    },
+    {
+      "word": "insulator",
+      "start": 82.23,
+      "end": 83.068
+    },
+    {
+      "word": "The",
+      "start": 84.12,
+      "end": 84.303
+    },
+    {
+      "word": "gaps",
+      "start": 84.318,
+      "end": 84.669
+    },
+    {
+      "word": "between",
+      "start": 84.684,
+      "end": 85.111
+    },
+    {
+      "word": "adjacent",
+      "start": 85.126,
+      "end": 85.675
+    },
+    {
+      "word": "Schwann",
+      "start": 85.69,
+      "end": 86.071
+    },
+    {
+      "word": "cells",
+      "start": 86.087,
+      "end": 86.574
+    },
+    {
+      "word": "are",
+      "start": 86.59,
+      "end": 86.666
+    },
+    {
+      "word": "the",
+      "start": 86.681,
+      "end": 86.803
+    },
+    {
+      "word": "nodes",
+      "start": 86.818,
+      "end": 87.26
+    },
+    {
+      "word": "of",
+      "start": 87.276,
+      "end": 87.382
+    },
+    {
+      "word": "Ranvier",
+      "start": 87.398,
+      "end": 88.099
+    },
+    {
+      "word": "At",
+      "start": 89.151,
+      "end": 89.41
+    },
+    {
+      "word": "each",
+      "start": 89.425,
+      "end": 89.669
+    },
+    {
+      "word": "node",
+      "start": 89.684,
+      "end": 89.989
+    },
+    {
+      "word": "the",
+      "start": 90.004,
+      "end": 90.065
+    },
+    {
+      "word": "membrane",
+      "start": 90.081,
+      "end": 90.66
+    },
+    {
+      "word": "is",
+      "start": 90.675,
+      "end": 90.812
+    },
+    {
+      "word": "exposed",
+      "start": 90.827,
+      "end": 91.391
+    },
+    {
+      "word": "to",
+      "start": 91.407,
+      "end": 91.483
+    },
+    {
+      "word": "the",
+      "start": 91.498,
+      "end": 91.681
+    },
+    {
+      "word": "extracellular",
+      "start": 91.696,
+      "end": 92.596
+    },
+    {
+      "word": "fluid",
+      "start": 92.611,
+      "end": 93.175
+    },
+    {
+      "word": "Those",
+      "start": 94.227,
+      "end": 94.593
+    },
+    {
+      "word": "nodes",
+      "start": 94.608,
+      "end": 95.019
+    },
+    {
+      "word": "will",
+      "start": 95.035,
+      "end": 95.202
+    },
+    {
+      "word": "matter",
+      "start": 95.218,
+      "end": 95.568
+    },
+    {
+      "word": "when",
+      "start": 95.584,
+      "end": 95.858
+    },
+    {
+      "word": "we",
+      "start": 95.873,
+      "end": 95.98
+    },
+    {
+      "word": "look",
+      "start": 95.995,
+      "end": 96.285
+    },
+    {
+      "word": "at",
+      "start": 96.3,
+      "end": 96.391
+    },
+    {
+      "word": "how",
+      "start": 96.407,
+      "end": 96.62
+    },
+    {
+      "word": "the",
+      "start": 96.635,
+      "end": 96.788
+    },
+    {
+      "word": "impulse",
+      "start": 96.803,
+      "end": 97.245
+    },
+    {
+      "word": "travels",
+      "start": 97.26,
+      "end": 97.794
+    },
+    {
+      "word": "quickly",
+      "start": 97.809,
+      "end": 98.343
+    },
+    {
+      "word": "A",
+      "start": 99.394,
+      "end": 99.562
+    },
+    {
+      "word": "nerve",
+      "start": 99.577,
+      "end": 100.004
+    },
+    {
+      "word": "impulse",
+      "start": 100.019,
+      "end": 100.492
+    },
+    {
+      "word": "is",
+      "start": 100.507,
+      "end": 100.675
+    },
+    {
+      "word": "an",
+      "start": 100.69,
+      "end": 100.812
+    },
+    {
+      "word": "action",
+      "start": 100.827,
+      "end": 101.193
+    },
+    {
+      "word": "potential",
+      "start": 101.209,
+      "end": 101.803
+    },
+    {
+      "word": "travelling",
+      "start": 101.818,
+      "end": 102.321
+    },
+    {
+      "word": "along",
+      "start": 102.337,
+      "end": 102.626
+    },
+    {
+      "word": "the",
+      "start": 102.641,
+      "end": 102.794
+    },
+    {
+      "word": "axon",
+      "start": 102.809,
+      "end": 103.48
+    },
+    {
+      "word": "An",
+      "start": 104.532,
+      "end": 104.76
+    },
+    {
+      "word": "action",
+      "start": 104.776,
+      "end": 105.111
+    },
+    {
+      "word": "potential",
+      "start": 105.126,
+      "end": 105.751
+    },
+    {
+      "word": "is",
+      "start": 105.766,
+      "end": 105.873
+    },
+    {
+      "word": "a",
+      "start": 105.888,
+      "end": 105.965
+    },
+    {
+      "word": "rapid",
+      "start": 105.98,
+      "end": 106.498
+    },
+    {
+      "word": "temporary",
+      "start": 106.757,
+      "end": 107.199
+    },
+    {
+      "word": "reversal",
+      "start": 107.215,
+      "end": 107.885
+    },
+    {
+      "word": "of",
+      "start": 107.901,
+      "end": 107.977
+    },
+    {
+      "word": "the",
+      "start": 107.992,
+      "end": 108.129
+    },
+    {
+      "word": "electrical",
+      "start": 108.144,
+      "end": 108.8
+    },
+    {
+      "word": "charge",
+      "start": 108.815,
+      "end": 109.257
+    },
+    {
+      "word": "across",
+      "start": 109.273,
+      "end": 109.699
+    },
+    {
+      "word": "the",
+      "start": 109.715,
+      "end": 109.806
+    },
+    {
+      "word": "membrane",
+      "start": 109.821,
+      "end": 110.584
+    },
+    {
+      "word": "Before",
+      "start": 111.635,
+      "end": 112.016
+    },
+    {
+      "word": "that",
+      "start": 112.032,
+      "end": 112.26
+    },
+    {
+      "word": "reversal",
+      "start": 112.276,
+      "end": 112.855
+    },
+    {
+      "word": "can",
+      "start": 112.87,
+      "end": 113.038
+    },
+    {
+      "word": "happen",
+      "start": 113.053,
+      "end": 113.48
+    },
+    {
+      "word": "we",
+      "start": 113.693,
+      "end": 113.815
+    },
+    {
+      "word": "must",
+      "start": 113.831,
+      "end": 114.227
+    },
+    {
+      "word": "understand",
+      "start": 114.242,
+      "end": 114.882
+    },
+    {
+      "word": "the",
+      "start": 114.898,
+      "end": 114.974
+    },
+    {
+      "word": "resting",
+      "start": 114.989,
+      "end": 115.462
+    },
+    {
+      "word": "state",
+      "start": 115.477,
+      "end": 116.056
+    },
+    {
+      "word": "At",
+      "start": 117.108,
+      "end": 117.398
+    },
+    {
+      "word": "rest",
+      "start": 117.413,
+      "end": 117.87
+    },
+    {
+      "word": "the",
+      "start": 118.038,
+      "end": 118.16
+    },
+    {
+      "word": "inside",
+      "start": 118.175,
+      "end": 118.785
+    },
+    {
+      "word": "of",
+      "start": 118.8,
+      "end": 118.876
+    },
+    {
+      "word": "the",
+      "start": 118.891,
+      "end": 119.029
+    },
+    {
+      "word": "axon",
+      "start": 119.044,
+      "end": 119.547
+    },
+    {
+      "word": "is",
+      "start": 119.562,
+      "end": 119.745
+    },
+    {
+      "word": "negative",
+      "start": 119.76,
+      "end": 120.309
+    },
+    {
+      "word": "compared",
+      "start": 120.324,
+      "end": 120.934
+    },
+    {
+      "word": "with",
+      "start": 120.949,
+      "end": 121.087
+    },
+    {
+      "word": "the",
+      "start": 121.102,
+      "end": 121.239
+    },
+    {
+      "word": "outside",
+      "start": 121.254,
+      "end": 122.108
+    },
+    {
+      "word": "That",
+      "start": 123.16,
+      "end": 123.48
+    },
+    {
+      "word": "potential",
+      "start": 123.495,
+      "end": 124.044
+    },
+    {
+      "word": "difference",
+      "start": 124.059,
+      "end": 124.516
+    },
+    {
+      "word": "is",
+      "start": 124.532,
+      "end": 124.669
+    },
+    {
+      "word": "the",
+      "start": 124.684,
+      "end": 124.791
+    },
+    {
+      "word": "resting",
+      "start": 124.806,
+      "end": 125.263
+    },
+    {
+      "word": "potential",
+      "start": 125.279,
+      "end": 125.949
+    },
+    {
+      "word": "about",
+      "start": 126.224,
+      "end": 126.559
+    },
+    {
+      "word": "minus",
+      "start": 126.574,
+      "end": 126.986
+    },
+    {
+      "word": "seventy",
+      "start": 127.001,
+      "end": 127.489
+    },
+    {
+      "word": "millivolts",
+      "start": 127.504,
+      "end": 128.388
+    },
+    {
+      "word": "The",
+      "start": 129.44,
+      "end": 129.608
+    },
+    {
+      "word": "unit",
+      "start": 129.623,
+      "end": 130.065
+    },
+    {
+      "word": "is",
+      "start": 130.081,
+      "end": 130.218
+    },
+    {
+      "word": "the",
+      "start": 130.233,
+      "end": 130.34
+    },
+    {
+      "word": "millivolt",
+      "start": 130.355,
+      "end": 131.071
+    },
+    {
+      "word": "one",
+      "start": 131.269,
+      "end": 131.559
+    },
+    {
+      "word": "thousandth",
+      "start": 131.574,
+      "end": 132.215
+    },
+    {
+      "word": "of",
+      "start": 132.23,
+      "end": 132.321
+    },
+    {
+      "word": "a",
+      "start": 132.337,
+      "end": 132.398
+    },
+    {
+      "word": "volt",
+      "start": 132.413,
+      "end": 132.977
+    },
+    {
+      "word": "Because",
+      "start": 134.029,
+      "end": 134.41
+    },
+    {
+      "word": "opposite",
+      "start": 134.425,
+      "end": 134.928
+    },
+    {
+      "word": "charges",
+      "start": 134.943,
+      "end": 135.431
+    },
+    {
+      "word": "are",
+      "start": 135.446,
+      "end": 135.492
+    },
+    {
+      "word": "separated",
+      "start": 135.507,
+      "end": 136.163
+    },
+    {
+      "word": "across",
+      "start": 136.178,
+      "end": 136.605
+    },
+    {
+      "word": "the",
+      "start": 136.62,
+      "end": 136.712
+    },
+    {
+      "word": "membrane",
+      "start": 136.727,
+      "end": 137.367
+    },
+    {
+      "word": "we",
+      "start": 137.565,
+      "end": 137.687
+    },
+    {
+      "word": "say",
+      "start": 137.702,
+      "end": 137.977
+    },
+    {
+      "word": "the",
+      "start": 137.992,
+      "end": 138.114
+    },
+    {
+      "word": "membrane",
+      "start": 138.129,
+      "end": 138.724
+    },
+    {
+      "word": "is",
+      "start": 138.739,
+      "end": 138.937
+    },
+    {
+      "word": "polarised",
+      "start": 138.952,
+      "end": 140.019
+    },
+    {
+      "word": "The",
+      "start": 141.071,
+      "end": 141.3
+    },
+    {
+      "word": "ions",
+      "start": 141.315,
+      "end": 141.834
+    },
+    {
+      "word": "are",
+      "start": 141.849,
+      "end": 141.94
+    },
+    {
+      "word": "not",
+      "start": 141.955,
+      "end": 142.26
+    },
+    {
+      "word": "evenly",
+      "start": 142.276,
+      "end": 142.779
+    },
+    {
+      "word": "shared",
+      "start": 142.794,
+      "end": 143.419
+    },
+    {
+      "word": "Sodium",
+      "start": 144.471,
+      "end": 145.096
+    },
+    {
+      "word": "ions",
+      "start": 145.111,
+      "end": 145.736
+    },
+    {
+      "word": "shown",
+      "start": 145.995,
+      "end": 146.315
+    },
+    {
+      "word": "in",
+      "start": 146.33,
+      "end": 146.422
+    },
+    {
+      "word": "amber",
+      "start": 146.437,
+      "end": 146.864
+    },
+    {
+      "word": "are",
+      "start": 147.138,
+      "end": 147.245
+    },
+    {
+      "word": "far",
+      "start": 147.26,
+      "end": 147.581
+    },
+    {
+      "word": "more",
+      "start": 147.596,
+      "end": 147.84
+    },
+    {
+      "word": "concentrated",
+      "start": 147.855,
+      "end": 148.754
+    },
+    {
+      "word": "outside",
+      "start": 148.769,
+      "end": 149.394
+    },
+    {
+      "word": "the",
+      "start": 149.41,
+      "end": 149.547
+    },
+    {
+      "word": "axon",
+      "start": 149.562,
+      "end": 150.309
+    },
+    {
+      "word": "Potassium",
+      "start": 151.361,
+      "end": 152.138
+    },
+    {
+      "word": "ions",
+      "start": 152.154,
+      "end": 152.748
+    },
+    {
+      "word": "shown",
+      "start": 153.023,
+      "end": 153.343
+    },
+    {
+      "word": "in",
+      "start": 153.358,
+      "end": 153.51
+    },
+    {
+      "word": "teal",
+      "start": 153.526,
+      "end": 153.952
+    },
+    {
+      "word": "are",
+      "start": 154.242,
+      "end": 154.318
+    },
+    {
+      "word": "far",
+      "start": 154.334,
+      "end": 154.654
+    },
+    {
+      "word": "more",
+      "start": 154.669,
+      "end": 154.913
+    },
+    {
+      "word": "concentrated",
+      "start": 154.928,
+      "end": 155.843
+    },
+    {
+      "word": "inside",
+      "start": 155.858,
+      "end": 156.681
+    },
+    {
+      "word": "Large",
+      "start": 157.733,
+      "end": 158.221
+    },
+    {
+      "word": "negative",
+      "start": 158.236,
+      "end": 158.769
+    },
+    {
+      "word": "organic",
+      "start": 158.785,
+      "end": 159.288
+    },
+    {
+      "word": "ions",
+      "start": 159.303,
+      "end": 159.974
+    },
+    {
+      "word": "such",
+      "start": 160.202,
+      "end": 160.477
+    },
+    {
+      "word": "as",
+      "start": 160.492,
+      "end": 160.614
+    },
+    {
+      "word": "proteins",
+      "start": 160.629,
+      "end": 161.452
+    },
+    {
+      "word": "remain",
+      "start": 161.727,
+      "end": 162.123
+    },
+    {
+      "word": "inside",
+      "start": 162.138,
+      "end": 162.718
+    },
+    {
+      "word": "because",
+      "start": 162.733,
+      "end": 163.053
+    },
+    {
+      "word": "they",
+      "start": 163.068,
+      "end": 163.19
+    },
+    {
+      "word": "cannot",
+      "start": 163.205,
+      "end": 163.663
+    },
+    {
+      "word": "cross",
+      "start": 163.678,
+      "end": 164.059
+    },
+    {
+      "word": "the",
+      "start": 164.074,
+      "end": 164.181
+    },
+    {
+      "word": "membrane",
+      "start": 164.196,
+      "end": 164.959
+    },
+    {
+      "word": "The",
+      "start": 166.01,
+      "end": 166.224
+    },
+    {
+      "word": "sodium",
+      "start": 166.239,
+      "end": 166.818
+    },
+    {
+      "word": "potassium",
+      "start": 166.894,
+      "end": 167.657
+    },
+    {
+      "word": "pump",
+      "start": 167.672,
+      "end": 167.992
+    },
+    {
+      "word": "maintains",
+      "start": 168.007,
+      "end": 168.739
+    },
+    {
+      "word": "those",
+      "start": 168.754,
+      "end": 169.029
+    },
+    {
+      "word": "concentration",
+      "start": 169.044,
+      "end": 169.943
+    },
+    {
+      "word": "gradients",
+      "start": 169.959,
+      "end": 170.858
+    },
+    {
+      "word": "It",
+      "start": 171.91,
+      "end": 172.154
+    },
+    {
+      "word": "is",
+      "start": 172.169,
+      "end": 172.276
+    },
+    {
+      "word": "a",
+      "start": 172.291,
+      "end": 172.352
+    },
+    {
+      "word": "membrane",
+      "start": 172.367,
+      "end": 172.962
+    },
+    {
+      "word": "protein",
+      "start": 172.977,
+      "end": 173.571
+    },
+    {
+      "word": "that",
+      "start": 173.587,
+      "end": 173.785
+    },
+    {
+      "word": "uses",
+      "start": 173.8,
+      "end": 174.227
+    },
+    {
+      "word": "ATP",
+      "start": 174.242,
+      "end": 174.989
+    },
+    {
+      "word": "the",
+      "start": 175.263,
+      "end": 175.385
+    },
+    {
+      "word": "cell's",
+      "start": 175.401,
+      "end": 175.904
+    },
+    {
+      "word": "energy",
+      "start": 175.919,
+      "end": 176.285
+    },
+    {
+      "word": "currency",
+      "start": 176.3,
+      "end": 177.032
+    },
+    {
+      "word": "For",
+      "start": 178.084,
+      "end": 178.327
+    },
+    {
+      "word": "each",
+      "start": 178.343,
+      "end": 178.648
+    },
+    {
+      "word": "cycle",
+      "start": 178.663,
+      "end": 179.242
+    },
+    {
+      "word": "three",
+      "start": 179.486,
+      "end": 179.837
+    },
+    {
+      "word": "sodium",
+      "start": 179.852,
+      "end": 180.385
+    },
+    {
+      "word": "ions",
+      "start": 180.401,
+      "end": 180.873
+    },
+    {
+      "word": "are",
+      "start": 180.888,
+      "end": 180.995
+    },
+    {
+      "word": "moved",
+      "start": 181.01,
+      "end": 181.498
+    },
+    {
+      "word": "out",
+      "start": 181.513,
+      "end": 181.834
+    },
+    {
+      "word": "and",
+      "start": 181.849,
+      "end": 181.971
+    },
+    {
+      "word": "two",
+      "start": 181.986,
+      "end": 182.215
+    },
+    {
+      "word": "potassium",
+      "start": 182.23,
+      "end": 182.946
+    },
+    {
+      "word": "ions",
+      "start": 182.962,
+      "end": 183.434
+    },
+    {
+      "word": "are",
+      "start": 183.449,
+      "end": 183.571
+    },
+    {
+      "word": "moved",
+      "start": 183.587,
+      "end": 184.105
+    },
+    {
+      "word": "in",
+      "start": 184.12,
+      "end": 184.44
+    },
+    {
+      "word": "That",
+      "start": 185.492,
+      "end": 185.782
+    },
+    {
+      "word": "is",
+      "start": 185.797,
+      "end": 185.949
+    },
+    {
+      "word": "active",
+      "start": 185.965,
+      "end": 186.361
+    },
+    {
+      "word": "transport",
+      "start": 186.376,
+      "end": 187.154
+    },
+    {
+      "word": "against",
+      "start": 187.398,
+      "end": 187.809
+    },
+    {
+      "word": "their",
+      "start": 187.824,
+      "end": 187.992
+    },
+    {
+      "word": "concentration",
+      "start": 188.007,
+      "end": 188.952
+    },
+    {
+      "word": "gradients",
+      "start": 188.968,
+      "end": 189.867
+    },
+    {
+      "word": "Because",
+      "start": 190.919,
+      "end": 191.3
+    },
+    {
+      "word": "three",
+      "start": 191.315,
+      "end": 191.59
+    },
+    {
+      "word": "positive",
+      "start": 191.605,
+      "end": 192.108
+    },
+    {
+      "word": "ions",
+      "start": 192.123,
+      "end": 192.611
+    },
+    {
+      "word": "leave",
+      "start": 192.626,
+      "end": 192.901
+    },
+    {
+      "word": "for",
+      "start": 192.916,
+      "end": 193.083
+    },
+    {
+      "word": "every",
+      "start": 193.099,
+      "end": 193.404
+    },
+    {
+      "word": "two",
+      "start": 193.419,
+      "end": 193.709
+    },
+    {
+      "word": "that",
+      "start": 193.724,
+      "end": 193.968
+    },
+    {
+      "word": "enter",
+      "start": 193.983,
+      "end": 194.334
+    },
+    {
+      "word": "the",
+      "start": 194.593,
+      "end": 194.699
+    },
+    {
+      "word": "pump",
+      "start": 194.715,
+      "end": 195.02
+    },
+    {
+      "word": "also",
+      "start": 195.035,
+      "end": 195.385
+    },
+    {
+      "word": "makes",
+      "start": 195.401,
+      "end": 195.705
+    },
+    {
+      "word": "the",
+      "start": 195.721,
+      "end": 195.812
+    },
+    {
+      "word": "inside",
+      "start": 195.827,
+      "end": 196.376
+    },
+    {
+      "word": "a",
+      "start": 196.391,
+      "end": 196.452
+    },
+    {
+      "word": "little",
+      "start": 196.468,
+      "end": 196.833
+    },
+    {
+      "word": "more",
+      "start": 196.849,
+      "end": 197.093
+    },
+    {
+      "word": "negative",
+      "start": 197.108,
+      "end": 197.87
+    },
+    {
+      "word": "The",
+      "start": 199.06,
+      "end": 199.228
+    },
+    {
+      "word": "membrane",
+      "start": 199.243,
+      "end": 199.837
+    },
+    {
+      "word": "is",
+      "start": 199.853,
+      "end": 200.02
+    },
+    {
+      "word": "selectively",
+      "start": 200.036,
+      "end": 200.737
+    },
+    {
+      "word": "permeable",
+      "start": 200.752,
+      "end": 201.484
+    },
+    {
+      "word": "which",
+      "start": 201.697,
+      "end": 201.88
+    },
+    {
+      "word": "means",
+      "start": 201.895,
+      "end": 202.231
+    },
+    {
+      "word": "it",
+      "start": 202.246,
+      "end": 202.383
+    },
+    {
+      "word": "does",
+      "start": 202.398,
+      "end": 202.612
+    },
+    {
+      "word": "not",
+      "start": 202.627,
+      "end": 202.871
+    },
+    {
+      "word": "treat",
+      "start": 202.886,
+      "end": 203.283
+    },
+    {
+      "word": "every",
+      "start": 203.298,
+      "end": 203.633
+    },
+    {
+      "word": "ion",
+      "start": 203.648,
+      "end": 204.106
+    },
+    {
+      "word": "the",
+      "start": 204.121,
+      "end": 204.228
+    },
+    {
+      "word": "same",
+      "start": 204.243,
+      "end": 204.594
+    },
+    {
+      "word": "way",
+      "start": 204.609,
+      "end": 205.097
+    },
+    {
+      "word": "At",
+      "start": 206.159,
+      "end": 206.449
+    },
+    {
+      "word": "rest",
+      "start": 206.464,
+      "end": 206.784
+    },
+    {
+      "word": "it",
+      "start": 206.8,
+      "end": 206.922
+    },
+    {
+      "word": "is",
+      "start": 206.937,
+      "end": 207.074
+    },
+    {
+      "word": "much",
+      "start": 207.089,
+      "end": 207.409
+    },
+    {
+      "word": "more",
+      "start": 207.425,
+      "end": 207.623
+    },
+    {
+      "word": "permeable",
+      "start": 207.638,
+      "end": 208.263
+    },
+    {
+      "word": "to",
+      "start": 208.278,
+      "end": 208.37
+    },
+    {
+      "word": "potassium",
+      "start": 208.385,
+      "end": 209.071
+    },
+    {
+      "word": "than",
+      "start": 209.086,
+      "end": 209.223
+    },
+    {
+      "word": "to",
+      "start": 209.239,
+      "end": 209.345
+    },
+    {
+      "word": "sodium",
+      "start": 209.361,
+      "end": 210.077
+    },
+    {
+      "word": "Potassium",
+      "start": 211.129,
+      "end": 211.891
+    },
+    {
+      "word": "leak",
+      "start": 211.906,
+      "end": 212.211
+    },
+    {
+      "word": "channels",
+      "start": 212.226,
+      "end": 212.684
+    },
+    {
+      "word": "stay",
+      "start": 212.699,
+      "end": 213.05
+    },
+    {
+      "word": "open",
+      "start": 213.065,
+      "end": 213.537
+    },
+    {
+      "word": "so",
+      "start": 213.72,
+      "end": 213.888
+    },
+    {
+      "word": "some",
+      "start": 213.903,
+      "end": 214.162
+    },
+    {
+      "word": "potassium",
+      "start": 214.178,
+      "end": 214.864
+    },
+    {
+      "word": "ions",
+      "start": 214.879,
+      "end": 215.351
+    },
+    {
+      "word": "diffuse",
+      "start": 215.367,
+      "end": 215.9
+    },
+    {
+      "word": "out",
+      "start": 215.916,
+      "end": 216.159
+    },
+    {
+      "word": "down",
+      "start": 216.175,
+      "end": 216.495
+    },
+    {
+      "word": "their",
+      "start": 216.51,
+      "end": 216.662
+    },
+    {
+      "word": "concentration",
+      "start": 216.678,
+      "end": 217.638
+    },
+    {
+      "word": "gradient",
+      "start": 217.653,
+      "end": 218.446
+    },
+    {
+      "word": "As",
+      "start": 219.498,
+      "end": 219.757
+    },
+    {
+      "word": "those",
+      "start": 219.772,
+      "end": 220.047
+    },
+    {
+      "word": "positive",
+      "start": 220.062,
+      "end": 220.534
+    },
+    {
+      "word": "ions",
+      "start": 220.55,
+      "end": 221.022
+    },
+    {
+      "word": "leave",
+      "start": 221.037,
+      "end": 221.54
+    },
+    {
+      "word": "the",
+      "start": 221.693,
+      "end": 221.815
+    },
+    {
+      "word": "inside",
+      "start": 221.83,
+      "end": 222.44
+    },
+    {
+      "word": "becomes",
+      "start": 222.455,
+      "end": 222.928
+    },
+    {
+      "word": "more",
+      "start": 222.943,
+      "end": 223.172
+    },
+    {
+      "word": "negative",
+      "start": 223.187,
+      "end": 223.995
+    },
+    {
+      "word": "Sodium",
+      "start": 225.047,
+      "end": 225.717
+    },
+    {
+      "word": "channels",
+      "start": 225.733,
+      "end": 226.205
+    },
+    {
+      "word": "are",
+      "start": 226.22,
+      "end": 226.312
+    },
+    {
+      "word": "mostly",
+      "start": 226.327,
+      "end": 226.861
+    },
+    {
+      "word": "closed",
+      "start": 226.876,
+      "end": 227.394
+    },
+    {
+      "word": "at",
+      "start": 227.409,
+      "end": 227.592
+    },
+    {
+      "word": "rest",
+      "start": 227.608,
+      "end": 228.034
+    },
+    {
+      "word": "so",
+      "start": 228.278,
+      "end": 228.446
+    },
+    {
+      "word": "sodium",
+      "start": 228.461,
+      "end": 229.04
+    },
+    {
+      "word": "cannot",
+      "start": 229.056,
+      "end": 229.498
+    },
+    {
+      "word": "easily",
+      "start": 229.513,
+      "end": 229.955
+    },
+    {
+      "word": "flood",
+      "start": 229.97,
+      "end": 230.306
+    },
+    {
+      "word": "back",
+      "start": 230.321,
+      "end": 230.641
+    },
+    {
+      "word": "in",
+      "start": 230.656,
+      "end": 230.961
+    },
+    {
+      "word": "Put",
+      "start": 232.013,
+      "end": 232.287
+    },
+    {
+      "word": "those",
+      "start": 232.303,
+      "end": 232.592
+    },
+    {
+      "word": "ideas",
+      "start": 232.608,
+      "end": 233.095
+    },
+    {
+      "word": "together",
+      "start": 233.111,
+      "end": 233.736
+    },
+    {
+      "word": "The",
+      "start": 234.787,
+      "end": 234.986
+    },
+    {
+      "word": "pump",
+      "start": 235.001,
+      "end": 235.321
+    },
+    {
+      "word": "keeps",
+      "start": 235.336,
+      "end": 235.672
+    },
+    {
+      "word": "sodium",
+      "start": 235.687,
+      "end": 236.159
+    },
+    {
+      "word": "high",
+      "start": 236.175,
+      "end": 236.48
+    },
+    {
+      "word": "outside",
+      "start": 236.495,
+      "end": 237.135
+    },
+    {
+      "word": "and",
+      "start": 237.15,
+      "end": 237.272
+    },
+    {
+      "word": "potassium",
+      "start": 237.287,
+      "end": 237.973
+    },
+    {
+      "word": "high",
+      "start": 237.989,
+      "end": 238.263
+    },
+    {
+      "word": "inside",
+      "start": 238.278,
+      "end": 239.101
+    },
+    {
+      "word": "Potassium",
+      "start": 240.153,
+      "end": 240.946
+    },
+    {
+      "word": "leak",
+      "start": 240.961,
+      "end": 241.236
+    },
+    {
+      "word": "channels",
+      "start": 241.251,
+      "end": 241.754
+    },
+    {
+      "word": "let",
+      "start": 241.769,
+      "end": 241.998
+    },
+    {
+      "word": "some",
+      "start": 242.013,
+      "end": 242.226
+    },
+    {
+      "word": "potassium",
+      "start": 242.242,
+      "end": 242.989
+    },
+    {
+      "word": "leave",
+      "start": 243.004,
+      "end": 243.598
+    },
+    {
+      "word": "Impermeant",
+      "start": 244.65,
+      "end": 245.397
+    },
+    {
+      "word": "negative",
+      "start": 245.412,
+      "end": 245.854
+    },
+    {
+      "word": "ions",
+      "start": 245.87,
+      "end": 246.266
+    },
+    {
+      "word": "stay",
+      "start": 246.281,
+      "end": 246.525
+    },
+    {
+      "word": "inside",
+      "start": 246.541,
+      "end": 247.364
+    },
+    {
+      "word": "The",
+      "start": 248.416,
+      "end": 248.598
+    },
+    {
+      "word": "result",
+      "start": 248.614,
+      "end": 249.056
+    },
+    {
+      "word": "is",
+      "start": 249.071,
+      "end": 249.223
+    },
+    {
+      "word": "a",
+      "start": 249.239,
+      "end": 249.315
+    },
+    {
+      "word": "polarised",
+      "start": 249.33,
+      "end": 250.108
+    },
+    {
+      "word": "membrane",
+      "start": 250.123,
+      "end": 250.717
+    },
+    {
+      "word": "at",
+      "start": 250.733,
+      "end": 250.87
+    },
+    {
+      "word": "about",
+      "start": 250.885,
+      "end": 251.205
+    },
+    {
+      "word": "minus",
+      "start": 251.22,
+      "end": 251.617
+    },
+    {
+      "word": "seventy",
+      "start": 251.632,
+      "end": 252.089
+    },
+    {
+      "word": "millivolts",
+      "start": 252.105,
+      "end": 252.943
+    },
+    {
+      "word": "That",
+      "start": 253.995,
+      "end": 254.3
+    },
+    {
+      "word": "is",
+      "start": 254.315,
+      "end": 254.467
+    },
+    {
+      "word": "the",
+      "start": 254.483,
+      "end": 254.604
+    },
+    {
+      "word": "resting",
+      "start": 254.62,
+      "end": 255.108
+    },
+    {
+      "word": "potential",
+      "start": 255.123,
+      "end": 255.854
+    },
+    {
+      "word": "The",
+      "start": 256.906,
+      "end": 257.089
+    },
+    {
+      "word": "pump",
+      "start": 257.105,
+      "end": 257.409
+    },
+    {
+      "word": "does",
+      "start": 257.425,
+      "end": 257.623
+    },
+    {
+      "word": "not",
+      "start": 257.638,
+      "end": 257.867
+    },
+    {
+      "word": "fire",
+      "start": 257.882,
+      "end": 258.248
+    },
+    {
+      "word": "the",
+      "start": 258.263,
+      "end": 258.4
+    },
+    {
+      "word": "impulse",
+      "start": 258.416,
+      "end": 259.193
+    },
+    {
+      "word": "It",
+      "start": 260.245,
+      "end": 260.489
+    },
+    {
+      "word": "quietly",
+      "start": 260.504,
+      "end": 261.083
+    },
+    {
+      "word": "maintains",
+      "start": 261.098,
+      "end": 261.784
+    },
+    {
+      "word": "the",
+      "start": 261.8,
+      "end": 261.891
+    },
+    {
+      "word": "gradients",
+      "start": 261.906,
+      "end": 262.608
+    },
+    {
+      "word": "that",
+      "start": 262.623,
+      "end": 262.775
+    },
+    {
+      "word": "make",
+      "start": 262.791,
+      "end": 263.05
+    },
+    {
+      "word": "an",
+      "start": 263.065,
+      "end": 263.187
+    },
+    {
+      "word": "impulse",
+      "start": 263.202,
+      "end": 263.675
+    },
+    {
+      "word": "possible",
+      "start": 263.69,
+      "end": 264.376
+    },
+    {
+      "word": "Here",
+      "start": 265.428,
+      "end": 265.824
+    },
+    {
+      "word": "is",
+      "start": 265.839,
+      "end": 265.992
+    },
+    {
+      "word": "a",
+      "start": 266.007,
+      "end": 266.068
+    },
+    {
+      "word": "worked",
+      "start": 266.083,
+      "end": 266.495
+    },
+    {
+      "word": "examination-style",
+      "start": 266.51,
+      "end": 267.791
+    },
+    {
+      "word": "example",
+      "start": 267.806,
+      "end": 268.537
+    },
+    {
+      "word": "A",
+      "start": 269.589,
+      "end": 269.757
+    },
+    {
+      "word": "student",
+      "start": 269.772,
+      "end": 270.23
+    },
+    {
+      "word": "writes",
+      "start": 270.245,
+      "end": 270.733
+    },
+    {
+      "word": "the",
+      "start": 270.87,
+      "end": 270.992
+    },
+    {
+      "word": "sodium",
+      "start": 271.007,
+      "end": 271.571
+    },
+    {
+      "word": "potassium",
+      "start": 271.662,
+      "end": 272.364
+    },
+    {
+      "word": "pump",
+      "start": 272.379,
+      "end": 272.699
+    },
+    {
+      "word": "creates",
+      "start": 272.714,
+      "end": 273.187
+    },
+    {
+      "word": "the",
+      "start": 273.202,
+      "end": 273.309
+    },
+    {
+      "word": "resting",
+      "start": 273.324,
+      "end": 273.766
+    },
+    {
+      "word": "potential",
+      "start": 273.781,
+      "end": 274.361
+    },
+    {
+      "word": "by",
+      "start": 274.376,
+      "end": 274.543
+    },
+    {
+      "word": "pumping",
+      "start": 274.559,
+      "end": 275.092
+    },
+    {
+      "word": "sodium",
+      "start": 275.108,
+      "end": 275.717
+    },
+    {
+      "word": "in",
+      "start": 275.733,
+      "end": 275.854
+    },
+    {
+      "word": "and",
+      "start": 275.87,
+      "end": 276.007
+    },
+    {
+      "word": "potassium",
+      "start": 276.022,
+      "end": 276.647
+    },
+    {
+      "word": "out",
+      "start": 276.662,
+      "end": 277.089
+    },
+    {
+      "word": "Identify",
+      "start": 278.141,
+      "end": 278.964
+    },
+    {
+      "word": "two",
+      "start": 278.979,
+      "end": 279.284
+    },
+    {
+      "word": "scientific",
+      "start": 279.3,
+      "end": 280.153
+    },
+    {
+      "word": "errors",
+      "start": 280.169,
+      "end": 280.565
+    },
+    {
+      "word": "and",
+      "start": 280.58,
+      "end": 280.702
+    },
+    {
+      "word": "correct",
+      "start": 280.717,
+      "end": 281.159
+    },
+    {
+      "word": "them",
+      "start": 281.175,
+      "end": 281.51
+    },
+    {
+      "word": "The",
+      "start": 282.562,
+      "end": 282.745
+    },
+    {
+      "word": "first",
+      "start": 282.76,
+      "end": 283.202
+    },
+    {
+      "word": "error",
+      "start": 283.217,
+      "end": 283.537
+    },
+    {
+      "word": "is",
+      "start": 283.553,
+      "end": 283.736
+    },
+    {
+      "word": "the",
+      "start": 283.751,
+      "end": 283.873
+    },
+    {
+      "word": "direction",
+      "start": 283.888,
+      "end": 284.681
+    },
+    {
+      "word": "The",
+      "start": 285.733,
+      "end": 285.915
+    },
+    {
+      "word": "pump",
+      "start": 285.931,
+      "end": 286.22
+    },
+    {
+      "word": "moves",
+      "start": 286.236,
+      "end": 286.632
+    },
+    {
+      "word": "three",
+      "start": 286.647,
+      "end": 286.952
+    },
+    {
+      "word": "sodium",
+      "start": 286.967,
+      "end": 287.516
+    },
+    {
+      "word": "ions",
+      "start": 287.531,
+      "end": 288.004
+    },
+    {
+      "word": "out",
+      "start": 288.019,
+      "end": 288.385
+    },
+    {
+      "word": "not",
+      "start": 288.629,
+      "end": 288.964
+    },
+    {
+      "word": "in",
+      "start": 288.979,
+      "end": 289.3
+    },
+    {
+      "word": "and",
+      "start": 289.544,
+      "end": 289.696
+    },
+    {
+      "word": "two",
+      "start": 289.711,
+      "end": 289.94
+    },
+    {
+      "word": "potassium",
+      "start": 289.955,
+      "end": 290.641
+    },
+    {
+      "word": "ions",
+      "start": 290.656,
+      "end": 291.129
+    },
+    {
+      "word": "in",
+      "start": 291.144,
+      "end": 291.388
+    },
+    {
+      "word": "not",
+      "start": 291.556,
+      "end": 291.861
+    },
+    {
+      "word": "out",
+      "start": 291.876,
+      "end": 292.333
+    },
+    {
+      "word": "The",
+      "start": 293.385,
+      "end": 293.598
+    },
+    {
+      "word": "second",
+      "start": 293.614,
+      "end": 294.04
+    },
+    {
+      "word": "error",
+      "start": 294.056,
+      "end": 294.376
+    },
+    {
+      "word": "is",
+      "start": 294.391,
+      "end": 294.589
+    },
+    {
+      "word": "the",
+      "start": 294.604,
+      "end": 294.711
+    },
+    {
+      "word": "claim",
+      "start": 294.726,
+      "end": 295.123
+    },
+    {
+      "word": "that",
+      "start": 295.138,
+      "end": 295.275
+    },
+    {
+      "word": "the",
+      "start": 295.291,
+      "end": 295.397
+    },
+    {
+      "word": "pump",
+      "start": 295.412,
+      "end": 295.687
+    },
+    {
+      "word": "alone",
+      "start": 295.702,
+      "end": 296.083
+    },
+    {
+      "word": "creates",
+      "start": 296.098,
+      "end": 296.586
+    },
+    {
+      "word": "the",
+      "start": 296.601,
+      "end": 296.693
+    },
+    {
+      "word": "resting",
+      "start": 296.708,
+      "end": 297.15
+    },
+    {
+      "word": "potential",
+      "start": 297.166,
+      "end": 297.897
+    },
+    {
+      "word": "The",
+      "start": 298.949,
+      "end": 299.147
+    },
+    {
+      "word": "pump",
+      "start": 299.162,
+      "end": 299.452
+    },
+    {
+      "word": "maintains",
+      "start": 299.467,
+      "end": 300.184
+    },
+    {
+      "word": "the",
+      "start": 300.199,
+      "end": 300.306
+    },
+    {
+      "word": "gradients",
+      "start": 300.321,
+      "end": 301.236
+    },
+    {
+      "word": "Potassium",
+      "start": 302.287,
+      "end": 303.08
+    },
+    {
+      "word": "leak",
+      "start": 303.095,
+      "end": 303.355
+    },
+    {
+      "word": "channels",
+      "start": 303.37,
+      "end": 303.873
+    },
+    {
+      "word": "and",
+      "start": 303.888,
+      "end": 303.995
+    },
+    {
+      "word": "the",
+      "start": 304.01,
+      "end": 304.101
+    },
+    {
+      "word": "trapped",
+      "start": 304.117,
+      "end": 304.528
+    },
+    {
+      "word": "negative",
+      "start": 304.544,
+      "end": 305.077
+    },
+    {
+      "word": "ions",
+      "start": 305.092,
+      "end": 305.565
+    },
+    {
+      "word": "are",
+      "start": 305.58,
+      "end": 305.733
+    },
+    {
+      "word": "also",
+      "start": 305.748,
+      "end": 306.205
+    },
+    {
+      "word": "essential",
+      "start": 306.22,
+      "end": 306.937
+    },
+    {
+      "word": "Now",
+      "start": 307.989,
+      "end": 308.339
+    },
+    {
+      "word": "pause",
+      "start": 308.354,
+      "end": 308.751
+    },
+    {
+      "word": "the",
+      "start": 308.766,
+      "end": 308.873
+    },
+    {
+      "word": "video",
+      "start": 308.888,
+      "end": 309.391
+    },
+    {
+      "word": "and",
+      "start": 309.406,
+      "end": 309.544
+    },
+    {
+      "word": "try",
+      "start": 309.559,
+      "end": 309.848
+    },
+    {
+      "word": "this",
+      "start": 309.864,
+      "end": 310.153
+    },
+    {
+      "word": "sequencing",
+      "start": 310.169,
+      "end": 310.809
+    },
+    {
+      "word": "question",
+      "start": 310.824,
+      "end": 311.48
+    },
+    {
+      "word": "Place",
+      "start": 312.531,
+      "end": 312.973
+    },
+    {
+      "word": "these",
+      "start": 312.989,
+      "end": 313.278
+    },
+    {
+      "word": "four",
+      "start": 313.294,
+      "end": 313.4
+    },
+    {
+      "word": "statements",
+      "start": 313.416,
+      "end": 314.01
+    },
+    {
+      "word": "in",
+      "start": 314.025,
+      "end": 314.117
+    },
+    {
+      "word": "the",
+      "start": 314.132,
+      "end": 314.254
+    },
+    {
+      "word": "order",
+      "start": 314.269,
+      "end": 314.604
+    },
+    {
+      "word": "that",
+      "start": 314.62,
+      "end": 314.833
+    },
+    {
+      "word": "establishes",
+      "start": 314.848,
+      "end": 315.534
+    },
+    {
+      "word": "a",
+      "start": 315.55,
+      "end": 315.611
+    },
+    {
+      "word": "resting",
+      "start": 315.626,
+      "end": 316.083
+    },
+    {
+      "word": "potential",
+      "start": 316.098,
+      "end": 316.83
+    },
+    {
+      "word": "A",
+      "start": 317.882,
+      "end": 318.202
+    },
+    {
+      "word": "the",
+      "start": 318.416,
+      "end": 318.537
+    },
+    {
+      "word": "sodium",
+      "start": 318.553,
+      "end": 319.117
+    },
+    {
+      "word": "potassium",
+      "start": 319.208,
+      "end": 319.955
+    },
+    {
+      "word": "pump",
+      "start": 319.97,
+      "end": 320.291
+    },
+    {
+      "word": "uses",
+      "start": 320.306,
+      "end": 320.717
+    },
+    {
+      "word": "ATP",
+      "start": 320.733,
+      "end": 321.617
+    },
+    {
+      "word": "B",
+      "start": 322.669,
+      "end": 323.034
+    },
+    {
+      "word": "sodium",
+      "start": 323.309,
+      "end": 323.797
+    },
+    {
+      "word": "stays",
+      "start": 323.812,
+      "end": 324.223
+    },
+    {
+      "word": "high",
+      "start": 324.239,
+      "end": 324.544
+    },
+    {
+      "word": "outside",
+      "start": 324.559,
+      "end": 325.245
+    },
+    {
+      "word": "and",
+      "start": 325.26,
+      "end": 325.382
+    },
+    {
+      "word": "potassium",
+      "start": 325.397,
+      "end": 326.144
+    },
+    {
+      "word": "stays",
+      "start": 326.159,
+      "end": 326.586
+    },
+    {
+      "word": "high",
+      "start": 326.601,
+      "end": 326.891
+    },
+    {
+      "word": "inside",
+      "start": 326.906,
+      "end": 327.745
+    },
+    {
+      "word": "C",
+      "start": 328.797,
+      "end": 329.269
+    },
+    {
+      "word": "potassium",
+      "start": 329.483,
+      "end": 330.214
+    },
+    {
+      "word": "leaks",
+      "start": 330.229,
+      "end": 330.55
+    },
+    {
+      "word": "out",
+      "start": 330.565,
+      "end": 330.763
+    },
+    {
+      "word": "through",
+      "start": 330.778,
+      "end": 331.114
+    },
+    {
+      "word": "open",
+      "start": 331.129,
+      "end": 331.556
+    },
+    {
+      "word": "leak",
+      "start": 331.571,
+      "end": 331.861
+    },
+    {
+      "word": "channels",
+      "start": 331.876,
+      "end": 332.577
+    },
+    {
+      "word": "D",
+      "start": 333.629,
+      "end": 333.98
+    },
+    {
+      "word": "the",
+      "start": 334.239,
+      "end": 334.33
+    },
+    {
+      "word": "membrane",
+      "start": 334.345,
+      "end": 334.94
+    },
+    {
+      "word": "is",
+      "start": 334.955,
+      "end": 335.138
+    },
+    {
+      "word": "polarised",
+      "start": 335.153,
+      "end": 335.9
+    },
+    {
+      "word": "at",
+      "start": 335.915,
+      "end": 336.037
+    },
+    {
+      "word": "about",
+      "start": 336.053,
+      "end": 336.373
+    },
+    {
+      "word": "minus",
+      "start": 336.388,
+      "end": 336.8
+    },
+    {
+      "word": "seventy",
+      "start": 336.815,
+      "end": 337.272
+    },
+    {
+      "word": "millivolts",
+      "start": 337.287,
+      "end": 338.172
+    },
+    {
+      "word": "Here",
+      "start": 339.223,
+      "end": 339.589
+    },
+    {
+      "word": "is",
+      "start": 339.604,
+      "end": 339.772
+    },
+    {
+      "word": "a",
+      "start": 339.787,
+      "end": 339.848
+    },
+    {
+      "word": "model",
+      "start": 339.864,
+      "end": 340.26
+    },
+    {
+      "word": "answer",
+      "start": 340.275,
+      "end": 340.854
+    },
+    {
+      "word": "First",
+      "start": 341.906,
+      "end": 342.486
+    },
+    {
+      "word": "A",
+      "start": 342.501,
+      "end": 342.76
+    },
+    {
+      "word": "the",
+      "start": 343.05,
+      "end": 343.187
+    },
+    {
+      "word": "pump",
+      "start": 343.202,
+      "end": 343.553
+    },
+    {
+      "word": "uses",
+      "start": 343.568,
+      "end": 344.01
+    },
+    {
+      "word": "ATP",
+      "start": 344.025,
+      "end": 344.986
+    },
+    {
+      "word": "That",
+      "start": 346.037,
+      "end": 346.358
+    },
+    {
+      "word": "produces",
+      "start": 346.373,
+      "end": 346.967
+    },
+    {
+      "word": "B",
+      "start": 346.983,
+      "end": 347.318
+    },
+    {
+      "word": "the",
+      "start": 347.592,
+      "end": 347.745
+    },
+    {
+      "word": "unequal",
+      "start": 347.76,
+      "end": 348.37
+    },
+    {
+      "word": "ion",
+      "start": 348.385,
+      "end": 348.766
+    },
+    {
+      "word": "distribution",
+      "start": 348.781,
+      "end": 349.833
+    },
+    {
+      "word": "Then",
+      "start": 350.885,
+      "end": 351.22
+    },
+    {
+      "word": "C",
+      "start": 351.236,
+      "end": 351.693
+    },
+    {
+      "word": "potassium",
+      "start": 351.906,
+      "end": 352.684
+    },
+    {
+      "word": "leaks",
+      "start": 352.699,
+      "end": 353.095
+    },
+    {
+      "word": "out",
+      "start": 353.111,
+      "end": 353.568
+    },
+    {
+      "word": "That",
+      "start": 354.62,
+      "end": 354.94
+    },
+    {
+      "word": "produces",
+      "start": 354.955,
+      "end": 355.534
+    },
+    {
+      "word": "D",
+      "start": 355.55,
+      "end": 355.946
+    },
+    {
+      "word": "a",
+      "start": 356.22,
+      "end": 356.297
+    },
+    {
+      "word": "polarised",
+      "start": 356.312,
+      "end": 357.104
+    },
+    {
+      "word": "membrane",
+      "start": 357.12,
+      "end": 357.714
+    },
+    {
+      "word": "at",
+      "start": 357.729,
+      "end": 357.882
+    },
+    {
+      "word": "about",
+      "start": 357.897,
+      "end": 358.248
+    },
+    {
+      "word": "minus",
+      "start": 358.263,
+      "end": 358.675
+    },
+    {
+      "word": "seventy",
+      "start": 358.69,
+      "end": 359.162
+    },
+    {
+      "word": "millivolts",
+      "start": 359.178,
+      "end": 360.047
+    },
+    {
+      "word": "In",
+      "start": 361.098,
+      "end": 361.358
+    },
+    {
+      "word": "part",
+      "start": 361.373,
+      "end": 361.708
+    },
+    {
+      "word": "two",
+      "start": 361.723,
+      "end": 361.906
+    },
+    {
+      "word": "we",
+      "start": 361.922,
+      "end": 362.089
+    },
+    {
+      "word": "will",
+      "start": 362.104,
+      "end": 362.287
+    },
+    {
+      "word": "see",
+      "start": 362.303,
+      "end": 362.608
+    },
+    {
+      "word": "how",
+      "start": 362.623,
+      "end": 362.836
+    },
+    {
+      "word": "a",
+      "start": 362.851,
+      "end": 362.928
+    },
+    {
+      "word": "stimulus",
+      "start": 362.943,
+      "end": 363.537
+    },
+    {
+      "word": "changes",
+      "start": 363.553,
+      "end": 364.117
+    },
+    {
+      "word": "this",
+      "start": 364.132,
+      "end": 364.361
+    },
+    {
+      "word": "polarised",
+      "start": 364.376,
+      "end": 365.168
+    },
+    {
+      "word": "membrane",
+      "start": 365.184,
+      "end": 365.778
+    },
+    {
+      "word": "into",
+      "start": 365.794,
+      "end": 366.159
+    },
+    {
+      "word": "an",
+      "start": 366.175,
+      "end": 366.266
+    },
+    {
+      "word": "action",
+      "start": 366.281,
+      "end": 366.632
+    },
+    {
+      "word": "potential",
+      "start": 366.647,
+      "end": 367.348
+    },
+    {
+      "word": "and",
+      "start": 367.653,
+      "end": 367.745
+    },
+    {
+      "word": "we",
+      "start": 367.76,
+      "end": 367.897
+    },
+    {
+      "word": "will",
+      "start": 367.912,
+      "end": 368.111
+    },
+    {
+      "word": "build",
+      "start": 368.126,
+      "end": 368.431
+    },
+    {
+      "word": "the",
+      "start": 368.446,
+      "end": 368.537
+    },
+    {
+      "word": "graph",
+      "start": 368.553,
+      "end": 369.01
+    },
+    {
+      "word": "as",
+      "start": 369.025,
+      "end": 369.178
+    },
+    {
+      "word": "each",
+      "start": 369.193,
+      "end": 369.452
+    },
+    {
+      "word": "phase",
+      "start": 369.467,
+      "end": 369.818
+    },
+    {
+      "word": "happens",
+      "start": 369.833,
+      "end": 370.58
+    },
+    {
+      "word": "If",
+      "start": 371.632,
+      "end": 371.861
+    },
+    {
+      "word": "this",
+      "start": 371.876,
+      "end": 372.089
+    },
+    {
+      "word": "explanation",
+      "start": 372.104,
+      "end": 372.836
+    },
+    {
+      "word": "has",
+      "start": 372.851,
+      "end": 373.034
+    },
+    {
+      "word": "helped",
+      "start": 373.05,
+      "end": 373.537
+    },
+    {
+      "word": "please",
+      "start": 373.736,
+      "end": 374.025
+    },
+    {
+      "word": "subscribe",
+      "start": 374.04,
+      "end": 374.681
+    },
+    {
+      "word": "to",
+      "start": 374.696,
+      "end": 374.818
+    },
+    {
+      "word": "JD",
+      "start": 374.833,
+      "end": 375.336
+    },
+    {
+      "word": "Science",
+      "start": 375.351,
+      "end": 375.839
+    },
+    {
+      "word": "for",
+      "start": 375.854,
+      "end": 375.976
+    },
+    {
+      "word": "more",
+      "start": 375.992,
+      "end": 376.236
+    },
+    {
+      "word": "lessons",
+      "start": 376.251,
+      "end": 377.059
+    },
+    {
+      "word": "You",
+      "start": 378.111,
+      "end": 378.324
+    },
+    {
+      "word": "can",
+      "start": 378.339,
+      "end": 378.537
+    },
+    {
+      "word": "find",
+      "start": 378.553,
+      "end": 378.964
+    },
+    {
+      "word": "further",
+      "start": 378.979,
+      "end": 379.345
+    },
+    {
+      "word": "learning",
+      "start": 379.361,
+      "end": 379.803
+    },
+    {
+      "word": "resources",
+      "start": 379.818,
+      "end": 380.458
+    },
+    {
+      "word": "and",
+      "start": 380.473,
+      "end": 380.58
+    },
+    {
+      "word": "practice",
+      "start": 380.595,
+      "end": 381.053
+    },
+    {
+      "word": "questions",
+      "start": 381.068,
+      "end": 381.662
+    },
+    {
+      "word": "at",
+      "start": 381.678,
+      "end": 381.815
+    },
+    {
+      "word": "jdscience.co.uk",
+      "start": 381.83,
+      "end": 384.864
+    },
+    {
+      "word": "Thank",
+      "start": 385.915,
+      "end": 386.281
+    },
+    {
+      "word": "you",
+      "start": 386.297,
+      "end": 386.388
+    },
+    {
+      "word": "for",
+      "start": 386.403,
+      "end": 386.54
+    },
+    {
+      "word": "watching",
+      "start": 386.556,
+      "end": 387.242
+    }
+  ],
+  "chunks": 2,
+  "model": "edge-tts",
+  "voice": "en-GB-RyanNeural",
+  "rate": "-18%",
+  "temporary_voice": true,
+  "replace_with": "cloned-voice",
+  "elevenlabs_blocker": "Configured ELEVENLABS_VOICE_ID accepted a 2.6 s greeting, then HTTP 401 quota_exceeded: 4 credits remaining, 1545 required for the first lesson chunk. Documented clone id returned voice_not_found. voices_read is not permitted on the API key."
+}

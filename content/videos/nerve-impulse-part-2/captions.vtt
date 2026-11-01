@@ -1,0 +1,365 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:04.257
+Hello and welcome back to JD Science This
+
+2
+00:00:04.273 --> 00:00:07.779
+is part two of our Level 3 lesson on the transmission of a
+
+3
+00:00:07.794 --> 00:00:11.498
+nerve impulse In part one we left the
+
+4
+00:00:11.513 --> 00:00:16.437
+axon polarised at about minus seventy millivolts Now
+
+5
+00:00:16.452 --> 00:00:20.279
+we will watch that membrane reverse and recover and we will draw
+
+6
+00:00:20.294 --> 00:00:24.623
+the action-potential graph as each event happens A
+
+7
+00:00:24.638 --> 00:00:28.175
+stimulus is any change that can affect the membrane such as a
+
+8
+00:00:28.190 --> 00:00:32.291
+neurotransmitter arriving at a dendrite or an artificial
+
+9
+00:00:32.306 --> 00:00:36.071
+current in an experiment If the stimulus is
+
+10
+00:00:36.087 --> 00:00:39.867
+strong enough the membrane potential at one region moves
+
+11
+00:00:39.882 --> 00:00:43.678
+from minus seventy millivolts towards a threshold value of about
+
+12
+00:00:43.693 --> 00:00:47.443
+minus fifty-five millivolts Threshold
+
+13
+00:00:47.459 --> 00:00:51.132
+is the critical voltage at which voltage-gated sodium channels
+
+14
+00:00:51.148 --> 00:00:54.791
+open in large numbers Voltage-gated
+
+15
+00:00:54.806 --> 00:00:59.699
+means the channel's shape depends on the membrane potential Below
+
+16
+00:00:59.715 --> 00:01:03.526
+threshold too few of those channels open the sodium
+
+17
+00:01:03.541 --> 00:01:07.520
+that enters is pumped or leaks away and the membrane returns
+
+18
+00:01:07.535 --> 00:01:11.437
+to rest That failed rise is not an action
+
+19
+00:01:11.452 --> 00:01:15.126
+potential If threshold is reached the
+
+20
+00:01:15.141 --> 00:01:19.242
+response is all-or-nothing The action potential
+
+21
+00:01:19.257 --> 00:01:22.901
+always reaches about the same peak around plus thirty
+
+22
+00:01:22.916 --> 00:01:27.108
+to plus forty millivolts A stronger stimulus
+
+23
+00:01:27.123 --> 00:01:30.782
+does not make a taller spike It can only
+
+24
+00:01:30.797 --> 00:01:34.501
+make action potentials more frequent once the membrane
+
+25
+00:01:34.516 --> 00:01:38.876
+has recovered Look at the graph The
+
+26
+00:01:38.891 --> 00:01:43.205
+horizontal axis is time in milliseconds The
+
+27
+00:01:43.221 --> 00:01:48.388
+vertical axis is membrane potential in millivolts Zero
+
+28
+00:01:48.404 --> 00:01:52.443
+millivolts is drawn as a dashed line Resting
+
+29
+00:01:52.459 --> 00:01:56.574
+potential sits near minus seventy Threshold
+
+30
+00:01:56.590 --> 00:02:00.263
+is marked near minus fifty-five The
+
+31
+00:02:00.279 --> 00:02:04.806
+peak is near plus thirty-five Depolarisation
+
+32
+00:02:04.821 --> 00:02:08.449
+is the rising phase Voltage-gated
+
+33
+00:02:08.465 --> 00:02:12.215
+sodium channels open and sodium ions rush in down their
+
+34
+00:02:12.230 --> 00:02:15.873
+electrochemical gradient The inside
+
+35
+00:02:15.888 --> 00:02:20.416
+rapidly becomes less negative then positive The
+
+36
+00:02:20.431 --> 00:02:24.120
+membrane is now depolarised On
+
+37
+00:02:24.135 --> 00:02:28.129
+the graph this is the steep upstroke from threshold to the peak
+
+38
+00:02:29.181 --> 00:02:32.977
+At the peak two things change The
+
+39
+00:02:32.992 --> 00:02:38.327
+voltage-gated sodium channels become inactivated Inactivation
+
+40
+00:02:38.343 --> 00:02:42.154
+is not the same as simply closing A part
+
+41
+00:02:42.169 --> 00:02:46.178
+of the protein blocks the open pore from the inside so sodium
+
+42
+00:02:46.193 --> 00:02:50.797
+entry stops even though the membrane is still positive At
+
+43
+00:02:50.812 --> 00:02:54.638
+the same time voltage-gated potassium channels open
+
+44
+00:02:55.690 --> 00:03:00.934
+They are slower to open than the sodium channels Repolarisation
+
+45
+00:03:00.949 --> 00:03:04.791
+is the falling phase Potassium ions
+
+46
+00:03:04.806 --> 00:03:08.510
+leave the axon through those open voltage-gated potassium
+
+47
+00:03:08.526 --> 00:03:12.245
+channels Positive charge leaves so the
+
+48
+00:03:12.260 --> 00:03:16.285
+inside becomes negative again This rapid
+
+49
+00:03:16.300 --> 00:03:20.644
+fall is caused by potassium efflux and sodium inactivation
+
+50
+00:03:21.696 --> 00:03:26.285
+It is not caused by the sodium potassium pump The
+
+51
+00:03:26.300 --> 00:03:30.492
+pump is far too slow to produce this millisecond downstroke
+
+52
+00:03:31.544 --> 00:03:35.507
+The pump's job is to restore the ion gradients afterwards
+
+53
+00:03:36.700 --> 00:03:41.467
+The membrane often goes a little more negative than rest That
+
+54
+00:03:41.482 --> 00:03:46.818
+undershoot is hyperpolarisation sometimes called after-hyperpolarisation
+
+55
+00:03:47.870 --> 00:03:51.559
+It happens because voltage-gated potassium channels are still
+
+56
+00:03:51.574 --> 00:03:55.400
+open for a short time As they close
+
+57
+00:03:55.583 --> 00:03:59.333
+and as leak channels and the pump continue their resting work the
+
+58
+00:03:59.348 --> 00:04:04.272
+potential returns towards minus seventy millivolts Follow
+
+59
+00:04:04.287 --> 00:04:08.403
+the graph once more Rest at minus seventy
+
+60
+00:04:09.455 --> 00:04:14.196
+A stimulus lifts the potential to threshold Sodium
+
+61
+00:04:14.211 --> 00:04:19.424
+enters and the trace shoots to about plus thirty-five Sodium
+
+62
+00:04:19.440 --> 00:04:23.281
+channels inactivate potassium leaves and the trace
+
+63
+00:04:23.296 --> 00:04:27.260
+falls A brief dip below minus seventy
+
+64
+00:04:27.443 --> 00:04:31.223
+then a return to rest The whole event lasts
+
+65
+00:04:31.238 --> 00:04:36.132
+about two to four milliseconds in a typical axon Here
+
+66
+00:04:36.147 --> 00:04:40.095
+is a worked examination-style example The
+
+67
+00:04:40.110 --> 00:04:44.577
+graph is at plus thirty-five millivolts Describe
+
+68
+00:04:44.592 --> 00:04:48.357
+the state of the voltage-gated sodium channels and the voltage-gated
+
+69
+00:04:48.373 --> 00:04:53.022
+potassium channels and name the phase that follows At
+
+70
+00:04:53.037 --> 00:04:56.757
+the peak voltage-gated sodium channels are inactivated
+
+71
+00:04:57.031 --> 00:05:01.147
+so sodium can no longer enter Voltage-gated
+
+72
+00:05:01.162 --> 00:05:05.004
+potassium channels are open so potassium is leaving
+
+73
+00:05:06.056 --> 00:05:10.049
+The phase that follows is repolarisation as the inside
+
+74
+00:05:10.065 --> 00:05:13.998
+becomes negative again Now pause the video
+
+75
+00:05:14.013 --> 00:05:17.702
+and try this A student says the
+
+76
+00:05:17.717 --> 00:05:21.467
+sodium potassium pump causes the falling phase of the action
+
+77
+00:05:21.482 --> 00:05:25.735
+potential by pumping sodium out Identify
+
+78
+00:05:25.751 --> 00:05:30.308
+the misconception and write a corrected sentence Here
+
+79
+00:05:30.324 --> 00:05:34.272
+is a model answer That statement is wrong
+
+80
+00:05:35.324 --> 00:05:39.394
+The falling phase is repolarisation caused by potassium
+
+81
+00:05:39.409 --> 00:05:43.068
+ions leaving through voltage-gated potassium channels after
+
+82
+00:05:43.083 --> 00:05:46.757
+the sodium channels inactivate The pump
+
+83
+00:05:46.772 --> 00:05:50.400
+later restores the sodium and potassium gradients but
+
+84
+00:05:50.415 --> 00:05:54.333
+it does not produce the rapid downstroke In
+
+85
+00:05:54.348 --> 00:05:58.220
+part three we will see how this local reversal starts the next
+
+86
+00:05:58.235 --> 00:06:02.199
+region of axon why the impulse travels in one direction
+
+87
+00:06:02.565 --> 00:06:06.513
+and how myelin makes conduction faster If
+
+88
+00:06:06.528 --> 00:06:10.491
+this explanation has helped please subscribe to JD Science
+
+89
+00:06:10.507 --> 00:06:14.455
+for more lessons You can find further learning
+
+90
+00:06:14.470 --> 00:06:19.516
+resources and practice questions at jdscience.co.uk
+
+91
+00:06:20.568 --> 00:06:21.894
+Thank you for watching

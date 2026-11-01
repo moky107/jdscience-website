@@ -1,0 +1,348 @@
+1
+00:00:00,100 --> 00:00:04,273
+Hello and welcome back to JD Science This
+
+2
+00:00:04,288 --> 00:00:08,404
+is part one of our Level 3 lesson on transmission at a chemical
+
+3
+00:00:08,419 --> 00:00:12,123
+synapse Along the axon the signal
+
+4
+00:00:12,138 --> 00:00:16,041
+is electrical An action potential is a wave
+
+5
+00:00:16,056 --> 00:00:19,867
+of membrane depolarisation Neurones
+
+6
+00:00:19,882 --> 00:00:23,571
+do not usually touch the next cell There is
+
+7
+00:00:23,587 --> 00:00:27,535
+a tiny gap so the message must be converted into a chemical
+
+8
+00:00:27,550 --> 00:00:31,590
+form to cross it A synapse is the specialised
+
+9
+00:00:31,605 --> 00:00:35,279
+junction between a neurone and the next cell which may be another
+
+10
+00:00:35,294 --> 00:00:39,547
+neurone or an effector such as a muscle fibre Look
+
+11
+00:00:39,562 --> 00:00:43,221
+first at a real electron micrograph of a neuromuscular
+
+12
+00:00:43,236 --> 00:00:46,895
+junction You can see a packed terminal and a
+
+13
+00:00:46,910 --> 00:00:50,766
+folded postsynaptic membrane but the individual vesicles
+
+14
+00:00:50,782 --> 00:00:54,501
+and ions are clearer on a diagram so we now use
+
+15
+00:00:54,516 --> 00:00:58,465
+a labelled scientific illustration The neurone
+
+16
+00:00:58,480 --> 00:01:02,474
+that arrives is the presynaptic neurone Its
+
+17
+00:01:02,489 --> 00:01:06,407
+swollen ending is the synaptic knob or synaptic bouton
+
+18
+00:01:07,459 --> 00:01:11,651
+Inside the knob are mitochondria and many synaptic vesicles
+
+19
+00:01:12,702 --> 00:01:16,727
+Each vesicle is a membrane sac filled with neurotransmitter
+
+20
+00:01:17,779 --> 00:01:21,513
+A neurotransmitter is a chemical that carries the signal across
+
+21
+00:01:21,529 --> 00:01:25,294
+the gap In this lesson the named example
+
+22
+00:01:25,309 --> 00:01:29,013
+is acetylcholine The gap itself is the
+
+23
+00:01:29,029 --> 00:01:33,724
+synaptic cleft about twenty nanometres wide The
+
+24
+00:01:33,739 --> 00:01:38,968
+membrane of the next cell is the postsynaptic membrane Embedded
+
+25
+00:01:38,983 --> 00:01:42,977
+in it are specific receptor proteins Those
+
+26
+00:01:42,992 --> 00:01:46,651
+receptors recognise acetylcholine and are linked to ion
+
+27
+00:01:46,666 --> 00:01:50,309
+channels An action potential arrives at
+
+28
+00:01:50,324 --> 00:01:53,937
+the presynaptic terminal by electrical propagation along the
+
+29
+00:01:53,952 --> 00:01:57,641
+axon That depolarisation opens
+
+30
+00:01:57,657 --> 00:02:02,657
+voltage-gated calcium channels in the knob membrane Calcium
+
+31
+00:02:02,672 --> 00:02:06,483
+ions are far more concentrated outside so they enter
+
+32
+00:02:06,498 --> 00:02:10,492
+the knob down their electrochemical gradient The
+
+33
+00:02:10,507 --> 00:02:14,623
+rise in calcium inside the knob is the trigger for vesicle movement
+
+34
+00:02:15,675 --> 00:02:19,364
+Vesicles are drawn to the presynaptic membrane and fuse
+
+35
+00:02:19,379 --> 00:02:23,221
+with it Fusion releases acetylcholine into
+
+36
+00:02:23,236 --> 00:02:27,733
+the cleft by exocytosis Exocytosis
+
+37
+00:02:27,748 --> 00:02:31,895
+means the vesicle membrane joins the plasma membrane and the contents
+
+38
+00:02:31,910 --> 00:02:35,797
+are emptied outside the cell Acetylcholine
+
+39
+00:02:35,812 --> 00:02:40,721
+molecules then diffuse across the synaptic cleft Diffusion
+
+40
+00:02:40,736 --> 00:02:45,279
+is passive movement from high to low concentration They
+
+41
+00:02:45,294 --> 00:02:48,983
+bind to specific receptors on the postsynaptic membrane
+
+42
+00:02:50,035 --> 00:02:55,004
+Binding opens ligand-gated ion channels Ligand-gated
+
+43
+00:02:55,019 --> 00:02:58,709
+means the channel is opened by a chemical messenger not by
+
+44
+00:02:58,724 --> 00:03:02,459
+voltage At a nicotinic acetylcholine
+
+45
+00:03:02,474 --> 00:03:06,117
+synapse those channels allow sodium ions to enter
+
+46
+00:03:06,132 --> 00:03:09,791
+the postsynaptic cell Sodium entry
+
+47
+00:03:09,806 --> 00:03:13,510
+produces a postsynaptic potential a local change in
+
+48
+00:03:13,526 --> 00:03:17,138
+membrane voltage If enough receptors
+
+49
+00:03:17,154 --> 00:03:21,071
+are activated and if the depolarisation at the axon hillock
+
+50
+00:03:21,087 --> 00:03:25,065
+of the next neurone reaches threshold voltage-gated sodium
+
+51
+00:03:25,080 --> 00:03:29,913
+channels open and a new action potential is generated The
+
+52
+00:03:29,928 --> 00:03:33,769
+electrical signal has been rebuilt on the far side of the gap
+
+53
+00:03:34,972 --> 00:03:38,885
+Notice the contrast Along the axon
+
+54
+00:03:39,145 --> 00:03:43,032
+charged ions move through voltage-gated channels and the impulse
+
+55
+00:03:43,047 --> 00:03:47,056
+is electrical Across the cleft the message
+
+56
+00:03:47,071 --> 00:03:51,004
+is a chemical acetylcholine travelling by diffusion
+
+57
+00:03:52,056 --> 00:03:55,882
+That conversion is why a typical chemical synapse is slower
+
+58
+00:03:55,898 --> 00:03:59,922
+than axonal conduction and why it can be modified by drugs
+
+59
+00:03:59,937 --> 00:04:04,495
+or enzymes Here is a worked examination-style
+
+60
+00:04:04,510 --> 00:04:08,794
+example Place these events in order starting
+
+61
+00:04:08,809 --> 00:04:13,245
+from the moment the action potential arrives Calcium
+
+62
+00:04:13,260 --> 00:04:18,504
+channels open Calcium enters Vesicles
+
+63
+00:04:18,520 --> 00:04:22,315
+fuse Acetylcholine is released by
+
+64
+00:04:22,331 --> 00:04:25,974
+exocytosis Acetylcholine
+
+65
+00:04:25,989 --> 00:04:30,212
+diffuses and binds Ligand-gated sodium
+
+66
+00:04:30,227 --> 00:04:34,145
+channels open A postsynaptic potential
+
+67
+00:04:34,160 --> 00:04:38,520
+forms The order is exactly that sequence
+
+68
+00:04:39,571 --> 00:04:43,337
+Arrival calcium entry exocytosis
+
+69
+00:04:43,581 --> 00:04:47,209
+diffusion receptor binding ligand-gated sodium
+
+70
+00:04:47,224 --> 00:04:50,959
+influx then a postsynaptic potential that may start
+
+71
+00:04:50,974 --> 00:04:54,998
+a new action potential Now pause the video
+
+72
+00:04:55,013 --> 00:04:58,855
+and try this On the synapse diagram
+
+73
+00:04:59,007 --> 00:05:02,940
+decide which structure releases acetylcholine and which structure
+
+74
+00:05:02,956 --> 00:05:06,568
+binds it Then state whether that arrangement
+
+75
+00:05:06,584 --> 00:05:10,273
+allows the signal to travel backwards Here
+
+76
+00:05:10,288 --> 00:05:13,916
+is a model answer Acetylcholine is
+
+77
+00:05:13,931 --> 00:05:18,230
+released from vesicles in the presynaptic knob It
+
+78
+00:05:18,245 --> 00:05:22,834
+binds to receptors on the postsynaptic membrane Because
+
+79
+00:05:22,849 --> 00:05:26,812
+the vesicles are only on one side and the receptors are only
+
+80
+00:05:26,828 --> 00:05:30,715
+on the other a typical chemical synapse cannot send the signal
+
+81
+00:05:30,730 --> 00:05:34,358
+backwards In part two we will see how
+
+82
+00:05:34,373 --> 00:05:38,443
+acetylcholine is removed how choline is recycled
+
+83
+00:05:38,733 --> 00:05:43,306
+and why that clean-up is essential for repeated one-way transmission
+
+84
+00:05:44,358 --> 00:05:48,062
+If this explanation has helped please subscribe to JD
+
+85
+00:05:48,078 --> 00:05:51,690
+Science for more lessons You can find
+
+86
+00:05:51,706 --> 00:05:57,590
+further learning resources and practice questions at jdscience.co.uk
+
+87
+00:05:58,641 --> 00:05:59,968
+Thank you for watching
+

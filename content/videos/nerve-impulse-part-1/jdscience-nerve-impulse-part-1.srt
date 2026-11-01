@@ -1,0 +1,376 @@
+1
+00:00:00,100 --> 00:00:04,273
+Hello and welcome back to JD Science This
+
+2
+00:00:04,288 --> 00:00:07,718
+is part one of our Level 3 lesson on the transmission of a
+
+3
+00:00:07,733 --> 00:00:11,712
+nerve impulse A nerve impulse is a brief
+
+4
+00:00:11,727 --> 00:00:15,751
+electrical signal that travels along a neurone A
+
+5
+00:00:15,766 --> 00:00:19,486
+neurone is a specialised nerve cell that carries information from
+
+6
+00:00:19,501 --> 00:00:23,236
+one place in the body to another Look first
+
+7
+00:00:23,251 --> 00:00:27,931
+at a real stained motor neurone from the spinal cord The
+
+8
+00:00:27,946 --> 00:00:31,742
+large purple cell bodies and the surrounding fibres are genuine
+
+9
+00:00:31,757 --> 00:00:35,431
+tissue A light micrograph can show the
+
+10
+00:00:35,446 --> 00:00:39,074
+cell body and processes but it cannot show the ions
+
+11
+00:00:39,090 --> 00:00:43,266
+that create the impulse so we now switch to a labelled scientific
+
+12
+00:00:43,282 --> 00:00:47,367
+diagram The cell body contains the nucleus
+
+13
+00:00:47,382 --> 00:00:51,254
+and most of the cytoplasm Short branched
+
+14
+00:00:51,270 --> 00:00:54,974
+dendrites receive incoming signals and pass them towards
+
+15
+00:00:54,989 --> 00:00:58,846
+the cell body The axon is a long process
+
+16
+00:00:58,861 --> 00:01:02,901
+that carries the impulse away from the cell body towards another cell
+
+17
+00:01:03,952 --> 00:01:07,596
+The axon is bounded by a plasma membrane which is a
+
+18
+00:01:07,611 --> 00:01:11,803
+phospholipid bilayer with proteins in it In
+
+19
+00:01:11,818 --> 00:01:15,843
+many neurones a myelin sheath wraps around the axon
+
+20
+00:01:16,894 --> 00:01:20,827
+Myelin is made by Schwann cells in the peripheral nervous system
+
+21
+00:01:20,843 --> 00:01:24,669
+and acts as an electrical insulator The gaps
+
+22
+00:01:24,684 --> 00:01:29,410
+between adjacent Schwann cells are the nodes of Ranvier At
+
+23
+00:01:29,425 --> 00:01:33,175
+each node the membrane is exposed to the extracellular fluid
+
+24
+00:01:34,227 --> 00:01:37,794
+Those nodes will matter when we look at how the impulse travels
+
+25
+00:01:37,809 --> 00:01:41,803
+quickly A nerve impulse is an action potential
+
+26
+00:01:41,818 --> 00:01:45,751
+travelling along the axon An action potential
+
+27
+00:01:45,766 --> 00:01:49,699
+is a rapid temporary reversal of the electrical charge across
+
+28
+00:01:49,715 --> 00:01:53,480
+the membrane Before that reversal can happen
+
+29
+00:01:53,693 --> 00:01:57,398
+we must understand the resting state At
+
+30
+00:01:57,413 --> 00:02:01,087
+rest the inside of the axon is negative compared with
+
+31
+00:02:01,102 --> 00:02:04,791
+the outside That potential difference is the
+
+32
+00:02:04,806 --> 00:02:09,608
+resting potential about minus seventy millivolts The
+
+33
+00:02:09,623 --> 00:02:14,410
+unit is the millivolt one thousandth of a volt Because
+
+34
+00:02:14,425 --> 00:02:18,114
+opposite charges are separated across the membrane we say the
+
+35
+00:02:18,129 --> 00:02:21,834
+membrane is polarised The ions
+
+36
+00:02:21,849 --> 00:02:25,736
+are not evenly shared Sodium ions
+
+37
+00:02:25,995 --> 00:02:30,309
+shown in amber are far more concentrated outside the axon
+
+38
+00:02:31,361 --> 00:02:35,843
+Potassium ions shown in teal are far more concentrated
+
+39
+00:02:35,858 --> 00:02:39,974
+inside Large negative organic ions
+
+40
+00:02:40,202 --> 00:02:44,059
+such as proteins remain inside because they cannot cross
+
+41
+00:02:44,074 --> 00:02:47,992
+the membrane The sodium potassium pump
+
+42
+00:02:48,007 --> 00:02:52,154
+maintains those concentration gradients It
+
+43
+00:02:52,169 --> 00:02:55,904
+is a membrane protein that uses ATP the cell's
+
+44
+00:02:55,919 --> 00:02:59,837
+energy currency For each cycle three
+
+45
+00:02:59,852 --> 00:03:03,571
+sodium ions are moved out and two potassium ions are
+
+46
+00:03:03,587 --> 00:03:07,809
+moved in That is active transport against
+
+47
+00:03:07,824 --> 00:03:11,590
+their concentration gradients Because three
+
+48
+00:03:11,605 --> 00:03:15,385
+positive ions leave for every two that enter the pump also
+
+49
+00:03:15,401 --> 00:03:19,228
+makes the inside a little more negative The
+
+50
+00:03:19,243 --> 00:03:22,871
+membrane is selectively permeable which means it does not
+
+51
+00:03:22,886 --> 00:03:26,784
+treat every ion the same way At rest
+
+52
+00:03:26,800 --> 00:03:31,891
+it is much more permeable to potassium than to sodium Potassium
+
+53
+00:03:31,906 --> 00:03:35,900
+leak channels stay open so some potassium ions diffuse
+
+54
+00:03:35,916 --> 00:03:39,757
+out down their concentration gradient As
+
+55
+00:03:39,772 --> 00:03:43,995
+those positive ions leave the inside becomes more negative
+
+56
+00:03:45,047 --> 00:03:49,040
+Sodium channels are mostly closed at rest so sodium
+
+57
+00:03:49,056 --> 00:03:53,095
+cannot easily flood back in Put those ideas
+
+58
+00:03:53,111 --> 00:03:57,135
+together The pump keeps sodium high outside
+
+59
+00:03:57,150 --> 00:04:00,946
+and potassium high inside Potassium
+
+60
+00:04:00,961 --> 00:04:05,397
+leak channels let some potassium leave Impermeant
+
+61
+00:04:05,412 --> 00:04:09,056
+negative ions stay inside The result
+
+62
+00:04:09,071 --> 00:04:12,943
+is a polarised membrane at about minus seventy millivolts
+
+63
+00:04:13,995 --> 00:04:17,623
+That is the resting potential The pump does
+
+64
+00:04:17,638 --> 00:04:21,784
+not fire the impulse It quietly maintains
+
+65
+00:04:21,800 --> 00:04:25,824
+the gradients that make an impulse possible Here
+
+66
+00:04:25,839 --> 00:04:29,757
+is a worked examination-style example A
+
+67
+00:04:29,772 --> 00:04:33,766
+student writes the sodium potassium pump creates the resting
+
+68
+00:04:33,781 --> 00:04:38,964
+potential by pumping sodium in and potassium out Identify
+
+69
+00:04:38,979 --> 00:04:42,745
+two scientific errors and correct them The
+
+70
+00:04:42,760 --> 00:04:46,632
+first error is the direction The pump moves
+
+71
+00:04:46,647 --> 00:04:50,641
+three sodium ions out not in and two potassium
+
+72
+00:04:50,656 --> 00:04:54,376
+ions in not out The second error
+
+73
+00:04:54,391 --> 00:04:59,147
+is the claim that the pump alone creates the resting potential The
+
+74
+00:04:59,162 --> 00:05:03,080
+pump maintains the gradients Potassium
+
+75
+00:05:03,095 --> 00:05:06,937
+leak channels and the trapped negative ions are also essential
+
+76
+00:05:07,989 --> 00:05:12,973
+Now pause the video and try this sequencing question Place
+
+77
+00:05:12,989 --> 00:05:16,830
+these four statements in the order that establishes a resting potential
+
+78
+00:05:17,882 --> 00:05:21,617
+A the sodium potassium pump uses ATP
+
+79
+00:05:22,669 --> 00:05:26,586
+B sodium stays high outside and potassium stays
+
+80
+00:05:26,601 --> 00:05:30,214
+high inside C potassium
+
+81
+00:05:30,229 --> 00:05:33,980
+leaks out through open leak channels D
+
+82
+00:05:34,239 --> 00:05:38,172
+the membrane is polarised at about minus seventy millivolts
+
+83
+00:05:39,223 --> 00:05:43,187
+Here is a model answer First A the
+
+84
+00:05:43,202 --> 00:05:46,967
+pump uses ATP That produces
+
+85
+00:05:46,983 --> 00:05:51,220
+B the unequal ion distribution Then
+
+86
+00:05:51,236 --> 00:05:54,940
+C potassium leaks out That
+
+87
+00:05:54,955 --> 00:05:58,675
+produces D a polarised membrane at about minus
+
+88
+00:05:58,690 --> 00:06:02,608
+seventy millivolts In part two we will see
+
+89
+00:06:02,623 --> 00:06:06,266
+how a stimulus changes this polarised membrane into an
+
+90
+00:06:06,281 --> 00:06:10,580
+action potential and we will build the graph as each phase happens
+
+91
+00:06:11,632 --> 00:06:15,336
+If this explanation has helped please subscribe to JD
+
+92
+00:06:15,351 --> 00:06:18,964
+Science for more lessons You can find
+
+93
+00:06:18,979 --> 00:06:24,864
+further learning resources and practice questions at jdscience.co.uk
+
+94
+00:06:25,915 --> 00:06:27,242
+Thank you for watching
+
