@@ -14,14 +14,18 @@ editable Python sources sit with the videos.
 ```bash
 COQUI_TOS_AGREED=1 python3 scripts/l3_nervous/tts_xtts_clone.py
 python3 scripts/l3_nervous/produce.py --skip-tts --out /opt/cursor/artifacts
+# Re-EQ muffled clones in place (video stream copied):
+python3 scripts/l3_nervous/audio_clarity.py --out /opt/cursor/artifacts
 ```
 
 Narration is a zero-shot clone of the uploaded JD Science teaching sample
 (`scripts/l3_nervous/tts_xtts_clone.py`). Accent and timbre come from that
-recording, not from `en-GB-RyanNeural`. ElevenLabs still cannot clone
-(`voices_write` denied) or synthesise (`quota_exceeded`). Keep
-`narration_master.m4a` and `transcript.json` so a later ElevenLabs clone can
-replace the track without rebuilding slide art.
+recording, not from `en-GB-RyanNeural`. Raw XTTS output is mud-heavy, so
+`audio_clarity.py` (also applied inside the XTTS writer) cuts sub-300 Hz and
+lifts 2.5–4.5 kHz presence. ElevenLabs still cannot clone (`voices_write`
+denied) or synthesise (`quota_exceeded`). Keep `narration_master.m4a` and
+`transcript.json` so a later ElevenLabs clone can replace the track without
+rebuilding slide art.
 
 Interactive activities:
 

@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
+from l3_nervous.audio_clarity import CLARITY_AF
 from l3_nervous.narration import BY_SLUG, LESSONS
 
 SPEAKER = Path("/tmp/joe_voice/joe_speaker.wav")
@@ -236,9 +237,10 @@ def generate_lesson(tts, whisper_model, slug: str) -> dict:
     joined = work / "joined.wav"
     write_wavs(parts, joined)
     wav44 = dest / "narration_master_xtts.wav"
+    # Clarity EQ: XTTS clones are mud-heavy; cut <300 Hz and lift presence.
     run([
         "ffmpeg", "-y", "-i", str(joined),
-        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+        "-af", CLARITY_AF,
         "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le",
         str(wav44),
     ])
@@ -273,9 +275,11 @@ def generate_lesson(tts, whisper_model, slug: str) -> dict:
         "speaker": "uploaded joes_voice teaching sample",
         "language": "en",
         "temporary": False,
+        "clarity_eq": CLARITY_AF,
         "notes": (
             "Zero-shot clone of the uploaded JD Science sample. Accent comes "
-            "from that recording, not from a British stock voice."
+            "from that recording, not from a British stock voice. Clarity EQ "
+            "cuts sub-300 Hz mud and lifts 2.5–4.5 kHz presence."
         ),
     }, indent=2) + "\n")
     print(f"{slug}: finished {dur:.2f}s words={len(words)} in {time.time() - t0:.1f}s", flush=True)

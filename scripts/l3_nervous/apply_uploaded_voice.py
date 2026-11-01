@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
+from l3_nervous.audio_clarity import CLARITY_AF
 from l3_nervous.narration import BY_SLUG, LESSONS
 
 SPEAKER = Path("/tmp/joe_voice/joe_speaker.wav")
@@ -48,7 +49,7 @@ def match_duration(src: Path, dest: Path, target: float) -> None:
     if got <= 0:
         raise RuntimeError(f"empty audio {src}")
     ratio = got / target
-    filters = ["loudnorm=I=-16:TP=-1.5:LRA=11"]
+    filters = [CLARITY_AF]
     if abs(ratio - 1.0) > 0.004:
         # Keep words on the original cue clock.
         filters.append(f"atempo={min(max(ratio, 0.5), 2.0):.6f}")
@@ -118,10 +119,12 @@ def convert_lesson(vc, slug: str) -> dict:
         "source_track": "en-GB-RyanNeural British teaching narration",
         "target": "uploaded joes_voice sample",
         "temporary": False,
+        "clarity_eq": CLARITY_AF,
         "notes": (
             "ElevenLabs could not clone (voices_write denied) or synthesise "
             "(quota_exceeded, 4 credits remaining). The uploaded 59 s JD Science "
-            "teaching sample was used as the OpenVoice v2 target speaker."
+            "teaching sample was used as the OpenVoice v2 target speaker. "
+            "Clarity EQ cuts mud and lifts presence."
         ),
     }
     (source_dir / "voice.json").write_text(json.dumps(voice, indent=2) + "\n")
