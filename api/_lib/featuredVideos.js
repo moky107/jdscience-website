@@ -5,6 +5,7 @@ import {
   FEATURED_THUMBNAIL_MIME_TYPES,
   FEATURED_VIDEO_BUCKET,
   FEATURED_VIDEO_DEFAULT_MAX_BYTES,
+  checkYouTubePublicEmbed,
   featuredVideoMaxBytesFromEnv,
   formatBytes,
   isAbsoluteHttpUrl,
@@ -32,6 +33,7 @@ const SETTINGS_KEY = 'featured_videos';
 const ADMIN_ACTIONS = new Set([
   'fv-list',
   'fv-prepare-upload',
+  'fv-check-youtube',
   'fv-save',
   'fv-publish',
   'fv-unpublish',
@@ -444,6 +446,11 @@ export async function handleFeaturedVideoAdminRequest(req, res, body, supabase) 
       return listResponse(res, supabase, store);
     }
 
+    if (action === 'fv-check-youtube') {
+      const check = await checkYouTubePublicEmbed(body.video_url || body.url || '');
+      return res.status(check.ok ? 200 : 400).json(check);
+    }
+
     if (action === 'fv-save') {
       const input = body.video || {};
       const parsed = validateFeaturedVideoInput(input);
@@ -454,6 +461,12 @@ export async function handleFeaturedVideoAdminRequest(req, res, body, supabase) 
       }
       if (fields.thumbnail_url && !isManagedPath('thumbnail', fields.thumbnail_url) && !isAbsoluteHttpUrl(fields.thumbnail_url)) {
         return res.status(400).json({ error: 'The uploaded thumbnail path is invalid. Upload the image again.' });
+      }
+      if (fields.video_type === 'youtube') {
+        const check = await checkYouTubePublicEmbed(fields.video_url);
+        if (!check.embeddable) {
+          return res.status(400).json({ error: check.error, youtubeCheck: check });
+        }
       }
 
       const id = trim(input.id, 64);
@@ -483,8 +496,15 @@ export async function handleFeaturedVideoAdminRequest(req, res, body, supabase) 
       if (!id) return res.status(400).json({ error: 'Missing video id.' });
       const existing = await store.get(id);
       if (!existing) return res.status(404).json({ error: 'That featured video no longer exists.' });
-      if (action === 'fv-publish') await store.publishOnly(id);
-      else await store.update(id, { is_published: false });
+      if (action === 'fv-publish') {
+        if (existing.video_type === 'youtube') {
+          const check = await checkYouTubePublicEmbed(existing.video_url);
+          if (!check.embeddable) {
+            return res.status(400).json({ error: check.error, youtubeCheck: check });
+          }
+        }
+        await store.publishOnly(id);
+      } else await store.update(id, { is_published: false });
       return listResponse(res, supabase, store);
     }
 

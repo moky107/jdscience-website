@@ -5,6 +5,7 @@ import {
   FEATURED_THUMBNAIL_MAX_BYTES,
   FEATURED_VIDEO_DEFAULT_MAX_BYTES,
   formatBytes,
+  checkYouTubePublicEmbed,
   isAllowedFeaturedThumbnailFile,
   isAllowedFeaturedVideoFile,
   normalizeResourceLink,
@@ -115,6 +116,8 @@ export default function AdminFeaturedVideoEditor({ password }) {
   const [previewId, setPreviewId] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [youtubeCheck, setYoutubeCheck] = useState(null); // { embeddable, error, title }
+  const [youtubeChecking, setYoutubeChecking] = useState(false);
   const sessionUploads = useRef([]); // files uploaded in this form session but not yet saved
   const blobUrls = useRef([]);
   const formRef = useRef(null);
@@ -274,6 +277,45 @@ export default function AdminFeaturedVideoEditor({ password }) {
 
   const youtubeId = form.video_type === "youtube" ? parseYouTubeId(form.youtube_url) : null;
 
+  useEffect(() => {
+    if (form.video_type !== "youtube") {
+      setYoutubeCheck(null);
+      setYoutubeChecking(false);
+      return undefined;
+    }
+    if (!youtubeId) {
+      setYoutubeCheck(null);
+      setYoutubeChecking(false);
+      return undefined;
+    }
+    let cancelled = false;
+    setYoutubeChecking(true);
+    const timer = setTimeout(() => {
+      checkYouTubePublicEmbed(youtubeId)
+        .then((result) => {
+          if (!cancelled) {
+            setYoutubeCheck(result);
+            setYoutubeChecking(false);
+          }
+        })
+        .catch(() => {
+          if (!cancelled) {
+            setYoutubeCheck({
+              ok: false,
+              embeddable: false,
+              youtubeId,
+              error: "Could not verify this YouTube link. Prefer Public or Unlisted videos only.",
+            });
+            setYoutubeChecking(false);
+          }
+        });
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [form.video_type, youtubeId]);
+
   const previewVideo = useMemo(() => {
     const base = {
       title: form.title.trim() || "Untitled video",
@@ -304,6 +346,10 @@ export default function AdminFeaturedVideoEditor({ password }) {
     const parsed = validateFeaturedVideoInput(payload);
     if (!parsed.ok) {
       setError(parsed.error);
+      return;
+    }
+    if (payload.video_type === "youtube" && youtubeCheck && youtubeCheck.embeddable === false) {
+      setError(youtubeCheck.error || "This YouTube video cannot be embedded for ordinary visitors.");
       return;
     }
     setSaving(true);
@@ -430,6 +476,21 @@ export default function AdminFeaturedVideoEditor({ password }) {
                 {form.youtube_url && (
                   <span style={{ ...hint, color: youtubeId ? "#166534" : "#b91c1c" }}>
                     {youtubeId ? `✓ YouTube video ${youtubeId}` : "That doesn’t look like a YouTube video link."}
+                  </span>
+                )}
+                {youtubeId && youtubeChecking && (
+                  <span style={hint}>Checking that visitors can watch this video without signing in…</span>
+                )}
+                {youtubeId && !youtubeChecking && youtubeCheck?.embeddable === true && (
+                  <span style={{ ...hint, color: "#166534" }}>
+                    ✓ Visitors can watch this video on the homepage (Public or Unlisted).
+                    {youtubeCheck.title ? ` YouTube title: “${youtubeCheck.title}”.` : ""}
+                  </span>
+                )}
+                {youtubeId && !youtubeChecking && youtubeCheck?.embeddable === false && (
+                  <span role="alert" style={{ ...hint, color: "#b91c1c", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "8px 10px" }}>
+                    {youtubeCheck.error || "This video cannot be embedded for ordinary visitors."}
+                    {" "}Never use Private for Video of the Day — set it to Public or Unlisted in YouTube Studio.
                   </span>
                 )}
               </label>

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import {
+  checkYouTubePublicEmbed,
   featuredVideoMaxBytesFromEnv,
   isAllowedFeaturedThumbnailFile,
   isAllowedFeaturedVideoFile,
@@ -22,6 +23,17 @@ assert.equal(featuredVideoMaxBytesFromEnv({ FEATURED_VIDEO_MAX_MB: "100" }), 100
 /* ------------------------------ shared helpers ------------------------------ */
 
 const ID = "dQw4w9WgXcQ";
+{
+  const ok = await checkYouTubePublicEmbed(ID, async () => ({
+    ok: true,
+    json: async () => ({ title: "Demo", author_name: "JDScience" }),
+  }));
+  assert.equal(ok.embeddable, true);
+  assert.equal(ok.youtubeId, ID);
+  const blocked = await checkYouTubePublicEmbed(ID, async () => ({ ok: false, status: 403, json: async () => ({}) }));
+  assert.equal(blocked.embeddable, false);
+  assert.match(blocked.error, /Private/i);
+}
 for (const url of [
   ID,
   `https://www.youtube.com/watch?v=${ID}&t=42s`,
@@ -38,7 +50,7 @@ for (const bad of ["", "https://vimeo.com/123", "https://youtube.com/watch?v=sho
 }
 assert.ok(!youTubeEmbedUrl(ID).includes("autoplay"), "embed never autoplays by default");
 assert.ok(youTubeEmbedUrl(ID, { autoplay: true }).includes("autoplay=1"));
-assert.ok(youTubeEmbedUrl(ID).startsWith("https://www.youtube-nocookie.com/embed/"));
+assert.ok(youTubeEmbedUrl(ID).startsWith("https://www.youtube.com/embed/"));
 
 assert.equal(normalizeResourceLink(""), "");
 assert.equal(normalizeResourceLink("/papers"), "/papers");
