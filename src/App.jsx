@@ -13,7 +13,8 @@ import { isPasswordResetPath } from "./authRedirect";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
-import HomepageIntroVideo from "./HomepageIntroVideo";
+import VideoOfTheDay from "./VideoOfTheDay";
+import AdminFeaturedVideo from "./AdminFeaturedVideo";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
@@ -2706,19 +2707,10 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 }
 
 /* --------------------------- VIDEO / CONTACT / FOOTER --------------------------- */
-function VideoSection() {
+function VideoSection({ onBrowseResources }) {
   const isMobile = useIsMobile();
-  return (
-    <section style={{ background: "#071025", color: "#fff", padding: isMobile ? "40px 16px" : "56px 20px" }}>
-      <div style={{ maxWidth: 980, margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontSize: isMobile ? 24 : 38, margin: 0 }}>How JD Science Works</h2>
-        <p style={{ color: "#cbd5e1", fontSize: isMobile ? 15 : 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" }}>
-          Watch this short introduction to see how learners use resources, past papers and tutoring support.
-        </p>
-        <HomepageIntroVideo isMobile={isMobile} />
-      </div>
-    </section>
-  );
+  // "Video of the Day" — managed from Admin → Video of the Day (replaces "How JD Science Works").
+  return <VideoOfTheDay isMobile={isMobile} onNavigateResources={onBrowseResources ? () => onBrowseResources() : undefined} />;
 }
 
 function Contact() {
@@ -3007,13 +2999,24 @@ function readAdminRoute() {
   }
 }
 
+const ADMIN_SECTIONS = ["bookings", "analytics", "featured-video"];
+
+function normalizeAdminSection(section) {
+  return ADMIN_SECTIONS.includes(section) ? section : "bookings";
+}
+
+function adminPathForSection(section) {
+  const next = normalizeAdminSection(section);
+  return next === "bookings" ? "/admin" : `/admin/${next}`;
+}
+
 function readAdminSection() {
   try {
     const path = window.location.pathname || "";
     if (path.startsWith("/admin/analytics")) return "analytics";
+    if (path.startsWith("/admin/featured-video")) return "featured-video";
     const params = new URLSearchParams(window.location.search);
-    if (params.get("section") === "analytics") return "analytics";
-    return "bookings";
+    return normalizeAdminSection(params.get("section"));
   } catch {
     return "bookings";
   }
@@ -3030,9 +3033,7 @@ function normalizeAdminUrl() {
       }
       return false;
     }
-    const section = readAdminSection();
-    const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
-    window.history.replaceState({}, "", nextPath);
+    window.history.replaceState({}, "", adminPathForSection(readAdminSection()));
     return true;
   } catch {
     return false;
@@ -3042,8 +3043,7 @@ function normalizeAdminUrl() {
 function writeAdminRoute(enabled, section = "bookings") {
   try {
     if (enabled) {
-      const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
-      window.history.pushState({}, "", nextPath);
+      window.history.pushState({}, "", adminPathForSection(section));
       return;
     }
     const url = new URL(window.location.href);
@@ -3106,7 +3106,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
   const [editingTutorId, setEditingTutorId] = useState(null);
   const [tutorEdits, setTutorEdits] = useState(null);
   const [tutorSaveMessage, setTutorSaveMessage] = useState("");
-  const activeSection = section === "analytics" ? "analytics" : "bookings";
+  const activeSection = normalizeAdminSection(section);
 
   async function load(pw) {
     setLoading(true);
@@ -3426,6 +3426,22 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
             >
               Analytics
             </button>
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("featured-video")}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 999,
+                border: activeSection === "featured-video" ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
+                background: activeSection === "featured-video" ? "#ecfeff" : "#fff",
+                color: activeSection === "featured-video" ? TEAL_DARK : "#334155",
+                cursor: "pointer",
+                fontWeight: 800,
+                fontSize: 13,
+              }}
+            >
+              Video of the Day
+            </button>
           </nav>
         </div>
         <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -3451,6 +3467,8 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
       <div style={{ maxWidth: activeSection === "analytics" ? 1280 : 1200, margin: "0 auto", padding: "20px 16px", width: "100%", minWidth: 0, overflowX: "hidden" }}>
         {activeSection === "analytics" ? (
           <AdminAnalytics password={password} onBack={() => onSectionChange?.("bookings")} />
+        ) : activeSection === "featured-video" ? (
+          <AdminFeaturedVideo password={password} />
         ) : (
           <>
         {error && (
@@ -3863,7 +3881,7 @@ function App() {
   const goAdmin = (section = "bookings") => {
     writeAdminRoute(true, section);
     setAdminRoute(true);
-    setAdminSection(section === "analytics" ? "analytics" : "bookings");
+    setAdminSection(normalizeAdminSection(section));
     setPage("home");
     setShopProductSlug(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -3871,7 +3889,7 @@ function App() {
 
   const setAdminSectionAndUrl = (section) => {
     writeAdminRoute(true, section);
-    setAdminSection(section === "analytics" ? "analytics" : "bookings");
+    setAdminSection(normalizeAdminSection(section));
   };
 
   const leaveAdmin = () => {
@@ -4268,7 +4286,7 @@ function App() {
           <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
           <div id="book-anchor"><BookingForm /></div>
           <div id="contact-anchor"><Contact /></div>
-          <VideoSection />
+          <VideoSection onBrowseResources={goPapers} />
         </main>
       )}
 

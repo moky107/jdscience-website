@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import { handleShopAdminRequest, wantsShopAdminRequest } from './_lib/shopHandlers.js';
 import { handleResourceUploadRequest, wantsResourceUploadRequest } from './_lib/resourceUpload.js';
 import { handleAdminAnalyticsRequest, wantsAdminAnalyticsRequest } from './_lib/analyticsHandlers.js';
+import { handleFeaturedVideoAdminRequest, wantsFeaturedVideoAdminRequest } from './_lib/featuredVideo.js';
 import { parseRequestBody, safeTrim } from './_lib/tutors.js';
 
 const CATEGORIES = new Set(['revision-advice', 'exam-tips', 'education-news']);
@@ -67,6 +68,11 @@ export default async function handler(req, res) {
   const provided = req.headers['x-admin-password'] || body.password;
   if (!provided || !safeEqual(provided, adminPassword)) {
     return res.status(401).json({ error: 'Incorrect password.' });
+  }
+
+  // Video of the Day: admin password (above) + signed-in admin Supabase session (checked inside).
+  if (wantsFeaturedVideoAdminRequest(req, body)) {
+    return handleFeaturedVideoAdminRequest(req, res, body);
   }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
