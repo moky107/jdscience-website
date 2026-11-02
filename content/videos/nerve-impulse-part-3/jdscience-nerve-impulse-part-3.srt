@@ -1,0 +1,384 @@
+1
+00:00:00,000 --> 00:00:03,380
+Hello, and welcome back to JD Science.
+
+2
+00:00:04,160 --> 00:00:08,440
+This is part three of our level three lesson on
+
+3
+00:00:08,440 --> 00:00:10,480
+the transmission of a nerve impulse.
+
+4
+00:00:12,720 --> 00:00:16,340
+We now have a full action potential in
+
+5
+00:00:16,340 --> 00:00:17,860
+one patch of membrane.
+
+6
+00:00:18,600 --> 00:00:22,660
+The remaining question is how that event travels, and
+
+7
+00:00:22,660 --> 00:00:26,580
+why it does not bounce backwards, when sodium ions
+
+8
+00:00:26,580 --> 00:00:30,440
+enter during depolarization, the inside
+
+9
+00:00:30,440 --> 00:00:33,100
+of that region becomes positive.
+
+10
+00:00:33,460 --> 00:00:37,140
+Those positive charges spread sideways as local
+
+11
+00:00:37,140 --> 00:00:37,620
+currents.
+
+12
+00:00:38,380 --> 00:00:43,220
+Just ahead of the active region, the local current depolarizes
+
+13
+00:00:43,220 --> 00:00:45,920
+the neighboring membrane towards threshold.
+
+14
+00:00:46,660 --> 00:00:50,420
+Voltage -gated sodium channels are open, and a new
+
+15
+00:00:50,420 --> 00:00:51,980
+action potential is born.
+
+16
+00:00:52,520 --> 00:00:56,520
+The impulse is not a single particle racing down the axon.
+
+17
+00:00:57,700 --> 00:01:01,500
+Is a chain of action potentials each triggering the
+
+18
+00:01:01,500 --> 00:01:01,700
+nerve?
+
+19
+00:01:02,460 --> 00:01:06,080
+Why does the impulse not also travel backwards into membrane
+
+20
+00:01:06,080 --> 00:01:07,940
+that is just fired?
+
+21
+00:01:08,600 --> 00:01:11,320
+The answer is the refractory period.
+
+22
+00:01:11,880 --> 00:01:15,820
+Immediately after an action potential, voltage -gated sodium
+
+23
+00:01:15,820 --> 00:01:17,920
+channels are inactivated.
+
+24
+00:01:18,410 --> 00:01:22,040
+For a short time, no new action potential can start
+
+25
+00:01:22,040 --> 00:01:24,840
+in that patch, however strong the stimulus.
+
+26
+00:01:25,500 --> 00:01:28,720
+That is the absolute refractory period.
+
+27
+00:01:29,400 --> 00:01:33,160
+As the sodium channels recover from inactivation, a
+
+28
+00:01:33,160 --> 00:01:36,780
+stronger than normal stimulus can start another action potential.
+
+29
+00:01:37,320 --> 00:01:41,360
+That interval is the relative refractory period, and
+
+30
+00:01:41,360 --> 00:01:43,440
+it overlaps with hyperpolarization.
+
+31
+00:01:44,060 --> 00:01:47,840
+When the membrane is even further from threshold, together
+
+32
+00:01:47,840 --> 00:01:51,700
+these refractory stages do two important jobs.
+
+33
+00:01:52,460 --> 00:01:56,440
+They force one -way propagation towards resting membrane
+
+34
+00:01:56,440 --> 00:02:00,220
+ahead, and away from inactivated membrane behind.
+
+35
+00:02:00,900 --> 00:02:04,640
+They also set a maximum firing frequency, because the second
+
+36
+00:02:04,640 --> 00:02:07,800
+spike cannot start until the sodium channels have recovered.
+
+37
+00:02:08,400 --> 00:02:12,100
+In an un -milded axon, every neighboring patch
+
+38
+00:02:12,100 --> 00:02:13,920
+must depolarize in turn.
+
+39
+00:02:14,580 --> 00:02:16,320
+The impulse creeps along the membrane.
+
+40
+00:02:16,980 --> 00:02:20,160
+In a malinated axon, the picture changes.
+
+41
+00:02:21,620 --> 00:02:23,300
+My lean is an insulator.
+
+42
+00:02:24,300 --> 00:02:27,860
+Ion flow across the membrane is largely restricted to the nodes of
+
+43
+00:02:27,860 --> 00:02:31,060
+Ranveer, where voltage -gated channels are concentrated.
+
+44
+00:02:31,720 --> 00:02:35,140
+Local currents travel quickly under the myelane to the next node.
+
+45
+00:02:35,580 --> 00:02:39,220
+The action potential appears to jump from node
+
+46
+00:02:39,220 --> 00:02:42,640
+to node, that is, solitory conduction.
+
+47
+00:02:43,380 --> 00:02:47,480
+From the Latin for leaping, solitory conduction is
+
+48
+00:02:47,480 --> 00:02:50,060
+faster and more energy efficient.
+
+49
+00:02:51,080 --> 00:02:54,920
+Fewer ions need to be pumped back, because fewer stretches
+
+50
+00:02:54,920 --> 00:02:56,840
+of membrane exchange ions.
+
+51
+00:02:57,600 --> 00:03:01,220
+Increasing axon diameter also speeds conduction,
+
+52
+00:03:01,700 --> 00:03:05,760
+because local currents travel more easily inside a wider axon.
+
+53
+00:03:06,360 --> 00:03:10,560
+Those two adaptations, myelin and diameter, explain
+
+54
+00:03:10,560 --> 00:03:14,080
+why some fibers, carry urgent signals so quickly.
+
+55
+00:03:14,840 --> 00:03:17,300
+Here is a worked examination style example.
+
+56
+00:03:17,940 --> 00:03:21,760
+Explain how the refractory period produces one -way
+
+57
+00:03:21,760 --> 00:03:25,400
+transmission along an axon, and how it limits
+
+58
+00:03:25,400 --> 00:03:28,480
+the number of impulses that can be sent each second.
+
+59
+00:03:29,120 --> 00:03:33,160
+Behind the active region, sodium channels are inactivated, so
+
+60
+00:03:33,160 --> 00:03:35,920
+local currents cannot restart an action potential there.
+
+61
+00:03:36,520 --> 00:03:40,540
+Ahead, the membrane is still at rest, so it can reach threshold.
+
+62
+00:03:41,360 --> 00:03:45,200
+Because each patch must recover before it can fire again, there
+
+63
+00:03:45,200 --> 00:03:49,220
+is a minimum time between spikes, and that limits firing frequency.
+
+64
+00:03:49,980 --> 00:03:53,020
+Now pause the video and try this matching activity.
+
+65
+00:03:53,740 --> 00:03:56,520
+Match each structure or event to its function.
+
+66
+00:03:57,140 --> 00:03:57,320
+1.
+
+67
+00:03:58,200 --> 00:03:58,880
+Nightingeeth.
+
+68
+00:03:58,880 --> 00:04:00,400
+2.
+
+69
+00:04:01,200 --> 00:04:02,940
+Node of round -the -air change.
+
+70
+00:04:03,660 --> 00:04:05,040
+Can an else?
+
+71
+00:04:06,200 --> 00:04:06,580
+3.
+
+72
+00:04:07,640 --> 00:04:08,480
+Local currents.
+
+73
+00:04:09,220 --> 00:04:09,640
+4.
+
+74
+00:04:10,720 --> 00:04:12,620
+Absolute refractory period.
+
+75
+00:04:13,280 --> 00:04:13,940
+Choose from.
+
+76
+00:04:14,660 --> 00:04:16,580
+Prevents immediate refiring.
+
+77
+00:04:17,400 --> 00:04:21,160
+Jumps the impulse to the next exposed membrane, insulates the
+
+78
+00:04:21,160 --> 00:04:24,420
+axon that polarizes the neighboring region to threshold.
+
+79
+00:04:25,160 --> 00:04:27,460
+Here is a model answer.
+
+80
+00:04:28,160 --> 00:04:31,100
+The medallion sheath insulates the axon.
+
+81
+00:04:31,840 --> 00:04:35,700
+The node of round -the -air is where the impulse is regenerated,
+
+82
+00:04:36,120 --> 00:04:38,320
+so the signal jumps from node to node.
+
+83
+00:04:39,000 --> 00:04:42,820
+Local currents depolarize the neighboring region to
+
+84
+00:04:42,820 --> 00:04:43,240
+threshold.
+
+85
+00:04:43,980 --> 00:04:48,360
+The absolute refractory period prevents immediate refiring,
+
+86
+00:04:49,000 --> 00:04:51,480
+and so keeps propagation one -way.
+
+87
+00:04:52,040 --> 00:04:55,360
+That completes transmission of a nerve impulse.
+
+88
+00:04:56,220 --> 00:04:59,340
+The electrical signal has travelled along the axon.
+
+89
+00:05:01,900 --> 00:05:05,460
+In the next topic we will see what happens when it reaches
+
+90
+00:05:05,460 --> 00:05:09,400
+a chemical synapse, where the message must cross a gap using
+
+91
+00:05:09,400 --> 00:05:10,640
+a neurotransmitter.
+
+92
+00:05:11,060 --> 00:05:14,700
+If this explanation has helped, please subscribe
+
+93
+00:05:14,700 --> 00:05:16,840
+to JD Science for more lessons.
+
+94
+00:05:17,240 --> 00:05:21,180
+You can find further learning resources and practice
+
+95
+00:05:21,180 --> 00:05:24,220
+questions at JD Science Tumpanyuk.
+
+96
+00:05:24,840 --> 00:05:25,840
+Thank you for watching.
+

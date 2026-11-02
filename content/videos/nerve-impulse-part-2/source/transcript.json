@@ -1,0 +1,3885 @@
+{
+  "slug": "nerve-impulse-part-2",
+  "title": "Transmission of a Nerve Impulse",
+  "audio": "/workspace/content/videos/nerve-impulse-part-2/source/narration_master.m4a",
+  "duration": 400.882,
+  "full_text": "Hello and welcome back to JD Science.\n\nThis is part two of our Level 3 lesson on the transmission of a nerve impulse. In part one we left the axon polarised at about minus seventy millivolts. Now we will watch that membrane reverse and recover, and we will draw the action-potential graph as each event happens.\n\nA stimulus is any change that can affect the membrane, such as a neurotransmitter arriving at a dendrite, or an artificial current in an experiment. If the stimulus is strong enough, the membrane potential at one region moves from minus seventy millivolts towards a threshold value of about minus fifty-five millivolts.\n\nThreshold is the critical voltage at which voltage-gated sodium channels open in large numbers. Voltage-gated means the channel's shape depends on the membrane potential. Below threshold, too few of those channels open, the sodium that enters is pumped or leaks away, and the membrane returns to rest. That failed rise is not an action potential.\n\nIf threshold is reached, the response is all-or-nothing. The action potential always reaches about the same peak, around plus thirty to plus forty millivolts. A stronger stimulus does not make a taller spike. It can only make action potentials more frequent, once the membrane has recovered.\n\nLook at the graph. The horizontal axis is time in milliseconds. The vertical axis is membrane potential in millivolts. Zero millivolts is drawn as a dashed line. Resting potential sits near minus seventy. Threshold is marked near minus fifty-five. The peak is near plus thirty-five.\n\nDepolarisation is the rising phase. Voltage-gated sodium channels open and sodium ions rush in down their electrochemical gradient. The inside rapidly becomes less negative, then positive. The membrane is now depolarised. On the graph, this is the steep upstroke from threshold to the peak.\n\nAt the peak, two things change. The voltage-gated sodium channels become inactivated. Inactivation is not the same as simply closing. A part of the protein blocks the open pore from the inside, so sodium entry stops even though the membrane is still positive. At the same time, voltage-gated potassium channels open. They are slower to open than the sodium channels.\n\nRepolarisation is the falling phase. Potassium ions leave the axon through those open voltage-gated potassium channels. Positive charge leaves, so the inside becomes negative again. This rapid fall is caused by potassium efflux and sodium inactivation. It is not caused by the sodium\u2013potassium pump. The pump is far too slow to produce this millisecond downstroke. The pump's job is to restore the ion gradients afterwards.\n\nThe membrane often goes a little more negative than rest. That undershoot is hyperpolarisation, sometimes called after-hyperpolarisation. It happens because voltage-gated potassium channels are still open for a short time. As they close, and as leak channels and the pump continue their resting work, the potential returns towards minus seventy millivolts.\n\nFollow the graph once more. Rest at minus seventy. A stimulus lifts the potential to threshold. Sodium enters and the trace shoots to about plus thirty-five. Sodium channels inactivate, potassium leaves, and the trace falls. A brief dip below minus seventy, then a return to rest. The whole event lasts about two to four milliseconds in a typical axon.\n\nHere is a worked examination-style example. The graph is at plus thirty-five millivolts. Describe the state of the voltage-gated sodium channels and the voltage-gated potassium channels, and name the phase that follows.\n\nAt the peak, voltage-gated sodium channels are inactivated, so sodium can no longer enter. Voltage-gated potassium channels are open, so potassium is leaving. The phase that follows is repolarisation, as the inside becomes negative again.\n\nNow pause the video and try this. A student says, the sodium\u2013potassium pump causes the falling phase of the action potential by pumping sodium out. Identify the misconception and write a corrected sentence.\n\nHere is a model answer. That statement is wrong. The falling phase is repolarisation, caused by potassium ions leaving through voltage-gated potassium channels after the sodium channels inactivate. The pump later restores the sodium and potassium gradients, but it does not produce the rapid downstroke.\n\nIn part three we will see how this local reversal starts the next region of axon, why the impulse travels in one direction, and how myelin makes conduction faster. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "tts_text": "Hello and welcome back to JD Science.\n\nThis is part two of our Level 3 lesson on the transmission of a nerve impulse. In part one we left the axon polarised at about minus seventy millivolts. Now we will watch that membrane reverse and recover, and we will draw the action-potential graph as each event happens.\n\nA stimulus is any change that can affect the membrane, such as a neurotransmitter arriving at a dendrite, or an artificial current in an experiment. If the stimulus is strong enough, the membrane potential at one region moves from minus seventy millivolts towards a threshold value of about minus fifty-five millivolts.\n\nThreshold is the critical voltage at which voltage-gated sodium channels open in large numbers. Voltage-gated means the channel's shape depends on the membrane potential. Below threshold, too few of those channels open, the sodium that enters is pumped or leaks away, and the membrane returns to rest. That failed rise is not an action potential.\n\nIf threshold is reached, the response is all-or-nothing. The action potential always reaches about the same peak, around plus thirty to plus forty millivolts. A stronger stimulus does not make a taller spike. It can only make action potentials more frequent, once the membrane has recovered.\n\nLook at the graph. The horizontal axis is time in milliseconds. The vertical axis is membrane potential in millivolts. Zero millivolts is drawn as a dashed line. Resting potential sits near minus seventy. Threshold is marked near minus fifty-five. The peak is near plus thirty-five.\n\nDepolarisation is the rising phase. Voltage-gated sodium channels open and sodium ions rush in down their electrochemical gradient. The inside rapidly becomes less negative, then positive. The membrane is now depolarised. On the graph, this is the steep upstroke from threshold to the peak.\n\nAt the peak, two things change. The voltage-gated sodium channels become inactivated. Inactivation is not the same as simply closing. A part of the protein blocks the open pore from the inside, so sodium entry stops even though the membrane is still positive. At the same time, voltage-gated potassium channels open. They are slower to open than the sodium channels.\n\nRepolarisation is the falling phase. Potassium ions leave the axon through those open voltage-gated potassium channels. Positive charge leaves, so the inside becomes negative again. This rapid fall is caused by potassium efflux and sodium inactivation. It is not caused by the sodium\u2013potassium pump. The pump is far too slow to produce this millisecond downstroke. The pump's job is to restore the ion gradients afterwards.\n\nThe membrane often goes a little more negative than rest. That undershoot is hyperpolarisation, sometimes called after-hyperpolarisation. It happens because voltage-gated potassium channels are still open for a short time. As they close, and as leak channels and the pump continue their resting work, the potential returns towards minus seventy millivolts.\n\nFollow the graph once more. Rest at minus seventy. A stimulus lifts the potential to threshold. Sodium enters and the trace shoots to about plus thirty-five. Sodium channels inactivate, potassium leaves, and the trace falls. A brief dip below minus seventy, then a return to rest. The whole event lasts about two to four milliseconds in a typical axon.\n\nHere is a worked examination-style example. The graph is at plus thirty-five millivolts. Describe the state of the voltage-gated sodium channels and the voltage-gated potassium channels, and name the phase that follows.\n\nAt the peak, voltage-gated sodium channels are inactivated, so sodium can no longer enter. Voltage-gated potassium channels are open, so potassium is leaving. The phase that follows is repolarisation, as the inside becomes negative again.\n\nNow pause the video and try this. A student says, the sodium\u2013potassium pump causes the falling phase of the action potential by pumping sodium out. Identify the misconception and write a corrected sentence.\n\nHere is a model answer. That statement is wrong. The falling phase is repolarisation, caused by potassium ions leaving through voltage-gated potassium channels after the sodium channels inactivate. The pump later restores the sodium and potassium gradients, but it does not produce the rapid downstroke.\n\nIn part three we will see how this local reversal starts the next region of axon, why the impulse travels in one direction, and how myelin makes conduction faster. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.22
+    },
+    {
+      "word": "and",
+      "start": 0.22,
+      "end": 1.14
+    },
+    {
+      "word": "welcome",
+      "start": 1.14,
+      "end": 1.4
+    },
+    {
+      "word": "back",
+      "start": 1.4,
+      "end": 1.68
+    },
+    {
+      "word": "to",
+      "start": 1.68,
+      "end": 1.98
+    },
+    {
+      "word": "JD",
+      "start": 1.98,
+      "end": 2.2
+    },
+    {
+      "word": "Science.",
+      "start": 2.2,
+      "end": 2.74
+    },
+    {
+      "word": "This",
+      "start": 3.4,
+      "end": 3.82
+    },
+    {
+      "word": "is",
+      "start": 3.82,
+      "end": 4.06
+    },
+    {
+      "word": "part",
+      "start": 4.06,
+      "end": 4.32
+    },
+    {
+      "word": "2",
+      "start": 4.32,
+      "end": 4.74
+    },
+    {
+      "word": "of",
+      "start": 4.74,
+      "end": 5.8
+    },
+    {
+      "word": "our",
+      "start": 5.8,
+      "end": 5.94
+    },
+    {
+      "word": "level",
+      "start": 5.94,
+      "end": 6.3
+    },
+    {
+      "word": "3",
+      "start": 6.3,
+      "end": 6.96
+    },
+    {
+      "word": "lesson",
+      "start": 6.96,
+      "end": 7.46
+    },
+    {
+      "word": "on",
+      "start": 7.46,
+      "end": 8.34
+    },
+    {
+      "word": "the",
+      "start": 8.34,
+      "end": 8.5
+    },
+    {
+      "word": "transmission",
+      "start": 8.5,
+      "end": 9.02
+    },
+    {
+      "word": "of",
+      "start": 9.02,
+      "end": 9.74
+    },
+    {
+      "word": "a",
+      "start": 9.74,
+      "end": 9.88
+    },
+    {
+      "word": "nerve",
+      "start": 9.88,
+      "end": 10.14
+    },
+    {
+      "word": "impulse.",
+      "start": 10.14,
+      "end": 10.68
+    },
+    {
+      "word": "In",
+      "start": 11.32,
+      "end": 11.56
+    },
+    {
+      "word": "part",
+      "start": 11.56,
+      "end": 11.76
+    },
+    {
+      "word": "1",
+      "start": 11.76,
+      "end": 12.18
+    },
+    {
+      "word": "we",
+      "start": 12.18,
+      "end": 12.8
+    },
+    {
+      "word": "left",
+      "start": 12.8,
+      "end": 12.98
+    },
+    {
+      "word": "the",
+      "start": 12.98,
+      "end": 13.26
+    },
+    {
+      "word": "axon",
+      "start": 13.26,
+      "end": 13.6
+    },
+    {
+      "word": "polarized",
+      "start": 13.6,
+      "end": 14.16
+    },
+    {
+      "word": "at",
+      "start": 14.16,
+      "end": 14.88
+    },
+    {
+      "word": "about",
+      "start": 14.88,
+      "end": 15.16
+    },
+    {
+      "word": "minus",
+      "start": 15.16,
+      "end": 15.58
+    },
+    {
+      "word": "70",
+      "start": 15.58,
+      "end": 16.22
+    },
+    {
+      "word": "millivolts.",
+      "start": 16.22,
+      "end": 17.24
+    },
+    {
+      "word": "Now",
+      "start": 17.5,
+      "end": 17.8
+    },
+    {
+      "word": "we",
+      "start": 17.8,
+      "end": 18.42
+    },
+    {
+      "word": "will",
+      "start": 18.42,
+      "end": 18.56
+    },
+    {
+      "word": "watch",
+      "start": 18.56,
+      "end": 18.8
+    },
+    {
+      "word": "that",
+      "start": 18.8,
+      "end": 19.0
+    },
+    {
+      "word": "membrane",
+      "start": 19.0,
+      "end": 19.42
+    },
+    {
+      "word": "reverse",
+      "start": 19.42,
+      "end": 20.34
+    },
+    {
+      "word": "and",
+      "start": 20.34,
+      "end": 21.06
+    },
+    {
+      "word": "recover",
+      "start": 21.06,
+      "end": 21.52
+    },
+    {
+      "word": "and",
+      "start": 21.52,
+      "end": 22.44
+    },
+    {
+      "word": "we",
+      "start": 22.44,
+      "end": 22.6
+    },
+    {
+      "word": "will",
+      "start": 22.6,
+      "end": 22.76
+    },
+    {
+      "word": "draw",
+      "start": 22.76,
+      "end": 23.06
+    },
+    {
+      "word": "the",
+      "start": 23.06,
+      "end": 23.36
+    },
+    {
+      "word": "action",
+      "start": 23.36,
+      "end": 23.7
+    },
+    {
+      "word": "potential",
+      "start": 23.7,
+      "end": 24.28
+    },
+    {
+      "word": "graph",
+      "start": 24.28,
+      "end": 24.68
+    },
+    {
+      "word": "as",
+      "start": 24.68,
+      "end": 25.44
+    },
+    {
+      "word": "each",
+      "start": 25.44,
+      "end": 25.86
+    },
+    {
+      "word": "event",
+      "start": 25.86,
+      "end": 26.12
+    },
+    {
+      "word": "happens.",
+      "start": 26.12,
+      "end": 26.74
+    },
+    {
+      "word": "A",
+      "start": 27.26,
+      "end": 27.64
+    },
+    {
+      "word": "stimulus",
+      "start": 27.64,
+      "end": 28.06
+    },
+    {
+      "word": "is",
+      "start": 28.06,
+      "end": 28.48
+    },
+    {
+      "word": "any",
+      "start": 28.48,
+      "end": 28.68
+    },
+    {
+      "word": "change",
+      "start": 28.68,
+      "end": 29.1
+    },
+    {
+      "word": "that",
+      "start": 29.1,
+      "end": 29.46
+    },
+    {
+      "word": "can",
+      "start": 29.46,
+      "end": 29.68
+    },
+    {
+      "word": "affect",
+      "start": 29.68,
+      "end": 30.06
+    },
+    {
+      "word": "the",
+      "start": 30.06,
+      "end": 30.26
+    },
+    {
+      "word": "membrane,",
+      "start": 30.26,
+      "end": 30.58
+    },
+    {
+      "word": "such",
+      "start": 31.28,
+      "end": 31.72
+    },
+    {
+      "word": "as",
+      "start": 31.72,
+      "end": 31.88
+    },
+    {
+      "word": "a",
+      "start": 31.88,
+      "end": 32.0
+    },
+    {
+      "word": "neurotransmitter",
+      "start": 32.0,
+      "end": 33.04
+    },
+    {
+      "word": "arriving",
+      "start": 33.04,
+      "end": 33.78
+    },
+    {
+      "word": "at",
+      "start": 33.78,
+      "end": 34.12
+    },
+    {
+      "word": "a",
+      "start": 34.12,
+      "end": 34.24
+    },
+    {
+      "word": "dendrite",
+      "start": 34.24,
+      "end": 34.68
+    },
+    {
+      "word": "or",
+      "start": 34.68,
+      "end": 35.5
+    },
+    {
+      "word": "an",
+      "start": 35.5,
+      "end": 35.66
+    },
+    {
+      "word": "artificial",
+      "start": 35.66,
+      "end": 36.1
+    },
+    {
+      "word": "current",
+      "start": 36.1,
+      "end": 36.52
+    },
+    {
+      "word": "in",
+      "start": 36.52,
+      "end": 37.14
+    },
+    {
+      "word": "an",
+      "start": 37.14,
+      "end": 37.26
+    },
+    {
+      "word": "experiment.",
+      "start": 37.26,
+      "end": 37.8
+    },
+    {
+      "word": "If",
+      "start": 38.54,
+      "end": 38.78
+    },
+    {
+      "word": "the",
+      "start": 38.78,
+      "end": 38.88
+    },
+    {
+      "word": "stimulus",
+      "start": 38.88,
+      "end": 39.26
+    },
+    {
+      "word": "is",
+      "start": 39.26,
+      "end": 39.48
+    },
+    {
+      "word": "strong",
+      "start": 39.48,
+      "end": 39.76
+    },
+    {
+      "word": "enough,",
+      "start": 39.76,
+      "end": 40.08
+    },
+    {
+      "word": "the",
+      "start": 40.82,
+      "end": 40.88
+    },
+    {
+      "word": "membrane",
+      "start": 40.88,
+      "end": 41.24
+    },
+    {
+      "word": "potential",
+      "start": 41.24,
+      "end": 41.8
+    },
+    {
+      "word": "at",
+      "start": 41.8,
+      "end": 42.06
+    },
+    {
+      "word": "one",
+      "start": 42.06,
+      "end": 42.3
+    },
+    {
+      "word": "region",
+      "start": 42.3,
+      "end": 42.68
+    },
+    {
+      "word": "moves",
+      "start": 42.68,
+      "end": 43.52
+    },
+    {
+      "word": "from",
+      "start": 43.52,
+      "end": 43.82
+    },
+    {
+      "word": "minus",
+      "start": 43.82,
+      "end": 44.18
+    },
+    {
+      "word": "70",
+      "start": 44.18,
+      "end": 44.68
+    },
+    {
+      "word": "millivolts",
+      "start": 44.68,
+      "end": 45.4
+    },
+    {
+      "word": "towards",
+      "start": 45.4,
+      "end": 46.3
+    },
+    {
+      "word": "a",
+      "start": 46.3,
+      "end": 46.5
+    },
+    {
+      "word": "threshold",
+      "start": 46.5,
+      "end": 46.8
+    },
+    {
+      "word": "value",
+      "start": 46.8,
+      "end": 47.3
+    },
+    {
+      "word": "about",
+      "start": 47.3,
+      "end": 47.68
+    },
+    {
+      "word": "minus",
+      "start": 47.68,
+      "end": 48.06
+    },
+    {
+      "word": "55",
+      "start": 48.06,
+      "end": 48.64
+    },
+    {
+      "word": "millivolts.",
+      "start": 48.64,
+      "end": 49.4
+    },
+    {
+      "word": "Freshhold",
+      "start": 50.2,
+      "end": 50.62
+    },
+    {
+      "word": "is",
+      "start": 50.62,
+      "end": 51.28
+    },
+    {
+      "word": "the",
+      "start": 51.28,
+      "end": 51.46
+    },
+    {
+      "word": "critical",
+      "start": 51.46,
+      "end": 51.84
+    },
+    {
+      "word": "voltage",
+      "start": 51.84,
+      "end": 52.26
+    },
+    {
+      "word": "at",
+      "start": 52.26,
+      "end": 53.16
+    },
+    {
+      "word": "which",
+      "start": 53.16,
+      "end": 53.48
+    },
+    {
+      "word": "voltage",
+      "start": 53.48,
+      "end": 54.08
+    },
+    {
+      "word": "gated",
+      "start": 54.08,
+      "end": 54.58
+    },
+    {
+      "word": "sodium",
+      "start": 54.58,
+      "end": 55.18
+    },
+    {
+      "word": "channels.",
+      "start": 55.18,
+      "end": 55.68
+    },
+    {
+      "word": "Open",
+      "start": 56.64,
+      "end": 57.04
+    },
+    {
+      "word": "in",
+      "start": 57.04,
+      "end": 57.24
+    },
+    {
+      "word": "large",
+      "start": 57.24,
+      "end": 57.58
+    },
+    {
+      "word": "numbers,",
+      "start": 57.58,
+      "end": 57.98
+    },
+    {
+      "word": "voltage",
+      "start": 58.6,
+      "end": 58.98
+    },
+    {
+      "word": "gated",
+      "start": 58.98,
+      "end": 59.42
+    },
+    {
+      "word": "means",
+      "start": 59.42,
+      "end": 59.68
+    },
+    {
+      "word": "the",
+      "start": 59.68,
+      "end": 60.3
+    },
+    {
+      "word": "channel's",
+      "start": 60.3,
+      "end": 60.96
+    },
+    {
+      "word": "shape",
+      "start": 60.96,
+      "end": 61.14
+    },
+    {
+      "word": "depends",
+      "start": 61.14,
+      "end": 62.08
+    },
+    {
+      "word": "on",
+      "start": 62.08,
+      "end": 62.72
+    },
+    {
+      "word": "the",
+      "start": 62.72,
+      "end": 62.86
+    },
+    {
+      "word": "membrane",
+      "start": 62.86,
+      "end": 63.22
+    },
+    {
+      "word": "potential.",
+      "start": 63.22,
+      "end": 63.94
+    },
+    {
+      "word": "Below",
+      "start": 64.74,
+      "end": 65.06
+    },
+    {
+      "word": "threshold,",
+      "start": 65.06,
+      "end": 65.64
+    },
+    {
+      "word": "two",
+      "start": 66.16,
+      "end": 66.46
+    },
+    {
+      "word": "few",
+      "start": 66.46,
+      "end": 66.8
+    },
+    {
+      "word": "of",
+      "start": 66.8,
+      "end": 67.0
+    },
+    {
+      "word": "those",
+      "start": 67.0,
+      "end": 67.16
+    },
+    {
+      "word": "channels",
+      "start": 67.16,
+      "end": 67.52
+    },
+    {
+      "word": "open,",
+      "start": 67.52,
+      "end": 68.0
+    },
+    {
+      "word": "the",
+      "start": 68.64,
+      "end": 68.74
+    },
+    {
+      "word": "sodium",
+      "start": 68.74,
+      "end": 69.14
+    },
+    {
+      "word": "that",
+      "start": 69.14,
+      "end": 69.38
+    },
+    {
+      "word": "enters",
+      "start": 69.38,
+      "end": 69.7
+    },
+    {
+      "word": "is",
+      "start": 69.7,
+      "end": 69.98
+    },
+    {
+      "word": "pumped",
+      "start": 69.98,
+      "end": 70.3
+    },
+    {
+      "word": "or",
+      "start": 70.3,
+      "end": 70.54
+    },
+    {
+      "word": "leaks",
+      "start": 70.54,
+      "end": 70.7
+    },
+    {
+      "word": "away",
+      "start": 70.7,
+      "end": 71.14
+    },
+    {
+      "word": "and",
+      "start": 71.14,
+      "end": 72.0
+    },
+    {
+      "word": "the",
+      "start": 72.0,
+      "end": 72.12
+    },
+    {
+      "word": "membrane",
+      "start": 72.12,
+      "end": 72.44
+    },
+    {
+      "word": "returns",
+      "start": 72.44,
+      "end": 72.94
+    },
+    {
+      "word": "to",
+      "start": 72.94,
+      "end": 73.34
+    },
+    {
+      "word": "wrath,",
+      "start": 73.34,
+      "end": 73.56
+    },
+    {
+      "word": "that",
+      "start": 73.98,
+      "end": 74.24
+    },
+    {
+      "word": "failed",
+      "start": 74.24,
+      "end": 74.56
+    },
+    {
+      "word": "rise",
+      "start": 74.56,
+      "end": 74.9
+    },
+    {
+      "word": "is",
+      "start": 74.9,
+      "end": 75.44
+    },
+    {
+      "word": "not",
+      "start": 75.44,
+      "end": 75.6
+    },
+    {
+      "word": "an",
+      "start": 75.6,
+      "end": 75.78
+    },
+    {
+      "word": "action",
+      "start": 75.78,
+      "end": 76.08
+    },
+    {
+      "word": "potential.",
+      "start": 76.08,
+      "end": 76.7
+    },
+    {
+      "word": "If",
+      "start": 77.21,
+      "end": 77.58
+    },
+    {
+      "word": "threshold",
+      "start": 77.58,
+      "end": 78.0
+    },
+    {
+      "word": "is",
+      "start": 78.0,
+      "end": 78.28
+    },
+    {
+      "word": "reached,",
+      "start": 78.28,
+      "end": 78.66
+    },
+    {
+      "word": "the",
+      "start": 79.18,
+      "end": 79.22
+    },
+    {
+      "word": "response",
+      "start": 79.22,
+      "end": 79.58
+    },
+    {
+      "word": "is",
+      "start": 79.58,
+      "end": 79.98
+    },
+    {
+      "word": "all",
+      "start": 79.98,
+      "end": 80.32
+    },
+    {
+      "word": "or",
+      "start": 80.32,
+      "end": 80.6
+    },
+    {
+      "word": "nothing.",
+      "start": 80.6,
+      "end": 81.02
+    },
+    {
+      "word": "The",
+      "start": 81.54,
+      "end": 81.8
+    },
+    {
+      "word": "action",
+      "start": 81.8,
+      "end": 82.1
+    },
+    {
+      "word": "potential",
+      "start": 82.1,
+      "end": 82.76
+    },
+    {
+      "word": "always",
+      "start": 82.76,
+      "end": 83.16
+    },
+    {
+      "word": "reaches",
+      "start": 83.16,
+      "end": 83.58
+    },
+    {
+      "word": "about",
+      "start": 83.58,
+      "end": 83.92
+    },
+    {
+      "word": "the",
+      "start": 83.92,
+      "end": 84.14
+    },
+    {
+      "word": "same",
+      "start": 84.14,
+      "end": 84.48
+    },
+    {
+      "word": "peak,",
+      "start": 84.48,
+      "end": 84.72
+    },
+    {
+      "word": "around",
+      "start": 85.54,
+      "end": 85.84
+    },
+    {
+      "word": "plus",
+      "start": 85.84,
+      "end": 86.26
+    },
+    {
+      "word": "30",
+      "start": 86.26,
+      "end": 86.74
+    },
+    {
+      "word": "to",
+      "start": 86.74,
+      "end": 87.08
+    },
+    {
+      "word": "plus",
+      "start": 87.08,
+      "end": 87.34
+    },
+    {
+      "word": "40",
+      "start": 87.34,
+      "end": 87.84
+    },
+    {
+      "word": "millivolts.",
+      "start": 87.84,
+      "end": 88.6
+    },
+    {
+      "word": "A",
+      "start": 89.06,
+      "end": 89.26
+    },
+    {
+      "word": "strongest",
+      "start": 89.26,
+      "end": 89.76
+    },
+    {
+      "word": "stimulus",
+      "start": 89.76,
+      "end": 90.24
+    },
+    {
+      "word": "does",
+      "start": 90.24,
+      "end": 90.58
+    },
+    {
+      "word": "not",
+      "start": 90.58,
+      "end": 90.78
+    },
+    {
+      "word": "make",
+      "start": 90.78,
+      "end": 91.1
+    },
+    {
+      "word": "a",
+      "start": 91.1,
+      "end": 91.7
+    },
+    {
+      "word": "taller",
+      "start": 91.7,
+      "end": 92.0
+    },
+    {
+      "word": "spike.",
+      "start": 92.0,
+      "end": 92.44
+    },
+    {
+      "word": "It",
+      "start": 93.98,
+      "end": 94.28
+    },
+    {
+      "word": "can",
+      "start": 94.28,
+      "end": 94.4
+    },
+    {
+      "word": "only",
+      "start": 94.4,
+      "end": 94.6
+    },
+    {
+      "word": "make",
+      "start": 94.6,
+      "end": 94.8
+    },
+    {
+      "word": "action",
+      "start": 94.8,
+      "end": 95.2
+    },
+    {
+      "word": "potentials",
+      "start": 95.2,
+      "end": 95.84
+    },
+    {
+      "word": "more",
+      "start": 95.84,
+      "end": 95.98
+    },
+    {
+      "word": "frequent",
+      "start": 95.98,
+      "end": 96.36
+    },
+    {
+      "word": "once",
+      "start": 96.36,
+      "end": 97.06
+    },
+    {
+      "word": "the",
+      "start": 97.06,
+      "end": 97.26
+    },
+    {
+      "word": "membrane",
+      "start": 97.26,
+      "end": 97.54
+    },
+    {
+      "word": "has",
+      "start": 97.54,
+      "end": 97.86
+    },
+    {
+      "word": "recovered.",
+      "start": 97.86,
+      "end": 98.32
+    },
+    {
+      "word": "Look",
+      "start": 98.78,
+      "end": 99.26
+    },
+    {
+      "word": "at",
+      "start": 99.26,
+      "end": 99.46
+    },
+    {
+      "word": "the",
+      "start": 99.46,
+      "end": 99.62
+    },
+    {
+      "word": "graph.",
+      "start": 99.62,
+      "end": 99.96
+    },
+    {
+      "word": "Ice,",
+      "start": 101.4,
+      "end": 101.76
+    },
+    {
+      "word": "liluo,",
+      "start": 102.56,
+      "end": 103.9
+    },
+    {
+      "word": "the",
+      "start": 104.26,
+      "end": 104.82
+    },
+    {
+      "word": "horizontal",
+      "start": 104.82,
+      "end": 105.34
+    },
+    {
+      "word": "axis",
+      "start": 105.34,
+      "end": 106.0
+    },
+    {
+      "word": "is",
+      "start": 106.0,
+      "end": 106.88
+    },
+    {
+      "word": "time",
+      "start": 106.88,
+      "end": 107.24
+    },
+    {
+      "word": "in",
+      "start": 107.24,
+      "end": 107.98
+    },
+    {
+      "word": "millisecond.",
+      "start": 107.98,
+      "end": 108.62
+    },
+    {
+      "word": "The",
+      "start": 109.28,
+      "end": 109.3
+    },
+    {
+      "word": "vertical",
+      "start": 109.3,
+      "end": 109.72
+    },
+    {
+      "word": "axis",
+      "start": 109.72,
+      "end": 110.18
+    },
+    {
+      "word": "is",
+      "start": 110.18,
+      "end": 110.46
+    },
+    {
+      "word": "membrane",
+      "start": 110.46,
+      "end": 110.84
+    },
+    {
+      "word": "potential",
+      "start": 110.84,
+      "end": 111.48
+    },
+    {
+      "word": "in",
+      "start": 111.48,
+      "end": 112.04
+    },
+    {
+      "word": "millivolts.",
+      "start": 112.04,
+      "end": 112.86
+    },
+    {
+      "word": "Zero",
+      "start": 113.34,
+      "end": 113.66
+    },
+    {
+      "word": "millivolts",
+      "start": 113.66,
+      "end": 114.48
+    },
+    {
+      "word": "is",
+      "start": 114.48,
+      "end": 115.18
+    },
+    {
+      "word": "drawn",
+      "start": 115.18,
+      "end": 115.52
+    },
+    {
+      "word": "as",
+      "start": 115.52,
+      "end": 115.86
+    },
+    {
+      "word": "a",
+      "start": 115.86,
+      "end": 115.98
+    },
+    {
+      "word": "dashed",
+      "start": 115.98,
+      "end": 116.46
+    },
+    {
+      "word": "line.",
+      "start": 116.46,
+      "end": 116.76
+    },
+    {
+      "word": "Resting",
+      "start": 117.3,
+      "end": 117.88
+    },
+    {
+      "word": "potential",
+      "start": 117.88,
+      "end": 118.64
+    },
+    {
+      "word": "sits",
+      "start": 118.64,
+      "end": 119.42
+    },
+    {
+      "word": "near",
+      "start": 119.42,
+      "end": 119.62
+    },
+    {
+      "word": "minus",
+      "start": 119.62,
+      "end": 119.98
+    },
+    {
+      "word": "70",
+      "start": 119.98,
+      "end": 120.6
+    },
+    {
+      "word": "or",
+      "start": 120.6,
+      "end": 121.54
+    },
+    {
+      "word": "allows",
+      "start": 121.54,
+      "end": 121.86
+    },
+    {
+      "word": "under",
+      "start": 121.86,
+      "end": 122.64
+    },
+    {
+      "word": "current",
+      "start": 122.64,
+      "end": 123.18
+    },
+    {
+      "word": "hold.",
+      "start": 123.18,
+      "end": 123.72
+    },
+    {
+      "word": "Freshhold",
+      "start": 124.36,
+      "end": 125.04
+    },
+    {
+      "word": "is",
+      "start": 125.04,
+      "end": 125.58
+    },
+    {
+      "word": "marked",
+      "start": 125.58,
+      "end": 125.96
+    },
+    {
+      "word": "near",
+      "start": 125.96,
+      "end": 126.3
+    },
+    {
+      "word": "minus",
+      "start": 126.3,
+      "end": 126.98
+    },
+    {
+      "word": "55,",
+      "start": 126.98,
+      "end": 127.7
+    },
+    {
+      "word": "the",
+      "start": 128.52,
+      "end": 128.6
+    },
+    {
+      "word": "peak",
+      "start": 128.6,
+      "end": 128.86
+    },
+    {
+      "word": "is",
+      "start": 128.86,
+      "end": 129.1
+    },
+    {
+      "word": "near",
+      "start": 129.1,
+      "end": 129.48
+    },
+    {
+      "word": "plus",
+      "start": 129.48,
+      "end": 130.26
+    },
+    {
+      "word": "35.",
+      "start": 130.26,
+      "end": 131.04
+    },
+    {
+      "word": "Depolarization",
+      "start": 131.92,
+      "end": 132.76
+    },
+    {
+      "word": "is",
+      "start": 132.76,
+      "end": 133.58
+    },
+    {
+      "word": "the",
+      "start": 133.58,
+      "end": 133.76
+    },
+    {
+      "word": "rising",
+      "start": 133.76,
+      "end": 134.22
+    },
+    {
+      "word": "phase.",
+      "start": 134.22,
+      "end": 134.7
+    },
+    {
+      "word": "Voltage",
+      "start": 135.52,
+      "end": 135.84
+    },
+    {
+      "word": "gated",
+      "start": 135.84,
+      "end": 136.26
+    },
+    {
+      "word": "sodium",
+      "start": 136.26,
+      "end": 136.9
+    },
+    {
+      "word": "channels",
+      "start": 136.9,
+      "end": 137.42
+    },
+    {
+      "word": "open",
+      "start": 137.42,
+      "end": 138.36
+    },
+    {
+      "word": "and",
+      "start": 138.36,
+      "end": 138.58
+    },
+    {
+      "word": "sodium",
+      "start": 138.58,
+      "end": 139.02
+    },
+    {
+      "word": "ions",
+      "start": 139.02,
+      "end": 139.48
+    },
+    {
+      "word": "rush",
+      "start": 139.48,
+      "end": 140.36
+    },
+    {
+      "word": "in",
+      "start": 140.36,
+      "end": 140.6
+    },
+    {
+      "word": "down,",
+      "start": 140.6,
+      "end": 140.88
+    },
+    {
+      "word": "the",
+      "start": 141.56,
+      "end": 141.56
+    },
+    {
+      "word": "electrochemical",
+      "start": 141.56,
+      "end": 142.26
+    },
+    {
+      "word": "gradient.",
+      "start": 142.26,
+      "end": 142.84
+    },
+    {
+      "word": "The",
+      "start": 143.28,
+      "end": 143.72
+    },
+    {
+      "word": "inside",
+      "start": 143.72,
+      "end": 144.1
+    },
+    {
+      "word": "rapidly",
+      "start": 144.1,
+      "end": 144.86
+    },
+    {
+      "word": "becomes",
+      "start": 144.86,
+      "end": 145.32
+    },
+    {
+      "word": "less",
+      "start": 145.32,
+      "end": 145.78
+    },
+    {
+      "word": "negative.",
+      "start": 145.78,
+      "end": 146.36
+    },
+    {
+      "word": "Then",
+      "start": 147.36,
+      "end": 147.66
+    },
+    {
+      "word": "positive.",
+      "start": 147.66,
+      "end": 148.24
+    },
+    {
+      "word": "The",
+      "start": 149.04,
+      "end": 149.26
+    },
+    {
+      "word": "membrane",
+      "start": 149.26,
+      "end": 149.72
+    },
+    {
+      "word": "is",
+      "start": 149.72,
+      "end": 150.46
+    },
+    {
+      "word": "now",
+      "start": 150.46,
+      "end": 150.74
+    },
+    {
+      "word": "depolarized.",
+      "start": 150.74,
+      "end": 151.86
+    },
+    {
+      "word": "On",
+      "start": 152.36,
+      "end": 152.58
+    },
+    {
+      "word": "the",
+      "start": 152.58,
+      "end": 152.72
+    },
+    {
+      "word": "graph,",
+      "start": 152.72,
+      "end": 153.02
+    },
+    {
+      "word": "this",
+      "start": 153.66,
+      "end": 153.94
+    },
+    {
+      "word": "is",
+      "start": 153.94,
+      "end": 154.12
+    },
+    {
+      "word": "the",
+      "start": 154.12,
+      "end": 154.32
+    },
+    {
+      "word": "steep",
+      "start": 154.32,
+      "end": 154.6
+    },
+    {
+      "word": "upstroke",
+      "start": 154.6,
+      "end": 155.14
+    },
+    {
+      "word": "from",
+      "start": 155.14,
+      "end": 155.58
+    },
+    {
+      "word": "threshold",
+      "start": 155.58,
+      "end": 156.02
+    },
+    {
+      "word": "to",
+      "start": 156.02,
+      "end": 156.38
+    },
+    {
+      "word": "the",
+      "start": 156.38,
+      "end": 156.52
+    },
+    {
+      "word": "peak.",
+      "start": 156.52,
+      "end": 156.72
+    },
+    {
+      "word": "At",
+      "start": 157.44,
+      "end": 157.82
+    },
+    {
+      "word": "the",
+      "start": 157.82,
+      "end": 157.96
+    },
+    {
+      "word": "peak,",
+      "start": 157.96,
+      "end": 158.3
+    },
+    {
+      "word": "two",
+      "start": 158.68,
+      "end": 158.82
+    },
+    {
+      "word": "things",
+      "start": 158.82,
+      "end": 159.1
+    },
+    {
+      "word": "change.",
+      "start": 159.1,
+      "end": 159.56
+    },
+    {
+      "word": "The",
+      "start": 160.3,
+      "end": 160.44
+    },
+    {
+      "word": "voltage",
+      "start": 160.44,
+      "end": 160.82
+    },
+    {
+      "word": "gated",
+      "start": 160.82,
+      "end": 161.44
+    },
+    {
+      "word": "sodium",
+      "start": 161.44,
+      "end": 161.98
+    },
+    {
+      "word": "channels",
+      "start": 161.98,
+      "end": 162.78
+    },
+    {
+      "word": "become",
+      "start": 162.78,
+      "end": 163.6
+    },
+    {
+      "word": "inactivated.",
+      "start": 163.6,
+      "end": 164.74
+    },
+    {
+      "word": "Inactivation",
+      "start": 165.32,
+      "end": 166.2
+    },
+    {
+      "word": "is",
+      "start": 166.2,
+      "end": 167.02
+    },
+    {
+      "word": "not",
+      "start": 167.02,
+      "end": 167.18
+    },
+    {
+      "word": "the",
+      "start": 167.18,
+      "end": 167.38
+    },
+    {
+      "word": "same",
+      "start": 167.38,
+      "end": 167.64
+    },
+    {
+      "word": "as",
+      "start": 167.64,
+      "end": 167.8
+    },
+    {
+      "word": "simply",
+      "start": 167.8,
+      "end": 168.16
+    },
+    {
+      "word": "closing.",
+      "start": 168.16,
+      "end": 168.64
+    },
+    {
+      "word": "A",
+      "start": 169.27,
+      "end": 169.66
+    },
+    {
+      "word": "part",
+      "start": 169.66,
+      "end": 169.9
+    },
+    {
+      "word": "of",
+      "start": 169.9,
+      "end": 170.12
+    },
+    {
+      "word": "the",
+      "start": 170.12,
+      "end": 170.28
+    },
+    {
+      "word": "protein",
+      "start": 170.28,
+      "end": 170.7
+    },
+    {
+      "word": "blocks,",
+      "start": 170.7,
+      "end": 171.1
+    },
+    {
+      "word": "the",
+      "start": 171.7,
+      "end": 171.88
+    },
+    {
+      "word": "open",
+      "start": 171.88,
+      "end": 172.14
+    },
+    {
+      "word": "pore",
+      "start": 172.14,
+      "end": 172.46
+    },
+    {
+      "word": "from",
+      "start": 172.46,
+      "end": 172.68
+    },
+    {
+      "word": "the",
+      "start": 172.68,
+      "end": 172.86
+    },
+    {
+      "word": "inside.",
+      "start": 172.86,
+      "end": 173.34
+    },
+    {
+      "word": "So",
+      "start": 174.04,
+      "end": 174.14
+    },
+    {
+      "word": "sodium",
+      "start": 174.14,
+      "end": 174.56
+    },
+    {
+      "word": "entry",
+      "start": 174.56,
+      "end": 174.98
+    },
+    {
+      "word": "stops,",
+      "start": 174.98,
+      "end": 175.32
+    },
+    {
+      "word": "even",
+      "start": 175.84,
+      "end": 175.98
+    },
+    {
+      "word": "though",
+      "start": 175.98,
+      "end": 176.2
+    },
+    {
+      "word": "the",
+      "start": 176.2,
+      "end": 176.38
+    },
+    {
+      "word": "membrane",
+      "start": 176.38,
+      "end": 176.8
+    },
+    {
+      "word": "is",
+      "start": 176.8,
+      "end": 177.06
+    },
+    {
+      "word": "still",
+      "start": 177.06,
+      "end": 177.26
+    },
+    {
+      "word": "positive.",
+      "start": 177.26,
+      "end": 177.82
+    },
+    {
+      "word": "At",
+      "start": 178.4,
+      "end": 178.54
+    },
+    {
+      "word": "the",
+      "start": 178.54,
+      "end": 178.68
+    },
+    {
+      "word": "same",
+      "start": 178.68,
+      "end": 178.88
+    },
+    {
+      "word": "time,",
+      "start": 178.88,
+      "end": 179.52
+    },
+    {
+      "word": "voltage",
+      "start": 180.18,
+      "end": 180.46
+    },
+    {
+      "word": "gated",
+      "start": 180.46,
+      "end": 181.08
+    },
+    {
+      "word": "potassium",
+      "start": 181.08,
+      "end": 181.92
+    },
+    {
+      "word": "channels",
+      "start": 181.92,
+      "end": 182.72
+    },
+    {
+      "word": "opened.",
+      "start": 182.72,
+      "end": 183.18
+    },
+    {
+      "word": "They",
+      "start": 183.98,
+      "end": 184.28
+    },
+    {
+      "word": "are",
+      "start": 184.28,
+      "end": 184.48
+    },
+    {
+      "word": "slower",
+      "start": 184.48,
+      "end": 184.94
+    },
+    {
+      "word": "to",
+      "start": 184.94,
+      "end": 185.14
+    },
+    {
+      "word": "open",
+      "start": 185.14,
+      "end": 185.48
+    },
+    {
+      "word": "than",
+      "start": 185.48,
+      "end": 185.98
+    },
+    {
+      "word": "the",
+      "start": 185.98,
+      "end": 186.14
+    },
+    {
+      "word": "sodium",
+      "start": 186.14,
+      "end": 186.56
+    },
+    {
+      "word": "channels.",
+      "start": 186.56,
+      "end": 187.22
+    },
+    {
+      "word": "Repolarization",
+      "start": 189.56,
+      "end": 190.34
+    },
+    {
+      "word": "is",
+      "start": 190.34,
+      "end": 191.12
+    },
+    {
+      "word": "the",
+      "start": 191.12,
+      "end": 191.32
+    },
+    {
+      "word": "falling",
+      "start": 191.32,
+      "end": 191.7
+    },
+    {
+      "word": "phase.",
+      "start": 191.7,
+      "end": 192.06
+    },
+    {
+      "word": "Potassium",
+      "start": 192.06,
+      "end": 193.24
+    },
+    {
+      "word": "ions",
+      "start": 193.24,
+      "end": 193.98
+    },
+    {
+      "word": "leave",
+      "start": 193.98,
+      "end": 194.36
+    },
+    {
+      "word": "the",
+      "start": 194.36,
+      "end": 194.58
+    },
+    {
+      "word": "axon",
+      "start": 194.58,
+      "end": 195.06
+    },
+    {
+      "word": "through",
+      "start": 195.06,
+      "end": 195.72
+    },
+    {
+      "word": "those",
+      "start": 195.72,
+      "end": 196.04
+    },
+    {
+      "word": "open",
+      "start": 196.04,
+      "end": 196.48
+    },
+    {
+      "word": "voltage",
+      "start": 196.48,
+      "end": 196.9
+    },
+    {
+      "word": "gated",
+      "start": 196.9,
+      "end": 197.48
+    },
+    {
+      "word": "potassium",
+      "start": 197.48,
+      "end": 198.32
+    },
+    {
+      "word": "channels.",
+      "start": 198.32,
+      "end": 199.08
+    },
+    {
+      "word": "BAN!",
+      "start": 199.46,
+      "end": 199.88
+    },
+    {
+      "word": "Positive",
+      "start": 200.62,
+      "end": 201.06
+    },
+    {
+      "word": "charge",
+      "start": 201.06,
+      "end": 201.46
+    },
+    {
+      "word": "leaves.",
+      "start": 201.46,
+      "end": 201.86
+    },
+    {
+      "word": "So",
+      "start": 202.94,
+      "end": 203.12
+    },
+    {
+      "word": "the",
+      "start": 203.12,
+      "end": 203.3
+    },
+    {
+      "word": "inside",
+      "start": 203.3,
+      "end": 203.7
+    },
+    {
+      "word": "becomes",
+      "start": 203.7,
+      "end": 204.18
+    },
+    {
+      "word": "negative",
+      "start": 204.18,
+      "end": 204.66
+    },
+    {
+      "word": "again.",
+      "start": 204.66,
+      "end": 205.1
+    },
+    {
+      "word": "This",
+      "start": 205.98,
+      "end": 206.18
+    },
+    {
+      "word": "rapid",
+      "start": 206.18,
+      "end": 206.52
+    },
+    {
+      "word": "fall",
+      "start": 206.52,
+      "end": 206.92
+    },
+    {
+      "word": "is",
+      "start": 206.92,
+      "end": 207.64
+    },
+    {
+      "word": "caused",
+      "start": 207.64,
+      "end": 207.92
+    },
+    {
+      "word": "by",
+      "start": 207.92,
+      "end": 208.44
+    },
+    {
+      "word": "potassium",
+      "start": 208.44,
+      "end": 209.44
+    },
+    {
+      "word": "efflux",
+      "start": 209.44,
+      "end": 210.18
+    },
+    {
+      "word": "and",
+      "start": 210.18,
+      "end": 210.8
+    },
+    {
+      "word": "sodium",
+      "start": 210.8,
+      "end": 211.2
+    },
+    {
+      "word": "inactivation.",
+      "start": 211.2,
+      "end": 212.46
+    },
+    {
+      "word": "It's",
+      "start": 212.92,
+      "end": 213.24
+    },
+    {
+      "word": "not",
+      "start": 213.24,
+      "end": 213.4
+    },
+    {
+      "word": "caused",
+      "start": 213.4,
+      "end": 213.7
+    },
+    {
+      "word": "by",
+      "start": 213.7,
+      "end": 214.0
+    },
+    {
+      "word": "the",
+      "start": 214.0,
+      "end": 214.14
+    },
+    {
+      "word": "sodium.",
+      "start": 214.14,
+      "end": 214.56
+    },
+    {
+      "word": "Potassium",
+      "start": 215.44,
+      "end": 216.0
+    },
+    {
+      "word": "pump.",
+      "start": 216.0,
+      "end": 216.44
+    },
+    {
+      "word": "The",
+      "start": 216.44,
+      "end": 216.7
+    },
+    {
+      "word": "pump",
+      "start": 216.7,
+      "end": 216.7
+    },
+    {
+      "word": "is",
+      "start": 216.7,
+      "end": 218.96
+    },
+    {
+      "word": "far",
+      "start": 218.96,
+      "end": 219.28
+    },
+    {
+      "word": "too",
+      "start": 219.28,
+      "end": 219.5
+    },
+    {
+      "word": "slow",
+      "start": 219.5,
+      "end": 219.92
+    },
+    {
+      "word": "to",
+      "start": 219.92,
+      "end": 220.22
+    },
+    {
+      "word": "produce",
+      "start": 220.22,
+      "end": 220.62
+    },
+    {
+      "word": "this",
+      "start": 220.62,
+      "end": 220.98
+    },
+    {
+      "word": "millisecond",
+      "start": 220.98,
+      "end": 221.66
+    },
+    {
+      "word": "downstroke.",
+      "start": 221.66,
+      "end": 222.48
+    },
+    {
+      "word": "I'm",
+      "start": 223.02,
+      "end": 223.62
+    },
+    {
+      "word": "with",
+      "start": 223.62,
+      "end": 223.78
+    },
+    {
+      "word": "an",
+      "start": 223.78,
+      "end": 224.56
+    },
+    {
+      "word": "anti",
+      "start": 224.56,
+      "end": 224.74
+    },
+    {
+      "word": "-spiral.",
+      "start": 224.74,
+      "end": 225.34
+    },
+    {
+      "word": "The",
+      "start": 226.12,
+      "end": 226.34
+    },
+    {
+      "word": "pump's",
+      "start": 226.34,
+      "end": 226.82
+    },
+    {
+      "word": "job",
+      "start": 226.82,
+      "end": 227.04
+    },
+    {
+      "word": "is",
+      "start": 227.04,
+      "end": 227.72
+    },
+    {
+      "word": "to",
+      "start": 227.72,
+      "end": 227.92
+    },
+    {
+      "word": "restore",
+      "start": 227.92,
+      "end": 228.42
+    },
+    {
+      "word": "the",
+      "start": 228.42,
+      "end": 228.72
+    },
+    {
+      "word": "ion",
+      "start": 228.72,
+      "end": 229.08
+    },
+    {
+      "word": "gradients",
+      "start": 229.08,
+      "end": 229.68
+    },
+    {
+      "word": "afterward.",
+      "start": 229.68,
+      "end": 230.46
+    },
+    {
+      "word": "The",
+      "start": 231.06,
+      "end": 231.3
+    },
+    {
+      "word": "membrane",
+      "start": 231.3,
+      "end": 231.72
+    },
+    {
+      "word": "often",
+      "start": 231.72,
+      "end": 232.82
+    },
+    {
+      "word": "goes",
+      "start": 232.82,
+      "end": 233.16
+    },
+    {
+      "word": "a",
+      "start": 233.16,
+      "end": 233.4
+    },
+    {
+      "word": "little",
+      "start": 233.4,
+      "end": 233.62
+    },
+    {
+      "word": "more",
+      "start": 233.62,
+      "end": 233.82
+    },
+    {
+      "word": "negative",
+      "start": 233.82,
+      "end": 234.12
+    },
+    {
+      "word": "than",
+      "start": 234.12,
+      "end": 234.6
+    },
+    {
+      "word": "rest.",
+      "start": 234.6,
+      "end": 234.9
+    },
+    {
+      "word": "That,",
+      "start": 235.5,
+      "end": 235.8
+    },
+    {
+      "word": "on",
+      "start": 235.9,
+      "end": 236.0
+    },
+    {
+      "word": "the",
+      "start": 236.0,
+      "end": 236.12
+    },
+    {
+      "word": "shoot,",
+      "start": 236.12,
+      "end": 236.34
+    },
+    {
+      "word": "is",
+      "start": 236.7,
+      "end": 236.96
+    },
+    {
+      "word": "hyperpolarization,",
+      "start": 236.96,
+      "end": 238.06
+    },
+    {
+      "word": "sometimes",
+      "start": 238.52,
+      "end": 238.9
+    },
+    {
+      "word": "called",
+      "start": 238.9,
+      "end": 239.32
+    },
+    {
+      "word": "after",
+      "start": 239.32,
+      "end": 240.1
+    },
+    {
+      "word": "hyperpolarization.",
+      "start": 240.1,
+      "end": 241.26
+    },
+    {
+      "word": "It",
+      "start": 241.79,
+      "end": 242.18
+    },
+    {
+      "word": "happens",
+      "start": 242.18,
+      "end": 242.52
+    },
+    {
+      "word": "because",
+      "start": 242.52,
+      "end": 243.52
+    },
+    {
+      "word": "voltage",
+      "start": 243.52,
+      "end": 244.52
+    },
+    {
+      "word": "gated",
+      "start": 244.52,
+      "end": 245.04
+    },
+    {
+      "word": "potassium",
+      "start": 245.04,
+      "end": 245.68
+    },
+    {
+      "word": "channels",
+      "start": 245.68,
+      "end": 246.3
+    },
+    {
+      "word": "are",
+      "start": 246.3,
+      "end": 246.54
+    },
+    {
+      "word": "still",
+      "start": 246.54,
+      "end": 246.78
+    },
+    {
+      "word": "open",
+      "start": 246.78,
+      "end": 247.14
+    },
+    {
+      "word": "for",
+      "start": 247.14,
+      "end": 247.42
+    },
+    {
+      "word": "a",
+      "start": 247.42,
+      "end": 247.54
+    },
+    {
+      "word": "short",
+      "start": 247.54,
+      "end": 247.72
+    },
+    {
+      "word": "time.",
+      "start": 247.72,
+      "end": 248.24
+    },
+    {
+      "word": "As",
+      "start": 248.7,
+      "end": 249.02
+    },
+    {
+      "word": "they",
+      "start": 249.02,
+      "end": 249.2
+    },
+    {
+      "word": "close",
+      "start": 249.2,
+      "end": 249.58
+    },
+    {
+      "word": "and",
+      "start": 249.58,
+      "end": 250.5
+    },
+    {
+      "word": "as",
+      "start": 250.5,
+      "end": 250.66
+    },
+    {
+      "word": "leak",
+      "start": 250.66,
+      "end": 250.82
+    },
+    {
+      "word": "channels",
+      "start": 250.82,
+      "end": 251.28
+    },
+    {
+      "word": "and",
+      "start": 251.28,
+      "end": 252.1
+    },
+    {
+      "word": "the",
+      "start": 252.1,
+      "end": 252.22
+    },
+    {
+      "word": "pump",
+      "start": 252.22,
+      "end": 252.4
+    },
+    {
+      "word": "continue",
+      "start": 252.4,
+      "end": 253.0
+    },
+    {
+      "word": "their",
+      "start": 253.0,
+      "end": 253.24
+    },
+    {
+      "word": "resting",
+      "start": 253.24,
+      "end": 253.54
+    },
+    {
+      "word": "work,",
+      "start": 253.54,
+      "end": 254.02
+    },
+    {
+      "word": "the",
+      "start": 254.46,
+      "end": 254.62
+    },
+    {
+      "word": "potential",
+      "start": 254.62,
+      "end": 255.02
+    },
+    {
+      "word": "returns",
+      "start": 255.02,
+      "end": 255.64
+    },
+    {
+      "word": "towards",
+      "start": 255.64,
+      "end": 256.0
+    },
+    {
+      "word": "minus",
+      "start": 256.0,
+      "end": 256.62
+    },
+    {
+      "word": "70",
+      "start": 256.62,
+      "end": 257.22
+    },
+    {
+      "word": "millivolts.",
+      "start": 257.22,
+      "end": 257.66
+    },
+    {
+      "word": "Follow",
+      "start": 258.38,
+      "end": 258.7
+    },
+    {
+      "word": "the",
+      "start": 258.7,
+      "end": 259.04
+    },
+    {
+      "word": "graph",
+      "start": 259.04,
+      "end": 259.32
+    },
+    {
+      "word": "once",
+      "start": 259.32,
+      "end": 259.82
+    },
+    {
+      "word": "more.",
+      "start": 259.82,
+      "end": 260.24
+    },
+    {
+      "word": "Rest",
+      "start": 260.96,
+      "end": 261.32
+    },
+    {
+      "word": "at",
+      "start": 261.32,
+      "end": 261.86
+    },
+    {
+      "word": "minus",
+      "start": 261.86,
+      "end": 262.22
+    },
+    {
+      "word": "70,",
+      "start": 262.22,
+      "end": 262.92
+    },
+    {
+      "word": "pile",
+      "start": 263.4,
+      "end": 263.78
+    },
+    {
+      "word": "out,",
+      "start": 263.78,
+      "end": 264.2
+    },
+    {
+      "word": "a",
+      "start": 264.2,
+      "end": 264.98
+    },
+    {
+      "word": "stimulus",
+      "start": 264.98,
+      "end": 265.42
+    },
+    {
+      "word": "lifts",
+      "start": 265.42,
+      "end": 266.32
+    },
+    {
+      "word": "the",
+      "start": 266.32,
+      "end": 266.54
+    },
+    {
+      "word": "potential",
+      "start": 266.54,
+      "end": 267.06
+    },
+    {
+      "word": "to",
+      "start": 267.06,
+      "end": 267.62
+    },
+    {
+      "word": "threshold.",
+      "start": 267.62,
+      "end": 268.14
+    },
+    {
+      "word": "Sodium",
+      "start": 268.92,
+      "end": 269.28
+    },
+    {
+      "word": "enters",
+      "start": 269.28,
+      "end": 269.64
+    },
+    {
+      "word": "and",
+      "start": 269.64,
+      "end": 270.58
+    },
+    {
+      "word": "the",
+      "start": 270.58,
+      "end": 270.7
+    },
+    {
+      "word": "trace",
+      "start": 270.7,
+      "end": 270.94
+    },
+    {
+      "word": "shoots",
+      "start": 270.94,
+      "end": 271.38
+    },
+    {
+      "word": "to",
+      "start": 271.38,
+      "end": 272.1
+    },
+    {
+      "word": "about",
+      "start": 272.1,
+      "end": 272.54
+    },
+    {
+      "word": "plus",
+      "start": 272.54,
+      "end": 273.42
+    },
+    {
+      "word": "35",
+      "start": 273.42,
+      "end": 274.2
+    },
+    {
+      "word": "platforms.",
+      "start": 274.2,
+      "end": 275.02
+    },
+    {
+      "word": "Sodium",
+      "start": 275.74,
+      "end": 276.22
+    },
+    {
+      "word": "channels",
+      "start": 276.22,
+      "end": 276.74
+    },
+    {
+      "word": "inactivate",
+      "start": 276.74,
+      "end": 277.74
+    },
+    {
+      "word": "potassium",
+      "start": 277.74,
+      "end": 278.94
+    },
+    {
+      "word": "leaves",
+      "start": 278.94,
+      "end": 279.52
+    },
+    {
+      "word": "and",
+      "start": 279.52,
+      "end": 280.4
+    },
+    {
+      "word": "the",
+      "start": 280.4,
+      "end": 280.54
+    },
+    {
+      "word": "trace",
+      "start": 280.54,
+      "end": 280.86
+    },
+    {
+      "word": "falls.",
+      "start": 280.86,
+      "end": 281.26
+    },
+    {
+      "word": "A",
+      "start": 281.96,
+      "end": 282.14
+    },
+    {
+      "word": "brief",
+      "start": 282.14,
+      "end": 282.42
+    },
+    {
+      "word": "dip",
+      "start": 282.42,
+      "end": 282.88
+    },
+    {
+      "word": "below",
+      "start": 282.88,
+      "end": 283.66
+    },
+    {
+      "word": "minus",
+      "start": 283.66,
+      "end": 284.14
+    },
+    {
+      "word": "70,",
+      "start": 284.14,
+      "end": 284.68
+    },
+    {
+      "word": "then",
+      "start": 285.34,
+      "end": 285.76
+    },
+    {
+      "word": "a",
+      "start": 285.76,
+      "end": 286.08
+    },
+    {
+      "word": "return",
+      "start": 286.08,
+      "end": 286.48
+    },
+    {
+      "word": "to",
+      "start": 286.48,
+      "end": 286.72
+    },
+    {
+      "word": "rest.",
+      "start": 286.72,
+      "end": 286.98
+    },
+    {
+      "word": "The",
+      "start": 287.56,
+      "end": 287.78
+    },
+    {
+      "word": "whole",
+      "start": 287.78,
+      "end": 287.96
+    },
+    {
+      "word": "event",
+      "start": 287.96,
+      "end": 288.38
+    },
+    {
+      "word": "lasts",
+      "start": 288.38,
+      "end": 289.1
+    },
+    {
+      "word": "about",
+      "start": 289.1,
+      "end": 289.66
+    },
+    {
+      "word": "2",
+      "start": 289.66,
+      "end": 289.98
+    },
+    {
+      "word": "to",
+      "start": 289.98,
+      "end": 290.14
+    },
+    {
+      "word": "4",
+      "start": 290.14,
+      "end": 290.4
+    },
+    {
+      "word": "milliseconds",
+      "start": 290.4,
+      "end": 290.96
+    },
+    {
+      "word": "in",
+      "start": 290.96,
+      "end": 291.78
+    },
+    {
+      "word": "a",
+      "start": 291.78,
+      "end": 291.9
+    },
+    {
+      "word": "typical",
+      "start": 291.9,
+      "end": 292.2
+    },
+    {
+      "word": "axor.",
+      "start": 292.2,
+      "end": 292.74
+    },
+    {
+      "word": "Here",
+      "start": 293.28,
+      "end": 293.68
+    },
+    {
+      "word": "is",
+      "start": 293.68,
+      "end": 293.9
+    },
+    {
+      "word": "a",
+      "start": 293.9,
+      "end": 294.0
+    },
+    {
+      "word": "worked",
+      "start": 294.0,
+      "end": 294.32
+    },
+    {
+      "word": "examination",
+      "start": 294.32,
+      "end": 294.76
+    },
+    {
+      "word": "style",
+      "start": 294.76,
+      "end": 295.44
+    },
+    {
+      "word": "example.",
+      "start": 295.44,
+      "end": 295.96
+    },
+    {
+      "word": "The",
+      "start": 296.6,
+      "end": 296.68
+    },
+    {
+      "word": "graph",
+      "start": 296.68,
+      "end": 296.94
+    },
+    {
+      "word": "is",
+      "start": 296.94,
+      "end": 297.78
+    },
+    {
+      "word": "at",
+      "start": 297.78,
+      "end": 298.36
+    },
+    {
+      "word": "plus",
+      "start": 298.36,
+      "end": 298.6
+    },
+    {
+      "word": "35",
+      "start": 298.6,
+      "end": 299.48
+    },
+    {
+      "word": "millivolts.",
+      "start": 299.48,
+      "end": 300.6
+    },
+    {
+      "word": "Describe",
+      "start": 301.2,
+      "end": 301.46
+    },
+    {
+      "word": "the",
+      "start": 301.46,
+      "end": 301.74
+    },
+    {
+      "word": "state",
+      "start": 301.74,
+      "end": 301.98
+    },
+    {
+      "word": "of",
+      "start": 301.98,
+      "end": 302.2
+    },
+    {
+      "word": "the",
+      "start": 302.2,
+      "end": 302.36
+    },
+    {
+      "word": "voltage",
+      "start": 302.36,
+      "end": 302.72
+    },
+    {
+      "word": "gated",
+      "start": 302.72,
+      "end": 303.22
+    },
+    {
+      "word": "sodium",
+      "start": 303.22,
+      "end": 303.62
+    },
+    {
+      "word": "channels",
+      "start": 303.62,
+      "end": 304.22
+    },
+    {
+      "word": "and",
+      "start": 304.22,
+      "end": 304.94
+    },
+    {
+      "word": "the",
+      "start": 304.94,
+      "end": 305.06
+    },
+    {
+      "word": "voltage",
+      "start": 305.06,
+      "end": 305.4
+    },
+    {
+      "word": "gated",
+      "start": 305.4,
+      "end": 305.86
+    },
+    {
+      "word": "potassium",
+      "start": 305.86,
+      "end": 306.32
+    },
+    {
+      "word": "channels",
+      "start": 306.32,
+      "end": 307.0
+    },
+    {
+      "word": "and",
+      "start": 307.0,
+      "end": 307.68
+    },
+    {
+      "word": "name",
+      "start": 307.68,
+      "end": 307.9
+    },
+    {
+      "word": "the",
+      "start": 307.9,
+      "end": 308.14
+    },
+    {
+      "word": "phase",
+      "start": 308.14,
+      "end": 308.4
+    },
+    {
+      "word": "that",
+      "start": 308.4,
+      "end": 308.6
+    },
+    {
+      "word": "follows.",
+      "start": 308.6,
+      "end": 308.98
+    },
+    {
+      "word": "At",
+      "start": 309.7,
+      "end": 309.98
+    },
+    {
+      "word": "the",
+      "start": 309.98,
+      "end": 310.14
+    },
+    {
+      "word": "peak,",
+      "start": 310.14,
+      "end": 310.36
+    },
+    {
+      "word": "voltage",
+      "start": 311.14,
+      "end": 311.36
+    },
+    {
+      "word": "gated",
+      "start": 311.36,
+      "end": 311.94
+    },
+    {
+      "word": "sodium",
+      "start": 311.94,
+      "end": 312.32
+    },
+    {
+      "word": "channels",
+      "start": 312.32,
+      "end": 312.98
+    },
+    {
+      "word": "are",
+      "start": 312.98,
+      "end": 313.54
+    },
+    {
+      "word": "inactivated,",
+      "start": 313.54,
+      "end": 314.36
+    },
+    {
+      "word": "so",
+      "start": 314.8,
+      "end": 315.1
+    },
+    {
+      "word": "sodium",
+      "start": 315.1,
+      "end": 315.56
+    },
+    {
+      "word": "can",
+      "start": 315.56,
+      "end": 315.86
+    },
+    {
+      "word": "no",
+      "start": 315.86,
+      "end": 316.02
+    },
+    {
+      "word": "longer",
+      "start": 316.02,
+      "end": 316.34
+    },
+    {
+      "word": "enter.",
+      "start": 316.34,
+      "end": 316.64
+    },
+    {
+      "word": "Voltage",
+      "start": 317.38,
+      "end": 317.72
+    },
+    {
+      "word": "gated",
+      "start": 317.72,
+      "end": 318.2
+    },
+    {
+      "word": "potassium",
+      "start": 318.2,
+      "end": 318.6
+    },
+    {
+      "word": "channels",
+      "start": 318.6,
+      "end": 319.28
+    },
+    {
+      "word": "are",
+      "start": 319.28,
+      "end": 319.5
+    },
+    {
+      "word": "open,",
+      "start": 319.5,
+      "end": 319.94
+    },
+    {
+      "word": "so",
+      "start": 320.48,
+      "end": 320.66
+    },
+    {
+      "word": "potassium",
+      "start": 320.66,
+      "end": 321.12
+    },
+    {
+      "word": "is",
+      "start": 321.12,
+      "end": 321.66
+    },
+    {
+      "word": "leaving.",
+      "start": 321.66,
+      "end": 322.06
+    },
+    {
+      "word": "The",
+      "start": 322.74,
+      "end": 323.06
+    },
+    {
+      "word": "phase",
+      "start": 323.06,
+      "end": 323.32
+    },
+    {
+      "word": "that",
+      "start": 323.32,
+      "end": 323.54
+    },
+    {
+      "word": "follows",
+      "start": 323.54,
+      "end": 323.9
+    },
+    {
+      "word": "is",
+      "start": 323.9,
+      "end": 324.64
+    },
+    {
+      "word": "repolarization,",
+      "start": 324.64,
+      "end": 325.74
+    },
+    {
+      "word": "as",
+      "start": 326.32,
+      "end": 326.72
+    },
+    {
+      "word": "the",
+      "start": 326.72,
+      "end": 326.88
+    },
+    {
+      "word": "inside",
+      "start": 326.88,
+      "end": 327.32
+    },
+    {
+      "word": "becomes",
+      "start": 327.32,
+      "end": 327.78
+    },
+    {
+      "word": "negative",
+      "start": 327.78,
+      "end": 328.34
+    },
+    {
+      "word": "again.",
+      "start": 328.34,
+      "end": 328.96
+    },
+    {
+      "word": "Now",
+      "start": 329.7,
+      "end": 330.06
+    },
+    {
+      "word": "pause",
+      "start": 330.06,
+      "end": 330.94
+    },
+    {
+      "word": "the",
+      "start": 330.94,
+      "end": 331.16
+    },
+    {
+      "word": "video",
+      "start": 331.16,
+      "end": 331.56
+    },
+    {
+      "word": "and",
+      "start": 331.56,
+      "end": 332.56
+    },
+    {
+      "word": "try",
+      "start": 332.56,
+      "end": 332.94
+    },
+    {
+      "word": "this.",
+      "start": 332.94,
+      "end": 333.48
+    },
+    {
+      "word": "A",
+      "start": 334.04,
+      "end": 334.22
+    },
+    {
+      "word": "student",
+      "start": 334.22,
+      "end": 334.46
+    },
+    {
+      "word": "says",
+      "start": 334.46,
+      "end": 334.86
+    },
+    {
+      "word": "the",
+      "start": 334.86,
+      "end": 335.84
+    },
+    {
+      "word": "sodium",
+      "start": 335.84,
+      "end": 336.24
+    },
+    {
+      "word": "potassium",
+      "start": 336.24,
+      "end": 337.06
+    },
+    {
+      "word": "pump",
+      "start": 337.06,
+      "end": 337.46
+    },
+    {
+      "word": "causes",
+      "start": 337.46,
+      "end": 338.18
+    },
+    {
+      "word": "the",
+      "start": 338.18,
+      "end": 338.48
+    },
+    {
+      "word": "falling",
+      "start": 338.48,
+      "end": 338.82
+    },
+    {
+      "word": "phase",
+      "start": 338.82,
+      "end": 339.14
+    },
+    {
+      "word": "of",
+      "start": 339.14,
+      "end": 339.36
+    },
+    {
+      "word": "the",
+      "start": 339.36,
+      "end": 339.5
+    },
+    {
+      "word": "action",
+      "start": 339.5,
+      "end": 339.78
+    },
+    {
+      "word": "potential",
+      "start": 339.78,
+      "end": 340.38
+    },
+    {
+      "word": "by",
+      "start": 340.38,
+      "end": 340.56
+    },
+    {
+      "word": "pumping",
+      "start": 340.56,
+      "end": 340.86
+    },
+    {
+      "word": "sodium",
+      "start": 340.86,
+      "end": 341.38
+    },
+    {
+      "word": "out.",
+      "start": 341.38,
+      "end": 341.78
+    },
+    {
+      "word": "Identify",
+      "start": 342.38,
+      "end": 342.94
+    },
+    {
+      "word": "in",
+      "start": 342.94,
+      "end": 343.12
+    },
+    {
+      "word": "this",
+      "start": 343.12,
+      "end": 343.28
+    },
+    {
+      "word": "conception",
+      "start": 343.28,
+      "end": 343.96
+    },
+    {
+      "word": "and",
+      "start": 343.96,
+      "end": 344.92
+    },
+    {
+      "word": "write",
+      "start": 344.92,
+      "end": 345.16
+    },
+    {
+      "word": "a",
+      "start": 345.16,
+      "end": 345.84
+    },
+    {
+      "word": "corrected",
+      "start": 345.84,
+      "end": 346.32
+    },
+    {
+      "word": "sentence.",
+      "start": 346.32,
+      "end": 347.1
+    },
+    {
+      "word": "Here",
+      "start": 347.72,
+      "end": 348.06
+    },
+    {
+      "word": "is",
+      "start": 348.06,
+      "end": 348.24
+    },
+    {
+      "word": "a",
+      "start": 348.24,
+      "end": 348.34
+    },
+    {
+      "word": "model",
+      "start": 348.34,
+      "end": 348.56
+    },
+    {
+      "word": "answer.",
+      "start": 348.56,
+      "end": 348.98
+    },
+    {
+      "word": "That",
+      "start": 349.7,
+      "end": 349.82
+    },
+    {
+      "word": "statement",
+      "start": 349.82,
+      "end": 350.42
+    },
+    {
+      "word": "is",
+      "start": 350.42,
+      "end": 351.38
+    },
+    {
+      "word": "wrong.",
+      "start": 351.38,
+      "end": 351.74
+    },
+    {
+      "word": "The",
+      "start": 352.34,
+      "end": 352.72
+    },
+    {
+      "word": "falling",
+      "start": 352.72,
+      "end": 353.1
+    },
+    {
+      "word": "phase",
+      "start": 353.1,
+      "end": 353.44
+    },
+    {
+      "word": "is",
+      "start": 353.44,
+      "end": 353.74
+    },
+    {
+      "word": "repolarization,",
+      "start": 353.74,
+      "end": 354.74
+    },
+    {
+      "word": "caused",
+      "start": 355.6,
+      "end": 355.96
+    },
+    {
+      "word": "by",
+      "start": 355.96,
+      "end": 356.2
+    },
+    {
+      "word": "potassium",
+      "start": 356.2,
+      "end": 356.76
+    },
+    {
+      "word": "ions,",
+      "start": 356.76,
+      "end": 357.26
+    },
+    {
+      "word": "leaving",
+      "start": 358.06,
+      "end": 358.34
+    },
+    {
+      "word": "through",
+      "start": 358.34,
+      "end": 358.78
+    },
+    {
+      "word": "voltage",
+      "start": 358.78,
+      "end": 359.26
+    },
+    {
+      "word": "gated",
+      "start": 359.26,
+      "end": 359.8
+    },
+    {
+      "word": "potassium",
+      "start": 359.8,
+      "end": 360.4
+    },
+    {
+      "word": "channels.",
+      "start": 360.4,
+      "end": 361.08
+    },
+    {
+      "word": "After",
+      "start": 362.0,
+      "end": 362.4
+    },
+    {
+      "word": "the",
+      "start": 362.4,
+      "end": 362.58
+    },
+    {
+      "word": "sodium",
+      "start": 362.58,
+      "end": 362.94
+    },
+    {
+      "word": "channels",
+      "start": 362.94,
+      "end": 363.52
+    },
+    {
+      "word": "inactivate,",
+      "start": 363.52,
+      "end": 364.42
+    },
+    {
+      "word": "the",
+      "start": 365.16,
+      "end": 365.26
+    },
+    {
+      "word": "pump",
+      "start": 365.26,
+      "end": 365.48
+    },
+    {
+      "word": "later",
+      "start": 365.48,
+      "end": 366.18
+    },
+    {
+      "word": "restores",
+      "start": 366.18,
+      "end": 367.04
+    },
+    {
+      "word": "the",
+      "start": 367.04,
+      "end": 367.24
+    },
+    {
+      "word": "sodium",
+      "start": 367.24,
+      "end": 367.74
+    },
+    {
+      "word": "and",
+      "start": 367.74,
+      "end": 368.38
+    },
+    {
+      "word": "potassium",
+      "start": 368.38,
+      "end": 368.92
+    },
+    {
+      "word": "gradients,",
+      "start": 368.92,
+      "end": 369.62
+    },
+    {
+      "word": "but",
+      "start": 370.16,
+      "end": 370.36
+    },
+    {
+      "word": "it",
+      "start": 370.36,
+      "end": 370.48
+    },
+    {
+      "word": "does",
+      "start": 370.48,
+      "end": 370.66
+    },
+    {
+      "word": "not",
+      "start": 370.66,
+      "end": 370.86
+    },
+    {
+      "word": "produce",
+      "start": 370.86,
+      "end": 371.24
+    },
+    {
+      "word": "the",
+      "start": 371.24,
+      "end": 371.56
+    },
+    {
+      "word": "rapid",
+      "start": 371.56,
+      "end": 371.86
+    },
+    {
+      "word": "downstroke.",
+      "start": 371.86,
+      "end": 372.44
+    },
+    {
+      "word": "In",
+      "start": 373.26,
+      "end": 373.42
+    },
+    {
+      "word": "part",
+      "start": 373.42,
+      "end": 373.6
+    },
+    {
+      "word": "three,",
+      "start": 373.6,
+      "end": 374.0
+    },
+    {
+      "word": "we",
+      "start": 374.34,
+      "end": 374.6
+    },
+    {
+      "word": "will",
+      "start": 374.6,
+      "end": 374.72
+    },
+    {
+      "word": "see",
+      "start": 374.72,
+      "end": 374.96
+    },
+    {
+      "word": "how",
+      "start": 374.96,
+      "end": 375.18
+    },
+    {
+      "word": "this",
+      "start": 375.18,
+      "end": 375.4
+    },
+    {
+      "word": "local",
+      "start": 375.4,
+      "end": 375.76
+    },
+    {
+      "word": "reversal",
+      "start": 375.76,
+      "end": 376.26
+    },
+    {
+      "word": "starts",
+      "start": 376.26,
+      "end": 376.84
+    },
+    {
+      "word": "the",
+      "start": 376.84,
+      "end": 377.1
+    },
+    {
+      "word": "next",
+      "start": 377.1,
+      "end": 377.36
+    },
+    {
+      "word": "region",
+      "start": 377.36,
+      "end": 377.66
+    },
+    {
+      "word": "of",
+      "start": 377.66,
+      "end": 377.84
+    },
+    {
+      "word": "action,",
+      "start": 377.84,
+      "end": 378.14
+    },
+    {
+      "word": "why",
+      "start": 378.82,
+      "end": 379.28
+    },
+    {
+      "word": "the",
+      "start": 379.28,
+      "end": 379.48
+    },
+    {
+      "word": "impulse",
+      "start": 379.48,
+      "end": 379.7
+    },
+    {
+      "word": "travels",
+      "start": 379.7,
+      "end": 380.14
+    },
+    {
+      "word": "in",
+      "start": 380.14,
+      "end": 380.38
+    },
+    {
+      "word": "one",
+      "start": 380.38,
+      "end": 380.58
+    },
+    {
+      "word": "direction.",
+      "start": 380.58,
+      "end": 381.1
+    },
+    {
+      "word": "And",
+      "start": 381.74,
+      "end": 382.08
+    },
+    {
+      "word": "how",
+      "start": 382.08,
+      "end": 382.24
+    },
+    {
+      "word": "my",
+      "start": 382.24,
+      "end": 382.42
+    },
+    {
+      "word": "LN",
+      "start": 382.42,
+      "end": 382.76
+    },
+    {
+      "word": "makes",
+      "start": 382.76,
+      "end": 383.46
+    },
+    {
+      "word": "conduction",
+      "start": 383.46,
+      "end": 383.88
+    },
+    {
+      "word": "faster.",
+      "start": 383.88,
+      "end": 384.56
+    },
+    {
+      "word": "If",
+      "start": 385.48,
+      "end": 385.54
+    },
+    {
+      "word": "this",
+      "start": 385.54,
+      "end": 385.74
+    },
+    {
+      "word": "explanation",
+      "start": 385.74,
+      "end": 386.28
+    },
+    {
+      "word": "has",
+      "start": 386.28,
+      "end": 386.7
+    },
+    {
+      "word": "helped,",
+      "start": 386.7,
+      "end": 387.08
+    },
+    {
+      "word": "please",
+      "start": 387.6,
+      "end": 387.84
+    },
+    {
+      "word": "subscribe",
+      "start": 387.84,
+      "end": 388.42
+    },
+    {
+      "word": "to",
+      "start": 388.42,
+      "end": 388.72
+    },
+    {
+      "word": "JD",
+      "start": 388.72,
+      "end": 388.94
+    },
+    {
+      "word": "Science",
+      "start": 388.94,
+      "end": 389.44
+    },
+    {
+      "word": "for",
+      "start": 389.44,
+      "end": 389.76
+    },
+    {
+      "word": "more",
+      "start": 389.76,
+      "end": 389.98
+    },
+    {
+      "word": "lessons.",
+      "start": 389.98,
+      "end": 390.38
+    },
+    {
+      "word": "You",
+      "start": 390.98,
+      "end": 391.2
+    },
+    {
+      "word": "can",
+      "start": 391.2,
+      "end": 391.32
+    },
+    {
+      "word": "find",
+      "start": 391.32,
+      "end": 391.64
+    },
+    {
+      "word": "further",
+      "start": 391.64,
+      "end": 392.04
+    },
+    {
+      "word": "learning",
+      "start": 392.04,
+      "end": 392.44
+    },
+    {
+      "word": "resources",
+      "start": 392.44,
+      "end": 392.9
+    },
+    {
+      "word": "and",
+      "start": 392.9,
+      "end": 393.3
+    },
+    {
+      "word": "practice",
+      "start": 393.3,
+      "end": 393.66
+    },
+    {
+      "word": "questions",
+      "start": 393.66,
+      "end": 394.28
+    },
+    {
+      "word": "at",
+      "start": 394.28,
+      "end": 394.86
+    },
+    {
+      "word": "JD",
+      "start": 394.86,
+      "end": 395.16
+    },
+    {
+      "word": "Science",
+      "start": 395.16,
+      "end": 395.68
+    },
+    {
+      "word": "Company.",
+      "start": 395.68,
+      "end": 396.08
+    },
+    {
+      "word": "But",
+      "start": 396.7,
+      "end": 397.5
+    },
+    {
+      "word": "thank",
+      "start": 397.5,
+      "end": 398.32
+    },
+    {
+      "word": "you",
+      "start": 398.32,
+      "end": 398.54
+    },
+    {
+      "word": "for",
+      "start": 398.54,
+      "end": 398.72
+    },
+    {
+      "word": "watching.",
+      "start": 398.72,
+      "end": 399.16
+    }
+  ],
+  "chunks": 31,
+  "model": "xtts_v2",
+  "voice": "uploaded-joes-voice-xtts",
+  "temporary_voice": false,
+  "elevenlabs_blocker": "ElevenLabs quota_exceeded (4 credits remaining) and voices_write denied. Narration synthesised from the uploaded speaker sample with XTTS v2 so accent and timbre come from that recording."
+}

@@ -1,0 +1,169 @@
+{
+  "slug": "nerve-impulse-part-1",
+  "duration": 391.658,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "micro",
+      "t": 25.54,
+      "aligned": true,
+      "cue": "Look first at a real stained motor"
+    },
+    {
+      "id": "structure",
+      "t": 48.46,
+      "aligned": true,
+      "cue": "The cell body contains the nucleus"
+    },
+    {
+      "id": "impulse",
+      "t": 106.16,
+      "aligned": true,
+      "cue": "A nerve impulse is an action potential"
+    },
+    {
+      "id": "rest",
+      "t": 123.12,
+      "aligned": true,
+      "cue": "At rest, the inside of the axon is negative"
+    },
+    {
+      "id": "ions",
+      "t": 146.44,
+      "aligned": true,
+      "cue": "The ions are not evenly shared"
+    },
+    {
+      "id": "pump",
+      "t": 169.36,
+      "aligned": true,
+      "cue": "The sodium\u2013potassium pump maintains"
+    },
+    {
+      "id": "leak",
+      "t": 201.56,
+      "aligned": true,
+      "cue": "The membrane is selectively permeable"
+    },
+    {
+      "id": "together",
+      "t": 231.06,
+      "aligned": true,
+      "cue": "Put those ideas together"
+    },
+    {
+      "id": "worked",
+      "t": 235.06,
+      "aligned": false,
+      "cue": "work examination style example"
+    },
+    {
+      "id": "worked_ans",
+      "t": 284.26,
+      "aligned": true,
+      "cue": "first error is the direction"
+    },
+    {
+      "id": "your_turn",
+      "t": 288.26,
+      "aligned": false,
+      "cue": "Now pause the video and try this sequencing question"
+    },
+    {
+      "id": "model",
+      "t": 342.54,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 365.14,
+      "aligned": true,
+      "cue": "In part two we will see how a stimulus"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "structure",
+      "item": "soma",
+      "t": 48.58,
+      "aligned": true,
+      "cue": "The cell body contains the nucleus"
+    },
+    {
+      "slide": "structure",
+      "item": "dendrites",
+      "t": 56.62,
+      "aligned": true,
+      "cue": "incoming signals and pass them towards the cell body"
+    },
+    {
+      "slide": "structure",
+      "item": "axon",
+      "t": 60.94,
+      "aligned": true,
+      "cue": "The axon is a long process"
+    },
+    {
+      "slide": "structure",
+      "item": "membrane",
+      "t": 68.72,
+      "aligned": true,
+      "cue": "The axon is bounded by a plasma membrane"
+    },
+    {
+      "slide": "structure",
+      "item": "myelin",
+      "t": 78.46,
+      "aligned": true,
+      "cue": "sheath wraps around the axon"
+    },
+    {
+      "slide": "structure",
+      "item": "nodes",
+      "t": 49.66,
+      "aligned": false,
+      "cue": "nodes of Ron"
+    },
+    {
+      "slide": "together",
+      "item": "b1",
+      "t": 234.0,
+      "aligned": true,
+      "cue": "The pump keeps sodium high outside"
+    },
+    {
+      "slide": "together",
+      "item": "b2",
+      "t": 241.2,
+      "aligned": true,
+      "cue": "Potassium leak channels let some potassium leave"
+    },
+    {
+      "slide": "together",
+      "item": "b3",
+      "t": 251.06,
+      "aligned": true,
+      "cue": "polarized membrane at about minus 70"
+    },
+    {
+      "slide": "your_turn",
+      "item": "pause",
+      "t": 309.12,
+      "aligned": true,
+      "cue": "Now pause the video"
+    },
+    {
+      "slide": "model",
+      "item": "model",
+      "t": 342.66,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

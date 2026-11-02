@@ -1,0 +1,372 @@
+1
+00:00:00,000 --> 00:00:03,420
+Hello, and welcome back to JD Science.
+
+2
+00:00:04,180 --> 00:00:07,840
+This is part two of our level three lesson on transmission
+
+3
+00:00:07,840 --> 00:00:09,540
+at a chemical synapse.
+
+4
+00:00:10,240 --> 00:00:14,040
+In part one, a satylcholine crossed the cleft
+
+5
+00:00:14,040 --> 00:00:16,580
+and opened like engaged sodium channels.
+
+6
+00:00:17,300 --> 00:00:20,960
+If that a cedalcholine stayed bound, the post -synaptic
+
+7
+00:00:20,960 --> 00:00:24,480
+membrane would keep depolarizing and control would be lost.
+
+8
+00:00:25,220 --> 00:00:27,140
+The transmitter must be removed.
+
+9
+00:00:27,640 --> 00:00:31,260
+At a cholinergic synapse removal is
+
+10
+00:00:31,260 --> 00:00:34,180
+not mainly by reoptake of the intact molecule.
+
+11
+00:00:34,800 --> 00:00:38,440
+The enzyme acetylcholineisterase is found
+
+12
+00:00:38,440 --> 00:00:41,480
+in the cleft and on the post -synaptic membrane.
+
+13
+00:00:42,320 --> 00:00:46,260
+Hydrolysis acetylcholine into acetate
+
+14
+00:00:46,260 --> 00:00:47,400
+and cholinene.
+
+15
+00:00:48,060 --> 00:00:51,340
+Pyrolysis means water is used to split the molecule.
+
+16
+00:00:51,920 --> 00:00:55,640
+At one split, acetylcholine no longer bind
+
+17
+00:00:55,640 --> 00:00:58,980
+its receptor, so the ligand dated channels close.
+
+18
+00:00:59,740 --> 00:01:01,200
+Choline is then recycled.
+
+19
+00:01:01,840 --> 00:01:05,660
+A transporter in the synaptic membrane takes Choline
+
+20
+00:01:05,660 --> 00:01:06,680
+back into the knob.
+
+21
+00:01:07,420 --> 00:01:11,480
+Inside the knob, Choline is combined with acetylcholine
+
+22
+00:01:11,480 --> 00:01:13,900
+sim A to remake acetylcholine.
+
+23
+00:01:14,540 --> 00:01:18,520
+And the new transmitter is packaged into vesicles, ready
+
+24
+00:01:18,520 --> 00:01:19,600
+for the next impulse.
+
+25
+00:01:20,440 --> 00:01:23,420
+Acetylcholine does not have to follow the same path.
+
+26
+00:01:24,220 --> 00:01:28,100
+The important exam point is that Choline
+
+27
+00:01:28,100 --> 00:01:29,300
+is reused.
+
+28
+00:01:29,880 --> 00:01:32,080
+This cleanup has two consequences.
+
+29
+00:01:32,840 --> 00:01:36,520
+First, each action potential produces a brief pulse
+
+30
+00:01:36,520 --> 00:01:40,140
+of transmitter rather than a continuous flood so the
+
+31
+00:01:40,140 --> 00:01:42,200
+post -synaptic cell can respond again.
+
+32
+00:01:42,880 --> 00:01:46,520
+Second, it supports one -way transmission.
+
+33
+00:01:47,320 --> 00:01:51,540
+Besicles and the machinery for release sit
+
+34
+00:01:51,540 --> 00:01:53,000
+in the presynaptic knob.
+
+35
+00:01:54,360 --> 00:01:58,220
+Receptors and in this example acetylcholine
+
+36
+00:01:58,220 --> 00:02:01,160
+is to us sit across the cleft, orange.
+
+37
+00:02:02,040 --> 00:02:05,700
+There is no store of acetylcholine waiting in the post
+
+38
+00:02:05,700 --> 00:02:07,680
+-synaptic cell to be released backward.
+
+39
+00:02:08,340 --> 00:02:12,160
+That is why a typical chemical synapse is
+
+40
+00:02:12,160 --> 00:02:15,840
+one way, while an axon can carry an action
+
+41
+00:02:15,840 --> 00:02:19,720
+potential in either direction if you stimulate it
+
+42
+00:02:19,720 --> 00:02:20,540
+in the middle.
+
+43
+00:02:21,120 --> 00:02:24,820
+In the body, the refractory period keeps axonal
+
+44
+00:02:24,820 --> 00:02:26,100
+travel one way.
+
+45
+00:02:26,820 --> 00:02:30,200
+At the synapse, the one -way rule is structural.
+
+46
+00:02:31,300 --> 00:02:34,720
+Release machinery on one side, receptors on the other.
+
+47
+00:02:35,500 --> 00:02:38,560
+Keep the two modes of transmission distinct.
+
+48
+00:02:39,120 --> 00:02:43,120
+Electrical propagation along the axon uses
+
+49
+00:02:43,120 --> 00:02:46,820
+local currents and voltage -gated sodium and
+
+50
+00:02:46,820 --> 00:02:47,960
+potassium channels.
+
+51
+00:02:48,620 --> 00:02:52,240
+Chemical transmission across the cleft uses calcium
+
+52
+00:02:52,240 --> 00:02:56,200
+entry, vesicle fusion, a neurotransmitter,
+
+53
+00:02:56,660 --> 00:02:59,180
+diffusion, and ligandated channels.
+
+54
+00:02:59,900 --> 00:03:03,840
+Students sometimes write that the impulse jumps
+
+55
+00:03:03,840 --> 00:03:05,000
+the gap electrically.
+
+56
+00:03:05,440 --> 00:03:08,700
+In a typical chemical synapse, it does not.
+
+57
+00:03:09,480 --> 00:03:10,860
+The electrical signal stops.
+
+58
+00:03:11,540 --> 00:03:15,420
+A chemical crosses and a new electrical signal may start.
+
+59
+00:03:16,160 --> 00:03:20,300
+Here is a worked examination style example.
+
+60
+00:03:20,880 --> 00:03:24,880
+Explain how acetylcholine nesteras and colline
+
+61
+00:03:24,880 --> 00:03:28,980
+recycling allow us synapse to transmit repeated impulses.
+
+62
+00:03:29,700 --> 00:03:31,280
+And y transmission is one way.
+
+63
+00:03:32,100 --> 00:03:35,990
+Acetylcholine nesterasa splits acetylcholine nesteras.
+
+64
+00:03:36,440 --> 00:03:39,320
+So the receptors are freed and the channels close.
+
+65
+00:03:40,080 --> 00:03:44,120
+Colline nesteras returns to the knob and is used to remake acetylcholine
+
+66
+00:03:44,120 --> 00:03:45,200
+for the next vesicles.
+
+67
+00:03:45,840 --> 00:03:49,720
+Transmission is one way because neurotransmitter is released only
+
+68
+00:03:49,720 --> 00:03:53,220
+from the press and optic side, and receptors are only on the
+
+69
+00:03:53,220 --> 00:03:54,360
+posts synaptic side.
+
+70
+00:03:55,000 --> 00:03:59,000
+Now pause the video and try this misconception question.
+
+71
+00:03:59,000 --> 00:04:02,960
+A student writes, after release, acetylcholine
+
+72
+00:04:02,960 --> 00:04:06,420
+is pumped straight back into the vesicle, and that is why the
+
+73
+00:04:06,420 --> 00:04:07,520
+synapse is one way.
+
+74
+00:04:08,040 --> 00:04:08,420
+Correct?
+
+75
+00:04:09,260 --> 00:04:10,480
+The two errors.
+
+76
+00:04:11,400 --> 00:04:12,720
+Here is a model answer.
+
+77
+00:04:14,040 --> 00:04:18,180
+Acetylcholine is first broken down by acetylcholine
+
+78
+00:04:18,180 --> 00:04:21,480
+nesteras to acetate and colline.
+
+79
+00:04:22,140 --> 00:04:25,820
+Colline in not intact acetylcholine is taken back into
+
+80
+00:04:25,820 --> 00:04:28,720
+the present optic knob and reused.
+
+81
+00:04:29,440 --> 00:04:33,140
+The synapse is one way because vesicles and receptors are
+
+82
+00:04:33,140 --> 00:04:34,360
+on opposite sides.
+
+83
+00:04:35,100 --> 00:04:38,820
+Not because a pump returns the whole transmitter to the vesicle.
+
+84
+00:04:39,480 --> 00:04:43,640
+You now have the full sequence from a polarized axon through
+
+85
+00:04:43,640 --> 00:04:47,840
+an action potential and solitory conduction to chemical transmission
+
+86
+00:04:47,840 --> 00:04:49,780
+and clean up other synapse.
+
+87
+00:04:50,480 --> 00:04:54,100
+Use the interactive activity to sequence the stages and to check the
+
+88
+00:04:54,100 --> 00:04:54,840
+channel functions.
+
+89
+00:04:54,840 --> 00:04:58,780
+If this explanation has helped, please subscribe
+
+90
+00:04:58,780 --> 00:05:00,640
+to JD Science for more lessons.
+
+91
+00:05:01,580 --> 00:05:05,440
+You can find further learning resources and practice questions at JD
+
+92
+00:05:05,440 --> 00:05:06,740
+Science Company Acutot.
+
+93
+00:05:07,280 --> 00:05:09,220
+Thank you for watching.
+
