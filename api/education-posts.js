@@ -4,6 +4,7 @@ import { handleShopPublicRequest, wantsShopPublicRequest } from './_lib/shopHand
 import { handleAnalyticsEventRequest, wantsAnalyticsEventRequest } from './_lib/analyticsHandlers.js';
 import { handlePasswordRecoveryRequest, wantsPasswordRecoveryRequest } from './_lib/passwordRecovery.js';
 import { handleTeacherMarkingSchemeRequest, wantsTeacherMarkingSchemeRequest } from './_lib/teacherMarkingScheme.js';
+import { handleFeaturedVideoPublicRequest, wantsFeaturedVideoPublicRequest } from './_lib/featuredVideos.js';
 
 function resourceSupabaseUrl() {
   return process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://xugsznxfvpbifpzpuoek.supabase.co';
@@ -89,6 +90,12 @@ export default async function handler(req, res) {
   if (wantsTeacherMarkingSchemeRequest(req)) return handleTeacherMarkingSchemeRequest(req, res);
   if (wantsShopPublicRequest(req)) return handleShopPublicRequest(req, res);
   if (wantsResourceFile(req)) return sendResourceFile(req, res);
+  if (wantsFeaturedVideoPublicRequest(req)) {
+    if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
+      return res.status(500).json({ error: 'Server not configured for database access.' });
+    }
+    return handleFeaturedVideoPublicRequest(req, res, createClient(resourceSupabaseUrl(), process.env.SUPABASE_SERVICE_ROLE_KEY));
+  }
 
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');

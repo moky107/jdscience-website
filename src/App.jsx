@@ -13,7 +13,7 @@ import { isPasswordResetPath } from "./authRedirect";
 import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
-import HomepageIntroVideo from "./HomepageIntroVideo";
+import FeaturedVideoSection from "./FeaturedVideoSection";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
@@ -27,6 +27,7 @@ import {
 import { isResourceLibraryPage, preferredVisitorAuthMode, RESOURCE_LOGIN_REQUIRED, syncSignedInCookie } from "./visitorAuth";
 import AdviceNewsSection from "./AdviceNewsSection";
 import AdminAdviceEditor from "./AdminAdviceEditor";
+import AdminFeaturedVideoEditor from "./AdminFeaturedVideoEditor";
 import AdminShopEditor from "./AdminShopEditor";
 import AdminAnalytics from "./AdminAnalytics";
 import CopyResourceToShopModal from "./CopyResourceToShopModal";
@@ -2706,19 +2707,9 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 }
 
 /* --------------------------- VIDEO / CONTACT / FOOTER --------------------------- */
-function VideoSection() {
+function VideoSection({ onBrowse }) {
   const isMobile = useIsMobile();
-  return (
-    <section style={{ background: "#071025", color: "#fff", padding: isMobile ? "40px 16px" : "56px 20px" }}>
-      <div style={{ maxWidth: 980, margin: "0 auto", textAlign: "center" }}>
-        <h2 style={{ fontSize: isMobile ? 24 : 38, margin: 0 }}>How JD Science Works</h2>
-        <p style={{ color: "#cbd5e1", fontSize: isMobile ? 15 : 18, lineHeight: 1.6, maxWidth: 760, margin: "12px auto 26px" }}>
-          Watch this short introduction to see how learners use resources, past papers and tutoring support.
-        </p>
-        <HomepageIntroVideo isMobile={isMobile} />
-      </div>
-    </section>
-  );
+  return <FeaturedVideoSection isMobile={isMobile} onBrowse={onBrowse} />;
 }
 
 function Contact() {
@@ -3795,6 +3786,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
             </div>
           )}
         </div>
+        <AdminFeaturedVideoEditor password={password} />
         <AdminAdviceEditor password={password} />
         <AdminShopEditor password={password} />
           </>
@@ -4268,7 +4260,7 @@ function App() {
           <TutorProfiles tutors={approvedTutors} loading={tutorsLoading} error={tutorsError} onViewAll={goTutors} onViewProfile={openTutorProfile} onBook={handleBookTutor} />
           <div id="book-anchor"><BookingForm /></div>
           <div id="contact-anchor"><Contact /></div>
-          <VideoSection />
+          <VideoSection onBrowse={goPapers} />
         </main>
       )}
 
