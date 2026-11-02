@@ -1,0 +1,104 @@
+{
+  "slug": "7-2-organisation-of-an-ecosystem",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 127.778,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 7.97,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "chain",
+      "t": 7.97,
+      "t_end": 28.201,
+      "cue": "A food chain shows what eats what",
+      "animate": false
+    },
+    {
+      "id": "carbon",
+      "t": 28.201,
+      "t_end": 35.207,
+      "cue": "Carbon moves between air, plants, animals",
+      "animate": false
+    },
+    {
+      "id": "water",
+      "t": 35.207,
+      "t_end": 40.462,
+      "cue": "Water moves through evaporation, condensation",
+      "animate": false
+    },
+    {
+      "id": "decay",
+      "t": 40.462,
+      "t_end": 82.675,
+      "cue": "Decomposers break down dead matter",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 82.675,
+      "t_end": 94.41,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 94.41,
+      "t_end": 103.869,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 103.869,
+      "t_end": 116.568,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 116.568,
+      "t_end": 127.778,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 84.864,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 89.418,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 90.732,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 94.673,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 103.989,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

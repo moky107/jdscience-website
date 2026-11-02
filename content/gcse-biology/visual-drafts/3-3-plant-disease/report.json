@@ -1,0 +1,106 @@
+{
+  "slug": "3-3-plant-disease",
+  "spec": "3.3",
+  "title": "Plant Disease",
+  "filename": "jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 130.056,
+  "bytes": 1598023,
+  "md5": "e1552d78a19b568544e0ac9cf261127a",
+  "local_path": "content/gcse-biology/visual-drafts/3-3-plant-disease/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-3-plant-disease/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 130.066667,
+      "size": 1598023,
+      "nb_frames": 3902
+    },
+    "luma": {
+      "start": 41.6,
+      "early": 45.3,
+      "mid": 41.3,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "130.067s vs 130.056s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3902 vs 3902"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.6"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=45.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=41.3"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/3-3-plant-disease.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

@@ -1,0 +1,172 @@
+1
+00:00:00,000 --> 00:00:02,340
+Hello and welcome back to JD Science.
+
+2
+00:00:02,940 --> 00:00:05,640
+Today we are exploring photosynthesis.
+
+3
+00:00:06,460 --> 00:00:10,340
+Plants use carbon dioxide and water with energy from sunlight
+
+4
+00:00:10,340 --> 00:00:13,220
+and chlorophyll to make glucose and oxygen.
+
+5
+00:00:13,780 --> 00:00:16,060
+Carbon dioxide enters through the stomata.
+
+6
+00:00:16,720 --> 00:00:18,500
+Water travels up from the roots.
+
+7
+00:00:19,080 --> 00:00:23,080
+The equation is 6 carbon dioxide plus 6 water gives
+
+8
+00:00:23,080 --> 00:00:25,080
+glucose plus 6 oxygen.
+
+9
+00:00:25,080 --> 00:00:29,080
+Glucose can be respiration converted into starch
+
+10
+00:00:29,080 --> 00:00:33,260
+for storage made into cellulose for cell walls combined
+
+11
+00:00:33,260 --> 00:00:37,340
+with nitrates to make amino acids or converted into lipids
+
+12
+00:00:37,340 --> 00:00:38,000
+for seeds.
+
+13
+00:00:38,660 --> 00:00:43,020
+The rate of photosynthesis depends on temperature, intensity and
+
+14
+00:00:43,020 --> 00:00:44,860
+carbon dioxide concentration.
+
+15
+00:00:45,400 --> 00:00:48,160
+Enzymes can become denatured at high temperatures.
+
+16
+00:00:48,740 --> 00:00:52,600
+Light intensity falls off with distance by the inverse square law.
+
+17
+00:00:52,600 --> 00:00:55,900
+Doubling the distance cuts the intensity to a quarter.
+
+18
+00:00:56,520 --> 00:01:00,280
+The balanced symbol equation is 6 carbon dioxide molecules
+
+19
+00:01:00,280 --> 00:01:04,260
+plus 6 water molecules producing 1 molecule and
+
+20
+00:01:04,260 --> 00:01:07,140
+6 oxygen molecules using light energy.
+
+21
+00:01:07,640 --> 00:01:11,480
+A limiting factor is the condition in shortest supply relative to
+
+22
+00:01:11,480 --> 00:01:12,340
+the plant's needs.
+
+23
+00:01:12,880 --> 00:01:16,760
+Increasing light will not keep increasing the rate if carbon dioxide
+
+24
+00:01:16,760 --> 00:01:23,100
+or temperature can
+
+25
+00:01:23,100 --> 00:01:26,680
+be treated as a point source and other conditions are controlled.
+
+26
+00:01:27,140 --> 00:01:30,940
+As you revise this topic, try to explain the key process in
+
+27
+00:01:30,940 --> 00:01:31,840
+your own words.
+
+28
+00:01:32,260 --> 00:01:36,120
+Focus on what happens, why it happens and how the structures
+
+29
+00:01:36,120 --> 00:01:38,160
+involved help the process work.
+
+30
+00:01:38,700 --> 00:01:42,400
+Now pause the video and try this exam style question.
+
+31
+00:01:42,960 --> 00:01:46,940
+A plant is moved from 20 cm to 40 cm from
+
+32
+00:01:46,940 --> 00:01:47,360
+a lamp.
+
+33
+00:01:47,360 --> 00:01:51,000
+Explain how the light intensity changes and what
+
+34
+00:01:51,000 --> 00:01:53,080
+this does to the rate of photosynthesis.
+
+35
+00:01:53,800 --> 00:01:55,200
+Here is a model answer.
+
+36
+00:01:55,580 --> 00:01:59,560
+Doubling the distance reduces the light intensity to a quarter so
+
+37
+00:01:59,560 --> 00:02:03,340
+the rate of photosynthesis falls because light is limiting the
+
+38
+00:02:03,340 --> 00:02:03,640
+rate.
+
+39
+00:02:04,120 --> 00:02:08,040
+If this explanation has helped, please subscribe to JD Science for
+
+40
+00:02:08,040 --> 00:02:08,720
+more lessons.
+
+41
+00:02:08,720 --> 00:02:12,500
+You can find further learning resources and practice questions
+
+42
+00:02:12,500 --> 00:02:16,480
+at jdscince
+
+43
+00:02:16,480 --> 00:02:18,360
+.co .uk.
+

@@ -1,0 +1,135 @@
+{
+  "slug": "3-3-plant-disease",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 130.056,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.332,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "signs",
+      "t": 5.332,
+      "t_end": 14.247,
+      "cue": "Signs of disease include stunted growth",
+      "animate": false
+    },
+    {
+      "id": "infect",
+      "t": 14.247,
+      "t_end": 29.63,
+      "cue": "Rose black spot is a fungal disease",
+      "animate": false
+    },
+    {
+      "id": "minerals",
+      "t": 29.63,
+      "t_end": 42.303,
+      "cue": "Nitrate deficiency causes stunted growth",
+      "animate": false
+    },
+    {
+      "id": "defend",
+      "t": 42.303,
+      "t_end": 58.997,
+      "cue": "Plants defend themselves with physical barriers",
+      "animate": false
+    },
+    {
+      "id": "pattern",
+      "t": 58.997,
+      "t_end": 85.131,
+      "cue": "Magnesium deficiency commonly causes interveinal chlorosis",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 85.131,
+      "t_end": 96.843,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 96.843,
+      "t_end": 108.642,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 108.642,
+      "t_end": 118.868,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 118.868,
+      "t_end": 130.056,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 87.316,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 91.861,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 93.172,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 97.105,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 108.762,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "infect",
+      "item": "b1",
+      "t": 14.367,
+      "cue": "Rose black spot"
+    },
+    {
+      "slide": "infect",
+      "item": "b2",
+      "t": 23.511,
+      "cue": "Tobacco mosaic virus"
+    },
+    {
+      "slide": "defend",
+      "item": "b1",
+      "t": 46.324,
+      "cue": "waxy cuticles and thorns"
+    },
+    {
+      "slide": "defend",
+      "item": "b2",
+      "t": 50.344,
+      "cue": "antibacterial chemicals"
+    }
+  ]
+}

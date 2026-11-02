@@ -1,0 +1,324 @@
+{
+  "slug": "1-3-transport-in-cells",
+  "duration": 130.87,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "diff",
+      "t": 8.6,
+      "aligned": true,
+      "cue": "In diffusion, particles move from high concentration"
+    },
+    {
+      "id": "faster",
+      "t": 15.92,
+      "aligned": true,
+      "cue": "It is faster when the temperature is higher"
+    },
+    {
+      "id": "lungs",
+      "t": 23.64,
+      "aligned": true,
+      "cue": "Oxygen diffuses into the blood in the lungs"
+    },
+    {
+      "id": "osmosis",
+      "t": 36.2,
+      "aligned": true,
+      "cue": "Osmosis is the diffusion of water"
+    },
+    {
+      "id": "active",
+      "t": 41.24,
+      "aligned": true,
+      "cue": "Active transport moves substances against"
+    },
+    {
+      "id": "compare",
+      "t": 51.54,
+      "aligned": true,
+      "cue": "Diffusion and osmosis are passive processes"
+    },
+    {
+      "id": "revise",
+      "t": 81.78,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 93.42,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 103.86,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 120.12,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 83.86,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 88.72,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 90.0,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 93.68,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 103.98,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "faster",
+      "item": "b1",
+      "t": 17.2,
+      "aligned": true,
+      "cue": "temperature is higher"
+    },
+    {
+      "slide": "faster",
+      "item": "b2",
+      "t": 18.82,
+      "aligned": true,
+      "cue": "concentration gradient is steeper"
+    },
+    {
+      "slide": "faster",
+      "item": "b3",
+      "t": 21.54,
+      "aligned": true,
+      "cue": "surface area is larger"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.88,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 5.2,
+      "aligned": true,
+      "cue": "substances move",
+      "target": "title"
+    },
+    {
+      "t": 8.72,
+      "aligned": true,
+      "cue": "diffusion",
+      "target": "heading"
+    },
+    {
+      "t": 10.78,
+      "aligned": true,
+      "cue": "high concentration",
+      "target": "high"
+    },
+    {
+      "t": 12.14,
+      "aligned": true,
+      "cue": "low concentration",
+      "target": "low"
+    },
+    {
+      "t": 14.14,
+      "aligned": true,
+      "cue": "concentration gradient",
+      "target": "arrow"
+    },
+    {
+      "t": 17.2,
+      "aligned": true,
+      "cue": "temperature is higher",
+      "target": "b1"
+    },
+    {
+      "t": 18.82,
+      "aligned": true,
+      "cue": "concentration gradient is steeper",
+      "target": "b2"
+    },
+    {
+      "t": 21.54,
+      "aligned": true,
+      "cue": "surface area is larger",
+      "target": "b3"
+    },
+    {
+      "t": 23.64,
+      "aligned": true,
+      "cue": "oxygen diffuses",
+      "target": "alveolus"
+    },
+    {
+      "t": 30.52,
+      "aligned": true,
+      "cue": "large surface area",
+      "target": "adapt1"
+    },
+    {
+      "t": 32.12,
+      "aligned": true,
+      "cue": "thin lining",
+      "target": "adapt2"
+    },
+    {
+      "t": 33.56,
+      "aligned": true,
+      "cue": "blood supply",
+      "target": "adapt3"
+    },
+    {
+      "t": 34.68,
+      "aligned": true,
+      "cue": "ventilation",
+      "target": "adapt4"
+    },
+    {
+      "t": 36.2,
+      "aligned": true,
+      "cue": "osmosis",
+      "target": "heading"
+    },
+    {
+      "t": 38.84,
+      "aligned": true,
+      "cue": "partially permeable",
+      "target": "membrane"
+    },
+    {
+      "t": 41.24,
+      "aligned": true,
+      "cue": "active transport",
+      "target": "heading"
+    },
+    {
+      "t": 43.1,
+      "aligned": true,
+      "cue": "against",
+      "target": "carrier"
+    },
+    {
+      "t": 48.0,
+      "aligned": true,
+      "cue": "Root hair cells use",
+      "target": "root"
+    },
+    {
+      "t": 65.38,
+      "aligned": true,
+      "cue": "using energy",
+      "target": "energy"
+    },
+    {
+      "t": 67.16,
+      "aligned": true,
+      "cue": "supplied by",
+      "target": "energy"
+    },
+    {
+      "t": 69.38,
+      "aligned": true,
+      "cue": "useful comparison",
+      "target": "heading"
+    },
+    {
+      "t": 70.74,
+      "aligned": true,
+      "cue": "oxygen entering",
+      "target": "diff_col"
+    },
+    {
+      "t": 73.58,
+      "aligned": true,
+      "cue": "water crossing",
+      "target": "osm_col"
+    },
+    {
+      "t": 77.56,
+      "aligned": true,
+      "cue": "mineral ions entering",
+      "target": "active_col"
+    },
+    {
+      "t": 78.9,
+      "aligned": true,
+      "cue": "root hair cells",
+      "target": "active_col"
+    },
+    {
+      "t": 82.12,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 88.72,
+      "aligned": true,
+      "cue": "why it happens",
+      "target": "r2"
+    },
+    {
+      "t": 90.46,
+      "aligned": true,
+      "cue": "structures involved",
+      "target": "r3"
+    },
+    {
+      "t": 93.68,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 104.6,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 120.32,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

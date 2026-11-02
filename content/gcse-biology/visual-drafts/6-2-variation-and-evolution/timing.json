@@ -1,0 +1,104 @@
+{
+  "slug": "6-2-variation-and-evolution",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 142.229,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.115,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "var",
+      "t": 6.115,
+      "t_end": 26.035,
+      "cue": "Variation is the difference between individuals",
+      "animate": false
+    },
+    {
+      "id": "ns",
+      "t": 26.035,
+      "t_end": 37.392,
+      "cue": "Natural selection drives evolution",
+      "animate": false
+    },
+    {
+      "id": "breed",
+      "t": 37.392,
+      "t_end": 45.866,
+      "cue": "Selective breeding chooses parents with desired traits",
+      "animate": false
+    },
+    {
+      "id": "ge",
+      "t": 45.866,
+      "t_end": 95.576,
+      "cue": "Genetic engineering moves a gene from one organism",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 95.576,
+      "t_end": 107.283,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 107.283,
+      "t_end": 117.417,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 117.417,
+      "t_end": 131.046,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 131.046,
+      "t_end": 142.229,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 97.76,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 102.303,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 103.614,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 107.545,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 117.537,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "slug": "2-3-plant-tissues-organs-systems",
+  "duration": 112.06,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "leaf",
+      "t": 7.32,
+      "aligned": true,
+      "cue": "A leaf has several tissues"
+    },
+    {
+      "id": "stomata",
+      "t": 22.84,
+      "aligned": true,
+      "cue": "Guard cells control the stomata"
+    },
+    {
+      "id": "transpire",
+      "t": 27.74,
+      "aligned": true,
+      "cue": "Water evaporates through the stomata"
+    },
+    {
+      "id": "xylem",
+      "t": 40.0,
+      "aligned": true,
+      "cue": "Xylem carries water and mineral ions upwards"
+    },
+    {
+      "id": "sources",
+      "t": 61.48,
+      "aligned": true,
+      "cue": "Phloem transports dissolved sugars from sources"
+    },
+    {
+      "id": "revise",
+      "t": 73.66,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 84.88,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 94.26,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 101.76,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 75.68,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 80.32,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 81.52,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 85.26,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 94.38,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.82,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 9.66,
+      "aligned": true,
+      "cue": "epidermis",
+      "target": "epidermis"
+    },
+    {
+      "t": 11.9,
+      "aligned": true,
+      "cue": "palisade",
+      "target": "palisade"
+    },
+    {
+      "t": 16.46,
+      "aligned": true,
+      "cue": "spongy",
+      "target": "spongy"
+    },
+    {
+      "t": 20.18,
+      "aligned": true,
+      "cue": "xylem and phloem",
+      "target": "vein"
+    },
+    {
+      "t": 22.84,
+      "aligned": true,
+      "cue": "guard cells",
+      "target": "guard"
+    },
+    {
+      "t": 23.88,
+      "aligned": true,
+      "cue": "stomata",
+      "target": "stoma"
+    },
+    {
+      "t": 27.74,
+      "aligned": true,
+      "cue": "water evaporates",
+      "target": "heading"
+    },
+    {
+      "t": 40.0,
+      "aligned": true,
+      "cue": "xylem carries",
+      "target": "xylem"
+    },
+    {
+      "t": 43.34,
+      "aligned": true,
+      "cue": "phloem",
+      "target": "phloem"
+    },
+    {
+      "t": 63.6,
+      "aligned": true,
+      "cue": "sources",
+      "target": "heading"
+    },
+    {
+      "t": 66.72,
+      "aligned": true,
+      "cue": "sinks",
+      "target": "heading"
+    },
+    {
+      "t": 73.96,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 85.26,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 94.84,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 101.92,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "slug": "3-2-monoclonal-antibodies",
+  "duration": 126.41,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "hyb",
+      "t": 11.54,
+      "aligned": true,
+      "cue": "A mouse is injected with an antigen"
+    },
+    {
+      "id": "uses",
+      "t": 27.38,
+      "aligned": true,
+      "cue": "They can be used to locate molecules"
+    },
+    {
+      "id": "side",
+      "t": 70.62,
+      "aligned": true,
+      "cue": "They are not automatically free from side effects"
+    },
+    {
+      "id": "revise",
+      "t": 77.02,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 89.02,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 96.74,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 112.62,
+      "aligned": true,
+      "cue": "subscribe"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 79.2,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 84.22,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 85.68,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 89.4,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 96.86,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "uses",
+      "item": "b1",
+      "t": 31.06,
+      "aligned": true,
+      "cue": "pregnancy tests"
+    },
+    {
+      "slide": "uses",
+      "item": "b2",
+      "t": 28.76,
+      "aligned": true,
+      "cue": "locate molecules in cells"
+    },
+    {
+      "slide": "uses",
+      "item": "b3",
+      "t": 36.1,
+      "aligned": true,
+      "cue": "bind to cancer cells"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.8,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 11.72,
+      "aligned": true,
+      "cue": "mouse is injected",
+      "target": "heading"
+    },
+    {
+      "t": 13.08,
+      "aligned": true,
+      "cue": "antigen",
+      "target": "heading"
+    },
+    {
+      "t": 20.84,
+      "aligned": true,
+      "cue": "hybridoma",
+      "target": "heading"
+    },
+    {
+      "t": 31.06,
+      "aligned": true,
+      "cue": "pregnancy",
+      "target": "b1"
+    },
+    {
+      "t": 34.68,
+      "aligned": true,
+      "cue": "cancer",
+      "target": "b3"
+    },
+    {
+      "t": 46.68,
+      "aligned": true,
+      "cue": "side effects",
+      "target": "heading"
+    },
+    {
+      "t": 77.32,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 89.4,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 97.18,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 112.62,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

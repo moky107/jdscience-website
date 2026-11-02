@@ -44,7 +44,11 @@ def pieces(text: str) -> list[str]:
     for part in re.split(r"[^a-z0-9]+", text):
         if not part:
             continue
-        if part == "jd":
+        if part in {"neurones", "neurons"}:
+            out.append("neurons")
+        elif part in {"ethene", "etheen"}:
+            out.append("ethene")
+        elif part == "jd":
             out.extend(["j", "d"])
         elif part == "gcse":
             out.extend(["g", "c", "s", "e"])

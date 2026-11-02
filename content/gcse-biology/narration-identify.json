@@ -1,0 +1,163 @@
+{
+  "recordings": [
+    {
+      "file": "CapCut_VC_Untitled_01_D20261026_T204707_d7f4.m4a",
+      "duration": 112.06,
+      "words": 266,
+      "preview": "Hello and welcome back to JD science. Today we are exploring plant tissues and organs. A leaf has several tissues. The epidermis covers the leaf. The palisade mesophyll",
+      "best_slug": "2-3-plant-tissues-organs-systems",
+      "best_hits": 7,
+      "second_hits": 1,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "Homeostasis_ea2b.m4a",
+      "duration": 125.29,
+      "words": 271,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring homeostasis. Homeostasis means keeping conditions inside the body at the right level. Temperature, ion content, water content",
+      "best_slug": "5-1-homeostasis",
+      "best_hits": 5,
+      "second_hits": 1,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "Hormons_5ea2.m4a",
+      "duration": 135.44,
+      "words": 308,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring hormones. Hormones are chemical messengers released by endocrine glands into the bloodstream. They are slower than nerves",
+      "best_slug": "5-3-hormonal-coordination",
+      "best_hits": 5,
+      "second_hits": 2,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "JDScience_1_3_Transport_in_Cells_Pointer_Review_110b.m4a",
+      "duration": 130.87,
+      "words": 296,
+      "preview": "Hello and welcome back to JD science. Today we are exploring how substances move in and out of cells. In diffusion particles move from high concentration to low",
+      "best_slug": "1-3-transport-in-cells",
+      "best_hits": 7,
+      "second_hits": 0,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "JDScience_1_3_Transport_in_Cells_Review_6415.m4a",
+      "duration": 130.87,
+      "words": 296,
+      "preview": "Hello and welcome back to JD science. Today we are exploring how substances move in and out of cells. In diffusion particles move from high concentration to low",
+      "best_slug": "1-3-transport-in-cells",
+      "best_hits": 7,
+      "second_hits": 0,
+      "usable": false,
+      "reason": "duplicate of JDScience_1_3_Transport_in_Cells_Pointer_Review_110b"
+    },
+    {
+      "file": "Nervous_system_6f84.m4a",
+      "duration": 129.52,
+      "words": 279,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring the nervous system. It lets us react to our surroundings. It contains the brain, spinal cord, neurons",
+      "best_slug": "5-2-the-nervous-system",
+      "best_hits": 4,
+      "second_hits": 1,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "Phoyosynthesis_30a3.m4a",
+      "duration": 140.02,
+      "words": 306,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring photosynthesis. Plants use carbon dioxide and water with energy from sunlight and chlorophyll to make glucose and",
+      "best_slug": "4-1-photosynthesis",
+      "best_hits": 5,
+      "second_hits": 1,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "Reproduction_b36e.m4a",
+      "duration": 157.45,
+      "words": 333,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring reproduction. Human egg and sperm cells each have 23 chromosomes. When they fuse, the zygote has 46",
+      "best_slug": "6-1-reproduction",
+      "best_hits": 3,
+      "second_hits": 0,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "Respiration_7780.m4a",
+      "duration": 128.57,
+      "words": 285,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring respiration. Respiration releases energy from glucose. Aerobic respiration uses oxygen and gives carbon dioxide and water. It",
+      "best_slug": "4-2-respiration",
+      "best_hits": 6,
+      "second_hits": 0,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "monoclona_antibodies_73a2.m4a",
+      "duration": 126.41,
+      "words": 286,
+      "preview": "Hello and welcome back to JD Science. Today, we are exploring monoclonal antibodies. These are identical antibodies made from a single parent cell. A mouse is injected with",
+      "best_slug": "3-2-monoclonal-antibodies",
+      "best_hits": 4,
+      "second_hits": 0,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "plant_disease_07bb.m4a",
+      "duration": 127.69,
+      "words": 276,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring plant disease. Signs of disease include stunted growth, spots on leaves, areas of decay, growths, pests and",
+      "best_slug": "3-3-plant-disease",
+      "best_hits": 5,
+      "second_hits": 2,
+      "usable": true,
+      "reason": "matched"
+    },
+    {
+      "file": "plant_hormones_5c08.m4a",
+      "duration": 116.89,
+      "words": 246,
+      "preview": "Hello and welcome back to JD Science. Today we are exploring plant hormones. We respond to light and gravity by growth. Shoots grow towards light, which is positive",
+      "best_slug": "5-4-plant-hormones",
+      "best_hits": 3,
+      "second_hits": 0,
+      "usable": true,
+      "reason": "matched"
+    }
+  ],
+  "matched": {
+    "2-3-plant-tissues-organs-systems": "CapCut_VC_Untitled_01_D20261026_T204707_d7f4.m4a",
+    "5-1-homeostasis": "Homeostasis_ea2b.m4a",
+    "5-3-hormonal-coordination": "Hormons_5ea2.m4a",
+    "1-3-transport-in-cells": "JDScience_1_3_Transport_in_Cells_Pointer_Review_110b.m4a",
+    "5-2-the-nervous-system": "Nervous_system_6f84.m4a",
+    "4-1-photosynthesis": "Phoyosynthesis_30a3.m4a",
+    "6-1-reproduction": "Reproduction_b36e.m4a",
+    "4-2-respiration": "Respiration_7780.m4a",
+    "3-2-monoclonal-antibodies": "monoclona_antibodies_73a2.m4a",
+    "3-3-plant-disease": "plant_disease_07bb.m4a",
+    "5-4-plant-hormones": "plant_hormones_5c08.m4a"
+  },
+  "awaiting": [
+    "2-1-principles-of-organisation",
+    "2-2-animal-tissues-organs-systems",
+    "3-1-communicable-diseases",
+    "3-1-discovering-and-testing-new-drugs",
+    "6-2-variation-and-evolution",
+    "6-3-genetics-and-evolution",
+    "6-4-classification",
+    "7-1-adaptations-interdependence",
+    "7-2-organisation-of-an-ecosystem",
+    "7-3-biodiversity",
+    "7-4-trophic-levels",
+    "7-5-food-production"
+  ]
+}

@@ -59,6 +59,10 @@ public/resources/t-level/science/videos/*/*.mp4
 # Large hosted GCSE Biology MP4s live in Supabase, not Git
 public/resources/gcse/biology/videos/*/*.mp4
 
+# Silent Biology visual-draft MP4s live in Supabase, not Git
+content/gcse-biology/visual-drafts/**/*.mp4
+content/gcse-biology/visual-drafts/**/qa/
+
 # Large hosted foundations MP4s live in Supabase, not Git
 public/resources/gcse/chemistry/videos/states-of-matter/*.mp4
 public/resources/gcse/chemistry/videos/changes-of-state/*.mp4

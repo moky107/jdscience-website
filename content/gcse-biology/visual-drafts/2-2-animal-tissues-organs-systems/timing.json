@@ -1,0 +1,136 @@
+{
+  "slug": "2-2-animal-tissues-organs-systems",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 135.11,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 11.737,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "enzymes",
+      "t": 11.737,
+      "t_end": 23.033,
+      "cue": "Amylase breaks starch into maltose",
+      "animate": true
+    },
+    {
+      "id": "bile",
+      "t": 23.033,
+      "t_end": 34.064,
+      "cue": "Bile is made in the liver",
+      "animate": false
+    },
+    {
+      "id": "denature",
+      "t": 34.064,
+      "t_end": 40.507,
+      "cue": "Enzymes have an active site",
+      "animate": false
+    },
+    {
+      "id": "vessels",
+      "t": 40.507,
+      "t_end": 55.597,
+      "cue": "The circulatory system pumps blood",
+      "animate": false
+    },
+    {
+      "id": "blood",
+      "t": 55.597,
+      "t_end": 62.481,
+      "cue": "Red blood cells carry oxygen",
+      "animate": false
+    },
+    {
+      "id": "precise",
+      "t": 62.481,
+      "t_end": 93.103,
+      "cue": "Be precise about digestion",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 93.103,
+      "t_end": 104.929,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 104.929,
+      "t_end": 115.607,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 115.607,
+      "t_end": 123.814,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 123.814,
+      "t_end": 135.11,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 95.31,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 99.899,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 101.222,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 105.194,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 115.727,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "blood",
+      "item": "b1",
+      "t": 55.717,
+      "cue": "Red blood cells carry oxygen"
+    },
+    {
+      "slide": "blood",
+      "item": "b2",
+      "t": 57.715,
+      "cue": "platelets help clot blood"
+    },
+    {
+      "slide": "blood",
+      "item": "b3",
+      "t": 59.922,
+      "cue": "white blood cells fight infection"
+    }
+  ]
+}
