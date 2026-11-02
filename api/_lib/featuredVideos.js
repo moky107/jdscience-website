@@ -5,6 +5,7 @@ import {
   FEATURED_THUMBNAIL_MIME_TYPES,
   FEATURED_VIDEO_BUCKET,
   FEATURED_VIDEO_DEFAULT_MAX_BYTES,
+  featuredVideoMaxBytesFromEnv,
   formatBytes,
   isAbsoluteHttpUrl,
   isAllowedFeaturedThumbnailFile,
@@ -14,6 +15,7 @@ import {
   validateFeaturedVideoInput,
   youTubeThumbnailUrl,
 } from '../../src/featuredVideo.js';
+import { ADMIN_RESOURCE_EMAILS, readBearerToken } from './resourceUpload.js';
 
 /*
  * "Video of the Day" data layer.
@@ -37,6 +39,18 @@ const ADMIN_ACTIONS = new Set([
   'fv-discard-uploads',
 ]);
 const UPLOAD_PREFIX = { video: 'videos/', thumbnail: 'thumbnails/' };
+
+function featuredVideoAdminEmails() {
+  const extra = String(process.env.ADMIN_EMAILS || '')
+    .split(',')
+    .map((email) => email.trim().toLowerCase())
+    .filter(Boolean);
+  return [...new Set([...ADMIN_RESOURCE_EMAILS.map((email) => email.toLowerCase()), ...extra])];
+}
+
+function configuredVideoMaxBytes() {
+  return featuredVideoMaxBytesFromEnv(process.env);
+}
 
 function trim(value, max = 5000) {
   return String(value ?? '').trim().slice(0, max);
@@ -141,9 +155,18 @@ export async function createFeaturedVideoStore(supabase) {
         'Could not update featured video.',
       ),
       async publishOnly(id) {
+        const rpc = await supabase.rpc('publish_featured_video', { target_id: id });
+        if (!rpc.error && rpc.data) {
+          return Array.isArray(rpc.data) ? rpc.data[0] : rpc.data;
+        }
+        // Fallback when the publish_featured_video() migration function is not yet installed.
         await single(supabase.from(TABLE).update({ is_published: false }).eq('is_published', true).neq('id', id).select('id'), 'Could not unpublish the previous video.');
         return single(
-          supabase.from(TABLE).update({ is_published: true, updated_at: new Date().toISOString() }).eq('id', id).select('*').single(),
+          supabase.from(TABLE).update({
+            is_published: true,
+            published_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          }).eq('id', id).select('*').single(),
           'Could not publish featured video.',
         );
       },
@@ -241,9 +264,10 @@ async function ensureBucket(supabase, id, options) {
 }
 
 async function featuredStorageLimits(supabase) {
+  const configuredMax = configuredVideoMaxBytes();
   const videoBucket = await ensureBucket(supabase, FEATURED_VIDEO_BUCKET, {
     public: true,
-    fileSizeLimit: FEATURED_VIDEO_DEFAULT_MAX_BYTES,
+    fileSizeLimit: configuredMax,
     allowedMimeTypes: ['video/mp4'],
   });
   const thumbBucket = await ensureBucket(supabase, FEATURED_THUMBNAIL_BUCKET, {
@@ -251,8 +275,13 @@ async function featuredStorageLimits(supabase) {
     fileSizeLimit: FEATURED_THUMBNAIL_MAX_BYTES,
     allowedMimeTypes: FEATURED_THUMBNAIL_MIME_TYPES,
   });
+  const bucketMax = Number(videoBucket?.file_size_limit) || 0;
+  // Honour the configured env cap, but never exceed a smaller live bucket limit.
+  const maxVideoBytes = bucketMax > 0
+    ? Math.min(configuredMax, bucketMax)
+    : configuredMax || FEATURED_VIDEO_DEFAULT_MAX_BYTES;
   return {
-    maxVideoBytes: Number(videoBucket?.file_size_limit) || FEATURED_VIDEO_DEFAULT_MAX_BYTES,
+    maxVideoBytes,
     maxThumbnailBytes: Number(thumbBucket?.file_size_limit) || FEATURED_THUMBNAIL_MAX_BYTES,
   };
 }
@@ -325,6 +354,27 @@ export function wantsFeaturedVideoAdminRequest(req, body) {
     || ADMIN_ACTIONS.has(trim(body?.action, 40));
 }
 
+/** Confirms the Supabase session token belongs to an authorised admin email. */
+export async function verifyFeaturedVideoAdmin(supabase, req) {
+  const token = readBearerToken(req);
+  if (!token) {
+    return {
+      ok: false,
+      status: 401,
+      error: 'Sign in to jdscience.co.uk with your administrator account (Login, top right), then retry.',
+    };
+  }
+  const { data, error } = await supabase.auth.getUser(token);
+  const email = String(data?.user?.email || '').toLowerCase();
+  if (error || !email) {
+    return { ok: false, status: 401, error: 'Your admin session has expired. Sign in again and retry.' };
+  }
+  if (!featuredVideoAdminEmails().includes(email)) {
+    return { ok: false, status: 403, error: 'Only JD Science administrators can manage the Video of the Day.' };
+  }
+  return { ok: true, email };
+}
+
 async function listResponse(res, supabase, store, extra = {}) {
   const rows = await store.list();
   const limits = await featuredStorageLimits(supabase);
@@ -342,6 +392,9 @@ export async function handleFeaturedVideoAdminRequest(req, res, body, supabase) 
   const action = trim(body?.action, 40) || 'fv-list';
 
   try {
+    const auth = await verifyFeaturedVideoAdmin(supabase, req);
+    if (!auth.ok) return res.status(auth.status).json({ error: auth.error });
+
     if (action === 'fv-prepare-upload') {
       const kind = trim(body.kind, 20) === 'thumbnail' ? 'thumbnail' : 'video';
       const filename = trim(body.filename, 200);
@@ -353,7 +406,12 @@ export async function handleFeaturedVideoAdminRequest(req, res, body, supabase) 
       if (!filename) return res.status(400).json({ error: 'File name is missing.' });
       if (!Number.isFinite(fileSize) || fileSize <= 0) return res.status(400).json({ error: 'The selected file is empty.' });
       if (fileSize > maxBytes) {
-        return res.status(400).json({ error: `File is too large (maximum ${formatBytes(maxBytes)}).` });
+        const youtubeHint = kind === 'video'
+          ? ' Compress the MP4, use a YouTube link instead, or ask an administrator to raise FEATURED_VIDEO_MAX_MB (and the matching Supabase upload limit).'
+          : '';
+        return res.status(400).json({
+          error: `This file is ${formatBytes(fileSize)}. The current upload limit is ${formatBytes(maxBytes)}.${youtubeHint}`,
+        });
       }
       if (kind === 'video' && !isAllowedFeaturedVideoFile({ name: filename, type: contentType })) {
         return res.status(400).json({ error: 'Upload an MP4 video file (.mp4).' });

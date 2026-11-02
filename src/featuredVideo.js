@@ -7,6 +7,19 @@ export const FEATURED_VIDEO_DEFAULT_MAX_BYTES = 50 * 1024 * 1024;
 export const FEATURED_THUMBNAIL_MAX_BYTES = 10 * 1024 * 1024;
 export const FEATURED_VIDEO_TYPES = ["mp4", "youtube"];
 export const FEATURED_THUMBNAIL_MIME_TYPES = ["image/jpeg", "image/png", "image/webp"];
+export const FEATURED_VIDEO_PLAYBACK_SPEEDS = [0.75, 1, 1.25, 1.5, 1.75, 2];
+export const FEATURED_VIDEO_SECTION_TITLE = "Video of the Day";
+export const FEATURED_VIDEO_SECTION_SUBTITLE =
+  "Watch our featured educational video and strengthen your understanding of key scientific concepts and examination questions.";
+
+/**
+ * Optional Vercel env FEATURED_VIDEO_MAX_MB overrides the default 50 MB cap.
+ * Keep it aligned with Supabase Storage → Settings → Upload file size limit.
+ */
+export function featuredVideoMaxBytesFromEnv(env = typeof process !== "undefined" ? process.env : {}) {
+  const mb = Number(env?.FEATURED_VIDEO_MAX_MB);
+  return Number.isFinite(mb) && mb > 0 ? Math.round(mb * 1024 * 1024) : FEATURED_VIDEO_DEFAULT_MAX_BYTES;
+}
 
 const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
 const YOUTUBE_HOSTS = new Set([

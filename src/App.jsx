@@ -2998,13 +2998,24 @@ function readAdminRoute() {
   }
 }
 
+const ADMIN_SECTIONS = ["bookings", "analytics", "featured-video"];
+
+function normalizeAdminSection(section) {
+  return ADMIN_SECTIONS.includes(section) ? section : "bookings";
+}
+
+function adminPathForSection(section) {
+  const next = normalizeAdminSection(section);
+  return next === "bookings" ? "/admin" : `/admin/${next}`;
+}
+
 function readAdminSection() {
   try {
     const path = window.location.pathname || "";
     if (path.startsWith("/admin/analytics")) return "analytics";
+    if (path.startsWith("/admin/featured-video")) return "featured-video";
     const params = new URLSearchParams(window.location.search);
-    if (params.get("section") === "analytics") return "analytics";
-    return "bookings";
+    return normalizeAdminSection(params.get("section"));
   } catch {
     return "bookings";
   }
@@ -3021,9 +3032,7 @@ function normalizeAdminUrl() {
       }
       return false;
     }
-    const section = readAdminSection();
-    const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
-    window.history.replaceState({}, "", nextPath);
+    window.history.replaceState({}, "", adminPathForSection(readAdminSection()));
     return true;
   } catch {
     return false;
@@ -3033,8 +3042,7 @@ function normalizeAdminUrl() {
 function writeAdminRoute(enabled, section = "bookings") {
   try {
     if (enabled) {
-      const nextPath = section === "analytics" ? "/admin/analytics" : "/admin";
-      window.history.pushState({}, "", nextPath);
+      window.history.pushState({}, "", adminPathForSection(section));
       return;
     }
     const url = new URL(window.location.href);
@@ -3097,7 +3105,7 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
   const [editingTutorId, setEditingTutorId] = useState(null);
   const [tutorEdits, setTutorEdits] = useState(null);
   const [tutorSaveMessage, setTutorSaveMessage] = useState("");
-  const activeSection = section === "analytics" ? "analytics" : "bookings";
+  const activeSection = normalizeAdminSection(section);
 
   async function load(pw) {
     setLoading(true);
@@ -3417,6 +3425,22 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
             >
               Analytics
             </button>
+            <button
+              type="button"
+              onClick={() => onSectionChange?.("featured-video")}
+              style={{
+                padding: "8px 12px",
+                borderRadius: 999,
+                border: activeSection === "featured-video" ? `1px solid ${TEAL}` : "1px solid #e2e8f0",
+                background: activeSection === "featured-video" ? "#ecfeff" : "#fff",
+                color: activeSection === "featured-video" ? TEAL_DARK : "#334155",
+                cursor: "pointer",
+                fontWeight: 800,
+                fontSize: 13,
+              }}
+            >
+              Video of the Day
+            </button>
           </nav>
         </div>
         <div className="stack-on-mobile" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -3442,6 +3466,8 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
       <div style={{ maxWidth: activeSection === "analytics" ? 1280 : 1200, margin: "0 auto", padding: "20px 16px", width: "100%", minWidth: 0, overflowX: "hidden" }}>
         {activeSection === "analytics" ? (
           <AdminAnalytics password={password} onBack={() => onSectionChange?.("bookings")} />
+        ) : activeSection === "featured-video" ? (
+          <AdminFeaturedVideoEditor password={password} />
         ) : (
           <>
         {error && (
@@ -3786,7 +3812,6 @@ function AdminDashboard({ onClose, onSiteLogout, section = "bookings", onSection
             </div>
           )}
         </div>
-        <AdminFeaturedVideoEditor password={password} />
         <AdminAdviceEditor password={password} />
         <AdminShopEditor password={password} />
           </>
@@ -3853,17 +3878,19 @@ function App() {
   }, [page, adminRoute, shopProductSlug]);
 
   const goAdmin = (section = "bookings") => {
-    writeAdminRoute(true, section);
+    const nextSection = normalizeAdminSection(section);
+    writeAdminRoute(true, nextSection);
     setAdminRoute(true);
-    setAdminSection(section === "analytics" ? "analytics" : "bookings");
+    setAdminSection(nextSection);
     setPage("home");
     setShopProductSlug(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const setAdminSectionAndUrl = (section) => {
-    writeAdminRoute(true, section);
-    setAdminSection(section === "analytics" ? "analytics" : "bookings");
+    const nextSection = normalizeAdminSection(section);
+    writeAdminRoute(true, nextSection);
+    setAdminSection(nextSection);
   };
 
   const leaveAdmin = () => {

@@ -149,6 +149,8 @@
     { "source": "/admin/", "destination": "/" },
     { "source": "/admin/analytics", "destination": "/" },
     { "source": "/admin/analytics/", "destination": "/" },
+    { "source": "/admin/featured-video", "destination": "/" },
+    { "source": "/admin/featured-video/", "destination": "/" },
     { "source": "/reset-password", "destination": "/" },
     { "source": "/reset-password/", "destination": "/" },
     { "source": "/papers", "destination": "/" },
