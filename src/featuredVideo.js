@@ -7,6 +7,19 @@ export const FEATURED_VIDEO_DEFAULT_MAX_BYTES = 50 * 1024 * 1024;
 export const FEATURED_THUMBNAIL_MAX_BYTES = 10 * 1024 * 1024;
 export const FEATURED_VIDEO_TYPES = ["mp4", "youtube"];
 export const FEATURED_THUMBNAIL_MIME_TYPES = ["image/jpeg", "image/png", "image/webp"];
+export const FEATURED_VIDEO_PLAYBACK_SPEEDS = [0.75, 1, 1.25, 1.5, 1.75, 2];
+export const FEATURED_VIDEO_SECTION_TITLE = "Video of the Day";
+export const FEATURED_VIDEO_SECTION_SUBTITLE =
+  "Watch our featured educational video and strengthen your understanding of key scientific concepts and examination questions.";
+
+/**
+ * Optional Vercel env FEATURED_VIDEO_MAX_MB overrides the default 50 MB cap.
+ * Keep it aligned with Supabase Storage → Settings → Upload file size limit.
+ */
+export function featuredVideoMaxBytesFromEnv(env = typeof process !== "undefined" ? process.env : {}) {
+  const mb = Number(env?.FEATURED_VIDEO_MAX_MB);
+  return Number.isFinite(mb) && mb > 0 ? Math.round(mb * 1024 * 1024) : FEATURED_VIDEO_DEFAULT_MAX_BYTES;
+}
 
 const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
 const YOUTUBE_HOSTS = new Set([
@@ -46,12 +59,20 @@ export function youTubeWatchUrl(id) {
   return id ? `https://www.youtube.com/watch?v=${id}` : "";
 }
 
-/** Privacy-enhanced embed. `autoplay` is only used after the visitor clicks play. */
+/**
+ * Standard YouTube embed. `autoplay` is only used after the visitor clicks play.
+ * Uses youtube.com/embed (same host as YouTube's oEmbed) so Public/Unlisted
+ * videos play for ordinary visitors without a YouTube login.
+ */
 export function youTubeEmbedUrl(id, { autoplay = false } = {}) {
   if (!id) return "";
-  const params = new URLSearchParams({ rel: "0", modestbranding: "1", playsinline: "1" });
+  const params = new URLSearchParams({
+    rel: "0",
+    modestbranding: "1",
+    playsinline: "1",
+  });
   if (autoplay) params.set("autoplay", "1");
-  return `https://www.youtube-nocookie.com/embed/${id}?${params.toString()}`;
+  return `https://www.youtube.com/embed/${id}?${params.toString()}`;
 }
 
 export function youTubeThumbnailUrl(id, quality = "maxresdefault") {
@@ -163,4 +184,68 @@ export function validateFeaturedVideoInput(input = {}) {
       resource_link: resourceLink || null,
     },
   };
+}
+
+/**
+ * Checks whether a YouTube video can be embedded for ordinary visitors
+ * (Public or Unlisted). Private / unavailable videos fail YouTube's oEmbed
+ * endpoint with HTTP 401/403/404.
+ */
+export async function checkYouTubePublicEmbed(videoUrlOrId, fetchImpl = fetch) {
+  const id = parseYouTubeId(videoUrlOrId);
+  if (!id) {
+    return {
+      ok: false,
+      embeddable: false,
+      youtubeId: null,
+      error: "Paste a valid YouTube video link.",
+    };
+  }
+  const watchUrl = youTubeWatchUrl(id);
+  try {
+    const resp = await fetchImpl(
+      `https://www.youtube.com/oembed?url=${encodeURIComponent(watchUrl)}&format=json`,
+      { headers: { Accept: "application/json" } },
+    );
+    if (resp.ok) {
+      const data = await resp.json().catch(() => ({}));
+      return {
+        ok: true,
+        embeddable: true,
+        youtubeId: id,
+        title: data?.title || "",
+        author: data?.author_name || "",
+      };
+    }
+    if (resp.status === 401 || resp.status === 403) {
+      return {
+        ok: false,
+        embeddable: false,
+        youtubeId: id,
+        error:
+          "This YouTube video is Private (or otherwise blocked). Visitors on jdscience.co.uk cannot watch it. In YouTube Studio set visibility to Public or Unlisted — never Private for Video of the Day.",
+      };
+    }
+    if (resp.status === 404) {
+      return {
+        ok: false,
+        embeddable: false,
+        youtubeId: id,
+        error: "That YouTube video could not be found. Check the link and try again.",
+      };
+    }
+    return {
+      ok: false,
+      embeddable: false,
+      youtubeId: id,
+      error: `YouTube could not confirm this video is embeddable (HTTP ${resp.status}). Use a Public or Unlisted video.`,
+    };
+  } catch {
+    return {
+      ok: false,
+      embeddable: false,
+      youtubeId: id,
+      error: "Could not reach YouTube to check this link. Check your connection and try again.",
+    };
+  }
 }

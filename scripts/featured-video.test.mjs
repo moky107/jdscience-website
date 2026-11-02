@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import {
+  checkYouTubePublicEmbed,
+  featuredVideoMaxBytesFromEnv,
   isAllowedFeaturedThumbnailFile,
   isAllowedFeaturedVideoFile,
   isInternalResourceLink,
@@ -15,9 +17,23 @@ import {
   wantsFeaturedVideoPublicRequest,
 } from "../api/_lib/featuredVideos.js";
 
+assert.equal(featuredVideoMaxBytesFromEnv({}), 50 * 1024 * 1024);
+assert.equal(featuredVideoMaxBytesFromEnv({ FEATURED_VIDEO_MAX_MB: "100" }), 100 * 1024 * 1024);
+
 /* ------------------------------ shared helpers ------------------------------ */
 
 const ID = "dQw4w9WgXcQ";
+{
+  const ok = await checkYouTubePublicEmbed(ID, async () => ({
+    ok: true,
+    json: async () => ({ title: "Demo", author_name: "JDScience" }),
+  }));
+  assert.equal(ok.embeddable, true);
+  assert.equal(ok.youtubeId, ID);
+  const blocked = await checkYouTubePublicEmbed(ID, async () => ({ ok: false, status: 403, json: async () => ({}) }));
+  assert.equal(blocked.embeddable, false);
+  assert.match(blocked.error, /Private/i);
+}
 for (const url of [
   ID,
   `https://www.youtube.com/watch?v=${ID}&t=42s`,
@@ -34,7 +50,7 @@ for (const bad of ["", "https://vimeo.com/123", "https://youtube.com/watch?v=sho
 }
 assert.ok(!youTubeEmbedUrl(ID).includes("autoplay"), "embed never autoplays by default");
 assert.ok(youTubeEmbedUrl(ID, { autoplay: true }).includes("autoplay=1"));
-assert.ok(youTubeEmbedUrl(ID).startsWith("https://www.youtube-nocookie.com/embed/"));
+assert.ok(youTubeEmbedUrl(ID).startsWith("https://www.youtube.com/embed/"));
 
 assert.equal(normalizeResourceLink(""), "");
 assert.equal(normalizeResourceLink("/papers"), "/papers");
@@ -96,6 +112,14 @@ function fakeSupabase() {
     settings,
     removed,
     from: query,
+    auth: {
+      getUser: async (token) => {
+        if (token === "admin-token") return { data: { user: { email: "jd943791@gmail.com" } }, error: null };
+        if (token === "visitor-token") return { data: { user: { email: "student@example.com" } }, error: null };
+        return { data: { user: null }, error: { message: "Invalid token" } };
+      },
+    },
+    rpc: async () => ({ data: null, error: { message: "not installed" } }),
     storage: {
       getBucket: async (id) => ({ data: { id, file_size_limit: id === "featured-videos" ? 50 * 1024 * 1024 : 10 * 1024 * 1024 }, error: null }),
       createBucket: async () => ({ data: null, error: null }),
@@ -122,9 +146,13 @@ function fakeRes() {
   };
 }
 
-async function admin(sb, body) {
+async function admin(sb, body, { token = "admin-token" } = {}) {
   const res = fakeRes();
-  await handleFeaturedVideoAdminRequest({ method: "POST", query: { scope: "featured-video" } }, res, body, sb);
+  await handleFeaturedVideoAdminRequest({
+    method: "POST",
+    query: { scope: "featured-video" },
+    headers: token ? { authorization: `Bearer ${token}` } : {},
+  }, res, body, sb);
   return res;
 }
 
@@ -144,7 +172,13 @@ let res = await publicGet(sb);
 assert.equal(res.statusCode, 200);
 assert.deepEqual(res.body, { ok: true, video: null }, "no published video yet");
 
+res = await admin(sb, { action: "fv-list" }, { token: "" });
+assert.equal(res.statusCode, 401, "admin actions require a signed-in admin session");
+res = await admin(sb, { action: "fv-list" }, { token: "visitor-token" });
+assert.equal(res.statusCode, 403, "non-admin sessions are rejected");
+
 res = await admin(sb, { action: "fv-list" });
+assert.equal(res.statusCode, 200);
 assert.equal(res.body.backend, "settings");
 assert.deepEqual(res.body.videos, []);
 
@@ -187,7 +221,7 @@ assert.equal(res.body.video.thumbnail_src, `https://i.ytimg.com/vi/${ID}/maxresd
 
 res = await admin(sb, { action: "fv-unpublish", id: ytId });
 res = await publicGet(sb);
-assert.equal(res.body.video, null, "removing from the homepage shows the placeholder");
+assert.equal(res.body.video, null, "API returns null when unpublished; homepage falls back to the intro video");
 
 res = await admin(sb, { action: "fv-delete", id: mp4Id });
 assert.equal(res.statusCode, 400, "permanent delete requires explicit confirmation");

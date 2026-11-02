@@ -1,14 +1,40 @@
 import React, { useEffect, useState } from "react";
 import FeaturedVideoPlayer from "./FeaturedVideoPlayer";
-import { isInternalResourceLink } from "./featuredVideo.js";
+import {
+  FEATURED_VIDEO_SECTION_SUBTITLE,
+  FEATURED_VIDEO_SECTION_TITLE,
+  isInternalResourceLink,
+} from "./featuredVideo.js";
+import { INTRO_VIDEO_POSTER, INTRO_VIDEO_SRC } from "./homepageVideo.js";
 
 const TEAL = "#009688";
-export const VIDEO_OF_THE_DAY_TITLE = "Video of the Day";
-export const VIDEO_OF_THE_DAY_SUBTITLE =
-  "Watch our featured educational video and strengthen your understanding of key scientific concepts and examination questions.";
+export const VIDEO_OF_THE_DAY_TITLE = FEATURED_VIDEO_SECTION_TITLE;
+export const VIDEO_OF_THE_DAY_SUBTITLE = FEATURED_VIDEO_SECTION_SUBTITLE;
 
-export function FeaturedVideoDetails({ video, isMobile = false }) {
+/** Shown when nothing is published (or the public API is unreachable). */
+export const DEFAULT_FEATURED_VIDEO = {
+  id: "jd-science-introduction",
+  title: "Welcome to JD Science",
+  description: "A short introduction to JD Science revision resources, past papers and tutoring support.",
+  video_type: "mp4",
+  video_src: INTRO_VIDEO_SRC,
+  youtube_id: null,
+  thumbnail_src: INTRO_VIDEO_POSTER,
+  has_custom_thumbnail: true,
+  resource_link: "/papers",
+};
+
+export function FeaturedVideoDetails({ video, isMobile = false, onBrowse }) {
   const internal = isInternalResourceLink(video.resource_link);
+  const isPapers = video.resource_link === "/papers" || String(video.resource_link || "").startsWith("/papers?");
+
+  function onResourceClick(event) {
+    if (isPapers && onBrowse) {
+      event.preventDefault();
+      onBrowse();
+    }
+  }
+
   return (
     <>
       <h3 style={{ margin: isMobile ? "0 0 14px" : "0 0 18px", fontSize: isMobile ? 19 : 24, lineHeight: 1.3, color: "#f8fafc", fontWeight: 800 }}>
@@ -25,6 +51,7 @@ export function FeaturedVideoDetails({ video, isMobile = false }) {
           {video.resource_link && (
             <a
               href={video.resource_link}
+              onClick={onResourceClick}
               target={internal ? undefined : "_blank"}
               rel={internal ? undefined : "noopener noreferrer"}
               style={{
@@ -64,6 +91,7 @@ export default function FeaturedVideoSection({ isMobile = false, onBrowse }) {
   }, []);
 
   const { loading, video } = state;
+  const displayVideo = video || DEFAULT_FEATURED_VIDEO;
 
   return (
     <section id="video-of-the-day" aria-labelledby="video-of-the-day-title" style={{ background: "#071025", color: "#fff", padding: isMobile ? "40px 16px" : "60px 20px" }}>
@@ -75,23 +103,8 @@ export default function FeaturedVideoSection({ isMobile = false, onBrowse }) {
 
         {loading ? (
           <div aria-busy="true" aria-label="Loading video" style={{ width: "100%", aspectRatio: "16 / 9", borderRadius: isMobile ? 14 : 18, background: "linear-gradient(110deg, #0f1b33 30%, #16264a 50%, #0f1b33 70%)", border: "1px solid rgba(255,255,255,.1)" }} />
-        ) : video ? (
-          <FeaturedVideoDetails video={video} isMobile={isMobile} />
         ) : (
-          <div role="status" style={{ borderRadius: isMobile ? 14 : 18, border: "1px dashed rgba(255,255,255,.22)", background: "rgba(255,255,255,.04)", padding: isMobile ? "34px 18px" : "56px 28px" }}>
-            <div aria-hidden="true" style={{ width: 64, height: 64, margin: "0 auto 16px", borderRadius: "50%", display: "grid", placeItems: "center", background: "rgba(0,150,136,.18)", color: "#5eead4" }}>
-              <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5L8 5.5z" /></svg>
-            </div>
-            <div style={{ fontWeight: 800, fontSize: isMobile ? 18 : 22 }}>Today’s featured video is on its way</div>
-            <p style={{ color: "#94a3b8", margin: "8px auto 0", maxWidth: 520, lineHeight: 1.6, fontSize: isMobile ? 14.5 : 16 }}>
-              Check back soon for our next featured lesson. In the meantime, explore our free revision resources and past papers.
-            </p>
-            {onBrowse && (
-              <button type="button" onClick={onBrowse} style={{ marginTop: 18, padding: "11px 18px", borderRadius: 999, border: 0, background: TEAL, color: "#fff", fontWeight: 800, fontSize: 15, cursor: "pointer" }}>
-                Browse free resources
-              </button>
-            )}
-          </div>
+          <FeaturedVideoDetails video={displayVideo} isMobile={isMobile} onBrowse={onBrowse} />
         )}
       </div>
     </section>

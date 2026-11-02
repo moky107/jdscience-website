@@ -5,6 +5,7 @@ import {
   FEATURED_THUMBNAIL_MAX_BYTES,
   FEATURED_VIDEO_DEFAULT_MAX_BYTES,
   formatBytes,
+  checkYouTubePublicEmbed,
   isAllowedFeaturedThumbnailFile,
   isAllowedFeaturedVideoFile,
   normalizeResourceLink,
@@ -13,6 +14,7 @@ import {
   validateFeaturedVideoInput,
   youTubeThumbnailUrl,
 } from "./featuredVideo.js";
+import { supabase } from "./supabaseClient.js";
 
 const TEAL = "#009688";
 const TEAL_DARK = "#004d40";
@@ -59,7 +61,7 @@ function formatDate(value) {
 }
 
 /** PUTs a file straight to a Supabase signed upload URL, reporting progress. */
-function uploadToSignedUrl(signedUrl, file, onProgress) {
+function uploadToSignedUrl(signedUrl, file, onProgress, signal) {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
     xhr.open("PUT", signedUrl);
@@ -77,6 +79,14 @@ function uploadToSignedUrl(signedUrl, file, onProgress) {
       reject(new Error(detail ? `Upload failed: ${detail}` : `Upload failed (HTTP ${xhr.status}).`));
     };
     xhr.onerror = () => reject(new Error("Network error during upload. Check your connection and try again."));
+    xhr.onabort = () => reject(Object.assign(new Error("Upload cancelled."), { cancelled: true }));
+    if (signal) {
+      if (signal.aborted) {
+        xhr.abort();
+        return;
+      }
+      signal.addEventListener("abort", () => xhr.abort(), { once: true });
+    }
     const body = new FormData();
     body.append("cacheControl", "3600");
     body.append("", file);
@@ -106,19 +116,26 @@ export default function AdminFeaturedVideoEditor({ password }) {
   const [previewId, setPreviewId] = useState("");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [youtubeCheck, setYoutubeCheck] = useState(null); // { embeddable, error, title }
+  const [youtubeChecking, setYoutubeChecking] = useState(false);
   const sessionUploads = useRef([]); // files uploaded in this form session but not yet saved
   const blobUrls = useRef([]);
   const formRef = useRef(null);
+  const uploadAbort = useRef(null);
 
   async function request(payload) {
+    const headers = { "Content-Type": "application/json" };
+    const { data } = await supabase.auth.getSession();
+    const token = data?.session?.access_token;
+    if (token) headers.Authorization = `Bearer ${token}`;
     const resp = await fetch(API, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers,
       body: JSON.stringify({ password, ...payload }),
     });
-    const data = await resp.json().catch(() => ({}));
-    if (!resp.ok) throw new Error(data?.error || "Request failed");
-    return data;
+    const json = await resp.json().catch(() => ({}));
+    if (!resp.ok) throw new Error(json?.error || "Request failed");
+    return json;
   }
 
   function applyList(data) {
@@ -211,6 +228,9 @@ export default function AdminFeaturedVideoEditor({ password }) {
       setError(`${file.name} is ${formatBytes(file.size)}. The maximum is ${formatBytes(maxBytes)}${isVideo ? " — for longer videos, upload to YouTube and paste the link instead." : "."}`);
       return;
     }
+    if (uploadAbort.current) uploadAbort.current.abort();
+    const controller = new AbortController();
+    uploadAbort.current = controller;
     setUpload({ kind, pct: 0, name: file.name });
     try {
       const prepared = await request({
@@ -220,7 +240,12 @@ export default function AdminFeaturedVideoEditor({ password }) {
         contentType: isVideo ? "video/mp4" : thumbnailContentType(file),
         fileSize: file.size,
       });
-      await uploadToSignedUrl(prepared.signedUrl, file, (pct) => setUpload({ kind, pct, name: file.name }));
+      await uploadToSignedUrl(
+        prepared.signedUrl,
+        file,
+        (pct) => setUpload({ kind, pct, name: file.name }),
+        controller.signal,
+      );
       sessionUploads.current.push({ kind, path: prepared.path });
       const preview = localUrl(file);
       setForm((current) => (isVideo
@@ -228,10 +253,16 @@ export default function AdminFeaturedVideoEditor({ password }) {
         : { ...current, thumbnail_url: prepared.path, thumb_preview: preview }));
       setMessage(`${isVideo ? "Video" : "Thumbnail"} uploaded. Check the preview, then save or publish.`);
     } catch (err) {
-      setError(err.message || "Upload failed.");
+      if (!err?.cancelled) setError(err.message || "Upload failed.");
+      else setMessage("Upload cancelled. You can choose another file and try again.");
     } finally {
+      if (uploadAbort.current === controller) uploadAbort.current = null;
       setUpload(null);
     }
+  }
+
+  function cancelUpload() {
+    if (uploadAbort.current) uploadAbort.current.abort();
   }
 
   const payload = useMemo(() => ({
@@ -245,6 +276,45 @@ export default function AdminFeaturedVideoEditor({ password }) {
   }), [form]);
 
   const youtubeId = form.video_type === "youtube" ? parseYouTubeId(form.youtube_url) : null;
+
+  useEffect(() => {
+    if (form.video_type !== "youtube") {
+      setYoutubeCheck(null);
+      setYoutubeChecking(false);
+      return undefined;
+    }
+    if (!youtubeId) {
+      setYoutubeCheck(null);
+      setYoutubeChecking(false);
+      return undefined;
+    }
+    let cancelled = false;
+    setYoutubeChecking(true);
+    const timer = setTimeout(() => {
+      checkYouTubePublicEmbed(youtubeId)
+        .then((result) => {
+          if (!cancelled) {
+            setYoutubeCheck(result);
+            setYoutubeChecking(false);
+          }
+        })
+        .catch(() => {
+          if (!cancelled) {
+            setYoutubeCheck({
+              ok: false,
+              embeddable: false,
+              youtubeId,
+              error: "Could not verify this YouTube link. Prefer Public or Unlisted videos only.",
+            });
+            setYoutubeChecking(false);
+          }
+        });
+    }, 350);
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [form.video_type, youtubeId]);
 
   const previewVideo = useMemo(() => {
     const base = {
@@ -276,6 +346,10 @@ export default function AdminFeaturedVideoEditor({ password }) {
     const parsed = validateFeaturedVideoInput(payload);
     if (!parsed.ok) {
       setError(parsed.error);
+      return;
+    }
+    if (payload.video_type === "youtube" && youtubeCheck && youtubeCheck.embeddable === false) {
+      setError(youtubeCheck.error || "This YouTube video cannot be embedded for ordinary visitors.");
       return;
     }
     setSaving(true);
@@ -330,24 +404,27 @@ export default function AdminFeaturedVideoEditor({ password }) {
     </button>
   );
   const progress = (kind) => upload?.kind === kind && (
-    <div style={{ display: "grid", gap: 4 }}>
+    <div style={{ display: "grid", gap: 6 }}>
       <div style={{ height: 8, borderRadius: 999, background: "#e2e8f0", overflow: "hidden" }}>
         <div style={{ width: `${upload.pct}%`, height: "100%", background: TEAL, transition: "width .2s" }} />
       </div>
-      <div style={hint}>Uploading {upload.name}… {upload.pct}%</div>
+      <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
+        <div style={hint}>Uploading {upload.name}… {upload.pct}%</div>
+        <button type="button" onClick={cancelUpload} style={btn("warn")}>Cancel upload</button>
+      </div>
     </div>
   );
 
   return (
     <div id="admin-featured-video" style={{ marginTop: 20, background: "#fff", borderRadius: 12, boxShadow: "0 4px 14px rgba(0,0,0,.05)", overflow: "hidden" }}>
       <div style={{ padding: "12px 14px", borderBottom: "1px solid #e2e8f0", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-        <div style={{ fontWeight: 800, color: "#0f172a" }}>Featured Video Management</div>
+        <div style={{ fontWeight: 800, color: "#0f172a" }}>Video of the Day</div>
         <button type="button" onClick={load} disabled={loading} style={btn()}>{loading ? "Refreshing…" : "↻ Refresh"}</button>
       </div>
 
       <div style={{ padding: 16, display: "grid", gap: 16, minWidth: 0 }}>
         <div style={{ color: "#64748b", fontSize: 14, lineHeight: 1.6 }}>
-          The published video appears in the homepage section “Video of the Day”. Only one video is live at a time — publishing a video replaces the current one, which stays in the library below.
+          The published video appears in the homepage section “Video of the Day”. Only one video is live at a time — publishing a video replaces the current one, which stays in the library below. While nothing is published, the homepage shows the JD Science introduction video.
         </div>
 
         {backend === "settings" && (
@@ -362,24 +439,24 @@ export default function AdminFeaturedVideoEditor({ password }) {
           <div style={{ minWidth: 0 }}>
             <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: ".04em", textTransform: "uppercase", color: live ? TEAL_DARK : "#64748b" }}>Currently on the homepage</div>
             <div style={{ fontWeight: 800, color: "#0f172a", marginTop: 4, overflowWrap: "anywhere" }}>
-              {live ? live.title : "No video published — visitors see a “coming soon” message."}
+              {live ? live.title : "No video published — visitors see the JD Science introduction video."}
             </div>
           </div>
           {live && (
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <button type="button" onClick={() => editVideo(live)} style={btn()}>Edit / replace</button>
-              <button type="button" disabled={busyId === live.id} onClick={() => rowAction(live, "fv-unpublish")} style={btn("warn")}>Remove from homepage</button>
+              <button type="button" onClick={() => editVideo(live)} style={btn()}>Edit</button>
+              <button type="button" disabled={busyId === live.id} onClick={() => rowAction(live, "fv-unpublish")} style={btn("warn")}>Remove from Homepage</button>
             </div>
           )}
         </div>
 
         <div ref={formRef} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 360px), 1fr))", gap: 16, alignItems: "start" }}>
           <form onSubmit={(e) => { e.preventDefault(); save(true); }} style={{ display: "grid", gap: 14, background: "#f8fafc", borderRadius: 12, padding: 14, minWidth: 0 }}>
-            <div style={{ fontWeight: 800, color: TEAL_DARK }}>{form.id ? "Edit featured video" : "Add a new featured video"}</div>
+            <div style={{ fontWeight: 800, color: TEAL_DARK }}>{form.id ? "Edit video" : "Add a new video"}</div>
 
             <div style={{ display: "flex", gap: 4, padding: 4, background: "#e2e8f0", borderRadius: 10 }} role="group" aria-label="Video source">
-              {tab("mp4", "Upload MP4")}
-              {tab("youtube", "YouTube link")}
+              {tab("mp4", "Upload Video")}
+              {tab("youtube", "Add YouTube Video")}
             </div>
 
             {form.video_type === "mp4" ? (
@@ -399,6 +476,21 @@ export default function AdminFeaturedVideoEditor({ password }) {
                 {form.youtube_url && (
                   <span style={{ ...hint, color: youtubeId ? "#166534" : "#b91c1c" }}>
                     {youtubeId ? `✓ YouTube video ${youtubeId}` : "That doesn’t look like a YouTube video link."}
+                  </span>
+                )}
+                {youtubeId && youtubeChecking && (
+                  <span style={hint}>Checking that visitors can watch this video without signing in…</span>
+                )}
+                {youtubeId && !youtubeChecking && youtubeCheck?.embeddable === true && (
+                  <span style={{ ...hint, color: "#166534" }}>
+                    ✓ Visitors can watch this video on the homepage (Public or Unlisted).
+                    {youtubeCheck.title ? ` YouTube title: “${youtubeCheck.title}”.` : ""}
+                  </span>
+                )}
+                {youtubeId && !youtubeChecking && youtubeCheck?.embeddable === false && (
+                  <span role="alert" style={{ ...hint, color: "#b91c1c", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "8px 10px" }}>
+                    {youtubeCheck.error || "This video cannot be embedded for ordinary visitors."}
+                    {" "}Never use Private for Video of the Day — set it to Public or Unlisted in YouTube Studio.
                   </span>
                 )}
               </label>
@@ -444,11 +536,11 @@ export default function AdminFeaturedVideoEditor({ password }) {
 
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               <button type="submit" disabled={busy} style={{ ...btn("primary"), background: busy ? "#94a3b8" : TEAL }}>
-                {saving ? "Saving…" : form.id && form.is_published ? "Save & keep live" : "Publish as Video of the Day"}
+                {saving ? "Saving…" : form.id && form.is_published ? "Save & keep live" : "Publish to Homepage"}
               </button>
               {!(form.id && form.is_published) && (
                 <button type="button" disabled={busy} onClick={() => save(false)} style={btn()}>
-                  {form.id ? "Save changes (not published)" : "Save as draft"}
+                  {form.id ? "Save changes" : "Save Draft"}
                 </button>
               )}
               {(form.id || form.title || form.mp4_path || form.youtube_url || form.thumbnail_url) && (
@@ -494,14 +586,14 @@ export default function AdminFeaturedVideoEditor({ password }) {
                     </div>
                   </div>
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                    <button type="button" onClick={() => setPreviewId(previewId === video.id ? "" : video.id)} style={btn()}>{previewId === video.id ? "Hide preview" : "Preview"}</button>
+                    <button type="button" onClick={() => setPreviewId(previewId === video.id ? "" : video.id)} style={btn()}>{previewId === video.id ? "Hide Preview" : "Preview"}</button>
                     <button type="button" onClick={() => editVideo(video)} style={btn()}>Edit</button>
                     {video.is_published ? (
-                      <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-unpublish")} style={btn("warn")}>Remove from homepage</button>
+                      <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-unpublish")} style={btn("warn")}>Remove from Homepage</button>
                     ) : (
-                      <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-publish")} style={btn("primary")}>Publish</button>
+                      <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-publish")} style={btn("primary")}>Publish to Homepage</button>
                     )}
-                    <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-delete")} style={btn("danger")}>Delete permanently</button>
+                    <button type="button" disabled={busyId === video.id} onClick={() => rowAction(video, "fv-delete")} style={btn("danger")}>Delete</button>
                   </div>
                 </div>
                 {previewId === video.id && (
