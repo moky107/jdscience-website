@@ -1,0 +1,2931 @@
+{
+  "slug": "rates-of-reaction",
+  "title": "Rates of reaction",
+  "audio": "/agent/repos/jdscience-website/content/videos/rates-of-reaction/source/narration_master.m4a",
+  "duration": 301.254,
+  "full_text": "Hello and welcome back to JD Science.\n\nThis GCSE Chemistry lesson is about rates of reaction.\n\nBy the end, you should be able to do three things. Say what reaction rate means. Calculate average rate from measurements. And read graphs that show how the rate changes.\n\nSome chemical reactions finish in a flash. Others take years.\n\nFireworks are very fast. They release energy in a bright burst.\n\nRusting of iron is slow. Iron changes gradually as it reacts with oxygen and water.\n\nThe rate of a reaction tells us how quickly reactants are used up, or how quickly products are formed.\n\nReactants are the substances we start with. Products are the new substances made during the reaction.\n\nAverage rate equals the quantity of product formed, divided by the time taken. Or, the quantity of reactant used up, divided by the time taken.\n\nQuantity might be a mass in grams, a volume in centimetres cubed, or an amount in moles. The units of rate follow the units you measured. Grams divided by seconds gives grams per second. Centimetres cubed divided by seconds gives centimetres cubed per second.\n\nLet's use a familiar reaction. Magnesium reacts with hydrochloric acid to make magnesium chloride and hydrogen. During the reaction, the magnesium disappears and bubbles of hydrogen are given off.\n\nWe can collect the hydrogen and find the average rate. Suppose we collect 180 centimetres cubed of hydrogen in 2 minutes. We want the answer in centimetres cubed per second, so convert the time first.\n\n2 minutes times 60 equals 120 seconds. Now divide the volume by the time. 180 divided by 120 equals 1.5. So the average rate is 1.5 centimetres cubed per second.\n\nThat is an average over the whole 2 minutes. The actual rate may have been faster at the start and slower later.\n\nWe can also measure how quickly a reactant is used up. In a separate experiment, 3 grams of magnesium reacts completely in 4 minutes.\n\nConvert 4 minutes to seconds. 4 times 60 equals 240 seconds. Then divide the mass used up by the time. 3 divided by 240 equals 0.0125. The average rate is 0.0125 grams per second.\n\nAverage rate hides how the reaction changes. Graphs show that clearly.\n\nFirst, mass of magnesium remaining against time. Time goes on the horizontal axis. Mass remaining goes on the vertical axis.\n\nIf we start with 3 grams, the line begins at 3. As magnesium is used up, the line slopes downwards. It is steep at first, because the reaction is fast. Then it becomes less steep. If all the magnesium reacts, the line reaches zero and becomes horizontal.\n\nNow look at volume of hydrogen produced against time. The line starts at zero, because no gas has been collected yet. As hydrogen is produced, the line rises. It is steep at the beginning, then less steep, then it levels off when the reaction has finished.\n\nFor both graphs, a steeper line means a faster reaction. A horizontal line means the measured quantity is no longer changing.\n\nA question might ask for moles per minute instead of grams per second. Always check the units. If it asks for a rate per second, convert the time into seconds before you divide.\n\nRemember this. Average rate is the quantity of reactant used up, or product formed, divided by the time taken. On a graph, greater steepness means a faster reaction.\n\nIf this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources at jdscience.co.uk. Thank you for watching.",
+  "tts_text": "Hello and welcome back to JD Science.\n\nThis GCSE Chemistry lesson is about rates of reaction.\n\nBy the end, you should be able to do three things. Say what reaction rate means. Calculate average rate from measurements. And read graphs that show how the rate changes.\n\nSome chemical reactions finish in a flash. Others take years.\n\nFireworks are very fast. They release energy in a bright burst.\n\nRusting of iron is slow. Iron changes gradually as it reacts with oxygen and water.\n\nThe rate of a reaction tells us how quickly reactants are used up, or how quickly products are formed.\n\nReactants are the substances we start with. Products are the new substances made during the reaction.\n\nAverage rate equals the quantity of product formed, divided by the time taken. Or, the quantity of reactant used up, divided by the time taken.\n\nQuantity might be a mass in grams, a volume in centimetres cubed, or an amount in moles. The units of rate follow the units you measured. Grams divided by seconds gives grams per second. Centimetres cubed divided by seconds gives centimetres cubed per second.\n\nLet's use a familiar reaction. Magnesium reacts with hydrochloric acid to make magnesium chloride and hydrogen. During the reaction, the magnesium disappears and bubbles of hydrogen are given off.\n\nWe can collect the hydrogen and find the average rate. Suppose we collect 180 centimetres cubed of hydrogen in 2 minutes. We want the answer in centimetres cubed per second, so convert the time first.\n\n2 minutes times 60 equals 120 seconds. Now divide the volume by the time. 180 divided by 120 equals 1.5. So the average rate is 1.5 centimetres cubed per second.\n\nThat is an average over the whole 2 minutes. The actual rate may have been faster at the start and slower later.\n\nWe can also measure how quickly a reactant is used up. In a separate experiment, 3 grams of magnesium reacts completely in 4 minutes.\n\nConvert 4 minutes to seconds. 4 times 60 equals 240 seconds. Then divide the mass used up by the time. 3 divided by 240 equals 0.0125. The average rate is 0.0125 grams per second.\n\nAverage rate hides how the reaction changes. Graphs show that clearly.\n\nFirst, mass of magnesium remaining against time. Time goes on the horizontal axis. Mass remaining goes on the vertical axis.\n\nIf we start with 3 grams, the line begins at 3. As magnesium is used up, the line slopes downwards. It is steep at first, because the reaction is fast. Then it becomes less steep. If all the magnesium reacts, the line reaches zero and becomes horizontal.\n\nNow look at volume of hydrogen produced against time. The line starts at zero, because no gas has been collected yet. As hydrogen is produced, the line rises. It is steep at the beginning, then less steep, then it levels off when the reaction has finished.\n\nFor both graphs, a steeper line means a faster reaction. A horizontal line means the measured quantity is no longer changing.\n\nA question might ask for moles per minute instead of grams per second. Always check the units. If it asks for a rate per second, convert the time into seconds before you divide.\n\nRemember this. Average rate is the quantity of reactant used up, or product formed, divided by the time taken. On a graph, greater steepness means a faster reaction.\n\nIf this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources at jdscience.co.uk. Thank you for watching.",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.1,
+      "end": 0.569
+    },
+    {
+      "word": "and",
+      "start": 0.583,
+      "end": 0.725
+    },
+    {
+      "word": "welcome",
+      "start": 0.739,
+      "end": 1.165
+    },
+    {
+      "word": "back",
+      "start": 1.18,
+      "end": 1.407
+    },
+    {
+      "word": "to",
+      "start": 1.421,
+      "end": 1.535
+    },
+    {
+      "word": "JD",
+      "start": 1.549,
+      "end": 2.018
+    },
+    {
+      "word": "Science",
+      "start": 2.032,
+      "end": 2.714
+    },
+    {
+      "word": "This",
+      "start": 4.27,
+      "end": 4.597
+    },
+    {
+      "word": "GCSE",
+      "start": 4.611,
+      "end": 5.406
+    },
+    {
+      "word": "Chemistry",
+      "start": 5.421,
+      "end": 5.932
+    },
+    {
+      "word": "lesson",
+      "start": 5.946,
+      "end": 6.358
+    },
+    {
+      "word": "is",
+      "start": 6.372,
+      "end": 6.529
+    },
+    {
+      "word": "about",
+      "start": 6.543,
+      "end": 6.926
+    },
+    {
+      "word": "rates",
+      "start": 6.94,
+      "end": 7.281
+    },
+    {
+      "word": "of",
+      "start": 7.296,
+      "end": 7.395
+    },
+    {
+      "word": "reaction",
+      "start": 7.409,
+      "end": 8.119
+    },
+    {
+      "word": "By",
+      "start": 9.394,
+      "end": 9.635
+    },
+    {
+      "word": "the",
+      "start": 9.65,
+      "end": 9.834
+    },
+    {
+      "word": "end",
+      "start": 9.849,
+      "end": 10.133
+    },
+    {
+      "word": "you",
+      "start": 10.374,
+      "end": 10.459
+    },
+    {
+      "word": "should",
+      "start": 10.474,
+      "end": 10.715
+    },
+    {
+      "word": "be",
+      "start": 10.729,
+      "end": 10.885
+    },
+    {
+      "word": "able",
+      "start": 10.9,
+      "end": 11.155
+    },
+    {
+      "word": "to",
+      "start": 11.17,
+      "end": 11.269
+    },
+    {
+      "word": "do",
+      "start": 11.283,
+      "end": 11.482
+    },
+    {
+      "word": "three",
+      "start": 11.496,
+      "end": 11.809
+    },
+    {
+      "word": "things",
+      "start": 11.823,
+      "end": 12.533
+    },
+    {
+      "word": "Say",
+      "start": 13.52,
+      "end": 13.889
+    },
+    {
+      "word": "what",
+      "start": 13.904,
+      "end": 14.159
+    },
+    {
+      "word": "reaction",
+      "start": 14.174,
+      "end": 14.699
+    },
+    {
+      "word": "rate",
+      "start": 14.713,
+      "end": 14.983
+    },
+    {
+      "word": "means",
+      "start": 14.997,
+      "end": 15.679
+    },
+    {
+      "word": "Calculate",
+      "start": 16.659,
+      "end": 17.37
+    },
+    {
+      "word": "average",
+      "start": 17.384,
+      "end": 17.767
+    },
+    {
+      "word": "rate",
+      "start": 17.782,
+      "end": 18.094
+    },
+    {
+      "word": "from",
+      "start": 18.108,
+      "end": 18.321
+    },
+    {
+      "word": "measurements",
+      "start": 18.335,
+      "end": 19.031
+    },
+    {
+      "word": "And",
+      "start": 20.012,
+      "end": 20.267
+    },
+    {
+      "word": "read",
+      "start": 20.282,
+      "end": 20.523
+    },
+    {
+      "word": "graphs",
+      "start": 20.537,
+      "end": 20.949
+    },
+    {
+      "word": "that",
+      "start": 20.963,
+      "end": 21.134
+    },
+    {
+      "word": "show",
+      "start": 21.148,
+      "end": 21.389
+    },
+    {
+      "word": "how",
+      "start": 21.404,
+      "end": 21.617
+    },
+    {
+      "word": "the",
+      "start": 21.631,
+      "end": 21.759
+    },
+    {
+      "word": "rate",
+      "start": 21.773,
+      "end": 22.071
+    },
+    {
+      "word": "changes",
+      "start": 22.085,
+      "end": 22.81
+    },
+    {
+      "word": "Some",
+      "start": 24.094,
+      "end": 24.449
+    },
+    {
+      "word": "chemical",
+      "start": 24.463,
+      "end": 24.96
+    },
+    {
+      "word": "reactions",
+      "start": 24.975,
+      "end": 25.571
+    },
+    {
+      "word": "finish",
+      "start": 25.585,
+      "end": 25.912
+    },
+    {
+      "word": "in",
+      "start": 25.926,
+      "end": 26.04
+    },
+    {
+      "word": "a",
+      "start": 26.054,
+      "end": 26.097
+    },
+    {
+      "word": "flash",
+      "start": 26.111,
+      "end": 26.807
+    },
+    {
+      "word": "Others",
+      "start": 27.794,
+      "end": 28.178
+    },
+    {
+      "word": "take",
+      "start": 28.192,
+      "end": 28.476
+    },
+    {
+      "word": "years",
+      "start": 28.49,
+      "end": 29.044
+    },
+    {
+      "word": "Fireworks",
+      "start": 30.322,
+      "end": 31.117
+    },
+    {
+      "word": "are",
+      "start": 31.132,
+      "end": 31.274
+    },
+    {
+      "word": "very",
+      "start": 31.288,
+      "end": 31.629
+    },
+    {
+      "word": "fast",
+      "start": 31.643,
+      "end": 32.282
+    },
+    {
+      "word": "They",
+      "start": 33.269,
+      "end": 33.482
+    },
+    {
+      "word": "release",
+      "start": 33.496,
+      "end": 33.908
+    },
+    {
+      "word": "energy",
+      "start": 33.923,
+      "end": 34.334
+    },
+    {
+      "word": "in",
+      "start": 34.349,
+      "end": 34.491
+    },
+    {
+      "word": "a",
+      "start": 34.505,
+      "end": 34.576
+    },
+    {
+      "word": "bright",
+      "start": 34.59,
+      "end": 34.945
+    },
+    {
+      "word": "burst",
+      "start": 34.959,
+      "end": 35.556
+    },
+    {
+      "word": "Rusting",
+      "start": 36.838,
+      "end": 37.321
+    },
+    {
+      "word": "of",
+      "start": 37.335,
+      "end": 37.435
+    },
+    {
+      "word": "iron",
+      "start": 37.449,
+      "end": 37.804
+    },
+    {
+      "word": "is",
+      "start": 37.818,
+      "end": 37.974
+    },
+    {
+      "word": "slow",
+      "start": 37.989,
+      "end": 38.5
+    },
+    {
+      "word": "Iron",
+      "start": 39.487,
+      "end": 39.885
+    },
+    {
+      "word": "changes",
+      "start": 39.899,
+      "end": 40.41
+    },
+    {
+      "word": "gradually",
+      "start": 40.424,
+      "end": 40.95
+    },
+    {
+      "word": "as",
+      "start": 40.964,
+      "end": 41.078
+    },
+    {
+      "word": "it",
+      "start": 41.092,
+      "end": 41.22
+    },
+    {
+      "word": "reacts",
+      "start": 41.234,
+      "end": 41.674
+    },
+    {
+      "word": "with",
+      "start": 41.689,
+      "end": 41.816
+    },
+    {
+      "word": "oxygen",
+      "start": 41.831,
+      "end": 42.37
+    },
+    {
+      "word": "and",
+      "start": 42.385,
+      "end": 42.512
+    },
+    {
+      "word": "water",
+      "start": 42.527,
+      "end": 43.109
+    },
+    {
+      "word": "The",
+      "start": 44.386,
+      "end": 44.556
+    },
+    {
+      "word": "rate",
+      "start": 44.571,
+      "end": 44.798
+    },
+    {
+      "word": "of",
+      "start": 44.812,
+      "end": 44.897
+    },
+    {
+      "word": "a",
+      "start": 44.912,
+      "end": 44.954
+    },
+    {
+      "word": "reaction",
+      "start": 44.968,
+      "end": 45.537
+    },
+    {
+      "word": "tells",
+      "start": 45.551,
+      "end": 45.92
+    },
+    {
+      "word": "us",
+      "start": 45.934,
+      "end": 46.034
+    },
+    {
+      "word": "how",
+      "start": 46.048,
+      "end": 46.247
+    },
+    {
+      "word": "quickly",
+      "start": 46.261,
+      "end": 46.659
+    },
+    {
+      "word": "reactants",
+      "start": 46.673,
+      "end": 47.341
+    },
+    {
+      "word": "are",
+      "start": 47.355,
+      "end": 47.397
+    },
+    {
+      "word": "used",
+      "start": 47.412,
+      "end": 47.809
+    },
+    {
+      "word": "up",
+      "start": 47.824,
+      "end": 48.079
+    },
+    {
+      "word": "or",
+      "start": 48.363,
+      "end": 48.477
+    },
+    {
+      "word": "how",
+      "start": 48.491,
+      "end": 48.704
+    },
+    {
+      "word": "quickly",
+      "start": 48.718,
+      "end": 49.145
+    },
+    {
+      "word": "products",
+      "start": 49.159,
+      "end": 49.67
+    },
+    {
+      "word": "are",
+      "start": 49.684,
+      "end": 49.855
+    },
+    {
+      "word": "formed",
+      "start": 49.869,
+      "end": 50.608
+    },
+    {
+      "word": "Reactants",
+      "start": 51.886,
+      "end": 52.639
+    },
+    {
+      "word": "are",
+      "start": 52.653,
+      "end": 52.696
+    },
+    {
+      "word": "the",
+      "start": 52.71,
+      "end": 52.824
+    },
+    {
+      "word": "substances",
+      "start": 52.838,
+      "end": 53.576
+    },
+    {
+      "word": "we",
+      "start": 53.591,
+      "end": 53.718
+    },
+    {
+      "word": "start",
+      "start": 53.733,
+      "end": 54.13
+    },
+    {
+      "word": "with",
+      "start": 54.145,
+      "end": 54.457
+    },
+    {
+      "word": "Products",
+      "start": 55.444,
+      "end": 56.026
+    },
+    {
+      "word": "are",
+      "start": 56.041,
+      "end": 56.126
+    },
+    {
+      "word": "the",
+      "start": 56.14,
+      "end": 56.254
+    },
+    {
+      "word": "new",
+      "start": 56.268,
+      "end": 56.552
+    },
+    {
+      "word": "substances",
+      "start": 56.566,
+      "end": 57.291
+    },
+    {
+      "word": "made",
+      "start": 57.305,
+      "end": 57.631
+    },
+    {
+      "word": "during",
+      "start": 57.646,
+      "end": 58.001
+    },
+    {
+      "word": "the",
+      "start": 58.015,
+      "end": 58.1
+    },
+    {
+      "word": "reaction",
+      "start": 58.114,
+      "end": 58.839
+    },
+    {
+      "word": "Average",
+      "start": 60.106,
+      "end": 60.561
+    },
+    {
+      "word": "rate",
+      "start": 60.575,
+      "end": 60.887
+    },
+    {
+      "word": "equals",
+      "start": 60.901,
+      "end": 61.313
+    },
+    {
+      "word": "the",
+      "start": 61.328,
+      "end": 61.413
+    },
+    {
+      "word": "quantity",
+      "start": 61.427,
+      "end": 61.953
+    },
+    {
+      "word": "of",
+      "start": 61.967,
+      "end": 62.095
+    },
+    {
+      "word": "product",
+      "start": 62.109,
+      "end": 62.507
+    },
+    {
+      "word": "formed",
+      "start": 62.521,
+      "end": 62.918
+    },
+    {
+      "word": "divided",
+      "start": 63.117,
+      "end": 63.643
+    },
+    {
+      "word": "by",
+      "start": 63.657,
+      "end": 63.813
+    },
+    {
+      "word": "the",
+      "start": 63.828,
+      "end": 63.941
+    },
+    {
+      "word": "time",
+      "start": 63.955,
+      "end": 64.339
+    },
+    {
+      "word": "taken",
+      "start": 64.353,
+      "end": 64.936
+    },
+    {
+      "word": "Or",
+      "start": 65.922,
+      "end": 66.42
+    },
+    {
+      "word": "the",
+      "start": 66.661,
+      "end": 66.761
+    },
+    {
+      "word": "quantity",
+      "start": 66.775,
+      "end": 67.315
+    },
+    {
+      "word": "of",
+      "start": 67.329,
+      "end": 67.442
+    },
+    {
+      "word": "reactant",
+      "start": 67.457,
+      "end": 68.025
+    },
+    {
+      "word": "used",
+      "start": 68.039,
+      "end": 68.38
+    },
+    {
+      "word": "up",
+      "start": 68.394,
+      "end": 68.65
+    },
+    {
+      "word": "divided",
+      "start": 68.849,
+      "end": 69.374
+    },
+    {
+      "word": "by",
+      "start": 69.388,
+      "end": 69.559
+    },
+    {
+      "word": "the",
+      "start": 69.573,
+      "end": 69.687
+    },
+    {
+      "word": "time",
+      "start": 69.701,
+      "end": 70.084
+    },
+    {
+      "word": "taken",
+      "start": 70.099,
+      "end": 70.681
+    },
+    {
+      "word": "Quantity",
+      "start": 71.95,
+      "end": 72.49
+    },
+    {
+      "word": "might",
+      "start": 72.504,
+      "end": 72.788
+    },
+    {
+      "word": "be",
+      "start": 72.802,
+      "end": 72.944
+    },
+    {
+      "word": "a",
+      "start": 72.959,
+      "end": 73.03
+    },
+    {
+      "word": "mass",
+      "start": 73.044,
+      "end": 73.37
+    },
+    {
+      "word": "in",
+      "start": 73.385,
+      "end": 73.498
+    },
+    {
+      "word": "grams",
+      "start": 73.513,
+      "end": 74.038
+    },
+    {
+      "word": "a",
+      "start": 74.265,
+      "end": 74.336
+    },
+    {
+      "word": "volume",
+      "start": 74.351,
+      "end": 74.848
+    },
+    {
+      "word": "in",
+      "start": 74.862,
+      "end": 75.018
+    },
+    {
+      "word": "centimetres",
+      "start": 75.032,
+      "end": 75.743
+    },
+    {
+      "word": "cubed",
+      "start": 75.757,
+      "end": 76.226
+    },
+    {
+      "word": "or",
+      "start": 76.481,
+      "end": 76.609
+    },
+    {
+      "word": "an",
+      "start": 76.623,
+      "end": 76.723
+    },
+    {
+      "word": "amount",
+      "start": 76.737,
+      "end": 77.12
+    },
+    {
+      "word": "in",
+      "start": 77.135,
+      "end": 77.262
+    },
+    {
+      "word": "moles",
+      "start": 77.277,
+      "end": 77.93
+    },
+    {
+      "word": "The",
+      "start": 78.917,
+      "end": 79.073
+    },
+    {
+      "word": "units",
+      "start": 79.087,
+      "end": 79.514
+    },
+    {
+      "word": "of",
+      "start": 79.528,
+      "end": 79.641
+    },
+    {
+      "word": "rate",
+      "start": 79.656,
+      "end": 79.954
+    },
+    {
+      "word": "follow",
+      "start": 79.968,
+      "end": 80.252
+    },
+    {
+      "word": "the",
+      "start": 80.266,
+      "end": 80.366
+    },
+    {
+      "word": "units",
+      "start": 80.38,
+      "end": 80.863
+    },
+    {
+      "word": "you",
+      "start": 80.877,
+      "end": 81.005
+    },
+    {
+      "word": "measured",
+      "start": 81.019,
+      "end": 81.573
+    },
+    {
+      "word": "Grams",
+      "start": 82.553,
+      "end": 83.036
+    },
+    {
+      "word": "divided",
+      "start": 83.051,
+      "end": 83.562
+    },
+    {
+      "word": "by",
+      "start": 83.576,
+      "end": 83.761
+    },
+    {
+      "word": "seconds",
+      "start": 83.775,
+      "end": 84.286
+    },
+    {
+      "word": "gives",
+      "start": 84.301,
+      "end": 84.585
+    },
+    {
+      "word": "grams",
+      "start": 84.599,
+      "end": 85.025
+    },
+    {
+      "word": "per",
+      "start": 85.039,
+      "end": 85.224
+    },
+    {
+      "word": "second",
+      "start": 85.238,
+      "end": 85.891
+    },
+    {
+      "word": "Centimetres",
+      "start": 86.872,
+      "end": 87.681
+    },
+    {
+      "word": "cubed",
+      "start": 87.695,
+      "end": 88.107
+    },
+    {
+      "word": "divided",
+      "start": 88.122,
+      "end": 88.59
+    },
+    {
+      "word": "by",
+      "start": 88.605,
+      "end": 88.789
+    },
+    {
+      "word": "seconds",
+      "start": 88.803,
+      "end": 89.343
+    },
+    {
+      "word": "gives",
+      "start": 89.357,
+      "end": 89.656
+    },
+    {
+      "word": "centimetres",
+      "start": 89.67,
+      "end": 90.366
+    },
+    {
+      "word": "cubed",
+      "start": 90.38,
+      "end": 90.749
+    },
+    {
+      "word": "per",
+      "start": 90.764,
+      "end": 90.891
+    },
+    {
+      "word": "second",
+      "start": 90.906,
+      "end": 91.531
+    },
+    {
+      "word": "Let's",
+      "start": 92.794,
+      "end": 93.135
+    },
+    {
+      "word": "use",
+      "start": 93.149,
+      "end": 93.405
+    },
+    {
+      "word": "a",
+      "start": 93.419,
+      "end": 93.476
+    },
+    {
+      "word": "familiar",
+      "start": 93.49,
+      "end": 94.058
+    },
+    {
+      "word": "reaction",
+      "start": 94.072,
+      "end": 94.811
+    },
+    {
+      "word": "Magnesium",
+      "start": 95.798,
+      "end": 96.679
+    },
+    {
+      "word": "reacts",
+      "start": 96.693,
+      "end": 97.133
+    },
+    {
+      "word": "with",
+      "start": 97.147,
+      "end": 97.289
+    },
+    {
+      "word": "hydrochloric",
+      "start": 97.304,
+      "end": 98.199
+    },
+    {
+      "word": "acid",
+      "start": 98.213,
+      "end": 98.525
+    },
+    {
+      "word": "to",
+      "start": 98.539,
+      "end": 98.625
+    },
+    {
+      "word": "make",
+      "start": 98.639,
+      "end": 98.88
+    },
+    {
+      "word": "magnesium",
+      "start": 98.895,
+      "end": 99.69
+    },
+    {
+      "word": "chloride",
+      "start": 99.704,
+      "end": 100.287
+    },
+    {
+      "word": "and",
+      "start": 100.301,
+      "end": 100.414
+    },
+    {
+      "word": "hydrogen",
+      "start": 100.429,
+      "end": 101.181
+    },
+    {
+      "word": "During",
+      "start": 102.162,
+      "end": 102.602
+    },
+    {
+      "word": "the",
+      "start": 102.616,
+      "end": 102.701
+    },
+    {
+      "word": "reaction",
+      "start": 102.716,
+      "end": 103.326
+    },
+    {
+      "word": "the",
+      "start": 103.582,
+      "end": 103.667
+    },
+    {
+      "word": "magnesium",
+      "start": 103.682,
+      "end": 104.477
+    },
+    {
+      "word": "disappears",
+      "start": 104.491,
+      "end": 105.23
+    },
+    {
+      "word": "and",
+      "start": 105.244,
+      "end": 105.386
+    },
+    {
+      "word": "bubbles",
+      "start": 105.4,
+      "end": 105.798
+    },
+    {
+      "word": "of",
+      "start": 105.812,
+      "end": 105.897
+    },
+    {
+      "word": "hydrogen",
+      "start": 105.912,
+      "end": 106.565
+    },
+    {
+      "word": "are",
+      "start": 106.579,
+      "end": 106.679
+    },
+    {
+      "word": "given",
+      "start": 106.693,
+      "end": 107.034
+    },
+    {
+      "word": "off",
+      "start": 107.048,
+      "end": 107.488
+    },
+    {
+      "word": "We",
+      "start": 108.766,
+      "end": 108.993
+    },
+    {
+      "word": "can",
+      "start": 109.007,
+      "end": 109.178
+    },
+    {
+      "word": "collect",
+      "start": 109.192,
+      "end": 109.561
+    },
+    {
+      "word": "the",
+      "start": 109.576,
+      "end": 109.647
+    },
+    {
+      "word": "hydrogen",
+      "start": 109.661,
+      "end": 110.343
+    },
+    {
+      "word": "and",
+      "start": 110.357,
+      "end": 110.485
+    },
+    {
+      "word": "find",
+      "start": 110.499,
+      "end": 110.854
+    },
+    {
+      "word": "the",
+      "start": 110.868,
+      "end": 110.968
+    },
+    {
+      "word": "average",
+      "start": 110.982,
+      "end": 111.436
+    },
+    {
+      "word": "rate",
+      "start": 111.451,
+      "end": 111.891
+    },
+    {
+      "word": "Suppose",
+      "start": 112.878,
+      "end": 113.432
+    },
+    {
+      "word": "we",
+      "start": 113.446,
+      "end": 113.588
+    },
+    {
+      "word": "collect",
+      "start": 113.602,
+      "end": 114.043
+    },
+    {
+      "word": "180",
+      "start": 114.057,
+      "end": 115.193
+    },
+    {
+      "word": "centimetres",
+      "start": 115.207,
+      "end": 115.932
+    },
+    {
+      "word": "cubed",
+      "start": 115.946,
+      "end": 116.315
+    },
+    {
+      "word": "of",
+      "start": 116.33,
+      "end": 116.415
+    },
+    {
+      "word": "hydrogen",
+      "start": 116.429,
+      "end": 117.054
+    },
+    {
+      "word": "in",
+      "start": 117.068,
+      "end": 117.225
+    },
+    {
+      "word": "2",
+      "start": 117.239,
+      "end": 117.48
+    },
+    {
+      "word": "minutes",
+      "start": 117.494,
+      "end": 118.034
+    },
+    {
+      "word": "We",
+      "start": 119.014,
+      "end": 119.227
+    },
+    {
+      "word": "want",
+      "start": 119.242,
+      "end": 119.469
+    },
+    {
+      "word": "the",
+      "start": 119.483,
+      "end": 119.597
+    },
+    {
+      "word": "answer",
+      "start": 119.611,
+      "end": 120.009
+    },
+    {
+      "word": "in",
+      "start": 120.023,
+      "end": 120.222
+    },
+    {
+      "word": "centimetres",
+      "start": 120.236,
+      "end": 120.96
+    },
+    {
+      "word": "cubed",
+      "start": 120.975,
+      "end": 121.315
+    },
+    {
+      "word": "per",
+      "start": 121.33,
+      "end": 121.429
+    },
+    {
+      "word": "second",
+      "start": 121.443,
+      "end": 121.955
+    },
+    {
+      "word": "so",
+      "start": 122.225,
+      "end": 122.338
+    },
+    {
+      "word": "convert",
+      "start": 122.352,
+      "end": 122.935
+    },
+    {
+      "word": "the",
+      "start": 122.949,
+      "end": 123.034
+    },
+    {
+      "word": "time",
+      "start": 123.048,
+      "end": 123.403
+    },
+    {
+      "word": "first",
+      "start": 123.418,
+      "end": 124.0
+    },
+    {
+      "word": "2",
+      "start": 125.266,
+      "end": 125.564
+    },
+    {
+      "word": "minutes",
+      "start": 125.578,
+      "end": 125.934
+    },
+    {
+      "word": "times",
+      "start": 125.948,
+      "end": 126.317
+    },
+    {
+      "word": "60 equals 120",
+      "start": 126.331,
+      "end": 128.391
+    },
+    {
+      "word": "seconds",
+      "start": 128.405,
+      "end": 129.144
+    },
+    {
+      "word": "Now",
+      "start": 130.131,
+      "end": 130.457
+    },
+    {
+      "word": "divide",
+      "start": 130.472,
+      "end": 130.884
+    },
+    {
+      "word": "the",
+      "start": 130.898,
+      "end": 130.969
+    },
+    {
+      "word": "volume",
+      "start": 130.983,
+      "end": 131.438
+    },
+    {
+      "word": "by",
+      "start": 131.452,
+      "end": 131.636
+    },
+    {
+      "word": "the",
+      "start": 131.651,
+      "end": 131.764
+    },
+    {
+      "word": "time",
+      "start": 131.778,
+      "end": 132.361
+    },
+    {
+      "word": "180",
+      "start": 133.341,
+      "end": 134.463
+    },
+    {
+      "word": "divided",
+      "start": 134.477,
+      "end": 135.031
+    },
+    {
+      "word": "by",
+      "start": 135.046,
+      "end": 135.216
+    },
+    {
+      "word": "120 equals 1.5",
+      "start": 135.23,
+      "end": 138.369
+    },
+    {
+      "word": "So",
+      "start": 139.35,
+      "end": 139.619
+    },
+    {
+      "word": "the",
+      "start": 139.634,
+      "end": 139.776
+    },
+    {
+      "word": "average",
+      "start": 139.79,
+      "end": 140.145
+    },
+    {
+      "word": "rate",
+      "start": 140.159,
+      "end": 140.443
+    },
+    {
+      "word": "is",
+      "start": 140.457,
+      "end": 140.614
+    },
+    {
+      "word": "1.5",
+      "start": 140.628,
+      "end": 141.679
+    },
+    {
+      "word": "centimetres",
+      "start": 141.693,
+      "end": 142.375
+    },
+    {
+      "word": "cubed",
+      "start": 142.389,
+      "end": 142.744
+    },
+    {
+      "word": "per",
+      "start": 142.759,
+      "end": 142.872
+    },
+    {
+      "word": "second",
+      "start": 142.886,
+      "end": 143.526
+    },
+    {
+      "word": "That",
+      "start": 144.79,
+      "end": 145.074
+    },
+    {
+      "word": "is",
+      "start": 145.088,
+      "end": 145.202
+    },
+    {
+      "word": "an",
+      "start": 145.216,
+      "end": 145.344
+    },
+    {
+      "word": "average",
+      "start": 145.358,
+      "end": 145.798
+    },
+    {
+      "word": "over",
+      "start": 145.813,
+      "end": 146.026
+    },
+    {
+      "word": "the",
+      "start": 146.04,
+      "end": 146.139
+    },
+    {
+      "word": "whole",
+      "start": 146.154,
+      "end": 146.466
+    },
+    {
+      "word": "2",
+      "start": 146.48,
+      "end": 146.722
+    },
+    {
+      "word": "minutes",
+      "start": 146.736,
+      "end": 147.29
+    },
+    {
+      "word": "The",
+      "start": 148.277,
+      "end": 148.476
+    },
+    {
+      "word": "actual",
+      "start": 148.49,
+      "end": 148.959
+    },
+    {
+      "word": "rate",
+      "start": 148.973,
+      "end": 149.229
+    },
+    {
+      "word": "may",
+      "start": 149.243,
+      "end": 149.427
+    },
+    {
+      "word": "have",
+      "start": 149.442,
+      "end": 149.584
+    },
+    {
+      "word": "been",
+      "start": 149.598,
+      "end": 149.783
+    },
+    {
+      "word": "faster",
+      "start": 149.797,
+      "end": 150.28
+    },
+    {
+      "word": "at",
+      "start": 150.294,
+      "end": 150.45
+    },
+    {
+      "word": "the",
+      "start": 150.464,
+      "end": 150.55
+    },
+    {
+      "word": "start",
+      "start": 150.564,
+      "end": 151.033
+    },
+    {
+      "word": "and",
+      "start": 151.047,
+      "end": 151.16
+    },
+    {
+      "word": "slower",
+      "start": 151.175,
+      "end": 151.587
+    },
+    {
+      "word": "later",
+      "start": 151.601,
+      "end": 152.126
+    },
+    {
+      "word": "We",
+      "start": 153.394,
+      "end": 153.607
+    },
+    {
+      "word": "can",
+      "start": 153.621,
+      "end": 153.792
+    },
+    {
+      "word": "also",
+      "start": 153.806,
+      "end": 154.118
+    },
+    {
+      "word": "measure",
+      "start": 154.133,
+      "end": 154.474
+    },
+    {
+      "word": "how",
+      "start": 154.488,
+      "end": 154.672
+    },
+    {
+      "word": "quickly",
+      "start": 154.687,
+      "end": 155.127
+    },
+    {
+      "word": "a",
+      "start": 155.141,
+      "end": 155.198
+    },
+    {
+      "word": "reactant",
+      "start": 155.212,
+      "end": 155.88
+    },
+    {
+      "word": "is",
+      "start": 155.894,
+      "end": 156.036
+    },
+    {
+      "word": "used",
+      "start": 156.05,
+      "end": 156.377
+    },
+    {
+      "word": "up",
+      "start": 156.391,
+      "end": 156.718
+    },
+    {
+      "word": "In",
+      "start": 157.705,
+      "end": 157.904
+    },
+    {
+      "word": "a",
+      "start": 157.918,
+      "end": 157.975
+    },
+    {
+      "word": "separate",
+      "start": 157.989,
+      "end": 158.401
+    },
+    {
+      "word": "experiment",
+      "start": 158.415,
+      "end": 159.139
+    },
+    {
+      "word": "3",
+      "start": 159.338,
+      "end": 159.651
+    },
+    {
+      "word": "grams",
+      "start": 159.665,
+      "end": 160.105
+    },
+    {
+      "word": "of",
+      "start": 160.12,
+      "end": 160.219
+    },
+    {
+      "word": "magnesium",
+      "start": 160.233,
+      "end": 161.029
+    },
+    {
+      "word": "reacts",
+      "start": 161.043,
+      "end": 161.483
+    },
+    {
+      "word": "completely",
+      "start": 161.497,
+      "end": 162.094
+    },
+    {
+      "word": "in",
+      "start": 162.108,
+      "end": 162.264
+    },
+    {
+      "word": "4",
+      "start": 162.279,
+      "end": 162.563
+    },
+    {
+      "word": "minutes",
+      "start": 162.577,
+      "end": 163.131
+    },
+    {
+      "word": "Convert",
+      "start": 164.398,
+      "end": 165.094
+    },
+    {
+      "word": "4",
+      "start": 165.108,
+      "end": 165.25
+    },
+    {
+      "word": "minutes",
+      "start": 165.264,
+      "end": 165.676
+    },
+    {
+      "word": "to",
+      "start": 165.691,
+      "end": 165.804
+    },
+    {
+      "word": "seconds",
+      "start": 165.818,
+      "end": 166.6
+    },
+    {
+      "word": "4",
+      "start": 167.587,
+      "end": 167.814
+    },
+    {
+      "word": "times",
+      "start": 167.828,
+      "end": 168.24
+    },
+    {
+      "word": "60 equals 240",
+      "start": 168.254,
+      "end": 170.371
+    },
+    {
+      "word": "seconds",
+      "start": 170.385,
+      "end": 171.109
+    },
+    {
+      "word": "Then",
+      "start": 172.089,
+      "end": 172.331
+    },
+    {
+      "word": "divide",
+      "start": 172.345,
+      "end": 172.743
+    },
+    {
+      "word": "the",
+      "start": 172.757,
+      "end": 172.828
+    },
+    {
+      "word": "mass",
+      "start": 172.842,
+      "end": 173.183
+    },
+    {
+      "word": "used",
+      "start": 173.197,
+      "end": 173.524
+    },
+    {
+      "word": "up",
+      "start": 173.538,
+      "end": 173.695
+    },
+    {
+      "word": "by",
+      "start": 173.709,
+      "end": 173.851
+    },
+    {
+      "word": "the",
+      "start": 173.865,
+      "end": 173.979
+    },
+    {
+      "word": "time",
+      "start": 173.993,
+      "end": 174.547
+    },
+    {
+      "word": "3",
+      "start": 175.527,
+      "end": 175.91
+    },
+    {
+      "word": "divided",
+      "start": 175.925,
+      "end": 176.45
+    },
+    {
+      "word": "by",
+      "start": 176.464,
+      "end": 176.663
+    },
+    {
+      "word": "240 equals 0.0125",
+      "start": 176.678,
+      "end": 181.01
+    },
+    {
+      "word": "The",
+      "start": 181.99,
+      "end": 182.217
+    },
+    {
+      "word": "average",
+      "start": 182.232,
+      "end": 182.629
+    },
+    {
+      "word": "rate",
+      "start": 182.643,
+      "end": 182.928
+    },
+    {
+      "word": "is",
+      "start": 182.942,
+      "end": 183.112
+    },
+    {
+      "word": "0.0125",
+      "start": 183.126,
+      "end": 185.342
+    },
+    {
+      "word": "grams",
+      "start": 185.357,
+      "end": 185.768
+    },
+    {
+      "word": "per",
+      "start": 185.783,
+      "end": 185.967
+    },
+    {
+      "word": "second",
+      "start": 185.982,
+      "end": 186.592
+    },
+    {
+      "word": "Average",
+      "start": 187.858,
+      "end": 188.327
+    },
+    {
+      "word": "rate",
+      "start": 188.341,
+      "end": 188.625
+    },
+    {
+      "word": "hides",
+      "start": 188.639,
+      "end": 189.009
+    },
+    {
+      "word": "how",
+      "start": 189.023,
+      "end": 189.193
+    },
+    {
+      "word": "the",
+      "start": 189.207,
+      "end": 189.335
+    },
+    {
+      "word": "reaction",
+      "start": 189.349,
+      "end": 189.918
+    },
+    {
+      "word": "changes",
+      "start": 189.932,
+      "end": 190.628
+    },
+    {
+      "word": "Graphs",
+      "start": 191.615,
+      "end": 192.112
+    },
+    {
+      "word": "show",
+      "start": 192.126,
+      "end": 192.353
+    },
+    {
+      "word": "that",
+      "start": 192.368,
+      "end": 192.567
+    },
+    {
+      "word": "clearly",
+      "start": 192.581,
+      "end": 193.092
+    },
+    {
+      "word": "First",
+      "start": 194.374,
+      "end": 195.042
+    },
+    {
+      "word": "mass",
+      "start": 195.169,
+      "end": 195.496
+    },
+    {
+      "word": "of",
+      "start": 195.51,
+      "end": 195.61
+    },
+    {
+      "word": "magnesium",
+      "start": 195.624,
+      "end": 196.419
+    },
+    {
+      "word": "remaining",
+      "start": 196.434,
+      "end": 196.945
+    },
+    {
+      "word": "against",
+      "start": 196.959,
+      "end": 197.371
+    },
+    {
+      "word": "time",
+      "start": 197.385,
+      "end": 197.897
+    },
+    {
+      "word": "Time",
+      "start": 198.884,
+      "end": 199.196
+    },
+    {
+      "word": "goes",
+      "start": 199.21,
+      "end": 199.523
+    },
+    {
+      "word": "on",
+      "start": 199.537,
+      "end": 199.636
+    },
+    {
+      "word": "the",
+      "start": 199.651,
+      "end": 199.722
+    },
+    {
+      "word": "horizontal",
+      "start": 199.736,
+      "end": 200.446
+    },
+    {
+      "word": "axis",
+      "start": 200.46,
+      "end": 201.1
+    },
+    {
+      "word": "Mass",
+      "start": 202.08,
+      "end": 202.52
+    },
+    {
+      "word": "remaining",
+      "start": 202.534,
+      "end": 203.003
+    },
+    {
+      "word": "goes",
+      "start": 203.017,
+      "end": 203.33
+    },
+    {
+      "word": "on",
+      "start": 203.344,
+      "end": 203.443
+    },
+    {
+      "word": "the",
+      "start": 203.458,
+      "end": 203.529
+    },
+    {
+      "word": "vertical",
+      "start": 203.543,
+      "end": 204.083
+    },
+    {
+      "word": "axis",
+      "start": 204.097,
+      "end": 204.707
+    },
+    {
+      "word": "If",
+      "start": 205.978,
+      "end": 206.205
+    },
+    {
+      "word": "we",
+      "start": 206.219,
+      "end": 206.347
+    },
+    {
+      "word": "start",
+      "start": 206.362,
+      "end": 206.717
+    },
+    {
+      "word": "with",
+      "start": 206.731,
+      "end": 206.859
+    },
+    {
+      "word": "3",
+      "start": 206.873,
+      "end": 207.185
+    },
+    {
+      "word": "grams",
+      "start": 207.2,
+      "end": 207.754
+    },
+    {
+      "word": "the",
+      "start": 207.91,
+      "end": 208.009
+    },
+    {
+      "word": "line",
+      "start": 208.023,
+      "end": 208.35
+    },
+    {
+      "word": "begins",
+      "start": 208.364,
+      "end": 208.833
+    },
+    {
+      "word": "at",
+      "start": 208.847,
+      "end": 208.947
+    },
+    {
+      "word": "3",
+      "start": 208.961,
+      "end": 209.472
+    },
+    {
+      "word": "As",
+      "start": 210.459,
+      "end": 210.701
+    },
+    {
+      "word": "magnesium",
+      "start": 210.715,
+      "end": 211.482
+    },
+    {
+      "word": "is",
+      "start": 211.496,
+      "end": 211.652
+    },
+    {
+      "word": "used",
+      "start": 211.667,
+      "end": 211.951
+    },
+    {
+      "word": "up",
+      "start": 211.965,
+      "end": 212.221
+    },
+    {
+      "word": "the",
+      "start": 212.434,
+      "end": 212.547
+    },
+    {
+      "word": "line",
+      "start": 212.562,
+      "end": 212.917
+    },
+    {
+      "word": "slopes",
+      "start": 212.931,
+      "end": 213.385
+    },
+    {
+      "word": "downwards",
+      "start": 213.4,
+      "end": 214.195
+    },
+    {
+      "word": "It",
+      "start": 215.175,
+      "end": 215.388
+    },
+    {
+      "word": "is",
+      "start": 215.402,
+      "end": 215.516
+    },
+    {
+      "word": "steep",
+      "start": 215.53,
+      "end": 215.871
+    },
+    {
+      "word": "at",
+      "start": 215.885,
+      "end": 215.985
+    },
+    {
+      "word": "first",
+      "start": 215.999,
+      "end": 216.567
+    },
+    {
+      "word": "because",
+      "start": 216.752,
+      "end": 217.022
+    },
+    {
+      "word": "the",
+      "start": 217.036,
+      "end": 217.121
+    },
+    {
+      "word": "reaction",
+      "start": 217.135,
+      "end": 217.704
+    },
+    {
+      "word": "is",
+      "start": 217.718,
+      "end": 217.874
+    },
+    {
+      "word": "fast",
+      "start": 217.888,
+      "end": 218.527
+    },
+    {
+      "word": "Then",
+      "start": 219.508,
+      "end": 219.735
+    },
+    {
+      "word": "it",
+      "start": 219.749,
+      "end": 219.834
+    },
+    {
+      "word": "becomes",
+      "start": 219.848,
+      "end": 220.303
+    },
+    {
+      "word": "less",
+      "start": 220.317,
+      "end": 220.601
+    },
+    {
+      "word": "steep",
+      "start": 220.616,
+      "end": 221.113
+    },
+    {
+      "word": "If",
+      "start": 222.093,
+      "end": 222.334
+    },
+    {
+      "word": "all",
+      "start": 222.348,
+      "end": 222.519
+    },
+    {
+      "word": "the",
+      "start": 222.533,
+      "end": 222.633
+    },
+    {
+      "word": "magnesium",
+      "start": 222.647,
+      "end": 223.414
+    },
+    {
+      "word": "reacts",
+      "start": 223.428,
+      "end": 223.968
+    },
+    {
+      "word": "the",
+      "start": 224.209,
+      "end": 224.309
+    },
+    {
+      "word": "line",
+      "start": 224.323,
+      "end": 224.664
+    },
+    {
+      "word": "reaches",
+      "start": 224.678,
+      "end": 225.104
+    },
+    {
+      "word": "zero",
+      "start": 225.118,
+      "end": 225.615
+    },
+    {
+      "word": "and",
+      "start": 225.63,
+      "end": 225.772
+    },
+    {
+      "word": "becomes",
+      "start": 225.786,
+      "end": 226.269
+    },
+    {
+      "word": "horizontal",
+      "start": 226.283,
+      "end": 227.121
+    },
+    {
+      "word": "Now",
+      "start": 228.406,
+      "end": 228.747
+    },
+    {
+      "word": "look",
+      "start": 228.761,
+      "end": 228.988
+    },
+    {
+      "word": "at",
+      "start": 229.003,
+      "end": 229.116
+    },
+    {
+      "word": "volume",
+      "start": 229.13,
+      "end": 229.557
+    },
+    {
+      "word": "of",
+      "start": 229.571,
+      "end": 229.656
+    },
+    {
+      "word": "hydrogen",
+      "start": 229.67,
+      "end": 230.324
+    },
+    {
+      "word": "produced",
+      "start": 230.338,
+      "end": 230.821
+    },
+    {
+      "word": "against",
+      "start": 230.835,
+      "end": 231.218
+    },
+    {
+      "word": "time",
+      "start": 231.233,
+      "end": 231.744
+    },
+    {
+      "word": "The",
+      "start": 232.731,
+      "end": 232.901
+    },
+    {
+      "word": "line",
+      "start": 232.916,
+      "end": 233.257
+    },
+    {
+      "word": "starts",
+      "start": 233.271,
+      "end": 233.74
+    },
+    {
+      "word": "at",
+      "start": 233.754,
+      "end": 233.896
+    },
+    {
+      "word": "zero",
+      "start": 233.91,
+      "end": 234.393
+    },
+    {
+      "word": "because",
+      "start": 234.606,
+      "end": 234.876
+    },
+    {
+      "word": "no",
+      "start": 234.89,
+      "end": 235.132
+    },
+    {
+      "word": "gas",
+      "start": 235.146,
+      "end": 235.558
+    },
+    {
+      "word": "has",
+      "start": 235.572,
+      "end": 235.714
+    },
+    {
+      "word": "been",
+      "start": 235.728,
+      "end": 235.884
+    },
+    {
+      "word": "collected",
+      "start": 235.899,
+      "end": 236.424
+    },
+    {
+      "word": "yet",
+      "start": 236.438,
+      "end": 236.808
+    },
+    {
+      "word": "As",
+      "start": 237.788,
+      "end": 238.015
+    },
+    {
+      "word": "hydrogen",
+      "start": 238.029,
+      "end": 238.64
+    },
+    {
+      "word": "is",
+      "start": 238.654,
+      "end": 238.782
+    },
+    {
+      "word": "produced",
+      "start": 238.796,
+      "end": 239.436
+    },
+    {
+      "word": "the",
+      "start": 239.634,
+      "end": 239.748
+    },
+    {
+      "word": "line",
+      "start": 239.762,
+      "end": 240.132
+    },
+    {
+      "word": "rises",
+      "start": 240.146,
+      "end": 240.87
+    },
+    {
+      "word": "It",
+      "start": 241.85,
+      "end": 242.063
+    },
+    {
+      "word": "is",
+      "start": 242.078,
+      "end": 242.191
+    },
+    {
+      "word": "steep",
+      "start": 242.205,
+      "end": 242.561
+    },
+    {
+      "word": "at",
+      "start": 242.575,
+      "end": 242.646
+    },
+    {
+      "word": "the",
+      "start": 242.66,
+      "end": 242.745
+    },
+    {
+      "word": "beginning",
+      "start": 242.759,
+      "end": 243.228
+    },
+    {
+      "word": "then",
+      "start": 243.427,
+      "end": 243.555
+    },
+    {
+      "word": "less",
+      "start": 243.569,
+      "end": 243.839
+    },
+    {
+      "word": "steep",
+      "start": 243.853,
+      "end": 244.293
+    },
+    {
+      "word": "then",
+      "start": 244.549,
+      "end": 244.677
+    },
+    {
+      "word": "it",
+      "start": 244.691,
+      "end": 244.791
+    },
+    {
+      "word": "levels",
+      "start": 244.805,
+      "end": 245.231
+    },
+    {
+      "word": "off",
+      "start": 245.245,
+      "end": 245.515
+    },
+    {
+      "word": "when",
+      "start": 245.529,
+      "end": 245.714
+    },
+    {
+      "word": "the",
+      "start": 245.728,
+      "end": 245.813
+    },
+    {
+      "word": "reaction",
+      "start": 245.828,
+      "end": 246.367
+    },
+    {
+      "word": "has",
+      "start": 246.382,
+      "end": 246.538
+    },
+    {
+      "word": "finished",
+      "start": 246.552,
+      "end": 247.106
+    },
+    {
+      "word": "For",
+      "start": 248.386,
+      "end": 248.585
+    },
+    {
+      "word": "both",
+      "start": 248.599,
+      "end": 248.94
+    },
+    {
+      "word": "graphs",
+      "start": 248.954,
+      "end": 249.451
+    },
+    {
+      "word": "a",
+      "start": 249.65,
+      "end": 249.693
+    },
+    {
+      "word": "steeper",
+      "start": 249.707,
+      "end": 250.147
+    },
+    {
+      "word": "line",
+      "start": 250.162,
+      "end": 250.502
+    },
+    {
+      "word": "means",
+      "start": 250.517,
+      "end": 250.843
+    },
+    {
+      "word": "a",
+      "start": 250.858,
+      "end": 250.914
+    },
+    {
+      "word": "faster",
+      "start": 250.929,
+      "end": 251.426
+    },
+    {
+      "word": "reaction",
+      "start": 251.44,
+      "end": 252.179
+    },
+    {
+      "word": "A",
+      "start": 253.166,
+      "end": 253.293
+    },
+    {
+      "word": "horizontal",
+      "start": 253.308,
+      "end": 253.989
+    },
+    {
+      "word": "line",
+      "start": 254.004,
+      "end": 254.316
+    },
+    {
+      "word": "means",
+      "start": 254.33,
+      "end": 254.643
+    },
+    {
+      "word": "the",
+      "start": 254.657,
+      "end": 254.742
+    },
+    {
+      "word": "measured",
+      "start": 254.756,
+      "end": 255.097
+    },
+    {
+      "word": "quantity",
+      "start": 255.112,
+      "end": 255.637
+    },
+    {
+      "word": "is",
+      "start": 255.651,
+      "end": 255.879
+    },
+    {
+      "word": "no",
+      "start": 255.893,
+      "end": 256.148
+    },
+    {
+      "word": "longer",
+      "start": 256.163,
+      "end": 256.575
+    },
+    {
+      "word": "changing",
+      "start": 256.589,
+      "end": 257.256
+    },
+    {
+      "word": "A",
+      "start": 258.526,
+      "end": 258.668
+    },
+    {
+      "word": "question",
+      "start": 258.682,
+      "end": 259.137
+    },
+    {
+      "word": "might",
+      "start": 259.151,
+      "end": 259.407
+    },
+    {
+      "word": "ask",
+      "start": 259.421,
+      "end": 259.691
+    },
+    {
+      "word": "for",
+      "start": 259.705,
+      "end": 259.804
+    },
+    {
+      "word": "moles",
+      "start": 259.819,
+      "end": 260.174
+    },
+    {
+      "word": "per",
+      "start": 260.188,
+      "end": 260.316
+    },
+    {
+      "word": "minute",
+      "start": 260.33,
+      "end": 260.642
+    },
+    {
+      "word": "instead",
+      "start": 260.657,
+      "end": 261.04
+    },
+    {
+      "word": "of",
+      "start": 261.054,
+      "end": 261.154
+    },
+    {
+      "word": "grams",
+      "start": 261.168,
+      "end": 261.594
+    },
+    {
+      "word": "per",
+      "start": 261.608,
+      "end": 261.765
+    },
+    {
+      "word": "second",
+      "start": 261.779,
+      "end": 262.404
+    },
+    {
+      "word": "Always",
+      "start": 263.391,
+      "end": 263.945
+    },
+    {
+      "word": "check",
+      "start": 263.959,
+      "end": 264.257
+    },
+    {
+      "word": "the",
+      "start": 264.271,
+      "end": 264.357
+    },
+    {
+      "word": "units",
+      "start": 264.371,
+      "end": 265.053
+    },
+    {
+      "word": "If",
+      "start": 266.033,
+      "end": 266.246
+    },
+    {
+      "word": "it",
+      "start": 266.26,
+      "end": 266.388
+    },
+    {
+      "word": "asks",
+      "start": 266.402,
+      "end": 266.786
+    },
+    {
+      "word": "for",
+      "start": 266.8,
+      "end": 266.928
+    },
+    {
+      "word": "a",
+      "start": 266.942,
+      "end": 267.013
+    },
+    {
+      "word": "rate",
+      "start": 267.027,
+      "end": 267.325
+    },
+    {
+      "word": "per",
+      "start": 267.34,
+      "end": 267.467
+    },
+    {
+      "word": "second",
+      "start": 267.482,
+      "end": 268.007
+    },
+    {
+      "word": "convert",
+      "start": 268.206,
+      "end": 268.717
+    },
+    {
+      "word": "the",
+      "start": 268.732,
+      "end": 268.817
+    },
+    {
+      "word": "time",
+      "start": 268.831,
+      "end": 269.158
+    },
+    {
+      "word": "into",
+      "start": 269.172,
+      "end": 269.442
+    },
+    {
+      "word": "seconds",
+      "start": 269.456,
+      "end": 269.996
+    },
+    {
+      "word": "before",
+      "start": 270.01,
+      "end": 270.351
+    },
+    {
+      "word": "you",
+      "start": 270.365,
+      "end": 270.55
+    },
+    {
+      "word": "divide",
+      "start": 270.564,
+      "end": 271.203
+    },
+    {
+      "word": "Remember",
+      "start": 272.482,
+      "end": 273.036
+    },
+    {
+      "word": "this",
+      "start": 273.05,
+      "end": 273.547
+    },
+    {
+      "word": "Average",
+      "start": 274.534,
+      "end": 275.003
+    },
+    {
+      "word": "rate",
+      "start": 275.017,
+      "end": 275.33
+    },
+    {
+      "word": "is",
+      "start": 275.344,
+      "end": 275.458
+    },
+    {
+      "word": "the",
+      "start": 275.472,
+      "end": 275.557
+    },
+    {
+      "word": "quantity",
+      "start": 275.571,
+      "end": 276.083
+    },
+    {
+      "word": "of",
+      "start": 276.097,
+      "end": 276.21
+    },
+    {
+      "word": "reactant",
+      "start": 276.225,
+      "end": 276.807
+    },
+    {
+      "word": "used",
+      "start": 276.821,
+      "end": 277.162
+    },
+    {
+      "word": "up",
+      "start": 277.176,
+      "end": 277.432
+    },
+    {
+      "word": "or",
+      "start": 277.631,
+      "end": 277.759
+    },
+    {
+      "word": "product",
+      "start": 277.773,
+      "end": 278.227
+    },
+    {
+      "word": "formed",
+      "start": 278.242,
+      "end": 278.654
+    },
+    {
+      "word": "divided",
+      "start": 278.881,
+      "end": 279.406
+    },
+    {
+      "word": "by",
+      "start": 279.421,
+      "end": 279.577
+    },
+    {
+      "word": "the",
+      "start": 279.591,
+      "end": 279.705
+    },
+    {
+      "word": "time",
+      "start": 279.719,
+      "end": 280.088
+    },
+    {
+      "word": "taken",
+      "start": 280.102,
+      "end": 280.671
+    },
+    {
+      "word": "On",
+      "start": 281.651,
+      "end": 281.864
+    },
+    {
+      "word": "a",
+      "start": 281.878,
+      "end": 281.935
+    },
+    {
+      "word": "graph",
+      "start": 281.949,
+      "end": 282.546
+    },
+    {
+      "word": "greater",
+      "start": 282.773,
+      "end": 283.199
+    },
+    {
+      "word": "steepness",
+      "start": 283.213,
+      "end": 283.71
+    },
+    {
+      "word": "means",
+      "start": 283.725,
+      "end": 284.08
+    },
+    {
+      "word": "a",
+      "start": 284.094,
+      "end": 284.165
+    },
+    {
+      "word": "faster",
+      "start": 284.179,
+      "end": 284.705
+    },
+    {
+      "word": "reaction",
+      "start": 284.719,
+      "end": 285.458
+    },
+    {
+      "word": "If",
+      "start": 286.726,
+      "end": 286.939
+    },
+    {
+      "word": "this",
+      "start": 286.953,
+      "end": 287.152
+    },
+    {
+      "word": "explanation",
+      "start": 287.166,
+      "end": 287.848
+    },
+    {
+      "word": "has",
+      "start": 287.862,
+      "end": 288.033
+    },
+    {
+      "word": "helped",
+      "start": 288.047,
+      "end": 288.502
+    },
+    {
+      "word": "please",
+      "start": 288.686,
+      "end": 288.956
+    },
+    {
+      "word": "subscribe",
+      "start": 288.97,
+      "end": 289.567
+    },
+    {
+      "word": "to",
+      "start": 289.581,
+      "end": 289.695
+    },
+    {
+      "word": "JD",
+      "start": 289.709,
+      "end": 290.178
+    },
+    {
+      "word": "Science",
+      "start": 290.192,
+      "end": 290.646
+    },
+    {
+      "word": "for",
+      "start": 290.661,
+      "end": 290.774
+    },
+    {
+      "word": "more",
+      "start": 290.788,
+      "end": 291.016
+    },
+    {
+      "word": "lessons",
+      "start": 291.03,
+      "end": 291.783
+    },
+    {
+      "word": "You",
+      "start": 292.77,
+      "end": 292.954
+    },
+    {
+      "word": "can",
+      "start": 292.969,
+      "end": 293.168
+    },
+    {
+      "word": "find",
+      "start": 293.182,
+      "end": 293.565
+    },
+    {
+      "word": "further",
+      "start": 293.579,
+      "end": 293.906
+    },
+    {
+      "word": "learning",
+      "start": 293.92,
+      "end": 294.304
+    },
+    {
+      "word": "resources",
+      "start": 294.318,
+      "end": 294.915
+    },
+    {
+      "word": "at",
+      "start": 294.929,
+      "end": 295.042
+    },
+    {
+      "word": "jdscience.co.uk",
+      "start": 295.057,
+      "end": 297.869
+    },
+    {
+      "word": "Thank",
+      "start": 298.849,
+      "end": 299.19
+    },
+    {
+      "word": "you",
+      "start": 299.204,
+      "end": 299.29
+    },
+    {
+      "word": "for",
+      "start": 299.304,
+      "end": 299.432
+    },
+    {
+      "word": "watching",
+      "start": 299.446,
+      "end": 300.085
+    }
+  ],
+  "chunks": 24,
+  "model": "edge-tts",
+  "voice": "en-GB-RyanNeural",
+  "rate": "-12%",
+  "temporary_voice": true,
+  "notes": "Slower British English so the intro and units are clear. Replace with the JD Science clone when ElevenLabs quota returns."
+}

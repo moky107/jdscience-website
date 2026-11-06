@@ -37,7 +37,9 @@ content/videos/studio/out/
 
 # Foundations working audio chunks
 content/videos/*/source/chunk_*.mp3
+content/videos/*/source/gap_*.mp3
 content/videos/*/source/narration_master_parts/
+content/videos/*/source/*_loudnorm.m4a
 content/videos/*/source/narration_master.m4a
 content/videos/*/source/narration_master.mp3
 content/videos/*/source/_before.wav
@@ -78,3 +80,4 @@ public/resources/gcse/chemistry/videos/electrolysis-molten-ionic/*.mp4
 public/resources/gcse/chemistry/videos/electrolysis-aqueous-solutions/*.mp4
 public/resources/gcse/chemistry/videos/copper-purification/*.mp4
 public/resources/gcse/chemistry/videos/chemical-changes-exam-practice/*.mp4
+public/resources/gcse/chemistry/videos/rates-of-reaction/*.mp4
