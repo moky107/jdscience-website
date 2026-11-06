@@ -1,0 +1,7 @@
+{
+  "engine": "edge-tts",
+  "voice": "en-GB-RyanNeural",
+  "rate": "-12%",
+  "temporary": true,
+  "notes": "Clearer, slower narration. Opening is a separate sentence: Hello and welcome back to JD Science."
+}
