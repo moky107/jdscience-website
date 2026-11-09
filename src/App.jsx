@@ -892,22 +892,22 @@ function Hero({ onScroll, onBrowse, onShop }) {
                 objectPosition: heroObjectPosition(slide, { isMobile, isTablet }),
                 opacity: isActive ? 1 : 0,
                 transition: prefersReducedMotion ? "none" : "opacity .7s ease",
-                filter: "brightness(1.06) contrast(1.03) saturate(1.04)",
+                filter: "brightness(1.10) contrast(1.01) saturate(1.04)",
                 pointerEvents: "none",
               }}
             />
           );
         })}
       </div>
-      {/* Stronger left wash so headline stays readable on green; right stays open for people. */}
+      {/* Keep the wash behind the headline and fade it out across the photo. */}
       <div
         className="hero-banner-overlay"
         style={{
           position: "absolute",
           inset: 0,
           background: isMobile
-            ? "linear-gradient(180deg, rgba(6, 55, 48, .55) 0%, rgba(6, 55, 48, .42) 42%, rgba(15, 23, 42, .55) 100%)"
-            : "linear-gradient(90deg, rgba(6, 55, 48, .82) 0%, rgba(6, 55, 48, .62) 34%, rgba(6, 55, 48, .28) 58%, rgba(15, 23, 42, .12) 100%)",
+            ? "linear-gradient(180deg, rgba(6, 55, 48, .55) 0%, rgba(6, 55, 48, .38) 42%, rgba(15, 23, 42, .48) 100%)"
+            : "linear-gradient(90deg, rgba(6, 55, 48, .80) 0%, rgba(6, 55, 48, .56) 34%, rgba(6, 55, 48, .14) 58%, rgba(15, 23, 42, 0) 100%)",
           pointerEvents: "none",
         }}
       />
