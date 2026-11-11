@@ -1,0 +1,7 @@
+{
+  "engine": "xtts_v2",
+  "speaker": "uploaded joes_voice teaching sample",
+  "language": "en",
+  "temporary": false,
+  "notes": "Zero-shot clone of the uploaded JD Science sample. Accent comes from that recording, not from a British stock voice."
+}

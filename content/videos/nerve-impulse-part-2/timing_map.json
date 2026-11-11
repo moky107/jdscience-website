@@ -1,0 +1,106 @@
+{
+  "slug": "nerve-impulse-part-2",
+  "duration": 400.882,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "stimulus",
+      "t": 27.26,
+      "aligned": true,
+      "cue": "A stimulus is any change that can affect"
+    },
+    {
+      "id": "allornone",
+      "t": 77.21,
+      "aligned": true,
+      "cue": "If threshold is reached, the response is all-or-nothing"
+    },
+    {
+      "id": "axes",
+      "t": 98.78,
+      "aligned": true,
+      "cue": "Look at the graph"
+    },
+    {
+      "id": "depol",
+      "t": 131.92,
+      "aligned": true,
+      "cue": "Depolarisation is the rising phase"
+    },
+    {
+      "id": "peak",
+      "t": 157.44,
+      "aligned": true,
+      "cue": "At the peak, two things change"
+    },
+    {
+      "id": "repol",
+      "t": 189.56,
+      "aligned": true,
+      "cue": "Repolarisation is the falling phase"
+    },
+    {
+      "id": "hyper",
+      "t": 231.06,
+      "aligned": true,
+      "cue": "The membrane often goes a little more negative"
+    },
+    {
+      "id": "replay",
+      "t": 258.38,
+      "aligned": true,
+      "cue": "Follow the graph once more"
+    },
+    {
+      "id": "worked",
+      "t": 294.0,
+      "aligned": true,
+      "cue": "worked examination style example"
+    },
+    {
+      "id": "worked_ans",
+      "t": 309.7,
+      "aligned": true,
+      "cue": "At the peak, voltage-gated sodium channels are inactivated"
+    },
+    {
+      "id": "your_turn",
+      "t": 329.7,
+      "aligned": true,
+      "cue": "Now pause the video and try this"
+    },
+    {
+      "id": "model",
+      "t": 347.72,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 373.26,
+      "aligned": true,
+      "cue": "In part three we will see how this local reversal"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "your_turn",
+      "item": "pause",
+      "t": 329.82,
+      "aligned": true,
+      "cue": "Now pause the video"
+    },
+    {
+      "slide": "model",
+      "item": "model",
+      "t": 347.84,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

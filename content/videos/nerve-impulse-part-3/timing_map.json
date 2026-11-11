@@ -1,0 +1,115 @@
+{
+  "slug": "nerve-impulse-part-3",
+  "duration": 326.612,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "local",
+      "t": 25.36,
+      "aligned": true,
+      "cue": "When sodium ions enter during depolarisation"
+    },
+    {
+      "id": "absref",
+      "t": 62.46,
+      "aligned": true,
+      "cue": "Why does the impulse not also travel backwards"
+    },
+    {
+      "id": "jobs",
+      "t": 107.3,
+      "aligned": true,
+      "cue": "Together, these refractory stages do two important jobs"
+    },
+    {
+      "id": "unmyel",
+      "t": 130.96,
+      "aligned": true,
+      "cue": "every neighboring patch"
+    },
+    {
+      "id": "salt",
+      "t": 139.18,
+      "aligned": true,
+      "cue": "the picture changes"
+    },
+    {
+      "id": "whyfast",
+      "t": 167.48,
+      "aligned": true,
+      "cue": "faster and more energy"
+    },
+    {
+      "id": "worked",
+      "t": 195.42,
+      "aligned": true,
+      "cue": "worked examination style example"
+    },
+    {
+      "id": "worked_ans",
+      "t": 209.12,
+      "aligned": true,
+      "cue": "Behind the active region, sodium channels are inactivated"
+    },
+    {
+      "id": "your_turn",
+      "t": 229.98,
+      "aligned": true,
+      "cue": "Now pause the video and try this matching activity"
+    },
+    {
+      "id": "model",
+      "t": 265.16,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 292.04,
+      "aligned": true,
+      "cue": "That completes transmission of a nerve impulse"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "jobs",
+      "item": "b1",
+      "t": 112.46,
+      "aligned": true,
+      "cue": "They force one-way propagation"
+    },
+    {
+      "slide": "jobs",
+      "item": "b2",
+      "t": 121.96,
+      "aligned": true,
+      "cue": "maximum firing frequency"
+    },
+    {
+      "slide": "jobs",
+      "item": "b3",
+      "t": 114.36,
+      "aligned": true,
+      "cue": "towards resting membrane ahead"
+    },
+    {
+      "slide": "your_turn",
+      "item": "pause",
+      "t": 230.1,
+      "aligned": true,
+      "cue": "Now pause the video"
+    },
+    {
+      "slide": "model",
+      "item": "model",
+      "t": 265.28,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

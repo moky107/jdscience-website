@@ -1,0 +1,25 @@
+# Transmission of a Nerve Impulse — Part 3  ·  Propagation and saltatory conduction
+
+Hello and welcome back to JD Science.
+
+This is part three of our Level 3 lesson on the transmission of a nerve impulse. We now have a full action potential in one patch of membrane. The remaining question is how that event travels, and why it does not bounce backwards.
+
+When sodium ions enter during depolarisation, the inside of that region becomes positive. Those positive charges spread sideways as local currents. Just ahead of the active region, the local current depolarises the neighbouring membrane towards threshold. Voltage-gated sodium channels there open, and a new action potential is born. The impulse is not a single particle racing down the axon. It is a chain of action potentials, each triggering the next.
+
+Why does the impulse not also travel backwards into membrane that has just fired? The answer is the refractory period. Immediately after an action potential, voltage-gated sodium channels are inactivated. For a short time, no new action potential can start in that patch, however strong the stimulus. That is the absolute refractory period.
+
+As the sodium channels recover from inactivation, a stronger-than-normal stimulus can start another action potential. That interval is the relative refractory period, and it overlaps with hyperpolarisation, when the membrane is even further from threshold. Together, these refractory stages do two important jobs. They force one-way propagation, towards resting membrane ahead and away from inactivated membrane behind. They also set a maximum firing frequency, because a second spike cannot start until the sodium channels have recovered.
+
+In an unmyelinated axon, every neighbouring patch must depolarise in turn. The impulse creeps along the membrane. In a myelinated axon the picture changes. Myelin is an insulator. Ion flow across the membrane is largely restricted to the nodes of Ranvier, where voltage-gated channels are concentrated. Local currents travel quickly under the myelin to the next node. The action potential appears to jump from node to node. That is saltatory conduction, from the Latin for leaping.
+
+Saltatory conduction is faster and more energy-efficient. Fewer ions need to be pumped back, because fewer stretches of membrane exchange ions. Increasing axon diameter also speeds conduction, because local currents travel more easily inside a wider axon. Those two adaptations, myelin and diameter, explain why some fibres carry urgent signals so quickly.
+
+Here is a worked examination-style example. Explain how the refractory period produces one-way transmission along an axon, and how it limits the number of impulses that can be sent each second.
+
+Behind the active region, sodium channels are inactivated, so local currents cannot restart an action potential there. Ahead, the membrane is still at rest, so it can reach threshold. Because each patch must recover before it can fire again, there is a minimum time between spikes, and that limits firing frequency.
+
+Now pause the video and try this matching activity. Match each structure or event to its function. One: myelin sheath. Two: node of Ranvier. Three: local currents. Four: absolute refractory period. Choose from: prevents immediate re-firing; jumps the impulse to the next exposed membrane; insulates the axon; depolarises the neighbouring region to threshold.
+
+Here is a model answer. The myelin sheath insulates the axon. The node of Ranvier is where the impulse is regenerated, so the signal jumps from node to node. Local currents depolarise the neighbouring region to threshold. The absolute refractory period prevents immediate re-firing and so keeps propagation one-way.
+
+That completes transmission of a nerve impulse. The electrical signal has travelled along the axon. In the next topic we will see what happens when it reaches a chemical synapse, where the message must cross a gap using a neurotransmitter. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.

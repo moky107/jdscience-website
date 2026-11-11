@@ -1,0 +1,31 @@
+Hello and welcome back to JD Science.
+
+This is part one of our Level 3 lesson on the transmission of a nerve impulse. A nerve impulse is a brief electrical signal that travels along a neurone. A neurone is a specialised nerve cell that carries information from one place in the body to another.
+
+Look first at a real stained motor neurone from the spinal cord. The large purple cell bodies and the surrounding fibres are genuine tissue. A light micrograph can show the cell body and processes, but it cannot show the ions that create the impulse, so we now switch to a labelled scientific diagram.
+
+The cell body contains the nucleus and most of the cytoplasm. Short, branched dendrites receive incoming signals and pass them towards the cell body. The axon is a long process that carries the impulse away from the cell body towards another cell.
+
+The axon is bounded by a plasma membrane, which is a phospholipid bilayer with proteins in it. In many neurones, a myelin sheath wraps around the axon. Myelin is made by Schwann cells in the peripheral nervous system and acts as an electrical insulator. The gaps between adjacent Schwann cells are the nodes of Ranvier. At each node the membrane is exposed to the extracellular fluid. Those nodes will matter when we look at how the impulse travels quickly.
+
+A nerve impulse is an action potential travelling along the axon. An action potential is a rapid, temporary reversal of the electrical charge across the membrane. Before that reversal can happen, we must understand the resting state.
+
+At rest, the inside of the axon is negative compared with the outside. That potential difference is the resting potential, about minus seventy millivolts. The unit is the millivolt, one thousandth of a volt. Because opposite charges are separated across the membrane, we say the membrane is polarised.
+
+The ions are not evenly shared. Sodium ions, shown in amber, are far more concentrated outside the axon. Potassium ions, shown in teal, are far more concentrated inside. Large negative organic ions, such as proteins, remain inside because they cannot cross the membrane.
+
+The sodium–potassium pump maintains those concentration gradients. It is a membrane protein that uses ATP, the cell's energy currency. For each cycle, three sodium ions are moved out and two potassium ions are moved in. That is active transport, against their concentration gradients. Because three positive ions leave for every two that enter, the pump also makes the inside a little more negative.
+
+The membrane is selectively permeable, which means it does not treat every ion the same way. At rest it is much more permeable to potassium than to sodium. Potassium leak channels stay open, so some potassium ions diffuse out down their concentration gradient. As those positive ions leave, the inside becomes more negative. Sodium channels are mostly closed at rest, so sodium cannot easily flood back in.
+
+Put those ideas together. The pump keeps sodium high outside and potassium high inside. Potassium leak channels let some potassium leave. Impermeant negative ions stay inside. The result is a polarised membrane at about minus seventy millivolts. That is the resting potential. The pump does not fire the impulse. It quietly maintains the gradients that make an impulse possible.
+
+Here is a worked examination-style example. A student writes, the sodium–potassium pump creates the resting potential by pumping sodium in and potassium out. Identify two scientific errors and correct them.
+
+The first error is the direction. The pump moves three sodium ions out, not in, and two potassium ions in, not out. The second error is the claim that the pump alone creates the resting potential. The pump maintains the gradients. Potassium leak channels and the trapped negative ions are also essential.
+
+Now pause the video and try this sequencing question. Place these four statements in the order that establishes a resting potential. A: the sodium–potassium pump uses ATP. B: sodium stays high outside and potassium stays high inside. C: potassium leaks out through open leak channels. D: the membrane is polarised at about minus seventy millivolts.
+
+Here is a model answer. First A, the pump uses ATP. That produces B, the unequal ion distribution. Then C, potassium leaks out. That produces D, a polarised membrane at about minus seventy millivolts.
+
+In part two we will see how a stimulus changes this polarised membrane into an action potential, and we will build the graph as each phase happens. If this explanation has helped, please subscribe to JD Science for more lessons. You can find further learning resources and practice questions at jdscience.co.uk. Thank you for watching.
