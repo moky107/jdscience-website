@@ -1,0 +1,115 @@
+{
+  "slug": "3-2-monoclonal-antibodies",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 129.629,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 10.605,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "hyb",
+      "t": 10.605,
+      "t_end": 27.959,
+      "cue": "A mouse is injected with an antigen",
+      "animate": true
+    },
+    {
+      "id": "uses",
+      "t": 27.959,
+      "t_end": 74.499,
+      "cue": "They can be used to locate molecules",
+      "animate": false
+    },
+    {
+      "id": "side",
+      "t": 74.499,
+      "t_end": 82.65,
+      "cue": "They are not automatically free from side effects",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 82.65,
+      "t_end": 94.395,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 94.395,
+      "t_end": 101.757,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 101.757,
+      "t_end": 118.41,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 118.41,
+      "t_end": 129.629,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 84.842,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 89.399,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 90.714,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 94.658,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 101.877,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "uses",
+      "item": "b1",
+      "t": 31.465,
+      "cue": "pregnancy tests"
+    },
+    {
+      "slide": "uses",
+      "item": "b2",
+      "t": 29.274,
+      "cue": "locate molecules in cells"
+    },
+    {
+      "slide": "uses",
+      "item": "b3",
+      "t": 36.811,
+      "cue": "bind to cancer cells"
+    }
+  ]
+}

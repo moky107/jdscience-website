@@ -1,0 +1,111 @@
+{
+  "slug": "4-2-respiration",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 129.629,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.255,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "aero",
+      "t": 5.255,
+      "t_end": 15.941,
+      "cue": "Respiration releases energy from glucose",
+      "animate": false
+    },
+    {
+      "id": "anaer",
+      "t": 15.941,
+      "t_end": 35.648,
+      "cue": "When oxygen is in short supply",
+      "animate": false
+    },
+    {
+      "id": "ferm",
+      "t": 35.648,
+      "t_end": 51.238,
+      "cue": "In yeast and plants, anaerobic respiration produces ethanol",
+      "animate": false
+    },
+    {
+      "id": "breathe",
+      "t": 51.238,
+      "t_end": 70.508,
+      "cue": "Respiration is a chemical process in cells",
+      "animate": false
+    },
+    {
+      "id": "lactate",
+      "t": 70.508,
+      "t_end": 85.835,
+      "cue": "anaerobic respiration in muscle cells produces lactate",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 85.835,
+      "t_end": 97.572,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 97.572,
+      "t_end": 106.769,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 106.769,
+      "t_end": 118.418,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 118.418,
+      "t_end": 129.629,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 88.025,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 92.58,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 93.893,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 97.835,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 106.889,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

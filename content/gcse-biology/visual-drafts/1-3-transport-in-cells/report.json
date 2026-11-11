@@ -1,0 +1,106 @@
+{
+  "slug": "1-3-transport-in-cells",
+  "spec": "1.3",
+  "title": "Transport in Cells",
+  "filename": "jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 133.473,
+  "bytes": 1752348,
+  "md5": "6f0de8d1a8a0a173735a7770ec6cb664",
+  "local_path": "content/gcse-biology/visual-drafts/1-3-transport-in-cells/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/1-3-transport-in-cells/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 133.472993,
+      "size": 1752348,
+      "nb_frames": 4004
+    },
+    "luma": {
+      "start": 41.6,
+      "early": 44.6,
+      "mid": 45.8,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "133.473s vs 133.473s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "4004 vs 4004"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.6"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=44.6"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=45.8"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/1-3-transport-in-cells.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

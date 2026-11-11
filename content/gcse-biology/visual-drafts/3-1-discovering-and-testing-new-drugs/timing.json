@@ -1,0 +1,122 @@
+{
+  "slug": "3-1-discovering-and-testing-new-drugs",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 122.866,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.792,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "discover",
+      "t": 6.792,
+      "t_end": 21.962,
+      "cue": "Penicillin was discovered by Alexander Fleming",
+      "animate": false
+    },
+    {
+      "id": "pipeline",
+      "t": 21.962,
+      "t_end": 33.958,
+      "cue": "New drugs go through preclinical testing",
+      "animate": false
+    },
+    {
+      "id": "blind",
+      "t": 33.958,
+      "t_end": 65.976,
+      "cue": "In a single-blind trial",
+      "animate": false
+    },
+    {
+      "id": "ethics",
+      "t": 65.976,
+      "t_end": 75.942,
+      "cue": "Not every trial uses a placebo",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 75.942,
+      "t_end": 87.762,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 87.762,
+      "t_end": 97.376,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 97.376,
+      "t_end": 111.576,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 111.576,
+      "t_end": 122.866,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 78.148,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 82.734,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 84.057,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 88.026,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 97.496,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "discover",
+      "item": "b1",
+      "t": 6.912,
+      "cue": "Penicillin was discovered"
+    },
+    {
+      "slide": "discover",
+      "item": "b2",
+      "t": 17.376,
+      "cue": "Digitalis comes from foxgloves"
+    },
+    {
+      "slide": "discover",
+      "item": "b3",
+      "t": 20.022,
+      "cue": "aspirin comes from willow"
+    }
+  ]
+}

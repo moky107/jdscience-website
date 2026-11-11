@@ -1,0 +1,106 @@
+{
+  "slug": "5-3-hormonal-coordination",
+  "spec": "5.3",
+  "title": "Hormonal Coordination in Humans",
+  "filename": "jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 136.463,
+  "bytes": 1811940,
+  "md5": "4ef0b9113de67a87a9e114af3118c30e",
+  "local_path": "content/gcse-biology/visual-drafts/5-3-hormonal-coordination/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-3-hormonal-coordination/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 136.466667,
+      "size": 1811940,
+      "nb_frames": 4094
+    },
+    "luma": {
+      "start": 41.9,
+      "early": 45.3,
+      "mid": 45.1,
+      "late": 39.6
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "136.467s vs 136.463s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "4094 vs 4094"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=41.9"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=45.3"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=45.1"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.6"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/5-3-hormonal-coordination.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

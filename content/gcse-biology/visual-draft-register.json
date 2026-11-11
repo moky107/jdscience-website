@@ -1,0 +1,2440 @@
+[
+  {
+    "slug": "1-3-transport-in-cells",
+    "spec": "1.3",
+    "title": "Transport in Cells",
+    "filename": "jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 133.473,
+    "bytes": 1752348,
+    "md5": "6f0de8d1a8a0a173735a7770ec6cb664",
+    "local_path": "content/gcse-biology/visual-drafts/1-3-transport-in-cells/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/1-3-transport-in-cells/jdscience-1-3-transport-in-cells-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 133.472993,
+        "size": 1752348,
+        "nb_frames": 4004
+      },
+      "luma": {
+        "start": 41.6,
+        "early": 44.6,
+        "mid": 45.8,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "133.473s vs 133.473s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4004 vs 4004"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.6"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=44.6"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.8"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/1-3-transport-in-cells.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "2-1-principles-of-organisation",
+    "spec": "2.1",
+    "title": "Principles of Organisation",
+    "filename": "jdscience-2-1-principles-of-organisation-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 97.239,
+    "bytes": 1296596,
+    "md5": "fcda3c419b9a4718f1d9b6cda641d119",
+    "local_path": "content/gcse-biology/visual-drafts/2-1-principles-of-organisation/jdscience-2-1-principles-of-organisation-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-2-1-principles-of-organisation-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/2-1-principles-of-organisation/jdscience-2-1-principles-of-organisation-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 97.239002,
+        "size": 1296596,
+        "nb_frames": 2917
+      },
+      "luma": {
+        "start": 46.5,
+        "early": 57.8,
+        "mid": 45.9,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "97.239s vs 97.239s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "2917 vs 2917"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=46.5"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=57.8"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.9"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/2-1-principles-of-organisation.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "2-2-animal-tissues-organs-systems",
+    "spec": "2.2",
+    "title": "Animal Tissues, Organs and Organ Systems",
+    "filename": "jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 135.11,
+    "bytes": 1883688,
+    "md5": "77317c7be1caf69805e70448fdec21d6",
+    "local_path": "content/gcse-biology/visual-drafts/2-2-animal-tissues-organs-systems/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/2-2-animal-tissues-organs-systems/jdscience-2-2-animal-tissues-organs-systems-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 135.11,
+        "size": 1883688,
+        "nb_frames": 4053
+      },
+      "luma": {
+        "start": 41.3,
+        "early": 41.3,
+        "mid": 43.1,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "135.110s vs 135.110s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4053 vs 4053"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.3"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=41.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=43.1"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/2-2-animal-tissues-organs-systems.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "2-3-plant-tissues-organs-systems",
+    "spec": "2.3",
+    "title": "Plant Tissues, Organs and Systems",
+    "filename": "jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 117.67,
+    "bytes": 1552792,
+    "md5": "6579a9309c14ce8dc8b5b6c360a5de8f",
+    "local_path": "content/gcse-biology/visual-drafts/2-3-plant-tissues-organs-systems/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/2-3-plant-tissues-organs-systems/jdscience-2-3-plant-tissues-organs-systems-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 117.67,
+        "size": 1552792,
+        "nb_frames": 3530
+      },
+      "luma": {
+        "start": 42.8,
+        "early": 47.3,
+        "mid": 45.2,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "117.670s vs 117.670s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3530 vs 3530"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.8"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=47.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.2"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/2-3-plant-tissues-organs-systems.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "3-1-communicable-diseases",
+    "spec": "3.1",
+    "title": "Communicable Diseases",
+    "filename": "jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 133.259,
+    "bytes": 1763572,
+    "md5": "98341b493cde15ceb1d0568449fff84e",
+    "local_path": "content/gcse-biology/visual-drafts/3-1-communicable-diseases/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-1-communicable-diseases/jdscience-3-1-communicable-diseases-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 133.266667,
+        "size": 1763572,
+        "nb_frames": 3998
+      },
+      "luma": {
+        "start": 42.2,
+        "early": 45.5,
+        "mid": 45.7,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "133.267s vs 133.259s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3998 vs 3998"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.2"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.5"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.7"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/3-1-communicable-diseases.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "3-1-discovering-and-testing-new-drugs",
+    "spec": "3.1",
+    "title": "Discovering and Testing New Drugs",
+    "filename": "jdscience-3-1-discovering-and-testing-new-drugs-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 122.866,
+    "bytes": 1532747,
+    "md5": "61792e467abeedc261ad6485e8037901",
+    "local_path": "content/gcse-biology/visual-drafts/3-1-discovering-and-testing-new-drugs/jdscience-3-1-discovering-and-testing-new-drugs-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-3-1-discovering-and-testing-new-drugs-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-1-discovering-and-testing-new-drugs/jdscience-3-1-discovering-and-testing-new-drugs-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 122.866667,
+        "size": 1532747,
+        "nb_frames": 3686
+      },
+      "luma": {
+        "start": 42.0,
+        "early": 38.8,
+        "mid": 45.4,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "122.867s vs 122.866s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3686 vs 3686"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.0"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=38.8"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/3-1-discovering-and-testing-new-drugs.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "3-2-monoclonal-antibodies",
+    "spec": "3.2",
+    "title": "Monoclonal Antibodies",
+    "filename": "jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 129.629,
+    "bytes": 1610728,
+    "md5": "30ef838967b51ea7b20d5b48bdbb36b1",
+    "local_path": "content/gcse-biology/visual-drafts/3-2-monoclonal-antibodies/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-2-monoclonal-antibodies/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 129.633333,
+        "size": 1610728,
+        "nb_frames": 3889
+      },
+      "luma": {
+        "start": 42.0,
+        "early": 42.0,
+        "mid": 42.4,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "129.633s vs 129.629s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3889 vs 3889"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.0"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=42.0"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=42.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/3-2-monoclonal-antibodies.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "3-3-plant-disease",
+    "spec": "3.3",
+    "title": "Plant Disease",
+    "filename": "jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 130.056,
+    "bytes": 1598023,
+    "md5": "e1552d78a19b568544e0ac9cf261127a",
+    "local_path": "content/gcse-biology/visual-drafts/3-3-plant-disease/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-3-plant-disease/jdscience-3-3-plant-disease-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 130.066667,
+        "size": 1598023,
+        "nb_frames": 3902
+      },
+      "luma": {
+        "start": 41.6,
+        "early": 45.3,
+        "mid": 41.3,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "130.067s vs 130.056s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3902 vs 3902"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.6"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=41.3"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/3-3-plant-disease.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "4-1-photosynthesis",
+    "spec": "4.1",
+    "title": "Photosynthesis",
+    "filename": "jdscience-4-1-photosynthesis-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 144.649,
+    "bytes": 1781398,
+    "md5": "a6875fb0a3bb3700a58623724a44b076",
+    "local_path": "content/gcse-biology/visual-drafts/4-1-photosynthesis/jdscience-4-1-photosynthesis-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-4-1-photosynthesis-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/4-1-photosynthesis/jdscience-4-1-photosynthesis-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 144.649002,
+        "size": 1781398,
+        "nb_frames": 4339
+      },
+      "luma": {
+        "start": 41.5,
+        "early": 44.6,
+        "mid": 44.8,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "144.649s vs 144.649s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4339 vs 4339"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.5"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=44.6"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=44.8"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/4-1-photosynthesis.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "4-2-respiration",
+    "spec": "4.2",
+    "title": "Respiration",
+    "filename": "jdscience-4-2-respiration-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 129.629,
+    "bytes": 1570075,
+    "md5": "5d9ddf3bee713100abe008f36fed1243",
+    "local_path": "content/gcse-biology/visual-drafts/4-2-respiration/jdscience-4-2-respiration-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-4-2-respiration-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/4-2-respiration/jdscience-4-2-respiration-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 129.633333,
+        "size": 1570075,
+        "nb_frames": 3889
+      },
+      "luma": {
+        "start": 41.3,
+        "early": 44.7,
+        "mid": 45.4,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "129.633s vs 129.629s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3889 vs 3889"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.3"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=44.7"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/4-2-respiration.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "5-1-homeostasis",
+    "spec": "5.1",
+    "title": "Homeostasis",
+    "filename": "jdscience-5-1-homeostasis-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 124.646,
+    "bytes": 1586642,
+    "md5": "31c824ca7326c4cbf0b810ffa931446e",
+    "local_path": "content/gcse-biology/visual-drafts/5-1-homeostasis/jdscience-5-1-homeostasis-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-5-1-homeostasis-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-1-homeostasis/jdscience-5-1-homeostasis-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 124.646009,
+        "size": 1586642,
+        "nb_frames": 3739
+      },
+      "luma": {
+        "start": 41.4,
+        "early": 36.5,
+        "mid": 45.4,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "124.646s vs 124.646s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3739 vs 3739"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.4"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=36.5"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/5-1-homeostasis.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "5-2-the-nervous-system",
+    "spec": "5.2",
+    "title": "The Nervous System",
+    "filename": "jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 136.32,
+    "bytes": 1587872,
+    "md5": "d80b3f1f959888fcfbf8165bb599d7ec",
+    "local_path": "content/gcse-biology/visual-drafts/5-2-the-nervous-system/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-2-the-nervous-system/jdscience-5-2-the-nervous-system-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 136.333333,
+        "size": 1587872,
+        "nb_frames": 4090
+      },
+      "luma": {
+        "start": 41.7,
+        "early": 41.7,
+        "mid": 44.9,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "136.333s vs 136.320s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4090 vs 4090"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.7"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=41.7"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=44.9"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/5-2-the-nervous-system.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "5-3-hormonal-coordination",
+    "spec": "5.3",
+    "title": "Hormonal Coordination in Humans",
+    "filename": "jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 136.463,
+    "bytes": 1811940,
+    "md5": "4ef0b9113de67a87a9e114af3118c30e",
+    "local_path": "content/gcse-biology/visual-drafts/5-3-hormonal-coordination/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-3-hormonal-coordination/jdscience-5-3-hormonal-coordination-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 136.466667,
+        "size": 1811940,
+        "nb_frames": 4094
+      },
+      "luma": {
+        "start": 41.9,
+        "early": 45.3,
+        "mid": 45.1,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "136.467s vs 136.463s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4094 vs 4094"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.9"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.1"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/5-3-hormonal-coordination.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "5-4-plant-hormones",
+    "spec": "5.4",
+    "title": "Plant Hormones",
+    "filename": "jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 117.812,
+    "bytes": 1501330,
+    "md5": "e400fceda184b20d71ac9ff85594feb1",
+    "local_path": "content/gcse-biology/visual-drafts/5-4-plant-hormones/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/5-4-plant-hormones/jdscience-5-4-plant-hormones-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 117.811995,
+        "size": 1501330,
+        "nb_frames": 3534
+      },
+      "luma": {
+        "start": 41.5,
+        "early": 45.3,
+        "mid": 47.2,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "117.812s vs 117.812s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3534 vs 3534"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.5"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=47.2"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/5-4-plant-hormones.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "6-1-reproduction",
+    "spec": "6.1",
+    "title": "Reproduction",
+    "filename": "jdscience-6-1-reproduction-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 148.137,
+    "bytes": 1807297,
+    "md5": "95e282aadff7d8d6b308f67464c0c176",
+    "local_path": "content/gcse-biology/visual-drafts/6-1-reproduction/jdscience-6-1-reproduction-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-6-1-reproduction-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-1-reproduction/jdscience-6-1-reproduction-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 148.137007,
+        "size": 1807297,
+        "nb_frames": 4444
+      },
+      "luma": {
+        "start": 41.5,
+        "early": 45.1,
+        "mid": 40.6,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "148.137s vs 148.137s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4444 vs 4444"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.5"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.1"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=40.6"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/6-1-reproduction.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "6-2-variation-and-evolution",
+    "spec": "6.2",
+    "title": "Variation and Evolution",
+    "filename": "jdscience-6-2-variation-and-evolution-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 142.229,
+    "bytes": 1786143,
+    "md5": "d61fefe00e98e4f4839b12161c9e187b",
+    "local_path": "content/gcse-biology/visual-drafts/6-2-variation-and-evolution/jdscience-6-2-variation-and-evolution-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-6-2-variation-and-evolution-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-2-variation-and-evolution/jdscience-6-2-variation-and-evolution-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 142.233333,
+        "size": 1786143,
+        "nb_frames": 4267
+      },
+      "luma": {
+        "start": 42.0,
+        "early": 45.3,
+        "mid": 43.7,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "142.233s vs 142.229s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4267 vs 4267"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.0"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=45.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=43.7"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/6-2-variation-and-evolution.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "6-3-genetics-and-evolution",
+    "spec": "6.3",
+    "title": "The Development of Understanding of Genetics and Evolution",
+    "filename": "jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 139.168,
+    "bytes": 1935125,
+    "md5": "11f13b22c9e0b432a7b2fb1bb943a7d8",
+    "local_path": "content/gcse-biology/visual-drafts/6-3-genetics-and-evolution/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-3-genetics-and-evolution/jdscience-6-3-genetics-and-evolution-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 139.168005,
+        "size": 1935125,
+        "nb_frames": 4175
+      },
+      "luma": {
+        "start": 42.3,
+        "early": 42.3,
+        "mid": 45.4,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "139.168s vs 139.168s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4175 vs 4175"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.3"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=42.3"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/6-3-genetics-and-evolution.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "6-4-classification",
+    "spec": "6.4",
+    "title": "Classification of New Organisms",
+    "filename": "jdscience-6-4-classification-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 118.31,
+    "bytes": 1483008,
+    "md5": "00c089b97201d506d10f66fc20a9f776",
+    "local_path": "content/gcse-biology/visual-drafts/6-4-classification/jdscience-6-4-classification-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-6-4-classification-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/6-4-classification/jdscience-6-4-classification-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 118.31,
+        "size": 1483008,
+        "nb_frames": 3549
+      },
+      "luma": {
+        "start": 46.5,
+        "early": 46.5,
+        "mid": 44.7,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "118.310s vs 118.310s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3549 vs 3549"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=46.5"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=46.5"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=44.7"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/6-4-classification.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "7-1-adaptations-interdependence",
+    "spec": "7.1",
+    "title": "Adaptations, Interdependence and Competition",
+    "filename": "jdscience-7-1-adaptations-interdependence-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 121.158,
+    "bytes": 1613496,
+    "md5": "9ed7c26445970cda3b45f78b578f2aca",
+    "local_path": "content/gcse-biology/visual-drafts/7-1-adaptations-interdependence/jdscience-7-1-adaptations-interdependence-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-7-1-adaptations-interdependence-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-1-adaptations-interdependence/jdscience-7-1-adaptations-interdependence-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 121.166667,
+        "size": 1613496,
+        "nb_frames": 3635
+      },
+      "luma": {
+        "start": 41.8,
+        "early": 44.7,
+        "mid": 45.0,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "121.167s vs 121.158s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3635 vs 3635"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.8"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=44.7"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.0"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/7-1-adaptations-interdependence.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "7-2-organisation-of-an-ecosystem",
+    "spec": "7.2",
+    "title": "Organisation of an Ecosystem",
+    "filename": "jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 127.778,
+    "bytes": 1603438,
+    "md5": "16b13ae1c947a6660afffda12ec9e23d",
+    "local_path": "content/gcse-biology/visual-drafts/7-2-organisation-of-an-ecosystem/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-2-organisation-of-an-ecosystem/jdscience-7-2-organisation-of-an-ecosystem-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 127.778005,
+        "size": 1603438,
+        "nb_frames": 3833
+      },
+      "luma": {
+        "start": 41.6,
+        "early": 41.6,
+        "mid": 44.4,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "127.778s vs 127.778s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3833 vs 3833"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.6"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=41.6"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=44.4"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/7-2-organisation-of-an-ecosystem.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "7-3-biodiversity",
+    "spec": "7.3",
+    "title": "Biodiversity and the Effect of Human Interaction on Ecosystems",
+    "filename": "jdscience-7-3-biodiversity-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 135.822,
+    "bytes": 1837197,
+    "md5": "a54ce188030816c58745f912d5eb939d",
+    "local_path": "content/gcse-biology/visual-drafts/7-3-biodiversity/jdscience-7-3-biodiversity-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-7-3-biodiversity-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-3-biodiversity/jdscience-7-3-biodiversity-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 135.833333,
+        "size": 1837197,
+        "nb_frames": 4075
+      },
+      "luma": {
+        "start": 42.1,
+        "early": 44.8,
+        "mid": 45.6,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "135.833s vs 135.822s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "4075 vs 4075"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=42.1"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=44.8"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.6"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/7-3-biodiversity.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "7-4-trophic-levels",
+    "spec": "7.4",
+    "title": "Trophic Levels in an Ecosystem",
+    "filename": "jdscience-7-4-trophic-levels-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 123.365,
+    "bytes": 1691991,
+    "md5": "bc80bc3cc9ae0dd54606a764c30337fc",
+    "local_path": "content/gcse-biology/visual-drafts/7-4-trophic-levels/jdscience-7-4-trophic-levels-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-7-4-trophic-levels-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-4-trophic-levels/jdscience-7-4-trophic-levels-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 123.366667,
+        "size": 1691991,
+        "nb_frames": 3701
+      },
+      "luma": {
+        "start": 41.0,
+        "early": 43.1,
+        "mid": 45.7,
+        "late": 39.6
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "123.367s vs 123.365s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3701 vs 3701"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.0"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=43.1"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=45.7"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.6"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/7-4-trophic-levels.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  },
+  {
+    "slug": "7-5-food-production",
+    "spec": "7.5",
+    "title": "Food Production",
+    "filename": "jdscience-7-5-food-production-visual-draft-1080p.mp4",
+    "kind": "visual_only_draft",
+    "narration": "pending_cloned_voice",
+    "youtube": "not_uploaded",
+    "site": "not_published",
+    "duration": 128.775,
+    "bytes": 1583018,
+    "md5": "3ba4807b2e77f80818c69588b0de1bba",
+    "local_path": "content/gcse-biology/visual-drafts/7-5-food-production/jdscience-7-5-food-production-visual-draft-1080p.mp4",
+    "artifact_path": "/opt/cursor/artifacts/jdscience-7-5-food-production-visual-draft-1080p.mp4",
+    "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/7-5-food-production/jdscience-7-5-food-production-visual-draft-1080p.mp4",
+    "upload_error": null,
+    "qa_pass": true,
+    "qa": {
+      "pass": true,
+      "failed": [],
+      "probe": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 30.0,
+        "duration": 128.775011,
+        "size": 1583018,
+        "nb_frames": 3863
+      },
+      "luma": {
+        "start": 41.7,
+        "early": 41.7,
+        "mid": 44.8,
+        "late": 39.5
+      },
+      "checks": [
+        {
+          "name": "resolution",
+          "ok": true,
+          "detail": "1920x1080"
+        },
+        {
+          "name": "codec",
+          "ok": true,
+          "detail": "h264"
+        },
+        {
+          "name": "fps",
+          "ok": true,
+          "detail": "30.0"
+        },
+        {
+          "name": "duration",
+          "ok": true,
+          "detail": "128.775s vs 128.775s"
+        },
+        {
+          "name": "frame_count",
+          "ok": true,
+          "detail": "3863 vs 3863"
+        },
+        {
+          "name": "not_black_start",
+          "ok": true,
+          "detail": "luma=41.7"
+        },
+        {
+          "name": "frame_size_start",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_early",
+          "ok": true,
+          "detail": "luma=41.7"
+        },
+        {
+          "name": "frame_size_early",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_mid",
+          "ok": true,
+          "detail": "luma=44.8"
+        },
+        {
+          "name": "frame_size_mid",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        },
+        {
+          "name": "not_black_late",
+          "ok": true,
+          "detail": "luma=39.5"
+        },
+        {
+          "name": "frame_size_late",
+          "ok": true,
+          "detail": "(1920, 1080)"
+        }
+      ]
+    },
+    "timing": "content/gcse-biology/timing/7-5-food-production.json",
+    "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+  }
+]

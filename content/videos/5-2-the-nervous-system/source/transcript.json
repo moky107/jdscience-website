@@ -1,0 +1,1683 @@
+{
+  "audio": "content/videos/5-2-the-nervous-system/source/narration_master.m4a",
+  "duration": 129.52,
+  "full_text": "Hello and welcome back to JD Science. Today we are exploring the nervous system. It lets us react to our surroundings. It contains the brain, spinal cord, neurons and receptors. In a conscious action, a stimulus is detected by a receptor. Sensory neurons carry the impulse to the spinal cord and brain. The brain decides on a response and motor neurons carry the impulse to an effector. In many spinal reflexes, the immediate response is coordinated through the spinal cord without waiting for a conscious decision. Sensory neurons send the impulse to a relay neuron in the spinal cord which sends it to a motor neuron. This is much faster. Neurons don't touch its synapses. Chemicals called neurotransmitters cross the gap. Eyes focus light using the lens and cornea. A reflex arc begins when a reflex arc begins when a receptor detects a stimulus. An impulse travels along a sensory neuron to the central nervous system where it may pass through a relay neuron before traveling along a motor neuron to an effector. Reflexes are automatic and can be rapid because they do not require a conscious decision before the response. The brain can still receive information about the event. At a chemical synapse, neurotransmitter molecules diffuse across the synaptic cleft and bind to receptors. As you revise this topic, try to explain the key process in your own words. Focus on what happens, why it happens and how the structures involved help the process work. Now pause the video and try this exam style question. Describe the pathway of a reflex arc in order. Here is a model answer. Receptor, sensory neuron, relay neuron in the spinal cord,",
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.0,
+      "end": 0.38,
+      "prob": 0.925
+    },
+    {
+      "word": "and",
+      "start": 0.38,
+      "end": 0.78,
+      "prob": 0.824
+    },
+    {
+      "word": "welcome",
+      "start": 0.78,
+      "end": 1.04,
+      "prob": 0.976
+    },
+    {
+      "word": "back",
+      "start": 1.04,
+      "end": 1.4,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 1.4,
+      "end": 1.64,
+      "prob": 0.997
+    },
+    {
+      "word": "JD",
+      "start": 1.64,
+      "end": 2.02,
+      "prob": 0.856
+    },
+    {
+      "word": "Science.",
+      "start": 2.02,
+      "end": 2.6,
+      "prob": 0.145
+    },
+    {
+      "word": "Today",
+      "start": 3.12,
+      "end": 3.52,
+      "prob": 0.995
+    },
+    {
+      "word": "we",
+      "start": 3.52,
+      "end": 4.02,
+      "prob": 0.619
+    },
+    {
+      "word": "are",
+      "start": 4.02,
+      "end": 4.16,
+      "prob": 0.984
+    },
+    {
+      "word": "exploring",
+      "start": 4.16,
+      "end": 4.72,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 4.72,
+      "end": 5.04,
+      "prob": 0.992
+    },
+    {
+      "word": "nervous",
+      "start": 5.04,
+      "end": 5.34,
+      "prob": 0.706
+    },
+    {
+      "word": "system.",
+      "start": 5.34,
+      "end": 5.92,
+      "prob": 0.998
+    },
+    {
+      "word": "It",
+      "start": 6.36,
+      "end": 6.54,
+      "prob": 0.989
+    },
+    {
+      "word": "lets",
+      "start": 6.54,
+      "end": 6.74,
+      "prob": 0.924
+    },
+    {
+      "word": "us",
+      "start": 6.74,
+      "end": 6.98,
+      "prob": 0.999
+    },
+    {
+      "word": "react",
+      "start": 6.98,
+      "end": 7.34,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 7.34,
+      "end": 7.58,
+      "prob": 0.999
+    },
+    {
+      "word": "our",
+      "start": 7.58,
+      "end": 7.74,
+      "prob": 0.999
+    },
+    {
+      "word": "surroundings.",
+      "start": 7.74,
+      "end": 8.28,
+      "prob": 0.995
+    },
+    {
+      "word": "It",
+      "start": 8.92,
+      "end": 9.06,
+      "prob": 0.994
+    },
+    {
+      "word": "contains",
+      "start": 9.06,
+      "end": 9.44,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 9.44,
+      "end": 9.74,
+      "prob": 0.996
+    },
+    {
+      "word": "brain,",
+      "start": 9.74,
+      "end": 10.12,
+      "prob": 0.99
+    },
+    {
+      "word": "spinal",
+      "start": 10.52,
+      "end": 10.88,
+      "prob": 0.995
+    },
+    {
+      "word": "cord,",
+      "start": 10.88,
+      "end": 11.34,
+      "prob": 0.977
+    },
+    {
+      "word": "neurons",
+      "start": 11.76,
+      "end": 12.14,
+      "prob": 0.975
+    },
+    {
+      "word": "and",
+      "start": 12.14,
+      "end": 12.66,
+      "prob": 0.778
+    },
+    {
+      "word": "receptors.",
+      "start": 12.66,
+      "end": 13.16,
+      "prob": 0.995
+    },
+    {
+      "word": "In",
+      "start": 13.82,
+      "end": 14.06,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 14.06,
+      "end": 14.24,
+      "prob": 0.992
+    },
+    {
+      "word": "conscious",
+      "start": 14.24,
+      "end": 14.52,
+      "prob": 0.997
+    },
+    {
+      "word": "action,",
+      "start": 14.52,
+      "end": 15.08,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 15.4,
+      "end": 15.52,
+      "prob": 0.994
+    },
+    {
+      "word": "stimulus",
+      "start": 15.52,
+      "end": 15.96,
+      "prob": 0.997
+    },
+    {
+      "word": "is",
+      "start": 15.96,
+      "end": 16.28,
+      "prob": 0.998
+    },
+    {
+      "word": "detected",
+      "start": 16.28,
+      "end": 16.62,
+      "prob": 0.999
+    },
+    {
+      "word": "by",
+      "start": 16.62,
+      "end": 17.0,
+      "prob": 0.999
+    },
+    {
+      "word": "a",
+      "start": 17.0,
+      "end": 17.12,
+      "prob": 0.983
+    },
+    {
+      "word": "receptor.",
+      "start": 17.12,
+      "end": 17.54,
+      "prob": 0.998
+    },
+    {
+      "word": "Sensory",
+      "start": 18.38,
+      "end": 18.72,
+      "prob": 0.975
+    },
+    {
+      "word": "neurons",
+      "start": 18.72,
+      "end": 19.2,
+      "prob": 0.995
+    },
+    {
+      "word": "carry",
+      "start": 19.2,
+      "end": 19.6,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 19.6,
+      "end": 19.84,
+      "prob": 0.999
+    },
+    {
+      "word": "impulse",
+      "start": 19.84,
+      "end": 20.3,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 20.3,
+      "end": 20.54,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 20.54,
+      "end": 20.66,
+      "prob": 0.998
+    },
+    {
+      "word": "spinal",
+      "start": 20.66,
+      "end": 21.04,
+      "prob": 0.998
+    },
+    {
+      "word": "cord",
+      "start": 21.04,
+      "end": 21.46,
+      "prob": 0.995
+    },
+    {
+      "word": "and",
+      "start": 21.46,
+      "end": 21.76,
+      "prob": 0.997
+    },
+    {
+      "word": "brain.",
+      "start": 21.76,
+      "end": 22.1,
+      "prob": 0.962
+    },
+    {
+      "word": "The",
+      "start": 22.56,
+      "end": 22.74,
+      "prob": 0.996
+    },
+    {
+      "word": "brain",
+      "start": 22.74,
+      "end": 23.04,
+      "prob": 0.999
+    },
+    {
+      "word": "decides",
+      "start": 23.04,
+      "end": 23.5,
+      "prob": 0.998
+    },
+    {
+      "word": "on",
+      "start": 23.5,
+      "end": 23.74,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 23.74,
+      "end": 23.84,
+      "prob": 0.986
+    },
+    {
+      "word": "response",
+      "start": 23.84,
+      "end": 24.24,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 24.24,
+      "end": 24.94,
+      "prob": 0.56
+    },
+    {
+      "word": "motor",
+      "start": 24.94,
+      "end": 25.26,
+      "prob": 0.992
+    },
+    {
+      "word": "neurons",
+      "start": 25.26,
+      "end": 25.86,
+      "prob": 0.992
+    },
+    {
+      "word": "carry",
+      "start": 25.86,
+      "end": 26.18,
+      "prob": 0.994
+    },
+    {
+      "word": "the",
+      "start": 26.18,
+      "end": 26.42,
+      "prob": 0.999
+    },
+    {
+      "word": "impulse",
+      "start": 26.42,
+      "end": 26.8,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 26.8,
+      "end": 27.06,
+      "prob": 0.999
+    },
+    {
+      "word": "an",
+      "start": 27.06,
+      "end": 27.18,
+      "prob": 0.994
+    },
+    {
+      "word": "effector.",
+      "start": 27.18,
+      "end": 27.7,
+      "prob": 0.949
+    },
+    {
+      "word": "In",
+      "start": 27.7,
+      "end": 28.12,
+      "prob": 0.671
+    },
+    {
+      "word": "many",
+      "start": 28.12,
+      "end": 28.42,
+      "prob": 0.992
+    },
+    {
+      "word": "spinal",
+      "start": 28.42,
+      "end": 28.86,
+      "prob": 0.981
+    },
+    {
+      "word": "reflexes,",
+      "start": 28.86,
+      "end": 29.72,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 30.06,
+      "end": 30.12,
+      "prob": 0.994
+    },
+    {
+      "word": "immediate",
+      "start": 30.12,
+      "end": 30.54,
+      "prob": 0.999
+    },
+    {
+      "word": "response",
+      "start": 30.54,
+      "end": 31.08,
+      "prob": 0.999
+    },
+    {
+      "word": "is",
+      "start": 31.08,
+      "end": 31.4,
+      "prob": 0.997
+    },
+    {
+      "word": "coordinated",
+      "start": 31.4,
+      "end": 32.04,
+      "prob": 0.983
+    },
+    {
+      "word": "through",
+      "start": 32.04,
+      "end": 32.44,
+      "prob": 0.99
+    },
+    {
+      "word": "the",
+      "start": 32.44,
+      "end": 32.6,
+      "prob": 0.995
+    },
+    {
+      "word": "spinal",
+      "start": 32.6,
+      "end": 33.0,
+      "prob": 0.997
+    },
+    {
+      "word": "cord",
+      "start": 33.0,
+      "end": 33.38,
+      "prob": 0.976
+    },
+    {
+      "word": "without",
+      "start": 33.38,
+      "end": 33.7,
+      "prob": 0.954
+    },
+    {
+      "word": "waiting",
+      "start": 33.7,
+      "end": 34.12,
+      "prob": 0.997
+    },
+    {
+      "word": "for",
+      "start": 34.12,
+      "end": 34.44,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 34.44,
+      "end": 34.56,
+      "prob": 0.988
+    },
+    {
+      "word": "conscious",
+      "start": 34.56,
+      "end": 34.92,
+      "prob": 0.997
+    },
+    {
+      "word": "decision.",
+      "start": 34.92,
+      "end": 35.5,
+      "prob": 0.996
+    },
+    {
+      "word": "Sensory",
+      "start": 36.18,
+      "end": 36.56,
+      "prob": 0.98
+    },
+    {
+      "word": "neurons",
+      "start": 36.56,
+      "end": 37.0,
+      "prob": 0.967
+    },
+    {
+      "word": "send",
+      "start": 37.0,
+      "end": 37.4,
+      "prob": 0.98
+    },
+    {
+      "word": "the",
+      "start": 37.4,
+      "end": 37.6,
+      "prob": 0.997
+    },
+    {
+      "word": "impulse",
+      "start": 37.6,
+      "end": 38.02,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 38.02,
+      "end": 38.3,
+      "prob": 0.998
+    },
+    {
+      "word": "a",
+      "start": 38.3,
+      "end": 38.44,
+      "prob": 0.982
+    },
+    {
+      "word": "relay",
+      "start": 38.44,
+      "end": 38.84,
+      "prob": 0.993
+    },
+    {
+      "word": "neuron",
+      "start": 38.84,
+      "end": 39.36,
+      "prob": 0.979
+    },
+    {
+      "word": "in",
+      "start": 39.36,
+      "end": 39.54,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 39.54,
+      "end": 39.68,
+      "prob": 0.999
+    },
+    {
+      "word": "spinal",
+      "start": 39.68,
+      "end": 40.02,
+      "prob": 0.999
+    },
+    {
+      "word": "cord",
+      "start": 40.02,
+      "end": 40.46,
+      "prob": 0.994
+    },
+    {
+      "word": "which",
+      "start": 40.46,
+      "end": 40.86,
+      "prob": 0.4
+    },
+    {
+      "word": "sends",
+      "start": 40.86,
+      "end": 41.18,
+      "prob": 0.996
+    },
+    {
+      "word": "it",
+      "start": 41.18,
+      "end": 41.36,
+      "prob": 0.996
+    },
+    {
+      "word": "to",
+      "start": 41.36,
+      "end": 41.54,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 41.54,
+      "end": 41.66,
+      "prob": 0.981
+    },
+    {
+      "word": "motor",
+      "start": 41.66,
+      "end": 41.9,
+      "prob": 0.993
+    },
+    {
+      "word": "neuron.",
+      "start": 41.9,
+      "end": 42.46,
+      "prob": 0.982
+    },
+    {
+      "word": "This",
+      "start": 42.96,
+      "end": 43.08,
+      "prob": 0.996
+    },
+    {
+      "word": "is",
+      "start": 43.08,
+      "end": 43.24,
+      "prob": 0.999
+    },
+    {
+      "word": "much",
+      "start": 43.24,
+      "end": 43.54,
+      "prob": 0.998
+    },
+    {
+      "word": "faster.",
+      "start": 43.54,
+      "end": 44.14,
+      "prob": 0.999
+    },
+    {
+      "word": "Neurons",
+      "start": 44.58,
+      "end": 44.84,
+      "prob": 0.958
+    },
+    {
+      "word": "don't",
+      "start": 44.84,
+      "end": 45.2,
+      "prob": 0.99
+    },
+    {
+      "word": "touch",
+      "start": 45.2,
+      "end": 45.44,
+      "prob": 1.0
+    },
+    {
+      "word": "its",
+      "start": 45.44,
+      "end": 45.62,
+      "prob": 0.448
+    },
+    {
+      "word": "synapses.",
+      "start": 45.62,
+      "end": 46.16,
+      "prob": 0.997
+    },
+    {
+      "word": "Chemicals",
+      "start": 46.84,
+      "end": 47.18,
+      "prob": 0.984
+    },
+    {
+      "word": "called",
+      "start": 47.18,
+      "end": 47.52,
+      "prob": 0.95
+    },
+    {
+      "word": "neurotransmitters",
+      "start": 47.52,
+      "end": 48.62,
+      "prob": 0.992
+    },
+    {
+      "word": "cross",
+      "start": 48.62,
+      "end": 48.84,
+      "prob": 0.991
+    },
+    {
+      "word": "the",
+      "start": 48.84,
+      "end": 49.1,
+      "prob": 0.999
+    },
+    {
+      "word": "gap.",
+      "start": 49.1,
+      "end": 49.38,
+      "prob": 0.997
+    },
+    {
+      "word": "Eyes",
+      "start": 50.12,
+      "end": 50.12,
+      "prob": 0.972
+    },
+    {
+      "word": "focus",
+      "start": 50.12,
+      "end": 50.52,
+      "prob": 0.996
+    },
+    {
+      "word": "light",
+      "start": 50.52,
+      "end": 50.98,
+      "prob": 0.996
+    },
+    {
+      "word": "using",
+      "start": 50.98,
+      "end": 51.34,
+      "prob": 0.986
+    },
+    {
+      "word": "the",
+      "start": 51.34,
+      "end": 51.58,
+      "prob": 0.996
+    },
+    {
+      "word": "lens",
+      "start": 51.58,
+      "end": 51.92,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 51.92,
+      "end": 52.16,
+      "prob": 0.995
+    },
+    {
+      "word": "cornea.",
+      "start": 52.16,
+      "end": 52.54,
+      "prob": 0.975
+    },
+    {
+      "word": "A",
+      "start": 54.92,
+      "end": 55.64,
+      "prob": 0.025
+    },
+    {
+      "word": "reflex",
+      "start": 55.64,
+      "end": 56.36,
+      "prob": 0.945
+    },
+    {
+      "word": "arc",
+      "start": 56.36,
+      "end": 56.78,
+      "prob": 0.937
+    },
+    {
+      "word": "begins",
+      "start": 56.78,
+      "end": 57.22,
+      "prob": 0.991
+    },
+    {
+      "word": "when",
+      "start": 57.22,
+      "end": 57.54,
+      "prob": 0.981
+    },
+    {
+      "word": "a",
+      "start": 57.54,
+      "end": 57.68,
+      "prob": 0.992
+    },
+    {
+      "word": "reflex",
+      "start": 57.68,
+      "end": 57.96,
+      "prob": 0.0
+    },
+    {
+      "word": "arc",
+      "start": 57.96,
+      "end": 58.16,
+      "prob": 0.065
+    },
+    {
+      "word": "begins",
+      "start": 58.16,
+      "end": 58.16,
+      "prob": 0.004
+    },
+    {
+      "word": "when",
+      "start": 58.16,
+      "end": 58.16,
+      "prob": 0.676
+    },
+    {
+      "word": "a",
+      "start": 58.16,
+      "end": 58.16,
+      "prob": 0.963
+    },
+    {
+      "word": "receptor",
+      "start": 58.16,
+      "end": 58.16,
+      "prob": 0.994
+    },
+    {
+      "word": "detects",
+      "start": 58.16,
+      "end": 58.46,
+      "prob": 0.962
+    },
+    {
+      "word": "a",
+      "start": 58.46,
+      "end": 59.16,
+      "prob": 0.977
+    },
+    {
+      "word": "stimulus.",
+      "start": 59.16,
+      "end": 59.16,
+      "prob": 0.993
+    },
+    {
+      "word": "An",
+      "start": 59.64,
+      "end": 59.76,
+      "prob": 0.83
+    },
+    {
+      "word": "impulse",
+      "start": 59.76,
+      "end": 60.18,
+      "prob": 0.982
+    },
+    {
+      "word": "travels",
+      "start": 60.18,
+      "end": 60.58,
+      "prob": 0.987
+    },
+    {
+      "word": "along",
+      "start": 60.58,
+      "end": 60.94,
+      "prob": 0.982
+    },
+    {
+      "word": "a",
+      "start": 60.94,
+      "end": 61.12,
+      "prob": 0.971
+    },
+    {
+      "word": "sensory",
+      "start": 61.12,
+      "end": 61.58,
+      "prob": 0.942
+    },
+    {
+      "word": "neuron",
+      "start": 61.58,
+      "end": 62.1,
+      "prob": 0.958
+    },
+    {
+      "word": "to",
+      "start": 62.1,
+      "end": 62.36,
+      "prob": 0.974
+    },
+    {
+      "word": "the",
+      "start": 62.36,
+      "end": 62.48,
+      "prob": 0.952
+    },
+    {
+      "word": "central",
+      "start": 62.48,
+      "end": 62.9,
+      "prob": 0.993
+    },
+    {
+      "word": "nervous",
+      "start": 62.9,
+      "end": 63.24,
+      "prob": 0.996
+    },
+    {
+      "word": "system",
+      "start": 63.24,
+      "end": 63.8,
+      "prob": 0.997
+    },
+    {
+      "word": "where",
+      "start": 63.8,
+      "end": 64.32,
+      "prob": 0.531
+    },
+    {
+      "word": "it",
+      "start": 64.32,
+      "end": 64.44,
+      "prob": 0.989
+    },
+    {
+      "word": "may",
+      "start": 64.44,
+      "end": 64.64,
+      "prob": 0.964
+    },
+    {
+      "word": "pass",
+      "start": 64.64,
+      "end": 64.98,
+      "prob": 0.988
+    },
+    {
+      "word": "through",
+      "start": 64.98,
+      "end": 65.3,
+      "prob": 0.987
+    },
+    {
+      "word": "a",
+      "start": 65.3,
+      "end": 65.44,
+      "prob": 0.979
+    },
+    {
+      "word": "relay",
+      "start": 65.44,
+      "end": 65.8,
+      "prob": 0.981
+    },
+    {
+      "word": "neuron",
+      "start": 65.8,
+      "end": 66.28,
+      "prob": 0.977
+    },
+    {
+      "word": "before",
+      "start": 66.28,
+      "end": 66.64,
+      "prob": 0.959
+    },
+    {
+      "word": "traveling",
+      "start": 66.64,
+      "end": 67.16,
+      "prob": 0.202
+    },
+    {
+      "word": "along",
+      "start": 67.16,
+      "end": 67.48,
+      "prob": 0.989
+    },
+    {
+      "word": "a",
+      "start": 67.48,
+      "end": 67.64,
+      "prob": 0.971
+    },
+    {
+      "word": "motor",
+      "start": 67.64,
+      "end": 67.92,
+      "prob": 0.993
+    },
+    {
+      "word": "neuron",
+      "start": 67.92,
+      "end": 68.44,
+      "prob": 0.979
+    },
+    {
+      "word": "to",
+      "start": 68.44,
+      "end": 68.62,
+      "prob": 0.987
+    },
+    {
+      "word": "an",
+      "start": 68.62,
+      "end": 68.74,
+      "prob": 0.98
+    },
+    {
+      "word": "effector.",
+      "start": 68.74,
+      "end": 69.34,
+      "prob": 0.922
+    },
+    {
+      "word": "Reflexes",
+      "start": 69.7,
+      "end": 70.24,
+      "prob": 0.873
+    },
+    {
+      "word": "are",
+      "start": 70.24,
+      "end": 70.34,
+      "prob": 0.99
+    },
+    {
+      "word": "automatic",
+      "start": 70.34,
+      "end": 70.84,
+      "prob": 0.972
+    },
+    {
+      "word": "and",
+      "start": 70.84,
+      "end": 71.34,
+      "prob": 0.97
+    },
+    {
+      "word": "can",
+      "start": 71.34,
+      "end": 71.5,
+      "prob": 0.994
+    },
+    {
+      "word": "be",
+      "start": 71.5,
+      "end": 71.64,
+      "prob": 0.998
+    },
+    {
+      "word": "rapid",
+      "start": 71.64,
+      "end": 72.06,
+      "prob": 0.997
+    },
+    {
+      "word": "because",
+      "start": 72.06,
+      "end": 72.48,
+      "prob": 0.936
+    },
+    {
+      "word": "they",
+      "start": 72.48,
+      "end": 72.66,
+      "prob": 0.993
+    },
+    {
+      "word": "do",
+      "start": 72.66,
+      "end": 72.86,
+      "prob": 0.977
+    },
+    {
+      "word": "not",
+      "start": 72.86,
+      "end": 73.16,
+      "prob": 0.991
+    },
+    {
+      "word": "require",
+      "start": 73.16,
+      "end": 73.6,
+      "prob": 0.995
+    },
+    {
+      "word": "a",
+      "start": 73.6,
+      "end": 73.84,
+      "prob": 0.979
+    },
+    {
+      "word": "conscious",
+      "start": 73.84,
+      "end": 74.22,
+      "prob": 0.998
+    },
+    {
+      "word": "decision",
+      "start": 74.22,
+      "end": 74.74,
+      "prob": 0.994
+    },
+    {
+      "word": "before",
+      "start": 74.74,
+      "end": 75.1,
+      "prob": 0.993
+    },
+    {
+      "word": "the",
+      "start": 75.1,
+      "end": 75.26,
+      "prob": 0.973
+    },
+    {
+      "word": "response.",
+      "start": 75.26,
+      "end": 75.64,
+      "prob": 0.998
+    },
+    {
+      "word": "The",
+      "start": 76.1,
+      "end": 76.22,
+      "prob": 0.865
+    },
+    {
+      "word": "brain",
+      "start": 76.22,
+      "end": 76.5,
+      "prob": 0.998
+    },
+    {
+      "word": "can",
+      "start": 76.5,
+      "end": 76.72,
+      "prob": 0.996
+    },
+    {
+      "word": "still",
+      "start": 76.72,
+      "end": 77.06,
+      "prob": 0.992
+    },
+    {
+      "word": "receive",
+      "start": 77.06,
+      "end": 77.44,
+      "prob": 0.99
+    },
+    {
+      "word": "information",
+      "start": 77.44,
+      "end": 77.92,
+      "prob": 0.995
+    },
+    {
+      "word": "about",
+      "start": 77.92,
+      "end": 78.36,
+      "prob": 0.995
+    },
+    {
+      "word": "the",
+      "start": 78.36,
+      "end": 78.52,
+      "prob": 0.99
+    },
+    {
+      "word": "event.",
+      "start": 78.52,
+      "end": 78.86,
+      "prob": 0.996
+    },
+    {
+      "word": "At",
+      "start": 78.86,
+      "end": 79.48,
+      "prob": 0.485
+    },
+    {
+      "word": "a",
+      "start": 79.48,
+      "end": 79.64,
+      "prob": 0.963
+    },
+    {
+      "word": "chemical",
+      "start": 79.64,
+      "end": 80.0,
+      "prob": 0.991
+    },
+    {
+      "word": "synapse,",
+      "start": 80.0,
+      "end": 80.64,
+      "prob": 0.993
+    },
+    {
+      "word": "neurotransmitter",
+      "start": 81.1,
+      "end": 81.9,
+      "prob": 0.994
+    },
+    {
+      "word": "molecules",
+      "start": 81.9,
+      "end": 82.42,
+      "prob": 0.997
+    },
+    {
+      "word": "diffuse",
+      "start": 82.42,
+      "end": 83.04,
+      "prob": 0.975
+    },
+    {
+      "word": "across",
+      "start": 83.04,
+      "end": 83.52,
+      "prob": 0.997
+    },
+    {
+      "word": "the",
+      "start": 83.52,
+      "end": 83.76,
+      "prob": 0.989
+    },
+    {
+      "word": "synaptic",
+      "start": 83.76,
+      "end": 84.24,
+      "prob": 0.994
+    },
+    {
+      "word": "cleft",
+      "start": 84.24,
+      "end": 84.8,
+      "prob": 0.997
+    },
+    {
+      "word": "and",
+      "start": 84.8,
+      "end": 85.08,
+      "prob": 0.983
+    },
+    {
+      "word": "bind",
+      "start": 85.08,
+      "end": 85.42,
+      "prob": 0.999
+    },
+    {
+      "word": "to",
+      "start": 85.42,
+      "end": 85.66,
+      "prob": 0.997
+    },
+    {
+      "word": "receptors.",
+      "start": 85.66,
+      "end": 86.12,
+      "prob": 0.992
+    },
+    {
+      "word": "As",
+      "start": 86.64,
+      "end": 86.84,
+      "prob": 0.993
+    },
+    {
+      "word": "you",
+      "start": 86.84,
+      "end": 86.98,
+      "prob": 0.998
+    },
+    {
+      "word": "revise",
+      "start": 86.98,
+      "end": 87.34,
+      "prob": 0.989
+    },
+    {
+      "word": "this",
+      "start": 87.34,
+      "end": 87.64,
+      "prob": 0.99
+    },
+    {
+      "word": "topic,",
+      "start": 87.64,
+      "end": 88.06,
+      "prob": 0.999
+    },
+    {
+      "word": "try",
+      "start": 88.56,
+      "end": 88.66,
+      "prob": 0.995
+    },
+    {
+      "word": "to",
+      "start": 88.66,
+      "end": 88.84,
+      "prob": 0.999
+    },
+    {
+      "word": "explain",
+      "start": 88.84,
+      "end": 89.24,
+      "prob": 0.998
+    },
+    {
+      "word": "the",
+      "start": 89.24,
+      "end": 89.48,
+      "prob": 0.996
+    },
+    {
+      "word": "key",
+      "start": 89.48,
+      "end": 89.78,
+      "prob": 0.931
+    },
+    {
+      "word": "process",
+      "start": 89.78,
+      "end": 90.28,
+      "prob": 0.997
+    },
+    {
+      "word": "in",
+      "start": 90.28,
+      "end": 90.64,
+      "prob": 0.994
+    },
+    {
+      "word": "your",
+      "start": 90.64,
+      "end": 90.78,
+      "prob": 0.999
+    },
+    {
+      "word": "own",
+      "start": 90.78,
+      "end": 91.04,
+      "prob": 0.991
+    },
+    {
+      "word": "words.",
+      "start": 91.04,
+      "end": 91.52,
+      "prob": 1.0
+    },
+    {
+      "word": "Focus",
+      "start": 91.98,
+      "end": 92.16,
+      "prob": 0.992
+    },
+    {
+      "word": "on",
+      "start": 92.16,
+      "end": 92.46,
+      "prob": 0.999
+    },
+    {
+      "word": "what",
+      "start": 92.46,
+      "end": 92.64,
+      "prob": 0.998
+    },
+    {
+      "word": "happens,",
+      "start": 92.64,
+      "end": 93.2,
+      "prob": 0.999
+    },
+    {
+      "word": "why",
+      "start": 93.48,
+      "end": 93.86,
+      "prob": 0.997
+    },
+    {
+      "word": "it",
+      "start": 93.86,
+      "end": 94.0,
+      "prob": 0.995
+    },
+    {
+      "word": "happens",
+      "start": 94.0,
+      "end": 94.52,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 94.52,
+      "end": 94.98,
+      "prob": 0.382
+    },
+    {
+      "word": "how",
+      "start": 94.98,
+      "end": 95.28,
+      "prob": 0.996
+    },
+    {
+      "word": "the",
+      "start": 95.28,
+      "end": 95.46,
+      "prob": 0.988
+    },
+    {
+      "word": "structures",
+      "start": 95.46,
+      "end": 95.8,
+      "prob": 0.995
+    },
+    {
+      "word": "involved",
+      "start": 95.8,
+      "end": 96.3,
+      "prob": 0.999
+    },
+    {
+      "word": "help",
+      "start": 96.3,
+      "end": 96.66,
+      "prob": 0.959
+    },
+    {
+      "word": "the",
+      "start": 96.66,
+      "end": 96.9,
+      "prob": 0.996
+    },
+    {
+      "word": "process",
+      "start": 96.9,
+      "end": 97.26,
+      "prob": 0.998
+    },
+    {
+      "word": "work.",
+      "start": 97.26,
+      "end": 97.7,
+      "prob": 0.996
+    },
+    {
+      "word": "Now",
+      "start": 98.2,
+      "end": 98.44,
+      "prob": 0.986
+    },
+    {
+      "word": "pause",
+      "start": 98.44,
+      "end": 99.04,
+      "prob": 0.586
+    },
+    {
+      "word": "the",
+      "start": 99.04,
+      "end": 99.28,
+      "prob": 0.996
+    },
+    {
+      "word": "video",
+      "start": 99.28,
+      "end": 99.6,
+      "prob": 0.999
+    },
+    {
+      "word": "and",
+      "start": 99.6,
+      "end": 99.98,
+      "prob": 0.986
+    },
+    {
+      "word": "try",
+      "start": 99.98,
+      "end": 100.26,
+      "prob": 0.998
+    },
+    {
+      "word": "this",
+      "start": 100.26,
+      "end": 100.46,
+      "prob": 0.991
+    },
+    {
+      "word": "exam",
+      "start": 100.46,
+      "end": 100.86,
+      "prob": 0.992
+    },
+    {
+      "word": "style",
+      "start": 100.86,
+      "end": 101.14,
+      "prob": 0.534
+    },
+    {
+      "word": "question.",
+      "start": 101.14,
+      "end": 101.62,
+      "prob": 0.995
+    },
+    {
+      "word": "Describe",
+      "start": 102.08,
+      "end": 102.46,
+      "prob": 0.979
+    },
+    {
+      "word": "the",
+      "start": 102.46,
+      "end": 102.64,
+      "prob": 0.998
+    },
+    {
+      "word": "pathway",
+      "start": 102.64,
+      "end": 103.02,
+      "prob": 0.995
+    },
+    {
+      "word": "of",
+      "start": 103.02,
+      "end": 103.4,
+      "prob": 0.996
+    },
+    {
+      "word": "a",
+      "start": 103.4,
+      "end": 103.52,
+      "prob": 0.991
+    },
+    {
+      "word": "reflex",
+      "start": 103.52,
+      "end": 103.9,
+      "prob": 0.959
+    },
+    {
+      "word": "arc",
+      "start": 103.9,
+      "end": 104.38,
+      "prob": 0.98
+    },
+    {
+      "word": "in",
+      "start": 104.38,
+      "end": 104.8,
+      "prob": 0.298
+    },
+    {
+      "word": "order.",
+      "start": 104.8,
+      "end": 105.14,
+      "prob": 0.971
+    },
+    {
+      "word": "Here",
+      "start": 105.62,
+      "end": 105.76,
+      "prob": 0.963
+    },
+    {
+      "word": "is",
+      "start": 105.76,
+      "end": 105.9,
+      "prob": 0.987
+    },
+    {
+      "word": "a",
+      "start": 105.9,
+      "end": 106.04,
+      "prob": 0.949
+    },
+    {
+      "word": "model",
+      "start": 106.04,
+      "end": 106.2,
+      "prob": 0.993
+    },
+    {
+      "word": "answer.",
+      "start": 106.2,
+      "end": 106.7,
+      "prob": 0.99
+    },
+    {
+      "word": "Receptor,",
+      "start": 107.18,
+      "end": 107.62,
+      "prob": 0.813
+    },
+    {
+      "word": "sensory",
+      "start": 108.04,
+      "end": 108.38,
+      "prob": 0.83
+    },
+    {
+      "word": "neuron,",
+      "start": 108.38,
+      "end": 108.92,
+      "prob": 0.955
+    },
+    {
+      "word": "relay",
+      "start": 109.42,
+      "end": 109.74,
+      "prob": 0.926
+    },
+    {
+      "word": "neuron",
+      "start": 109.74,
+      "end": 110.26,
+      "prob": 0.986
+    },
+    {
+      "word": "in",
+      "start": 110.26,
+      "end": 110.46,
+      "prob": 0.988
+    },
+    {
+      "word": "the",
+      "start": 110.46,
+      "end": 110.58,
+      "prob": 0.986
+    },
+    {
+      "word": "spinal",
+      "start": 110.58,
+      "end": 110.88,
+      "prob": 0.987
+    },
+    {
+      "word": "cord,",
+      "start": 110.88,
+      "end": 111.74,
+      "prob": 0.972
+    }
+  ],
+  "method": "faster-whisper-small.en-single-pass",
+  "voice": "original-uploaded-narration"
+}

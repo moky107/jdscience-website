@@ -1,0 +1,129 @@
+{
+  "slug": "3-1-communicable-diseases",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 133.259,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.069,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "pathogens",
+      "t": 6.069,
+      "t_end": 24.805,
+      "cue": "Pathogens are microbes that cause disease",
+      "animate": true
+    },
+    {
+      "id": "examples",
+      "t": 24.805,
+      "t_end": 37.911,
+      "cue": "HIV is spread through body fluids",
+      "animate": false
+    },
+    {
+      "id": "defence",
+      "t": 37.911,
+      "t_end": 48.29,
+      "cue": "Our defences include hairs and mucus",
+      "animate": false
+    },
+    {
+      "id": "vaccines",
+      "t": 48.29,
+      "t_end": 76.877,
+      "cue": "Vaccines contain dead or inactive pathogens",
+      "animate": false
+    },
+    {
+      "id": "abx",
+      "t": 76.877,
+      "t_end": 87.96,
+      "cue": "Antibiotics act on bacterial structures",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 87.96,
+      "t_end": 99.747,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 99.747,
+      "t_end": 108.894,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 108.894,
+      "t_end": 122.0,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 122.0,
+      "t_end": 133.259,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 90.159,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 94.733,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 96.052,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 100.01,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 109.014,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "examples",
+      "item": "b1",
+      "t": 24.925,
+      "cue": "HIV is spread"
+    },
+    {
+      "slide": "examples",
+      "item": "b2",
+      "t": 29.467,
+      "cue": "Measles causes fever"
+    },
+    {
+      "slide": "examples",
+      "item": "b3",
+      "t": 33.865,
+      "cue": "Malaria is caused"
+    }
+  ]
+}

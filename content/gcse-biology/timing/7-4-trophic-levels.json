@@ -1,0 +1,97 @@
+{
+  "slug": "7-4-trophic-levels",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 123.365,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 5.603,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "levels",
+      "t": 5.603,
+      "t_end": 15.545,
+      "cue": "Level 1 is producers",
+      "animate": false
+    },
+    {
+      "id": "pyramid",
+      "t": 15.545,
+      "t_end": 30.909,
+      "cue": "Biomass decreases at each level",
+      "animate": true
+    },
+    {
+      "id": "calc",
+      "t": 30.909,
+      "t_end": 74.832,
+      "cue": "Efficiency equals biomass transferred divided by biomass available",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 74.832,
+      "t_end": 86.943,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 86.943,
+      "t_end": 104.205,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 104.205,
+      "t_end": 111.796,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 111.796,
+      "t_end": 123.365,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 77.092,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 81.791,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 83.147,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 87.214,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 104.325,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "slug": "3-3-plant-disease",
+  "duration": 127.69,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "signs",
+      "t": 6.06,
+      "aligned": true,
+      "cue": "Signs of disease include stunted growth"
+    },
+    {
+      "id": "infect",
+      "t": 16.08,
+      "aligned": true,
+      "cue": "Rose black spot is a fungal disease"
+    },
+    {
+      "id": "minerals",
+      "t": 31.58,
+      "aligned": true,
+      "cue": "Nitrate deficiency causes stunted growth"
+    },
+    {
+      "id": "defend",
+      "t": 43.14,
+      "aligned": true,
+      "cue": "Plants defend themselves with physical barriers"
+    },
+    {
+      "id": "pattern",
+      "t": 55.22,
+      "aligned": true,
+      "cue": "Pattern of symptoms"
+    },
+    {
+      "id": "revise",
+      "t": 80.82,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 92.28,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 103.84,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 113.64,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 82.94,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 87.68,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 89.1,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 92.56,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 103.96,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "slide": "infect",
+      "item": "b1",
+      "t": 16.2,
+      "aligned": true,
+      "cue": "Rose black spot"
+    },
+    {
+      "slide": "infect",
+      "item": "b2",
+      "t": 24.98,
+      "aligned": true,
+      "cue": "Tobacco mosaic virus"
+    },
+    {
+      "slide": "defend",
+      "item": "b1",
+      "t": 45.58,
+      "aligned": true,
+      "cue": "waxy cuticles and thorns"
+    },
+    {
+      "slide": "defend",
+      "item": "b2",
+      "t": 49.6,
+      "aligned": true,
+      "cue": "antibacterial chemicals"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.56,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 7.22,
+      "aligned": true,
+      "cue": "stunted growth",
+      "target": "heading"
+    },
+    {
+      "t": 16.08,
+      "aligned": true,
+      "cue": "rose black spot",
+      "target": "b1"
+    },
+    {
+      "t": 24.98,
+      "aligned": true,
+      "cue": "tobacco mosaic",
+      "target": "b2"
+    },
+    {
+      "t": 31.58,
+      "aligned": true,
+      "cue": "nitrate",
+      "target": "nitrate"
+    },
+    {
+      "t": 37.08,
+      "aligned": true,
+      "cue": "magnesium",
+      "target": "magnesium"
+    },
+    {
+      "t": 45.58,
+      "aligned": true,
+      "cue": "waxy cuticles",
+      "target": "b1"
+    },
+    {
+      "t": 49.6,
+      "aligned": true,
+      "cue": "antibacterial",
+      "target": "b2"
+    },
+    {
+      "t": 81.1,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 92.56,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 104.26,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 113.84,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

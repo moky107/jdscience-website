@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:02,400
+Hello and welcome back to JD Science.
+
+2
+00:00:03,020 --> 00:00:05,660
+Today we are exploring homeostasis.
+
+3
+00:00:06,380 --> 00:00:10,040
+Homeostasis means keeping conditions inside the body at
+
+4
+00:00:10,040 --> 00:00:10,900
+the right level.
+
+5
+00:00:11,480 --> 00:00:15,280
+Temperature, ion content, water content and blood
+
+6
+00:00:15,280 --> 00:00:16,960
+glucose are all controlled.
+
+7
+00:00:17,580 --> 00:00:19,480
+Control systems have three parts.
+
+8
+00:00:19,920 --> 00:00:21,020
+Receptors detect a.
+
+9
+00:00:21,160 --> 00:00:25,160
+A change, a coordinator such as the brain processes the information
+
+10
+00:00:25,160 --> 00:00:28,920
+and effectors such as muscles and glands produce the
+
+11
+00:00:28,920 --> 00:00:29,380
+response.
+
+12
+00:00:29,380 --> 00:00:33,080
+Negative feedback means the output of a process controls
+
+13
+00:00:33,080 --> 00:00:34,140
+its own level.
+
+14
+00:00:34,560 --> 00:00:38,260
+For example, when blood glucose rises, insulin is
+
+15
+00:00:38,260 --> 00:00:39,400
+released to lower it.
+
+16
+00:00:39,780 --> 00:00:43,300
+When glucose falls, glucagon is released higher tier.
+
+17
+00:00:43,700 --> 00:00:47,420
+Negative feedback opposes a change from a normal operating
+
+18
+00:00:47,420 --> 00:00:48,060
+range.
+
+19
+00:00:48,420 --> 00:00:52,060
+For example, after a meal, rising blood glucose
+
+20
+00:00:52,060 --> 00:00:56,200
+stimulates pancreatic beta cells to release insulin, promoting
+
+21
+00:00:56,200 --> 00:00:57,980
+glucose uptake and storage.
+
+22
+00:00:58,720 --> 00:01:02,640
+When blood glucose falls, pancreatic alpha cells release
+
+23
+00:01:02,640 --> 00:01:06,000
+glucagon, stimulating the liver to release glucose.
+
+24
+00:01:06,500 --> 00:01:10,240
+The nervous and endocrine systems both contribute to maintaining a
+
+25
+00:01:10,240 --> 00:01:11,940
+stable internal environment.
+
+26
+00:01:12,380 --> 00:01:16,080
+As you revise this topic, try to explain the key process in
+
+27
+00:01:16,080 --> 00:01:16,920
+your own words.
+
+28
+00:01:17,460 --> 00:01:21,160
+Focus on what happens, why it happens and how the structures
+
+29
+00:01:21,160 --> 00:01:23,000
+involved help the process work.
+
+30
+00:01:23,000 --> 00:01:27,020
+Now pause the video and try this exam style question.
+
+31
+00:01:27,380 --> 00:01:31,320
+Describe the role of receptors, coordinators and effectors
+
+32
+00:01:31,320 --> 00:01:32,480
+in a control system.
+
+33
+00:01:33,160 --> 00:01:34,420
+Here is a model answer.
+
+34
+00:01:35,100 --> 00:01:39,220
+Receptors detect a change in the internal or external environment.
+
+35
+00:01:39,760 --> 00:01:43,720
+The coordinator, such as the brain, processes the information.
+
+36
+00:01:44,600 --> 00:01:48,400
+Effectors, such as muscles or glands, bring about a response.
+
+37
+00:01:48,800 --> 00:01:52,840
+If this explanation has helped, please subscribe to JD Science
+
+38
+00:01:52,840 --> 00:01:53,780
+for more lessons.
+
+39
+00:01:54,400 --> 00:02:01,100
+You can find further learning resources and practice questions at jdscience
+
+40
+00:02:01,100 --> 00:02:02,840
+.co .uk.
+
+41
+00:02:03,660 --> 00:02:05,100
+Thank you for watching, Ick.
+

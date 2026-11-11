@@ -1,0 +1,106 @@
+{
+  "slug": "3-2-monoclonal-antibodies",
+  "spec": "3.2",
+  "title": "Monoclonal Antibodies",
+  "filename": "jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+  "kind": "visual_only_draft",
+  "narration": "pending_cloned_voice",
+  "youtube": "not_uploaded",
+  "site": "not_published",
+  "duration": 129.629,
+  "bytes": 1610728,
+  "md5": "30ef838967b51ea7b20d5b48bdbb36b1",
+  "local_path": "content/gcse-biology/visual-drafts/3-2-monoclonal-antibodies/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+  "artifact_path": "/opt/cursor/artifacts/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+  "download_url": "https://xugsznxfvpbifpzpuoek.supabase.co/storage/v1/object/public/resources/gcse-igcse/biology/visual-drafts/3-2-monoclonal-antibodies/jdscience-3-2-monoclonal-antibodies-visual-draft-1080p.mp4",
+  "upload_error": null,
+  "qa_pass": true,
+  "qa": {
+    "pass": true,
+    "failed": [],
+    "probe": {
+      "width": 1920,
+      "height": 1080,
+      "codec": "h264",
+      "fps": 30.0,
+      "duration": 129.633333,
+      "size": 1610728,
+      "nb_frames": 3889
+    },
+    "luma": {
+      "start": 42.0,
+      "early": 42.0,
+      "mid": 42.4,
+      "late": 39.5
+    },
+    "checks": [
+      {
+        "name": "resolution",
+        "ok": true,
+        "detail": "1920x1080"
+      },
+      {
+        "name": "codec",
+        "ok": true,
+        "detail": "h264"
+      },
+      {
+        "name": "fps",
+        "ok": true,
+        "detail": "30.0"
+      },
+      {
+        "name": "duration",
+        "ok": true,
+        "detail": "129.633s vs 129.629s"
+      },
+      {
+        "name": "frame_count",
+        "ok": true,
+        "detail": "3889 vs 3889"
+      },
+      {
+        "name": "not_black_start",
+        "ok": true,
+        "detail": "luma=42.0"
+      },
+      {
+        "name": "frame_size_start",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_early",
+        "ok": true,
+        "detail": "luma=42.0"
+      },
+      {
+        "name": "frame_size_early",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_mid",
+        "ok": true,
+        "detail": "luma=42.4"
+      },
+      {
+        "name": "frame_size_mid",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      },
+      {
+        "name": "not_black_late",
+        "ok": true,
+        "detail": "luma=39.5"
+      },
+      {
+        "name": "frame_size_late",
+        "ok": true,
+        "detail": "(1920, 1080)"
+      }
+    ]
+  },
+  "timing": "content/gcse-biology/timing/3-2-monoclonal-antibodies.json",
+  "resume_note": "Re-encode against cloned-voice MP3. Do not stretch narration to this estimated clock."
+}

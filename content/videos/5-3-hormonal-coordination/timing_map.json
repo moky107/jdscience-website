@@ -1,0 +1,153 @@
+{
+  "slug": "5-3-hormonal-coordination",
+  "duration": 135.44,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "glands",
+      "t": 6.28,
+      "aligned": true,
+      "cue": "Hormones are chemical messengers"
+    },
+    {
+      "id": "diabetes",
+      "t": 28.92,
+      "aligned": true,
+      "cue": "In type 1 diabetes, the pancreas does not make enough insulin"
+    },
+    {
+      "id": "cycle",
+      "t": 42.48,
+      "aligned": true,
+      "cue": "The menstrual cycle involves FSH"
+    },
+    {
+      "id": "adh",
+      "t": 54.8,
+      "aligned": true,
+      "cue": "When water is low, ADH is released"
+    },
+    {
+      "id": "revise",
+      "t": 92.8,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 104.4,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 113.66,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 121.5,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 94.92,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 99.82,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 101.24,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 104.78,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 113.78,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.64,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 4.64,
+      "aligned": true,
+      "cue": "hormones",
+      "target": "heading"
+    },
+    {
+      "t": 29.6,
+      "aligned": true,
+      "cue": "type 1",
+      "target": "heading"
+    },
+    {
+      "t": 42.58,
+      "aligned": true,
+      "cue": "menstrual",
+      "target": "heading"
+    },
+    {
+      "t": 56.72,
+      "aligned": true,
+      "cue": "adh",
+      "target": "heading"
+    },
+    {
+      "t": 93.1,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 104.78,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 114.02,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 121.68,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

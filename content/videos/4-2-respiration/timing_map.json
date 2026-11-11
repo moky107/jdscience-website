@@ -1,0 +1,159 @@
+{
+  "slug": "4-2-respiration",
+  "duration": 128.57,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "aero",
+      "t": 6.14,
+      "aligned": true,
+      "cue": "Respiration releases energy from glucose"
+    },
+    {
+      "id": "anaer",
+      "t": 16.44,
+      "aligned": true,
+      "cue": "When oxygen is in short supply"
+    },
+    {
+      "id": "ferm",
+      "t": 35.6,
+      "aligned": true,
+      "cue": "In yeast and plants, anaerobic respiration produces ethanol"
+    },
+    {
+      "id": "breathe",
+      "t": 50.72,
+      "aligned": true,
+      "cue": "Respiration is a chemical process in cells"
+    },
+    {
+      "id": "lactate",
+      "t": 69.54,
+      "aligned": true,
+      "cue": "anaerobic respiration in muscle cells produces lactate"
+    },
+    {
+      "id": "revise",
+      "t": 83.04,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 94.84,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 103.3,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 114.72,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 85.64,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 90.34,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 91.82,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 94.96,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 103.42,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.66,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 9.34,
+      "aligned": true,
+      "cue": "aerobic",
+      "target": "heading"
+    },
+    {
+      "t": 18.7,
+      "aligned": true,
+      "cue": "anaerobic",
+      "target": "heading"
+    },
+    {
+      "t": 38.88,
+      "aligned": true,
+      "cue": "ethanol",
+      "target": "heading"
+    },
+    {
+      "t": 72.14,
+      "aligned": true,
+      "cue": "lactate",
+      "target": "heading"
+    },
+    {
+      "t": 83.86,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 94.94,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 103.8,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 114.88,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}

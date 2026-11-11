@@ -1,0 +1,111 @@
+{
+  "slug": "2-3-plant-tissues-organs-systems",
+  "clock": "estimated_from_teaching_edition_until_cloned_mp3",
+  "duration": 117.67,
+  "transition_s": 0.4,
+  "fps": 30,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "t_end": 6.193,
+      "cue": "Hello and welcome back to JD Science",
+      "animate": true
+    },
+    {
+      "id": "leaf",
+      "t": 6.193,
+      "t_end": 21.941,
+      "cue": "A leaf has several tissues",
+      "animate": true
+    },
+    {
+      "id": "stomata",
+      "t": 21.941,
+      "t_end": 27.427,
+      "cue": "Guard cells control the stomata",
+      "animate": false
+    },
+    {
+      "id": "transpire",
+      "t": 27.427,
+      "t_end": 39.548,
+      "cue": "Water evaporates through the stomata",
+      "animate": false
+    },
+    {
+      "id": "xylem",
+      "t": 39.548,
+      "t_end": 62.993,
+      "cue": "Xylem carries water and mineral ions upwards",
+      "animate": false
+    },
+    {
+      "id": "sources",
+      "t": 62.993,
+      "t_end": 76.618,
+      "cue": "Phloem transports dissolved sugars from sources",
+      "animate": false
+    },
+    {
+      "id": "revise",
+      "t": 76.618,
+      "t_end": 88.473,
+      "cue": "As you revise this topic",
+      "animate": false
+    },
+    {
+      "id": "exam",
+      "t": 88.473,
+      "t_end": 99.09,
+      "cue": "Now, pause the video",
+      "animate": false
+    },
+    {
+      "id": "answer",
+      "t": 99.09,
+      "t_end": 106.345,
+      "cue": "Here is a model answer",
+      "animate": false
+    },
+    {
+      "id": "outro",
+      "t": 106.345,
+      "t_end": 117.67,
+      "cue": "please subscribe to JD Science",
+      "animate": false
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 78.83,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 83.43,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 84.758,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 88.739,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 99.21,
+      "cue": "Here is a model answer"
+    }
+  ]
+}

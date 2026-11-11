@@ -1,0 +1,165 @@
+{
+  "slug": "4-1-photosynthesis",
+  "duration": 140.02,
+  "slides": [
+    {
+      "id": "intro",
+      "t": 0.0,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "eq",
+      "t": 6.46,
+      "aligned": true,
+      "cue": "Plants use carbon dioxide and water"
+    },
+    {
+      "id": "glucose",
+      "t": 25.08,
+      "aligned": true,
+      "cue": "Glucose can be"
+    },
+    {
+      "id": "limit",
+      "t": 38.66,
+      "aligned": true,
+      "cue": "The rate of photosynthesis depends on temperature"
+    },
+    {
+      "id": "inv",
+      "t": 48.74,
+      "aligned": true,
+      "cue": "Light intensity falls off with distance"
+    },
+    {
+      "id": "caveat",
+      "t": 51.4,
+      "aligned": true,
+      "cue": "inverse square"
+    },
+    {
+      "id": "revise",
+      "t": 87.14,
+      "aligned": true,
+      "cue": "As you revise this topic"
+    },
+    {
+      "id": "exam",
+      "t": 98.7,
+      "aligned": true,
+      "cue": "Now, pause the video"
+    },
+    {
+      "id": "answer",
+      "t": 113.8,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    },
+    {
+      "id": "outro",
+      "t": 126.06,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "revise",
+      "item": "r1",
+      "t": 89.2,
+      "aligned": true,
+      "cue": "explain the key process"
+    },
+    {
+      "slide": "revise",
+      "item": "r2",
+      "t": 94.02,
+      "aligned": true,
+      "cue": "why it happens"
+    },
+    {
+      "slide": "revise",
+      "item": "r3",
+      "t": 95.38,
+      "aligned": true,
+      "cue": "how the structures involved"
+    },
+    {
+      "slide": "exam",
+      "item": "pause",
+      "t": 98.9,
+      "aligned": true,
+      "cue": "pause the video"
+    },
+    {
+      "slide": "answer",
+      "item": "model",
+      "t": 113.92,
+      "aligned": true,
+      "cue": "Here is a model answer"
+    }
+  ],
+  "cursor": [
+    {
+      "t": 0.7,
+      "aligned": true,
+      "cue": "welcome back",
+      "target": null
+    },
+    {
+      "t": 6.96,
+      "aligned": true,
+      "cue": "carbon dioxide and water",
+      "target": "heading"
+    },
+    {
+      "t": 11.88,
+      "aligned": true,
+      "cue": "glucose",
+      "target": "heading"
+    },
+    {
+      "t": 40.68,
+      "aligned": true,
+      "cue": "temperature",
+      "target": "heading"
+    },
+    {
+      "t": 48.74,
+      "aligned": true,
+      "cue": "light intensity",
+      "target": "heading"
+    },
+    {
+      "t": 51.4,
+      "aligned": true,
+      "cue": "inverse",
+      "target": "heading"
+    },
+    {
+      "t": 87.44,
+      "aligned": true,
+      "cue": "revise this topic",
+      "target": "r1"
+    },
+    {
+      "t": 98.9,
+      "aligned": true,
+      "cue": "pause the video",
+      "target": "question"
+    },
+    {
+      "t": 114.42,
+      "aligned": true,
+      "cue": "model answer",
+      "target": "answer"
+    },
+    {
+      "t": 126.22,
+      "aligned": true,
+      "cue": "subscribe",
+      "target": null
+    }
+  ]
+}
