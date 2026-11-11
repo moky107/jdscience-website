@@ -45,6 +45,7 @@ export const FEATURED_RESOURCE_LANDINGS = [
     description: "Browse JDScience GCSE Physics worksheets, revision notes, past-paper links and mark schemes for AQA, Edexcel, OCR and other UK exam boards today.",
     intro: "Use this GCSE Physics landing page to reach energy, forces, electricity, waves and space topics through the existing JD Science resource system. Revision notes and worksheets sit alongside past questions so exam practice can follow the same idea you have just revised. IGCSE Physics students can use the same page where the content overlaps. Specifications, mark schemes and examiner reports stay in their usual categories rather than being copied into a second library. Choose AQA, Edexcel or OCR below to open the live past papers browser already set to GCSE Physics, then add Eduqas or WJEC if that is your course. Videos appear when a clip has been published for the topic. For tutoring on working, units and required practicals, the Find a Tutor page and Joseph Danso’s profile explain the next step.",
     related: [
+      { href: "/resources/gcse/physics/videos/", text: "GCSE Physics energy videos" },
       { href: "/resources/gcse/chemistry/", text: "GCSE Chemistry resources" },
       { href: "/resources/gcse/biology/", text: "GCSE Biology resources" },
       { href: "/resources/a-level/physics/", text: "A-Level Physics resources" },
