@@ -116,7 +116,9 @@ export default function FeaturedVideoPlayer({ video, isMobile = false }) {
             controls={started}
             playsInline
             preload="metadata"
-            controlsList="nodownload"
+            controlsList="nodownload noremoteplayback"
+            disablePictureInPicture
+            onContextMenu={(event) => event.preventDefault()}
             title={title}
             onPlay={() => setStarted(true)}
             onLoadedMetadata={(event) => { event.currentTarget.playbackRate = speed; }}

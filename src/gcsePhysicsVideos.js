@@ -17,7 +17,7 @@ function lesson({ title, topicSlug, file_name, source_path, description }) {
     source_path,
     description,
     file_url_override: `/resources/gcse/physics/videos/${topicSlug}/${file_name}`,
-    notesHtml: `<div class="callout">Original JD Science GCSE Physics lesson. Watch on this page, or download the MP4.</div><p>${description}</p>`,
+    notesHtml: `<div class="callout">Original JD Science GCSE Physics lesson. Watch on this page — streaming only, no downloads.</div><p>${description}</p>`,
   };
 }
 

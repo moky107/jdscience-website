@@ -52,6 +52,9 @@ test("homepage video uses stable public mp4 with poster and autoplay-safe attrib
   assert.equal(props.poster, INTRO_VIDEO_POSTER);
   assert.equal(props.poster, "/homepage-promo-poster.jpg");
   assert.equal(props.controls, true);
+  assert.equal(props.controlsList, "nodownload noremoteplayback");
+  assert.equal(props.disablePictureInPicture, true);
+  assert.equal(typeof props.onContextMenu, "function");
   assert.equal(props.muted, true);
   assert.equal(props.playsInline, true);
   assert.equal(props.autoPlay, true);

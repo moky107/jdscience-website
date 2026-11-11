@@ -8,11 +8,14 @@ export function homepageVideoElementProps({ autoPlay = true } = {}) {
     title: "How JD Science Works",
     poster: INTRO_VIDEO_POSTER,
     controls: true,
+    controlsList: "nodownload noremoteplayback",
+    disablePictureInPicture: true,
     muted: true,
     playsInline: true,
     preload: "metadata",
     autoPlay: Boolean(autoPlay),
     loop: true,
+    onContextMenu: (event) => event.preventDefault(),
   };
 }
 

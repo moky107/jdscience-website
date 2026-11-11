@@ -252,11 +252,14 @@ function ResourceVideoPlayer({ title, src, poster, captions, description, direct
         {direct ? (
           <video
             controls
+            controlsList="nodownload noremoteplayback"
+            disablePictureInPicture
             playsInline
             preload="metadata"
             poster={poster || undefined}
             title={title}
             crossOrigin={captions ? "anonymous" : undefined}
+            onContextMenu={(event) => event.preventDefault()}
             style={{ position: "absolute", width: "100%", height: "100%", top: 0, left: 0, objectFit: "contain", background: "#000" }}
           >
             <source src={src} type="video/mp4" />
