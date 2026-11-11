@@ -5,6 +5,7 @@ import { JD_SCIENCE_WORKSHEETS } from "../../src/jdScienceWorksheets.js";
 import { HOSTED_REVISION_NOTES } from "../../src/hostedRevisionNotes.js";
 import { GCSE_CHEMISTRY_VIDEOS } from "../../src/gcseChemistryVideos.js";
 import { GCSE_BIOLOGY_VIDEOS } from "../../src/gcseBiologyVideos.js";
+import { GCSE_PHYSICS_VIDEOS } from "../../src/gcsePhysicsVideos.js";
 import { TLEVEL_CHEMISTRY_VIDEOS } from "../../src/tlevelChemistryVideos.js";
 import { JOSEPH_DANSO, SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { FEATURED_RESOURCE_LANDINGS, JOSEPH_TEACHING_SUBJECTS, RESOURCE_TYPES } from "../../src/resourceLandingPages.js";
@@ -23,6 +24,7 @@ const EXTRA_HOSTED_RESOURCES = [
   { level: "GCSE/IGCSE", subject: "Chemistry", exam_board: "Edexcel", resource_category: "Revision Notes", title: "Topic 1 Key Concepts notes", file_name: "jdscience-edexcel-gcse-chemistry-topic-1-key-concepts-notes-pdf.pdf" },
   ...GCSE_CHEMISTRY_VIDEOS,
   ...GCSE_BIOLOGY_VIDEOS,
+  ...GCSE_PHYSICS_VIDEOS,
   ...TLEVEL_CHEMISTRY_VIDEOS,
 ];
 
@@ -100,12 +102,13 @@ function videoPlayerHtml(items, topicTitle) {
 
 function publishHostedVideoFiles() {
   let copied = 0;
-  for (const item of GCSE_CHEMISTRY_VIDEOS) {
+  const hosted = [...GCSE_CHEMISTRY_VIDEOS, ...GCSE_PHYSICS_VIDEOS];
+  for (const item of hosted) {
     if (item.hosted || !item.source_path || !item.file_url_override) continue;
     const src = path.join(root, item.source_path);
     const dest = path.join(publicDir, item.file_url_override.replace(/^\//, ""));
     if (!fs.existsSync(src)) {
-      throw new Error(`Missing GCSE Chemistry video source: ${item.source_path}`);
+      throw new Error(`Missing hosted video source: ${item.source_path}`);
     }
     fs.mkdirSync(path.dirname(dest), { recursive: true });
     fs.copyFileSync(src, dest);
@@ -674,4 +677,4 @@ const topicCount = writeResourcePages(subjects);
 writeFeaturedLandingPages();
 writeMissingFeaturedHubs(subjects);
 writeElevenPlusPages();
-console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages, ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings and 11+ PDF library pages. Copied ${hostedVideosCopied} GCSE Chemistry lesson videos.`);
+console.log(`Wrote about, Joseph Danso profile, ${subjects.length} subject hubs, ${topicCount} topic pages, ${FEATURED_RESOURCE_LANDINGS.length} featured SEO landings and 11+ PDF library pages. Copied ${hostedVideosCopied} hosted lesson videos.`);
