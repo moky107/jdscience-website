@@ -1,0 +1,98 @@
+{
+  "title": "Thermal Insulation and Thermal Conductivity",
+  "file": "08_Thermal_Insulation_and_Conductivity.mp4",
+  "duration": 244.03800000000004,
+  "voice": "en-NG-AbeoNeural",
+  "scenes": [
+    {
+      "index": 0,
+      "layout": "title",
+      "diagram": "title",
+      "title": "Thermal Insulation and Thermal Conductivity",
+      "start": 0.45,
+      "duration": 17.088,
+      "pause": 0.0,
+      "text": "Hello and welcome back to JD Science. Today we will explain thermal conductivity, compare insulating materials and answer a GCSE question about loft insulation. Please subscribe to JD Science and visit jdscience.co.uk for more revision resources."
+    },
+    {
+      "index": 1,
+      "layout": "explain",
+      "diagram": "conductivity",
+      "title": "Thermal conductivity",
+      "start": 17.838,
+      "duration": 27.504,
+      "pause": 0.0,
+      "text": "Thermal conductivity describes how readily a material conducts thermal energy. Its SI unit is watts per metre per kelvin, written W per metre per kelvin. A temperature difference of one kelvin is equal in size to a difference of one degree Celsius, so some tables express the unit using degrees Celsius. The lower the thermal conductivity, the more effective the material is at resisting conduction when thickness and other conditions are the same."
+    },
+    {
+      "index": 2,
+      "layout": "explain",
+      "diagram": "cond_bars",
+      "title": "Illustrative conductivities",
+      "start": 45.641999999999996,
+      "duration": 40.776,
+      "pause": 0.0,
+      "text": "Let us compare some illustrative values, measured in watts per metre per kelvin. Air and polyurethane foam may each have values around 0.03; fibreglass around 0.04; wool felt around 0.05; wood around 0.15; plaster around 0.50; glass around 0.80; brick around 1.00; and concrete around 1.04. Actual values depend on composition, moisture, temperature and density, so always use the table provided in an examination. Fibreglass, foam and trapped air have low thermal conductivity, which makes them useful for insulation."
+    },
+    {
+      "index": 3,
+      "layout": "explain",
+      "diagram": "cond_factors",
+      "title": "What changes the rate",
+      "start": 86.718,
+      "duration": 24.048,
+      "pause": 0.0,
+      "text": "The rate of energy transfer through a wall depends not only on the material's thermal conductivity but also on the wall's thickness, area and temperature difference across it. Thicker insulation generally reduces the rate of transfer. Double glazing uses a gap containing air or another gas to reduce conduction and suppress convection. Loft insulation reduces energy transfer through the roof."
+    },
+    {
+      "index": 4,
+      "layout": "explain",
+      "diagram": "brick",
+      "title": "Brick and fibreglass",
+      "start": 111.066,
+      "duration": 35.16,
+      "pause": 0.0,
+      "text": "Here is a comparison using the illustrative table. Brick has a conductivity of 1.00, while fibreglass has 0.04. Dividing 1.00 by 0.04 gives 25. This means brick's thermal conductivity is 25 times that of fibreglass. For equal thickness, area and temperature difference, conduction through the brick would be approximately 25 times greater. It is more precise to compare conductivity than to say a material is '25 times better' without stating the conditions."
+    },
+    {
+      "index": 5,
+      "layout": "question",
+      "diagram": "wood",
+      "title": "Your turn",
+      "start": 146.526,
+      "duration": 10.32,
+      "pause": 5.0,
+      "text": "Now it is your turn. Which is the better insulator, wood or plaster, and by what factor do their conductivities differ? Pause the video."
+    },
+    {
+      "index": 6,
+      "layout": "answer",
+      "diagram": "wood",
+      "title": "Worked answer",
+      "start": 162.14600000000002,
+      "duration": 19.656,
+      "pause": 0.0,
+      "text": "Wood has the lower conductivity, 0.15 compared with 0.50. Divide 0.50 by 0.15 to obtain approximately 3.3. Plaster's conductivity is about 3.3 times that of wood, so wood resists conduction more effectively at the same thickness."
+    },
+    {
+      "index": 7,
+      "layout": "exam",
+      "diagram": "loft",
+      "title": "GCSE-style question",
+      "start": 182.10200000000003,
+      "duration": 46.632,
+      "pause": 0.0,
+      "text": "Here is a GCSE-style question. Fibreglass and wool felt are used for loft insulation. A thicker layer of wool felt is needed to give the same insulation as fibreglass. Part A, worth two marks: which material has the higher thermal conductivity, and why? Wool felt has the higher conductivity, so a greater thickness is needed to achieve a similar resistance to conduction. Award one mark for wool felt and one for the explanation. Part B, worth two marks: explain why trapped air helps reduce energy transfer. Air has low thermal conductivity, so conduction through it is slow; trapping the air in small pockets also prevents large convection currents. Award one mark for each correct explanation."
+    },
+    {
+      "index": 8,
+      "layout": "end",
+      "diagram": "end",
+      "title": "Keep practising",
+      "start": 229.03400000000005,
+      "duration": 14.304,
+      "pause": 0.0,
+      "text": "Remember that lower conductivity means less energy transferred by conduction under equivalent conditions. Subscribe to JD Science and visit jdscience.co.uk for more worked examples. Thank you for watching."
+    }
+  ]
+}
