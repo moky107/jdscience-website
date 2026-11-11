@@ -40,6 +40,7 @@
       "source": "/homepage-promo.mp4",
       "headers": [
         { "key": "Content-Type", "value": "video/mp4" },
+        { "key": "Content-Disposition", "value": "inline" },
         { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
         { "key": "Accept-Ranges", "value": "bytes" }
       ]
@@ -48,6 +49,7 @@
       "source": "/resources/gcse/chemistry/videos/(.*)\\.mp4",
       "headers": [
         { "key": "Content-Type", "value": "video/mp4" },
+        { "key": "Content-Disposition", "value": "inline" },
         { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
         { "key": "Accept-Ranges", "value": "bytes" }
       ]
@@ -56,6 +58,7 @@
       "source": "/resources/gcse/physics/videos/(.*)\\.mp4",
       "headers": [
         { "key": "Content-Type", "value": "video/mp4" },
+        { "key": "Content-Disposition", "value": "inline" },
         { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" },
         { "key": "Accept-Ranges", "value": "bytes" }
       ]
