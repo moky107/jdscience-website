@@ -1,0 +1,320 @@
+1
+00:00:00,100 --> 00:00:02,714
+Hello and welcome back to JD Science
+
+2
+00:00:04,270 --> 00:00:08,119
+This GCSE Chemistry lesson is about rates of reaction
+
+3
+00:00:09,394 --> 00:00:12,533
+By the end you should be able to do three things
+
+4
+00:00:13,520 --> 00:00:15,679
+Say what reaction rate means
+
+5
+00:00:16,659 --> 00:00:19,031
+Calculate average rate from measurements
+
+6
+00:00:20,012 --> 00:00:22,810
+And read graphs that show how the rate changes
+
+7
+00:00:24,094 --> 00:00:26,807
+Some chemical reactions finish in a flash
+
+8
+00:00:27,794 --> 00:00:29,044
+Others take years
+
+9
+00:00:30,322 --> 00:00:32,282
+Fireworks are very fast
+
+10
+00:00:33,269 --> 00:00:35,556
+They release energy in a bright burst
+
+11
+00:00:36,838 --> 00:00:38,500
+Rusting of iron is slow
+
+12
+00:00:39,487 --> 00:00:43,109
+Iron changes gradually as it reacts with oxygen and water
+
+13
+00:00:44,386 --> 00:00:47,809
+The rate of a reaction tells us how quickly reactants are used
+
+14
+00:00:47,824 --> 00:00:48,079
+up
+
+15
+00:00:48,363 --> 00:00:50,608
+or how quickly products are formed
+
+16
+00:00:51,886 --> 00:00:54,457
+Reactants are the substances we start with
+
+17
+00:00:55,444 --> 00:00:58,839
+Products are the new substances made during the reaction
+
+18
+00:01:00,106 --> 00:01:04,339
+Average rate equals the quantity of product formed divided by the time
+
+19
+00:01:04,353 --> 00:01:04,936
+taken
+
+20
+00:01:05,922 --> 00:01:10,681
+Or the quantity of reactant used up divided by the time taken
+
+21
+00:01:11,950 --> 00:01:16,226
+Quantity might be a mass in grams a volume in centimetres cubed
+
+22
+00:01:16,481 --> 00:01:17,930
+or an amount in moles
+
+23
+00:01:18,917 --> 00:01:21,573
+The units of rate follow the units you measured
+
+24
+00:01:22,553 --> 00:01:25,891
+Grams divided by seconds gives grams per second
+
+25
+00:01:26,872 --> 00:01:31,531
+Centimetres cubed divided by seconds gives centimetres cubed per second
+
+26
+00:01:32,794 --> 00:01:34,811
+Let's use a familiar reaction
+
+27
+00:01:35,798 --> 00:01:40,414
+Magnesium reacts with hydrochloric acid to make magnesium chloride and
+
+28
+00:01:40,429 --> 00:01:41,181
+hydrogen
+
+29
+00:01:42,162 --> 00:01:47,034
+During the reaction the magnesium disappears and bubbles of hydrogen are given
+
+30
+00:01:47,048 --> 00:01:47,488
+off
+
+31
+00:01:48,766 --> 00:01:51,891
+We can collect the hydrogen and find the average rate
+
+32
+00:01:52,878 --> 00:01:58,034
+Suppose we collect 180 centimetres cubed of hydrogen in 2 minutes
+
+33
+00:01:59,014 --> 00:02:03,034
+We want the answer in centimetres cubed per second so convert the
+
+34
+00:02:03,048 --> 00:02:04,000
+time first
+
+35
+00:02:05,266 --> 00:02:09,144
+2 minutes times 60 equals 120 seconds
+
+36
+00:02:10,131 --> 00:02:12,361
+Now divide the volume by the time
+
+37
+00:02:13,341 --> 00:02:18,369
+180 divided by 120 equals 1.5
+
+38
+00:02:19,350 --> 00:02:23,526
+So the average rate is 1.5 centimetres cubed per second
+
+39
+00:02:24,790 --> 00:02:27,290
+That is an average over the whole 2 minutes
+
+40
+00:02:28,277 --> 00:02:31,587
+The actual rate may have been faster at the start and slower
+
+41
+00:02:31,601 --> 00:02:32,126
+later
+
+42
+00:02:33,394 --> 00:02:36,718
+We can also measure how quickly a reactant is used up
+
+43
+00:02:37,705 --> 00:02:42,563
+In a separate experiment 3 grams of magnesium reacts completely in 4
+
+44
+00:02:42,577 --> 00:02:43,131
+minutes
+
+45
+00:02:44,398 --> 00:02:46,600
+Convert 4 minutes to seconds
+
+46
+00:02:47,587 --> 00:02:51,109
+4 times 60 equals 240 seconds
+
+47
+00:02:52,089 --> 00:02:54,547
+Then divide the mass used up by the time
+
+48
+00:02:55,527 --> 00:02:56,663
+3 divided by
+
+49
+00:02:56,678 --> 00:03:01,010
+240 equals 0.0125
+
+50
+00:03:01,990 --> 00:03:06,592
+The average rate is 0.0125 grams per second
+
+51
+00:03:07,858 --> 00:03:10,628
+Average rate hides how the reaction changes
+
+52
+00:03:11,615 --> 00:03:13,092
+Graphs show that clearly
+
+53
+00:03:14,374 --> 00:03:17,897
+First mass of magnesium remaining against time
+
+54
+00:03:18,884 --> 00:03:21,100
+Time goes on the horizontal axis
+
+55
+00:03:22,080 --> 00:03:24,707
+Mass remaining goes on the vertical axis
+
+56
+00:03:25,978 --> 00:03:29,472
+If we start with 3 grams the line begins at 3
+
+57
+00:03:30,459 --> 00:03:34,195
+As magnesium is used up the line slopes downwards
+
+58
+00:03:35,175 --> 00:03:38,527
+It is steep at first because the reaction is fast
+
+59
+00:03:39,508 --> 00:03:41,113
+Then it becomes less steep
+
+60
+00:03:42,093 --> 00:03:47,121
+If all the magnesium reacts the line reaches zero and becomes horizontal
+
+61
+00:03:48,406 --> 00:03:51,744
+Now look at volume of hydrogen produced against time
+
+62
+00:03:52,731 --> 00:03:56,808
+The line starts at zero because no gas has been collected yet
+
+63
+00:03:57,788 --> 00:04:00,870
+As hydrogen is produced the line rises
+
+64
+00:04:01,850 --> 00:04:05,231
+It is steep at the beginning then less steep then it levels
+
+65
+00:04:05,245 --> 00:04:07,106
+off when the reaction has finished
+
+66
+00:04:08,386 --> 00:04:12,179
+For both graphs a steeper line means a faster reaction
+
+67
+00:04:13,166 --> 00:04:17,256
+A horizontal line means the measured quantity is no longer changing
+
+68
+00:04:18,526 --> 00:04:21,765
+A question might ask for moles per minute instead of grams per
+
+69
+00:04:21,779 --> 00:04:22,404
+second
+
+70
+00:04:23,391 --> 00:04:25,053
+Always check the units
+
+71
+00:04:26,033 --> 00:04:29,442
+If it asks for a rate per second convert the time into
+
+72
+00:04:29,456 --> 00:04:31,203
+seconds before you divide
+
+73
+00:04:32,482 --> 00:04:33,547
+Remember this
+
+74
+00:04:34,534 --> 00:04:38,654
+Average rate is the quantity of reactant used up or product formed
+
+75
+00:04:38,881 --> 00:04:40,671
+divided by the time taken
+
+76
+00:04:41,651 --> 00:04:45,458
+On a graph greater steepness means a faster reaction
+
+77
+00:04:46,726 --> 00:04:51,016
+If this explanation has helped please subscribe to JD Science for more
+
+78
+00:04:51,030 --> 00:04:51,783
+lessons
+
+79
+00:04:52,770 --> 00:04:57,869
+You can find further learning resources at jdscience.co.uk
+
+80
+00:04:58,849 --> 00:05:00,085
+Thank you for watching
+

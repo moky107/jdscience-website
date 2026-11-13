@@ -1,0 +1,257 @@
+{
+  "slug": "rates-of-reaction",
+  "duration": 301.254,
+  "slides": [
+    {
+      "id": "hello",
+      "t": 0.1,
+      "aligned": true,
+      "cue": "Hello and welcome back to JD Science"
+    },
+    {
+      "id": "title",
+      "t": 4.27,
+      "aligned": true,
+      "cue": "This GCSE Chemistry lesson is about rates of reaction"
+    },
+    {
+      "id": "aims",
+      "t": 9.394,
+      "aligned": true,
+      "cue": "By the end, you should be able to do three things"
+    },
+    {
+      "id": "hook",
+      "t": 24.094,
+      "aligned": true,
+      "cue": "Some chemical reactions finish in a flash"
+    },
+    {
+      "id": "fireworks",
+      "t": 30.322,
+      "aligned": true,
+      "cue": "Fireworks are very fast"
+    },
+    {
+      "id": "rusting",
+      "t": 36.838,
+      "aligned": true,
+      "cue": "Rusting of iron is slow"
+    },
+    {
+      "id": "define",
+      "t": 44.386,
+      "aligned": true,
+      "cue": "The rate of a reaction tells us"
+    },
+    {
+      "id": "words",
+      "t": 51.886,
+      "aligned": true,
+      "cue": "Reactants are the substances we start with"
+    },
+    {
+      "id": "formula",
+      "t": 60.106,
+      "aligned": true,
+      "cue": "Average rate equals the quantity of product formed"
+    },
+    {
+      "id": "units",
+      "t": 71.95,
+      "aligned": true,
+      "cue": "Quantity might be a mass in grams"
+    },
+    {
+      "id": "reaction",
+      "t": 95.798,
+      "aligned": true,
+      "cue": "Magnesium reacts with hydrochloric acid"
+    },
+    {
+      "id": "ex1",
+      "t": 112.878,
+      "aligned": true,
+      "cue": "Suppose we collect 180"
+    },
+    {
+      "id": "ex1_calc",
+      "t": 125.266,
+      "aligned": true,
+      "cue": "2 minutes times 60 equals 120 seconds"
+    },
+    {
+      "id": "ex1_ans",
+      "t": 139.634,
+      "aligned": true,
+      "cue": "the average rate is 1.5"
+    },
+    {
+      "id": "ex2",
+      "t": 159.338,
+      "aligned": true,
+      "cue": "3 grams of magnesium reacts completely"
+    },
+    {
+      "id": "ex2_ans",
+      "t": 164.398,
+      "aligned": true,
+      "cue": "Convert 4 minutes to seconds"
+    },
+    {
+      "id": "graphs_why",
+      "t": 191.615,
+      "aligned": true,
+      "cue": "Graphs show that clearly"
+    },
+    {
+      "id": "mg_axes",
+      "t": 198.884,
+      "aligned": true,
+      "cue": "Time goes on the horizontal axis"
+    },
+    {
+      "id": "mg_line",
+      "t": 207.91,
+      "aligned": true,
+      "cue": "the line begins at 3"
+    },
+    {
+      "id": "h2_graph",
+      "t": 229.13,
+      "aligned": true,
+      "cue": "Volume of hydrogen produced against time"
+    },
+    {
+      "id": "steep",
+      "t": 249.65,
+      "aligned": true,
+      "cue": "a steeper line means a faster reaction"
+    },
+    {
+      "id": "units2",
+      "t": 259.819,
+      "aligned": true,
+      "cue": "moles per minute instead of grams per second"
+    },
+    {
+      "id": "recap",
+      "t": 272.482,
+      "aligned": true,
+      "cue": "Remember this"
+    },
+    {
+      "id": "outro",
+      "t": 288.686,
+      "aligned": true,
+      "cue": "please subscribe to JD Science"
+    }
+  ],
+  "reveals": [
+    {
+      "slide": "aims",
+      "item": "a1",
+      "t": 13.52,
+      "aligned": true,
+      "cue": "Say what reaction rate means"
+    },
+    {
+      "slide": "aims",
+      "item": "a2",
+      "t": 16.659,
+      "aligned": true,
+      "cue": "Calculate average rate from measurements"
+    },
+    {
+      "slide": "aims",
+      "item": "a3",
+      "t": 20.282,
+      "aligned": true,
+      "cue": "read graphs that show how the rate changes"
+    },
+    {
+      "slide": "words",
+      "item": "reactants",
+      "t": 52.006,
+      "aligned": true,
+      "cue": "Reactants are the substances we start with"
+    },
+    {
+      "slide": "words",
+      "item": "products",
+      "t": 55.444,
+      "aligned": true,
+      "cue": "Products are the new substances"
+    },
+    {
+      "slide": "formula",
+      "item": "product",
+      "t": 61.427,
+      "aligned": true,
+      "cue": "quantity of product formed"
+    },
+    {
+      "slide": "formula",
+      "item": "reactant",
+      "t": 66.775,
+      "aligned": true,
+      "cue": "quantity of reactant used up"
+    },
+    {
+      "slide": "ex1_calc",
+      "item": "time",
+      "t": 125.386,
+      "aligned": true,
+      "cue": "2 minutes times 60"
+    },
+    {
+      "slide": "ex1_calc",
+      "item": "div",
+      "t": 133.341,
+      "aligned": true,
+      "cue": "180 divided by 120"
+    },
+    {
+      "slide": "ex1_calc",
+      "item": "ans",
+      "t": 135.23,
+      "aligned": true,
+      "cue": "equals 1.5"
+    },
+    {
+      "slide": "ex2_ans",
+      "item": "time",
+      "t": 167.587,
+      "aligned": true,
+      "cue": "4 times 60"
+    },
+    {
+      "slide": "ex2_ans",
+      "item": "div",
+      "t": 175.527,
+      "aligned": true,
+      "cue": "3 divided by"
+    },
+    {
+      "slide": "ex2_ans",
+      "item": "ans",
+      "t": 181.99,
+      "aligned": true,
+      "cue": "The average rate is 0.0125"
+    },
+    {
+      "slide": "steep",
+      "item": "fast",
+      "t": 249.77,
+      "aligned": true,
+      "cue": "a steeper line means a faster reaction"
+    },
+    {
+      "slide": "steep",
+      "item": "flat",
+      "t": 253.166,
+      "aligned": true,
+      "cue": "A horizontal line means the measured quantity"
+    }
+  ]
+}
