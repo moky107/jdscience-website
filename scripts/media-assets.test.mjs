@@ -76,8 +76,8 @@ test("homepage promo mp4 is publicly shipped with moov before mdat (faststart)",
   assert.ok(moov < mdat, "moov must precede mdat so browsers can start playback early");
 });
 
-test("homepage hero carousel keeps original hero then chemistry → physics → biology every 20s", () => {
-  assert.equal(HERO_ROTATION_MS, 20_000);
+test("homepage hero carousel keeps original hero then chemistry → physics → biology every 5s", () => {
+  assert.equal(HERO_ROTATION_MS, 5_000);
   assert.deepEqual(
     HERO_SLIDES.map((slide) => slide.id),
     ["original", "chemistry", "physics", "biology"],

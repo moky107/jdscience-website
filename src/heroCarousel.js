@@ -1,6 +1,6 @@
 /** Homepage hero banner carousel — original hero + chemistry → physics → biology. */
 
-export const HERO_ROTATION_MS = 20_000;
+export const HERO_ROTATION_MS = 5_000;
 
 /** Legacy single hero image — also kept as a carousel slide. */
 export const HERO_FALLBACK_IMG = "/hero-students.png.png";
