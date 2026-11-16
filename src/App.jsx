@@ -1935,13 +1935,15 @@ const inp = { padding: "11px 12px", borderRadius: 8, border: "1px solid #e2e8f0"
 
 function TutorAvatar({ tutor, size = 72 }) {
   const [failed, setFailed] = useState(false);
-  const photoUrl = String(tutor?.profile_photo_url || "").trim();
+  // Joseph’s advertised profile uses initials instead of a photograph.
+  const hidePhoto = tutor?.id === "8854bced-44e6-44ea-adc6-e9f9eaeeca7e";
+  const photoUrl = hidePhoto ? "" : String(tutor?.profile_photo_url || "").trim();
 
   useEffect(() => {
     setFailed(false);
   }, [photoUrl]);
 
-  if (!photoUrl && !failed) {
+  if (hidePhoto || (!photoUrl && !failed)) {
     return (
       <div
         aria-hidden="true"
