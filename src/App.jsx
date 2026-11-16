@@ -901,15 +901,15 @@ function Hero({ onScroll, onBrowse, onShop }) {
           );
         })}
       </div>
-      {/* Stronger left wash so headline stays readable on green; right stays open for people. */}
+      {/* Lighter wash keeps the photos bright while supporting the white headline. */}
       <div
         className="hero-banner-overlay"
         style={{
           position: "absolute",
           inset: 0,
           background: isMobile
-            ? "linear-gradient(180deg, rgba(6, 55, 48, .55) 0%, rgba(6, 55, 48, .42) 42%, rgba(15, 23, 42, .55) 100%)"
-            : "linear-gradient(90deg, rgba(6, 55, 48, .82) 0%, rgba(6, 55, 48, .62) 34%, rgba(6, 55, 48, .28) 58%, rgba(15, 23, 42, .12) 100%)",
+            ? "linear-gradient(180deg, rgba(6, 55, 48, .36) 0%, rgba(6, 55, 48, .24) 42%, rgba(15, 23, 42, .32) 100%)"
+            : "linear-gradient(90deg, rgba(6, 55, 48, .62) 0%, rgba(6, 55, 48, .42) 34%, rgba(6, 55, 48, .10) 58%, rgba(15, 23, 42, 0) 100%)",
           pointerEvents: "none",
         }}
       />
