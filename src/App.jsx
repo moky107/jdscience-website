@@ -894,7 +894,7 @@ function Hero({ onScroll, onBrowse, onShop }) {
                 objectPosition: heroObjectPosition(slide, { isMobile, isTablet }),
                 opacity: isActive ? 1 : 0,
                 transition: prefersReducedMotion ? "none" : "opacity .7s ease",
-                filter: "brightness(1.06) contrast(1.03) saturate(1.04)",
+                filter: slide.filter || "brightness(1.06) contrast(1.03) saturate(1.04)",
                 pointerEvents: "none",
               }}
             />

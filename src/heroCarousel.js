@@ -32,6 +32,7 @@ export const HERO_SLIDES = [
     src: "/images/jdscience-banner-physics.png",
     alt: "Physics tutoring banner with students learning together",
     label: "Physics",
+    filter: "brightness(1.4) contrast(.92) saturate(1.04)",
     /** Slightly lower focal point so probes / LEDs stay in frame with faces. */
     objectPosition: { desktop: "62% 46%", tablet: "66% 44%", mobile: "70% 40%" },
   },
@@ -40,6 +41,7 @@ export const HERO_SLIDES = [
     src: "/images/jdscience-banner-biology.png",
     alt: "Biology tutoring banner with students learning together",
     label: "Biology",
+    filter: "brightness(1.4) contrast(.92) saturate(1.04)",
     /** Center-right cluster around the microscope; preserve headroom. */
     objectPosition: { desktop: "64% 34%", tablet: "68% 32%", mobile: "72% 30%" },
   },
