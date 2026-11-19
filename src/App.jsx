@@ -653,7 +653,7 @@ function Navbar({ onHome, onPick, onResource, onScroll, onSearch, onTutor, onSho
 
   const logo = (
     <a href="/" onClick={(e) => { e.preventDefault(); onHome(); setMenuOpen(false); }} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flexShrink: 1, minWidth: 0, textDecoration: "none" }}>
-      <div style={{ width: 38, height: 38, borderRadius: 8, background: `linear-gradient(135deg,${TEAL},${TEAL_DARK})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800 }}>JD</div>
+      <img src="/jdscience-logo.webp" alt="JD Science Education" width={62} height={52} style={{ display: "block", flexShrink: 0 }} />
       <div className="site-logo-text" style={{ fontWeight: 800, color: "#0f172a", fontSize: 15 }}>jdscience.co.uk</div>
     </a>
   );
