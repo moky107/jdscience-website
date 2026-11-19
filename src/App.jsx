@@ -168,6 +168,19 @@ const PLACEHOLDER_RESOURCE_LINKS = {
 };
 
 const STATIC_RESOURCE_ITEMS = [
+  {
+    level: "A-Level",
+    subject: "Physics",
+    exam_board: "",
+    resource_category: "Videos",
+    all_boards: true,
+    title: "GCSE & A-Level Physics: Force Walkthrough",
+    topic_slug: "tennis-ball-force",
+    file_name: "jdscience-physics-force-walkthrough.mp4",
+    file_url_override: "https://resource2.heygen.ai/video/e6aeff0037d04c8180efcf8377a6d4f4/original.mp4",
+    poster_url: "/images/physics-force-walkthrough.jpg",
+    description: "Work through an A-level tennis-ball question using change in horizontal momentum and contact time. Includes the original question, step-by-step calculations, the 38 N mark-scheme answer and an F = ma check. Useful GCSE and A-level revision.",
+  },
   ...hostedRevisionNotesForCatalog(),
   ...GCSE_CHEMISTRY_VIDEOS,
   ...GCSE_BIOLOGY_VIDEOS,
