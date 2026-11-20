@@ -14,6 +14,7 @@ import ResourceAccessGate from "./ResourceAccessGate";
 import TermsAgreement from "./TermsAgreement";
 import TutorChoosingNotice from "./TutorChoosingNotice";
 import FeaturedVideoSection from "./FeaturedVideoSection";
+import WavesHomepageFeature from "./WavesHomepageFeature";
 import { LOCAL_AVATAR_FALLBACK, resolveTutorAvatarSrc } from "./tutorAvatar.js";
 import { TERMS_ACCEPTANCE_ERROR, TERMS_VERSION } from "./termsAndConditions";
 import { ROTATION_INTERVAL_MS, shouldRotateTutorProfiles, tutorCarouselPageCount, tutorCarouselPageIndex, tutorsForHomepage } from "./tutorRotation";
@@ -2726,7 +2727,12 @@ function TutorApplicationForm({ open, onClose, onSubmitted, triggerRef }) {
 /* --------------------------- VIDEO / CONTACT / FOOTER --------------------------- */
 function VideoSection({ onBrowse }) {
   const isMobile = useIsMobile();
-  return <FeaturedVideoSection isMobile={isMobile} onBrowse={onBrowse} />;
+  return (
+    <>
+      <WavesHomepageFeature isMobile={isMobile} />
+      <FeaturedVideoSection isMobile={isMobile} onBrowse={onBrowse} />
+    </>
+  );
 }
 
 function Contact() {
