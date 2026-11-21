@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { GCSE_CHEMISTRY_VIDEOS, GCSE_CHEMISTRY_LESSON_VIDEOS } from "../../src/gcseChemistryVideos.js";
 import { SITE_ORIGIN } from "../../src/educatorProfile.js";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
+import { streamOnlyVideoHtml } from "./stream-only-video.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const publicDir = path.join(root, "public");
@@ -25,23 +26,13 @@ function videoHtml(item) {
   if (item.embed_url) {
     return `<p><a class="download" href="${escapeHtml(item.embed_url)}">Watch ${escapeHtml(item.title)}</a></p>`;
   }
-  const captions = item.caption_url
-    ? `<track kind="captions" src="${escapeHtml(item.caption_url)}" srclang="en" label="English" default />`
-    : "";
-  return `
-            <style>
-              .lesson-video { margin: 0 0 24px; background: #0f172a; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 16px rgba(15,23,42,.05); }
-              .lesson-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
-              .lesson-video figcaption { background: #fff; padding: 10px 14px; }
-              .lesson-video figcaption .download { margin: 0; }
-            </style>
-            <figure class="lesson-video">
-              <video controls playsinline preload="metadata"${item.poster_url ? ` poster="${escapeHtml(item.poster_url)}"` : ""} title="${escapeHtml(item.title)}"${item.caption_url ? " crossorigin=\"anonymous\"" : ""}>
-                <source src="${escapeHtml(item.file_url_override)}" type="video/mp4" />
-                ${captions}
-              </video>
-              <figcaption><a class="download" href="${escapeHtml(item.file_url_override)}" download>Download ${escapeHtml(item.title)} (MP4)</a></figcaption>
-            </figure>`;
+  return streamOnlyVideoHtml({
+    escapeHtml,
+    src: item.file_url_override,
+    title: item.title,
+    posterUrl: item.poster_url || null,
+    captionUrl: item.caption_url || null,
+  });
 }
 
 function main() {
@@ -58,7 +49,7 @@ function main() {
     description: "Original JD Science GCSE Chemistry lessons with captions, exam-style questions and model answers.",
     canonicalPath: `/${indexPath}/`,
     heading: "GCSE Chemistry videos",
-    lede: "Original JD Science lessons. Watch on this page, or download the MP4.",
+    lede: "Original JD Science lessons. Watch on this page — streaming only, no downloads.",
     breadcrumbs: [
       { name: "Resources", path: "/resources/" },
       { name: "GCSE", path: "/resources/gcse/" },

@@ -13,6 +13,7 @@ import { papersHref } from "../../src/papersQuery.js";
 import { ELEVEN_PLUS_RESOURCES, ELEVEN_PLUS_SECTIONS } from "../../src/elevenPlusResources.js";
 import { writeTermsPage } from "./write-terms-page.mjs";
 import { escapeHtml, renderPublicPage } from "./html-chrome.mjs";
+import { streamOnlyVideoHtml } from "./stream-only-video.mjs";
 import { isAnswerSheet, answersUrlFor, compareTopicTitles } from "../worksheets/catalog.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -84,20 +85,13 @@ function absoluteUrl(href) {
 function videoPlayerHtml(items, topicTitle) {
   const videos = items.filter((item) => isDirectVideoHref(item.href));
   if (!videos.length) return "";
-  return `
-            <style>
-              .lesson-video { margin: 0 0 24px; background: #0f172a; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 16px rgba(15,23,42,.05); }
-              .lesson-video video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
-              .lesson-video figcaption { background: #fff; padding: 10px 14px; }
-              .lesson-video figcaption .download { margin: 0; }
-            </style>
-            ${videos.map((item) => `<figure class="lesson-video">
-              <video controls playsinline preload="metadata"${item.poster_url ? ` poster="${escapeHtml(item.poster_url)}"` : ""} title="${escapeHtml(item.label || topicTitle)}"${item.caption_url ? " crossorigin=\"anonymous\"" : ""}>
-                <source src="${escapeHtml(item.href)}" type="video/mp4" />
-                ${item.caption_url ? `<track kind="captions" src="${escapeHtml(item.caption_url)}" srclang="en" label="English" default />` : ""}
-              </video>
-              <figcaption><a class="download" href="${escapeHtml(item.href)}" download>Download ${escapeHtml(item.label || topicTitle)} (MP4)</a></figcaption>
-            </figure>`).join("")}`;
+  return videos.map((item) => streamOnlyVideoHtml({
+    escapeHtml,
+    src: item.href,
+    title: item.label || topicTitle,
+    posterUrl: item.poster_url || null,
+    captionUrl: item.caption_url || null,
+  })).join("");
 }
 
 function publishHostedVideoFiles() {

@@ -18,7 +18,7 @@ function calculationLesson({ title, topicSlug, file_name, source_path, descripti
     hosted: false,
     poster_url: `/resources/gcse/chemistry/videos/${topicSlug}/poster.jpg`,
     file_url_override: `/resources/gcse/chemistry/videos/${topicSlug}/${file_name}`,
-    notesHtml: `<div class="callout">Original JD Science GCSE Chemistry lesson. Watch on this page, or download the MP4.</div><p>${description}</p>`,
+    notesHtml: `<div class="callout">Original JD Science GCSE Chemistry lesson. Watch on this page — streaming only, no downloads.</div><p>${description}</p>`,
   };
 }
 
